@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:10+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Exact Solitary-wave Solutions for the General Fifth-order Shallow Water-wave Models Notes (tanh^):-2^(0 [-840a/#2« ^(O&quot;</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="1999">1999</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Woo-Pyo</forename><surname>Hong</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Young-Dae</forename><surname>Jung&amp;apos;&amp;apos;</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Catholic University of Taegu-Hyosung</orgName>
+								<address>
+									<postCode>712-702</postCode>
+									<settlement>Hayang</settlement>
+									<region>Kyongsan, Kyungbuk</region>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution">Hanyang University</orgName>
+								<address>
+									<addrLine>Kyunggi-Do 425-791</addrLine>
+									<settlement>Ansan</settlement>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Exact Solitary-wave Solutions for the General Fifth-order Shallow Water-wave Models Notes (tanh^):-2^(0 [-840a/#2« ^(O&quot;</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Z. Naturforsch</title>
+						<imprint>
+							<biblScope unit="volume">54</biblScope>
+							<biblScope unit="page" from="272" to="273"/>
+							<date type="published" when="1999">1999</date>
+						</imprint>
+					</monogr>
+					<note type="submission">received December 15, 1998</note>
+					<note>272 Reprint requests to Prof W. Hong;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<abstract>
+				<p>We perform a computerized symbolic computation to find some general solitonic solutions forthe general fifth-order shallow water-wave models. Applying the tanh-typed method, we have found certain new exact solitary wave solutions. The previously published solutions turn out to be special cases with restricted model parameters. We investigate the generalized fifth-order shallow water-wave model which describes certain physically-interesting (1 + l)-dimensional waves but is not integra-ble by the conventional methods [1]: + 2qvv^ + 3rv^v^ = 0, (1) where a, fi, y, q, and r are model parameters, i; is a real scalar function of the two independent variables, x and t, and the subscripts denote partial derivatives. We apply the tanh-typed method [2-4] with symbolic computation to (1) and assume that the physical field V (JC, 0 has the form N v{x, /) = S (0 • tanh&quot; [^(0X + •»(/)], (2) n=0 where N is an integer determined via the balance of the highest-order contributions from the linear and non-linear terms of (1) as N=2, while/^;v(0, ^(0. and are the non-trivial differentiable functions to be determined. With the symbolic computation package Maple we introduce Ansatz (2) together with the above conditions into (1) and collect the coefficients of like powers of tanh: (tanh&apos;):-6^2(0^(0 • [r^^itf + 16/^(0^2(0 + nOa(^{tf\ (3) (tanh**):-5/^,(0^(0 • [24a^(0&apos;* + 20x^(0^2(0 + ^r^zitf] (4) (5) + 24^(0V^o(0/^2(0-96y^2(tfm^ + 6r^o(t)^2(,tf + 2q^2(tf] (tanh&quot;): (0 ^(0 [3r/^, (0^-2400^(0^*-1-6^(0^-184x^(0^/^2(0-1-12^(OV^o(0 + lSr^oit)^2(t) + 6q^2(t)-\5r^2(tf] (6) (tanh^):-2^2(t) ^ »(0-1232a/#2(&apos;) ^(tf + nr^,(tf^2(t)^(t)-2^2(t) ^ ^{t)x + 12r//o(0^2(0V(0-6r/#o(&apos;)/^i (0 V(0-6r^o(tf^2(t) ^(0-2q^j (tf^(t)-4^/^0(0^2(0 ^(0 + 80y/#o(0/^2(0 ^(0^ + 40/x^2(0 ^{tf-112y/^2(0V(0^ + 32y/#,(0V(0&apos; + 49/#2(0V(0 (7) (tanh^):-/^, (0 ^ »(/) + 3 r/^, (O&apos; ^(0 + ^/^2(0+8M/^i(0^(0&apos; + IGy^oiO^i (0 ^(O&apos;-^i (0 ^ ^(t)x + IS r^oiO^iit) ^2(1)^(0 (8)-3r^oitf^i (0 ^(0 + 6q^i (0/^2(0 ^(0-2^/^0(0/^1 (0 ^(0-927//, (0 ^(0^2(0 (tanh&apos;): 2/^2(0 »(0 + 2720/^2(0 ^(0^-32y//o(0//2(0 ^(O&apos; + 2/^2(01-^(t)x + 6r^o(t)^i (tf^it) + 6r^o(tf^2(t) ^(0 + (0-16/1/^2(0 ^(tf + 2q^, (0V(0 + \6y^2(tf^(tf + 4^/^0(0/^2(0 ^(0-12y/#,(0^^(0&apos; (9) (tanh°): //, (0 ^ ^{t)x + /t, (01:-2/1/^,(0^(0-&apos;+ 16a//i(0^(0^-1-3 ,-//o(0 V, (0 ^(0 + 2^/^0(0//, (0 ^(0 + 8y//, (0 ^(0^2(0-4y/#o(0//. (0 ^(0^ (10) + ^//o(0. 0932-0784 / 99 / 0300-0272 $ 06.00 © Verlag der Zeitschrift für Naturforschung, Tübingen • www.znaiurforsch.com</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>where N is an integer determined via the balance of the highest-order contributions from the linear and non- linear terms of ( 1 are the non-trivial differentiable functions to be deter- mined. With the symbolic computation package Maple we introduce Ansatz ( 2 ) together with the above conditions into ( 1 ) and collect the coefficients of like powers of tanh: (tanh'): -6^2(0^( 0 Reprint requests to Prof W. Hong; E-mail: wphong@cuth.cataegu.ac.kr</head><label>1210</label><figDesc>) as N=2, while/^;v(0, ^(0. and• [r^^itf + 16/^(0^2(0 + nOa(^{tf\ (3) (tanh**): -5/^,(0^(0 • [24a^(0'* + 20x^(0^2(0 + ^r^zitf] (4)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>-+ 80y/#o( 0 /^2( 0 ^(0^ + 40 /x^2( 0 ^{tf -112y/^2(0V(0^ + 32y/#,(0V( 0 ' + 49 /#2(0V( 0 (7) (tanh^): -/^, ( 0 ^ »(/) + 3 r/^, (O'- 0784 / 99 / 0300 - 0272 $ 06 . 00 © Verlag der Zeitschrift für Naturforschung, Tübingen • www.znaiurforsch.com</head><label>0040004900078499030002720600</label><figDesc>2q^j (tf^(t) -4^/^0(0^2(0 ^(0^(0 + ^/^2(0+8M/^i(0^(0' + IGy^oiO^i (0 ^(O' -^i (0 ^ ^(t)x + IS r^oiO^iit) ^2(1)^(0 (8) -3r^oitf^i (0 ^(0 + 6q^i (0/^2(0 ^(0 -2^/^0(0/^1 (0 ^(0 -927//, (0 ^(0^2(0 (tanh'): 2/^2(0 »(0 + 2720/^2(0 ^(0^ -32y//o(0//2(0 ^(O' + 2/^2(01-^(t)x + 6r^o(t)^i (tf^it) + 6r^o(tf^2(t)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head></head><label></label><figDesc>F'g-'• A kink-typed solitary wave with the parameters /i = I, y=\,q=\,^=\. r = -l,and^=V-'8'-+l2/30. (15) (16)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. A kink-typed solitary wave with the parameters H=l,</figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgement</head><p>This work was supported by the special research Grant in 1991 of Catholic University of Taegu-Hyosung.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Kichenassamy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nonlinearity</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">133</biblScope>
+			<date type="published" when="1997" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><forename type="middle">T</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Tian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Mechanica</title>
+		<imprint>
+			<biblScope unit="volume">128</biblScope>
+			<biblScope unit="page">137</biblScope>
+			<date type="published" when="1998" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><forename type="middle">T</forename><surname>Gao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Enging. Sei. (Lett</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Parkes</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Duffy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computer Phys. Comm</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page">1081</biblScope>
+			<date type="published" when="1996" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

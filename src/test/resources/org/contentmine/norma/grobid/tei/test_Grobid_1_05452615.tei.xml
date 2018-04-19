@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:10+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A New Requirement Prioritization Model for Market Driven Products Using Analytical Hierarchical Process</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>IEEE</publisher>
+				<availability status="unknown"><p>Copyright IEEE</p>
+				</availability>
+				<date type="published" when="2010-02">2010-02</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Muhammad</forename><forename type="middle">Atif</forename><surname>Iqbal</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Athar</forename><forename type="middle">Mohsin</forename><surname>Zaidi</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><roleName>Dr</roleName><forename type="first">Saeed</forename><surname>Murtaza</surname></persName>
+						</author>
+						<title level="a" type="main">A New Requirement Prioritization Model for Market Driven Products Using Analytical Hierarchical Process</title>
+					</analytic>
+					<monogr>
+						<title level="m">2010 International Conference on Data Storage and Data Engineering</title>
+						<imprint>
+							<publisher>IEEE</publisher>
+							<date type="published" when="2010-02" />
+						</imprint>
+					</monogr>
+					<idno type="DOI">10.1109/dsde.2010.49</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>AHP</term>
+					<term>Bespoke</term>
+					<term>Dynamic validation</term>
+					<term>Market-driven</term>
+					<term>Model</term>
+					<term>Requirements</term>
+					<term>Static validation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>As compared to bespoke software development, in market driven software development huge numbers of requirements that comes from many different users, customers, competitors through surveys, interviews, focus groups, and competitor analysis intimidate to over burden the requirement engineering process. So it is vital for product management to select the requirements that aligned with the overall business goals and dispose of others as early as possible. This paper presents a new model for requirement prioritization using AHP (Analytical Hierarchical Process). Number of comparisons as compare to traditional AHP techniques are significantly reduced which make it practicable and applicable. In creation of this model qualitative and quantitative research methodologies are used. To evaluate the model both static and dynamic validation techniques are used to assess the model in industry where the aspects of practicality, applicability, Implementation, effectiveness, and efficiency were investigated, yielding promising initial results.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Due to the emergence of markets for off-the-shelf or packaged software <ref type="bibr" target="#b0">[1]</ref>, market-driven software development is gaining increased significance in comparison to traditional bespoke software development <ref type="bibr" target="#b8">[9]</ref>. Due to this shift, the requirements engineering area is very much affected <ref type="bibr" target="#b8">[9]</ref>. In conventional requirements engineering for bespoke software products the focus is on satisfying the specific customer's requirements whereas in market-driven requirements engineering the number of requirements in most cases is very huge. In market-driven software development environment, requirements do not only come from the developers, marketing groups, sales team, support groups, bug reports etc <ref type="bibr" target="#b9">[10]</ref> but also from many different users, customers, competitors through surveys, interviews, focus groups, and competitor analysis.</p><p>Prioritizing software requirements helps to determine which requirements that are most important, and in which order requirements should be developed and tested throughout the development lifecycle. By prioritizing the requirements, software engineers can put focus on a subset of all requirements, and implement these in a particular release but the biggest challenge is how to prioritize large number of requirements in case of market- driven software development.</p><p>This paper presents a MDRPM (Market Driven Requirement Prioritization Model) which uses AHP. The layout of the paper is as follows, section II describes the overview of existing requirement prioritization techniques, section III go through the steps involved in making if MDRPM, section IV explains the functionality of MDRPM and implementation of all the steps involved in it, Validation process and result of this validation is discussed in section V, VI and in the last section VII gives us the conclusion.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. RELATED AREA AND LITERATURE STUDY</head><p>As discussed in the earlier section, in case of market- Driven software products, it is not unusual to have hundreds and even thousands of individual requirements. Whereas all requirements are mandatory but some are more critical than others. For example, failure to implement certain requirements may have grave business ramifications that would make the system a failure, while others although contractually binding would have far less serious business consequences if they were not implemented or not implemented correctly <ref type="bibr" target="#b3">[4]</ref>. Requirements prioritization is recognized as a most important and difficult activity in Market-Driven Requirement Engineering <ref type="bibr" target="#b10">[11]</ref>  <ref type="bibr" target="#b12">[13]</ref>. The most vital and decisive decision making is needed in requirement prioritization activity. The selection of requirements from the given set of features requires a very high decision power because it is done most of time by ad-hoc methods <ref type="bibr" target="#b8">[9]</ref>. The incorrect decision leads to wrong implementation of selected requirements <ref type="bibr" target="#b8">[9]</ref>. Findings indicate that currently used prioritization methods have limited ability to support decision-making in a complex area like requirements prioritization in market-driven product development <ref type="bibr" target="#b12">[13]</ref>. In addition, there are practical difficulties in the usage of methods, and therefore, prioritization results should be taken more as being indicative than as an ultimate truth <ref type="bibr" target="#b13">[14]</ref>. Current approaches are not capable of handling large number of requirements as in case of market driven products or large system <ref type="bibr" target="#b10">[11]</ref> <ref type="bibr" target="#b13">[14]</ref>. On the basis of above facts, Therefore, a need for a model of good practices in market-driven requirements prioritization for market driven products has been identified, which could come to help cater the challenges faced by MDRE and transfer of knowledge from academia to industry.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Figure 1 Steps involved in making of MDRPM</head><p>The steps involved in the making of MDRPM are shown in <ref type="figure">Figure 1</ref>. In the first step both quantitative and qualitative analysis <ref type="bibr" target="#b22">[23]</ref> are performed which include brief literature survey, interviews from industry representatives, analysis of requirement specification documents of previous software projects done by different companies. On the basis of step 1, a candidate solution is developed in step 2. Once the candidate solution is developed, it is validated in both industry and academia through static and dynamic validation <ref type="bibr" target="#b22">[23]</ref> in step 3 and 4 respectively. Model is updated on the basis of static and dynamic validation. Finally Model is released in step 5.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. MDRPM (MARKET DRIVEN REQUIREMENT PRIORITIZATION MODEL)</head><p>This section presents MDRPM and brief description of steps involved in it. The MDRPM is based upon the following assumptions. 1. Abstract requirements: Abstract requirements <ref type="bibr" target="#b1">[2]</ref> are available to be comparable to other requirements.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">No Requirements dependencies:</head><p>There are no dependencies <ref type="bibr" target="#b3">[4]</ref> between requirements, all requirements are independent. 3. No conflict: There is no conflict if pair wise comparison to be performed by more the than two persons during step-2.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Step 1 (Requirement Initialization)</head><p>Pre-defined bins are created as a result of qualitative and quantitative analysis and industry input. In step-1 one all the requirements will be traversed by a requirement engineer or a team performing requirement prioritization and using their knowledge and experience every requirement will be assigned a bin on the principle of best fit <ref type="bibr" target="#b7">[8]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Step 2 (Modified AHP Engine)</head><p>Once all the requirements are inserted in their corresponding bins according to best fit approach, if there are n number of bins than all the bins from i to n is processed in AHP engine <ref type="bibr" target="#b17">[18]</ref> where i is the first bin. If the total numbers of requirements in bin i is n, then the total number of comparisons are n × (n-1) / 2. Place the candidate requirements in the n×n AHP matrix. In order to set up the priorities, the scale shown in <ref type="table" target="#tab_2">Table 2</ref> is used.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>S No Requirement related to Bin</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Description</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Accessibility</head><p>Degree to which a system is accessible by as many people as possible. 2</p><p>Audit and control Information system auditing 3</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Availability</head><p>The degree to which a system is operable and in a committable state at the start of a mission. 4</p><p>Backup Making copies of data so that these additional copies may be used to restore the original after a data loss event. 5</p><p>Usability Ease with which people can make use of a particular system in order to achieve a particular goal.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Certification</head><p>Requirements that must be met in order to be able to get the system certified. 7</p><p>Compliance A state in which someone or something is in accordance with established guidelines, specifications, or legislation. 8</p><p>Reliability The ability of a person or system to perform and maintain its functions in routine circumstances, as well as hostile or unexpected circumstances. 9</p><p>Resilience The ability to provide and maintain an acceptable level of service in the face of faults and challenges to normal operation. Failure Management Attempts to reboot the system failed to correct the problem and, when the backup system failed to cut-in.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>20</head><p>Modifiability Customization of the system according to onès need or to meet new requirements 21</p><p>Open Source Offering practical accessibility to a software's source code 22</p><p>Operability The ability to keep a system in a safe and reliable functioning condition, according to pre-defined operational requirements. 23</p><p>Usability by target user Ease with which selected people can make use of a particular system in order to achieve a particular goal.  <ref type="table" target="#tab_4">Ability to either handle growing amounts  of work in a graceful manner or to be  readily enlarged  33  Security  The degree of protection against danger,  loss, and criminals  34</ref> Compatibility System that runs on one of the models can also be run on all other models of the family.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>35</head><p>Supportability The ability to support install, configure, and monitor system.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table 1 Name and Description of Bins</head><p>This scale is very much similar to the one that was designed by Saaty <ref type="bibr" target="#b20">[21]</ref> for comparing requirements. The scale not only tells us which requirement is more important than the other, but also how much one requirement is more important than other. Let us suppose that there are 'n' numbers of requirements, R1, R2 ….Rn. Once we put these into n×n matrix, the relative value for requirements are presented as Rij, where rows have index of 'i' and columns have index of 'j' <ref type="bibr" target="#b20">[21]</ref>. For each pair of requirement Rij, the requirements are compared and the relative value is inserted from Table 2 <ref type="bibr" target="#b19">[20]</ref>. If relative importance of requirement Ri is equal to requirement Rj than Rij=1, Rji =1. Hence, we insert '1' in all the positions where Ri is compared to Ri (main diagonal). As shown in <ref type="table" target="#tab_4">Table 3</ref> we have inserted '1' at all diagonal positions (R11, R22, R33, R44 . . . Rnn).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>How Important</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Description</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>1</head><p>Equal Importance  If requirement Rij has priority value of X, then requirement Rji has priority value of 1/X (reciprocal value of Rij). For each pair of requirements (starting with R1 and R2) inserts their relative intensity of value from <ref type="table" target="#tab_2">Table  2</ref>. Example of how this step will be performed in shown in table 4, in the position (R12) where the row R1 intersects column R2. As shown in <ref type="table" target="#tab_5">Table 4</ref> we have inserted values of relative intensity in columns (R12, R13, R14, R23, R24, and R34). For example we have put value '5' in position (R12) which shows that R1 is '5 times' more important than R2.Inspite of this selection one can also select the values that are less important rather than more important. When this is done, the reciprocal values are automatically calculated. We have put reciprocal values in columns (R21, R31, R41, R32, R42, and R43) as shown in <ref type="table" target="#tab_5">Table 4</ref>. For instance in position (R21) insert the reciprocal value, in this case value in (R21) is 0.2 which shows that requirement R2 is 0.2 times less important than R1.Once the prioritized values are inserted into the rows and columns of AHP matrix, the next task is to normalize the values by using a method called 'Averaging over normalized columns' [18] <ref type="bibr" target="#b20">[21]</ref>. The steps to perform Averaging over normalized columns are shown below. First we calculate the sum of columns in the comparison matrix. As shown in <ref type="table" target="#tab_6">Table 5</ref>, we have calculated sum of columns for four requirements. After calculating the sum of columns, the next step is to normalize the sum of rows convert each value to the percentage of its column total. We divide the value of Rij by the sum of columns. As shown in <ref type="table" target="#tab_6">Table 5</ref>, the value of column (R11) is '1' and sum of that column (Total) is 1.54.We divide 1 by 1.54 which results in the value 0.65, see <ref type="table" target="#tab_7">Table 6</ref>. The value 0.65 is normalized value for columns (R11). Similarly we calculate normalized values for the whole matrix. The normalized values calculated above are used to calculate the priority ordering for every requirement.</p><p>To calculate row average value we calculate sum of rows. For each row, we add every normalized values of that row and divide it with the number of requirements. As shown in <ref type="table" target="#tab_8">Table 7</ref> for row 1, sum of rows is (R11 +R12+R13+R14) which equals to 2.3. Similarly we calculate the sum of rows for other three rows.  The resulting values not only reflect that R1 is more important than R2, R2 is more important than R3 and R3 is more important than R4; it also shows how much one requirement more/less important than another. For instance, R1 is 11.5 times more important than R4 and R4 is 3.6 times less important than R3.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Step 3 (Consistency Check)</head><p>While performing prioritization there may be likelihood that Eigen values are not consistent. Let us assume that if in final result we determined that requirement R1 is more important than R2, requirement R2 is more important than R3, and R3 is more important than R1.This shows that there is inconsistency while performing pair wise comparisons, in reality R1 is more important than R3.These kind of errors that take place in performing AHP, are called judgmental errors <ref type="bibr" target="#b21">[22]</ref>. When the prioritization is done; next task is to check consistency of Eigen values. Consistency Index (CI) is the indictor of accuracy of pair wise comparisons performed.</p><p>To overcome judgmental errors we need to perform a consistency check <ref type="bibr" target="#b17">[18]</ref>. The CI is calculated by using the following formula.</p><p>CI (Consistency Index) = (λ max -n)/ (n-1)</p><p>Where λmax = Maximum Eigen value of the comparison matrix n = Number of requirements</p><p>The closer the value of λmax is to n; greater is the possibility of having consistent results and little judgmental errors. Steps to calculate the value of λmax are as follows <ref type="bibr" target="#b19">[20]</ref> [21]:</p><p>1) To facilitate the calculations we have transformed the data presented in <ref type="table" target="#tab_5">Table 4</ref> into Matrix A (4 × 4) and the Priority column of <ref type="table" target="#tab_8">Table 7</ref> into Matrix B (4 × 1). Next, we have multiplied two matrixes which results in Matrix C (4 × 1).  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Matrix</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Matrix C Matrix D</head><p>2) The next step is to calculate the average sum (λmax).</p><p>The following formula is used to calculate the value of λmax. Once value of λmax is calculated we calculate value of CI using formula CI = (4.54 -4) /3 = 0.18 To further evaluate whether CI value is acceptable or not, we calculate Consistency Ratio (CR). CR is the ratio of consistency index to random index (RI).</p><p>Saaty has proposed the scale for random index to calculate consistency ratio <ref type="bibr" target="#b20">[21]</ref>. As shown in <ref type="table">Table 8</ref>, the value of RI varies with the number of objects to prioritize and that its RI vector is fixed. The formula to calculate Consistency Ratio (CR) is: CR = CI/RI Where CI = Consistency Index RI = Random Index For example the order of matrices is (4×4); therefore we issue RI value of order (4) from <ref type="table">Table 9</ref>. The RI value for order (4) is 0.9. The Consistency Ratio (CR) for this example is: CR = 0.18/0.9 = 0.2</p><p>According to <ref type="bibr" target="#b20">[21]</ref>, if the value of CR is equal or less than 0.1, than it results in to very little judgmental errors and yields accurate results. The results in this case, show the moderate degree of judgmental errors.</p><formula xml:id="formula_1">Requirements (n) RI 1 0 2 0 3</formula><p>0.58 4 0.9 5</p><p>1.12 1.24 7</p><p>1.32 8</p><p>1.41 9</p><p>1.45 10</p><p>1.49 11</p><p>1.51 12</p><p>1.48 13</p><p>1.56. 14</p><p>1.57 15</p><p>1.59 16</p><p>1.60 17</p><p>1.62 18</p><p>1.62 19</p><p>1.63 20</p><p>1.65 21</p><p>1.66 22</p><p>1.68 23</p><p>1.69 24</p><p>1.72 25</p><p>1.73 <ref type="table">Table 8</ref> Scale for random index</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Step 4 (Requirement Prioritization)</head><p>Prioritize all requirements in n bin, processing one bin at a time. When all the requirements are prioritize now it's time to prioritize the bins itself. For this purpose step 2-3 is used and the final outcome is prioritized requirements. For example we have five bins; first we prioritize all the requirements in b1. Demonstration of how to do this step is shown in <ref type="figure" target="#fig_6">figure 4</ref>; this is the step we performed in step 1, 2 and 3. Then using step 2-3 all requirements in all the bins (b1, b2, b3, b4, b5) are prioritized. <ref type="figure">Figure 5</ref> Example showing bin b1, b2, b3 and b4 are prioritized.</p><p>In the first step we prioritize all requirements within each bin; Next step is to prioritize bins itself. For this purpose we will again use step 2 and 3 but this time we are not prioritizing requirements but bins. Let us suppose the order in which the bins are prioritized is b5,b2, b4, b1, b3. Bin b5 has the highest priority where as bin b3 has the lowest priority. Now use the appropriate representation to show prioritizes requirements. Purpose of the validation step is to evaluate the aspects of practicality, applicability, Implementation, effectiveness, and efficiency of MDRPM. Both static and dynamic validation techniques are used. Static validation involved presentation of the candidate solution in industry or academia and collecting feedback from practitioners <ref type="bibr" target="#b22">[23]</ref>. A set of qualitative and quantitative questions is designed to validate the proposed model from the interviewees. A thorough literature study of product management and requirements engineering literature is done by the author. Brainstorming is done by the authors to identify suitable questions to be included for the interview. Based on the outcome of the brainstorming session, a set of qualitative and quantitative questions is developed by the authors.</p><p>Steps involved in validation of MDRPM are shown in <ref type="figure">figure 8</ref>. Dynamic validation means that the proposed solution is actually applied through case study in the industry in some project(s) by the roles suggested <ref type="bibr" target="#b22">[23]</ref>. This realistically evaluates the scalability and potential of the proposed solution in the industry. Refinements can be done based on the practical validation of the proposed solution. Two companies A and B were chosen for the validation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V.I Validation results</head><p>In this section summary of static and dynamic validation results is presented, the goal of the validation process was to investigateModeìs practicality, applicability, Implementation, effectiveness and efficiency.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V.I.I Practicality and applicability</head><p>The model is found to be practical and easy to use once it is clearly understood. It is also found that the model is customizable based on the organization's individual goals and objectives. In order to customize the model new bins has to be introduced or modification of existing ones according to company`s need. During the validation interviews the management personnel from company A suggested that applying model on more case studies would help in understanding and customization of the model. Both the companies A and B showed interest in implementing MDRPM as it is a strong candidate for requirements prioritization for their new product. Representatives from both the companies showed no reservations in declaring this model practical and applicable.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V.I.II Model Implementation</head><p>The pre-requisite for implementing this model is not considered as overhead. The pre-request includes requirement abstraction, no requirement dependencies and no-conflict. All the existing requirement prioritization models are unable to cope with large number of requirements in case of market-driven products which make them non practical, and so they are ignored by companies but in case of MDRPM it has all the strength of AHP and by adding few modifications made it scalable. The representative from both the companies agreed that this model is implementable. Representative from company B stressed on developing an automated tool to facilitate requirement engineers to prioritize requirements using MDRPM, as it can save lot of time.</p><p>Representative from company A suggested that it would be a great advantage if MDRPM could use history data of company's previous projects and propose relevant bin to a requirement, it will assist requirement engineer in selecting the most appropriate bin for a particular requirement.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V.I.III Effectiveness and Efficiency</head><p>The MDRPM is found to be capable of producing an intended result and as it reduces the number of pair wise comparisons as compared to traditional AHP technique which make it more efficient. The model is based upon AHP which is known to be a most reliable and effective technique among all requirement prioritization methods <ref type="bibr" target="#b11">[12]</ref>. The outcome of dynamic validation showed that it produced accurate results and in half time as compared to AHP. The representatives from both the companies rate it better than AHP in terms of effectiveness and efficiency.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>VI. CONCLUSION</head><p>MDRPM will help to make right decisions regarding requirement prioritization. The validation was performed to assure that the model complied with the real needs of the industry. As MDRPM does not suggest fit for every organization, but is rather customizable. The customizable nature of the model is based on introducing new bins or modifying existing ones. MDRPM is validated through both static and dynamic validation, the results of static and dynamic validation shows that it can be practically implemented in the industry and the model is customizable based on the organization's individual goals and objectives. Numbers of comparisons are drastically reduced as compared to traditional AHP technique which was unusable once the requirements reaches over a particular threshold but in case of MDRPM it can handle large number of requirements. This research paper has also described the process of creating MDRPM, as well as the validation procedure employed in order to ensure that the model is useful for industry practitioners. The model could be useful for driving improvement efforts in requirements prioritization.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 2</head><label>2</label><figDesc>Figure 2 Steps involved in MDRPM</figDesc><graphic url="image-17.png" coords="2,64.58,532.68,220.80,78.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 3</head><label>3</label><figDesc>Figure 3 Steps involved in AHP Engine</figDesc><graphic url="image-19.png" coords="2,321.72,327.29,215.52,177.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>A Matrix B Matrix CI</head><label></label><figDesc>Divide the first element of Matrix C with first element of Matrix B, second element of Matrix C with second element of Matrix x B and so on. These results into Matrix D (4× 1).The elements of Matrix D are D1, D2,</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>λmax</head><label></label><figDesc>= (D1 + D2 +D3…+Dn)/ n Where n= Number of requirements In this case we have four requirements λmax = (4.20 + 5.31 + 4.39 + 4.27)/4 = 4.54</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>6</head><label>6</label><figDesc></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 4</head><label>4</label><figDesc>Figure 4 Example showing bin b1 is prioritized.</figDesc><graphic url="image-31.png" coords="6,62.40,418.44,227.16,73.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 6</head><label>6</label><figDesc>Figure 6 Graph showing prioritized requirements V. VALIDATION OF MDRPM</figDesc><graphic url="image-33.png" coords="6,313.62,67.93,239.16,159.72" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2" validated="false"><head>Table 2 Scale for prioritizing requirements</head><label>2</label><figDesc></figDesc><table></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4" validated="false"><head>Table 3 AHP nxn Priority Matrix</head><label>3</label><figDesc></figDesc><table></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5" validated="false"><head>Table 4 Sum of columns in the comparison matrix</head><label>4</label><figDesc></figDesc><table></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6" validated="false"><head>Table 5 Normalized</head><label>5</label><figDesc>values for the whole matrix.</figDesc><table></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7" validated="true"><head>Table 6 Calculate the sum of rows for AHP Matrix.</head><label>6</label><figDesc></figDesc><table>The sum of rows of each row is divided by four (number 
+of requirements). The priority value we got for row 1 is 
+0.575. Similarly we calculate values for other three rows. 
+These values are called Eigen values of the matrix. 
+
+</table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_8" validated="true"><head>Table 7 Eigen values of the matrix.</head><label>7</label><figDesc></figDesc><table>The final matrix is represented as normalized eigenvector 
+of the comparison matrix. The final result shows the 
+degree of importance of one requirement to another, with 
+respect to the particular aspect customer keeps in 
+mind before performing prioritization [21][22]. 
+
+R1 contains 57.5% of total importance. 
+R2 contains 19% of total importance. 
+R3 contains 18% of total importance. 
+R4 contains 5% of total importance. 
+
+</table></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Challenges in Market-Driven Requirements Engineering-an Industrial Interview Study</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Karlsson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Dahlstedt</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Natt</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Regnell</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Persson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of Eighth International Workshop on Requirements Engineering: Foundation for Software Quality (REFSQ&apos;02)</title>
+		<meeting>Eighth International Workshop on Requirements Engineering: Foundation for Software Quality (REFSQ&apos;02)<address><addrLine>Essen, Germany</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2002" />
+			<biblScope unit="page" from="101" to="112" />
+		</imprint>
+		<respStmt>
+			<orgName>Universitat Duisburg-Essen</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Requirements Engineering Supporting Technical Product Management</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Gorschek</surname></persName>
+		</author>
+		<idno>No. 2006:01, ISBN 91-7295-081-1</idno>
+		<imprint>
+			<date type="published" when="2002" />
+			<pubPlace>Blekinge Institute of Technology, Ronneby</pubPlace>
+		</imprint>
+	</monogr>
+<note type="report_type">PhD Thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Product Strategy for High Technology Companies</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Michael</forename><forename type="middle">E</forename><surname>Mcgrath</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2000" />
+			<publisher>McGraw-Hill Professional Book Group</publisher>
+		</imprint>
+	</monogr>
+	<note>2nd edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Aligning Requirements with Business Objectives: A Framework for Requirements Engineering Decisions</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Aurum</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Wohlin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings Requirements Engineering Decision Support Workshop</title>
+		<meeting>Requirements Engineering Decision Support Workshop<address><addrLine>Paris, France</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2005" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Vähäniitty</surname></persName>
+		</author>
+		<title level="m">Product Strategy Decisions in Small Software Product Businesses-A Framework and Experiences</title>
+		<imprint>
+			<date type="published" when="2003" />
+		</imprint>
+		<respStmt>
+			<orgName>Helsinki University of Technology, Institute of Software Business and Engineering</orgName>
+		</respStmt>
+	</monogr>
+<note type="report_type">Master&apos;s Thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Technology Strategy in a Software Products Company</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A ;</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Meyer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Lopez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Product Innovation Management</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="294" to="306" />
+			<date type="published" when="1995" />
+		</imprint>
+	</monogr>
+	<note>IEEE Computer</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Science and Technology Roadmaps</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R N</forename><surname>Kostoff</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Schaller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Engineering Management</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="132" to="146" />
+			<date type="published" when="2001" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Guest Editors&apos; Introduction: RE&apos;03: Practical Requirements Engineering Solutions</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Wieringa</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Ebert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Software</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="16" to="18" />
+			<date type="published" when="2004" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Challenges in Market-Driven Requirements Engineering-an Industrial Interview Study</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Lena</forename><surname>Karlsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Eight International Workshop on Requirements Engineering: Foundation for Software Quality (REFSQ &apos;02</title>
+		<meeting>the Eight International Workshop on Requirements Engineering: Foundation for Software Quality (REFSQ &apos;02</meeting>
+		<imprint>
+			<date type="published" when="2003" />
+			<biblScope unit="page" from="101" to="112" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Release Planning in Market-Driven Software Product Development: Provoking an Understanding</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Pär</forename><surname>Carlshamre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Requirements Engineering</title>
+		<imprint>
+			<date type="published" when="2002" />
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="139" to="151" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Market-Driven Requirements Engineering Process Model-MDREP</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Andrigo</forename><surname>Gomes</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Andreas</forename><surname>Pettersson</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007" />
+			<pubPlace>Karlskrona</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Blekinge Institute of Technology</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Requirements Engineering-A good practice guide</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Ian</forename><surname>Sommerville</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Pete</forename><surname>Sawyer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003" />
+			<publisher>Wiley &amp; sons</publisher>
+			<pubPlace>West Sussex</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Suitability of Requirements Prioritizations Methods for Market-Driven Software Product Development</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Laura</forename><surname>Lehtola</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Marjo</forename><surname>Kauppinen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Software Process: Improvement and Practice</title>
+		<imprint>
+			<date type="published" when="2006" />
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="7" to="19" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Requirements engineering challenges in market-driven software development-An interview study with practitioners</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Lena</forename><surname>Karlsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Information and Software Technology</title>
+		<imprint>
+			<date type="published" when="2007" />
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="588" to="604" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Marketing with Reliability and Maintainability: The Business Case of Hiring a Reliability Engineer When There are No R&amp;M Requirements</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Aron</forename><surname>Brall</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Landis</forename><surname>Gardner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annual Symposium-RAMS</title>
+		<imprint>
+			<biblScope unit="page" from="480" to="484" />
+			<date type="published" when="2004" />
+		</imprint>
+	</monogr>
+	<note>Reliability and Maintainability</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Value-Oriented Requirements Prioritization in a Small Development Organization</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Jim</forename><surname>Azar</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Randy</forename><forename type="middle">K</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Davis</forename><surname>Cordes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Software</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="32" to="38" />
+			<date type="published" when="2007" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Understanding the Product Life Cycle: Four Key Requirements Engineering Techniques</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Christof</forename><surname>Ebert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Software</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="19" to="25" />
+			<date type="published" when="2006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Saaty</surname></persName>
+		</author>
+		<title level="m">The Analytic Hierarchy Process: Planning, Priority Setting, Resource, Allocation</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>McGraw-Hill</publisher>
+			<date type="published" when="1980" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Decision Making for Leaders: The Analytic Hierarchy Process for Decisions in a Complex World</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Saaty</surname></persName>
+		</author>
+		<idno>ISBN-13: 978-0962031786</idno>
+		<imprint>
+			<date type="published" when="2001" />
+			<publisher>Publisher: RWS Publications</publisher>
+		</imprint>
+	</monogr>
+	<note>New Edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Requirements Engineering and Agile Software Development</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Paetsch</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Eberlein</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Maurer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 12 IEEE International workshop</title>
+		<meeting>the 12 IEEE International workshop</meeting>
+		<imprint>
+			<date type="published" when="2003" />
+			<biblScope unit="page" from="1" to="6" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Saaty</surname></persName>
+		</author>
+		<title level="m">The Analytic Hierarchy Process: Planning, Priority Setting, Resource, Allocation</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>McGraw-Hill</publisher>
+			<date type="published" when="1980" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Singular value decomposition in AHP</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Gass</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Ripsaw</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Operational Research</title>
+		<imprint>
+			<biblScope unit="volume">2004</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="573" to="584" />
+			<date type="published" when="2004" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Real World Research</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Robson</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2002" />
+			<publisher>Blackwell Publishing</publisher>
+			<pubPlace>Malden</pubPlace>
+		</imprint>
+	</monogr>
+	<note>2nd Edition</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

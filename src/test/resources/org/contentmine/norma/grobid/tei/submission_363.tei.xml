@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:10+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">COHERENCE PROPERTIES OF QUANTUM DOT RESONANCE FLUORESCENCE</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2010">2010. 2010. 2010. 2010</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Clemens</forename><surname>Matthiesen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Cavendish Laboratory</orgName>
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<addrLine>JJ Thomson Ave</addrLine>
+									<postCode>CB30HE</postCode>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Peter</forename><surname>Humphreys</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Cavendish Laboratory</orgName>
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<addrLine>JJ Thomson Ave</addrLine>
+									<postCode>CB30HE</postCode>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Nick</forename><surname>Vamivakas</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Cavendish Laboratory</orgName>
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<addrLine>JJ Thomson Ave</addrLine>
+									<postCode>CB30HE</postCode>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Atatüre</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Cavendish Laboratory</orgName>
+								<orgName type="institution">University of Cambridge</orgName>
+								<address>
+									<addrLine>JJ Thomson Ave</addrLine>
+									<postCode>CB30HE</postCode>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">COHERENCE PROPERTIES OF QUANTUM DOT RESONANCE FLUORESCENCE</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Phys. Rev. Lett</title>
+						<imprint>
+							<biblScope unit="volume">81</biblScope>
+							<biblScope unit="page">177402</biblScope>
+							<date type="published" when="2010">2010. 2010. 2010. 2010</date>
+						</imprint>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<abstract>
+				<p>Resonance fluorescence has proven to be a useful technique for studying self-assembled quantum dot spin dynamics [1,2], as well as for the demonstration of single-shot spin readout [3]. However, one important advantage of resonance fluorescence is the direct access to the generated photons, which also carry quantum dot spin state information. Key challenges for resonance fluorescence in quantum information processing are currently laser background suppression and optical coherence. In this work we present progress in overcoming these challenges: In particular, we show that our signal to background ratio reaches approximately 1000:1 while maintaining an overall photon collection efficiency of 1%. These results suggest that we are now in the regime where the requirements for fault-tolerant quantum error correction could be satisfied. Further, we report field-correlation measurements on resonance fluorescence photons generated in the weak (0.2 times saturation) and the strong (4000 times saturation) excitation regime. Figure 1 presents an exemplary result for excitation approximately 200 times the saturation value. These measurements reveal explicitly that the photon coherence is reduced as a function of excitation Rabi frequency in a similar nature to recent results employing ultrafast pulses [4]. Despite the reduction of single photon coherence time to around 400 picoseconds for the highest excitation, we still observe coherent rotations up to 22π. Figure 1. Field-correlation measurement [g (1) (τ)] of resonance fluorescence from a singly charged self-assembled quantum dot for an excitation power of approximately 200 times the saturation power.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Field-correlation measurement [g (1) (τ)] of resonance fluorescence from a singly charged selfassembled quantum dot for an excitation power of approximately 200 times the saturation power.</figDesc><graphic coords="1,107.28,379.44,360.24,189.12" type="vector_box" /></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C.-Y.</forename><surname>Lu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">35332</biblScope>
+			<date type="published" when="2010" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Fallahi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page">257402</biblScope>
+			<date type="published" when="2010" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">N</forename><surname>Vamivakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="page" from="297" to="300" />
+			<date type="published" when="2010" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">J</forename><surname>Ramsay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page">177402</biblScope>
+			<date type="published" when="2010" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

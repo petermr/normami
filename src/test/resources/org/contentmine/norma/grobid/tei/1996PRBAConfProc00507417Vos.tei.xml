@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:10+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">the eijde</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date>June 4-6, 1996</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><forename type="middle">J W</forename><surname>Spoelder</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Faculty of Physics and Astronomy of the Vrije Universiteit</orgName>
+								<orgName type="department" key="dep2">Faculty of Medicine of the Vrije Universiteit</orgName>
+								<orgName type="department" key="dep3">Faculty of Mathematics, Computer Science</orgName>
+								<orgName type="institution">University of Amsterdam</orgName>
+								<address>
+									<addrLine>De Boelelaan 1081, 1007 RIB Amsterdam, Kruislaan 403</addrLine>
+									<postBox>p.0. Box 7057</postBox>
+									<postCode>1081 HV, 1098 SJ</postCode>
+									<settlement>Amsterdam, Amsterdam</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><forename type="middle">H M</forename><surname>Va</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Faculty of Physics and Astronomy of the Vrije Universiteit</orgName>
+								<orgName type="department" key="dep2">Faculty of Medicine of the Vrije Universiteit</orgName>
+								<orgName type="department" key="dep3">Faculty of Mathematics, Computer Science</orgName>
+								<orgName type="institution">University of Amsterdam</orgName>
+								<address>
+									<addrLine>De Boelelaan 1081, 1007 RIB Amsterdam, Kruislaan 403</addrLine>
+									<postBox>p.0. Box 7057</postBox>
+									<postCode>1081 HV, 1098 SJ</postCode>
+									<settlement>Amsterdam, Amsterdam</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">the eijde</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">IEEE Instrumentation and Measurement Technology Conference Brussels</title>
+						<meeting> <address><addrLine>Belgium</addrLine></address>
+						</meeting>
+						<imprint>
+							<date type="published">June 4-6, 1996</date>
+						</imprint>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<abstract>
+				<p>525 7463, fax +31 20 525 7490 haw developed a prototype-instru-a new way to measure the shape of its propertks ~f (~ ~ ~ A &apos; s). Encoded that is mirrored to aracterization of and the refkcfed an integral recon</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>The anterior surface of the human eye (cornea) is for 84% responsible for the refraction of light and thus of eminent importance for good sight. Ophthalmologists have recognized the role of the cornea in the refraction process. A modern technique to improve a patient's sight is by adjusting the corneal surface. ?he rapid develop- ment of this keratorefractive surgery induced the need for accurate methods to evaluate the shape of the cor- nea. To measure the shape of the cornea standardiy a cylin- drically symmetrical ringpattern (stimulus) is mirrored to the eye. Analysis of the recorded reflection (Purkinje image) allows for reconstruction of the corneal surface. Available instruments employing this technique are known not to work ideally <ref type="bibr">[l]</ref>. In pathological cases with severely irregular or badly reflecting corneas, automatic recognition of the ringpattern often fails as the mires become extremely distorted or vague. Moreover, as it is impossible to uniquely identify positions along each ring it has to be assumed that reflection occurs in meridional planes to come to a description of the corneal shape per meridian only. We have developed a protolype-stimulus that exploits the virtues of Pseudo Random inary Arrays (PWBA's), which, encoded in a coloured stimuluspattern, contribute to a very robust measuremen~techniqu~ with uniquely characterized points. In our approach it is not necessary to make the aforementioned reflection-assumption ena- bling an integral reconstruction of the cornea. Details of our design are worked out in Section II. In Sec- tion III some experimental aspects of the stimulus are presented and the accuracy and robustness of our approach is studied. Section IV describes the recon- struction of the corneal surface.</p><p>The essence of our novel technique lies in the use of uniquely characterized positions both on the stimulus and in the recorded reflection. In this way a one-to-one correspondence between points on the stimulus and on the registering device is established which can be used to reconstruct the corneal shape. implementation of this design is facilitated by properties of Pseudo Random (Sri] I i &lt; n). Primi- tive polynomials with coefficients 0 or 1 provide the feed- back path of shif-tregisters that are used to generate these maximum length sequences. PRBA's exist in vari- ous sizes and have many useful distinguishing features.</p><p>The key virtue we use is the "window"-property: each bit- pattern seen through a prescribed window of k-by-1 (or larger) bits sliding over the array is unique. Conversely, each k-by4 (or larger) subpart of tlne PRBA uniquely defines a position in the PRBA. <ref type="figure" target="#fig_1">Fig. 1</ref> shows an example of a PRBA (with n = 3, m= 5, k = 2, I= 2). For a more for- mal treatment of PRBAs we refer to [2j. We have opted to encode a large PRBA (n = 65, m= 63, k = 6, I= 2) through a representation of the 0's and the 1's by two bright colours. A third colour (black in our approach) is necessary to provide distinction between adjacent bits of the same value. The assembled pattern presents a checkerboardpattern when mirrored to a sphere of radius 8 mm (average radius of the human eye). <ref type="figure" target="#fig_2">Fig. 2</ref> demonstrates our encoding of the PRBA of <ref type="figure" target="#fig_1">Fig. 1</ref> (the 0's and i's are added for clarity) Each posi- tion where two black squares meet ("crossing") can be uniquely labelled with the positional lrndices of the adja- cent bits in the encoded PRBA. The prototype-instrument devised by us is depicted in <ref type="figure">Fig. 3</ref>. It consists of a cylinder closed at one side con- taining a patiern (stimulus or stimulator) that is brightly lit from the back. The object to be measured is positioned in front of the open end; ,the reflected image (Purkinje image) is registered with a camera behind the other (closed) end. The camera used in this configuration is a Panasonic 3-CCD camera (GP-US502). Digitization of the resulting image is done with the Matrox Meteorhgb- framegrabber placed in a Dell Pentium 90 PC. Further processing of the captured information is done on a SUN SPARCclassic workstation within the SCIL-image image- procesising environment <ref type="bibr">[is]</ref> and the S-plus modelling environment <ref type="bibr">[6]</ref>.   <ref type="figure">Fig. 3</ref>. Crosscut of our prototype. The stimulus pattern, lit from the back by neon tubes, is mirrored to the eye, its reflection is registered with a camera.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Ill. PATTERN RECOGNITION</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Implementation</head><p>In uniquely identifying the crossings the first step is to localize them in the inputimage. This is done with a matched filter approach <ref type="bibr">[3]</ref>. Locations are accepted as crossings if the response to the matched filter exceeds a preset threshold value. By adjusting the threshold false- positive responses are eliminated. Secondly the colours of the adjacent coloured squares must be determined. In order to do this the relative RGB-values of the pixels of the coloured squares are aggregated, leaving out the pixels of the outermost two layers to diminish the effect of blurring. The relative colour of a pixel</p><formula xml:id="formula_0">(ri, gi, bi) is defined as ( r i / s j , g i / s i , b , / s i ) where si = ri + g, + b j .</formula><p>After this the relative colours are clustered with the K- means clustering algorithm into two groups representing the 0's and 1's 141. If the average relative colour of a square is closer to the centre of the 0-cluster than to the other it is identified as a 0, otherwise as 1. Thus we come to a tentative assignment of bitvalues. Subsequently, a graph is constituted by linking crossings to their respective neighbouring crossings. Here we take into account that with two neighbouring crossings the configuration of the coloured squares inverts. This proc- ess can be conceived as reconstructing the checker- boardpattern. From the checkerboard a binary "sub"- array is recovered (possibly not the entire PRBA is "rec- ognized" as not all the crossings might be identified). Matching of the subarray against the "mother"-PRBA leads to a unique identification of the crossings.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Colour experiments</head><p>A key problem that had to be solved was which colours should be used in our encoding. Obviously those colours should be taken that provide optimal recognition, also under noisy circumstances. To determine this we mir- rored patches of 6 colours (Red, Green, Blue, Cyan, agenta, Yellow) to a blue and a brown eye and a metal ball (as an ideal testobject for comparison), and deter- mined the average relative colour of the reflections regis- tered by our camera. circles of radius twice the corresponding standard devia- tion are drawn round each average; along the vertical axis is the normalized blue-coordinate, along the hori- zontal axis (the sloping lines in the graph) the normal- ized green-coordinate. From these figures it can be concluded that red and magenta are indistinguishable. Furthermore, red/ magenta, blue and green closely resemble a grey tint (the centre of the graph). Yellow and cyan lie farthest apart, providing the best distinction and thus the most optimal choice for our encoding.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Precision in the localization of pattern elements</head><p>The precision of our matched filter approach as to the localization of the crossings was tested in the following experiment. Artificial images were generated holding a checkerboard of 11 by 11 squares presenting our design. In each simu-  image the location of th crossings (IQ0 in total) was exactly known. The distance between neighbouring crossings was set to a prefixed number of pixels (block- size). The RGB-colour of the black, cyan and yellow squares were taken as (O,O,O), <ref type="bibr">( ,2!55,255)</ref>, <ref type="bibr">(255,255,O)</ref> respectively. To introduce disturbance u n ~ o ~ ~ e l ~ ~ ~ e d uni- formly distributed noise of preset sla ndard deviation was added to the individual colour channels sepaira~~~y. In this we try to relate the average distance between the real and detected location (and co~~espond~ng standard deviation) to the blocksize and the standard dei,/~a~ion of the applied noise. We expected to find deterioration of the results with small blocksizes and large arriounts of esuits are collated in <ref type="table" target="#tab_0">Table I</ref>. The results remain fairly stable under various amounts of noise and with different blocksizes. The procedure fails only with huge amounts of noise (SE9 200) and with small blocksize (6 pixels) as the average the standard deviation exceeds half the blocksize. A pre- cision of about 1 pixel in the localization of paltiern ele- ments is demonstrated under very noisy circurnstanees (SD 100) and with small pattern e ~ e i ~ e n ~ ~</p><p>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Accuracy in the identification of ~ 9 ~ ~ ~ e r n elmrenLs</head><p>To determine the accuracy of our j ~ e r ~ ~ j f i ~ a ~ i ~ t n proce- dure we devised four stimulus patterns encoding. The average blocksize register era when mirroring these stimuli to a s radius was 7 by 7, 9 by 9, 11 by 1 f or 13 by I3 pixels.</p><p>Table II relates the blocksize to the percentagc, = errone- ously identified blocks when mirrored to a b~lue or a brown eye or to a metal ball. sizes deviate from the blocksizes y as the two eyes and the metal ball do not present perfect spheres with 8 mm radius. From these tables it can be concluded that in the proc- ess of recovering the patlern from the inputimage a sig- nificant number of bits will be wrongly interpreted. Thus it is necessary to evaluate to what extent (despite misin- terpretations) it is still possible to come to a unique iden- tification of the subpattern (and thus to come to a compllete faultcorrection).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. Relocation experimenifs</head><p>te the robustness of the PR acterifation of subarrays we conducted the following experiment. From the " m a s t e ~ -~ ~ B A (the one which was used dur- ing the course of our roject with n = 63, m= 65, k = 6, I = 2) all rectangular sub rrays were taken of all sizes larger than 6 by 2. In each individual subarray bits were inverted with an a priory taken probability (noiselevel). Subsequently the master PRBA (M) was searched for the original position of each subarray (S) by sliding the subarray over the PRBA (relocation). At each position (x,y) the ~ a ~ m i n g distance was recorded (the number of different bitvalues):</p><formula xml:id="formula_2">k l IS(i, j ) -M ( x + i, y + j&gt;l (1)</formula><p>-.- (with k and I the height and the width of the subarray).</p><p>Correct relocation was admitted if a subarray had an absolute minimum in Hamming distance at its original position. <ref type="figure">Fig. 7</ref> illustrates this process for a specific sub- array containing 1550 bits at noise level 17.5%. <ref type="figure" target="#fig_7">Fig. 8</ref> summarizes the results of the simulations. Along I axis is the size of the subarray (height vertically the fraction of subarrays of a given size that could be correctly relocated. Each curve corresponds to a different noise level. From this figure it can be concluded that when no noise is applied all sub- arrays of all sizes will be correctly relocated. Conversely, the original position of not even one subarray is correctly identified when approximately 50% of the bits are inverted. At a noise level of 20% (worst case in our appli- cation, see <ref type="table" target="#tab_0">Table II</ref>) a rectangular subarray has to include minimally 150 bits to allow for correct relocation. Experiments with different randomseeds showed identi- cal profiles.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E Summary of the identification process</head><p>From our colourdiagrams it can be deduced that cyan and yellow, located farthest apart, provide the best pick for our encoding. Introduction of more colours (for exam- ple to incorporate additional information) is unrealistic as alternatives appear closely to either cyan or yellow ( ali subarrays of all sizes (relocation). Each curve shows the fraction correctly relocated subarrays 04 a given size at a specific noise level. 5 and <ref type="figure" target="#fig_5">Fig. 6</ref>). Under controlled, simulated circumstances we demon- strated a precision of one pixel in the localization of pat- tern elements, even under noisy circumstances ( 10lo1og(Signal/Noise) = 101Q10g(255/100) = 4.06) and with small pattern elements (six by six pixels per ele- ment). When the average size of pattern elements is 7 by 7 pix- els approximately 20% of them is wrongly interpreted. These errors can be totally corrected if the pattern con- tains a rectangular area of at least 150 bits (See <ref type="figure" target="#fig_7">Fig. 8</ref>).</p><p>As our prototype contains 4095 coloured blocks (= 65 times 63 bits) a resolution that is even slightly better than that of commercially available instruments (8 pixels per ring) is feasible.</p><p>O w approach enables an integral reconstruction of the corneal shape whereas standard techniques lead only to a description of the cornea in crosscuts. To exploit the benefit of our method we ~mp~emen~ed a reconstruction- algorithm that, as a first approximation, models the cor- neal shape as an ellipsoid with a fixed centre and 6 degrees of freedom (representing the length of the three axes and three rotation angles). Suppose a point 8 on the stimulus is reflected by the cor- nea in a point c on the ~ ~ ~ -c h ~ ~ (see <ref type="figure" target="#fig_8">Fig. 9</ref>). Given an instance of our modelfunction 7; it is possible to calculate a point s' on the stimulator that would be registered in c when mirrored lo the surface described by '8: (This can be done by simple backwards raytracing.) Our objective is to minimize 11 s' -8 I t for the crossings in our checker- board pattern, coming down to nonlinear parameteresti-      veloped instrument exploits properties of om Binary Arrays to capture the corneal re. Encoded in a coloured stimulus pattern PRBA's allow for a unique cha Simulations dernonstrale a hig dures in localizing padtern despite a significant number of misinterpretations in the rn dements, using the characteris- REM a complete faultcorrection is have introduced a unique charac- terization of points on the stimulus, integral reconstruc- tion of the corneal shape becomes possible. Thus we have developed a new measurement-technique provid- ing a resolution that is at least as good as that of com- mercially available instruments.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Binary</head><label></label><figDesc>Arrays. Pseudo Random Binary Arrays (PRBA's) (A[i,j] I i &lt; n, j &lt; m, A[i,j] E (0,l)) are the two dimensional analogon of Pseudo Random Binary S e ~ u ~ ~ c e s</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Example of a PRBA: each subarray of 2 by 2 or larger contains a unique bitpattern.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Example of our encoding: two colours are used to represent the bits of the PRBA of Fig. 1 (the 0's and 1's are added for clarity).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4 (</head><label>4</label><figDesc>metal ball), Fig. 5 (blue eye) and Fig. 6 (brown eye) show the results projected on the plane r + g + b =I :</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 6 .</head><label>6</label><figDesc>Relative response of our camera to six coloured patches mirrored to a metal ball: circles of radius twice the standard deviation are drawn round each average (r=Red, m = Magenta, b = Blue, c = Cyan, g = Green,Relative response of our camera to patches of six colours mirrored to a brown eve</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>lated</head><label></label><figDesc></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 8 .</head><label>8</label><figDesc>Fig. 8. Relocation properties of a PRBA: a searchprocess was undertaken to the original position of</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 9 .</head><label>9</label><figDesc>Fig. 9. General outline of the reconstructionprocess: s is a point on the stimulus that is registered in rc: on the E D ; s'would result in registration in ewhen mirrored to an instance of our modelfunction. The distance between all points 8 and s' is minimized by adjusting the parameters of the modelfunction.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head></head><label></label><figDesc>the parame~ers 0% the mo ard paramete~es~ima~~on p oiir r~cons~ruc~ion ~ ~ ~ g o ~ ~ ~ h m under artifi- es lasing a raytracing program i(P0VRAY 171) as well as with cal~b~a~ed steel balk and In the ~of the shape of a sphere of 8 mm was collates the ~ e s u ~ ~ s of ~ i e a s ~ r ~ ~ e ~ ~ radius of three steei balk with our ~ r o ~ o t y ~ e ai Zeiss era^^^^^^^ def~n~ng the gold st and minimal radius point measured wit The principal curvatures measu~ec~ with our instrument are derived from the apex of the ~ ~ c o ~ s ~ r u ~ ~ e ~ ellipsoid. ~ e s e ~ ~ ~ ~ a n c e of the results</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>CEU</head><label></label><figDesc></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" validated="false"><head>TABLE I PRECISION</head><label>I</label><figDesc>OF OUR LOCALIZATION PROCEDURE: EACH ENTRY PRESENTS THE AVERAGE DISTANCE BETWEEN THE FIEAL AND DETECTED LOCATION 1N PATTERNS WITH DIFFERENT BLOCKSIZES (IN PIXELS) AND WITH DIFFERENT AMOIONTS OF NOISE Blocksize Standard deviation of added noise</figDesc><table></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" validated="false"><head>TABLE I1 ACCURACY OF OUR IDENTlFlCAPlON PROCEDURE: THE PERCENTAGE OF WRONGLY {CLASSIFIED COLOURED SQUARES AT A GIVIEN BLOCKSIZE metal ball ~~~ ~~</head><label>I1</label><figDesc></figDesc><table></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2" validated="false"><head>Table IV holds</head><label>IV</label><figDesc></figDesc><table>the curvatures measure 
+apex of the right e 
+also with nonideal 
+
+ments is almost id 
+
+THE CURVATURE OF THREE STEEL BAILS M 
+~ 
+A 
+~ 
+~ 
+R 
+~ 
+~ 
+~ 
+WITH A 
+
+of three ~ e s ~ ~ e r s o n s ~ 
+It slhsws that 
+
+jects 'the outcome of the tli~do instru-
+
+K E ~ A T ~ ~ ~ T E R 
+
+A N 5 OUR F'RBTOTYPE 
+
+keratometer 
+cornea-
+topograph 
+
+/ object I Wmax Rmin I Ri'nax Rmin 1 
+
+"47 
+
+.01 
+
+I 3 I 8.01 1 8.01 j 7.99 1 7.99 I 
+
+</table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3" validated="false"><head>TABLE 1V THE CURVATURE OF THE CORNEAL APEX OF THRIEE</head><label>1V</label><figDesc></figDesc><table>EYES 
+MEASURED WITH A K ~ R ~ T O M ~ T E ~ 
+AND OUR PRC'TOTYPE 
+
+__l-s 
+
+cornea. 
+
+1 
+
+~ 
+o 
+~ 
+~ 
+~ 
+~ 
+a 
+~ 
+~ 
+
+I 
+
+7.36 I 7.26 1 7.26 1 7.23 
+
+</table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>OVJL</head><p>TS</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A Comparison of the TMS-1 and the Corneal Analysis System for the Evaluation of Abnormal Corneas</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">J</forename><surname>Antalis</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><forename type="middle">G</forename><surname>Lembach</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><forename type="middle">G</forename><surname>Carney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">the CL.AO journal</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="58" to="63" />
+			<date type="published" when="1993" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Pseudo-Random Sequences and Arrays</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><forename type="middle">J</forename><surname>Macwilliams</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><forename type="middle">J A</forename><surname>Sloane ; P. ~ U ~ I ~ ~ ~ K E</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Oosteirlinck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. of the I€%</title>
+		<meeting>of the I€%</meeting>
+		<imprint>
+			<date type="published" when="1976" />
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page" from="174" to="179" />
+		</imprint>
+	</monogr>
+	<note>Range lrnage Acquisition with a</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">lEEE Trans. on PAMI</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="148" to="165" />
+			<date type="published" when="1990" />
+		</imprint>
+		<respStmt>
+			<orgName>Single Binary-Encoded Light Pattern</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Chstering Algorithms</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">A</forename><surname>Hartigan</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1975" />
+			<publisher>John Wiley &amp; Sons</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Van Balen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Cate</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Koelma</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">W</forename><surname>Mosterd</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Scilimage: A multi-layered environment for use and development of image processing software</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Smeulders</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">fxperimental Environments for Computer Vi:sion and lrnage Processing</title>
+		<editor>H.E. Christensen and J.L. Crowley</editor>
+		<meeting><address><addrLine>Singapore</addrLine></address></meeting>
+		<imprint>
+			<publisher>World Scientific Press</publisher>
+			<date type="published" when="1993" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+				<title level="m">Seattle: StatSci</title>
+		<imprint>
+			<publisher>Maths~lft, Inc</publisher>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">993</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">KretzschmaLr and 6. Young, Raytracing worlds with POV-Ray</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Enzman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page" from="1" to="878739" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">A spline sutrface algorithm for reconstruction of corneal topography from a videokeratographic reflectilon pattern</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">A</forename><surname>Haistead</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><forename type="middle">A</forename><surname>Barsky</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">A</forename><surname>Klein</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">B</forename><surname>Mandell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Optometry and Vision Science</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="821" to="827" />
+			<date type="published" when="1995" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

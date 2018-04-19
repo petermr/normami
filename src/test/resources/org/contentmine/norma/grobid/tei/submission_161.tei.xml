@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:10+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MAGNETO-PHOTOLUMINESCENCE AS A PROBE OF PHASES IN QUANTUM HALL MULTI-LAYERS References: SL QW 0</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2002">2002. 2004. 2010</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">I</forename><surname>Shevchenko</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">V</forename><surname>Fil</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">A</forename><surname>Yakovleva</surname></persName>
+						</author>
+						<title level="a" type="main">MAGNETO-PHOTOLUMINESCENCE AS A PROBE OF PHASES IN QUANTUM HALL MULTI-LAYERS References: SL QW 0</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Low Temp. Phys</title>
+						<imprint>
+							<biblScope unit="volume">65</biblScope>
+							<biblScope unit="page">165302</biblScope>
+							<date type="published" when="2002">2002. 2004. 2010</date>
+						</imprint>
+					</monogr>
+					<note>________________________________ * corresponding author : 0.2 0.4 0.6 0.8</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<abstract>
+				<p>A variety of quantum phases due to the strong interlayer electronic correlations were predicted in electron multi-layers at the filling factor ν = 1[1]. As was demonstrated, depending on the ratio d/l B , where d is the interlayer separation and l B is the magnetic length, different ground states may be realized. Here we report on observation of the magnetic field driven quantum phase transitions in weakly coupled, intentionally disordered multiple quantum wells. The structure studied here consists of a 240 nm wide AlGaAs parabolic well modulated by a sequence of ten quantum wells with random widths separated by 4.2 nm barriers. The largest (34 nm) GaAs well (QW 0) is in the center of the parabolic well. The electron concentration in the parabolic well was 3.7x10 11 cm-2 and mobility 2x10 5 cm 2 /Vs. According to the calculations eight wells are occupied. They emit eight corresponding photoluminescence (PL) lines. At the magnetic field B=1.5T these wells reveal the miniband quantum Hall (QH) state with the total filling factor ν SL = 1. At B=3T another QH state with the filling factor ν SL = 0.5 emerges. The spin polarizations of both these QH states, as determined by PL measurements, are almost 100%. We attribute the state found at B=3T to the paired dimer state with the total filling factor ν D = 1 suggested in the QH multiple wells as the ground state with the lowest energy [2]. The peaks of the electron spin polarization manifest to the skyrmion origin of the respective quantum Hall states. With further increase of the magnetic field, at B=6T the slope of the Hall resistance increases. Our recent magnetoresistance experiments on this sample have shown that in this case the magnetic field induces a quantum transition separating two phases with different distributions of the electron density over the random wells Ref.[3]. In the high-field phase, the electrons in the lateral AlGaAs wells which form a collective skyrmion state are pinned at the random potential. While, the central GaAs well completely determines the in-plane magneto-resistance of the sample revealing well developed FQH states. The integrated intensities of the PL lines from the central well (QW 0) and from the neighboring wells (QW-1 and QW 2), associated with their occupations, directly demonstrate the magnetic field driven redistribution of the electrons: with increasing magnetic field the electrons move from the neighboring wells to the central well. We show that the miniband and dimer QH states vanish with increasing interlayer disorder. While, no significant effect of the disorder was observed on the single-layer high-field QH states.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>References:</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>[ 1 ]</head><label>1</label><figDesc>Figure. 1: (a) R xx and R xy as a function of the magnetic field, (b) integrated intensity of σpolarized PL from the central well QW 0 and from the lateral wells QW-1 , QW 2 , (c) spin polarization of the electrons in the central well measured in disordered multi-wells at T ≈ 300 mK.</figDesc></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl/>
+			</div>
+		</back>
+	</text>
+</TEI>

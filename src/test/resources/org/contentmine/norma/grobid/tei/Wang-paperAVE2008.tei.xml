@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:10+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Information Synthesis for Answer Validation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Rui</forename><surname>Wang</surname></persName>
+							<email>rwang@coli.uni-sb.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Saarland University</orgName>
+								<address>
+									<postCode>66123</postCode>
+									<settlement>Saarbrücken</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Günter</forename><surname>Neumann</surname></persName>
+							<email>neumann@dfki.de</email>
+							<affiliation key="aff1">
+								<orgName type="department">LT-Lab</orgName>
+								<orgName type="institution">DFKI</orgName>
+								<address>
+									<addrLine>Stuhlsatzenhausweg 3</addrLine>
+									<postCode>66123</postCode>
+									<settlement>Saarbrücken</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Information Synthesis for Answer Validation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Answer Validation</term>
+					<term>Recognizing Textual Entailment</term>
+					<term>Information Synthesis</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>This report is about our participation in the Answer Validation Exercise (AVE2008). Our system casts the AVE task into a Recognizing Textual Entailment (RTE) problem and uses an existing RTE system to validate answers. Additional information from named-entity (NE) recognizer, question analysis component, and so on, is also considered as assistances to make the final decision. In all, we have submitted two runs, one run for English and the other for German. They have achieved f-measures of 0.64 and 0.61 respectively. Compared with our system last year, which purely depends on the output of the RTE system, the extra information does show its effectiveness.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction and Related Work</head><p>Answer Validation is an important step for Question Answering (QA) systems, which aims to validate the answers extracted from natural language texts, and select the most proper answers for the final output.</p><p>Using Recognizing Textual Entailment (RTE-1 - <ref type="bibr" target="#b2">Dagan et al., 2006</ref>; RTE-2 -Bar- <ref type="bibr" target="#b0">Haim et al., 2006</ref>) to do answer validation has shown a great success ( <ref type="bibr" target="#b8">Peñas et al., 2007</ref>). We also developed our own RTE system and participated in AVE2007. The RTE system proposed a new sentence representation extracted from the dependency structure, and utilized the Subsequence Kernel method ( <ref type="bibr" target="#b1">Bunescu and Mooney, 2006</ref>) to perform machine learning. We have achieved fairly high results on both the RTE-2 data set ( <ref type="bibr" target="#b9">Wang and Neumann, 2007a</ref>) and the RTE-3 data set ( <ref type="bibr" target="#b10">Wang and Neumann, 2007b</ref>), especially on Information Extraction (IE) and QA pairs. However, on the AVE data sets, we still found much space for the improvement. Therefore, based on the system we developed last year, our motivation this year is to see whether using extra information, e.g. named- entity (NE) recognition, question analysis, etc., can make further improvement on the final results. This report will start with a brief introduction of our RTE system and then followed by the whole AVE system. The results of our two submission runs will be shown in section 4, and in the end, we will summarize our work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">The RTE System</head><p>The RTE system ( <ref type="bibr" target="#b9">Wang and Neumann, 2007a</ref>; <ref type="bibr" target="#b10">Wang and Neumann, 2007b</ref>) is developed for RTE-3 Challenge ( <ref type="bibr" target="#b4">Giampiccolo et al., 2007</ref>). The system contains a main approach with two backup strategies. The main approach extracts parts of the dependency structures to form a new representation, named Tree Skeleton, as the feature space and then applies Subsequence Kernels to represent TSs and perform Machine Learning. The backup strategies will deal with the T-H pairs which cannot be solved by the main approach. One backup strategy is called Triple Matcher, as it calculates the overlapping ratio on top of the dependency structures in a triple representation; the other is simply a Bag-of-Words (BoW) method, which calculates the overlapping ratio of words in T and H.</p><p>The main approach starts with processing H, since it is usually textually shorter than T, and the dependency structure also simpler. Tree skeletons are extracted based on the dependency structures derived by Minipar <ref type="bibr" target="#b6">(Lin, 1998</ref>) for English and SMES ( <ref type="bibr" target="#b7">Neumann and Piskorski, 2002</ref>) for German. There are nouns in the lower part of the parse tree, and they share a common parent node, which is (usually) a verb in the upper part. Since content words usually convey most of the meaning of the sentence, we will mark the nouns as Topic Words and the verb as the Root Node. Together with the dependency paths in between, they form a subtree of the original dependency structure, which can be viewed as an extended version of Predicate-Argument Structure ( <ref type="bibr" target="#b5">Gildea and Palmer, 2002</ref>). We call the subtree Tree Skeleton, the topic words Foot Nodes, and the dependency path from the noun to the root node Spine. If there are two foot nodes, the corresponding spines will be the Left Spine and the Right Spine.</p><p>On top of the tree skeleton of H, the tree skeleton of T can also be extracted. We assume that if the entailment holds from T to H, at least, they will share the same topics. Since in practice, there are different expressions for the same entity, we have applied some fuzzy matching techniques to correspond the topic words in T and H, like initialism, partial matching, etc. Once we successfully identify the topic words in T, we trace up along the dependency parse tree to find the lowest common parent node, which will be marked as the root node of the tree skeleton of T 1 .</p><p>After some generalizations, we merge the two tree skeletons by 1) excluding the longest common prefixes for left spines and 2) excluding the longest common suffixes for right spines. Finally, we will get the dissimilarity of the two tree skeletons and we call it Spine Differences, i.e. Left Spine Difference (LSD) and Right Spine Difference (RSD). Then, since all the remaining symbols are POS tags and (generalized) dependency relation tags, they altogether form a Closed-Class Symbol (CCS) set. The spine difference is thus a sequence of CCSs. To represent it, we have utilized a Subsequence Kernel and a Collocation Kernel ( <ref type="bibr" target="#b9">Wang and Neumann, 2007a</ref>).</p><p>We have also considered the comparison between root nodes and their adjacent dependency relations. We have observed that some adjacent dependency relations of the root node (e.g. &lt;SUBJ&gt;or &lt;OBJ&gt;) can play important roles in predicting the entailment relationship. For instance, the verb "sell" has a direction of the action from the subject to the object. In addition, the verb "sell" and "buy" convey totally different semantics. Therefore, we assign them two extra simple kernels named Verb Consistence (VC) and Verb Relation Consistence (VRC). The former indicates whether two root nodes have a similar meaning, and the latter indicates whether the relations are contradictive (e.g. &lt;SUBJ&gt; and &lt;OBJ&gt; are contradictive).</p><p>Finally, the main approach is assisted by two backup strategies: one is called the Triple Similarity and the other is called the BoW Similarity. Chief requirements for the backup strategy are robustness and simplicity. Accordingly, we construct a similarity function, which operates on two triple (dependency structure represented in the form of &lt;head, relation, modifier&gt;) sets and determines how many triples of H are contained in T. The core assumption here is that the higher the number of matching triple elements, the more similar both sets are, and the more likely it is that T entails H. The function uses an approximate matching function. Different cases (i.e. ignoring either the parent node or the child node, or the relation between nodes) might provide different indications for the similarity of T and H. We then sum them up using different weights and divide the result by the cardinality of H for normalization. The BoW similarity score is calculated by dividing the number of overlapping words between T and H by the total number of words in H after a simple tokenization according to the space between words. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Preprocessing and Post-processing</head><p>Since the input of the AVE task is a list of questions, their corresponding answers and the documents containing these answers, we need to adapt them into T-H pairs for the RTE system. For instance, the question is, How many "Superside" world championships did Steve Webster win between 1987 and 2004? (id=87) 2 The QA system gives out several candidate answers to this question, as follows, ten (id=87_1) 24 (id=87_2) … Each answer will have one supporting document where the answer comes from, like this, The most successful sidecar racer in Superside has been Steve Webster MBE, who has won ten world championships between 1987 and 2004. (id=87_1)</p><p>The assumption here is that if the answer is relevant to the question, the document which contains the answer should entail the statement derived by combining the question and the answer. This section will mainly focus on the combination of the question and the answer and in the next sections the RTE system and how to deal with the output of the system will be described.</p><p>In order to combine the question and the answer into a statement, we need some language patterns. Normally, we have different types of questions, such as Who-questions asking about persons, What-questions asking about definitions, etc. Therefore, we manually construct some language patterns for the input questions. For the example given above (id=87), we will apply the following pattern, Steve Webster won &lt;Answer&gt; "Superside" world championships between 1987 and 2004.</p><p>Consequently, we substitute the &lt;Answer&gt; by each candidate answer to form Hs -hypotheses. Since the supporting documents are naturally the Ts -texts, the T-H pairs are built up accordingly, Id: 87_1 Entailment: Unknown Text: The most successful sidecar racer in Superside has been Steve Webster MBE, who has won ten world championships between 1987 and 2004. Hypothesis: Steve Webster won ten "Superside" world championships between 1987 and 2004.</p><p>These T-H pairs can be the input for any generic RTE systems. In practice, after applying our RTE system, if the T-H pairs are covered by our main approach, we will directly use the answers; if not, we will use a threshold to decide the answer based on the two similarity scores. Therefore, every T-H pair has a triple similarity score and a BoW similarity score, and for some of the T-H pairs, we directly know whether the entailment holds. The post-processing is straightforward, the "YES" entailment cases will be validated answers and the "NO" entailment cases will be rejected answers. In addition, the selected answers (i.e. the best answers) will naturally be the pairs covered by our main approach or (if not,) with the highest similarity scores.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Additional Components</head><p>The RTE system is used as a core component of the AVE system. Based on the error analysis of last year's results, this year we use additional components to filter out noisy candidates. Therefore, two extra components are added to the architecture, the NE recognizer and the question analyzer. For NE recognition, we use StanfordNER ( <ref type="bibr" target="#b3">Finkel et al., 2005</ref>) for English and SPPC ( <ref type="bibr" target="#b7">Neumann and Piskorski, 2002</ref>) for German; and for question analysis, we use the SMES system ( <ref type="bibr" target="#b7">Neumann and Piskorski, 2002</ref>). The detailed workflow is as follows,</p><p>1. Annotate NEs in H, store them in an NE list; if the answer is an NE, store the NE type as A'_Type;</p><p>2. Analyze the question and obtain expected answer type, store it as A_Type;</p><p>3. Synthesize all the information, i.e. NE list, A_Type, A'_Type, BoW similarity, Triple similarity, etc. As for the example mentioned above (id=87), the additional information will be, NE list: Steve Webster (person), 1987 (date), 2004 (date); A_Type: Number A'_Type: Number</p><p>Then, heuristic rules are straightforward to be applied, e.g. checking the consistence between A_Type and A'_Type, checking whether all (or how many of) the NEs also appear in the documents, etc. All these results together with the outputs of the RTE system will be synthesized to make the final decision.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Results</head><p>We have submitted two runs for this year's AVE tasks, one for English and one for German. In the following, we will first show the table of the results and then present an error analysis. In the table, we notice that both for English and German, our validation system outperforms the best QA systems, which suggests the necessity of the validation step. Although there is a gap between the system performance and the perfect selection, the results are quite satisfactory. If we compare this year's results with last year's, the additional information does improve the results significantly.</p><p>Comparing the recall and precision, for both languages, the latter is worse. Therefore, we did some error analysis to see whether there is still some space for improvements. An interesting example in the English data is as follows,</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Question: What is the name of the best known piece by Jeremiah Clarke? (id=0011) Answer: a rondo (id=0011_7) Document: The most famous piece known by that name, however, is a composition by Jeremiah Clarke, properly a rondo for keyboard named Prince of Denmark's March.</head><p>Our system wrongly validated this answer, because "a rondo" is not the name of that music work. In fact, what we need here is a special proper name recognizer which can differentiate whether the noun is a name for a music work.</p><p>In the German data, other kinds of errors occur. For instance, Question: Wer war Russlands Verteidigungsminister 1994? (id=0020 3 ) Answer: Pawel Gratschow (id=0020_6)</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Document: Wie der russische Verteidigungsminister Pawel Gratschow am Mittwoch in Tiflis weiter bekanntgab, will Rußland insgesamt fünf Militärstützpunkte in den Kaukasus- Republiken Georgien, Armenien und Aserbaidschan einrichten. 1994-02-02</head><p>The key problem here is that the year "1994" in the document might not be the year when the event happened, but the year of the report. This asks us to further synthesize the information we have, i.e. NE annotation and dependency parsing, to make better use of them.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Conclusion and Future Work</head><p>To sum up, in this paper, we described our participation of AVE 2008. Based on the experience of last year's participation, apart from the RTE core system, we add two extra components, NE recognizer and question analyzer, to further improve the results. The strategy is quite successful according to the comparison of system performances.</p><p>However, the problem has not been fully solved. Due to the noisy web data, filtering some documents in the preprocessing step could be even more effective than working on the post-processing phase. Another direction considered by us is to take a closer look at the different performances between different languages.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Our AVE system uses the RTE system (Tera-Textual Entailment Recognition for Application) as a core component. The preprocessing module mainly adapts questions, their corresponding answers, and supporting documents into Text (T)Hypothesis (H) pairs, assisted by some manually designed patterns. The post-processing module (i.e. the Answer Validation in the picture) will validate each answer and select a most proper one based on the output of the RTE system. The new modules added are the NE Recognition and Question Analysis. Thus, we will have extra information like NEs in the answers, Expected Answer Types (EATs), etc.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" validated="false"><head>Table 1 .</head><label>1</label><figDesc></figDesc><table>Results of our submissions compared with last year's 
+
+Submission 
+Runs 
+Recall 
+Precision 
+F-measure 
+Estimated QA 
+Performance 
+
+QA 
+Accuracy 
+100% VALIDATED (EN) 
+1 
+0.08 
+0.14 
+N/A 
+N/A 
+50%VALIDATED (EN) 
+0.5 
+0.08 
+0.13 
+N/A 
+N/A 
+Perfect Selection (EN) 
+N/A 
+N/A 
+N/A 
+0.56 
+0.34 
+Best QA System (EN) 
+N/A 
+N/A 
+N/A 
+0.21 
+0.21 
+dfki07-run1 (EN) 
+0.62 
+0.37 
+0.46 
+N/A 
+0.16 
+dfki07-run2 (EN) 
+0.71 
+0.44 
+0.55 
+N/A 
+0.21 
+dfki08run1 (EN) 
+0.78 
+0.54 
+0.64 
+0.34 
+0.24 
+
+100% VALIDATED(DE) 
+1 
+0.12 
+0.21 
+N/A 
+N/A 
+50% VALIDATED (DE) 
+0.5 
+0.12 
+0.19 
+N/A 
+N/A 
+Perfect Selection (DE) 
+N/A 
+N/A 
+N/A 
+0.77 
+0.52 
+Best QA System (DE) 
+N/A 
+N/A 
+N/A 
+0.38 
+0.38 
+dfki08run1 (DE) 
+0.71 
+0.54 
+0.61 
+0.52 
+0.43 
+
+</table></figure>
+
+			<note place="foot" n="1"> The Root Node of T is not necessary to be a verb, instead, it could be a noun, a preposition, or even a dependency relation.</note>
+
+			<note place="foot" n="2"> The &quot;id&quot; comes from AVE 2008 test data, i.e. &quot;AVE2008-annotated-test-EN.xml&quot;.</note>
+
+			<note place="foot" n="3"> This &quot;id&quot; comes from &quot;AVE2008-annotated-test-DE.xml&quot;.</note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The Second PASCAL Recognising Textual Entailment Challenge</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Bar-Haim</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Dagan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Dolan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Ferro</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Giampiccolo</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Magnini</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Szpektor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Second PASCAL Challenges Workshop on Recognising Textual Entailment</title>
+		<meeting>the Second PASCAL Challenges Workshop on Recognising Textual Entailment<address><addrLine>Venice, Italy</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Subsequence Kernels for Relation Extraction</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Bunescu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Mooney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems 18</title>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">The PASCAL Recognising Textual Entailment Challenge</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Dagan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">O</forename><surname>Glickman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Magnini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">MLCW 2005, LNAI</title>
+		<editor>QuiñoneroCandela et al.</editor>
+		<imprint>
+			<publisher>Springer-Verlag</publisher>
+			<date type="published" when="2006" />
+			<biblScope unit="volume">3944</biblScope>
+			<biblScope unit="page" from="177" to="190" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Incorporating Non-local Information into Information Extraction Systems by Gibbs Sampling</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Jenny</forename><forename type="middle">Rose</forename><surname>Finkel</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Trond</forename><surname>Grenager</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 43nd Annual Meeting of the Association for Computational Linguistics (ACL 2005)</title>
+		<meeting>the 43nd Annual Meeting of the Association for Computational Linguistics (ACL 2005)</meeting>
+		<imprint>
+			<date type="published" when="2005" />
+			<biblScope unit="page" from="363" to="370" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The Third PASCAL Recognizing Textual Entailment Challenge</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Giampiccolo</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Magnini</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Dagan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Dolan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Workshop on Textual Entailment and Paraphrasing</title>
+		<meeting>the Workshop on Textual Entailment and Paraphrasing<address><addrLine>Prague</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2007-06" />
+			<biblScope unit="page" from="1" to="9" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The Necessity of Parsing for Predicate Argument Recognition</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Gildea</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Palmer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 40th Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 40th Meeting of the Association for Computational Linguistics<address><addrLine>Philadelphia, PA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2002" />
+			<biblScope unit="page" from="239" to="246" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Dependency-based Evaluation of MINIPAR</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Workshop on the Evaluation of Parsing Systems</title>
+		<imprint>
+			<date type="published" when="1998" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">A Shallow Text Processing Core Engine</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Neumann</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Piskorski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="451" to="476" />
+			<date type="published" when="2002" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Overview of the Answer Validation Exercise</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Anselmo</forename><surname>Peñas</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Álvaro</forename><surname>Rodrigo</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Felisa</forename><surname>Verdejo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">the CLEF 2007 Working Notes</title>
+		<imprint>
+			<date type="published" when="2007" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Recognizing Textual Entailment Using a Subsequence Kernel Method</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Neumann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. of AAAI</title>
+		<meeting>of AAAI</meeting>
+		<imprint>
+			<date type="published" when="2007" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Recognizing Textual Entailment Using Sentence Similarity based on Dependency Tree Skeletons</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Neumann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Workshop on Textual Entailment and Paraphrasing</title>
+		<meeting>the Workshop on Textual Entailment and Paraphrasing<address><addrLine>Prague</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2007-06" />
+			<biblScope unit="page" from="36" to="41" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">DFKI-LT at AVE 2007: Using Recognizing Textual Entailment for Answer Validation</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Neumann</surname></persName>
+		</author>
+		<idno>ISBN: 2-912335-31-0</idno>
+	</analytic>
+	<monogr>
+		<title level="m">online proceedings of CLEF 2007 Working Notes</title>
+		<meeting><address><addrLine>Budapest, Hungary</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2007-09" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

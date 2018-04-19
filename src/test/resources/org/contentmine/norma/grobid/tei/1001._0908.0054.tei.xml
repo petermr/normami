@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:10+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Ultra light bosonic dark matter and CMB</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Ivan</forename><surname>Rodriguez Montoya</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Departamento de Física</orgName>
+								<orgName type="department" key="dep2">Centro de Investigación y de Estudios Avanzados del IPN</orgName>
+								<address>
+									<addrLine>07000 México D.F</addrLine>
+									<postBox>A.P. 14-740</postBox>
+									<country key="MX">México</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Tonatiuh</forename><forename type="middle">Matos</forename><surname>Chassin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Departamento de Física</orgName>
+								<orgName type="department" key="dep2">Centro de Investigación y de Estudios Avanzados del IPN</orgName>
+								<address>
+									<addrLine>07000 México D.F</addrLine>
+									<postBox>A.P. 14-740</postBox>
+									<country key="MX">México</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Ultra light bosonic dark matter and CMB</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<abstract>
+				<p>In this work we report the cosmological effects that a species of Ultra Light Bosonic Dark Matter imprints in the Acoustic Peaks of the CMB, and some of its thermic features. We show that the effect of the Bose-Einstein statistics is small albeit perceptible, and is equivalent to an increase of non-relativistic matter. It is also noted the mass-to-temperature ratio necessary for being still a Dark Matter candidate. And it is needed a non-zero optical depth of Reionization.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>It has been argued that a Scalar Field may be a candidate to form the main component of the total Dark Matter in the universe <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5]</ref>, this alternative is called the SFDM model. The mass of this Scalar Field is assumed ultra light (∼ 10 −22 eV ), and obey an equuation of state p = ωρ, with −1 ≤ ω ≤ 1. It is also interesting that this type of matter can form astrophysical objects called Boson Stars <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b6">7]</ref>. The SFDM model has been tested on galactic scales <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10]</ref>. On the other hand, at cosmological scales, the most powerful observable to rule out theoretical models is the Cosmic Mi- crowave Background (CMB) spectrum. In <ref type="bibr" target="#b10">[11]</ref> it is studied the modification of the spectrum assuming an interaction with the baryonic sector.</p><p>In the present treatment we analyze how the values of different parameters change the amplitudes of the acousitic peaks with no interaction at all. There is a fermionic particle which shares some similitudes with this hypothetical bosonic species, that is, the neutrino. In fact, its study as a candidate for Dark Matter can serve as an antecedent for our goal. The neutrino was the first promising particle candidate to be the whole Dark Matter of the universe. That is because of their low interacting rate with baryons and the evidence of the flavour oscillations which strongly sug- gest a non-zero neutrino mass. Even though, there are some unavoidables problems that indicate that the neutrinos can not be the whole Dark Matter of the universe <ref type="bibr" target="#b11">[12]</ref>. Very early in the universe, neutrinos were in thermal equi- librium with the primeval fireball. Due to its low mass com- pared with its temperature in this epoch, they behave exactly as radiation. After decoupling, they relax only with the expan- sion of the universe as T ν ∝ a −1 , and eventually its tempera- ture falls below its mass. It is known as the non-relativistic transition (NRT). Besides, once decoupled, its temperature remain well determined in terms of the temperature photons T ν = (4/11) 1/3 T γ , which fixes the neutrino number density today to n (0) ν ∼ 100cm −3 . An important intrinsic part of its nature is that they are fermions and then their density has an upper bound. Thus the content of neutrinos Ω ν is entirely parameterized by its mass, i.e., m ν ≈ Ω ν 51.013 eV <ref type="bibr" target="#b12">[13]</ref>.</p><p>Between the times of decoupling and the non-relativistic transition, neutrinos just free-stream due to the negligible in- teraction with the rest of the matter. Thus, the combined effect of free-streaming and radiation behavior clears off the fluctu- ations of δ ν ≡ δ ρ ν /ρ ν . This means that there is no contribu- tion to the acoustic oscillations in the CMB due to massless (or relativistic) neutrions.</p><p>On the other hand, after the non-relativistic transition, the neutrinos behave closely as Cold Dark Matter. The fluctua- tions begin to grow quickly until they reach the Cold Dark Matter rate, that is δ ν ∝ a. Thus, the structure formation has a contribution in the neutrino gravitational fluctuations after the NRT. However, in most standard models, this transition takes place well after the matter dominated epoch and the neutrino contribution becomes subdominant. The effect of the neutri- nos in the CMB is not negligible, although, it is too low to be considered as the whole component of Dark Matter <ref type="bibr" target="#b13">[14]</ref>.</p><p>In the following, we assume the value of the temperature of the CMB photons today T CMB = 2.726 K, the Hubble's constant H 0 = 75.0km s −1 M pc −1 , and a flat geometry with a Cosmological Constant Λ, just for simplicity. It is choosed units in which c = k B = 1, then, 1 K ∝ 10 −5 eV . This paper is organized as follows. Section 2 is concerned to state the key equations of this calculation. Section 3 discusses the results, and the conclusions are enclosed in section 4.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. ULTRA LIGHT BOSONS AS DARK MATTER</head><p>We consider a Bosonic Ultra Light species of matter. We just know that (i) it is a boson, (ii) with a mass m B ∼ 10 −22 eV . (iii) It should be ultra-relativistic when decoupled, behaving thus, as radiation. Note that in this approach the Dark Matter is not treated as a Scalar Field, but as a bosonic particle. The equation of state at the moment of decoupling is assumed to be ω = 1/3, corresponding to radiation. We want to inves- tigate if the Ultra Light Bosonic Dark Matter (ULBDM) can form the main component of Dark Matter and reproduce the observed CMB spectrum. The geometry of this universe is described by the Friedmann-LemaˆıtreLemaˆıtre (FL) metric, perturbed to first order and we take the conformal newtonian gauge</p><formula xml:id="formula_0">ds 2 = a 2 −(1 + 2ψ)dτ 2 + (1 − 2φ )dx i dx i .<label>(1)</label></formula><p>Where τ is the proper time. In this gauge the tensor and vector degrees of freedom are eliminated from the begining and it just appear the scalar modes (ψ and φ ) of the perturbation.</p><p>Following the same formalism developed for the fermionic sector <ref type="bibr" target="#b14">[15]</ref>, it is useful to define the corrected proper mo- mentum q i ≡ a p i , q j = q n j , where n j is its direction unit vector and a is the scale factor. The proper momentum p i was defined in terms of the canonical conjugate momentum P i = a(1 − ψ)p i of the the comoving coordinate x i . The co- movil proper energy is ε ≡ a(p 2 + m 2 ) 1/2 . We also know that the linear metric perturbations induce linear statistical pertur- bations in the distribution function.</p><formula xml:id="formula_1">f (x i , P j , τ) = f 0 (q) 1 + Ψ(x i , q, ˆ n j , τ) ,<label>(2)</label></formula><p>where f 0 is the phase-space distribution function in an homo- geneus background universe</p><formula xml:id="formula_2">f 0 (q) = 1 e q/T B − 1<label>(3)</label></formula><p>and Ψ is related to the perturbation of the bosons temperature</p><formula xml:id="formula_3">Ψ(x i , q, ˆ n j , τ) = − ∂ ln f 0 ∂ ln q (q) δ T B T B (x i , q, ˆ n j , τ).<label>(4)</label></formula><p>The evolution of the ULBDM is described by the collision- less Boltzmann (or Vlasov) equation, which in Fourier space reads</p><formula xml:id="formula_4">˙ Ψ − i q ε Ψ = − ( k · ˆ n) ˙ ψ + i ε q ( k · ˆ n)φ ∂ ln f 0 ∂ ln q .<label>(5)</label></formula><p>This equation gives the response of the phase-space distribu- tion function to the metric perturbations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. TESTING WITH THE CMB</head><p>The first interrogative is whether the CMB is effectively sensitive to the nature of the statistics of the SFDM. We denote the mass-to-temperature ratio of some species of fermions as x F , and a species of bosons as x B , evaluated today. We com- pute the CMB spectrums for fermions and bosons separetely. It is important to mantain all the parameters fixed in order to observe only the effect of the change of the statistics. In <ref type="figure" target="#fig_0">figure 1</ref> one can see that for bosons, the amplitudes of the first and second peaks are reduced, albeit the third peak is in- creased respect to the corresponding of fermions. This is an effect similar to that due to an icrease in the ratio between the non-relativistic Matter and the Radiation. Thus, it could be interpreted as an additional effective attractive potential.</p><p>Here, the main problem is that the temperature of the ULBDM is entirely unknown. This fact is due to the unknown way of colliding with the rest of the matter. Moreover, if the interaction rate was always zero, thus there is no reason to believe that this species was in thermal equilibrium with the primeval fireball. Without any interactions between the parti- cles, there is no even a physical meaning for the temperature. However, we suppose that there was some primordial decay which generated the ULBDM. It also decoupled very early (maybe near the Big Bang). Once the species is decoupled from the rest of matter, its phase-space distribution function is "freezed-out" and its temperature can only relax with the expansion of the universe T B ∼ a −1 . Then, after photon de- coupling, the temperature of the bosons just can be</p><formula xml:id="formula_5">T B = αT γ ,<label>(6)</label></formula><p>where α is a constant free parameter to be determined. It is crucial to note that if T B ∼ T γ , the quantity</p><formula xml:id="formula_6">x B ≡ m B T (0) B<label>(7)</label></formula><p>is effectively zero, which means that the particle is ultra- relativistic today (x B = m B /αT CMB ). The addition of ULBDM to the total matter background with this value of x B just moves the entire CMB spectrum to the right and upwards. The effect is shown in <ref type="figure" target="#fig_1">figure 2</ref>. In all the following figures: Ω = 1, Ω Λ = 0.74, Ω bar = 0.04, and the crosses form the curve of the mean value of the observed CMB spectrum.</p><p>For all the values α 10 −25 it is noticed that the predicted power spectrum is not sensitive to the change of α unless it approaches to α = 10 −26 (x B = 10 4 ) or greater. The order of magnitude needed to fit the data is α ∝ 10 −27 (x B ∝ 10 5 ). The mass of the ULBDM must be five orders of magnitude greater than its temperature. In <ref type="figure" target="#fig_2">figure 3</ref> it is plotted how the CMB power spectrum is sensitive to little changes of α. The range shown is from α = 0.3x10 −27 to α = 1.1x10 −27 (from x B = 73, 367.57 to x B = 40, 759.76). It is noted that, the more relativistic the species is, the more enhanced the first and sec- ond peaks are.</p><p>In <ref type="figure" target="#fig_3">figure 4</ref> it is shown the prediction for α = 10 −28 (second curve from bottom to top). In this case, the ULBDM become non-relativistic very early, causing a damping in the acoustic oscillations because of an increase in the gravitational poten- tial wells. On the bottom of the same figure also appears the curve for α = 10 −30 , in which the same effect is enhanced.</p><p>Once the necessary mass-to-temperature ratio is estimated, we now investigate the content of bosons against the content     of Cold Dark Matter. <ref type="figure" target="#fig_4">Figure 5</ref> shows how the increase in Cold Dark Matter diminishes the amplitude of the oscillations. This is an effect of an enhancement of the gravitational potential wells. It also seems to suggest a universe with these two con- tents equilibrated. Nevertheless, we must measure the effect of the fraction of reionized baryonic matter too. We fix all the parameters and now vary the optical depth in <ref type="figure" target="#fig_5">figure 6</ref>. We show that a universe ULBDM-dominated (Ω B = 0.2) could be allowed for x B ∝ 10 5 and τ between 0.05 and 0.19. Now we just want to say something about the number den- sity of the SFDM. Firstly, we must keep in mind that in this scheme, there is no condensation explicitly taked into account yet. Next, if we must assume that nowadays the ULBDM par- ticles behave as non-relativistic, so we can use</p><formula xml:id="formula_7">m B n B = Ω B ρ c .<label>(8)</label></formula><p>Then if one fixes the mass, the content of bosons in the uni-verse Ω B determines its number density. For m B ≈ 10 −22 and Ω B = 0.2 it follows that n B ≈ 10 25 cm −3 . Such a big density must be accompanied by a Bose-Einstein condensate treat- ment of this matter. That is the aim of one following work to be presented.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CONCLUSIONS</head><p>A universe dominated by Ultra Light Bosonic Dark Matter in a non-condensate state could be possible only if these par- ticles fulfill the condition that its mass-to-temperature ratio must be close to ∼ 10 5 . For a mass ∼ 10 −22 eV , this is equiv- alent to a temperature of the order of ∼ 10 −27 eV ∼ 10 −22 K. Until now, there is no way to falsify such a low temperature unless it can be given a mechanism of interaction with the rest of the matter or a primeval decay which had could generate the ULBDM. The energy of interaction would reveal the tem- perature of decoupling. Then the temperature of the ULBDM would be determined and it could be predicted a set of allowed values of the parameter α. If this interaction can be parameter- ized by a constant of interaction, then the CMB data can serve to predict an allowed range of values for this constant. This range could be used to search this particles by other means.</p><p>We have shown that the effect of Reionzation is of crucial importance to understand the nature of this type of matter in the CMB. To get in concordance between the model and the observations, it is needed at least a value of τ 0.07.</p><p>The most promising and physically interesting feature of the ULBDM or SFDM resides on its condensate state <ref type="bibr" target="#b15">[16]</ref>, <ref type="bibr" target="#b16">[17]</ref>, <ref type="bibr" target="#b17">[18]</ref>. We have shown that the change in the type of statistics in the distribution function has non negligible ef- fects in the CMB. It remains to include explicitly the infor- mation of a Bose-Einstein condensate in the dynamical equa- tions. The number density of the ULBDM (∼ 10 −22 eV ), if it dominated the Dark Matter content, should be of the order of ∼ 10 25 cm −3 today. It is necessary to investigate whether the condition x B ∝ 10 5 should be still satisfied in a condensate state, or not.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: CMB spectrums for Ω F = Ω B = 0.2, x F = x B = 63109, τ = 0.13. All the parameters are the same for both curves. The continuous line corresponds to bosons and the dashed line to fermions.</figDesc><graphic url="image-1.png" coords="2,317.01,52.08,255.12,178.58" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: CMB spectrum for a Universe with Ω B = 0.2, Ω CDM = 0.02, α 10 −26 .</figDesc><graphic url="image-3.png" coords="3,54.00,274.37,255.12,178.58" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 :</head><label>3</label><figDesc>Figure 3: Response of the CMB spectrum to the change in the massto-temperature ratio of the SFDM. For the three curves Ω B = 0.2, Ω CDM = 0.02, α ∝ 10 −27 .</figDesc><graphic url="image-4.png" coords="3,54.00,507.58,255.12,178.58" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 :</head><label>4</label><figDesc>Figure 4: CMB spectrums for α in the interval (10 −26 , 10 −30 ). With Ω B = 0.2, Ω CDM = 0.02, and no reionization.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 :</head><label>5</label><figDesc>Figure 5: CMB power spectrums for diferent contents of ULBDM and CDM. For the three curves shown α ∝ 10 −27 , no reionization.</figDesc><graphic url="image-6.png" coords="3,317.01,276.69,255.12,178.58" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 :</head><label>6</label><figDesc>Figure 6: CMB power spectrums for diferent optical depths of reionization. The range shown is from τ = 0.05 to τ = 0.19. Ω Bos = 0.2, Ω CDM = 0.02, α ∝ 10 −27 .</figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>We would like to thank Luis Arturo Ureña López, Ab-del Pérez Lorenzana, Omar Miranda Romagnoli, Ricardo López Fernández and Roy Maartens for useful discussions. This work was partially supported by CONACyT México, under grants 49865-F, 216536/219673 and by grant number I0101/131/07 C-234/07, Instituto Avanzado de Cosmologia (IAC) collaboration.</p><p>All the analysis was done using the public code CMBFAST <ref type="bibr" target="#b18">[19]</ref>. And all the calculated curves were compared to the ob-serbations of the WMAP satellite on its last five years. Avail-able at http://lambda.gsfc.nasa.gov/product/map/current.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Barkana</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Gruzinov</surname></persName>
+		</author>
+		<idno>astro-ph/0003365</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="1158" to="1161" />
+			<date type="published" when="2000" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Matos</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Siddhartha</forename><surname>Guzman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename></persName>
+		</author>
+		<idno>gr-qc/9810028</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Class.Quant.Grav</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="9" to="16" />
+			<date type="published" when="2000" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Matos</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Siddhartha</forename><surname>Guzman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Urena-Lopez</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><forename type="middle">A</forename></persName>
+		</author>
+		<idno>astro-ph/9908152</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Class.Quant.Grav</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1707" to="1712" />
+			<date type="published" when="2000" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Matos</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><forename type="middle">A</forename><surname>Urena-Lopez</surname></persName>
+		</author>
+		<idno>astro-ph/0006024</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys.Rev</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">63506</biblScope>
+			<date type="published" when="2001" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">A</forename><surname>Garcia-Aspeitia</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Matos</surname></persName>
+		</author>
+		<idno>gr-qc/0906.327</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Jae-Weon</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">In-Gyu</forename><surname>Koh</surname></persName>
+		</author>
+		<idno>hep-ph/9507385</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. D</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="2236" to="2239" />
+			<date type="published" when="1996" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Siddhartha</forename><surname>Guzman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename></persName>
+		</author>
+		<idno>gr- qc/0512081</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. D</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page">21501</biblScope>
+			<date type="published" when="2006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Bernal</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Matos</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Núñez</surname></persName>
+		</author>
+		<idno>astro- ph/0303455</idno>
+		<imprint>
+			<date type="published" when="2008" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Matos</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Vazquez-Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Magana</surname></persName>
+		</author>
+		<idno>astro- ph/0806.0683</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">G</forename><surname>Böhmer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Harko</forename><forename type="middle">T</forename><surname>Jcap06</surname></persName>
+		</author>
+		<idno>astro- ph/0705.4158v4</idno>
+		<imprint>
+			<date type="published" when="2007" />
+			<biblScope unit="page">25</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Ferrer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">A</forename><surname>Grifols</surname></persName>
+		</author>
+		<idno>astro- ph/0407532</idno>
+		<imprint>
+			<date type="published" when="2004" />
+			<biblScope unit="page">12</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">Modern</forename><surname>Dodelson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Cosmology</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003" />
+			<publisher>Academic Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><forename type="middle">W</forename><surname>Kolb</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Turner</forename><forename type="middle">M</forename></persName>
+		</author>
+		<title level="m">The Early Universe</title>
+		<imprint>
+			<publisher>AddisonWesley</publisher>
+			<date type="published" when="1990" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Lesgourgues</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Pastor</surname></persName>
+		</author>
+		<idno>astro-ph/0603494</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physics Reports</title>
+		<imprint>
+			<biblScope unit="volume">429</biblScope>
+			<biblScope unit="page" from="307" to="379" />
+			<date type="published" when="2006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Bertschinger</forename><forename type="middle">E</forename></persName>
+		</author>
+		<idno>astro- ph/9506072</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Astrophys. J</title>
+		<imprint>
+			<biblScope unit="volume">455</biblScope>
+			<date type="published" when="1995" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><forename type="middle">P</forename><surname>Woo</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><forename type="middle">C</forename><surname>Chiueh</surname></persName>
+		</author>
+		<idno>astro- ph/0806.0232</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ApJ</title>
+		<imprint>
+			<biblScope unit="volume">697</biblScope>
+			<biblScope unit="page" from="850" to="861" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><forename type="middle">A</forename><surname>Ureña-López</surname></persName>
+		</author>
+		<idno>gr-qc/0104093</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Class. Quantum Grav</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="2617" to="2632" />
+			<date type="published" when="2002" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><forename type="middle">A</forename><surname>Ureña-López</surname></persName>
+		</author>
+		<idno>gr-qc/0806.3093</idno>
+		<imprint>
+			<date type="published" when="2009" />
+			<biblScope unit="page">14</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">U</forename><surname>Seljak</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Zaldarriaga</surname></persName>
+		</author>
+		<idno>astro-ph/9603033</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Astrophys. J</title>
+		<imprint>
+			<biblScope unit="volume">469</biblScope>
+			<date type="published" when="1996" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

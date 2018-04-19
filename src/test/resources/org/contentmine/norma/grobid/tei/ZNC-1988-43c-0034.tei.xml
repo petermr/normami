@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:13+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Novel Sesquiterpene Ethers from Liquid Cultures of the Wood-Rotting Fungus Lentinus lepideus</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="1988">1988</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Wolf-Rainer</forename><surname>Abraham</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Hans-Peter</forename><surname>Hanssen</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Claudius</forename><surname>Möhringer</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">GBF -Gesellschaft für Biotechnologische Forschung mbH</orgName>
+								<orgName type="department" key="dep2">Lehrstuhl für Pharmakognosie</orgName>
+								<orgName type="institution">Universität Hamburg</orgName>
+								<address>
+									<addrLine>Mascheroder Weg 1, Bundesstraße 43</addrLine>
+									<postCode>D-3300, D-2000</postCode>
+									<settlement>Braunschweig, Hamburg 13</settlement>
+									<country>Bundesrepublik Deutschland, Bundesrepublik Deutschland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Institut für Organische Chemie</orgName>
+								<orgName type="institution">Universität Hamburg</orgName>
+								<address>
+									<addrLine>Martin-Luther-King-Platz 6</addrLine>
+									<postCode>D-2000</postCode>
+									<settlement>Hamburg 13</settlement>
+									<country key="DE">Bundesrepublik Deutschland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Novel Sesquiterpene Ethers from Liquid Cultures of the Wood-Rotting Fungus Lentinus lepideus</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Z. Naturforsch</title>
+						<imprint>
+							<biblScope unit="volume">43</biblScope>
+							<biblScope unit="page" from="24" to="28"/>
+							<date type="published" when="1988">1988</date>
+						</imprint>
+					</monogr>
+					<note type="submission">received August 18/October 30, 1987</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<abstract/>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Fruit-bodies of the wood-rotting basidiomycete Lentinus lepideus (Fr.: Fr.) Fr. produce a charac- teristic anise-like odour. In the past, a number of cinnamic acid derivatives have been isolated from natural material and from cultivated strains <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b1">2]</ref>. Recently, several sesquiterpene hydrocarbons and alcohols have been identified in liquid cultures of L. lepideus FPRL 7B <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b3">4]</ref>, Most of these constitu- ents possess a 1,7-dimethyl-4-isopropyldecaline skeleton (cadinanes and related compounds). Ses- quiterpene accumulation was stimulated in particu- lar, when certain amino acids (isoleucine, phenyl- alanine, methionine) were offered as the sole nitro- gen source in the culture medium <ref type="bibr" target="#b4">[5]</ref>. From cultures of strain L. lepideus FPRL 7B grown on glucose- isoleucine-mineral salt medium, we have now iso- lated three novel muurolene ethers. As a minor com- pound, the acyclic sesquiterpene alcohol terrestrol (= 2,3-dihydro-6-[£]-farnesol) was identified.</p><p>Reprint requests to Dr. H.-P. Hanssen.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Material and Methods</head><p>Lentinus lepideus FPRL 7B (= ATCC 56985) was isolated in 1956 by the Forest Products Research Laboratory, Risborough (GB).</p><p>After mycelium inoculation, the basidiomycete was cultivated on a defined synthetic liquid culture medium containing glucose (2%), isoleucine (0.15%), and mineral salts <ref type="bibr" target="#b5">[6]</ref>. Volatiles were deter- mined after 15 weeks from 40 cultures (grown in 250 ml Erlenmeyer flasks containing 50 ml of culture broth) by circulation steam distillation <ref type="bibr" target="#b6">[7]</ref>, The crude extract was further separated on a Si-60 column with a /7-hexane/ethyl acetate gradient (changing from pure hexane to 19:1). If necessary, the collected frac- tions were further purified by preparative TLC using dichloromethane/acetone 19:1.</p><p>GLC analyses of the total distillate and of individ- ual fractions were performed using a Perkin-Elmer F 22 gas Chromatograph equipped with a glass capil- lary WG 11 column (22 mx0.33 mm i.d.), a flame ionization detector (FID; range 1; attenuation 1:4; split 1:30), and a computing integrator (PE M-l). Operating conditions: linear temperature program 80-200 °C, 2 °C/min; injector, 200 °C; detector, 210 °C; carrier gas, N 2 at 1 ml/min; injection volume 1.0 |xl. Sniffing GLC analysis of the total distillate was performed using a 60 m DB-1 silica capillary col- umn, a linear temperature program (60-250 °C; 3 °C/min), and He (2 bar) as carrier gas.</p><p>MS analyses were carried out on a Hitachi-Perkin- Elmer RMU D 6 mass spectrometer (70 eV) coupled with a Perkin-Elmer F 21 fractometer using a glass capillary polypropylene glycol 5100 column (50 m; 0.25 mm i.d.) and a linear temperature program 60(80) -180 °C; 1.25 °C/min. High resolution mass spectrometry (7500) was performed on a Varian MAT MS 311 A instrument (70 eV) with PFK as a reference substance.</p><p>'H NMR spectra were recorded at 400 MHz on a Bruker WM 400 spectrometer and the 13 C NMR spectra at 75.5 MHz on a Bruker AM 300 instru- ment. If not stated otherwise, CDC1 3 was used as solvent and TMS as an internal standard. Particulars of NOE and 2 D-WH-and I3 C/'H-chemical shift correlation experiments are described in <ref type="bibr" target="#b7">[8]</ref>. Optical rotation was measured on a Perkin-Elmer PE 241 Polarimeter.</p><p>Quantities of the newly identified metabolites were calculated gaschromatographically via internal standards (6-methyl-5-hepten-2-one, l-octen-3-ol) using FID-specific substance factors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results and Discussion</head><p>The odour of cultures of Lentinus lepideus (Fr.: Fr.) Fr. has been described as "pleasant" or "like 10% anisaldehyde in proof spirit" <ref type="bibr" target="#b8">[9]</ref>. Previously, we have shown that the production of volatiles by this fungus and the resulting flavour impression depend on the composition of the culture medium. Especial- ly the nitrogen source influenced the formation of volatile metabolites distinctly <ref type="bibr" target="#b4">[5]</ref>.</p><p>Strain L. lepideus FPRL 7B was cultivated on a defined synthetic liquid glucose-isoleucine-mineral salt medium. 15-Weeks-old cultures produced a pleasant odour with a "sweet, woody note". The dis- tillate of these cultures consisted almost exclusively of sesquiterpenes and of 2-methylbutan-l-ol <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b9">10]</ref>. After further separation of the total distillate by column chromatography, as major component a mix- ture of two sesquiterpene ethers was found which was very difficult to separate. Instead of separating the compounds in sufficient amount, we used a 3:1 mixture of 1 and 2 for two-dimensional 'H/'H-and ^C^H-chemical shift correlation. This ratio between these two compounds proofed to be sufficient for the identification of the two sets of 13 C NMR data. The coupling between 5-H and 10-H is 5 Hz in 1 and smaller than 1 Hz in 2 requiring a c/s-fused decaline. Irradiation at 5-H showed a NOE at 12-/13-H which is only possible in a trans-arrangement between 4-H and 5-H, thus the skeleton of both compounds is that of a muurolene. Compound 1 differs from compound 2 only in the positions of the double bond and the allylic ether bridge. The NMR data are listed in <ref type="table" target="#tab_1">Tables I and II, the NOE experiments in Table III</ref>. We have named these new natural products lenti- deusether (1) ((1R*, 4S*, 5R*, 8R*, 10S*)-l,7-di- methyl-4-isopropyl-ll-oxa-tricyclo-6.2.1.0 51 °-unde- cene-6 = 1,8-epoxymuurolene) and isolentideus- ether (2) (= 1,6-epoxymuurolene).</p><p>The mass spectrum of lentideusether ( <ref type="figure" target="#fig_1">Fig. 1)</ref> shows a parent peak at m/z 220 (30%). High resolu- tion mass spectra gave for M + 220.1843 (220.1827 calculated for C,sH <ref type="bibr">24</ref>  . The quota of these compounds amounts to more than 50%, and 13-to 15-weeks-old cultures produce more than 100 mg/1 culture medium of the mixture. The odour impression of these metabolites -determined by sniffing-capillary GLC -can be described as "warm, woody, reminding of cedar wood oil".</p><p>The mass spectrum of a third muurolene ether (3) with an additional hydroxy group <ref type="figure" target="#fig_2">(Fig. 2)</ref> shows a parent peak at m/z 236 (36%). Other prominent frag- ments are m/z 175 (40), 133 (17), 109 (100), 108 (74), <ref type="table">Table I</ref>. 13 C NMR data of lentideusether (1), isolentideusether (2), and terrestrol (4).  a Amplitude of signals in DEPT-135 spectrum (CH, or CH = +; CH 2 = -; quat. C = 0. b Assignments may be interchanged (assigned by comparison with l3 C NMR data of citro- nellol <ref type="bibr" target="#b10">[11]</ref> and frans-nerolidol <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b12">13]</ref>).  <ref type="bibr">Hz]</ref>: 1: 5, 6 = 1.3; 5, 10 = 5.0; 5, 14 = 2.3; 6, 8a -1.5; 6,14 = 1.5; 8a, 9ß = 5.5; 9a, 9ß -10.8; 9ß, 10 = 5.0; 11, 12 = 6.5; 11, 13 = 6.5. 2: 4,5 = 3;5,6&gt;0&lt; 1;5,15 &gt;0;6,8&gt;0;6,10 = 1.5;</p><p>8,9a = 3.2; 8, 9ß = 3.5; 8,10&gt;0;9a,9ß= 18.5; 9a, 10 = 5; 9a, 14 = 2.7; 9ß, 14 = 2; 11,12 = 6.5; 11, 13 = 6.5. 3:3 a, 5 = 1.5; 4,5 = 1.5; 4,11 = 10.5; 5,6 = 3;5,14 = 2; 6, 8 = 1.8; 6, 14 = 2; 8, 9ß = 5.7; 9a, 9ß = 10; 11, 12 = 6.4; 11, 13 = 6.4. The *H NMR spectrum of 3 is very similar to that one of 1. Instead of the threefold doublet of 9ß-H of 1, the 9ß-H of 3 displayed only a double doublet. This observation together with the deshielding of 5-H, 6-H and 12-H points to an a-oriented 10-hy- droxy group, thus this compound was identified as 10-hydroxy-lentideusether (= 10-hydroxy-l,8-epoxy- muurolene). Determination of the optical rotation of the colourless crystals (m.p. 115 °C) gave [a(c = 0.3, CHC1 3 ) = +25.3 °C (589 nm), +27.3 °C (578 nm), +30.7 °C (546 nm), +49.7 °C (436 nm), +70.7 °C (365 nm)]. So far, ethers with a muurolane skeleton have been found in brown algae <ref type="bibr" target="#b13">[14]</ref> and tentatively in cultures of the basidiomycete Poria xantha <ref type="bibr" target="#b14">[15]</ref>. The isolated compound, however, is described as a 1,7-epoxymuurolane differing from the lentideus- ethers also in the lack of the double bond.</p><p>Screening the individual fractions from column chromatography, we could also isolate a further ses- quiterpene alcohol which could be identified espe- cially by its 13 C NMR <ref type="table" target="#tab_1">(Table II)</ref> and its MS data as terrestrol (4) (= 2,3-dihydro-6[£]-farnesol). This compound -isolated for the first time as a marking substance of male bumble bees <ref type="bibr" target="#b15">[16]</ref> -has already been found in liquid cultures of yeasts <ref type="bibr" target="#b16">[17]</ref>, in Ceratocystis coerulescens (Ascomycotina) <ref type="bibr" target="#b17">[18]</ref>, and cultures of the basidiomycete Poria xantha <ref type="bibr" target="#b14">[15]</ref>.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>0 ).</head><label>0</label><figDesc>The fragmentation pattern of 1 and 2 is very similar: GLC/MS (1): m/z (%) 220 (30), 205 (M + -CH r ; 48), 202 (M + -H 2 0; 18), 177 (M + -C 3 H 7 -; 16), 159 (M + -C 3 H r -H 2 0; 100), 131 (38), 119 (28), 105 (40), 93 (63), 43 (60). GLC/MS (2): m/z (%) 220 (28), 205 (29), 202 (32), 177 (35), 159 (100), 131 (65), 105 (55), 93 (60), 91 (68), 43 (82)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>1</head><label>1</label><figDesc></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 1. Mass spectrum of lentideusether (= 1,8-epoxymuurolene).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" validated="false"><head>Table II :</head><label>II</label><figDesc></figDesc><table>'H NMR chemical shifts and coupling constants of 
+lentideusether (1), isolentideusether (2), and 10-hydroxy-
+lentideusether (3); in CDC1 3 . 
+
+1 
+
+2 
+3 
+
+2-H 
+m 1.67 
+m 1.49 
+m 1.7 
+2'-H 
+m 1.56 
+m 1.45 
+to 
+3-H 
+m 1.61 
+m 1.81 
+m 1.4 
+3'-H 
+m 1.40 
+m 1.45 
+4-H 
+m 1.11 
+m 1.37 
+m 1.2 
+5-H 
+m 2.60 
+d(br) 2.27 
+dqdd 2.82 
+6-H 
+ddq 4.96 
+d 3.74 
+dqd 5.13 
+8-H 
+dd 4.04 
+m 5.11 
+dd 3.98 
+9a-H 
+d 1.71 
+dddq 2.24 
+d 1.84 
+9ß-H 
+ddd 2.33 
+ddq 2.42 
+dd 2.32 
+10-H 
+dd 2.00 
+dd 1.94 
+
+-
+
+11-H 
+m 1.72 
+mm 1.65 
+dqq 1.95 
+12-H 
+d 0.94 
+d 0.95 
+d 1.00 
+13-H 
+d 0.93 
+d 0.93 
+d 0.91 
+14-H 
+dd 1.72 
+m 1.74 
+dd 1.75 
+15-H 
+s 1.18 
+s 1.27 
+s 1.19 
+
+J [</table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2" validated="false"><head>Table III .</head><label>III</label><figDesc></figDesc><table>Results of NOE experiments on lentideusether 
+(1) and isolentideusether (2). 
+
+Compound Resonance irradiated Resonances enhanced 
+
+1 
+
+5-H 
+10-H, 6-H, 12-or 13-H 
+12-and 13-H 
+5-H 
+15-H 
+9ß-H, 10-H, 2-H 
+
+2 
+6-H 
+5-H, 4-H 
+12-and 13-H 
+5-H 
+15-H 
+9ß-H, 10-H 
+
+105 (18), 58 (19), 43 (83). HR-MS spectra gave for 
+M + 236.1743 (236.1776 calculated for C 15 H 24 0 2 ). 
+</table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgement</head><p>We are greatful to Dr. H. Surburg, <ref type="bibr">Haarmann &amp; Reimer GmbH, Holzminden (FRG)</ref>, for providing facilities for GLC sniffing analysis.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Fungal Metabolites</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><forename type="middle">B</forename><surname>Turner</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1971" />
+			<publisher>Academic Press</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><forename type="middle">B</forename><surname>Turner</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">C</forename><surname>Aldridge</surname></persName>
+		</author>
+		<title level="m">Fungal Metabolites II</title>
+		<meeting><address><addrLine>London</addrLine></address></meeting>
+		<imprint>
+			<publisher>Academic Press</publisher>
+			<date type="published" when="1983" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H.-P</forename><surname>Hanssen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phytochemistry</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">1159</biblScope>
+			<date type="published" when="1981" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H.-P</forename><surname>Hanssen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phytochemistry</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page">1293</biblScope>
+			<date type="published" when="1985" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H.-P</forename><surname>Hanssen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Sprecher</surname></persName>
+		</author>
+		<title level="m">Flavour &apos;81</title>
+		<editor>P. Schreier</editor>
+		<meeting><address><addrLine>Berlin, New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Walter de Gruyter</publisher>
+			<date type="published" when="1981" />
+			<biblScope unit="page">547</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Sprecher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Planta</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page">565</biblScope>
+			<date type="published" when="1959" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Sprecher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dtsch. Apoth. Ztg</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page">213</biblScope>
+			<date type="published" when="1963" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W.-R</forename><surname>Abraham</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Ernst</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Witte</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H.-P</forename><surname>Hanssen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Sprecher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Tetrahedron</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page">4475</biblScope>
+			<date type="published" when="1986" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><forename type="middle">C</forename><surname>Badcock</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trans. Br. Mycol. Soc</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page">188</biblScope>
+			<date type="published" when="1939" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H.-P</forename><surname>Hanssen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W.-R</forename><surname>Abraham</surname></persName>
+		</author>
+		<title level="m">Proc. 4th European Congress on Biotechnology (O. M. Neijssel</title>
+		<editor>R. R. van der Meer, and K. Ch. A. M. Luyben</editor>
+		<meeting>4th European Congress on Biotechnology (O. M. Neijssel<address><addrLine>Amsterdam</addrLine></address></meeting>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="1987" />
+			<biblScope unit="page">291</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Bohlmann</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Zeisberg</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Klein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Org. Magn. Resonance</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">426</biblScope>
+			<date type="published" when="1975" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H.-P</forename><surname>Hanssen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W.-R</forename><surname>Abraham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Naturforsch</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">959</biblScope>
+			<date type="published" when="1986" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W.-R</forename><surname>Abraham</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>unpublished data</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><surname>Amico</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Oriente</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Piattelli</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Tringali</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Fattorusso</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Magno</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Mayol</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Experientia</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">450</biblScope>
+			<date type="published" when="1979" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">U</forename><surname>Krahn</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1986" />
+		</imprint>
+		<respStmt>
+			<orgName>Technical University of Berlin</orgName>
+		</respStmt>
+	</monogr>
+	<note>Ph.D. thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Ställberg-Stenhagen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Chem. Scand</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page">358</biblScope>
+			<date type="published" when="1970" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H.-P</forename><surname>Hanssen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Sprecher</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Klingenberg</surname></persName>
+		</author>
+		<title level="m">Progress in Essential Oil Research</title>
+		<editor>H. Brunke</editor>
+		<meeting><address><addrLine>Berlin, New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Walter de Gruyter</publisher>
+			<date type="published" when="1986" />
+			<biblScope unit="page">395</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Sprecher</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K.-H</forename><surname>Kubeczka</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Ratschko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch. Pharm</title>
+		<imprint>
+			<biblScope unit="volume">308</biblScope>
+			<biblScope unit="page">843</biblScope>
+			<date type="published" when="1975" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

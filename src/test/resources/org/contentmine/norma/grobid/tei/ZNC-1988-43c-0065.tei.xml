@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:17+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Energy Transfer within PC Trimers of Mastigocladus laminosus Studied by Picosecond Time-Resolved Transient Absorption Spectroscopy</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="1988">1988</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schneider</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institut für Physikalische und Theoretische Chemie</orgName>
+								<orgName type="institution">Technischen Universität München</orgName>
+								<address>
+									<addrLine>Lichtenbergstraße 4, Menzinger Straße 67</addrLine>
+									<postCode>D-8046, D-8000</postCode>
+									<settlement>Garching, München 19</settlement>
+									<country>Bundesrepublik Deutschland, Bundesrepublik Deutschland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Geiselhart</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institut für Physikalische und Theoretische Chemie</orgName>
+								<orgName type="institution">Technischen Universität München</orgName>
+								<address>
+									<addrLine>Lichtenbergstraße 4, Menzinger Straße 67</addrLine>
+									<postCode>D-8046, D-8000</postCode>
+									<settlement>Garching, München 19</settlement>
+									<country>Bundesrepublik Deutschland, Bundesrepublik Deutschland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Siebzehnrübl</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institut für Physikalische und Theoretische Chemie</orgName>
+								<orgName type="institution">Technischen Universität München</orgName>
+								<address>
+									<addrLine>Lichtenbergstraße 4, Menzinger Straße 67</addrLine>
+									<postCode>D-8046, D-8000</postCode>
+									<settlement>Garching, München 19</settlement>
+									<country>Bundesrepublik Deutschland, Bundesrepublik Deutschland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Fischer</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institut für Physikalische und Theoretische Chemie</orgName>
+								<orgName type="institution">Technischen Universität München</orgName>
+								<address>
+									<addrLine>Lichtenbergstraße 4, Menzinger Straße 67</addrLine>
+									<postCode>D-8046, D-8000</postCode>
+									<settlement>Garching, München 19</settlement>
+									<country>Bundesrepublik Deutschland, Bundesrepublik Deutschland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Scheer</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institut für Physikalische und Theoretische Chemie</orgName>
+								<orgName type="institution">Technischen Universität München</orgName>
+								<address>
+									<addrLine>Lichtenbergstraße 4, Menzinger Straße 67</addrLine>
+									<postCode>D-8046, D-8000</postCode>
+									<settlement>Garching, München 19</settlement>
+									<country>Bundesrepublik Deutschland, Bundesrepublik Deutschland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Energy Transfer within PC Trimers of Mastigocladus laminosus Studied by Picosecond Time-Resolved Transient Absorption Spectroscopy</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Z. Naturforsch</title>
+						<imprint>
+							<biblScope unit="volume">43</biblScope>
+							<biblScope unit="page" from="55" to="62"/>
+							<date type="published" when="1988">1988</date>
+						</imprint>
+					</monogr>
+					<note type="submission">received July 2/October 12, 1987</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Energy Transfer</term>
+					<term>Phycocyanin Trimer</term>
+					<term>Excited State Lifetimes</term>
+					<term>Transient Absorption Recovery</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>The transient absorption recovery induced in phycocyanin trimers by picosecond pulses of variable wavelength (570-620 nm) has been recorded and analyzed by applying a least-squares multi-exponential fit procedure. The results suggest that in native PC trimers the chromophores exhibit a microheterogeneity with the effect that the derived apparent lifetimes are functions of excitation and probing wavelength. It is suggested that, due to strong excitonic coupling between a-84 and ß-84 chromophores, the lifetime of the terminal acceptor state is reduced to about 900 ps; the apparent energy transfer time from chromophore ß-155 to a-84 and ß-84 chromophores varies between 20-50 ps depending on the actual chromophore-protein arrangement (microheterogeneity).</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>The light harvesting antenna complexes of cyano- bacteria and red algae, the phycobilisomes (PBS), are highly organized assemblies of biliproteins and linker peptides. The extensive investigation of the fast and efficient energy transfer within the phyco- bilisomes and further to the reaction center located in the thylakoid membrane has led to a qualitative model for these processes <ref type="bibr" target="#b0">[1]</ref>, Important steps in its development were the detection of the organization scheme by electron microscopy <ref type="bibr" target="#b2">[2]</ref>, the identification of the building blocks, namely trimers and hexamers of allophycocyanin, phycocyanin (PC) and phyco- erythrin <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b2">[2]</ref><ref type="bibr" target="#b4">[3]</ref> and finally the determination of the structure of two C-phycocyanins from different or- ganisms by X-ray cristallography <ref type="bibr" target="#b5">[4,</ref><ref type="bibr" target="#b6">5]</ref>. The latter proved that in monomeric PC the three phycocyano- bilin chromophores experience different micro- environments; the so-called ß-84 chromophore (bound to cystein 84* of the ß-chain) extends in the inner core region and is, therefore, most likely sub- ject to interaction with the linker peptides. Based * The alignment adjusted nomenclature <ref type="bibr" target="#b5">[4]</ref> has been adopted for amino acid numbering.</p><p>Reprint requests to Prof. Dr. S. <ref type="bibr">Schneider.</ref> on the analysis of the UV-absorption, emission and CD-spectra <ref type="bibr" target="#b7">[6]</ref><ref type="bibr" target="#b8">[7]</ref><ref type="bibr" target="#b9">[8]</ref> it had been shown earlier that the three phycocyanobilin chromophores were spectro- scopically distinct species. According to their as- sumed function in the energy transfer chain, they were divided into sensitizing and fluorescing chromophores. Titration experiments with PCMS (/?ara-ch!oromercurybenzenesulfonate) <ref type="bibr" target="#b10">[9]</ref> and crys- tal spectroscopic studies (T. Schirmer, private com- munication) gave recently the final proof that the red-most absorbing, "fluorescing" chromophore is identical to ß-84.</p><p>Early picosecond time-resolved fluorescence de- cay studies showed decay curves which could be fit best by multi-exponentials. 2-4 decay times were obtained, which fall into 3 distinct ranges i) 1.3-1.8 ns, ii) 100-500 ps and iii) 10-80 ps.</p><p>The longest decay time has generally been inter- preted as the "free" decay of the fluorescing chromophore(s). The others are due to energy trans- fer within the complex as shown in particular by time-resolved depolarization studies and the obser- vation of rise-terms in fluorescence <ref type="bibr" target="#b11">[10]</ref><ref type="bibr" target="#b12">[11]</ref><ref type="bibr" target="#b13">[12]</ref><ref type="bibr" target="#b14">[13]</ref><ref type="bibr" target="#b15">[14]</ref><ref type="bibr" target="#b16">[15]</ref>, but their physical meaning is still under debate. From the variation of amplitudes with wavelength the fastest decay component has generally been assumed to be due mainly to the s -&gt; f transfer, i.e. energy transfer from ß-155 to ß-84 and/or a-84.</p><p>After the X-ray structure became known, which estimates the closest distance between an a-84 and a ß-84 chromophore of neighbouring monomers in a trimeric unit to be only about 20 Ä, the fastest decay component was assigned alternatively to the energy transfer between these two chromophores <ref type="bibr" target="#b17">[16,</ref><ref type="bibr" target="#b18">17]</ref>; the decay time of around 300 ps had to be inter- preted as the lifetime of ß-155, which is located at the periphery of the trimeric unit.</p><p>Theoretical considerations <ref type="bibr" target="#b17">[16,</ref><ref type="bibr" target="#b18">17]</ref> show that the energy transfer times between chromophores are sensitive functions of not only the distance, but also of the overall orientation of the tetrapyrrole chromo- phores. They should in addition vary with the precise values of the torsional angles at the methine bridges since direction and magnitude of the transition di- pole moment change significantly with these para- meters <ref type="bibr" target="#b19">[18]</ref>.</p><p>In an attempt to distinguish between the above mentioned alternative interpretations of the ob- served fluorescence decay patterns of isolated PC trimers we have reinvestigated this problem applying picosecond time-resolved transient absorption spec- troscopy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Preparation of PC trimers</head><p>Trimers of PC were prepared according to the pro- cedure described previously <ref type="bibr" target="#b20">[19]</ref>. Measurements were performed after dilution in buffer. Chromo- phore concentration was chosen such that OD (620 nm) &lt; 1 cm -1 0.1 M phosphate buffer, pH 7.0.</p><p>Absorption spectra were recorded before and after each measurement to check for deterioration.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Picosecond time-resolved transient absorption spectroscopy</head><p>For measuring the groundstate recovery time, the pump-probe technique was used as displayed sche- matically in <ref type="figure" target="#fig_0">Fig. 1</ref>. The sample is excited by tunable picosecond pulses from a cavity-dumped dye laser (fp ~ 10 ps, E p ~ 10 nJ pulse -1 ). The change in trans- mission of a weak probe pulse, which is derived from the excitation pulse by means of a beam splitter and sent through a variable optical delay line, is meas- ured as a function of delay time between pump and probe pulse. In our set-up, the maximum delay, which can be generated without changing the exact geometrical overlap of pump and probe beam in the sample, is about 2 ns; the time window is, therefore, comparable to that of the synchroscan streak camera used in previous measurements <ref type="bibr" target="#b11">[10]</ref><ref type="bibr" target="#b12">[11]</ref><ref type="bibr" target="#b13">[12]</ref><ref type="bibr" target="#b14">[13]</ref><ref type="bibr" target="#b15">[14]</ref>, In order to avoid artifacts because of thermal lensing, pulse rep- etition rates of about 80 kHz were chosen; under this condition average light intensities are less than 1 mW (or 10 13 photons cm -2 pulse -1 ). The induced trans- mission changes are less than 1% for which reason phase sensitive detection (lock-in amplifier, Ithaco model 393) is used for improving the signal/noise ratio.</p><p>The time resolution of the experiment is limited by the pulse width which is determined by recording the background free autocorrelation. It was found that the experimentally determined correlation curves can be fitted very well by assuming either a sech 2 or gaussian pulse profile. Attempts to analyze the time course of the probe pulse transmission T(t) by a least- squares fit procedure (analogous to the evaluation of the fluorescence data) as a convolution of the experi- mentally determined autocorrelation function (which includes also the coherence spike, if the step size in optical delay is smaller than the coherence length of the laser pulse) and a multi-exponential decay law failed. The reason is simply that the inclusion of the coherence spike results in a contribution to the re- sponse function, which is actually not real. In the response function (decay curve) the coherence spike is very often of neglegible amplitude (because of larger step sizes). Instead of suppressing the coher- ence spike in the experimental (noisy) autocorrela- tion function by data manipulation, we prefer to sub- stitute it in the least-squares fit procedure by the analytical function which is calculated for a sech 2 or a gaussian pulse profile, respectively. The pulse para- meters are taken from the fit of the autocorrelation function (in principle, they could be treated as addi- tional free parameters in the fit routine of the ground- state recovery curves <ref type="bibr" target="#b22">[21]</ref>). In contrast to examples reported in the literature <ref type="bibr" target="#b23">[22,</ref><ref type="bibr" target="#b25">23]</ref> where the lifetime are estimated by means of a semi-logarithmic plot of the decaying part of T(t) only, here full use is made of the information which is buried in the onset of the transmission change. Therefore, decay times down to about l A of the apparent pulse width can be evaluated with good accuracy. An additional benefit of the de- scribed procedure is that any irregularities in laser performance causing e.g. an increase in pulse width become immediately apparent.</p><formula xml:id="formula_0">DELAY 4% / MICRO- COMPUTER L S JL- / n CH PD REF.</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>LOCK-IN AMPLIFIER</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p>The changes in transmission, which are induced in a buffer solution of PC trimers by picosecond pulses of different wavelengths are shown in <ref type="figure" target="#fig_1">Fig. 2</ref>. For better comparison, all curves are normalized with respect to the maximum value of the bleaching {A r max ). Since the integration time setting of the lock- in amplifier was kept at a fixed value the S/N ratio TIME [ps]  <ref type="table" target="#tab_0">Table I.</ref> appears highest for excitation pulses with \ ~ 620 nm, which yield the highest transmission change, namely 1%.</p><p>It is evident already from inspection of <ref type="figure" target="#fig_1">Fig. 2</ref> that pulses with X ex = 600 nm produce the highest fraction of a very short-lived (excited) species. The reduction in the relative amount of the shorter-lived species seems to be more pronounced when going towards longer wavelength. Without analysis, it can, how- ever, not be decided whether it is only the amplitude ratio, which varies with wavelength or whether the underlaying decay times are in addition dependent on the excitation wavelength. A least-squares fit based on a two-exponential decay law yields the lifetimes and amplitudes summarized in <ref type="table" target="#tab_0">Table I</ref>. Al- though the distribution of the residuals does not necessarily suggest the extension of the analysis to a 3-exponential decay law, such an analysis is recom- mended for two reasons.</p><p>(i) Both short and long lifetime vary systematically with excitation wavelength, such that for X ex = 600 nm the shortest decay times are deduced by the fit routine. Such a behaviour is indicative for the presence of an additional component.</p><p>(ii) According to the above mentioned models, the three types of chromophores should exhibit just three different lifetimes, if a three-fold symmetry is taken into account <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b21">20]</ref>.</p><p>It has been pointed out in connection with the dis- cussion of fluorescence decay curves that depending on experimental conditions the amplitude of one component can be very small and, therefore, difficult to detect unless the S/N ratio is extremely high <ref type="bibr" target="#b14">[13,</ref><ref type="bibr" target="#b26">24]</ref>, Therefore, a fit with a lower number of expo- nentials often yields an essentially equally good fit.</p><p>The results obtained from a least-squares fit based upon a 3-exponential decay law are summarized in <ref type="table" target="#tab_0">Table II</ref>. In accordance with the above mentioned  expectation the fast component of the 2-exponential fit splits into two components. The amplitude ratio of both components varies with wavelength, but also the lifetimes. Because of the fact that the amplitudes of these short-lived components are fairly high, the variation in lifetimes seems to indicate that the fast part of the decay is not due to a superposition of only two components with fixed lifetimes. The decay times determined for the third compo- nent vary between 800 and 1300 ps. On one hand such a variation could be related to the fact that the observation window comprises only 1500 ps or about 1.5 decay times, for which reason no accuracy better than ± 10% can be expected. On the other hand, the average decay time x 3 ~ 950 ps is significantly short- er than the fluorescence lifetimes reported in the lit- erature for native PC trimers (1.1-1.5 ns <ref type="bibr" target="#b14">[13,</ref><ref type="bibr" target="#b16">15]</ref>). One possible explanation for this discrepancy could be that the slow component approximates also two components with lifetimes in the range 0.5 ns to 1.5 ns, i.e. the least-squares fit should be based upon a 4-exponential fit. It is, however, obvious that the results of such an attempt are subject to discussion in view of the actual S/N ratio and the limitations in observation time. If one forces the fit routine to fix the lifetime of the third component at a given value, e.g. t 3 = 1200 ps, then the program does not con- verge in all cases (e.g. not for X = 600 nm). Where it does the second component adopts decay times be- tween 600 and 900 ps (see <ref type="table" target="#tab_0">Table II)</ref>; the fastest com- ponents) is (are) approximated by a single exponen- tial with lifetimes close to those derived from the biexponential fit.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>Before entering the discussion of the above results it should be mentioned that time-resolved fluores- cence measurements using single photon timing showed that a 3-exponential fit was not sufficient <ref type="bibr" target="#b16">[15]</ref>. Using a 4-exponential global fit analysis, the set of decay curves was reproduced by exponentials with lifetimes of 1420, 807, 203 and 36 ps, respectively. The 800 ps component was assigned to denatured chromophores. In the polarized synchroscan streak camera measurements usually two components with x ( ~ 50 ps and x 2 ~ 1000-1200 ps were found in the isotropic decay curves 7 0 = (7 p + 2/ s ) of freshly pre- pared trimers <ref type="bibr" target="#b14">[13]</ref> while in the difference function D = I p -I s a 800 ps component was detected next to a fast one (x ~ 50 ps). When crystallized trimers <ref type="bibr" target="#b6">[5]</ref> were dissolved again in buffer solution, both func- tions 7 0 and D could be fit by two exponentials with lifetimes of 50 and 1300 ps, respectively <ref type="bibr" target="#b15">[14]</ref>.</p><p>This brief compilation of prior results demon- strates that the new results gained by the pump- probe technique must be discussed for each of the following three cases:</p><p>(i) The three-exponential fit yields an adequate description of the time-resolved transmission curves because there are 3 well defined types of chromo- phores.</p><p>(ii) The adequate fit of the set of experimental curves requires the superposition of ^ 4 exponentials with wavelength independent decay constants, but wavelength dependent amplitudes.</p><p>(iii) The multi-exponential fit with wavelength de- pendent decay times is descriptive, i.e. the derived decay times are not directly related to lifetimes of a small number of structurally well defined chromo- phores but rather the average over a distribution of geometries.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>case (i):</head><p>This interpretation implies that the phycocyanin trimer in solution still exhibits the three-fold sym- metry which is found in the crystal <ref type="bibr" target="#b17">[16,</ref><ref type="bibr" target="#b18">17]</ref>, Assum- ing that the spectral features of the three chromo- phores are unchanged when going from the subunits to the trimer then the fastest rate should be assigned to the energy transfer between a-84 and ß-84 as has already been mentioned above <ref type="bibr" target="#b17">[16,</ref><ref type="bibr" target="#b18">17]</ref>. In accord- ance with such an assignment would be the observa- tion that the fastest component is predominant when the excitation wavelength falls between the ab- sorption maxima of ß-155 (= 595 nm) and ß-84 (~ 622 nm). The second fastest rate should then be governed by the lifetime of ß-155. The variations in lifetimes and relative amplitudes of the two fast com- ponents of the 3-exponential fit are, however, such that one can not rationalize them as being due to the inaccuracy inherent to the fitting procedure. Large variations in the decay times when applying a 3-expo- nential fit to groundstate recovery measurements, have also been observed by other authors for similar preparations of PC trimers <ref type="bibr" target="#b25">[23]</ref>, Similar decay times were found when the same excitation wavelength was used, which supports the hypothesis that these variations are not random but inherent to the system. Therefore, one has to reject model (i).</p><p>The dominance of a 800-900 ps component in the transient transmission recovery at longer wave- length indicates that upon formation of the trimeric state most of the ß-84 chromophores adopt a specific geometry with such a lifetime. Chromophores with other geometries or in slightly different protein envi- ronment could have longer lifetimes and most likely larger fluorescence quantum yields, for which reason their contribution to the fluorescence decay should be more pronounced. In contradiction to the inter- pretation given by <ref type="bibr">Wendler et al. [15]</ref> transient absorption measurements would suggest that the shorter-lived chromophore-protein configuration would be the dominant one in isolated trimers (with- out linker peptides). Changes in fluorescence prop- erties upon deaggregation and reaggregation have also been reported for allophycocyanin <ref type="bibr" target="#b4">[3,</ref><ref type="bibr" target="#b27">25]</ref>.</p><formula xml:id="formula_1">case (ii):</formula><p>The second alternative, which is similar to a model proposed by <ref type="bibr">Wendler et al. [15]</ref>, assumes implicitly that the fast kinetics is not modified by the presence of "denatured" chromophores. I.e., the modified chromophores are not involved in the energy transfer chain, but are excited directly and relax to the groundstate like isolated molecules. In this connec- tion it is noteworthy that the long-lived component can not always be split into two components with one lifetime of 1200 ps (fixed) and another one around 600-800 ps (see <ref type="table" target="#tab_0">Table II</ref>). This indicates again that with excitation wavelength 600 nm, that chromo- phore protein configuration must be predominantly excited (either directly or via energy transfer) which has a lifetime below 1 ns.</p><p>A completely different interpretation of case (ii) follows the lines given earlier by Schneider et al. <ref type="bibr" target="#b14">[13,</ref><ref type="bibr" target="#b15">14]</ref>. Based on the refined data from X-ray analysis of the structure of the chromophores in C-phyco- cyanin <ref type="bibr" target="#b32">[30]</ref> we have calculated the energy transfer rates between the three types of chromophores ac- cording to Försters formula for resonant dipole-di- pole transfer. Information about the spectral proper- ties of the chromophores, i.e. the spectral overlap integrals were taken from Sauer et al. <ref type="bibr" target="#b18">[17]</ref>. The result of these calculations is summarized <ref type="figure">Fig. 3</ref>. The trans- fer rates between the a-84 and ß-84 chromophores of neighbouring monomers and vice versa are denoted as X and Y, respectively. Since the center-to-center distance between these chromophores is only about 20 Ä, the calculated rates are very high, namely 916 ns -1 for a-84 ß-84 and 771 ns -1 for ß-84 a-84. Therefore, under the assumption of Förster type energy transfer a fast equilibration between these chromophores within 1 or 2 ps should be ex- pected. On the other hand transfer times of some picoseconds are comparable to typical time-constants of vibrational relaxation of the excited molecules, i.e. Försters assumption of incoherent transfer steps should no longer be valid, but coherent excitonic in- teraction must be taken into account. In this case the a-84 and ß-84 chromophores in the trimeric unit form a weak excitonic coupled system, i.e. their excited states form a kind of "compound state" (localized exciton). Measurable excitation transfer 21.07 @ 594 X^X 9.02+x, /""X («84) _ (P84 ) 1.68</p><p>7.58+y K then takes place only between the ß-155 chromo- phore and such a compound state. For this reason only two decay times should be found experimental- ly, one describing the energy transfer from ß-155 to the coupled chromophore system, the second one describing the decay of this compound state. The appearance of four fixed decay times in a global data analysis could be rationalized by dividing them into two pairs, each pair exhibiting one fast and one slow component. To be more specific, one could postulate that ß-84 or a-84 exists in two (slightly) different geometries, each giving rise to a distinct coupled state with a precise lifetime. Then the ener- gy transfer from ß-155 to either one of these states should also be described by one fixed rate constant each.</p><p>The assumption that ß-84 could exist in two differ- ent geometries is suggested by the fact that this chromophore appears to be most susceptible to per- tubations <ref type="bibr" target="#b5">[4,</ref><ref type="bibr" target="#b6">5,</ref><ref type="bibr" target="#b8">7,</ref><ref type="bibr" target="#b10">9]</ref>, Microheterogeneity of a-84 is suggested by the observation that the fit of the fluorescence decay of a-subunits needs more than one exponential <ref type="bibr" target="#b12">[11,</ref><ref type="bibr" target="#b28">26]</ref>.</p><formula xml:id="formula_2">case (iii):</formula><p>This model is a straight-forward extension of the two state model described above to one with many different chromophore conformations (microscopic heterogeneity) as it is also suggested from holeburn- ing experiments (J. Friedrich, private communica- tion). Different geometries, e.g. angles of torsion around methin bridges, cause differences in excited state properties like excitation energies and lifetimes <ref type="bibr" target="#b29">[27,</ref><ref type="bibr" target="#b30">28]</ref> and they should also affect the above dis- cussed interaction between the a-84 and ß-84 chromophores. In case of weak excitonic coupling it is obvious that differences in the excited state wave- functions cause variing coupling constants, thus giv- ing rise to different "compound states". Since these coupled chromophores are acceptor states for the de- population of the ß-155 chromophores via energy transfer, a distribution of transfer rates for this step (short lifetime) as well as the observed variation of the long lifetime with wavelength (decay of different compound states) can easily be rationalized. But even in case of very weak coupling (Förster type energy transfer) a microscopic heterogeneity in the chromophore conformations should result in a dis- tribution of transfer rates, because the probability for resonant dipole-dipole energy transfer depends sensitive on the geometrical orientation factor x be- tween donor and acceptor molecules A ~ v -1 )- James et al. <ref type="bibr" target="#b26">[24]</ref> have demonstrated for fluores- cence decay curves that whenever the recorded fluorescence is a superposition of several compo- nents with a finite distribution of lifetimes a satisfac- tory fit can be achieved by assuming a bi-exponential decay law. Since one is dealing with the same mathematical problem when analyzing groundstate recovery curves, an a priori distinction between the latter interpretations can not be given on the basis of this experimental information alone (a fact which is apparently ignored by many authors). It seems plausible that in case of a distribution of similar chromophore-protein arrangements the bi-exponen- tial fit, where each lifetime then represents an aver- age over the individual components, does show a fairly systematic variation of fit parameters with exci- tation wavelength.</p><p>In our opinion additional evidence for the assump- tion of coupling between a-84 and ß-84 in PC is also given by the completely different fluorescence decay pattern of phycoerythrocyanin trimers <ref type="bibr" target="#b14">[13]</ref>. There the excited state of the "modified" a-84 chromophore lies above that of ß-155, i.e. the energetic near-degeneracy with ß-84 is removed. As a consequence three fluorescence components with distinctly different lifetimes can be deduced (xj ~ 100 ps, x 2 ~ 400 ps, x 3 ~ 1400 ps). A similar observa- tion can also be made for monomers; there the coupling between a-84 and ß-84 is much smaller than that between chromophores belonging to different monomers in one trimeric unit (Geiselhart, unpub- lished results).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion</head><p>Considering the experimental results collected on biliproteins in various states of aggregation by differ- ent spectroscopic techniques we feel that the in- terpretation given for case (iii) is currently the only one which can explain all observations without lead- ing to contradictions. In contrast to the widely adopted model described above we postulate that in native PC-trimers, weak excitonic coupling between a-84 and ß-84 prevents the detection of Förster type energy transfer between these chromophores. The proof for this statement can come from three sources.</p><p>(i) Knowing the absorption spectra of the three types of chromophores, the time course of the in- duced absorbance changes can be calculated for each kinetic model and especially the variation of the am- plitudes of each exponential with wavelength. Be- cause of discrepancies between theory and experi- ment some models might be rejected. Work in this direction is under way in our group.</p><p>(ii) Higher resolution X-ray data could provide the basis for quantum mechanical model calculations to determine theoretically the interaction between a-84 and ß-84 chromophores (assumption of excitonic coupling).</p><p>(iii) Investigation of chemically modified bilipro- teins, for which both kinetic (lifetime measurements) and structural information (e.g. CARS-spectra <ref type="bibr" target="#b31">[29]</ref>) is available.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A ckn owledgemen ts</head><p>The authors wish to thank Prof. Dr. R. Huber and Dr. T. Schirmer (Max-Planck-Institut für Bioche- mie, Martinsried) for many stimulating discussions and providing insight to unpublished material. Fi- nancial support by Deutsche Forschungsgemein- schaft (SFB 143) and Fonds der Chemie is gratefully acknowledged.</p><p>Note added in proof: The work of Schirmer cited on the title page has been published: T. Schirmer and M. G. Vincent, Biochim. Biophys. <ref type="bibr">Acta 893, 379-385 (1987)</ref>. An update of ref. <ref type="bibr" target="#b18">[17]</ref> using the revised coordinates for PC <ref type="bibr" target="#b32">[30]</ref> arrives at similar fast Förster transfer rates and excitonic couplings as dis- cussed above (K. Sauer, H. Scheer, unpublished).</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Experimental arrangement for picosecond time-resolved transient absorption spectroscopy.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Excitation wavelength dependence of groundstate recovery of native phycocyanin trimers (Mastigocladus laminosus). The solid lines represent bi-exponential fits with parameters given in Table I.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" validated="false"><head>Table I .</head><label>I</label><figDesc></figDesc><table>Fit parameters (lifetimes and relative amplitudes) 
+obtained for a two-exponential analysis of groundstate 
+recovery curves displayed in Fig. 2. 
+
+X [nm] 
+T, [ps] 
+A, [%] 
+T 2 [ps] 
+A 2 [%] 
+
+570 
+64 
+45 
+1220 
+55 
+580 
+37 
+53 
+935 
+47 
+590 
+36 
+61 
+996 
+39 
+600 
+28 
+66 
+823 
+34 
+620 
+48 
+34 
+898 
+66 
+640 
+97 
+20 
+1036 
+80 
+
+</table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" validated="false"><head>Table II .</head><label>II</label><figDesc></figDesc><table>Fit parameters (lifetimes and relative amplitudes) 
+obtained for a three-exponential analysis of groundstate 
+recovery curves displayed in Fig. 2. A: free fit of all 
+parameters; B: long lifetime kept fixed at 1200 ps. 
+
+A 
+B 
+\ [nm] 
+Ti [ps] 
+A; [%] 
+Ti [ps] 
+A, [%] 
+
+570 
+16 
+30 
+18 
+22 
+86 
+26 
+75 
+30 
+1265 
+44 
+1200 
+48 
+
+580 
+32 
+54 
+32 
+54 
+388 
+7 
+600 
+18 
+1042 
+39 
+1200 
+28 
+
+590 
+13 
+21 
+36 
+61 
+41 
+43 
+910 
+26 
+1010 
+36 
+1200 
+13 
+
+600 
+28 
+64 
+42 
+2 
+
+-
+-
+
+829 
+34 
+
+620 
+29 
+33 
+36 
+35 
+194 
+10 
+549 
+27 
+974 
+57 
+1200 
+38 
+
+640 
+98 
+13 
+86 
+12 
+970 
+43 
+764 
+44 
+1047 
+44 
+1200 
+44 
+
+</table></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Scheer</surname></persName>
+		</author>
+		<title level="m">Light Reaction Path of Photosynthesis</title>
+		<editor>F. K. Fong</editor>
+		<meeting><address><addrLine>Berlin</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="1982" />
+			<biblScope unit="page" from="7" to="45" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Amsterdam 1987. c) Contributions in: Antennas and Reaction Centers of Photosynthetic Bacteria-Structure</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">R</forename><surname>Holzwarth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Interactions and Dynamics</title>
+		<editor>M. E. Michel-Beyerle</editor>
+		<meeting><address><addrLine>Berlin</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="1985" />
+			<biblScope unit="page" from="95" to="157" />
+		</imprint>
+	</monogr>
+	<note>Topics in Photosynthesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Mörschel</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Koller</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Wehrmeyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch. Microbiol</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="43" to="51" />
+			<date type="published" when="1980" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Gantt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioscience</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="781" to="788" />
+			<date type="published" when="1975" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Mccoll</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Guard-Friar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phycobiliproteins</title>
+		<imprint>
+			<date type="published" when="1986" />
+			<publisher>CRC Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Schirmer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Bode</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Sidler</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Zuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mol. Biol</title>
+		<imprint>
+			<biblScope unit="volume">184</biblScope>
+			<biblScope unit="page" from="257" to="277" />
+			<date type="published" when="1985" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Schirmer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Bode</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">L</forename><surname>Hackert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mol. Biol</title>
+		<imprint>
+			<biblScope unit="volume">188</biblScope>
+			<biblScope unit="page">651</biblScope>
+			<date type="published" when="1986" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Friedrich</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><forename type="middle">B</forename><surname>Scheer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Zickendraht-Wendelstadt</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Haarer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page" from="1030" to="1035" />
+			<date type="published" when="1981" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Siebzehnrübl</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Scheer</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page" from="17" to="25" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Mimuro</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Füglistaller</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Riimbeli</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Zuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochim. Biophys. Acta</title>
+		<imprint>
+			<biblScope unit="volume">848</biblScope>
+			<biblScope unit="page" from="155" to="166" />
+			<date type="published" when="1986" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Siebzehnrübl</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Scheer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Naturforsch</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="258" to="262" />
+			<date type="published" when="1987" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Hefferle</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Nies</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Wehrmeyer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schneider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Photobiochem. Photobiophys</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="325" to="334" />
+			<date type="published" when="1983" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Hefferle</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Scheer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schneider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Photochem. Photobiol</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="221" to="232" />
+			<date type="published" when="1984" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Hefferle</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Geiselhart</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Mindl</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Scheer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Naturforsch</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="606" to="616" />
+			<date type="published" when="1984" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Geiselhart</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Mindl</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><forename type="middle">R</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Scheer</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page" from="26" to="35" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Geiselhart</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Scharnagl</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Schirmer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Bode</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Sidler</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Zuber</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page" from="36" to="44" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Wendler</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Scheer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">R</forename><surname>Holzwarth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Photochem. Photobiol</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="79" to="86" />
+			<date type="published" when="1986" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Schirmer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1986" />
+		</imprint>
+	</monogr>
+<note type="report_type">Techn. Universität München</note>
+	<note>Ph.D. thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Sauer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Scheer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Sauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Photochem. Photobiol</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="427" to="440" />
+			<date type="published" when="1987" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Ch</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Scharnagl</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1986" />
+		</imprint>
+	</monogr>
+<note type="report_type">Techn. Universität München</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Füglistaller</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Widmer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Zuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch. Microbiol</title>
+		<imprint>
+			<biblScope unit="volume">129</biblScope>
+			<biblScope unit="page" from="268" to="274" />
+			<date type="published" when="1981" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">R</forename><surname>Holzwarth</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Wendler</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">W</forename><surname>Suter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biophys. J</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="1" to="12" />
+			<date type="published" when="1987" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Geiselhart</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1988" />
+		</imprint>
+	</monogr>
+<note type="report_type">Techn. Universität München</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Gillbro</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Sandström</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><surname>Sundström</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Wendler</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">R</forename><surname>Holzwarth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochim. Biophys. Acta</title>
+		<imprint>
+			<biblScope unit="volume">808</biblScope>
+			<biblScope unit="page" from="52" to="65" />
+			<date type="published" when="1985" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Gillbro</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><surname>Sundström</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Sandström</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Spangfort</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Andersson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">FEBS Lett</title>
+		<imprint>
+			<biblScope unit="volume">193</biblScope>
+			<biblScope unit="page" from="267" to="270" />
+			<date type="published" when="1985" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Sandström</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Gillbro</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><forename type="middle">R</forename><surname>Sundström</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Scheer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochim. Biophys. Acta</title>
+		<imprint/>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><forename type="middle">R</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><forename type="middle">S</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>De Mayo</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Ware</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Letters</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="460" to="465" />
+			<date type="published" when="1985" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Füglistaller</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Mimuro</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Suter</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Zuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biol. Chem. Hoppe-Seyler</title>
+		<imprint>
+			<date type="published" when="1987" />
+		</imprint>
+	</monogr>
+	<note>in print</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">C</forename><surname>Switalski</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1987" />
+			<pubPlace>Berkeley</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>University of California</orgName>
+		</respStmt>
+	</monogr>
+<note type="report_type">PhD thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Scharnagl</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Köst-Reyes</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Otto</surname></persName>
+		</author>
+		<title level="m">Optical Properties and Structure of Tetrapyrroles</title>
+		<editor>G. Blauer and H. Sund</editor>
+		<meeting><address><addrLine>Berlin</addrLine></address></meeting>
+		<imprint>
+			<publisher>Walter de Gruyter</publisher>
+			<date type="published" when="1985" />
+			<biblScope unit="page" from="391" to="410" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Köst-Reyes</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Scharnagl</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Geiselhart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Photochem. Photobiol</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="771" to="777" />
+			<date type="published" when="1986" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Baumann</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">U</forename><surname>Klüter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Naturforsch</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="44" to="49" />
+			<date type="published" when="1987" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Schirmer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Bode</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Huber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mol. Biol</title>
+		<imprint>
+			<biblScope unit="volume">196</biblScope>
+			<biblScope unit="page" from="677" to="695" />
+			<date type="published" when="1987" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

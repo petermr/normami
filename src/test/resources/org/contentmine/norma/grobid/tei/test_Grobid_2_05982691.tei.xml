@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:10+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Energy Efficient Routing Protocol for Zone Based Mobile Sensor Networks</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Usama</forename><surname>Ahmed</surname></persName>
+							<email>usamaahmed@mcs.edu.pk</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Information Security Department</orgName>
+								<orgName type="department" key="dep2">College of Signals</orgName>
+								<orgName type="department" key="dep3">Computer Sciences Department</orgName>
+								<orgName type="laboratory">College of Signals National University of Sciences and Technology (NUST) Islamabad</orgName>
+								<orgName type="institution">National University of Sciences and Technology (NUST) Islamabad</orgName>
+								<address>
+									<country>Pakistan, Pakistan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Faisal</forename><forename type="middle">Bashir</forename><surname>Hussain</surname></persName>
+							<email>faisalbashir@mcs.edu.pk</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Information Security Department</orgName>
+								<orgName type="department" key="dep2">College of Signals</orgName>
+								<orgName type="department" key="dep3">Computer Sciences Department</orgName>
+								<orgName type="laboratory">College of Signals National University of Sciences and Technology (NUST) Islamabad</orgName>
+								<orgName type="institution">National University of Sciences and Technology (NUST) Islamabad</orgName>
+								<address>
+									<country>Pakistan, Pakistan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Energy Efficient Routing Protocol for Zone Based Mobile Sensor Networks</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>mobile</term>
+					<term>sensor</term>
+					<term>routing</term>
+					<term>zone</term>
+					<term>aodv</term>
+					<term>mobility</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Mobility in sensor networks has not only expanded the role of sensor networks but has also given a whole new dimension to all research areas. Extra vigilance and unique approaches are required to address the concerns raised due to mobility. Therefore, we present a novel zone based routing scheme that is modified from Adhoc Ondemand Distance Vector Routing protocol. Our protocol is not only efficient in reducing the amount of control information produced as a result of path finding but also capable of reducing network segment errors, such that routing information is always available in the underlying network. The results have shown that this scheme is efficient in case of low as well as high mobility scenarios due to our proposed zone based architecture.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>Wireless sensor networks have extensively been the focus of research in the recent years. Such networks are composed of several hundred to several thousand of sensors disseminated in a geographical area. Sensors are very simple, battery powered electronic devices equipped with a tiny processor, few kilobytes of storage memory, a radio transceiver and sometimes a mobilizer depending upon the application.</p><p>Wireless sensor networks offer unique benefits and versatility for those locations and applications where human interaction is less feasible, examples of which may be to monitor volcanoes, movements inside enemy territory or temperature and humidity deep inside a machinery, to count a few. With no prerequisites of fixed infrastructure or base stations, they can be created and used anytime, anywhere. Such networks could be inherently fault-resilient, for they do not operate under the limitations of a fixed topology. The addition and deletion of nodes is easy and might sometimes only require dropping a few hundred through a vehicle. These types of networks have many advantages where setting up wired line networks is not possible. Such advantages have attracted immediate attention in its use among military, police, and rescue agencies, and especially under disorganized or hostile environments, including isolated scenes of natural disaster and armed conflict.</p><p>A Mobile Sensor Network (MSN) is composed of sensor nodes equipped with a mobilizer. They can move randomly or as per specification of their application or task. MSNs are closely related to Mobile Adhoc networks (MANETs) in a sense that they not only involve multihop communication but there are unpredictable and frequent topology changes due to mobility. Mobility brings many advance concepts to perception entirely shifting the paradigm of research and development. Novel approaches are required to address the issues raised due to unpredictable movements of nodes. One of the prime concerns that need to be precisely dealt with is the routing of information to the base station. Frequent movements in MSN result in path breakage. Whenever routing of packet is disrupted due to a path break, we need to reroute the data through alternative path or the packets will be dropped, resulting in loss or delayed delivery. For this we instantly need to repair the route or use any backup path if available. Different types of routing protocols have been developed for sensor networks.</p><p>A path break results in two types of control traffic within the network. One is the error information and the other is new route request. In case of mobile sensor network, where path breaks are too often, the network is mostly occupied by the control traffic. This can cause network outage and unnecessary delays in data delivery. There is a need for a routing protocol that is responsive in case of route failures with less or no additional control traffic for new route discovery. The routing protocol has to be efficient in confining error messages to the neighborhood where error has occurred and restrict it from traversing across the network.</p><p>MSNs bear similarities with MANETs, but routing protocols designed for MANETs are not suitable for MSNs due to their energy requirements and computational constraints. However, instead of designing new protocols for MSNs, we can have them restructured according to the needs and limitations of MSNs <ref type="bibr" target="#b0">[1]</ref>.</p><p>The motivation of this research has been to develop a routing protocol that offer reliability, improved error control mechanism, better link repair with low overhead in MSNs. A novel approach is used to derive the cost of routing data in terms of a factor that employ the remaining energy and the movements of nodes. This factor gives a prediction about the availability of the path. This least cost route is used to route the data to the base station for the fact that the path will predictably be available for a long time.</p><p>II. RELATED WORK Routing protocols so far proposed for sensor networks assume stationary nodes <ref type="bibr" target="#b1">[2]</ref>. One reason being the fact that this assumption facilitates the routing and clustering algorithm. Greedy Parameter Stateless Routing <ref type="bibr" target="#b2">[3]</ref>, Minimum Cost Forwarding Algorithm <ref type="bibr" target="#b3">[4]</ref> and Low Energy Adaptive Clustering Hierarchy <ref type="bibr" target="#b4">[5]</ref> offers no support for mobility, however Directed Diffusion <ref type="bibr" target="#b5">[6]</ref>, Geographical and Energy Aware Routing <ref type="bibr" target="#b6">[7]</ref> and Geographic Adaptive Fidelity <ref type="bibr" target="#b7">[8]</ref> offers a limited support by virtue of their operation <ref type="bibr" target="#b8">[9]</ref> and not that they are specifically designed.</p><p>A little effort has been made to address the issues of routing in MSNs. A location based routing protocol for MSN has been proposed by L. Zou, M. Lu and Z. Xiong in <ref type="bibr" target="#b9">[10]</ref>. This protocol uses the concept of greedy forwarding on the basis of a cost function of each node. This cost is close to the Euclidean length of the shortest path from sensor node to the base station. Whenever the greedy routing is not possible after a number of hops, the packet is forwarded using the high-cost-to-low-cost rule.</p><p>Routing protocols developed for MANET are strong candidates to be considered for MSN because of both being somewhat similar except the resource scarcity of MSN. This restriction prevents MANET protocols to be used in sensor networks without modification. The most studied algorithm for MANETs, Adhoc Ondemand Distance Vector (AODV) routing protocol has been proposed in <ref type="bibr" target="#b10">[11]</ref>. Different variants of AODV have been proposed for wireless sensor networks assuming static nodes among which TinyAODV <ref type="bibr" target="#b11">[12]</ref> is the most popular. In TinyAODV the routes are static when they are created for the first time. There is no mechanism for the route expiry and the route are accumulated in route cache and deleted on first in first out basis.</p><p>The original AODV <ref type="bibr" target="#b10">[11]</ref> protocol performs well in static environment but suffers from performance degradation in mobile environment. Also there is no mechanism in AODV protocol to derive the cost and willingness of a node to be a part of data transmission <ref type="bibr" target="#b0">[1]</ref> , which is critically imperative in case of low power environments such as sensor networks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. NETWORK SETUP</head><p>This section explains the network setup and assumptions related to the proposed routing protocol. The network consists of mobile nodes and a static Sink node. The node movement may be either application specific or completely mobile. Our protocol put no restriction on mobility of nodes.</p><p>The nodes in the network are aware of their location which is continuously updated even in case of mobility. For location awareness either GPS enabled <ref type="bibr" target="#b12">[13]</ref> or non-GPS <ref type="bibr" target="#b13">[14]</ref> scheme can be used, details of which is out of scope of this research. The entire network is divided into fixed size m × n square zones. The zone creation takes places at the start of the network when Sink broadcasts the zone size 'S z ' to the network. At any point in time, the Sink may vary the zone size depending on a number of factors, such as increasing zone size for reducing hops towards the Sink. This research only focuses on fixed zone size broadcasted by Sink.  zone is governed by a zone head which is responsible for aggregating and routing the data to the base station. Each node is aware of its zone identifier and hence the identity of its zone head. Initial zone setup and zone head selection is out of scope of this research paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. PROTOCOL OPERATION</head><p>This section describes the operation of our proposed Zone Based Routing (ZBR) protocol that is a modified version of Adhoc On-Demand Distance Vector (AODV) routing protocol. This modified version is used as the underlying routing protocol in the zone based network infrastructure.</p><p>The sensor nodes deployed within the phenomena report the event as soon as any activity is observed in the respective region. The data flow depends on the specification of application being used. However, it can be broadly divided into three categories when a node is static, partially static and at times it becomes mobile, or fully mobile in the case of target tracking application. As the ZBR has no limitations regarding the movement of nodes, it is equally efficient in dealing with highly mobile and dense environments.</p><p>In ZBR, whatever the case may be, the member nodes transmit data to their respective zone head, which is always one hop neighbor of all member nodes. Zone head performs the aggregation depending on the type of application and transmit the aggregated or individual data to the base station. Route discovery, maintenance and consistent availability of route for reliable data delivery are the core responsibility of the zone head. The protocol is divided into three phases which are individually addressed in the following sections.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Mobility Factor and Zone Head Selection</head><p>This section introduces the concept of mobility factor which is the core aspect of our proposed protocol. Each node keeps track of its mobility and records the number of movements it has made and the energy spent in these movements. Here, a move is considered as the change in location of node without a pause, irrespective of the distance, destination and direction. A node may change its zone as a result of a movement and joins a new zone as a member. The number of times a node has moved and the number of times that move has resulted into a zone change, along with the remaining energy is used to calculate the mobility factor for the node. The mobility factor (M.F) is given as under</p><formula xml:id="formula_0">' 1 . e M Z F M t t    e' &gt; 0</formula><p>Where e' is the remaining energy, Z t is the total number of Zone changes and M t is the total number of moves made during time 't' seconds. Each node keeps a record of its mobility factor. A lower value of mobility factor means that the node is less mobile and more of a candidate for being the zone head. On the contrary, a higher value depicts frequent movements and renders a node inconsistent as a zone head. head M.F with the one received. If the received value is lower than the value already kept, the zone head M.F and zone head identifier are appropriately updated.</p><p>At the end of the broadcast phase, each node has the knowledge of the node with least mobility factor and hence the node is considered the zone head. The lowest values of M.F ensures that the node will serve as zone head for longer duration and if participating in the route towards the base station the route will be stable for maximum period of time.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Route Maintenance</head><p>This section describes the format of enhanced route request, route reply and the process of route creation and preservation for ZBR protocol.</p><p>1) Route Request: A zone head disseminates a RREQ when it determines that it needs a route to the base station and does not have one available. The format of the RREQ message is shown in the <ref type="figure">fig. 2</ref>.</p><p>Each node in the network, including zone head and base station possesses a unique identifier and is named as Node ID. The Destination ID is always the ID of the base station. The Destination Sequence Number field is the last known sequence number for the Base Station. The Originator ID is the identifier belonging to the source of the RREQ and is in fact the Node ID of the originator zone head in ZBR. The Originator Sequence Number is the zone head's own sequence number, which is incremented prior to insertion in a RREQ to avoid routing loops <ref type="bibr" target="#b10">[11]</ref>. The Originator Zone ID is the zone in which the originator of the RREQ exists. The RREQ ID field is incremented by one from the last RREQ ID used by the current zone head. The Hop Count field is set to zero and the RREQ is then broadcasted. The broadcast continues in the network until the request reaches the base station.</p><p>The inclusion of zone ID in addition to the node ID itself gives us more control over the dissemination of control information across the path. In fact, each zone is always governed by a zone head, unless the zone is empty. A zone may either be empty due to the movement of all nodes to different location or in case the nodes have their energy depleted. There may also be a case that the node that originated the request is no longer available in the zone and the zone is now governed by a different node. The reply generated by the base station will traverse the intermediate zones to the originator zone. This is because the packet contains the Originator Zone ID. The zone head will receive the reply packet and caches the route in its routing 2) Route Reply: When a node in the neighborhood receives a RREQ, it silently discards the RREQ if it is not the zone head. However, the zone head of the respective zone upon receiving the RREQ verifies that it has not received the same RREQ before. It then creates a reverse route to the sender of RREQ and rebroadcast the RREQ or otherwise unicast a route for the destination back to the originator if it has a route to the destination that is not expired. The established reverse route contains the sender node and its zone ID beside other necessary information.</p><p>If no intermediate node has provided the route to the destination, the RREQ eventually reaches the base station. The base station creates a reverse route with the sender and then generates a RREP and unicast it toward the originator zone. All the intermediate nodes that receive this RREP caches the sender in the forward path table that is, in fact the routing table.</p><p>The format of RREP is shown in <ref type="figure">fig. 3</ref>. The destination ID and Destination Sequence number is the base station identifier and its sequence number respectively. The type field identifies that it is a RREP message. Originator Zone ID, Originator Node ID and Originator Sequence number is the node and zone identity and the sequence number respectively associated with originator of the RREQ.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3) Route Creation:</head><p>This section describes the working of our proposed protocol taking into account a model network. The dissemination of route request, the reply generated in response and the routing table is described in this section. Our network consists of mobile nodes and a static base station. The nodes represented by N i are arranged in square zones represented by Z i and a zone head represented by ZH i is elected for each zone.</p><p>Suppose the network consists of twelve zones naming Z 0 to Z 11 as shown in <ref type="figure" target="#fig_0">fig. 1</ref>. Each zone consists of random number of mobile nodes governed by a zone head. Zone head from Z 0 denoted by ZH 0 has aggregated the data from its member nodes and is ready to transmit it to the base station. ZH 0 broadcast a RREQ to its neighboring zones setting hop count to zero. Neighboring zone heads ZH 1 , ZH 4 and ZH 5 receives the RREQ, establish the reverse route with ZH 0 , increment the hop count and rebroadcast the RREQ as they have no route to the base station. <ref type="figure">Fig. 4</ref> shows the reverse route for ZH <ref type="bibr" target="#b0">1</ref> The RREQ is broadcasted in the entire network. Contrary to the normal operation of AODV, this RREQ is of no concern to the member nodes. Only zone head are the one responsible for receiving and replaying the RREQ making sure that same RREQ is not accepted more than once. This reduces the amount of route requests produced in the entire network. The RREQ reaches the base station through Z 3 which is the closest to the base station. The reverse route for ZH 3 is shown in <ref type="figure">fig. 5</ref>. The base station in turn caches Z 3 as the next hop in reverse route for Z 0 . RREP is generated by the base station and sent to zone Z 3 . ZH 3 receive the RREP and forward it to Z 2 along the reverse path. ZH 2 adhere to the same principle and forward it to Z 1 and ZH 1 in turn forward it to Z 0 . ZH 0 upon receiving the RREP starts transmitting the data.</p><p>In case the zone head from any zone had moved out to a different zone, it had immediately been replaced by another node which had the least mobility factor at that time. So as long as there is only one node in the zone, it is the zone head and it is responsible for responding to the control packet. This fact concludes that the movement in zone has no effect on the underlying routing information. This scheme also helps in efficient topology maintenance. Since the zone head is responsible for routing and route management, few zone members can turn-wise be in sleep state to conserve energy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Node Mobility</head><p>This sub-section discusses the various scenarios that may result in case of mobility in a sensor network with respect to the proposed zone based architecture.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>1) Node Joining and leaving:</head><p>Whenever a new node enters a zone it always joins as a member node. The node broadcast a beacon as depicted in <ref type="figure">fig. 6</ref> to search for the zone head only in case when it has an event to report. The zone head adds the node into its member list that contains the information about nodes currently sending data for aggregation. Local connectivity between zone head and nodes can be made through hello packets or layer 2 protocols such as 802.11. Nodes when leaving the zone does not send any beacon to the zone head.</p><p>2) Zone Head Leaving or Joining: When a zone head moves out of a zone it broadcasts a beacon as shown in <ref type="figure">fig. 7</ref> to notify its members about its status. The nodes after receiving the broadcast re-elects the new zone head following the same procedure as defined in section A . If the zone is currently an intermediate hop in the path of data the new zone head upon receiving the packets will generate a beacon message to its neighbors demanding the next hop towards the base station. In normal operation, intermediate node movement result in path breakage, a RERR message and a RREQ re-broadcast by the originator. This results in the over head of control traffic and latency for data traffic. This is not the case with ZBR protocol as it is prompt and efficient in rebuilding the route to the destination. The zone head that has moved to join a new zone is revoked from its role of zone head. It joins the new zone as a member node and attach itself to the current zone head regardless of its mobility factor. The same beacon message as shown in <ref type="figure">fig. 7</ref> can be broadcasted by a zone head to start a zone head re- elction process in a zone if the energy level of the current zone head has gone below a certain threshold. Afterwards the entire process of selecting new zone head is the same as in case of zone head leaving the zone.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. SIMULATION RESULTS</head><p>This section presents the comparison of ZBR with AODV protocol. As ZBR is a refinement of AODV protocol, therefore a better approach is to compare it with the same. We can analyze and evaluate both protocols on the basis of same performance metrics which is not possible in case of other protocols designed to address different set of problems.</p><p>We have considered three different types of networks with varying number of nodes. The network types are categorized as static, partial and fully mobile. The static network is assumed to be an environment monitoring network where nodes are static and sense data as per requirement broadcasted by sink. The mobile network whether partial or full is assumed to be composed of target tracking sensor nodes that detect any moving targets and follow it across the network while continuously transmitting the sensed data to the sink. Number of CBR flows is taken to be 10, 20 and 50 in each network. The first 5 seconds are to calculate mobility factors and construction of zones in case of ZBR protocol followed by data transmission. The nodes generating CBR flow in each scenario are mobile except the case of static network. The simulation is based on ns-2 version 2.33. The simulation settings described in table 1 depicts the settings that are common to all scenarios in the simulation. The performance metrics measured in this simulation includes packet delivery ratio, routing overhead, and scalability.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>1) Packet Delivery Ratio:</head><p>The measured end-to-end successful transmission probability. This ratio is calculated by the number of data packets recieved by the sink divided by number of data packets produced by the source.</p><p>2) Routing overhead: the number of RREQs generated across the network in each case.</p><p>3) Scalabilty: the effect of increase in node density on the routing overhead.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Simulation results</head><p>The three scenarios in our simulation are described in the proceeding section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>1) Static network</head><p>The first simulation test was a baseline experiment to evaluate and compare the performance of our ZBR protocol with AODV in case of static nodes. The network is composed of 100, 200, and 300 nodes with 10, 25, and 50 nodes sending data to the sink. <ref type="figure" target="#fig_0">Fig. 8 to fig. 10</ref> depicts the results of the simulation. In <ref type="figure" target="#fig_2">fig. 8</ref> ZBR and AODV are compared in terms of route requests generated across the network. <ref type="figure" target="#fig_3">Fig. 9</ref> depicts the total network energy consumption of both ZBR and AODV protocol. Energy consumed is dependant on the amount of control packets and data packets successfully delivered at destination in addition to the energy used in the creation of zones in ZBR protocol. Finally the <ref type="figure" target="#fig_0">fig.  10</ref> shows the comparison of packet delivery ratio for both the protocols.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>2) Partialy mobile network</head><p>In this scenario the network is composed of a mix of static and mobile nodes in equal proportion. For example in a network of 100 nodes, 50 nodes are static and 50 are mobile. The data sending nodes are 10, 25, and 50 in each scenario.</p><p>All data-sending nodes whether scattered or in a group, move in a definite pattern along the target while other remaining mobile nodes are randomly moving without any specific pattern or destination. <ref type="figure" target="#fig_0">Fig. 8 to fig. 10</ref> depicts the comparison of both the AODV and ZBR protocol for partially mobile network in terms of number of routing overhead, energy and packet delivery ratio.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>3) Fully mobile network</head><p>The fully mobile network for our simulation is a network with all mobile nodes in the network. The nodes move randomly in the network without any fixed destination. The data sending nodes are 10, 25, and 50 in each case. The data sending nodes whether grouped or scattered move in a definite direction across the network following the target. <ref type="figure" target="#fig_0">Fig  8 to fig. 10</ref> also depicts the comparison of both protocols in terms of routing overhead, energy and packet delivery ratio. <ref type="figure" target="#fig_0">Fig. 10</ref> depicts the scalability of ZBR protocol. It is evident from the figures that the performance of AODV protocol exponentially deteriorates as the node density increases, whereas our ZBR protocol is consistent and performs best in dense networks. This owes to the fact that ZBR protocol routes data to the zones and not to the nodes in network so the increase in the number nodes has no effect on the performance of ZBR protocol.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>VI. CONCLUSION</head><p>In this paper we have proposed an efficient and scalable zone based routing protocol for routing in MSNs. The results have shown that ZBR protocol has reduced the routing overhead caused due to frequent link breaks due to mobility. The zone based network structure and implicit derivation of path cost in terms of mobility factor has resulted in reliable and consistent routes towards the sink. In this research we have assumed a fixed zone size. Our future work will extend our proposed research to support varying zone sizes. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. An example of zone based architecture</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Each</head><label></label><figDesc></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Comparison of routing overhead generated in various network scenarios</figDesc><graphic url="image-197.png" coords="4,83.31,596.77,153.73,105.97" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. Energy consumption in a network with 100, 200 and 300 nodes respectively</figDesc><graphic url="image-201.png" coords="5,232.05,448.51,157.77,95.75" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" validated="false"><head></head><label></label><figDesc>The zone head selection procedure starts with each node broadcasting its M.F. This broadcast is intended for the members of the same zone and is discarded by others. Initially each node keeps its own M.F as the zone head M.F. Once a broadcast is received, the node compares the zone</figDesc><table>Base Station 
+
+Legend 
+
+Zone Head 
+Member Node 
+
+0 
+1 
+2 
+3 
+
+7 
+6 
+5 
+4 
+
+8 
+9 
+10 
+11 </table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" validated="false"><head>table regardless of Node ID.</head><label>regardless</label><figDesc></figDesc><table>Type 
+RREQ ID 
+Hop count 
+Originator ID Originator Zone ID 
+Originator Sequence Number 
+
+Destination ID 
+Destination Sequence Number 
+
+Figure 2. RREQ packet format 
+
+Type 
+Hop Count 
+Originator Zone ID 
+Originator ID 
+Originator Sequence Number 
+
+Destination ID 
+Destination Sequence Number 
+
+Figure 3. RREP packet format 
+
+</table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3" validated="false"><head>TABLE I .</head><label>I</label><figDesc></figDesc><table>SIMULATION PARAMETERS 
+
+Parameter 
+Value 
+Simulation Time 
+100 sec 
+Field Size 
+100m x 100m 
+Zone Size 
+10m x 10m 
+MAC Layer 
+IEEE 802.11 
+Data Packet Length 
+40 bytes 
+Data Interval 
+0.25 sec 
+Routing Protocol 
+ZBR, AODV 
+Radio Range 
+20 m 
+Node Velocity 
+10 km/h 
+Mobility 
+0%, 50%, 100% 
+
+</table></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Overview of Existing Routing Protocols for Low Power and Lossy Networks&quot;. Draft-ietf-roll-protocols-survey02</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Levis</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Tavakoli</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008" />
+		</imprint>
+	</monogr>
+	<note>txt</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A survey on routing protocols for wireless sensor networks</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Akkaya</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Younis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Elsevier Ad Hoc Network Journal</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="325" to="349" />
+			<date type="published" when="2005" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">GPSR: greedy perimeter stateless routing for wireless networks</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Karp</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><forename type="middle">T</forename><surname>Kung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Mobile Computing and Networking</title>
+		<imprint>
+			<date type="published" when="2000" />
+			<biblScope unit="page" from="243" to="254" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A scalable solution to minimum cost forwarding in large sensor networks</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Tenth International Conference on Computer Communications and Networks</title>
+		<imprint>
+			<date type="published" when="2001" />
+			<biblScope unit="page" from="304" to="309" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Energyefficient communication protocol for wireless micro-sensor networks</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><forename type="middle">R</forename><surname>Heinzelman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Chandrakasan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Balakrishnan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">33rd Annual Hawaii International Conference on System Sciences</title>
+		<imprint>
+			<date type="published" when="2000" />
+			<biblScope unit="page" from="3005" to="3014" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Directed diffusion: a scalable and robust communication paradigm for sensor networks</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Intanagonwiwat</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Govindan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Estrin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Sixth Annual International Conference on Mobile Computing and Networks (Mobi-COM &apos;00)</title>
+		<meeting>the Sixth Annual International Conference on Mobile Computing and Networks (Mobi-COM &apos;00)</meeting>
+		<imprint>
+			<date type="published" when="2000" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Geographical and energy aware routing: a recursive data dissemination protocol for wireless sensor networks</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Govindan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Estrin</surname></persName>
+		</author>
+		<idno>UCLA/CSD-TR-01-0023</idno>
+		<imprint>
+			<date type="published" when="2001-05" />
+		</imprint>
+		<respStmt>
+			<orgName>Computer Science Department, University of California at Los Angeles</orgName>
+		</respStmt>
+	</monogr>
+<note type="report_type">Tech. Rep.</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Geography-informed energy conservation for ad hoc routing</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Heidemann</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Estrin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Seventh Annual ACM/IEEE International Conference on Mobile Computing and Networking</title>
+		<meeting>the Seventh Annual ACM/IEEE International Conference on Mobile Computing and Networking</meeting>
+		<imprint>
+			<date type="published" when="2001" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Secure routing in wireless sensor networks: attacks and countermeasures</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Karlof</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Wagner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE International Workshop on Sensor Network Protocols and Applications</title>
+		<meeting>the IEEE International Workshop on Sensor Network Protocols and Applications</meeting>
+		<imprint>
+			<date type="published" when="2003-05" />
+			<biblScope unit="page" from="113" to="127" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">PAGER-M: A novel location-based routing protocol for mobile sensor networks</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Xiong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc</title>
+		<meeting>null<address><addrLine>San Jose, CA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2004-10" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Ad hoc On-Demand Distance Vector (AODV) routing</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Perkins</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Belding-Royer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">R</forename><surname>Das</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003" />
+		</imprint>
+	</monogr>
+	<note>rfc3561.txt</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">TinyOS project website</title>
+		<ptr target="http://www.tinyos.net" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Dynamic finegrained localization in ad-hoc networks of sensors</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Savvides</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C.-C</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">B</forename><surname>Strivastava</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">MobiCom &apos;01: Proceedings of the 7th annual international conference on Mobile computing and networking</title>
+		<meeting><address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2001" />
+			<biblScope unit="page" from="166" to="179" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Adhoc Positioning System</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Niculescu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Nath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Global Telecommunications Conference, 2001. GLOBECOM &apos;01</title>
+		<imprint>
+			<date type="published" when="2001" />
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="2926" to="2931" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

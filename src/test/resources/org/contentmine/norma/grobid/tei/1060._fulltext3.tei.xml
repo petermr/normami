@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/cmdev/grobid-0.5.1-SNAPSHOT/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="de">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.1-SNAPSHOT" ident="GROBID" when="2018-01-21T14:10+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Zur Hydrolyse von 2,3-Dihydro-1,3-di-tert-butyl-4,5-dimethylimidazol-2-yliden. Die Kristallstruktur von 1,3-Di-tert-butyl-4,5-dimethylimidazoliumhydrogencarbonat</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Wiley-Blackwell</publisher>
+				<availability status="unknown"><p>Copyright Wiley-Blackwell</p>
+				</availability>
+				<date type="published" when="2008">2008</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Ahmed</forename><surname>Abu-Rayyan</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Qutaiba</forename><surname>Abu-Salem</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Norbert</forename><surname>Kuhn</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Cäcilia</forename><surname>Maichle-Mößmer</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Manfred</forename><surname>Steimann</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Gerald</forename><surname>Henkel</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Institut für Anorganische Chemie</orgName>
+								<orgName type="institution">Al Isra University Post Office</orgName>
+								<address>
+									<postCode>11622</postCode>
+									<country key="JO">Jordan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Universität Tübingen</orgName>
+								<address>
+									<addrLine>Auf der Morgenstelle 18</addrLine>
+									<postCode>D-72076</postCode>
+									<settlement>Tübingen</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Zur Hydrolyse von 2,3-Dihydro-1,3-di-tert-butyl-4,5-dimethylimidazol-2-yliden. Die Kristallstruktur von 1,3-Di-tert-butyl-4,5-dimethylimidazoliumhydrogencarbonat</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Zeitschrift für anorganische und allgemeine Chemie</title>
+						<title level="j" type="abbrev">Z. anorg. allg. Chem.</title>
+						<idno type="ISSN">0044-2313</idno>
+						<idno type="eISSN">1521-3749</idno>
+						<imprint>
+							<publisher>Wiley-Blackwell</publisher>
+							<biblScope unit="volume">634</biblScope>
+							<biblScope unit="issue">5</biblScope>
+							<biblScope unit="page" from="823" to="824"/>
+							<date type="published" when="2008">2008</date>
+						</imprint>
+					</monogr>
+					<idno type="DOI">10.1002/zaac.200700576</idno>
+					<note type="submission">Bei der Redaktion eingegangen am 14. Dezember 2007.</note>
+					<note>On the Hydrolysis of 2,3-Dihydro-1,3-di-tert-butyl-4,5-dimethylimidazol-2-ylidene. The Crystal Structure of 1,3-Di-tert-butyl-4,5-dimethylimidazolium Bicarbonate [1]</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Carbenes</term>
+					<term>Carbonates</term>
+					<term>Hydrogen bonds</term>
+					<term>Crystal struc-tures</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>1,3-Di-tert-butyl-4,5-dimethylimidazolium bicarbonate (7), formed on the exposure of 2,3-dihydro-1,3-di-tert-butyl-4,5-di-methylimidazol-2-ylidene (6) towards air, is prepared on the reaction of 6 with ammonium bicarbonate; its crystal structure analysis 2,3-Dihydroimidazol-2-ylidene (1) [2] gelten als luftempfindlich und werden deshalb vorzugsweise unter Schutzgas gehandhabt. Während ihre Umsetzung mit Kohlendioxid in glatter Reaktion zum CO 2-Addukt 2 führt [3], sind die zyklischen Harnstoffe 3 mit Disauerstoff auch in der angeregten Singulett-Form nicht zugäng-lich [4, 5]. Durch Addition von Wasser an 1 ist die Bildung stabiler Hydrate, etwa in Form von Imidazoliumhydroxiden (4), bislang nicht beobachtet worden. Als Endprodukt der in wasserhaltigen Lösungsmitteln langsam verlaufenden Hydrolyse haben wir Pro-duktgemische erhalten; Denk et al. isolierten das Formamid 5 (R 񮽙 tert-Bu), vermutlich als Folge der Spaltung des Imidazolium-Ions durch die bei der Protonierung des zugehörigen Carbens 1 (R 1 񮽙 tert-C 4 H 9 ; R 2 񮽙 H) freigesetzte Hydroxid-Base [4]. Zur Vermeidung der Ringspaltung sowie zum Nachweis der durch Wasser erfolgten Protonierung haben wir das Carben 6 in feuchtem Tetrahydrofuran gelöst und das freigesetzte Hydroxidion mit Koh-lendioxid abgefangen. Hierbei bildete sich das Hydrogencarbonat-823 reveals the presence of dimeric bicarbonate anions linked to each other and to the imidazolium ions with hydrogen bonds.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="de">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>.20(5), H(2)-O(14a) 1.48(5) A ˚ ; O(13)-H(2)-O(14a) 170(2)°], mit denen die Imidazoliumionen gleichfalls über Wasser- stoffbindungen verknüpft sind [C(1)-H(1) 0.94(2), H(1)-O(14) 2.62(2), H(1)-O(15) 2.27(5) A ˚ ; C(1)-H(1)-O(14) 174(1), C(1)-H(1)- O(15) 133(1)O(14)-H(1)-O(15) 53(1)°]. Die Anbindung des Imida</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimenteller Teil</head><p>Sämtliche Untersuchungen wurden in gereinigten Lösungsmitteln unter Schutzgas durchgeführt. 2,3-Dihydro-1,3-di-tert-butyl-4,5-di- methylimidazol-2-yliden (6) wurde nach Literaturangaben <ref type="bibr" target="#b12">[10]</ref> erhalten. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>- zolium-</head><label></label><figDesc>Ions erfolgt hierbei, zusätzlich zur Einbindung des "freien" Sauerstoffatoms O(15), durch eine schwache, nahezu linear ge- staltete Wechselwirkung des Wasserstoffatoms H(1) mit dem an der Dimerisierung des Anions beteiligten Sauerstoffatom O(14). Im CO 3 -Gerüst ist die CO-Bindung zum nicht in die Dimerisierung des Anions eingebundenenSauerstoffatom O(15) merklich ver- kürzt [C(12)-O(13) 1.309(2), C(12)-O(14) 1.284(2), C(12)-O(15) 1.238(2) A ˚ ]. Diesen Befund sowie die sichtbare Aufweitung der den O-H-O-Fragmenten zugehörigen O-C-O-Winkel [O(13)-C(12)-O14) 117.9(2), O(13)-C(12)-O(15) 120.4(2), O(14)-C(12)-O(15) 121.6(2)°] sehen wir in Zusammenhang mit einer gegenüber dem dimeren Hydrogencarbonat nur schwachen Wechselwirkung der Sauerstoff- atome mit dem Imidazoliumion.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" validated="false"><head>.</head><label></label><figDesc></figDesc><table>Durch Addition von Wasser an 1 ist die Bildung stabiler 
+Hydrate, etwa in Form von Imidazoliumhydroxiden (4), bislang 
+nicht beobachtet worden. Als Endprodukt der in wasserhaltigen 
+Lösungsmitteln langsam verlaufenden Hydrolyse haben wir Pro-
+duktgemische erhalten; Denk et al. isolierten das Formamid 5 (R 񮽙 
+tert-Bu), vermutlich als Folge der Spaltung des Imidazolium-Ions 
+durch die bei der Protonierung des zugehörigen Carbens 1 (R 1 񮽙 
+tert-C 4 H 9 ; R 2 񮽙 H) freigesetzte Hydroxid-Base [4]. 
+Zur Vermeidung der Ringspaltung sowie zum Nachweis der durch 
+Wasser erfolgten Protonierung haben wir das Carben 6 in feuchtem 
+Tetrahydrofuran gelöst und das freigesetzte Hydroxidion mit Koh-
+lendioxid abgefangen. Hierbei bildete sich das Hydrogencarbonat-
+
+* Dr. A. Abu-Rayyan 
+Faculty of Pharmacy, Al Isra University 
+P.O. Box 22 and 33 
+Al Isra University Post Office 
+11622 Jordan 
+E-mail: ahmadrayyan@yahoo.com 
+
+Prof. Dr. N. Kuhn 
+Institut für Anorganische Chemie der Universität Tübingen 
+Auf der Morgenstelle 18 
+D-72076 Tübingen 
+Fax: 񮽙49 (0)7071 29 5224 
+E-mail: norbert.kuhn@uni-tuebingen.de reveals the presence of dimeric bicarbonate anions linked to each 
+other and to the imidazolium ions with hydrogen bonds. 
+Keywords: Carbenes; Carbonates; Hydrogen bonds; Crystal struc-
+tures 
+
+Schema 1 
+
+Salz 7, das präparativ jedoch besser durch Umsetzung von 6 mit 
+Ammoniumhydrogencarbonat zugänglich ist. Vermutlich wird die Abb. 1 Ansicht der Ionenpaare von C 12 H 22 N 2 O 3 (7) im Kristall. 
+
+rasche Reaktion von 6 mit Wasser in Gegenwart von Kohlendioxid 
+sowohl durch die Absenkung des pH-Wertes der wässrigen Lösung 
+wie auch durch die Verschiebung des Protolysegleichgewichts durch 
+die Bildung des Hydrogencarbonat-Ions beeinflusst. 
+
+Die Einkristallstrukturanalyse von 7 (Abb. 1) zeigt das Vorliegen 
+von über symmetrische, angenähert lineare Wasserstoffbindungen 
+zu dimeren Einheiten verbrückten Hydrogencarbonat-Ionen 
+[O(13)-H(2) 1</table></figure>
+
+			<note place="foot">© 2008 WILEY-VCH Verlag GmbH &amp; Co. KGaA, Weinheim</note>
+
+			<note place="foot" n="1"> H-NMR (DMSO-d 6 ): δ 񮽙 1.40 (d, 12 H, CHMe 2 , 3 J 񮽙 6.6 Hz), 2.19 (s, 6 H, 4,5-Me), 4.47 (sept, 2 H, CHMe 2 ), 9.42 (s, 1 H, 2-H), HCO 3 nicht beobachtet. 13 C-NMR (DMSO-d 6 ): δ 񮽙 7.8 (4,5-Me), 22.1 (CHMe 2 ), 49.6 (CHMe 2 ), 125.7 (C2), 131.4 (C4,5), 158.2 (HCO 3 ).</note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">), c 񮽙 18.927(4) A ˚ , V񮽙 2695(1) A ˚ 3 , Z 񮽙 8, D c 񮽙 1.194 Mg/m 3 , Mo-KαStrahlung (λ 񮽙 0.71073 A ˚ ), T 񮽙 150 K, Kleinste-Quadrate-Verfeinerung (volle Matrix), Schweratome anisotrop, Wasserstoffatome isotrop auf gefundenen Positionen verfeinert, ein Extinktionsparameter</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Raumgruppe</forename><surname>Orthorhombisch</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Pbca</surname></persName>
+		</author>
+		<idno>b 񮽙 16</idno>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+		</imprint>
+	</monogr>
+	<note>Kristallstrukturanalyse von 7: C 12 H 22 N 2 O 3 , M 񮽙 242. ein Skalierungsfaktor, Θ-Bereich der Datensammlung 3.21 bis 29.27°, Kristalldimensionen 0.31 x 0.22 x 0.19 mm. 23723 gesammelte Reflexe, davon 3644 unabhängig [R(int.) 񮽙 0.1207</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+				<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">񮽙</forename><surname>Goof</surname></persName>
+		</author>
+		<idno>0.0648</idno>
+		<ptr target="http://www.ccdc.cam.ac.ukUnionRoad" />
+		<title level="m">wR2 (alle Daten) 񮽙 0.1382. STOE IPDS, SHELXL-97. Einzelheiten zur Kristallstrukturuntersuchung können beim Cambridge Crystallographic Data Centre</title>
+		<imprint>
+			<biblScope unit="page">1</biblScope>
+		</imprint>
+	</monogr>
+	<note>Cambridge CB2 1EZ, UK) unter Angabe der Hinterlegungsnummer CCDC 677146 angefordert werden</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Wir danken Herrn Dr. P. Haiß für die Durchführung von Literaturrecherchen</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Derivate des Imidazols, 68</title>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Kristallogr. zur Veröffentlichung eingereicht</title>
+		<editor>N. Kuhn, Q. Abu-Salem, K. Eichele, C. Maichle-Mößmer, H. Schubert</editor>
+		<imprint/>
+	</monogr>
+	<note>Teil 67 dieser Serie</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">:</forename><forename type="middle">M</forename><surname>Übersicht</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Angew</forename><surname>Regitz</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Chem</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">O</forename><surname>Bourissou</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><forename type="middle">P</forename><surname>Guerret</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Gabbai</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">; N</forename><surname>Bertrand</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Kuhn</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Al-Sheikh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem. Int. Ed. Engl</title>
+		<editor>C. J. Carmalt, A. H. Cowley</editor>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">829</biblScope>
+			<date type="published" when="1996" />
+			<publisher>W. A. Herrmann</publisher>
+		</imprint>
+	</monogr>
+	<note>Coord. Chem. Rev.</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Kuhn</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Maichle-Mößmer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Steimann</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Weyers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Naturforsch</title>
+		<imprint>
+			<biblScope unit="page">427</biblScope>
+			<date type="published" when="1999" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">K</forename><surname>Denk</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">M</forename><surname>Rodezno</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">J</forename><surname>Lough</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Organomet. Chem</title>
+		<imprint>
+			<biblScope unit="page">242</biblScope>
+			<date type="published" when="2001" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Ishiguro</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Hirabayashi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Nojima</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Sawaki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Lett</title>
+		<imprint>
+			<biblScope unit="page">796</biblScope>
+			<date type="published" when="2002" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">The Weak Hydrogen Bond</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><forename type="middle">R</forename><surname>Desiraju</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Th</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Steiner</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999" />
+			<publisher>Oxford University Press</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="middle">Z B R L</forename><surname>Vgl</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">F</forename><surname>Sass</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Acta</forename><surname>Scheuerman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">;</forename><forename type="middle">C S</forename><surname>Crystallogr</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">D</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Acta</forename><surname>Mighell</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">;</forename><forename type="middle">V</forename><surname>Crystallogr</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Cirpus</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">; V</forename><surname>Adam</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Cirpus</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Wittrock</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Adam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Anorg. Allg. Chem</title>
+		<editor>A. Adam, V. Cirpus</editor>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">533</biblScope>
+			<date type="published" when="1197" />
+		</imprint>
+	</monogr>
+	<note>Z. Anorg. Allg. Chem.</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Nitta</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Tomiie</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">H</forename><surname>Koo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Crystallogr</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">292</biblScope>
+			<date type="published" when="1952" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Kuhn</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Maichle-Mößmer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Steimann</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Sweidan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Naturforsch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Anorg. Allg. Chem</title>
+		<editor>101</editor>
+		<editor>N. Kuhn, K. Eichele, M. Steimann, A. Al-Sheikh, B. Doser, Ch. Ochsenfeld</editor>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">2268</biblScope>
+			<date type="published" when="2006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Kuhn</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Th</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Kratz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Synthesis</title>
+		<imprint>
+			<biblScope unit="page">561</biblScope>
+			<date type="published" when="1993" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
