@@ -40,7 +40,7 @@ public class EPMCResultsJsonTest {
 	    JsonParser parser = new JsonParser();
 	    JsonElement jsonElement = parser.parse(resultsJsonString);
 	    JsonArray entryArray = jsonElement.getAsJsonArray();
-		Assert.assertEquals("results",  25, entryArray.size());
+		Assert.assertEquals("results",  3, entryArray.size());
 		for (int i = 0; i < entryArray.size(); i++) {
 			JsonElement entry = entryArray.get(i);
 			EPMCResultsJsonEntry resultJson = new EPMCResultsJsonEntry(entry);
@@ -55,7 +55,7 @@ public class EPMCResultsJsonTest {
 	    JsonParser parser = new JsonParser();
 	    JsonElement jsonElement = parser.parse(resultsJsonString);
 	    JsonArray entryArray = jsonElement.getAsJsonArray();
-		Assert.assertEquals("results",  25, entryArray.size());
+		Assert.assertEquals("results",  3, entryArray.size());
 		JsonElement jsonElement1 = entryArray.get(0);
 		EPMCResultsJsonEntry epmcJsonEntry = new EPMCResultsJsonEntry(jsonElement1);
 		
@@ -218,7 +218,7 @@ public class EPMCResultsJsonTest {
 	    JsonParser parser = new JsonParser();
 	    JsonElement jsonElement = parser.parse(resultsJsonString);
 	    JsonArray entryArray = jsonElement.getAsJsonArray();
-		Assert.assertEquals("results",  500, entryArray.size());
+		Assert.assertEquals("results",  3, entryArray.size());
 		for (int i = 0; i < entryArray.size(); i++) {
 			JsonElement entry = entryArray.get(i);
 			EPMCResultsJsonEntry resultJson = new EPMCResultsJsonEntry(entry);
@@ -238,7 +238,7 @@ public class EPMCResultsJsonTest {
 		epmcConverter.setCProjectDir(cProjectDir);
 		epmcConverter.readInputStream(new FileInputStream(jsonFile));
 		epmcConverter.createJsonEntryListAndPossiblyCProject();
-		Assert.assertEquals("entries: ", 6, epmcConverter.getOrCreateEntryArray().size());
+		Assert.assertEquals("entries: ", 3, epmcConverter.getOrCreateEntryArray().size());
 	}
 
 	@Test

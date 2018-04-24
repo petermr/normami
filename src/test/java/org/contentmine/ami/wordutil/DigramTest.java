@@ -56,6 +56,9 @@ public class DigramTest {
 
 	private void setup1() throws IOException {
 		InputStream is = this.getClass().getResourceAsStream(PNG_TXT);
+		if (is == null) {
+			throw new RuntimeException("Cannot find "+PNG_TXT);
+		}
 		files = IOUtils.readLines(is);
 		ngramGeneratorList = new ArrayList<NGramGenerator>();
 		for (String filename : files) {

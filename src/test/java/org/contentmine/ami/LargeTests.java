@@ -3,6 +3,8 @@ package org.contentmine.ami;
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.ami.plugins.regex.RegexArgProcessor;
@@ -11,13 +13,18 @@ import org.contentmine.ami.wordutil.WordSetWrapper;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.NormaArgProcessor;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
 //@Ignore
 public class LargeTests {
-	
+	private static final Logger LOG = Logger.getLogger(LargeTests.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
+
 	File patentsLarge = new File("../patents/US08979");
 
 	
@@ -191,10 +198,13 @@ public class LargeTests {
 	@Test
 	public void runBespokeDictionary() throws IOException {
 		File projectDir = new File("target/tutorial/zika10");
+		CMineTestFixtures.cleanAndCopyDir(new File(NAConstants.TEST_AMI_DIR+"/zika10"), projectDir);
+		Assert.assertTrue("exists "+projectDir, projectDir.exists());
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
+		String inn = NAConstants.PLUGINS_DICTIONARY+"/inn.xml";
+		LOG.debug("inn "+inn);
 		commandProcessor.processCommands(""
-				+ "word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/inn.xml"
-				+ "");
+				+ "word(search)w.search:"+inn+"");
 		commandProcessor.createDataTables();
 	}
 

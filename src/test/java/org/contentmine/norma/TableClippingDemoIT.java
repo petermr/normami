@@ -12,6 +12,10 @@ import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Range;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGSVG;
+import org.contentmine.graphics.svg.SVGText;
+import org.contentmine.graphics.svg.fonts.StyleRecordFactory;
+import org.contentmine.graphics.svg.fonts.StyleRecordSet;
+import org.contentmine.graphics.svg.fonts.TypefaceMaps;
 import org.contentmine.norma.pubstyle.util.RegionFinder;
 import org.contentmine.svg2xml.page.PageCropper;
 import org.contentmine.svg2xml.page.PageCropper.Units;
@@ -272,5 +276,45 @@ public class TableClippingDemoIT {
 			" --output " + outpath;
 		new Norma().run(cmd);
 	}
+
+	@Test
+	// very long
+		public void testTypefaces() throws IOException {
+			NormaRunner normaRunner = new NormaRunner();
+			File projectDir = new File(NormaFixtures.TEST_DEMOS_DIR, "cert");
+			Assert.assertTrue("exists "+projectDir, projectDir.exists());
+			File targetDir = new File("target/demos/cert/");
+	//		/**
+			CMineTestFixtures.cleanAndCopyDir(projectDir, targetDir);
+			normaRunner.convertRawPDFToProjectToCompactSVG(targetDir);
+	//		*/
+			File ctreeDir; String cmd;
+	
+			CMineGlobber globber = new CMineGlobber();
+			globber.setRegex(".*/fulltext-page.*compact.svg");
+			globber.setLocation(targetDir.toString());
+			List<File> textFiles = globber.listFiles();
+			List<SVGText> svgTexts = SVGText.readAndCreateTexts(textFiles);
+			Assert.assertEquals(8538, svgTexts.size());
+			StyleRecordFactory styleRecordFactory = new StyleRecordFactory();
+			StyleRecordSet styleRecordSet = styleRecordFactory.createStyleRecordSet(svgTexts);
+			TypefaceMaps typefaceSet = styleRecordSet.extractTypefaceMaps("cert");
+			Assert.assertEquals(29, typefaceSet.size());
+			LOG.debug(typefaceSet);
+	
+	//		ctreeDir = new File(targetDir, "Timmermans_etal_2016_B_Cell_Crohns");
+	//		cmd = "--ctree "+ctreeDir +
+	//			" --cropbox x0 32.0 y0 728.0 x1 578 y1 274 yup " + " --pageNumbers 3 "+" --output " + "tables/table1/table.svg";
+	//		new Norma().run(cmd);
+	//		
+	//		ctreeDir = new File(targetDir, "Varga2001");
+	//		cmd = "--ctree "+ctreeDir +
+	//			" --cropbox x0 70.0 y0 62.0 x1 460 y1 252 "+" --pageNumbers 3 "+" --output " + "tables/table1/table.svg";
+	//		new Norma().run(cmd);
+	//		
+	//		cmd = "--ctree "+ctreeDir +
+	//			" --cropbox x0 268 y0 481 x1 514 y1 255 yup "+" --pageNumbers 7 "+" --output " + "maths/maths1/maths.svg";
+	//		new Norma().run(cmd);
+		}
 
 }
