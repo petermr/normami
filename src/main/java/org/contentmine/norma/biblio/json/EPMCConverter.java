@@ -1,7 +1,6 @@
 package org.contentmine.norma.biblio.json;
 
 import java.io.File;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -24,6 +23,7 @@ import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.HtmlHtml;
 import org.contentmine.graphics.html.HtmlTd;
 import org.contentmine.graphics.html.HtmlTr;
+import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.biblio.EPMCResultsJsonEntry;
 
 import com.google.gson.JsonArray;
@@ -224,7 +224,7 @@ public class EPMCConverter implements CellCalculator {
 		getOrCreateDataTablesTool();
 		dataTablesTool.setTitle("METADATA");
 		dataTablesTool.setCellCalculator(this);
-		this.setRemoteLink0("../../src/test/resources/org/xmlcml/ami2/zika/");
+		this.setRemoteLink0("../../"+NAConstants.TEST_AMI_DIR+"/zika/");
 		this.setRemoteLink1("/scholarly.html");
 		this.setRowHeadingName("EPMCID");
 		HtmlHtml html = dataTablesTool.createHtml(this);

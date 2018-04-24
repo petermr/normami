@@ -48,7 +48,7 @@ public class TFTest {
 	@Ignore
 	public void convertToc() {
 		File targetDir = new File("target/tutorial/tf");
-		CMineTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/xmlcml/norma/pubstyle/tf/toc/"), targetDir);
+		CMineTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/contentmine/norma/pubstyle/tf/toc/"), targetDir);
 		String args = "--project "+targetDir+" -i fulltext.html -o fulltext.xhtml --html jsoup";
 		DefaultArgProcessor argProcessor = new NormaArgProcessor(args); 
 		argProcessor.runAndOutput(); 

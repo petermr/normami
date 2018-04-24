@@ -64,7 +64,7 @@ public class RSTest {
 		File outfile = new File(CTREE_DIR, "schol1.html");
 		Result result = new StreamResult(outfile);
 		Transformer transformer = new TransformerFactoryImpl().newTransformer(
-				new StreamSource("src/main/resources/org/xmlcml/norma/pubstyle/rs/toHtml.xsl"));
+				new StreamSource("src/main/resources/org/contentmine/norma/pubstyle/rs/toHtml.xsl"));
 		transformer.transform(source, result);
 	}
 	

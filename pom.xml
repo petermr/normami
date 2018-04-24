@@ -18,7 +18,8 @@
 	    <jsoup.version>1.8.2</jsoup.version>
 	    <jdeb.version>1.3</jdeb.version>
 -->
-
+	    <lucene.version>4.10.3</lucene.version>
+        <univocity.version>1.5.6</univocity.version>
 	     
     </properties>
 
@@ -40,7 +41,7 @@
                 <configuration>
                     <programs>
                         <program>
-                            <mainClass>org.xmlcml.norma.Norma</mainClass>
+                            <mainClass>org.contentmine.norma.Norma</mainClass>
                             <id>norma</id>
                         </program>
                     </programs>
@@ -95,7 +96,7 @@
 
 
                         <data>
-                            <src>${basedir}/src/main/resources/org/xmlcml/norma/pubstyle/plosone/htmlTagger.xml</src>
+                            <src>${basedir}/src/main/resources/org/contentmine/norma/pubstyle/plosone/htmlTagger.xml</src>
                             <type>file</type>
                             <mapper>
                                 <type>perm</type>
@@ -104,7 +105,7 @@
                             </mapper>
                         </data>
                         <data>
-                            <src>${basedir}/src/test/resources/org/xmlcml/norma/pubstyle/plosone/journal.pone.0111303/fulltext.html</src>
+                            <src>${basedir}/src/test/resources/org/contentmine/norma/pubstyle/plosone/journal.pone.0111303/fulltext.html</src>
                             <type>file</type>
                             <mapper>
                                 <type>perm</type>
@@ -169,7 +170,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>org.xmlcml.norma.Norma</mainClass>
+                            <mainClass>org.contentmine.norma.Norma</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -259,6 +260,23 @@
             <artifactId>xml-apis</artifactId>
 		    <version>${xml-apis.version}</version>
 		</dependency>
+		        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>${lucene.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-common</artifactId>
+            <version>${lucene.version}</version>
+        </dependency>
+        <dependency>
+        <!-- https://github.com/uniVocity/univocity-parsers // needed for JAX -->
+            <groupId>com.univocity</groupId>
+            <artifactId>univocity-parsers</artifactId>
+            <version>${univocity.version}</version>
+            <type>jar</type>
+        </dependency>        
 		
 		
     </dependencies>

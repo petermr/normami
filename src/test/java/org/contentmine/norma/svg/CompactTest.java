@@ -8,7 +8,6 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.norma.Norma;
 import org.contentmine.norma.NormaFixtures;
-import org.contentmine.norma.NormaRunner;
 import org.junit.Test;
 
 import junit.framework.Assert;
@@ -38,20 +37,6 @@ private static final Logger LOG = Logger.getLogger(CompactTest.class);
 		File outputFile = new File(targetDir, "ctree1/figures/figure1/figure.svg.compact.svg");
 		long size = FileUtils.sizeOf(outputFile);
 //		Assert.assertEquals("new file "+size, 28150, size);
-	}
-	
-	/** converts a directory with PDF files into Ctrees with compact svg.
-	 * 
-	 * SHOWCASE
-	 */
-	@Test
-	// LONG
-	public void testPDFToCompactSVG() {
-		NormaRunner normaRunner = new NormaRunner();
-		File projectDir = new File(NormaFixtures.TEST_DEMOS_DIR, "cert");
-		File targetDir = new File("target/demos/cert/");
-		CMineTestFixtures.cleanAndCopyDir(projectDir, targetDir);
-		normaRunner.convertRawPDFToProjectToCompactSVG(targetDir);
 	}
 	
 }

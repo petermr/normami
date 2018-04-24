@@ -22,7 +22,7 @@ public class GetPapersTest {
 	public void testGetPapers() throws IOException{
 		// for info
 		String query = "getpapers --api eupmc -q 'anopheles FIRST_PDATE:[2014-06-01 TO 2014-06-07]' -x --outdir anopheles";
-		// results in src/test/resources/org/xmlcml/norma/pubstyle/
+		// results in src/test/resources/org/contentmine/norma/pubstyle/
 		File anophelesDir = new File(NormaFixtures.TEST_PUBSTYLE_DIR, "getpapers/anopheles");
 		File resultsJsonFile = new File(anophelesDir, "eupmc_results.json");
 		Assert.assertTrue(resultsJsonFile.exists());

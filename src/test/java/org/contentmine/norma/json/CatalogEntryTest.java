@@ -128,8 +128,8 @@ public class CatalogEntryTest {
 			false
 		);
 
-	private File RSU_JSON_FILE = new File("src/test/resources/org/xmlcml/norma/pubstyle/plosone/rsu.json");
-	private File SNIPPET_JSON_FILE = new File("src/test/resources/org/xmlcml/norma/json/snippet.json");
+	private File RSU_JSON_FILE = new File("src/test/resources/org/contentmine/norma/pubstyle/plosone/rsu.json");
+	private File SNIPPET_JSON_FILE = new File("src/test/resources/org/contentmine/norma/json/snippet.json");
 
 	/** part of entry.
 	 * 

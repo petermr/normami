@@ -60,7 +60,7 @@ public class PloSONETest {
 		FileUtils.deleteQuietly(outputFile);
 		String[] args = {
 				"-i", NormaFixtures.F0113556_HTML.toString(),
-				"--pubstyle", "src/main/resources/org/xmlcml/norma/pubstyle/plosone/htmlTagger.xml",
+				"--pubstyle", "src/main/resources/org/contentmine/norma/pubstyle/plosone/htmlTagger.xml",
 				"-o", outputFile.toString(),
 		};
 		Norma norma = new Norma();
@@ -83,7 +83,7 @@ public class PloSONETest {
 		File outputFile = new File("target/plosone/0115884.html");
 		String[] args = {
 				"-i", NormaFixtures.F0115884_HTML.toString(),
-				"--pubstyle", "src/main/resources/org/xmlcml/norma/pubstyle/plosone/htmlTagger.xml",
+				"--pubstyle", "src/main/resources/org/contentmine/norma/pubstyle/plosone/htmlTagger.xml",
 				"-o", outputFile.toString(),
 		};
 		Norma norma = new Norma();
@@ -180,7 +180,7 @@ public class PloSONETest {
 		String[] args = {
 				"-i", new File(NormaFixtures.F0115884A_DIR, "fulltext.nodtd.xml").toString(),
 				"--pubstyle", "nlm",
-				"--transform", "src/main/resources/org/xmlcml/norma/pubstyle/nlm/toHtml.xsl",
+				"--transform", "src/main/resources/org/contentmine/norma/pubstyle/nlm/toHtml.xsl",
 				"-o", outputFile.toString(),
 		};
 		if (1==1) throw new RuntimeException("Recast as CTree");

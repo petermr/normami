@@ -58,6 +58,19 @@
   </help>
  </arg>
 
+<!--  moved from cproject (where it makes no sense 2018-04-23 -->
+ <arg name="dictionary"
+     long="--c.dictionary"
+     args="source [source]"
+     parseMethod="parseDictionary"
+     countRange="{1,*}"
+     >
+     <help>
+     <p>Dictionaries for lookup. sources follow EuclidSource and can be resources, files, or URLs.
+     in some cases they may also be symbolic.</p>
+     </help>
+ </arg>
+
  <arg name="div" brief="-d" long="--divs" args="expression [expression] ..."
   countRange="{1,*}" parseMethod="parseDivs">
   <help>

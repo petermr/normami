@@ -3,6 +3,7 @@ package org.contentmine.norma;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.security.acl.NotOwnerException;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -17,6 +18,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.CHESConstants;
+import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.cproject.CProjectArgProcessor;
 import org.contentmine.cproject.args.ArgIterator;
 import org.contentmine.cproject.args.ArgumentOption;
@@ -24,6 +26,8 @@ import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.cproject.args.StringPair;
 import org.contentmine.cproject.args.VersionManager;
 import org.contentmine.cproject.files.CTree;
+import org.contentmine.cproject.files.ResourceLocation;
+import org.contentmine.cproject.lookup.DefaultStringDictionary;
 import org.contentmine.eucl.euclid.IntArray;
 import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.svg.SVGElement;
@@ -89,7 +93,8 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 	
 	public NormaArgProcessor() {
 		super();
-		this.readArgumentOptions(this.getArgsResource());
+		String argsResource = this.getArgsResource();
+		this.readArgumentOptions(NormaArgProcessor.class, argsResource);
 	}
 	
 	public static VersionManager getVersionManager() {
@@ -128,6 +133,17 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 		pageCropper.processCropBoxArgs(option.processArgs(tokens).getStringValues());
 		LOG.debug("PAGE CROPPER "+pageCropper.toString());
 	}
+
+	/**
+	 * noved from CProject where it makes little sense
+	 * @param option
+	 * @param argIterator
+	 */
+	public void parseDictionary(ArgumentOption option, ArgIterator argIterator) {
+		List<String> dictionarySources = argIterator.createTokenListUpToNextNonDigitMinus(option);
+		createAndAddDictionaries(dictionarySources);
+	}
+	
 
 	public void parseDivs(ArgumentOption option, ArgIterator argIterator) {
 		divList = argIterator.getStrings(option);
@@ -770,6 +786,51 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 		LOG.trace("svg "+svgPageFile);
 		return svgPageFile;
 	}
+
+	/**
+	 * move to ami
+	 * @param dictionarySources
+	 */
+		public void createAndAddDictionaries(List<String> dictionarySources) {
+			ensureDictionaryList();
+			for (String dictionarySource : dictionarySources) {
+				InputStream is = null;
+				LOG.trace("DS "+dictionarySource);
+				String dictionaryResource = dictionarySource;
+				// add /classpath prefix for resource
+				if (dictionarySource.startsWith("src")) {
+//					dictionaryResource = "/"+dictionarySource;
+				} else if (dictionarySource.startsWith("org")) {
+						dictionaryResource = "/"+dictionarySource;
+				} else if (!dictionarySource.startsWith("/")) {
+					dictionaryResource = NAConstants.PLUGINS_DICTIONARY+"/"+dictionarySource;
+				}
+				if (!dictionaryResource.endsWith(NAConstants.DOT_XML)) {
+					dictionaryResource = dictionaryResource+NAConstants.DOT_XML;
+				}
+				LOG.trace("DR "+dictionaryResource);
+//				is = this.getClass().getResourceAsStream(dictionaryResource);
+				is = AMIArgProcessor.class.getResourceAsStream(dictionaryResource);
+				if (is == null) {
+					is = new ResourceLocation().getInputStreamHeuristically(dictionarySource);
+				}
+				if (is == null) {
+					throw new RuntimeException("cannot read inputStream for dictionary: "+dictionaryResource);
+				}
+				DefaultStringDictionary dictionary = DefaultStringDictionary.createDictionary(dictionarySource, is);
+				if (dictionary == null) {
+					throw new RuntimeException("cannot read/create dictionary: "+dictionarySource);
+				}
+				dictionaryList.add(dictionary);
+			}
+		}
+
+		protected void ensureDictionaryList() {
+			if (dictionaryList == null) {
+				dictionaryList = new ArrayList<DefaultStringDictionary>();
+			}
+		}
+
 
 
 

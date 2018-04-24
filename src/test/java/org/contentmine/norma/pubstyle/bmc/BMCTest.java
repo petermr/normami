@@ -274,8 +274,8 @@ public class BMCTest {
 				"--input", "fulltext.xml",
 				"--output", "scholarly.html",
 				"--standalone", "true",
-//				"--transform", SRC_MAIN_RESOURCES+"/org/xmlcml/norma/"+"pubstyle/nlm/toHtml.xsl", // stylesheet to convert 
-				"--transform", "/org/xmlcml/norma/"+"pubstyle/nlm/toHtml.xsl", // stylesheet to convert 
+//				"--transform", SRC_MAIN_RESOURCES+"/org/contentmine/norma/"+"pubstyle/nlm/toHtml.xsl", // stylesheet to convert 
+				"--transform", "/org/contentmine/norma/"+"pubstyle/nlm/toHtml.xsl", // stylesheet to convert 
 		};
 		Norma norma = new Norma();
 		norma.run(args);

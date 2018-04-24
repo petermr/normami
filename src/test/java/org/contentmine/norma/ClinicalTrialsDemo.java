@@ -28,7 +28,7 @@ public class ClinicalTrialsDemo {
 			"-q", "trialstemp/http_www.trialsjournal.com_content_16_1_1", // output from quickscrape
 			"-i", "fulltext.xml",
 			"-o", "scholarly.html",
-			"--transform", "src/main/resources/org/xmlcml/norma/pubstyle/bmc/xml2html.xsl",                  // stylesheet to use (code)
+			"--transform", "src/main/resources/org/contentmine/norma/pubstyle/bmc/xml2html.xsl",                  // stylesheet to use (code)
 		};
 		Norma norma = new Norma();
 		norma.run(args0);
@@ -126,7 +126,7 @@ public class ClinicalTrialsDemo {
 			"-r", "true",
 			"-i", "fulltext.xml",
 			"-o", "scholarly.html",
-			"--transform", "src/main/resources/org/xmlcml/norma/pubstyle/bmc/xml2html.xsl",                  // stylesheet to use (code)
+			"--transform", "src/main/resources/org/contentmine/norma/pubstyle/bmc/xml2html.xsl",                  // stylesheet to use (code)
 		};
 		Norma norma = new Norma();
 		norma.run(args0);

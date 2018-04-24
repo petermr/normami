@@ -9,9 +9,7 @@ import java.nio.charset.Charset;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
-import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.norma.Norma;
 import org.contentmine.norma.input.pdf.PDF2TXTConverter;
@@ -104,7 +102,7 @@ Caused by: java.io.IOException: Error: Header doesn't contain versioninfo
 	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1214)
 	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1181)
 	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1152)
-	at org.xmlcml.pdf2svg.PDF2SVGConverter.readDocument(PDF2SVGConverter.java:323)
+	at org.contentmine.pdf2svg.PDF2SVGConverter.readDocument(PDF2SVGConverter.java:323)
 	*/
 
 	public void testBadPDF() {
@@ -174,28 +172,6 @@ Caused by: java.io.IOException: Error: Header doesn't contain versioninfo
 		cTree.readFulltextPDF(new File(NormaFixtures.TEST_PUBSTYLE_DIR, "cgiar/345.pdf"));
 		PDF2XHTMLConverter pdf2HtmlConverter = new PDF2XHTMLConverter(cTree);
 		pdf2HtmlConverter.readAndConvertToXHTML();
-	}
-	
-	@Test
-//	@Ignore // LARGE
-	// reinstated
-	public void testPDF2SVG() {
-		File cprojectDir = new File(NormaFixtures.TEST_MISC_DIR, "cproject");
-		File targetDir = new File("target/pdfs/cproject");
-		File targetDir1 = new File("target/pdfs/cproject/temp");
-		CMineTestFixtures.cleanAndCopyDir(cprojectDir, targetDir);
-		String cmd = "--project " + targetDir + " --input fulltext.pdf "+ " --outputDir " + targetDir1 + " --transform pdf2svg ";
-		new Norma().run(cmd);
-	}
-	
-	@Test
-	@Ignore // LARGE
-	public void testPDF2SVGLarge() throws IOException {
-		File sourceDir = new File("../../projects/unesco");
-		Assert.assertTrue(""+sourceDir.getCanonicalPath(), sourceDir.exists());
-		String cmd = "--project "+sourceDir+" --makeProject (\\1)/fulltext.pdf --fileFilter .*/(.*)\\.pdf";
-		new CProject().run(cmd);
-		new Norma().run("--project " + sourceDir + " --input fulltext.pdf "+ " --outputDir " + sourceDir + " --transform pdf2svg ");
 	}
 
 

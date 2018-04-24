@@ -72,36 +72,36 @@ public class ManifestTest {
 	}
 	
 	/**
-0    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - id = "26000862"
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - source = "MED"
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - pmid = "26000862"
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - pmcid = "PMC4441471"
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - DOI = "10.1371/journal.pone.0127339"
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - title = "Control of relative timing and stoichiometry by a master regulator."
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - authorString = "Goldschmidt Y, Yurkovsky E, Reif A, Rosner R, Akiva A, Nachman I."
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - authorList = {"author":[{"fullName":["Goldschmidt Y"],"firstName":["Yifat"],"lastName":["Goldschmidt"],"initials":["Y"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Yurkovsky E"],"firstName":["Evgeny"],"lastName":["Yurkovsky"],"initials":["E"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Reif A"],"firstName":["Amit"],"lastName":["Reif"],"initials":["A"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Rosner R"],"firstName":["Roni"],"lastName":["Rosner"],"initials":["R"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Akiva A"],"firstName":["Amit"],"lastName":["Akiva"],"initials":["A"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Nachman I"],"firstName":["Iftach"],"lastName":["Nachman"],"initials":["I"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]}]}
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - journalInfo = {"issue":["5"],"volume":["10"],"journalIssueId":["2278532"],"dateOfPublication":["2015"],"monthOfPublication":["0"],"yearOfPublication":["2015"],"printPublicationDate":["2015-01-01"],"journal":[{"title":["PloS one"],"ISOAbbreviation":["PLoS ONE"],"medlineAbbreviation":["PLoS One"],"NLMid":["101285081"],"ESSN":["1932-6203"]}]}
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - pageInfo = "e0127339"
-1    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - abstractText = "Developmental processes in cells require a series of complex steps. Often only a single master regulator activates genes in these different steps. This poses several challenges: some targets need to be ordered temporally, while co-functional targets may need to be synchronized in both time and expression level. Here we study in single cells the dynamic activation patterns of early meiosis genes in budding yeast, targets of the meiosis master regulator Ime1. We quantify the individual roles of the promoter and protein levels in expression pattern control, as well as the roles of individual promoter elements. We find a consistent expression pattern difference between a non-cofunctional pair of genes, and a highly synchronized activation of a co-functional pair. We show that dynamic control leading to these patterns is distributed between promoter, gene and external regions. Through specific reciprocal changes to the promoters of pairs of genes, we show that different genes can use different promoter elements to reach near identical activation patterns."
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - affiliation = "Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - language = "eng"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - pubModel = "Electronic-eCollection"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - pubTypeList = {"pubType":["Journal Article"]}
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - subsetList = {"subset":[{"code":["IM"],"name":["Index Medicus"]}]}
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - fullTextUrlList = {"fullTextUrl":[{"availability":["Open access"],"availabilityCode":["OA"],"documentStyle":["pdf"],"site":["Europe_PMC"],"url":["http://europepmc.org/articles/PMC4441471?pdf=render"]},{"availability":["Open access"],"availabilityCode":["OA"],"documentStyle":["html"],"site":["Europe_PMC"],"url":["http://europepmc.org/articles/PMC4441471"]},{"availability":["Subscription required"],"availabilityCode":["S"],"documentStyle":["doi"],"site":["DOI"],"url":["http://dx.doi.org/10.1371/journal.pone.0127339"]}]}
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - isOpenAccess = "Y"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - inEPMC = "Y"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - inPMC = "N"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - citedByCount = "0"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - hasReferences = "N"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - hasTextMinedTerms = "Y"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - hasDbCrossReferences = "N"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - hasLabsLinks = "N"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - hasTMAccessionNumbers = "N"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - dateOfCreation = "2015-05-24"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - electronicPublicationDate = "2015-05-22"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - firstPublicationDate = "2015-05-22"
-2    [main] DEBUG org.xmlcml.norma.json.ManifestTest  - luceneScore = "1176.4783"
+0    [main] DEBUG org.contentmine.norma.json.ManifestTest  - id = "26000862"
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - source = "MED"
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - pmid = "26000862"
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - pmcid = "PMC4441471"
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - DOI = "10.1371/journal.pone.0127339"
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - title = "Control of relative timing and stoichiometry by a master regulator."
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - authorString = "Goldschmidt Y, Yurkovsky E, Reif A, Rosner R, Akiva A, Nachman I."
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - authorList = {"author":[{"fullName":["Goldschmidt Y"],"firstName":["Yifat"],"lastName":["Goldschmidt"],"initials":["Y"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Yurkovsky E"],"firstName":["Evgeny"],"lastName":["Yurkovsky"],"initials":["E"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Reif A"],"firstName":["Amit"],"lastName":["Reif"],"initials":["A"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Rosner R"],"firstName":["Roni"],"lastName":["Rosner"],"initials":["R"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Akiva A"],"firstName":["Amit"],"lastName":["Akiva"],"initials":["A"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]},{"fullName":["Nachman I"],"firstName":["Iftach"],"lastName":["Nachman"],"initials":["I"],"affiliation":["Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."]}]}
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - journalInfo = {"issue":["5"],"volume":["10"],"journalIssueId":["2278532"],"dateOfPublication":["2015"],"monthOfPublication":["0"],"yearOfPublication":["2015"],"printPublicationDate":["2015-01-01"],"journal":[{"title":["PloS one"],"ISOAbbreviation":["PLoS ONE"],"medlineAbbreviation":["PLoS One"],"NLMid":["101285081"],"ESSN":["1932-6203"]}]}
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - pageInfo = "e0127339"
+1    [main] DEBUG org.contentmine.norma.json.ManifestTest  - abstractText = "Developmental processes in cells require a series of complex steps. Often only a single master regulator activates genes in these different steps. This poses several challenges: some targets need to be ordered temporally, while co-functional targets may need to be synchronized in both time and expression level. Here we study in single cells the dynamic activation patterns of early meiosis genes in budding yeast, targets of the meiosis master regulator Ime1. We quantify the individual roles of the promoter and protein levels in expression pattern control, as well as the roles of individual promoter elements. We find a consistent expression pattern difference between a non-cofunctional pair of genes, and a highly synchronized activation of a co-functional pair. We show that dynamic control leading to these patterns is distributed between promoter, gene and external regions. Through specific reciprocal changes to the promoters of pairs of genes, we show that different genes can use different promoter elements to reach near identical activation patterns."
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - affiliation = "Department of Biochemistry and Molecular Biology, Tel Aviv University, Tel Aviv, Israel."
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - language = "eng"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - pubModel = "Electronic-eCollection"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - pubTypeList = {"pubType":["Journal Article"]}
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - subsetList = {"subset":[{"code":["IM"],"name":["Index Medicus"]}]}
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - fullTextUrlList = {"fullTextUrl":[{"availability":["Open access"],"availabilityCode":["OA"],"documentStyle":["pdf"],"site":["Europe_PMC"],"url":["http://europepmc.org/articles/PMC4441471?pdf=render"]},{"availability":["Open access"],"availabilityCode":["OA"],"documentStyle":["html"],"site":["Europe_PMC"],"url":["http://europepmc.org/articles/PMC4441471"]},{"availability":["Subscription required"],"availabilityCode":["S"],"documentStyle":["doi"],"site":["DOI"],"url":["http://dx.doi.org/10.1371/journal.pone.0127339"]}]}
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - isOpenAccess = "Y"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - inEPMC = "Y"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - inPMC = "N"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - citedByCount = "0"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - hasReferences = "N"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - hasTextMinedTerms = "Y"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - hasDbCrossReferences = "N"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - hasLabsLinks = "N"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - hasTMAccessionNumbers = "N"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - dateOfCreation = "2015-05-24"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - electronicPublicationDate = "2015-05-22"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - firstPublicationDate = "2015-05-22"
+2    [main] DEBUG org.contentmine.norma.json.ManifestTest  - luceneScore = "1176.4783"
 	 */
 
 	@Test

@@ -6,13 +6,9 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.util.CMineTestFixtures;
-import org.contentmine.eucl.xml.XMLUtil;
-import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.norma.Norma;
 import org.contentmine.norma.NormaFixtures;
-import org.contentmine.norma.table.SVGTable2HTMLConverter;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -75,22 +71,6 @@ public class TableTest {
 		}
 	}
 	
-	/** align rows and columns
-	 * 
-	 * @param inputFile
-	 * @return
-	 * @throws IOException 
-	 */
-	@Test
-	public void testRowAndColumns() throws IOException {
-		File inputFile = new File(NormaFixtures.TEST_TABLE_DIR, "svg/10.1007_s00213-015-4198-1.svg");
-		SVGTable2HTMLConverter converter = new SVGTable2HTMLConverter();
-		converter.readInput(inputFile);
-		HtmlElement htmlElement = converter.convert();
-		File file = new File(NormaFixtures.TARGET_DIR, "table/svg/10.1007_s00213-015-4198-1.svg.html");
-		XMLUtil.debug(htmlElement, file, 1);
-	}
-	
 	@Test
 	/** aggregate into HTML display
 	 * (a) creates table.svg.html from table.svg
@@ -107,17 +87,6 @@ public class TableTest {
 			+ " --outputDir "+"target/pdftable00/"
 			+ " --transform svgtable2html");
 		
-	}
-	
-	@Test
-	public void testMenu() {
-//		File targetDir = new File("target/pdftable1/");
-		File targetDir = new File("../../cm-ucl/corpus-oa-pmr-v02/");
-		/**  */
-		new CProject().run("--project "+targetDir
-				+ " --output tableViewList.html"
-				+ " --projectMenu .*/tables/tableView.html");
-
 	}
 	
 	

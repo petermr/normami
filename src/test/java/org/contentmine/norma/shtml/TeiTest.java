@@ -85,12 +85,12 @@ public class TeiTest {
 		globber.setRegex(".*.xml");
 		globber.setLocation(targetDir.toString());
 		List<File> xmlFiles = globber.listFiles();
-		Assert.assertEquals(16, xmlFiles.size());
+		Assert.assertEquals(2, xmlFiles.size());
 		normaRunner.convertRawTEIXMLToProject(targetDir);
 		globber.setRegex(".*/fulltext\\.xml");
 		globber.setLocation(targetDir.toString());
 		xmlFiles = globber.listFiles();
-		Assert.assertEquals(16, xmlFiles.size());
+		Assert.assertEquals(2, xmlFiles.size());
 		
 		String cmd = "--project "+targetDir + " --input fulltext.xml" + " --output fulltext.html "+" --transform grobid2html ";
 		new Norma().run(cmd);
