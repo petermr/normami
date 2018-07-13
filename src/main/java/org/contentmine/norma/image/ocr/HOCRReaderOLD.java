@@ -1,6 +1,7 @@
 package org.contentmine.norma.image.ocr;
 
 import java.awt.image.BufferedImage;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -57,10 +58,11 @@ import nu.xom.Elements;
  * @author pm286
  *
  */
-public class HOCRReader extends InputReader {
+@Deprecated // use cephis instead
+public class HOCRReaderOLD extends InputReader {
 
 
-	public static final Logger LOG = Logger.getLogger(HOCRReader.class);
+	public static final Logger LOG = Logger.getLogger(HOCRReaderOLD.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -150,7 +152,7 @@ public class HOCRReader extends InputReader {
 		this.marginColor = marginColor;
 	}
 
-	public HOCRReader() {
+	public HOCRReaderOLD() {
 		setup();
 	}
 	
@@ -308,7 +310,7 @@ public class HOCRReader extends InputReader {
 	private HtmlSVG createPageFromTesseract(HtmlDiv wordPageDiv) {
 		SVGWordPage svgPage = wordPageDiv == null ? null : new SVGWordPage();
 		HtmlDiv htmlPage = new HtmlDiv();
-		HOCRReader.copyAttributes(wordPageDiv, svgPage);
+		HOCRReaderOLD.copyAttributes(wordPageDiv, svgPage);
 		XMLUtil.copyAttributes(wordPageDiv, htmlPage);
 		HtmlSVG htmlSVG = new HtmlSVG(htmlPage, svgPage);
 		Elements childs = wordPageDiv.getChildElements();
@@ -335,7 +337,7 @@ public class HOCRReader extends InputReader {
 		XMLUtil.copyAttributes(wordBlockDiv, htmlBlock);
 		htmlBlock.setClassAttribute("block");
 		SVGWordBlock svgBlock = wordBlockDiv == null ? null : new SVGWordBlock();
-		HOCRReader.copyAttributes(wordBlockDiv, svgBlock);
+		HOCRReaderOLD.copyAttributes(wordBlockDiv, svgBlock);
 		HtmlSVG htmlSVG = new HtmlSVG(htmlBlock, svgBlock);
 		Elements childs = wordBlockDiv.getChildElements();
 		for (int i = 0; i < childs.size(); i++) {
@@ -358,7 +360,7 @@ public class HOCRReader extends InputReader {
 
 	private HtmlSVG createParFromTesseract(HtmlP p) {
 		SVGWordPara svgPara = p == null ? null : new SVGWordPara();
-		HOCRReader.copyAttributes(p, svgPara);
+		HOCRReaderOLD.copyAttributes(p, svgPara);
 		HtmlP htmlP = new HtmlP();
 		XMLUtil.copyAttributes(p, htmlP);
 		HtmlSVG htmlSVG = new HtmlSVG(htmlP, svgPara);
@@ -383,7 +385,7 @@ public class HOCRReader extends InputReader {
 
 	private HtmlSVG createLineFromTesseract(HtmlSpan lineSpan) {
 		SVGWordLine svgLine = new SVGWordLine();
-		HOCRReader.copyAttributes(lineSpan, svgLine);
+		HOCRReaderOLD.copyAttributes(lineSpan, svgLine);
 		HtmlSpan htmlLineSpan = new HtmlSpan();
 		XMLUtil.copyAttributes(lineSpan, htmlLineSpan);
 		HtmlSVG htmlSVG = new HtmlSVG(htmlLineSpan, svgLine);
@@ -483,7 +485,7 @@ public class HOCRReader extends InputReader {
 	private HtmlSVG createWordFromTesseract(HtmlSpan htmlSpan0) {
 		LOG.trace("createWordFromTesseract");
 		SVGWord svgWord = new SVGWord();
-		HOCRReader.copyAttributes(htmlSpan0, svgWord);
+		HOCRReaderOLD.copyAttributes(htmlSpan0, svgWord);
 		HtmlSpan htmlSpan = new HtmlSpan(); 
 		HtmlSVG htmlSVG = new HtmlSVG(htmlSpan, svgWord);
 		HOCRTitle hocrTitle = new HOCRTitle(htmlSpan0.getTitle());
@@ -606,7 +608,7 @@ public class HOCRReader extends InputReader {
 		BufferedImage expandedImage = addMargins(rawImage0);
 		ImageIO.write(expandedImage, imageSuffix, new FileOutputStream(pngFile));
 		ImageToHOCRConverter converter = new ImageToHOCRConverter();
-		File outfileRoot = new File(imageDir, id+HOCRReader.HOCR);
+		File outfileRoot = new File(imageDir, id+HOCRReaderOLD.HOCR);
 		File outputHtml = converter.convertImageToHOCR(pngFile, outfileRoot);
 		if (outputHtml == null) {
 			return;
@@ -620,7 +622,7 @@ public class HOCRReader extends InputReader {
 		GridExtractor gridExtractor = new GridExtractor(new Real2(8., 8.));
 		gridExtractor.deduceGrid(potentialLabels);
 
-		SVGSVG.wrapAndWriteAsSVG(svgg, new File(imageDir, id+HOCRReader.HOCR_SVG));
+		SVGSVG.wrapAndWriteAsSVG(svgg, new File(imageDir, id+HOCRReaderOLD.HOCR_SVG));
 	}
 
 	private BufferedImage addMargins(BufferedImage rawImage) {
@@ -759,7 +761,7 @@ public class HOCRReader extends InputReader {
 
 	public static List<String> matchPattern(HtmlSpan line, Pattern pattern) {
 		List<String> matchList = new ArrayList<String>();
-		List<HtmlSpan> words = HOCRReader.getWords(line);
+		List<HtmlSpan> words = HOCRReaderOLD.getWords(line);
 		StringBuilder sb = new StringBuilder();
 		for (HtmlSpan word : words) {
 			sb.append(word.getValue());
@@ -778,7 +780,7 @@ public class HOCRReader extends InputReader {
 
 	public static String getSpacedValue(HtmlSpan line) {
 		StringBuilder sb = new StringBuilder();
-		List<HtmlSpan> spans = HOCRReader.getWords(line);
+		List<HtmlSpan> spans = HOCRReaderOLD.getWords(line);
 		for (HtmlSpan span : spans) {
 			sb.append(span.getValue()+" ");
 		}
@@ -842,7 +844,7 @@ public class HOCRReader extends InputReader {
 	public List<SVGPhrase> getOrCreatePhraseList() {
 		if (allPhraseList == null) {
 			this.getOrCreateWordLineList();
-			allPhraseList = HOCRReader.createPhraseList(wordLineList);
+			allPhraseList = HOCRReaderOLD.createPhraseList(wordLineList);
 		}
 		return allPhraseList;
 	}

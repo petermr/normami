@@ -37,7 +37,7 @@ import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.graphics.svg.SVGText;
 import org.contentmine.graphics.svg.normalize.TextDecorator;
 import org.contentmine.graphics.svg.plot.XYPlotBox;
-import org.contentmine.norma.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 import org.contentmine.norma.image.ocr.NamedImage;
 import org.contentmine.norma.input.pdf.PDF2ImagesConverter;
 import org.contentmine.norma.input.pdf.PDF2TEIConverter;
@@ -68,7 +68,7 @@ public class NormaTransformer {
 		// HTMLCleaner
 //        type             type         indir      informat   outdir     outformat
 		DECOMPACTSVG(  "decompactsvg",  "null",   CTree.SVG,  null,    CTree.SVG+"."+"compact"+".svg"),
-		COMPACTSVG(    "compactsvg",    "null",   CTree.SVG,  null,    CTree.SVG+"."+"compact"+".svg"),
+		COMPACTSVG(    "compactsvg",    "null",   CTree.SVG,  null,    CTree.SVG/*+"."+"compact"+".svg"*/),
 		HOCR2SVG(      "hocr2svg",      "image/", CTree.HOCR,  "svg/",   CTree.HOCR_SVG),
 		CSV2HTML(      "csv2html",      "table/", CTree.CSV,  "table/", CTree.FULLTEXT_HTML),
 		CSV2TSV(       "csv2tsv",       "table/", CTree.CSV,  "table/", CTree.TSV),
@@ -77,10 +77,10 @@ public class NormaTransformer {
 		PDF2SVG(       "pdf2svg",       null,     CTree.FULLTEXT_PDF,  "svg/",   CTree.FULLTEXT_PDF_SVG),
 		PDF2TEI(       "pdf2tei",       null,     CTree.FULLTEXT_PDF,  null,     CTree.FULLTEXT_TEI_XML),
 		PDF2TXT(       "pdf2txt",       null,     CTree.FULLTEXT_PDF,  null,     CTree.FULLTEXT_PDF_TXT),
-		SCATTER2CSV (  "scatter2csv",   null,     CTree.SVG,  null,     CTree.SVG+"."+"csv"),
-		SVGTABLE2CSV ( "svgtable2csv",  null,     CTree.SVG,  null,     CTree.SVG+"."+"csv"),
-		SVGTABLE2HTML( "svgtable2html", null,     CTree.SVG,  null,     CTree.SVG+"."+"html"),
-		SVG2SVG(       "svg2svg",       null,     CTree.SVG,  null,     CTree.SVG+"."+"svg"),
+		SCATTER2CSV (  "scatter2csv",   null,     CTree.SVG,           null,     CTree.SVG+"."+"csv"),
+		SVGTABLE2CSV ( "svgtable2csv",  null,     CTree.SVG,           null,     CTree.SVG+"."+"csv"),
+		SVGTABLE2HTML( "svgtable2html", null,     CTree.SVG,           null,     CTree.SVG+"."+"html"),
+		SVG2SVG(       "svg2svg",       null,     CTree.SVG,           null,     CTree.SVG+"."+"svg"),
 		TEI2HTML(      "tei2html",      null,     CTree.FULLTEXT_TEI_XML,  null, CTree.FULLTEXT_HTML),
 		TEI2TXT(       "tei2txt",       null,     CTree.FULLTEXT_TEI_XML,  null, CTree.FULLTEXT_TXT),
 		TEX2HTML(      "tex2html",      null,     CTree.FULLTEXT_TEX,  null,     CTree.FULLTEXT_HTML),
@@ -88,6 +88,7 @@ public class NormaTransformer {
 		// XML input // all requite stylesheets
 		XML2HTML(      "xml2html",      null,     CTree.FULLTEXT_XML,  null,     CTree.SCHOLARLY_HTML),
 		XML2TXT(       "xml2txt",       null,     CTree.FULLTEXT_XML,  null,     CTree.FULLTEXT_TXT),
+//		XMLSECTION(    "xmlsection",    null,     CTree.FULLTEXT_XML,  null,     CTree.FULLTEXT_XML),
 		XML2XML(       "xml2xml",       null,     CTree.FULLTEXT_XML,  null,     CTree.FULLTEXT_XML),
 		;
 	
@@ -233,6 +234,7 @@ public class NormaTransformer {
 		} else {
 			transformSingleInputFile();
 		}
+		return;
 		
 	}
 
@@ -309,6 +311,10 @@ public class NormaTransformer {
 		// create default directory name
 		inputDirName = (type.inputDirName != null) ? type.inputDirName : inputDirName;
 		outputDirName = (type.outputDirName != null) ? type.outputDirName : outputDirName;
+		// FIXME
+		if (outputDirName != null) {
+			outputDir = new File(outputDirName);
+		}
 		ioFileFilter = normaArgProcessor.getIOFileFilter();
 		if (inputDirName != null && !"null".equals(inputDirName)) { // check for duplicate code
 			parseInputDirectoryAndAddDefaults(inputDirName, outputDirName);
@@ -324,6 +330,7 @@ public class NormaTransformer {
 		} 
 		LOG.debug("inputFile: "+inputFile+"; outputFile: "+outputFile + "; fileFilter: " + ioFileFilter + "; inputDir: "+inputDirName+
 				"; ctree: "+this.currentCTree.getDirectory()+"; outputDir: "+outputDirName);
+		return;
 	}
 
 	private void parseInputFile() {
@@ -463,6 +470,7 @@ public class NormaTransformer {
 			LOG.warn("Cannot process cleaned HTML element - use 2-step norma");
 			
 		} else if (Type.XML2HTML.equals(type) ||
+//				Type.XMLSECTION.equals(type) ||
 				Type.XML2TXT.equals(type) ||
 				Type.XML2XML.equals(type)) {
 			transformXMLWithStylesheet();
@@ -562,7 +570,7 @@ public class NormaTransformer {
 	}
 
 	private SVGElement applyHOCR2SVGToInputFile(File inputFile) {
-		HOCRReader hocrReader = new HOCRReader();
+		HOCRReaderOLD hocrReader = new HOCRReaderOLD();
 		try {
 			hocrReader.readHOCR(new FileInputStream(inputFile));
 		} catch (IOException e) {
@@ -811,10 +819,6 @@ public class NormaTransformer {
 		return outputTxt;
 	}
 
-//	public String getXmlString() {
-//		return xmlString;
-//	}
-
 	/** ordered list of title+image.
 	 *
 	 * title are of form "image<page>.<serial>.Img<img>"
@@ -837,10 +841,17 @@ public class NormaTransformer {
 		if (outputFile != null) {
 			String outname = outputFile.getAbsolutePath().toString();
 			String treename = currentCTree.getDirectory().getAbsolutePath().toString();
-			if (!outname.startsWith(treename)) {
-				throw new RuntimeException("outname is not child of Ctree "+outname+" ; "+treename);
+			
+//			if (!outname.startsWith(treename)) {
+//				throw new RuntimeException("outname is not child of Ctree "+outname+" ; "+treename);
+//			}
+			if (outname.startsWith(treename)) {	
+				output = outname.substring(treename.length());
+			} else {
+				// FIXME
+				File f = outputDir;
+				output = outname.substring(treename.length());
 			}
-			output = outname.substring(treename.length());
 			// output is of form "table/table1.html"
 		} else {
 			output = normaArgProcessor.getOutput();

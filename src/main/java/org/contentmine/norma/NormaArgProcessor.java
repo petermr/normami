@@ -301,6 +301,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 			normaTransformer.clearVariables();
 			normaTransformer.runTransform(transformTypeString);
 		}
+		return;
 	}
 
 	public void runHtml(ArgumentOption option) {

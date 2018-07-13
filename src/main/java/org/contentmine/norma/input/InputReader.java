@@ -1,13 +1,14 @@
 package org.contentmine.norma.input;
 
 import java.io.IOException;
+
 import java.io.InputStream;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
 import org.contentmine.norma.InputFormat;
 import org.contentmine.norma.RawInput;
-import org.contentmine.norma.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 import org.contentmine.norma.input.html.HtmlReader;
 
 public class InputReader {
@@ -21,7 +22,7 @@ public class InputReader {
 		} else if (type.equals(InputFormat.HTML)) {
 			reader = new HtmlReader();
 		} else if (type.equals(InputFormat.HOCR)) {
-			reader = new HOCRReader();
+			reader = new HOCRReaderOLD();
 		} else {
 			throw new RuntimeException("Unknown/unsupported input type: "+type);
 		}

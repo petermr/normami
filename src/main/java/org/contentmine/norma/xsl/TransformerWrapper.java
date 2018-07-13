@@ -126,6 +126,9 @@ public class TransformerWrapper {
 		if (outfile == null) {
 			throw new RuntimeException("null output file");
 		}
+		if (outfile.exists()) {
+			FileUtils.forceDelete(outfile);
+		}
 		
 	    String xmlString = transformToXML(infile);
 	    // debug output

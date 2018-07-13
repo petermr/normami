@@ -13,7 +13,7 @@ import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.graphics.svg.SVGSVG;
-import org.contentmine.pdf2svg.PDF2SVGConverter;
+import org.contentmine.svg2xml.PDF2SVGConverter;
 import org.contentmine.svg2xml.pdf.PDFAnalyzer;
 
 import nu.xom.Element;
@@ -63,33 +63,40 @@ public class PDF2XHTMLConverter {
 	public List<SVGSVG> readAndConvertToSVGList(File infile) throws Exception {
 		LOG.warn("PDFAnalyzer not refactored into svghtml");
 		PDF2SVGConverter converter = createAndSetConverter();
-		converter.openPDFFile(infile);
-		List<SVGSVG> svgList = converter.getPageList();
-		return svgList;
+		LOG.error("FIXME");
+//		converter.openPDFFile(infile);
+//		List<SVGSVG> svgList = converter.getPageList();
+//		return svgList;
+		return null;
 	}
 
 	public List<SVGSVG> readAndConvertToSVGList(URL url) throws Exception {
 		LOG.warn("PDFAnalyzer not refactored into svghtml");
 		PDF2SVGConverter converter = createAndSetConverter();
-		converter.openPDFURL(url);
-		List<SVGSVG> svgList = converter.getPageList();
-		return svgList;
+		LOG.error("FIXME");
+//		converter.openPDFURL(url);
+//		List<SVGSVG> svgList = converter.getPageList();
+//		return svgList;
+		return null;
 	}
 
 	public List<SVGSVG> readAndConvertToSVGList(InputStream is) throws Exception {
 		LOG.warn("PDFAnalyzer not refactored into svghtml");
 		PDF2SVGConverter converter = createAndSetConverter();
-		converter.openPDFInputStream(is);
-		List<SVGSVG> svgList = converter.getPageList();
-		return svgList;
+		throw new RuntimeException("FIXME");
+//		converter.openPDFInputStream(is);
+//		List<SVGSVG> svgList = converter.getPageList();
+//		return svgList;
 	}
 
 	private PDF2SVGConverter createAndSetConverter() {
 		LOG.warn("PDFAnalyzer not refactored into svghtml");
 		PDF2SVGConverter converter = new PDF2SVGConverter();
-		converter.setWriteFile(false);
-		converter.setStoreSVG(true);
-		return converter;
+		throw new RuntimeException("FIXME");
+
+//		converter.setWriteFile(false);
+//		converter.setStoreSVG(true);
+//		return converter;
 	}
 
 	public HtmlElement readAndConvertToXHTML(List<SVGSVG> svgList) throws Exception {

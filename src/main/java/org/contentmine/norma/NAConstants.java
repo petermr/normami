@@ -47,8 +47,19 @@ public class NAConstants {
 	public final static String PLUGINS_RESOURCE   = NAConstants.SLASH_AMI_RESOURCE+"/plugins";
 	public final static String PLUGINS_DICTIONARY = NAConstants.PLUGINS_RESOURCE+"/dictionary";
 	public final static String PLUGINS_GENE       = NAConstants.PLUGINS_RESOURCE+"/gene";
+	public final static String PLUGINS_PLACES     = NAConstants.PLUGINS_RESOURCE+"/places";
 	public final static String PLUGINS_SPECIES    = NAConstants.PLUGINS_RESOURCE+"/species";
+	public final static String PLUGINS_STATISTICS = NAConstants.PLUGINS_RESOURCE+"/statistics";
 	public final static String PLUGINS_SYNBIO     = NAConstants.PLUGINS_RESOURCE+"/synbio";
 	public final static String PLUGINS_WORD       = NAConstants.PLUGINS_RESOURCE+"/word";
+	
+	public static final String GENE_HGNC          = NAConstants.PLUGINS_GENE+"/hgnc";
+
+	public static final File LOCAL_DIR = new File("local/");
+	public static final File LOCAL_DOCUMENTS = new File(NAConstants.LOCAL_DIR, "doc/");
+	public static final File LOCAL_DICTIONARIES = new File(NAConstants.LOCAL_DIR, "dict/");
+	public static final File LOCAL_COMMANDS = new File(NAConstants.LOCAL_DIR, "cmd/");
+
+
 
 } 

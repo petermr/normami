@@ -53,7 +53,7 @@ public class NormaTestFixtures {
 		String args = null;
 		if (type.equals("project")) {
 			CProject project = new CProject(dir);
-			CTreeList cTreeList = project.getResetCTreeList();
+			CTreeList cTreeList = project.getOrCreateCTreeList();
 			for (CTree cTree : cTreeList) {
 				if (!cTree.hasScholarlyHTML()) {
 					// mising SHTML, normalize all
