@@ -18,7 +18,7 @@ import org.contentmine.cproject.args.ArgumentOption;
 import org.contentmine.cproject.files.ResultsElement;
 import org.contentmine.graphics.svg.text.SVGPhrase;
 import org.contentmine.norma.editor.Extraction;
-import org.contentmine.norma.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 
 /** 
  * Processes commandline arguments.
@@ -149,7 +149,7 @@ public class PhyloTreeArgProcessor extends AMIArgProcessor {
 		}
 	}
 
-	public HOCRReader getOrCreateHOCRReader() {
+	public HOCRReaderOLD getOrCreateHOCRReader() {
 		return phyloCore.getOrCreateHOCRReader();
 	}
 

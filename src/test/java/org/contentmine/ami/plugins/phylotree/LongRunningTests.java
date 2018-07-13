@@ -21,7 +21,7 @@ import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.editor.EditList;
 import org.contentmine.norma.editor.Extraction;
 import org.contentmine.norma.editor.SubstitutionEditor;
-import org.contentmine.norma.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -136,7 +136,7 @@ public class LongRunningTests {
 					XMLUtil.debug(nexml, new FileOutputStream(MergeTipTest.X15GOODTREE+root+".nexml.xml"), 1);
 					FileUtils.write(new File(MergeTipTest.X15GOODTREE+root+".nwk"), nexml.createNewick());
 					XMLUtil.debug(nexml.createSVG(), new FileOutputStream(MergeTipTest.X15GOODTREE+root+".svg"), 1);
-					HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
+					HOCRReaderOLD hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
 					SVGSVG.wrapAndWriteAsSVG(hocrReader.getOrCreateSVG(), new File(MergeTipTest.X15GOODTREE+root+".words.svg"));
 				} catch (Exception e) {
 					LOG.debug("error in conversion");

@@ -167,8 +167,7 @@ NOT YET FULLY IMPLEMENTED.
   </help>
  </arg>
 
- <arg 
-     name="move" 
+ <arg name="move" 
      long="--move" 
      args=" glob directory"
   class="org.contentmine.cproject.args.StringPair" 
@@ -177,6 +176,7 @@ NOT YET FULLY IMPLEMENTED.
   runMethod="runMove">
   <help>
    NOT YET FULLY IMPLEMENTED
+   OBSOLETE?
    NOTE complemented by new "move" command
    moves files of type glob to directory (subdirectory of CTree), creating it if necessary
    at the moment globbing only on file suffixes as we need to protect the metacharacters

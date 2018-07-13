@@ -377,7 +377,7 @@ public class NormaArgProcessorTest {
 		File projectDir1 = new File("target/corrupt");
 		CMineTestFixtures.cleanAndCopyDir(sourceDir1, projectDir1);
 		CProject project  = new CProject(projectDir1);
-		LOG.debug(project.getResetCTreeList());
+		LOG.debug(project.getOrCreateCTreeList());
 		String args1 = "--project "+projectDir1.toString()+" --relabelContent fulltext.html";
 		new Norma().run(args1);
 		Assert.assertFalse("old html", new File(projectDir1, "test1/fulltext.html").exists());

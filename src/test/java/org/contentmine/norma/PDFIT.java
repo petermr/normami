@@ -24,13 +24,13 @@ public class PDFIT {
 	@Test
 	//	@Ignore // LARGE
 		// reinstated
-		public void testPDF2SVG() {
-			File cprojectDir = new File(NormaFixtures.TEST_MISC_DIR, "cproject");
-			File targetDir = new File("target/pdfs/cproject");
-			File targetDir1 = new File("target/pdfs/cproject/temp");
-			CMineTestFixtures.cleanAndCopyDir(cprojectDir, targetDir);
-			String cmd = "--project " + targetDir + " --input fulltext.pdf "+ " --outputDir " + targetDir1 + " --transform pdf2svg ";
-			new Norma().run(cmd);
-		}
+	public void testPDF2SVG() {
+		File cprojectDir = new File(NormaFixtures.TEST_MISC_DIR, "cproject");
+		File targetDir = new File("target/pdfs/cproject");
+		File targetDir1 = new File("target/pdfs/cproject/temp");
+		CMineTestFixtures.cleanAndCopyDir(cprojectDir, targetDir);
+		String cmd = "--project " + targetDir + " --input fulltext.pdf "+ " --outputDir " + targetDir1 + " --transform pdf2svg ";
+		new Norma().run(cmd);
+	}
 
 }

@@ -42,7 +42,7 @@ public class PMIDParserTest {
 		RISParser parser = new RISParser();
 		parser.read(new FileInputStream(new File(NormaFixtures.TEST_BIBLIO_DIR, "pmid/pmidsmall.txt")));
 		List<RISEntry> bibChunks = parser.getEntries();
-		Assert.assertEquals(13,  bibChunks.size());
+		Assert.assertEquals(3,  bibChunks.size());
 		for (RISEntry chunk : bibChunks) {
 //			System.out.println(">>"+chunk);
 		}
@@ -53,7 +53,7 @@ public class PMIDParserTest {
 		RISParser parser = new RISParser();
 		parser.read(new FileInputStream(new File(NormaFixtures.TEST_BIBLIO_DIR, "pmid/pmidsmall.txt")));
 		List<RISEntry> bibChunks = parser.getEntries();
-		Assert.assertEquals(13,  bibChunks.size());
+		Assert.assertEquals(3,  bibChunks.size());
 		for (RISEntry chunk : bibChunks) {
 //			System.out.println(">>"+chunk);
 		}

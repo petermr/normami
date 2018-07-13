@@ -212,11 +212,11 @@ public class TableClippingDemoIT {
 
 	@Test
 	public void testTablesAndEquations() {
-		NormaRunner normaRunner = new NormaRunner();
+		Norma norma = new Norma();
 		File projectDir = new File(NormaFixtures.TEST_DEMOS_DIR, "cert");
 		File targetDir = new File("target/demos/cert/");
 		CMineTestFixtures.cleanAndCopyDir(projectDir, targetDir);
-		normaRunner.convertRawPDFToProjectToSVG(targetDir);
+		norma.convertRawPDFToProjectToSVG(targetDir);
 		
 		File ctreeDir; String cmd;
 		
@@ -237,11 +237,11 @@ public class TableClippingDemoIT {
 
 	@Test
 	public void testPDFToCompactSVG() {
-		NormaRunner normaRunner = new NormaRunner();
+		Norma norma = new Norma();
 		File projectDir = new File(NormaFixtures.TEST_DEMOS_DIR, "cert");
 		File targetDir = new File("target/demos/cert/");
 		CMineTestFixtures.cleanAndCopyDir(projectDir, targetDir);
-		normaRunner.convertRawPDFToProjectToCompactSVG(targetDir);
+		norma.convertRawPDFToProjectToCompactSVG(targetDir);
 		
 		File ctreeDir; String cmd;
 		
@@ -262,11 +262,11 @@ public class TableClippingDemoIT {
 
 	@Test
 	public void testCTree() {
-		NormaRunner normaRunner = new NormaRunner();
+		Norma norma = new Norma();
 		File projectDir = new File(NormaFixtures.TEST_DEMOS_DIR, "cert");
 		File targetDir = new File("target/demos/cert/");
 		CMineTestFixtures.cleanAndCopyDir(projectDir, targetDir);
-		normaRunner.convertRawPDFToProjectToSVG(targetDir);
+		norma.convertRawPDFToProjectToSVG(targetDir);
 		File ctree = new File(targetDir, "Varga2001");
 		String outpath = "tables/table1b/table.svg";
 		String cmd = "" +
@@ -280,18 +280,18 @@ public class TableClippingDemoIT {
 	@Test
 	// very long
 		public void testTypefaces() throws IOException {
-			NormaRunner normaRunner = new NormaRunner();
+			Norma norma = new Norma();
 			File projectDir = new File(NormaFixtures.TEST_DEMOS_DIR, "cert");
 			Assert.assertTrue("exists "+projectDir, projectDir.exists());
 			File targetDir = new File("target/demos/cert/");
 	//		/**
 			CMineTestFixtures.cleanAndCopyDir(projectDir, targetDir);
-			normaRunner.convertRawPDFToProjectToCompactSVG(targetDir);
+			norma.convertRawPDFToProjectToCompactSVG(targetDir);
 	//		*/
 			File ctreeDir; String cmd;
 	
 			CMineGlobber globber = new CMineGlobber();
-			globber.setRegex(".*/fulltext-page.*compact.svg");
+			globber.setRegex(".*/fulltext-page\\.svg");
 			globber.setLocation(targetDir.toString());
 			List<File> textFiles = globber.listFiles();
 			List<SVGText> svgTexts = SVGText.readAndCreateTexts(textFiles);

@@ -58,7 +58,7 @@ public class HGNCDictionary extends DefaultAMIDictionary {
 
 	private void readHGNCXML() {
 		ClassLoader cl = getClass().getClassLoader();
-		String hgnc = NAConstants.PLUGINS_GENE+"/hgnc/hgnc.xml";
+		String hgnc = NAConstants.GENE_HGNC+"/hgnc.xml";
 		LOG.debug("is "+hgnc);
 //		InputStream hgncIs = cl.getResourceAsStream(hgnc);
 		InputStream hgncIs = this.getClass().getResourceAsStream(hgnc);
@@ -68,7 +68,7 @@ public class HGNCDictionary extends DefaultAMIDictionary {
 	private void readHGNCJson() {
 		try {
 			createFromInputStream(HGNC, this.getClass().getClassLoader().getResourceAsStream(
-					NAConstants.PLUGINS_GENE+"/hgnc/hgnc_complete_set.json"));
+					NAConstants.GENE_HGNC+"/hgnc_complete_set.json"));
 			String resultsJsonString = IOUtils.toString(inputStream, UTF_8);
 		    JsonParser parser = new JsonParser();
 		    hgncJson = (JsonObject) parser.parse(resultsJsonString);

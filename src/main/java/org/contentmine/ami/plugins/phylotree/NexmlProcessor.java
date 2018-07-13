@@ -39,7 +39,7 @@ import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.editor.EditList;
 import org.contentmine.norma.editor.Extraction;
 import org.contentmine.norma.editor.SubstitutionEditor;
-import org.contentmine.norma.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 
 import nu.xom.Attribute;
 
@@ -310,12 +310,12 @@ public class NexmlProcessor {
 		return speciesPatternInputStream;
 	}
 
-	public void matchSpecies(HOCRReader hocrReader) {
+	public void matchSpecies(HOCRReaderOLD hocrReader) {
 		if (speciesPattern != null) {
 			List<HtmlSpan> lines = hocrReader.getNonEmptyLines();
 			for (HtmlSpan line : lines) {
-				List<String> matchList = HOCRReader.matchPattern(line, speciesPattern);
-				argProcessor.LOG.trace((matchList.size() == 0 ? "?? "+HOCRReader.getSpacedValue(line).toString() : matchList));
+				List<String> matchList = HOCRReaderOLD.matchPattern(line, speciesPattern);
+				argProcessor.LOG.trace((matchList.size() == 0 ? "?? "+HOCRReaderOLD.getSpacedValue(line).toString() : matchList));
 			}
 		}
 	}

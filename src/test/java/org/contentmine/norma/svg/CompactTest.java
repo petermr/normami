@@ -24,6 +24,7 @@ private static final Logger LOG = Logger.getLogger(CompactTest.class);
 	}
 
 	@Test
+	// FIXME TEST
 	public void testCompact() {
 		String cprojectName = "singleTreeSingleFigure";
 		File sourceDir = new File(NormaFixtures.TEST_PLOT_DIR, cprojectName);
@@ -34,7 +35,7 @@ private static final Logger LOG = Logger.getLogger(CompactTest.class);
 		File inputFile = new File(targetDir, "ctree1/figures/figure1/figure.svg");
 		Assert.assertEquals("input file ", 48389, FileUtils.sizeOf(inputFile));
 		new Norma().run(cmd);
-		File outputFile = new File(targetDir, "ctree1/figures/figure1/figure.svg.compact.svg");
+		File outputFile = new File(targetDir, "ctree1/figures/figure1/figure.svg");
 		long size = FileUtils.sizeOf(outputFile);
 //		Assert.assertEquals("new file "+size, 28150, size);
 	}

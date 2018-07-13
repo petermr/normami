@@ -349,7 +349,7 @@ public class TutorialTest {
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
 //		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
 		String cmd = "sequence(dnaprimer) gene(human) "
-		+ "word(search)w.search:"+NAConstants.PLUGINS_RESOURCE+"/dictionary/tropicalVirus.xml";
+		+ "word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/tropicalVirus.xml";
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
 		commandProcessor.processCommands(cmd);
 
@@ -365,7 +365,7 @@ public class TutorialTest {
 		
 //		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
 		String cmd = "sequence(dnaprimer) gene(human) "
-		+ "word(search)w.search:"+NAConstants.PLUGINS_RESOURCE+"/dictionary/statistics.xml";
+		+ "word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/statistics.xml";
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
 		commandProcessor.processCommands(cmd);
 

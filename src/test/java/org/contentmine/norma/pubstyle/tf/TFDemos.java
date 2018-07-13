@@ -54,7 +54,7 @@ public class TFDemos {
 		transformTables2Html(targetDir);
 		
 		CProject project = new CProject(targetDir);
-		CTreeList ctrees = project.getResetCTreeList();
+		CTreeList ctrees = project.getOrCreateCTreeList();
 		List<HtmlTable> tables = new ArrayList<HtmlTable>();
 		List<HtmlElement> rows = new ArrayList<HtmlElement>();
 		StringBuilder captionBuilder = new StringBuilder();

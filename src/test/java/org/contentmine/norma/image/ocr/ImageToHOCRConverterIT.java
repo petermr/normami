@@ -16,7 +16,7 @@ import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.norma.NormaFixtures;
-import org.contentmine.norma.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
 import org.contentmine.norma.image.ocr.NamedImage;
 import org.contentmine.norma.input.pdf.PDF2ImagesConverter;
@@ -49,7 +49,7 @@ public class ImageToHOCRConverterIT {
 		} else {
 			Assert.assertTrue("outfile exists", outfile.exists());
 			Assert.assertEquals("filename", "image.2.1.hocr.html", outfile.getName());
-			HOCRReader hocrReader = new HOCRReader();
+			HOCRReaderOLD hocrReader = new HOCRReaderOLD();
 			hocrReader.readHOCR(new FileInputStream(outfile));
 			SVGElement svgg = hocrReader.getOrCreateSVG();
 			Assert.assertNotNull("svgg not null", svgg);
@@ -91,7 +91,7 @@ public class ImageToHOCRConverterIT {
 			String root = FilenameUtils.getBaseName(file.getParentFile().getName());
 			DefaultArgProcessor.CM_LOG.debug(root);
 			BufferedImage image = ImageIO.read(file);
-			HOCRReader hocrReader = new HOCRReader();
+			HOCRReaderOLD hocrReader = new HOCRReaderOLD();
 			hocrReader.setMaxFontSize(50.);
 			hocrReader.labelSubImages("[A-Za-z]");
 			File outputDir1 = new File(outputDir, root);
@@ -106,7 +106,7 @@ public class ImageToHOCRConverterIT {
 		File outputDir = new File("target/neuro/images");
 		outputDir.mkdirs();
 		String imageSuffix = "png";
-		HOCRReader hocrReader = new HOCRReader();
+		HOCRReaderOLD hocrReader = new HOCRReaderOLD();
 		hocrReader.setMaxFontSize(50.);
 		hocrReader.labelSubImages("[A-Za-z]");
 //		hocrReader.setImageMarginX(50);

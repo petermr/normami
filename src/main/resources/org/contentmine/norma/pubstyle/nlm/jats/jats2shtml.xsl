@@ -128,6 +128,15 @@
 
 <!--  unexpected tags; transform <foo> to <div tagx="foo">...</div> -->
 	<xsl:template match="*">
+	<!--  tags yet to be assigned
+UNKNOWN nlm: glyph-ref: 
+UNKNOWN nlm: alt-text: 
+UNKNOWN nlm: city: 
+UNKNOWN nlm: license_ref: 
+UNKNOWN nlm: statement: 
+UNKNOWN nlm: state: 
+UNKNOWN nlm: def-head: 
+	 -->
 	    <div>
 	        <xsl:message>UNKNOWN: <xsl:value-of select="local-name()"/></xsl:message>
 	        <xsl:copy-of select="@*"/>

@@ -12,7 +12,6 @@ import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.norma.Norma;
-import org.contentmine.norma.NormaRunner;
 import org.contentmine.norma.pubstyle.util.RegionFinder;
 import org.contentmine.svg2xml.page.PageCropper;
 import org.contentmine.svg2xml.page.PageCropper.Units;
@@ -123,12 +122,12 @@ top: 117.3, left: 17.6, width: 85.6, height: 79.5
 	@Test
 	@Ignore // NYworking
 	public void testGetBoxesByXPath() throws IOException {
-		NormaRunner normaRunner = new NormaRunner();
+		Norma norma = new Norma();
 
 		File projectDir = new File(NormaFixtures.TEST_DEMOS_DIR, "lancet");
 		File targetDir = new File("target/demos/lancet/");
 		CMineTestFixtures.cleanAndCopyDir(projectDir, targetDir);
-		normaRunner.convertRawPDFToProjectToSVG(targetDir);
+		norma.convertRawPDFToProjectToSVG(targetDir);
 		
 		RegionFinder regionFinder = new RegionFinder();
 		 // lancet

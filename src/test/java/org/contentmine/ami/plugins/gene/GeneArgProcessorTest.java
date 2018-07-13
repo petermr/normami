@@ -61,7 +61,7 @@ public class GeneArgProcessorTest {
 		File large = new File(AMIFixtures.TEST_PATENTS_DIR, "US08979");
 		NormaTestFixtures.runNorma(large, "project", "uspto2html"); // writes to test dir
 		String args = "-i scholarly.html --g.gene "
-				+ "--c.dictionary "+NAConstants.PLUGINS_RESOURCE+"/gene/hgnc/hgnc.xml"
+				+ "--c.dictionary "+NAConstants.GENE_HGNC+"/hgnc.xml"
 				+ " --project "+large; 
 		GeneArgProcessor argProcessor = new GeneArgProcessor(args);
 		argProcessor.runAndOutput();
@@ -80,7 +80,7 @@ public class GeneArgProcessorTest {
 		if (!large.exists()) return; // only on PMR machine
 //		WordTest.runNorma(large);
 		String args = "-i scholarly.html --g.gene "
-				+ "--c.dictionary "+NAConstants.PLUGINS_RESOURCE+"/gene/hgnc/hgnc.xml"
+				+ "--c.dictionary "+NAConstants.GENE_HGNC+"/hgnc.xml"
 				+ " --project "+large; 
 		GeneArgProcessor argProcessor = new GeneArgProcessor(args);
 		argProcessor.runAndOutput();

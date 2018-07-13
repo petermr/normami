@@ -228,7 +228,7 @@ public class LargeTests {
 		commandProcessor.processCommands(""
 				+ "regex(regex/statistics.xml)"
 //				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
-				+ " word(search)w.search:"+NAConstants.PLUGINS_RESOURCE+"/statistics/statistics.xml"
+				+ " word(search)w.search:"+NAConstants.PLUGINS_STATISTICS+"/statistics.xml"
 				+ "");
 		commandProcessor.createDataTables();
 	}

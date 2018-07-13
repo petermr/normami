@@ -20,7 +20,7 @@ import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.Norma;
 import org.contentmine.norma.NormaFixtures;
-import org.contentmine.norma.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -45,7 +45,7 @@ public class HOCRReaderTest {
 		String resource = NAConstants.OCR_RESOURCE+"ijs.0.003566-0-000.pbm.png.hocr";
 		InputStream is = this.getClass().getResourceAsStream(resource);
 		Assert.assertNotNull("input stream must not be null: "+resource, is);
-		HOCRReader hocrReader = new HOCRReader();
+		HOCRReaderOLD hocrReader = new HOCRReaderOLD();
 		hocrReader.readHOCR(is);
 		Assert.assertNotNull(hocrReader.getHocrElement());
 		HtmlElement htmlHead = hocrReader.getHead();
@@ -58,7 +58,7 @@ public class HOCRReaderTest {
 	@Test
 	@Ignore // fix expected file
 	public void testReadHOCR2SVG() throws IOException {
-		HOCRReader hocrReader = new HOCRReader();
+		HOCRReaderOLD hocrReader = new HOCRReaderOLD();
 		hocrReader.readHOCR(this.getClass().getResourceAsStream(NAConstants.OCR_RESOURCE+"ijs.0.003566-0-000.pbm.png.hocr"));
 		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
 		Assert.assertNotNull("SVG not null", svgSvg);
@@ -82,11 +82,11 @@ public class HOCRReaderTest {
 	    Assert.assertNull("message: "+msg, msg);
 	}
 
-	private void matchSpecies(HOCRReader hocrReader, Pattern IJSEM) {
+	private void matchSpecies(HOCRReaderOLD hocrReader, Pattern IJSEM) {
 		List<HtmlSpan> lines = hocrReader.getNonEmptyLines();
 		for (HtmlSpan line : lines) {
-			List<String> matchList = HOCRReader.matchPattern(line, IJSEM);
-			LOG.trace((matchList.size() == 0 ? "?? "+HOCRReader.getSpacedValue(line).toString() : matchList));
+			List<String> matchList = HOCRReaderOLD.matchPattern(line, IJSEM);
+			LOG.trace((matchList.size() == 0 ? "?? "+HOCRReaderOLD.getSpacedValue(line).toString() : matchList));
 		}
 //		System.out.println();
 	}
@@ -109,7 +109,7 @@ public class HOCRReaderTest {
 
 		for (String root : roots) {
 			LOG.trace(root);
-			HOCRReader hocrReader = new HOCRReader();
+			HOCRReaderOLD hocrReader = new HOCRReaderOLD();
 			String hocrResource = NAConstants.OCR_RESOURCE+"/"+root+".pbm.png.hocr";
 			InputStream resourceAsStream = this.getClass().getResourceAsStream(hocrResource);
 			Assert.assertNotNull("hocr not null "+hocrResource, resourceAsStream);

@@ -29,7 +29,7 @@ import org.contentmine.graphics.svg.text.SVGWordBlock;
 import org.contentmine.graphics.svg.text.SVGWordLine;
 import org.contentmine.graphics.svg.text.SVGWordPage;
 import org.contentmine.graphics.svg.text.SVGWordPara;
-import org.contentmine.norma.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 
 /** merges results from HOCR (Tesseract) with phylotree (SVG and Nexml)
  * 
@@ -55,7 +55,7 @@ public class HOCRPhyloTreeTest {
 	
 	@Test
 	public void testReadHOCRSVG() throws Exception {
-		HOCRReader hocrReader = new HOCRReader();
+		HOCRReaderOLD hocrReader = new HOCRReaderOLD();
 		hocrReader.readHOCR(new FileInputStream(HOCR_364_HTML));
 		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
 		//svgSvg.debug("svg");
@@ -119,7 +119,7 @@ public class HOCRPhyloTreeTest {
 	@Test
 	public void testMerge() throws Exception {
 		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
-		HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
+		HOCRReaderOLD hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
 		List<SVGPhrase> phraseList = hocrReader.createPhraseList(HOCRPhyloTreeTest.HOCR_364_HTML);
 		Assert.assertEquals(73, phraseList.size());
 		
@@ -139,7 +139,7 @@ public class HOCRPhyloTreeTest {
 	@Test
 	public void testMerge1() throws Exception {
 		PhyloTreeArgProcessor phyloTreeArgProcessor = new PhyloTreeArgProcessor();
-		HOCRReader hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
+		HOCRReaderOLD hocrReader = phyloTreeArgProcessor.getOrCreateHOCRReader();
 //		List<SVGWordLine> allLineList = hocrReader.createWordLineList(HOCRPhyloTreeTest.HOCR_364_HTML);
 		phyloTreeArgProcessor.mergeFiles(HOCRPhyloTreeTest.HOCR_364_HTML, PHYLOTREE_364_NEXML);
 	}

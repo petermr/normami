@@ -29,4 +29,6 @@
   <stylesheet name="grobid2html">/org/contentmine/norma/tei/grobid-html.xsl</stylesheet>
   <!--  patents  -->
   <stylesheet name="uspto2html">/org/contentmine/norma/patents/uspto/toHtml.xsl</stylesheet>
+  <!-- extractions from jats -->
+  <stylesheet name="nlm2method">/org/contentmine/norma/pubstyle/nlm/jats/sections/methods.xsl</stylesheet>
 </stylesheetList>

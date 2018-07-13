@@ -62,12 +62,21 @@ public class AMIFixtures {
 
 	public static final File TEST_WORD_DIR           = new File(NAConstants.TEST_AMI_DIR, "word");
 	public static final File TEST_WORD_EXAMPLES      = new File(TEST_WORD_DIR, "examples");
+	
+	public static final File TEST_WORKBENCH_DIR      = new File(NAConstants.TEST_AMI_DIR, "workbench");
+	public static final File TEST_WORKBENCH_MOSQUITO_PDF = new File(TEST_WORKBENCH_DIR, "mosquitosPDF");
+	public static final File TEST_WORKBENCH_MOSQUITO_PDF1 = new File(TEST_WORKBENCH_DIR, "mosquitosPDF1");
+	public static final File TEST_WORKBENCH_MOSQUITO_PDF_SVG =
+			new File(TEST_WORKBENCH_DIR, "mosquitosPDFSVG");
+	public static final File TEST_WORKBENCH_MOSQUITO = new File(TEST_WORKBENCH_DIR, "mosquitos");
+	
 	public static final File TARGET_EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
 
 	public static final String RESULTS_XML = "results.xml";
 	private static final String RESULTS_DIR = "results/";
 	private static final String EXPECTED_DIR = "expected/";
 	private static final String TARGET_TEST = "target/test/";
+
 
 
 	/** runs tests and compares expected and actual output.

@@ -22,8 +22,10 @@ public class NormaFixtures {
 	public final static File MAIN_PUBSTYLE_DIR = new File(NAConstants.MAIN_NORMA_DIR, "pubstyle");
 	public final static File MAIN_HINDAWI_DIR = new File(NormaFixtures.MAIN_PUBSTYLE_DIR, "hindawi");
 	public final static File GROUP_MAJOR_SECTIONS_XSL = new File(NormaFixtures.MAIN_HINDAWI_DIR, "groupMajorSections.xsl");
+	public final static File TARGET_DIR = new File("target");
 
 	public final static File TEST_NORMA_DIR = new File(CHESConstants.SRC_TEST_TOP, "norma");
+	public final static File TARGET_NORMA_DIR = new File("target", "norma");
 	
 	public final static File TEST_BIBLIO_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "biblio");
 	public final static File TEST_DEMOS_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "demos");
@@ -32,7 +34,10 @@ public class NormaFixtures {
 	public final static File TEST_JSON_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "json");
 	public final static File TEST_OUTPUT_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "output");
 	public final static File TEST_PATENTS_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "patents");
+	public final static File TEST_PLOT_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "plot");
+	public final static File TARGET_PLOT_DIR = new File(NormaFixtures.TARGET_NORMA_DIR, "plot");
 	public final static File TEST_PUBSTYLE_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "pubstyle");
+	public final static File TARGET_PUBSTYLE_DIR = new File(TARGET_DIR, "pubstyle");
 	public final static File TEST_SECTIONS_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "sections");
 	public final static File TEST_STYLE_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "style");
 	public final static File TEST_TABLE_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "table");
@@ -112,10 +117,6 @@ public class NormaFixtures {
 	public final static File TEST_PDFTABLE0_DIR = new File(NormaFixtures.TEST_TABLE_DIR, "pdftable0/");
 	public final static File TEST_PDFTABLE_DIR = new File(NormaFixtures.TEST_TABLE_DIR, "pdftable/");
 	
-	public final static File TEST_PLOT_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "plot/");
-
-	public final static File TARGET_DIR = new File("target");
-	public final static File TARGET_PUBSTYLE_DIR = new File(TARGET_DIR, "pubstyle");
 
 	private static final File DEMO_DIR = new File("./demo");
 	public static final File MOSQUITOS_DIR = new File(NormaFixtures.DEMO_DIR, "mosquitos1/");

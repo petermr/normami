@@ -28,7 +28,7 @@ import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.graphics.svg.linestuff.LineMerger.MergeMethod;
 import org.contentmine.graphics.svg.text.SVGPhrase;
-import org.contentmine.norma.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
 
 /** the main data and logic of phylo.
@@ -47,7 +47,7 @@ public class PhyloCore {
 
 	private PhyloTreeArgProcessor argProcessor;
 	private String hocrHtmlFilename;
-	private HOCRReader hocrReader;
+	private HOCRReaderOLD hocrReader;
 	private String hocrSvgFilename;
 	private String svgFilename;
 	private File outputDir;
@@ -99,7 +99,7 @@ public class PhyloCore {
 
 	private void outputHocrHtml(File phyloTreeDir) {
 		File hocrHtmlFile = new File(phyloTreeDir, getImageSerial()+".hocr.html");
-		HOCRReader hocrReader = this.getOrCreateHOCRReader();
+		HOCRReaderOLD hocrReader = this.getOrCreateHOCRReader();
 		try {
 			HtmlElement htmlBody = hocrReader.getOrCreateHtmlBody();
 			if (htmlBody != null) {
@@ -114,7 +114,7 @@ public class PhyloCore {
 
 	private void outputHocrSvg(File phyloTreeDir) {
 		File hocrSvgFile = new File(phyloTreeDir, getImageSerial()+".hocr.svg");
-		HOCRReader hocrReader = this.getOrCreateHOCRReader();
+		HOCRReaderOLD hocrReader = this.getOrCreateHOCRReader();
 		argProcessor.TREE_LOG().info("wrote HOCSVG: "+hocrSvgFile);
 		SVGElement svg = hocrReader.getOrCreateSVG();
 		if (svg == null) {
@@ -128,9 +128,9 @@ public class PhyloCore {
 
 	// =============================
 	
-	public HOCRReader getOrCreateHOCRReader() {
+	public HOCRReaderOLD getOrCreateHOCRReader() {
 		if (hocrReader == null) {
-			hocrReader = new HOCRReader();
+			hocrReader = new HOCRReaderOLD();
 			hocrReader.setJoiningBox(DEFAULT_HOCR_WORD_JOINING_BOX);
 		}
 		return hocrReader;
@@ -166,7 +166,7 @@ public class PhyloCore {
 		return new File(outputDir, outputRoot+HOCR_HTML_SUFFIX);
 	}
 
-	private HOCRReader createHOCRReaderAndProcess(File imageFile) throws IOException,
+	private HOCRReaderOLD createHOCRReaderAndProcess(File imageFile) throws IOException,
 			InterruptedException, FileNotFoundException {
 		ensureOutputDirectory();
 		outputDir.mkdirs();
@@ -246,7 +246,7 @@ public class PhyloCore {
 	 * @param hocrReader
 	 * @param nexml modified by the process
 	 */
-	public void mergeOCRAndPixelTree(HOCRReader hocrReader, NexmlNEXML nexml) {
+	public void mergeOCRAndPixelTree(HOCRReaderOLD hocrReader, NexmlNEXML nexml) {
 		if (nexml == null) {
 			argProcessor.TREE_LOG().error("Cannot create tree");
 		} else {
@@ -339,7 +339,7 @@ public class PhyloCore {
 				XMLUtil.debug(nexml, new FileOutputStream(new File(outdir, root+".nexml.xml")), 1);
 				FileUtils.write(new File(outdir, root+".nwk"), nexml.createNewick());
 				XMLUtil.debug(nexml.createSVG(), new FileOutputStream(new File(outdir, root+".svg")), 1);
-				HOCRReader hocrReader = phyloCore.getOrCreateHOCRReader();
+				HOCRReaderOLD hocrReader = phyloCore.getOrCreateHOCRReader();
 				SVGSVG.wrapAndWriteAsSVG(hocrReader.getOrCreateSVG(), new File(outdir, root+".words.svg"));
 			}
 		}

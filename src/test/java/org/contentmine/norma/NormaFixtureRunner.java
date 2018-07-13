@@ -43,7 +43,7 @@ private static final Logger LOG = Logger.getLogger(NormaFixtureRunner.class);
 		DefaultArgProcessor argProcessor = new NormaArgProcessor(args); 
 		argProcessor.runAndOutput(); 
 		CProject project = new CProject(projectDir);
-		CTree ctree0 = project.getResetCTreeList().get(0);
+		CTree ctree0 = project.getOrCreateCTreeList().get(0);
 		File xhtmlFile = ctree0.getExistingFulltextXHTML();
 		if (xhtmlFile != null) {
 			Assert.assertTrue("xhtml: ", xhtmlFile.exists());

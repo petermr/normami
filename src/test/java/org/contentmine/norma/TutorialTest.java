@@ -106,9 +106,23 @@ public class TutorialTest {
 		Norma norma = new Norma();
 		norma.run(args);
 	}
-		
-	/**
 
+	@Test
+	// FIXME TEST
+	public void testSections() throws Exception {
+		LOG.warn("FIXME - method extraction");
+		File targetDir = new File("target/neuro");
+		CMineTestFixtures.cleanAndCopyDir(new File("src/test/resources/org/contentmine/norma/transform/neuro"), targetDir);
+		String args = "--project "+targetDir+" -i fulltext.xml --output method.xml --transform nlm2method";
+		Norma norma = new Norma();
+		norma.run(args);
+		Assert.assertTrue(new File(targetDir, "PMC3307046/fulltext.xml").exists());
+		// NYI
+		Assert.assertTrue("method.xml", new File( targetDir, "PMC3307046/method.xml").exists());
+		args = "--project "+targetDir+" -i method.xml -o method.html --transform nlm2html";
+		norma.run(args);
+	}
+	/**
 	# create scholarly.html for 9 publishers
 	 */
 	/**
@@ -123,7 +137,9 @@ public class TutorialTest {
 		String sourceName = NormaFixtures.QUICKSCRAPE_DIR+ "/acp/acp-15-1013-2015";
 		String destName = "target/cmdirs_all/acp/acp-15-1013-2015";
 		testXML2ScholarlyHTML(sourceName, destName);
-	}		
+	}	
+	
+	
 	/**
 	cp -R src/test/resources/org/contentmine/norma/pubstyle/bmc/1471-2148-14-70/  temp-bmc
 	rm temp-bmc/scholarly.html
@@ -178,6 +194,8 @@ public class TutorialTest {
 	norma -q temp-plosone -i fulltext.xml -o scholarly.html --transform nlm2html
 	ls -lt temp-plosone/scholarly.html
 	 */
+	
+	// ============= private ===============
 
 	private void testXML2ScholarlyHTML(String sourceName, String destName) throws IOException {
 		transformNLM(sourceName, destName);
