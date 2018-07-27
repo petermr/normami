@@ -27,14 +27,42 @@ import nu.xom.Node;
 public class OccurrenceAnalyzer {
 
 	public enum OccurrenceType {
-		SPECIES("match"),
-		STRING("exact");
-		private String attName;
-		private OccurrenceType(String attName) {
-			this.attName = attName;
+		BINOMIAL("binomial", "match"),
+		STRING(null, "exact"), 
+		GENE(null, "exact"), 
+		;
+		
+		private String name;
+		private String matchMethod;
+		private GeneType geneType;
+		
+		private OccurrenceType(String name, String matchMethod) {
+			this.name = name;
+			this.matchMethod = matchMethod;
+			this.geneType = null;
 		}
-		public String getAttName() {
-			return attName;
+		public String getMatchMethod() {
+			return matchMethod;
+		}
+		public void setSubType(GeneType subType) {
+			this.geneType = subType;
+		}
+	}
+
+	public enum GeneType {
+		HUMAN("human"),
+		MOUSE("mouse"),
+		DROSOPHILA("drosophila"),
+		ARABIDOPSIS("arabidopsis"),
+		;
+		
+		private String type;
+		private GeneType(String type) {
+			this.type = type;
+		}
+		
+		public String getType() {
+			return type;
 		}
 	}
 
@@ -43,12 +71,12 @@ public class OccurrenceAnalyzer {
 	private Map<File, List<Multiset.Entry<String>>> entryListByFile;
 
 	private OccurrenceType type = OccurrenceType.STRING;
-	private File projectDir;
-	private String resultsRegex;
+	private String resultsDirRegex;
 	private String code;
 	private int maxCount;
 	private List<File> resultsFiles;
 	private List<File> cTreeFiles;
+	private EntityAnalyzer entityAnalyzer;
 	
 	public OccurrenceAnalyzer() {
 		setDefaults();
@@ -64,18 +92,13 @@ public class OccurrenceAnalyzer {
 		return this;
 	}
 
-	public OccurrenceAnalyzer setProjectDir(File projectDir) {
-		this.projectDir = projectDir;
-		return this;
-	}
-
-	public OccurrenceAnalyzer setResultsRegex(String regex) {
-		this.resultsRegex = regex;
+	public OccurrenceAnalyzer setResultsDirRegex(String resultsDirRegex) {
+		this.resultsDirRegex = resultsDirRegex;
 		return this;
 	}
 
 	public String getAttName() {
-		return type.getAttName();
+		return type.getMatchMethod();
 	}
 
 	private List<Multiset.Entry<String>> getAllMatchedSpeciesInFileSortedByCount(File binomialFile) {
@@ -105,9 +128,13 @@ public class OccurrenceAnalyzer {
 
 	public List<File> getOrCreateResultsFiles() {
 		if (resultsFiles == null) {
-			resultsFiles = new CMineGlobber().setRegex(resultsRegex).setLocation(projectDir).listFiles();
+			resultsFiles = new CMineGlobber().setRegex(resultsDirRegex).setLocation(getProjectDir()).listFiles();
 		}
 		return resultsFiles;
+	}
+
+	private File getProjectDir() {
+		return entityAnalyzer == null ? null : entityAnalyzer.getProjectDir();
 	}
 
 	public List<Multiset.Entry<String>> getEntriesSortedByImportance() {
@@ -139,8 +166,9 @@ public class OccurrenceAnalyzer {
 		return this;
 	}
 
-	public void setMaxCount(int maxCount) {
+	public OccurrenceAnalyzer setMaxCount(int maxCount) {
 		this.maxCount = maxCount;
+		return this;
 	}
 
 
@@ -194,6 +222,19 @@ public class OccurrenceAnalyzer {
 
 	public int getMaxCount() {
 		return maxCount;
+	}
+
+	public OccurrenceType getType() {
+		return type;
+	}
+
+	public void setType(OccurrenceType type) {
+		this.type = type;
+	}
+
+	public OccurrenceAnalyzer setEntityAnalyzer(EntityAnalyzer entityAnalyzer) {
+		this.entityAnalyzer = entityAnalyzer;
+		return this;
 	}
 
 
