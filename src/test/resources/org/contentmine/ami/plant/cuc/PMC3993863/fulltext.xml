@@ -1,0 +1,273 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.0 20120330//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="rapid-communication" xml:lang="EN"><?DTDIdentifier.IdentifierValue -//ACS//DTD ACS Journal DTD v1.02 20061031//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName ACSJournal-v102.dtd?><?SourceDTD.Version 1.02?><?ConverterInfo.XSLTName acs2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Org Lett</journal-id><journal-id journal-id-type="iso-abbrev">Org. Lett</journal-id><journal-id journal-id-type="publisher-id">ol</journal-id><journal-id journal-id-type="coden">orlef7</journal-id><journal-title-group><journal-title>Organic Letters</journal-title></journal-title-group><issn pub-type="ppub">1523-7060</issn><issn pub-type="epub">1523-7052</issn><publisher><publisher-name>American Chemical
+Society</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3993863</article-id><article-id pub-id-type="doi">10.1021/ol500422t</article-id><article-categories><subj-group><subject>Letter</subject></subj-group></article-categories><title-group><article-title>Copper-Mediated Perfluoroalkylation of Heteroaryl
+Bromides with (phen)CuR<sub>F</sub></article-title></title-group><contrib-group><contrib contrib-type="author" id="ath1"><name><surname>Mormino</surname><given-names>Michael
+G.</given-names></name></contrib><contrib contrib-type="author" id="ath2"><name><surname>Fier</surname><given-names>Patrick S.</given-names></name></contrib><contrib contrib-type="author" corresp="yes" id="ath3"><name><surname>Hartwig</surname><given-names>John F.</given-names></name><xref rid="cor1" ref-type="other">*</xref></contrib><aff id="aff1"><institution>University of California</institution>, Department of Chemistry, Berkeley, California 94720, <country>United States</country></aff></contrib-group><author-notes><corresp id="cor1"><label>*</label>E-mail: <email>jhartwig@berkeley.edu</email>.</corresp></author-notes><pub-date pub-type="pmc-release"><day>12</day><month>03</month><year>2015</year></pub-date><pub-date pub-type="epub"><day>12</day><month>03</month><year>2014</year></pub-date><pub-date pub-type="ppub"><day>21</day><month>03</month><year>2014</year></pub-date><volume>16</volume><issue>6</issue><fpage>1744</fpage><lpage>1747</lpage><history><date date-type="received"><day>10</day><month>02</month><year>2014</year></date></history><permissions><copyright-statement>Copyright &#x000a9; 2014 American Chemical Society</copyright-statement><copyright-year>2014</copyright-year><copyright-holder>American Chemical Society</copyright-holder></permissions><abstract><p content-type="toc-graphic"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ol-2014-00422t_0008" id="ab-d31e132"/></p><p>The
+attachment of perfluoroalkyl groups onto organic compounds
+has been a major synthetic goal over the past several decades. Previously,
+our group reported phenanthroline-ligated perfluoroalkyl copper reagents,
+(phen)CuR<sub>F</sub>, which react with aryl iodides and aryl boronates
+to form the corresponding benzotrifluorides. Herein the perfluoroalkylation
+of a series of heteroaryl bromides with (phen)CuCF<sub>3</sub> and
+(phen)CuCF<sub>2</sub>CF<sub>3</sub> is reported. The mild reaction
+conditions allow the process to tolerate many common functional groups.
+Perfluoroethylation with (phen)CuCF<sub>2</sub>CF<sub>3</sub> occurs in somewhat higher yields than trifluoromethylation
+with (phen)CuCF<sub>3</sub>, creating a method to generate fluoroalkyl
+heteroarenes that are less accessible from trifluoroacetic acid
+derivatives.</p></abstract><funding-group><funding-statement><funding-source>National Institutes of Health, United States</funding-source></funding-statement></funding-group><custom-meta-group><custom-meta><meta-name>document-id-old-9</meta-name><meta-value>ol500422t</meta-value></custom-meta><custom-meta><meta-name>document-id-new-14</meta-name><meta-value>ol-2014-00422t</meta-value></custom-meta><custom-meta><meta-name>ccc-price</meta-name><meta-value/></custom-meta></custom-meta-group></article-meta></front><body><p>The trifluoromethyl group is
+present in numerous pharmaceuticals, agrochemicals, and materials.
+As a result, there has been considerable interest in developing practical
+reactions to incorporate perfluoroalkyl groups into organic compounds
+under mild conditions. In medicinal and agrochemistry, the introduction
+of a trifluoromethyl group can lead to increases in activity and stability.<sup><xref ref-type="bibr" rid="ref1">1</xref></sup> The top selling drugs fluoxetine (Prozac) and
+mefloquine (Lariam) and the leading agrochemical fluazinam contain
+CF<sub>3</sub> groups (Figure <xref rid="fig1" ref-type="fig">1</xref>).</p><fig id="fig1" position="float"><label>Figure 1</label><caption><p>Bioactive compounds
+containing CF<sub>3</sub> groups.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ol-2014-00422t_0002" id="gr4" position="float"/></fig><p>The Swarts reaction, which involves the treatment of benzotrichlorides
+with HF or SbF<sub>5</sub>, remains the most prevalent method for
+the industrial-scale synthesis of trifluoromethyl arenes and certain
+heteroarenes.<sup><xref ref-type="bibr" rid="cit2a">2a</xref></sup> Although this method is
+effective in the bulk production of simple benzotrifluorides,
+its utility on the laboratory scale for the synthesis of complex molecules
+and late-stage functionalization is limited by the low functional
+group compatibility and toxic reagents. Furthermore, the Swarts reaction
+cannot be applied to the synthesis of longer-chain perfluoroalkyl
+moieties, such as the C<sub>2</sub>F<sub>5</sub> group.</p><p>Although
+there has been considerable progress in copper-mediated
+perfluoroalkylation reactions in recent years, these reactions are
+mostly limited to aryl iodide and arylboron substrates.<sup><xref ref-type="bibr" rid="ref2">2</xref></sup> Perfluoroalkylation reactions of aryl bromides,
+which are more commercially and synthetically available than aryl
+iodides, have been limited to substrates containing electron-withdrawing
+groups. A single report for the trifluoromethylation of aryl
+chlorides with Pd has been reported.<sup><xref ref-type="bibr" rid="ref3">3</xref></sup> However,
+these reactions require an expensive palladium precatalyst, ligand,
+and CF<sub>3</sub> source. Most relevant to our current work, the
+majority of the current methods have not been demonstrated to be applicable
+to the synthesis of fluoroalkyl <italic>hetero</italic>arenes with
+significant scope. This limitation is important because of the prevalence
+of heteroarenes in medicinal and agrochemistry.</p><p>The difference
+in availability of aryl iodides and bromides is
+even greater for heteroaryl halides. There are only about one-fifth
+as many commercially available iodopyridines compared to bromopyridines,
+and the price of 2-iodopyridine is nearly 40 times higher than that
+of 2-bromopyridine per mole.<sup><xref ref-type="bibr" rid="ref4">4</xref></sup> A Reaxys
+search shows that there are also twice as many procedures to synthesize
+any bromopyridine isomer compared to procedures to synthesize the
+corresponding iodopyridines.</p><p>Grushin has recently reported the
+perfluoroalkylation of
+heteroaryl bromides with CuCF<sub>3</sub> formed by the direct cupration
+of HCF<sub>3</sub>.<sup><xref ref-type="bibr" rid="cit5a">5a</xref>,<xref ref-type="bibr" rid="cit5b">5b</xref></sup> Although the functional group
+tolerance and yields of this method are high, the CuCF<sub>3</sub> reagent cannot be stored.<sup><xref ref-type="bibr" rid="cit5c">5c</xref></sup> Thus, each
+reaction must be initiated by generation of CuCF<sub>3</sub> from
+gaseous HCF<sub>3</sub>, and such a transformation is challenging
+to conduct in common laboratory settings.</p><p>Methods for the radical
+trifluoromethylation of heteroarenes
+have also been reported recently.<sup><xref ref-type="bibr" rid="ref6">6</xref></sup> While
+these methods do not require prefunctionalized substrates, the yields
+and regioselectivities of these reactions are often modest, and limited
+functional group compatibility has been demonstrated. Thus, methods
+for the synthesis of fluoroalkylheteroarenes from heteroaryl
+bromides with easily handled reagents that occur with broad scope
+and complete site selectivity are desirable.</p><p>Our group recently
+reported the trifluoromethylation of aryl iodides
+with a phenanthroline&#x02013;CuCF<sub>3</sub> complex, (phen)CuCF<sub>3</sub> (<bold>1</bold>) (Figure <xref rid="fig2" ref-type="fig">2</xref>B).<sup><xref ref-type="bibr" rid="cit7a">7a</xref></sup> This thermally stable, commercially available
+solid reacts with a variety of aryl iodides and electron-deficient
+aryl bromides under mild conditions. We also showed that aryl bromides
+can be converted to trifluoromethylarenes indirectly by
+initial conversion to arylboronate esters, followed by a reaction
+of the boronate with <bold>1</bold> in air.<sup><xref ref-type="bibr" rid="cit7b">7b</xref></sup></p><fig id="fig2" position="float"><label>Figure 2</label><caption><p>Synthesis of perfluoroalkyl heteroarenes.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ol-2014-00422t_0003" id="gr5" position="float"/></fig><p>Because <bold>1</bold> was shown to react with
+electron-deficient <italic>aryl</italic> bromides, we considered that <bold>1</bold> would react
+similarly with <italic>hetero</italic>aryl bromides that are inherently
+more electron-deficient than the corresponding arenes, such as pyridines
+and diazines. However, reactions of CuCF<sub>3</sub> reagents with
+bromopyridines could be challenging because pyridines can bind to
+the metal center and alter the inherent reactivity. Moreover, bromopyridines
+are less reactive toward oxidative addition than iodopyridines, and
+the oxidative addition step is likely the rate-limiting step for reactions
+with copper centers containing electron-withdrawing perfluoroalkyl
+groups.<sup><xref ref-type="bibr" rid="ref9">9</xref></sup> We hypothesized that the chelating
+phen ligand in preformed <bold>1</bold> would minimize bonding of
+the pyridine to the copper center, in addition to rendering the copper
+complex isolable and easy to handle. Herein, we report that copper
+complexes <bold>1</bold> and <bold>2</bold> react with a range of
+heteroaryl bromides to form perfluoroalkylheteroarenes
+in good yields. The reactivity and functional group compatibility
+for the reaction of bromopyridines with <bold>1</bold> is higher than
+those of prior methods for the fluoroalkylation of heteroarenes.</p><p>Table <xref rid="tbl1" ref-type="other">1</xref> shows a comparison of the yield
+for the trifluoromethylation of methyl 6-bromopicolinate,
+a representative bromopyridine containing a potentially reactive ester.
+Although the 2-position is activated, the prior methods reported for
+trifluoromethylation generate the 2-trifluoromethylpyridine
+in low to modest yield. In contrast, the reaction of this bromopyridine
+with <bold>1</bold> occurs in essentially quantitative yield.</p><table-wrap id="tbl1" position="float"><label>Table 1</label><caption><title>Comparison of Copper-Mediated Trifluoromethylations
+of a Functionalized Bromopyridine<xref rid="t1fn1" ref-type="table-fn">a</xref></title></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ol-2014-00422t_0007" id="fx1" position="float"/><table frame="hsides" rules="groups" border="0"><colgroup><col align="left"/><col align="left"/></colgroup><thead><tr><th style="border:none;" align="center">conditions</th><th style="border:none;" align="center">yield</th></tr></thead><tbody><tr><td style="border:none;" align="left">(phen)CuCF<sub>3</sub>, DMF, 80&#x000a0;&#x000b0;C</td><td style="border:none;" align="left">96%</td></tr><tr><td style="border:none;" align="left">(PPh<sub>3</sub>)<sub>3</sub>CuCF<sub>3</sub> (1.0&#x000a0;equiv), <sup><italic>t</italic></sup>Bu-bpy,
+PhMe, 80&#x000a0;&#x000b0;C</td><td style="border:none;" align="left">56%<xref rid="t1fn2" ref-type="table-fn">b</xref></td></tr><tr><td style="border:none;" align="left">K[(MeO)<sub>3</sub>BCF<sub>3</sub>], CuI (20&#x000a0;mol&#x000a0;%), phen (20&#x000a0;mol&#x000a0;%), DMSO, 60&#x000a0;&#x000b0;C</td><td style="border:none;" align="left">17%<xref rid="t1fn3" ref-type="table-fn">c</xref></td></tr><tr><td style="border:none;" align="left">TESCF<sub>3</sub>, KF,
+CuI (10&#x000a0;mol&#x000a0;%), phen (10&#x000a0;mol&#x000a0;%), DMF/NMP, 60&#x000a0;&#x000b0;C</td><td style="border:none;" align="left">20%<xref rid="t1fn4" ref-type="table-fn">d</xref></td></tr><tr><td style="border:none;" align="left">MeO<sub>2</sub>CCF<sub>3</sub>, CsF, CuI (10&#x000a0;mol&#x000a0;%), DMF, 160&#x000a0;&#x000b0;C</td><td style="border:none;" align="left">24%<xref rid="t1fn5" ref-type="table-fn">e</xref></td></tr><tr><td style="border:none;" align="left">TESCF<sub>3</sub>, KF, CuI (1.5&#x000a0;equiv), DMF/NMP, 80&#x000a0;&#x000b0;C</td><td style="border:none;" align="left">&#x0003c;5%<xref rid="t1fn6" ref-type="table-fn">f</xref></td></tr></tbody></table><table-wrap-foot><fn id="t1fn1"><label>a</label><p>Yields were determined
+by <sup>19</sup>F NMR spectroscopy.</p></fn><fn id="t1fn2"><label>b</label><p>Reference (<xref ref-type="bibr" rid="cit8a">8a</xref>).</p></fn><fn id="t1fn3"><label>c</label><p>Reference (<xref ref-type="bibr" rid="cit8b">8b</xref>).</p></fn><fn id="t1fn4"><label>d</label><p>Reference (<xref ref-type="bibr" rid="cit8c">8c</xref>).</p></fn><fn id="t1fn5"><label>e</label><p>Reference (<xref ref-type="bibr" rid="cit8d">8d</xref>).</p></fn><fn id="t1fn6"><label>f</label><p>Reference (<xref ref-type="bibr" rid="cit8e">8e</xref>).</p></fn></table-wrap-foot></table-wrap><p>The scope of
+the trifluoromethylation reaction of various
+2-, 3-, and 4-bromopyridines with complex <bold>1</bold> is
+shown in Scheme <xref rid="sch1" ref-type="scheme">1</xref>. 2-Bromopyridines containing
+both electron-donating and electron-withdrawing substituents at each
+position of the ring afforded the products in excellent yields within
+8 h. Substrates bearing aldehyde, ketone, ester, and the Weinreb amide
+functionality (<bold>3f</bold>&#x02013;<bold>k</bold>) reacted in good
+yields; side products resulting from nucleophilic addition of CF<sub>3</sub> to the carbonyl group were not observed. Competitive addition
+to a carbonyl group is commonly observed in systems involving nucleophilic
+CF<sub>3</sub> reagents.<sup><xref ref-type="bibr" rid="ref8">8</xref></sup> In addition,
+substrates containing nitro and cyano groups (<bold>4e</bold> and <bold>4l</bold>) reacted in high yields. Ortho-substituted 2-bromopyridines
+formed products <bold>4b</bold>, <bold>4f</bold>, <bold>4g</bold>,
+and <bold>4p</bold> in 74&#x02013;94% yield. Protic X&#x02013;H bonds
+of alcohols, amides, and carbamates were tolerated under the reaction
+conditions. However, a lower yield (<bold>4m</bold>, 40%) was observed
+from the reaction of a substrate containing a secondary amide compared
+to that from a substrate containing a tertiary amide (<bold>4n</bold>, 92%).</p><fig id="sch1" position="float"><label>Scheme 1</label><caption><title>Trifluoromethylation of Bromopyridines with (phen)CuCF<sub>3</sub> (<bold>1</bold>)</title><p id="s1fn1">Reaction conditions:
+bromopyridine
+(<bold>3</bold>, 0.10 mmol) and <bold>1</bold> (0.12 mmol) in DMF
+(1 mL) at 80 or 100 &#x000b0;C for 8 h. Yields were determined by <sup>19</sup>F NMR spectroscopy. Yields in parentheses are isolated yields. <sup><italic>b</italic></sup> Yield of bis-trifluoromethylated product. <sup><italic>c</italic></sup> Reaction was run at 100 &#x000b0;C. <sup><italic>d</italic></sup> 1.5 equiv of <bold>1</bold> was used. <sup><italic>e</italic></sup> Isolated product contains trace (2&#x02013;3%) perfluoroethyl
+product.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ol-2014-00422t_0004" id="gr1" position="float"/></fig><p>For certain compounds (<bold>4m</bold>&#x02013;<bold>o</bold>),
+the isolated product was found to contain trace (2&#x02013;3%) perfluoroethyl
+product resulting from difluorocarbene insertion into the CuCF<sub>3</sub> reagent.<sup><xref ref-type="bibr" rid="cit5c">5c</xref></sup> The reaction of 2,5-dibromopyridine
+(<bold>3d</bold>) occurred preferentially at the 2-position over the
+5-position, but the product from trifluoromethylation at both the
+2- and 5-position formed in 15% yield. No product was observed corresponding
+to trifluoromethylation at the 5-position alone. 2-Chloropyridines
+and pyrimidines were also investigated for their reactivity toward <bold>1</bold>. However, low yields (5&#x02013;20%) of the trifluoromethylated
+products were obtained from the heteroaryl chlorides.</p><p>Pyridines
+containing bromine at the 4-position were less reactive
+than those containing bromine at the 2-position. High yields were
+observed when the bromoheteroarene contained electron-withdrawing
+groups (<bold>3ac</bold>&#x02013;<bold>ae</bold>). The product of trifluoromethylation
+was obtained in modest yield from 4-bromopyridines bearing electron-donating
+groups (<bold>4aa</bold>, <bold>4ab</bold>).</p><p>3-Bromopyridines
+were less reactive toward this process than 2-
+and 4-bromopyridines, but synthetically useful amounts of the 3-trifluoromethylpyridines
+did form. We presume the lower reactivity is due to the greater electron
+density at the 3-position of pyridines than at the 2- and 4-positions,
+making them more akin to bromoarenes and less prone to undergo oxidative
+addition to the Cu(I) reagent. Consistent with this assertion, the
+reactions of 3-bromopyridines required heating at a higher temperature
+(100 &#x000b0;C) than the reactions with 2-bromopyridines (80 &#x000b0;C).
+The trifluoromethylation of 3-bromopyridines containing
+electron-donating substituents (<bold>3x</bold>, <bold>3y</bold>)
+afforded products in modest yields. However, the trifluoromethylation
+of 3-bromopyridines containing electron-withdrawing substituents
+(<bold>3s</bold>&#x02013;<bold>w</bold>) formed the products in good
+yields. Thus, this simple reaction provides a method to form a range
+of 3-trifluoromethylpyridine derivatives.</p><p>To enhance
+the reactivity of 3-bromopyridines toward <bold>1</bold>, we
+tested several changes to the reaction conditions (see
+Table S1 in the <xref rid="notes-1" ref-type="notes">Supporting Information</xref>).
+However, changes to the temperature, equivalents of <bold>1</bold>, reaction time, concentration, ligand, and solvent had little effect
+on the yield. Catalytic quantities of Lewis acids to bind to pyridine
+and decrease electron density at the 3-position led to no reaction.
+Reactions of the corresponding pyridine-<italic>N</italic>-oxide and <italic>N</italic>-(TBS)pyridinium triflate formed the trifluoromethylpyridine
+derivatives in trace quantities. We are continuing to investigate
+methods to increase the reactivity of electron-rich 3-bromopyridines
+toward <bold>1</bold>.</p><p>The scope of the trifluoromethylation
+reaction with <bold>1</bold> encompassed reactions with other brominated
+nitrogen heterocycles
+(Scheme <xref rid="sch2" ref-type="scheme">2</xref>). For example, 2- and 5-bromopyrimidines
+reacted with <bold>1</bold> to form the corresponding trifluoromethylpyrimidines
+in good yield (<bold>6a</bold>&#x02013;<bold>c</bold>). Complex <bold>1</bold> also reacted with a range of bromopyrazines (<bold>5d</bold>), quinolines (<bold>5e, 5f</bold>), quinoxolines (<bold>5g</bold>), isoquinolines (<bold>5h</bold>), and aza-indoles (<bold>5i</bold>) when bromine was located adjacent to nitrogen. The reaction with
+2,4-dibromoquinoline occurred selectively at the 2-position;
+only 18% of the bis-trifluoromethylated side product (<bold>6e</bold>) formed.</p><fig id="sch2" position="float"><label>Scheme 2</label><caption><title>Trifluoromethylation of Heteroaryl Bromides with (phen)CuCF<sub>3</sub> (<bold>1</bold>)</title><p id="s2fn1">Reaction conditions:
+bromoheteroarene
+(<bold>5</bold>, 0.10 mmol) and <bold>1</bold> (0.12 mmol) in DMF
+(1 mL) at 80 or 100 &#x000b0;C for 8 h. Yields were determined by <sup>19</sup>F NMR spectroscopy. Yields in parentheses are isolated yields. <sup><italic>b</italic></sup> Yield of bis-trifluoromethylated product. <sup><italic>c</italic></sup> Reaction was run at 100 &#x000b0;C. <sup><italic>d</italic></sup> 1.5 equiv of <bold>1</bold> was used. <sup><italic>e</italic></sup> Isolated product contains 20% perfluoroethyl product. <sup><italic>f</italic></sup> Isolated on a 4.8 mmol scale.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ol-2014-00422t_0005" id="gr2" position="float"/></fig><p>The electron-rich property of five-membered heterocycles
+might
+lead one to expect that these systems would not react readily with <bold>1</bold>. However, complex <bold>1</bold> does react with certain
+five-membered heterocycles containing bromine in the 2-position. The
+reactions of <bold>1</bold> with 2-bromo indole (<bold>5j</bold>),
+benzimidazole (<bold>5l</bold>), and benzoxazole (<bold>5k</bold>)
+formed the trifluoromethylated products in good to high yield.
+Brominated caffeine was also transformed to the trifluoromethylated
+product and isolated on gram scale in high yield (<bold>6m</bold>),
+demonstrating the applicability of this method for the large-scale
+trifluoromethylation of complex heterocyclic substrates. Finally,
+the nucleoside derivative <bold>5n</bold> underwent trifluoromethylation
+in high yield. Reactions of 2-bromofurans and 2-bromothiophenes
+also were explored, but only low yields of the trifluoromethylation
+product were obtained. Furthermore, unprotected N&#x02013;H derivatives
+of <bold>5i</bold> and <bold>5l</bold> did not react with <bold>1</bold> to form trifluoromethylated products.</p><p>Given the limited
+synthetic procedures for the incorporation of
+longer chain perfluoroalkyl groups, we investigated the extension
+of this reaction to the perfluoroethylation of bromoheteroarenes
+with (phen)CuCF<sub>2</sub>CF<sub>3</sub> (<bold>2</bold>) (Scheme <xref rid="sch3" ref-type="scheme">3</xref>). In fact, the perfluoroethyl heteroarene products
+were generated in higher yield than the trifluoromethyl analogues.
+This higher yield was observed for 2-, 3-, and 4-bromopyridines.
+For example, 3-bromopyridine reacted with <bold>2</bold> to
+form 3-pentafluoroethylpyridine in 74% yield, and
+2-methoxy-3-bromopyridine reacted with <bold>2</bold> to form
+the &#x02212;C<sub>2</sub>F<sub>5</sub> product in 65% yield. We propose
+the increased yields with <bold>2</bold> result, in part, from the
+greater thermal stability of <bold>2</bold> compared to that of <bold>1</bold>. Heating complexes <bold>1</bold> and <bold>2</bold> separately
+in DMF at 80 &#x000b0;C caused 80% of <bold>1</bold> to decompose, compared
+to only 6% of <bold>2</bold> after 24 h.</p><fig id="sch3" position="float"><label>Scheme 3</label><caption><title>Perfluoroethylation
+of Heteroaryl Bromides with (phen)CuCF<sub>2</sub>CF<sub>3</sub> (<bold>2</bold>)</title><p id="s3fn1">Reaction conditions: bromoheteroarene
+(<bold>5</bold>, 0.10 mmol) and <bold>2</bold> (0.12 mmol) in DMF
+(1 mL) at 80 or 100 &#x000b0;C for 8 h. Yields were determined by <sup>19</sup>F NMR spectroscopy. Yields in parentheses are isolated yields. <sup><italic>b</italic></sup> Yield of bis-perfluoroethylated product. <sup><italic>c</italic></sup> Reaction was run at 100 &#x000b0;C. <sup><italic>d</italic></sup> Isolated product contains 7% of <bold>7n</bold>. <sup><italic>e</italic></sup> Isolated product contains 4% bis-perfluoroethylated
+product.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ol-2014-00422t_0006" id="gr3" position="float"/></fig><p>The reactions of bromopyridines
+with <bold>2</bold> occurred
+with similar functional group compatibility as was observed for the
+reactions of <bold>1</bold> (Scheme <xref rid="sch3" ref-type="scheme">3</xref>). Although
+the yields were high in almost all cases, bromopyridines bearing
+electron-withdrawing substituents generally reacted in higher yields
+than those bearing electron-donating substituents. Various diazines
+also underwent the perfluoroethylation reaction.</p><p>In summary,
+we developed a simple synthetic procedure for the generation
+of perfluoroalkyl heteroarenes from reactions of stable CuCF<sub>3</sub> and CuC<sub>2</sub>F<sub>5</sub> complexes <bold>1</bold> and <bold>2</bold> with heteroaryl bromides. These reactions are an improvement
+over current perfluoroalkylation reactions of heteroaryl iodides because
+heteroaryl bromides are significantly less expensive and more readily
+available than heteroaryl iodides. The high reactivity of complexes <bold>1</bold> and <bold>2</bold>, as well as the mild reaction conditions,
+allowed for the perfluoroalkylation of heteroaryl bromides containing
+both electron-donating and -withdrawing groups as well as electrophilic
+and protic functional groups. We anticipate that this process will
+enable the synthesis of perfluoroalkyl derivatives of a wide range
+of heteroarenes as part of studies on structure&#x02013;reactivity
+relationships.</p></body><back><notes id="notes-1" notes-type="si"><title>Supporting Information Available</title><p>Experimental procedures, details
+on reaction development, and characterization of reaction products.
+This material is available free of charge via the Internet at <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org">http://pubs.acs.org</uri>.</p></notes><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material content-type="local-data" id="sifile1"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ol500422t_si_001.pdf"><caption><p>ol500422t_si_001.pdf</p></caption></media></supplementary-material></sec><notes id="NOTES-d322e905-autogenerated" notes-type="conflict-of-interest"><p>The authors declare
+the
+following competing financial interest(s): A provisional patent application
+has been filed by the University of California. J.F.H. is a founder
+of Catylix; he and the company may benefit financially from the expected
+results of the PHS-funded research conducted in his laboratory.</p></notes><ack><title>Acknowledgments</title><p>We thank the NIH (GM-58108) for support of this work and Catylix
+for a supply of TMS&#x02013;C<sub>2</sub>F<sub>5</sub>. We thank the
+NSF and Chevron for graduate fellowships to M.G.M. and P.S.F., respectively.</p></ack><ref-list><title>References</title><ref id="ref1"><mixed-citation publication-type="journal" id="cit1"><name><surname>Purser</surname><given-names>S.</given-names></name>; <name><surname>Moore</surname><given-names>P. R.</given-names></name>; <name><surname>Swallow</surname><given-names>S.</given-names></name>; <name><surname>Gouverneur</surname><given-names>V.</given-names></name>
+<source>Chem. Soc. Rev.</source>
+<year>2008</year>, <volume>37</volume>, <fpage>320</fpage>.<pub-id pub-id-type="pmid">18197348</pub-id></mixed-citation></ref><ref id="ref2"><note><p>For reviews on perfluoroalkylation reactions,
+see:</p></note><mixed-citation publication-type="journal" id="cit2a"><label>a</label><name><surname>Tomashenko</surname><given-names>O. A.</given-names></name>; <name><surname>Grushin</surname><given-names>V. V.</given-names></name>
+<source>Chem. Rev.</source>
+<year>2011</year>, <volume>111</volume>, <fpage>4475</fpage>.<pub-id pub-id-type="pmid">21456523</pub-id></mixed-citation><mixed-citation publication-type="journal" id="cit2b"><label> b</label><name><surname>Liang</surname><given-names>T.</given-names></name>; <name><surname>Neumann</surname><given-names>C. N.</given-names></name>; <name><surname>Ritter</surname><given-names>T.</given-names></name>
+<source>Angew. Chem., Int. Ed.</source>
+<year>2013</year>, <volume>52</volume>, <fpage>8214</fpage>.</mixed-citation></ref><ref id="ref3"><mixed-citation publication-type="journal" id="cit3"><name><surname>Cho</surname><given-names>E. J.</given-names></name>; <name><surname>Senecal</surname><given-names>T. D.</given-names></name>; <name><surname>Kinzel</surname><given-names>T.</given-names></name>; <name><surname>Zhang</surname><given-names>Y.</given-names></name>; <name><surname>Watson</surname><given-names>D. A.</given-names></name>; <name><surname>Buchwald</surname><given-names>S. L.</given-names></name>
+<source>Science</source>
+<year>2010</year>, <volume>328</volume>, <fpage>1679</fpage>.<pub-id pub-id-type="pmid">20576888</pub-id></mixed-citation></ref><ref id="ref4"><note><p>Sigma-Aldrich prices.</p></note></ref><ref id="ref5"><mixed-citation publication-type="journal" id="cit5a"><label>a</label><name><surname>Zanardi</surname><given-names>A.</given-names></name>; <name><surname>Novikov</surname><given-names>M. A.</given-names></name>; <name><surname>Martin</surname><given-names>E.</given-names></name>; <name><surname>Benet-Buchholz</surname><given-names>J.</given-names></name>; <name><surname>Grushin</surname><given-names>V. V.</given-names></name>
+<source>J. Am. Chem. Soc.</source>
+<year>2011</year>, <volume>133</volume>, <fpage>20901</fpage>.<pub-id pub-id-type="pmid">22136628</pub-id></mixed-citation><mixed-citation publication-type="journal" id="cit5b"><label> b</label><name><surname>Lishchynskyi</surname><given-names>A.</given-names></name>; <name><surname>Novikov</surname><given-names>M. A.</given-names></name>; <name><surname>Martin</surname><given-names>E.</given-names></name>; <name><surname>Escudero-Ad&#x000e1;n</surname><given-names>E. C.</given-names></name>; <name><surname>Nov&#x000e1;k</surname><given-names>P.</given-names></name>; <name><surname>Grushin</surname><given-names>V. V.</given-names></name>
+<source>J. Org. Chem.</source>
+<year>2013</year>, <volume>78</volume>, <fpage>11126</fpage>.<pub-id pub-id-type="pmid">23964731</pub-id></mixed-citation><mixed-citation publication-type="journal" id="cit5c"><label> c</label><name><surname>Wiemers</surname><given-names>D. M.</given-names></name>; <name><surname>Burton</surname><given-names>D. J.</given-names></name>
+<source>J. Am. Chem. Soc.</source>
+<year>1986</year>, <volume>108</volume>, <fpage>832</fpage>.</mixed-citation></ref><ref id="ref6"><note><p>For examples of radical trifluoromethylation
+reactions, see:</p></note><mixed-citation publication-type="journal" id="cit6a"><label>a</label><name><surname>Ji</surname><given-names>Y.</given-names></name>; <name><surname>Bruecki</surname><given-names>T.</given-names></name>; <name><surname>Baxter</surname><given-names>R. D.</given-names></name>; <name><surname>Fujiwara</surname><given-names>Y.</given-names></name>; <name><surname>Seiple</surname><given-names>I. B.</given-names></name>; <name><surname>Su</surname><given-names>S.</given-names></name>; <name><surname>Blackmond</surname><given-names>D. G.</given-names></name>; <name><surname>Baran</surname><given-names>P. S.</given-names></name>
+<source>Proc. Natl. Acad. Sci. U.S.A.</source>
+<year>2011</year>, <volume>108</volume>, <fpage>14411</fpage>.<pub-id pub-id-type="pmid">21844378</pub-id></mixed-citation><mixed-citation publication-type="journal" id="cit6b"><label> b</label><name><surname>Nagib</surname><given-names>D. A.</given-names></name>; <name><surname>MacMillan</surname><given-names>D. W. C.</given-names></name>
+<source>Nature</source>
+<year>2011</year>, <volume>480</volume>, <fpage>224</fpage>.<pub-id pub-id-type="pmid">22158245</pub-id></mixed-citation></ref><ref id="ref7"><mixed-citation publication-type="journal" id="cit7a"><label>a</label><name><surname>Morimoto</surname><given-names>H.</given-names></name>; <name><surname>Tsubogo</surname><given-names>T.</given-names></name>; <name><surname>Litvinas</surname><given-names>N. D.</given-names></name>; <name><surname>Hartwig</surname><given-names>J. F.</given-names></name>
+<source>Angew. Chem.,
+Int. Ed.</source>
+<year>2011</year>, <volume>50</volume>, <fpage>3793</fpage>.</mixed-citation><mixed-citation publication-type="journal" id="cit7b"><label> b</label><name><surname>Litvinas</surname><given-names>N. D.</given-names></name>; <name><surname>Fier</surname><given-names>P. S.</given-names></name>; <name><surname>Hartwig</surname><given-names>J. F.</given-names></name>
+<source>Angew. Chem., Int. Ed.</source>
+<year>2012</year>, <volume>51</volume>, <fpage>563</fpage>.</mixed-citation></ref><ref id="ref8"><mixed-citation publication-type="journal" id="cit8a"><label>a</label><name><surname>Tomashenko</surname><given-names>O. A.</given-names></name>; <name><surname>Escudero-Ad&#x000e1;n</surname><given-names>E. C.</given-names></name>; <name><surname>Belmonte</surname><given-names>M. M.</given-names></name>; <name><surname>Grushin</surname><given-names>V. V.</given-names></name>
+<source>Angew. Chem., Int. Ed.</source>
+<year>2011</year>, <volume>50</volume>, <fpage>7655</fpage>.</mixed-citation><mixed-citation publication-type="journal" id="cit8b"><label> b</label><name><surname>Knauber</surname><given-names>T.</given-names></name>; <name><surname>Arikan</surname><given-names>F.</given-names></name>; <name><surname>R&#x000f6;shenthaler</surname><given-names>G.-V.</given-names></name>; <name><surname>Goo&#x000df;en</surname><given-names>L. J.</given-names></name>
+<source>Chem.&#x02014;Eur.
+J.</source>
+<year>2011</year>, <volume>17</volume>, <fpage>2689</fpage>.<pub-id pub-id-type="pmid">21274956</pub-id></mixed-citation><mixed-citation publication-type="journal" id="cit8c"><label> c</label><name><surname>Oishi</surname><given-names>M.</given-names></name>; <name><surname>Kondo</surname><given-names>H.</given-names></name>; <name><surname>Amii</surname><given-names>H.</given-names></name>
+<source>Chem. Commun.</source>
+<year>2009</year>, <fpage>1909</fpage>.</mixed-citation><mixed-citation publication-type="journal" id="cit8d"><label> d</label><name><surname>Schareina</surname><given-names>T.</given-names></name>; <name><surname>Wu</surname><given-names>X.-F.</given-names></name>; <name><surname>Zapf</surname><given-names>A.</given-names></name>; <name><surname>Cott&#x000e9;</surname><given-names>A.</given-names></name>; <name><surname>Gotta</surname><given-names>M.</given-names></name>; <name><surname>Beller</surname><given-names>M.</given-names></name>
+<source>Top. Catal.</source>
+<year>2012</year>, <volume>55</volume>, <fpage>426</fpage>.</mixed-citation><mixed-citation publication-type="journal" id="cit8e"><label> e</label><name><surname>Urata</surname><given-names>H.</given-names></name>; <name><surname>Fuchikami</surname><given-names>H.</given-names></name>
+<source>Tetrahedron Lett.</source>
+<year>1991</year>, <volume>32</volume>, <fpage>91</fpage>.</mixed-citation></ref><ref id="ref9"><mixed-citation publication-type="journal" id="cit9"><name><surname>Kieltsch</surname><given-names>I.</given-names></name>; <name><surname>Dubinina</surname><given-names>G. G.</given-names></name>; <name><surname>Hamacher</surname><given-names>C.</given-names></name>; <name><surname>Kaiser</surname><given-names>A.</given-names></name>; <name><surname>Torres-Nieto</surname><given-names>J.</given-names></name>; <name><surname>Hutchison</surname><given-names>J. M.</given-names></name>; <name><surname>Klein</surname><given-names>A.</given-names></name>; <name><surname>Budnikova</surname><given-names>Y.</given-names></name>; <name><surname>Vicic</surname><given-names>D. A.</given-names></name>
+<source>Organometallics</source>
+<year>2010</year>, <volume>29</volume>, <fpage>1451</fpage>.</mixed-citation></ref></ref-list></back></article>

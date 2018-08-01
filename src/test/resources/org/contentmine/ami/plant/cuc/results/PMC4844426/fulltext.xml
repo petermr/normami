@@ -1,0 +1,725 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="review-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Plants (Basel)</journal-id><journal-id journal-id-type="iso-abbrev">Plants (Basel)</journal-id><journal-id journal-id-type="publisher-id">plants</journal-id><journal-title-group><journal-title>Plants</journal-title></journal-title-group><issn pub-type="epub">2223-7747</issn><publisher><publisher-name>MDPI</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4844426</article-id><article-id pub-id-type="doi">10.3390/plants5010009</article-id><article-id pub-id-type="publisher-id">plants-05-00009</article-id><article-categories><subj-group subj-group-type="heading"><subject>Review</subject></subj-group></article-categories><title-group><article-title>How Microbes Twist Jasmonate Signaling around Their Little Fingers</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Gimenez-Ibanez</surname><given-names>Selena</given-names></name><xref rid="c1-plants-05-00009" ref-type="corresp">*</xref></contrib><contrib contrib-type="author"><name><surname>Chini</surname><given-names>Andrea</given-names></name></contrib><contrib contrib-type="author"><name><surname>Solano</surname><given-names>Roberto</given-names></name></contrib></contrib-group><contrib-group><contrib contrib-type="editor"><name><surname>Gasperini</surname><given-names>Debora</given-names></name><role>Academic Editor</role></contrib></contrib-group><aff id="af1-plants-05-00009">Plant Molecular Genetics Department, Centro Nacional de Biotecnolog&#x000ed;a-CSIC (CNB-CSIC), 28049 Madrid, Spain; <email>achini@cnb.csic.es</email> (A.C.); <email>rsolano@cnb.csic.es</email> (R.S.)</aff><author-notes><corresp id="c1-plants-05-00009"><label>*</label>Correspondence: <email>selena.gimenez@cnb.csic.es</email>; Tel.: +34-915-855-430; Fax: +34-915-854-506</corresp></author-notes><pub-date pub-type="epub"><day>19</day><month>1</month><year>2016</year></pub-date><pub-date pub-type="collection"><month>3</month><year>2016</year></pub-date><volume>5</volume><issue>1</issue><elocation-id>9</elocation-id><history><date date-type="received"><day>11</day><month>11</month><year>2015</year></date><date date-type="accepted"><day>31</day><month>12</month><year>2015</year></date></history><permissions><copyright-statement>&#x000a9; 2016 by the authors; licensee MDPI, Basel, Switzerland.</copyright-statement><copyright-year>2016</copyright-year><license><license-p><!--CREATIVE COMMONS-->This article is an open access article distributed under the terms and conditions of the Creative Commons by Attribution (CC-BY) license (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>).</license-p></license></permissions><abstract><p>Plant immunity relies on a complex network of hormone signaling pathways in which jasmonic acid (JA) plays a central role. Successful microbial pathogens or symbionts have developed strategies to manipulate plant hormone signaling pathways to cause hormonal imbalances for their own benefit. These strategies include the production of plant hormones, phytohormone mimics, or effector proteins that target host components to disrupt hormonal signaling pathways and enhance virulence. Here, we describe the molecular details of the most recent and best-characterized examples of specific JA hormonal manipulation by microbes, which exemplify the ingenious ways by which pathogens can take control over the plant&#x02019;s hormone signaling network to suppress host immunity.</p></abstract><kwd-group><kwd>hormonal manipulation</kwd><kwd>jasmonate</kwd><kwd>hormone mimics</kwd><kwd>phytotoxin</kwd><kwd>coronatine</kwd><kwd>effectors</kwd><kwd>JAZ repressors</kwd><kwd>pathogenesis</kwd><kwd>symbiosis</kwd></kwd-group></article-meta></front><body><sec id="sec1-plants-05-00009"><title>1. Introduction</title><p>Agricultural productivity depends on the capacity of plants to adapt to changing environmental conditions. In nature, plants live in complex environments in which they intimately interact with a broad range of microbial pathogens with different infection strategies. To defend themselves, plants have evolved sophisticated strategies to perceive their attacker during the infection process and to translate this perception into an effective immune response. Recognition of highly conserved microbe-associated molecular patterns (MAMPs) by host cell transmembrane pattern recognition receptors (PRRs) leads to MAMP-triggered immunity (MTI) that restricts pathogen growth [<xref rid="B1-plants-05-00009" ref-type="bibr">1</xref>]. To overcome such lines of defense, adapted pathogens deliver phytotoxins and virulence molecules called effector proteins into the plant cell to promote pathogenesis in a process known as effector-triggered susceptibility (ETS) [<xref rid="B1-plants-05-00009" ref-type="bibr">1</xref>]. Inside the plant cell, phytotoxins and effectors target host molecules to subvert the host cell physiology and disrupt defenses. However, despite the fact that elucidating effector action is essential to understanding bacterial pathogenesis, the molecular function and host targets of the vast majority of effectors remain largely unknown.</p><p>Plant immunity relies on a complex network of hormone signaling pathways in which jasmonic acid (JA) and salicylic acid (SA) play a central role [<xref rid="B2-plants-05-00009" ref-type="bibr">2</xref>,<xref rid="B3-plants-05-00009" ref-type="bibr">3</xref>]. Both molecules control defense responses to different types of microbes and thus, they orchestrate a different and complex transcriptional reprogramming response that eventually leads to plant resistance. The JA pathway is primarily induced by and effective in mediating resistance against herbivores and necrotrophic pathogens such as <italic>Botrytis cinerea</italic>, whereas the SA pathway is primarily induced by and effective in mediating resistance against biotrophic and hemi-biotrophic pathogens such as <italic>Pseudomonas syringae</italic> [<xref rid="B3-plants-05-00009" ref-type="bibr">3</xref>]. JA and SA defense pathways generally antagonize each other and thus, elevated resistance against necrotrophs is often correlated with increased susceptibility to biotrophs and <italic>vice versa</italic> [<xref rid="B4-plants-05-00009" ref-type="bibr">4</xref>]. JAs play a key role in plant survival by contributing to adaptation to biotic and abiotic stresses and modulating many physiological and developmental agricultural traits such as root growth and fertility [<xref rid="B5-plants-05-00009" ref-type="bibr">5</xref>]. In the complex picture of hormonal plant immunity, other hormones such as abscisic acid (ABA), auxins, brassinosteroids (BRs), cytokinins (CKs), ethylene (ET), gibberellic acid (GAs), and oxylipins (other than JA) function as modulators of the plant immune signaling network as well, fine-tuning the hormonal balances to optimize resistance to the invading organism [<xref rid="B2-plants-05-00009" ref-type="bibr">2</xref>,<xref rid="B6-plants-05-00009" ref-type="bibr">6</xref>,<xref rid="B7-plants-05-00009" ref-type="bibr">7</xref>]. Therefore, the collective contribution of hormones during plant-pathogen interactions is crucial to establish the robust immune transcriptional program against the specific infection strategy of invading attackers.</p><p>In the last decade, a combination of genetic, molecular, and biochemical analyses have dissected the core JA signal transduction components linking JA synthesis to hormone-induced changes in gene expression. Among all JAs found in nature, (+)-7-iso-JA-<sc>l</sc>-Ile (JA-Ile) is the molecularly active form of the JA hormone [<xref rid="B8-plants-05-00009" ref-type="bibr">8</xref>]. JA-Ile is perceived through a co-receptor complex formed by the F-box protein CORONATINE-INSENSITIVE 1 (COI1) and JASMONATE ZIM DOMAIN (JAZ) proteins [<xref rid="B9-plants-05-00009" ref-type="bibr">9</xref>,<xref rid="B10-plants-05-00009" ref-type="bibr">10</xref>,<xref rid="B11-plants-05-00009" ref-type="bibr">11</xref>,<xref rid="B12-plants-05-00009" ref-type="bibr">12</xref>]. COI1 controls the turnover of the JAZ co-receptors in response to JA-Ile. The JAZ family is composed of 12 canonical members in <italic>Arabidopsis</italic> and an atypical repressor, JAZ13 [<xref rid="B13-plants-05-00009" ref-type="bibr">13</xref>,<xref rid="B14-plants-05-00009" ref-type="bibr">14</xref>]. JAZ proteins are repressors of the JA-signaling transcription factors (TFs), such as the basic helix-loop-helix (bHLH) MYC2, MYC3 and MYC4, that control JA-regulated genes [<xref rid="B9-plants-05-00009" ref-type="bibr">9</xref>,<xref rid="B10-plants-05-00009" ref-type="bibr">10</xref>,<xref rid="B11-plants-05-00009" ref-type="bibr">11</xref>,<xref rid="B15-plants-05-00009" ref-type="bibr">15</xref>,<xref rid="B16-plants-05-00009" ref-type="bibr">16</xref>,<xref rid="B17-plants-05-00009" ref-type="bibr">17</xref>]. To initiate transcription, MYCs physically interacts with the MEDIATOR25 (MED25) subunit of the eukaryotic Mediator complex [<xref rid="B17-plants-05-00009" ref-type="bibr">17</xref>,<xref rid="B18-plants-05-00009" ref-type="bibr">18</xref>,<xref rid="B19-plants-05-00009" ref-type="bibr">19</xref>,<xref rid="B20-plants-05-00009" ref-type="bibr">20</xref>]. This complex recruits to the MYCs-bound promoter all of the general transcription factors (GTFs) and RNA polymerase II machinery required to initiate JA transcriptional reprograming [<xref rid="B19-plants-05-00009" ref-type="bibr">19</xref>,<xref rid="B20-plants-05-00009" ref-type="bibr">20</xref>]. Repression of TFs by JAZ involves the competitive inhibition of MYC interaction with MED25 by the Jas domain of JAZs [<xref rid="B17-plants-05-00009" ref-type="bibr">17</xref>]. Repression also requires the recruitment of the general co-repressor TOPLESS (TPL) and TPL-related proteins through the NOVEL INTERACTOR OF JAZ (NINJA) adaptor, which are supposed to lock chromatin by histone deacetylation [<xref rid="B21-plants-05-00009" ref-type="bibr">21</xref>]. Under stress conditions, JA-Ile promotes the formation of JAZ-COI1 complexes, triggering JAZ ubiquitination and subsequent degradation via the 26S proteasome [<xref rid="B9-plants-05-00009" ref-type="bibr">9</xref>,<xref rid="B10-plants-05-00009" ref-type="bibr">10</xref>,<xref rid="B11-plants-05-00009" ref-type="bibr">11</xref>]. This leads to de-repression of the TFs that initiate the transcription of JA-dependent genes [<xref rid="B22-plants-05-00009" ref-type="bibr">22</xref>].</p><p>Pathogens have evolved capabilities to manipulate or subvert plant hormone signaling pathways to cause hormonal imbalances for their own benefit. Microbes enhance their virulence by producing plant hormones, phytohormone mimics, or injecting into eukaryotic plant cells an arsenal of virulence effector proteins that target hormonal components to evade or disrupt hormonal signaling pathways and/or crosstalk [<xref rid="B23-plants-05-00009" ref-type="bibr">23</xref>]. Here, we describe the molecular details of the best-characterized examples of specific JA hormonal manipulation by microbes, which exemplify the ingenious ways by which pathogens can take control over the plant&#x02019;s hormone signaling network to suppress host immunity.</p></sec><sec id="sec2-plants-05-00009"><title>2. Production of JA Phytohormones and Mimics by Pathogens</title><p>Pathogens are capable of synthesizing phytohormones and phytohormone mimics to take control of the host immune system by inducing hormonal imbalances (<xref ref-type="table" rid="plants-05-00009-t001">Table 1</xref>). Probably, the best-studied example corresponds to coronatine (COR), a mimic of the bioactive JA-Ile hormone, produced by some strains of <italic>P. syringae</italic> [<xref rid="B8-plants-05-00009" ref-type="bibr">8</xref>,<xref rid="B24-plants-05-00009" ref-type="bibr">24</xref>,<xref rid="B25-plants-05-00009" ref-type="bibr">25</xref>]. COR, as JA-Ile, is perceived through the COI1/JAZ co-receptor complex, activating JA-dependent responses that, in turn, inhibit SA-dependent defenses required for <italic>P. syringae</italic> resistance (<xref ref-type="fig" rid="plants-05-00009-f001">Figure 1</xref>) [<xref rid="B5-plants-05-00009" ref-type="bibr">5</xref>,<xref rid="B26-plants-05-00009" ref-type="bibr">26</xref>]. Remarkably, COR is more active than the JA-Ile plant hormone itself in triggering the COI1-JAZ complex formation and subsequent JAZ degradation, indicating that COR acts as a potent and highly specific mimic of JA-Ile perception in plants [<xref rid="B8-plants-05-00009" ref-type="bibr">8</xref>,<xref rid="B27-plants-05-00009" ref-type="bibr">27</xref>]. The functional similarity between COR and JA-Ile has been further demonstrated by the three-dimensional structural analysis of each molecule in association with a COI1 receptor complex [<xref rid="B11-plants-05-00009" ref-type="bibr">11</xref>], and by the rational design of COR-based antagonists of JA-Ile perception that block the COI1-JAZ co-receptor [<xref rid="B28-plants-05-00009" ref-type="bibr">28</xref>]. Among the twelve canonical JAZs, eight genes are induced in <italic>Arabidopsis</italic> during <italic>P. syringae</italic> infection in a COR-dependent manner [<xref rid="B29-plants-05-00009" ref-type="bibr">29</xref>]. Of note, only loss-of-function mutants of <italic>JAZ10</italic> are more susceptible to <italic>P. syringae</italic>, indicating that JAZ10 is a negative regulator of both JA signaling and disease development [<xref rid="B29-plants-05-00009" ref-type="bibr">29</xref>]. In combination with <italic>jaz10,</italic> the <italic>jaz5</italic> knockout (KO) enhances chlorotic symptoms and (moderately) bacterial growth, indicating that JAZ5 and JAZ10 act co-operatively to restrict <italic>P. syringae</italic> growth during bacterial pathogenesis and are targeted by COR [<xref rid="B30-plants-05-00009" ref-type="bibr">30</xref>].</p><p>In plants, COR acts as a multifunctional suppressor of defense responses and <italic>P. syringae</italic> mutants unable to produce COR show reduced virulence [<xref rid="B24-plants-05-00009" ref-type="bibr">24</xref>,<xref rid="B31-plants-05-00009" ref-type="bibr">31</xref>]. COR contributes to disease symptomatology by inducing chlorotic lesions [<xref rid="B24-plants-05-00009" ref-type="bibr">24</xref>,<xref rid="B32-plants-05-00009" ref-type="bibr">32</xref>,<xref rid="B33-plants-05-00009" ref-type="bibr">33</xref>], facilitates bacterial entry into the plant host by stimulating the re-opening of stomata after microbial-triggered stomatal closure [<xref rid="B34-plants-05-00009" ref-type="bibr">34</xref>,<xref rid="B35-plants-05-00009" ref-type="bibr">35</xref>,<xref rid="B36-plants-05-00009" ref-type="bibr">36</xref>], promotes bacterial growth by inhibiting SA-dependent defenses required for <italic>P. syringae</italic> resistance through the activation of its antagonistic JA pathway [<xref rid="B37-plants-05-00009" ref-type="bibr">37</xref>,<xref rid="B38-plants-05-00009" ref-type="bibr">38</xref>] and suppresses plant cell wall defense through perturbation of secondary metabolism [<xref rid="B31-plants-05-00009" ref-type="bibr">31</xref>]. Analyses of both plant and bacterial mutants indicate that COR elicits the JA pathway to repress SA-signaling, and that suppression of SA responses is a necessary component of the virulence action of COR [<xref rid="B2-plants-05-00009" ref-type="bibr">2</xref>,<xref rid="B32-plants-05-00009" ref-type="bibr">32</xref>,<xref rid="B33-plants-05-00009" ref-type="bibr">33</xref>,<xref rid="B39-plants-05-00009" ref-type="bibr">39</xref>,<xref rid="B40-plants-05-00009" ref-type="bibr">40</xref>,<xref rid="B41-plants-05-00009" ref-type="bibr">41</xref>]. A mechanism for suppression of SA-signaling by COR occurs though MYC2 TF that binds to the promoter and triggers the expression of the three NAC (petunia NAM and <italic>Arabidopsis</italic> ATAF1, ATAF2, and CUC2) <italic>ANAC19, ANAC55</italic> and <italic>ANAC72</italic> TFs [<xref rid="B39-plants-05-00009" ref-type="bibr">39</xref>]. These ANACs repress expression of genes involved in SA-biosynthesis, such as Isochorismate Synthase 2 (<italic>SID2</italic>), and induce <italic>BSMT1</italic>, a benzoic/salicylic acid carboxyl methyltransferase that reduces the biologically active pool of SA. Consequently, COR suppresses SA-mediated plant immunity against the bacteria, inducing stomatal reopening and bacterial propagation in both local and systemic tissues [<xref rid="B39-plants-05-00009" ref-type="bibr">39</xref>]. Remarkably, closely related NAC TFs, JA2 (Jasmonic Acid 2) and JA2L (JA2-like) differentially regulate stomatal closure and reopening during <italic>Pseudomonas</italic> attack in tomato [<xref rid="B42-plants-05-00009" ref-type="bibr">42</xref>], further indicating that the function of NAC TFs is conserved among different plant species.</p><table-wrap id="plants-05-00009-t001" position="float"><object-id pub-id-type="pii">plants-05-00009-t001_Table 1</object-id><label>Table 1</label><caption><p>Microorganisms able to synthetize jasmonates (JAs) and JA-mimics.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Micro-Organism</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Class</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Molecules</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Reference</th></tr></thead><tbody><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Pseudomonas syringae</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Pathogenic bacteria</td><td align="center" valign="middle" rowspan="1" colspan="1">coronatine</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B25-plants-05-00009" ref-type="bibr">25</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Lasiodiplodia theobromae</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Pathogenic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B43-plants-05-00009" ref-type="bibr">43</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Gibberella fujikuroi</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Pathogenic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA-Ile and other jasmonates</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B44-plants-05-00009" ref-type="bibr">44</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Collybia confluens</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Saprophitic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA and 7-iso-JA </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B45-plants-05-00009" ref-type="bibr">45</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Collybia dryophila</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Saprophitic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA and 7-iso-JA </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B45-plants-05-00009" ref-type="bibr">45</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Coprinus alkalinus</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Saprophitic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA and 7-iso-JA </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B45-plants-05-00009" ref-type="bibr">45</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Coprinus cinereus</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Saprophitic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA and 7-iso-JA </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B45-plants-05-00009" ref-type="bibr">45</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Mycena tintinabulum</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Saprophitic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA and 7-iso-JA </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B45-plants-05-00009" ref-type="bibr">45</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Phellinus laevigatus</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Saprophitic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA and 7-iso-JA </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B45-plants-05-00009" ref-type="bibr">45</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Trametes versicolor</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Saprophitic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA and 7-iso-JA </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B45-plants-05-00009" ref-type="bibr">45</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Pisolithus tinctorius</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Ectomyccorhizal fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA and 7-iso-JA </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B46-plants-05-00009" ref-type="bibr">46</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Fusarium oxysporum</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Pathogenic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA, JA-Ile, 9,10-dihydro-JA and other jasmonates</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B47-plants-05-00009" ref-type="bibr">47</xref>,<xref rid="B48-plants-05-00009" ref-type="bibr">48</xref>,<xref rid="B49-plants-05-00009" ref-type="bibr">49</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>Diplodia gossypina</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">Pathogenic fungus</td><td align="center" valign="middle" rowspan="1" colspan="1">JA and Me-JA</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B50-plants-05-00009" ref-type="bibr">50</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">Strains SF2, SF3 and SF4 </td><td align="center" valign="middle" rowspan="1" colspan="1">Endophytic bacteria</td><td align="center" valign="middle" rowspan="1" colspan="1">OPDA and other jasmonates </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B51-plants-05-00009" ref-type="bibr">51</xref>]</td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><italic>Magnaporthe oryzae</italic></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">Pathogenic fungus</td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">JA, Me-JA and 12OH-JA</td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">[<xref rid="B52-plants-05-00009" ref-type="bibr">52</xref>]</td></tr></tbody></table></table-wrap><p>A COI1-independent effect of COR has also been reported [<xref rid="B31-plants-05-00009" ref-type="bibr">31</xref>]. COR seems to suppress an SA-independent pathway contributing to callose deposition, a hallmark of plant resistance, by reducing accumulation of an indole glucosinolate via PEN2 (penetration 2)-dependent pathway [<xref rid="B31-plants-05-00009" ref-type="bibr">31</xref>]. However, this COI1-independent effect of COR awaits further confirmation due to the use of weak alleles of <italic>coi1.</italic> Thus, acquisition of COR by <italic>Pseudomonas</italic> pathogens has been of tremendous adaptive importance during host-pathogen evolution to manipulate the host hormonal network to promote susceptibility.</p><p>Several fungi such as <italic>Fusarium oxysporum</italic> (<italic>F. oxysporum</italic>) and <italic>Lasiodiplodia theobromae</italic> (<italic>L. theobromae</italic>) are also capable of producing bioactive JAs among others (<xref ref-type="table" rid="plants-05-00009-t001">Table 1</xref>, <xref ref-type="fig" rid="plants-05-00009-f001">Figure 1</xref>) [<xref rid="B23-plants-05-00009" ref-type="bibr">23</xref>,<xref rid="B43-plants-05-00009" ref-type="bibr">43</xref>,<xref rid="B44-plants-05-00009" ref-type="bibr">44</xref>,<xref rid="B45-plants-05-00009" ref-type="bibr">45</xref>,<xref rid="B46-plants-05-00009" ref-type="bibr">46</xref>,<xref rid="B47-plants-05-00009" ref-type="bibr">47</xref>,<xref rid="B50-plants-05-00009" ref-type="bibr">50</xref>,<xref rid="B51-plants-05-00009" ref-type="bibr">51</xref>,<xref rid="B53-plants-05-00009" ref-type="bibr">53</xref>,<xref rid="B54-plants-05-00009" ref-type="bibr">54</xref>]. For example, the tomato infecting fungus <italic>F. oxysporum</italic> forma specialis (f. sp) <italic>lycopersici</italic> produces JAs through the specific lipoxygenase enzyme 13<italic>S</italic>-LOX, conserved with plant LOXs [<xref rid="B48-plants-05-00009" ref-type="bibr">48</xref>]. In addition, <italic>F. oxysporum</italic> f. sp. <italic>conglutinans</italic> and <italic>F. oxysporum</italic> f. sp. <italic>matthioli</italic>, which infect roots of <italic>Arabidopsis</italic>, produce JA-Ile and JA-Leu, respectively, in culture filtrates [<xref rid="B49-plants-05-00009" ref-type="bibr">49</xref>]. Consequently, JA-insensitivity suppresses infection by these <italic>F. oxysporum</italic> strains that produce detectable JA-Ile levels [<xref rid="B49-plants-05-00009" ref-type="bibr">49</xref>]. This indicates that several fungi have also evolved to produce JAs as a virulence strategy to promote infection [<xref rid="B49-plants-05-00009" ref-type="bibr">49</xref>].</p><p>On the other hand, some pathogens have evolved the competence to detoxify or inactivate compounds required for immunity including JAs [<xref rid="B8-plants-05-00009" ref-type="bibr">8</xref>,<xref rid="B55-plants-05-00009" ref-type="bibr">55</xref>]. For example, hydroxylation of JAs is a common catabolic mechanism contributing to switch-off JA signaling but producing derivatives that may have other functions [<xref rid="B55-plants-05-00009" ref-type="bibr">55</xref>]. The rice blast fungus <italic>Magnaporthe oryzae</italic> (<italic>M. oryzae</italic>) produces an antibiotic biosynthesis monooxygenase (Abm) that converts endogenous free JA into hydroxylated JA (12OH-JA) [<xref rid="B52-plants-05-00009" ref-type="bibr">52</xref>]. Both Abm and 12OH-JA are secreted during host penetration and help evade plant defenses [<xref rid="B52-plants-05-00009" ref-type="bibr">52</xref>]. Loss of Abm in <italic>M. oryzae</italic> leads to accumulation of plant-produced methyl (Me)JA blocking the invasive growth of the fungi, whereas exogenously added 12OH-JA markedly attenuates abm&#x00394;-induced immunity in rice. Therefore, Abm might have a dual role, on one hand reducing the free JA, and therefore plant defenses, and, on the other hand, producing 12OH-JA, which facilitates <italic>M. oryzae</italic> infection [<xref rid="B52-plants-05-00009" ref-type="bibr">52</xref>].</p></sec><sec id="sec3-plants-05-00009"><title>3. Effector-Mediated Manipulation of JA Signaling Pathway by Bacterial and Oomycete Plant Pathogens</title><p>Bacterial pathogens such as <italic>P. syringae</italic> have evolved specific effectors to disrupt hormonal equilibrium by targeting JA signaling and/or JA-SA balance in the plant cell (<xref ref-type="table" rid="plants-05-00009-t002">Table 2</xref>, <xref ref-type="fig" rid="plants-05-00009-f001">Figure 1</xref>) [<xref rid="B6-plants-05-00009" ref-type="bibr">6</xref>,<xref rid="B56-plants-05-00009" ref-type="bibr">56</xref>,<xref rid="B57-plants-05-00009" ref-type="bibr">57</xref>,<xref rid="B58-plants-05-00009" ref-type="bibr">58</xref>,<xref rid="B59-plants-05-00009" ref-type="bibr">59</xref>].</p><p>The <italic>Pseudomonas</italic> effectors HopX1 and HopZ1a activate the JA signaling pathway by targeting the JAZ repressors [<xref rid="B56-plants-05-00009" ref-type="bibr">56</xref>,<xref rid="B57-plants-05-00009" ref-type="bibr">57</xref>]. HopX1 from <italic>P. syringae</italic> pv. <italic>tabaci</italic> (<italic>Pta</italic>) 11528 encodes a cysteine protease that associates with JAZ proteins via its conserved ZIM domain and induces JAZ degradation in a proteasome- and COI1-independent manner, likely via its cysteine protease activity [<xref rid="B56-plants-05-00009" ref-type="bibr">56</xref>]. Ectopic expression of HopX1 in <italic>Arabidopsis</italic> induces the expression of JA-dependent genes and represses SA signaling. Delivery of HopX1 by the natural TTSS (Type Three Secretion System) of <italic>Pseudomonas</italic> partially re-opens stomata and promotes susceptibility during the infection process. Since <italic>Pta</italic> 11528 does not produce COR, HopX1 may have evolved as an alternative evolutionary strategy to manipulate core regulators of JA signaling.</p><table-wrap id="plants-05-00009-t002" position="float"><object-id pub-id-type="pii">plants-05-00009-t002_Table 2</object-id><label>Table 2</label><caption><p>Microbial effectors targeting JA-mediated defenses.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Effector</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Organism</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Plant Target</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Mode of Action</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Reference</th></tr></thead><tbody><tr><td align="center" valign="middle" rowspan="1" colspan="1">AvrB (MPK4)</td><td align="center" valign="middle" rowspan="1" colspan="1"><italic>P. syringae</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">RIN4/MPK4</td><td align="center" valign="middle" rowspan="1" colspan="1">Activates JA defenses targeting </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B58-plants-05-00009" ref-type="bibr">58</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">MPK4/RIN4/HSP90/RAR1 complex</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">AvrB (AHA1)</td><td align="center" valign="middle" rowspan="1" colspan="1"><italic>P. syringae</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">RIN4/AHA1</td><td align="center" valign="middle" rowspan="1" colspan="1">Activates JA defenses promoting AHA1-dependent </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B59-plants-05-00009" ref-type="bibr">59</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">COI1/JAZ interaction and JAZ degradation</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">HopZ1a</td><td align="center" valign="middle" rowspan="1" colspan="1"><italic>P. syringae</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">JAZs</td><td align="center" valign="middle" rowspan="1" colspan="1">Activates JA defenses promoting COI1-dependent </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B57-plants-05-00009" ref-type="bibr">57</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">degradation of the JAZ repressors</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">HopX1</td><td align="center" valign="middle" rowspan="1" colspan="1"><italic>P. syringae</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">JAZs</td><td align="center" valign="middle" rowspan="1" colspan="1">Activates JA defenses promoting COI1-independent </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B56-plants-05-00009" ref-type="bibr">56</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">degradation of the JAZ repressors</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">RxL44</td><td align="center" valign="middle" rowspan="1" colspan="1"><italic>H. arabidopsidis</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">MED19a</td><td align="center" valign="middle" rowspan="1" colspan="1">Induces MED19a degradation shifting the balance </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B60-plants-05-00009" ref-type="bibr">60</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" rowspan="1" colspan="1">from SA- to JA/ET-mediated defense</td><td align="center" valign="middle" rowspan="1" colspan="1">
+</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">MiSSP7</td><td align="center" valign="middle" rowspan="1" colspan="1"><italic>L. bicolor</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">JAZs</td><td align="center" valign="middle" rowspan="1" colspan="1">Suppresses JA defenses stabilizing the JAZs </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B61-plants-05-00009" ref-type="bibr">61</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">SSITL</td><td align="center" valign="middle" rowspan="1" colspan="1"><italic>S. sclerotiorum</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">unkown</td><td align="center" valign="middle" rowspan="1" colspan="1">Suppresses JA defenses</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B62-plants-05-00009" ref-type="bibr">62</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">Exopolysaccharide</td><td align="center" valign="middle" rowspan="1" colspan="1"><italic>B. cinerea</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">unkown</td><td align="center" valign="middle" rowspan="1" colspan="1">Activates SA pathway to suppress JA defenses </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B63-plants-05-00009" ref-type="bibr">63</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">Abm</td><td align="center" valign="middle" rowspan="1" colspan="1"><italic>M. oryzae</italic></td><td align="center" valign="middle" rowspan="1" colspan="1">JA or unkown</td><td align="center" valign="middle" rowspan="1" colspan="1">Suppresses JA defenses by convertion of fungal JA </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B52-plants-05-00009" ref-type="bibr">52</xref>]</td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">
+</td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">into 12OH-JA</td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">
+</td></tr></tbody></table></table-wrap><p>HopZ1a from <italic>P. syringae</italic> pv. <italic>syringae</italic> (<italic>Pss</italic>) strain A2 encodes a cysteine protease/acetyltransferase that acetylates several JAZ proteins interacting with their conserved Jas domain [<xref rid="B57-plants-05-00009" ref-type="bibr">57</xref>]. HopZ1a-mediated acetylation induces JAZ1 degradation through an undefined mechanism that is dependent on COI1, leading to the activation of JA-dependent gene expression, suppression of SA responses and plant susceptibility (<xref ref-type="fig" rid="plants-05-00009-f001">Figure 1</xref>) [<xref rid="B57-plants-05-00009" ref-type="bibr">57</xref>]. Interestingly, this suggests that post-translational modifications of the Jas motif of JAZ1 may modulate the 26S proteasome degradation triggered by COI1 in the absence of the hormone. Indeed, post-translational modifications, including acetylation, have been shown to induce or repress proteasomal degradation [<xref rid="B64-plants-05-00009" ref-type="bibr">64</xref>]. Recently, the threonine residue T346 was identified as the main auto-acetylation site of HopZ1a by mass spectrometry, whereas two additional neighboring serine residues (S349 and S351) are required for the acetyltransferase activity of HopZ1a <italic>in vitro</italic> and indispensable for the virulence function of HopZ1a <italic>in planta</italic> [<xref rid="B65-plants-05-00009" ref-type="bibr">65</xref>,<xref rid="B66-plants-05-00009" ref-type="bibr">66</xref>]. These serine residues are important for the enzymatic activity of HopZ1a and are indispensable for inositol hexakisphosphate (IP6)-induced activation of the effector in eukaryotic hosts [<xref rid="B65-plants-05-00009" ref-type="bibr">65</xref>]. The absence of IP6 in bacteria suggests that the enzymatic activity of this effector is activated after it is delivered into the host. Interestingly, previous structural studies have revealed that interaction of the COI1/JAZ co-receptor with its JA-Ile ligand requires an inositol pentakisphosphate (IP5) cofactor [<xref rid="B11-plants-05-00009" ref-type="bibr">11</xref>]. Further investigations are needed to determine how HopZ1a-mediated acetylation of JAZs could facilitate their COI1-dependent degradation and whether this effector mimics a still unknown host post-translational mechanism controlling the activity of the JA receptor complex.</p><p>Besides the JA receptor, additional bacterial effectors affect plant hormonal equilibrium targeting other JA signaling components. The kinase-like AvrB effector was among the first effectors shown to promote JA signaling [<xref rid="B58-plants-05-00009" ref-type="bibr">58</xref>,<xref rid="B67-plants-05-00009" ref-type="bibr">67</xref>]. AvrB induces JA signaling by at least two different mechanisms, both dependent on the AvrB-interacting plasma membrane (PM)-associated protein RIN4 (RPM1-interacting) [<xref rid="B68-plants-05-00009" ref-type="bibr">68</xref>,<xref rid="B69-plants-05-00009" ref-type="bibr">69</xref>]. On one hand, AvrB interacts with and phosphorylates MPK4, a mitogen-activated protein kinase that acts as a positive regulator of JA signaling (<xref ref-type="fig" rid="plants-05-00009-f001">Figure 1</xref>) [<xref rid="B58-plants-05-00009" ref-type="bibr">58</xref>]. AvrB is unable to elicit the expression of the plant defensin <italic>PDF1.2</italic> in <italic>mpk4</italic> mutant plants and when using an <italic>avrB</italic> mutant unable to phosphorylate MPK4, suggesting that phosphorylation of MPK4 is required for AvrB-mediated promotion of JA signaling [<xref rid="B58-plants-05-00009" ref-type="bibr">58</xref>]. Notably, overexpression of AvrB in the <italic>coi1</italic> mutant background fails to enhance susceptibility to <italic>P. syringae</italic> [<xref rid="B67-plants-05-00009" ref-type="bibr">67</xref>], indicating that the AvrB-mediated defense suppression requires the JA receptor COI1 and canonical components of the JA signaling pathway.</p><p>On the other hand, AvrB also induces stomatal opening by positively regulating the PM H+-ATPase AHA1 to enhance bacterial penetration and virulence in a RIN4-dependent manner (<xref ref-type="fig" rid="plants-05-00009-f001">Figure 1</xref>) [<xref rid="B59-plants-05-00009" ref-type="bibr">59</xref>,<xref rid="B70-plants-05-00009" ref-type="bibr">70</xref>,<xref rid="B71-plants-05-00009" ref-type="bibr">71</xref>]. RIN4 directly interacts with AHA1 and the closely related AHA2, acting as a regulator of the proton pump required for stomatal dynamics, likely to inhibit the entry of bacterial pathogens into the plant leaf during infection [<xref rid="B71-plants-05-00009" ref-type="bibr">71</xref>,<xref rid="B72-plants-05-00009" ref-type="bibr">72</xref>]. AvrB is able to interact with RIN4 and promote its phosphorylation [<xref rid="B69-plants-05-00009" ref-type="bibr">69</xref>,<xref rid="B73-plants-05-00009" ref-type="bibr">73</xref>,<xref rid="B74-plants-05-00009" ref-type="bibr">74</xref>], and RIN4 phosphorylation mimics show enhanced H+-ATPase activity and inhibited immune responses activated upon microbial perception in <italic>Arabidopsis</italic> [<xref rid="B70-plants-05-00009" ref-type="bibr">70</xref>]. Congruently, transgenic expression of AvrB enhances H+-ATPase activity of AHA1, and bacterially delivered AvrB induces stomatal opening and enhances infection in a RIN4-dependent manner, demonstrating that the RIN4-AHA1 pathway is exploited by AvrB for virulence [<xref rid="B59-plants-05-00009" ref-type="bibr">59</xref>]. Interestingly, AHA1 promotes the interaction between the JA receptor COI1 and JAZ proteins, activating JA signaling. Similarly, AvrB also induces the COI1-JAZ9 interaction and the degradation of multiple JAZ proteins [<xref rid="B59-plants-05-00009" ref-type="bibr">59</xref>]. Thus, AvrB-induced stomatal opening and virulence requires the canonical JA signaling pathway, which involves COI1, JAZs and also previously described ANAC19, ANAC55 and ANAC72 TFs [<xref rid="B39-plants-05-00009" ref-type="bibr">39</xref>,<xref rid="B59-plants-05-00009" ref-type="bibr">59</xref>]. The biochemical mechanism by which the PM AHA1 activity induces nuclear COI1-JAZ interaction remains unclear. One hypothesis speculates that activation of PM H+-ATPase could induce post-translational modification of JAZs leading to JAZ degradation as, for example, the acetyltransferase activity of the bacterial effector HopZ1a [<xref rid="B57-plants-05-00009" ref-type="bibr">57</xref>,<xref rid="B59-plants-05-00009" ref-type="bibr">59</xref>]. Alternatively, the activation of PM H+-ATPase could induce the generation of JAs or unknown signal molecules/cofactors such as inositol pentakisphosphate IP5 to potentiate the assembly of the COI1-JAZ complex [<xref rid="B59-plants-05-00009" ref-type="bibr">59</xref>]. In this context, a recent report suggests that inositol pyrophosphate IP8 may also be a critical cofactor in COI1-JAZ complex formation as <italic>Arabidopsis</italic> plants lacking VIH2, a diphosphoinositol pentakisphosphate kinase (PPIP5K) regulating the biosynthesis of IP8, are compromised in JA dependent responses [<xref rid="B75-plants-05-00009" ref-type="bibr">75</xref>]. In summary, these findings uncover a novel pathway exploited by AvrB that acts upstream of COI1 to regulate JA signaling and stomatal opening.</p><p>The nuclear effector RxL44 encoded by the oomycete downy mildew pathogen <italic>Hyaloperonospora arabidopsidis</italic> directly interacts with the mediator subunit MED19a (Mediator19a), resulting in the proteasome-mediated degradation of MED19a (<xref ref-type="fig" rid="plants-05-00009-f001">Figure 1</xref>) [<xref rid="B60-plants-05-00009" ref-type="bibr">60</xref>]. The Mediator complex acts as a molecular bridge between transcriptional regulators and RNA polymerase II at the transcription start site, and has emerged as a key regulator of plant immunity [<xref rid="B76-plants-05-00009" ref-type="bibr">76</xref>]. MED25, another component of the Mediator complex, interacts with several TFs including MYC2 and MYC3, acting as an integrative hub for the regulation of JA-responsive gene expression [<xref rid="B17-plants-05-00009" ref-type="bibr">17</xref>,<xref rid="B18-plants-05-00009" ref-type="bibr">18</xref>]). RxL44-induced MED19a degradation shifts the balance of defense gene transcription from SA-responsive to JA/ET-mediated defense, enhancing susceptibility to biotrophs. In contrast with RxL44, plants overexpressing <italic>MED19a</italic> show significant higher levels of SA defenses [<xref rid="B60-plants-05-00009" ref-type="bibr">60</xref>]. Thus, RxL44 enhances susceptibility to biotrophs by attenuating SA-dependent gene expression.</p><p>Finally, recent data indicates that independently evolved virulence effectors converge onto hubs in a plant immune system network [<xref rid="B77-plants-05-00009" ref-type="bibr">77</xref>,<xref rid="B78-plants-05-00009" ref-type="bibr">78</xref>]. High throughput systematic protein-protein interaction approaches between proteins from the reference plant <italic>Arabidopsis thaliana</italic> and effector proteins from the bacteria <italic>P. syringae</italic>, the oomycete <italic>Hyaloperonospora arabidopsidis</italic> and the ascomycete <italic>Golovinomyces orontii</italic> pathogens, has allowed to develop a large-scale map of physical interactions [<xref rid="B77-plants-05-00009" ref-type="bibr">77</xref>,<xref rid="B78-plants-05-00009" ref-type="bibr">78</xref>]. These experiments yielded a map of more than 6000 interactions, resulting in a network that identifies host proteins onto which intraspecies and interspecies pathogen effectors converge [<xref rid="B77-plants-05-00009" ref-type="bibr">77</xref>,<xref rid="B78-plants-05-00009" ref-type="bibr">78</xref>]. Pathogens from different kingdoms deploy independently evolved virulence effectors that interact with a set of highly connected cellular hubs to facilitate their diverse life-cycle strategies, showing an interspecies effector convergence onto shared host proteins. Remarkably, some of the most significantly targeted plant hub proteins by effectors include immune- and hormone-related proteins such as JAZ3 and MED19a among others. Thus, it is tempting to speculate that the understanding of how effector molecules from multiple pathogens hijack hormonal pathways to promote disease is just beginning. Altogether, these examples indicate that the JA receptor complex stands as a major hub/target in the arms race between plants and pathogens.</p></sec><sec id="sec4-plants-05-00009"><title>4. Effector-Mediated Manipulation of JA Signaling Pathway by Necrotrophic Fungi</title><p>Compared to our knowledge on bacterial and oomycete effectors, the molecular mechanisms used by necrotrophic fungi to manipulate JA signaling are still very poorly understood. Infection by necrotrophs primarily relies on the production of nonspecific toxins and cell wall degrading enzymes. However, several examples suggest that this type of pathogens also manipulate hormonal pathways. The necrotrophic fungi <italic>B. cinerea</italic> secretes an exopolysaccharide (EPS) potentially acting as an elicitor of the SA pathway to suppress JA defenses in tomato plants (<xref ref-type="table" rid="plants-05-00009-t002">Table 2</xref>) [<xref rid="B63-plants-05-00009" ref-type="bibr">63</xref>]. In another recent example, the necrotrophic fungal pathogen <italic>Sclerotinia sclerotiorum</italic> secretes an effector-like protein called SSITL (sclerotinia sclerotiorum integrin-like) that suppresses JA-dependent defenses [<xref rid="B62-plants-05-00009" ref-type="bibr">62</xref>]. SSITL retains the conserved solvent-exposed Arg-Gly-Asp (RGD)-like motif of plant integrin-like proteins, such as NDR1 (nonrace-specific disease resistance1) involved in defense signaling; therefore suggesting that SSITL mimics the activity of this type of proteins [<xref rid="B62-plants-05-00009" ref-type="bibr">62</xref>]. Further studies are still needed to understand at the molecular level how these molecules act inside plant cells.</p></sec><sec id="sec5-plants-05-00009"><title>5. Effector-Mediated Modulation of JA Signaling by Beneficial Microbes</title><p>Beneficial microbes establish long-term relationships with their host plants to fulfill their life cycles [<xref rid="B79-plants-05-00009" ref-type="bibr">79</xref>]. Ectomycorrhizal fungi (EM), such as <italic>Laccaria bicolor</italic>, support host growth by providing growth-limiting nutrients to their plant host through a mutualistic symbiotic relationship within the plant roots [<xref rid="B80-plants-05-00009" ref-type="bibr">80</xref>]. In order to develop within the host and feed on living cells, they need to contend with the defense mechanisms of the plant, and fungal secreted effectors may facilitate this process. The mycorrhizal induced small secreted protein 7 (MiSSP7) is encoded by the most highly symbiosis-upregulated gene of the EM <italic>L. bicolor</italic>. MiSSP7 is an effector protein indispensable for the establishment of mutualism with their host plants [<xref rid="B80-plants-05-00009" ref-type="bibr">80</xref>]. Upon perception of diffusible signals from the Populus roots, the fungus secretes MiSSP7 that is imported into the plant cell via phosphatidylinositol-3-phosphate-mediated endocytosis, and targeted to the plant nucleus (<xref ref-type="table" rid="plants-05-00009-t002">Table 2</xref>, <xref ref-type="fig" rid="plants-05-00009-f001">Figure 1</xref>) [<xref rid="B61-plants-05-00009" ref-type="bibr">61</xref>,<xref rid="B80-plants-05-00009" ref-type="bibr">80</xref>]. In the nucleus, MiSSP7 interacts with the JA-repressor PtJAZ6 and protects PtJAZ6 from JA-induced degradation. Consistently, the symbiotic activity of MiSSP7 can be replaced by either inhibiting JA signaling <italic>in planta</italic> or through transgenic overexpression of the <italic>PtJAZ6</italic> gene [<xref rid="B61-plants-05-00009" ref-type="bibr">61</xref>]. This indicates that MiSSP7 is able to inhibit the JA-dependent host defenses stabilizing JAZ repressors to promote fungal colonization and mutualism. Thus, beneficial microbes also evolved effectors that are delivered inside the host plant cell to manipulate hormonal signaling, and thus can be considered symbiotic effectors.</p><fig id="plants-05-00009-f001" position="float"><label>Figure 1</label><caption><p>Phytotoxins and microbial effectors targeting the JA signaling components. Several microbes produce JA-Ile precursors or the JA-Ile mimic coronatine that are perceived by the JA-Ile receptor complex and induce degradation of JAZ repressors (see <xref ref-type="table" rid="plants-05-00009-t001">Table 1</xref> for specific examples). HopX1 from <italic>P. syringae</italic> pv. <italic>tabaci</italic> (<italic>Pta</italic>) 11528 encodes a cysteine protease that associates with JAZ proteins induces their degradation in a proteasome- and COI1-independent manner, likely via its cysteine protease activity [<xref rid="B56-plants-05-00009" ref-type="bibr">56</xref>]. HopZ1a from <italic>P. syringae</italic> pv. <italic>syringae</italic> (<italic>Pss</italic>) strain A2 encodes a cysteine protease/acetyltransferase that acetylates several JAZ proteins and induces their degradation through an undefined mechanism that is dependent on COI1 [<xref rid="B57-plants-05-00009" ref-type="bibr">57</xref>]. AvrB interacts with [<xref rid="B71-plants-05-00009" ref-type="bibr">71</xref>] and phosphorylates MPK4, which triggers activation of JA signaling [<xref rid="B58-plants-05-00009" ref-type="bibr">58</xref>]. AvrB also induces the degradation of multiple JAZ proteins by positively regulating the PM H+-ATPase AHA1 to enhance bacterial penetration and virulence through RIN4 [<xref rid="B59-plants-05-00009" ref-type="bibr">59</xref>]. The ectomycorrhizal MiSSP7 effector interacts with PtJAZ6 and protects PtJAZ6 from JA-induced degradation, attenuating JA-dependent host defenses to promote fungal colonization and mutualism [<xref rid="B61-plants-05-00009" ref-type="bibr">61</xref>]. The oomycete downy mildew effector RxL44 directly interacts with the mediator subunit MED19a (Mediator19a), resulting in the proteasome-mediated degradation of MED19a, which shifts the balance of defense gene transcription from SA-responsive to JA/ET-mediated defense, enhancing susceptibility to biotrophs [<xref rid="B60-plants-05-00009" ref-type="bibr">60</xref>]. In all cases, degradation of JAZs leads to de-repression of the TFs that initiate the activation of JA-dependent gene expression, suppression of SA responses and plant susceptibility. Black arrows indicate activation of the indicated hormonal pathway. Black bars indicate inhibition of the indicated hormonal pathway. Dashed arrows denote indirect or unclear mechanism leading to the activation of the indicated hormonal pathway. A circled Ac indicates acetylation. A circled P indicates phosphorylation.</p></caption><graphic xlink:href="plants-05-00009-g001"/></fig></sec><sec id="sec6-plants-05-00009"><title>6. Conclusions</title><p>The importance of signaling molecules in plant immunity is a well-established notion in plant biology and the molecular mechanisms regulating the phytohormone-mediated defenses have been extensively studied in the last decades. In this context, the role of hormones in plant immunity is further highlighted by the increasing number of pathogens producing phytohormones or phytohormone mimics and by the identification of a plethora of microbial effectors targeting hormonal pathways to promote disease or establish beneficial interactions. Of note, virulence activities of effectors on specific hormonal components can lead to the identification of novel mechanisms of host hormonal regulation unknown to date. In addition, an improved mechanistic understanding of how pathogenic toxins and effectors manipulate host hormonal components will be instrumental in identifying new defensive hubs and to develop new plant varieties with improved resistance to pathogens.</p></sec></body><back><ack><title>Acknowledgments</title><p>We thank members of the Roberto Solano laboratory for critical reading of the manuscript. Selena Gimenez-Ibanez was supported by an International UNESCO-L&#x000d3;REAL Fellowship for Women in Science. Andrea Chini was supported by a Ramon y Cajal fellowship from the Spanish Research Council. Work in Roberto Solano lab was funded by the Spanish Ministry for Science and Innovation grant BIO2013-44407-R.</p></ack><notes><title>Author Contributions</title><p>Selena Gimenez-Ibanez wrote the manuscript, which all authors read, edited and approved. Andrea Chini prepared the figures.</p></notes><notes><title>Conflicts of Interest</title><p>The authors declare no conflict of interest.</p></notes><ref-list><title>References</title><ref id="B1-plants-05-00009"><label>1.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jones</surname><given-names>J.D.</given-names></name><name><surname>Dangl</surname><given-names>J.L.</given-names></name></person-group>
+<article-title>The plant immune system</article-title>
+<source>Nature</source>
+<year>2006</year>
+<volume>444</volume>
+<fpage>323</fpage>
+<lpage>329</lpage>
+<pub-id pub-id-type="doi">10.1038/nature05286</pub-id>
+<pub-id pub-id-type="pmid">17108957</pub-id></element-citation></ref><ref id="B2-plants-05-00009"><label>2.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gimenez-Ibanez</surname><given-names>S.</given-names></name><name><surname>Solano</surname><given-names>R.</given-names></name></person-group>
+<article-title>Nuclear jasmonate and salicylate signaling and crosstalk in defense against pathogens</article-title>
+<source>Front. Plant Sci.</source>
+<year>2013</year>
+<pub-id pub-id-type="doi">10.3389/fpls.2013.00072</pub-id>
+<?supplied-pmid 23577014?><pub-id pub-id-type="pmid">23577014</pub-id></element-citation></ref><ref id="B3-plants-05-00009"><label>3.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Glazebrook</surname><given-names>J.</given-names></name></person-group>
+<article-title>Contrasting mechanisms of defense against biotrophic and necrotrophic pathogens</article-title>
+<source>Annu. Rev. Phytopathol.</source>
+<year>2005</year>
+<volume>43</volume>
+<fpage>205</fpage>
+<lpage>227</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev.phyto.43.040204.135923</pub-id>
+<?supplied-pmid 16078883?><pub-id pub-id-type="pmid">16078883</pub-id></element-citation></ref><ref id="B4-plants-05-00009"><label>4.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Grant</surname><given-names>M.</given-names></name><name><surname>Lamb</surname><given-names>C.</given-names></name></person-group>
+<article-title>Systemic immunity</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2006</year>
+<volume>9</volume>
+<fpage>414</fpage>
+<lpage>420</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2006.05.013</pub-id>
+<?supplied-pmid 16753329?><pub-id pub-id-type="pmid">16753329</pub-id></element-citation></ref><ref id="B5-plants-05-00009"><label>5.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wasternack</surname><given-names>C.</given-names></name><name><surname>Hause</surname><given-names>B.</given-names></name></person-group>
+<article-title>Jasmonates: Biosynthesis, perception, signal transduction and action in plant stress response, growth and development. An update to the 2007 review in annals of botany</article-title>
+<source>Ann. Bot.</source>
+<year>2013</year>
+<volume>111</volume>
+<fpage>1021</fpage>
+<lpage>1058</lpage>
+<pub-id pub-id-type="doi">10.1093/aob/mct067</pub-id>
+<?supplied-pmid 23558912?><pub-id pub-id-type="pmid">23558912</pub-id></element-citation></ref><ref id="B6-plants-05-00009"><label>6.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Robert-Seilaniantz</surname><given-names>A.</given-names></name><name><surname>Grant</surname><given-names>M.</given-names></name><name><surname>Jones</surname><given-names>J.D.</given-names></name></person-group>
+<article-title>Hormone crosstalk in plant disease and defense: More than just jasmonate-salicylate antagonism</article-title>
+<source>Annu. Rev. Phytopathol.</source>
+<year>2011</year>
+<volume>49</volume>
+<fpage>317</fpage>
+<lpage>343</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev-phyto-073009-114447</pub-id>
+<?supplied-pmid 21663438?><pub-id pub-id-type="pmid">21663438</pub-id></element-citation></ref><ref id="B7-plants-05-00009"><label>7.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pieterse</surname><given-names>C.M.</given-names></name><name><surname>van der Does</surname><given-names>D.</given-names></name><name><surname>Zamioudis</surname><given-names>C.</given-names></name><name><surname>Leon-Reyes</surname><given-names>A.</given-names></name><name><surname>van Wees</surname><given-names>S.C.</given-names></name></person-group>
+<article-title>Hormonal modulation of plant immunity</article-title>
+<source>Annu.Rev.Cell Dev. Biol.</source>
+<year>2012</year>
+<volume>28</volume>
+<fpage>489</fpage>
+<lpage>521</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev-cellbio-092910-154055</pub-id>
+<?supplied-pmid 22559264?><pub-id pub-id-type="pmid">22559264</pub-id></element-citation></ref><ref id="B8-plants-05-00009"><label>8.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fonseca</surname><given-names>S.</given-names></name><name><surname>Chini</surname><given-names>A.</given-names></name><name><surname>Hamberg</surname><given-names>M.</given-names></name><name><surname>Adie</surname><given-names>B.</given-names></name><name><surname>Porzel</surname><given-names>A.</given-names></name><name><surname>Kramell</surname><given-names>R.</given-names></name><name><surname>Miersch</surname><given-names>O.</given-names></name><name><surname>Wasternack</surname><given-names>C.</given-names></name><name><surname>Solano</surname><given-names>R.</given-names></name></person-group>
+<article-title>(+)-7-iso-Jasmonoyl-<sc>l</sc>-isoleucine is the endogenous bioactive jasmonate</article-title>
+<source>Nat. Chem. Biol.</source>
+<year>2009</year>
+<volume>5</volume>
+<fpage>344</fpage>
+<lpage>350</lpage>
+<pub-id pub-id-type="doi">10.1038/nchembio.161</pub-id>
+<?supplied-pmid 19349968?><pub-id pub-id-type="pmid">19349968</pub-id></element-citation></ref><ref id="B9-plants-05-00009"><label>9.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chini</surname><given-names>A.</given-names></name><name><surname>Fonseca</surname><given-names>S.</given-names></name><name><surname>Fernandez</surname><given-names>G.</given-names></name><name><surname>Adie</surname><given-names>B.</given-names></name><name><surname>Chico</surname><given-names>J.M.</given-names></name><name><surname>Lorenzo</surname><given-names>O.</given-names></name><name><surname>Garcia-Casado</surname><given-names>G.</given-names></name><name><surname>Lopez-Vidriero</surname><given-names>I.</given-names></name><name><surname>Lozano</surname><given-names>F.M.</given-names></name><name><surname>Ponce</surname><given-names>M.R.</given-names></name><etal/></person-group>
+<article-title>The JAZ family of repressors is the missing link in jasmonate signalling</article-title>
+<source>Nature</source>
+<year>2007</year>
+<volume>448</volume>
+<fpage>666</fpage>
+<lpage>671</lpage>
+<pub-id pub-id-type="doi">10.1038/nature06006</pub-id>
+<?supplied-pmid 17637675?><pub-id pub-id-type="pmid">17637675</pub-id></element-citation></ref><ref id="B10-plants-05-00009"><label>10.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Thines</surname><given-names>B.</given-names></name><name><surname>Katsir</surname><given-names>L.</given-names></name><name><surname>Melotto</surname><given-names>M.</given-names></name><name><surname>Niu</surname><given-names>Y.</given-names></name><name><surname>Mandaokar</surname><given-names>A.</given-names></name><name><surname>Liu</surname><given-names>G.</given-names></name><name><surname>Nomura</surname><given-names>K.</given-names></name><name><surname>He</surname><given-names>S.Y.</given-names></name><name><surname>Howe</surname><given-names>G.A.</given-names></name><name><surname>Browse</surname><given-names>J.</given-names></name></person-group>
+<article-title>JAZ repressor proteins are targets of the SCF(COI1) complex during jasmonate signalling</article-title>
+<source>Nature</source>
+<year>2007</year>
+<volume>448</volume>
+<fpage>661</fpage>
+<lpage>665</lpage>
+<pub-id pub-id-type="doi">10.1038/nature05960</pub-id>
+<?supplied-pmid 17637677?><pub-id pub-id-type="pmid">17637677</pub-id></element-citation></ref><ref id="B11-plants-05-00009"><label>11.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sheard</surname><given-names>L.B.</given-names></name><name><surname>Tan</surname><given-names>X.</given-names></name><name><surname>Mao</surname><given-names>H.</given-names></name><name><surname>Withers</surname><given-names>J.</given-names></name><name><surname>Ben-Nissan</surname><given-names>G.</given-names></name><name><surname>Hinds</surname><given-names>T.R.</given-names></name><name><surname>Kobayashi</surname><given-names>Y.</given-names></name><name><surname>Hsu</surname><given-names>F.F.</given-names></name><name><surname>Sharon</surname><given-names>M.</given-names></name><name><surname>Browse</surname><given-names>J.</given-names></name><etal/></person-group>
+<article-title>Jasmonate perception by inositol-phosphate-potentiated COI1-JAZ co-receptor</article-title>
+<source>Nature</source>
+<year>2010</year>
+<volume>468</volume>
+<fpage>400</fpage>
+<lpage>405</lpage>
+<pub-id pub-id-type="doi">10.1038/nature09430</pub-id>
+<?supplied-pmid 20927106?><pub-id pub-id-type="pmid">20927106</pub-id></element-citation></ref><ref id="B12-plants-05-00009"><label>12.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yan</surname><given-names>Y.</given-names></name><name><surname>Stolz</surname><given-names>S.</given-names></name><name><surname>Chetelat</surname><given-names>A.</given-names></name><name><surname>Reymond</surname><given-names>P.</given-names></name><name><surname>Pagni</surname><given-names>M.</given-names></name><name><surname>Dubugnon</surname><given-names>L.</given-names></name><name><surname>Farmer</surname><given-names>E.E.</given-names></name></person-group>
+<article-title>A downstream mediator in the growth repression limb of the jasmonate pathway</article-title>
+<source>Plant Cell</source>
+<year>2007</year>
+<volume>19</volume>
+<fpage>2470</fpage>
+<lpage>2483</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.107.050708</pub-id>
+<?supplied-pmid 17675405?><pub-id pub-id-type="pmid">17675405</pub-id></element-citation></ref><ref id="B13-plants-05-00009"><label>13.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chini</surname><given-names>A.</given-names></name><name><surname>Boter</surname><given-names>M.</given-names></name><name><surname>Solano</surname><given-names>R.</given-names></name></person-group>
+<article-title>Plant oxylipins: COI1/JAZs/MYC2 as the core jasmonic acid-signalling module</article-title>
+<source>FEBS J.</source>
+<year>2009</year>
+<volume>276</volume>
+<fpage>4682</fpage>
+<lpage>4692</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1742-4658.2009.07194.x</pub-id>
+<?supplied-pmid 19663905?><pub-id pub-id-type="pmid">19663905</pub-id></element-citation></ref><ref id="B14-plants-05-00009"><label>14.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Thireault</surname><given-names>C.</given-names></name><name><surname>Shyu</surname><given-names>C.</given-names></name><name><surname>Yoshida</surname><given-names>Y.</given-names></name><name><surname>St. Aubin</surname><given-names>B.</given-names></name><name><surname>Campos</surname><given-names>M.L.</given-names></name><name><surname>Howe</surname><given-names>G.A.</given-names></name></person-group>
+<article-title>Repression of jasmonate signaling by a non-tify JAZ protein in arabidopsis</article-title>
+<source>Plant J.</source>
+<year>2015</year>
+<volume>82</volume>
+<fpage>669</fpage>
+<lpage>679</lpage>
+<pub-id pub-id-type="doi">10.1111/tpj.12841</pub-id>
+<?supplied-pmid 25846245?><pub-id pub-id-type="pmid">25846245</pub-id></element-citation></ref><ref id="B15-plants-05-00009"><label>15.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pauwels</surname><given-names>L.</given-names></name><name><surname>Goossens</surname><given-names>A.</given-names></name></person-group>
+<article-title>The JAZ proteins: A crucial interface in the jasmonate signaling cascade</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>3089</fpage>
+<lpage>3100</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.111.089300</pub-id>
+<?supplied-pmid 21963667?><pub-id pub-id-type="pmid">21963667</pub-id></element-citation></ref><ref id="B16-plants-05-00009"><label>16.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fernandez-Calvo</surname><given-names>P.</given-names></name><name><surname>Chini</surname><given-names>A.</given-names></name><name><surname>Fernandez-Barbero</surname><given-names>G.</given-names></name><name><surname>Chico</surname><given-names>J.M.</given-names></name><name><surname>Gimenez-Ibanez</surname><given-names>S.</given-names></name><name><surname>Geerinck</surname><given-names>J.</given-names></name><name><surname>Eeckhout</surname><given-names>D.</given-names></name><name><surname>Schweizer</surname><given-names>F.</given-names></name><name><surname>Godoy</surname><given-names>M.</given-names></name><name><surname>Franco-Zorrilla</surname><given-names>J.M.</given-names></name><etal/></person-group>
+<article-title>The arabidopsis bHLH transcription factors MYC3 and MYC4 are targets of JAZ repressors and act additively with MYC2 in the activation of jasmonate responses</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>701</fpage>
+<lpage>715</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.110.080788</pub-id>
+<?supplied-pmid 21335373?><pub-id pub-id-type="pmid">21335373</pub-id></element-citation></ref><ref id="B17-plants-05-00009"><label>17.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhang</surname><given-names>F.</given-names></name><name><surname>Yao</surname><given-names>J.</given-names></name><name><surname>Ke</surname><given-names>J.</given-names></name><name><surname>Zhang</surname><given-names>L.</given-names></name><name><surname>Lam</surname><given-names>V.Q.</given-names></name><name><surname>Xin</surname><given-names>X.F.</given-names></name><name><surname>Zhou</surname><given-names>X.E.</given-names></name><name><surname>Chen</surname><given-names>J.</given-names></name><name><surname>Brunzelle</surname><given-names>J.</given-names></name><name><surname>Griffin</surname><given-names>P.R.</given-names></name><etal/></person-group>
+<article-title>Structural basis of JAZ repression of MYC transcription factors in jasmonate signalling</article-title>
+<source>Nature</source>
+<year>2015</year>
+<volume>525</volume>
+<fpage>269</fpage>
+<lpage>273</lpage>
+<pub-id pub-id-type="doi">10.1038/nature14661</pub-id>
+<?supplied-pmid 26258305?><pub-id pub-id-type="pmid">26258305</pub-id></element-citation></ref><ref id="B18-plants-05-00009"><label>18.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cevik</surname><given-names>V.</given-names></name><name><surname>Kidd</surname><given-names>B.N.</given-names></name><name><surname>Zhang</surname><given-names>P.</given-names></name><name><surname>Hill</surname><given-names>C.</given-names></name><name><surname>Kiddle</surname><given-names>S.</given-names></name><name><surname>Denby</surname><given-names>K.J.</given-names></name><name><surname>Holub</surname><given-names>E.B.</given-names></name><name><surname>Cahill</surname><given-names>D.M.</given-names></name><name><surname>Manners</surname><given-names>J.M.</given-names></name><name><surname>Schenk</surname><given-names>P.M.</given-names></name><etal/></person-group>
+<article-title>Mediator25 acts as an integrative hub for the regulation of jasmonate-responsive gene expression in arabidopsis</article-title>
+<source>Plant Physiol.</source>
+<year>2012</year>
+<volume>160</volume>
+<fpage>541</fpage>
+<lpage>555</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.112.202697</pub-id>
+<?supplied-pmid 22822211?><pub-id pub-id-type="pmid">22822211</pub-id></element-citation></ref><ref id="B19-plants-05-00009"><label>19.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kidd</surname><given-names>B.N.</given-names></name><name><surname>Edgar</surname><given-names>C.I.</given-names></name><name><surname>Kumar</surname><given-names>K.K.</given-names></name><name><surname>Aitken</surname><given-names>E.A.</given-names></name><name><surname>Schenk</surname><given-names>P.M.</given-names></name><name><surname>Manners</surname><given-names>J.M.</given-names></name><name><surname>Kazan</surname><given-names>K.</given-names></name></person-group>
+<article-title>The mediator complex subunit PFT1 is a key regulator of jasmonate-dependent defense in arabidopsis</article-title>
+<source>Plant Cell</source>
+<year>2009</year>
+<volume>21</volume>
+<fpage>2237</fpage>
+<lpage>2252</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.109.066910</pub-id>
+<?supplied-pmid 19671879?><pub-id pub-id-type="pmid">19671879</pub-id></element-citation></ref><ref id="B20-plants-05-00009"><label>20.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Walley</surname><given-names>J.W.</given-names></name><name><surname>Rowe</surname><given-names>H.C.</given-names></name><name><surname>Xiao</surname><given-names>Y.</given-names></name><name><surname>Chehab</surname><given-names>E.W.</given-names></name><name><surname>Kliebenstein</surname><given-names>D.J.</given-names></name><name><surname>Wagner</surname><given-names>D.</given-names></name><name><surname>Dehesh</surname><given-names>K.</given-names></name></person-group>
+<article-title>The chromatin remodeler splayed regulates specific stress signaling pathways</article-title>
+<source>PLoS Pathog.</source>
+<year>2008</year>
+<volume>4</volume>
+<elocation-id>9</elocation-id>
+<pub-id pub-id-type="doi">10.1371/journal.ppat.1000237</pub-id>
+<?supplied-pmid 19079584?><pub-id pub-id-type="pmid">19079584</pub-id></element-citation></ref><ref id="B21-plants-05-00009"><label>21.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pauwels</surname><given-names>L.</given-names></name><name><surname>Barbero</surname><given-names>G.F.</given-names></name><name><surname>Geerinck</surname><given-names>J.</given-names></name><name><surname>Tilleman</surname><given-names>S.</given-names></name><name><surname>Grunewald</surname><given-names>W.</given-names></name><name><surname>Perez</surname><given-names>A.C.</given-names></name><name><surname>Chico</surname><given-names>J.M.</given-names></name><name><surname>Bossche</surname><given-names>R.V.</given-names></name><name><surname>Sewell</surname><given-names>J.</given-names></name><name><surname>Gil</surname><given-names>E.</given-names></name><etal/></person-group>
+<article-title>Ninja connects the co-repressor topless to jasmonate signalling</article-title>
+<source>Nature</source>
+<year>2010</year>
+<volume>464</volume>
+<fpage>788</fpage>
+<lpage>791</lpage>
+<pub-id pub-id-type="doi">10.1038/nature08854</pub-id>
+<?supplied-pmid 20360743?><pub-id pub-id-type="pmid">20360743</pub-id></element-citation></ref><ref id="B22-plants-05-00009"><label>22.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fonseca</surname><given-names>S.</given-names></name><name><surname>Chico</surname><given-names>J.M.</given-names></name><name><surname>Solano</surname><given-names>R.</given-names></name></person-group>
+<article-title>The jasmonate pathway: The ligand, the receptor and the core signalling module</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2009</year>
+<volume>12</volume>
+<fpage>539</fpage>
+<lpage>547</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2009.07.013</pub-id>
+<?supplied-pmid 19716757?><pub-id pub-id-type="pmid">19716757</pub-id></element-citation></ref><ref id="B23-plants-05-00009"><label>23.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kazan</surname><given-names>K.</given-names></name><name><surname>Lyons</surname><given-names>R.</given-names></name></person-group>
+<article-title>Intervention of phytohormone pathways by pathogen effectors</article-title>
+<source>Plant Cell</source>
+<year>2014</year>
+<volume>26</volume>
+<fpage>2285</fpage>
+<lpage>2309</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.114.125419</pub-id>
+<?supplied-pmid 24920334?><pub-id pub-id-type="pmid">24920334</pub-id></element-citation></ref><ref id="B24-plants-05-00009"><label>24.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Brooks</surname><given-names>D.M.</given-names></name><name><surname>Hernandez-Guzman</surname><given-names>G.</given-names></name><name><surname>Kloek</surname><given-names>A.P.</given-names></name><name><surname>Alarcon-Chaidez</surname><given-names>F.</given-names></name><name><surname>Sreedharan</surname><given-names>A.</given-names></name><name><surname>Rangaswamy</surname><given-names>V.</given-names></name><name><surname>Penaloza-Vazquez</surname><given-names>A.</given-names></name><name><surname>Bender</surname><given-names>C.L.</given-names></name><name><surname>Kunkel</surname><given-names>B.N.</given-names></name></person-group>
+<article-title>Identification and characterization of a well-defined series of coronatine biosynthetic mutants of pseudomonas syringae pv. Tomato DC3000</article-title>
+<source>Mol. Plant-Microbe Interact.</source>
+<year>2004</year>
+<volume>17</volume>
+<fpage>162</fpage>
+<lpage>174</lpage>
+<pub-id pub-id-type="doi">10.1094/MPMI.2004.17.2.162</pub-id>
+<?supplied-pmid 14964530?><pub-id pub-id-type="pmid">14964530</pub-id></element-citation></ref><ref id="B25-plants-05-00009"><label>25.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Feys</surname><given-names>B.</given-names></name><name><surname>Benedetti</surname><given-names>C.E.</given-names></name><name><surname>Penfold</surname><given-names>C.N.</given-names></name><name><surname>Turner</surname><given-names>J.G.</given-names></name></person-group>
+<article-title>Arabidopsis mutants selected for resistance to the phytotoxin coronatine are male sterile, insensitive to methyl jasmonate, and resistant to a bacterial pathogen</article-title>
+<source>Plant Cell</source>
+<year>1994</year>
+<volume>6</volume>
+<fpage>751</fpage>
+<lpage>759</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.6.5.751</pub-id>
+<?supplied-pmid 12244256?><pub-id pub-id-type="pmid">12244256</pub-id></element-citation></ref><ref id="B26-plants-05-00009"><label>26.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gimenez-Ibanez</surname><given-names>S.</given-names></name><name><surname>Boter</surname><given-names>M.</given-names></name><name><surname>Solano</surname><given-names>R.</given-names></name></person-group>
+<article-title>Novel players fine-tune plant trade-offs</article-title>
+<source>Essays Biochem.</source>
+<year>2015</year>
+<volume>58</volume>
+<fpage>83</fpage>
+<lpage>100</lpage>
+<pub-id pub-id-type="doi">10.1042/bse0580083</pub-id>
+<?supplied-pmid 26374889?><pub-id pub-id-type="pmid">26374889</pub-id></element-citation></ref><ref id="B27-plants-05-00009"><label>27.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Katsir</surname><given-names>L.</given-names></name><name><surname>Schilmiller</surname><given-names>A.L.</given-names></name><name><surname>Staswick</surname><given-names>P.E.</given-names></name><name><surname>He</surname><given-names>S.Y.</given-names></name><name><surname>Howe</surname><given-names>G.A.</given-names></name></person-group>
+<article-title>COI1 is a critical component of a receptor for jasmonate and the bacterial virulence factor coronatine</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2008</year>
+<volume>105</volume>
+<fpage>7100</fpage>
+<lpage>7105</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.0802332105</pub-id>
+<?supplied-pmid 18458331?><pub-id pub-id-type="pmid">18458331</pub-id></element-citation></ref><ref id="B28-plants-05-00009"><label>28.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Monte</surname><given-names>I.</given-names></name><name><surname>Hamberg</surname><given-names>M.</given-names></name><name><surname>Chini</surname><given-names>A.</given-names></name><name><surname>Gimenez-Ibanez</surname><given-names>S.</given-names></name><name><surname>Garcia-Casado</surname><given-names>G.</given-names></name><name><surname>Porzel</surname><given-names>A.</given-names></name><name><surname>Pazos</surname><given-names>F.</given-names></name><name><surname>Boter</surname><given-names>M.</given-names></name><name><surname>Solano</surname><given-names>R.</given-names></name></person-group>
+<article-title>Rational design of a ligand-based antagonist of jasmonate perception</article-title>
+<source>Nat. Chem. Biol.</source>
+<year>2014</year>
+<volume>10</volume>
+<fpage>671</fpage>
+<lpage>676</lpage>
+<pub-id pub-id-type="doi">10.1038/nchembio.1575</pub-id>
+<?supplied-pmid 24997606?><pub-id pub-id-type="pmid">24997606</pub-id></element-citation></ref><ref id="B29-plants-05-00009"><label>29.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Demianski</surname><given-names>A.J.</given-names></name><name><surname>Chung</surname><given-names>K.M.</given-names></name><name><surname>Kunkel</surname><given-names>B.N.</given-names></name></person-group>
+<article-title>Analysis of arabidopsis JAZ gene expression during pseudomonas syringae pathogenesis</article-title>
+<source>Mol. Plant Pathol.</source>
+<year>2012</year>
+<volume>13</volume>
+<fpage>46</fpage>
+<lpage>57</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1364-3703.2011.00727.x</pub-id>
+<?supplied-pmid 21726394?><pub-id pub-id-type="pmid">21726394</pub-id></element-citation></ref><ref id="B30-plants-05-00009"><label>30.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>De Torres Zabala</surname><given-names>M.</given-names></name><name><surname>Zhai</surname><given-names>B.</given-names></name><name><surname>Jayaraman</surname><given-names>S.</given-names></name><name><surname>Eleftheriadou</surname><given-names>G.</given-names></name><name><surname>Winsbury</surname><given-names>R.</given-names></name><name><surname>Yang</surname><given-names>R.</given-names></name><name><surname>Truman</surname><given-names>W.</given-names></name><name><surname>Tang</surname><given-names>S.</given-names></name><name><surname>Smirnoff</surname><given-names>N.</given-names></name><name><surname>Grant</surname><given-names>M.</given-names></name></person-group>
+<article-title>Novel JAZ co-operativity and unexpected JA dynamics underpin arabidopsis defence responses to pseudomonas syringae infection</article-title>
+<source>New Phytol.</source>
+<year>2015</year>
+<pub-id pub-id-type="doi">10.1111/nph.13683</pub-id>
+</element-citation></ref><ref id="B31-plants-05-00009"><label>31.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Geng</surname><given-names>X.</given-names></name><name><surname>Cheng</surname><given-names>J.</given-names></name><name><surname>Gangadharan</surname><given-names>A.</given-names></name><name><surname>Mackey</surname><given-names>D.</given-names></name></person-group>
+<article-title>The coronatine toxin of pseudomonas syringae is a multifunctional suppressor of arabidopsis defense</article-title>
+<source>Plant Cell</source>
+<year>2012</year>
+<volume>24</volume>
+<fpage>4763</fpage>
+<lpage>4774</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.112.105312</pub-id>
+<?supplied-pmid 23204405?><pub-id pub-id-type="pmid">23204405</pub-id></element-citation></ref><ref id="B32-plants-05-00009"><label>32.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Uppalapati</surname><given-names>S.R.</given-names></name><name><surname>Ishiga</surname><given-names>Y.</given-names></name><name><surname>Wangdi</surname><given-names>T.</given-names></name><name><surname>Kunkel</surname><given-names>B.N.</given-names></name><name><surname>Anand</surname><given-names>A.</given-names></name><name><surname>Mysore</surname><given-names>K.S.</given-names></name><name><surname>Bender</surname><given-names>C.L.</given-names></name></person-group>
+<article-title>The phytotoxin coronatine contributes to pathogen fitness and is required for suppression of salicylic acid accumulation in tomato inoculated with pseudomonas syringae pv. Tomato DC3000</article-title>
+<source>Mol. Plant Microbe Interact.</source>
+<year>2007</year>
+<volume>20</volume>
+<fpage>955</fpage>
+<lpage>965</lpage>
+<pub-id pub-id-type="doi">10.1094/MPMI-20-8-0955</pub-id>
+<?supplied-pmid 17722699?><pub-id pub-id-type="pmid">17722699</pub-id></element-citation></ref><ref id="B33-plants-05-00009"><label>33.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kloek</surname><given-names>A.P.</given-names></name><name><surname>Verbsky</surname><given-names>M.L.</given-names></name><name><surname>Sharma</surname><given-names>S.B.</given-names></name><name><surname>Schoelz</surname><given-names>J.E.</given-names></name><name><surname>Vogel</surname><given-names>J.</given-names></name><name><surname>Klessig</surname><given-names>D.F.</given-names></name><name><surname>Kunkel</surname><given-names>B.N.</given-names></name></person-group>
+<article-title>Resistance to pseudomonas syringae conferred by an arabidopsis thaliana coronatine-insensitive (COI1) mutation occurs through two distinct mechanisms</article-title>
+<source>Plant J.</source>
+<year>2001</year>
+<volume>26</volume>
+<fpage>509</fpage>
+<lpage>522</lpage>
+<pub-id pub-id-type="doi">10.1046/j.1365-313x.2001.01050.x</pub-id>
+<?supplied-pmid 11439137?><pub-id pub-id-type="pmid">11439137</pub-id></element-citation></ref><ref id="B34-plants-05-00009"><label>34.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Melotto</surname><given-names>M.</given-names></name><name><surname>Underwood</surname><given-names>W.</given-names></name><name><surname>Koczan</surname><given-names>J.</given-names></name><name><surname>Nomura</surname><given-names>K.</given-names></name><name><surname>He</surname><given-names>S.Y.</given-names></name></person-group>
+<article-title>Plant stomata function in innate immunity against bacterial invasion</article-title>
+<source>Cell</source>
+<year>2006</year>
+<volume>126</volume>
+<fpage>969</fpage>
+<lpage>980</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cell.2006.06.054</pub-id>
+<?supplied-pmid 16959575?><pub-id pub-id-type="pmid">16959575</pub-id></element-citation></ref><ref id="B35-plants-05-00009"><label>35.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Melotto</surname><given-names>M.</given-names></name><name><surname>Underwood</surname><given-names>W.</given-names></name><name><surname>He</surname><given-names>S.Y.</given-names></name></person-group>
+<article-title>Role of stomata in plant innate immunity and foliar bacterial diseases</article-title>
+<source>Annu. Rev. Phytopathol.</source>
+<year>2008</year>
+<volume>46</volume>
+<fpage>101</fpage>
+<lpage>122</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev.phyto.121107.104959</pub-id>
+<?supplied-pmid 18422426?><pub-id pub-id-type="pmid">18422426</pub-id></element-citation></ref><ref id="B36-plants-05-00009"><label>36.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lee</surname><given-names>S.</given-names></name><name><surname>Ishiga</surname><given-names>Y.</given-names></name><name><surname>Clermont</surname><given-names>K.</given-names></name><name><surname>Mysore</surname><given-names>K.S.</given-names></name></person-group>
+<article-title>Coronatine inhibits stomatal closure and delays hypersensitive response cell death induced by nonhost bacterial pathogens</article-title>
+<source>PeerJ</source>
+<year>2013</year>
+<pub-id pub-id-type="doi">10.7717/peerj.34</pub-id>
+<?supplied-pmid 23638370?><pub-id pub-id-type="pmid">23638370</pub-id></element-citation></ref><ref id="B37-plants-05-00009"><label>37.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Laurie-Berry</surname><given-names>N.</given-names></name><name><surname>Joardar</surname><given-names>V.</given-names></name><name><surname>Street</surname><given-names>I.H.</given-names></name><name><surname>Kunkel</surname><given-names>B.N.</given-names></name></person-group>
+<article-title>The arabidopsis thaliana jasmonate insensitive 1 gene is required for suppression of salicylic acid-dependent defenses during infection by pseudomonas syringae</article-title>
+<source>Mol. Plant Microbe Interact.</source>
+<year>2006</year>
+<volume>19</volume>
+<fpage>789</fpage>
+<lpage>800</lpage>
+<pub-id pub-id-type="doi">10.1094/MPMI-19-0789</pub-id>
+<?supplied-pmid 16838791?><pub-id pub-id-type="pmid">16838791</pub-id></element-citation></ref><ref id="B38-plants-05-00009"><label>38.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cui</surname><given-names>J.</given-names></name><name><surname>Bahrami</surname><given-names>A.K.</given-names></name><name><surname>Pringle</surname><given-names>E.G.</given-names></name><name><surname>Hernandez-Guzman</surname><given-names>G.</given-names></name><name><surname>Bender</surname><given-names>C.L.</given-names></name><name><surname>Pierce</surname><given-names>N.E.</given-names></name><name><surname>Ausubel</surname><given-names>F.M.</given-names></name></person-group>
+<article-title>Pseudomonas syringae manipulates systemic plant defenses against pathogens and herbivores</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2005</year>
+<volume>102</volume>
+<fpage>1791</fpage>
+<lpage>1796</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.0409450102</pub-id>
+<?supplied-pmid 15657122?><pub-id pub-id-type="pmid">15657122</pub-id></element-citation></ref><ref id="B39-plants-05-00009"><label>39.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zheng</surname><given-names>X.Y.</given-names></name><name><surname>Spivey</surname><given-names>N.W.</given-names></name><name><surname>Zeng</surname><given-names>W.</given-names></name><name><surname>Liu</surname><given-names>P.P.</given-names></name><name><surname>Fu</surname><given-names>Z.Q.</given-names></name><name><surname>Klessig</surname><given-names>D.F.</given-names></name><name><surname>He</surname><given-names>S.Y.</given-names></name><name><surname>Dong</surname><given-names>X.</given-names></name></person-group>
+<article-title>Coronatine promotes pseudomonas syringae virulence in plants by activating a signaling cascade that inhibits salicylic acid accumulation</article-title>
+<source>Cell Host Microbe</source>
+<year>2012</year>
+<volume>11</volume>
+<fpage>587</fpage>
+<lpage>596</lpage>
+<pub-id pub-id-type="doi">10.1016/j.chom.2012.04.014</pub-id>
+<?supplied-pmid 22704619?><pub-id pub-id-type="pmid">22704619</pub-id></element-citation></ref><ref id="B40-plants-05-00009"><label>40.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Geng</surname><given-names>X.</given-names></name><name><surname>Jin</surname><given-names>L.</given-names></name><name><surname>Shimada</surname><given-names>M.</given-names></name><name><surname>Kim</surname><given-names>M.G.</given-names></name><name><surname>Mackey</surname><given-names>D.</given-names></name></person-group>
+<article-title>The phytotoxin coronatine is a multifunctional component of the virulence armament of pseudomonas syringae</article-title>
+<source>Planta</source>
+<year>2014</year>
+<volume>240</volume>
+<fpage>1149</fpage>
+<lpage>1165</lpage>
+<pub-id pub-id-type="doi">10.1007/s00425-014-2151-x</pub-id>
+<?supplied-pmid 25156488?><pub-id pub-id-type="pmid">25156488</pub-id></element-citation></ref><ref id="B41-plants-05-00009"><label>41.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Brooks</surname><given-names>D.M.</given-names></name><name><surname>Bender</surname><given-names>C.L.</given-names></name><name><surname>Kunkel</surname><given-names>B.N.</given-names></name></person-group>
+<article-title>The pseudomonas syringae phytotoxin coronatine promotes virulence by overcoming salicylic acid-dependent defences in arabidopsis thaliana</article-title>
+<source>Mol. Plant Pathol.</source>
+<year>2005</year>
+<volume>6</volume>
+<fpage>629</fpage>
+<lpage>639</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1364-3703.2005.00311.x</pub-id>
+<?supplied-pmid 20565685?><pub-id pub-id-type="pmid">20565685</pub-id></element-citation></ref><ref id="B42-plants-05-00009"><label>42.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Du</surname><given-names>M.</given-names></name><name><surname>Zhai</surname><given-names>Q.</given-names></name><name><surname>Deng</surname><given-names>L.</given-names></name><name><surname>Li</surname><given-names>S.</given-names></name><name><surname>Li</surname><given-names>H.</given-names></name><name><surname>Yan</surname><given-names>L.</given-names></name><name><surname>Huang</surname><given-names>Z.</given-names></name><name><surname>Wang</surname><given-names>B.</given-names></name><name><surname>Jiang</surname><given-names>H.</given-names></name><name><surname>Huang</surname><given-names>T.</given-names></name><etal/></person-group>
+<article-title>Closely related NAC transcription factors of tomato differentially regulate stomatal closure and reopening during pathogen attack</article-title>
+<source>Plant Cell</source>
+<year>2014</year>
+<volume>26</volume>
+<fpage>3167</fpage>
+<lpage>3184</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.114.128272</pub-id>
+<?supplied-pmid 25005917?><pub-id pub-id-type="pmid">25005917</pub-id></element-citation></ref><ref id="B43-plants-05-00009"><label>43.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Aldridge</surname><given-names>D.C.</given-names></name><name><surname>Galt</surname><given-names>S.</given-names></name><name><surname>Giles</surname><given-names>D.</given-names></name><name><surname>Turner</surname><given-names>W.B.</given-names></name></person-group>
+<article-title>Metabolites of lasiodiplodia theobromae</article-title>
+<source>J. Chem. Soc. C</source>
+<year>1971</year>
+<volume>5</volume>
+<fpage>1623</fpage>
+<lpage>1627</lpage>
+<pub-id pub-id-type="doi">10.1039/j39710001623</pub-id>
+</element-citation></ref><ref id="B44-plants-05-00009"><label>44.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miersch</surname><given-names>O.</given-names></name><name><surname>Bruckner</surname><given-names>B.</given-names></name><name><surname>Schmidt</surname><given-names>J.</given-names></name><name><surname>Sembdner</surname><given-names>G.</given-names></name></person-group>
+<article-title>Cyclopentane fatty acids from gibberella fujikuroi</article-title>
+<source>Phytochemistry</source>
+<year>1992</year>
+<volume>31</volume>
+<fpage>3835</fpage>
+<lpage>3837</lpage>
+<pub-id pub-id-type="doi">10.1016/S0031-9422(00)97537-X</pub-id>
+</element-citation></ref><ref id="B45-plants-05-00009"><label>45.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miersch</surname><given-names>O.</given-names></name><name><surname>Gunther</surname><given-names>T.</given-names></name><name><surname>Fritsche</surname><given-names>W.</given-names></name><name><surname>Sembdner</surname><given-names>G.</given-names></name></person-group>
+<article-title>Jasmonates from different fungal species</article-title>
+<source>Nat. Prod. Lett.</source>
+<year>1993</year>
+<volume>2</volume>
+<fpage>293</fpage>
+<lpage>299</lpage>
+<pub-id pub-id-type="doi">10.1080/10575639308043825</pub-id>
+</element-citation></ref><ref id="B46-plants-05-00009"><label>46.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miersch</surname><given-names>O.</given-names></name><name><surname>Regvar</surname><given-names>M.</given-names></name><name><surname>Wasternack</surname><given-names>C.</given-names></name></person-group>
+<article-title>Metabolism of jasmonic acid in pisolithus tinctorius cultures</article-title>
+<source>Phyton</source>
+<year>1999</year>
+<volume>39</volume>
+<fpage>243</fpage>
+<lpage>247</lpage>
+</element-citation></ref><ref id="B47-plants-05-00009"><label>47.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miersch</surname><given-names>O.</given-names></name><name><surname>Bohlmann</surname><given-names>H.</given-names></name><name><surname>Wasternack</surname><given-names>C.</given-names></name></person-group>
+<article-title>Jasmonates and related compounds from fusarium oxysporum</article-title>
+<source>Phytochemistry</source>
+<year>1999</year>
+<volume>50</volume>
+<fpage>517</fpage>
+<lpage>523</lpage>
+<pub-id pub-id-type="doi">10.1016/S0031-9422(98)00596-2</pub-id>
+</element-citation></ref><ref id="B48-plants-05-00009"><label>48.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Brodhun</surname><given-names>F.</given-names></name><name><surname>Cristobal-Sarramian</surname><given-names>A.</given-names></name><name><surname>Zabel</surname><given-names>S.</given-names></name><name><surname>Newie</surname><given-names>J.</given-names></name><name><surname>Hamberg</surname><given-names>M.</given-names></name><name><surname>Feussner</surname><given-names>I.</given-names></name></person-group>
+<article-title>An iron 13S-lipoxygenase with an alpha-linolenic acid specific hydroperoxidase activity from fusarium oxysporum</article-title>
+<source>PLoS ONE</source>
+<year>2013</year>
+<volume>8</volume>
+<elocation-id>9</elocation-id>
+<pub-id pub-id-type="doi">10.1371/journal.pone.0064919</pub-id>
+<?supplied-pmid 23741422?><pub-id pub-id-type="pmid">23741422</pub-id></element-citation></ref><ref id="B49-plants-05-00009"><label>49.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cole</surname><given-names>S.J.</given-names></name><name><surname>Yoon</surname><given-names>A.J.</given-names></name><name><surname>Faull</surname><given-names>K.F.</given-names></name><name><surname>Diener</surname><given-names>A.C.</given-names></name></person-group>
+<article-title>Host perception of jasmonates promotes infection by fusarium oxysporum formae speciales that produce isoleucine- and leucine-conjugated jasmonates</article-title>
+<source>Mol. Plant Pathol.</source>
+<year>2014</year>
+<volume>15</volume>
+<fpage>589</fpage>
+<lpage>600</lpage>
+<pub-id pub-id-type="doi">10.1111/mpp.12117</pub-id>
+<?supplied-pmid 24387225?><pub-id pub-id-type="pmid">24387225</pub-id></element-citation></ref><ref id="B50-plants-05-00009"><label>50.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Go</surname><given-names>I.H.</given-names></name><name><surname>Kim</surname><given-names>K.J.</given-names></name><name><surname>Kim</surname><given-names>Y.H.</given-names></name></person-group>
+<article-title>Optimal conditions for the production of (+)-Jasmonic acid by Diplodia gossypina ATCC10936</article-title>
+<source>Korean J. Microbiol.</source>
+<year>2006</year>
+<volume>42</volume>
+<fpage>210</fpage>
+<lpage>215</lpage>
+</element-citation></ref><ref id="B51-plants-05-00009"><label>51.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Forchetti</surname><given-names>G.</given-names></name><name><surname>Masciarelli</surname><given-names>O.</given-names></name><name><surname>Alemano</surname><given-names>S.</given-names></name><name><surname>Alvarez</surname><given-names>D.</given-names></name><name><surname>Abdala</surname><given-names>G.</given-names></name></person-group>
+<article-title>Endophytic bacteria in sunflower (<italic>Helianthus annuus</italic> L.): Isolation, characterization, and production of jasmonates and abscisic acid in culture medium</article-title>
+<source>Appl. Microbiol. Biotechnol.</source>
+<year>2007</year>
+<volume>76</volume>
+<fpage>1145</fpage>
+<lpage>1152</lpage>
+<pub-id pub-id-type="doi">10.1007/s00253-007-1077-7</pub-id>
+<?supplied-pmid 17657487?><pub-id pub-id-type="pmid">17657487</pub-id></element-citation></ref><ref id="B52-plants-05-00009"><label>52.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Patkar</surname><given-names>R.N.</given-names></name><name><surname>Benke</surname><given-names>P.I.</given-names></name><name><surname>Qu</surname><given-names>Z.</given-names></name><name><surname>Constance Chen</surname><given-names>Y.Y.</given-names></name><name><surname>Yang</surname><given-names>F.</given-names></name><name><surname>Swarup</surname><given-names>S.</given-names></name><name><surname>Naqvi</surname><given-names>N.I.</given-names></name></person-group>
+<article-title>A fungal monooxygenase-derived jasmonate attenuates host innate immunity</article-title>
+<source>Nat. Chem. Biol.</source>
+<year>2015</year>
+<volume>11</volume>
+<fpage>733</fpage>
+<lpage>740</lpage>
+<pub-id pub-id-type="doi">10.1038/nchembio.1885</pub-id>
+<?supplied-pmid 26258762?><pub-id pub-id-type="pmid">26258762</pub-id></element-citation></ref><ref id="B53-plants-05-00009"><label>53.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miersch</surname><given-names>O.</given-names></name><name><surname>Porzel</surname><given-names>A.</given-names></name><name><surname>Wasternack</surname><given-names>C.</given-names></name></person-group>
+<article-title>Microbial conversion of jasmonates-hydroxylations by aspergillus niger</article-title>
+<source>Phytochemistry</source>
+<year>1999</year>
+<volume>50</volume>
+<fpage>1147</fpage>
+<lpage>1152</lpage>
+<pub-id pub-id-type="doi">10.1016/S0031-9422(98)00698-0</pub-id>
+<pub-id pub-id-type="pmid">10234859</pub-id></element-citation></ref><ref id="B54-plants-05-00009"><label>54.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tsukada</surname><given-names>K.</given-names></name><name><surname>Takahashi</surname><given-names>K.</given-names></name><name><surname>Nabeta</surname><given-names>K.</given-names></name></person-group>
+<article-title>Biosynthesis of jasmonic acid in a plant pathogenic fungus, lasiodiplodia theobromae</article-title>
+<source>Phytochemistry</source>
+<year>2010</year>
+<volume>71</volume>
+<fpage>2019</fpage>
+<lpage>2023</lpage>
+<pub-id pub-id-type="doi">10.1016/j.phytochem.2010.09.013</pub-id>
+<?supplied-pmid 20952041?><pub-id pub-id-type="pmid">20952041</pub-id></element-citation></ref><ref id="B55-plants-05-00009"><label>55.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miersch</surname><given-names>O.</given-names></name><name><surname>Neumerkel</surname><given-names>J.</given-names></name><name><surname>Dippe</surname><given-names>M.</given-names></name><name><surname>Stenzel</surname><given-names>I.</given-names></name><name><surname>Wasternack</surname><given-names>C.</given-names></name></person-group>
+<article-title>Hydroxylated jasmonates are commonly occurring metabolites of jasmonic acid and contribute to a partial switch-off in jasmonate signaling</article-title>
+<source>New Phytol.</source>
+<year>2008</year>
+<volume>177</volume>
+<fpage>114</fpage>
+<lpage>127</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1469-8137.2007.02252.x</pub-id>
+<?supplied-pmid 17995915?><pub-id pub-id-type="pmid">17995915</pub-id></element-citation></ref><ref id="B56-plants-05-00009"><label>56.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gimenez-Ibanez</surname><given-names>S.</given-names></name><name><surname>Boter</surname><given-names>M.</given-names></name><name><surname>Fernandez-Barbero</surname><given-names>G.</given-names></name><name><surname>Chini</surname><given-names>A.</given-names></name><name><surname>Rathjen</surname><given-names>J.P.</given-names></name><name><surname>Solano</surname><given-names>R.</given-names></name></person-group>
+<article-title>The bacterial effector HopX1 targets JAZ transcriptional repressors to activate jasmonate signaling and promote infection in arabidopsis</article-title>
+<source>PLoS Biol.</source>
+<year>2014</year>
+<volume>12</volume>
+<elocation-id>9</elocation-id>
+<pub-id pub-id-type="doi">10.1371/journal.pbio.1001792</pub-id>
+<?supplied-pmid 24558350?><pub-id pub-id-type="pmid">24558350</pub-id></element-citation></ref><ref id="B57-plants-05-00009"><label>57.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jiang</surname><given-names>S.</given-names></name><name><surname>Yao</surname><given-names>J.</given-names></name><name><surname>Ma</surname><given-names>K.W.</given-names></name><name><surname>Zhou</surname><given-names>H.</given-names></name><name><surname>Song</surname><given-names>J.</given-names></name><name><surname>He</surname><given-names>S.Y.</given-names></name><name><surname>Ma</surname><given-names>W.</given-names></name></person-group>
+<article-title>Bacterial effector activates jasmonate signaling by directly targeting JAZ transcriptional repressors</article-title>
+<source>PLoS Pathog.</source>
+<year>2013</year>
+<volume>9</volume>
+<elocation-id>9</elocation-id>
+<pub-id pub-id-type="doi">10.1371/journal.ppat.1003715</pub-id>
+<?supplied-pmid 24204266?><pub-id pub-id-type="pmid">24204266</pub-id></element-citation></ref><ref id="B58-plants-05-00009"><label>58.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cui</surname><given-names>H.</given-names></name><name><surname>Wang</surname><given-names>Y.</given-names></name><name><surname>Xue</surname><given-names>L.</given-names></name><name><surname>Chu</surname><given-names>J.</given-names></name><name><surname>Yan</surname><given-names>C.</given-names></name><name><surname>Fu</surname><given-names>J.</given-names></name><name><surname>Chen</surname><given-names>M.</given-names></name><name><surname>Innes</surname><given-names>R.W.</given-names></name><name><surname>Zhou</surname><given-names>J.M.</given-names></name></person-group>
+<article-title><italic>Pseudomonas syringae</italic> effector protein AvrB perturbs <italic>Arabidopsis</italic> hormone signaling by activating MAP KINASE 4</article-title>
+<source>Cell Host Microbe</source>
+<year>2010</year>
+<volume>7</volume>
+<fpage>164</fpage>
+<lpage>175</lpage>
+<pub-id pub-id-type="doi">10.1016/j.chom.2010.01.009</pub-id>
+<?supplied-pmid 20159621?><pub-id pub-id-type="pmid">20159621</pub-id></element-citation></ref><ref id="B59-plants-05-00009"><label>59.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhou</surname><given-names>Z.</given-names></name><name><surname>Wu</surname><given-names>Y.</given-names></name><name><surname>Yang</surname><given-names>Y.</given-names></name><name><surname>Du</surname><given-names>M.</given-names></name><name><surname>Zhang</surname><given-names>X.</given-names></name><name><surname>Guo</surname><given-names>Y.</given-names></name><name><surname>Li</surname><given-names>C.</given-names></name><name><surname>Zhou</surname><given-names>J.M.</given-names></name></person-group>
+<article-title>An arabidopsis plasma membrane proton atpase modulates JA signaling and is exploited by the pseudomonas syringae effector protein AvrB for stomatal invasion</article-title>
+<source>Plant Cell</source>
+<year>2015</year>
+<volume>27</volume>
+<fpage>2032</fpage>
+<lpage>2041</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.15.00466</pub-id>
+<?supplied-pmid 26198069?><pub-id pub-id-type="pmid">26198069</pub-id></element-citation></ref><ref id="B60-plants-05-00009"><label>60.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Caillaud</surname><given-names>M.C.</given-names></name><name><surname>Asai</surname><given-names>S.</given-names></name><name><surname>Rallapalli</surname><given-names>G.</given-names></name><name><surname>Piquerez</surname><given-names>S.</given-names></name><name><surname>Fabro</surname><given-names>G.</given-names></name><name><surname>Jones</surname><given-names>J.D.</given-names></name></person-group>
+<article-title>A downy mildew effector attenuates salicylic acid-triggered immunity in arabidopsis by interacting with the host mediator complex</article-title>
+<source>PLoS Biol.</source>
+<year>2013</year>
+<volume>11</volume>
+<elocation-id>9</elocation-id>
+<pub-id pub-id-type="doi">10.1371/journal.pbio.1001732</pub-id>
+<?supplied-pmid 24339748?><pub-id pub-id-type="pmid">24339748</pub-id></element-citation></ref><ref id="B61-plants-05-00009"><label>61.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Plett</surname><given-names>J.M.</given-names></name><name><surname>Daguerre</surname><given-names>Y.</given-names></name><name><surname>Wittulsky</surname><given-names>S.</given-names></name><name><surname>Vayssieres</surname><given-names>A.</given-names></name><name><surname>Deveau</surname><given-names>A.</given-names></name><name><surname>Melton</surname><given-names>S.J.</given-names></name><name><surname>Kohler</surname><given-names>A.</given-names></name><name><surname>Morrell-Falvey</surname><given-names>J.L.</given-names></name><name><surname>Brun</surname><given-names>A.</given-names></name><name><surname>Veneault-Fourrey</surname><given-names>C.</given-names></name><etal/></person-group>
+<article-title>Effector MISSP7 of the mutualistic fungus laccaria bicolor stabilizes the populus JAZ6 protein and represses jasmonic acid (JA) responsive genes</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2014</year>
+<volume>111</volume>
+<fpage>8299</fpage>
+<lpage>8304</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.1322671111</pub-id>
+<?supplied-pmid 24847068?><pub-id pub-id-type="pmid">24847068</pub-id></element-citation></ref><ref id="B62-plants-05-00009"><label>62.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhu</surname><given-names>W.</given-names></name><name><surname>Wei</surname><given-names>W.</given-names></name><name><surname>Fu</surname><given-names>Y.</given-names></name><name><surname>Cheng</surname><given-names>J.</given-names></name><name><surname>Xie</surname><given-names>J.</given-names></name><name><surname>Li</surname><given-names>G.</given-names></name><name><surname>Yi</surname><given-names>X.</given-names></name><name><surname>Kang</surname><given-names>Z.</given-names></name><name><surname>Dickman</surname><given-names>M.B.</given-names></name><name><surname>Jiang</surname><given-names>D.</given-names></name></person-group>
+<article-title>A secretory protein of necrotrophic fungus sclerotinia sclerotiorum that suppresses host resistance</article-title>
+<source>PLoS ONE</source>
+<year>2013</year>
+<volume>8</volume>
+<elocation-id>9</elocation-id>
+<pub-id pub-id-type="doi">10.1371/journal.pone.0053901</pub-id>
+<?supplied-pmid 23342034?><pub-id pub-id-type="pmid">23342034</pub-id></element-citation></ref><ref id="B63-plants-05-00009"><label>63.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>El Oirdi</surname><given-names>M.</given-names></name><name><surname>el Rahman</surname><given-names>T.A.</given-names></name><name><surname>Rigano</surname><given-names>L.</given-names></name><name><surname>el Hadrami</surname><given-names>A.</given-names></name><name><surname>Rodriguez</surname><given-names>M.C.</given-names></name><name><surname>Daayf</surname><given-names>F.</given-names></name><name><surname>Vojnov</surname><given-names>A.</given-names></name><name><surname>Bouarab</surname><given-names>K.</given-names></name></person-group>
+<article-title>Botrytis cinerea manipulates the antagonistic effects between immune pathways to promote disease development in tomato</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>2405</fpage>
+<lpage>2421</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.111.083394</pub-id>
+<?supplied-pmid 21665999?><pub-id pub-id-type="pmid">21665999</pub-id></element-citation></ref><ref id="B64-plants-05-00009"><label>64.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jeong</surname><given-names>J.W.</given-names></name><name><surname>Bae</surname><given-names>M.K.</given-names></name><name><surname>Ahn</surname><given-names>M.Y.</given-names></name><name><surname>Kim</surname><given-names>S.H.</given-names></name><name><surname>Sohn</surname><given-names>T.K.</given-names></name><name><surname>Bae</surname><given-names>M.H.</given-names></name><name><surname>Yoo</surname><given-names>M.A.</given-names></name><name><surname>Song</surname><given-names>E.J.</given-names></name><name><surname>Lee</surname><given-names>K.J.</given-names></name><name><surname>Kim</surname><given-names>K.W.</given-names></name></person-group>
+<article-title>Regulation and destabilization of HIF-1alpha by ARD1-mediated acetylation</article-title>
+<source>Cell</source>
+<year>2002</year>
+<volume>111</volume>
+<fpage>709</fpage>
+<lpage>720</lpage>
+<pub-id pub-id-type="doi">10.1016/S0092-8674(02)01085-1</pub-id>
+<pub-id pub-id-type="pmid">12464182</pub-id></element-citation></ref><ref id="B65-plants-05-00009"><label>65.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ma</surname><given-names>K.W.</given-names></name><name><surname>Jiang</surname><given-names>S.</given-names></name><name><surname>Hawara</surname><given-names>E.</given-names></name><name><surname>Lee</surname><given-names>D.</given-names></name><name><surname>Pan</surname><given-names>S.</given-names></name><name><surname>Coaker</surname><given-names>G.</given-names></name><name><surname>Song</surname><given-names>J.</given-names></name><name><surname>Ma</surname><given-names>W.</given-names></name></person-group>
+<article-title>Two serine residues in pseudomonas syringae effector HopZ1a are required for acetyltransferase activity and association with the host co-factor</article-title>
+<source>New Phytol.</source>
+<year>2015</year>
+<volume>208</volume>
+<fpage>1157</fpage>
+<lpage>1168</lpage>
+<pub-id pub-id-type="doi">10.1111/nph.13528</pub-id>
+<?supplied-pmid 26103463?><pub-id pub-id-type="pmid">26103463</pub-id></element-citation></ref><ref id="B66-plants-05-00009"><label>66.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rufian</surname><given-names>J.S.</given-names></name><name><surname>Lucia</surname><given-names>A.</given-names></name><name><surname>Macho</surname><given-names>A.P.</given-names></name><name><surname>Orozco-Navarrete</surname><given-names>B.</given-names></name><name><surname>Arroyo-Mateos</surname><given-names>M.</given-names></name><name><surname>Bejarano</surname><given-names>E.R.</given-names></name><name><surname>Beuzon</surname><given-names>C.R.</given-names></name><name><surname>Ruiz-Albert</surname><given-names>J.</given-names></name></person-group>
+<article-title>Auto-acetylation on K289 is not essential for HopZ1a-mediated plant defense suppression</article-title>
+<source>Front. Microbiol.</source>
+<year>2015</year>
+<pub-id pub-id-type="doi">10.3389/fmicb.2015.00684</pub-id>
+<?supplied-pmid 26217317?><pub-id pub-id-type="pmid">26217317</pub-id></element-citation></ref><ref id="B67-plants-05-00009"><label>67.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shang</surname><given-names>Y.</given-names></name><name><surname>Li</surname><given-names>X.</given-names></name><name><surname>Cui</surname><given-names>H.</given-names></name><name><surname>He</surname><given-names>P.</given-names></name><name><surname>Thilmony</surname><given-names>R.</given-names></name><name><surname>Chintamanani</surname><given-names>S.</given-names></name><name><surname>Zwiesler-Vollick</surname><given-names>J.</given-names></name><name><surname>Gopalan</surname><given-names>S.</given-names></name><name><surname>Tang</surname><given-names>X.</given-names></name><name><surname>Zhou</surname><given-names>J.M.</given-names></name></person-group>
+<article-title>RAR1, a central player in plant immunity, is targeted by pseudomonas syringae effector AvrB</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2006</year>
+<volume>103</volume>
+<fpage>19200</fpage>
+<lpage>19205</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.0607279103</pub-id>
+<?supplied-pmid 17148606?><pub-id pub-id-type="pmid">17148606</pub-id></element-citation></ref><ref id="B68-plants-05-00009"><label>68.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Grant</surname><given-names>M.R.</given-names></name><name><surname>Godiard</surname><given-names>L.</given-names></name><name><surname>Straube</surname><given-names>E.</given-names></name><name><surname>Ashfield</surname><given-names>T.</given-names></name><name><surname>Lewald</surname><given-names>J.</given-names></name><name><surname>Sattler</surname><given-names>A.</given-names></name><name><surname>Innes</surname><given-names>R.W.</given-names></name><name><surname>Dangl</surname><given-names>J.L.</given-names></name></person-group>
+<article-title>Structure of the arabidopsis RPM1 gene enabling dual specificity disease resistance</article-title>
+<source>Science</source>
+<year>1995</year>
+<volume>269</volume>
+<fpage>843</fpage>
+<lpage>846</lpage>
+<pub-id pub-id-type="doi">10.1126/science.7638602</pub-id>
+<?supplied-pmid 7638602?><pub-id pub-id-type="pmid">7638602</pub-id></element-citation></ref><ref id="B69-plants-05-00009"><label>69.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mackey</surname><given-names>D.</given-names></name><name><surname>Holt</surname><given-names>B.F.</given-names><suffix>3rd</suffix></name><name><surname>Wiig</surname><given-names>A.</given-names></name><name><surname>Dangl</surname><given-names>J.L.</given-names></name></person-group>
+<article-title>RIN4 interacts with pseudomonas syringae type III effector molecules and is required for RPM1-mediated resistance in arabidopsis</article-title>
+<source>Cell</source>
+<year>2002</year>
+<volume>108</volume>
+<fpage>743</fpage>
+<lpage>754</lpage>
+<pub-id pub-id-type="doi">10.1016/S0092-8674(02)00661-X</pub-id>
+<pub-id pub-id-type="pmid">11955429</pub-id></element-citation></ref><ref id="B70-plants-05-00009"><label>70.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lee</surname><given-names>D.</given-names></name><name><surname>Bourdais</surname><given-names>G.</given-names></name><name><surname>Yu</surname><given-names>G.</given-names></name><name><surname>Robatzek</surname><given-names>S.</given-names></name><name><surname>Coaker</surname><given-names>G.</given-names></name></person-group>
+<article-title>Phosphorylation of the plant immune regulator rpm1-interacting protein4 enhances plant plasma membrane h+-atpase activity and inhibits flagellin-triggered immune responses in arabidopsis</article-title>
+<source>Plant Cell</source>
+<year>2015</year>
+<volume>27</volume>
+<fpage>2042</fpage>
+<lpage>2056</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.114.132308</pub-id>
+<?supplied-pmid 26198070?><pub-id pub-id-type="pmid">26198070</pub-id></element-citation></ref><ref id="B71-plants-05-00009"><label>71.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Liu</surname><given-names>J.</given-names></name><name><surname>Elmore</surname><given-names>J.M.</given-names></name><name><surname>Fuglsang</surname><given-names>A.T.</given-names></name><name><surname>Palmgren</surname><given-names>M.G.</given-names></name><name><surname>Staskawicz</surname><given-names>B.J.</given-names></name><name><surname>Coaker</surname><given-names>G.</given-names></name></person-group>
+<article-title>RIN4 functions with plasma membrane H+-ATPases to regulate stomatal apertures during pathogen attack</article-title>
+<source>PLoS Biol.</source>
+<year>2009</year>
+<volume>7</volume>
+<elocation-id>9</elocation-id>
+<pub-id pub-id-type="doi">10.1371/journal.pbio.1000139</pub-id>
+<?supplied-pmid 19564897?><pub-id pub-id-type="pmid">19564897</pub-id></element-citation></ref><ref id="B72-plants-05-00009"><label>72.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Elmore</surname><given-names>J.M.</given-names></name><name><surname>Coaker</surname><given-names>G.</given-names></name></person-group>
+<article-title>The role of the plasma membrane H+-ATPase in plant-microbe interactions</article-title>
+<source>Mol. Plant</source>
+<year>2011</year>
+<volume>4</volume>
+<fpage>416</fpage>
+<lpage>427</lpage>
+<pub-id pub-id-type="doi">10.1093/mp/ssq083</pub-id>
+<?supplied-pmid 21300757?><pub-id pub-id-type="pmid">21300757</pub-id></element-citation></ref><ref id="B73-plants-05-00009"><label>73.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chung</surname><given-names>E.H.</given-names></name><name><surname>da Cunha</surname><given-names>L.</given-names></name><name><surname>Wu</surname><given-names>A.J.</given-names></name><name><surname>Gao</surname><given-names>Z.</given-names></name><name><surname>Cherkis</surname><given-names>K.</given-names></name><name><surname>Afzal</surname><given-names>A.J.</given-names></name><name><surname>Mackey</surname><given-names>D.</given-names></name><name><surname>Dangl</surname><given-names>J.L.</given-names></name></person-group>
+<article-title>Specific threonine phosphorylation of a host target by two unrelated type iii effectors activates a host innate immune receptor in plants</article-title>
+<source>Cell Host Microbe</source>
+<year>2011</year>
+<volume>9</volume>
+<fpage>125</fpage>
+<lpage>136</lpage>
+<pub-id pub-id-type="doi">10.1016/j.chom.2011.01.009</pub-id>
+<?supplied-pmid 21320695?><pub-id pub-id-type="pmid">21320695</pub-id></element-citation></ref><ref id="B74-plants-05-00009"><label>74.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Liu</surname><given-names>J.</given-names></name><name><surname>Elmore</surname><given-names>J.M.</given-names></name><name><surname>Lin</surname><given-names>Z.J.</given-names></name><name><surname>Coaker</surname><given-names>G.</given-names></name></person-group>
+<article-title>A receptor-like cytoplasmic kinase phosphorylates the host target rin4, leading to the activation of a plant innate immune receptor</article-title>
+<source>Cell Host Microbe</source>
+<year>2011</year>
+<volume>9</volume>
+<fpage>137</fpage>
+<lpage>146</lpage>
+<pub-id pub-id-type="doi">10.1016/j.chom.2011.01.010</pub-id>
+<?supplied-pmid 21320696?><pub-id pub-id-type="pmid">21320696</pub-id></element-citation></ref><ref id="B75-plants-05-00009"><label>75.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Laha</surname><given-names>D.</given-names></name><name><surname>Johnen</surname><given-names>P.</given-names></name><name><surname>Azevedo</surname><given-names>C.</given-names></name><name><surname>Dynowski</surname><given-names>M.</given-names></name><name><surname>Weiss</surname><given-names>M.</given-names></name><name><surname>Capolicchio</surname><given-names>S.</given-names></name><name><surname>Mao</surname><given-names>H.</given-names></name><name><surname>Iven</surname><given-names>T.</given-names></name><name><surname>Steenbergen</surname><given-names>M.</given-names></name><name><surname>Freyer</surname><given-names>M.</given-names></name><etal/></person-group>
+<article-title>VIH2 regulates the synthesis of inositol pyrophosphate InsP8 and jasmonate-dependent defenses in arabidopsis</article-title>
+<source>Plant Cell</source>
+<year>2015</year>
+<volume>27</volume>
+<fpage>1082</fpage>
+<lpage>1097</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.114.135160</pub-id>
+<?supplied-pmid 25901085?><pub-id pub-id-type="pmid">25901085</pub-id></element-citation></ref><ref id="B76-plants-05-00009"><label>76.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Conaway</surname><given-names>R.C.</given-names></name><name><surname>Conaway</surname><given-names>J.W.</given-names></name></person-group>
+<article-title>Function and regulation of the mediator complex</article-title>
+<source>Curr. Opin. Genet. Dev.</source>
+<year>2011</year>
+<volume>21</volume>
+<fpage>225</fpage>
+<lpage>230</lpage>
+<pub-id pub-id-type="doi">10.1016/j.gde.2011.01.013</pub-id>
+<?supplied-pmid 21330129?><pub-id pub-id-type="pmid">21330129</pub-id></element-citation></ref><ref id="B77-plants-05-00009"><label>77.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mukhtar</surname><given-names>M.S.</given-names></name><name><surname>Carvunis</surname><given-names>A.R.</given-names></name><name><surname>Dreze</surname><given-names>M.</given-names></name><name><surname>Epple</surname><given-names>P.</given-names></name><name><surname>Steinbrenner</surname><given-names>J.</given-names></name><name><surname>Moore</surname><given-names>J.</given-names></name><name><surname>Tasan</surname><given-names>M.</given-names></name><name><surname>Galli</surname><given-names>M.</given-names></name><name><surname>Hao</surname><given-names>T.</given-names></name><name><surname>Nishimura</surname><given-names>M.T.</given-names></name><etal/></person-group>
+<article-title>Independently evolved virulence effectors converge onto hubs in a plant immune system network</article-title>
+<source>Science</source>
+<year>2011</year>
+<volume>333</volume>
+<fpage>596</fpage>
+<lpage>601</lpage>
+<pub-id pub-id-type="doi">10.1126/science.1203659</pub-id>
+<?supplied-pmid 21798943?><pub-id pub-id-type="pmid">21798943</pub-id></element-citation></ref><ref id="B78-plants-05-00009"><label>78.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wessling</surname><given-names>R.</given-names></name><name><surname>Epple</surname><given-names>P.</given-names></name><name><surname>Altmann</surname><given-names>S.</given-names></name><name><surname>He</surname><given-names>Y.</given-names></name><name><surname>Yang</surname><given-names>L.</given-names></name><name><surname>Henz</surname><given-names>S.R.</given-names></name><name><surname>McDonald</surname><given-names>N.</given-names></name><name><surname>Wiley</surname><given-names>K.</given-names></name><name><surname>Bader</surname><given-names>K.C.</given-names></name><name><surname>Glasser</surname><given-names>C.</given-names></name><etal/></person-group>
+<article-title>Convergent targeting of a common host protein-network by pathogen effectors from three kingdoms of life</article-title>
+<source>Cell Host Microbe</source>
+<year>2014</year>
+<volume>16</volume>
+<fpage>364</fpage>
+<lpage>375</lpage>
+<pub-id pub-id-type="doi">10.1016/j.chom.2014.08.004</pub-id>
+<?supplied-pmid 25211078?><pub-id pub-id-type="pmid">25211078</pub-id></element-citation></ref><ref id="B79-plants-05-00009"><label>79.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zamioudis</surname><given-names>C.</given-names></name><name><surname>Pieterse</surname><given-names>C.M.</given-names></name></person-group>
+<article-title>Modulation of host immunity by beneficial microbes</article-title>
+<source>Mol. Plant Microbe Interact.</source>
+<year>2012</year>
+<volume>25</volume>
+<fpage>139</fpage>
+<lpage>150</lpage>
+<pub-id pub-id-type="doi">10.1094/MPMI-06-11-0179</pub-id>
+<?supplied-pmid 21995763?><pub-id pub-id-type="pmid">21995763</pub-id></element-citation></ref><ref id="B80-plants-05-00009"><label>80.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Plett</surname><given-names>J.M.</given-names></name><name><surname>Kemppainen</surname><given-names>M.</given-names></name><name><surname>Kale</surname><given-names>S.D.</given-names></name><name><surname>Kohler</surname><given-names>A.</given-names></name><name><surname>Legue</surname><given-names>V.</given-names></name><name><surname>Brun</surname><given-names>A.</given-names></name><name><surname>Tyler</surname><given-names>B.M.</given-names></name><name><surname>Pardo</surname><given-names>A.G.</given-names></name><name><surname>Martin</surname><given-names>F.</given-names></name></person-group>
+<article-title>A secreted effector protein of laccaria bicolor is required for symbiosis development</article-title>
+<source>Curr. Biol.</source>
+<year>2011</year>
+<volume>21</volume>
+<fpage>1197</fpage>
+<lpage>1203</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2011.05.033</pub-id>
+<?supplied-pmid 21757352?><pub-id pub-id-type="pmid">21757352</pub-id></element-citation></ref></ref-list></back></article>

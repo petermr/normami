@@ -1,0 +1,490 @@
+{
+  "id": [
+    "25414713"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25414713"
+  ],
+  "pmcid": [
+    "PMC4222140"
+  ],
+  "doi": [
+    "10.3389/fpls.2014.00599"
+  ],
+  "title": [
+    "Comparative transcriptomic analysis of male and female flowers of monoecious Quercus suber."
+  ],
+  "authorString": [
+    "Rocheta M, Sobral R, Magalhães J, Amorim MI, Ribeiro T, Pinheiro M, Egas C, Morais-Cecílio L, Costa MM."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Rocheta M"
+          ],
+          "firstName": [
+            "Margarida"
+          ],
+          "lastName": [
+            "Rocheta"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3939-4564",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Recursos Naturais Ambiente e Território, Instituto Superior de Agronomia, Universidade de Lisboa Lisboa, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Sobral R"
+          ],
+          "firstName": [
+            "Rómulo"
+          ],
+          "lastName": [
+            "Sobral"
+          ],
+          "initials": [
+            "R"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3798-3154",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centre for Biodiversity, Functional & Integrative Genomics, Plant Functional Biology Centre, University of Minho Braga, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Magalhães J"
+          ],
+          "firstName": [
+            "Joana"
+          ],
+          "lastName": [
+            "Magalhães"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Centre for Biodiversity, Functional & Integrative Genomics, Plant Functional Biology Centre, University of Minho Braga, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Amorim MI"
+          ],
+          "firstName": [
+            "Maria I"
+          ],
+          "lastName": [
+            "Amorim"
+          ],
+          "initials": [
+            "MI"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-3831-9602",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Biologia, Faculdade de Ciências da Universidade do Porto Porto, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Ribeiro T"
+          ],
+          "firstName": [
+            "Teresa"
+          ],
+          "lastName": [
+            "Ribeiro"
+          ],
+          "initials": [
+            "T"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2487-5293",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Recursos Naturais Ambiente e Território, Instituto Superior de Agronomia, Universidade de Lisboa Lisboa, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Pinheiro M"
+          ],
+          "firstName": [
+            "Miguel"
+          ],
+          "lastName": [
+            "Pinheiro"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Biocant, Parque Tecnológico de Cantanhede Cantanhede, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Egas C"
+          ],
+          "firstName": [
+            "Conceição"
+          ],
+          "lastName": [
+            "Egas"
+          ],
+          "initials": [
+            "C"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2307-5414",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Biocant, Parque Tecnológico de Cantanhede Cantanhede, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Morais-Cecílio L"
+          ],
+          "firstName": [
+            "Leonor"
+          ],
+          "lastName": [
+            "Morais-Cecílio"
+          ],
+          "initials": [
+            "L"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9313-2253",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Recursos Naturais Ambiente e Território, Instituto Superior de Agronomia, Universidade de Lisboa Lisboa, Portugal."
+          ]
+        },
+        {
+          "fullName": [
+            "Costa MM"
+          ],
+          "firstName": [
+            "Maria M R"
+          ],
+          "lastName": [
+            "Costa"
+          ],
+          "initials": [
+            "MM"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9032-5690",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centre for Biodiversity, Functional & Integrative Genomics, Plant Functional Biology Centre, University of Minho Braga, Portugal."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-3831-9602",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-3798-3154",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-2487-5293",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-3939-4564",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-9313-2253",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-9032-5690",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-2307-5414",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "5"
+      ],
+      "journalIssueId": [
+        "2120434"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in plant science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "599"
+  ],
+  "abstractText": [
+    "Monoecious species provide a comprehensive system to study the developmental programs underlying the establishment of female and male organs in unisexual flowers. However, molecular resources for most monoecious non-model species are limited, hampering our ability to study the molecular mechanisms involved in flower development of these species. The objective of this study was to identify differentially expressed genes during the development of male and female flowers of the monoecious species Quercus suber, an economically important Mediterranean tree. Total RNA was extracted from different developmental stages of Q. suber flowers. Non-normalized cDNA libraries of male and female flowers were generated using 454 pyrosequencing technology producing a total of 962,172 high-quality reads with an average length of 264 nucleotides. The assembly of the reads resulted in 14,488 contigs for female libraries and 10,438 contigs for male libraries. Comparative analysis of the transcriptomes revealed genes differentially expressed in early and late stages of development of female and male flowers, some of which have been shown to be involved in pollen development, in ovule formation and in flower development of other species with a monoecious, dioecious, or hermaphroditic sexual system. Moreover, we found differentially expressed genes that have not yet been characterized and others that have not been previously shown to be implicated in flower development. This transcriptomic analysis constitutes a major step toward the characterization of the molecular mechanisms involved in flower development in a monoecious tree with a potential contribution toward the knowledge of conserved developmental mechanisms in other species."
+  ],
+  "affiliation": [
+    "Departamento de Recursos Naturais Ambiente e Território, Instituto Superior de Agronomia, Universidade de Lisboa Lisboa, Portugal."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Flower development",
+        "EST",
+        "Rna-seq",
+        "Pyrosequencing",
+        "Transcriptomics",
+        "Cork Oak",
+        "Quercus Suber",
+        "Monoecious"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4222140?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4222140"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2014.00599"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "10"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2014-11-21"
+  ],
+  "dateOfCreation": [
+    "2014-11-21"
+  ],
+  "dateOfRevision": [
+    "2014-12-15"
+  ],
+  "electronicPublicationDate": [
+    "2014-11-06"
+  ],
+  "firstPublicationDate": [
+    "2014-11-06"
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "id": [
+    "28764653"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28764653"
+  ],
+  "pmcid": [
+    "PMC5540570"
+  ],
+  "doi": [
+    "10.1186/s12870-017-1077-4"
+  ],
+  "title": [
+    "Maize network analysis revealed gene modules involved in development, nutrients utilization, metabolism, and stress response."
+  ],
+  "authorString": [
+    "Ma S, Ding Z, Li P."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Ma S"
+          ],
+          "firstName": [
+            "Shisong"
+          ],
+          "lastName": [
+            "Ma"
+          ],
+          "initials": [
+            "S"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-5563-448X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "School of Life Sciences, University of Science and Technology of China, Hefei, Anhui, China. sma@ustc.edu.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Ding Z"
+          ],
+          "firstName": [
+            "Zehong"
+          ],
+          "lastName": [
+            "Ding"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "The Institute of Tropical Bioscience and Biotechnology, Chinese Academy of Tropical Agricultural Sciences, Haikou, Hainan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Li P"
+          ],
+          "firstName": [
+            "Pinghua"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Agronomy, Shandong Agricultural University, Tai'an, Shandong, China. pinghuali@sdau.edu.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-5563-448X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "17"
+      ],
+      "journalIssueId": [
+        "2582309"
+      ],
+      "dateOfPublication": [
+        "2017 Aug"
+      ],
+      "monthOfPublication": [
+        "8"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-08-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC plant biology"
+          ],
+          "ISOAbbreviation": [
+            "BMC Plant Biol."
+          ],
+          "medlineAbbreviation": [
+            "BMC Plant Biol"
+          ],
+          "NLMid": [
+            "100967807"
+          ],
+          "ISSN": [
+            "1471-2229"
+          ],
+          "ESSN": [
+            "1471-2229"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "131"
+  ],
+  "abstractText": [
+    "The advent of big data in biology offers opportunities while poses challenges to derive biological insights. For maize, a large amount of publicly available transcriptome datasets have been generated but a comprehensive analysis is lacking.We constructed a maize gene co-expression network based on the graphical Gaussian model, using massive RNA-seq data. The network, containing 20,269 genes, assembles into 964 gene modules that function in a variety of plant processes, such as cell organization, the development of inflorescences, ligules and kernels, the uptake and utilization of nutrients (e.g. nitrogen and phosphate), the metabolism of benzoxazionids, oxylipins, flavonoids, and wax, and the response to stresses. Among them, the inflorescences development module is enriched with domestication genes (like ra1, ba1, gt1, tb1, tga1) that control plant architecture and kernel structure, while multiple other modules relate to diverse agronomic traits. Contained within these modules are transcription factors acting as known or potential expression regulators for the genes within the same modules, suggesting them as candidate regulators for related biological processes. A comparison with an established Arabidopsis network revealed conserved gene association patterns for specific modules involved in cell organization, nutrients uptake & utilization, and metabolism. The analysis also identified significant divergences between the two species for modules that orchestrate developmental pathways.This network sheds light on how gene modules are organized between different species in the context of evolutionary divergence and highlights modules whose structure and gene content can provide important resources for maize gene functional studies with application potential."
+  ],
+  "affiliation": [
+    "School of Life Sciences, University of Science and Technology of China, Hefei, Anhui, China. sma@ustc.edu.cn."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Zea mays"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Databases, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Comparative genomics",
+        "Maize Development",
+        "Gene Network Analysis",
+        "Maize Metabolism Pathways",
+        "Plant Nutrient Uptake And Utilization"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5540570?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5540570"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12870-017-1077-4"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2017-12-06"
+  ],
+  "dateOfCreation": [
+    "2017-08-03"
+  ],
+  "dateOfRevision": [
+    "2017-12-20"
+  ],
+  "electronicPublicationDate": [
+    "2017-08-01"
+  ],
+  "firstPublicationDate": [
+    "2017-08-01"
+  ]
+}

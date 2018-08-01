@@ -1,0 +1,677 @@
+{
+  "id": [
+    "23987738"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "23987738"
+  ],
+  "pmcid": [
+    "PMC3844413"
+  ],
+  "doi": [
+    "10.1186/1471-2229-13-123"
+  ],
+  "title": [
+    "Transcriptomic analysis highlights epigenetic and transcriptional regulation during zygotic embryo development of Pinus pinaster."
+  ],
+  "authorString": [
+    "de Vega-Bartol JJ, Simões M, Lorenz WW, Rodrigues AS, Alba R, Dean JF, Miguel CM."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "de Vega-Bartol JJ"
+          ],
+          "firstName": [
+            "José J"
+          ],
+          "lastName": [
+            "de Vega-Bartol"
+          ],
+          "initials": [
+            "JJ"
+          ],
+          "affiliation": [
+            "iBET - Instituto de Biologia Experimental e Tecnológica, Apartado 12, 2780-901 Oeiras, Portugal. cmiguel@itqb.unl.pt."
+          ]
+        },
+        {
+          "fullName": [
+            "Simões M"
+          ],
+          "firstName": [
+            "Marta"
+          ],
+          "lastName": [
+            "Simões"
+          ],
+          "initials": [
+            "M"
+          ]
+        },
+        {
+          "fullName": [
+            "Lorenz WW"
+          ],
+          "firstName": [
+            "W Walter"
+          ],
+          "lastName": [
+            "Lorenz"
+          ],
+          "initials": [
+            "WW"
+          ]
+        },
+        {
+          "fullName": [
+            "Rodrigues AS"
+          ],
+          "firstName": [
+            "Andreia S"
+          ],
+          "lastName": [
+            "Rodrigues"
+          ],
+          "initials": [
+            "AS"
+          ]
+        },
+        {
+          "fullName": [
+            "Alba R"
+          ],
+          "firstName": [
+            "Rob"
+          ],
+          "lastName": [
+            "Alba"
+          ],
+          "initials": [
+            "R"
+          ]
+        },
+        {
+          "fullName": [
+            "Dean JF"
+          ],
+          "firstName": [
+            "Jeffrey F D"
+          ],
+          "lastName": [
+            "Dean"
+          ],
+          "initials": [
+            "JF"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-1208-1023",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Miguel CM"
+          ],
+          "firstName": [
+            "Célia M"
+          ],
+          "lastName": [
+            "Miguel"
+          ],
+          "initials": [
+            "CM"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-1427-952X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-1208-1023",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-0740-393X",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-2847-5158",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-1427-952X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "13"
+      ],
+      "journalIssueId": [
+        "2000653"
+      ],
+      "dateOfPublication": [
+        "2013 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC plant biology"
+          ],
+          "ISOAbbreviation": [
+            "BMC Plant Biol."
+          ],
+          "medlineAbbreviation": [
+            "BMC Plant Biol"
+          ],
+          "NLMid": [
+            "100967807"
+          ],
+          "ISSN": [
+            "1471-2229"
+          ],
+          "ESSN": [
+            "1471-2229"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "123"
+  ],
+  "abstractText": [
+    "BACKGROUND: It is during embryogenesis that the plant body plan is established and the meristems responsible for all post-embryonic growth are specified. The molecular mechanisms governing conifer embryogenesis are still largely unknown. Their elucidation may contribute valuable information to clarify if the distinct features of embryo development in angiosperms and gymnosperms result from differential gene regulation. To address this issue, we have performed the first transcriptomic analysis of zygotic embryo development in a conifer species (Pinus pinaster) focusing our study in particular on regulatory genes playing important roles during plant embryo development, namely epigenetic regulators and transcription factors. RESULTS: Microarray analysis of P. pinaster zygotic embryogenesis was performed at five periods of embryo development from early developing to mature embryos. Our results show that most changes in transcript levels occurred in the first and the last embryo stage-to-stage transitions, namely early to pre-cotyledonary embryo and cotyledonary to mature embryo. An analysis of functional categories for genes that were differentially expressed through embryogenesis highlighted several epigenetic regulation mechanisms. While putative orthologs of transcripts associated with mechanisms that target transposable elements and repetitive sequences were strongly expressed in early embryogenesis, PRC2-mediated repression of genes seemed more relevant during late embryogenesis. On the other hand, functions related to sRNA pathways appeared differentially regulated across all stages of embryo development with a prevalence of miRNA functions in mid to late embryogenesis. Identification of putative transcription factor genes differentially regulated between consecutive embryo stages was strongly suggestive of the relevance of auxin responses and regulation of auxin carriers during early embryogenesis. Such responses could be involved in establishing embryo patterning. Later in development, transcripts with homology to genes acting on modulation of auxin flow and determination of adaxial-abaxial polarity were up-regulated, as were putative orthologs of genes required for meristem formation and function as well as establishment of organ boundaries. Comparative analysis with A. thaliana embryogenesis also highlighted genes involved in auxin-mediated responses, as well as epigenetic regulation, indicating highly correlated transcript profiles between the two species. CONCLUSIONS: This is the first report of a time-course transcriptomic analysis of zygotic embryogenesis in a conifer. Taken together our results show that epigenetic regulation and transcriptional control related to auxin transport and response are critical during early to mid stages of pine embryogenesis and that important events during embryogenesis seem to be coordinated by putative orthologs of major developmental regulators in angiosperms."
+  ],
+  "affiliation": [
+    "iBET - Instituto de Biologia Experimental e Tecnológica, Apartado 12, 2780-901 Oeiras, Portugal. cmiguel@itqb.unl.pt."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "BBS/E/T/000PR6193"
+          ],
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "BBS/E/T/000PR5885"
+          ],
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Pinus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "EM"
+                  ],
+                  "qualifierName": [
+                    "embryology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seeds"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Indoleacetic Acids"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oligonucleotide Array Sequence Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Epigenesis, Genetic"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Indoleacetic Acids"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3844413?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3844413"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23987738/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23987738/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1471-2229-13-123"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "9"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2014-06-20"
+  ],
+  "dateOfCreation": [
+    "2013-11-15"
+  ],
+  "electronicPublicationDate": [
+    "2013-08-30"
+  ],
+  "firstPublicationDate": [
+    "2013-08-30"
+  ]
+}

@@ -1,0 +1,538 @@
+{
+  "id": [
+    "25887996"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25887996"
+  ],
+  "pmcid": [
+    "PMC4404573"
+  ],
+  "doi": [
+    "10.1186/s12864-015-1504-6"
+  ],
+  "title": [
+    "Global scale transcriptome analysis of Arabidopsis embryogenesis in vitro."
+  ],
+  "authorString": [
+    "Wickramasuriya AM, Dunwell JM."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Wickramasuriya AM"
+          ],
+          "firstName": [
+            "Anushka M"
+          ],
+          "lastName": [
+            "Wickramasuriya"
+          ],
+          "initials": [
+            "AM"
+          ],
+          "affiliation": [
+            "School of Agriculture, Policy and Development, University of Reading, Reading, UK. a.m.wickramasuriya@gmail.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Dunwell JM"
+          ],
+          "firstName": [
+            "Jim M"
+          ],
+          "lastName": [
+            "Dunwell"
+          ],
+          "initials": [
+            "JM"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2147-665X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "School of Agriculture, Policy and Development, University of Reading, Reading, UK. j.m.dunwell@reading.ac.uk."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-2147-665X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "16"
+      ],
+      "journalIssueId": [
+        "2257341"
+      ],
+      "dateOfPublication": [
+        "2015 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "301"
+  ],
+  "abstractText": [
+    "Somatic embryogenesis (SE) in plants is a process by which embryos are generated directly from somatic cells, rather than from the fused products of male and female gametes. Despite the detailed expression analysis of several somatic-to-embryonic marker genes, a comprehensive understanding of SE at a molecular level is still lacking. The present study was designed to generate high resolution transcriptome datasets for early SE providing the way for future research to understand the underlying molecular mechanisms that regulate this process. We sequenced Arabidopsis thaliana somatic embryos collected from three distinct developmental time-points (5, 10 and 15 d after in vitro culture) using the Illumina HiSeq 2000 platform.This study yielded a total of 426,001,826 sequence reads mapped to 26,520 genes in the A. thaliana reference genome. Analysis of embryonic cultures after 5 and 10 d showed differential expression of 1,195 genes; these included 778 genes that were more highly expressed after 5 d as compared to 10 d. Moreover, 1,718 genes were differentially expressed in embryonic cultures between 10 and 15 d. Our data also showed at least eight different expression patterns during early SE; the majority of genes are transcriptionally more active in embryos after 5 d. Comparison of transcriptomes derived from somatic embryos and leaf tissues revealed that at least 4,951 genes are transcriptionally more active in embryos than in the leaf; increased expression of genes involved in DNA cytosine methylation and histone deacetylation were noted in embryogenic tissues. In silico expression analysis based on microarray data found that approximately 5% of these genes are transcriptionally more active in somatic embryos than in actively dividing callus and non-dividing leaf tissues. Moreover, this identified 49 genes expressed at a higher level in somatic embryos than in other tissues. This included several genes with unknown function, as well as others related to oxidative and osmotic stress, and auxin signalling.The transcriptome information provided here will form the foundation for future research on genetic and epigenetic control of plant embryogenesis at a molecular level. In follow-up studies, these data could be used to construct a regulatory network for SE; the genes more highly expressed in somatic embryos than in vegetative tissues can be considered as potential candidates to validate these networks."
+  ],
+  "affiliation": [
+    "School of Agriculture, Policy and Development, University of Reading, Reading, UK. a.m.wickramasuriya@gmail.com."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seeds"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cluster Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Genome, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Somatic Embryogenesis Techniques"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "High-Throughput Nucleotide Sequencing"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4404573?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4404573"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12864-015-1504-6"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "11"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "arrayexpress",
+        "go"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-01-20"
+  ],
+  "dateOfCreation": [
+    "2015-04-21"
+  ],
+  "dateOfRevision": [
+    "2015-04-22"
+  ],
+  "electronicPublicationDate": [
+    "2015-04-16"
+  ],
+  "firstPublicationDate": [
+    "2015-04-16"
+  ]
+}

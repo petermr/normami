@@ -1,0 +1,587 @@
+{
+  "id": [
+    "23951554"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "23951554"
+  ],
+  "pmcid": [
+    "PMC3741915"
+  ],
+  "doi": [
+    "10.1016/j.fob.2013.07.006"
+  ],
+  "title": [
+    "ATAF1 transcription factor directly regulates abscisic acid biosynthetic gene NCED3 in Arabidopsis thaliana."
+  ],
+  "authorString": [
+    "Jensen MK, Lindemose S, de Masi F, Reimer JJ, Nielsen M, Perera V, Workman CT, Turck F, Grant MR, Mundy J, Petersen M, Skriver K."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Jensen MK"
+          ],
+          "firstName": [
+            "Michael Krogh"
+          ],
+          "lastName": [
+            "Jensen"
+          ],
+          "initials": [
+            "MK"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7574-4707",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biology, University of Copenhagen, Ole Maaloes Vej 5, DK-2200 Copenhagen N, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Lindemose S"
+          ],
+          "firstName": [
+            "Søren"
+          ],
+          "lastName": [
+            "Lindemose"
+          ],
+          "initials": [
+            "S"
+          ]
+        },
+        {
+          "fullName": [
+            "de Masi F"
+          ],
+          "firstName": [
+            "Federico"
+          ],
+          "lastName": [
+            "de Masi"
+          ],
+          "initials": [
+            "F"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4859-4170",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Reimer JJ"
+          ],
+          "firstName": [
+            "Julia J"
+          ],
+          "lastName": [
+            "Reimer"
+          ],
+          "initials": [
+            "JJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-3291-5892",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Nielsen M"
+          ],
+          "firstName": [
+            "Michael"
+          ],
+          "lastName": [
+            "Nielsen"
+          ],
+          "initials": [
+            "M"
+          ]
+        },
+        {
+          "fullName": [
+            "Perera V"
+          ],
+          "firstName": [
+            "Venura"
+          ],
+          "lastName": [
+            "Perera"
+          ],
+          "initials": [
+            "V"
+          ]
+        },
+        {
+          "fullName": [
+            "Workman CT"
+          ],
+          "firstName": [
+            "Chris T"
+          ],
+          "lastName": [
+            "Workman"
+          ],
+          "initials": [
+            "CT"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2210-3743",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Turck F"
+          ],
+          "firstName": [
+            "Franziska"
+          ],
+          "lastName": [
+            "Turck"
+          ],
+          "initials": [
+            "F"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4982-5949",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Grant MR"
+          ],
+          "firstName": [
+            "Murray R"
+          ],
+          "lastName": [
+            "Grant"
+          ],
+          "initials": [
+            "MR"
+          ]
+        },
+        {
+          "fullName": [
+            "Mundy J"
+          ],
+          "firstName": [
+            "John"
+          ],
+          "lastName": [
+            "Mundy"
+          ],
+          "initials": [
+            "J"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7490-4588",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Petersen M"
+          ],
+          "firstName": [
+            "Morten"
+          ],
+          "lastName": [
+            "Petersen"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-3035-5991",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Skriver K"
+          ],
+          "firstName": [
+            "Karen"
+          ],
+          "lastName": [
+            "Skriver"
+          ],
+          "initials": [
+            "K"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2225-4012",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-3035-5991",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-3291-5892",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-7490-4588",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-7574-4707",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-2210-3743",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4859-4170",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-4982-5949",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-2225-4012",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "3"
+      ],
+      "journalIssueId": [
+        "2048931"
+      ],
+      "dateOfPublication": [
+        "2013 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "FEBS Open Bio"
+          ],
+          "ISOAbbreviation": [
+            "FEBS Open Bio"
+          ],
+          "medlineAbbreviation": [
+            "FEBS Open Bio"
+          ],
+          "NLMid": [
+            "101580716"
+          ],
+          "ISSN": [
+            "2211-5463"
+          ],
+          "ESSN": [
+            "2211-5463"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "321-327"
+  ],
+  "abstractText": [
+    "ATAF1, an Arabidopsis thaliana NAC transcription factor, plays important roles in plant adaptation to environmental stress and development. To search for ATAF1 target genes, we used protein binding microarrays and chromatin-immunoprecipitation (ChIP). This identified T[A,C,G]CGT[A,G] and TT[A,C,G]CGT as ATAF1 consensus binding sequences. Co-expression analysis across publicly available microarray experiments identified 25 genes co-expressed with ATAF1. The promoter regions of ATAF1 co-expressors were significantly enriched for ATAF1 binding sites, and TTGCGTA was identified in the promoter of the key abscisic acid (ABA) phytohormone biosynthetic gene NCED3. ChIP-qPCR and expression analysis showed that ATAF1 binding to the NCED3 promoter correlated with increased NCED3 expression and ABA hormone levels. These results indicate that ATAF1 regulates ABA biosynthesis."
+  ],
+  "affiliation": [
+    "Department of Biology, University of Copenhagen, Ole Maaloes Vej 5, DK-2200 Copenhagen N, Denmark."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "BB/E010334/1"
+          ],
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Arabidopsis",
+        "DNA-binding",
+        "Nac Transcription Factor",
+        "Aba, Abscisic Acid",
+        "Ataf1, Arabidopsis Thaliana Activating Factor 1",
+        "Chip, Chromatin-immunoprecipitation",
+        "Dbd, Dna-binding Domain",
+        "Nac, Nam, Ataf1/2, Cuc2",
+        "Nced3, 9-Cis-epoxycarotenoid Dioxygenase-3",
+        "Pbm, Protein-binding Microarrays",
+        "Pwm, Position Weight Matrix",
+        "Snrk, Sucrose Nonfermenting 1(Snf1)-related Serine/threonine-protein Kinase",
+        "Tf, Transcription Factor",
+        "Abscisic Acid Biosynthesis"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3741915?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3741915"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23951554/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23951554/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1016/j.fob.2013.07.006"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "34"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL",
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by-nc-nd"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2013-08-16"
+  ],
+  "dateOfCreation": [
+    "2013-08-16"
+  ],
+  "dateOfRevision": [
+    "2017-09-22"
+  ],
+  "electronicPublicationDate": [
+    "2013-07-29"
+  ],
+  "firstPublicationDate": [
+    "2013-07-29"
+  ]
+}

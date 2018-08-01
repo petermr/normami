@@ -1,0 +1,454 @@
+{
+  "id": [
+    "29462363"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29462363"
+  ],
+  "pmcid": [
+    "PMC6018650"
+  ],
+  "doi": [
+    "10.1093/pcp/pcy013"
+  ],
+  "title": [
+    "A Gene Regulatory Network for Cellular Reprogramming in Plant Regeneration."
+  ],
+  "authorString": [
+    "Ikeuchi M, Shibata M, Rymen B, Iwase A, Bågman AM, Watt L, Coleman D, Favero DS, Takahashi T, Ahnert SE, Brady SM, Sugimoto K."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Ikeuchi M"
+          ],
+          "firstName": [
+            "Momoko"
+          ],
+          "lastName": [
+            "Ikeuchi"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9474-5131",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Shibata M"
+          ],
+          "firstName": [
+            "Michitaro"
+          ],
+          "lastName": [
+            "Shibata"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-7008-8437",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Rymen B"
+          ],
+          "firstName": [
+            "Bart"
+          ],
+          "lastName": [
+            "Rymen"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Iwase A"
+          ],
+          "firstName": [
+            "Akira"
+          ],
+          "lastName": [
+            "Iwase"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Bågman AM"
+          ],
+          "firstName": [
+            "Anne-Maarit"
+          ],
+          "lastName": [
+            "Bågman"
+          ],
+          "initials": [
+            "AM"
+          ],
+          "affiliation": [
+            "Department of Plant Biology and Genome Center, University of California, Davis, One Shields Avenue, Davis, CA 95616, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Watt L"
+          ],
+          "firstName": [
+            "Lewis"
+          ],
+          "lastName": [
+            "Watt"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Coleman D"
+          ],
+          "firstName": [
+            "Duncan"
+          ],
+          "lastName": [
+            "Coleman"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Favero DS"
+          ],
+          "firstName": [
+            "David S"
+          ],
+          "lastName": [
+            "Favero"
+          ],
+          "initials": [
+            "DS"
+          ],
+          "affiliation": [
+            "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Takahashi T"
+          ],
+          "firstName": [
+            "Tatsuya"
+          ],
+          "lastName": [
+            "Takahashi"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Ahnert SE"
+          ],
+          "firstName": [
+            "Sebastian E"
+          ],
+          "lastName": [
+            "Ahnert"
+          ],
+          "initials": [
+            "SE"
+          ],
+          "affiliation": [
+            "Sainsbury Laboratory, University of Cambridge, Bateman Street, Cambridge, CB2 1LR UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Brady SM"
+          ],
+          "firstName": [
+            "Siobhan M"
+          ],
+          "lastName": [
+            "Brady"
+          ],
+          "initials": [
+            "SM"
+          ],
+          "affiliation": [
+            "Department of Plant Biology and Genome Center, University of California, Davis, One Shields Avenue, Davis, CA 95616, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Sugimoto K"
+          ],
+          "firstName": [
+            "Keiko"
+          ],
+          "lastName": [
+            "Sugimoto"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-9474-5131",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-7008-8437",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "4"
+      ],
+      "volume": [
+        "59"
+      ],
+      "journalIssueId": [
+        "2671994"
+      ],
+      "dateOfPublication": [
+        "2018 Apr"
+      ],
+      "monthOfPublication": [
+        "4"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-04-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Plant & cell physiology"
+          ],
+          "ISOAbbreviation": [
+            "Plant Cell Physiol."
+          ],
+          "medlineAbbreviation": [
+            "Plant Cell Physiol"
+          ],
+          "NLMid": [
+            "9430925"
+          ],
+          "ISSN": [
+            "0032-0781"
+          ],
+          "ESSN": [
+            "1471-9053"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "765-777"
+  ],
+  "abstractText": [
+    "Wounding triggers organ regeneration in many plant species, and application of plant hormones, such as auxin and cytokinin, enhances their regenerative capacities in tissue culture. Recent studies have identified several key players mediating wound- and/or plant hormone-induced cellular reprogramming, but the global architecture of gene regulatory relationships underlying plant cellular reprogramming is still far from clear. In this study, we uncovered a gene regulatory network (GRN) associated with plant cellular reprogramming by using an enhanced yeast one-hybrid (eY1H) screen systematically to identify regulatory relationships between 252 transcription factors (TFs) and 48 promoters. Our network analyses suggest that wound- and/or hormone-invoked signals exhibit extensive cross-talk and regulate many common reprogramming-associated genes via multilayered regulatory cascades. Our data suggest that PLETHORA 3 (PLT3), ENHANCER OF SHOOT REGENERATION 1 (ESR1) and HEAT SHOCK FACTOR B 1 (HSFB1) act as critical nodes that have many overlapping targets and potentially connect upstream stimuli to downstream developmental decisions. Interestingly, a set of wound-inducible APETALA 2/ETHYLENE RESPONSE FACTORs (AP2/ERFs) appear to regulate these key genes, which, in turn, form feed-forward cascades that control downstream targets associated with callus formation and organ regeneration. In addition, we found another regulatory pathway, mediated by LATERAL ORGAN BOUNDARY/ASYMMETRIC LEAVES 2 (LOB/AS2) TFs, which probably plays a distinct but partially overlapping role alongside the AP2/ERFs in the putative gene regulatory cascades. Taken together, our findings provide the first global picture of the GRN governing plant cell reprogramming, which will serve as a valuable resource for future studies."
+  ],
+  "affiliation": [
+    "RIKEN Center for Sustainable Resource Science, 1-7-22 Suehiro-cho, Tsurumi, Yokohama, Kanagawa, 230-0045 Japan."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC6018650?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC6018650"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/pcp/pcy013"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by-nc"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2018-02-21"
+  ],
+  "dateOfRevision": [
+    "2018-07-11"
+  ],
+  "firstPublicationDate": [
+    "2018-04-01"
+  ]
+}

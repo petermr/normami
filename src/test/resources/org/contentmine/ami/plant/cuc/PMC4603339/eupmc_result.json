@@ -1,0 +1,529 @@
+{
+  "id": [
+    "26462652"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26462652"
+  ],
+  "pmcid": [
+    "PMC4603339"
+  ],
+  "doi": [
+    "10.1186/s12864-015-1996-0"
+  ],
+  "title": [
+    "Transcriptome profiling of wheat glumes in wild emmer, hulled landraces and modern cultivars."
+  ],
+  "authorString": [
+    "Zou H, Tzarfati R, Hübner S, Krugman T, Fahima T, Abbo S, Saranga Y, Korol AB."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Zou H"
+          ],
+          "firstName": [
+            "Hongda"
+          ],
+          "lastName": [
+            "Zou"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Evolutionary and Environmental Biology, The Institute of Evolution, Faculty of Natural Sciences, University of Haifa, Haifa, 31905, Israel. hongdazou@yahoo.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Tzarfati R"
+          ],
+          "firstName": [
+            "Raanan"
+          ],
+          "lastName": [
+            "Tzarfati"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Department of Evolutionary and Environmental Biology, The Institute of Evolution, Faculty of Natural Sciences, University of Haifa, Haifa, 31905, Israel. raanantt@gmail.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Hübner S"
+          ],
+          "firstName": [
+            "Sariel"
+          ],
+          "lastName": [
+            "Hübner"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Botany, University of British Columbia, Vancouver, BC, V6T 1Z4, Canada. sariel.hubner@botany.ubc.ca."
+          ]
+        },
+        {
+          "fullName": [
+            "Krugman T"
+          ],
+          "firstName": [
+            "Tamar"
+          ],
+          "lastName": [
+            "Krugman"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Department of Evolutionary and Environmental Biology, The Institute of Evolution, Faculty of Natural Sciences, University of Haifa, Haifa, 31905, Israel. krugman@research.haifa.ac.il."
+          ]
+        },
+        {
+          "fullName": [
+            "Fahima T"
+          ],
+          "firstName": [
+            "Tzion"
+          ],
+          "lastName": [
+            "Fahima"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Department of Evolutionary and Environmental Biology, The Institute of Evolution, Faculty of Natural Sciences, University of Haifa, Haifa, 31905, Israel. fahima@research.haifa.ac.il."
+          ]
+        },
+        {
+          "fullName": [
+            "Abbo S"
+          ],
+          "firstName": [
+            "Shahal"
+          ],
+          "lastName": [
+            "Abbo"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Robert H. Smith Institute of Plant Sciences and Genetics in Agriculture, The Hebrew University of Jerusalem, Rehovot, 7610001, Israel. shahal.abbo@mail.huji.ac.il."
+          ]
+        },
+        {
+          "fullName": [
+            "Saranga Y"
+          ],
+          "firstName": [
+            "Yehoshua"
+          ],
+          "lastName": [
+            "Saranga"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Robert H. Smith Institute of Plant Sciences and Genetics in Agriculture, The Hebrew University of Jerusalem, Rehovot, 7610001, Israel. shuki.saranga@mail.huji.ac.il."
+          ]
+        },
+        {
+          "fullName": [
+            "Korol AB"
+          ],
+          "firstName": [
+            "Abraham B"
+          ],
+          "lastName": [
+            "Korol"
+          ],
+          "initials": [
+            "AB"
+          ],
+          "affiliation": [
+            "Department of Evolutionary and Environmental Biology, The Institute of Evolution, Faculty of Natural Sciences, University of Haifa, Haifa, 31905, Israel. korol@research.haifa.ac.il."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "16"
+      ],
+      "journalIssueId": [
+        "2257341"
+      ],
+      "dateOfPublication": [
+        "2015 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "777"
+  ],
+  "abstractText": [
+    "Wheat domestication is considered as one of the most important events in the development of human civilization. Wheat spikelets have undergone significant changes during evolution under domestication, resulting in soft glumes and larger kernels that are released easily upon threshing. Our main goal was to explore changes in transcriptome expression in glumes that accompanied wheat evolution under domestication.A total of six tetraploid wheat accessions were selected for transcriptome profiling based on their rachis brittleness and glumes toughness. RNA pools from glumes of the central spikelet at heading time were used to construct cDNA libraries for sequencing. The trimmed reads from each library were separately aligned to the reference sub-genomes A and B, which were extracted from wheat survey sequence. Differentially expression analysis and functional annotation were performed between wild and domesticated wheat, to identity candidate genes associated with evolution under domestication. Selected candidate genes were validated using real time PCR.Transcriptome profiles of wild emmer wheat, wheat landraces, and wheat cultivars were compared using next generation sequencing (RNA-seq). We have found a total of 194,893 transcripts, of which 73,150 were shared between wild, landraces, and cultivars. From 781 differentially expressed genes (DEGs), 336 were down-regulated and 445 were up-regulated in the domesticated compared to wild wheat genotypes. Gene Ontology (GO) annotation assigned 293 DEGs (37.5 %) to GO term groups, of which 134 (17.1 %) were down-regulated and 159 (20.4 %) up-regulated in the domesticated wheat. Some of the down-regulated DEGs in domesticated wheat are related to the biosynthetic pathways that eventually define the mechanical strength of the glumes, such as cell wall, lignin, pectin and wax biosynthesis. The reduction in gene expression of such genes, may explain the softness of the glumes in the domesticated forms. In addition, we have identified genes involved in nutrient remobilization that may affect grain size and other agronomic traits evolved under domestication.The comparison of RNA-seq profiles between glumes of wheat groups differing in glumes toughness and rachis brittleness revealed a few DEGs that may be involved in glumes toughness and nutrient remobilization. These genes may be involved in processes of wheat improvement under domestication."
+  ],
+  "affiliation": [
+    "Department of Evolutionary and Environmental Biology, The Institute of Evolution, Faculty of Natural Sciences, University of Haifa, Haifa, 31905, Israel. hongdazou@yahoo.com."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Humans"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Triticum"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "DNA, Complementary"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Tetraploidy"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Molecular Sequence Annotation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "High-Throughput Nucleotide Sequencing"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Ontology"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "DNA, Complementary"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4603339?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4603339"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12864-015-1996-0"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "4"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-07-01"
+  ],
+  "dateOfCreation": [
+    "2015-10-14"
+  ],
+  "dateOfRevision": [
+    "2015-10-17"
+  ],
+  "electronicPublicationDate": [
+    "2015-10-13"
+  ],
+  "firstPublicationDate": [
+    "2015-10-13"
+  ]
+}

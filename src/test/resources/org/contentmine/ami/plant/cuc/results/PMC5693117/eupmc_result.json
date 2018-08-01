@@ -1,0 +1,948 @@
+{
+  "id": [
+    "29058667"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29058667"
+  ],
+  "pmcid": [
+    "PMC5693117"
+  ],
+  "doi": [
+    "10.7554/elife.30135"
+  ],
+  "title": [
+    "Control of plant cell fate transitions by transcriptional and hormonal signals."
+  ],
+  "authorString": [
+    "Gaillochet C, Stiehl T, Wenzl C, Ripoll JJ, Bailey-Steinitz LJ, Li L, Pfeiffer A, Miotk A, Hakenjos JP, Forner J, Yanofsky MF, Marciniak-Czochra A, Lohmann JU."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Gaillochet C"
+          ],
+          "firstName": [
+            "Christophe"
+          ],
+          "lastName": [
+            "Gaillochet"
+          ],
+          "initials": [
+            "C"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-0537-1356",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Stem Cell Biology, Centre for Organismal Studies, University of Heidelberg, Heidelberg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Stiehl T"
+          ],
+          "firstName": [
+            "Thomas"
+          ],
+          "lastName": [
+            "Stiehl"
+          ],
+          "initials": [
+            "T"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9686-9197",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Institute of Applied Mathematics, Heidelberg University, Heidelberg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Wenzl C"
+          ],
+          "firstName": [
+            "Christian"
+          ],
+          "lastName": [
+            "Wenzl"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Department of Stem Cell Biology, Centre for Organismal Studies, University of Heidelberg, Heidelberg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Ripoll JJ"
+          ],
+          "firstName": [
+            "Juan-José"
+          ],
+          "lastName": [
+            "Ripoll"
+          ],
+          "initials": [
+            "JJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-8229-1555",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Division of Biological Sciences, Section of Cell and Developmental Biology, University of California, San Diego, San Diego, United States."
+          ]
+        },
+        {
+          "fullName": [
+            "Bailey-Steinitz LJ"
+          ],
+          "firstName": [
+            "Lindsay J"
+          ],
+          "lastName": [
+            "Bailey-Steinitz"
+          ],
+          "initials": [
+            "LJ"
+          ],
+          "affiliation": [
+            "Division of Biological Sciences, Section of Cell and Developmental Biology, University of California, San Diego, San Diego, United States."
+          ]
+        },
+        {
+          "fullName": [
+            "Li L"
+          ],
+          "firstName": [
+            "Lanxin"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Department of Stem Cell Biology, Centre for Organismal Studies, University of Heidelberg, Heidelberg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Pfeiffer A"
+          ],
+          "firstName": [
+            "Anne"
+          ],
+          "lastName": [
+            "Pfeiffer"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-6825-6297",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Stem Cell Biology, Centre for Organismal Studies, University of Heidelberg, Heidelberg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Miotk A"
+          ],
+          "firstName": [
+            "Andrej"
+          ],
+          "lastName": [
+            "Miotk"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2581-672X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Stem Cell Biology, Centre for Organismal Studies, University of Heidelberg, Heidelberg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Hakenjos JP"
+          ],
+          "firstName": [
+            "Jana P"
+          ],
+          "lastName": [
+            "Hakenjos"
+          ],
+          "initials": [
+            "JP"
+          ],
+          "affiliation": [
+            "Department of Stem Cell Biology, Centre for Organismal Studies, University of Heidelberg, Heidelberg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Forner J"
+          ],
+          "firstName": [
+            "Joachim"
+          ],
+          "lastName": [
+            "Forner"
+          ],
+          "initials": [
+            "J"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6406-7066",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Stem Cell Biology, Centre for Organismal Studies, University of Heidelberg, Heidelberg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Yanofsky MF"
+          ],
+          "firstName": [
+            "Martin F"
+          ],
+          "lastName": [
+            "Yanofsky"
+          ],
+          "initials": [
+            "MF"
+          ],
+          "affiliation": [
+            "Division of Biological Sciences, Section of Cell and Developmental Biology, University of California, San Diego, San Diego, United States."
+          ]
+        },
+        {
+          "fullName": [
+            "Marciniak-Czochra A"
+          ],
+          "firstName": [
+            "Anna"
+          ],
+          "lastName": [
+            "Marciniak-Czochra"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-5831-6505",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Institute of Applied Mathematics, Heidelberg University, Heidelberg, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Lohmann JU"
+          ],
+          "firstName": [
+            "Jan U"
+          ],
+          "lastName": [
+            "Lohmann"
+          ],
+          "initials": [
+            "JU"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3667-187X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Stem Cell Biology, Centre for Organismal Studies, University of Heidelberg, Heidelberg, Germany."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-8229-1555",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-2581-672X",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-9686-9197",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-6825-6297",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-0537-1356",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-5831-6505",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-6406-7066",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-3667-187X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "6"
+      ],
+      "journalIssueId": [
+        "2602618"
+      ],
+      "dateOfPublication": [
+        "2017 Oct"
+      ],
+      "monthOfPublication": [
+        "10"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-10-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "eLife"
+          ],
+          "ISOAbbreviation": [
+            "Elife"
+          ],
+          "medlineAbbreviation": [
+            "Elife"
+          ],
+          "NLMid": [
+            "101579614"
+          ],
+          "ISSN": [
+            "2050-084X"
+          ],
+          "ESSN": [
+            "2050-084X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "abstractText": [
+    "Plant meristems carry pools of continuously active stem cells, whose activity is controlled by developmental and environmental signals. After stem cell division, daughter cells that exit the stem cell domain acquire transit amplifying cell identity before they are incorporated into organs and differentiate. In this study, we used an integrated approach to elucidate the role of HECATE (HEC) genes in regulating developmental trajectories of shoot stem cells in Arabidopsis thaliana. Our work reveals that HEC function stabilizes cell fate in distinct zones of the shoot meristem thereby controlling the spatio-temporal dynamics of stem cell differentiation. Importantly, this activity is concomitant with the local modulation of cellular responses to cytokinin and auxin, two key phytohormones regulating cell behaviour. Mechanistically, we show that HEC factors transcriptionally control and physically interact with MONOPTEROS (MP), a key regulator of auxin signalling, and modulate the autocatalytic stabilization of auxin signalling output."
+  ],
+  "affiliation": [
+    "Department of Stem Cell Biology, Centre for Organismal Studies, University of Heidelberg, Heidelberg, Germany."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article",
+        "Research Support, N.I.H., Extramural"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "R01 GM112976"
+          ],
+          "agency": [
+            "NIGMS NIH HHS"
+          ],
+          "acronym": [
+            "GM"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stem Cells"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Shoots"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Growth Regulators"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cell Differentiation"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Cells"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Cytokinin",
+        "Plant Biology",
+        "developmental biology",
+        "Stem Cells",
+        "auxin",
+        "Cell Fate",
+        "A. thaliana",
+        "Shoot Meristem",
+        "Hecate1"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Growth Regulators"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5693117?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5693117"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.7554/eLife.30135"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.7554/eLife.30135"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.7554/eLife.30135"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.7554/eLife.30135"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.7554/eLife.30135"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.7554/eLife.30135"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.7554/eLife.30135"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "2"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2018-06-25"
+  ],
+  "dateOfCreation": [
+    "2017-10-24"
+  ],
+  "dateOfRevision": [
+    "2018-06-28"
+  ],
+  "electronicPublicationDate": [
+    "2017-10-23"
+  ],
+  "firstPublicationDate": [
+    "2017-10-23"
+  ]
+}

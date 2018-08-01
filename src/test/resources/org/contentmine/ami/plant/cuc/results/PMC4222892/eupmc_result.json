@@ -1,0 +1,442 @@
+{
+  "id": [
+    "25375102"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25375102"
+  ],
+  "pmcid": [
+    "PMC4222892"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0111615"
+  ],
+  "title": [
+    "A developmental model for branching morphogenesis of lake cress compound leaf."
+  ],
+  "authorString": [
+    "Nakamasu A, Nakayama H, Nakayama N, Suematsu NJ, Kimura S."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Nakamasu A"
+          ],
+          "firstName": [
+            "Akiko"
+          ],
+          "lastName": [
+            "Nakamasu"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Bioresource and Environmental Sciences Faculty of Life Sciences, Kyoto Sangyo University, Kyoto, Japan; Meiji Institute for Advanced Study of Mathematical Sciences, Meiji University, Tokyo, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Nakayama H"
+          ],
+          "firstName": [
+            "Hokuto"
+          ],
+          "lastName": [
+            "Nakayama"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Bioresource and Environmental Sciences Faculty of Life Sciences, Kyoto Sangyo University, Kyoto, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Nakayama N"
+          ],
+          "firstName": [
+            "Naomi"
+          ],
+          "lastName": [
+            "Nakayama"
+          ],
+          "initials": [
+            "N"
+          ],
+          "affiliation": [
+            "Institute of Molecular Plant Sciences, University of Edinburgh, Edinburgh, Lothian, United Kingdom."
+          ]
+        },
+        {
+          "fullName": [
+            "Suematsu NJ"
+          ],
+          "firstName": [
+            "Nobuhiko J"
+          ],
+          "lastName": [
+            "Suematsu"
+          ],
+          "initials": [
+            "NJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-5860-4147",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Meiji Institute for Advanced Study of Mathematical Sciences, Meiji University, Tokyo, Japan; Graduate School of Advanced Mathematical Sciences, Meiji University, Tokyo, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Kimura S"
+          ],
+          "firstName": [
+            "Seisuke"
+          ],
+          "lastName": [
+            "Kimura"
+          ],
+          "initials": [
+            "S"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6796-3675",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Bioresource and Environmental Sciences Faculty of Life Sciences, Kyoto Sangyo University, Kyoto, Japan."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-5860-4147",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-6796-3675",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "11"
+      ],
+      "volume": [
+        "9"
+      ],
+      "journalIssueId": [
+        "2216242"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "e111615"
+  ],
+  "abstractText": [
+    "Lake cress, Rorippa aquatica (Brassicaceae), is a semi-aquatic plant that exhibits a variety of leaf shapes, from simple leaves to highly branched compound leaves, depending on the environment. Leaf shape can vary within a single plant, suggesting that the variation can be explained by a simple model. In order to simulate the branched structure in the compound leaves of R. aquatica, we implemented reaction-diffusion (RD) patterning onto a theoretical framework that had been developed for serration distribution in the leaves of Arabidopsis thaliana, with the modification of the one-dimensional reaction-diffusion domain being deformed with the spatial periodicity of the RD pattern while expanding. This simple method using an iterative pattern could create regular and nested branching patterns. Subsequently, we verified the plausibility of our theoretical model by comparing it with the experimentally observed branching patterns. The results suggested that our model successfully predicted both the qualitative and quantitative aspects of the timing and positioning of branching in growing R. aquatica leaves."
+  ],
+  "affiliation": [
+    "Department of Bioresource and Environmental Sciences Faculty of Life Sciences, Kyoto Sangyo University, Kyoto, Japan; Meiji Institute for Advanced Study of Mathematical Sciences, Meiji University, Tokyo, Japan."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Nasturtium"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Models, Theoretical"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Development"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4222892?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4222892"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0111615"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "3"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-07-03"
+  ],
+  "dateOfCreation": [
+    "2014-11-07"
+  ],
+  "electronicPublicationDate": [
+    "2014-11-06"
+  ],
+  "firstPublicationDate": [
+    "2014-11-06"
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC3017828/results/gene/human/results.xml">
+  <result pre="en resistance responses, where a repression of a number of auxin responsive genes (including genes " exact="SAUR" post=", Aux/IAA, auxin importer AUX1, auxin exporter PIN7) were significantly repres" xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="of a number of auxin responsive genes (including genes SAUR, Aux/IAA, auxin importer " exact="AUX1" post=", auxin exporter PIN7) were significantly repressed [ 67]; supporting the ide" xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="ive genes (including genes SAUR, Aux/IAA, auxin importer AUX1, auxin exporter " exact="PIN7" post=") were significantly repressed [ 67]; supporting the idea that down-regulation of au" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

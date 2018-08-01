@@ -1,0 +1,570 @@
+{
+  "id": [
+    "24952381"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "24952381"
+  ],
+  "pmcid": [
+    "PMC4078243"
+  ],
+  "doi": [
+    "10.1186/1471-2164-15-510"
+  ],
+  "title": [
+    "RNA-Seq analysis reveals that multiple phytohormone biosynthesis and signal transduction pathways are reprogrammed in curled-cotyledons mutant of soybean [Glycine max (L.) Merr]."
+  ],
+  "authorString": [
+    "Shi G, Huang F, Gong Y, Xu G, Yu J, Hu Z, Cai Q, Yu D."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Shi G"
+          ],
+          "firstName": [
+            "Guixia"
+          ],
+          "lastName": [
+            "Shi"
+          ],
+          "initials": [
+            "G"
+          ]
+        },
+        {
+          "fullName": [
+            "Huang F"
+          ],
+          "firstName": [
+            "Fang"
+          ],
+          "lastName": [
+            "Huang"
+          ],
+          "initials": [
+            "F"
+          ]
+        },
+        {
+          "fullName": [
+            "Gong Y"
+          ],
+          "firstName": [
+            "Yu"
+          ],
+          "lastName": [
+            "Gong"
+          ],
+          "initials": [
+            "Y"
+          ]
+        },
+        {
+          "fullName": [
+            "Xu G"
+          ],
+          "firstName": [
+            "Guangli"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "G"
+          ]
+        },
+        {
+          "fullName": [
+            "Yu J"
+          ],
+          "firstName": [
+            "Jingjing"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "J"
+          ]
+        },
+        {
+          "fullName": [
+            "Hu Z"
+          ],
+          "firstName": [
+            "Zhenbin"
+          ],
+          "lastName": [
+            "Hu"
+          ],
+          "initials": [
+            "Z"
+          ]
+        },
+        {
+          "fullName": [
+            "Cai Q"
+          ],
+          "firstName": [
+            "Qingsheng"
+          ],
+          "lastName": [
+            "Cai"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "affiliation": [
+            "College of Life Sciences, Nanjing Agricultural University, Nanjing, China. qscai@njau.edu.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Yu D"
+          ],
+          "firstName": [
+            "Deyue"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "D"
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "15"
+      ],
+      "journalIssueId": [
+        "2131045"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "510"
+  ],
+  "abstractText": [
+    "BACKGROUND: Soybean is one of the most economically important crops in the world. The cotyledon is the nutrient storage area in seeds, and it is critical for seed quality and yield. Cotyledon mutants are important for the genetic dissection of embryo patterning and seed development. However, the molecular mechanisms underlying soybean cotyledon development are largely unexplored. RESULTS: In this study, we characterised a soybean curled-cotyledon (cco) mutant. Compared with wild-type (WT), anatomical analysis revealed that the cco cotyledons at the torpedo stage became more slender and grew outward. The entire embryos of cco mutant resembled the \"tail of swallow\". In addition, cco seeds displayed reduced germination rate and gibberellic acid (GA3) level, whereas the abscisic acid (ABA) and auxin (IAA) levels were increased. RNA-seq identified 1,093 differentially expressed genes (DEGs) between WT and the cco mutant. The KEGG pathway analysis showed many DEGs were mapped to the hormone biosynthesis and signal transduction pathways. Consistent with assays of hormones in seeds, the results of RNA-seq indicated auxin and ABA biosynthesis and signal transduction in cco were more active than in WT, while an early step in GA biosynthesis was blocked, as well as conversion rate of inactive GAs to bioactive GAs in GA signaling. Furthermore, genes participated in other hormone biosynthesis and signalling pathways such as cytokinin (CK), ethylene (ET), brassinosteroid (BR), and jasmonate acid (JA) were also affected in the cco mutant. CONCLUSIONS: Our data suggest that multiple phytohormone biosynthesis and signal transduction pathways are reprogrammed in cco, and changes in these pathways may partially contribute to the cco mutant phenotype, suggesting the involvement of multiple hormones in the coordination of soybean cotyledon development."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Soybeans"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Cotyledon"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Indoleacetic Acids"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Growth Regulators"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Indoleacetic Acids"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Plant Growth Regulators"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4078243?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4078243"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24952381/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24952381/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1471-2164-15-510"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "2"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen",
+        "refseq"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2015-02-20"
+  ],
+  "dateOfCreation": [
+    "2014-06-30"
+  ],
+  "electronicPublicationDate": [
+    "2014-06-21"
+  ],
+  "firstPublicationDate": [
+    "2014-06-21"
+  ]
+}

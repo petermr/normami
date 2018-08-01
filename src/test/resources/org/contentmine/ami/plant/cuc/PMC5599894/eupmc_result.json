@@ -1,0 +1,723 @@
+{
+  "id": [
+    "28911330"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28911330"
+  ],
+  "pmcid": [
+    "PMC5599894"
+  ],
+  "doi": [
+    "10.1186/s13059-017-1302-3"
+  ],
+  "title": [
+    "Extensive transcriptomic and epigenomic remodelling occurs during Arabidopsis thaliana germination."
+  ],
+  "authorString": [
+    "Narsai R, Gouil Q, Secco D, Srivastava A, Karpievitch YV, Liew LC, Lister R, Lewsey MG, Whelan J."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Narsai R"
+          ],
+          "firstName": [
+            "Reena"
+          ],
+          "lastName": [
+            "Narsai"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "ARC Centre of Excellence in Plant Energy Biology, Department of Animal, Plant and Soil Sciences, School of Life Sciences, La Trobe University, Melbourne, VIC, 3086, Australia. r.narsai@laTrobe.edu.au."
+          ]
+        },
+        {
+          "fullName": [
+            "Gouil Q"
+          ],
+          "firstName": [
+            "Quentin"
+          ],
+          "lastName": [
+            "Gouil"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-5142-7886",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centre for AgriBioscience, Department of Animal, Plant and Soil Sciences, School of Life Sciences, La Trobe University, Melbourne, VIC, 3086, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Secco D"
+          ],
+          "firstName": [
+            "David"
+          ],
+          "lastName": [
+            "Secco"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "ARC Centre of Excellence in Plant Energy Biology, The University of Western Australia, Perth, WA, 6009, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Srivastava A"
+          ],
+          "firstName": [
+            "Akanksha"
+          ],
+          "lastName": [
+            "Srivastava"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "ARC Centre of Excellence in Plant Energy Biology, The University of Western Australia, Perth, WA, 6009, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Karpievitch YV"
+          ],
+          "firstName": [
+            "Yuliya V"
+          ],
+          "lastName": [
+            "Karpievitch"
+          ],
+          "initials": [
+            "YV"
+          ],
+          "affiliation": [
+            "ARC Centre of Excellence in Plant Energy Biology, The University of Western Australia, Perth, WA, 6009, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Liew LC"
+          ],
+          "firstName": [
+            "Lim Chee"
+          ],
+          "lastName": [
+            "Liew"
+          ],
+          "initials": [
+            "LC"
+          ],
+          "affiliation": [
+            "Centre for AgriBioscience, Department of Animal, Plant and Soil Sciences, School of Life Sciences, La Trobe University, Melbourne, VIC, 3086, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Lister R"
+          ],
+          "firstName": [
+            "Ryan"
+          ],
+          "lastName": [
+            "Lister"
+          ],
+          "initials": [
+            "R"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-6637-7239",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "ARC Centre of Excellence in Plant Energy Biology, The University of Western Australia, Perth, WA, 6009, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Lewsey MG"
+          ],
+          "firstName": [
+            "Mathew G"
+          ],
+          "lastName": [
+            "Lewsey"
+          ],
+          "initials": [
+            "MG"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2631-4337",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centre for AgriBioscience, Department of Animal, Plant and Soil Sciences, School of Life Sciences, La Trobe University, Melbourne, VIC, 3086, Australia. lewsey@lewseylab.org."
+          ]
+        },
+        {
+          "fullName": [
+            "Whelan J"
+          ],
+          "firstName": [
+            "James"
+          ],
+          "lastName": [
+            "Whelan"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "ARC Centre of Excellence in Plant Energy Biology, Department of Animal, Plant and Soil Sciences, School of Life Sciences, La Trobe University, Melbourne, VIC, 3086, Australia."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-6637-7239",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-2631-4337",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-5142-7886",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "18"
+      ],
+      "journalIssueId": [
+        "2593121"
+      ],
+      "dateOfPublication": [
+        "2017 Sep"
+      ],
+      "monthOfPublication": [
+        "9"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-09-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Genome biology"
+          ],
+          "ISOAbbreviation": [
+            "Genome Biol."
+          ],
+          "medlineAbbreviation": [
+            "Genome Biol"
+          ],
+          "NLMid": [
+            "100960660"
+          ],
+          "ISSN": [
+            "1474-7596"
+          ],
+          "ESSN": [
+            "1474-760X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "172"
+  ],
+  "abstractText": [
+    "Seed germination involves progression from complete metabolic dormancy to a highly active, growing seedling. Many factors regulate germination and these interact extensively, forming a complex network of inputs that control the seed-to-seedling transition. Our understanding of the direct regulation of gene expression and the dynamic changes in the epigenome and small RNAs during germination is limited. The interactions between genome, transcriptome and epigenome must be revealed in order to identify the regulatory mechanisms that control seed germination.We present an integrated analysis of high-resolution RNA sequencing, small RNA sequencing and MethylC sequencing over ten developmental time points in Arabidopsis thaliana seeds, finding extensive transcriptomic and epigenomic transformations associated with seed germination. We identify previously unannotated loci from which messenger RNAs are expressed transiently during germination and find widespread alternative splicing and divergent isoform abundance of genes involved in RNA processing and splicing. We generate the first dynamic transcription factor network model of germination, identifying known and novel regulatory factors. Expression of both microRNA and short interfering RNA loci changes significantly during germination, particularly between the seed and the post-germinative seedling. These are associated with changes in gene expression and large-scale demethylation observed towards the end of germination, as the epigenome transitions from an embryo-like to a vegetative seedling state.This study reveals the complex dynamics and interactions of the transcriptome and epigenome during seed germination, including the extensive remodelling of the seed DNA methylome from an embryo-like to vegetative-like state during the seed-to-seedling transition. Data are available for exploration in a user-friendly browser at https://jbrowse.latrobe.edu.au/germination_epigenome ."
+  ],
+  "affiliation": [
+    "ARC Centre of Excellence in Plant Energy Biology, Department of Animal, Plant and Soil Sciences, School of Life Sciences, La Trobe University, Melbourne, VIC, 3086, Australia. r.narsai@laTrobe.edu.au."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Validation Studies",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "DNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Germination"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "DNA Methylation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Epigenesis, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Developmental"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Models, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Germination",
+        "Arabidopsis",
+        "Transcription factor",
+        "DNA methylation",
+        "Alternative splicing",
+        "Small RNA",
+        "Rna-seq"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "DNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5599894?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5599894"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s13059-017-1302-3"
+          ]
+        }
+      ]
+    }
+  ],
+  "commentCorrectionList": [
+    {
+      "commentCorrection": [
+        {
+          "id": [
+            "28944781"
+          ],
+          "source": [
+            "MED"
+          ],
+          "reference": [
+            "Nat Rev Genet. 2017 Nov;18(11):637"
+          ],
+          "type": [
+            "Comment in"
+          ],
+          "orderIn": [
+            "86"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "7"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2018-05-07"
+  ],
+  "dateOfCreation": [
+    "2017-09-16"
+  ],
+  "dateOfRevision": [
+    "2018-06-28"
+  ],
+  "electronicPublicationDate": [
+    "2017-09-15"
+  ],
+  "firstPublicationDate": [
+    "2017-09-15"
+  ]
+}

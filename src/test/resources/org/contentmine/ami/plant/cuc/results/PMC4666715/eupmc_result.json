@@ -1,0 +1,795 @@
+{
+  "id": [
+    "26623515"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26623515"
+  ],
+  "pmcid": [
+    "PMC4666715"
+  ],
+  "doi": [
+    "10.7554/elife.07811"
+  ],
+  "title": [
+    "Mechanical stress contributes to the expression of the STM homeobox gene in Arabidopsis shoot meristems."
+  ],
+  "authorString": [
+    "Landrein B, Kiss A, Sassi M, Chauvet A, Das P, Cortizo M, Laufs P, Takeda S, Aida M, Traas J, Vernoux T, Boudaoud A, Hamant O."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Landrein B"
+          ],
+          "firstName": [
+            "Benoît"
+          ],
+          "lastName": [
+            "Landrein"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Laboratoire Joliot-Curie, Laboratoire de Physique, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Kiss A"
+          ],
+          "firstName": [
+            "Annamaria"
+          ],
+          "lastName": [
+            "Kiss"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2547-4064",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Laboratoire Joliot-Curie, Laboratoire de Physique, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Sassi M"
+          ],
+          "firstName": [
+            "Massimiliano"
+          ],
+          "lastName": [
+            "Sassi"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-9685-4902",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Laboratoire de Reproduction de développement des plantes, INRA, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Chauvet A"
+          ],
+          "firstName": [
+            "Aurélie"
+          ],
+          "lastName": [
+            "Chauvet"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Laboratoire Joliot-Curie, Laboratoire de Physique, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Das P"
+          ],
+          "firstName": [
+            "Pradeep"
+          ],
+          "lastName": [
+            "Das"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Laboratoire Joliot-Curie, Laboratoire de Physique, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Cortizo M"
+          ],
+          "firstName": [
+            "Millan"
+          ],
+          "lastName": [
+            "Cortizo"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "AgroParisTech, Institut Jean-Pierre Bourgin, UMR 1318, ERL CNRS 3559, Saclay Plant Sciences, Versailles, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Laufs P"
+          ],
+          "firstName": [
+            "Patrick"
+          ],
+          "lastName": [
+            "Laufs"
+          ],
+          "initials": [
+            "P"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4459-3445",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "AgroParisTech, Institut Jean-Pierre Bourgin, UMR 1318, ERL CNRS 3559, Saclay Plant Sciences, Versailles, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Takeda S"
+          ],
+          "firstName": [
+            "Seiji"
+          ],
+          "lastName": [
+            "Takeda"
+          ],
+          "initials": [
+            "S"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-0183-7390",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Cell and Genome Biology, Graduate School of Life and Environmental Sciences, Kyoto Prefectural University, Kyoto, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Aida M"
+          ],
+          "firstName": [
+            "Mitsuhiro"
+          ],
+          "lastName": [
+            "Aida"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9000-7502",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Graduate School of Biological Sciences, Nara Institute of Science and Technology, Nara, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Traas J"
+          ],
+          "firstName": [
+            "Jan"
+          ],
+          "lastName": [
+            "Traas"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Laboratoire de Reproduction de développement des plantes, INRA, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Vernoux T"
+          ],
+          "firstName": [
+            "Teva"
+          ],
+          "lastName": [
+            "Vernoux"
+          ],
+          "initials": [
+            "T"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-8257-4088",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Laboratoire de Reproduction de développement des plantes, INRA, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Boudaoud A"
+          ],
+          "firstName": [
+            "Arezki"
+          ],
+          "lastName": [
+            "Boudaoud"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2780-4717",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Laboratoire Joliot-Curie, Laboratoire de Physique, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Hamant O"
+          ],
+          "firstName": [
+            "Olivier"
+          ],
+          "lastName": [
+            "Hamant"
+          ],
+          "initials": [
+            "O"
+          ],
+          "affiliation": [
+            "Laboratoire Joliot-Curie, Laboratoire de Physique, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-8257-4088",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-2780-4717",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-2547-4064",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-9000-7502",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4459-3445",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-0183-7390",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-9685-4902",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "4"
+      ],
+      "journalIssueId": [
+        "2347438"
+      ],
+      "dateOfPublication": [
+        "2015 Dec"
+      ],
+      "monthOfPublication": [
+        "12"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-12-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "eLife"
+          ],
+          "ISOAbbreviation": [
+            "Elife"
+          ],
+          "medlineAbbreviation": [
+            "Elife"
+          ],
+          "NLMid": [
+            "101579614"
+          ],
+          "ISSN": [
+            "2050-084X"
+          ],
+          "ESSN": [
+            "2050-084X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "e07811"
+  ],
+  "abstractText": [
+    "The role of mechanical signals in cell identity determination remains poorly explored in tissues. Furthermore, because mechanical stress is widespread, mechanical signals are difficult to uncouple from biochemical-based transduction pathways. Here we focus on the homeobox gene SHOOT MERISTEMLESS (STM), a master regulator and marker of meristematic identity in Arabidopsis. We found that STM expression is quantitatively correlated to curvature in the saddle-shaped boundary domain of the shoot apical meristem. As tissue folding reflects the presence of mechanical stress, we test and demonstrate that STM expression is induced after micromechanical perturbations. We also show that STM expression in the boundary domain is required for organ separation. While STM expression correlates with auxin depletion in this domain, auxin distribution and STM expression can also be uncoupled. STM expression and boundary identity are thus strengthened through a synergy between auxin depletion and an auxin-independent mechanotransduction pathway at the shoot apical meristem."
+  ],
+  "affiliation": [
+    "Laboratoire Joliot-Curie, Laboratoire de Physique, CNRS, ENS Lyon, UCB Lyon 1, Université de Lyon, Lyon, France."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "615739"
+          ],
+          "agency": [
+            "European Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "294397"
+          ],
+          "agency": [
+            "European Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Shoots"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Meristem"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Homeodomain Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Stress, Mechanical"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Meristem",
+        "Arabidopsis",
+        "Boundary",
+        "STM",
+        "Homeobox",
+        "Mechanical stress",
+        "Plant Biology",
+        "developmental biology",
+        "Stem Cells",
+        "auxin"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "STM protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Homeodomain Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4666715?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4666715"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.7554/eLife.07811"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "23"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-08-22"
+  ],
+  "dateOfCreation": [
+    "2015-12-02"
+  ],
+  "dateOfRevision": [
+    "2017-09-22"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-01"
+  ],
+  "firstPublicationDate": [
+    "2015-12-01"
+  ]
+}

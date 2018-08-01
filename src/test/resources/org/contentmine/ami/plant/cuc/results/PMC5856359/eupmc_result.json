@@ -1,0 +1,282 @@
+{
+  "id": [
+    "29551849"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29551849"
+  ],
+  "pmcid": [
+    "PMC5856359"
+  ],
+  "doi": [
+    "10.1080/02664763.2017.1342780"
+  ],
+  "title": [
+    "Bayesian adaptive bandit-based designs using the Gittins index for multi-armed trials with normally distributed endpoints."
+  ],
+  "authorString": [
+    "Smith AL, Villar SS."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Smith AL"
+          ],
+          "firstName": [
+            "Adam L"
+          ],
+          "lastName": [
+            "Smith"
+          ],
+          "initials": [
+            "AL"
+          ],
+          "affiliation": [
+            "Department of Pure Mathematics and Mathematical Statistics, University of Cambridge, Cambridge, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Villar SS"
+          ],
+          "firstName": [
+            "Sofía S"
+          ],
+          "lastName": [
+            "Villar"
+          ],
+          "initials": [
+            "SS"
+          ],
+          "affiliation": [
+            "MRC Biostatistics Unit, University of Cambridge, School of Clinical Medicine, Cambridge, UK."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "6"
+      ],
+      "volume": [
+        "45"
+      ],
+      "journalIssueId": [
+        "2662892"
+      ],
+      "dateOfPublication": [
+        "2018 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of applied statistics"
+          ],
+          "ISOAbbreviation": [
+            "J Appl Stat"
+          ],
+          "medlineAbbreviation": [
+            "J Appl Stat"
+          ],
+          "NLMid": [
+            "9883455"
+          ],
+          "ISSN": [
+            "0266-4763"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "1052-1076"
+  ],
+  "abstractText": [
+    "Adaptive designs for multi-armed clinical trials have become increasingly popular recently because of their potential to shorten development times and to increase patient response. However, developing response-adaptive designs that offer patient-benefit while ensuring the resulting trial provides a statistically rigorous and unbiased comparison of the different treatments included is highly challenging. In this paper, the theory of Multi-Armed Bandit Problems is used to define near optimal adaptive designs in the context of a clinical trial with a normally distributed endpoint with known variance. We report the operating characteristics (type I error, power, bias) and patient-benefit of these approaches and alternative designs using simulation studies based on an ongoing trial. These results are then compared to those recently published in the context of Bernoulli endpoints. Many limitations and advantages are similar in both cases but there are also important differences, specially with respect to type I error control. This paper proposes a simulation-based testing procedure to correct for the observed type I error inflation that bandit-based and adaptive rules can induce."
+  ],
+  "affiliation": [
+    "Department of Pure Mathematics and Mathematical Statistics, University of Cambridge, Cambridge, UK."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "MC_UP_1302/2"
+          ],
+          "agency": [
+            "Medical Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Sequential sampling",
+        "Gittins Index",
+        "Multi-armed Bandit",
+        "Patient Allocation",
+        "Response Adaptive Procedures",
+        "Normally Distributed Endpoint"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5856359?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5856359"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1080/02664763.2017.1342780"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "Y"
+  ],
+  "epmcAuthMan": [
+    "Y"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "manuscriptId": [
+    "EMS73558"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2018-03-20"
+  ],
+  "dateOfRevision": [
+    "2018-03-21"
+  ],
+  "electronicPublicationDate": [
+    "2017-06-28"
+  ],
+  "firstPublicationDate": [
+    "2017-06-28"
+  ]
+}

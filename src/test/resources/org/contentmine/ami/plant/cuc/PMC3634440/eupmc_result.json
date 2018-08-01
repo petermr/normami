@@ -1,0 +1,346 @@
+{
+  "id": [
+    "23485989"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "23485989"
+  ],
+  "pmcid": [
+    "PMC3634440"
+  ],
+  "doi": [
+    "10.3390/ijms14035842"
+  ],
+  "title": [
+    "Structure, function and networks of transcription factors involved in abiotic stress responses."
+  ],
+  "authorString": [
+    "Lindemose S, O'Shea C, Jensen MK, Skriver K."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Lindemose S"
+          ],
+          "firstName": [
+            "Søren"
+          ],
+          "lastName": [
+            "Lindemose"
+          ],
+          "initials": [
+            "S"
+          ]
+        },
+        {
+          "fullName": [
+            "O'Shea C"
+          ],
+          "firstName": [
+            "Charlotte"
+          ],
+          "lastName": [
+            "O'Shea"
+          ],
+          "initials": [
+            "C"
+          ]
+        },
+        {
+          "fullName": [
+            "Jensen MK"
+          ],
+          "firstName": [
+            "Michael Krogh"
+          ],
+          "lastName": [
+            "Jensen"
+          ],
+          "initials": [
+            "MK"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7574-4707",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Skriver K"
+          ],
+          "firstName": [
+            "Karen"
+          ],
+          "lastName": [
+            "Skriver"
+          ],
+          "initials": [
+            "K"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2225-4012",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-7574-4707",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-2225-4012",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "3"
+      ],
+      "volume": [
+        "14"
+      ],
+      "journalIssueId": [
+        "2013358"
+      ],
+      "dateOfPublication": [
+        "2013 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "International journal of molecular sciences"
+          ],
+          "ISOAbbreviation": [
+            "Int J Mol Sci"
+          ],
+          "medlineAbbreviation": [
+            "Int J Mol Sci"
+          ],
+          "NLMid": [
+            "101092791"
+          ],
+          "ISSN": [
+            "1422-0067"
+          ],
+          "ESSN": [
+            "1422-0067"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "5842-5878"
+  ],
+  "abstractText": [
+    "Transcription factors (TFs) are master regulators of abiotic stress responses in plants. This review focuses on TFs from seven major TF families, known to play functional roles in response to abiotic stresses, including drought, high salinity, high osmolarity, temperature extremes and the phytohormone ABA. Although ectopic expression of several TFs has improved abiotic stress tolerance in plants, fine-tuning of TF expression and protein levels remains a challenge to avoid crop yield loss. To further our understanding of TFs in abiotic stress responses, emerging gene regulatory networks based on TFs and their direct targets genes are presented. These revealed components shared between ABA-dependent and independent signaling as well as abiotic and biotic stress signaling. Protein structure analysis suggested that TFs hubs of large interactomes have extended regions with protein intrinsic disorder (ID), referring to their lack of fixed tertiary structures. ID is now an emerging topic in plant science. Furthermore, the importance of the ubiquitin-proteasome protein degradation systems and modification by sumoylation is also apparent from the interactomes. Therefore; TF interaction partners such as E3 ubiquitin ligases and TF regions with ID represent future targets for engineering improved abiotic stress tolerance in crops."
+  ],
+  "affiliation": [
+    "Biomolecular Sciences, Department of Biology, University of Copenhagen, Ole Maaloes Vej 5, DK-2200 Copenhagen N, Denmark. kskriver@bio.ku.dk."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "review-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3634440?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3634440"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23485989/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23485989/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3390/ijms14035842"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "65"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2013-03-17"
+  ],
+  "dateOfCreation": [
+    "2013-03-14"
+  ],
+  "dateOfRevision": [
+    "2013-05-03"
+  ],
+  "electronicPublicationDate": [
+    "2013-03-13"
+  ],
+  "firstPublicationDate": [
+    "2013-03-13"
+  ]
+}

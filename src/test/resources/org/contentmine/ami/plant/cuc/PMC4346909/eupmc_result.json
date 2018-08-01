@@ -1,0 +1,674 @@
+{
+  "id": [
+    "25658800"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25658800"
+  ],
+  "pmcid": [
+    "PMC4346909"
+  ],
+  "doi": [
+    "10.3390/ijms16023493"
+  ],
+  "title": [
+    "Transcriptome profiling and identification of transcription factors in ramie (Boehmeria nivea L. Gaud) in response to PEG treatment, using illumina paired-end sequencing technology."
+  ],
+  "authorString": [
+    "An X, Chen J, Zhang J, Liao Y, Dai L, Wang B, Liu L, Peng D."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "An X"
+          ],
+          "firstName": [
+            "Xia"
+          ],
+          "lastName": [
+            "An"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Ecophysiology and Farming Systems in the Middle Reaches of the Yangtze River, Ministry of Agriculture, College of Plant Science and Technology, Huazhong Agricultural University, Wuhan 430070, China. anxia111@126.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Chen J"
+          ],
+          "firstName": [
+            "Jie"
+          ],
+          "lastName": [
+            "Chen"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Ecophysiology and Farming Systems in the Middle Reaches of the Yangtze River, Ministry of Agriculture, College of Plant Science and Technology, Huazhong Agricultural University, Wuhan 430070, China. lqlcj@126.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang J"
+          ],
+          "firstName": [
+            "Jingyu"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Ecophysiology and Farming Systems in the Middle Reaches of the Yangtze River, Ministry of Agriculture, College of Plant Science and Technology, Huazhong Agricultural University, Wuhan 430070, China. 13164612991@163.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Liao Y"
+          ],
+          "firstName": [
+            "Yiwen"
+          ],
+          "lastName": [
+            "Liao"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Ecophysiology and Farming Systems in the Middle Reaches of the Yangtze River, Ministry of Agriculture, College of Plant Science and Technology, Huazhong Agricultural University, Wuhan 430070, China. lywen2009@126.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Dai L"
+          ],
+          "firstName": [
+            "Lunjin"
+          ],
+          "lastName": [
+            "Dai"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Ecophysiology and Farming Systems in the Middle Reaches of the Yangtze River, Ministry of Agriculture, College of Plant Science and Technology, Huazhong Agricultural University, Wuhan 430070, China. dailunjin@gmail.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang B"
+          ],
+          "firstName": [
+            "Bo"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Ecophysiology and Farming Systems in the Middle Reaches of the Yangtze River, Ministry of Agriculture, College of Plant Science and Technology, Huazhong Agricultural University, Wuhan 430070, China. wangbo@mail.hzau.edu.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu L"
+          ],
+          "firstName": [
+            "Lijun"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Ecophysiology and Farming Systems in the Middle Reaches of the Yangtze River, Ministry of Agriculture, College of Plant Science and Technology, Huazhong Agricultural University, Wuhan 430070, China. liulijun@mail.hzau.edu.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Peng D"
+          ],
+          "firstName": [
+            "Dingxiang"
+          ],
+          "lastName": [
+            "Peng"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Ecophysiology and Farming Systems in the Middle Reaches of the Yangtze River, Ministry of Agriculture, College of Plant Science and Technology, Huazhong Agricultural University, Wuhan 430070, China. pdxiang@mail.hzau.edu.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "2"
+      ],
+      "volume": [
+        "16"
+      ],
+      "journalIssueId": [
+        "2246613"
+      ],
+      "dateOfPublication": [
+        "2015"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "International journal of molecular sciences"
+          ],
+          "ISOAbbreviation": [
+            "Int J Mol Sci"
+          ],
+          "medlineAbbreviation": [
+            "Int J Mol Sci"
+          ],
+          "NLMid": [
+            "101092791"
+          ],
+          "ISSN": [
+            "1422-0067"
+          ],
+          "ESSN": [
+            "1422-0067"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "3493-3511"
+  ],
+  "abstractText": [
+    "Ramie (Boehmeria nivea L. Gaud), commonly known as China grass, is a perennial bast fiber plant of the Urticaceae. In China, ramie farming, industry, and trade provide income for about five million people. Drought stress severely affects ramie stem growth and causes a dramatic decrease in ramie fiber production. There is a need to enhance ramie's tolerance to drought stress. However, the drought stress regulatory mechanism in ramie remains unknown. Water stress imposed by polyethylene glycol (PEG) is a common and convenient method to evaluate plant drought tolerance. In this study, transcriptome analysis of cDNA collections from ramie subjected to PEG treatment was conducted using Illumina paired-end sequencing, which generated 170 million raw sequence reads. Between leaves and roots subjected to 24 (L2 and R2) and 72 (L3 and R3) h of PEG treatment, 16,798 genes were differentially expressed (9281 in leaves and 8627 in roots). Among these, 25 transcription factors (TFs) from the AP2 (3), MYB (6), NAC (9), zinc finger (5), and bZIP (2) families were considered to be associated with drought stress. The identified TFs could be used to further investigate drought adaptation in ramie."
+  ],
+  "affiliation": [
+    "Key Laboratory of Crop Ecophysiology and Farming Systems in the Middle Reaches of the Yangtze River, Ministry of Agriculture, College of Plant Science and Technology, Huazhong Agricultural University, Wuhan 430070, China. anxia111@126.com."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Boehmeria"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Roots"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Polyethylene Glycols"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Molecular Sequence Data"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Droughts"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "High-Throughput Nucleotide Sequencing"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Polyethylene Glycols"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4346909?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4346909"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3390/ijms16023493"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "7"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL",
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-09-29"
+  ],
+  "dateOfCreation": [
+    "2015-02-09"
+  ],
+  "dateOfRevision": [
+    "2015-04-04"
+  ],
+  "electronicPublicationDate": [
+    "2015-02-04"
+  ],
+  "firstPublicationDate": [
+    "2015-02-04"
+  ]
+}

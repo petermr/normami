@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="pectin">
+ <result pre="gene expression data with known connectivity information in terms of" exact="matrix" post="decomposition [ 31, 47]. NCA model assumes the log-linear"/>
+ <result pre="becomes: (2) log Er = CS log TFAr Where the" exact="matrix" post="Er represents the expression values of genes at different"/>
+ <result pre="represents the expression values of genes at different measurement conditions," exact="matrix" post="CS is the control strength of each TF on"/>
+ <result pre="equation (2) as: (3) E = C T Here expression" exact="matrix" post="[E] corresponds to [Er] in equation (2), connectivity strength"/>
+ <result pre="matrix [E] corresponds to [Er] in equation (2), connectivity strength" exact="matrix" post="[C] is equivalent to [CS] and transcription factor activity"/>
+ <result pre="matrix [C] is equivalent to [CS] and transcription factor activity" exact="matrix" post="[T] corresponds to log[TFAr] in equation (2). Based on"/>
+ <result pre="using a two-step least-squares algorithm and normalized through a nonsingular" exact="matrix" post="[S] according to, (5) E = C T ="/>
+ <result pre="to be satisfied termed as NCA criteria: (a) The connectivity" exact="matrix" post="[C] must have full-column rank. (b) When a node"/>
+ <result pre="it, the resulting network must be characterized by a connectivity" exact="matrix" post="that still has full-column rank. (c) T matrix must"/>
+ <result pre="a connectivity matrix that still has full-column rank. (c) T" exact="matrix" post="must have full row rank. The algorithm for NCA"/>
+ <result pre="GO categories were as follows. Table 3 GO terms attribute" exact="matrix" post="from the significantly regulated gene-list for each ecotype, generated"/>
+</results>

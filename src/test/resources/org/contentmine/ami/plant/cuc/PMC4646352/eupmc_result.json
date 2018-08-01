@@ -1,0 +1,655 @@
+{
+  "id": [
+    "26569117"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26569117"
+  ],
+  "pmcid": [
+    "PMC4646352"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0141866"
+  ],
+  "title": [
+    "Comparative Genomics of NAC Transcriptional Factors in Angiosperms: Implications for the Adaptation and Diversification of Flowering Plants."
+  ],
+  "authorString": [
+    "Pereira-Santana A, Alcaraz LD, Castaño E, Sanchez-Calderon L, Sanchez-Teyer F, Rodriguez-Zapata L."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Pereira-Santana A"
+          ],
+          "firstName": [
+            "Alejandro"
+          ],
+          "lastName": [
+            "Pereira-Santana"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Unidad de Biotecnología, Centro de Investigación Científica de Yucatán, Mérida, Yucatán, México."
+          ]
+        },
+        {
+          "fullName": [
+            "Alcaraz LD"
+          ],
+          "firstName": [
+            "Luis David"
+          ],
+          "lastName": [
+            "Alcaraz"
+          ],
+          "initials": [
+            "LD"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3284-0605",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Ecología de la Biodiversidad, Instituto de Ecología, Universidad Nacional Autónoma de México, México City, D.F., México."
+          ]
+        },
+        {
+          "fullName": [
+            "Castaño E"
+          ],
+          "firstName": [
+            "Enrique"
+          ],
+          "lastName": [
+            "Castaño"
+          ],
+          "initials": [
+            "E"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2645-9541",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Unidad de Bioquímica y Biología Molecular de Plantas, Centro de Investigación Científica de Yucatán, Mérida, Yucatán, México."
+          ]
+        },
+        {
+          "fullName": [
+            "Sanchez-Calderon L"
+          ],
+          "firstName": [
+            "Lenin"
+          ],
+          "lastName": [
+            "Sanchez-Calderon"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Laboratorio de Biología Molecular de Plantas, Unidad Académica de Ciencias Biológicas, Universidad Autónoma de Zacatecas, Zacatecas, Zacatecas, México."
+          ]
+        },
+        {
+          "fullName": [
+            "Sanchez-Teyer F"
+          ],
+          "firstName": [
+            "Felipe"
+          ],
+          "lastName": [
+            "Sanchez-Teyer"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Unidad de Biotecnología, Centro de Investigación Científica de Yucatán, Mérida, Yucatán, México."
+          ]
+        },
+        {
+          "fullName": [
+            "Rodriguez-Zapata L"
+          ],
+          "firstName": [
+            "Luis"
+          ],
+          "lastName": [
+            "Rodriguez-Zapata"
+          ],
+          "initials": [
+            "L"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4872-8231",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Unidad de Biotecnología, Centro de Investigación Científica de Yucatán, Mérida, Yucatán, México."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-2645-9541",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-4872-8231",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-3284-0605",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "11"
+      ],
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "2338480"
+      ],
+      "dateOfPublication": [
+        "2015"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "e0141866"
+  ],
+  "abstractText": [
+    "NAC proteins constitute one of the largest groups of plant-specific transcription factors and are known to play essential roles in various developmental processes. They are also important in plant responses to stresses such as drought, soil salinity, cold, and heat, which adversely affect growth. The current knowledge regarding the distribution of NAC proteins in plant lineages comes from relatively small samplings from the available data. In the present study, we broadened the number of plant species containing the NAC family origin and evolution to shed new light on the evolutionary history of this family in angiosperms. A comparative genome analysis was performed on 24 land plant species, and NAC ortholog groups were identified by means of bidirectional BLAST hits. Large NAC gene families are found in those species that have experienced more whole-genome duplication events, pointing to an expansion of the NAC family with divergent functions in flowering plants. A total of 3,187 NAC transcription factors that clustered into six major groups were used in the phylogenetic analysis. Many orthologous groups were found in the monocot and eudicot lineages, but only five orthologous groups were found between P. patens and each representative taxa of flowering plants. These groups were called basal orthologous groups and likely expanded into more recent taxa to cope with their environmental needs. This analysis on the angiosperm NAC family represents an effort to grasp the evolutionary and functional diversity within this gene family while providing a basis for further functional research on vascular plant gene families."
+  ],
+  "affiliation": [
+    "Unidad de Biotecnología, Centro de Investigación Científica de Yucatán, Mérida, Yucatán, México."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Comparative Study",
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Angiosperms"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cluster Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Likelihood Functions"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Markov Chains"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genomics"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Environment"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Acclimatization"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phylogeny"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Species Specificity"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Duplication"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Amino Acid Motifs"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genome, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Multigene Family"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Software"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genetic Variation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Biological Evolution"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4646352?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4646352"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0141866"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "6"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "pfam",
+        "doi"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-06-23"
+  ],
+  "dateOfCreation": [
+    "2015-11-17"
+  ],
+  "dateOfRevision": [
+    "2015-11-26"
+  ],
+  "electronicPublicationDate": [
+    "2015-11-16"
+  ],
+  "firstPublicationDate": [
+    "2015-11-16"
+  ]
+}

@@ -1,0 +1,660 @@
+{
+  "id": [
+    "29329517"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29329517"
+  ],
+  "pmcid": [
+    "PMC5767043"
+  ],
+  "doi": [
+    "10.1186/s12864-017-4367-1"
+  ],
+  "title": [
+    "Genome-wide analyses of direct target genes of four rice NAC-domain transcription factors involved in drought tolerance."
+  ],
+  "authorString": [
+    "Chung PJ, Jung H, Choi YD, Kim JK."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Chung PJ"
+          ],
+          "firstName": [
+            "Pil Joong"
+          ],
+          "lastName": [
+            "Chung"
+          ],
+          "initials": [
+            "PJ"
+          ],
+          "affiliation": [
+            "Graduate School of International Agricultural Technology and Crop Biotechnology Institute/GreenBio Science & Technology, Seoul National University, Pyeongchang, 25354, South Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Jung H"
+          ],
+          "firstName": [
+            "Harin"
+          ],
+          "lastName": [
+            "Jung"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Graduate School of International Agricultural Technology and Crop Biotechnology Institute/GreenBio Science & Technology, Seoul National University, Pyeongchang, 25354, South Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Choi YD"
+          ],
+          "firstName": [
+            "Yang Do"
+          ],
+          "lastName": [
+            "Choi"
+          ],
+          "initials": [
+            "YD"
+          ],
+          "affiliation": [
+            "Graduate School of International Agricultural Technology and Crop Biotechnology Institute/GreenBio Science & Technology, Seoul National University, Pyeongchang, 25354, South Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Kim JK"
+          ],
+          "firstName": [
+            "Ju-Kon"
+          ],
+          "lastName": [
+            "Kim"
+          ],
+          "initials": [
+            "JK"
+          ],
+          "affiliation": [
+            "Graduate School of International Agricultural Technology and Crop Biotechnology Institute/GreenBio Science & Technology, Seoul National University, Pyeongchang, 25354, South Korea. jukon@snu.ac.kr."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "19"
+      ],
+      "journalIssueId": [
+        "2633636"
+      ],
+      "dateOfPublication": [
+        "2018 Jan"
+      ],
+      "monthOfPublication": [
+        "1"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "40"
+  ],
+  "abstractText": [
+    "Plant stress responses and mechanisms determining tolerance are controlled by diverse sets of genes. Transcription factors (TFs) have been implicated in conferring drought tolerance under drought stress conditions, and the identification of their target genes can elucidate molecular regulatory networks that orchestrate tolerance mechanisms.We generated transgenic rice plants overexpressing the 4 rice TFs, OsNAC5, 6, 9, and 10, under the control of the root-specific RCc3 promoter. We showed that they were tolerant to drought stress with reduced loss of grain yield under drought conditions compared with wild type plants. To understand the molecular mechanisms underlying this tolerance, we here performed chromatin immunoprecipitation (ChIP)-Seq and RNA-Seq analyses to identify the direct target genes of the OsNAC proteins using the RCc3:6MYC-OsNAC expressing roots. A total of 475 binding loci for the 4 OsNAC proteins were identified by cross-referencing their binding to promoter regions and the expression levels of the corresponding genes. The binding loci were distributed among the promoter regions of 391 target genes that were directly up-regulated by one of the OsNAC proteins in four RCc3:6MYC-OsNAC transgenic lines. Based on gene ontology (GO) analysis, the direct target genes were related to transmembrane/transporter activity, vesicle, plant hormones, carbohydrate metabolism, and TFs. The direct targets of each OsNAC range from 4.0-8.7% of the total number of up-regulated genes found in the RNA-Seq data sets. Thus, each OsNAC up-regulates a set of direct target genes that alter root system architecture in the RCc3:OsNAC plants to confer drought tolerance. Our results provide a valuable resource for functional dissection of the molecular mechanisms of drought tolerance.Many of the target genes, including transmembrane/transporter, vesicle related, auxin/hormone related, carbohydrate metabolic processes, and transcription factor genes, that are up-regulated by OsNACs act as the cellular components which would alter the root architectures of RCc3:OsNACs for drought tolerance."
+  ],
+  "affiliation": [
+    "Graduate School of International Agricultural Technology and Crop Biotechnology Institute/GreenBio Science & Technology, Seoul National University, Pyeongchang, 25354, South Korea."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "PJ011829012016"
+          ],
+          "agency": [
+            "the Rural Development Administration under the Next-Generation Biogreen 21 program"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "NRF-2013R1A6A3A04060627"
+          ],
+          "agency": [
+            "the National Research Foundation of Korea"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Chromatin Immunoprecipitation"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genome-Wide Association Study"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Droughts"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oryza"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Domains"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Oryza sativa",
+        "Drought tolerance",
+        "Rna-seq",
+        "Chip-seq",
+        "Genome-wide Analysis",
+        "Nac Transcription Factors"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5767043?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5767043"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12864-017-4367-1"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "go"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2018-07-18"
+  ],
+  "dateOfCreation": [
+    "2018-01-14"
+  ],
+  "dateOfRevision": [
+    "2018-07-18"
+  ],
+  "electronicPublicationDate": [
+    "2018-01-12"
+  ],
+  "firstPublicationDate": [
+    "2018-01-12"
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "id": [
+    "28503178"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28503178"
+  ],
+  "pmcid": [
+    "PMC5408010"
+  ],
+  "doi": [
+    "10.3389/fpls.2017.00468"
+  ],
+  "title": [
+    "Transcriptomic Response of Chinese Yew (Taxus chinensis) to Cold Stress."
+  ],
+  "authorString": [
+    "Meng D, Yu X, Ma L, Hu J, Liang Y, Liu X, Yin H, Liu H, He X, Li D."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Meng D"
+          ],
+          "firstName": [
+            "Delong"
+          ],
+          "lastName": [
+            "Meng"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "School of Biology and Environmental Science, University College DublinDublin, Ireland."
+          ]
+        },
+        {
+          "fullName": [
+            "Yu X"
+          ],
+          "firstName": [
+            "Xianghua"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biometallurgy of Ministry of Education, Central South UniversityChangsha, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Ma L"
+          ],
+          "firstName": [
+            "Liyuan"
+          ],
+          "lastName": [
+            "Ma"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biometallurgy of Ministry of Education, Central South UniversityChangsha, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Hu J"
+          ],
+          "firstName": [
+            "Jin"
+          ],
+          "lastName": [
+            "Hu"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biometallurgy of Ministry of Education, Central South UniversityChangsha, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liang Y"
+          ],
+          "firstName": [
+            "Yili"
+          ],
+          "lastName": [
+            "Liang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biometallurgy of Ministry of Education, Central South UniversityChangsha, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu X"
+          ],
+          "firstName": [
+            "Xueduan"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biometallurgy of Ministry of Education, Central South UniversityChangsha, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yin H"
+          ],
+          "firstName": [
+            "Huaqun"
+          ],
+          "lastName": [
+            "Yin"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biometallurgy of Ministry of Education, Central South UniversityChangsha, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu H"
+          ],
+          "firstName": [
+            "Hongwei"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biometallurgy of Ministry of Education, Central South UniversityChangsha, China."
+          ]
+        },
+        {
+          "fullName": [
+            "He X"
+          ],
+          "firstName": [
+            "Xiaojia"
+          ],
+          "lastName": [
+            "He"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "The Administrative Centre for China's Agenda 21Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Li D"
+          ],
+          "firstName": [
+            "Diqiang"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Key Laboratory of Forest Ecology and Environment of State Forestry Administration, Institute of Forest Ecology, Environment, and Protection, Chinese Academy of ForestryBeijing, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "8"
+      ],
+      "journalIssueId": [
+        "2550591"
+      ],
+      "dateOfPublication": [
+        "2017 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in plant science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "468"
+  ],
+  "abstractText": [
+    "Taxus chinensis is a rare and endangered shrub, highly sensitive to temperature changes and widely known for its potential in cancer treatment. How gene expression of T. chinensis responds to low temperature is still unknown. To investigate cold response of the genus Taxus, we obtained the transcriptome profiles of T. chinensis grown under normal and low temperature (cold stress, 0°C) conditions using Illumina Miseq sequencing. A transcriptome including 83,963 transcripts and 62,654 genes were assembled from 4.16 Gb of reads data. Comparative transcriptomic analysis identified 2,025 differently expressed (DE) isoforms at p < 0.05, of which 1,437 were up-regulated by cold stress and 588 were down-regulated. Annotation of DE isoforms indicated that transcription factors (TFs) in the MAPK signaling pathway and TF families of NAC, WRKY, bZIP, MYB, and ERF were transcriptionally activated. This might have been caused by the accumulation of secondary messengers, such as reactive oxygen species (ROS) and Ca2+. While accumulation of ROS will have caused damages to cells, our results indicated that to adapt to low temperatures T. chinensis employed a series of mechanisms to minimize these damages. The mechanisms included: (i) cold-enhanced expression of ROS deoxidant systems, such as peroxidase and phospholipid hydroperoxide glutathione peroxidase, to remove ROS. This was further confirmed by analyses showing increased activity of POD, SOD, and CAT under cold stress. (ii) Activation of starch and sucrose metabolism, thiamine metabolism, and purine metabolism by cold-stress to produce metabolites which either protect cell organelles or lower the ROS content in cells. These processes are regulated by ROS signaling, as the \"feedback\" toward ROS accumulation."
+  ],
+  "affiliation": [
+    "School of Biology and Environmental Science, University College DublinDublin, Ireland."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Taxus chinensis",
+        "Cold stress",
+        "ROS",
+        "Transcriptome",
+        "Cold Response",
+        "De Isoforms"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5408010?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5408010"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2017.00468"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "N"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2017-05-15"
+  ],
+  "dateOfRevision": [
+    "2017-08-16"
+  ],
+  "electronicPublicationDate": [
+    "2017-04-28"
+  ],
+  "firstPublicationDate": [
+    "2017-04-28"
+  ]
+}

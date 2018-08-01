@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC2961395/results/gene/human/results.xml">
+  <result pre="Absorption correction: multi-scan ( " exact="SHELXTL" post="; Sheldrick, 2008 ▶) T min = 0.488, T max = 0.5" xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="Data collection: " exact="SMART" post=" (Bruker, 1997 ▶); cell refinement: SAINT (Bruker, 1997 ▶); " xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="Data collection: SMART (Bruker, 1997 ▶); cell refinement: " exact="SAINT" post=" (Bruker, 1997 ▶); data reduction: SAINT; program(s) used to solve structure" xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="a href=&quot;#bb3&quot;&gt; ▶); cell refinement: SAINT (Bruker, 1997 ▶); data reduction: " exact="SAINT" post="; program(s) used to solve structure: SHELXS97 (Sheldrick, 2008 ▶); program(" xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="Bruker, 1997 ▶); data reduction: SAINT; program(s) used to solve structure: " exact="SHELXS97" post=" (Sheldrick, 2008 ▶); program(s) used to refine structure: SHELXL97 (Sheldri" xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="ructure: SHELXS97 (Sheldrick, 2008 ▶); program(s) used to refine structure: " exact="SHELXL97" post=" (Sheldrick, 2008 ▶); molecular graphics: SHELXTL (Sheldrick, 2008 &lt;a href=&quot;" xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="used to refine structure: SHELXL97 (Sheldrick, 2008 ▶); molecular graphics: " exact="SHELXTL" post=" (Sheldrick, 2008 ▶); software used to prepare material for publication: SHELXTL" xpath="/html[1]/body[1]/div[2]/div[2]/div[3]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="HELXTL (Sheldrick, 2008 ▶); software used to prepare material for publication: " exact="SHELXTL" post=". " dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

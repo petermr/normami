@@ -1,0 +1,667 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="review-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Plants (Basel)</journal-id><journal-id journal-id-type="iso-abbrev">Plants (Basel)</journal-id><journal-id journal-id-type="publisher-id">plants</journal-id><journal-title-group><journal-title>Plants</journal-title></journal-title-group><issn pub-type="epub">2223-7747</issn><publisher><publisher-name>MDPI</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5371767</article-id><article-id pub-id-type="doi">10.3390/plants6010008</article-id><article-id pub-id-type="publisher-id">plants-06-00008</article-id><article-categories><subj-group subj-group-type="heading"><subject>Review</subject></subj-group></article-categories><title-group><article-title>Multiple Mobile mRNA Signals Regulate Tuber Development in Potato</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Hannapel</surname><given-names>David J.</given-names></name><xref ref-type="aff" rid="af1-plants-06-00008">1</xref><xref rid="c1-plants-06-00008" ref-type="corresp">*</xref></contrib><contrib contrib-type="author"><name><surname>Banerjee</surname><given-names>Anjan K.</given-names></name><xref ref-type="aff" rid="af2-plants-06-00008">2</xref></contrib></contrib-group><contrib-group><contrib contrib-type="editor"><name><surname>Kim</surname><given-names>Jae-Yean</given-names></name><role>Academic Editor</role></contrib></contrib-group><aff id="af1-plants-06-00008"><label>1</label>Plant Biology Major, 253 Horticulture Hall, Iowa State University, Ames, IA 50011-1100, USA</aff><aff id="af2-plants-06-00008"><label>2</label>Biology Division, Indian Institute of Science Education and Research, Dr. Homi Bhabha Road, Pashan, Pune 411008, India; <email>akb@iiserpune.ac.in</email></aff><author-notes><corresp id="c1-plants-06-00008"><label>*</label>Correspondence: <email>djh@iastate.edu</email>; Tel.: +515-294-9130; Fax: +515-294-0730</corresp></author-notes><pub-date pub-type="epub"><day>10</day><month>2</month><year>2017</year></pub-date><pub-date pub-type="collection"><month>3</month><year>2017</year></pub-date><volume>6</volume><issue>1</issue><elocation-id>8</elocation-id><history><date date-type="received"><day>04</day><month>11</month><year>2016</year></date><date date-type="accepted"><day>30</day><month>1</month><year>2017</year></date></history><permissions><copyright-statement>&#x000a9; 2017 by the authors.</copyright-statement><copyright-year>2017</copyright-year><license license-type="open-access"><license-p>Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>).</license-p></license></permissions><abstract><p>Included among the many signals that traffic through the sieve element system are full-length mRNAs that function to respond to the environment and to regulate development. In potato, several mRNAs that encode transcription factors from the three-amino-loop-extension (TALE) superfamily move from leaves to roots and stolons via the phloem to control growth and signal the onset of tuber formation. This RNA transport is enhanced by short-day conditions and is facilitated by RNA-binding proteins from the polypyrimidine tract-binding family of proteins. Regulation of growth is mediated by three mobile mRNAs that arise from vasculature in the leaf. One mRNA, <italic>StBEL5</italic>, functions to activate growth, whereas two other, sequence-related StBEL&#x02019;s, <italic>StBEL11</italic> and <italic>StBEL29</italic>, function antagonistically to repress StBEL5 target genes involved in promoting tuber development. This dynamic system utilizes closely-linked phloem-mobile mRNAs to control growth in developing potato tubers. In creating a complex signaling pathway, potato has evolved a long-distance transport system that regulates underground organ development through closely-associated, full-length mRNAs that function as either activators or repressors.</p></abstract><kwd-group><kwd>phloem</kwd><kwd>signals</kwd><kwd><italic>Solanum tuberosum</italic></kwd><kwd>StBEL</kwd><kwd>TALE</kwd><kwd>tuberization</kwd></kwd-group></article-meta></front><body><sec id="sec1-plants-06-00008"><title>1. Introduction</title><sec id="sec1dot1-plants-06-00008"><title>1.1. Phloem-Mobile mRNAs in Plants </title><p>Plants have evolved a unique long-distance signaling system that utilizes cell-to-cell plasmodesmatal connections and a specialized phloem cell network. In addition to its function in the transport of sugars from source to sink organs, the phloem is an important conduit for moving signals that mediate responses to stress and processes of development [<xref rid="B1-plants-06-00008" ref-type="bibr">1</xref>]. Catalogued among the many signals that are transported across the sieve element system are metabolites, hormones, proteins, small RNAs and full-length mRNAs. Phloem sap profiling has confirmed that the phloem functions in a dynamic process to deliver signals that respond to internal and environmental cues. Numerous full-length mRNAs have been identified in the sieve element system of several plant species [<xref rid="B2-plants-06-00008" ref-type="bibr">2</xref>,<xref rid="B3-plants-06-00008" ref-type="bibr">3</xref>,<xref rid="B4-plants-06-00008" ref-type="bibr">4</xref>,<xref rid="B5-plants-06-00008" ref-type="bibr">5</xref>,<xref rid="B6-plants-06-00008" ref-type="bibr">6</xref>]. Using heterografts and movement assays, several mRNAs have been identified that are transported through the vascular system. Included in this ever-growing list are <italic>Aux/IAA</italic>, <italic>FT</italic>, <italic>ATC</italic>, <italic>GAI</italic> and <italic>KNOX</italic> (<xref ref-type="table" rid="plants-06-00008-t001">Table 1</xref>). Using a heterograft system between different plant species and RNA-Seq, Notaguchi et al. [<xref rid="B7-plants-06-00008" ref-type="bibr">7</xref>] identified 138 transcripts of <italic>Arabidopsis</italic> that were mobile across an <italic>Arabidopsis</italic>/tobacco graft union. Approximately ten of these were transcription factors (TFs), including transcripts from a BEL1-like and a KNOX-type TF. In another study, using variant ecotype transcript profiling in heterografts, Thieme et al. [<xref rid="B8-plants-06-00008" ref-type="bibr">8</xref>] reported the identification of 2006 genes producing mobile RNAs in <italic>Arabidopsis</italic>. Many of these mobile transcripts followed the phloem-dependent sugar allocation pathway from leaves to roots, but a high number of transcripts also moved in a root-to-shoot direction. Yet, despite these valuable insights, mobile RNAs with an established function or phenotype are still rare. Some of the best examples of these latter types include <italic>StBEL5, -11, -29</italic> [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>] and <italic>POTH1</italic> [<xref rid="B11-plants-06-00008" ref-type="bibr">11</xref>] of potato, <italic>CmGAI</italic> of pumpkin [<xref rid="B12-plants-06-00008" ref-type="bibr">12</xref>], <italic>PFP-LeT6</italic> from tomato [<xref rid="B13-plants-06-00008" ref-type="bibr">13</xref>] and <italic>AUX/IAA</italic> [<xref rid="B14-plants-06-00008" ref-type="bibr">14</xref>], <italic>FLOWERING LOCUS T</italic> and <italic>CENTRORADIALIS</italic> [<xref rid="B15-plants-06-00008" ref-type="bibr">15</xref>,<xref rid="B16-plants-06-00008" ref-type="bibr">16</xref>,<xref rid="B17-plants-06-00008" ref-type="bibr">17</xref>] from <italic>Arabidopsis</italic>.</p><p>In addition to full-length mRNAs, small RNAs/miRNAs are also mobile through the plant&#x02019;s phloem system and play important roles in both defense and development [<xref rid="B18-plants-06-00008" ref-type="bibr">18</xref>]. Numerous miRNAs have been identified in potato [<xref rid="B19-plants-06-00008" ref-type="bibr">19</xref>,<xref rid="B20-plants-06-00008" ref-type="bibr">20</xref>], and two of these, miR172 and miR156, have been implicated in the regulation of tuber formation [<xref rid="B21-plants-06-00008" ref-type="bibr">21</xref>,<xref rid="B22-plants-06-00008" ref-type="bibr">22</xref>]. It is conceivable that miRNAs of potato play an important role in regulating the activity of full-length, mobile mRNA signals [<xref rid="B20-plants-06-00008" ref-type="bibr">20</xref>].</p></sec><sec id="sec1dot2-plants-06-00008"><title>1.2. Signals for Potato Tuberization </title><p>Tuberization in potato is controlled by phloem-mobile signals that arise from the leaf. Based on previous work, the three most important signals that regulate the onset of tuber formation in potato are StCDF1, StSP6A and StBEL5 [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B27-plants-06-00008" ref-type="bibr">27</xref>,<xref rid="B28-plants-06-00008" ref-type="bibr">28</xref>]. StCDF1 functions in the leaf with clock genes and the GI/FKF1 complex to mediate earliness [<xref rid="B28-plants-06-00008" ref-type="bibr">28</xref>]. StSP6A, an FT-like protein, and <italic>StBEL5</italic> mRNA are both mobile signals that originate in the leaf and under favorable conditions move down underground to the stolon tip to initiate tuber formation. We now understand that StBEL5 functions upstream to induce <italic>StSP6A</italic> activity, auto-regulates its own gene in stolons and induces numerous genes involved in the formation of the tuber [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>]. POTH1 is a KNOTTED1-type TF that serves as a partner to StBEL5 and can also function as a mobile RNA [<xref rid="B11-plants-06-00008" ref-type="bibr">11</xref>]. The focus of this review, however, will be the novel group of mobile RNAs from the StBEL family that contribute to controlling tuber formation. BEL1- and KNOTTED1-type proteins are transcription factors from the three-amino-loop-extension (TALE) superfamily [<xref rid="B30-plants-06-00008" ref-type="bibr">30</xref>] that interact to regulate the expression of target genes. In potato, StBEL5 and its KNOX protein partner, POTH1, regulate tuberization by targeting genes that control the growth processes of the tuber pathway [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>]. RNA movement assays demonstrated that <italic>StBEL5</italic> transcripts move through the phloem to stolon tips, the site of tuber induction. <italic>StBEL5</italic> mRNA originates in the leaf, and its movement to stolons is induced by a short-day (SD) photoperiod. This remarkable whole-plant communication system involves light induction of transcription in the leaf, photoperiod-activated mobilization of RNA and protein signals through the phloem and SD regulation of the promoters for both <italic>StBEL5</italic> and <italic>StSP6A</italic> in target organs growing underground in the dark [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>,<xref rid="B31-plants-06-00008" ref-type="bibr">31</xref>].</p></sec><sec id="sec1dot3-plants-06-00008"><title>1.3. The Tuberization Clade of the StBEL Family</title><p>BEL1-like proteins are ubiquitous plant TFs that form heterodimers with KNOTTED1-type TFs and function in both floral and vegetative development [<xref rid="B32-plants-06-00008" ref-type="bibr">32</xref>,<xref rid="B33-plants-06-00008" ref-type="bibr">33</xref>,<xref rid="B34-plants-06-00008" ref-type="bibr">34</xref>,<xref rid="B35-plants-06-00008" ref-type="bibr">35</xref>]. Using the potato genome database, thirteen active BEL1-like genes have been identified each containing the conserved homeobox domain and the BELL domain, both of which are essential for the function of BEL1-type proteins [<xref rid="B36-plants-06-00008" ref-type="bibr">36</xref>,<xref rid="B37-plants-06-00008" ref-type="bibr">37</xref>]. Phylogenetic analysis of the StBEL family demonstrated a degree of orthology with the thirteen BEL1-like genes of <italic>Arabidopsis</italic>. Based on this analysis, StBEL proteins may be grouped into five main clades (<xref ref-type="fig" rid="plants-06-00008-f001">Figure 1</xref>). One of these clades is designated the tuberization clade made up of <italic>StBEL5</italic>, <italic>StBEL11</italic> and <italic>StBEL29.</italic> These three StBEL types cluster with <italic>AtBLH1</italic> of <italic>Arabidopsis</italic> that functions with KNAT3 to affect the establishment of cell fates in the mature embryo sac [<xref rid="B38-plants-06-00008" ref-type="bibr">38</xref>]. Analyses of RNA abundance patterns using RNA-Seq data showed that these three <italic>StBEL</italic> genes make up approximately two-thirds of the total transcript values for the entire family [<xref rid="B39-plants-06-00008" ref-type="bibr">39</xref>]. Their RNA accumulation levels are very abundant in petioles and stems. Together, these observations suggest that <italic>StBEL5</italic>, <italic>-11</italic> and <italic>-29</italic> are relatively stable RNAs that play important roles in regulating development in actively-growing organs. All three exhibit enhanced levels of RNA accumulation in both leaves and stolons from short-day plants [<xref rid="B39-plants-06-00008" ref-type="bibr">39</xref>,<xref rid="B40-plants-06-00008" ref-type="bibr">40</xref>]. Within this group, <italic>StBEL5</italic> functions as a mobile RNA that impacts growth in both tubers and roots [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B31-plants-06-00008" ref-type="bibr">31</xref>]. Because of their phylogenetic similarity and their overlapping RNA accumulation patterns, our initial assumption of this group was that its members were functionally redundant and potentially shared a similar long-distance, non-cell-autonomous delivery system. This review will update the functional roles of StBEL11 and StBEL29 and compare them to StBEL5&#x02019;s regulatory role in controlling tuber formation.</p></sec></sec><sec id="sec2-plants-06-00008"><title>2. Mobile RNAs of Potato</title><sec id="sec2dot1-plants-06-00008"><title>2.1. StBEL5 Functions as a Mobile RNA Signal</title><p>The two principal factors that function as long-distance mobile signals for controlling the onset of tuber formation are the FT ortholog, StSP6A [<xref rid="B27-plants-06-00008" ref-type="bibr">27</xref>,<xref rid="B41-plants-06-00008" ref-type="bibr">41</xref>], and the full-length mRNA of <italic>StBEL5</italic>. Both arise from the leaf and under inductive conditions are transported via the phloem underground to the stolon tip to initiate tuber formation [<xref rid="B42-plants-06-00008" ref-type="bibr">42</xref>,<xref rid="B43-plants-06-00008" ref-type="bibr">43</xref>]. StBEL5 of potato functions with a KNOX partner to regulate tuber growth [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B37-plants-06-00008" ref-type="bibr">37</xref>,<xref rid="B40-plants-06-00008" ref-type="bibr">40</xref>]. In plants, BEL1-like proteins form a complex with KNOX-type transcription factors [<xref rid="B36-plants-06-00008" ref-type="bibr">36</xref>,<xref rid="B39-plants-06-00008" ref-type="bibr">39</xref>,<xref rid="B44-plants-06-00008" ref-type="bibr">44</xref>] to regulate numerous aspects of growth and development [<xref rid="B32-plants-06-00008" ref-type="bibr">32</xref>,<xref rid="B33-plants-06-00008" ref-type="bibr">33</xref>,<xref rid="B34-plants-06-00008" ref-type="bibr">34</xref>,<xref rid="B40-plants-06-00008" ref-type="bibr">40</xref>,<xref rid="B45-plants-06-00008" ref-type="bibr">45</xref>]. This BEL/KNOX complex recognizes a specific <italic>cis</italic>-element, a double TTGAC motif present in target genes of BEL1-like TFs. StBEL5 is unique in that its full-length transcript has the capacity to move long distances through the sieve element system [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B31-plants-06-00008" ref-type="bibr">31</xref>,<xref rid="B46-plants-06-00008" ref-type="bibr">46</xref>]. Long-distance transport of <italic>StBEL5</italic> mRNA through the sieve element system has been verified using RNA movement assays in both heterografts (<xref ref-type="fig" rid="plants-06-00008-f002">Figure 2</xref>) and whole plants (<xref ref-type="fig" rid="plants-06-00008-f003">Figure 3</xref>). Heterografts have featured a transgenic scion grafted onto a non-transformed WT <italic>S. tuberosum</italic> ssp. <italic>andigena</italic> line 7540 stock. With such a graft, movement of transgenic <italic>StBEL5</italic> RNA, or any potential mobile RNA, may be tracked downward across the graft union (<xref ref-type="fig" rid="plants-06-00008-f002">Figure 2</xref>A,B). To map <italic>StBEL5</italic> RNA movement using another model system, the leaf-specific galactinol synthase (GAS) promoter was employed (<xref ref-type="fig" rid="plants-06-00008-f003">Figure 3</xref>). Utilizing this system coupled with RT-qPCR, RNA mobility to other parts of the plant may readily be monitored. In both cases, enhanced mobility of <italic>StBEL5</italic> is strongly correlated to increased tuber yields (<xref ref-type="fig" rid="plants-06-00008-f002">Figure 2</xref>C and <xref ref-type="fig" rid="plants-06-00008-f003">Figure 3</xref>B). Movement of StBEL5 is enhanced by SDs (<xref ref-type="fig" rid="plants-06-00008-f003">Figure 3</xref>A) and is mediated by select RNA-binding proteins [<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>]. Expression of <italic>StBEL5</italic> is activated in leaf veins and petioles by low levels of blue and red light, but not by day length [<xref rid="B48-plants-06-00008" ref-type="bibr">48</xref>]. </p><p>In a process that leads to tuber induction, StBEL5 enhances its own activity in stolons and augments StSP6A activity in both leaves and in newly tuberizing stolon tips [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>,<xref rid="B31-plants-06-00008" ref-type="bibr">31</xref>]. Expression of both <italic>StBEL5</italic> and <italic>StSP6A</italic> is strongly induced in stolons under short-day conditions by the long-distance transport of <italic>StBEL5</italic> signal RNA [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>]. In both overexpression and suppression lines of StBEL5, accumulation of <italic>StSP6A</italic> was tightly correlated with the activity of StBEL5. By mutating five <italic>cis</italic>-elements specific for StBEL5 binding in the upstream genomic sequence of <italic>StSP6A</italic>, fusing these to a GUS marker and analyzing the construct in transgenic lines, SD-induced transcriptional activity of StSP6A was eliminated [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>]. Overall, these results strongly suggest that <italic>StSP6A</italic> is a transcriptional target of StBEL5 in both leaves and stolons and help to elucidate the mechanism for the &#x0201c;autoregulatory loop&#x0201d; formulated to explain SD-induced accumulation of transcripts of <italic>StSP6A</italic> in stolons [<xref rid="B27-plants-06-00008" ref-type="bibr">27</xref>]. Through this double induction of StSP6A in leaves and stolons and the auto-regulation of its own gene in stolons, StBEL5 functions to directly activate the tuberization program and to amplify the StSP6A signal. </p><p>There are numerous reports of StBEL5&#x02019;s positive effect on tuberization [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B40-plants-06-00008" ref-type="bibr">40</xref>,<xref rid="B46-plants-06-00008" ref-type="bibr">46</xref>,<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>]. Overexpression (OE), enhanced accumulation and regulated movement of its mRNA led to early, increased tuber yields by as much as five-fold in both the photoperiod-responsive subspecies <italic>S. tuberosum andigena</italic> and the commercial cultivar, D&#x000e9;sir&#x000e9;e. Despite these yield increases, shoot growth and morphology were normal, suggesting that the effect of StBEL5 OE on overall plant growth is specific. Tuber morphology was also similar to WT. Consistent with these results, RNA suppression of StBEL5 resulted in drastic reductions in tuber yields [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>,<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>]. In summary, careful analysis of StBEL5 activity using both OE and RNA suppression lines has established a very robust correlation between StBEL5 accumulation and potato tuber yields. Supporting this role in tuberization, recent analysis of the StBEL5-induced transcriptome identified thousands of targets genes, many of them involved in growth processes occurring in the newly-forming tuber [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>]. Examples of StBEL5-target genes that are involved in tuberization include <italic>GA2 OXIDASE1</italic> [<xref rid="B50-plants-06-00008" ref-type="bibr">50</xref>], <italic>GA20 OXIDASE1</italic> [<xref rid="B51-plants-06-00008" ref-type="bibr">51</xref>], <italic>LONELYGUY</italic> [<xref rid="B52-plants-06-00008" ref-type="bibr">52</xref>], <italic>AGL8</italic> [<xref rid="B53-plants-06-00008" ref-type="bibr">53</xref>], the <italic>PINs</italic> [<xref rid="B54-plants-06-00008" ref-type="bibr">54</xref>], <italic>AUX/IAA</italic> [<xref rid="B55-plants-06-00008" ref-type="bibr">55</xref>] and <italic>POTLX1</italic> [<xref rid="B56-plants-06-00008" ref-type="bibr">56</xref>]. In addition, expression and promoter analyses have shown clearly that StBEL5 activates three critical tuber signals, its own gene through auto-regulation [<xref rid="B31-plants-06-00008" ref-type="bibr">31</xref>], the aforementioned StSP6A and the leaf-specific signal, StCDF1 [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>]. Developmental studies with StBEL5 overexpression and suppression lines demonstrated a very strong positive correlation between StBEL5 and <italic>StSP6A</italic> gene activity [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>]. It is through this overall pattern of transcriptional control and its targeted RNA mobility that StBEL5 affects its impact on tuber formation [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>].</p></sec><sec id="sec2dot2-plants-06-00008"><title>2.2. Mobility and Function of StBEL11 and StBEL29</title><p>Because of their close sequence matches, including highly conserved functional domains and accumulation in stolons during the onset of tuber formation, we considered the possibility that members of the StBEL5/StBEL11/StBEL29 clade of StBEL-like TFs share both the mode of action and function in relation to tuber development. For example, the promoters of all three are active in leaf vasculature [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>]. More specifically, do StBEL11 and -29 exhibit mobility of their RNAs through the phloem? Are they redundant for a tuberization function? Making use of heterografts and transgenic lines that tag the target RNAs with non-plant sequence and that limit their source expression to leaf veins, experiments were designed to test the long-distance transport capacity of <italic>StBEL11</italic> and <italic>StBEL29</italic>. Several replicate heterografts of transgenic scions grafted onto WT stocks clearly demonstrated that both RNAs moved from leaves across the graft union into roots and stolon tips (<xref ref-type="fig" rid="plants-06-00008-f004">Figure 4</xref>A,B), whereas control RNAs did not (<xref ref-type="fig" rid="plants-06-00008-f004">Figure 4</xref>C,D). Using transgenic plants that drive <italic>StBEL11</italic> and <italic>-29</italic> expression by the leaf-specific GAS promoter [<xref rid="B49-plants-06-00008" ref-type="bibr">49</xref>], movement of the transgenic RNAs into stolon tips was enhanced by SD conditions (<xref ref-type="fig" rid="plants-06-00008-f004">Figure 4</xref>E). The GAS promoter is specific to minor veins of the leaf mesophyll and so is an excellent promoter to use to assess movement through the leaf vasculature. In potato, the GAS promoter is active in the minor veins of leaves, and its activity was not detected in roots, stolons or tubers [<xref rid="B46-plants-06-00008" ref-type="bibr">46</xref>]. Because of the organ-specific activity of the GAS promoter, only transgenic RNA that was transported from the leaf was quantified in stolons (<xref ref-type="fig" rid="plants-06-00008-f004">Figure 4</xref>E). These movement dynamics are similar to StBEL5 [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B46-plants-06-00008" ref-type="bibr">46</xref>]. In summary, the three sequence-related StBEL&#x02019;s, StBEL5, -11 and -29, are the only BELs of potato with RNA levels that increase in response to short-day conditions and that have been confirmed to be phloem-mobile [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>,<xref rid="B40-plants-06-00008" ref-type="bibr">40</xref>].</p><p>To determine if this phloem mobility was related to tuber development, transgenic lines were again utilized to assess the function of StBEL11 and StBEL29. Several transgenic lines that overexpressed <italic>StBEL11</italic> or <italic>StBEL29</italic> were examined utilizing both the leaf-specific GAS promoter (<xref ref-type="fig" rid="plants-06-00008-f005">Figure 5</xref>A,B) and a CaMV 35S promoter (<xref ref-type="fig" rid="plants-06-00008-f005">Figure 5</xref>C). Despite very little change in shoot growth [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>], OE in these GAS:BEL lines led to a reduction in both root and tuber growth (<xref ref-type="fig" rid="plants-06-00008-f005">Figure 5</xref>A,B), whereas OE using the CaMV 35S promoter resulted in decreased tuber yields (<xref ref-type="fig" rid="plants-06-00008-f005">Figure 5</xref>C). In direct opposition to the enhanced effect mediated by OE of StBEL5 (<xref ref-type="fig" rid="plants-06-00008-f006">Figure 6</xref>A), GAS:BEL lines of both <italic>StBEL11</italic> and <italic>StBEL29</italic> suppressed RNA levels of the tuber marker genes, <italic>StSP6A</italic> and <italic>StPIN1</italic> (<xref ref-type="fig" rid="plants-06-00008-f006">Figure 6</xref>B,C). To round out this analysis, transgenic lines that suppressed <italic>StBEL11</italic> and <italic>StBEL29</italic> through an antisense strategy were employed [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>]. In this case, despite negligible changes in shoot growth, suppression of both of these types led to enhanced tuber yields (<xref ref-type="fig" rid="plants-06-00008-f007">Figure 7</xref>A,B). Concomitant with this yield increase, RNA levels of the tuber signal gene, <italic>StSP6A</italic>, increased by as much as five-fold in these transgenic lines (<xref ref-type="fig" rid="plants-06-00008-f007">Figure 7</xref>C), whereas in StBEL5 suppression lines, <italic>StSP6A</italic> RNA levels were reduced [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>].</p><p>Tubers from the StBEL11 and -29 antisense lines appeared to exhibit a normal morphology (<xref ref-type="fig" rid="plants-06-00008-f007">Figure 7</xref>D). Based on the results from both OE and suppression lines, it is likely that these tuber phenotypes are caused by a change in the tuber genetic program. In the case of StBEL5, OE leads to an enhancement of yield, whereas OE of StBEL11 or -29 suppresses tuber yields [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>,<xref rid="B40-plants-06-00008" ref-type="bibr">40</xref>,<xref rid="B46-plants-06-00008" ref-type="bibr">46</xref>]. Considering the high degree of conservation in the amino-acid sequences of the functional domains of these three StBEL types [<xref rid="B39-plants-06-00008" ref-type="bibr">39</xref>], it is not surprising that they mediate the activity of some of the same target genes. </p></sec></sec><sec id="sec3-plants-06-00008"><title>3. Mechanism for <italic>StBEL</italic> RNA Movement: The Role of the PTB Proteins </title><p>Although there are numerous reports of full-length mobile RNAs in plants, there is very little information on the RNA sequence that mediates this process [<xref rid="B12-plants-06-00008" ref-type="bibr">12</xref>,<xref rid="B57-plants-06-00008" ref-type="bibr">57</xref>]. Such sequences, designated zip code elements, have been identified in the RNAs of animals and function in an interaction with RNA-binding proteins to control location and stability [<xref rid="B58-plants-06-00008" ref-type="bibr">58</xref>,<xref rid="B59-plants-06-00008" ref-type="bibr">59</xref>,<xref rid="B60-plants-06-00008" ref-type="bibr">60</xref>]. Most often, these zip code sequences are located in the 3&#x02032; untranslated regions (UTR) of the transcript. Recently, several papers have reported on the role of important RNA-binding proteins that facilitate the movement and stability of phloem-mobile RNAs in both pumpkin and potato [<xref rid="B24-plants-06-00008" ref-type="bibr">24</xref>,<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>].</p><p>In both cases, the key RNA-binding proteins involved were polypyrimidine tract-binding (PTB) proteins. These proteins contain four RNA recognition motifs that bind at four cytosine/uracil (CU) motifs located within 100&#x02013;200-nt regions inside the UTRs of the target RNAs [<xref rid="B61-plants-06-00008" ref-type="bibr">61</xref>]. In the case of <italic>StBEL5</italic>, the CU-rich sequence present in its 3&#x02032; UTR (<xref ref-type="fig" rid="plants-06-00008-f008">Figure 8</xref>) facilitates binding to two RNA-binding proteins, designated StPTB1 and StPTB6 (<italic>Solanum tuberosum</italic> polypyrimidine tract-binding protein) [<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>]. Previous work has confirmed that these PTB proteins fine-tune and optimize StBEL5 activity during tuber formation by enhancing the movement, stability and activity of the <italic>StBEL5</italic> RNA [<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>]. Movement assays using a PVX vector system suggest that, similar to StBEL5, the StPTB proteins are mediating movement of <italic>StBEL11</italic> and <italic>StBEL29</italic> [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>]. Because of StBEL5&#x02019;s importance as a TF and its significant effect on development [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>], and similar to other biological systems [<xref rid="B62-plants-06-00008" ref-type="bibr">62</xref>,<xref rid="B63-plants-06-00008" ref-type="bibr">63</xref>,<xref rid="B64-plants-06-00008" ref-type="bibr">64</xref>], the location and timing of StBEL5 activity is extremely critical for coordinating cell growth. Promoter analysis of the two StPTB&#x02019;s and StBEL5 demonstrates their strong concordant spatial and temporal patterns of expression, particularly in vascular tissue [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>]. All three have expression associated with phloem cells and newly-formed tubers. In independent transgenic lines, overexpression and suppression of StPTB1 and StPTB6 are directly correlated to the movement and stability of <italic>StBEL5</italic> RNA [<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>]. </p><p>The thirteen BEL RNAs of potato exhibit a wide range of RNA accumulation patterns [<xref rid="B39-plants-06-00008" ref-type="bibr">39</xref>]. <italic>StBEL5</italic>, <italic>-11</italic> and <italic>-29</italic> are by far the most abundant RNAs in the StBEL family and the only ones confirmed to be phloem-mobile [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>,<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>,<xref rid="B31-plants-06-00008" ref-type="bibr">31</xref>]. The length of the 3&#x02032; UTRs of these three mobile RNAs are the longest of the group at 505, 317 and 491 nt, respectively. Within the transcript sequence of all three, CU motifs are repeated several times in the UTRs (<xref ref-type="fig" rid="plants-06-00008-f008">Figure 8</xref>). The 3&#x02032; UTRs of <italic>StBEL5</italic>, <italic>StBEL11</italic> and <italic>StBEL29</italic> contain 16, 7 and 11 CU motifs, respectively (<xref ref-type="fig" rid="plants-06-00008-f008">Figure 8</xref>, red highlighted nucleotides). <italic>AtGAI</italic>, a confirmed mobile RNA of <italic>Arabidopsis</italic>, contains 10 CU motifs in its 3&#x02032; UTR (<xref ref-type="fig" rid="plants-06-00008-f008">Figure 8</xref>). These uracil/cytosine-rich motifs very likely mediate the binding of the RNA to the StPTB proteins [<xref rid="B24-plants-06-00008" ref-type="bibr">24</xref>,<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>]. By way of comparison, the non-mobile <italic>StBEL</italic> mRNAs, <italic>StBEL14</italic> and <italic>-22</italic>, have three and two CU motifs, respectively, in their 3&#x02032; UTRs. Considering that the mobility of all three of these RNAs was enhanced under an SD photoperiod (<xref ref-type="fig" rid="plants-06-00008-f002">Figure 2</xref>, <xref ref-type="fig" rid="plants-06-00008-f003">Figure 3</xref> and <xref ref-type="fig" rid="plants-06-00008-f004">Figure 4</xref>), it is feasible that all three mobile RNAs are transported by the same RNA/protein complex.</p></sec><sec id="sec4-plants-06-00008"><title>4. Final Perspectives</title><p>How does the repressive activity of StBEL11 and -29 work within the framework of tuber development? Could these mobile tuber signals mediate cell-specific control of growth in coordination with StBEL5 activity? The nascent tuber evolves from a specific cell layer within the apical meristem of the stolon and is characterized by a change in the direction of cell growth from transverse divisions and cell elongation to longitudinal cell division [<xref rid="B66-plants-06-00008" ref-type="bibr">66</xref>]. The apical portion of the stolon meristem becomes dormant soon after tuber initiation. At the onset of tuber formation, after stolon elongation has ceased, a band of cells within the pith and cortex enlarges and divides longitudinally. This results in swelling in the stolon tip that spreads throughout the subapical portion of the meristem [<xref rid="B66-plants-06-00008" ref-type="bibr">66</xref>]. Further size increases are mediated by the development of cells within the perimedullary region located between the pith and the cortex. These bands of progenitor cells are connected to the vascular tissue and so would be readily accessible to any mobile signals traveling along the sieve element system and into the stolon tip [<xref rid="B66-plants-06-00008" ref-type="bibr">66</xref>]. Locally, these processes are regulated by changes in hormone levels [<xref rid="B67-plants-06-00008" ref-type="bibr">67</xref>]. For example, the radial swelling that occurs in the subapical meristem of the stolon is caused by a reduction in gibberellic acid (GA) levels that leads to a reorientation of cortical microtubules to a longitudinal direction [<xref rid="B68-plants-06-00008" ref-type="bibr">68</xref>,<xref rid="B69-plants-06-00008" ref-type="bibr">69</xref>]. Under high levels of GA, the stolon tip elongates, and as GA levels drop dramatically in the developing tuber, cell division is more randomly aligned [<xref rid="B67-plants-06-00008" ref-type="bibr">67</xref>]. This results in a globular-shaped organ, the tuber, that will eventually become more ovate in shape. Other hormones, such as auxin and cytokinins, also play important roles in controlling tuber formation [<xref rid="B52-plants-06-00008" ref-type="bibr">52</xref>,<xref rid="B70-plants-06-00008" ref-type="bibr">70</xref>,<xref rid="B71-plants-06-00008" ref-type="bibr">71</xref>]. Therefore, during the onset of tuberization, some cells in the stolon meristem become very active, whereas others in close proximity remain dormant. Analyses of the transcriptional targets of StBEL5 (and other TALE TFs) indicate that a large proportion of these are involved in hormone metabolism [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>,<xref rid="B72-plants-06-00008" ref-type="bibr">72</xref>]. For example, StBEL5 suppresses GA levels in stolons by regulating the transcription of important genes controlling GA metabolism [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>,<xref rid="B31-plants-06-00008" ref-type="bibr">31</xref>,<xref rid="B37-plants-06-00008" ref-type="bibr">37</xref>]. Through similar transcriptional controls, cytokinin levels are enhanced [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>,<xref rid="B40-plants-06-00008" ref-type="bibr">40</xref>]. StBEL11/29 and StBEL5 working in tandem with their KNOX partners may readily function as stop-and-go switches that tightly maintain a balance in cell growth as the incipient tuber takes form. This process is comparable to the classic florigen/anti-florigen model [<xref rid="B73-plants-06-00008" ref-type="bibr">73</xref>]. In this system, flowering locus T (FT) protein acts as the floral signal that moves into the apex and binds to the basic leucine zipper TF, FD, to induce flowering. TERMINAL FLOWER 1-like proteins function as floral inhibitors and are antagonistic to FT function. As little as a single amino-acid change in the FT protein sequence was sufficient to transform it from a floral activator to a floral repressor [<xref rid="B74-plants-06-00008" ref-type="bibr">74</xref>].</p><p>In summary, previous work indicates that the full-length mRNAs of <italic>StBEL5</italic>, <italic>StBEL11</italic> and <italic>StBEL29</italic> are phloem-mobile and that this movement is enhanced by SD and may be regulated by a common mechanism. Enhanced movement and accumulation of <italic>StBEL5</italic> RNA results in a phenotype characterized by increased earliness and tuber yields. The movement and stability of its transcript is mediated by an interaction with the RNA-binding proteins, StPTB1 and StPTB6. <italic>StBEL11</italic> and <italic>StBEL29</italic> regulate tuber formation, but they function in opposition to the growth-promoting features of StBEL5. They both appear to inhibit growth by targeting select genes that are involved in tuber development. Consistent with this premise, suppression of both <italic>StBEL11</italic> and <italic>-29</italic> specifically increases tuber yields. In creating a complex signaling pathway, potato has evolved a long-distance transport system that regulates underground organ development through full-length mRNAs that function as both activators and repressors. The three StBEL&#x02019;s of the tuberization clade appear to balance tuber growth by mobilizing their mRNAs through an interaction with RNA-binding proteins. StBEL5 functions to directly activate the tuberization program and to amplify other important signals in the pathway [<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>]. In this model, StBEL11 and -29 function antagonistically in this process to repress tuber growth. </p></sec></body><back><ack><title>Acknowledgments</title><p>Thanks to the many excellent graduate students and post-docs who have contributed to this work. Research from the Hannapel lab was supported by the National Science Foundation Plant Genome Research Program (Grant No. 0820659). The Banerjee lab gratefully acknowledges funding support from the Indian Institute of Science Education and Research, Pune, and the Department of Science and Technology, Government of India. </p></ack><notes notes-type="COI-statement"><title>Conflicts of Interest</title><p>The authors declare no conflict of interest.</p></notes><ref-list><title>References</title><ref id="B1-plants-06-00008"><label>1.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lucas</surname><given-names>W.J.</given-names></name><name><surname>Groover</surname><given-names>A.</given-names></name><name><surname>Lichtenberger</surname><given-names>R.</given-names></name><name><surname>Furuta</surname><given-names>K.</given-names></name><name><surname>Yadav</surname><given-names>S.R.</given-names></name><name><surname>Helariutta</surname><given-names>Y.</given-names></name><name><surname>He</surname><given-names>X.Q.</given-names></name><name><surname>Fukuda</surname><given-names>H.</given-names></name><name><surname>Kang</surname><given-names>J.</given-names></name><name><surname>Brady</surname><given-names>S.M.</given-names></name><etal/></person-group>
+<article-title>The plant vascular system: Evolution, development and functions</article-title>
+<source>J. Integr. Plant Biol.</source>
+<year>2013</year>
+<volume>55</volume>
+<fpage>294</fpage>
+<lpage>388</lpage>
+<pub-id pub-id-type="doi">10.1111/jipb.12041</pub-id>
+<?supplied-pmid 23462277?><pub-id pub-id-type="pmid">23462277</pub-id></element-citation></ref><ref id="B2-plants-06-00008"><label>2.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Asano</surname><given-names>T.</given-names></name><name><surname>Masumura</surname><given-names>T.</given-names></name><name><surname>Kusano</surname><given-names>H.</given-names></name><name><surname>Kikuchi</surname><given-names>S.</given-names></name><name><surname>Kurita</surname><given-names>A.</given-names></name><name><surname>Shimada</surname><given-names>H.</given-names></name><name><surname>Kadowaki</surname><given-names>K.</given-names></name></person-group>
+<article-title>Construction of a specialized cDNA library from plant cells isolated by laser capture microdissection: Toward comprehensive analysis of the genes expressed in the rice phloem</article-title>
+<source>Plant J.</source>
+<year>2002</year>
+<volume>32</volume>
+<fpage>401</fpage>
+<lpage>408</lpage>
+<pub-id pub-id-type="doi">10.1046/j.1365-313X.2002.01423.x</pub-id>
+<?supplied-pmid 12410817?><pub-id pub-id-type="pmid">12410817</pub-id></element-citation></ref><ref id="B3-plants-06-00008"><label>3.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vilaine</surname><given-names>F.</given-names></name><name><surname>Palauqui</surname><given-names>J.C.</given-names></name><name><surname>Amselem</surname><given-names>J.</given-names></name><name><surname>Kusiak</surname><given-names>C.</given-names></name><name><surname>Lemoine</surname><given-names>R.</given-names></name><name><surname>Dinant</surname><given-names>S.</given-names></name></person-group>
+<article-title>Towards deciphering phloem: A transcriptome analysis of the phloem of <italic>Apium graveolens</italic></article-title>
+<source>Plant J.</source>
+<year>2003</year>
+<volume>36</volume>
+<fpage>67</fpage>
+<lpage>81</lpage>
+<pub-id pub-id-type="doi">10.1046/j.1365-313X.2003.01855.x</pub-id>
+<?supplied-pmid 12974812?><pub-id pub-id-type="pmid">12974812</pub-id></element-citation></ref><ref id="B4-plants-06-00008"><label>4.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Omid</surname><given-names>A.</given-names></name><name><surname>Keilin</surname><given-names>T.</given-names></name><name><surname>Glass</surname><given-names>A.</given-names></name><name><surname>Leshkowitz</surname><given-names>D.</given-names></name><name><surname>Wolf</surname><given-names>S.</given-names></name></person-group>
+<article-title>Characterization of phloem-sap transcription profile in melon plants</article-title>
+<source>J. Exp. Bot.</source>
+<year>2007</year>
+<volume>58</volume>
+<fpage>3645</fpage>
+<lpage>3656</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/erm214</pub-id>
+<?supplied-pmid 17928373?><pub-id pub-id-type="pmid">17928373</pub-id></element-citation></ref><ref id="B5-plants-06-00008"><label>5.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Deeken</surname><given-names>R.</given-names></name><name><surname>Ache</surname><given-names>P.</given-names></name><name><surname>Kajahn</surname><given-names>I.</given-names></name><name><surname>Klinkenberg</surname><given-names>J.</given-names></name><name><surname>Bringmann</surname><given-names>G.</given-names></name><name><surname>Hedrich</surname><given-names>R.</given-names></name></person-group>
+<article-title>Identification of <italic>Arabidopsis thaliana</italic> phloem RNAs provides a search criterion for phloem-based transcripts hidden in complex datasets of microarray experiments</article-title>
+<source>Plant J.</source>
+<year>2008</year>
+<volume>55</volume>
+<fpage>746</fpage>
+<lpage>759</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2008.03555.x</pub-id>
+<?supplied-pmid 18485061?><pub-id pub-id-type="pmid">18485061</pub-id></element-citation></ref><ref id="B6-plants-06-00008"><label>6.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gaupels</surname><given-names>F.</given-names></name><name><surname>Buhtz</surname><given-names>A.</given-names></name><name><surname>Knauer</surname><given-names>T.</given-names></name><name><surname>Deshmukh</surname><given-names>S.</given-names></name><name><surname>Waller</surname><given-names>F.</given-names></name><name><surname>van Bel</surname><given-names>A.J.E.</given-names></name><name><surname>Kogel</surname><given-names>K.H.</given-names></name><name><surname>Kehr</surname><given-names>J.</given-names></name></person-group>
+<article-title>Adaptation of aphid stylectomy for analyses of proteins and mRNAs in barley phloem sap</article-title>
+<source>J. Exp. Bot.</source>
+<year>2008</year>
+<volume>59</volume>
+<fpage>3297</fpage>
+<lpage>3306</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/ern181</pub-id>
+<?supplied-pmid 18632729?><pub-id pub-id-type="pmid">18632729</pub-id></element-citation></ref><ref id="B7-plants-06-00008"><label>7.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Notaguchi</surname><given-names>M.</given-names></name><name><surname>Higashiyama</surname><given-names>T.</given-names></name><name><surname>Suzuki</surname><given-names>T.</given-names></name></person-group>
+<article-title>Identification of mRNAs that move over long distances using an RNA-Seq analysis of <italic>Arabidopsis</italic>/<italic>Nicotiana benthamiana</italic> heterografts</article-title>
+<source>Plant Cell Physiol.</source>
+<year>2015</year>
+<volume>56</volume>
+<fpage>311</fpage>
+<lpage>321</lpage>
+<pub-id pub-id-type="doi">10.1093/pcp/pcu210</pub-id>
+<?supplied-pmid 25527829?><pub-id pub-id-type="pmid">25527829</pub-id></element-citation></ref><ref id="B8-plants-06-00008"><label>8.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Thieme</surname><given-names>C.J.</given-names></name><name><surname>Rojas-Triana</surname><given-names>M.</given-names></name><name><surname>Stecyk</surname><given-names>E.</given-names></name><name><surname>Schudoma</surname><given-names>C.</given-names></name><name><surname>Zhang</surname><given-names>W.</given-names></name><name><surname>Yang</surname><given-names>L.</given-names></name><name><surname>Mi&#x000f1;ambres</surname><given-names>M.</given-names></name><name><surname>Walther</surname><given-names>D.</given-names></name><name><surname>Schulze</surname><given-names>W.X.</given-names></name><name><surname>Paz-Ares</surname><given-names>J.</given-names></name><etal/></person-group>
+<article-title>Endogenous Arabidopsis messenger RNAs transported to distant tissues</article-title>
+<source>Nat. Plants</source>
+<year>2015</year>
+<volume>1</volume>
+<fpage>15025</fpage>
+<pub-id pub-id-type="doi">10.1038/nplants.2015.25</pub-id>
+<?supplied-pmid 27247031?><pub-id pub-id-type="pmid">27247031</pub-id></element-citation></ref><ref id="B9-plants-06-00008"><label>9.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Banerjee</surname><given-names>A.K.</given-names></name><name><surname>Chatterjee</surname><given-names>M.</given-names></name><name><surname>Yu</surname><given-names>Y.</given-names></name><name><surname>Suh</surname><given-names>S.G.</given-names></name><name><surname>Miller</surname><given-names>W.A.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>Dynamics of a mobile RNA of potato involved in a long-distance signaling pathway</article-title>
+<source>Plant Cell</source>
+<year>2006</year>
+<volume>18</volume>
+<fpage>3443</fpage>
+<lpage>3457</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.106.042473</pub-id>
+<?supplied-pmid 17189340?><pub-id pub-id-type="pmid">17189340</pub-id></element-citation></ref><ref id="B10-plants-06-00008"><label>10.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ghate</surname><given-names>T.H.</given-names></name><name><surname>Sharma</surname><given-names>P.</given-names></name><name><surname>Khondare</surname><given-names>K.R.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name><name><surname>Banerjee</surname><given-names>A.K.</given-names></name></person-group>
+<article-title>The mobile RNAs, StBEL11 and StBEL29, suppress growth of tubers in potato</article-title>
+<source>Plant Mol. Biol.</source>
+<year>2017</year>
+<pub-id pub-id-type="doi">10.1007/s11103-016-0582-4</pub-id>
+<?supplied-pmid 28084609?><pub-id pub-id-type="pmid">28084609</pub-id></element-citation></ref><ref id="B11-plants-06-00008"><label>11.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mahajan</surname><given-names>A.</given-names></name><name><surname>Bhogle</surname><given-names>S.</given-names></name><name><surname>Kang</surname><given-names>I.H.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name><name><surname>Banerjee</surname><given-names>A.K.</given-names></name></person-group>
+<article-title>The mRNA of a Knotted1-like transcription factor of potato is phloem mobile</article-title>
+<source>Plant Mol. Biol.</source>
+<year>2012</year>
+<volume>79</volume>
+<fpage>595</fpage>
+<lpage>608</lpage>
+<pub-id pub-id-type="doi">10.1007/s11103-012-9931-0</pub-id>
+<?supplied-pmid 22638904?><pub-id pub-id-type="pmid">22638904</pub-id></element-citation></ref><ref id="B12-plants-06-00008"><label>12.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Haywood</surname><given-names>V.</given-names></name><name><surname>Yu</surname><given-names>T.S.</given-names></name><name><surname>Huang</surname><given-names>N.C.</given-names></name><name><surname>Lucas</surname><given-names>W.J.</given-names></name></person-group>
+<article-title>Phloem long-distance trafficking of GIBBERELLIC ACID-INSENSITIVE RNA regulates leaf development</article-title>
+<source>Plant J.</source>
+<year>2005</year>
+<volume>42</volume>
+<fpage>49</fpage>
+<lpage>68</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2005.02351.x</pub-id>
+<?supplied-pmid 15773853?><pub-id pub-id-type="pmid">15773853</pub-id></element-citation></ref><ref id="B13-plants-06-00008"><label>13.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kim</surname><given-names>M.</given-names></name><name><surname>Canio</surname><given-names>W.</given-names></name><name><surname>Kessler</surname><given-names>S.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>Developmental changes due to long distance movement of a homeobox fusion transcript in tomato</article-title>
+<source>Science</source>
+<year>2001</year>
+<volume>293</volume>
+<fpage>287</fpage>
+<lpage>289</lpage>
+<pub-id pub-id-type="doi">10.1126/science.1059805</pub-id>
+<?supplied-pmid 11452121?><pub-id pub-id-type="pmid">11452121</pub-id></element-citation></ref><ref id="B14-plants-06-00008"><label>14.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Notaguchi</surname><given-names>M.</given-names></name><name><surname>Wolf</surname><given-names>S.</given-names></name><name><surname>Lucas</surname><given-names>W.J.</given-names></name></person-group>
+<article-title>Phloem-mobile Aux/IAA transcripts target to the root tip and modify root architecture</article-title>
+<source>J. Integr. Plant Biol.</source>
+<year>2012</year>
+<volume>54</volume>
+<fpage>760</fpage>
+<lpage>772</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1744-7909.2012.01155.x</pub-id>
+<?supplied-pmid 22925478?><pub-id pub-id-type="pmid">22925478</pub-id></element-citation></ref><ref id="B15-plants-06-00008"><label>15.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Li</surname><given-names>C.</given-names></name><name><surname>Gu</surname><given-names>M.</given-names></name><name><surname>Shi</surname><given-names>N.</given-names></name><name><surname>Zhang</surname><given-names>H.</given-names></name><name><surname>Yang</surname><given-names>X.</given-names></name><name><surname>Osman</surname><given-names>T.</given-names></name><name><surname>Liu</surname><given-names>Y.</given-names></name><name><surname>Wang</surname><given-names>H.</given-names></name><name><surname>Vatish</surname><given-names>M.</given-names></name><name><surname>Jackson</surname><given-names>S.</given-names></name><etal/></person-group>
+<article-title>Mobile FT mRNA contributes to the systemic florigen signalling in floral induction</article-title>
+<source>Sci. Rep.</source>
+<year>2011</year>
+<volume>1</volume>
+<fpage>73</fpage>
+<pub-id pub-id-type="doi">10.1038/srep00073</pub-id>
+<?supplied-pmid 22355592?><pub-id pub-id-type="pmid">22355592</pub-id></element-citation></ref><ref id="B16-plants-06-00008"><label>16.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Huang</surname><given-names>N.C.</given-names></name><name><surname>Jane</surname><given-names>W.N.</given-names></name><name><surname>Chen</surname><given-names>J.</given-names></name><name><surname>Yu</surname><given-names>T.S.</given-names></name></person-group>
+<article-title><italic>Arabidopsis</italic> CENTRORADIALIS homologue acts systemically to inhibit floral initiation in <italic>Arabidopsis</italic></article-title>
+<source>Plant J.</source>
+<year>2012</year>
+<volume>72</volume>
+<fpage>175</fpage>
+<lpage>184</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2012.05076.x</pub-id>
+<?supplied-pmid 22702636?><pub-id pub-id-type="pmid">22702636</pub-id></element-citation></ref><ref id="B17-plants-06-00008"><label>17.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lu</surname><given-names>K.J.</given-names></name><name><surname>Huang</surname><given-names>N.C.</given-names></name><name><surname>Liu</surname><given-names>Y.S.</given-names></name><name><surname>Lu</surname><given-names>C.A.</given-names></name><name><surname>Yu</surname><given-names>T.S.</given-names></name></person-group>
+<article-title>Long-distance movement of <italic>Arabidopsis</italic> FLOWERING LOCUS T RNA participates in systemic floral regulation</article-title>
+<source>RNA Biol.</source>
+<year>2012</year>
+<volume>9</volume>
+<fpage>653</fpage>
+<lpage>662</lpage>
+<pub-id pub-id-type="doi">10.4161/rna.19965</pub-id>
+<?supplied-pmid 22614833?><pub-id pub-id-type="pmid">22614833</pub-id></element-citation></ref><ref id="B18-plants-06-00008"><label>18.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Molnar</surname><given-names>A.</given-names></name><name><surname>Melnyk</surname><given-names>C.W.</given-names></name><name><surname>Bassett</surname><given-names>A.</given-names></name><name><surname>Hardcastle</surname><given-names>T.J.</given-names></name><name><surname>Dunn</surname><given-names>R.</given-names></name><name><surname>Baulcombe</surname><given-names>D.C.</given-names></name></person-group>
+<article-title>Small silencing RNAs in plants are mobile and direct epigenetic modification in recipient cells</article-title>
+<source>Science</source>
+<year>2010</year>
+<volume>328</volume>
+<fpage>872</fpage>
+<lpage>875</lpage>
+<pub-id pub-id-type="doi">10.1126/science.1187959</pub-id>
+<?supplied-pmid 20413459?><pub-id pub-id-type="pmid">20413459</pub-id></element-citation></ref><ref id="B19-plants-06-00008"><label>19.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhang</surname><given-names>R.</given-names></name><name><surname>Marshall</surname><given-names>D.</given-names></name><name><surname>Bryan</surname><given-names>G.J.</given-names></name><name><surname>Hornyik</surname><given-names>C.</given-names></name></person-group>
+<article-title>Identification and characterization of miRNA transcriptome in potato by high-throughput sequencing</article-title>
+<source>PLoS ONE</source>
+<year>2013</year>
+<volume>8</volume>
+<elocation-id>e57233</elocation-id>
+<pub-id pub-id-type="doi">10.1371/journal.pone.0057233</pub-id>
+<?supplied-pmid 23437348?><pub-id pub-id-type="pmid">23437348</pub-id></element-citation></ref><ref id="B20-plants-06-00008"><label>20.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lakhotia</surname><given-names>N.</given-names></name><name><surname>Joshi</surname><given-names>G.</given-names></name><name><surname>Bhardwaj</surname><given-names>A.R.</given-names></name><name><surname>Katiyar-Agarwal</surname><given-names>S.</given-names></name><name><surname>Agarwal</surname><given-names>M.</given-names></name><name><surname>Jagannath</surname><given-names>A.</given-names></name><name><surname>Goel</surname><given-names>S.</given-names></name><name><surname>Kumar</surname><given-names>A.</given-names></name></person-group>
+<article-title>Identification and characterization of miRNAome in root, stem, leaf and tuber developmental stages of potato (<italic>Solanum tuberosum</italic> L.) by high-throughput sequencing</article-title>
+<source>BMC Plant Biol.</source>
+<year>2014</year>
+<volume>14</volume>
+<elocation-id>6</elocation-id>
+<pub-id pub-id-type="doi">10.1186/1471-2229-14-6</pub-id>
+<?supplied-pmid 24397411?><pub-id pub-id-type="pmid">24397411</pub-id></element-citation></ref><ref id="B21-plants-06-00008"><label>21.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Martin</surname><given-names>A.</given-names></name><name><surname>Adam</surname><given-names>H.</given-names></name><name><surname>D&#x000ed;az-Mendoza</surname><given-names>M.</given-names></name><name><surname>Zurczak</surname><given-names>M.</given-names></name><name><surname>Gonz&#x000e1;lez-Schain</surname><given-names>N.D.</given-names></name><name><surname>Su&#x000e1;rez-L&#x000f3;pez</surname><given-names>P.</given-names></name></person-group>
+<article-title>Graft-transmissible induction of potato tuberization by the microRNA miR172</article-title>
+<source>Development</source>
+<year>2009</year>
+<volume>136</volume>
+<fpage>2873</fpage>
+<lpage>2881</lpage>
+<pub-id pub-id-type="doi">10.1242/dev.031658</pub-id>
+<?supplied-pmid 19666819?><pub-id pub-id-type="pmid">19666819</pub-id></element-citation></ref><ref id="B22-plants-06-00008"><label>22.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bhogale</surname><given-names>S.</given-names></name><name><surname>Mahajan</surname><given-names>A.S.</given-names></name><name><surname>Natarajan</surname><given-names>B.</given-names></name><name><surname>Rajabhoj</surname><given-names>M.</given-names></name><name><surname>Thulasiram</surname><given-names>H.V.</given-names></name><name><surname>Banerjee</surname><given-names>A.K.</given-names></name></person-group>
+<article-title>MicroRNA156: A potential graft-transmissible microRNA that modulates plant architecture and tuberization in <italic>Solanum tuberosum</italic> ssp. <italic>andigena</italic></article-title>
+<source>Plant Physiol.</source>
+<year>2014</year>
+<volume>164</volume>
+<fpage>1011</fpage>
+<lpage>1027</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.113.230714</pub-id>
+<?supplied-pmid 24351688?><pub-id pub-id-type="pmid">24351688</pub-id></element-citation></ref><ref id="B23-plants-06-00008"><label>23.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kanehira</surname><given-names>A.</given-names></name><name><surname>Yamada</surname><given-names>K.</given-names></name><name><surname>Iwaya</surname><given-names>T.</given-names></name><name><surname>Tsuwamoto</surname><given-names>R.</given-names></name><name><surname>Kasai</surname><given-names>A.</given-names></name><name><surname>Nakazono</surname><given-names>M.</given-names></name><name><surname>Harada</surname><given-names>T.</given-names></name></person-group>
+<article-title>Apple phloem cells contain some mRNAs transported over long distances</article-title>
+<source>Tree Genet. Genomes</source>
+<year>2010</year>
+<volume>5</volume>
+<fpage>635</fpage>
+<lpage>642</lpage>
+<pub-id pub-id-type="doi">10.1007/s11295-010-0279-9</pub-id>
+</element-citation></ref><ref id="B24-plants-06-00008"><label>24.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ham</surname><given-names>B.K.</given-names></name><name><surname>Brandom</surname><given-names>J.L.</given-names></name><name><surname>Xoconostle-Cazares</surname><given-names>B.</given-names></name><name><surname>Ringgold</surname><given-names>V.</given-names></name><name><surname>Lough</surname><given-names>T.L.</given-names></name><name><surname>Lucas</surname><given-names>W.J.</given-names></name></person-group>
+<article-title>A polypyrimidine tract binding protein, pumpkin RBP50, forms the basis of a phloem-mobile ribonucleoprotein complex</article-title>
+<source>Plant Cell</source>
+<year>2009</year>
+<volume>21</volume>
+<fpage>197</fpage>
+<lpage>215</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.108.061317</pub-id>
+<?supplied-pmid 19122103?><pub-id pub-id-type="pmid">19122103</pub-id></element-citation></ref><ref id="B25-plants-06-00008"><label>25.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ruiz-Medrano</surname><given-names>R.</given-names></name><name><surname>Xoconostle-Cazares</surname><given-names>B.</given-names></name><name><surname>Lucas</surname><given-names>W.J.</given-names></name></person-group>
+<article-title>Phloem long-distance transport of CmNACP mRNA: Implications for supracellular regulation in plants</article-title>
+<source>Development</source>
+<year>1999</year>
+<volume>126</volume>
+<fpage>4405</fpage>
+<lpage>4419</lpage>
+<?supplied-pmid 10498677?><pub-id pub-id-type="pmid">10498677</pub-id></element-citation></ref><ref id="B26-plants-06-00008"><label>26.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yang</surname><given-names>H.W.</given-names></name><name><surname>Yu</surname><given-names>T.S.</given-names></name></person-group>
+<article-title><italic>Arabidopsis</italic> floral regulators <italic>FVE</italic> and <italic>AGL24</italic> are phloem-mobile RNAs</article-title>
+<source>Bot. Stud.</source>
+<year>2010</year>
+<volume>51</volume>
+<fpage>17</fpage>
+<lpage>26</lpage>
+</element-citation></ref><ref id="B27-plants-06-00008"><label>27.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Navarro</surname><given-names>C.</given-names></name><name><surname>Abelenda</surname><given-names>J.A.</given-names></name><name><surname>Cruz-Or&#x000f3;</surname><given-names>E.</given-names></name><name><surname>Cu&#x000e9;llar</surname><given-names>C.A.</given-names></name><name><surname>Tamaki</surname><given-names>S.</given-names></name><name><surname>Silva</surname><given-names>J.</given-names></name><name><surname>Shimamoto</surname><given-names>K.</given-names></name><name><surname>Prat</surname><given-names>S.</given-names></name></person-group>
+<article-title>Control of flowering and storage organ formation in potato by FLOWERING LOCUS T</article-title>
+<source>Nature</source>
+<year>2011</year>
+<volume>478</volume>
+<fpage>119</fpage>
+<lpage>122</lpage>
+<pub-id pub-id-type="doi">10.1038/nature10431</pub-id>
+<?supplied-pmid 21947007?><pub-id pub-id-type="pmid">21947007</pub-id></element-citation></ref><ref id="B28-plants-06-00008"><label>28.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kloosterman</surname><given-names>B.</given-names></name><name><surname>Abelenda</surname><given-names>J.A.</given-names></name><name><surname>del Mar Gomez</surname><given-names>M.</given-names></name><name><surname>Oortwijn</surname><given-names>M.</given-names></name><name><surname>de Boer</surname><given-names>J.M.</given-names></name><name><surname>Kowitwanich</surname><given-names>K.</given-names></name><name><surname>Horvath</surname><given-names>B.M.</given-names></name><name><surname>van Eck</surname><given-names>H.J.</given-names></name><name><surname>Smaczniak</surname><given-names>C.</given-names></name><name><surname>Prat</surname><given-names>S.</given-names></name><etal/></person-group>
+<article-title>Naturally occurring allele diversity allows potato cultivation in northern latitudes</article-title>
+<source>Nature</source>
+<year>2013</year>
+<volume>495</volume>
+<fpage>246</fpage>
+<lpage>250</lpage>
+<pub-id pub-id-type="doi">10.1038/nature11912</pub-id>
+<?supplied-pmid 23467094?><pub-id pub-id-type="pmid">23467094</pub-id></element-citation></ref><ref id="B29-plants-06-00008"><label>29.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sharma</surname><given-names>P.</given-names></name><name><surname>Lin</surname><given-names>T.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>Targets of the <italic>StBEL5</italic> transcription factor include the FT ortholog <italic>StSP6A</italic></article-title>
+<source>Plant Physiol.</source>
+<year>2016</year>
+<volume>170</volume>
+<fpage>310</fpage>
+<lpage>324</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.15.01314</pub-id>
+<?supplied-pmid 26553650?><pub-id pub-id-type="pmid">26553650</pub-id></element-citation></ref><ref id="B30-plants-06-00008"><label>30.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>B&#x000fc;rglin</surname><given-names>T.R.</given-names></name></person-group>
+<article-title>Analysis of TALE superclass homeobox genes (MEIS, PBC, KNOX, Iroquois, TGIF) reveals a novel domain conserved between plants and animals</article-title>
+<source>Nucl. Acids Res.</source>
+<year>1997</year>
+<volume>25</volume>
+<fpage>4173</fpage>
+<lpage>4180</lpage>
+<pub-id pub-id-type="doi">10.1093/nar/25.21.4173</pub-id>
+<?supplied-pmid 9336443?><pub-id pub-id-type="pmid">9336443</pub-id></element-citation></ref><ref id="B31-plants-06-00008"><label>31.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lin</surname><given-names>T.</given-names></name><name><surname>Sharma</surname><given-names>P.</given-names></name><name><surname>Gonzalez</surname><given-names>D.H.</given-names></name><name><surname>Viola</surname><given-names>I.L.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>The impact of the long-distance transport of a BEL1-like mRNA on development</article-title>
+<source>Plant Physiol.</source>
+<year>2013</year>
+<volume>161</volume>
+<fpage>760</fpage>
+<lpage>772</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.112.209429</pub-id>
+<?supplied-pmid 23221774?><pub-id pub-id-type="pmid">23221774</pub-id></element-citation></ref><ref id="B32-plants-06-00008"><label>32.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rutjens</surname><given-names>B.</given-names></name><name><surname>Bao</surname><given-names>D.</given-names></name><name><surname>van Eck-Stouten</surname><given-names>E.</given-names></name><name><surname>Brand</surname><given-names>M.</given-names></name><name><surname>Smeekens</surname><given-names>S.</given-names></name><name><surname>Proveniers</surname><given-names>M.</given-names></name></person-group>
+<article-title>Shoot apical meristem function in Arabidopsis requires the combined activities of three BEL1-like homeodomain proteins</article-title>
+<source>Plant J.</source>
+<year>2009</year>
+<volume>58</volume>
+<fpage>641</fpage>
+<lpage>654</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2009.03809.x</pub-id>
+<?supplied-pmid 19175771?><pub-id pub-id-type="pmid">19175771</pub-id></element-citation></ref><ref id="B33-plants-06-00008"><label>33.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ung</surname><given-names>N.</given-names></name><name><surname>Lal</surname><given-names>S.</given-names></name><name><surname>Smith</surname><given-names>H.M.</given-names></name></person-group>
+<article-title>The role of PENNYWISE and POUND-FOOLISH in the maintenance of the shoot apical meristem in <italic>Arabidopsis</italic></article-title>
+<source>Plant Physiol.</source>
+<year>2011</year>
+<volume>156</volume>
+<fpage>605</fpage>
+<lpage>614</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.110.171462</pub-id>
+<?supplied-pmid 21505100?><pub-id pub-id-type="pmid">21505100</pub-id></element-citation></ref><ref id="B34-plants-06-00008"><label>34.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Smith</surname><given-names>H.M.S.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>The interaction of two homeobox genes, <italic>BREVIPEDICELLUS</italic> and <italic>PENNYWISE</italic>, regulates internode patterning in the <italic>Arabidopsis</italic> inflorescence</article-title>
+<source>Plant Cell</source>
+<year>2003</year>
+<volume>15</volume>
+<fpage>1717</fpage>
+<lpage>1727</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.012856</pub-id>
+<?supplied-pmid 12897247?><pub-id pub-id-type="pmid">12897247</pub-id></element-citation></ref><ref id="B35-plants-06-00008"><label>35.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Khan</surname><given-names>M.</given-names></name><name><surname>Tabb</surname><given-names>P.</given-names></name><name><surname>Hepworth</surname><given-names>S.R.</given-names></name></person-group>
+<article-title>BLADE-ON-PETIOLE1 and 2 regulate <italic>Arabidopsis</italic> inflorescence architecture in conjunction with homeobox genes KNAT6 and ATH1</article-title>
+<source>Plant Signal Behav.</source>
+<year>2012</year>
+<volume>7</volume>
+<fpage>788</fpage>
+<lpage>792</lpage>
+<pub-id pub-id-type="doi">10.4161/psb.20599</pub-id>
+<?supplied-pmid 22751300?><pub-id pub-id-type="pmid">22751300</pub-id></element-citation></ref><ref id="B36-plants-06-00008"><label>36.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>M&#x000fc;ller</surname><given-names>J.</given-names></name><name><surname>Wang</surname><given-names>Y.</given-names></name><name><surname>Franzen</surname><given-names>R.</given-names></name><name><surname>Santi</surname><given-names>L.</given-names></name><name><surname>Salamini</surname><given-names>F.</given-names></name><name><surname>Rohde</surname><given-names>W.</given-names></name></person-group>
+<article-title>In vitro interactions between barley TALE proteins suggest a role for protein-protein associations in the regulation of Knox gene function</article-title>
+<source>Plant J.</source>
+<year>2001</year>
+<volume>27</volume>
+<fpage>13</fpage>
+<lpage>23</lpage>
+<pub-id pub-id-type="doi">10.1046/j.1365-313x.2001.01064.x</pub-id>
+<?supplied-pmid 11489179?><pub-id pub-id-type="pmid">11489179</pub-id></element-citation></ref><ref id="B37-plants-06-00008"><label>37.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chen</surname><given-names>H.</given-names></name><name><surname>Banerjee</surname><given-names>A.K.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>The tandem complex of BEL and KNOX partners is required for transcriptional repression of ga20ox1</article-title>
+<source>Plant J.</source>
+<year>2004</year>
+<volume>38</volume>
+<fpage>276</fpage>
+<lpage>284</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2004.02048.x</pub-id>
+<?supplied-pmid 15078330?><pub-id pub-id-type="pmid">15078330</pub-id></element-citation></ref><ref id="B38-plants-06-00008"><label>38.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pagnussat</surname><given-names>G.C.</given-names></name><name><surname>Yu</surname><given-names>H.J.</given-names></name><name><surname>Sundaresan</surname><given-names>V.</given-names></name></person-group>
+<article-title>Cell-fate switch of synergid to egg cell in Arabidopsis eostre mutant embryo sacs arises from misexpression of the BEL1-like homeodomain gene BLH1</article-title>
+<source>Plant Cell</source>
+<year>2007</year>
+<volume>19</volume>
+<fpage>3578</fpage>
+<lpage>3592</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.107.054890</pub-id>
+<?supplied-pmid 18055603?><pub-id pub-id-type="pmid">18055603</pub-id></element-citation></ref><ref id="B39-plants-06-00008"><label>39.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sharma</surname><given-names>P.</given-names></name><name><surname>Lin</surname><given-names>T.</given-names></name><name><surname>Grandellis</surname><given-names>C.</given-names></name><name><surname>Yu</surname><given-names>M.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>The BEL1-like family of transcription factors in potato</article-title>
+<source>J. Exp. Bot.</source>
+<year>2014</year>
+<volume>65</volume>
+<fpage>709</fpage>
+<lpage>723</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/ert432</pub-id>
+<?supplied-pmid 24474812?><pub-id pub-id-type="pmid">24474812</pub-id></element-citation></ref><ref id="B40-plants-06-00008"><label>40.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chen</surname><given-names>H.</given-names></name><name><surname>Rosin</surname><given-names>F.M.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>Interacting transcription factors from the three amino acid loop extension superclass regulate tuber formation</article-title>
+<source>Plant Physiol.</source>
+<year>2003</year>
+<volume>132</volume>
+<fpage>1391</fpage>
+<lpage>1404</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.103.022434</pub-id>
+<?supplied-pmid 12857821?><pub-id pub-id-type="pmid">12857821</pub-id></element-citation></ref><ref id="B41-plants-06-00008"><label>41.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Abelenda</surname><given-names>J.A.</given-names></name><name><surname>Navarro</surname><given-names>C.</given-names></name><name><surname>Prat</surname><given-names>S.</given-names></name></person-group>
+<article-title>Flowering and tuberization: A tale of two nightshades</article-title>
+<source>Trends Plant Sci.</source>
+<year>2014</year>
+<volume>19</volume>
+<fpage>115</fpage>
+<lpage>122</lpage>
+<pub-id pub-id-type="doi">10.1016/j.tplants.2013.09.010</pub-id>
+<?supplied-pmid 24139978?><pub-id pub-id-type="pmid">24139978</pub-id></element-citation></ref><ref id="B42-plants-06-00008"><label>42.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Su&#x000e1;rez-L&#x000f3;pez</surname><given-names>P.</given-names></name></person-group>
+<article-title>A critical appraisal of phloem-mobile signals involved in tuber induction</article-title>
+<source>Front. Plant Sci.</source>
+<year>2013</year>
+<volume>4</volume>
+<fpage>253</fpage>
+<pub-id pub-id-type="doi">10.3389/fpls.2013.00253</pub-id>
+<?supplied-pmid 23882274?><pub-id pub-id-type="pmid">23882274</pub-id></element-citation></ref><ref id="B43-plants-06-00008"><label>43.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>A perspective on photoperiodic phloem-mobile signals that control development</article-title>
+<source>Front. Plant Sci.</source>
+<year>2013</year>
+<volume>4</volume>
+<fpage>295</fpage>
+<pub-id pub-id-type="doi">10.3389/fpls.2013.00295</pub-id>
+<?supplied-pmid 23935603?><pub-id pub-id-type="pmid">23935603</pub-id></element-citation></ref><ref id="B44-plants-06-00008"><label>44.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bellaoui</surname><given-names>M.</given-names></name><name><surname>Pidkowich</surname><given-names>M.S.</given-names></name><name><surname>Samach</surname><given-names>A.</given-names></name><name><surname>Kushalappa</surname><given-names>K.</given-names></name><name><surname>Kohalmi</surname><given-names>S.E.</given-names></name><name><surname>Modrusan</surname><given-names>Z.</given-names></name><name><surname>Crosby</surname><given-names>W.L.</given-names></name><name><surname>Haughn</surname><given-names>G.W.</given-names></name></person-group>
+<article-title>The Arabidopsis BELL1 and KNOX TALE homeodomain proteins interact through a domain conserved between plants and animals</article-title>
+<source>Plant Cell</source>
+<year>2001</year>
+<volume>13</volume>
+<fpage>2455</fpage>
+<lpage>2470</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.13.11.2455</pub-id>
+<?supplied-pmid 11701881?><pub-id pub-id-type="pmid">11701881</pub-id></element-citation></ref><ref id="B45-plants-06-00008"><label>45.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Brambilla</surname><given-names>V.</given-names></name><name><surname>Battaglia</surname><given-names>R.</given-names></name><name><surname>Colombo</surname><given-names>M.</given-names></name><name><surname>Masiero</surname><given-names>S.</given-names></name><name><surname>Bencivenga</surname><given-names>S.</given-names></name><name><surname>Kater</surname><given-names>M.M.</given-names></name><name><surname>Colombo</surname><given-names>L.</given-names></name></person-group>
+<article-title>Genetic and molecular interactions between BELL1 and MADS box factors support ovule development in Arabidopsis</article-title>
+<source>Plant Cell</source>
+<year>2007</year>
+<volume>19</volume>
+<fpage>2544</fpage>
+<lpage>2556</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.107.051797</pub-id>
+<?supplied-pmid 17693535?><pub-id pub-id-type="pmid">17693535</pub-id></element-citation></ref><ref id="B46-plants-06-00008"><label>46.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Banerjee</surname><given-names>A.K.</given-names></name><name><surname>Lin</surname><given-names>T.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>Untranslated regions of a mobile transcript mediate RNA metabolism</article-title>
+<source>Plant Physiol.</source>
+<year>2009</year>
+<volume>151</volume>
+<fpage>1831</fpage>
+<lpage>1843</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.109.144428</pub-id>
+<?supplied-pmid 19783647?><pub-id pub-id-type="pmid">19783647</pub-id></element-citation></ref><ref id="B47-plants-06-00008"><label>47.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cho</surname><given-names>S.K.</given-names></name><name><surname>Sharma</surname><given-names>P.</given-names></name><name><surname>Butler</surname><given-names>N.M.</given-names></name><name><surname>Kang</surname><given-names>I.H.</given-names></name><name><surname>Shah</surname><given-names>S.</given-names></name><name><surname>Rao</surname><given-names>A.G.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>Polypyrimidine tract-binding proteins of potato mediate tuberization through an interaction with StBEL5 RNA</article-title>
+<source>J. Exp. Bot.</source>
+<year>2015</year>
+<volume>66</volume>
+<fpage>6835</fpage>
+<lpage>6847</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/erv389</pub-id>
+<?supplied-pmid 26283046?><pub-id pub-id-type="pmid">26283046</pub-id></element-citation></ref><ref id="B48-plants-06-00008"><label>48.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chatterjee</surname><given-names>M.</given-names></name><name><surname>Banerjee</surname><given-names>A.K.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>A BELL1-like gene of potato is light activated and wound inducible</article-title>
+<source>Plant Physiol.</source>
+<year>2007</year>
+<volume>145</volume>
+<fpage>1435</fpage>
+<lpage>1443</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.107.105924</pub-id>
+<?supplied-pmid 17921341?><pub-id pub-id-type="pmid">17921341</pub-id></element-citation></ref><ref id="B49-plants-06-00008"><label>49.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ayre</surname><given-names>B.G.</given-names></name><name><surname>Blair</surname><given-names>J.E.</given-names></name><name><surname>Turgeon</surname><given-names>R.</given-names></name></person-group>
+<article-title>Functional and phylogenetic analyses of a conserved regulatory program in the phloem of minor veins</article-title>
+<source>Plant Physiol.</source>
+<year>2003</year>
+<volume>133</volume>
+<fpage>1229</fpage>
+<lpage>1239</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.103.027714</pub-id>
+<?supplied-pmid 14526110?><pub-id pub-id-type="pmid">14526110</pub-id></element-citation></ref><ref id="B50-plants-06-00008"><label>50.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kloosterman</surname><given-names>B.</given-names></name><name><surname>Navarro</surname><given-names>C.</given-names></name><name><surname>Bijsterbosch</surname><given-names>G.</given-names></name><name><surname>Lange</surname><given-names>T.</given-names></name><name><surname>Prat</surname><given-names>S.</given-names></name><name><surname>Visser</surname><given-names>R.G.</given-names></name><name><surname>Bachem</surname><given-names>C.W.</given-names></name></person-group>
+<article-title>StGA2ox1 is induced prior to stolon swelling and controls GA levels during potato tuber development</article-title>
+<source>Plant J.</source>
+<year>2007</year>
+<volume>52</volume>
+<fpage>362</fpage>
+<lpage>373</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2007.03245.x</pub-id>
+<?supplied-pmid 17764503?><pub-id pub-id-type="pmid">17764503</pub-id></element-citation></ref><ref id="B51-plants-06-00008"><label>51.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Carrera</surname><given-names>E.</given-names></name><name><surname>Bou</surname><given-names>J.</given-names></name><name><surname>Garc&#x000ed;a-Mart&#x000ed;nez</surname><given-names>J.L.</given-names></name><name><surname>Prat</surname><given-names>S.</given-names></name></person-group>
+<article-title>Changes in <italic>GA 20-oxidase</italic> gene expression strongly affect stem length, tuber induction and tuber yield of potato plants</article-title>
+<source>Plant J.</source>
+<year>2000</year>
+<volume>22</volume>
+<fpage>247</fpage>
+<lpage>256</lpage>
+<pub-id pub-id-type="doi">10.1046/j.1365-313x.2000.00736.x</pub-id>
+<?supplied-pmid 10849342?><pub-id pub-id-type="pmid">10849342</pub-id></element-citation></ref><ref id="B52-plants-06-00008"><label>52.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Eviatar-Ribak</surname><given-names>T.</given-names></name><name><surname>Shalit-Kaneh</surname><given-names>A.</given-names></name><name><surname>Chappell-Maor</surname><given-names>L.</given-names></name><name><surname>Amsellem</surname><given-names>Z.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name><name><surname>Lifschitz</surname><given-names>E.</given-names></name></person-group>
+<article-title>A cytokinin-activating enzyme promotes tuber formation in tomato</article-title>
+<source>Curr. Biol.</source>
+<year>2013</year>
+<volume>23</volume>
+<fpage>1057</fpage>
+<lpage>1064</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2013.04.061</pub-id>
+<?supplied-pmid 23746638?><pub-id pub-id-type="pmid">23746638</pub-id></element-citation></ref><ref id="B53-plants-06-00008"><label>53.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rosin</surname><given-names>F.M.</given-names></name><name><surname>Hart</surname><given-names>J.K.</given-names></name><name><surname>van Onckelen</surname><given-names>H.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>Suppression of a vegetative MADS box gene of potato activates axillary meristem development</article-title>
+<source>Plant Physiol.</source>
+<year>2003</year>
+<volume>131</volume>
+<fpage>1613</fpage>
+<lpage>1622</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.102.012500</pub-id>
+<?supplied-pmid 12692320?><pub-id pub-id-type="pmid">12692320</pub-id></element-citation></ref><ref id="B54-plants-06-00008"><label>54.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Roumeliotis</surname><given-names>E.</given-names></name><name><surname>Kloosterman</surname><given-names>B.</given-names></name><name><surname>Oortwijn</surname><given-names>M.</given-names></name><name><surname>Visser</surname><given-names>R.G.</given-names></name><name><surname>Bachem</surname><given-names>C.W.</given-names></name></person-group>
+<article-title>The PIN family of proteins in potato and their putative role in tuberization</article-title>
+<source>Front. Plant Sci.</source>
+<year>2013</year>
+<volume>14</volume>
+<fpage>524</fpage>
+<pub-id pub-id-type="doi">10.3389/fpls.2013.00524</pub-id>
+<?supplied-pmid 24391658?><pub-id pub-id-type="pmid">24391658</pub-id></element-citation></ref><ref id="B55-plants-06-00008"><label>55.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gao</surname><given-names>J.</given-names></name><name><surname>Cao</surname><given-names>X.</given-names></name><name><surname>Shi</surname><given-names>S.</given-names></name><name><surname>Ma</surname><given-names>Y.</given-names></name><name><surname>Wang</surname><given-names>K.</given-names></name><name><surname>Liu</surname><given-names>S.</given-names></name><name><surname>Chen</surname><given-names>D.</given-names></name><name><surname>Chen</surname><given-names>Q.</given-names></name><name><surname>Ma</surname><given-names>H.</given-names></name></person-group>
+<article-title>Genome-wide survey of Aux/IAA gene family members in potato (<italic>Solanum tuberosum</italic>): Identification, expression analysis, and evaluation of their roles in tuber development</article-title>
+<source>Biochem. Biophys. Res. Commun.</source>
+<year>2016</year>
+<pub-id pub-id-type="doi">10.1016/j.bbrc.2016.02.013</pub-id>
+<?supplied-pmid 26869512?><pub-id pub-id-type="pmid">26869512</pub-id></element-citation></ref><ref id="B56-plants-06-00008"><label>56.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kolomiets</surname><given-names>M.V.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name><name><surname>Chen</surname><given-names>H.</given-names></name><name><surname>Tymeson</surname><given-names>M.</given-names></name><name><surname>Gladon</surname><given-names>R.J.</given-names></name></person-group>
+<article-title>Lipoxygenase is involved in the control of potato tuber development</article-title>
+<source>Plant Cell</source>
+<year>2001</year>
+<volume>13</volume>
+<fpage>613</fpage>
+<lpage>626</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.13.3.613</pub-id>
+<?supplied-pmid 11251100?><pub-id pub-id-type="pmid">11251100</pub-id></element-citation></ref><ref id="B57-plants-06-00008"><label>57.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Huang</surname><given-names>N.C.</given-names></name><name><surname>Yu</surname><given-names>T.S.</given-names></name></person-group>
+<article-title>The sequences of Arabidopsis GA-INSENSITIVE RNA constitute the motifs that are necessary and sufficient for RNA long-distance trafficking</article-title>
+<source>Plant J.</source>
+<year>2009</year>
+<volume>59</volume>
+<fpage>921</fpage>
+<lpage>929</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2009.03918.x</pub-id>
+<?supplied-pmid 19453448?><pub-id pub-id-type="pmid">19453448</pub-id></element-citation></ref><ref id="B58-plants-06-00008"><label>58.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Corral-Debrinski</surname><given-names>M.</given-names></name><name><surname>Blugeon</surname><given-names>C.</given-names></name><name><surname>Sawicka</surname><given-names>J.C.</given-names></name></person-group>
+<article-title>In yeast, the 3&#x02032;untranslated region or the presequence of ATM1 is required for the exclusive localization of its mRNA to the vicinity of mitochondria</article-title>
+<source>Mol. Cell. Biol.</source>
+<year>2000</year>
+<volume>20</volume>
+<fpage>7881</fpage>
+<lpage>7892</lpage>
+<pub-id pub-id-type="doi">10.1128/MCB.20.21.7881-7892.2000</pub-id>
+<?supplied-pmid 11027259?><pub-id pub-id-type="pmid">11027259</pub-id></element-citation></ref><ref id="B59-plants-06-00008"><label>59.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Thio</surname><given-names>G.L.</given-names></name><name><surname>Ray</surname><given-names>R.P.</given-names></name><name><surname>Barcelo</surname><given-names>G.</given-names></name><name><surname>Sch&#x000fc;pbach</surname><given-names>T.</given-names></name></person-group>
+<article-title>Localization of gurken RNA in Drosophila oogenesis requires elements in the 5&#x02032; and 3&#x02032; regions of the transcript</article-title>
+<source>Dev. Biol.</source>
+<year>2000</year>
+<volume>221</volume>
+<fpage>435</fpage>
+<lpage>446</lpage>
+<pub-id pub-id-type="doi">10.1006/dbio.2000.9690</pub-id>
+<?supplied-pmid 10790337?><pub-id pub-id-type="pmid">10790337</pub-id></element-citation></ref><ref id="B60-plants-06-00008"><label>60.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jansen</surname><given-names>R.P.</given-names></name></person-group>
+<article-title>mRNA localization: Message on the move</article-title>
+<source>Nat. Rev. Mol. Cell. Biol.</source>
+<year>2001</year>
+<volume>2</volume>
+<fpage>247</fpage>
+<lpage>256</lpage>
+<pub-id pub-id-type="doi">10.1038/35067016</pub-id>
+<?supplied-pmid 11283722?><pub-id pub-id-type="pmid">11283722</pub-id></element-citation></ref><ref id="B61-plants-06-00008"><label>61.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sawicka</surname><given-names>K.</given-names></name><name><surname>Bushell</surname><given-names>M.</given-names></name><name><surname>Spriggs</surname><given-names>K.A.</given-names></name><name><surname>Willis</surname><given-names>A.E.</given-names></name></person-group>
+<article-title>Polypyrimidine tract-binding protein: A multifunctional RNA-binding protein</article-title>
+<source>Biochem. Soc. Trans.</source>
+<year>2008</year>
+<volume>36</volume>
+<fpage>641</fpage>
+<lpage>647</lpage>
+<pub-id pub-id-type="doi">10.1042/BST0360641</pub-id>
+<?supplied-pmid 18631133?><pub-id pub-id-type="pmid">18631133</pub-id></element-citation></ref><ref id="B62-plants-06-00008"><label>62.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>King</surname><given-names>M.L.</given-names></name><name><surname>Messitt</surname><given-names>T.J.</given-names></name><name><surname>Mowry</surname><given-names>K.L.</given-names></name></person-group>
+<article-title>Putting RNAs in the right place at the right time: RNA localization in the frog oocyte</article-title>
+<source>Biol. Cell.</source>
+<year>2005</year>
+<volume>97</volume>
+<fpage>19</fpage>
+<lpage>33</lpage>
+<pub-id pub-id-type="doi">10.1042/BC20040067</pub-id>
+<?supplied-pmid 15601255?><pub-id pub-id-type="pmid">15601255</pub-id></element-citation></ref><ref id="B63-plants-06-00008"><label>63.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Eliscovich</surname><given-names>C.</given-names></name><name><surname>Buxbaum</surname><given-names>A.R.</given-names></name><name><surname>Katz</surname><given-names>Z.B.</given-names></name><name><surname>Singer</surname><given-names>R.H.</given-names></name></person-group>
+<article-title>mRNA on the move: The road to its biological destiny</article-title>
+<source>J. Biol. Chem.</source>
+<year>2013</year>
+<volume>288</volume>
+<fpage>20361</fpage>
+<lpage>20368</lpage>
+<pub-id pub-id-type="doi">10.1074/jbc.R113.452094</pub-id>
+<?supplied-pmid 23720759?><pub-id pub-id-type="pmid">23720759</pub-id></element-citation></ref><ref id="B64-plants-06-00008"><label>64.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Buxbaum</surname><given-names>A.R.</given-names></name><name><surname>Haimovich</surname><given-names>G.</given-names></name><name><surname>Singer</surname><given-names>R.H.</given-names></name></person-group>
+<article-title>In the right place at the right time: Visualizing and understanding mRNA localization</article-title>
+<source>Nat. Rev. Mol. Cell. Biol.</source>
+<year>2015</year>
+<volume>16</volume>
+<fpage>95</fpage>
+<lpage>109</lpage>
+<pub-id pub-id-type="doi">10.1038/nrm3918</pub-id>
+<?supplied-pmid 25549890?><pub-id pub-id-type="pmid">25549890</pub-id></element-citation></ref><ref id="B65-plants-06-00008"><label>65.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Auweter</surname><given-names>S.D.</given-names></name><name><surname>Allain</surname><given-names>F.H.T.</given-names></name></person-group>
+<article-title>Structure&#x02013;function relationships of the polypyrimidine tract binding protein</article-title>
+<source>Cell. Mol. Life Sci.</source>
+<year>2008</year>
+<volume>65</volume>
+<fpage>516</fpage>
+<lpage>527</lpage>
+<pub-id pub-id-type="doi">10.1007/s00018-007-7378-2</pub-id>
+<?supplied-pmid 17975705?><pub-id pub-id-type="pmid">17975705</pub-id></element-citation></ref><ref id="B66-plants-06-00008"><label>66.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Xu</surname><given-names>X.</given-names></name><name><surname>Vreugdenhil</surname><given-names>D.</given-names></name><name><surname>van Lammeren</surname><given-names>A.A.M.</given-names></name></person-group>
+<article-title>Cell division and cell enlargement during potato tuber formation</article-title>
+<source>J. Exp. Bot.</source>
+<year>1998</year>
+<volume>49</volume>
+<fpage>573</fpage>
+<lpage>582</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/49.320.573</pub-id>
+</element-citation></ref><ref id="B67-plants-06-00008"><label>67.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Xu</surname><given-names>X.</given-names></name><name><surname>van Lammeren</surname><given-names>A.A.M.</given-names></name><name><surname>Vermeer</surname><given-names>E.</given-names></name><name><surname>Vreugdenhil</surname><given-names>D.</given-names></name></person-group>
+<article-title>The role of gibberellin, abscisic acid, and sucrose in the regulation of potato tuber formation in vitro</article-title>
+<source>Plant Physiol.</source>
+<year>1998</year>
+<volume>117</volume>
+<fpage>575</fpage>
+<lpage>584</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.117.2.575</pub-id>
+<?supplied-pmid 9625710?><pub-id pub-id-type="pmid">9625710</pub-id></element-citation></ref><ref id="B68-plants-06-00008"><label>68.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sanz</surname><given-names>M.J.</given-names></name><name><surname>Mingo-Castel</surname><given-names>A.</given-names></name><name><surname>van Lammeren</surname><given-names>A.A.M.</given-names></name><name><surname>Vreugdenhil</surname><given-names>D.</given-names></name></person-group>
+<article-title>Changes in the microtubular cytoskeleton precede in vitro tuber formation in potato</article-title>
+<source>Protoplasma</source>
+<year>1996</year>
+<volume>191</volume>
+<fpage>46</fpage>
+<lpage>54</lpage>
+<pub-id pub-id-type="doi">10.1007/BF01280824</pub-id>
+</element-citation></ref><ref id="B69-plants-06-00008"><label>69.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shibaoka</surname><given-names>H.</given-names></name></person-group>
+<article-title>Regulation by gibberellins of the orientation of cortical microtubules in plant cells</article-title>
+<source>Aust. J. Plant Physiol.</source>
+<year>1993</year>
+<volume>20</volume>
+<fpage>461</fpage>
+<lpage>470</lpage>
+<pub-id pub-id-type="doi">10.1071/PP9930461</pub-id>
+</element-citation></ref><ref id="B70-plants-06-00008"><label>70.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Roumeliotis</surname><given-names>E.</given-names></name><name><surname>Kloosterman</surname><given-names>B.</given-names></name><name><surname>Oortwijn</surname><given-names>M.</given-names></name><name><surname>Kohlen</surname><given-names>W.</given-names></name><name><surname>Bouwmeester</surname><given-names>H.J.</given-names></name><name><surname>Visser</surname><given-names>R.G.</given-names></name><name><surname>Bachem</surname><given-names>C.W.</given-names></name></person-group>
+<article-title>The effects of auxin and strigolactones on tuber initiation and stolon architecture in potato</article-title>
+<source>J. Exp. Bot.</source>
+<year>2012</year>
+<volume>63</volume>
+<fpage>4539</fpage>
+<lpage>4547</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/ers132</pub-id>
+<?supplied-pmid 22689826?><pub-id pub-id-type="pmid">22689826</pub-id></element-citation></ref><ref id="B71-plants-06-00008"><label>71.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kolachevskaya</surname><given-names>O.O.</given-names></name><name><surname>Alekseeva</surname><given-names>V.V.</given-names></name><name><surname>Sergeeva</surname><given-names>L.I.</given-names></name><name><surname>Rukavtsova</surname><given-names>E.B.</given-names></name><name><surname>Getman</surname><given-names>I.A.</given-names></name><name><surname>Vreugdenhil</surname><given-names>D.</given-names></name><name><surname>Buryanov</surname><given-names>Y.I.</given-names></name><name><surname>Romanov</surname><given-names>G.A.</given-names></name></person-group>
+<article-title>Expression of auxin synthesis gene tms1 under control of a tuber-specific promoter enhances potato tuberization in vitro</article-title>
+<source>J. Integr. Plant Biol.</source>
+<year>2015</year>
+<volume>57</volume>
+<fpage>734</fpage>
+<lpage>744</lpage>
+<pub-id pub-id-type="doi">10.1111/jipb.12314</pub-id>
+<?supplied-pmid 25421937?><pub-id pub-id-type="pmid">25421937</pub-id></element-citation></ref><ref id="B72-plants-06-00008"><label>72.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bolduc</surname><given-names>N.</given-names></name><name><surname>Yilmaz</surname><given-names>A.</given-names></name><name><surname>Mejia-Guerra</surname><given-names>M.K.</given-names></name><name><surname>Morohashi</surname><given-names>K.</given-names></name><name><surname>O&#x02019;Connor</surname><given-names>D.</given-names></name><name><surname>Grotewold</surname><given-names>E.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Unraveling the KNOTTED1 regulatory network in maize meristems</article-title>
+<source>Genes Develop.</source>
+<year>2012</year>
+<volume>26</volume>
+<fpage>1685</fpage>
+<lpage>1690</lpage>
+<pub-id pub-id-type="doi">10.1101/gad.193433.112</pub-id>
+<?supplied-pmid 22855831?><pub-id pub-id-type="pmid">22855831</pub-id></element-citation></ref><ref id="B73-plants-06-00008"><label>73.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lifschitz</surname><given-names>E.</given-names></name><name><surname>Ayre</surname><given-names>B.G.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name></person-group>
+<article-title>Florigen and anti-florigen&#x02014;A systemic mechanism for coordinating growth and termination in flowering plants</article-title>
+<source>Front. Plant Sci.</source>
+<year>2014</year>
+<volume>5</volume>
+<pub-id pub-id-type="doi">10.3389/fpls.2014.00465</pub-id>
+<?supplied-pmid 25278944?><pub-id pub-id-type="pmid">25278944</pub-id></element-citation></ref><ref id="B74-plants-06-00008"><label>74.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hanzawa</surname><given-names>Y.</given-names></name><name><surname>Money</surname><given-names>T.</given-names></name><name><surname>Bradley</surname><given-names>D.</given-names></name></person-group>
+<article-title>A single amino acid converts a repressor to an activator of flowering</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2005</year>
+<volume>102</volume>
+<fpage>7748</fpage>
+<lpage>7753</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.0500932102</pub-id>
+<?supplied-pmid 15894619?><pub-id pub-id-type="pmid">15894619</pub-id></element-citation></ref></ref-list></back><floats-group><fig id="plants-06-00008-f001" position="float"><label>Figure 1</label><caption><p>Phylogenetic relationship of the BEL1-like proteins of <italic>Arabidopsis</italic> and potato. The amino acid sequences of the thirteen known potato BEL1-like proteins were compared with BEL1 proteins of <italic>Arabidopsis</italic>. These data were organized into a phylogenetic tree with the MEGA4.0.2 package and the neighbor-joining program. The numbers listed at the branching points are boot-strapping values that indicate the level of significance (percentage) for the separation of two branches. The length of the branch line indicates the extent of difference according to the scale at the lower left-hand side. StBEL&#x02019;s are represented in bold letters. Putative functions are listed for each group. The red oval designates the StBEL5 clade. OFP, OVATE FAMILY PROTEIN. With permission of the authors [<xref rid="B39-plants-06-00008" ref-type="bibr">39</xref>].</p></caption><graphic xlink:href="plants-06-00008-g001"/></fig><fig id="plants-06-00008-f002" position="float"><label>Figure 2</label><caption><p>StBEL5 RNA moves through a heterograft graft, and this movement is associated with enhanced tuber yield. Soil-grown wild-type stock plants (<italic>S. tuberosum</italic> ssp. <italic>andigena</italic>) were grafted with scions from a StBEL5 overexpression line (<bold>A</bold>). After four weeks of long days (LDs) in the greenhouse, grafted plants were transferred to a growth chamber and acclimated under LD conditions for one week before transfer to short-day (SD) conditions. Leaf and stolon tip samples were harvested after 12 days of SD conditions and the RNA extracted. RT-PCR with gene-specific primers was performed (<bold>B</bold>) for both a negative control (a potato MADS box gene, 102-23) and test samples (StBEL5-FL, [full length]). Grafts made from an over-expression line for an antisense sequence of a potato MADS box gene (line 102-23) were used as a non-mobile control. RNA from scion leaf samples was used as a positive control (scion leaf). WT RNA from stolon tips, 0.5 cm in length, was sampled for both heterografts and used in the RT-PCR reactions. PCR was performed twice off a template made from RNA and reverse transcriptase. Two different gene-specific primers were used with a non-plant DNA tag specific for the transgenic RNA to discriminate from the native RNA. Three plants were assayed for both heterografts and are designated 1, 2 and 3. RNA from leaves of a WT/WT autograft was used as a negative PCR control (WT leaf lane). WT is non-transformed <italic>andigena</italic> line 7540. Similar negative results were obtained with RNA from autograft stolons. For tuber yields (<bold>C</bold>), plants were harvested after 28 days, and the mean of three plants was calculated for WT and StBEL5 grafted plants. WT scions grafted onto WT stocks were used as the yield controls. gfw, grams fresh weight. With permission of the authors [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>].</p></caption><graphic xlink:href="plants-06-00008-g002"/></fig><fig id="plants-06-00008-f003" position="float"><label>Figure 3</label><caption><p>The correlation of <italic>StBEL5</italic> RNA movement into stolon tips (<bold>A</bold>) and tuber yields (<bold>B</bold>) in a transgenic line expressing full-length <italic>StBEL5</italic> transcripts driven by the leaf-specific <italic>CmGAS</italic> promoter [<xref rid="B46-plants-06-00008" ref-type="bibr">46</xref>,<xref rid="B49-plants-06-00008" ref-type="bibr">49</xref>]. A transgenic line with GUS transcripts driven by the same leaf-specific promoter was included as a control (<bold>B</bold>). Transgenic plants (<italic>S. tuberosum</italic> ssp. <italic>andigena</italic>) were grown under greenhouse conditions until the 12&#x02013;14 leaf stage and then grown under short or long days for 10 days before harvest. Harvested plants were scored for tuber numbers after 10 days and tuber yields after 28 days under SD conditions (<bold>B</bold>). Total RNA was extracted from 0.5-cm stolon tips and new leaves from three separate plants. RT-PCR was performed using a non-plant sequence tag fused to all transgenic RNAs, and a gene-specific primer from the 3&#x02032; UTR of St-<italic>BEL5</italic> (<bold>A</bold>). The full-length <italic>BEL5</italic> and GUS constructs were cloned downstream from the <italic>CmGAS</italic> promoter in the binary vector, pBI101.2. Non-transformed control plants are designated &#x0201c;WT 7540&#x0201d;. Homogenous PCR products were quantified (<bold>A</bold>) by using ImageJ software and normalized by using rRNA values [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>]. Standard errors of the means of the three biological replicates are shown (<bold>A</bold>,<bold>B</bold>). &#x025a1;, leaf; &#x025a0;, stolon (<bold>A</bold>). GUS expression was detected in leaves, but not stolons of GAS::GUS transgenic lines of <italic>S. tuberosum</italic> ssp. <italic>andigena</italic> [<xref rid="B46-plants-06-00008" ref-type="bibr">46</xref>]. With permission of the authors [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>].</p></caption><graphic xlink:href="plants-06-00008-g003"/></fig><fig id="plants-06-00008-f004" position="float"><label>Figure 4</label><caption><p>Movement of transgenic <italic>StBEL11</italic> (<bold>A</bold>) and <italic>-29</italic> (<bold>B</bold>) mRNA across heterografts of soil-grown plants. Heterografts were performed with four replicates of <italic>GAS::BEL11</italic> (line 11b), <italic>GAS::BEL29</italic> (line 29-9) and <italic>GAS::GUS</italic> scions on non-transformed wild-type <italic>S. tuberosum</italic> ssp. <italic>andigena</italic> line 7540 (WT) stocks. Culture conditions and one-step RT-PCR using transgenic-specific primers were previously described [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>]. All PCR products detected in scion (positive control) and stock (test for movement) RNA samples represent transgenic RNA. RNA from scion leaf samples was used as a positive control (scion samples). Heterografts are designated R1-4 (root stock RNA) and St1-4 (stolon stock RNA). Negative controls for movement of GUS (<bold>C</bold>) and PCR of WT (<bold>D</bold>) RNA are included. Photoperiod effect on the movement of transgenic <italic>StBEL29</italic> and <italic>StBEL11</italic> mRNA from leaves into stolons was assessed (<bold>E</bold>). Full-length transgenic RNA was driven by the leaf-specific GAS promoter of melon [<xref rid="B46-plants-06-00008" ref-type="bibr">46</xref>,<xref rid="B49-plants-06-00008" ref-type="bibr">49</xref>]. GAS::BEL11 and -29 plants were grown under either long-day (LD) or short-day (SD) conditions [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>]. RT-qPCR with gene-specific primers was used to calculate the amount of transgenic RNA in stolons. Samples were measured in duplicate and normalized against <italic>StActin8</italic> mRNA. The fold change in RNA levels was calculated as the 2<sup>&#x02212;&#x00394;&#x00394;Ct</sup> value relative to transgenic RNA (set at a value of 1.0) detected in the source leaf. Standard errors of the means of two biological replicates are shown with one or two asterisks indicating a significant difference (<italic>p</italic> &#x0003c; 0.05 or <italic>p</italic> &#x0003c; 0.01, respectively). With permission of the publisher [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>].</p></caption><graphic xlink:href="plants-06-00008-g004"/></fig><fig id="plants-06-00008-f005" position="float"><label>Figure 5</label><caption><p>Root (<bold>A</bold>) and tuber (<bold>B</bold>) yields from non-transformed <italic>S. tuberosum</italic> ssp. <italic>andigena</italic> (WT line 7540) and GAS::StBEL11 and -29 transgenic lines grown under short-day conditions in growth chambers. (<bold>C</bold>) Tuber yields in 7540 (WT), 35S::StBEL11 (lines 7 and 11) and 35S::StBEL29 (lines 6 and 11) transgenic lines. Plants were grown under long days for four weeks followed by three (GAS lines) or four (35S lines) weeks under short-day conditions. At harvest, shoots were weighed, and tubers and roots were washed in water, blotted dry and weighed. Data (g&#x000b7;fr&#x000b7;wt plant<sup>&#x02212;1</sup> = grams fresh weight per plant) represent the mean of four (GAS lines) or seven (35S lines) biological replicates. Error bars represent &#x000b1;SD. One, two or three asterisks indicate significance (<italic>p</italic> &#x0003c; 0.05, <italic>p</italic> &#x0003c; 0.01 and <italic>p</italic> &#x0003c; 0.001, respectively) using a Student&#x02019;s <italic>t-</italic>test. By permission of the publisher [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>].</p></caption><graphic xlink:href="plants-06-00008-g005"/></fig><fig id="plants-06-00008-f006" position="float"><label>Figure 6</label><caption><p>Relative levels of <italic>StSP6A</italic>, and <italic>StPIN1</italic> RNA in tuberizing stolons of WT 7540 <italic>andigena</italic> (open bars), GAS:StBEL5 (<bold>A</bold>), GAS:StBEL11 (<bold>B</bold>) and -29 (<bold>C</bold>) transgenic lines (black bars) grown under short-day conditions. Data represent the mean of two biological replicates and two technical reps. Plants were grown under long days for four weeks followed by two weeks under short-day conditions. StBEL5 enhances the levels of RNA for these target genes whereas, StBEL11 and -29 suppress the activity of these target genes. With permission of the publisher and authors [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>,<xref rid="B29-plants-06-00008" ref-type="bibr">29</xref>].</p></caption><graphic xlink:href="plants-06-00008-g006"/></fig><fig id="plants-06-00008-f007" position="float"><label>Figure 7</label><caption><p>Phenotype of RNA antisense lines for StBEL11 (11-1, 11-2) and StBEL29 (29-1, 29-2). After screening, select independent lines were grown for eight weeks under long days and then 21 d under SD conditions, harvested and scored for shoot growth (<bold>A</bold>) and tuber yields (<bold>B</bold>). <italic>Andigena</italic> line 7540 is a non-transformed WT line. For analysis of the tuber target gene, <italic>StSP6A</italic> (<bold>C</bold>), RNA was extracted from 21-day SD stolons and quantified using RT-qPCR with gene-specific primers. Error bars represent &#x000b1;SD of five plants for the whole plant analysis and two biological replicates for the RT-qPCR. A Student&#x02019;s <italic>t</italic>-test was performed to check significance with one, two and three asterisks indicating <italic>p</italic>-values of &#x0003c;0.05, &#x0003c;0.01 and &#x0003c;0.001, respectively. Tuber samples from RNA antisense lines for StBEL11 and StBEL29 (<bold>D</bold>). Plants were grown in a growth chamber as described above prior to harvest. For each line, tubers were pooled from three plants. White bar = 1.0 cm. With permission of the publisher [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>].</p></caption><graphic xlink:href="plants-06-00008-g007"/></fig><fig id="plants-06-00008-f008" position="float"><label>Figure 8</label><caption><p>Cytosine/uracil (CU) motifs present in the 3&#x02032; UTRs of four mobile RNAs, <italic>AtGAI</italic> [<xref rid="B57-plants-06-00008" ref-type="bibr">57</xref>], <italic>StBEL5</italic> [<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>] and <italic>StBEL11</italic> and -<italic>29</italic> [<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>]. CU motifs of three nt or more are designated in a bold red font. GenBank accession numbers are Y15193 for <italic>AtGAI</italic>, AF406697 for <italic>StBEL5</italic>, AF406698 for <italic>StBEL11</italic> and AF406702 for <italic>StBEL29</italic>. These CU motifs are putative targets for the four RNA-recognition motifs present in polypyrimidine tract-binding proteins that bind numerous RNAs to regulate their metabolism [<xref rid="B47-plants-06-00008" ref-type="bibr">47</xref>,<xref rid="B65-plants-06-00008" ref-type="bibr">65</xref>].</p></caption><graphic xlink:href="plants-06-00008-g008"/></fig><table-wrap id="plants-06-00008-t001" position="float"><object-id pub-id-type="pii">plants-06-00008-t001_Table 1</object-id><label>Table 1</label><caption><p>Phloem-mobile mRNAs of transcription factors that move across heterografts.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">RNA</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Annotation</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Putative Function</th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Reference</th></tr></thead><tbody><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>MpSLR/IAA14</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Auxin response factor</td><td align="center" valign="middle" rowspan="1" colspan="1">Transcriptional repressor </td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B23-plants-06-00008" ref-type="bibr">23</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>CmSCL14P</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Scarecrow-like</td><td align="center" valign="middle" rowspan="1" colspan="1">Transcription factor</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B24-plants-06-00008" ref-type="bibr">24</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>CmSTM</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Shoot meristemless</td><td align="center" valign="middle" rowspan="1" colspan="1">Meristem regulator</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B24-plants-06-00008" ref-type="bibr">24</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>CmERF</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Ethylene response factor</td><td align="center" valign="middle" rowspan="1" colspan="1">Ethylene signaling</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B24-plants-06-00008" ref-type="bibr">24</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>CmNAC</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">NAM, ATAF1/2 and CUC2</td><td align="center" valign="middle" rowspan="1" colspan="1">Meristem development</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B25-plants-06-00008" ref-type="bibr">25</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>CmMyb</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Myb-like transcription factor</td><td align="center" valign="middle" rowspan="1" colspan="1">Transcriptional activator</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B24-plants-06-00008" ref-type="bibr">24</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>BoFVE</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Mammalian retinoblastoma-associated protein</td><td align="center" valign="middle" rowspan="1" colspan="1">Floral regulator</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B26-plants-06-00008" ref-type="bibr">26</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>BoAGL24</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Agamous-like</td><td align="center" valign="middle" rowspan="1" colspan="1">Floral regulator</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B26-plants-06-00008" ref-type="bibr">26</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>AtAux/IAA18 and -28 *</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Auxin response factor</td><td align="center" valign="middle" rowspan="1" colspan="1">Auxin signaling &#x021e9;</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B14-plants-06-00008" ref-type="bibr">14</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>CmGAI *</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">GA Insensitive</td><td align="center" valign="middle" rowspan="1" colspan="1">Leaf morphology &#x021e7;</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B12-plants-06-00008" ref-type="bibr">12</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>StBEL5 *</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Potato BEL1-like family</td><td align="center" valign="middle" rowspan="1" colspan="1">Tuber growth &#x021e9;</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B9-plants-06-00008" ref-type="bibr">9</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>StBEL11/29 *</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Potato BEL1-like family</td><td align="center" valign="middle" rowspan="1" colspan="1">Tuber growth &#x021e9;</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B10-plants-06-00008" ref-type="bibr">10</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>POTH1 *</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Potato KNOTTED1-type</td><td align="center" valign="middle" rowspan="1" colspan="1">Vegetative growth &#x021e9;</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B11-plants-06-00008" ref-type="bibr">11</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>PFP-LeT6 *</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Tomato Knotted1-type fusion</td><td align="center" valign="middle" rowspan="1" colspan="1">Leaf morphology &#x021e7;</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B13-plants-06-00008" ref-type="bibr">13</xref>]</td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><italic>FT *</italic>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">Arabidopsis Flowering locus T</td><td align="center" valign="middle" rowspan="1" colspan="1">Activates flowering &#x021e7;</td><td align="center" valign="middle" rowspan="1" colspan="1">[<xref rid="B15-plants-06-00008" ref-type="bibr">15</xref>]</td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><italic>ATC *</italic>
+</td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">Arabidopsis CENTRORADIALIS </td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">Represses flowering &#x021e7;</td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">[<xref rid="B16-plants-06-00008" ref-type="bibr">16</xref>]</td></tr></tbody></table><table-wrap-foot><fn><p><bold>*</bold> Indicates that movement of the RNA is associated with a phenotype. <italic>At</italic>, <italic>Arabidopsis thaliana</italic>; <italic>Cm</italic>, <italic>Cucurbita maxima</italic>; <italic>Le</italic>, <italic>Lycopersicon esculentum</italic>; <italic>Mp</italic>, <italic>Malus prunifolia</italic>; <italic>Bo</italic>, <italic>Brassica oleracea</italic>; <italic>St</italic>, <italic>Solanum tuberosum</italic>; PFP, pyrophosphate-dependent fructose 6-phosphate phosphotransferase. Arrows in the function column of the last seven RNAs indicate the prominent direction of the mobile transcript through a graft union.</p></fn></table-wrap-foot></table-wrap></floats-group></article>

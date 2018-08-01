@@ -1,0 +1,792 @@
+{
+  "id": [
+    "19302712"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "19302712"
+  ],
+  "pmcid": [
+    "PMC2666766"
+  ],
+  "doi": [
+    "10.1186/1471-2164-10-120"
+  ],
+  "title": [
+    "Sugarcane genes associated with sucrose content."
+  ],
+  "authorString": [
+    "Papini-Terzi FS, Rocha FR, Vêncio RZ, Felix JM, Branco DS, Waclawovsky AJ, Del Bem LE, Lembke CG, Costa MD, Nishiyama MY, Vicentini R, Vincentz MG, Ulian EC, Menossi M, Souza GM."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Papini-Terzi FS"
+          ],
+          "firstName": [
+            "Flávia S"
+          ],
+          "lastName": [
+            "Papini-Terzi"
+          ],
+          "initials": [
+            "FS"
+          ]
+        },
+        {
+          "fullName": [
+            "Rocha FR"
+          ],
+          "firstName": [
+            "Flávia R"
+          ],
+          "lastName": [
+            "Rocha"
+          ],
+          "initials": [
+            "FR"
+          ]
+        },
+        {
+          "fullName": [
+            "Vêncio RZ"
+          ],
+          "firstName": [
+            "Ricardo Z N"
+          ],
+          "lastName": [
+            "Vêncio"
+          ],
+          "initials": [
+            "RZ"
+          ]
+        },
+        {
+          "fullName": [
+            "Felix JM"
+          ],
+          "firstName": [
+            "Juliana M"
+          ],
+          "lastName": [
+            "Felix"
+          ],
+          "initials": [
+            "JM"
+          ]
+        },
+        {
+          "fullName": [
+            "Branco DS"
+          ],
+          "firstName": [
+            "Diana S"
+          ],
+          "lastName": [
+            "Branco"
+          ],
+          "initials": [
+            "DS"
+          ]
+        },
+        {
+          "fullName": [
+            "Waclawovsky AJ"
+          ],
+          "firstName": [
+            "Alessandro J"
+          ],
+          "lastName": [
+            "Waclawovsky"
+          ],
+          "initials": [
+            "AJ"
+          ]
+        },
+        {
+          "fullName": [
+            "Del Bem LE"
+          ],
+          "firstName": [
+            "Luiz E V"
+          ],
+          "lastName": [
+            "Del Bem"
+          ],
+          "initials": [
+            "LE"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-8472-4476",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Lembke CG"
+          ],
+          "firstName": [
+            "Carolina G"
+          ],
+          "lastName": [
+            "Lembke"
+          ],
+          "initials": [
+            "CG"
+          ]
+        },
+        {
+          "fullName": [
+            "Costa MD"
+          ],
+          "firstName": [
+            "Maximiller D L"
+          ],
+          "lastName": [
+            "Costa"
+          ],
+          "initials": [
+            "MD"
+          ]
+        },
+        {
+          "fullName": [
+            "Nishiyama MY Jr"
+          ],
+          "firstName": [
+            "Milton Y"
+          ],
+          "lastName": [
+            "Nishiyama"
+          ],
+          "initials": [
+            "MY"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2410-0562",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Vicentini R"
+          ],
+          "firstName": [
+            "Renato"
+          ],
+          "lastName": [
+            "Vicentini"
+          ],
+          "initials": [
+            "R"
+          ]
+        },
+        {
+          "fullName": [
+            "Vincentz MG"
+          ],
+          "firstName": [
+            "Michel G A"
+          ],
+          "lastName": [
+            "Vincentz"
+          ],
+          "initials": [
+            "MG"
+          ]
+        },
+        {
+          "fullName": [
+            "Ulian EC"
+          ],
+          "firstName": [
+            "Eugênio C"
+          ],
+          "lastName": [
+            "Ulian"
+          ],
+          "initials": [
+            "EC"
+          ]
+        },
+        {
+          "fullName": [
+            "Menossi M"
+          ],
+          "firstName": [
+            "Marcelo"
+          ],
+          "lastName": [
+            "Menossi"
+          ],
+          "initials": [
+            "M"
+          ]
+        },
+        {
+          "fullName": [
+            "Souza GM"
+          ],
+          "firstName": [
+            "Glaucia M"
+          ],
+          "lastName": [
+            "Souza"
+          ],
+          "initials": [
+            "GM"
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-2410-0562",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-8472-4476",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "1589839"
+      ],
+      "dateOfPublication": [
+        "2009 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2009"
+      ],
+      "printPublicationDate": [
+        "2009-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2009"
+  ],
+  "pageInfo": [
+    "120"
+  ],
+  "abstractText": [
+    "BACKGROUND: Sucrose content is a highly desirable trait in sugarcane as the worldwide demand for cost-effective biofuels surges. Sugarcane cultivars differ in their capacity to accumulate sucrose and breeding programs routinely perform crosses to identify genotypes able to produce more sucrose. Sucrose content in the mature internodes reach around 20% of the culms dry weight. Genotypes in the populations reflect their genetic program and may display contrasting growth, development, and physiology, all of which affect carbohydrate metabolism. Few studies have profiled gene expression related to sugarcane's sugar content. The identification of signal transduction components and transcription factors that might regulate sugar accumulation is highly desirable if we are to improve this characteristic of sugarcane plants. RESULTS: We have evaluated thirty genotypes that have different Brix (sugar) levels and identified genes differentially expressed in internodes using cDNA microarrays. These genes were compared to existing gene expression data for sugarcane plants subjected to diverse stress and hormone treatments. The comparisons revealed a strong overlap between the drought and sucrose-content datasets and a limited overlap with ABA signaling. Genes associated with sucrose content were extensively validated by qRT-PCR, which highlighted several protein kinases and transcription factors that are likely to be regulators of sucrose accumulation. The data also indicate that aquaporins, as well as lignin biosynthesis and cell wall metabolism genes, are strongly related to sucrose accumulation. Moreover, sucrose-associated genes were shown to be directly responsive to short term sucrose stimuli, confirming their role in sugar-related pathways. CONCLUSION: Gene expression analysis of sugarcane populations contrasting for sucrose content indicated a possible overlap with drought and cell wall metabolism processes and suggested signaling and transcriptional regulators to be used as molecular markers in breeding programs. Transgenic research is necessary to further clarify the role of the genes and define targets useful for sugarcane improvement programs based on transgenic plants."
+  ],
+  "affiliation": [
+    "Departamento de Bioquímica, Instituto de Química, Universidade de São Paulo, São Paulo, SP, Brazil. flastal@yahoo.com.br"
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Saccharum"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sucrose"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AN"
+                  ],
+                  "qualifierName": [
+                    "analysis"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oligonucleotide Array Sequence Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Reverse Transcriptase Polymerase Chain Reaction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Agriculture"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Sucrose"
+          ],
+          "registryNumber": [
+            "57-50-1"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2666766?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2666766"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "abs"
+          ],
+          "site": [
+            "BioMedCentral"
+          ],
+          "url": [
+            "http://www.biomedcentral.com/1471-2164/10/120/abstract"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "BioMedCentral"
+          ],
+          "url": [
+            "http://www.biomedcentral.com/1471-2164/10/120"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "BioMedCentral"
+          ],
+          "url": [
+            "http://www.biomedcentral.com/content/pdf/1471-2164-10-120.pdf"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/19302712/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/19302712/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1471-2164-10-120"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "27"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2009-06-01"
+  ],
+  "dateOfCreation": [
+    "2009-04-08"
+  ],
+  "dateOfRevision": [
+    "2013-06-02"
+  ],
+  "electronicPublicationDate": [
+    "2009-03-21"
+  ],
+  "firstPublicationDate": [
+    "2009-03-21"
+  ]
+}

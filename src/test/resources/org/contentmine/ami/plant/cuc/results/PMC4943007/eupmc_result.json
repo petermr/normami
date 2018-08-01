@@ -1,0 +1,801 @@
+{
+  "id": [
+    "27405371"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27405371"
+  ],
+  "pmcid": [
+    "PMC4943007"
+  ],
+  "doi": [
+    "10.1186/s12870-016-0843-z"
+  ],
+  "title": [
+    "Functional and regulatory conservation of the soybean ER stress-induced DCD/NRP-mediated cell death signaling in plants."
+  ],
+  "authorString": [
+    "Reis PA, Carpinetti PA, Freitas PP, Santos EG, Camargos LF, Oliveira IH, Silva JC, Carvalho HH, Dal-Bianco M, Soares-Ramos JR, Fontes EP."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Reis PA"
+          ],
+          "firstName": [
+            "Pedro A B"
+          ],
+          "lastName": [
+            "Reis"
+          ],
+          "initials": [
+            "PA"
+          ],
+          "affiliation": [
+            "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Carpinetti PA"
+          ],
+          "firstName": [
+            "Paola A"
+          ],
+          "lastName": [
+            "Carpinetti"
+          ],
+          "initials": [
+            "PA"
+          ],
+          "affiliation": [
+            "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Freitas PP"
+          ],
+          "firstName": [
+            "Paula P J"
+          ],
+          "lastName": [
+            "Freitas"
+          ],
+          "initials": [
+            "PP"
+          ],
+          "affiliation": [
+            "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Santos EG"
+          ],
+          "firstName": [
+            "Eulálio G D"
+          ],
+          "lastName": [
+            "Santos"
+          ],
+          "initials": [
+            "EG"
+          ],
+          "affiliation": [
+            "Departamento de Bioquímica e Biologia Molecular, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Camargos LF"
+          ],
+          "firstName": [
+            "Luiz F"
+          ],
+          "lastName": [
+            "Camargos"
+          ],
+          "initials": [
+            "LF"
+          ],
+          "affiliation": [
+            "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Oliveira IH"
+          ],
+          "firstName": [
+            "Igor H T"
+          ],
+          "lastName": [
+            "Oliveira"
+          ],
+          "initials": [
+            "IH"
+          ],
+          "affiliation": [
+            "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Silva JC"
+          ],
+          "firstName": [
+            "José Cleydson F"
+          ],
+          "lastName": [
+            "Silva"
+          ],
+          "initials": [
+            "JC"
+          ],
+          "affiliation": [
+            "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Carvalho HH"
+          ],
+          "firstName": [
+            "Humberto H"
+          ],
+          "lastName": [
+            "Carvalho"
+          ],
+          "initials": [
+            "HH"
+          ],
+          "affiliation": [
+            "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Dal-Bianco M"
+          ],
+          "firstName": [
+            "Maximiller"
+          ],
+          "lastName": [
+            "Dal-Bianco"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Soares-Ramos JR"
+          ],
+          "firstName": [
+            "Juliana R L"
+          ],
+          "lastName": [
+            "Soares-Ramos"
+          ],
+          "initials": [
+            "JR"
+          ],
+          "affiliation": [
+            "Departamento de Bioquímica e Biologia Molecular, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Fontes EP"
+          ],
+          "firstName": [
+            "Elizabeth P B"
+          ],
+          "lastName": [
+            "Fontes"
+          ],
+          "initials": [
+            "EP"
+          ],
+          "affiliation": [
+            "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil. bbfontes@ufv.br."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "16"
+      ],
+      "journalIssueId": [
+        "2538293"
+      ],
+      "dateOfPublication": [
+        "2016 Jul"
+      ],
+      "monthOfPublication": [
+        "7"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-07-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC plant biology"
+          ],
+          "ISOAbbreviation": [
+            "BMC Plant Biol."
+          ],
+          "medlineAbbreviation": [
+            "BMC Plant Biol"
+          ],
+          "NLMid": [
+            "100967807"
+          ],
+          "ISSN": [
+            "1471-2229"
+          ],
+          "ESSN": [
+            "1471-2229"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "156"
+  ],
+  "abstractText": [
+    "The developmental and cell death domain (DCD)-containing asparagine-rich proteins (NRPs) were first identified in soybean (Glycine max) as transducers of a cell death signal derived from prolonged endoplasmic reticulum (ER) stress, osmotic stress, drought or developmentally-programmed leaf senescence via the GmNAC81/GmNAC30/GmVPE signaling module. In spite of the relevance of the DCD/NRP-mediated signaling as a versatile adaptive response to multiple stresses, mechanistic knowledge of the pathway is lacking and the extent to which this pathway may operate in the plant kingdom has not been investigated.Here, we demonstrated that the DCD/NRP-mediated signaling also propagates a stress-induced cell death signal in other plant species with features of a programmed cell death (PCD) response. In silico analysis revealed that several plant genomes harbor conserved sequences of the pathway components, which share functional analogy with their soybean counterparts. We showed that GmNRPs, GmNAC81and VPE orthologs from Arabidopsis, designated as AtNRP-1, AtNRP-2, ANAC036 and gVPE, respectively, induced cell death when transiently expressed in N. benthamiana leaves. In addition, loss of AtNRP1 and AtNRP2 function attenuated ER stress-induced cell death in Arabidopsis, which was in marked contrast with the enhanced cell death phenotype displayed by overexpressing lines as compared to Col-0. Furthermore, atnrp-1 knockout mutants displayed enhanced sensitivity to PEG-induced osmotic stress, a phenotype that could be complemented with ectopic expression of either GmNRP-A or GmNRP-B. In addition, AtNRPs, ANAC036 and gVPE were induced by osmotic and ER stress to an extent that was modulated by the ER-resident molecular chaperone binding protein (BiP) similarly as in soybean. Finally, as putative downstream components of the NRP-mediated cell death signaling, the stress induction of AtNRP2, ANAC036 and gVPE was dependent on the AtNRP1 function. BiP overexpression also conferred tolerance to water stress in Arabidopsis, most likely due to modulation of the drought-induced NRP-mediated cell death response.Our results indicated that the NRP-mediated cell death signaling operates in the plant kingdom with conserved regulatory mechanisms and hence may be target for engineering stress tolerance and adaptation in crops."
+  ],
+  "affiliation": [
+    "National Institute of Science and Technology in Plant-Pest Interactions, Bioagro, Universidade Federal de Viçosa, Viçosa, MG, Brazil."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Endoplasmic Reticulum"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CL"
+                  ],
+                  "qualifierName": [
+                    "classification"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Soybeans"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phylogeny"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Biological Evolution"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Endoplasmic Reticulum Stress"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Programmed cell death",
+        "Binding protein",
+        "ER stress",
+        "Nrps",
+        "Abiotic Stresses",
+        "Bip",
+        "Vpe",
+        "Nac Transcription Factors",
+        "Vacuolar Processing Enzyme",
+        "N-rich Proteins"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4943007?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4943007"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12870-016-0843-z"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "3"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2017-08-15"
+  ],
+  "dateOfCreation": [
+    "2016-07-14"
+  ],
+  "dateOfRevision": [
+    "2017-12-20"
+  ],
+  "electronicPublicationDate": [
+    "2016-07-12"
+  ],
+  "firstPublicationDate": [
+    "2016-07-12"
+  ]
+}

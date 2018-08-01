@@ -1,0 +1,665 @@
+{
+  "id": [
+    "25788736"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25788736"
+  ],
+  "pmcid": [
+    "PMC4986878"
+  ],
+  "doi": [
+    "10.1093/jxb/erv092"
+  ],
+  "title": [
+    "Functions for rice RFL in vegetative axillary meristem specification and outgrowth."
+  ],
+  "authorString": [
+    "Deshpande GM, Ramakrishna K, Chongloi GL, Vijayraghavan U."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Deshpande GM"
+          ],
+          "firstName": [
+            "Gauravi M"
+          ],
+          "lastName": [
+            "Deshpande"
+          ],
+          "initials": [
+            "GM"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-1621-1553",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Microbiology and Cell Biology, Indian Institute of Science, Bangalore 560012, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Ramakrishna K"
+          ],
+          "firstName": [
+            "Kavitha"
+          ],
+          "lastName": [
+            "Ramakrishna"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Department of Microbiology and Cell Biology, Indian Institute of Science, Bangalore 560012, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Chongloi GL"
+          ],
+          "firstName": [
+            "Grace L"
+          ],
+          "lastName": [
+            "Chongloi"
+          ],
+          "initials": [
+            "GL"
+          ],
+          "affiliation": [
+            "Department of Microbiology and Cell Biology, Indian Institute of Science, Bangalore 560012, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Vijayraghavan U"
+          ],
+          "firstName": [
+            "Usha"
+          ],
+          "lastName": [
+            "Vijayraghavan"
+          ],
+          "initials": [
+            "U"
+          ],
+          "affiliation": [
+            "Department of Microbiology and Cell Biology, Indian Institute of Science, Bangalore 560012, India uvr@mcbl.iisc.ernet.in uvr123@gmail.com."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-1621-1553",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "9"
+      ],
+      "volume": [
+        "66"
+      ],
+      "journalIssueId": [
+        "2278258"
+      ],
+      "dateOfPublication": [
+        "2015 May"
+      ],
+      "monthOfPublication": [
+        "5"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-05-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "2773-2784"
+  ],
+  "abstractText": [
+    "Axillary meristems (AMs) are secondary shoot meristems whose outgrowth determines plant architecture. In rice, AMs form tillers, and tillering mutants reveal an interplay between transcription factors and the phytohormones auxin and strigolactone as some factors that underpin this developmental process. Previous studies showed that knockdown of the transcription factor gene RFL reduced tillering and caused a very large decrease in panicle branching. Here, the relationship between RFL, AM initiation, and outgrowth was examined. We show that RFL promotes AM specification through its effects on LAX1 and CUC genes, as their expression was modulated on RFL knockdown, on induction of RFL:GR fusion protein, and by a repressive RFL-EAR fusion protein. Further, we report reduced expression of auxin transporter genes OsPIN1 and OsPIN3 in the culm of RFL knockdown transgenic plants. Additionally, subtle change in the spatial pattern of IR4 DR5:GFP auxin reporter was observed, which hints at compromised auxin transport on RFL knockdown. The relationship between RFL, strigolactone signalling, and bud outgrowth was studied by transcript analyses and by the tillering phenotype of transgenic plants knocked down for both RFL and D3. These data suggest indirect RFL-strigolactone links that may affect tillering. Further, we show expression modulation of the auxin transporter gene OsPIN3 upon RFL:GR protein induction and by the repressive RFL-EAR protein. These modified forms of RFL had only indirect effects on OsPIN1. Together, we have found that RFL regulates the LAX1 and CUC genes during AM specification, and positively influences the outgrowth of AMs though its effects on auxin transport."
+  ],
+  "affiliation": [
+    "Department of Microbiology and Cell Biology, Indian Institute of Science, Bangalore 560012, India."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Meristem"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CY"
+                  ],
+                  "qualifierName": [
+                    "cytology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Indoleacetic Acids"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Biological Transport"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Knockdown Techniques"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oryza"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Oryza sativa",
+        "Auxin transport",
+        "Lax1",
+        "Cuc1",
+        "Axillary Meristem Specification",
+        "Cuc2",
+        "Rfl."
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "FL protein, Oryza sativa"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Indoleacetic Acids"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4986878?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4986878"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/erv092"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "5"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-02-09"
+  ],
+  "dateOfCreation": [
+    "2015-04-29"
+  ],
+  "dateOfRevision": [
+    "2016-08-23"
+  ],
+  "electronicPublicationDate": [
+    "2015-03-18"
+  ],
+  "firstPublicationDate": [
+    "2015-03-18"
+  ]
+}

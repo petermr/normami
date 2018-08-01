@@ -1,0 +1,544 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName archivearticle3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Plant Biotechnol J</journal-id><journal-id journal-id-type="iso-abbrev">Plant Biotechnol. J</journal-id><journal-id journal-id-type="doi">10.1111/(ISSN)1467-7652</journal-id><journal-id journal-id-type="publisher-id">PBI</journal-id><journal-title-group><journal-title>Plant Biotechnology Journal</journal-title></journal-title-group><issn pub-type="ppub">1467-7644</issn><issn pub-type="epub">1467-7652</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5595714</article-id><article-id pub-id-type="doi">10.1111/pbi.12715</article-id><article-id pub-id-type="publisher-id">PBI12715</article-id><article-categories><subj-group subj-group-type="overline"><subject>Research Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Research Articles</subject></subj-group></article-categories><title-group><article-title>Activation of secondary cell wall biosynthesis by miR319&#x02010;targeted <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> transcription factor</article-title><alt-title alt-title-type="left-running-head"><italic>Xudong Sun</italic> et&#x000a0;al.</alt-title></title-group><contrib-group><contrib id="pbi12715-cr-0001" contrib-type="author" corresp="yes"><name><surname>Sun</surname><given-names>Xudong</given-names></name><address><email>sunxudong@mail.kib.ac.cn</email></address><xref ref-type="aff" rid="pbi12715-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib id="pbi12715-cr-0002" contrib-type="author"><name><surname>Wang</surname><given-names>Chongde</given-names></name><xref ref-type="aff" rid="pbi12715-aff-0004">
+<sup>4</sup>
+</xref></contrib><contrib id="pbi12715-cr-0003" contrib-type="author"><name><surname>Xiang</surname><given-names>Nan</given-names></name><xref ref-type="aff" rid="pbi12715-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib id="pbi12715-cr-0004" contrib-type="author"><name><surname>Li</surname><given-names>Xiong</given-names></name><xref ref-type="aff" rid="pbi12715-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib id="pbi12715-cr-0005" contrib-type="author"><name><surname>Yang</surname><given-names>Shihai</given-names></name><xref ref-type="aff" rid="pbi12715-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib id="pbi12715-cr-0006" contrib-type="author"><name><surname>Du</surname><given-names>JianCan</given-names></name><xref ref-type="aff" rid="pbi12715-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib id="pbi12715-cr-0007" contrib-type="author"><name><surname>Yang</surname><given-names>Yongping</given-names></name><xref ref-type="aff" rid="pbi12715-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib id="pbi12715-cr-0008" contrib-type="author" corresp="yes"><name><surname>Yang</surname><given-names>Yunqiang</given-names></name><address><email>yangyunqiang@mail.kib.ac.cn</email></address><xref ref-type="aff" rid="pbi12715-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="pbi12715-aff-0003">
+<sup>3</sup>
+</xref></contrib></contrib-group><aff id="pbi12715-aff-0001">
+<label><sup>1</sup></label>
+<named-content content-type="organisation-division">Key Laboratory for Plant Diversity and Biogeography of East Asia</named-content>
+<named-content content-type="organisation-division">Kunming Institute of Botany</named-content>
+<institution>Chinese Academy of Sciences</institution>
+<named-content content-type="city">Kunming</named-content>
+<country country="CN">China</country>
+</aff><aff id="pbi12715-aff-0002">
+<label><sup>2</sup></label>
+<named-content content-type="organisation-division">Plant Germplasm and Genomics Center</named-content>
+<named-content content-type="organisation-division">The Germplasm Bank of Wild Species</named-content>
+<named-content content-type="organisation-division">Kunming Institute of Botany</named-content>
+<institution>Chinese Academy of Sciences</institution>
+<named-content content-type="city">Kunming</named-content>
+<country country="CN">China</country>
+</aff><aff id="pbi12715-aff-0003">
+<label><sup>3</sup></label>
+<named-content content-type="organisation-division">Institute of Tibetan Plateau Research at Kunming</named-content>
+<named-content content-type="organisation-division">Kunming Institute of Botany</named-content>
+<institution>Chinese Academy of Sciences</institution>
+<named-content content-type="city">Kunming</named-content>
+<country country="CN">China</country>
+</aff><aff id="pbi12715-aff-0004">
+<label><sup>4</sup></label>
+<named-content content-type="organisation-division">College of Plant Protection</named-content>
+<institution>Yunnan Agriculture University</institution>
+<named-content content-type="city">Kunming</named-content>
+<country country="CN">China</country>
+</aff><author-notes><corresp id="correspondenceTo"><label>*</label><italic>Correspondence</italic> (Tel +86 871 65230873; fax +86 871 65230873; email <email>sunxudong@mail.kib.ac.cn</email> (X.S.))<break/>
+and<break/>
+(Tel +86 871 65230873; fax +86 871 65230873; email <email>yangyunqiang@mail.kib.ac.cn</email> (Y.Y.))<break/></corresp></author-notes><pub-date pub-type="epub"><day>27</day><month>4</month><year>2017</year></pub-date><pub-date pub-type="ppub"><month>10</month><year>2017</year></pub-date><volume>15</volume><issue>10</issue><issue-id pub-id-type="doi">10.1111/pbi.2017.15.issue-10</issue-id><fpage>1284</fpage><lpage>1294</lpage><history><date date-type="received"><day>25</day><month>5</month><year>2016</year></date><date date-type="rev-recd"><day>16</day><month>1</month><year>2017</year></date><date date-type="accepted"><day>20</day><month>2</month><year>2017</year></date></history><permissions><!--<copyright-statement content-type="issue-copyright"> &#x000a9; 2017 Society for Experimental Biology, Association of Applied Biologists and John Wiley & Sons Ltd <copyright-statement>--><copyright-statement content-type="article-copyright">&#x000a9; 2017 The Authors. <italic>Plant Biotechnology Journal</italic> published by Society for Experimental Biology and The Association of Applied Biologists and John Wiley &#x00026; Sons Ltd.</copyright-statement><license license-type="creativeCommonsBy"><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="file:PBI-15-1284.pdf"/><abstract id="pbi12715-abs-0001"><title>Summary</title><p>The overexpression of miR319 in plants results in delayed senescence, and high levels of miR319&#x02010;targeted <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> transcription factor cause premature onset of this process. However, the underlying mechanisms of this pathway remain elusive. Here, we found that miR319 overexpression results in a decrease in <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> abundance and secondary cell wall formation in the stem. Conversely, constitutive expression of miR319&#x02010;resistant <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> promotes secondary cell wall formation, indicating that miR319&#x02010;mediated <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> controls secondary cell wall formation during development. Further analysis revealed that <styled-content style="fixed-case">TCP</styled-content>4 might directly bind the promoter of <italic><styled-content style="fixed-case">VND</styled-content>7</italic> to activate its expression, which triggers the expression of a <italic><styled-content style="fixed-case">VND</styled-content>7</italic> transcriptional network associated with secondary cell wall biosynthesis and programmed cell death and accelerates vessel formation. In addition, the development process gradually increased <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> expression. These results suggest that miR319 and its target <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> can act as switches that turn on secondary cell wall synthesis and programmed cell death.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="pbi12715-kwd-0001">miR319</kwd><kwd id="pbi12715-kwd-0002"><italic><styled-content style="fixed-case">TCP</styled-content>4</italic></kwd><kwd id="pbi12715-kwd-0003">transcription factor</kwd><kwd id="pbi12715-kwd-0004">secondary cell wall biosynthesis</kwd><kwd id="pbi12715-kwd-0005">xylem vessel element differentiation</kwd></kwd-group><funding-group><award-group><funding-source>Major State Basic Research Development Program of China</funding-source><award-id>2010CB951704</award-id></award-group><award-group><funding-source>National Natural Science Foundation of China</funding-source><award-id>41271058</award-id><award-id>31400244</award-id></award-group></funding-group><counts><fig-count count="10"/><table-count count="0"/><page-count count="11"/><word-count count="6738"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>pbi12715</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>October 2017</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:5.1.9 mode:remove_FC converted:12.09.2017</meta-value></custom-meta></custom-meta-group></article-meta><notes><fn-group id="pbi12716-ntgp-0001"><fn id="pbi12715-note-1001"><p>Accession numbers: UBQ10 (At4&#x000a0;g05320); TCP4 (AT3&#x000a0;g15030); VND7 (AT1&#x000a0;g71930); LBD30 (At4&#x000a0;g00220); MYB46 (At5&#x000a0;g12870); MYB83 (AT3&#x000a0;g08500); CesA4 (At5&#x000a0;g44030); CesA7 (AT5&#x000a0;g17420); CesA8 (At4&#x000a0;g18780); IRX8 (AT5&#x000a0;g54690); IRX10 (AT1&#x000a0;g27440); XCP1 (At4&#x000a0;g35350); XCP2 (At1&#x000a0;g20850); LAC4 (At2&#x000a0;g38080); LAC17 (At5&#x000a0;g60020); PAL1 (At2&#x000a0;g37040); C4H (At2&#x000a0;g30490); HCT (At5&#x000a0;g48930), C3H1 (At2&#x000a0;g40890).</p></fn></fn-group></notes></front><body><sec id="pbi12715-sec-0001"><title>Introduction</title><p>Small RNAs, which are typically 20&#x02013;24 nucleotides long, are important for gene and chromatin regulation in plants (Chen, <xref rid="pbi12715-bib-0005" ref-type="ref">2009</xref>; Taylor <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0031" ref-type="ref">2014</xref>). MicroRNAs (miRNAs), approximately 21 nucleotides in length, negatively regulate target genes by partly pairing to the corresponding mRNA and facilitating its cleavage. Some miRNAs are conserved in different species and are believed to facilitate evolutionarily conserved functions in regulating organogenesis (Chen, <xref rid="pbi12715-bib-0005" ref-type="ref">2009</xref>). Usually, miRNAs are transcribed by RNA polymerase II into primary&#x02010;miRNAs (pri&#x02010;miRNAs) in the nucleus. The pri&#x02010;miRNAs are processed by microprocessor containing Drosha and dsRNA&#x02010;binding protein (DGCR8) to produce precursor&#x02010;miRNAs (pre&#x02010;miRNAs; Voinnet, <xref rid="pbi12715-bib-0032" ref-type="ref">2009</xref>). In plants, DICER&#x02010;like 1 (DCL1) proteins cleave the pre&#x02010;miRNA. Unlike in animals, plant miRNAs are cleaved by DCL1 mainly in the nucleus rather than the cytoplasm, and then the cleaved duplex is translocated into the cytoplasm by HASTY. Once in the cytoplasm, the miRNAs are unwound into single mature miRNAs by a helicase, and the mature miRNAs finally enter the ribonucleoprotein complex known as the RNA&#x02010;induced silencing complex, where they regulate targeted gene expression (Chen, <xref rid="pbi12715-bib-0005" ref-type="ref">2009</xref>; Jones&#x02010;Rhoades <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0013" ref-type="ref">2006</xref>).</p><p>Several plant miRNAs are involved in plant growth, development and the stress response (Chen, <xref rid="pbi12715-bib-0005" ref-type="ref">2009</xref>; Sunkar, <xref rid="pbi12715-bib-0029" ref-type="ref">2010</xref>). The first described plant miRNA mutant <italic>jaw</italic>&#x02010;D was identified in the transgenic line overexpressing miR319. The major targets of miR319 are a series of <italic>TCP</italic> (<italic>TEOSINTE BRANCHED1/CYCLOIDEA/PCF</italic>) transcription factors, including <italic>TCP2/3/4/10/24</italic> (Palatnik <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0022" ref-type="ref">2003</xref>). Several studies revealed that miR319 and its targets play multiple roles in plant developmental processes, such as leaf morphogenesis, jasmonic acid biosynthesis, senescence and flower development (Li <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0016" ref-type="ref">2012</xref>; Nag <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0019" ref-type="ref">2009</xref>; Palatnik <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0022" ref-type="ref">2003</xref>; Schommer <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0024" ref-type="ref">2008</xref>). In <italic>Solanum lycopersicum</italic> (tomato), the down&#x02010;regulation of several <italic>TCPs</italic> by ectopic expression of miR319 results in larger leaflets and continuous growth of the leaf margin, whereas reduced levels of miR319 or enhanced levels of <italic>TCP</italic> decrease leaf sizes (Ori <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0021" ref-type="ref">2007</xref>).</p><p>Plant cells are enclosed in an extracellular matrix, the cell wall, that imparts structural support and regulate growth and differentiation. All plant cells have a thin primary cell wall and certain cell types such as sclerenchyma cells, also have a secondary wall layer, located between the primary wall and the plasma membrane. Secondary cell walls consist mainly of cellulose, hemicellulose and lignin (Zhong and Ye, <xref rid="pbi12715-bib-0038" ref-type="ref">2007</xref>). The biosynthetic pathway associated with secondary cell wall formation is highly regulated at the transcriptional level. Several lines of evidence have demonstrated that a network of transcription factors regulates plant secondary wall biosynthesis (Zhong and Ye, <xref rid="pbi12715-bib-0038" ref-type="ref">2007</xref>). In this network, the NAC (for NAM, ATAF1/2 and CUC2) domain transcription factors, including SND1, NST1, NST2, VND6 and VND7, are master switches that control a set of downstream functional factors, which in turn activate secondary cell wall biosynthesis factors, such as <italic>SND2</italic>,<italic> SND3</italic>,<italic> MYB20</italic>,<italic> MYB102</italic> and <italic>KNAT7</italic>. This activation initiates the expression of secondary cell wall biosynthesis genes, leading to a massive deposition of the secondary wall in cells (Ellis <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0010" ref-type="ref">2014</xref>; Zhong <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0039" ref-type="ref">2006</xref>).</p><p>VND7 belongs to the NAC transcription factor family and is preferentially expressed in differentiating xylem vessel elements (Kubo <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0015" ref-type="ref">2005</xref>; Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0035" ref-type="ref">2010b</xref>). <italic>VND7</italic> overexpression can induce the ectopic differentiation of protoxylem&#x02010;like vessels and result in a pale colour and death (Kubo <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0015" ref-type="ref">2005</xref>; Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0035" ref-type="ref">2010b</xref>). Functional suppression of <italic>VND7</italic> causes defects in the formation of vessel elements. A broad range of putative direct target genes of VND7 has been identified through transcriptome analysis and encodes transcription factors, irregular xylem proteins and proteolytic enzymes (Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0036" ref-type="ref">2011</xref>). These results strongly suggest that <italic>VND7</italic> acts as a key regulator of xylem vessel differentiation.</p><p>A previous study showed that miR319 controls jasmonate biosynthesis and senescence through miR319&#x02010;targeted <italic>TCP4</italic>, which can bind to the promoter of the <italic>LOX2</italic> gene that is responsible for jasmonic acid biosynthesis (Schommer <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0024" ref-type="ref">2008</xref>). However, the pathways that regulate senescence remain unclear. In the present study, we show that <italic>TCP4</italic> associates with the promoter region of <italic>VND7</italic> to directly activate its expression, which regulates the differentiation of all types of xylem vessels in roots and shoots (Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0033" ref-type="ref">2008</xref>). The disruption of <italic>TCP4</italic> resulted in the decreased formation of the secondary cell wall and the decreased differentiation of xylem vessel elements. Furthermore, we found that gradually increasing the level of <italic>TCP4</italic> corresponded to a gradual increase in the levels of <italic>VND7</italic> transcripts in the development processes. These data suggest that <italic>TCP4</italic> may be involved in xylem vessel differentiation via activating <italic>VND7</italic> transcription.</p></sec><sec id="pbi12715-sec-0002"><title>Results</title><sec id="pbi12715-sec-0003"><title>Generation of stable transgenic lines overexpressing <italic>rTCP4</italic>
+</title><p>Plants overexpressing miR319&#x02010;resistant <italic>TCP4</italic> (<italic>rTCP4:GFP</italic>) have a shorter life span than wild&#x02010;type (WT) plants and do not produce seeds (Schommer <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0024" ref-type="ref">2008</xref>). However, three independent transgenic lines with weaker phenotypes, meaning that they produced seeds, were selected in this study. Three lines had long hypocotyls, epinastic cotyledons and smaller rosette leaves; further, their aerial parts were darker green than those of the wild type (Figure&#x000a0;<xref rid="pbi12715-fig-0001" ref-type="fig">1</xref>a), similar to the overexpression of <italic>rTCP4:GFP</italic> phenotype (Schommer <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0024" ref-type="ref">2008</xref>). All three lines exhibited a normal life cycle (Figure&#x000a0;<xref rid="pbi12715-fig-0001" ref-type="fig">1</xref>b). Quantitative real&#x02010;time polymerase chain reaction (qRT&#x02010;PCR) analysis confirmed the up&#x02010;regulation of <italic>TCP4</italic> levels (Figure&#x000a0;<xref rid="pbi12715-fig-0001" ref-type="fig">1</xref>c). The <italic>rTCP4</italic>&#x02010;<italic>3</italic> transgenic plants showed the highest <italic>TCP4</italic> expression level, almost 2.5&#x02010;fold higher than WT, while <italic>rTCP4&#x02010;6</italic> plants showed a twofold increase, and <italic>rTCP4&#x02010;7</italic> plants showed a 1.7&#x02010;fold increase. Notably, even the <italic>rTCP4</italic>&#x02010;<italic>7</italic> transgenic plants with slight up&#x02010;regulation of <italic>TCP4</italic> exhibited the <italic>rTCP4</italic>&#x02010;<italic>GFP</italic> phenotype (Figure&#x000a0;<xref rid="pbi12715-fig-0001" ref-type="fig">1</xref>a). <italic>Jaw&#x02010;D</italic>,<italic> a miR319a</italic> overexpressing line, has crinkling leaves with cutting margins (Palatnik <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0022" ref-type="ref">2003</xref>). When the <italic>rTCP4&#x02010;3</italic> line was crossed with <italic>jaw</italic>&#x02010;D plants, the phenotype of the heterozygote F1 plants alleviated the phenotype of the <italic>jaw</italic>&#x02010;D plants (Figure&#x000a0;<xref rid="pbi12715-fig-0001" ref-type="fig">1</xref>d). The fact that slight up&#x02010;regulation of <italic>TCP4</italic> affects plant growth and development indicates that the TCP4 plays a vital role in these processes.</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Phenotypes of <styled-content style="fixed-case">rTCP</styled-content>4 transgenic plants. (a) Wild&#x02010;type and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic> 2&#x02010;week&#x02010;old seedlings. (b) Wild&#x02010;type and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic> 6&#x02010;week&#x02010;old seedlings. (c) Relative expression of <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> in transgenic plants. Transcript levels were normalized to <styled-content style="fixed-case">UBQ</styled-content>10 and then expressed relative to Col&#x02010;0. The expression level of <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> in the&#x000a0;wild type is set to 1. Error bars represent <styled-content style="fixed-case">SE</styled-content> of triplicate experiments. (*<italic>P</italic>&#x000a0;&#x0003c;&#x000a0;0.01). (d) Rosettes of 25&#x02010;day&#x02010;old seedlings. F1, the progeny between <italic><styled-content style="fixed-case">rTCP</styled-content>4&#x02010;3</italic> and <italic>jaw&#x02010;</italic>D. Bar&#x000a0;=&#x000a0;0.5&#x000a0;cm.</p></caption><graphic id="nlm-graphic-1" xlink:href="PBI-15-1284-g001"/></fig></sec><sec id="pbi12715-sec-0004"><title>MiR319&#x02010;targeted <italic>TCP4</italic> is involved in xylem vessel element formation</title><p>When we transferred the transgenic plants to soil, we found that the hypocotyls of the <italic>rTCP4</italic>&#x02010;<italic>3</italic>,<italic> rTCP4</italic>&#x02010;<italic>6</italic> and <italic>rTCP4</italic>&#x02010;<italic>7</italic> transgenic plants were less flexible than WT plants. Thus, we speculated that lignification might be increased in the transformants. To examine this hypothesis, we selected <italic>rTCP4</italic>&#x02010;<italic>3</italic> and <italic>rTCP4</italic>&#x02010;<italic>6</italic> transgenic plants for further investigation. Histological studies were performed to investigate the differences in secondary wall structure among the WT, <italic>jaw</italic>&#x02010;D plants and <italic>rTCP4</italic>&#x02010;<italic>OX</italic> lines. Cross&#x02010;sections of the basal parts of the stems revealed that xylem vessel elements were more frequent in stems of <italic>rTCP4</italic>&#x02010;<italic>OX</italic> lines (Figure&#x000a0;<xref rid="pbi12715-fig-0002" ref-type="fig">2</xref>c,d). Transmission electron micrographs showed that the wall thickness of vessel elements in <italic>jaw</italic>&#x02010;D plants was clearly reduced compared with WT plants (Figure&#x000a0;<xref rid="pbi12715-fig-0002" ref-type="fig">2</xref>f,i). The overexpression of <italic>rTCP4</italic> resulted in significantly increased wall thickness of the vessels (Figure&#x000a0;<xref rid="pbi12715-fig-0002" ref-type="fig">2</xref>g,h,i), and the magnitude of the effect correlated with the expression level of <italic>TCP4</italic> (Figure&#x000a0;<xref rid="pbi12715-fig-0001" ref-type="fig">1</xref>c). These results indicate that TCP4 plays a vital role in vessel formation.</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>Cross&#x02010;sections of the stem in 6&#x02010;week&#x02010;old plants. (a&#x02013;d) Cross&#x02010;sections of vascular bundles in the 15&#x02010;cm&#x02010;high stems of 6&#x02010;week&#x02010;old plants. Note that black arrow indicates increased vessel element formation. (e&#x02013;h) Transmission electron micrographs of vessel walls in the stems of 6&#x02010;week&#x02010;old plants. (a, e) Wild type. (b, f) <italic>jaw</italic>&#x02010;D. (c, g) <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>3</italic>. (d, h) <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>6</italic>. co, cortex; ph, phloem; ve, vessel. (i) Wall thickness of the vessel elements in the stems of wild&#x02010;type, <italic>jaw</italic>&#x02010;D and transgenic plants. The wall thickness was measured from transmission electron micrographs. The differences in wall thickness of the xylem vessel elements in the stem between the wild type and the other lines are statistically significant (*<italic>P</italic>&#x000a0;&#x0003c;&#x000a0;0.05). The data are the means (&#x003bc;m) of 60 cells,&#x000a0;which are from three plants of each genotype. Bars&#x000a0;=&#x000a0;20&#x000a0;&#x003bc;m (a&#x02013;d), 5&#x000a0;&#x003bc;m (e&#x02013;h).</p></caption><graphic id="nlm-graphic-3" xlink:href="PBI-15-1284-g002"/></fig></sec><sec id="pbi12715-sec-0005"><title>Overexpression of <italic>TCP4</italic> causes increased deposition of lignin and cellulose</title><p>Secondary cell walls are mainly composed of lignin, cellulose and hemicellulose. To further investigate the function of <italic>TCP4</italic> in the regulation of secondary wall biosynthesis, we examined whether the observed increase in cell wall thickness corresponded to an increased deposition of lignin, cellulose or both. As shown in Figure&#x000a0;<xref rid="pbi12715-fig-0003" ref-type="fig">3</xref>, conventional Wiesner histochemical stains (phloroglucinol&#x02010;HCl, in which a violet&#x02010;red colour is indicative of lignins) exhibited less intense coloration in the secondary cell walls of <italic>jaw</italic>&#x02010;D plants than in the controls, but higher intensity in the <italic>rTCP4&#x02010;OX</italic> lines (Figure&#x000a0;<xref rid="pbi12715-fig-0003" ref-type="fig">3</xref>a&#x02013;d). Ectopic lignin staining was also observed in the stem cortex of <italic>rTCP4&#x02010;OX</italic> lines (Figure&#x000a0;<xref rid="pbi12715-fig-0003" ref-type="fig">3</xref>c,d). These data indicate a reduction in lignin content in the secondary cell wall of <italic>jaw</italic>&#x02010;D plants and increased lignin content in the <italic>rTCP4&#x02010;OX</italic> lines.</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>Modulation of lignin and secondary cell wall cellulose by miR319 and <italic><styled-content style="fixed-case">TCP</styled-content>4</italic>. Stem sections were stained with phloroglucinol&#x02010;<styled-content style="fixed-case">HC</styled-content>l or Calcofluor White to detect lignin or secondary wall cellulose, respectively. (a&#x02010;d) Phloroglucinol&#x02010;<styled-content style="fixed-case">HC</styled-content>l staining (red colour) revealed weaker lignin signals within the interfascicular fibres and xylem bundles in the <italic>jaw</italic>&#x02010;D plants (b) compared with the control wild&#x02010;type plants (a). The strongest signals were observed in the <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>3</italic> (c) and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>6</italic> (d) lines. Note that increased lignin deposition was detected in the stem of <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>3</italic> (c) and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>6</italic> (d). (e&#x02013;h) Calcofluor White staining (blue colour) of stem sections showing cellulose staining in the walls of interfascicular fibres and xylem cells in seedling stems of the wild type (e), <italic>jaw</italic>&#x02010;D (f), and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>3</italic> (g) and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>6</italic> (h) lines. Note that strong cellulose signals were detected in the stem cortex of <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>3</italic> (g) and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic>6</italic> (h). xy, xylem; if, interfascicular fibre. Bars&#x000a0;=&#x000a0;50&#x000a0;&#x003bc;m.</p></caption><graphic id="nlm-graphic-5" xlink:href="PBI-15-1284-g003"/></fig><p>Similarly, histological staining of cellulose in the stems (using Calcofluor White, in which a blue colour is indicative of secondary wall cellulose), under epifluorescence microscopy, revealed weaker fluorescence within the interfascicular fibres and xylem bundles in the <italic>jaw</italic>&#x02010;D plants compared with the control WT plants (Figure&#x000a0;<xref rid="pbi12715-fig-0003" ref-type="fig">3</xref>e,f). However, the fluorescence intensity was stronger in the <italic>rTCP4</italic>&#x02010;<italic>OX</italic> lines (Figure&#x000a0;<xref rid="pbi12715-fig-0003" ref-type="fig">3</xref>g,h). These results indicate that TCP4 is involved in secondary wall biosynthesis affecting the abundance of both cellulose and lignin.</p></sec><sec id="pbi12715-sec-0006"><title>TCP4 might directly activate the expression of <italic>VND7</italic> for xylem vessel element formation</title><p>Our data showed that the activation of <italic>TCP4</italic> is responsible for secondary cell wall biosynthesis. To characterize this process in more detail, we searched for TCP4&#x02010;targeted genes among lignification&#x02010;related genes using the TCP&#x02010;binding motif &#x02018;GTGGTCCC&#x02019; (Schommer <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0024" ref-type="ref">2008</xref>) as bait. Intriguingly, we found one &#x02018;GTGGTCCC&#x02019; <italic>cis</italic> element in the promoter region of <italic>VND7</italic> (Figure&#x000a0;<xref rid="pbi12715-fig-0004" ref-type="fig">4</xref>a). <italic>VND7</italic> is involved in xylem vessel formation (Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0033" ref-type="ref">2008</xref>). We first measured the levels of <italic>VND7</italic> transcripts in the different lines. As shown in Figure&#x000a0;<xref rid="pbi12715-fig-0004" ref-type="fig">4</xref>b, the <italic>VND7</italic> transcriptional level was lowest in the <italic>jaw</italic>&#x02010;D plants and up&#x02010;regulated in the <italic>rTCP4&#x02010;OX</italic> lines. An electrophoretic mobility shift assay (EMSA) revealed that the motif in <italic>VND7</italic> was bound by His&#x02010;TCP4 but not His alone. The additional unlabeled probes competed for binding in dose&#x02010;dependent manner (Figure&#x000a0;<xref rid="pbi12715-fig-0004" ref-type="fig">4</xref>c). The miR319&#x02010;resistant <italic>rTCP4</italic> cannot be sufficiently cleaved by miR319, due to a mutation at the cleavage site in <italic>TCP4</italic> (Schommer <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0024" ref-type="ref">2008</xref>). We also found that rTCP4&#x02010;HIS bounds to the promoter region of the <italic>VND7</italic> (Figure&#x000a0;<xref rid="pbi12715-fig-0004" ref-type="fig">4</xref>c). The qRT&#x02010;PCR and EMSA analyses indicated that TCP4 might activate the transcription of <italic>VND7</italic> by directly binding to its promoter. Thus, the transient expression system was used next to investigate whether TCP4 activates the expression of <italic>VND7</italic>. When we co&#x02010;transfected the <italic>ProVND7:LUC</italic> reporter plasmid with the <italic>35S:TCP4</italic> effector plasmid, strong LUC activity was detected (Figure&#x000a0;<xref rid="pbi12715-fig-0004" ref-type="fig">4</xref>d,e). However, in the absence of the effector <italic>35S:TCP4</italic> plasmid, LUC activity was much lower (Figure&#x000a0;<xref rid="pbi12715-fig-0004" ref-type="fig">4</xref>d,e). These results revealed that TCP4 indeed activates transcriptional activity of <italic>VND7 in&#x000a0;vivo</italic>.</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>
+<styled-content style="fixed-case">TCP</styled-content>4 binds to the promoter region of <italic><styled-content style="fixed-case">VND</styled-content>7</italic>. (a) The promoter sequence of the <italic><styled-content style="fixed-case">VND</styled-content>7</italic> gene. The green box represents the putative <styled-content style="fixed-case">TCP</styled-content>4&#x02010;binding element (<styled-content style="fixed-case">GTGGTCCC</styled-content>). (b) <styled-content style="fixed-case">qRT</styled-content>&#x02010;<styled-content style="fixed-case">PCR</styled-content> analysis of <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> and <italic><styled-content style="fixed-case">VND</styled-content>7</italic> expression in Col&#x02010;0, <italic>jaw</italic>&#x02010;D plants and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic><styled-content style="fixed-case">OX</styled-content></italic> lines. The expression levels of <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> and <italic><styled-content style="fixed-case">VND</styled-content>7</italic> in the wild type are set to 1, respectively. Relative expression of each gene was calculated by normalizing to the value in <styled-content style="fixed-case">WT</styled-content> plants. Error bars represent <styled-content style="fixed-case">SE</styled-content> of triplicate experiments. (c) <italic>In vitro</italic>
+<styled-content style="fixed-case">EMSA</styled-content> assay showing that the <styled-content style="fixed-case">TCP</styled-content>4&#x02010;<styled-content style="fixed-case">HIS</styled-content> fusion protein, but not the negative control 6<styled-content style="fixed-case">HIS</styled-content>, binds to the <italic><styled-content style="fixed-case">VND</styled-content>7</italic> promoter (Probe). <styled-content style="fixed-case">rTCP</styled-content>4&#x02010;<styled-content style="fixed-case">HIS</styled-content> also bounds to the promoter region of the <italic><styled-content style="fixed-case">VND</styled-content>7</italic>. Biotin&#x02010;P indicates the biotin&#x02010;labelled probe, and Cold&#x02010;P indicates the probe without biotin labelling. Competition for <styled-content style="fixed-case">TCP</styled-content>4 binding was performed with 10&#x000d7; and 50&#x000d7; unlabeled probes. Arrow indicates shifted bands. (d) Transient expression of the <italic>35S:<styled-content style="fixed-case">TCP</styled-content>4</italic> effector construct with the <italic>Pro</italic>
+<styled-content style="fixed-case"><sub><italic>VND</italic></sub></styled-content>
+<sub><italic>7</italic></sub>
+<italic>:<styled-content style="fixed-case">LUC</styled-content></italic> reporter construct in <italic>N.&#x000a0;benthamiana</italic> leaves. Quantitative analyses of luminescence intensity are shown in (e). The <italic>35S:<styled-content style="fixed-case">LUC</styled-content></italic> construct was used as the positive control. The luminescence intensity of <italic>Pro</italic>
+<styled-content style="fixed-case"><sub><italic>VND</italic></sub></styled-content>
+<sub><italic>7</italic></sub>
+<italic>:<styled-content style="fixed-case">LUC</styled-content></italic> is set to 1. Relative luminescence intensity was calculated by normalizing to the value of <italic>Pro</italic>
+<styled-content style="fixed-case"><sub><italic>VND</italic></sub></styled-content>
+<sub><italic>7</italic></sub>
+<italic>:<styled-content style="fixed-case">LUC</styled-content></italic>. The data are the means&#x000a0;&#x000b1;&#x000a0;<styled-content style="fixed-case">SD</styled-content> of triplicate experiments. (*<italic>P</italic>&#x000a0;&#x0003c;&#x000a0;0.01).</p></caption><graphic id="nlm-graphic-7" xlink:href="PBI-15-1284-g004"/></fig><p>Because <italic>VND7</italic> plays a pivotal role in regulating the differentiation of all types of xylem vessels in <italic>Arabidopsis</italic> (Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0033" ref-type="ref">2008</xref>), we then assessed vessel formation using specific basic fuchsin red staining of xylem and semi&#x02010;thin section. As shown in Figure&#x000a0;<xref rid="pbi12715-fig-0005" ref-type="fig">5</xref>, <italic>jaw</italic>&#x02010;D plants showed repressed vessel element differentiation (Figure&#x000a0;<xref rid="pbi12715-fig-0005" ref-type="fig">5</xref>b,f), but more vessel elements were observed in the hypocotyls of the <italic>rTCP4</italic>&#x02010;<italic>OX</italic> lines (Figure&#x000a0;<xref rid="pbi12715-fig-0005" ref-type="fig">5</xref>c,d,g,h). Similarly, the roots of the <italic>jaw</italic>&#x02010;D plants exhibited weaker signals in vessels (Figure&#x000a0;<xref rid="pbi12715-fig-0005" ref-type="fig">5</xref>j) and repressed vessel element differentiation (Figure&#x000a0;<xref rid="pbi12715-fig-0005" ref-type="fig">5</xref>n). In contrast, the <italic>rTCP4</italic>&#x02010;<italic>OX</italic> lines showed increased formation of vessel elements (Figure&#x000a0;<xref rid="pbi12715-fig-0005" ref-type="fig">5</xref>k,I,o,p). Overexpression of <italic>rTCP4</italic> in <italic>jaw&#x02010;</italic>D plants rescued the vessel element defects of hypocotyls and roots (Figure&#x000a0;<xref rid="pbi12715-sup-0001" ref-type="supplementary-material">S1</xref>). These results corroborate that TCP4 is involved in the differentiation of xylem vessel elements.</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0005" orientation="portrait" position="float"><label>Figure 5</label><caption><p>Modulation of vessel elements formation by miR319 and <italic><styled-content style="fixed-case">TCP</styled-content>4</italic>. Xylem vessels were stained with basic fuchsin red and visualized under a confocal microscope in (a&#x02013;d) and (i&#x02013;l). (a&#x02013;d) Confocal laser scanning microscopy images of hypocotyls from Col&#x02010;0 (a), <italic>jaw&#x02010;</italic>D plants (b) and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic><styled-content style="fixed-case">OX</styled-content></italic> lines (c and d). (e&#x02013;h) Cross&#x02010;section of hypocotyls in the 1&#x02010;week&#x02010;old seedlings. (i&#x02013;l) Confocal laser scanning microscopy images of roots from Col&#x02010;0 (i), <italic>jaw</italic>&#x02010;D plants (j) and&#x000a0;<italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic><styled-content style="fixed-case">OX</styled-content></italic> lines (k and l). (m&#x02013;p) Cross&#x02010;section of roots in the 1&#x02010;week&#x02010;old seedlings. White and black arrows indicate protoxylem vessels. White arrows in (b) indicate the absence of vessels on one side. The phenotype was also found in (f). White arrows in (c, d) and (k, l) indicate the additional formation of&#x000a0;vessels in the roots and hypocotyls, respectively. The phenotype was also found in (g, h) and (o, p). Bars&#x000a0;=&#x000a0;20&#x000a0;&#x003bc;m.</p></caption><graphic id="nlm-graphic-9" xlink:href="PBI-15-1284-g005"/></fig></sec><sec id="pbi12715-sec-0007"><title>Quantitative RT&#x02010;PCR analysis of genes involved in secondary wall formation</title><p>Our data showed that TCP4 can bind the <italic>VND7</italic> promoter to modulate its transcriptional level. Previous studies showed that VND7 also modulates a series of transcription factor genes including <italic>MYB46</italic> and <italic>MYB83</italic>, which up&#x02010;regulate the expression of many genes related to secondary cell wall formation both in fibres and vessels (McCarthy <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0018" ref-type="ref">2009</xref>; Zhong <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0040" ref-type="ref">2007</xref>). <italic>LBD30</italic> forms a positive feedback loop with VND7 during xylem vessel formation (Soyano <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0027" ref-type="ref">2008</xref>; Zhou <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0041" ref-type="ref">2009</xref>). We found lower transcriptional levels of <italic>MYBs</italic> and <italic>LBD30</italic> in <italic>jaw</italic>&#x02010;D plants and higher transcriptional levels in the <italic>rTCP4</italic>&#x02010;<italic>OX</italic> lines compared with WT (Figure&#x000a0;<xref rid="pbi12715-fig-0006" ref-type="fig">6</xref>). CESA4/IRX5, CESA7/IRX3 and CESA8/IRX1 are cellulose synthases that function in the synthesis of the secondary cell wall (Taylor <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0030" ref-type="ref">2003</xref>). <italic>IRX8</italic> and <italic>IRX10</italic> are required for normal amounts of hemicellulose and cellulose in secondary cell wall formation (Brown <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0004" ref-type="ref">2005</xref>; Zeng <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0037" ref-type="ref">2016</xref>). Here, we also found lower transcriptional levels of these genes in <italic>jaw</italic>&#x02010;D plants and up&#x02010;regulation in the <italic>rTCP4</italic>&#x02010;<italic>OX</italic> lines (Figure&#x000a0;<xref rid="pbi12715-fig-0006" ref-type="fig">6</xref>). Two plant cysteine proteases, <italic>XCP1</italic> and <italic>XCP2</italic>, that are also the direct target genes of VND7 (Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0036" ref-type="ref">2011</xref>), may be involved in autolysis of programmed cell death (PCD) during the xylem differentiation of tracheary elements (TEs) (Avci <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0001" ref-type="ref">2008</xref>). The expression levels of these proteases strikingly corresponded to the <italic>TCP4</italic> transcript level.</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0006" orientation="portrait" position="float"><label>Figure 6</label><caption><p>
+<styled-content style="fixed-case">qRT</styled-content>&#x02010;<styled-content style="fixed-case">PCR</styled-content> analysis of secondary wall&#x02010;associated formation genes in 2&#x02010;week&#x02010;old seedlings. Bars show the relative expression levels of each gene in&#x000a0;the wild type, <italic>jaw</italic>&#x02010;D plants and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic><styled-content style="fixed-case">OX</styled-content></italic> lines. The expression level of each gene in the wild type is set to 1. Relative gene expression was calculated by normalizing to the value in <styled-content style="fixed-case">WT</styled-content> plants. Error bars represent <styled-content style="fixed-case">SE</styled-content> of triplicate experiments.</p></caption><graphic id="nlm-graphic-11" xlink:href="PBI-15-1284-g006"/></fig><p>Consistent with the histological data showing that <italic>TCP4</italic> overexpression caused ectopic deposition of lignin, we found that <italic>TCP4</italic> overexpression substantially induced the expression of genes involved in lignin biosynthetic pathways (Figure&#x000a0;<xref rid="pbi12715-fig-0007" ref-type="fig">7</xref>). Both laccase genes <italic>LAC4</italic> and <italic>LAC17</italic>, which are involved in secondary wall formation (Berthet <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0002" ref-type="ref">2011</xref>; Zhou <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0041" ref-type="ref">2009</xref>), were also activated by TCP4 (Figure&#x000a0;<xref rid="pbi12715-fig-0007" ref-type="fig">7</xref>).</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0007" orientation="portrait" position="float"><label>Figure 7</label><caption><p>
+<styled-content style="fixed-case">qRT</styled-content>&#x02010;<styled-content style="fixed-case">PCR</styled-content> analysis of lignin biosynthesis genes in 2&#x02010;week&#x02010;old seedlings. Bars show the relative expression levels of each gene in the wild type, <italic>jaw</italic>&#x02010;D plants and <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>&#x02010;<italic><styled-content style="fixed-case">OX</styled-content></italic> lines. The expression level of each gene in the wild type is set to 1. Relative gene expression was calculated by normalizing to&#x000a0;the value in <styled-content style="fixed-case">WT</styled-content> plants. Error bars represent <styled-content style="fixed-case">SE</styled-content> of triplicate experiments.</p></caption><graphic id="nlm-graphic-13" xlink:href="PBI-15-1284-g007"/></fig><p>To further confirm that TCP4 could activate the expression of cellulose and lignin biosynthesis genes, the <italic>rTCP4</italic> was subcloned into <italic>pER8</italic> (Zuo <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0042" ref-type="ref">2000</xref>), downstream of an estrogen&#x02010;inducible promoter, and the resulting plasmids were introduced into wild&#x02010;type Arabidopsis via the floral&#x02010;dip method (Clough and Bent, <xref rid="pbi12715-bib-0007" ref-type="ref">1998</xref>). Two&#x02010;week&#x02010;old transgenic plants were treated with 2&#x000a0;&#x003bc;<sc>m</sc> estradiol, and estradiol activation of <italic>TCP4</italic> substantially induced the expression of cellulose and lignin biosynthesis genes (Figure&#x000a0;<xref rid="pbi12715-fig-0008" ref-type="fig">8</xref>). Together, these results demonstrate that TCP4 is a transcriptional activator of cellulose and lignin biosynthesis during secondary wall formation.</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0008" orientation="portrait" position="float"><label>Figure 8</label><caption><p>Induction of the secondary cell wall biosynthetic genes by estradiol activation of <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic>. Bars show the relative expression levels of <italic><styled-content style="fixed-case">TCP</styled-content>4</italic>,<italic><styled-content style="fixed-case">VND</styled-content>7</italic> and secondary cell wall biosynthetic genes expression in 2&#x02010;week&#x02010;old <italic><styled-content style="fixed-case">pER</styled-content>8&#x02010;<styled-content style="fixed-case">rTCP</styled-content>4&#x02010;4</italic> seedlings treated with 2&#x000a0;&#x003bc;<sc>m</sc> estradiol for various periods of time. The expression levels of <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> and <italic><styled-content style="fixed-case">VND</styled-content>7</italic> in the 2&#x02010;week&#x02010;old <italic><styled-content style="fixed-case">pER</styled-content>8&#x02010;<styled-content style="fixed-case">rTCP</styled-content>4&#x02010;4</italic> seedlings without treatment are set to 1, respectively. Relative gene expression was calculated by normalizing to the value in the 2&#x02010;week&#x02010;old <italic><styled-content style="fixed-case">pER</styled-content>8&#x02010;<styled-content style="fixed-case">rTCP</styled-content>4&#x02010;4</italic> seedlings without treatment. Error bars represent <styled-content style="fixed-case">SE</styled-content> of triplicate experiments.</p></caption><graphic id="nlm-graphic-15" xlink:href="PBI-15-1284-g008"/></fig></sec><sec id="pbi12715-sec-0008"><title>Inducible overexpression of <italic>rTCP4</italic> is sufficient to induce ectopic xylem vessel formation</title><p>To further confirm that <italic>TCP4</italic> is involved in xylem vessel formation, <italic>pER8&#x02010;rTCP4&#x02010;4</italic> transgenic seeds were grown in MS medium with or without 2&#x000a0;&#x003bc;<sc>m</sc> estradiol. Under estradiol&#x02010;free growth conditions, <italic>pER8&#x02010;rTCP4&#x02010;4</italic> seedlings showed a phenotype similar to the wild type (Figure&#x000a0;<xref rid="pbi12715-fig-0009" ref-type="fig">9</xref>a). In the presence of estradiol treatment, <italic>pER8&#x02010;rTCP4&#x02010;4</italic> seedlings exhibit long hypocotyls, epinastic cotyledons and smaller rosette leaves (Figure&#x000a0;<xref rid="pbi12715-fig-0009" ref-type="fig">9</xref>b). Cross&#x02010;sections of hypocotyls and roots of <italic>pER8&#x02010;rTCP4&#x02010;4</italic> seedlings without estradiol treatment did not show obvious differences from the wild type (Figure&#x000a0;<xref rid="pbi12715-fig-0009" ref-type="fig">9</xref>c,e). In contrast, estradiol treatment increased the production of xylem vessel elements in <italic>pER8&#x02010;rTCP4&#x02010;4</italic> seedlings (Figure&#x000a0;<xref rid="pbi12715-fig-0009" ref-type="fig">9</xref>d,f).</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0009" orientation="portrait" position="float"><label>Figure 9</label><caption><p>Inducible overexpression of <italic><styled-content style="fixed-case">rTCP</styled-content>4</italic> increased xylem vessel element formation in transgenic Arabidopsis. (a) Phenotype of 1&#x02010;week&#x02010;old <italic><styled-content style="fixed-case">pER</styled-content>8&#x02010;<styled-content style="fixed-case">rTCP</styled-content>4&#x02010;4</italic> seedlings growing in <styled-content style="fixed-case">MS</styled-content> medium without 2&#x000a0;&#x003bc;<sc>m</sc> estradiol. (b) Phenotype of 1&#x02010;week&#x02010;old <italic><styled-content style="fixed-case">pER</styled-content>8&#x02010;<styled-content style="fixed-case">rTCP</styled-content>4&#x02010;4</italic> seedlings growing in <styled-content style="fixed-case">MS</styled-content> medium with 2&#x000a0;&#x003bc;<sc>m</sc> estradiol. (c) Cross&#x02010;sections of hypocotyls in (a) showing similar phenotype with wild type. (d) Cross&#x02010;sections of hypocotyls in (b) showing increased xylem vessel formation. (e) Cross&#x02010;sections of roots in (a) showing similar phenotype with wild type. (f) Cross&#x02010;sections of roots in (b) showing increased xylem vessel formation. Bars&#x000a0;=&#x000a0;1&#x000a0;cm (a, b), 20&#x000a0;&#x003bc;m (c&#x02013;f).</p></caption><graphic id="nlm-graphic-17" xlink:href="PBI-15-1284-g009"/></fig></sec><sec id="pbi12715-sec-0009"><title>Transcriptional levels of <italic>TCP4</italic> and <italic>VND7</italic> are regulated by developmental processes</title><p>The expression of <italic>miR319</italic> varied depending on the developmental state (Nag <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0019" ref-type="ref">2009</xref>). As <italic>TCP4</italic> is the target gene of <italic>miR319</italic>, we measured the expression levels of <italic>TCP4</italic> and <italic>VND7</italic> during different developmental periods. As shown in Figure&#x000a0;<xref rid="pbi12715-fig-0010" ref-type="fig">10</xref>, we found that the transcriptional levels of <italic>TCP4</italic> and <italic>VND7</italic> gradually increased during plant development and reached a maximum level after 5&#x000a0;weeks of growth. This result indicates that a positive correlation exists between <italic>TCP4</italic> and <italic>VND7</italic>.</p><fig fig-type="Figure" xml:lang="en" id="pbi12715-fig-0010" orientation="portrait" position="float"><label>Figure 10</label><caption><p>Dynamic expression of <italic>Arabidopsis <styled-content style="fixed-case">TCP</styled-content>4</italic> and <italic><styled-content style="fixed-case">VND</styled-content>7</italic>
+<styled-content style="fixed-case">mRNA</styled-content>. <styled-content style="fixed-case">qRT</styled-content>&#x02010;<styled-content style="fixed-case">PCR</styled-content> analysis of <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> and <italic><styled-content style="fixed-case">VND</styled-content>7</italic> expression changes during development. The expression levels of <italic><styled-content style="fixed-case">TCP</styled-content>4</italic> and <italic><styled-content style="fixed-case">VND</styled-content>7</italic> in the 1&#x02010;week&#x02010;old wild&#x02010;type plants are set to 1, respectively. Relative gene expression was calculated by normalizing to the value in the 1&#x02010;week&#x02010;old wild&#x02010;type plants. Error bars represent <styled-content style="fixed-case">SE</styled-content> of triplicate experiments.</p></caption><graphic id="nlm-graphic-19" xlink:href="PBI-15-1284-g010"/></fig></sec></sec><sec id="pbi12715-sec-0010"><title>Discussion</title><p>Previous studies demonstrated that miR319 and its targets, which comprise a set of TCP transcription factor genes, regulate various developmental physiological processes, such as leaf growth (Palatnik <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0022" ref-type="ref">2003</xref>; Schommer <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0025" ref-type="ref">2014</xref>), leaf senescence (Sarvepalli and Nath, <xref rid="pbi12715-bib-0023" ref-type="ref">2011</xref>; Schommer <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0024" ref-type="ref">2008</xref>) and petal development (Nag <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0019" ref-type="ref">2009</xref>). Here, we discovered that miR319 and its target gene <italic>TCP4</italic> simultaneously control plant developmental processes and senescence by modulating <italic>VND7</italic>&#x02010;dependent xylem vessel formation and PCD. These findings suggest that plants strictly adjust <italic>TCP4</italic> levels to coordinate two key processes in plant biology: development and senescence.</p><p>Schommer <italic>et&#x000a0;al</italic>. (<xref rid="pbi12715-bib-0024" ref-type="ref">2008</xref>) found that <italic>jaw</italic>&#x02010;D plants with high miR319 expression levels could delay senescence by reducing <italic>TCP4</italic> expression and jasmonic acid (JA) biosynthesis. Given that JA also mediates cell wall lignification (Denness <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0008" ref-type="ref">2011</xref>), it is possible that the lower level of miR319 during maturity results in a high level of <italic>TCP4</italic> expression, which promotes JA synthesis, and that the produced JA synergistically contributes to lignin biosynthesis. Although exogenous application of JA caused premature senescence in attached and detached leaves in WT <italic>Arabidopsis</italic>,<italic> TCP4</italic>&#x02010;targeted <italic>LOX2</italic> expression was sharply reduced during leaf senescence (He <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0012" ref-type="ref">2002</xref>). LOX2&#x02010;RNAi plants and WT plants did not show any differences in senescence initiation and progression based on the assessment of chlorophyll loss during natural senescence (Seltmann <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0026" ref-type="ref">2010</xref>). These results indicate that the <italic>TCP</italic>&#x02010;targeted <italic>LOX2</italic> in the JA biosynthesis pathway is not necessary for promoting senescence in <italic>Arabidopsis</italic>, and a parallel pathway exists during the control of senescence. The differentiation of vessel cells results in an orchestrated construction of the secondary cell wall structure involving cellulosic thickening and lignification, PCD and cellular autolysis (Fukuda, <xref rid="pbi12715-bib-0011" ref-type="ref">1997</xref>). Systematic analysis of gene expression revealed that many genes involved in both secondary wall formation and modification and PCD are simultaneously expressed just before morphological changes occur in TEs (Kubo <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0015" ref-type="ref">2005</xref>; Ohashi&#x02010;Ito <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0020" ref-type="ref">2010</xref>; Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0034" ref-type="ref">2010a</xref>, <xref rid="pbi12715-bib-0036" ref-type="ref">2011</xref>). In this study, we showed that TCP4 binds to the promoter of <italic>VND7</italic> and activates its expression. VND7, an essential NAC transcription factor, activates downstream networks to promote PCD of TEs and xylem vessel differentiation (Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0036" ref-type="ref">2011</xref>). Overexpression of <italic>VND7</italic> causes seedlings to become pale in colour and results in their premature death (Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0034" ref-type="ref">2010a</xref>). TCP4 and VND7 showed a similar expression pattern in vascular tissue as shown by a promoter GUS assay (Koyama <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0014" ref-type="ref">2007</xref>; Yamaguchi <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0033" ref-type="ref">2008</xref>). During the promotion of maturation, the transcriptional levels of <italic>TCP4</italic> and <italic>VND7</italic> gradually increased during plant development. These findings suggest that <italic>TCP4</italic> initiates PCD, at least partly, by activating the <italic>VND7</italic> gene through the VND7 transcriptional network for secondary wall formation.</p><p>Development and senescence are widely studied processes that are fundamental for sessile plant survival in nature. Leaf senescence represents the final stage of leaf development and is critical for plant relocation of nutrients from the leaves to the reproducing seeds (Lim <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0017" ref-type="ref">2007</xref>). Here, we uncovered a novel mechanism of miR319 in coordinating development and senescence in <italic>Arabidopsis</italic>. Development modulates miR319&#x02010;mediated <italic>TCP4</italic> expression to activate the downstream <italic>VND7</italic> network and thereby promotes secondary cell wall formation and PCD. Thus, low <italic>TCP4</italic> levels during the juvenile&#x02010;to&#x02010;adult/senescence transition retard xylem vessel differentiation. In contrast, high <italic>TCP4</italic> levels in adult/senescence plants promote rapid xylem vessel differentiation, which contributes to transport of water and minerals and provides mechanic strength to the entire plants, suggesting that proper levels of active <italic>TCP4</italic> are critical for plant development. Thus, this study reveals a novel role for miR319 in coordinating plant developmental processes with senescence responses.</p></sec><sec id="pbi12715-sec-0011"><title>Experimental procedures</title><sec id="pbi12715-sec-0012"><title>Plant materials and growth conditions</title><p>
+<italic>Arabidopsis thaliana</italic> ecotype Columbia (Col&#x02010;0) was used as the WT control. <italic>Jaw</italic>&#x02010;D seeds were obtained from Prof. Detlef Weigel (Max Planck Institute for Developmental Biology). Surface&#x02010;sterilized seeds were germinated on Murashige and Skoog (MS) medium. The seeds were kept at 4&#x000a0;&#x000b0;C for 3&#x000a0;days and then transferred to a greenhouse (22&#x000a0;&#x000b0;C) under long&#x02010;day conditions (16&#x000a0;h light/day). Seedlings were transplanted to the soil 10&#x000a0;days after planting.</p></sec><sec id="pbi12715-sec-0013"><title>Transgenic plants</title><p>The <italic>ORF</italic> of <italic>rTCP4</italic> was amplified with the primer pairs 5&#x02032;&#x02010;ATGTCTGACGACCAATTCCATCACC&#x02010;3&#x02032; and 5&#x02032;&#x02010;TCAATGGCGAGAAATAGAGGAAGCA&#x02010;3&#x02032; using <italic>rTCP4&#x02010;GFP</italic> plasmid (Schommer <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0024" ref-type="ref">2008</xref>) and then used EZ cloning into <italic>pBI121</italic> and <italic>pER8</italic>, respectively. The resulting plasmids were introduced into <italic>Agrobacterium</italic> GV3101. Transgenic <italic>Arabidopsis</italic> lines expressing <italic>rTCP4</italic> were obtained by <italic>Agrobacterium</italic>&#x02010;mediated flower dipping transformation. The transformants were selected on MS medium containing 50&#x000a0;mg/L kanamycin for <italic>pBI121</italic>&#x02010;<italic>rTCP4</italic> and 20&#x000a0;mg/L hygromycin for <italic>pER8&#x02010;rTCP4</italic>.</p></sec><sec id="pbi12715-sec-0014"><title>Histology</title><p>Inflorescence stems were collected at developmental stage 6.2 (Boyes <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0003" ref-type="ref">2001</xref>), corresponding to a height of 15&#x000a0;cm. The basal parts of the stem were fixed at 4&#x000a0;&#x000b0;C overnight with 2% glutaraldehyde in PBS (33&#x000a0;m<sc>m</sc> Na<sub>2</sub>HPO<sub>4</sub> and 1.8&#x000a0;m<sc>m</sc> NaH<sub>2</sub>PO<sub>4</sub>, pH 7.2). After fixation, tissues embedded in low viscosity (Spurr's) resin (Electron Microscopy Sciences, PA) were sectioned (1&#x000a0;&#x003bc;m thick) and stained with toluidine blue for light microscopy. For observation of subcellular structures, 85&#x02010;nm&#x02010;thick sections were poststained with uranyl acetate and lead citrate and observed using a JEM&#x02010;1230 transmission electron microscope (JEOL, Tokyo, Japan). The wall thickness of xylem vessel elements in the stem was measured.</p><p>For examination of lignified cell walls in stems, 50&#x02010;&#x003bc;m&#x02010;thick sections were stained for 5&#x000a0;min with 1% phloroglucinol in 6&#x000a0;N HCl to identify lignin, which was shown as a bright red colour. Semithin sections were processed according to Sun <italic>et&#x000a0;al</italic>. (<xref rid="pbi12715-bib-0028" ref-type="ref">2013</xref>). One&#x02010;micrometer&#x02010;thick sections were stained for cellulose with 0.01% Calcofluor White and observed with an ultraviolet fluorescence microscope as described previously (Zhou <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0041" ref-type="ref">2009</xref>). Under the conditions used, only secondary walls exhibited brilliant fluorescence. For vessel visualizations, the roots and hypocotyls of 7&#x02010;day&#x02010;old seedlings were cleared and stained with 0.01% basic fuchsin as described previously (Dharmawardhana <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0009" ref-type="ref">1992</xref>).</p></sec><sec id="pbi12715-sec-0015"><title>Protein expression and purification</title><p>The <italic>TCP4</italic> and <italic>rTCP4</italic> expression constructs <italic>pET32a</italic>&#x02010;<italic>TCP4</italic> and <italic>pET32a</italic>&#x02010;<italic>rTCP4</italic> were transformed into the <italic>Escherichia coli</italic> strain <italic>Rosseta</italic>&#x02122;, respectively. LB (100&#x000a0;mL) containing 100&#x000a0;mg/mL ampicillin was inoculated with 1&#x000a0;mL of overnight culture and grown at 37&#x000a0;&#x000b0;C to mid&#x02010;log phase. Recombinant protein expression was induced with 0.5&#x000a0;m<sc>m</sc> isopropyl b&#x02010;L&#x02010;thiogalactoside. Cells were harvested after 3&#x000a0;h of induction. Cells were lysed according to the instructions of the MagneHis&#x02122; Protein Purification System (Promega, WI). The lysate was centrifuged, and the supernatant was loaded onto a Ni&#x02010;NTA spin column (Promega). Recombinant protein was eluted in a 200&#x000a0;&#x003bc;L volume containing 500&#x000a0;m<sc>m</sc> imidazole. The eluted protein was dialysed&#x000a0;against 50&#x000a0;m<sc>m</sc> NaH<sub>2</sub>PO<sub>4</sub>, 300&#x000a0;m<sc>m</sc> NaCl and 10% glycerol for 6&#x000a0;h. The purification was monitored by Western blot using&#x000a0;anti&#x02010;His HRP&#x02010;conjugated antibodies (Qiagen, Beijing, China).</p></sec><sec id="pbi12715-sec-0016"><title>Emsa</title><p>A DNA probe was generated by end&#x02010;labelling a double&#x02010;stranded oligo (5&#x02032;&#x02010;ATTGTTGG<underline underline-style="single">GTGGTCCC</underline>ATAAAAAT&#x02010;3&#x02032;) containing one TCP4&#x02010;binding site with a biotin label at the 3&#x02032; end. The binding reaction was conducted in a total volume of 20&#x000a0;&#x003bc;L containing 100 fmol of probe, 1&#x000d7; binding buffer (20&#x000a0;m<sc>m</sc> HEPES&#x02010;KOH, pH 7.8, 100&#x000a0;m<sc>m</sc> KCl, 1&#x000a0;m<sc>m</sc> EDTA, 0.1% BSA, 10&#x000a0;ng herring sperm DNA and 10% glycerol) and 1&#x000a0;&#x003bc;g of purified protein. The mixture was incubated for 30&#x000a0;min at room temperature and loaded on a 6% native polyacrylamide gel. Electrophoresis was conducted at 6&#x000a0;V/cm for 45&#x000a0;min with 0.25&#x000d7; Tris&#x02010;borate buffer at room temperature.</p></sec><sec id="pbi12715-sec-0017"><title>Transactivation of <italic>VND7</italic> promoter activity by TCP4 in <italic>Nicotiana benthamiana</italic> leaves</title><p>The transient expression assays were performed in <italic>N.&#x000a0;benthamiana</italic> leaves according to previously described methods (Chen <italic>et&#x000a0;al</italic>., <xref rid="pbi12715-bib-0006" ref-type="ref">2011</xref>). The <italic>VND7</italic> promoter was amplified with the primer pairs 5&#x02032;&#x02010;TTTCATCAGTACCTGATCCAGC&#x02010;3&#x02032; and 5&#x02032;&#x02010;GTGTCTTTTTGGAAGCTATTGC&#x02010;3&#x02032;, cloned into the pMD18T vector (Takara, Dalian, China) and verified by sequencing. The <italic>VND7</italic> promoter was then fused with the luciferase reporter gene <italic>LUC</italic> through EZ cloning into the plant binary vector <italic>pRI101</italic> to generate the reporter construct <italic>Pro</italic>
+<sub><italic>VND7</italic></sub>
+<italic>:LUC</italic>. The <italic>TCP4</italic> effector construct was <italic>35S:TCP4</italic>, and the <italic>TCP4</italic> coding region was amplified by PCR with the primer pairs. Five independent determinations were assessed. The experiment was repeated three times with similar results.</p></sec><sec id="pbi12715-sec-0018"><title>Quantitative RT&#x02010;PCR</title><p>The aforementioned <italic>Arabidopsis</italic> seedlings were used for quantitative real&#x02010;time PCR (qRT&#x02010;PCR) analysis of gene expression. Total RNAs were extracted using Trizol reagent (Invitrogen, CA) and reverse transcribed using M&#x02010;MLV (Promega). Real&#x02010;time PCR was performed with the ABI7500 real&#x02010;time PCR system using <italic>TransStart</italic>
+<sup>&#x000ae;</sup> Top Green qPCR SuperMix (TransGen, Beijing, China). The relative gene expression level was calculated by normalizing against the internal control <italic>Ubiquitin10</italic>. Three technical replicates were carried out for each sample. Primers are listed in Table&#x000a0;<xref rid="pbi12715-sup-0002" ref-type="supplementary-material">S1</xref>.</p></sec><sec id="pbi12715-sec-0019"><title>Statistical analysis</title><p>Statistical analysis and exponential curve fitting were performed using SigmaPlot 10.0 (Systat Software Inc., San Jose, CA) software. Results are expressed as mean&#x000a0;&#x000b1;&#x000a0;SD. Student's <italic>t</italic>&#x02010;tests were performed, and <italic>P</italic>&#x02010;values provided in results.</p></sec></sec><sec id="pbi12715-sec-0021"><title>Conflict of interest</title><p>The authors declare no competing interests.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material content-type="local-data" id="pbi12715-sup-0001"><caption><p>
+<bold>Figure&#x000a0;S1</bold> Cross&#x02010;sections of hypocotyls and roots of F1 seedlings.</p></caption><media xlink:href="PBI-15-1284-s001.jpg"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pbi12715-sup-0002"><caption><p>
+<bold>Table&#x000a0;S1</bold> Primers used for qRT&#x02010;PCR analysis in this study.</p></caption><media xlink:href="PBI-15-1284-s002.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="pbi12715-sec-0020"><title>Acknowledgments</title><p>We thank Prof. Detlef Weigel (Max Planck Institute Developmental Biology, Germany) for the <italic>jaw&#x02010;</italic>D seeds, <italic>rTCP4&#x02010;GFP</italic> plasmid and critical reading of the manuscript. We are grateful to Dr. Hongtao Li for practical assistance with operation of the ABI7500. We gratefully thank Prof. Anja Geitmann (McGill University, Canada) and Prof. Jinling Huang (East Carolina University, USA) for revising the manuscript about writing style, English language and syntax. This work was financially supported by the Major State Basic Research Development Program of China (2010CB951704) and the National Natural Science Foundation of China to Y. P. Y. (41271058) and X. D. S. (31400244).</p></ack><ref-list content-type="cited-references" id="pbi12715-bibl-0001"><title>References</title><ref id="pbi12715-bib-0001"><mixed-citation publication-type="journal" id="pbi12715-cit-0001">
+<string-name>
+<surname>Avci</surname>, <given-names>U.</given-names>
+</string-name>, <string-name>
+<surname>Petzold</surname>, <given-names>H.E.</given-names>
+</string-name>, <string-name>
+<surname>Ismail</surname>, <given-names>I.O.</given-names>
+</string-name>, <string-name>
+<surname>Beers</surname>, <given-names>E.P.</given-names>
+</string-name> and <string-name>
+<surname>Haigler</surname>, <given-names>C.H.</given-names>
+</string-name> (<year>2008</year>) <article-title>Cysteine&#x000a0;proteases XCP1 and XCP2 aid micro&#x02010;autolysis within the intact&#x000a0;central vacuole during xylogenesis in Arabidopsis roots</article-title>. <source>Plant J.</source>
+<volume>56</volume>, <fpage>303</fpage>&#x02013;<lpage>315</lpage>.<pub-id pub-id-type="pmid">18573193</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0002"><mixed-citation publication-type="journal" id="pbi12715-cit-0002">
+<string-name>
+<surname>Berthet</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Demont&#x02010;Caulet</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Pollet</surname>, <given-names>B.</given-names>
+</string-name>, <string-name>
+<surname>Bidzinski</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Cezard</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Le Bris</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Borrega</surname>, <given-names>N.</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic> (<year>2011</year>) <article-title>Disruption of LACCASE4 and 17 results in tissue&#x02010;specific alterations to lignification of <italic>Arabidopsis thaliana</italic> stems</article-title>. <source>Plant Cell</source>, <volume>23</volume>, <fpage>1124</fpage>&#x02013;<lpage>1137</lpage>.<pub-id pub-id-type="pmid">21447792</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0003"><mixed-citation publication-type="journal" id="pbi12715-cit-0003">
+<string-name>
+<surname>Boyes</surname>, <given-names>D.C.</given-names>
+</string-name>, <string-name>
+<surname>Zayed</surname>, <given-names>A.M.</given-names>
+</string-name>, <string-name>
+<surname>Ascenzi</surname>, <given-names>R.</given-names>
+</string-name>, <string-name>
+<surname>McCaskill</surname>, <given-names>A.J.</given-names>
+</string-name>, <string-name>
+<surname>Hoffman</surname>, <given-names>N.E.</given-names>
+</string-name>, <string-name>
+<surname>Davis</surname>, <given-names>K.R.</given-names>
+</string-name> and <string-name>
+<surname>G&#x000f6;rlach</surname>, <given-names>J.</given-names>
+</string-name> (<year>2001</year>) <article-title>Growth stage&#x02013;based phenotypic analysis of Arabidopsis: a model for high throughput functional genomics in plants</article-title>. <source>Plant Cell</source>, <volume>13</volume>, <fpage>1499</fpage>&#x02013;<lpage>1510</lpage>.<pub-id pub-id-type="pmid">11449047</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0004"><mixed-citation publication-type="journal" id="pbi12715-cit-0004">
+<string-name>
+<surname>Brown</surname>, <given-names>D.M.</given-names>
+</string-name>, <string-name>
+<surname>Zeef</surname>, <given-names>L.A.H.</given-names>
+</string-name>, <string-name>
+<surname>Ellis</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Goodacre</surname>, <given-names>R.</given-names>
+</string-name> and <string-name>
+<surname>Turner</surname>, <given-names>S.R.</given-names>
+</string-name> (<year>2005</year>) <article-title>Identification of novel genes in Arabidopsis involved in secondary cell wall formation using expression profiling and reverse genetics</article-title>. <source>Plant Cell</source>, <volume>17</volume>, <fpage>2281</fpage>&#x02013;<lpage>2295</lpage>.<pub-id pub-id-type="pmid">15980264</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0005"><mixed-citation publication-type="journal" id="pbi12715-cit-0005">
+<string-name>
+<surname>Chen</surname>, <given-names>X.</given-names>
+</string-name> (<year>2009</year>) <article-title>Small RNAs and their roles in plant development</article-title>. <source>Ann. Rev. Cell Dev.</source>
+<volume>25</volume>, <fpage>21</fpage>&#x02013;<lpage>44</lpage>.</mixed-citation></ref><ref id="pbi12715-bib-0006"><mixed-citation publication-type="journal" id="pbi12715-cit-0006">
+<string-name>
+<surname>Chen</surname>, <given-names>Q.</given-names>
+</string-name>, <string-name>
+<surname>Sun</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Zhai</surname>, <given-names>Q.</given-names>
+</string-name>, <string-name>
+<surname>Zhou</surname>, <given-names>W.</given-names>
+</string-name>, <string-name>
+<surname>Qi</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Xu</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Wang</surname>, <given-names>B.</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic> (<year>2011</year>) <article-title>The basic helix&#x02010;loop&#x02010;helix transcription factor MYC2 directly represses PLETHORA expression during jasmonate&#x02010;mediated modulation of the root stem cell niche in Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>23</volume>, <fpage>3335</fpage>&#x02013;<lpage>3352</lpage>.<pub-id pub-id-type="pmid">21954460</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0007"><mixed-citation publication-type="journal" id="pbi12715-cit-0007">
+<string-name>
+<surname>Clough</surname>, <given-names>S.J.</given-names>
+</string-name> and <string-name>
+<surname>Bent</surname>, <given-names>A.F.</given-names>
+</string-name> (<year>1998</year>) <article-title>Floral dip: a simplified method for <italic>Agrobacterium</italic>&#x02010;mediated transformation of <italic>Arabidopsis thaliana</italic>
+</article-title>. <source>Plant J.</source>
+<volume>16</volume>, <fpage>735</fpage>&#x02013;<lpage>743</lpage>.<pub-id pub-id-type="pmid">10069079</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0008"><mixed-citation publication-type="journal" id="pbi12715-cit-0008">
+<string-name>
+<surname>Denness</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>McKenna</surname>, <given-names>J.F.</given-names>
+</string-name>, <string-name>
+<surname>Segonzac</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Wormit</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Madhou</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Bennett</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Mansfield</surname>, <given-names>J.</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic> (<year>2011</year>) <article-title>Cell wall damage&#x02010;induced lignin biosynthesis is regulated by a reactive oxygen species&#x02010;and jasmonic acid&#x02010;dependent process in Arabidopsis</article-title>. <source>Plant Physiol.</source>
+<volume>156</volume>, <fpage>1364</fpage>&#x02013;<lpage>1374</lpage>.<pub-id pub-id-type="pmid">21546454</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0009"><mixed-citation publication-type="journal" id="pbi12715-cit-0009">
+<string-name>
+<surname>Dharmawardhana</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Ellis</surname>, <given-names>B.</given-names>
+</string-name> and <string-name>
+<surname>Carlson</surname>, <given-names>J.</given-names>
+</string-name> (<year>1992</year>) <article-title>Characterization of vascular lignification in <italic>Arabidopsis thaliana</italic>
+</article-title>. <source>Can. J. Bot.</source>
+<volume>70</volume>, <fpage>2238</fpage>&#x02013;<lpage>2244</lpage>.</mixed-citation></ref><ref id="pbi12715-bib-0010"><mixed-citation publication-type="journal" id="pbi12715-cit-0010">
+<string-name>
+<surname>Ellis</surname>, <given-names>B.</given-names>
+</string-name>, <string-name>
+<surname>Schuetz</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Douglas</surname>, <given-names>C.</given-names>
+</string-name> and <string-name>
+<surname>Samuels</surname>, <given-names>L.</given-names>
+</string-name> (<year>2014</year>) <article-title>Manipulating lignin deposition</article-title>. <source>Can. J. Plant Sci.</source>
+<volume>94</volume>, <fpage>1043</fpage>&#x02013;<lpage>1049</lpage>.</mixed-citation></ref><ref id="pbi12715-bib-0011"><mixed-citation publication-type="journal" id="pbi12715-cit-0011">
+<string-name>
+<surname>Fukuda</surname>, <given-names>H.</given-names>
+</string-name> (<year>1997</year>) <article-title>Tracheary element differentiation</article-title>. <source>Plant Cell</source>, <volume>9</volume>, <fpage>1147</fpage>&#x02013;<lpage>1156</lpage>.<pub-id pub-id-type="pmid">12237380</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0012"><mixed-citation publication-type="journal" id="pbi12715-cit-0012">
+<string-name>
+<surname>He</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Fukushige</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Hildebrand</surname>, <given-names>D.F.</given-names>
+</string-name> and <string-name>
+<surname>Gan</surname>, <given-names>S.</given-names>
+</string-name> (<year>2002</year>) <article-title>Evidence supporting a role of jasmonic acid in Arabidopsis leaf senescence</article-title>. <source>Plant Physiol.</source>
+<volume>128</volume>, <fpage>876</fpage>&#x02013;<lpage>884</lpage>.<pub-id pub-id-type="pmid">11891244</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0013"><mixed-citation publication-type="journal" id="pbi12715-cit-0013">
+<string-name>
+<surname>Jones&#x02010;Rhoades</surname>, <given-names>M.W.</given-names>
+</string-name>, <string-name>
+<surname>Bartel</surname>, <given-names>D.P.</given-names>
+</string-name> and <string-name>
+<surname>Bartel</surname>, <given-names>B.</given-names>
+</string-name> (<year>2006</year>) <article-title>MicroRNAs and their regulatory roles in plants</article-title>. <source>Annu. Rev. Plant Biol.</source>
+<volume>57</volume>, <fpage>19</fpage>&#x02013;<lpage>53</lpage>.<pub-id pub-id-type="pmid">16669754</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0014"><mixed-citation publication-type="journal" id="pbi12715-cit-0014">
+<string-name>
+<surname>Koyama</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Furutani</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Tasaka</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Ohme&#x02010;Takagi</surname>, <given-names>M.</given-names>
+</string-name> (<year>2007</year>) <article-title>TCP transcription factors control the morphology of shoot lateral organs via negative regulation of the expression of boundary&#x02010;specific genes in Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>19</volume>, <fpage>473</fpage>&#x02013;<lpage>484</lpage>.<pub-id pub-id-type="pmid">17307931</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0015"><mixed-citation publication-type="journal" id="pbi12715-cit-0015">
+<string-name>
+<surname>Kubo</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Udagawa</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Nishikubo</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Horiguchi</surname>, <given-names>G.</given-names>
+</string-name>, <string-name>
+<surname>Yamaguchi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Ito</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Mimura</surname>, <given-names>T.</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic> (<year>2005</year>) <article-title>Transcription switches for protoxylem and metaxylem vessel formation</article-title>. <source>Genes Dev.</source>
+<volume>19</volume>, <fpage>1855</fpage>&#x02013;<lpage>1860</lpage>.<pub-id pub-id-type="pmid">16103214</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0016"><mixed-citation publication-type="journal" id="pbi12715-cit-0016">
+<string-name>
+<surname>Li</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name>
+<surname>Li</surname>, <given-names>B.</given-names>
+</string-name>, <string-name>
+<surname>Shen</surname>, <given-names>W.H.</given-names>
+</string-name>, <string-name>
+<surname>Huang</surname>, <given-names>H.</given-names>
+</string-name> and <string-name>
+<surname>Dong</surname>, <given-names>A.</given-names>
+</string-name> (<year>2012</year>) <article-title>TCP transcription factors interact with AS2 in the repression of class&#x02010;I KNOX genes in <italic>Arabidopsis thaliana</italic>
+</article-title>. <source>Plant J.</source>
+<volume>71</volume>, <fpage>99</fpage>&#x02013;<lpage>107</lpage>.<pub-id pub-id-type="pmid">22380849</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0017"><mixed-citation publication-type="journal" id="pbi12715-cit-0017">
+<string-name>
+<surname>Lim</surname>, <given-names>P.O.</given-names>
+</string-name>, <string-name>
+<surname>Kim</surname>, <given-names>H.J.</given-names>
+</string-name> and <string-name>
+<surname>Nam</surname>, <given-names>H.G.</given-names>
+</string-name> (<year>2007</year>) <article-title>Leaf senescence</article-title>. <source>Annu. Rev. Plant Biol.</source>
+<volume>58</volume>, <fpage>115</fpage>&#x02013;<lpage>136</lpage>.<pub-id pub-id-type="pmid">17177638</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0018"><mixed-citation publication-type="journal" id="pbi12715-cit-0018">
+<string-name>
+<surname>McCarthy</surname>, <given-names>R.L.</given-names>
+</string-name>, <string-name>
+<surname>Zhong</surname>, <given-names>R.</given-names>
+</string-name> and <string-name>
+<surname>Ye</surname>, <given-names>Z.&#x02010;H.</given-names>
+</string-name> (<year>2009</year>) <article-title>MYB83 is a direct target of SND1 and acts redundantly with MYB46 in the regulation of secondary cell wall biosynthesis in Arabidopsis</article-title>. <source>Plant Cell Physiol.</source>
+<volume>50</volume>, <fpage>1950</fpage>&#x02013;<lpage>1964</lpage>.<pub-id pub-id-type="pmid">19808805</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0019"><mixed-citation publication-type="journal" id="pbi12715-cit-0019">
+<string-name>
+<surname>Nag</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>King</surname>, <given-names>S.</given-names>
+</string-name> and <string-name>
+<surname>Jack</surname>, <given-names>T.</given-names>
+</string-name> (<year>2009</year>) <article-title>miR319a targeting of TCP4 is critical for petal growth and development in Arabidopsis</article-title>. <source>Proc. Natl Acad. Sci. USA</source>, <volume>106</volume>, <fpage>22534</fpage>&#x02013;<lpage>22539</lpage>.<pub-id pub-id-type="pmid">20007771</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0020"><mixed-citation publication-type="journal" id="pbi12715-cit-0020">
+<string-name>
+<surname>Ohashi&#x02010;Ito</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Oda</surname>, <given-names>Y.</given-names>
+</string-name> and <string-name>
+<surname>Fukuda</surname>, <given-names>H.</given-names>
+</string-name> (<year>2010</year>) <article-title>Arabidopsis VASCULAR&#x02010;RELATED NAC&#x02010;DOMAIN6 directly regulates the genes that govern programmed cell death and secondary wall formation during xylem differentiation</article-title>. <source>Plant Cell</source>, <volume>22</volume>, <fpage>3461</fpage>&#x02013;<lpage>3473</lpage>.<pub-id pub-id-type="pmid">20952636</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0021"><mixed-citation publication-type="journal" id="pbi12715-cit-0021">
+<string-name>
+<surname>Ori</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Cohen</surname>, <given-names>A.R.</given-names>
+</string-name>, <string-name>
+<surname>Etzioni</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Brand</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Yanai</surname>, <given-names>O.</given-names>
+</string-name>, <string-name>
+<surname>Shleizer</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Menda</surname>, <given-names>N.</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic> (<year>2007</year>) <article-title>Regulation of LANCEOLATE by miR319 is required for compound&#x02010;leaf development in tomato</article-title>. <source>Nat. Genet.</source>
+<volume>39</volume>, <fpage>787</fpage>&#x02013;<lpage>791</lpage>.<pub-id pub-id-type="pmid">17486095</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0022"><mixed-citation publication-type="journal" id="pbi12715-cit-0022">
+<string-name>
+<surname>Palatnik</surname>, <given-names>J.F.</given-names>
+</string-name>, <string-name>
+<surname>Allen</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>Wu</surname>, <given-names>X.</given-names>
+</string-name>, <string-name>
+<surname>Schommer</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Schwab</surname>, <given-names>R.</given-names>
+</string-name>, <string-name>
+<surname>Carrington</surname>, <given-names>J.C.</given-names>
+</string-name> and <string-name>
+<surname>Weigel</surname>, <given-names>D.</given-names>
+</string-name> (<year>2003</year>) <article-title>Control of leaf morphogenesis by microRNAs</article-title>. <source>Nature</source>, <volume>425</volume>, <fpage>257</fpage>&#x02013;<lpage>263</lpage>.<pub-id pub-id-type="pmid">12931144</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0023"><mixed-citation publication-type="journal" id="pbi12715-cit-0023">
+<string-name>
+<surname>Sarvepalli</surname>, <given-names>K.</given-names>
+</string-name> and <string-name>
+<surname>Nath</surname>, <given-names>U.</given-names>
+</string-name> (<year>2011</year>) <article-title>Hyper&#x02010;activation of the TCP4 transcription factor in <italic>Arabidopsis thaliana</italic> accelerates multiple aspects of plant maturation</article-title>. <source>Plant J.</source>
+<volume>67</volume>, <fpage>595</fpage>&#x02013;<lpage>607</lpage>.<pub-id pub-id-type="pmid">21518050</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0024"><mixed-citation publication-type="journal" id="pbi12715-cit-0024">
+<string-name>
+<surname>Schommer</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Palatnik</surname>, <given-names>J.F.</given-names>
+</string-name>, <string-name>
+<surname>Aggarwal</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Chetelat</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Cubas</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Farmer</surname>, <given-names>E.E.</given-names>
+</string-name>, <string-name>
+<surname>Nath</surname>, <given-names>U.</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic> (<year>2008</year>) <article-title>Control of jasmonate biosynthesis and senescence by miR319 targets</article-title>. <source>PLoS Biol.</source>
+<volume>6</volume>, <fpage>1991</fpage>&#x02013;<lpage>2001</lpage>.</mixed-citation></ref><ref id="pbi12715-bib-0025"><mixed-citation publication-type="journal" id="pbi12715-cit-0025">
+<string-name>
+<surname>Schommer</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Debernardi</surname>, <given-names>J.M.</given-names>
+</string-name>, <string-name>
+<surname>Bresso</surname>, <given-names>E.G.</given-names>
+</string-name>, <string-name>
+<surname>Rodriguez</surname>, <given-names>R.E.</given-names>
+</string-name> and <string-name>
+<surname>Palatnik</surname>, <given-names>J.F.</given-names>
+</string-name> (<year>2014</year>) <article-title>Repression of cell proliferation by miR319&#x02010;regulated TCP4</article-title>. <source>Mol. Plant</source>, <volume>7</volume>, <fpage>1533</fpage>&#x02013;<lpage>1544</lpage>.<pub-id pub-id-type="pmid">25053833</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0026"><mixed-citation publication-type="journal" id="pbi12715-cit-0026">
+<string-name>
+<surname>Seltmann</surname>, <given-names>M.A.</given-names>
+</string-name>, <string-name>
+<surname>Stingl</surname>, <given-names>N.E.</given-names>
+</string-name>, <string-name>
+<surname>Lautenschlaeger</surname>, <given-names>J.K.</given-names>
+</string-name>, <string-name>
+<surname>Krischke</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Mueller</surname>, <given-names>M.J.</given-names>
+</string-name> and <string-name>
+<surname>Berger</surname>, <given-names>S.</given-names>
+</string-name> (<year>2010</year>) <article-title>Differential impact of lipoxygenase 2 and jasmonates on natural and stress&#x02010;induced senescence in Arabidopsis</article-title>. <source>Plant Physiol.</source>
+<volume>152</volume>, <fpage>1940</fpage>&#x02013;<lpage>1950</lpage>.<pub-id pub-id-type="pmid">20190093</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0027"><mixed-citation publication-type="journal" id="pbi12715-cit-0027">
+<string-name>
+<surname>Soyano</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Thitamadee</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Machida</surname>, <given-names>Y.</given-names>
+</string-name> and <string-name>
+<surname>Chua</surname>, <given-names>N.H.</given-names>
+</string-name> (<year>2008</year>) <article-title>
+<italic>ASYMMETRIC LEAVES2&#x02010;LIKE19</italic>/<italic>LATERAL ORGAN BOUNDARIES DOMAIN30</italic> and <italic>ASL20</italic>/<italic>LBD18</italic> regulate tracheary element differentiation in <italic>Arabidopsis</italic>
+</article-title>. <source>Plant Cell</source>, <volume>20</volume>, <fpage>3359</fpage>&#x02013;<lpage>3373</lpage>.<pub-id pub-id-type="pmid">19088331</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0028"><mixed-citation publication-type="journal" id="pbi12715-cit-0028">
+<string-name>
+<surname>Sun</surname>, <given-names>X.D.</given-names>
+</string-name>, <string-name>
+<surname>Feng</surname>, <given-names>Z.H.</given-names>
+</string-name>, <string-name>
+<surname>Meng</surname>, <given-names>L.S.</given-names>
+</string-name>, <string-name>
+<surname>Zhu</surname>, <given-names>J.</given-names>
+</string-name> and <string-name>
+<surname>Geitmann</surname>, <given-names>A.</given-names>
+</string-name> (<year>2013</year>) <article-title>Arabidopsis <italic>ASL11/LBD15</italic> is involved in shoot apical meristem development and regulates <italic>WUS</italic> expression</article-title>. <source>Planta</source>, <volume>237</volume>, <fpage>1367</fpage>&#x02013;<lpage>1378</lpage>.<pub-id pub-id-type="pmid">23397191</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0029"><mixed-citation publication-type="journal" id="pbi12715-cit-0029">
+<string-name>
+<surname>Sunkar</surname>, <given-names>R.</given-names>
+</string-name> (<year>2010</year>) <chapter-title>MicroRNAs with macro&#x02010;effects on plant stress responses</chapter-title>
+<source>Seminars in Cell &#x00026; Developmental Biology</source>, <volume>21</volume>, <fpage>805</fpage>&#x02013;<lpage>811</lpage>.<pub-id pub-id-type="pmid">20398781</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0030"><mixed-citation publication-type="journal" id="pbi12715-cit-0030">
+<string-name>
+<surname>Taylor</surname>, <given-names>N.G.</given-names>
+</string-name>, <string-name>
+<surname>Howells</surname>, <given-names>R.M.</given-names>
+</string-name>, <string-name>
+<surname>Huttly</surname>, <given-names>A.K.</given-names>
+</string-name>, <string-name>
+<surname>Vickers</surname>, <given-names>K.</given-names>
+</string-name> and <string-name>
+<surname>Turner</surname>, <given-names>S.R.</given-names>
+</string-name> (<year>2003</year>) <article-title>Interactions among three distinct CesA proteins essential for cellulose synthesis</article-title>. <source>Proc. Natl Acad. Sci. USA</source>, <volume>100</volume>, <fpage>1450</fpage>&#x02013;<lpage>1455</lpage>.<pub-id pub-id-type="pmid">12538856</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0031"><mixed-citation publication-type="journal" id="pbi12715-cit-0031">
+<string-name>
+<surname>Taylor</surname>, <given-names>R.S.</given-names>
+</string-name>, <string-name>
+<surname>Tarver</surname>, <given-names>J.E.</given-names>
+</string-name>, <string-name>
+<surname>Hiscock</surname>, <given-names>S.J.</given-names>
+</string-name> and <string-name>
+<surname>Donoghue</surname>, <given-names>P.C.</given-names>
+</string-name> (<year>2014</year>) <article-title>Evolutionary history of plant microRNAs</article-title>. <source>Trends Plant Sci.</source>
+<volume>19</volume>, <fpage>175</fpage>&#x02013;<lpage>182</lpage>.<pub-id pub-id-type="pmid">24405820</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0032"><mixed-citation publication-type="journal" id="pbi12715-cit-0032">
+<string-name>
+<surname>Voinnet</surname>, <given-names>O.</given-names>
+</string-name> (<year>2009</year>) <article-title>Origin, biogenesis, and activity of plant microRNAs</article-title>. <source>Cell</source>, <volume>136</volume>, <fpage>669</fpage>&#x02013;<lpage>687</lpage>.<pub-id pub-id-type="pmid">19239888</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0033"><mixed-citation publication-type="journal" id="pbi12715-cit-0033">
+<string-name>
+<surname>Yamaguchi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Kubo</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Fukuda</surname>, <given-names>H.</given-names>
+</string-name> and <string-name>
+<surname>Demura</surname>, <given-names>T.</given-names>
+</string-name> (<year>2008</year>) <article-title>Vascular&#x02010;related NAC&#x02010;DOMAIN7 is involved in the differentiation of all types of xylem vessels in Arabidopsis roots and shoots</article-title>. <source>Plant J.</source>
+<volume>55</volume>, <fpage>652</fpage>&#x02013;<lpage>664</lpage>.<pub-id pub-id-type="pmid">18445131</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0034"><mixed-citation publication-type="journal" id="pbi12715-cit-0034">
+<string-name>
+<surname>Yamaguchi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Gou&#x000e9;</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Igarashi</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Ohtani</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Nakano</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Mortimer</surname>, <given-names>J.C.</given-names>
+</string-name>, <string-name>
+<surname>Nishikubo</surname>, <given-names>N.</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic> (<year>2010a</year>) <article-title>VASCULAR&#x02010;RELATED NAC&#x02010;DOMAIN6 and VASCULAR&#x02010;RELATED NAC&#x02010;DOMAIN7 effectively induce transdifferentiation into xylem vessel elements under control of an induction system</article-title>. <source>Plant Physiol.</source>
+<volume>153</volume>, <fpage>906</fpage>&#x02013;<lpage>914</lpage>.<pub-id pub-id-type="pmid">20488898</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0035"><mixed-citation publication-type="journal" id="pbi12715-cit-0035">
+<string-name>
+<surname>Yamaguchi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Ohtani</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Mitsuda</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Kubo</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Ohme&#x02010;Takagi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Fukuda</surname>, <given-names>H.</given-names>
+</string-name> and <string-name>
+<surname>Demura</surname>, <given-names>T.</given-names>
+</string-name> (<year>2010b</year>) <article-title>VND&#x02010;INTERACTING2, a NAC domain transcription factor, negatively regulates xylem vessel formation in Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>22</volume>, <fpage>1249</fpage>&#x02013;<lpage>1263</lpage>.<pub-id pub-id-type="pmid">20388856</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0036"><mixed-citation publication-type="journal" id="pbi12715-cit-0036">
+<string-name>
+<surname>Yamaguchi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Mitsuda</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Ohtani</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Ohme&#x02010;Takagi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Kato</surname>, <given-names>K.</given-names>
+</string-name> and <string-name>
+<surname>Demura</surname>, <given-names>T.</given-names>
+</string-name> (<year>2011</year>) <article-title>VASCULAR&#x02010;RELATED NAC&#x02010;DOMAIN7 directly regulates the expression of a broad range of genes for xylem vessel formation</article-title>. <source>Plant J.</source>
+<volume>66</volume>, <fpage>579</fpage>&#x02013;<lpage>590</lpage>.<pub-id pub-id-type="pmid">21284754</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0037"><mixed-citation publication-type="journal" id="pbi12715-cit-0037">
+<string-name>
+<surname>Zeng</surname>, <given-names>W.</given-names>
+</string-name>, <string-name>
+<surname>Lampugnani</surname>, <given-names>E.R.</given-names>
+</string-name>, <string-name>
+<surname>Picard</surname>, <given-names>K.L.</given-names>
+</string-name>, <string-name>
+<surname>Song</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Wu</surname>, <given-names>A.&#x02010;M.</given-names>
+</string-name>, <string-name>
+<surname>Farion</surname>, <given-names>I.M.</given-names>
+</string-name>, <string-name>
+<surname>Zhao</surname>, <given-names>J.</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic> (<year>2016</year>) <article-title>Asparagus IRX9, IRX10, and IRX14A are components of an active xylan backbone synthase complex that forms in the Golgi apparatus</article-title>. <source>Plant Physiol.</source>
+<volume>171</volume>, <fpage>93</fpage>&#x02013;<lpage>109</lpage>.<pub-id pub-id-type="pmid">26951434</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0038"><mixed-citation publication-type="journal" id="pbi12715-cit-0038">
+<string-name>
+<surname>Zhong</surname>, <given-names>R.</given-names>
+</string-name> and <string-name>
+<surname>Ye</surname>, <given-names>Z.&#x02010;H.</given-names>
+</string-name> (<year>2007</year>) <article-title>Regulation of cell wall biosynthesis</article-title>. <source>Curr. Opin. Plant Biol.</source>
+<volume>10</volume>, <fpage>564</fpage>&#x02013;<lpage>572</lpage>.<pub-id pub-id-type="pmid">17950657</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0039"><mixed-citation publication-type="journal" id="pbi12715-cit-0039">
+<string-name>
+<surname>Zhong</surname>, <given-names>R.</given-names>
+</string-name>, <string-name>
+<surname>Demura</surname>, <given-names>T.</given-names>
+</string-name> and <string-name>
+<surname>Ye</surname>, <given-names>Z.&#x02010;H.</given-names>
+</string-name> (<year>2006</year>) <article-title>SND1, a NAC domain transcription factor, is a key regulator of secondary wall synthesis in fibers of Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>18</volume>, <fpage>3158</fpage>&#x02013;<lpage>3170</lpage>.<pub-id pub-id-type="pmid">17114348</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0040"><mixed-citation publication-type="journal" id="pbi12715-cit-0040">
+<string-name>
+<surname>Zhong</surname>, <given-names>R.</given-names>
+</string-name>, <string-name>
+<surname>Richardson</surname>, <given-names>E.A.</given-names>
+</string-name> and <string-name>
+<surname>Ye</surname>, <given-names>Z.&#x02010;H.</given-names>
+</string-name> (<year>2007</year>) <article-title>The MYB46 transcription factor is a direct target of SND1 and regulates secondary wall biosynthesis in Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>19</volume>, <fpage>2776</fpage>&#x02013;<lpage>2792</lpage>.<pub-id pub-id-type="pmid">17890373</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0041"><mixed-citation publication-type="journal" id="pbi12715-cit-0041">
+<string-name>
+<surname>Zhou</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Lee</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Zhong</surname>, <given-names>R.</given-names>
+</string-name> and <string-name>
+<surname>Ye</surname>, <given-names>Z.H.</given-names>
+</string-name> (<year>2009</year>) <article-title>MYB58 and MYB63 are transcriptional activators of the lignin biosynthetic pathway during secondary cell wall formation in Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>21</volume>, <fpage>248</fpage>&#x02013;<lpage>266</lpage>.<pub-id pub-id-type="pmid">19122102</pub-id></mixed-citation></ref><ref id="pbi12715-bib-0042"><mixed-citation publication-type="journal" id="pbi12715-cit-0042">
+<string-name>
+<surname>Zuo</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Niu</surname>, <given-names>Q.W.</given-names>
+</string-name> and <string-name>
+<surname>Chua</surname>, <given-names>N.H.</given-names>
+</string-name> (<year>2000</year>) <article-title>Technical advance: an estrogen receptor&#x02010;based transactivator XVE mediates highly inducible gene expression in transgenic plants</article-title>. <source>Plant J.</source>
+<volume>24</volume>, <fpage>265</fpage>&#x02013;<lpage>273</lpage>.<pub-id pub-id-type="pmid">11069700</pub-id></mixed-citation></ref></ref-list></back></article>

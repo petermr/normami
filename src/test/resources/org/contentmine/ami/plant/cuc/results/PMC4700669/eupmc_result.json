@@ -1,0 +1,702 @@
+{
+  "id": [
+    "26728635"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26728635"
+  ],
+  "pmcid": [
+    "PMC4700669"
+  ],
+  "doi": [
+    "10.1186/s12864-015-2330-6"
+  ],
+  "title": [
+    "Transcriptome analysis of secondary cell wall development in Medicago truncatula."
+  ],
+  "authorString": [
+    "Wang H, Yang JH, Chen F, Torres-Jerez I, Tang Y, Wang M, Du Q, Cheng X, Wen J, Dixon R."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Wang H"
+          ],
+          "firstName": [
+            "Huanzhong"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Plant Science and Landscape Architecture, University of Connecticut, 1390 Storrs Rd., Storrs, CT, 06269, USA. huanzhong.wang@uconn.edu."
+          ]
+        },
+        {
+          "fullName": [
+            "Yang JH"
+          ],
+          "firstName": [
+            "Jung Hyun"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "JH"
+          ],
+          "affiliation": [
+            "Department of Plant Science and Landscape Architecture, University of Connecticut, 1390 Storrs Rd., Storrs, CT, 06269, USA. jung.yang@uconn.edu."
+          ]
+        },
+        {
+          "fullName": [
+            "Chen F"
+          ],
+          "firstName": [
+            "Fang"
+          ],
+          "lastName": [
+            "Chen"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Department of Biological Sciences, University of North Texas, 1155 Union Circle, Denton, TX, 76203, USA. Fang.Chen@unt.edu."
+          ]
+        },
+        {
+          "fullName": [
+            "Torres-Jerez I"
+          ],
+          "firstName": [
+            "Ivone"
+          ],
+          "lastName": [
+            "Torres-Jerez"
+          ],
+          "initials": [
+            "I"
+          ],
+          "affiliation": [
+            "Plant Biology Division, Samuel Roberts Noble Foundation, 2510 Sam Noble Parkway, Ardmore, OK, 73401, USA. itjerez@noble.org."
+          ]
+        },
+        {
+          "fullName": [
+            "Tang Y"
+          ],
+          "firstName": [
+            "Yuhong"
+          ],
+          "lastName": [
+            "Tang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2967-778X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Plant Biology Division, Samuel Roberts Noble Foundation, 2510 Sam Noble Parkway, Ardmore, OK, 73401, USA. ytang@noble.org."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang M"
+          ],
+          "firstName": [
+            "Mingyi"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Plant Biology Division, Samuel Roberts Noble Foundation, 2510 Sam Noble Parkway, Ardmore, OK, 73401, USA. mingy.wang@gmail.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Du Q"
+          ],
+          "firstName": [
+            "Qian"
+          ],
+          "lastName": [
+            "Du"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "affiliation": [
+            "Department of Plant Science and Landscape Architecture, University of Connecticut, 1390 Storrs Rd., Storrs, CT, 06269, USA. qian.du@uconn.edu."
+          ]
+        },
+        {
+          "fullName": [
+            "Cheng X"
+          ],
+          "firstName": [
+            "Xiaofei"
+          ],
+          "lastName": [
+            "Cheng"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Plant Biology Division, Samuel Roberts Noble Foundation, 2510 Sam Noble Parkway, Ardmore, OK, 73401, USA. xcheng@noble.org."
+          ]
+        },
+        {
+          "fullName": [
+            "Wen J"
+          ],
+          "firstName": [
+            "Jiangqi"
+          ],
+          "lastName": [
+            "Wen"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Plant Biology Division, Samuel Roberts Noble Foundation, 2510 Sam Noble Parkway, Ardmore, OK, 73401, USA. jwen@noble.org."
+          ]
+        },
+        {
+          "fullName": [
+            "Dixon R"
+          ],
+          "firstName": [
+            "Richard"
+          ],
+          "lastName": [
+            "Dixon"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Department of Biological Sciences, University of North Texas, 1155 Union Circle, Denton, TX, 76203, USA. Richard.Dixon@unt.edu."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-2967-778X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "17"
+      ],
+      "journalIssueId": [
+        "2401365"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "23"
+  ],
+  "abstractText": [
+    "Legumes are important to humans by providing food, feed and raw materials for industrial utilizations. Some legumes, such as alfalfa, are potential bioenergy crops due to their high biomass productivity. Global transcriptional profiling has been successfully used to identify genes and regulatory pathways in secondary cell wall thickening in Arabidopsis, but such transcriptome data is lacking in legumes.A systematic microarray assay and high through-put real time PCR analysis of secondary cell wall development were performed along stem maturation in Medicago truncatula. More than 11,000 genes were differentially expressed during stem maturation, and were categorized into 10 expression clusters. Among these, 279 transcription factor genes were correlated with lignin/cellulose biosynthesis, therefore representing putative regulators of secondary wall development. The b-ZIP, NAC, WRKY, C2H2 zinc finger (ZF), homeobox, and HSF gene families were over-represented. Gene co-expression network analysis was employed to identify transcription factors that may regulate the biosynthesis of lignin, cellulose and hemicellulose. As a complementary approach to microarray, real-time PCR analysis was used to characterize the expression of 1,045 transcription factors in the stem samples, and 64 of these were upregulated more than 5-fold during stem maturation. Reverse genetics characterization of a cellulose synthase gene in cluster 10 confirmed its function in xylem development.This study provides a useful transcriptome and expression resource for understanding cell wall development, which is pivotal to enhance biomass production in legumes."
+  ],
+  "affiliation": [
+    "Department of Plant Science and Landscape Architecture, University of Connecticut, 1390 Storrs Rd., Storrs, CT, 06269, USA. huanzhong.wang@uconn.edu."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cell Wall"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Medicago truncatula"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Stems"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Lignin"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Glucosyltransferases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Glucosyltransferases"
+          ],
+          "registryNumber": [
+            "EC 2.4.1.-"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Lignin"
+          ],
+          "registryNumber": [
+            "9005-53-2"
+          ]
+        },
+        {
+          "name": [
+            "cellulose synthase"
+          ],
+          "registryNumber": [
+            "EC 2.4.1.-"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4700669?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4700669"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12864-015-2330-6"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "4"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-09-28"
+  ],
+  "dateOfCreation": [
+    "2016-01-05"
+  ],
+  "dateOfRevision": [
+    "2016-01-07"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-05"
+  ],
+  "firstPublicationDate": [
+    "2016-01-05"
+  ]
+}

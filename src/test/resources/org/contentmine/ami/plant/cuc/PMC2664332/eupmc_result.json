@@ -1,0 +1,626 @@
+{
+  "id": [
+    "19381263"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "19381263"
+  ],
+  "pmcid": [
+    "PMC2664332"
+  ],
+  "doi": [
+    "10.1371/journal.pgen.1000457"
+  ],
+  "title": [
+    "Evidence for antisense transcription associated with microRNA target mRNAs in Arabidopsis."
+  ],
+  "authorString": [
+    "Luo QJ, Samanta MP, Köksal F, Janda J, Galbraith DW, Richardson CR, Ou-Yang F, Rock CD."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Luo QJ"
+          ],
+          "firstName": [
+            "Qing-Jun"
+          ],
+          "lastName": [
+            "Luo"
+          ],
+          "initials": [
+            "QJ"
+          ],
+          "affiliation": [
+            "Department of Biological Sciences, Texas Tech University, Lubbock, Texas, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Samanta MP"
+          ],
+          "firstName": [
+            "Manoj P"
+          ],
+          "lastName": [
+            "Samanta"
+          ],
+          "initials": [
+            "MP"
+          ]
+        },
+        {
+          "fullName": [
+            "Köksal F"
+          ],
+          "firstName": [
+            "Fatih"
+          ],
+          "lastName": [
+            "Köksal"
+          ],
+          "initials": [
+            "F"
+          ]
+        },
+        {
+          "fullName": [
+            "Janda J"
+          ],
+          "firstName": [
+            "Jaroslav"
+          ],
+          "lastName": [
+            "Janda"
+          ],
+          "initials": [
+            "J"
+          ]
+        },
+        {
+          "fullName": [
+            "Galbraith DW"
+          ],
+          "firstName": [
+            "David W"
+          ],
+          "lastName": [
+            "Galbraith"
+          ],
+          "initials": [
+            "DW"
+          ]
+        },
+        {
+          "fullName": [
+            "Richardson CR"
+          ],
+          "firstName": [
+            "Casey R"
+          ],
+          "lastName": [
+            "Richardson"
+          ],
+          "initials": [
+            "CR"
+          ]
+        },
+        {
+          "fullName": [
+            "Ou-Yang F"
+          ],
+          "firstName": [
+            "Fangqian"
+          ],
+          "lastName": [
+            "Ou-Yang"
+          ],
+          "initials": [
+            "F"
+          ]
+        },
+        {
+          "fullName": [
+            "Rock CD"
+          ],
+          "firstName": [
+            "Christopher D"
+          ],
+          "lastName": [
+            "Rock"
+          ],
+          "initials": [
+            "CD"
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-2090-0650",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "4"
+      ],
+      "volume": [
+        "5"
+      ],
+      "journalIssueId": [
+        "1613376"
+      ],
+      "dateOfPublication": [
+        "2009 Apr"
+      ],
+      "monthOfPublication": [
+        "4"
+      ],
+      "yearOfPublication": [
+        "2009"
+      ],
+      "printPublicationDate": [
+        "2009-04-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PLoS genetics"
+          ],
+          "ISOAbbreviation": [
+            "PLoS Genet."
+          ],
+          "medlineAbbreviation": [
+            "PLoS Genet"
+          ],
+          "NLMid": [
+            "101239074"
+          ],
+          "ISSN": [
+            "1553-7390"
+          ],
+          "ESSN": [
+            "1553-7404"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2009"
+  ],
+  "pageInfo": [
+    "e1000457"
+  ],
+  "abstractText": [
+    "Antisense transcription is a pervasive phenomenon, but its source and functional significance is largely unknown. We took an expression-based approach to explore microRNA (miRNA)-related antisense transcription by computational analyses of published whole-genome tiling microarray transcriptome and deep sequencing small RNA (smRNA) data. Statistical support for greater abundance of antisense transcription signatures and smRNAs was observed for miRNA targets than for paralogous genes with no miRNA cleavage site. Antisense smRNAs were also found associated with MIRNA genes. This suggests that miRNA-associated \"transitivity\" (production of small interfering RNAs through antisense transcription) is more common than previously reported. High-resolution (3 nt) custom tiling microarray transcriptome analysis was performed with probes 400 bp 5' upstream and 3' downstream of the miRNA cleavage sites (direction relative to the mRNA) for 22 select miRNA target genes. We hybridized RNAs labeled from the smRNA pathway mutants, including hen1-1, dcl1-7, hyl1-2, rdr6-15, and sgs3-14. Results showed that antisense transcripts associated with miRNA targets were mainly elevated in hen1-1 and sgs3-14 to a lesser extent, and somewhat reduced in dcl11-7, hyl11-2, or rdr6-15 mutants. This was corroborated by semi-quantitative reverse transcription PCR; however, a direct correlation of antisense transcript abundance in MIR164 gene knockouts was not observed. Our overall analysis reveals a more widespread role for miRNA-associated transitivity with implications for functions of antisense transcription in gene regulation. HEN1 and SGS3 may be links for miRNA target entry into different RNA processing pathways."
+  ],
+  "affiliation": [
+    "Department of Biological Sciences, Texas Tech University, Lubbock, Texas, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article",
+        "Research Support, N.I.H., Extramural"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "R21 GM077245"
+          ],
+          "agency": [
+            "NIGMS NIH HHS"
+          ],
+          "acronym": [
+            "GM"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "1R21GM077245"
+          ],
+          "agency": [
+            "NIGMS NIH HHS"
+          ],
+          "acronym": [
+            "GM"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Antisense"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Messenger"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Transcription, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "RNA, Messenger"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Antisense"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2664332?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2664332"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/19381263/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/19381263/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pgen.1000457"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "21"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "ARXPR",
+        "EMBL",
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2009-07-06"
+  ],
+  "dateOfCreation": [
+    "2009-04-21"
+  ],
+  "dateOfRevision": [
+    "2017-02-24"
+  ],
+  "electronicPublicationDate": [
+    "2009-04-17"
+  ],
+  "firstPublicationDate": [
+    "2009-04-17"
+  ]
+}

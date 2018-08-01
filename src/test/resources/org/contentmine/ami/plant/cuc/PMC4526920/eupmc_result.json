@@ -1,0 +1,855 @@
+{
+  "id": [
+    "26071531"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26071531"
+  ],
+  "pmcid": [
+    "PMC4526920"
+  ],
+  "doi": [
+    "10.1093/jxb/erv291"
+  ],
+  "title": [
+    "Overexpression of the Arabidopsis thaliana signalling peptide TAXIMIN1 affects lateral organ development."
+  ],
+  "authorString": [
+    "Colling J, Tohge T, De Clercq R, Brunoud G, Vernoux T, Fernie AR, Makunga NP, Goossens A, Pauwels L."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Colling J"
+          ],
+          "firstName": [
+            "Janine"
+          ],
+          "lastName": [
+            "Colling"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Plant Systems Biology, Flanders Institute for Biotechnology, (VIB), Technologiepark 927, B-9052 Gent, Belgium Department of Plant Biotechnology and Bioinformatics, Ghent University, Technologiepark 927, B-9052 Gent, Belgium Institute for Plant Biotechnology, Department of Genetics, Stellenbosch University, Stellenbosch, 7602, South Africa."
+          ]
+        },
+        {
+          "fullName": [
+            "Tohge T"
+          ],
+          "firstName": [
+            "Takayuki"
+          ],
+          "lastName": [
+            "Tohge"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Max-Planck-Institute of Molecular Plant Physiology, Am Mühlenberg 1, 14476, Potsdam-Golm, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "De Clercq R"
+          ],
+          "firstName": [
+            "Rebecca"
+          ],
+          "lastName": [
+            "De Clercq"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Department of Plant Systems Biology, Flanders Institute for Biotechnology, (VIB), Technologiepark 927, B-9052 Gent, Belgium Department of Plant Biotechnology and Bioinformatics, Ghent University, Technologiepark 927, B-9052 Gent, Belgium."
+          ]
+        },
+        {
+          "fullName": [
+            "Brunoud G"
+          ],
+          "firstName": [
+            "Geraldine"
+          ],
+          "lastName": [
+            "Brunoud"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Laboratoire de Reproduction et Développement des Plantes, CNRS, INRA, ENS Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Vernoux T"
+          ],
+          "firstName": [
+            "Teva"
+          ],
+          "lastName": [
+            "Vernoux"
+          ],
+          "initials": [
+            "T"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-8257-4088",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Laboratoire de Reproduction et Développement des Plantes, CNRS, INRA, ENS Lyon, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Fernie AR"
+          ],
+          "firstName": [
+            "Alisdair R"
+          ],
+          "lastName": [
+            "Fernie"
+          ],
+          "initials": [
+            "AR"
+          ],
+          "affiliation": [
+            "Max-Planck-Institute of Molecular Plant Physiology, Am Mühlenberg 1, 14476, Potsdam-Golm, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Makunga NP"
+          ],
+          "firstName": [
+            "Nokwanda P"
+          ],
+          "lastName": [
+            "Makunga"
+          ],
+          "initials": [
+            "NP"
+          ],
+          "affiliation": [
+            "Institute for Plant Biotechnology, Department of Genetics, Stellenbosch University, Stellenbosch, 7602, South Africa Department of Botany and Zoology, Stellenbosch University, Stellenbosch, 7602, South Africa."
+          ]
+        },
+        {
+          "fullName": [
+            "Goossens A"
+          ],
+          "firstName": [
+            "Alain"
+          ],
+          "lastName": [
+            "Goossens"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-1599-551X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Plant Systems Biology, Flanders Institute for Biotechnology, (VIB), Technologiepark 927, B-9052 Gent, Belgium Department of Plant Biotechnology and Bioinformatics, Ghent University, Technologiepark 927, B-9052 Gent, Belgium algoo@psb.vib-ugent.be."
+          ]
+        },
+        {
+          "fullName": [
+            "Pauwels L"
+          ],
+          "firstName": [
+            "Laurens"
+          ],
+          "lastName": [
+            "Pauwels"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Department of Plant Systems Biology, Flanders Institute for Biotechnology, (VIB), Technologiepark 927, B-9052 Gent, Belgium Department of Plant Biotechnology and Bioinformatics, Ghent University, Technologiepark 927, B-9052 Gent, Belgium."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-1599-551X",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-8257-4088",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "17"
+      ],
+      "volume": [
+        "66"
+      ],
+      "journalIssueId": [
+        "2311903"
+      ],
+      "dateOfPublication": [
+        "2015 Aug"
+      ],
+      "monthOfPublication": [
+        "8"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-08-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "5337-5349"
+  ],
+  "abstractText": [
+    "Lateral organ boundary formation is highly regulated by transcription factors and hormones such as auxins and brassinosteroids. However, in contrast to many other developmental processes in plants, no role for signalling peptides in the regulation of this process has been reported yet. The first characterization of the secreted cysteine-rich TAXIMIN (TAX) signalling peptides in Arabidopsis is presented here. TAX1 overexpression resulted in minor alterations in the primary shoot and root metabolome, abnormal fruit morphology, and fusion of the base of cauline leaves to stems forming a decurrent leaf attachment. The phenotypes at the paraclade junction match TAX1 promoter activity in this region and are similar to loss of LATERAL ORGAN FUSION (LOF) transcription factor function. Nevertheless, TAX1 expression was unchanged in lof1lof2 paraclade junctions and, conversely, LOF gene expression was unchanged in TAX1 overexpressing plants, suggesting TAX1 may act independently. This study identifies TAX1 as the first plant signalling peptide influencing lateral organ separation and implicates the existence of a peptide signal cascade regulating this process in Arabidopsis."
+  ],
+  "affiliation": [
+    "Department of Plant Systems Biology, Flanders Institute for Biotechnology, (VIB), Technologiepark 927, B-9052 Gent, Belgium Department of Plant Biotechnology and Bioinformatics, Ghent University, Technologiepark 927, B-9052 Gent, Belgium Institute for Plant Biotechnology, Department of Genetics, Stellenbosch University, Stellenbosch, 7602, South Africa."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Meristem"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Stems"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Peptides"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Intracellular Signaling Peptides and Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Sorting Signals"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Alignment"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Amino Acid Sequence"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Fruit development",
+        "Cysteine-rich Peptide",
+        "Boundary Genes",
+        "Lateral Organ Fusion",
+        "Paraclade Junction."
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Peptides"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Protein Sorting Signals"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Intracellular Signaling Peptides and Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "TAX1 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4526920?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4526920"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/erv291"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "3"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-05-24"
+  ],
+  "dateOfCreation": [
+    "2015-08-07"
+  ],
+  "dateOfRevision": [
+    "2015-08-11"
+  ],
+  "electronicPublicationDate": [
+    "2015-06-12"
+  ],
+  "firstPublicationDate": [
+    "2015-06-12"
+  ]
+}

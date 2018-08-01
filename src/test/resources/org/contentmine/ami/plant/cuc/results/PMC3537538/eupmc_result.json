@@ -1,0 +1,498 @@
+{
+  "id": [
+    "23181474"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "23181474"
+  ],
+  "pmcid": [
+    "PMC3537538"
+  ],
+  "doi": [
+    "10.1186/1754-6834-5-84"
+  ],
+  "title": [
+    "Engineering of plants with improved properties as biofuels feedstocks by vessel-specific complementation of xylan biosynthesis mutants."
+  ],
+  "authorString": [
+    "Petersen PD, Lau J, Ebert B, Yang F, Verhertbruggen Y, Kim JS, Varanasi P, Suttangkakul A, Auer M, Loqué D, Scheller HV."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Petersen PD"
+          ],
+          "firstName": [
+            "Pia Damm"
+          ],
+          "lastName": [
+            "Petersen"
+          ],
+          "initials": [
+            "PD"
+          ],
+          "affiliation": [
+            "Department of Plant Biology and Biotechnology, University of Copenhagen, 40 Thorvaldsensvej, Frederiksberg C, DK-1871, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Lau J"
+          ],
+          "firstName": [
+            "Jane"
+          ],
+          "lastName": [
+            "Lau"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Physical Biosciences Division, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd, Berkeley, CA, 94720, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Ebert B"
+          ],
+          "firstName": [
+            "Berit"
+          ],
+          "lastName": [
+            "Ebert"
+          ],
+          "initials": [
+            "B"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6914-5473",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Physical Biosciences Division, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd, Berkeley, CA, 94720, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Yang F"
+          ],
+          "firstName": [
+            "Fan"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Physical Biosciences Division, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd, Berkeley, CA, 94720, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Verhertbruggen Y"
+          ],
+          "firstName": [
+            "Yves"
+          ],
+          "lastName": [
+            "Verhertbruggen"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4114-5428",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Physical Biosciences Division, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd, Berkeley, CA, 94720, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Kim JS"
+          ],
+          "firstName": [
+            "Jin Sun"
+          ],
+          "lastName": [
+            "Kim"
+          ],
+          "initials": [
+            "JS"
+          ],
+          "affiliation": [
+            "Physical Biosciences Division, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd, Berkeley, CA, 94720, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Varanasi P"
+          ],
+          "firstName": [
+            "Patanjali"
+          ],
+          "lastName": [
+            "Varanasi"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Sandia National Laboratories, 7011 East Avenue, Livermore, CA, 94550, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Suttangkakul A"
+          ],
+          "firstName": [
+            "Anongpat"
+          ],
+          "lastName": [
+            "Suttangkakul"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Science, Kasetsart University, Bangkok, 10900, Thailand."
+          ]
+        },
+        {
+          "fullName": [
+            "Auer M"
+          ],
+          "firstName": [
+            "Manfred"
+          ],
+          "lastName": [
+            "Auer"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Life Sciences Division, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd, Berkeley, CA, 94720, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Loqué D"
+          ],
+          "firstName": [
+            "Dominique"
+          ],
+          "lastName": [
+            "Loqué"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Physical Biosciences Division, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd, Berkeley, CA, 94720, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Scheller HV"
+          ],
+          "firstName": [
+            "Henrik Vibe"
+          ],
+          "lastName": [
+            "Scheller"
+          ],
+          "initials": [
+            "HV"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6702-3560",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Plant & Microbial Biology, University of California, Berkeley, CA, 94720, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-6702-3560",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-6914-5473",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4114-5428",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "5"
+      ],
+      "journalIssueId": [
+        "1980521"
+      ],
+      "dateOfPublication": [
+        "2012 Nov"
+      ],
+      "monthOfPublication": [
+        "11"
+      ],
+      "yearOfPublication": [
+        "2012"
+      ],
+      "printPublicationDate": [
+        "2012-11-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Biotechnology for biofuels"
+          ],
+          "ISOAbbreviation": [
+            "Biotechnol Biofuels"
+          ],
+          "medlineAbbreviation": [
+            "Biotechnol Biofuels"
+          ],
+          "NLMid": [
+            "101316935"
+          ],
+          "ISSN": [
+            "1754-6834"
+          ],
+          "ESSN": [
+            "1754-6834"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2012"
+  ],
+  "pageInfo": [
+    "84"
+  ],
+  "abstractText": [
+    "Cost-efficient generation of second-generation biofuels requires plant biomass that can easily be degraded into sugars and further fermented into fuels. However, lignocellulosic biomass is inherently recalcitrant toward deconstruction technologies due to the abundant lignin and cross-linked hemicelluloses. Furthermore, lignocellulosic biomass has a high content of pentoses, which are more difficult to ferment into fuels than hexoses. Engineered plants with decreased amounts of xylan in their secondary walls have the potential to render plant biomass a more desirable feedstock for biofuel production.Xylan is the major non-cellulosic polysaccharide in secondary cell walls, and the xylan deficient irregular xylem (irx) mutants irx7, irx8 and irx9 exhibit severe dwarf growth phenotypes. The main reason for the growth phenotype appears to be xylem vessel collapse and the resulting impaired transport of water and nutrients. We developed a xylan-engineering approach to reintroduce xylan biosynthesis specifically into the xylem vessels in the Arabidopsis irx7, irx8 and irx9 mutant backgrounds by driving the expression of the respective glycosyltransferases with the vessel-specific promoters of the VND6 and VND7 transcription factor genes. The growth phenotype, stem breaking strength, and irx morphology was recovered to varying degrees. Some of the plants even exhibited increased stem strength compared to the wild type. We obtained Arabidopsis plants with up to 23% reduction in xylose levels and 18% reduction in lignin content compared to wild-type plants, while exhibiting wild-type growth patterns and morphology, as well as normal xylem vessels. These plants showed a 42% increase in saccharification yield after hot water pretreatment. The VND7 promoter yielded a more complete complementation of the irx phenotype than the VND6 promoter.Spatial and temporal deposition of xylan in the secondary cell wall of Arabidopsis can be manipulated by using the promoter regions of vessel-specific genes to express xylan biosynthetic genes. The expression of xylan specifically in the xylem vessels is sufficient to complement the irx phenotype of xylan deficient mutants, while maintaining low overall amounts of xylan and lignin in the cell wall. This engineering approach has the potential to yield bioenergy crop plants that are more easily deconstructed and fermented into biofuels."
+  ],
+  "affiliation": [
+    "Department of Plant Biology and Biotechnology, University of Copenhagen, 40 Thorvaldsensvej, Frederiksberg C, DK-1871, Denmark."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3537538?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3537538"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23181474/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23181474/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1754-6834-5-84"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "43"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2013-01-08"
+  ],
+  "dateOfCreation": [
+    "2013-01-07"
+  ],
+  "dateOfRevision": [
+    "2017-07-18"
+  ],
+  "electronicPublicationDate": [
+    "2012-11-26"
+  ],
+  "firstPublicationDate": [
+    "2012-11-26"
+  ]
+}

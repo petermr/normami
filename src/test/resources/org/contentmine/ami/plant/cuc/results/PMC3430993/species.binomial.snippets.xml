@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC3430993/results/species/binomial/results.xml">
+  <result pre="Banana ( " exact="Musa acuminata" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[2]" match="Musa acuminata" post=", AAA group), a typical climacteric fruit, is one of the most important food crops after rice, maiz" name="binomial"/>
+  <result pre="Pre-climacteric banana ( " exact="Musa acuminata" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[2]" match="Musa acuminata" post=", AAA group, cv. Carvendish) fruit at the 75–80% plump stage were obtained from a local commercial " name="binomial"/>
+  <result pre=", a 1529bp upstream sequence from the start codon of MaNAC2 was isolated from the genome of " exact="Musa acuminata" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[2]" match="Musa acuminata" post=" using a genome-walking PCR method. Analysis of the promoter using the PLACE and Plant-CARE databas" name="binomial"/>
+  <result pre=" " exact="Arabidopsis thaliana" xpath="/html[1]/body[1]/div[2]/div[4]/div[2]/p[2]" match="Arabidopsis thaliana" post=" and Oryza sativa NAC proteins have been classified previously into two groups based on simi" name="binomial"/>
+  <result pre=" Arabidopsis thaliana and " exact="Oryza sativa" match="Oryza sativa" post=" NAC proteins have been classified previously into two groups based on similarities in the NAC doma" name="binomial"/>
+ </snippets>
+</snippetsTree>

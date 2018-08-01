@@ -1,0 +1,616 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3062569</article-id><article-id pub-id-type="pmid">21445363</article-id><article-id pub-id-type="publisher-id">PONE-D-10-05088</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0018094</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Agriculture</subject><subj-group><subject>Agricultural Biotechnology</subject></subj-group><subj-group><subject>Crops</subject><subj-group><subject>Cereals</subject><subj-group><subject>Rice</subject></subj-group></subj-group></subj-group><subj-group><subject>Pest Control</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Computational Biology</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome Expression Analysis</subject></subj-group></subj-group><subj-group><subject>Microarrays</subject></subj-group></subj-group><subj-group><subject>Genomics</subject><subj-group><subject>Genome Expression Analysis</subject></subj-group></subj-group><subj-group><subject>Microbiology</subject><subj-group><subject>Host-Pathogen Interaction</subject><subject>Virology</subject></subj-group></subj-group><subj-group><subject>Model Organisms</subject><subj-group><subject>Plant and Algal Models</subject><subj-group><subject>Rice</subject></subj-group></subj-group></subj-group><subj-group><subject>Plant Science</subject><subj-group><subject>Plant Pathology</subject><subj-group><subject>Plant Pathogens</subject></subj-group></subj-group></subj-group><subj-group><subject>Systems Biology</subject></subj-group></subj-group></article-categories><title-group><article-title>Relationship between Symptoms and Gene Expression Induced by the Infection of Three Strains of <italic>Rice dwarf virus</italic>
+</article-title><alt-title alt-title-type="running-head">Gene Expression of RDV Infected Rice Plants</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Satoh</surname><given-names>Kouji</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Shimizu</surname><given-names>Takumi</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Kondoh</surname><given-names>Hiroaki</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Hiraguri</surname><given-names>Akihiro</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Sasaya</surname><given-names>Takahide</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Choi</surname><given-names>Il-Ryong</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Omura</surname><given-names>Toshihiro</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Kikuchi</surname><given-names>Shoshi</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>&#x0002a;</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Research Team for Vector-borne Plant Pathogens, National Agricultural Research Center, Tsukuba, Ibaraki, Japan</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Division of Genome and Biodiversity Research, National Institute of Agrobiological Sciences, Tsukuba, Ibaraki, Japan</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Plant Breeding, Genetics, and Biotechnology Division, International Rice Research Institute, Metro Manila, Philippines</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Vartanian</surname><given-names>Jean-Pierre</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">Institut Pasteur, France</aff><author-notes><corresp id="cor1">&#x0002a; E-mail: <email>skikuchi@nias.affrc.go.jp</email></corresp><fn fn-type="con"><p>Conceived and designed the experiments: TO SK. Performed the experiments: KS HK. Analyzed the data: KS. Contributed reagents/materials/analysis tools: T. Shimizu AH T. Sasaya. Wrote the paper: KS. Drafted the paper for important intellectual content: IRC SK.</p></fn></author-notes><pub-date pub-type="collection"><year>2011</year></pub-date><pub-date pub-type="epub"><day>22</day><month>3</month><year>2011</year></pub-date><volume>6</volume><issue>3</issue><elocation-id>e18094</elocation-id><history><date date-type="received"><day>15</day><month>11</month><year>2010</year></date><date date-type="accepted"><day>21</day><month>2</month><year>2011</year></date></history><permissions><copyright-statement>Satoh et al.</copyright-statement><copyright-year>2011</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><sec><title>Background</title><p>
+<italic>Rice dwarf virus</italic> (RDV) is the causal agent of rice dwarf disease, which often results in severe yield losses of rice in East Asian countries. The disease symptoms are stunted growth, chlorotic specks on leaves, and delayed and incomplete panicle exsertion. Three RDV strains, O, D84, and S, were reported. RDV-S causes the most severe symptoms, whereas RDV-O causes the mildest. Twenty amino acid substitutions were found in 10 of 12 virus proteins among three RDV strains.</p></sec><sec><title>Methodology/Principal Findings</title><p>We analyzed the gene expression of rice in response to infection with the three RDV strains using a 60-mer oligonucleotide microarray to examine the relationship between symptom severity and gene responses. The number of differentially expressed genes (DEGs) upon the infection of RDV-O, -D84, and -S was 1985, 3782, and 6726, respectively, showing a correlation between the number of DEGs and symptom severity. Many DEGs were related to defense, stress response, and development and morphogenesis processes. For defense and stress response processes, gene silencing-related genes were activated by RDV infection and the degree of activation was similar among plants infected with the three RDV strains. Genes for hormone-regulated defense systems were also activated by RDV infection, and the degree of activation seemed to be correlated with the concentration of RDV in plants. Some development and morphogenesis processes were suppressed by RDV infection, but the degree of suppression was not correlated well with the RDV concentration.</p></sec><sec><title>Conclusions/Significance</title><p>Gene responses to RDV infection were regulated differently depending on the gene groups regulated and the strains infecting. It seems that symptom severity is associated with the degree of gene response in defense-related and development- and morphogenesis-related processes. The titer levels of RDV in plants and the amino acid substitutions in RDV proteins could be involved in regulating such gene responses.</p></sec></abstract><counts><page-count count="13"/></counts></article-meta></front><body><sec id="s1"><title>Introduction</title><p>Virus interacts with host proteins, and disturbs the gene expression of host cell. Responses of plants at the gene expression level to various viruses were examined using microarrays to explore the molecular basis of symptom development and defense systems <xref rid="pone.0018094-Dardick1" ref-type="bibr">[1]</xref>&#x02013;<xref rid="pone.0018094-Satoh1" ref-type="bibr">[8]</xref>. Comparison of results from previous studies indicated that, although many genes in various plant species respond specifically to different viruses, there is commonality in responses among different plant-virus interactions <xref rid="pone.0018094-Dardick1" ref-type="bibr">[1]</xref>, <xref rid="pone.0018094-Senthil1" ref-type="bibr">[2]</xref>. Virus infection often results in the suppression of genes related to development and morphogenesis processes, and the suppression of such genes appears to cause disease symptoms, although, the individual genes within a group suppressed by virus infection vary depending on plant species and tissues, and virus species <xref rid="pone.0018094-Senthil1" ref-type="bibr">[2]</xref>&#x02013;<xref rid="pone.0018094-Catoni1" ref-type="bibr">[6]</xref>. Virus infection also activates genes related to stress- and pathogenesis-related (PR) responses <xref rid="pone.0018094-Dardick1" ref-type="bibr">[1]</xref>&#x02013;<xref rid="pone.0018094-Satoh1" ref-type="bibr">[8]</xref>. The induction of genes for these processes is related not only to defense against viruses, but also to abnormal plant development. The gene-silencing process is one of the major virus defense systems <xref rid="pone.0018094-DazPendn1" ref-type="bibr">[9]</xref>&#x02013;<xref rid="pone.0018094-Vaucheret1" ref-type="bibr">[12]</xref>. Suppression of genes involved in the gene-silencing process may cause abnormal plant development <xref rid="pone.0018094-Nagasaki1" ref-type="bibr">[10]</xref>, <xref rid="pone.0018094-Vaucheret1" ref-type="bibr">[12]</xref>. Activation of PR genes also causes abnormal plant growth <xref rid="pone.0018094-Liu1" ref-type="bibr">[13]</xref>&#x02013;<xref rid="pone.0018094-Stotz1" ref-type="bibr">[15]</xref>.</p><p>Rice dwarf disease limits rice production in East Asian countries. Rice plants affected by the disease show symptoms such as stunted growth, chlorotic specks on leaves, and delayed and incomplete panicle exsertion <xref rid="pone.0018094-Hibino1" ref-type="bibr">[16]</xref>. Rice dwarf disease is caused by <italic>Rice dwarf virus</italic> (RDV). RDV is transmitted to rice plants by insects, in particular leafhoppers (<italic>Nephotettix</italic> spp.), after multiplication of the virus in the insect. Many cell wall- and chloroplast- related genes were suppressed, whereas various defense-related genes were activated in rice plants infected with RDV <xref rid="pone.0018094-Shimizu1" ref-type="bibr">[7]</xref>.</p><p>Three strains of RDV differentiated by the severity of symptoms they cause were reported <xref rid="pone.0018094-Kimura1" ref-type="bibr">[17]</xref>. Rice plants infected with the severe strain of RDV (RDV-S) were significantly more stunted than those with the ordinary strain of RDV (RDV-D84). Another strain, RDV-O, originating from RDV-D84, causes weaker symptoms than those caused by RDV-D84. To reveal specific gene responses associated with the difference in symptom severity caused by different RDV strains, we compared the gene responses in rice individually infected with RDV-S, -D84, and -O using a 60-mer oligonucleotide microarray. The result indicated that the gene responses to RDV infection were regulated differently depending on the gene group and RDV strains, and that symptom severity is associated with the degree of gene response in defense-related and development- and morphogenesis-related processes.</p></sec><sec id="s2"><title>Results</title><sec id="s2a"><title>1. Characterization of three RDV strains</title><p>RDV strains RDV-O, -D84 and -S were independently inoculated into 11-day-old rice seedlings by viruliferous green leafhopper (GLH: <italic>Nephotettix cincticeps</italic>). At 8 days post inoculation (dpi), disease symptoms such as stunting and leaf stripes were observed and the differences in symptoms caused by the respective RDV strains became distinct after 18 dpi. The plants inoculated with virus-free GLH (mock-inoculated plants) did not show any symptoms (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1A</xref>, and Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s001">Figure S1</xref>). The height of plants infected with RDV was significantly shorter than that of mock-inoculated plant. The height of the plants infected with RDV-S was lowest, and that of plants infected with RDV-O was highest (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1A</xref>, Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s007">Table S1A</xref>).The titer of RDV in the infected plants was also different among plants infected with different RDV strains (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1B</xref>). The concentrations of RDV-D84 and -S were significantly higher than that of RDV-O, but the concentrations of RDV-D84 and -S were not significantly different (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1B</xref>).</p><fig id="pone-0018094-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018094.g001</object-id><label>Figure 1</label><caption><title>Characterization of three RDV strains.</title><p>A): Heights of plants infected with three RDV strains at 40 dpi. Common letters are not signficantly different at the 1&#x00025; level by least significant difference test. Vertical lines indicate standard deviation. B): Concentrations of RDV strains at 30 dpi estimated by enzyme-linked immunosorbent assay. Vertical lines indicate standard deviation. Common letters are not significantly different at the 5&#x00025; level by least significant difference test. Vertical lines indicate standard deviation. C): Amino acid substitutions of three RDV strains.</p></caption><graphic xlink:href="pone.0018094.g001"/></fig><p>The entire genome sequences of the three RDV strains were determined (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s007">Table S1B</xref>). Twenty amino acid substitutions were found among the proteins encoded in the genomes of the three RDV strains (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1C</xref>, Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s007">Table S1C</xref>). Sixteen amino acid substitutions were specific to the proteins encoded in the genomes of RDV-S. RDV-S-specific amino acid substitutions were found in eight proteins (P2, P3, Pns4, Pns6, P7, P8, P9, and Pns12, <xref ref-type="fig" rid="pone-0018094-g001">Figure 1C</xref>). Three amino acid substitutions were specific to RDV-O (P1, P2, and Pns10, <xref ref-type="fig" rid="pone-0018094-g001">Figure 1C</xref>).</p></sec><sec id="s2b"><title>2. Transcriptome analysis</title><p>To elucidate the basis of differences in symptom severity caused by three RDV strains at the gene expression level, we compared gene expression profiles among plants infected with the respective RDV strains using a 60-mer oligonucleotide microarray. Gene expression changes in response to RDV infection were detected by direct comparison between mock- and RDV-inoculated plants. The number of differentially expressed genes (DEGs) was different among plants infected with three RDV strains. The number of DEGs in plants infected with RDV-O, -D84, and -S was 1985, 3782, and 6726, respectively (<xref ref-type="fig" rid="pone-0018094-g002">Figure 2A and B</xref>, Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s008">Table S2</xref>). To assess the accuracy of microarray data, we selected 17 DEGs and two non-DEGs and examined the similarity between gene responses observed by microarray and those by RT-PCR. Most cases of activation or suppression of gene expression detected by microarray were also observed by RT-PCR, although the degree of the response was different for some genes (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s002">Figure S2</xref>).</p><fig id="pone-0018094-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018094.g002</object-id><label>Figure 2</label><caption><title>Numbers of specific and common differentially expressed genes (DEGs), and hierarchical clustering of common DEGs among plants infected with three RDV strains.</title><p>A): Activated DEGs. B): Suppressed DEGs. The number of common activated and suppressed DEGs is 526 and 908. Hierarchical clustering of common activated (C) and suppressed DEGs (D) by Pearson correlation was performed by Mev ver. 4.4 <xref rid="pone.0018094-Edgar1" ref-type="bibr">[69]</xref>. The numbers under the heatmaps are the average log<sub>2</sub> ratios of common DEGs in plants infected with the respective RDV strains.</p></caption><graphic xlink:href="pone.0018094.g002"/></fig><p>The individual DEGs induced by three RDV strains were similar (<xref ref-type="fig" rid="pone-0018094-g002">Figure 2A and B</xref>). About 90&#x00025; of the DEGs by RDV-O infection also showed a response in rice plants infected with RDV-D84 and/or -S, and more than 90&#x00025; of the DEGs by RDV-D84 infection also showed a response in plants infected with RDV-O and/or -S (<xref ref-type="fig" rid="pone-0018094-g002">Figure 2A and B</xref>). The numbers of commonly activated and suppressed DEGs among plants infected with the three RDV strains were 526 and 908, respectively (<xref ref-type="fig" rid="pone-0018094-g002">Figure 2A and B</xref>). A hierarchical clustering analysis of the common DEGs indicated that the degree of their responses varied among plants infected with the three RDV strains (<xref ref-type="fig" rid="pone-0018094-g002">Figure 2C and D</xref>). Generally, the degree of gene response to RDV-O infection was lowest and the response to RDV-S infection was highest. The degree of gene activation by RDV-D84 infection was closer to that by RDV-S infection than to that by RDV-O infection, whereas the degree of gene suppression by RDV-D84 was closer to that by RDV-O infection.</p></sec><sec id="s2c"><title>Defense- and stress-related genes</title><p>One of the host defense systems against virus infection is the gene-silencing system. The expression of the genes involved in the gene silencing system is often activated by virus infection <xref rid="pone.0018094-DazPendn1" ref-type="bibr">[9]</xref>. Several genes for argonaute protein and RNA-dependent RNA polymerase, which are involved in the production of small interfering RNA <xref rid="pone.0018094-DazPendn1" ref-type="bibr">[9]</xref>, <xref rid="pone.0018094-Nagasaki1" ref-type="bibr">[10]</xref>, <xref rid="pone.0018094-Xie1" ref-type="bibr">[18]</xref>, were also activated by RDV infection (<xref ref-type="fig" rid="pone-0018094-g003">Figure 3</xref>). The degree of activation of genes for the gene-silencing system by RDV infection was similar among plants infected with the three RDV strains (<xref ref-type="fig" rid="pone-0018094-g003">Figure 3</xref>).</p><fig id="pone-0018094-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018094.g003</object-id><label>Figure 3</label><caption><title>Responses of genes related to gene-silencing systems by RDV infection.</title><p>The log<sub>2</sub>-based differential expression ratios (signal intensity in RDV-infected plant/signal intensity in mock-inoculated plant) of genes after infection with RDV strains are indicated by green (suppressed) or red (activated) colors of various intensities. Only the ratios of genes that were declared as a DEG in at least in one plant by an RDV strain are shown. Numbers in bold are the differential expression ratios of genes declared as a DEG (see <xref ref-type="sec" rid="s4">Materials and Methods</xref>).</p></caption><graphic xlink:href="pone.0018094.g003"/></fig><p>Plant hormone-regulated systems are also involved in defense against virus infection <xref rid="pone.0018094-Snchez1" ref-type="bibr">[19]</xref>, <xref rid="pone.0018094-Takahashi1" ref-type="bibr">[20]</xref>. The genes for jasmonic acid (JA) synthesis were induced by RDV infection. Especially, genes for enzymes involved in the early steps in JA synthesis such as lipoxygenase and allene oxide synthase were highly activated (<xref ref-type="fig" rid="pone-0018094-g004">Figure 4</xref>). Tify family and <italic>JAMyb</italic> genes encode JA-responsive transcription factors <xref rid="pone.0018094-Lee1" ref-type="bibr">[21]</xref>, <xref rid="pone.0018094-Ye1" ref-type="bibr">[22]</xref>. The expression of genes for Tify family and <italic>JAMyb</italic> was also activated by RDV infection (<xref ref-type="fig" rid="pone-0018094-g004">Figure 4</xref>). The number and degree of activation for DEGs in plants infected with RDV-O were less than in plants infected with RDV-D84 and -S. However, the number and degree in plants infected with RDV-D84 were similar to those in plants infected with RDV-S (<xref ref-type="fig" rid="pone-0018094-g005">Figure 5</xref>). Ethylene (ET) and salicylic acid (SA) are also involved in hormonal defense systems <xref rid="pone.0018094-Snchez1" ref-type="bibr">[19]</xref>, <xref rid="pone.0018094-Takahashi1" ref-type="bibr">[20]</xref>, <xref rid="pone.0018094-Love1" ref-type="bibr">[23]</xref>. However, the genes for ET and SA synthesis were not strongly activated by RDV infection (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s008">Table S2</xref>).</p><fig id="pone-0018094-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018094.g004</object-id><label>Figure 4</label><caption><title>Response of genes related to JA synthesis and signaling processes to RDV infection.</title><p>See <xref ref-type="fig" rid="pone-0018094-g003">Figure 3</xref> for details.</p></caption><graphic xlink:href="pone.0018094.g004"/></fig><fig id="pone-0018094-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018094.g005</object-id><label>Figure 5</label><caption><title>Response of genes belonging to WRKY and AP2/EREBP families to RDV infection.</title><p>A): WRKY family. B): AP2/EREBP family. See <xref ref-type="fig" rid="pone-0018094-g003">Figure 3</xref> for details.</p></caption><graphic xlink:href="pone.0018094.g005"/></fig><p>Hormone-regulated defense systems are controlled by transcription factors such as WRKY and AP2/EREBP (named from APETALA 2/ETHYLENE RESPONSIVE ELEMENT BINDING PROTEIN) families <xref rid="pone.0018094-Fischer1" ref-type="bibr">[24]</xref>&#x02013;<xref rid="pone.0018094-Shimono1" ref-type="bibr">[26]</xref>. Many WRKY and AP2/EREBP genes were activated by RDV infection (<xref ref-type="fig" rid="pone-0018094-g005">Figure 5A and B</xref>). The genes regulated by WRKY and AP2/EREBP include PR protein genes <xref rid="pone.0018094-Fischer1" ref-type="bibr">[24]</xref>, <xref rid="pone.0018094-Qiu1" ref-type="bibr">[25]</xref>. PR proteins are classified into several types according to their biochemical functions <xref rid="pone.0018094-vanLoon1" ref-type="bibr">[27]</xref>. The expression of PR protein genes was changed by RDV infection. The direction of the gene response was different from the type of PR protein (<xref ref-type="fig" rid="pone-0018094-g006">Figure 6</xref>). Many genes for PR1 (SCP-like extracellular domain-containing proteins), chitinases (PR3, 4, and 8), PR5 (thaumatin-like proteins), PR6 (protease inhibitors), and PR10 (pathogenesis-related Bet v I family proteins) were activated, whereas the genes for PR2 (&#x003b2;-1,3-glucosidases), PR14 (non-specific lipid transfer proteins), and PR15 and 16 (germin-like proteins) were predominantly suppressed by RDV infection (<xref ref-type="fig" rid="pone-0018094-g006">Figure 6</xref>). The expression of other defense- and stress-related genes such as those for glutathione S-transferases (GST) and heat shock factors was also activated by RDV infection (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s003">Figure S3</xref>). The number and degree of response for DEGs associated with defense and stress response processes by RDV infection were different among plants infected with the three RDV strains. For activated DEGs, the degree of response by RDV-D84 infection was generally higher than that by RDV-O infection, but was similar to that by RDV-S infection (<xref ref-type="fig" rid="pone-0018094-g005">Figure 5</xref> and <xref ref-type="fig" rid="pone-0018094-g006">6</xref>). For a majority of suppressed DEGs, the degree of response by RDV-D84 infection was similar to that by RDV-O infection, but was lower than that by RDV-S infection (<xref ref-type="fig" rid="pone-0018094-g006">Figure 6</xref>).</p><fig id="pone-0018094-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018094.g006</object-id><label>Figure 6</label><caption><title>Response of pathogenesis related gene families to RDV infection.</title><p>See <xref ref-type="fig" rid="pone-0018094-g003">Figure 3</xref> for details.</p></caption><graphic xlink:href="pone.0018094.g006"/></fig></sec><sec id="s2d"><title>Development- and morphogenesis-related genes</title><p>Development and morphogenesis processes are often controlled by plant hormones. Gibberellic acid (GA) is a plant hormone that promotes shoot elongation. Genes involved in early reaction of GA synthesis such as those for <italic>ent</italic>-kaurene synthase <xref rid="pone.0018094-Sakamoto1" ref-type="bibr">[28]</xref> were suppressed by RDV infection, whereas genes involved in GA inactivation processes such as those for gibberellin-2-oxidase <xref rid="pone.0018094-Sakamoto1" ref-type="bibr">[28]</xref> were activated (<xref ref-type="fig" rid="pone-0018094-g007">Figure 7A</xref>). Genes belonging to the GRAS (named from &#x0201c;GIBBERELLIC ACID-INSENSITIVE,&#x0201d; &#x0201c;REPRESSOR of GAI,&#x0201d; and &#x0201c;SCARECROW&#x0201d;) family encode negative regulators of GA signaling <xref rid="pone.0018094-Hirsch1" ref-type="bibr">[29]</xref>. RDV infection activated expression of the GRAS gene family (<xref ref-type="fig" rid="pone-0018094-g007">Figure 7A</xref>). The responses of genes related to GA synthesis and signaling were similar between the plants infected with RDV-D84 and RDV-S, whereas the genes encoding <italic>ent</italic>-kaurene synthase were suppressed only in plants infected with RDV-S.</p><fig id="pone-0018094-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018094.g007</object-id><label>Figure 7</label><caption><title>Response of genes related to GA and IAA synthesis and signaling processes to RDV infection.</title><p>A): GA synthesis and signaling. B): IAA synthesis and signaling. See <xref ref-type="fig" rid="pone-0018094-g003">Figure 3</xref> for details.</p></caption><graphic xlink:href="pone.0018094.g007"/></fig><p>Indole acetic acid (IAA) is a plant hormone involved in development processes such as shoot elongation. Genes for aromatic-L-amino-acid decarboxylase and YUCCA family monooxygenase, which are involved in the early steps of IAA synthesis <xref rid="pone.0018094-Zhao1" ref-type="bibr">[30]</xref>, were suppressed by RDV infection (<xref ref-type="fig" rid="pone-0018094-g007">Figure 7B</xref>). Six genes for auxin response factor (ARF), which is a positive regulator of auxin signaling <xref rid="pone.0018094-Guilfoyle1" ref-type="bibr">[31]</xref>, were suppressed (<xref ref-type="fig" rid="pone-0018094-g007">Figure 7B</xref>). Many auxin-responding SAUR (SMALL AUXIN UP RNA) <xref rid="pone.0018094-Jain1" ref-type="bibr">[32]</xref> genes were also suppressed by RDV infection (<xref ref-type="fig" rid="pone-0018094-g007">Figure 7B</xref>). The degree of suppression for genes related to IAA synthesis and signaling was highest in plants infected with RDV-S and lowest in plants infected with RDV-O (<xref ref-type="fig" rid="pone-0018094-g007">Figure 7B</xref>).</p><p>Various transcription factors are closely regulated during development and morphogenesis processes <xref rid="pone.0018094-vanderGraaff1" ref-type="bibr">[33]</xref>&#x02013;<xref rid="pone.0018094-Mao1" ref-type="bibr">[41]</xref>. The homeobox gene family is associated with the development and morphogenesis of plants <xref rid="pone.0018094-vanderGraaff1" ref-type="bibr">[33]</xref>, <xref rid="pone.0018094-Park1" ref-type="bibr">[34]</xref>. The expression of many HD-zip-type homeobox genes was suppressed by RDV infection, except for the genes classified in HD-zip I, which were predominantly activated by RDV infection (<xref ref-type="fig" rid="pone-0018094-g008">Figure 8A</xref>). Genes for other transcription factors involved in development processes were also suppressed by RDV infection (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s004">Figure S4</xref>). In constract, the genes for many transcription factors categorized into NAC (named from &#x0201c;NAM,&#x0201d; &#x0201c;ATAF1,&#x0201d; and &#x0201c;CUC2&#x0201d;) and DOF (DNA-BINDING WITH ONE FINGER) were activated by RDV infection (<xref ref-type="fig" rid="pone-0018094-g008">Figure 8B</xref>, Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s004">Figure S4</xref>) <xref rid="pone.0018094-Mao1" ref-type="bibr">[41]</xref>. The degree of response for genes for these transcription factors was dependent on the RDV strains infecting and the direction of the gene response. The degree of suppression by RDV-D84 infection was similar to that by RDV-O infection, and was less than that by RDV-S infection, whereas the degree of activation by RDV-D84 was higher than that by RDV-O infection and was similar to that by RDV-S infection.</p><fig id="pone-0018094-g008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018094.g008</object-id><label>Figure 8</label><caption><title>Response of genes related to auxin synthesis and signaling processes to RDV infection.</title><p>A): Homeobox family. B): NAC family. See <xref ref-type="fig" rid="pone-0018094-g003">Figure 3</xref> for details.</p></caption><graphic xlink:href="pone.0018094.g008"/></fig><p>Our previous study showed that RDV infection suppresses the expression of genes related to cell wall and chloroplast formation <xref rid="pone.0018094-Senthil1" ref-type="bibr">[2]</xref>. The current study also showed the suppression of genes related to cell wall formation such as those for cellulose synthases and arabinogalactan proteins (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s005">Figure S5</xref>). The degree of suppression of cell wall-related genes in plants infected with RDV-O was similar to that in plants infected with RDV-D84, but it was lower than in plants infected with RDV-S. In contrast, many genes for wall-associated kinases, which bind to pectin <xref rid="pone.0018094-Zhang1" ref-type="bibr">[42]</xref>, were activated by RDV infection (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s005">Figure S5</xref>). The degree of activation for wall-associated kinase genes in plants infected with RDV-D84 was similar to that in plants infected with RDV-S, but it was higher than in plants infected with RDV-O (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s005">Figure S5</xref>).</p><p>Many genes associated with photosynthesis, carbon fixation processes, and chlorophyll synthesis were suppressed by RDV infection in this study (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s006">Figure S6</xref>). Genes associated with chlorophyll degradation were not activated by RDV infection. The gene response was also different among plants infected with the three RDV strains. The genes involved in photosynthesis pathway were usually suppressed mostly only in plants infected with RDV-S. In carbon fixation and chlorophyll metabolism, many genes were suppressed in plants infected with RDV-D84 and RDV-S. Only a few genes such as those for ribulose-bisphosphate carboxylase and cytochrome c6 were also suppressed in plants infected with RDV-O (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s006">Figure S6</xref>).</p></sec></sec><sec id="s3"><title>Discussion</title><p>Three RDV strains caused disease symptoms such as stunting and chlorotic specks, but the severity of symptoms, especially stunting, varied among plants infected with the three strains (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1A</xref>, and Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s001">Figure S1</xref>). The plants infected with RDV-S were most stunted and those infected with RDV-O were least stunted (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1A</xref>). The RDV titer levels were also dependent on the RDV strains. The level of RDV-O was lowest, but the titer level of RDV-S was not significantly different from that of RDV-D84 (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1B</xref>). This result implies that the severity of disease symptoms is not simply related to the level of RDV titer in infected plants, and that other factors may be involved in symptom development.</p><sec id="s3a"><title>1. Defense- and stress response-related genes regulated by RDV infection</title><p>RDV infection activated the expression of many groups of genes associated with defense and stress response processes, although some genes were suppressed (<xref ref-type="fig" rid="pone-0018094-g003">Figures 3</xref>&#x02013;<xref ref-type="fig" rid="pone-0018094-g004"/>
+<xref ref-type="fig" rid="pone-0018094-g005"/>
+<xref ref-type="fig" rid="pone-0018094-g006">6</xref>). The gene-silencing system is one of the important systems of defense against virus infection <xref rid="pone.0018094-DazPendn1" ref-type="bibr">[9]</xref>. RDV infection activated many genes likely related to the RNAi process. <italic>SHOOTLESS4</italic> (<italic>SHL4</italic>) in rice is the gene encoding a component of the <italic>trans</italic>-acting siRNA process for endogenous genes, which is one of the post-transcriptional gene-silencing (PTGS) processes <xref rid="pone.0018094-Nagasaki1" ref-type="bibr">[10]</xref>. <italic>Dicer-like 2</italic> (<italic>DCL2</italic>) is involved in the PTGS process in <italic>Arabidopsis</italic>
+<xref rid="pone.0018094-Xie1" ref-type="bibr">[18]</xref>. RNA-dependent RNA polymerase 2 (RDR2) works with DCL3 to form chromatin-associated siRNAs in <italic>Arabidopsis</italic>
+<xref rid="pone.0018094-Xie1" ref-type="bibr">[18]</xref>. <italic>RDR1</italic> in <italic>Arabidopsis</italic> produces viral secondary siRNAs following viral RNA replication-triggered biogenesis of primary siRNAs <xref rid="pone.0018094-Wang3" ref-type="bibr">[43]</xref>. In plants infected with RDV, rice genes that are likely orthologous to genes for <italic>RDR1</italic> and <italic>DCL2</italic> (<italic>OsRDR1</italic>: LOC_Os02g50330, <italic>OsDCL2a</italic>: LOC_Os03g38740, <xref rid="pone.0018094-Kapoor1" ref-type="bibr">[44]</xref>) were activated by RDV infection. In addition, <italic>OsAGO2</italic> (LOC_Os04g52540) and <italic>OsAGO3</italic> (LOC_Os04g52550), which are paralogous genes of <italic>SHL4</italic>
+<xref rid="pone.0018094-Kapoor1" ref-type="bibr">[44]</xref>, were also activated by RDV infection. The expression of genes related to the gene-silencing process did not vary significantly among plants infected with the different RDV strains (<xref ref-type="fig" rid="pone-0018094-g003">Figure 3</xref>). These observations suggest that the difference in titer level among RDV strains is not associated with the expression of the genes for the gene-silencing process.</p><p>JA is a signal molecule for the regulation of a defense system against biotic stresses. The genes for JA synthesis and signaling were induced by RDV infection (<xref ref-type="fig" rid="pone-0018094-g004">Figure 4</xref>). <italic>RIM1</italic> (LOC_Os03g02800) is a NAC family gene, and a negative regulator of JA signaling <xref rid="pone.0018094-Yoshii1" ref-type="bibr">[45]</xref>. RDV propagation was suppressed in a <italic>rim1</italic> mutant <xref rid="pone.0018094-Yoshii2" ref-type="bibr">[46]</xref>, whereas genes for JA synthesis and JA-mediated signaling were quickly and highly induced in the <italic>rim1</italic> mutant by wounding <xref rid="pone.0018094-Yoshii1" ref-type="bibr">[45]</xref>. These observations suggest that JA-mediated defense systems in rice plants are involved in the suppression of RDV propagation. In this study, the <italic>RIM1</italic> gene was suppressed in the respective plants infected with RDV strains (<xref ref-type="fig" rid="pone-0018094-g008">Figure 8</xref>). The genes for JA synthesis and JA-mediated defense systems were highly induced in plants infected with RDV-S (<xref ref-type="fig" rid="pone-0018094-g004">Figure 4</xref>). This result suggests that the activation of defense systems controlled by JA after RDV infection may not be enough to inhibit propagation of RDV in plants expressing functional <italic>RIM1</italic>. The inconsistency between the result with the <italic>rim1</italic> mutant and this study indicates that quick induction of JA-mediated defense systems may be important for suppressing RDV propagation.</p><p>RDV infection also induced many types of genes related to biotic stress responses such as those encoding AP2-EREBP, WRKY, PR protein families, and wall-associated kinase (<xref ref-type="fig" rid="pone-0018094-g005">Figures 5</xref> and <xref ref-type="fig" rid="pone-0018094-g006">6</xref>, Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s005">Figure S5</xref>) <xref rid="pone.0018094-Fischer1" ref-type="bibr">[24]</xref>&#x02013;<xref rid="pone.0018094-vanLoon1" ref-type="bibr">[27]</xref>, <xref rid="pone.0018094-Zhang1" ref-type="bibr">[42]</xref>. Expression of <italic>WRKY45</italic> gene (LOC_Os05g25770), which is reported to be induced by SA and not by JA <xref rid="pone.0018094-Shimono1" ref-type="bibr">[26]</xref>, was increased by RDV infection, although the genes for SA synthesis were not induced by RDV infection (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s008">Table S2</xref>). Thus, the defense systems regulated by <italic>WRKY45</italic> and SA signaling could also be induced by RDV infection.</p></sec><sec id="s3b"><title>2. About development and morphogenesis processes</title><p>Virus infection affects plant growth and development processes, and the disturbance of gene expression by virus infection may lead to the development of disease symptoms such as dwarfism and mosaic on leaves <xref rid="pone.0018094-Dardick1" ref-type="bibr">[1]</xref>&#x02013;<xref rid="pone.0018094-Satoh1" ref-type="bibr">[8]</xref>. Genes related to cell wall and chloroplast functions were suppressed by RDV infection <xref rid="pone.0018094-Shimizu1" ref-type="bibr">[7]</xref>. In this study, the suppression of these genes was observed in plants infected with three RDV strains (Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s005">Figures S5</xref> and <xref ref-type="supplementary-material" rid="pone.0018094.s006">S6</xref>). The suppression of these genes was also observed in plants infected with other viruses <xref rid="pone.0018094-Dardick1" ref-type="bibr">[1]</xref>, <xref rid="pone.0018094-Havelda1" ref-type="bibr">[3]</xref>&#x02013;<xref rid="pone.0018094-Catoni1" ref-type="bibr">[6]</xref>, <xref rid="pone.0018094-Satoh1" ref-type="bibr">[8]</xref>. Plants infected with <italic>Plum pox virus</italic>, <italic>Tomato spotted wilt virus</italic> and <italic>Rice stripe virus</italic> (RSV) showed symptoms such as dwarfism and chlorosis. Genes for cell wall and chloroplast functions were also suppressed in plants infected with these viruses <xref rid="pone.0018094-Babu1" ref-type="bibr">[4]</xref>, <xref rid="pone.0018094-Catoni1" ref-type="bibr">[6]</xref>, <xref rid="pone.0018094-Satoh1" ref-type="bibr">[8]</xref>. Therefore, the suppression of these genes may be related to symptom development.</p><p>The suppression of GA and IAA synthesis and signaling processes was observed in plants infected with RDV (<xref ref-type="fig" rid="pone-0018094-g007">Figure 7</xref>). The suppression of GA related genes was also observed in stunted plants infected with RSV and <italic>Soybean mosaic virus</italic>
+<xref rid="pone.0018094-Satoh1" ref-type="bibr">[8]</xref>, <xref rid="pone.0018094-Babu2" ref-type="bibr">[47]</xref>. The loss of function in GA synthesis and signaling resulted in dwarfism in rice and <italic>Arabidopsis</italic> plants <xref rid="pone.0018094-MargisPinheiro1" ref-type="bibr">[48]</xref>&#x02013;<xref rid="pone.0018094-Dill1" ref-type="bibr">[51]</xref>, and transgenic plant expressing genes for GA degradation showed the dwarfism <xref rid="pone.0018094-Lo1" ref-type="bibr">[52]</xref>. ARF genes affect development in <italic>Arabidopsis</italic> and rice <xref rid="pone.0018094-Attia1" ref-type="bibr">[53]</xref>, <xref rid="pone.0018094-Lim1" ref-type="bibr">[54]</xref>. A transgenic rice plant in which expression of the ARF1 gene was repressed exhibited development abnormalities such as stunted growth, short leaves, and delayed flowering <xref rid="pone.0018094-Attia1" ref-type="bibr">[53]</xref>. These observations suggest that the suppression of GA and IAA synthesis and signaling is also associated with dwarfism caused by RDV infection.</p><p>Suppression of transcription factor genes such as those encoding homeobox, TCP, and SBP families resulted in abnormal development and growth <xref rid="pone.0018094-vanderGraaff1" ref-type="bibr">[33]</xref>&#x02013;<xref rid="pone.0018094-Mao1" ref-type="bibr">[41]</xref>. In this study, HD-zip family genes responded to RDV infection. The many genes of HD-zip II, III and IV families were suppressed by RDV infection, whereas those of the HD-zip I family were induced. In <italic>Arabidopsis</italic>, the functions of HD-zip genes are dependent on the types of domain encoded in the genes <xref rid="pone.0018094-Elhiti1" ref-type="bibr">[55]</xref>. The genes of HD-zip I are involved in stress responses and development, while HD-zip II genes are involved in auxin signaling and development. HD-zip III and IV function in development processes <xref rid="pone.0018094-Elhiti1" ref-type="bibr">[55]</xref>. Therefore, the difference in responses among HD-zip gene families in plants infected with RDV may be associated with the gene functions dependent on domain types. NAC family genes are involved in the regulation of plant development and stress responses <xref rid="pone.0018094-Mao1" ref-type="bibr">[41]</xref>, <xref rid="pone.0018094-Takasaki1" ref-type="bibr">[56]</xref>. The expression of many NAC genes was changed by RDV infection. Especially, some genes in SNAC (stress-responsive NAC, <xref rid="pone.0018094-Takasaki1" ref-type="bibr">[56]</xref>) family were induced by RDV infection. Thus, like HD-zip genes, the responses of NAC genes seem to be dependent on the encoded domain types, which may be related to distinctive gene functions.</p><p>The activation of genes for defense processes affects plant development. The <italic>rim1</italic> mutant showed stunted shoot growth <xref rid="pone.0018094-Yoshii2" ref-type="bibr">[46]</xref>. A high concentration of endogenous JA inhibited shoot growth <xref rid="pone.0018094-Wasternack1" ref-type="bibr">[57]</xref>. Some genes for defense systems such as those for PR proteins are also associated with plant development and morphogenesis processes <xref rid="pone.0018094-Banerjee1" ref-type="bibr">[14]</xref>, <xref rid="pone.0018094-Anand1" ref-type="bibr">[58]</xref>. Therefore, the activation of genes for defense processes may be related to symptom development.</p></sec><sec id="s3c"><title>3. The difference in gene responses by three RDV strains</title><p>Gene responses to RDV infection can be largely categorized into three types: 1) responses that are similar among all infected plants, independent of the RDV strain; 2) responses that are similar in plants infected with RDV-D84 and RDV-S; and 3) responses that are similar in plants infected with RDV-O and RDV-D84.</p><p>A Type 1 response is found in the genes for gene silencing. Virus genomes often encode a protein to inhibit the gene-silencing process in host cells (silencing suppressor) in order for viruses to propagate in host cells <xref rid="pone.0018094-DazPendn1" ref-type="bibr">[9]</xref>. Pns10 in RDV functions as a suppressor of gene silencing processes in host cells <xref rid="pone.0018094-Cao1" ref-type="bibr">[59]</xref>. One amino acid substitution was found in Pns10 of RDV-O (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1C</xref>). A mutant of <italic>Cucumber mosaic virus</italic>, which does not express the silencing suppressor protein, accumulated at a low level in <italic>Arabidopsis</italic>, indicating that the mutation of the silencing suppressor affected virus propagation in plants <xref rid="pone.0018094-Wang3" ref-type="bibr">[43]</xref>. These observations suggest that RDV titer levels may be related to the possible difference in protein structure of Pns10 among different RDV strains.</p><p>A Type 2 response is mainly found in genes activated by RDV infection (<xref ref-type="fig" rid="pone-0018094-g002">Figure 2C</xref>), such as genes involved in stress response and defense processes. It seems that the degree of response of genes in this category is correlated with RDV titer levels.</p><p>A Type 3 response is found in the expression patterns of development- and morphogenesis-related genes. It seems that a Type3 response may not be associated with RDV titer levels, since the degree of suppression in plants infected with RDV-D84 is lower than that with RDV-S, although the titer level in RDV-D84-infected plants was similar to that in RDV-S-infected plants. The suppression of host gene expression compared among <italic>Nicotiana</italic> plants infected with some RNA viruses such as <italic>Cymbidium ringspot virus, Turnip crinkle virus, Ribgrass mosaic virus, and Cucumber mosaic virus</italic> (CMV) showed that the severe suppression of host genes was associated with the development of severe symptoms <xref rid="pone.0018094-Havelda1" ref-type="bibr">[3]</xref>. The amino acid changes in virus proteins are also associated with the disease symptoms. Some virus proteins of <italic>Tomato leaf curl virus</italic> (TLCV) are associated with disease symptoms. Transgenic plants expressing mutated TLCV genes encoding C2, C3, C4, and V1 showed significantly milder symptoms than those expressing the wild type TLCV genes <xref rid="pone.0018094-Selth1" ref-type="bibr">[60]</xref>. The symptom severity on <italic>Nicotiana</italic> plants infected with CMV was associated with the protein sequence of coat protein and not the level of the titer or gene product <xref rid="pone.0018094-Szilassy1" ref-type="bibr">[61]</xref>. Therefore, the lack of association between RDV titer levels and Type 3 gene response may be due to the difference in amino acid sequences among different RDV strains. In RDV, seven structural (P1, P2, P3, P5, P7, P8, and P9) and five non-structural proteins (Pns4, Pns6, Pns10, Pns11 and Pns12) are encoded in the 12 genome segments of double stranded RNA <xref rid="pone.0018094-Omura1" ref-type="bibr">[62]</xref>. Pns6 is localized to plasmodesmata and identified as necessary for cell-to-cell movement of RDV <xref rid="pone.0018094-Li1" ref-type="bibr">[63]</xref>. Pns10 functions as a suppressor of gene-silencing processes in host cells <xref rid="pone.0018094-Cao1" ref-type="bibr">[59]</xref>. Sixteen amino acid substitutions in eight virus proteins were specific to RDV-S (<xref ref-type="fig" rid="pone-0018094-g001">Figure 1C</xref>), Five of 16 amino acid substitutions in RDV-S were found in P2 protein. P2 interacts with <italic>ent</italic>-kaurene oxidase and inhibits GA synthesis <xref rid="pone.0018094-Zhu1" ref-type="bibr">[64]</xref>. The response of genes involved in GA synthesis and the signaling process by RDV infection indicated that endogenous GA content may decrease in infected plants, and that the decrease may be more drastic in plants infected with RDV-S. Suppression of genes for GA synthesis and signaling could be associated with the difference in P2 protein sequences among RDV strains. In this study, we suggest that disease severity by RDV strains is dependent on the difference in expression of various genes, which is in turn associated with RDV titer level and the variations in virus proteins among RDV strains. In a further study, we would like to investigate the interaction between host and virus proteins to determine the mechanisms of symptom development by RDV infection.</p></sec></sec><sec sec-type="materials|methods" id="s4"><title>Materials and Methods</title><sec id="s4a"><title>Virus, insect vector, and plant samples</title><p>The sources of RDV-O and RDV-S were described previously <xref rid="pone.0018094-Kimura1" ref-type="bibr">[17]</xref>. Both strains were propagated and have been maintained in rice plants (<italic>Oryza sativa</italic> L. cv. Nipponbare) since 1984. For maintenance of RDV, rice plants were inoculated at the three- to four-leaf stage with a viruliferous green leafhopper (GLH: <italic>Nephotettix cincticeps</italic>) at least once a year. All rice plants were grown in the greenhouse, where temperatures fluctuated between 25 and 30&#x000b0;C in the spring to autumn.</p><p>In 1984, rice plants were inoculated with RDV-O. One to two months after inoculation, the virus, designated as D84, was purified according to the method described previously <xref rid="pone.0018094-Kimura2" ref-type="bibr">[65]</xref>, and stored at &#x02212;70&#x000b0;C. In 2006, the purified RDV-D84 was injected into instars of GLH and the insects were kept in a group for 10 to 14 days on healthy rice plants in a 28&#x000b0;C growth chamber. The insects were transferred to rice seedlings grown to the two- to three-leaf stage for inoculation of RDV-D84. The inoculated plants were placed in the greenhouse.</p><p>GLH were maintained in cages that contained rice seedlings in an insect-rearing room at 25&#x02013;27&#x000b0;C. To obtain viruliferous GLH, nymphs were reared on virus-infected rice plants for 2 days, and insects were maintained up to the adult stage with occasional replacement of seedlings by healthy rice seedlings. Virus-free GLH were reared on healthy seedlings.</p><p>Fourteen seeds of <italic>Oryza sativa</italic> cv. Nipponbare, which is susceptible to RDV, were sown in a pot (85 mm in diameter and 75 mm in height) filled with about 250 ml of a commercial soil mixture (Bonsol, Sumitomo Chemical, Tokyo, Japan). The plants were grown under well-watered conditions in an air-conditioned greenhouse (25&#x000b1;3&#x000b0;C, natural sunlight). Fourteen seedlings at the two-leaf stage in a single pot were exposed to 70 viruliferous or virus-free (for mock inoculation) GLH in an inoculation chamber (34 cm wide by 26 cm deep by 34 cm high) for 24 h (25&#x000b1;3&#x000b0;C, continuous light conditions). After the insects were removed from the plants, the seedlings were placed in an air-conditioned greenhouse (25&#x000b1;3&#x000b0;C, natural sunlight). At 21 dpi, the shoots of the inoculated plants (except the meristem) were cut at 3 cm above the soil surface. After weighing of the samples, they were frozen in liquid nitrogen and stored at &#x02212;80&#x000b0;C. After harvest, rice seedlings were grown continuously in the same greenhouse to evaluate virus infection. The experiment was repeated three times (three biological replicates). The heights of 20 rice plants infected with each RDV strain and 20 mock-inoculated plants were measured at 40 dpi. The significance of difference in plant heights was examined by ANOVA (P-value&#x0003c;0.01) and Fisher's least significant difference (LSD) test (LSD at 1&#x00025; level).</p></sec><sec id="s4b"><title>Detection and quantification of RDV</title><p>RDV infection and concentration were evaluated by the double antibody-sandwich enzyme-linked immunosorbent assay (DAS-ELISA) using an antiserum against RDV described previously <xref rid="pone.0018094-Takahashi2" ref-type="bibr">[66]</xref>. To evaluate RDV infection, pieces (about 1 cm) of leaf sheath/stem tissue were harvested from each rice seedling and subjected to DAS-ELISA. To quantify the concentration of RDV in the rice plants, leaf samples were harvested from RDV-infected- and mock-inoculated plants at 30 dpi. After the leaf weight was measured, the samples were frozen in liquid nitrogen and stored at &#x02212;80&#x000b0;C. The frozen samples were ground by a multibead shocker (MB501(S), YASUI KIKAI, Osaka, Japan) and were suspended with 10-fold weight of phosphate buffered saline (PBS) (10&#x000d7; extracts). The 10&#x000d7; extracts were further serially diluted between 2- and 2<sup>8</sup>-fold with PBS and subjected to DAS-ELISA. The concentration of the coat protein was estimated by comparing absorbance values of RDV-infected rice leaf saps with those of purified RDV of known concentrations at 410 nm. The significance of difference in virus concentrations among plants infected with the RDV strains was examined by ANOVA (P-value&#x0003c;0.05) and LSD test (LSD at 5&#x00025; level).</p></sec><sec id="s4c"><title>Sequencing of the RDV genome</title><p>Total RNA was extracted from RDV-infected rice plants using the RNeasy plant mini kit (Qiagen, Valencia, CA, USA) according to the manufacturer's instructions, and then reverse transcribed using SuperScript III (Invitrogen, Carlsbad, CA, USA) with random primers. The cDNA of the RDV genome was amplified by PCR using KOD DNA polymerase (TOYOBO, Osaka, Japan). The PCR protocol consisted of 1 min at 94&#x000b0;C, followed by 30 cycles of 15 s at 94&#x000b0;C, 15 s at 55&#x000b0;C, and 1 min at 68&#x000b0;C, and final extension time of 5 min at 68&#x000b0;C. PCR products of the expected size were purified by a PCR purification kit (Qiagen, Valencia, CA, USA) and directly sequenced in both directions using an ABI 3130 genetic analyzer with an ABI BigDye terminator v1.1 cycle sequencing kit (Applied Biosystems, Foster City, CA, USA). The nucleotide sequence data were compiled and analyzed with Genetyx-Win version 6 (Software Development, Tokyo, Japan).</p></sec><sec id="s4d"><title>RNA extraction</title><p>Prior to RNA extraction, RDV infection in plants to be used for RNA extraction was examined by DAS-ELISA. For extraction of RNA from RDV-inoculated plants, we used only those confirmed to be infected with RDV. RNA samples were extracted from five independent plants in the same replicates by the RNeasy Maxi kit (Qiagen, Valencia, CA, USA). For this microarray experiment, we prepared 12 RNA samples (three RDV strains and one mock&#x000d7;three biological replicates). The concentration and quality of total RNA were examined by Nanodrop (Nanodrop ND-1000, Nanodrop Technologies, Wilmington, DE, USA) and BioAnalyzer (G2938A, Agilent Technologies, Santa Clara, CA, USA), respectively.</p></sec><sec id="s4e"><title>Microarray experiment and data analysis</title><p>To analyze gene responses to RDV infection, we used a two-dye method, which directly compared expression profiles between two samples on the same microarray. The details of the microarray experiment and data analysis were described previously <xref rid="pone.0018094-Satoh1" ref-type="bibr">[8]</xref>. In brief, cyanine 3(Cy3)- or cyanine 5 (Cy5)-labeled complementary RNA (cRNA) samples were synthesized from 850 ng of the total RNA using the Low-input RNA labeling kit (Agilent Technologies, Santa Clara, CA, USA). In this study, RDV-infected and mock samples were labeled by Cy3 and Cy5, respectively. Hybridization solution was prepared with 825 ng each of Cy3- and Cy5-labeled cRNA preparations using the In situ hybridization kit plus (Agilent Technologies, Santa Clara, CA, USA). Hybridization and washing of microarray slides were performed following the manufacturer's protocols. After being washed, the slide image files were produced by the DNA microarray scanner (G2505B; Agilent Technologies, Santa Clara, CA, USA).</p><p>Signal intensities of Cy3 and Cy5 were extracted from the image files and normalized in each array by Feature Extraction version 9.5 (Agilent Technologies, Santa Clara, CA, USA). Signal intensities among all microarray data were normalized according to the quantile method (Global normalization) by EXPANDER ver. 4.1 <xref rid="pone.0018094-Ulitsky1" ref-type="bibr">[67]</xref>. A gene was declared &#x0201c;expressed&#x0201d; if the average signal intensity of the gene was higher than 6 in at least one condition; otherwise, the gene was considered not expressed. A DEG was defined as an expressed gene with 1) a log<sub>2</sub>-based ratio (RDV-inoculated sample/mock-inoculated sample) higher than 0.585 or lower than &#x02212;0.585 and 2) significant changes in gene expression of P&#x02264;0.05 by a paired t-test (permutation: all, FDR collection: adjusted Bonferroni method). Data processing was performed using Mev version 4.4 <xref rid="pone.0018094-Saeed1" ref-type="bibr">[68]</xref>. The outputs of microarray analysis used in this study (series number GSE24937) are available at NCBI-GEO <xref rid="pone.0018094-Edgar1" ref-type="bibr">[69]</xref>.</p></sec><sec id="s4f"><title>RT-PCR</title><p>Complementary DNA (cDNA) fragments for transcripts of selected rice genes or the RDV genome were synthesized using 1,000 ng of the corresponding RNA with 50 ng/&#x000b5;l of random hexamer by SuperScript III reverse transcriptase (Invitrogen, USA). The resultant reaction mixtures containing cDNA were diluted four times. Some 4 &#x000b5;l of diluted mixture was used for PCR. Primers for rice genes were designed by Primer 3 <xref rid="pone.0018094-Rozen1" ref-type="bibr">[70]</xref>. Designed primers are shown in Supplementary <xref ref-type="supplementary-material" rid="pone.0018094.s001">Figure S1</xref>. The cycling program was initial denaturation for 2 min at 95&#x000b0;C, followed by 30 to 40 cycles of 15 s at 95&#x000b0;C, 15 s at variable annealing temperatures, and 45 s at 68&#x000b0;C, with a final extension of 1 min at 68&#x000b0;C (GeneAmp PCR System 9700; Applied Biosystems, USA). Annealing temperature was dependent on the Tm of the designed primers, and was between 50 and 60&#x000b0;C.</p></sec></sec><sec sec-type="supplementary-material" id="s5"><title>Supporting Information</title><supplementary-material content-type="local-data" id="pone.0018094.s001"><label>Figure S1</label><caption><p>
+<bold>Disease symptoms in plants infected with three RDV strains.</bold> A): Rice plants stunted by infection with RDV strains at 30 dpi. Bar: 10 cm. B) Chlorotic stripes on leaf of an RDV-S-infected plant. Bar: 1 cm. C)</p><p>(TIF)</p></caption><media xlink:href="pone.0018094.s001.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018094.s002"><label>Figure S2</label><caption><p>
+<bold>DEGs evaluated by RT-PCR.</bold> The numbers are the normalized signal intensity and log<sub>2</sub>-based differential expression ratios by microarray analysis. ns: log<sub>2</sub>-based differential expression ratio of the gene not significantly differentially expressed.</p><p>(TIF)</p></caption><media xlink:href="pone.0018094.s002.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018094.s003"><label>Figure S3</label><caption><p>
+<bold>Response in abiotic stress responsive gene families to RDV infection.</bold> See <xref ref-type="fig" rid="pone-0018094-g004">Figure 4</xref> for details.</p><p>(TIF)</p></caption><media xlink:href="pone.0018094.s003.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018094.s004"><label>Figure S4</label><caption><p>
+<bold>Response of genes for transcription factors involved in development and morphogenesis processes to RDV infection.</bold> See <xref ref-type="fig" rid="pone-0018094-g004">Figure 4</xref> for details.</p><p>(TIF)</p></caption><media xlink:href="pone.0018094.s004.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018094.s005"><label>Figure S5</label><caption><p>
+<bold>Response of genes whose products localized in cell wall to RDV infection.</bold> See <xref ref-type="fig" rid="pone-0018094-g004">Figure 4</xref> for details.</p><p>(TIF)</p></caption><media xlink:href="pone.0018094.s005.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018094.s006"><label>Figure S6</label><caption><p>
+<bold>Response of genes associated with photosynthesis-, and carbon fixation-related processes to RDV infection.</bold> See <xref ref-type="fig" rid="pone-0018094-g004">Figure 4</xref> for details.</p><p>(TIF)</p></caption><media xlink:href="pone.0018094.s006.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018094.s007"><label>Table S1</label><caption><p>
+<bold>Characterization of three RDV strains.</bold> A: raw data of plant height, B: nucleotide sequences of 12 segments, C: amino acid sequences of 12 proteins</p><p>(XLS)</p></caption><media xlink:href="pone.0018094.s007.xls"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018094.s008"><label>Table S2</label><caption><p>
+<bold>The list of DEGs.</bold>
+</p><p>(XLS)</p></caption><media xlink:href="pone.0018094.s008.xls"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack><p>We thank Dr. Bill Hardy for editing this manuscript and Ms. Setsuko Kimura and Hiromi Satoh for their support in the microarray and RT-PCR experiments.</p></ack><fn-group><fn fn-type="COI-statement"><p><bold>Competing Interests: </bold>The authors have declared that no competing interests exist.</p></fn><fn fn-type="financial-disclosure"><p><bold>Funding: </bold>This work was supported by the project grants from the Program for Promotion of Basic Research Activities for Innovative Biosciences (PROBRAIN). The subject of each study is not selected by the funder but only reported to the funder annually. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></fn></fn-group><ref-list><title>References</title><ref id="pone.0018094-Dardick1"><label>1</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dardick</surname><given-names>C</given-names></name></person-group>
+<year>2007</year>
+<article-title>Comparative expression profiling of <italic>Nicotiana benthamiana</italic> leaves systemically infected with three fruit tree viruses.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>20</volume>
+<fpage>1004</fpage>
+<lpage>1017</lpage>
+<pub-id pub-id-type="pmid">17722703</pub-id></element-citation></ref><ref id="pone.0018094-Senthil1"><label>2</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Senthil</surname><given-names>G</given-names></name><name><surname>Liu</surname><given-names>H</given-names></name><name><surname>Puram</surname><given-names>VG</given-names></name><name><surname>Clark</surname><given-names>A</given-names></name><name><surname>Stromberg</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Specific and common changes in <italic>Nicotiana benthamiana</italic> gene expression in response to infection by enveloped viruses.</article-title>
+<source>J Gen Virol</source>
+<volume>86</volume>
+<fpage>2615</fpage>
+<lpage>2625</lpage>
+<pub-id pub-id-type="pmid">16099921</pub-id></element-citation></ref><ref id="pone.0018094-Havelda1"><label>3</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Havelda</surname><given-names>Z</given-names></name><name><surname>V&#x000e1;rallyay</surname><given-names>E</given-names></name><name><surname>V&#x000e1;l&#x000f3;czi</surname><given-names>A</given-names></name><name><surname>Burgy&#x000e1;n</surname><given-names>J</given-names></name></person-group>
+<year>2008</year>
+<article-title>Plant virus infection-induced persistent host gene downregulation in systemically infected leaves.</article-title>
+<source>Plant J</source>
+<volume>55</volume>
+<fpage>278</fpage>
+<lpage>288</lpage>
+<pub-id pub-id-type="pmid">18397378</pub-id></element-citation></ref><ref id="pone.0018094-Babu1"><label>4</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Babu</surname><given-names>M</given-names></name><name><surname>Griffiths</surname><given-names>JS</given-names></name><name><surname>Huang</surname><given-names>TS</given-names></name><name><surname>Wang</surname><given-names>A</given-names></name></person-group>
+<year>2008</year>
+<article-title>Altered gene expression changes in <italic>Arabidopsis</italic> leaf tissues and protoplasts in response to <italic>Plum pox virus</italic> infection.</article-title>
+<source>BMC Genomics</source>
+<volume>9</volume>
+<fpage>325</fpage>
+<comment>Available: <ext-link ext-link-type="uri" xlink:href="http://www.biomedcentral.com/1471-2164/9/325">http://www.biomedcentral.com/1471-2164/9/325</ext-link>. Accessed 9 July 2008</comment>
+<pub-id pub-id-type="pmid">18613973</pub-id></element-citation></ref><ref id="pone.0018094-AgudeloRomero1"><label>5</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Agudelo-Romero</surname><given-names>P</given-names></name><name><surname>Carbonell</surname><given-names>P</given-names></name><name><surname>Perez-Amador</surname><given-names>MA</given-names></name><name><surname>Elena</surname><given-names>SF</given-names></name></person-group>
+<year>2008</year>
+<article-title>Virus adaptation by manipulation of host's gene expression.</article-title>
+<source>PLoS One</source>
+<volume>3</volume>
+<fpage>e2397</fpage>
+<comment>Available: <ext-link ext-link-type="uri" xlink:href="http://www.plosone.org/article/info:doi/10.1371/journal.pone.0002397">www.plosone.org/article/info:doi/10.1371/journal.pone.0002397</ext-link>. Accessed 11 June 2008</comment>
+<pub-id pub-id-type="pmid">18545680</pub-id></element-citation></ref><ref id="pone.0018094-Catoni1"><label>6</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Catoni</surname><given-names>M</given-names></name><name><surname>Miozzi</surname><given-names>L</given-names></name><name><surname>Fiorilli</surname><given-names>V</given-names></name><name><surname>Lanfranco</surname><given-names>L</given-names></name><name><surname>Accotto</surname><given-names>GP</given-names></name></person-group>
+<year>2009</year>
+<article-title>Comparative analysis of expression profiles in shoots and roots of tomato systemically infected by <italic>Tomato spotted wilt virus</italic> reveals organ-specific transcriptional responses.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>22</volume>
+<fpage>1504</fpage>
+<lpage>1513</lpage>
+<pub-id pub-id-type="pmid">19888816</pub-id></element-citation></ref><ref id="pone.0018094-Shimizu1"><label>7</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shimizu</surname><given-names>T</given-names></name><name><surname>Satoh</surname><given-names>K</given-names></name><name><surname>Kikuchi</surname><given-names>S</given-names></name><name><surname>Omura</surname><given-names>T</given-names></name></person-group>
+<year>2007</year>
+<article-title>The repression of cell wall- and plastid-related genes and the induction of defense-related genes in rice plants infected with <italic>Rice dwarf virus</italic>.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>20</volume>
+<fpage>247</fpage>
+<lpage>254</lpage>
+<pub-id pub-id-type="pmid">17378427</pub-id></element-citation></ref><ref id="pone.0018094-Satoh1"><label>8</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Satoh</surname><given-names>K</given-names></name><name><surname>Kondoh</surname><given-names>H</given-names></name><name><surname>Sasaya</surname><given-names>T</given-names></name><name><surname>Shimizu</surname><given-names>T</given-names></name><name><surname>Choi</surname><given-names>IR</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>Selective modification of rice (<italic>Oryza sativa</italic>) gene expression by <italic>Rice stripe virus</italic> infection.</article-title>
+<source>J Gen Virol</source>
+<volume>91</volume>
+<fpage>294</fpage>
+<lpage>305</lpage>
+<pub-id pub-id-type="pmid">19793907</pub-id></element-citation></ref><ref id="pone.0018094-DazPendn1"><label>9</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>D&#x000ed;az-Pend&#x000f3;n</surname><given-names>JA</given-names></name><name><surname>Ding</surname><given-names>SW</given-names></name></person-group>
+<year>2008</year>
+<article-title>Direct and indirect roles of viral suppressors of RNA silencing in pathogenesis.</article-title>
+<source>Annu Rev Phytopathol</source>
+<volume>46</volume>
+<fpage>303</fpage>
+<lpage>326</lpage>
+<pub-id pub-id-type="pmid">18680427</pub-id></element-citation></ref><ref id="pone.0018094-Nagasaki1"><label>10</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nagasaki</surname><given-names>H</given-names></name><name><surname>Itoh</surname><given-names>J</given-names></name><name><surname>Hayashi</surname><given-names>K</given-names></name><name><surname>Hibara</surname><given-names>K</given-names></name><name><surname>Satoh-Nagasawa</surname><given-names>N</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>The small interfering RNA production pathway is required for shoot meristem initiation in rice.</article-title>
+<source>Proc Natl Acad Sci USA</source>
+<volume>104</volume>
+<fpage>14867</fpage>
+<lpage>14871</lpage>
+<pub-id pub-id-type="pmid">17804793</pub-id></element-citation></ref><ref id="pone.0018094-Yu1"><label>11</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yu</surname><given-names>D</given-names></name><name><surname>Fan</surname><given-names>B</given-names></name><name><surname>MacFarlane</surname><given-names>SA</given-names></name><name><surname>Chen</surname><given-names>Z</given-names></name></person-group>
+<year>2003</year>
+<article-title>Analysis of the involvement of an inducible <italic>Arabidopsis</italic> RNA-dependent RNA polymerase in antiviral defense.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>16</volume>
+<fpage>206</fpage>
+<lpage>216</lpage>
+<pub-id pub-id-type="pmid">12650452</pub-id></element-citation></ref><ref id="pone.0018094-Vaucheret1"><label>12</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vaucheret</surname><given-names>H</given-names></name></person-group>
+<year>2008</year>
+<article-title>Plant ARGONAUTES.</article-title>
+<source>Trends Plant Sci</source>
+<volume>13</volume>
+<fpage>350</fpage>
+<lpage>358</lpage>
+<pub-id pub-id-type="pmid">18508405</pub-id></element-citation></ref><ref id="pone.0018094-Liu1"><label>13</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Liu</surname><given-names>D</given-names></name><name><surname>Raghothama</surname><given-names>KG</given-names></name><name><surname>Hasegawa</surname><given-names>PM</given-names></name><name><surname>Bressan</surname><given-names>RA</given-names></name></person-group>
+<year>1994</year>
+<article-title>Osmotin overexpression in potato delays development of disease symptoms.</article-title>
+<source>Proc Natl Acad Sci U S A</source>
+<volume>91</volume>
+<fpage>1888</fpage>
+<lpage>1892</lpage>
+<pub-id pub-id-type="pmid">11607463</pub-id></element-citation></ref><ref id="pone.0018094-Banerjee1"><label>14</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Banerjee</surname><given-names>J</given-names></name><name><surname>Maiti</surname><given-names>MK</given-names></name></person-group>
+<year>2010</year>
+<article-title>Functional role of rice germin-like protein1 in regulation of plant height and disease resistance.</article-title>
+<source>Biochem Biophys Res Commun</source>
+<volume>394</volume>
+<fpage>178</fpage>
+<lpage>183</lpage>
+<pub-id pub-id-type="pmid">20188068</pub-id></element-citation></ref><ref id="pone.0018094-Stotz1"><label>15</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Stotz</surname><given-names>HU</given-names></name><name><surname>Spence</surname><given-names>B</given-names></name><name><surname>Wang</surname><given-names>Y</given-names></name></person-group>
+<year>2009</year>
+<article-title>A defensin from tomato with dual function in defense and development.</article-title>
+<source>Plant Mol Biol</source>
+<volume>71</volume>
+<fpage>131</fpage>
+<lpage>143</lpage>
+<pub-id pub-id-type="pmid">19533379</pub-id></element-citation></ref><ref id="pone.0018094-Hibino1"><label>16</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hibino</surname><given-names>H</given-names></name></person-group>
+<year>1996</year>
+<article-title>Biology and epidemiology of rice viruses.</article-title>
+<source>Annu Rev Phytopathol</source>
+<volume>34</volume>
+<fpage>249</fpage>
+<lpage>274</lpage>
+<pub-id pub-id-type="pmid">15012543</pub-id></element-citation></ref><ref id="pone.0018094-Kimura1"><label>17</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kimura</surname><given-names>I</given-names></name><name><surname>Minobe</surname><given-names>Y</given-names></name><name><surname>Omura</surname><given-names>T</given-names></name></person-group>
+<year>1987</year>
+<article-title>Changes in a nucleic acid and a protein component of <italic>Rice dwarf virus</italic> particles associated with an increase in symptom severity.</article-title>
+<source>J Gen Virol</source>
+<volume>68</volume>
+<fpage>3211</fpage>
+<lpage>3215</lpage>
+</element-citation></ref><ref id="pone.0018094-Xie1"><label>18</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Xie</surname><given-names>Z</given-names></name><name><surname>Johansen</surname><given-names>LK</given-names></name><name><surname>Gustafson</surname><given-names>AM</given-names></name><name><surname>Kasschau</surname><given-names>KD</given-names></name><name><surname>Lellis</surname><given-names>AD</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>Genetic and functional diversification of small RNA pathways in plants.</article-title>
+<source>PLoS Biol</source>
+<volume>2</volume>
+<fpage>E104</fpage>
+<comment>Available: <ext-link ext-link-type="uri" xlink:href="http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020104">www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020104</ext-link>. Accessed 24 Feb 2004</comment>
+<pub-id pub-id-type="pmid">15024409</pub-id></element-citation></ref><ref id="pone.0018094-Snchez1"><label>19</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>S&#x000e1;nchez</surname><given-names>G</given-names></name><name><surname>Gerhardt</surname><given-names>N</given-names></name><name><surname>Siciliano</surname><given-names>F</given-names></name><name><surname>Vojnov</surname><given-names>A</given-names></name><name><surname>Malcuit</surname><given-names>I</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>Salicylic acid is involved in the Nb-mediated defense responses to <italic>Potato virus X</italic> in <italic>Solanum tuberosum</italic>.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>23</volume>
+<fpage>394</fpage>
+<lpage>405</lpage>
+<pub-id pub-id-type="pmid">20192827</pub-id></element-citation></ref><ref id="pone.0018094-Takahashi1"><label>20</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Takahashi</surname><given-names>H</given-names></name><name><surname>Kanayama</surname><given-names>Y</given-names></name><name><surname>Zheng</surname><given-names>MS</given-names></name><name><surname>Kusano</surname><given-names>T</given-names></name><name><surname>Hase</surname><given-names>S</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>Antagonistic interactions between the SA and JA signaling pathways in <italic>Arabidopsis</italic> modulate expression of defense genes and gene-for-gene resistance to <italic>Cucumber mosaic virus</italic>.</article-title>
+<source>Plant Cell Physiol</source>
+<volume>45</volume>
+<fpage>803</fpage>
+<lpage>809</lpage>
+<pub-id pub-id-type="pmid">15215516</pub-id></element-citation></ref><ref id="pone.0018094-Lee1"><label>21</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lee</surname><given-names>MW</given-names></name><name><surname>Qi</surname><given-names>M</given-names></name><name><surname>Yang</surname><given-names>Y</given-names></name></person-group>
+<year>2001</year>
+<article-title>A novel jasmonic acid-inducible rice <italic>myb</italic> gene associates with fungal infection and host cell death.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>14</volume>
+<fpage>527</fpage>
+<lpage>535</lpage>
+<pub-id pub-id-type="pmid">11310740</pub-id></element-citation></ref><ref id="pone.0018094-Ye1"><label>22</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ye</surname><given-names>H</given-names></name><name><surname>Du</surname><given-names>H</given-names></name><name><surname>Tang</surname><given-names>N</given-names></name><name><surname>Li</surname><given-names>X</given-names></name><name><surname>Xiong</surname><given-names>L</given-names></name></person-group>
+<year>2009</year>
+<article-title>Identification and expression profiling analysis of TIFY family genes involved in stress and phytohormone responses in rice.</article-title>
+<source>Plant Mol Biol</source>
+<volume>71</volume>
+<fpage>291</fpage>
+<lpage>305</lpage>
+<pub-id pub-id-type="pmid">19618278</pub-id></element-citation></ref><ref id="pone.0018094-Love1"><label>23</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Love</surname><given-names>AJ</given-names></name><name><surname>Laval</surname><given-names>V</given-names></name><name><surname>Geri</surname><given-names>C</given-names></name><name><surname>Laird</surname><given-names>J</given-names></name><name><surname>Tomos</surname><given-names>AD</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Components of <italic>Arabidopsis</italic> defense- and ethylene-signaling pathways regulate susceptibility to <italic>Cauliflower mosaic virus</italic> by restricting long-distance movement.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>20</volume>
+<fpage>659</fpage>
+<lpage>670</lpage>
+<pub-id pub-id-type="pmid">17555274</pub-id></element-citation></ref><ref id="pone.0018094-Fischer1"><label>24</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fischer</surname><given-names>U</given-names></name><name><surname>Dr&#x000f6;ge-Laser</surname><given-names>W</given-names></name></person-group>
+<year>2004</year>
+<article-title>Overexpression of NtERF5, a new member of the tobacco ethylene response transcription factor family, enhances resistance to <italic>Tobacco mosaic virus</italic>.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>17</volume>
+<fpage>1162</fpage>
+<lpage>1171</lpage>
+<pub-id pub-id-type="pmid">15497409</pub-id></element-citation></ref><ref id="pone.0018094-Qiu1"><label>25</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Qiu</surname><given-names>D</given-names></name><name><surname>Xiao</surname><given-names>J</given-names></name><name><surname>Ding</surname><given-names>X</given-names></name><name><surname>Xiong</surname><given-names>M</given-names></name><name><surname>Cai</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>OsWRKY13 mediates rice disease resistance by regulating defense-related genes in salicylate- and jasmonate-dependent signaling.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>20</volume>
+<fpage>492</fpage>
+<lpage>499</lpage>
+<pub-id pub-id-type="pmid">17506327</pub-id></element-citation></ref><ref id="pone.0018094-Shimono1"><label>26</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shimono</surname><given-names>M</given-names></name><name><surname>Sugano</surname><given-names>S</given-names></name><name><surname>Nakayama</surname><given-names>A</given-names></name><name><surname>Jiang</surname><given-names>CJ</given-names></name><name><surname>Ono</surname><given-names>K</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Rice WRKY45 plays a crucial role in benzothiadiazole-inducible blast resistance.</article-title>
+<source>Plant Cell</source>
+<volume>19</volume>
+<fpage>2064</fpage>
+<lpage>2076</lpage>
+<pub-id pub-id-type="pmid">17601827</pub-id></element-citation></ref><ref id="pone.0018094-vanLoon1"><label>27</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>van Loon</surname><given-names>LC</given-names></name><name><surname>Rep</surname><given-names>M</given-names></name><name><surname>Pieterse</surname><given-names>CM</given-names></name></person-group>
+<year>2006</year>
+<article-title>Significance of inducible defense-related proteins in infected plants.</article-title>
+<source>Annu Rev Phytopathol</source>
+<volume>44</volume>
+<fpage>135</fpage>
+<lpage>162</lpage>
+<pub-id pub-id-type="pmid">16602946</pub-id></element-citation></ref><ref id="pone.0018094-Sakamoto1"><label>28</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sakamoto</surname><given-names>T</given-names></name><name><surname>Miura</surname><given-names>K</given-names></name><name><surname>Itoh</surname><given-names>H</given-names></name><name><surname>Tatsumi</surname><given-names>T</given-names></name><name><surname>Ueguchi-Tanaka</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>An overview of gibberellin metabolism enzyme genes and their related mutants in rice.</article-title>
+<source>Plant Physiol</source>
+<volume>134</volume>
+<fpage>1642</fpage>
+<lpage>1653</lpage>
+<pub-id pub-id-type="pmid">15075394</pub-id></element-citation></ref><ref id="pone.0018094-Hirsch1"><label>29</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hirsch</surname><given-names>S</given-names></name><name><surname>Oldroyd</surname><given-names>GE</given-names></name></person-group>
+<year>2009</year>
+<article-title>GRAS-domain transcription factors that regulate plant development.</article-title>
+<source>Plant Signal Behav</source>
+<volume>4</volume>
+<fpage>698</fpage>
+<lpage>700</lpage>
+<pub-id pub-id-type="pmid">19820314</pub-id></element-citation></ref><ref id="pone.0018094-Zhao1"><label>30</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhao</surname><given-names>Y</given-names></name></person-group>
+<year>2010</year>
+<article-title>Auxin biosynthesis and its role in plant development.</article-title>
+<source>Annu Rev Plant Biol</source>
+<volume>61</volume>
+<fpage>49</fpage>
+<lpage>64</lpage>
+<pub-id pub-id-type="pmid">20192736</pub-id></element-citation></ref><ref id="pone.0018094-Guilfoyle1"><label>31</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Guilfoyle</surname><given-names>TJ</given-names></name><name><surname>Hagen</surname><given-names>G</given-names></name></person-group>
+<year>2007</year>
+<article-title>Auxin response factors.</article-title>
+<source>Curr Opin Plant Biol</source>
+<volume>10</volume>
+<fpage>453</fpage>
+<lpage>460</lpage>
+<pub-id pub-id-type="pmid">17900969</pub-id></element-citation></ref><ref id="pone.0018094-Jain1"><label>32</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jain</surname><given-names>M</given-names></name><name><surname>Tyagi</surname><given-names>AK</given-names></name><name><surname>Khurana</surname><given-names>JP</given-names></name></person-group>
+<year>2006</year>
+<article-title>Genome-wide analysis, evolutionary expansion, and expression of early auxin-responsive SAUR gene family in rice (<italic>Oryza sativa</italic>).</article-title>
+<source>Genomics</source>
+<volume>88</volume>
+<fpage>360</fpage>
+<lpage>371</lpage>
+<pub-id pub-id-type="pmid">16707243</pub-id></element-citation></ref><ref id="pone.0018094-vanderGraaff1"><label>33</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>van der Graaff</surname><given-names>E</given-names></name><name><surname>Laux</surname><given-names>T</given-names></name><name><surname>Rensing</surname><given-names>SA</given-names></name></person-group>
+<year>2009</year>
+<article-title>The WUS homeobox-containing (WOX) protein family.</article-title>
+<source>Genome Biol</source>
+<volume>10</volume>
+<fpage>248</fpage>
+<comment>Available: <ext-link ext-link-type="uri" xlink:href="http://genomebiology.com/content/10/12/248">http://genomebiology.com/content/10/12/248</ext-link>. Accessed 29 Dec 2009</comment>
+<pub-id pub-id-type="pmid">20067590</pub-id></element-citation></ref><ref id="pone.0018094-Park1"><label>34</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Park</surname><given-names>SH</given-names></name><name><surname>Kim</surname><given-names>CM</given-names></name><name><surname>Je</surname><given-names>BI</given-names></name><name><surname>Park</surname><given-names>SH</given-names></name><name><surname>Park</surname><given-names>SJ</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>A <italic>Ds</italic>-insertion mutant of <italic>OSH6</italic> (<italic>Oryza sativa</italic> Homeobox 6) exhibits outgrowth of vestigial leaf-like structures, bracts, in rice.</article-title>
+<source>Planta</source>
+<volume>227</volume>
+<fpage>1</fpage>
+<lpage>12</lpage>
+<pub-id pub-id-type="pmid">17624547</pub-id></element-citation></ref><ref id="pone.0018094-Abiko1"><label>35</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Abiko</surname><given-names>M</given-names></name><name><surname>Ohmori</surname><given-names>Y</given-names></name><name><surname>Hirano</surname><given-names>HY</given-names></name></person-group>
+<year>2008</year>
+<article-title>Genome-wide expression profiling and identification of genes under the control of the <italic>DROOPING LEAF</italic> gene during midrib development in rice.</article-title>
+<source>Genes Genet Syst</source>
+<volume>83</volume>
+<fpage>237</fpage>
+<lpage>244</lpage>
+<pub-id pub-id-type="pmid">18670135</pub-id></element-citation></ref><ref id="pone.0018094-Wang1"><label>36</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>S</given-names></name><name><surname>Chang</surname><given-names>Y</given-names></name><name><surname>Guo</surname><given-names>J</given-names></name><name><surname>Chen</surname><given-names>JG</given-names></name></person-group>
+<year>2007</year>
+<article-title>
+<italic>Arabidopsis</italic> Ovate Family Protein 1 is a transcriptional repressor that suppresses cell elongation.</article-title>
+<source>Plant J</source>
+<volume>50</volume>
+<fpage>858</fpage>
+<lpage>872</lpage>
+<pub-id pub-id-type="pmid">17461792</pub-id></element-citation></ref><ref id="pone.0018094-MartnTrillo1"><label>37</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mart&#x000ed;n-Trillo</surname><given-names>M</given-names></name><name><surname>Cubas</surname><given-names>P</given-names></name></person-group>
+<year>2010</year>
+<article-title>TCP genes: a family snapshot ten years later.</article-title>
+<source>Trends Plant Sci</source>
+<volume>15</volume>
+<fpage>31</fpage>
+<lpage>39</lpage>
+<pub-id pub-id-type="pmid">19963426</pub-id></element-citation></ref><ref id="pone.0018094-Shigyo1"><label>38</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shigyo</surname><given-names>M</given-names></name><name><surname>Tabei</surname><given-names>N</given-names></name><name><surname>Yoneyama</surname><given-names>T</given-names></name><name><surname>Yanagisawa</surname><given-names>S</given-names></name></person-group>
+<year>2006</year>
+<article-title>Evolutionary processes during the formation of the plant-specific Dof transcription factor family.</article-title>
+<source>Plant Cell Physiol</source>
+<volume>48</volume>
+<fpage>179</fpage>
+<lpage>185</lpage>
+<pub-id pub-id-type="pmid">17132629</pub-id></element-citation></ref><ref id="pone.0018094-Shikata1"><label>39</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shikata</surname><given-names>M</given-names></name><name><surname>Koyama</surname><given-names>T</given-names></name><name><surname>Mitsuda</surname><given-names>N</given-names></name><name><surname>Ohme-Takagi</surname><given-names>M</given-names></name></person-group>
+<year>2009</year>
+<article-title>
+<italic>Arabidopsis</italic> SBP-box genes <italic>SPL10</italic>, <italic>SPL11</italic> and <italic>SPL2</italic> control morphological change in association with shoot maturation in the reproductive phase.</article-title>
+<source>Plant Cell Physiol</source>
+<volume>50</volume>
+<fpage>2133</fpage>
+<lpage>2145</lpage>
+<pub-id pub-id-type="pmid">19880401</pub-id></element-citation></ref><ref id="pone.0018094-Wang2"><label>40</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>L</given-names></name><name><surname>Yin</surname><given-names>H</given-names></name><name><surname>Qian</surname><given-names>Q</given-names></name><name><surname>Yang</surname><given-names>J</given-names></name><name><surname>Huang</surname><given-names>C</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>NECK LEAF 1, a GATA type transcription factor, modulates organogenesis by regulating the expression of multiple regulatory genes during reproductive development in rice.</article-title>
+<source>Cell Res</source>
+<volume>19</volume>
+<fpage>598</fpage>
+<lpage>611</lpage>
+<pub-id pub-id-type="pmid">19337211</pub-id></element-citation></ref><ref id="pone.0018094-Mao1"><label>41</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mao</surname><given-names>C</given-names></name><name><surname>Ding</surname><given-names>W</given-names></name><name><surname>Wu</surname><given-names>Y</given-names></name><name><surname>Yu</surname><given-names>J</given-names></name><name><surname>He</surname><given-names>X</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Overexpression of a NAC-domain protein promotes shoot branching in rice.</article-title>
+<source>New Phytol</source>
+<volume>176</volume>
+<fpage>288</fpage>
+<lpage>298</lpage>
+<pub-id pub-id-type="pmid">17888111</pub-id></element-citation></ref><ref id="pone.0018094-Zhang1"><label>42</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhang</surname><given-names>S</given-names></name><name><surname>Chen</surname><given-names>C</given-names></name><name><surname>Li</surname><given-names>L</given-names></name><name><surname>Meng</surname><given-names>L</given-names></name><name><surname>Singh</surname><given-names>J</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Evolutionary expansion, gene structure, and expression of the rice wall-associated kinase gene family.</article-title>
+<source>Plant Physiol</source>
+<volume>139</volume>
+<fpage>1107</fpage>
+<lpage>1124</lpage>
+<pub-id pub-id-type="pmid">16286450</pub-id></element-citation></ref><ref id="pone.0018094-Wang3"><label>43</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>XB</given-names></name><name><surname>Wu</surname><given-names>Q</given-names></name><name><surname>Ito</surname><given-names>T</given-names></name><name><surname>Cillo</surname><given-names>F</given-names></name><name><surname>Li</surname><given-names>WX</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>RNAi-mediated viral immunity requires amplification of virus-derived siRNAs in <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>Proc Natl Acad Sci USA</source>
+<volume>107</volume>
+<fpage>484</fpage>
+<lpage>489</lpage>
+<pub-id pub-id-type="pmid">19966292</pub-id></element-citation></ref><ref id="pone.0018094-Kapoor1"><label>44</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kapoor</surname><given-names>M</given-names></name><name><surname>Arora</surname><given-names>R</given-names></name><name><surname>Lama</surname><given-names>T</given-names></name><name><surname>Nijhawan</surname><given-names>A</given-names></name><name><surname>Khurana</surname><given-names>JP</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Genome-wide identification, organization and phylogenetic analysis of Dicer-like, Argonaute and RNA-dependent RNA Polymerase gene families and their expression analysis during reproductive development and stress in rice.</article-title>
+<source>BMC Genomics</source>
+<volume>9</volume>
+<fpage>451</fpage>
+<comment>Available: <ext-link ext-link-type="uri" xlink:href="http://www.biomedcentral.com/1471-2164/9/451">http://www.biomedcentral.com/1471-2164/9/451</ext-link>. Accessed 1 Oct 2008</comment>
+<pub-id pub-id-type="pmid">18826656</pub-id></element-citation></ref><ref id="pone.0018094-Yoshii1"><label>45</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yoshii</surname><given-names>M</given-names></name><name><surname>Yamazaki</surname><given-names>M</given-names></name><name><surname>Rakwal</surname><given-names>R</given-names></name><name><surname>Kishi-Kaboshi</surname><given-names>M</given-names></name><name><surname>Miyao</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>The NAC transcription factor RIM1 of rice is a new regulator of jasmonate signaling.</article-title>
+<source>Plant J</source>
+<volume>61</volume>
+<fpage>804</fpage>
+<lpage>815</lpage>
+<pub-id pub-id-type="pmid">20015061</pub-id></element-citation></ref><ref id="pone.0018094-Yoshii2"><label>46</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yoshii</surname><given-names>M</given-names></name><name><surname>Shimizu</surname><given-names>T</given-names></name><name><surname>Yamazaki</surname><given-names>M</given-names></name><name><surname>Higashi</surname><given-names>T</given-names></name><name><surname>Miyao</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Disruption of a novel gene for a NAC-domain protein in rice confers resistance to <italic>Rice dwarf virus</italic>.</article-title>
+<source>Plant J</source>
+<volume>57</volume>
+<fpage>615</fpage>
+<lpage>625</lpage>
+<pub-id pub-id-type="pmid">18980655</pub-id></element-citation></ref><ref id="pone.0018094-Babu2"><label>47</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Babu</surname><given-names>M</given-names></name><name><surname>Gagarinova</surname><given-names>AG</given-names></name><name><surname>Brandle</surname><given-names>JE</given-names></name><name><surname>Wang</surname><given-names>A</given-names></name></person-group>
+<year>2008</year>
+<article-title>Association of the transcriptional response of soybean plants with soybean mosaic virus systemic infection.</article-title>
+<source>J Gen Virol</source>
+<volume>89</volume>
+<fpage>1069</fpage>
+<lpage>1080</lpage>
+<pub-id pub-id-type="pmid">18343851</pub-id></element-citation></ref><ref id="pone.0018094-MargisPinheiro1"><label>48</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Margis-Pinheiro</surname><given-names>M</given-names></name><name><surname>Zhou</surname><given-names>XR</given-names></name><name><surname>Zhu</surname><given-names>QH</given-names></name><name><surname>Dennis</surname><given-names>ES</given-names></name><name><surname>Upadhyaya</surname><given-names>NM</given-names></name></person-group>
+<year>2005</year>
+<article-title>Isolation and characterization of a <italic>Ds</italic>-tagged rice (<italic>Oryza sativa</italic> L.) GA-responsive dwarf mutant defective in an early step of the gibberellin biosynthesis pathway.</article-title>
+<source>Plant Cell Rep</source>
+<volume>23</volume>
+<fpage>819</fpage>
+<lpage>833</lpage>
+<pub-id pub-id-type="pmid">15668792</pub-id></element-citation></ref><ref id="pone.0018094-Rieu1"><label>49</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rieu</surname><given-names>I</given-names></name><name><surname>Ruiz-Rivero</surname><given-names>O</given-names></name><name><surname>Fernandez-Garcia</surname><given-names>N</given-names></name><name><surname>Griffiths</surname><given-names>J</given-names></name><name><surname>Powers</surname><given-names>SJ</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>The gibberellin biosynthetic genes AtGA20ox1 and AtGA20ox2 act, partially redundantly, to promote growth and development throughout the <italic>Arabidopsis</italic> life cycle.</article-title>
+<source>Plant J</source>
+<volume>53</volume>
+<fpage>488</fpage>
+<lpage>504</lpage>
+<pub-id pub-id-type="pmid">18069939</pub-id></element-citation></ref><ref id="pone.0018094-Ikeda1"><label>50</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ikeda</surname><given-names>A</given-names></name><name><surname>Ueguchi-Tanaka</surname><given-names>M</given-names></name><name><surname>Sonoda</surname><given-names>Y</given-names></name><name><surname>Kitano</surname><given-names>H</given-names></name><name><surname>Koshioka</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2001</year>
+<article-title>
+<italic>slender</italic> rice, a constitutive gibberellin response mutant, is caused by a null mutation of the SLR1 gene, an ortholog of the height-regulating gene GAI/RGA/RHT/D8.</article-title>
+<source>Plant Cell</source>
+<volume>13</volume>
+<fpage>999</fpage>
+<lpage>1010</lpage>
+<pub-id pub-id-type="pmid">11340177</pub-id></element-citation></ref><ref id="pone.0018094-Dill1"><label>51</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dill</surname><given-names>A</given-names></name><name><surname>Sun</surname><given-names>T</given-names></name></person-group>
+<year>2001</year>
+<article-title>Synergistic derepression of gibberellin signaling by removing RGA and GAI function in <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>Genetics</source>
+<volume>159</volume>
+<fpage>777</fpage>
+<lpage>785</lpage>
+<pub-id pub-id-type="pmid">11606552</pub-id></element-citation></ref><ref id="pone.0018094-Lo1"><label>52</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lo</surname><given-names>SF</given-names></name><name><surname>Yang</surname><given-names>SY</given-names></name><name><surname>Chen</surname><given-names>KT</given-names></name><name><surname>Hsing</surname><given-names>YI</given-names></name><name><surname>Zeevaart</surname><given-names>JA</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>A novel class of gibberellin 2-oxidases control semidwarfism, tillering, and root development in rice.</article-title>
+<source>Plant Cell</source>
+<volume>20</volume>
+<fpage>2603</fpage>
+<lpage>2618</lpage>
+<pub-id pub-id-type="pmid">18952778</pub-id></element-citation></ref><ref id="pone.0018094-Attia1"><label>53</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Attia</surname><given-names>KA</given-names></name><name><surname>Abdelkhalik</surname><given-names>AF</given-names></name><name><surname>Ammar</surname><given-names>MH</given-names></name><name><surname>Wei</surname><given-names>C</given-names></name><name><surname>Yang</surname><given-names>J</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Antisense phenotypes reveal a functional expression of OsARF1, an auxin response factor, in transgenic rice.</article-title>
+<source>Curr Issues Mol Biol</source>
+<volume>11</volume>
+<issue>Suppl 1</issue>
+<fpage>i29</fpage>
+<lpage>34</lpage>
+<pub-id pub-id-type="pmid">19193962</pub-id></element-citation></ref><ref id="pone.0018094-Lim1"><label>54</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lim</surname><given-names>PO</given-names></name><name><surname>Lee</surname><given-names>IC</given-names></name><name><surname>Kim</surname><given-names>J</given-names></name><name><surname>Kim</surname><given-names>HJ</given-names></name><name><surname>Ryu</surname><given-names>JS</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>Auxin response factor 2 (ARF2) plays a major role in regulating auxin-mediated leaf longevity.</article-title>
+<source>J Exp Bot</source>
+<volume>61</volume>
+<fpage>1419</fpage>
+<lpage>1430</lpage>
+<pub-id pub-id-type="pmid">20164142</pub-id></element-citation></ref><ref id="pone.0018094-Elhiti1"><label>55</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Elhiti</surname><given-names>M</given-names></name><name><surname>Stasolla</surname><given-names>C</given-names></name></person-group>
+<year>2009</year>
+<article-title>Structure and function of homodomain-leucine zipper (HD-Zip) proteins.</article-title>
+<source>Plant Signal Behav</source>
+<volume>4</volume>
+<fpage>86</fpage>
+<lpage>88</lpage>
+<pub-id pub-id-type="pmid">19649178</pub-id></element-citation></ref><ref id="pone.0018094-Takasaki1"><label>56</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Takasaki</surname><given-names>H</given-names></name><name><surname>Maruyama</surname><given-names>K</given-names></name><name><surname>Kidokoro</surname><given-names>S</given-names></name><name><surname>Ito</surname><given-names>Y</given-names></name><name><surname>Fujita</surname><given-names>Y</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>The abiotic stress-responsive NAC-type transcription factor OsNAC5 regulates stress-inducible genes and stress tolerance in rice.</article-title>
+<source>Mol Genet Genomics</source>
+<volume>284</volume>
+<fpage>173</fpage>
+<lpage>183</lpage>
+<pub-id pub-id-type="pmid">20632034</pub-id></element-citation></ref><ref id="pone.0018094-Wasternack1"><label>57</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wasternack</surname><given-names>C</given-names></name></person-group>
+<year>2007</year>
+<article-title>Jasmonates: an update on biosynthesis, signal transduction and action in plant stress response, growth and development.</article-title>
+<source>Ann Bot</source>
+<volume>100</volume>
+<fpage>681</fpage>
+<lpage>697</lpage>
+<pub-id pub-id-type="pmid">17513307</pub-id></element-citation></ref><ref id="pone.0018094-Anand1"><label>58</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Anand</surname><given-names>A</given-names></name><name><surname>Schmelz</surname><given-names>EA</given-names></name><name><surname>Muthukrishnan</surname><given-names>S</given-names></name></person-group>
+<year>2003</year>
+<article-title>Development of a lesion-mimic phenotype in a transgenic wheat line overexpressing genes for pathogenesis-related (PR) proteins is dependent on salicylic acid concentration.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>16</volume>
+<fpage>916</fpage>
+<lpage>925</lpage>
+<pub-id pub-id-type="pmid">14558693</pub-id></element-citation></ref><ref id="pone.0018094-Cao1"><label>59</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cao</surname><given-names>X</given-names></name><name><surname>Zhou</surname><given-names>P</given-names></name><name><surname>Zhang</surname><given-names>X</given-names></name><name><surname>Zhu</surname><given-names>S</given-names></name><name><surname>Zhong</surname><given-names>X</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Identification of an RNA silencing suppressor from a plant double-stranded RNA virus.</article-title>
+<source>J Virol</source>
+<volume>79</volume>
+<fpage>13018</fpage>
+<lpage>13027</lpage>
+<pub-id pub-id-type="pmid">16189004</pub-id></element-citation></ref><ref id="pone.0018094-Selth1"><label>60</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Selth</surname><given-names>LA</given-names></name><name><surname>Randles</surname><given-names>JW</given-names></name><name><surname>Rezaian</surname><given-names>MA</given-names></name></person-group>
+<year>2004</year>
+<article-title>Host responses to transient expression of individual genes encoded by <italic>Tomato leaf curl virus</italic>.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>17</volume>
+<fpage>27</fpage>
+<lpage>33</lpage>
+<pub-id pub-id-type="pmid">14714865</pub-id></element-citation></ref><ref id="pone.0018094-Szilassy1"><label>61</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Szilassy</surname><given-names>D</given-names></name><name><surname>Sal&#x000e1;nki</surname><given-names>K</given-names></name><name><surname>Bal&#x000e1;zs</surname><given-names>E</given-names></name></person-group>
+<year>1999</year>
+<article-title>Stunting induced by cucumber mosaic cucumovirus-infected <italic>Nicotiana glutinosa</italic> is determined by a single amino acid residue in the coat protein.</article-title>
+<source>Mol Plant-Microbe Interact</source>
+<volume>12</volume>
+<fpage>1105</fpage>
+<lpage>1113</lpage>
+<pub-id pub-id-type="pmid">10624018</pub-id></element-citation></ref><ref id="pone.0018094-Omura1"><label>62</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Omura</surname><given-names>T</given-names></name><name><surname>Mertens</surname><given-names>PPPC</given-names></name></person-group>
+<year>2005</year>
+<article-title>Phytoreovirus.</article-title>
+<person-group person-group-type="editor"><name><surname>Fauquet</surname><given-names>CM</given-names></name><name><surname>Mayo</surname><given-names>MA</given-names></name><name><surname>Maniloff</surname><given-names>J</given-names></name><name><surname>Desselberger</surname><given-names>U</given-names></name><name><surname>Ball</surname><given-names>AL</given-names></name></person-group>
+<source>Virus Taxonomy: eighth report of the International Committee on Taxonomy of Viruses</source>
+<publisher-loc>London, United Kingdom</publisher-loc>
+<publisher-name>Academic Press</publisher-name>
+<fpage>543</fpage>
+<lpage>549</lpage>
+</element-citation></ref><ref id="pone.0018094-Li1"><label>63</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Li</surname><given-names>Y</given-names></name><name><surname>Bao</surname><given-names>YM</given-names></name><name><surname>Wei</surname><given-names>CH</given-names></name><name><surname>Kang</surname><given-names>ZS</given-names></name><name><surname>Zhong</surname><given-names>YW</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>
+<italic>Rice dwarf phytoreovirus</italic> segment S6-encoded nonstructural protein has a cell-to-cell movement function.</article-title>
+<source>J Virol</source>
+<volume>78</volume>
+<fpage>5382</fpage>
+<lpage>5389</lpage>
+<pub-id pub-id-type="pmid">15113917</pub-id></element-citation></ref><ref id="pone.0018094-Zhu1"><label>64</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhu</surname><given-names>S</given-names></name><name><surname>Gao</surname><given-names>F</given-names></name><name><surname>Cao</surname><given-names>X</given-names></name><name><surname>Chen</surname><given-names>M</given-names></name><name><surname>Ye</surname><given-names>G</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>The rice dwarf virus P2 protein interacts with ent-kaurene oxidases in vivo, leading to reduced biosynthesis of gibberellins and rice dwarf symptoms.</article-title>
+<source>Plant Physiol</source>
+<volume>139</volume>
+<fpage>1935</fpage>
+<lpage>1945</lpage>
+<pub-id pub-id-type="pmid">16299167</pub-id></element-citation></ref><ref id="pone.0018094-Kimura2"><label>65</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kimura</surname><given-names>I</given-names></name><name><surname>Kodama</surname><given-names>T</given-names></name><name><surname>Suzuki</surname><given-names>N</given-names></name></person-group>
+<year>1968</year>
+<article-title>Customization of a method for <italic>Rice dwarf virus</italic> purification and activity of purified virus.</article-title>
+<source>Ann Phytopathol Soc Jpn</source>
+<volume>28</volume>
+<fpage>205</fpage>
+</element-citation></ref><ref id="pone.0018094-Takahashi2"><label>66</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Takahashi</surname><given-names>Y</given-names></name><name><surname>Omura</surname><given-names>T</given-names></name><name><surname>Shohara</surname><given-names>K</given-names></name><name><surname>Tsuchizaki</surname><given-names>T</given-names></name></person-group>
+<year>1991</year>
+<article-title>Comparison of four serological methods for practical detection of ten viruses of rice in plants and insects.</article-title>
+<source>Plant Dis</source>
+<volume>75</volume>
+<fpage>458</fpage>
+<lpage>461</lpage>
+</element-citation></ref><ref id="pone.0018094-Ulitsky1"><label>67</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ulitsky</surname><given-names>I</given-names></name><name><surname>Maron-Katz</surname><given-names>A</given-names></name><name><surname>Shavit</surname><given-names>S</given-names></name><name><surname>Sagir</surname><given-names>D</given-names></name><name><surname>Linhart</surname><given-names>C</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>Expander: from expression microarrays to networks and functions.</article-title>
+<source>Nat Protoc</source>
+<volume>5</volume>
+<fpage>303</fpage>
+<lpage>322</lpage>
+<pub-id pub-id-type="pmid">20134430</pub-id></element-citation></ref><ref id="pone.0018094-Saeed1"><label>68</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Saeed</surname><given-names>AI</given-names></name><name><surname>Bhagabati</surname><given-names>NK</given-names></name><name><surname>Braisted</surname><given-names>JC</given-names></name><name><surname>Liang</surname><given-names>W</given-names></name><name><surname>Sharov</surname><given-names>V</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>TM4 microarray software suite.</article-title>
+<source>Methods Enzymol</source>
+<volume>411</volume>
+<fpage>134</fpage>
+<lpage>193</lpage>
+<pub-id pub-id-type="pmid">16939790</pub-id></element-citation></ref><ref id="pone.0018094-Edgar1"><label>69</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Edgar</surname><given-names>R</given-names></name><name><surname>Domrachev</surname><given-names>M</given-names></name><name><surname>Lash</surname><given-names>AE</given-names></name></person-group>
+<year>2002</year>
+<article-title>Gene Expression Omnibus: NCBI gene expression and hybridization array data repository.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>30</volume>
+<fpage>207</fpage>
+<lpage>210</lpage>
+<pub-id pub-id-type="pmid">11752295</pub-id></element-citation></ref><ref id="pone.0018094-Rozen1"><label>70</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Rozen</surname><given-names>S</given-names></name><name><surname>Skaletsky</surname><given-names>HJ</given-names></name></person-group>
+<year>2000</year>
+<article-title>Primer3 on the WWW for general users and for biologist programmers.</article-title>
+<person-group person-group-type="editor"><name><surname>Krawetz</surname><given-names>S</given-names></name><name><surname>Misener</surname><given-names>S</given-names></name></person-group>
+<source>Bioinformatics Methods and Protocols: Methods in Molecular Biology</source>
+<publisher-loc>Humana Press, Totowa, New Jersey</publisher-loc>
+<publisher-name>United States of America</publisher-name>
+<fpage>365</fpage>
+<lpage>386</lpage>
+</element-citation></ref></ref-list></back></article>

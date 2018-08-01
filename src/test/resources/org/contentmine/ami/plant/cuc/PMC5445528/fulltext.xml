@@ -1,0 +1,688 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article" xml:lang="EN"><?DTDIdentifier.IdentifierValue -//ACS//DTD ACS Journal DTD v1.02 20061031//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName ACSJournal-v102.dtd?><?SourceDTD.Version 1.02?><?ConverterInfo.XSLTName acs2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">ACS Cent Sci</journal-id><journal-id journal-id-type="iso-abbrev">ACS Cent Sci</journal-id><journal-id journal-id-type="publisher-id">oc</journal-id><journal-id journal-id-type="coden">acscii</journal-id><journal-title-group><journal-title>ACS Central Science</journal-title></journal-title-group><issn pub-type="ppub">2374-7943</issn><issn pub-type="epub">2374-7951</issn><publisher><publisher-name>American Chemical Society</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5445528</article-id><article-id pub-id-type="doi">10.1021/acscentsci.7b00099</article-id><article-categories><subj-group><subject>Research Article</subject></subj-group></article-categories><title-group><article-title>Noncanonical Function of a Small-Molecular Virulence
+Factor Coronatine against Plant Immunity: An <italic>In Vivo</italic> Raman Imaging Approach</article-title></title-group><contrib-group><contrib contrib-type="author" corresp="yes" id="ath1"><name><surname>Ueda</surname><given-names>Minoru</given-names></name><xref rid="cor1" ref-type="other">*</xref><xref rid="aff1" ref-type="aff">&#x02020;</xref></contrib><contrib contrib-type="author" id="ath2"><name><surname>Egoshi</surname><given-names>Syusuke</given-names></name><xref rid="aff1" ref-type="aff">&#x02020;</xref></contrib><contrib contrib-type="author" id="ath3"><name><surname>Dodo</surname><given-names>Kosuke</given-names></name><xref rid="aff2" ref-type="aff">&#x02021;</xref><xref rid="aff3" ref-type="aff">&#x000a7;</xref><xref rid="aff4" ref-type="aff">&#x02225;</xref></contrib><contrib contrib-type="author" id="ath4"><name><surname>Ishimaru</surname><given-names>Yasuhiro</given-names></name><xref rid="aff1" ref-type="aff">&#x02020;</xref></contrib><contrib contrib-type="author" id="ath5"><name><surname>Yamakoshi</surname><given-names>Hiroyuki</given-names></name><xref rid="aff2" ref-type="aff">&#x02021;</xref></contrib><contrib contrib-type="author" id="ath6"><name><surname>Nakano</surname><given-names>Takeshi</given-names></name><xref rid="aff3" ref-type="aff">&#x000a7;</xref><xref rid="aff5" ref-type="aff">&#x022a5;</xref></contrib><contrib contrib-type="author" id="ath7"><name><surname>Takaoka</surname><given-names>Yousuke</given-names></name><xref rid="aff1" ref-type="aff">&#x02020;</xref></contrib><contrib contrib-type="author" id="ath8"><name><surname>Tsukiji</surname><given-names>Shinya</given-names></name><xref rid="aff6" ref-type="aff">#</xref></contrib><contrib contrib-type="author" id="ath9"><name><surname>Sodeoka</surname><given-names>Mikiko</given-names></name><xref rid="aff2" ref-type="aff">&#x02021;</xref><xref rid="aff3" ref-type="aff">&#x000a7;</xref><xref rid="aff4" ref-type="aff">&#x02225;</xref></contrib><aff id="aff1"><label>&#x02020;</label>Department
+of Chemistry, <institution>Tohoku University</institution>, 6-3 Aramaki-Aza Aoba, Aoba-ku, Sendai 980-8578, <country>Japan</country></aff><aff id="aff2"><label>&#x02021;</label>Synthetic
+Organic Chemistry Laboratory, <institution>RIKEN</institution>, Hirosawa, Wako, Saitama, 351-0198, <country>Japan</country></aff><aff id="aff3"><label>&#x000a7;</label><institution>RIKEN
+Center for Sustainable Resource Science</institution>, Hirosawa, Wako, Saitama, 351-0198, <country>Japan</country></aff><aff id="aff4"><label>&#x02225;</label><institution>AMED-CREST,
+Japan Agency for Medical Research and Development</institution>, Wako, Saitama, 351-0198, <country>Japan</country></aff><aff id="aff5"><label>&#x022a5;</label>Core
+Research for Evolutional Science and Technology (CREST), <institution>Japan Science and Technology Agency (JST)</institution>, Kawaguchi, Saitama, 332-0012, <country>Japan</country></aff><aff id="aff6"><label>#</label>Frontier
+Research Institute for Materials Science (FRIMS), Department of Life
+Science and Applied Chemistry, Department of Nanopharmaceutical Sciences, <institution>Nagoya Institute of Technology</institution>, Gokiso-cho, Showa-ku, Nagoya 466-8555, <country>Japan</country></aff></contrib-group><author-notes><corresp id="cor1"><label>*</label>E-mail: <email>ueda@m.tohoku.ac.jp</email>. Tel and fax: <fax>+81-22-795-6553</fax>.</corresp></author-notes><pub-date pub-type="epub"><day>04</day><month>05</month><year>2017</year></pub-date><pub-date pub-type="ppub"><day>24</day><month>05</month><year>2017</year></pub-date><volume>3</volume><issue>5</issue><fpage>462</fpage><lpage>472</lpage><history><date date-type="received"><day>05</day><month>03</month><year>2017</year></date></history><permissions><copyright-statement>Copyright &#x000a9; 2017 American Chemical Society</copyright-statement><copyright-year>2017</copyright-year><copyright-holder>American Chemical Society</copyright-holder><license><license-p>This is an open access article published under an ACS AuthorChoice <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/page/policy/authorchoice_termsofuse.html">License</ext-link>, which permits copying and redistribution of the article or any adaptations for non-commercial purposes.</license-p></license></permissions><abstract><p content-type="toc-graphic"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="oc-2017-00099s_0007" id="ab-d30e261"/></p><p>Coronatine (<bold>1</bold>), a small-molecular virulence factor
+produced by plant-pathogenic bacteria, promotes bacterial infection
+by inducing the opening of stomatal pores, the major route of bacterial
+entry into the plant, via the jasmonate-mediated COI1-JAZ signaling
+pathway. However, this pathway is also important for multiple plant
+functions, including defense against wounding by herbivorous insects.
+Thus, suppression of the COI1-JAZ signaling pathway to block bacterial
+infection would concomitantly impair plant defense against herbivorous
+wounding. Here, we report additional, COI1-JAZ-independent, action
+of <bold>1</bold> in <italic>Arabidopsis thaliana</italic> guard cells.
+First, we found that a stereoisomer of <bold>1</bold> regulates the
+movement of <italic>Arabidopsis</italic> guard cells without affecting
+COI1-JAZ signaling. Second, we found using alkyne-tagged Raman imaging
+(ATRI) that <bold>1</bold> is localized to the endoplasmic reticulum
+(ER) of living guard cells of <italic>Arabidopsis</italic>. The use
+of <italic>arc6</italic> mutant lacking chloroplast formation was
+pivotal to circumvent the issue of autofluorescence during ATRI. These
+findings indicate that <bold>1</bold> has an ER-related action on <italic>Arabidopsis</italic> stomata that bypasses the COI1-JAZ signaling
+module. It may be possible to suppress the action of <bold>1</bold> on stomata without impairing plant defense responses against herbivores.</p></abstract><abstract abstract-type="short"><p>Bacterial infection of plants causes
+severe crop losses.
+A bacterial virulence factor, coronatine (<bold>1</bold>), facilitates
+infection by hijacking a plant&#x02019;s defense pathway. We found
+an ER-mediated noncanonical pathway of <bold>1</bold>-mediated infection
+in <italic>Arabidopsis</italic>.</p></abstract><custom-meta-group><custom-meta><meta-name>document-id-old-9</meta-name><meta-value>oc7b00099</meta-value></custom-meta><custom-meta><meta-name>document-id-new-14</meta-name><meta-value>oc-2017-00099s</meta-value></custom-meta><custom-meta><meta-name>ccc-price</meta-name><meta-value/></custom-meta></custom-meta-group></article-meta></front><body><sec id="sec1"><title>Introduction</title><p>Scientists continue to seek novel and
+effective ways to reduce
+the impact of bacterial infections upon crop yields. Being able to
+mitigate plant&#x02013;pathogen interactions has great potential to
+improve crop production. The attack of pathogens triggers plant immune
+responses. A plant hormone, 7-<italic>iso</italic>-jasmonoyl-<sc>l</sc>-isoleucine (<bold>2</bold>, <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>a),<sup><xref ref-type="bibr" rid="ref1">1</xref></sup> plays important roles
+in this plant immunity.<sup><xref ref-type="bibr" rid="ref2">2</xref>&#x02212;<xref ref-type="bibr" rid="ref5">5</xref></sup> The most important physiological role of <bold>2</bold> lies in
+the activation of induced immunity, which is triggered by the attack
+of insect herbivores and necrotrophic pathogens as well as tissue
+injury.<sup><xref ref-type="bibr" rid="ref6">6</xref></sup><bold>2</bold> functions through
+the coreceptor composed of CORONATINE INSENSITIVE1 (COI1) and JASMONATE
+ZIM-DOMAIN (JAZ) proteins.<sup><xref ref-type="bibr" rid="ref7">7</xref>&#x02212;<xref ref-type="bibr" rid="ref9">9</xref></sup> And the COI1-JAZ signaling pathway
+is considered the only signaling pathway in which <bold>2</bold> is
+involved.</p><fig id="fig1" position="float"><label>Figure 1</label><caption><p>Evaluation of the physiological action of coronatine relative and
+derivatives. (a) Structures of coronatine (<bold>1</bold>) relatives
+and derivatives: 7-<italic>epi</italic>-jasmonoyl-<sc>l</sc>-isoleucine
+(<bold>2</bold>), coronatine (<bold>1</bold>), and related compounds
+(<italic>ent</italic><bold>1</bold>, <bold>3</bold>-<italic>ent</italic><bold>4</bold>, <italic>ent</italic><bold>3</bold>-<bold>4</bold>, <bold>3</bold>, and <bold>4</bold>). (b) Effect of <bold>1</bold> derivatives on reopening (measured as size of aperture) of <italic>Arabidopsis thaliana</italic> (Col-0) abaxial stomata by abscisic
+acid (ABA). Indole-3-acetic acid (IAA), which induces stomatal reopening,
+was used as a positive control. Dashed line indicates the mean stomatal
+aperture taken from a control setting, in which <italic>Arabidopsis</italic> leaf peels with closed stomata were incubated in MES buffer (pH
+6.2) containing 2% EtOH. Bars represent mean stomatal aperture and
+SE (<italic>n</italic> = 20 stomata). Letters a&#x02013;d indicate
+significant differences between the means (ANOVA: <italic>P</italic> &#x0003c; 0.05). (c) A stoma in the epidermis of <italic>Arabidopsis
+thaliana</italic>. The width of the red bar was measured as the stomatal
+aperture. (d) Yeast two-hybrid (Y2H) assay of compound-induced COI1-JAZ9
+coreceptor formation. Lane A: Yeast cells cotransformed with pDEST22-JAZ9
+and pDEST32-COI1. Lane B: Yeast cells cotransformed with pDEST22-RalGDS-m1
+and pDEST32-Krev1 as a positive control. Lane C: Yeast cells cotransformed
+with pDEST22-RalGDS-m2 and pDEST32-Krev1 as a negative control. (e)
+Pull-down assay of purified GST-COI1 (5 nM) with recombinant <italic>E. coli</italic> expressed MBP-JAZ9 (approximately 40 nM) in the
+presence of COR derivatives (100 nM). GST-COI1 bound to MBP-JAZ9 were
+pulled down with amylose resin, and analyzed by immunoblotting. HRP-conjugated
+anti-GST antibody was used for detection of GST-COI1. Anti-MBP antibody
+and HRP-conjugated rat IgG antibody was used for showing the amounts
+of MBP-JAZ9 as the input materials. (f, g) Relative transcript levels
+of <italic>AOS</italic> and <italic>VSP2</italic> in <italic>A. thaliana</italic> treated with <bold>1</bold> derivatives. Each relative transcript
+level was assessed by quantitative RT-PCR. &#x0201c;Cont.&#x0201d; indicates
+the mean <italic>AOS</italic> or <italic>VSP2</italic> transcript
+level in a buffer containing 2% EtOH only. Bars represent the mean <italic>AOS</italic> or <italic>VSP2</italic> transcript levels of the test
+samples (100 &#x003bc;M). Bars represent mean and SE (<italic>n</italic> = 3). Letters a&#x02013;c indicate significant differences between
+the means (ANOVA: <italic>P</italic> &#x0003c; 0.05).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="oc-2017-00099s_0001" id="gr1" position="float"/></fig><p>Coronatine (<bold>1</bold>, <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>a) composed of (+)-coronafacic acid (<bold>3</bold>, <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>a) and (+)-coronamic
+acid (<bold>4</bold>, <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>a) is a small-molecular phytotoxin produced by <italic>Pseudomonas
+syringae</italic>.<sup><xref ref-type="bibr" rid="ref10">10</xref></sup><bold>1</bold> has
+been considered a structural and biological mimic of <bold>2</bold> and used as a strong agonist of the COI1-JAZ coreceptor.<sup><xref ref-type="bibr" rid="ref11">11</xref>,<xref ref-type="bibr" rid="ref12">12</xref></sup> However, we cannot fully understand the extent to which <bold>1</bold> mimics <bold>2</bold> in plant defense responses, and the unknown
+targets are expected to be included. For example, <bold>1</bold> suppresses
+callose deposition to promote infection of <italic>P. syringae</italic> in a COI1-independent manner.<sup><xref ref-type="bibr" rid="ref13">13</xref></sup></p><p>Bacterial virulence factors are molecules produced by bacteria
+that contribute to their pathogenicity, for instance by facilitating
+colonization of the host. Previous studies have revealed another role
+of <bold>1</bold> as a virulence factor in plant&#x02013;microbe interactions.<sup><xref ref-type="bibr" rid="ref14">14</xref></sup> Within a few hours of infection by the bacterium <italic>P. syringae</italic>, the stomata of <italic>Arabidopsis thaliana</italic> close (stomatal defense), thus blocking the main route of bacterial
+entry into the plant apoplast.<sup><xref ref-type="bibr" rid="ref15">15</xref></sup><italic>P. syringae</italic> causes the reopening of closed stomata to counter
+this stomatal defense, thereby securing the path of bacterial entry
+into the plant apoplast. Stomatal defense has been considered to be
+partly under the control of plant hormones, such as abscisic acid
+(ABA).<sup><xref ref-type="bibr" rid="ref14">14</xref>,<xref ref-type="bibr" rid="ref16">16</xref></sup><bold>1</bold> has thus been considered
+to prevent the closure of plant stomata by inhibiting ABA-mediated
+stomatal closure. Furthermore, this process is thought to take place
+through the COI1-JAZ-MYC2-NAC signaling cascade (see also <xref rid="fig6" ref-type="fig">Figure <xref rid="fig6" ref-type="fig">6</xref></xref><bold>#1</bold>),
+because <bold>1</bold> fails to inhibit ABA-mediated stomatal closure
+in both the <italic>coi1&#x02013;3</italic> and <italic>anac</italic> which is an <italic>anac19</italic>/<italic>anac55</italic>/<italic>anac72</italic> triple mutant of all three NAC TFs (petunia NAM and <italic>Arabidopsis</italic> ATAF1, ATAF2, and CUC2 transcription factors).<sup><xref ref-type="bibr" rid="ref16">16</xref></sup> NAC TFs are a direct target of MYC TF and function
+downstream of the COI1-JAZ coreceptor to suppress ABA signaling pathways,
+leading to the stomatal closure.<sup><xref ref-type="bibr" rid="ref17">17</xref></sup> Thus, <bold>1</bold> inhibits stomatal closure through the COI1-JAZ signaling
+pathway.<sup><xref ref-type="bibr" rid="ref18">18</xref></sup> In this way, <italic>P. syringae</italic> uses <bold>1</bold> to hijack the plant&#x02019;s own pathway of
+defense. In principle, inhibition of the COI1-JAZ pathway could therefore
+improve the stomatal defense of the plant.</p><p>However, inhibiting
+the COI1-JAZ pathway would present a trade-off
+between improved stomatal defense and impaired defense against attack
+of herbivores and necrotrophs, which could impede overall improvement
+of plant immunity by suppressing the COI1-JAZ pathway. A strategy
+to suppress the action of <bold>1</bold> on stomata without impairing
+COI1-JAZ-dependent plant defense responses would therefore be highly
+desirable.</p><p>Here, we report that, in addition to its conventional
+COI1-JAZ-dependent
+function, <bold>1</bold> counters stomatal defense through a COI1-JAZ-independent
+and ER (endoplasmic reticulum)-mediated function. We show this through
+two independent approaches: the development of a non-COI1-JAZ agonistic <bold>1</bold> derivative with stomatal reopening activity and alkyne-tag <italic>in vivo</italic> Raman imaging (ATRI)<sup><xref ref-type="bibr" rid="ref19">19</xref>&#x02212;<xref ref-type="bibr" rid="ref21">21</xref></sup> of <bold>1</bold> in
+living <italic>A. thaliana</italic> guard cells. The Raman signal
+of an alkyne appears in an otherwise silent region where no biomolecules
+in the cell provide any Raman signal. Especially, the subcellular
+localization of alkyne-tagged <bold>1</bold> obtained by ATRI provided
+a pivotal evidence of the COI1-JAZ-independent function. To our knowledge,
+this is the first successful application of ATRI for visualizing intracellular
+localization of a small molecule in living plant cells. Our result
+demonstrated that ATRI is a powerful alternative method for fluorescence
+imaging because fluorescence-labeled (FL) small molecular ligands
+such as FL-<bold>1</bold> have often lost their bioactivity by the
+addition of a large fluorescent dye.<sup><xref ref-type="bibr" rid="ref22">22</xref></sup></p></sec><sec id="sec2"><title>Results
+and Discussion</title><sec id="sec2.1"><title>Coronatine Triggers the Reopening of Closed
+Stomata through
+a COI1-JAZ-Independent Mechanism</title><p>Stomatal defense against
+pathogenic infection can be mimicked by abscisic acid (ABA) treatment
+because ABA signaling is involved as a key mechanism of stomatal defense.<sup><xref ref-type="bibr" rid="ref14">14</xref>,<xref ref-type="bibr" rid="ref16">16</xref></sup> It has already been shown that <bold>1</bold> can counter both pathogen-
+and ABA-mediated stomatal closure by inhibiting the ABA signaling
+cascade through the COI1-JAZ-MYC2-NAC signaling module.<sup><xref ref-type="bibr" rid="ref16">16</xref></sup> Then, we evaluated the physiological action
+of <bold>1</bold> and a series of the stereoisomers against ABA-mediated
+stomatal closure on the WT (Col-0) and knockout mutants of <italic>Arabidopsis.</italic></p><p>In a previous study, we prepared optically
+pure components of <bold>1</bold>, <bold>3</bold>,<sup><xref ref-type="bibr" rid="ref22">22</xref></sup> and <bold>4</bold>,<sup><xref ref-type="bibr" rid="ref23">23</xref></sup> and then
+synthesized a stereoisomer (<bold>3</bold>-<italic>ent</italic><bold>4</bold>; <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>a) composed of naturally occurring <bold>3</bold> and enantiomeric <bold>4</bold> ((&#x02212;)-coronamic acid). We also synthesized the enantiomers
+of <bold>1</bold> (<italic>ent</italic>-<bold>1</bold>) and <bold>3</bold>-<italic>ent</italic><bold>4</bold> (<italic>ent</italic><bold>3</bold>-<bold>4</bold>; <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>a).<sup><xref ref-type="bibr" rid="ref23">23</xref></sup> We evaluated the physiological
+action of these stereoisomers in detail.</p><p>Abaxial stomata of
+6- to 8-week-old Col-0 <italic>A. thaliana</italic> were first treated
+with ABA to induce closure and then treated with <bold>1</bold> or
+its stereoisomers (<italic>ent</italic>-<bold>1</bold>, <bold>3</bold>-<italic>ent</italic><bold>4</bold>, <italic>ent</italic><bold>3</bold>-<bold>4</bold>, <bold>3</bold>, and <bold>4</bold>). Naturally occurring <bold>1</bold> effectively reopened the closed
+Col-0 stomata, whereas <italic>ent</italic>-<bold>1</bold>, <bold>4</bold>, and <bold>3</bold> were ineffective (<xref rid="fig1" ref-type="fig">Figures <xref rid="fig1" ref-type="fig">1</xref></xref>b and <xref rid="fig1" ref-type="fig">1</xref><bold>c</bold>). It was surprising that a stereoisomer <bold>3</bold>-<italic>ent</italic><bold>4</bold> was also effective at reopening the stomata of <italic>A. thaliana</italic>, whereas its enantiomer, <italic>ent</italic><bold>3</bold>-<bold>4</bold>, was ineffective. Nevertheless, our
+yeast two-hybrid (Y2H) assays (<xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>d) and pull-down assay using JAZ9-MBP (<xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>e) showed that <bold>3</bold>-<italic>ent</italic><bold>4</bold> does not induce COI1-JAZ9 coreceptor
+formation; nor does it induce expression of COI1-JAZ-regulated JA-biosynthetic
+gene <italic>allene oxide synthase</italic> (<italic>AOS</italic>)
+and JA-marker gene <italic>Vegetative Storage Protein 2</italic> (<italic>VSP2</italic>) in <italic>A. thaliana</italic> (<xref rid="fig1" ref-type="fig">Figures <xref rid="fig1" ref-type="fig">1</xref></xref>f<bold>&#x02013;</bold><xref rid="fig1" ref-type="fig">1</xref>g). However, weak overlap between transcriptional
+responses induced by <bold>1</bold> and <italic>ent</italic><bold>3</bold>-<bold>4</bold> suggested that <italic>ent</italic><bold>3</bold>-<bold>4</bold> maintains some of the biological functions
+of <bold>1</bold>. DNA microarray analyses in <italic>Arabidopsis</italic> treated by <bold>1</bold>, <italic>ent</italic><bold>3</bold>-<bold>4</bold>, or <italic>ent</italic><bold>1</bold> demonstrated that
+19% of <bold>1</bold>-inducible genes (117/605 genes) was overlapped
+with <italic>ent</italic><bold>3</bold>-<bold>4</bold> inducible genes,
+while as little as 3.8% (23/605 genes) was overlapped with <italic>ent</italic><bold>1-</bold>inducible genes (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Figure S1A, Table S1</ext-link>). These results show that the stereochemistry
+of the <bold>4</bold> moiety in <bold>1</bold> does not affect the
+function of <bold>1</bold> in stomata and a stereoisomer of <bold>1</bold> (<bold>3</bold>-<italic>ent</italic><bold>4</bold>) can
+induce the reopening of closed <italic>Arabidopsis</italic> stomata
+against ABA-mediated stomatal closure through a unique mechanism independent
+of COI1-JAZ.</p><p>We next examined the COI1-JAZ independent action
+of <bold>1</bold>/<bold>3</bold>-<italic>ent</italic><bold>4</bold> against stomatal
+defense by using knockout mutants of <italic>Arabidopsis.</italic> All the results on <bold>1</bold> were examined by the comparison
+of those on <bold>3</bold>-<italic>ent</italic><bold>4</bold> used
+as a reference. We examined the effect of <bold>1</bold>/<bold>3</bold>-<italic>ent</italic><bold>4</bold> on the reopening of closed stomata
+of knockout <italic>Arabidopsis</italic> mutants, <italic>coi1-1</italic>,<sup><xref ref-type="bibr" rid="ref24">24</xref></sup><italic>coi1-16s</italic>,<sup><xref ref-type="bibr" rid="ref25">25</xref></sup> and <italic>anac</italic> (<xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>). The reopening of closed
+stomata was not affected in all three mutants, either by <bold>1</bold> or by <bold>3</bold>-<italic>ent</italic><bold>4</bold> (<xref rid="fig2" ref-type="fig">Figures <xref rid="fig2" ref-type="fig">2</xref></xref>a, <xref rid="fig2" ref-type="fig">2</xref>b, and <xref rid="fig2" ref-type="fig">2</xref>c). In contrast, different
+results were obtained in a conventional bioassay used in previous
+studies.<sup><xref ref-type="bibr" rid="ref14">14</xref>,<xref ref-type="bibr" rid="ref16">16</xref></sup> ABA-induced stomatal closure was inhibited
+by the coaddition of COR (<xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>d), and the inhibition was impaired in <italic>coi1-1</italic> and <italic>anac</italic> knockout mutants (<xref rid="fig2" ref-type="fig">Figures <xref rid="fig2" ref-type="fig">2</xref></xref>e and <xref rid="fig2" ref-type="fig">2</xref>f), as reported
+previously.<sup><xref ref-type="bibr" rid="ref14">14</xref>,<xref ref-type="bibr" rid="ref16">16</xref></sup> However, the ABA-induced stomatal
+closure was not inhibited by the coaddition of <bold>3</bold>-<italic>ent</italic><bold>4</bold> in wild type plants as well as in both
+mutants (<xref rid="fig2" ref-type="fig">Figures <xref rid="fig2" ref-type="fig">2</xref></xref>d&#x02013;<xref rid="fig2" ref-type="fig">2</xref>f).</p><fig id="fig2" position="float"><label>Figure 2</label><caption><p>Physiological evaluation of coronatine and derivatives
+using knockout
+mutants of <italic>Arabidopsis thaliana</italic>. (a&#x02013;c) Effect
+of <bold>1</bold> derivatives on reopening of closed stomata of <italic>coi1-1</italic> (a), <italic>coi1-16s</italic> (b), and <italic>anac</italic> (c) mutants under dark conditions. IAA was used as a positive control.
+Letters a&#x02013;d indicate significant differences between the means
+(ANOVA: <italic>P</italic> &#x0003c; 0.05). (d&#x02013;f) Effect of <bold>1</bold> derivatives (30 &#x003bc;M) on stomata of wild type Col-0
+(d), <italic>coi1-1</italic> (e), and <italic>anac</italic> (f) with
+(+ ABA) and without (&#x02212; ABA) (15 &#x003bc;M) cotreatment. Dashed
+line indicates mean stomatal aperture under control conditions. Bars
+represent mean stomatal aperture and SE (<italic>n</italic> = 20 stomata).
+Letters indicate significant differences between the means (ANOVA: <italic>P</italic> &#x0003c; 0.05).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="oc-2017-00099s_0002" id="gr2" position="float"/></fig><p>These careful physiological assessments of <bold>1</bold> and the
+stereoisomer <bold>3</bold>-<italic>ent</italic><bold>4</bold> using
+knockout mutants of <italic>A. thaliana</italic> strongly suggest
+that <bold>1</bold> functions differently in the stomatal reopening
+after ABA-mediated closure and in the inhibition of ABA-mediated stomatal
+closure itself, and the reopening of closed stomata mediated by <bold>3</bold>-<italic>ent</italic><bold>4</bold> is independent of the
+COI1-JAZ-MYC2-NAC signaling cascade (<xref rid="fig1" ref-type="fig">Figures <xref rid="fig1" ref-type="fig">1</xref></xref>b&#x02013;<xref rid="fig1" ref-type="fig">1</xref>f). It is
+also interesting that the enantiomer <italic>ent</italic><bold>3</bold>-<bold>4</bold> was ineffective at stomatal reopening, as this result
+strongly suggests that molecular recognition of the stereochemistry
+of the ligand, probably by an unknown receptor protein, is involved
+in the reopening of closed stomata. Additionally, <bold>1</bold> triggered
+the reopening of closed stomata in the mutants <italic>coi1-1</italic>, <italic>coi1-16s</italic>, and <italic>anac</italic> even though
+the COI1-JAZ-MYC2-NAC signaling module is located upstream of the
+ABA-mediated or SA-related signaling cascades that lead to the inhibition
+of stomatal closure (<xref rid="fig2" ref-type="fig">Figures <xref rid="fig2" ref-type="fig">2</xref></xref>a&#x02013;<xref rid="fig2" ref-type="fig">2</xref>c).</p><p>Our results clearly
+show that the reopening of closed stomata is
+regulated by a mechanism that is distinct from the inhibition of ABA/SA-mediated
+stomatal closure (<xref rid="fig1" ref-type="fig">Figures <xref rid="fig1" ref-type="fig">1</xref></xref> and <xref rid="fig2" ref-type="fig">2</xref>). This is consistent with the
+results of our previous <italic>in silico</italic> docking study<sup><xref ref-type="bibr" rid="ref22">22</xref></sup> in which some <bold>1</bold> derivatives were
+unable to bind the COI1-JAZ coreceptor despite these compounds&#x02019;
+being effective in a stomatal reopening assay.<sup><xref ref-type="bibr" rid="ref22">22</xref></sup> We thus hypothesized that <bold>1</bold> counters stomatal
+defense through two functions: COI1-JAZ-independent reopening of closed
+stomata and the well-known COI1-JAZ-dependent inhibition of stomatal
+closure.</p></sec><sec id="sec2.2"><title>Diyne-Tagged <bold>1</bold> and <italic>in Vivo</italic> Raman
+Imaging of Subcellular Localization</title><p>The subcellular localization
+of a small molecule can provide important information on its mode
+of action.<sup><xref ref-type="bibr" rid="ref26">26</xref></sup> The nuclear colocalization
+of COI1 and JAZ9 was observed in <italic>A. thaliana</italic> and <italic>Nicotiana tabacum</italic> epidermal cell,<sup><xref ref-type="bibr" rid="ref27">27</xref></sup> thus, the information on the subcellular localization of <bold>1</bold> derivative which is effective at stomatal reopening and ineffective
+as a COI1-JAZ agonist will confirm COI1-JAZ independence of <bold>1</bold>-mediated reopening of closed stomata and provide information
+on the potential mode of action. Our previous attempt by using fluorescein-labeled <bold>1</bold> (FL-<bold>1</bold>) resulted in failure because the synthetic
+FL-<bold>1</bold> was ineffective at reopening of closed stomata.<sup><xref ref-type="bibr" rid="ref22">22</xref></sup> We therefore focused on the <italic>in vivo</italic> alkyne-tag Raman imaging (ATRI) technique<sup><xref ref-type="bibr" rid="ref19">19</xref>&#x02212;<xref ref-type="bibr" rid="ref21">21</xref></sup> because the
+alkyne-tag necessary for ATRI is much smaller than fluorescein and
+is expected not to affect the bioactivity of original <bold>1</bold>. ATRI has been used to examine the subcellular accumulation of alkyne-tagged
+EdU<sup><xref ref-type="bibr" rid="ref19">19</xref></sup> and diyne-tagged coenzyme Q in HeLa
+cells<sup><xref ref-type="bibr" rid="ref20">20</xref></sup> and was recently applied to monitoring
+the distribution of diyne-tagged sphingomyelin in the lipid raft-mimicking
+domain of an artificial membrane.<sup><xref ref-type="bibr" rid="ref21">21</xref></sup> However,
+ATRI is a state-of-the-art technique; thus, past reports of ATRI have
+been confined to proof-of-concept experiments using well-studied examples
+that have already been verified by other methods. We observed the
+subcellular localization of <bold>5</bold> in a guard cell, which
+to our knowledge is the first successful application of ATRI on living
+plant cells. ATRI using <bold>5</bold> demonstrated a distinct difference
+in subcellular localization between <bold>1</bold> and the COI1-JAZ
+module following stomatal reopening.</p><p>A <bold>1</bold>-based
+ATRI probe should be effective at stomatal reopening and ineffective
+as a COI1-JAZ agonist, thus precluding colocalization with the COI1-JAZ
+machinery in the guard cell. As mentioned for <bold>3</bold>-<italic>ent</italic><bold>4</bold>, the <bold>3</bold> moiety in <bold>1</bold> may play an important role in the induction of stomatal reopening,
+while structural modification of the <bold>4</bold> moiety might not
+affect the bioactivity of <bold>1</bold>. Thus, we designed and synthesized
+a diyne-tagged <bold>1</bold> (<bold>5</bold>) consisting of naturally
+occurring <bold>3</bold> and a diyne-tagged <sc>l</sc>-amino acid;<sup><xref ref-type="bibr" rid="ref20">20</xref></sup> the enantiomer <italic>ent</italic>-<bold>5</bold> was synthesized as a control (<xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>a, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Scheme S1</ext-link>). The use of
+a methyl ester proved to be suitable for practical use because of
+its improved bioactivity. Both <bold>5</bold>s provided a strong Raman
+signal at 2260 cm<sup>&#x02013;1</sup> (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Figure S2</ext-link>).</p><fig id="fig3" position="float"><label>Figure 3</label><caption><p>Physiological evaluation of <bold>5</bold>s. (a) Structure of <bold>5</bold> and <italic>ent</italic><bold>5</bold>. (b, c) Effect of <bold>1</bold> and <bold>5</bold>s on reopening of closed stomata in wild
+type Col-0 (b) and <italic>coi1-16s A. thaliana</italic> (c). IAA
+was used as a positive control. The dashed line indicates mean stomatal
+aperture of the control without <bold>1</bold> derivatives. Bars represent
+mean stomatal aperture and SE (<italic>n</italic> = 20 stomata). Letters
+a&#x02013;e indicate significant differences between the means (ANOVA: <italic>P</italic> &#x0003c; 0.05). (d) Y2H assay of ligand-induced COI1-JAZ9
+coreceptor formation. Lane A: Yeast cells cotransformed with pDEST22-JAZ9
+and pDEST32-COI1. Lane B: Yeast cells cotransformed with pDEST22-RalGDS-m1
+and pDEST32-Krev1 as a positive control. Lane C: Yeast cells cotransformed
+with pDEST22-RalGDS-m2 and pDEST32-Krev1 as a negative control. (e)
+Pull-down assay of purified GST-COI1 (5 nM) with recombinant <italic>E. coli</italic> expressed MBP-JAZ9 (approximately 40 nM) in the
+presence of diyne <bold>5</bold> (100 nM). All experiments were carried
+out according to the same procedure as for <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>e. (f, g) Relative transcript levels of <italic>AOS</italic> and <italic>VSP2</italic> in <italic>A. thaliana</italic> treated with <bold>1</bold> and diyne-tagged <bold>1</bold>s. Quantitative
+RT-PCR analyses of relative transcript levels were performed after
+treatment with each <bold>1</bold> derivative. &#x0201c;Cont.&#x0201d;
+indicates the mean <italic>AOS</italic> or <italic>VSP2</italic> transcript
+level under control conditions. Bars represent the mean <italic>AOS</italic> or <italic>VSP2</italic> transcript level of test samples (100 &#x003bc;M).
+Bars represent mean and SE (<italic>n</italic> = 3). Letters a&#x02013;c
+indicate significant differences between the means (ANOVA: <italic>P</italic> &#x0003c; 0.05).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="oc-2017-00099s_0003" id="gr3" position="float"/></fig><p><xref rid="fig3" ref-type="fig">Figures <xref rid="fig3" ref-type="fig">3</xref></xref>b&#x02013;<xref rid="fig3" ref-type="fig">3</xref>f show the physiological evaluation of <bold>5</bold> and <italic>ent</italic>-<bold>5</bold>, using the same methods
+as described in <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>. <bold>5</bold> was as effective as <bold>1</bold> for stomatal
+reopening in Col-0, <italic>coi1-1</italic>, and <italic>coi1-16s</italic>(<xref ref-type="bibr" rid="ref25">25</xref>) mutants, whereas <italic>ent</italic>-<bold>5</bold> was ineffective (<xref rid="fig3" ref-type="fig">Figures <xref rid="fig3" ref-type="fig">3</xref></xref>b, <xref rid="fig3" ref-type="fig">3</xref>c, and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">S4</ext-link>). Moreover, Y2H assays and analysis of gene
+expressions under the control of COI1-JAZ signaling (<italic>AOS</italic> and <italic>VSP2</italic>) suggested that <bold>5</bold> was ineffective
+as agonists of the COI1-JAZ coreceptor (<xref rid="fig3" ref-type="fig">Figures <xref rid="fig3" ref-type="fig">3</xref></xref>d&#x02013;<xref rid="fig3" ref-type="fig">3</xref>f). These
+results suggested that <bold>5</bold> is as effective as <bold>1</bold> in triggering the reopening of closed stomata through a COI1-JAZ-independent
+signaling pathway. Thus, we expected <bold>5</bold> to provide information
+on the subcellular localization of <bold>1</bold> during COI1-JAZ
+independent stomatal reopening activity.</p><p>We measured the Raman
+spectra of subcellular regions of <italic>Arabidopsis</italic> guard
+cells, including the nucleus, perinuclear
+area, vacuole, and dorsal/ventral area of plasma membrane (<xref rid="fig4" ref-type="fig">Figures <xref rid="fig4" ref-type="fig">4</xref></xref>a and <xref rid="fig4" ref-type="fig">4</xref>b). Strong autofluorescence due to the <italic>Arabidopsis</italic> chloroplast prevents <italic>in vivo</italic> Raman imaging. Instead,
+we picked up the Raman signals of <bold>5</bold> (2258 cm<sup>&#x02013;1</sup>) in each subcellular region by the comparison of the normalized
+background signal intensity within the same region. The <bold>5</bold> (2258 cm<sup>&#x02013;1</sup>) reopened the closed stomata and then
+localized around the perinuclear region, but not inside the nucleus,
+of Col-0 wild type guard cells (<xref rid="fig4" ref-type="fig">Figure <xref rid="fig4" ref-type="fig">4</xref></xref>a). On the other hand, no clear localization was observed
+using <italic>ent</italic>-<bold>5</bold> (<xref rid="fig4" ref-type="fig">Figure <xref rid="fig4" ref-type="fig">4</xref></xref>a). The localization of <bold>5</bold> was
+not affected by the presence or absence of the COI1 protein, as shown
+by its similar localization in the <italic>coi1-16s</italic> mutant
+(<xref rid="fig4" ref-type="fig">Figure <xref rid="fig4" ref-type="fig">4</xref></xref>b).</p><fig id="fig4" position="float"><label>Figure 4</label><caption><p>Raman spectra
+in each area of stomatal guard cell indicating subcellular
+localization of <bold>5</bold>. Raman spectra in living guard cells
+of Col-0 (a) and <italic>coi1-16s</italic> (b) were obtained after
+3 h treatment by 100 &#x003bc;M <bold>5</bold> (left)/<italic>ent</italic><bold>5</bold> (right). The threshold concentration for detecting <bold>5</bold> was &#x0223c;100 &#x003bc;M. For details, see <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Figure S3</ext-link>. Averaged Raman spectra for each subcellular area
+in the guard cell (1.2 &#x003bc;m &#x000d7; 1.1 &#x003bc;m in size: 3 &#x000d7;
+3 pixels) are presented in each color: nucleus area in red, perinuclear
+area in orange, vacuole area in cyan or blue, plasma membrane (dorsal
+area) in yellow or green, and plasma membrane (ventral area) in purple.
+(a) Raman signal of <bold>5</bold> can be found in perinuclear area
+including ER, whereas no signal was observed in all area for the <italic>ent</italic><bold>5</bold>, and (b) the localization was not affected
+even in <italic>coi1-16s</italic>. The light intensity at the sample
+plane was calculated as 5.8&#x02013;6.2 mW/&#x003bc;m<sup>2</sup> from
+the ratio of the measured laser power between the sample position
+and the area of the illumination line. The exposure time for each
+line was 120 s. Spectra were vertically offset for ease of viewing.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="oc-2017-00099s_0004" id="gr4" position="float"/></fig><p>We found that strong autofluorescence
+due to the <italic>Arabidopsis</italic> chloroplast precluded <italic>in vivo</italic> Raman signal-based
+imaging of <bold>5</bold> in guard cells. To resolve this, we used
+the <italic>arc6</italic> mutant of <italic>A. thaliana</italic>,
+which is partly impaired in chloroplast formation,<sup><xref ref-type="bibr" rid="ref28">28</xref>&#x02212;<xref ref-type="bibr" rid="ref30">30</xref></sup> and in which
+guard cells without chloroplasts have been reported. As expected,
+low background autofluorescence from the chloroplast was observed
+in <italic>arc-6</italic> guard cells (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Figure S5</ext-link>). The use of <italic>arc6</italic> mutant guard cells enabled
+the <italic>in vivo</italic> Raman imaging of <bold>5</bold> within
+the guard cell. Fortunately, <bold>5</bold> remained as effective
+as <bold>1</bold> for stomatal opening of <italic>arc-6</italic> guard
+cells, whereas <italic>ent</italic>-<bold>5</bold> was ineffective
+(<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Figure S6</ext-link>). <xref rid="fig5" ref-type="fig">Figure <xref rid="fig5" ref-type="fig">5</xref></xref>a shows the <italic>in vivo</italic> Raman
+imaging of <bold>5</bold> in an <italic>arc-6</italic> guard cell.
+The background noise in this ATRI experiment was very low compared
+to that using <italic>Arabidopsis</italic> wild type Col-0 (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Figure S7</ext-link>). The clear localization of <bold>5</bold> around the nucleus and plasma membrane (dorsal side) of <italic>arc-6</italic> guard cells could be observed, whereas <italic>ent</italic>-<bold>5</bold> showed no specific localization in the same cells
+(<xref rid="fig5" ref-type="fig">Figures <xref rid="fig5" ref-type="fig">5</xref></xref>a, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">S8</ext-link>, and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">S9</ext-link>). In addition,
+ER-localization of <bold>5</bold> was competitively inhibited by the
+addition of <bold>1</bold> (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Figure S10</ext-link>).
+We also observed that the fluorescence of ER-marker, ER-Tracker Green,
+in <italic>arc-6</italic> guard cells could be superimposed onto the
+Raman signal of <bold>5</bold> (<xref rid="fig5" ref-type="fig">Figure <xref rid="fig5" ref-type="fig">5</xref></xref>b).</p><fig id="fig5" position="float"><label>Figure 5</label><caption><p>Subcellular localization of 5 and nuclear localization
+of COI1
+and JAZ9 in guard cells. (a) Raman imaging of <bold>5</bold> and <italic>ent</italic><bold>5</bold> at 100 &#x003bc;M in living guard cells
+of <italic>A. thaliana arc6&#x02013;1</italic> after 3 h of treatment. <bold>5</bold> localized largely in the perinuclear area including ER,
+whereas no localization was observed for the <italic>ent</italic><bold>5</bold>. The light intensity at the sample plane was calculated
+as 6.2 mW/&#x003bc;m<sup>2</sup> from the ratio of the measured laser
+power between the sample position and the illumination line. Exposure
+time for each line was 120 s. (b) Fluorescence imaging of ER-Tracker
+(left) and nuclear marker HoeFLAc<sub>2</sub> (right). <bold>5</bold> in panel a can be superimposed with ER-tracker, and not with HoeFLAc2.
+Irradiation at 488 nm, detection at 490&#x02013;555 nm (green). (c)
+Both of YFP:COI1 (left, yellow) and YFP:JAZ9 (center, yellow) can
+be superimposed with HoeFLAc2 in panel b and localized in the nucleus
+of <italic>Arabidopsis</italic> guard cell, whereas YFP as a control
+cannot localize in the nucleus (right, yellow). YFP was detected at
+490&#x02013;555 nm, and chloroplasts were detected at 415&#x02013;735
+nm under irradiation at 488 nm.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="oc-2017-00099s_0005" id="gr5" position="float"/></fig><p>The use of the <italic>arc-6</italic> mutant was highly successful
+in avoiding the influence of the strong autofluorescence of chloroplasts
+in plant cells (<xref rid="fig5" ref-type="fig">Figure <xref rid="fig5" ref-type="fig">5</xref></xref>a). Conventional methods used to circumvent the effects of strong
+background autofluorescence, such as resonance Raman scattering or
+the use of longer wavelength irradiation, are ineffective for ATRI
+in plant cells due to the low Raman signal intensity of diyne. Previous
+applications of Raman spectroscopy in plant tissues have been restricted
+to special cases, such as the observation of endogenous polyacetylene
+in the roots of <italic>Daucus carota</italic>, which contain no chloroplasts
+but accumulate a great amount (2.0 g kg<sup>&#x02013;1</sup> FW) of
+polyacetylene.<sup><xref ref-type="bibr" rid="ref31">31</xref></sup> Our strategy using the <italic>arc-6</italic> mutant will be a versatile new method for the <italic>in vivo</italic> application of ATRI in plant cells. While the results
+presented here were obtained by spontaneous Raman microscopy, the
+use of newly emerged ATRI coupled with coherent Raman scattering microscopies
+would offer faster image acquisition, greater detection sensitivity,
+and less photodamage.<sup><xref ref-type="bibr" rid="ref32">32</xref>&#x02212;<xref ref-type="bibr" rid="ref37">37</xref></sup> In contrast, the nuclear localization of COI1 and JAZ was clearly
+observed in <italic>P</italic><sub><italic>35S</italic></sub>-COI1:YFP
+and <italic>P</italic><sub><italic>35S</italic></sub>-JAZ9:YFP guard
+cells (<xref rid="fig5" ref-type="fig">Figure <xref rid="fig5" ref-type="fig">5</xref></xref>c).
+Thus, a distinct difference in localization was confirmed between <bold>5</bold> and the COI1-JAZ coreceptor in <italic>Arabidopsis</italic> guard cells (<xref rid="fig5" ref-type="fig">Figures <xref rid="fig5" ref-type="fig">5</xref></xref>a and <xref rid="fig5" ref-type="fig">5</xref>c). Our observations strongly suggested
+that the reopening of closed <italic>Arabidopsis</italic> stomata
+by <bold>1</bold> can be linked to the unique localization of <bold>1</bold> in guard cells.</p><p>Recently, Higaki et al. reported subcellular
+microscopic imaging
+of guard cells using markers for various organelles,<sup><xref ref-type="bibr" rid="ref38">38</xref></sup> revealing the typical distribution of organelles in the
+guard cells of open or closed stomata. In their study, the localization
+of the ER in the guard cells changed dramatically before and after
+stomatal opening.<sup><xref ref-type="bibr" rid="ref38">38</xref></sup> Our observations of
+the localization of <bold>5</bold> in <italic>arc-6</italic> guard
+cells seem to correspond well with the distribution of GFP-ER in the
+guard cells of open stomata. Moreover, the fluorescence pattern of
+an ER-marker, ER-Tracker Green, in <italic>arc-6</italic> guard cells
+was very similar to the Raman signal of <bold>5</bold> (<xref rid="fig5" ref-type="fig">Figure <xref rid="fig5" ref-type="fig">5</xref></xref>b). It is therefore plausible
+to conclude that <bold>5</bold> localizes in the ER of <italic>arc-6</italic> guard cells. In contrast, the COI1-JAZ machinery was confirmed to
+localize to the nuclei of guard cells (<xref rid="fig5" ref-type="fig">Figure <xref rid="fig5" ref-type="fig">5</xref></xref>c). This observation corresponds well with
+the nuclear colocalization of COI1 and JAZ9 in <italic>A. thaliana</italic> and <italic>Nicotiana tabacum</italic> epidermal cells, in which
+the physical interaction between JAZ9 and the TF MYC2 plays a pivotal
+role.<sup><xref ref-type="bibr" rid="ref27">27</xref></sup> The ATRI experiments strongly support
+the involvement of a COI1-JAZ-independent function of <bold>1</bold> in <italic>Arabidopsis</italic> guard cells.</p><p>The ER thus has
+an important role in the <bold>1</bold>-mediated
+reopening of stomata. This result provides an important clue for the
+noncanonical function of <bold>1</bold> in the <italic>Arabidopsis</italic> guard cell. The swelling of guard cells leading to the stomatal
+opening is initiated by the activation of H<sup>+</sup>-ATPase, and
+subsequent membrane hyperpolarization activates the voltage-dependent
+inward-rectifying potassium channel KAT-1.<sup><xref ref-type="bibr" rid="ref39">39</xref>&#x02212;<xref ref-type="bibr" rid="ref41">41</xref></sup> KAT-1 is synthesized
+and packaged into COPII around the perinuclear region of ER where
+we observed the Raman signal of <bold>5</bold> and then transported
+to the plasma membrane through Golgi apparatus.<sup><xref ref-type="bibr" rid="ref42">42</xref>&#x02212;<xref ref-type="bibr" rid="ref46">46</xref></sup> Ion channel trafficking will strongly affect cellular
+volume control.<sup><xref ref-type="bibr" rid="ref41">41</xref></sup> Thus, our results provide
+new insight on <bold>1</bold>-mediated stomatal reopening that <bold>1</bold> potentially affects the membrane trafficking of KAT-1 in
+the stomatal guard cell to contribute to the reopening of closed stomata.</p></sec></sec><sec id="sec3"><title>Conclusions</title><p>In this paper, we described a COI1-JAZ-independent
+function of <bold>1</bold> on <italic>Arabidopsis</italic> stomatal
+guard cells (<xref rid="fig6" ref-type="fig">Figure <xref rid="fig6" ref-type="fig">6</xref></xref>). The bacterial virulence factor, <bold>1</bold>, has been
+considered to inhibit stomatal closure via the ABA-mediated COI1-JAZ
+signaling pathway. However, AIRI experiments and extensive biological
+assessments of <bold>1</bold> stereoisomers (<italic>ent</italic>-<bold>1</bold>, <bold>3</bold>-<italic>ent</italic><bold>4</bold>, <italic>ent</italic><bold>3</bold>-<bold>4</bold>, <bold>3</bold>, and <bold>4</bold>) suggested another scenario in which both COI1-JAZ-independent
+and COI1-JAZ-dependent functions are involved in the <bold>1</bold>-mediated breaking of stomatal defense. It is plausible to consider
+that the functions of <bold>2</bold> (a plant hormone) and <bold>1</bold> (a bacterial virulence factor) in the <italic>Arabidopsis</italic> guard cell are not identical despite their structural similarity.
+Only the bacterial virulence factor <bold>1</bold> is involved in
+the COI1-JAZ-independent reopening of closed stomata.</p><fig id="fig6" position="float"><label>Figure 6</label><caption><p>Schematic diagram of
+the two functions of the bacterial virulence
+factor, <bold>1</bold>, on stomatal guard cells to counter stomatal
+defense. In <italic>Arabidopsis</italic> guard cells, <bold>1</bold> produced by <italic>Pseudomonas syringae</italic> counters stomatal
+defense through two functions: in #1 (left), <bold>1</bold> inhibits
+ABA-mediated stomatal closure in response to bacterial PAMPs (pathogen-associated
+molecular patterns) through the COI1-JAZ-MYC2-NAC signaling cascade,
+and in #2 (right), it simultaneously promotes the reopening of closed
+stomata through a COI1-JAZ-independent, ER-related mechanism.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="oc-2017-00099s_0006" id="gr6" position="float"/></fig><p>The discovery of a COI1-JAZ-independent
+function will provide a
+possible way to settle a dilemma of plant defense against foreign
+invaders. Biotrophic bacteria hijack the COI1-JAZ signaling pathway
+to facilitate infection through the bacterial virulence factor, <bold>1</bold>. Inhibition of the COI1-JAZ-independent action of <bold>1</bold> would suppress infection without impairing the COI1-JAZ-dependent
+plant defense responses against other invaders. A molecular understanding
+of this novel function could lead to the development of new anti-infection
+chemicals.</p></sec><sec id="sec4"><title>Materials and Methods</title><p>All experiments reported in this
+work were performed three or more
+times with similar results. In Y2H and <italic>in planta</italic> assays,
+we standardize the relative potencies of different ligands used (<bold>1</bold> and the stereoisomers, <bold>5</bold>/<italic>ent</italic><bold>5</bold>, and <bold>2</bold>) before a new set of experiments.
+Detailed procedures for protein and RNA analyses, assays for stomatal
+reopening assay, Y2H, Raman and fluorescence imaging, statistical
+analyses, and chemical syntheses of <bold>5</bold> and <italic>ent</italic><bold>5</bold> can be found in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">SI Materials &#x00026; Methods</ext-link>.</p><sec id="sec4.1"><title>Plant Materials and Growth Conditions</title><p><italic>A. thaliana</italic> plants were grown on Jiffy-7 peat pellets (Sakata Seed Corporation,
+Japan) in a Biotron LPH-240SP growth chamber (Nippon Medical &#x00026;
+Chemical Instruments Co., Ltd., Japan) at 22 &#x000b0;C under 12 h light
+(100&#x02013;118 &#x003bc;mol&#x000b7;m<sup>&#x02013;2</sup>&#x000b7;s<sup>&#x02013;1</sup>; cool-white fluorescent light)/12 h dark conditions unless stated
+otherwise. For quantitative PCR analysis, sterilized <italic>A. thaliana</italic> were grown in 1/2 Murashige &#x00026; Skoog liquid medium in a Biotron
+NC-220 growth chamber (Nippon Medical &#x00026; Chemical Instruments Co.,
+Ltd., Japan) at 22 &#x000b0;C under sterile 16 h light (118 &#x003bc;mol&#x000b7;m<sup>&#x02013;2</sup>&#x000b7;s<sup>&#x02013;1</sup>; cool-white fluorescent
+light)/8 h dark conditions.</p></sec><sec id="sec4.2"><title>Stomatal Reopening Assay</title><p>The abaxial
+leaf epidermis
+of 6- to 8-week-old <italic>Arabidopsis</italic> plants was peeled
+and cut to about 2 mm<sup>2</sup>. For the assay of opening of stomata
+closed by ABA, the peels were submerged in filtered (with cellulose
+acetate membrane filter; 25 mm, 0.2 &#x003bc;m, 25CS020AS, ADVANTEC)
+buffer (25 mM MES (Dojindo, Co., Ltd., Japan)&#x02013;KOH, pH 6.15,
+10 mM KCl) containing 10 &#x003bc;M ABA at 22 &#x000b0;C for 3 h in the
+light (100&#x02013;118 &#x003bc;mol&#x000b7;m<sup>&#x02013;2</sup>&#x000b7;s<sup>&#x02013;1</sup>) to close the stomata. Then the peels with closed
+stomata were washed and incubated for 3 h with each test sample in
+buffer (10 mM MES&#x02013;KOH, pH 6.2, 50 mM KCl) at 22 &#x000b0;C in
+the dark. For the assay for opening of closed stomata in the dark,
+the peels were submerged in filtered buffer (10 mM MES&#x02013;KOH,
+pH 6.2, 50 mM KCl) at 22 &#x000b0;C for 3 h in the dark to close the
+stomata. Then the peels with closed stomata were incubated for 3 h
+with each test sample at 22 &#x000b0;C in the dark. For the competitive
+inhibition of COR (Sigma-Aldrich Japan Co. Ltd., Japan) and ABA on
+stomatal aperture, the peels were submerged in filtered buffer (25
+mM MES&#x02013;KOH, pH 6.15, 10 mM KCl) with 15 &#x003bc;M ABA and 30
+&#x003bc;M COR or COR derivative at 22 &#x000b0;C for 1 h in the light
+(100&#x02013;118 &#x003bc;mol&#x000b7;m<sup>&#x02013;2</sup>&#x000b7;s<sup>&#x02013;1</sup>). Micrographs were taken under an IX71 microscope (Olympus Corp.,
+Japan) equipped with a DP72 CCD camera (Olympus Corp.). The length
+of stomatal apertures was measured using ImageJ 1.45S software (<uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://imagej.net/Welcome">http://imagej.net/Welcome</uri>).</p></sec><sec id="sec4.3"><title>Quantitative PCR</title><p>Seven-day-old plants were incubated
+in autoclaved 1/2 Murashige &#x00026; Skoog liquid medium containing 0.5%
+sucrose and 5 mM MES&#x02013;KOH (pH 5.8) for 3 h at 22 &#x000b0;C in
+the dark. Plants were sampled after one more hour of incubation with
+each filtered 100 &#x003bc;M of test sample at 22 &#x000b0;C in the dark.
+Total RNA was isolated with an RNeasy Mini Kit (QIAGEN Co., Ltd.,
+Germany). First-strand cDNA was synthesized with ReverTra Ace reverse
+transcriptase (TOYOBO, Japan) using oligo-dT primers. Quantitative
+PCR was performed by a StepOnePlus Real-Time PCR System (Life Technologies,
+USA). Sequences of all primers for quantitative PCR are listed in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Table S2</ext-link>. <italic>Tubulin-alpha 5</italic> was
+used as a reference gene.</p></sec><sec id="sec4.4"><title>Y2H Prey-JAZ9 Bait-COI1 Assays</title><p>Y2H
+assays were performed
+using the ProQuest Two-Hybrid System (Invitrogen, CA, USA). Coding
+sequences of <italic>COI1</italic> and <italic>JAZ9</italic> were
+amplified with the primers shown in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Table S3</ext-link> and cloned into plasmid pENTR/D-TOPO (Invitrogen). Using Gateway
+technology, <italic>COI1</italic> and <italic>JAZ9</italic> were respectively
+transferred to plasmids pDEST32 and pDEST22 and transformed into the
+MaV203 strain (MAT&#x003b1;, <italic>leu2-3</italic>, 112, <italic>trp1-901</italic>, <italic>his3&#x00394;200</italic>, <italic>ade2-101</italic>, <italic>gal4&#x00394;</italic>, <italic>gal80&#x00394;</italic>, <italic>SPAL10::URA3</italic>, <italic>GAL1::lacZ</italic>, <italic>HIS3</italic><sub><italic>UASGAL1</italic></sub><italic>::HIS3@LYS2</italic>, <italic>can1</italic><sup><italic>R</italic></sup>, <italic>cyh2</italic><sup><italic>R</italic></sup>). Each transformed yeast was grown in 1 mL of SD/&#x02013;Leu/&#x02013;Trp
+medium at 20 &#x000b0;C until the OD600 reached around 0.4 to 0.8. After
+collection of yeast cells by centrifugation, cells were washed three
+times with sterile water and the OD600 was adjusted to 0.6. After
+that, 3 &#x003bc;L of cultures were spotted to SD/&#x02013;His/&#x02013;Leu/&#x02013;Trp
+medium containing each compound and 1% (v/v) ethanol in each plate.
+To reduce the number of false-positive colonies, 15 mM 3-amino-1,2,4-triazole
+was also added to the SD medium. Plates were incubated at 20 &#x000b0;C
+for 5&#x02013;6 days to observe the interaction.</p></sec><sec id="sec4.5"><title>Pull-Down Assay
+for COI1-JAZ Coreceptor Formation</title><p>The
+plasmids of GST-fused COI1 or ASK1 (pFB-GTE-COI1 and pFB-HTB-ASK1)
+were obtained from Addgene (<uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.addgene.org/">https://www.addgene.org/</uri>). These proteins were coexpressed in insect cells and purified by
+glutathione affinity chromatography.<sup><xref ref-type="bibr" rid="ref47">47</xref></sup> Recombinant
+MBP-fused JAZ9<sup><xref ref-type="bibr" rid="ref7">7</xref>,<xref ref-type="bibr" rid="ref22">22</xref></sup> were expressed in <italic>Escherichia
+coli</italic> BL21 cells and purified in amylose resin (New England
+Biolabs) columns according to the previously reported protocols. In
+the pull-down experiments, purified COI1-GST (5 nM) with ASK1-GST
+and coronatine analogues (100 nM) in 500 &#x003bc;L of incubation buffer
+(50 mM Tris-HCl, pH 7.8, containing 100 mM NaCl, 10% glycerol, 0.1%
+Tween20, 20 mM 2-mercaptoethanol, 1 &#x003bc;M IP<sub>5</sub>, EDTA-free
+complete protease inhibitor cocktail according to the manufacturer&#x02019;s
+instructions (Roche)) was added to amylose resin-bound MBP-JAZ9 (25
+&#x003bc;L suspension of amylose resin with 40 nM MBP-JAZ9). After 4
+h incubation at 4 &#x000b0;C under rotation, the samples were washed with 500 &#x003bc;L of fresh incubation buffer
+in triplicate. The washed amylose resin was resuspended in 50 &#x003bc;L
+of SDS&#x02013;PAGE loading buffer containing maltose (20 mM). Following
+boiling for 10 min at 60 &#x000b0;C, the samples were loaded on SDS&#x02013;PAGE
+and analyzed with Western blotting. The bound COI1-GST were detected
+using anti-GST HRP conjugate (RPN1236, GE Healthcare).</p></sec><sec id="sec4.6"><title>Statistical
+Analysis</title><p>The data were analyzed by one-way
+ANOVA followed by a Student&#x02013;Newman&#x02013;Keuls post hoc test
+among all means. Statistical analysis was conducted using CoStat version
+6.400 software (CoHort Software, <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.cohort.com">http://www.cohort.com</uri>).</p></sec><sec id="sec4.7"><title>Raman Microscopy</title><p>Raman spectra and images in <xref rid="fig4" ref-type="fig">Figures <xref rid="fig4" ref-type="fig">4</xref></xref>, <xref rid="fig5" ref-type="fig">5</xref>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">S2, S3, S5, S7, S8, and S10</ext-link> were
+obtained using laser-scanning Raman microscopy (Raman-11; Nanophoton,
+Japan) with a 532 nm excitation laser. The beam size was 160 &#x003bc;m
+&#x000d7; 0.27 &#x003bc;m (<italic>X</italic> &#x000d7; <italic>Y</italic>), and the resolution was 0.40 &#x003bc;m &#x000d7; 0.37 &#x003bc;m &#x000d7;
+&#x0003e;1.0 &#x003bc;m (<italic>X</italic> &#x000d7; <italic>Y</italic> &#x000d7; <italic>Z</italic>) per pixel. The laser beam was focused to a line at the
+sample and scanned in 1D over a sample to acquire the Raman spectra
+and image. All data processing was performed using Raman image processing
+software (Raman Viewer; Nanophoton Corporation, Japan) installed on
+Raman-11. The detailed conditions for each figure are described in
+the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Supporting Information</ext-link>.</p></sec><sec id="sec4.8"><title>Fluorescence
+Microscopy</title><p>Light micrographs and fluorescent
+images in <xref rid="fig5" ref-type="fig">Figures <xref rid="fig5" ref-type="fig">5</xref></xref>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">S5, and S9</ext-link> were taken using an IX71
+microscope equipped with DP72 CCD camera and WIB filter (Olympus Corp.,
+Japan) or an LSM-710 confocal microscope system (Carl Zeiss, Germany).
+The detailed conditions for each figure are described in the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">Supporting Information</ext-link>.</p></sec></sec></body><back><notes id="notes-1" notes-type="si"><title>Supporting Information Available</title><p>The Supporting Information
+is available free of charge on the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org">ACS Publications website</ext-link> at DOI: <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/abs/10.1021/acscentsci.7b00099">10.1021/acscentsci.7b00099</ext-link>.<list id="silist" list-type="simple"><list-item><p>Details of Raman
+and fluorescence studies, synthesis
+of diyne probe, microarray data, materials and methods, <sup>1</sup>H and <sup>13</sup>C NMR spectra, and references (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acscentsci.7b00099/suppl_file/oc7b00099_si_001.pdf">PDF</ext-link>)</p></list-item></list></p></notes><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material content-type="local-data" id="sifile1"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="oc7b00099_si_001.pdf"><caption><p>oc7b00099_si_001.pdf</p></caption></media></supplementary-material></sec><notes id="NOTES-d228e2283-autogenerated" notes-type="COI-statement"><p>The authors declare no
+competing financial interest.</p></notes><ack><title>Acknowledgments</title><p><italic>Arabidopsis
+thaliana</italic> COI1 mutant (<italic>coi1-1</italic> and <italic>col1-16s</italic>), ANAC mutant (<italic>anac</italic>) in ecotype
+Col-0 background were kindly provide by
+Dr. R. Solano and Dr. A. Chini (National Center for Biotechnology,
+Madrid, Spain), Dr. Yoshiyuki Murata (Okayama University), and Dr.
+Xinnian Dong (Duke University), respectively. ARC6 mutant (<italic>arc6-1</italic>) in ecotype Ws background was kindly provided by
+Dr. Yasushi Yoshioka (Nagoya University). <italic>P</italic><sub><italic>35S</italic></sub>-YFP, <italic>P</italic><sub><italic>35S</italic></sub>-COI1:YFP, and <italic>P</italic><sub><italic>35S</italic></sub>-YFP:JAZ9 plants in ecotype Col-0 background were kindly provided
+by Dr. Sheng Yang He (Michigan State University). We thank Prof. Katsumasa
+Fujita and Dr. Jun Ando (Osaka University) for useful suggestions
+on ATRI, and Dr. Yoshiyuki Murata and Dr. Shintaro Munemasa (Okayama
+University) for helpful discussion throughout the manuscript. This
+work was supported in part by a Grant-in-Aid for Scientific Research
+(No. 23102012) on Innovative Areas &#x0201c;Chemical Biology of Natural
+Products&#x0201d; to M.U. from MEXT, Japan; a Grant-in-Aid for Scientific
+Research (No. 26282207 and No. 17H00885 to M.U.); JSPS A3 Foresight
+Program to M.U.); and AMED-CREST, AMED, to K.D. and M.S.</p></ack><ref-list><title>References</title><ref id="ref1"><mixed-citation publication-type="journal" id="cit1"><name><surname>Fonseca</surname><given-names>S.</given-names></name>; <name><surname>Chini</surname><given-names>A.</given-names></name>; <name><surname>Hamberg</surname><given-names>M.</given-names></name>; <name><surname>Adie</surname><given-names>B.</given-names></name>; <name><surname>Porzel</surname><given-names>A.</given-names></name>; <name><surname>Kramell</surname><given-names>R.</given-names></name>; <name><surname>Miersch</surname><given-names>O.</given-names></name>; <name><surname>Wasternack</surname><given-names>C.</given-names></name>; <name><surname>Solano</surname><given-names>R.</given-names></name>
+<article-title>(+)-7-iso-Jasmonoyl-L-isoleucine is the endogenous
+bioactive jasmonate</article-title>. <source>Nat. Chem. Biol.</source>
+<year>2009</year>, <volume>5</volume><issue>5</issue><fpage>344</fpage>&#x02013;<lpage>350</lpage><pub-id pub-id-type="doi">10.1038/nchembio.161</pub-id>.<pub-id pub-id-type="pmid">19349968</pub-id></mixed-citation></ref><ref id="ref2"><mixed-citation publication-type="journal" id="cit2"><name><surname>Wasternack</surname><given-names>C.</given-names></name>
+<article-title>Jasmonates:
+an update on biosynthesis, signal transduction and action in plant
+stress response, growth and development</article-title>. <source>Ann.
+Bot.</source>
+<year>2007</year>, <volume>100</volume><issue>4</issue><fpage>681</fpage>&#x02013;<lpage>697</lpage><pub-id pub-id-type="doi">10.1093/aob/mcm079</pub-id>.<pub-id pub-id-type="pmid">17513307</pub-id></mixed-citation></ref><ref id="ref3"><mixed-citation publication-type="journal" id="cit3"><name><surname>Wasternack</surname><given-names>C.</given-names></name>; <name><surname>Hause</surname><given-names>B.</given-names></name>
+<article-title>Jasmonates: biosynthesis, perception, signal transduction and action
+in plant stress response, growth and development. An update to the
+2007 review in Annals of Botany</article-title>. <source>Ann. Bot.</source>
+<year>2013</year>, <volume>111</volume><issue>6</issue><fpage>1021</fpage>&#x02013;<lpage>1058</lpage><pub-id pub-id-type="doi">10.1093/aob/mct067</pub-id>.<pub-id pub-id-type="pmid">23558912</pub-id></mixed-citation></ref><ref id="ref4"><mixed-citation publication-type="journal" id="cit4"><name><surname>Wasternack</surname><given-names>C.</given-names></name>
+<article-title>How Jasmonates
+Earned their Laurels: Past and Present</article-title>. <source>J. Plant
+Growth Regul.</source>
+<year>2015</year>, <volume>34</volume><issue>4</issue><fpage>761</fpage>&#x02013;<lpage>794</lpage><pub-id pub-id-type="doi">10.1007/s00344-015-9526-5</pub-id>.</mixed-citation></ref><ref id="ref5"><mixed-citation publication-type="journal" id="cit5"><name><surname>Wasternack</surname><given-names>C.</given-names></name>; <name><surname>Kombrink</surname><given-names>E.</given-names></name>
+<article-title>Jasmonates: structural requirements
+for lipid-derived
+signals active in plant stress responses and development</article-title>. <source>ACS Chem. Biol.</source>
+<year>2010</year>, <volume>5</volume><issue>1</issue><fpage>63</fpage>&#x02013;<lpage>77</lpage><pub-id pub-id-type="doi">10.1021/cb900269u</pub-id>.<pub-id pub-id-type="pmid">20025249</pub-id></mixed-citation></ref><ref id="ref6"><mixed-citation publication-type="journal" id="cit6"><name><surname>Campos</surname><given-names>M. L.</given-names></name>; <name><surname>Kang</surname><given-names>J. H.</given-names></name>; <name><surname>Howe</surname><given-names>G. A.</given-names></name>
+<article-title>Jasmonate-triggered
+plant immunity</article-title>. <source>J. Chem. Ecol.</source>
+<year>2014</year>, <volume>40</volume><issue>7</issue><fpage>657</fpage>&#x02013;<lpage>675</lpage><pub-id pub-id-type="doi">10.1007/s10886-014-0468-3</pub-id>.<pub-id pub-id-type="pmid">24973116</pub-id></mixed-citation></ref><ref id="ref7"><mixed-citation publication-type="journal" id="cit7"><name><surname>Chini</surname><given-names>A.</given-names></name>; <name><surname>Fonseca</surname><given-names>S.</given-names></name>; <name><surname>Fernandez</surname><given-names>G.</given-names></name>; <name><surname>Adie</surname><given-names>B.</given-names></name>; <name><surname>Chico</surname><given-names>J. M.</given-names></name>; <name><surname>Lorenzo</surname><given-names>O.</given-names></name>; <name><surname>Garcia-Casado</surname><given-names>G.</given-names></name>; <name><surname>Lopez-Vidriero</surname><given-names>I.</given-names></name>; <name><surname>Lozano</surname><given-names>F. M.</given-names></name>; <name><surname>Ponce</surname><given-names>M. R.</given-names></name>; et al. <article-title>The
+JAZ family of repressors
+is the missing link in jasmonate signalling</article-title>. <source>Nature</source>
+<year>2007</year>, <volume>448</volume><issue>7154</issue><fpage>666</fpage>&#x02013;<lpage>671</lpage><pub-id pub-id-type="doi">10.1038/nature06006</pub-id>.<pub-id pub-id-type="pmid">17637675</pub-id></mixed-citation></ref><ref id="ref8"><mixed-citation publication-type="journal" id="cit8"><name><surname>Thines</surname><given-names>B.</given-names></name>; <name><surname>Katsir</surname><given-names>L.</given-names></name>; <name><surname>Melotto</surname><given-names>M.</given-names></name>; <name><surname>Niu</surname><given-names>Y.</given-names></name>; <name><surname>Mandaokar</surname><given-names>A.</given-names></name>; <name><surname>Liu</surname><given-names>G.</given-names></name>; <name><surname>Nomura</surname><given-names>K.</given-names></name>; <name><surname>He</surname><given-names>S. Y.</given-names></name>; <name><surname>Howe</surname><given-names>G. A.</given-names></name>; <name><surname>Browse</surname><given-names>J.</given-names></name>
+<article-title>JAZ repressor
+proteins are targets of the SCF(COI1) complex during jasmonate signalling</article-title>. <source>Nature</source>
+<year>2007</year>, <volume>448</volume><issue>7154</issue><fpage>661</fpage>&#x02013;<lpage>665</lpage><pub-id pub-id-type="doi">10.1038/nature05960</pub-id>.<pub-id pub-id-type="pmid">17637677</pub-id></mixed-citation></ref><ref id="ref9"><mixed-citation publication-type="journal" id="cit9"><name><surname>Yan</surname><given-names>Y.</given-names></name>; <name><surname>Stolz</surname><given-names>S.</given-names></name>; <name><surname>Chetelat</surname><given-names>A.</given-names></name>; <name><surname>Reymond</surname><given-names>P.</given-names></name>; <name><surname>Pagni</surname><given-names>M.</given-names></name>; <name><surname>Dubugnon</surname><given-names>L.</given-names></name>; <name><surname>Farmer</surname><given-names>E. E.</given-names></name>
+<article-title>A downstream
+mediator in the growth
+repression limb of the jasmonate pathway</article-title>. <source>Plant
+Cell</source>
+<year>2007</year>, <volume>19</volume><issue>8</issue><fpage>2470</fpage>&#x02013;<lpage>2483</lpage><pub-id pub-id-type="doi">10.1105/tpc.107.050708</pub-id>.<pub-id pub-id-type="pmid">17675405</pub-id></mixed-citation></ref><ref id="ref10"><mixed-citation publication-type="journal" id="cit10"><name><surname>Ichihara</surname><given-names>A.</given-names></name>; <name><surname>Shiraishi</surname><given-names>K.</given-names></name>; <name><surname>Sato</surname><given-names>H.</given-names></name>; <name><surname>Sakamura</surname><given-names>S.</given-names></name>; <name><surname>Nishiyama</surname><given-names>K.</given-names></name>; <name><surname>Sakai</surname><given-names>R.</given-names></name>; <name><surname>Furusaki</surname><given-names>A.</given-names></name>; <name><surname>Matsumoto</surname><given-names>T.</given-names></name>
+<article-title>The structure
+of coronatine</article-title>. <source>J. Am. Chem. Soc.</source>
+<year>1977</year>, <volume>99</volume><issue>2</issue><fpage>636</fpage>&#x02013;<lpage>637</lpage><pub-id pub-id-type="doi">10.1021/ja00444a067</pub-id>.</mixed-citation></ref><ref id="ref11"><mixed-citation publication-type="journal" id="cit11"><name><surname>Katsir</surname><given-names>L.</given-names></name>; <name><surname>Schilmiller</surname><given-names>A. L.</given-names></name>; <name><surname>Staswick</surname><given-names>P. E.</given-names></name>; <name><surname>He</surname><given-names>S. Y.</given-names></name>; <name><surname>Howe</surname><given-names>G. A.</given-names></name>
+<article-title>COI1 is
+a critical component of a receptor for jasmonate and the bacterial
+virulence factor coronatine</article-title>. <source>Proc. Natl. Acad.
+Sci. U. S. A.</source>
+<year>2008</year>, <volume>105</volume><issue>19</issue><fpage>7100</fpage>&#x02013;<lpage>7105</lpage><pub-id pub-id-type="doi">10.1073/pnas.0802332105</pub-id>.<pub-id pub-id-type="pmid">18458331</pub-id></mixed-citation></ref><ref id="ref12"><mixed-citation publication-type="journal" id="cit12"><name><surname>Browse</surname><given-names>J.</given-names></name>
+<article-title>Jasmonate
+passes muster: a receptor and targets for the defense hormone</article-title>. <source>Annu. Rev. Plant Biol.</source>
+<year>2009</year>, <volume>60</volume>, <fpage>183</fpage>&#x02013;<lpage>205</lpage><pub-id pub-id-type="doi">10.1146/annurev.arplant.043008.092007</pub-id>.<pub-id pub-id-type="pmid">19025383</pub-id></mixed-citation></ref><ref id="ref13"><mixed-citation publication-type="journal" id="cit13"><name><surname>Geng</surname><given-names>X.</given-names></name>; <name><surname>Cheng</surname><given-names>J.</given-names></name>; <name><surname>Gangadharan</surname><given-names>A.</given-names></name>; <name><surname>Mackey</surname><given-names>D.</given-names></name>
+<article-title>The coronatine toxin
+of Pseudomonas syringae is a multifunctional suppressor of Arabidopsis
+defense</article-title>. <source>Plant Cell</source>
+<year>2012</year>, <volume>24</volume><issue>11</issue><fpage>4763</fpage>&#x02013;<lpage>4774</lpage><pub-id pub-id-type="doi">10.1105/tpc.112.105312</pub-id>.<pub-id pub-id-type="pmid">23204405</pub-id></mixed-citation></ref><ref id="ref14"><mixed-citation publication-type="journal" id="cit14"><name><surname>Melotto</surname><given-names>M.</given-names></name>; <name><surname>Underwood</surname><given-names>W.</given-names></name>; <name><surname>Koczan</surname><given-names>J.</given-names></name>; <name><surname>Nomura</surname><given-names>K.</given-names></name>; <name><surname>He</surname><given-names>S. Y.</given-names></name>
+<article-title>Plant stomata
+function in innate immunity against bacterial invasion</article-title>. <source>Cell</source>
+<year>2006</year>, <volume>126</volume><issue>5</issue><fpage>969</fpage>&#x02013;<lpage>980</lpage><pub-id pub-id-type="doi">10.1016/j.cell.2006.06.054</pub-id>.<pub-id pub-id-type="pmid">16959575</pub-id></mixed-citation></ref><ref id="ref15"><mixed-citation publication-type="journal" id="cit15"><name><surname>McLachlan</surname><given-names>D. H.</given-names></name>; <name><surname>Kopischke</surname><given-names>M.</given-names></name>; <name><surname>Robatzek</surname><given-names>S.</given-names></name>
+<article-title>Gate control: guard
+cell regulation
+by microbial stress</article-title>. <source>New Phytol.</source>
+<year>2014</year>, <volume>203</volume><issue>4</issue><fpage>1049</fpage>&#x02013;<lpage>1063</lpage><pub-id pub-id-type="doi">10.1111/nph.12916</pub-id>.<pub-id pub-id-type="pmid">25040778</pub-id></mixed-citation></ref><ref id="ref16"><mixed-citation publication-type="journal" id="cit16"><name><surname>Zheng</surname><given-names>X. Y.</given-names></name>; <name><surname>Spivey</surname><given-names>N. W.</given-names></name>; <name><surname>Zeng</surname><given-names>W.</given-names></name>; <name><surname>Liu</surname><given-names>P. P.</given-names></name>; <name><surname>Fu</surname><given-names>Z. Q.</given-names></name>; <name><surname>Klessig</surname><given-names>D. F.</given-names></name>; <name><surname>He</surname><given-names>S. Y.</given-names></name>; <name><surname>Dong</surname><given-names>X.</given-names></name>
+<article-title>Coronatine promotes
+Pseudomonas syringae virulence in plants by activating a signaling
+cascade that inhibits salicylic acid accumulation</article-title>. <source>Cell Host Microbe</source>
+<year>2012</year>, <volume>11</volume><issue>6</issue><fpage>587</fpage>&#x02013;<lpage>596</lpage><pub-id pub-id-type="doi">10.1016/j.chom.2012.04.014</pub-id>.<pub-id pub-id-type="pmid">22704619</pub-id></mixed-citation></ref><ref id="ref17"><mixed-citation publication-type="journal" id="cit17"><name><surname>Montillet</surname><given-names>J. L.</given-names></name>; <name><surname>Hirt</surname><given-names>H.</given-names></name>
+<article-title>New checkpoints in
+stomatal defense</article-title>. <source>Trends
+Plant Sci.</source>
+<year>2013</year>, <volume>18</volume><issue>6</issue><fpage>295</fpage>&#x02013;<lpage>297</lpage><pub-id pub-id-type="doi">10.1016/j.tplants.2013.03.007</pub-id>.<pub-id pub-id-type="pmid">23582764</pub-id></mixed-citation></ref><ref id="ref18"><mixed-citation publication-type="journal" id="cit18"><name><surname>Munemasa</surname><given-names>S.</given-names></name>; <name><surname>Oda</surname><given-names>K.</given-names></name>; <name><surname>Watanabe-Sugimoto</surname><given-names>M.</given-names></name>; <name><surname>Nakamura</surname><given-names>Y.</given-names></name>; <name><surname>Shimoishi</surname><given-names>Y.</given-names></name>; <name><surname>Murata</surname><given-names>Y.</given-names></name>
+<article-title>The coronatine-insensitive
+1 mutation reveals the hormonal
+signaling interaction between abscisic acid and methyl jasmonate in
+Arabidopsis guard cells. Specific impairment of ion channel activation
+and second messenger production</article-title>. <source>Plant Physiol.</source>
+<year>2007</year>, <volume>143</volume><issue>3</issue><fpage>1398</fpage>&#x02013;<lpage>1407</lpage><pub-id pub-id-type="doi">10.1104/pp.106.091298</pub-id>.<pub-id pub-id-type="pmid">17220365</pub-id></mixed-citation></ref><ref id="ref19"><mixed-citation publication-type="journal" id="cit19"><name><surname>Yamakoshi</surname><given-names>H.</given-names></name>; <name><surname>Dodo</surname><given-names>K.</given-names></name>; <name><surname>Okada</surname><given-names>M.</given-names></name>; <name><surname>Ando</surname><given-names>J.</given-names></name>; <name><surname>Palonpon</surname><given-names>A.</given-names></name>; <name><surname>Fujita</surname><given-names>K.</given-names></name>; <name><surname>Kawata</surname><given-names>S.</given-names></name>; <name><surname>Sodeoka</surname><given-names>M.</given-names></name>
+<article-title>Imaging of EdU, an
+alkyne-tagged cell proliferation probe, by Raman microscopy</article-title>. <source>J. Am. Chem. Soc.</source>
+<year>2011</year>, <volume>133</volume><issue>16</issue><fpage>6102</fpage>&#x02013;<lpage>6105</lpage><pub-id pub-id-type="doi">10.1021/ja108404p</pub-id>.<pub-id pub-id-type="pmid">21443184</pub-id></mixed-citation></ref><ref id="ref20"><mixed-citation publication-type="journal" id="cit20"><name><surname>Yamakoshi</surname><given-names>H.</given-names></name>; <name><surname>Dodo</surname><given-names>K.</given-names></name>; <name><surname>Palonpon</surname><given-names>A.</given-names></name>; <name><surname>Ando</surname><given-names>J.</given-names></name>; <name><surname>Fujita</surname><given-names>K.</given-names></name>; <name><surname>Kawata</surname><given-names>S.</given-names></name>; <name><surname>Sodeoka</surname><given-names>M.</given-names></name>
+<article-title>Alkyne-Tag
+Raman Imaging for Visualization
+of Mobile Small Molecules in Live Cells</article-title>. <source>J.
+Am. Chem. Soc.</source>
+<year>2012</year>, <volume>134</volume><issue>51</issue><fpage>20681</fpage>&#x02013;<lpage>20689</lpage><pub-id pub-id-type="doi">10.1021/ja308529n</pub-id>.<pub-id pub-id-type="pmid">23198907</pub-id></mixed-citation></ref><ref id="ref21"><mixed-citation publication-type="journal" id="cit21"><name><surname>Ando</surname><given-names>J.</given-names></name>; <name><surname>Kinoshita</surname><given-names>M.</given-names></name>; <name><surname>Cui</surname><given-names>J.</given-names></name>; <name><surname>Yamakoshi</surname><given-names>H.</given-names></name>; <name><surname>Dodo</surname><given-names>K.</given-names></name>; <name><surname>Fujita</surname><given-names>K.</given-names></name>; <name><surname>Murata</surname><given-names>M.</given-names></name>; <name><surname>Sodeoka</surname><given-names>M.</given-names></name>
+<article-title>Sphingomyelin
+distribution in lipid rafts of artificial monolayer membranes visualized
+by Raman microscopy</article-title>. <source>Proc. Natl. Acad. Sci.
+U. S. A.</source>
+<year>2015</year>, <volume>112</volume><issue>15</issue><fpage>4558</fpage>&#x02013;<lpage>4563</lpage><pub-id pub-id-type="doi">10.1073/pnas.1418088112</pub-id>.<pub-id pub-id-type="pmid">25825736</pub-id></mixed-citation></ref><ref id="ref22"><mixed-citation publication-type="journal" id="cit22"><name><surname>Egoshi</surname><given-names>S.</given-names></name>; <name><surname>Takaoka</surname><given-names>Y.</given-names></name>; <name><surname>Saito</surname><given-names>H.</given-names></name>; <name><surname>Nukadzuka</surname><given-names>Y.</given-names></name>; <name><surname>Hayashi</surname><given-names>K.</given-names></name>; <name><surname>Ishimaru</surname><given-names>Y.</given-names></name>; <name><surname>Yamakoshi</surname><given-names>H.</given-names></name>; <name><surname>Dodo</surname><given-names>K.</given-names></name>; <name><surname>Sodeoka</surname><given-names>M.</given-names></name>; <name><surname>Ueda</surname><given-names>M.</given-names></name>
+<article-title>Dual function of coronatine
+as a bacterial virulence factor against plants: possible COI1&#x02013;JAZ-independent
+role</article-title>. <source>RSC Adv.</source>
+<year>2016</year>, <volume>6</volume><issue>23</issue><fpage>19404</fpage>&#x02013;<lpage>19412</lpage><pub-id pub-id-type="doi">10.1039/C5RA20676F</pub-id>.</mixed-citation></ref><ref id="ref23"><mixed-citation publication-type="journal" id="cit23"><name><surname>Okada</surname><given-names>M.</given-names></name>; <name><surname>Ito</surname><given-names>S.</given-names></name>; <name><surname>Matsubara</surname><given-names>A.</given-names></name>; <name><surname>Iwakura</surname><given-names>I.</given-names></name>; <name><surname>Egoshi</surname><given-names>S.</given-names></name>; <name><surname>Ueda</surname><given-names>M.</given-names></name>
+<article-title>Total syntheses
+of coronatines by exo-selective Diels-Alder reaction and their biological
+activities on stomatal opening</article-title>. <source>Org. Biomol.
+Chem.</source>
+<year>2009</year>, <volume>7</volume><issue>15</issue><fpage>3065</fpage>&#x02013;<lpage>3073</lpage><pub-id pub-id-type="doi">10.1039/b905159g</pub-id>.</mixed-citation></ref><ref id="ref24"><mixed-citation publication-type="journal" id="cit24"><name><surname>Xie</surname><given-names>D. X.</given-names></name>; <name><surname>Feys</surname><given-names>B. F.</given-names></name>; <name><surname>James</surname><given-names>S.</given-names></name>; <name><surname>Nieto-Rostro</surname><given-names>M.</given-names></name>; <name><surname>Turner</surname><given-names>J. G.</given-names></name>
+<article-title>COI1: an Arabidopsis gene required for jasmonate-regulated
+defense and fertility</article-title>. <source>Science</source>
+<year>1998</year>, <volume>280</volume><issue>5366</issue><fpage>1091</fpage>&#x02013;<lpage>1094</lpage><pub-id pub-id-type="doi">10.1126/science.280.5366.1091</pub-id>.<pub-id pub-id-type="pmid">9582125</pub-id></mixed-citation></ref><ref id="ref25"><mixed-citation publication-type="journal" id="cit25"><name><surname>Chen</surname><given-names>J.</given-names></name>; <name><surname>Sonobe</surname><given-names>K.</given-names></name>; <name><surname>Ogawa</surname><given-names>N.</given-names></name>; <name><surname>Masuda</surname><given-names>S.</given-names></name>; <name><surname>Nagatani</surname><given-names>A.</given-names></name>; <name><surname>Kobayashi</surname><given-names>Y.</given-names></name>; <name><surname>Ohta</surname><given-names>H.</given-names></name>
+<article-title>Inhibition of arabidopsis hypocotyl
+elongation by jasmonates is enhanced under red light in phytochrome
+B dependent manner</article-title>. <source>J. Plant Res.</source>
+<year>2013</year>, <volume>126</volume><issue>1</issue><fpage>161</fpage>&#x02013;<lpage>168</lpage><pub-id pub-id-type="doi">10.1007/s10265-012-0509-3</pub-id>.<pub-id pub-id-type="pmid">22825635</pub-id></mixed-citation></ref><ref id="ref26"><mixed-citation publication-type="journal" id="cit26"><name><surname>Nishimura</surname><given-names>S.</given-names></name>; <name><surname>Arita</surname><given-names>Y.</given-names></name>; <name><surname>Honda</surname><given-names>M.</given-names></name>; <name><surname>Iwamoto</surname><given-names>K.</given-names></name>; <name><surname>Matsuyama</surname><given-names>A.</given-names></name>; <name><surname>Shirai</surname><given-names>A.</given-names></name>; <name><surname>Kawasaki</surname><given-names>H.</given-names></name>; <name><surname>Kakeya</surname><given-names>H.</given-names></name>; <name><surname>Kobayashi</surname><given-names>T.</given-names></name>; <name><surname>Matsunaga</surname><given-names>S.</given-names></name>; et al. <article-title>Marine antifungal theonellamides target 3 beta-hydroxysterol
+to activate Rho1 signaling</article-title>. <source>Nat. Chem. Biol.</source>
+<year>2010</year>, <volume>6</volume><issue>7</issue><fpage>519</fpage>&#x02013;<lpage>526</lpage><pub-id pub-id-type="doi">10.1038/nchembio.387</pub-id>.<pub-id pub-id-type="pmid">20543850</pub-id></mixed-citation></ref><ref id="ref27"><mixed-citation publication-type="journal" id="cit27"><name><surname>Withers</surname><given-names>J.</given-names></name>; <name><surname>Yao</surname><given-names>J.</given-names></name>; <name><surname>Mecey</surname><given-names>C.</given-names></name>; <name><surname>Howe</surname><given-names>G. A.</given-names></name>; <name><surname>Melotto</surname><given-names>M.</given-names></name>; <name><surname>He</surname><given-names>S. Y.</given-names></name>
+<article-title>Transcription
+factor-dependent nuclear localization of a transcriptional repressor
+in jasmonate hormone signaling</article-title>. <source>Proc. Natl.
+Acad. Sci. U. S. A.</source>
+<year>2012</year>, <volume>109</volume><issue>49</issue><fpage>20148</fpage>&#x02013;<lpage>20153</lpage><pub-id pub-id-type="doi">10.1073/pnas.1210054109</pub-id>.<pub-id pub-id-type="pmid">23169619</pub-id></mixed-citation></ref><ref id="ref28"><mixed-citation publication-type="journal" id="cit28"><name><surname>Chen</surname><given-names>Y.</given-names></name>; <name><surname>Asano</surname><given-names>T.</given-names></name>; <name><surname>Fujiwara</surname><given-names>M. T.</given-names></name>; <name><surname>Yoshida</surname><given-names>S.</given-names></name>; <name><surname>Machida</surname><given-names>Y.</given-names></name>; <name><surname>Yoshioka</surname><given-names>Y.</given-names></name>
+<article-title>Plant Cells Without
+Detectable Plastids are Generated
+in the crumpled leaf Mutant of Arabidopsis thaliana</article-title>. <source>Plant Cell Physiol.</source>
+<year>2009</year>, <volume>50</volume><issue>5</issue><fpage>956</fpage>&#x02013;<lpage>969</lpage><pub-id pub-id-type="doi">10.1093/pcp/pcp047</pub-id>.<pub-id pub-id-type="pmid">19318374</pub-id></mixed-citation></ref><ref id="ref29"><mixed-citation publication-type="journal" id="cit29"><name><surname>Pyke</surname><given-names>K. A.</given-names></name>; <name><surname>Rutherford</surname><given-names>S. M.</given-names></name>; <name><surname>Robertson</surname><given-names>E. J.</given-names></name>; <name><surname>Leech</surname><given-names>R.</given-names></name>
+<article-title>M. arc6, a fertile
+Arabidopsis mutant with only two mesophyll cell chloroplasts</article-title>. <source>Plant Physiol.</source>
+<year>1994</year>, <volume>106</volume><issue>3</issue><fpage>1169</fpage>&#x02013;<lpage>1177</lpage><pub-id pub-id-type="doi">10.1104/pp.106.3.1169</pub-id>.<pub-id pub-id-type="pmid">12232400</pub-id></mixed-citation></ref><ref id="ref30"><mixed-citation publication-type="journal" id="cit30"><name><surname>Robertson</surname><given-names>E. J.</given-names></name>; <name><surname>Pyke</surname><given-names>K. A.</given-names></name>; <name><surname>Leech</surname><given-names>R. M.</given-names></name>
+<article-title>Arc6, an
+Extreme Chloroplast Division
+Mutant of Arabidopsis Also Alters Proplastid Proliferation and Morphology
+in Shoot and Root Apices</article-title>. <source>J. Cell Sci.</source>
+<year>1995</year>, <volume>108</volume>, <fpage>2937</fpage>&#x02013;<lpage>2944</lpage>.<pub-id pub-id-type="pmid">8537433</pub-id></mixed-citation></ref><ref id="ref31"><mixed-citation publication-type="journal" id="cit31"><name><surname>Roman</surname><given-names>M.</given-names></name>; <name><surname>Dobrowolski</surname><given-names>J. C.</given-names></name>; <name><surname>Baranska</surname><given-names>M.</given-names></name>; <name><surname>Baranski</surname><given-names>R.</given-names></name>
+<article-title>Spectroscopic studies
+on bioactive polyacetylenes and other plant components in wild carrot
+root</article-title>. <source>J. Nat. Prod.</source>
+<year>2011</year>, <volume>74</volume><issue>8</issue><fpage>1757</fpage>&#x02013;<lpage>1763</lpage><pub-id pub-id-type="doi">10.1021/np200265d</pub-id>.<pub-id pub-id-type="pmid">21800857</pub-id></mixed-citation></ref><ref id="ref32"><mixed-citation publication-type="journal" id="cit32"><name><surname>Hong</surname><given-names>S.</given-names></name>; <name><surname>Chen</surname><given-names>T.</given-names></name>; <name><surname>Zhu</surname><given-names>Y.</given-names></name>; <name><surname>Li</surname><given-names>A.</given-names></name>; <name><surname>Huang</surname><given-names>Y.</given-names></name>; <name><surname>Chen</surname><given-names>X.</given-names></name>
+<article-title>Live-cell stimulated Raman scattering
+imaging of alkyne-tagged biomolecules</article-title>. <source>Angew.
+Chem., Int. Ed.</source>
+<year>2014</year>, <volume>53</volume><issue>23</issue><fpage>5827</fpage>&#x02013;<lpage>5831</lpage><pub-id pub-id-type="doi">10.1002/anie.201400328</pub-id>.</mixed-citation></ref><ref id="ref33"><mixed-citation publication-type="journal" id="cit33"><name><surname>Chen</surname><given-names>Z.</given-names></name>; <name><surname>Paley</surname><given-names>D. W.</given-names></name>; <name><surname>Wei</surname><given-names>L.</given-names></name>; <name><surname>Weisman</surname><given-names>A. L.</given-names></name>; <name><surname>Friesner</surname><given-names>R. A.</given-names></name>; <name><surname>Nuckolls</surname><given-names>C.</given-names></name>; <name><surname>Min</surname><given-names>W.</given-names></name>
+<article-title>Multicolor
+live-cell chemical imaging
+by isotopically edited alkyne vibrational palette</article-title>. <source>J. Am. Chem. Soc.</source>
+<year>2014</year>, <volume>136</volume><issue>22</issue><fpage>8027</fpage>&#x02013;<lpage>8033</lpage><pub-id pub-id-type="doi">10.1021/ja502706q</pub-id>.<pub-id pub-id-type="pmid">24849912</pub-id></mixed-citation></ref><ref id="ref34"><mixed-citation publication-type="journal" id="cit34"><name><surname>Wei</surname><given-names>L.</given-names></name>; <name><surname>Hu</surname><given-names>F.</given-names></name>; <name><surname>Shen</surname><given-names>Y.</given-names></name>; <name><surname>Chen</surname><given-names>Z.</given-names></name>; <name><surname>Yu</surname><given-names>Y.</given-names></name>; <name><surname>Lin</surname><given-names>C. C.</given-names></name>; <name><surname>Wang</surname><given-names>M. C.</given-names></name>; <name><surname>Min</surname><given-names>W.</given-names></name>
+<article-title>Live-cell imaging of alkyne-tagged
+small biomolecules by stimulated Raman scattering</article-title>. <source>Nat. Methods</source>
+<year>2014</year>, <volume>11</volume><issue>4</issue><fpage>410</fpage>&#x02013;<lpage>412</lpage><pub-id pub-id-type="doi">10.1038/nmeth.2878</pub-id>.<pub-id pub-id-type="pmid">24584195</pub-id></mixed-citation></ref><ref id="ref35"><mixed-citation publication-type="journal" id="cit35"><name><surname>Wei</surname><given-names>L.</given-names></name>; <name><surname>Hu</surname><given-names>F.</given-names></name>; <name><surname>Chen</surname><given-names>Z.</given-names></name>; <name><surname>Shen</surname><given-names>Y.</given-names></name>; <name><surname>Zhang</surname><given-names>L.</given-names></name>; <name><surname>Min</surname><given-names>W.</given-names></name>
+<article-title>Live-Cell
+Bioorthogonal Chemical Imaging: Stimulated Raman Scattering Microscopy
+of Vibrational Probes</article-title>. <source>Acc. Chem. Res.</source>
+<year>2016</year>, <volume>49</volume><issue>8</issue><fpage>1494</fpage>&#x02013;<lpage>1502</lpage><pub-id pub-id-type="doi">10.1021/acs.accounts.6b00210</pub-id>.<pub-id pub-id-type="pmid">27486796</pub-id></mixed-citation></ref><ref id="ref36"><mixed-citation publication-type="journal" id="cit36"><name><surname>Hu</surname><given-names>F.</given-names></name>; <name><surname>Lamprecht</surname><given-names>M. R.</given-names></name>; <name><surname>Wei</surname><given-names>L.</given-names></name>; <name><surname>Morrison</surname><given-names>B.</given-names></name>; <name><surname>Min</surname><given-names>W.</given-names></name>
+<article-title>Bioorthogonal
+chemical imaging of metabolic activities in live mammalian hippocampal
+tissues with stimulated Raman scattering</article-title>. <source>Sci.
+Rep.</source>
+<year>2016</year>, <volume>6</volume>, <fpage>39660</fpage><pub-id pub-id-type="doi">10.1038/srep39660</pub-id>.<pub-id pub-id-type="pmid">28000773</pub-id></mixed-citation></ref><ref id="ref37"><mixed-citation publication-type="journal" id="cit37"><name><surname>Yamaguchi</surname><given-names>S.</given-names></name>; <name><surname>Matsushita</surname><given-names>T.</given-names></name>; <name><surname>Izuta</surname><given-names>S.</given-names></name>; <name><surname>Katada</surname><given-names>S.</given-names></name>; <name><surname>Ura</surname><given-names>M.</given-names></name>; <name><surname>Ikeda</surname><given-names>T.</given-names></name>; <name><surname>Hayashi</surname><given-names>G.</given-names></name>; <name><surname>Suzuki</surname><given-names>Y.</given-names></name>; <name><surname>Kobayashi</surname><given-names>K.</given-names></name>; <name><surname>Tokunaga</surname><given-names>K.</given-names></name>; et al. <article-title>Chemically-activatable alkyne-tagged probe
+for imaging microdomains in lipid bilayer membranes</article-title>. <source>Sci. Rep.</source>
+<year>2017</year>, <volume>7</volume>, <fpage>41007</fpage><pub-id pub-id-type="doi">10.1038/srep41007</pub-id>.<pub-id pub-id-type="pmid">28117375</pub-id></mixed-citation></ref><ref id="ref38"><mixed-citation publication-type="journal" id="cit38"><name><surname>Higaki</surname><given-names>T.</given-names></name>; <name><surname>Kutsuna</surname><given-names>N.</given-names></name>; <name><surname>Hosokawa</surname><given-names>Y.</given-names></name>; <name><surname>Akita</surname><given-names>K.</given-names></name>; <name><surname>Ebine</surname><given-names>K.</given-names></name>; <name><surname>Ueda</surname><given-names>T.</given-names></name>; <name><surname>Kondo</surname><given-names>N.</given-names></name>; <name><surname>Hasezawa</surname><given-names>S.</given-names></name>
+<article-title>Statistical organelle
+dissection of Arabidopsis guard cells using image database LIPS</article-title>. <source>Sci. Rep.</source>
+<year>2012</year>, <volume>2</volume>, <fpage>405</fpage><pub-id pub-id-type="doi">10.1038/srep00405</pub-id>.<pub-id pub-id-type="pmid">22582142</pub-id></mixed-citation></ref><ref id="ref39"><mixed-citation publication-type="journal" id="cit39"><name><surname>Kim</surname><given-names>T. H.</given-names></name>; <name><surname>Bohmer</surname><given-names>M.</given-names></name>; <name><surname>Hu</surname><given-names>H.</given-names></name>; <name><surname>Nishimura</surname><given-names>N.</given-names></name>; <name><surname>Schroeder</surname><given-names>J. I.</given-names></name>
+<article-title>Guard cell signal transduction network:
+advances in
+understanding abscisic acid, CO2, and Ca2+ signaling</article-title>. <source>Annu. Rev. Plant Biol.</source>
+<year>2010</year>, <volume>61</volume>, <fpage>561</fpage>&#x02013;<lpage>591</lpage><pub-id pub-id-type="doi">10.1146/annurev-arplant-042809-112226</pub-id>.<pub-id pub-id-type="pmid">20192751</pub-id></mixed-citation></ref><ref id="ref40"><mixed-citation publication-type="journal" id="cit40"><name><surname>Fan</surname><given-names>L.-M.</given-names></name>; <name><surname>Zhao</surname><given-names>Z.</given-names></name>; <name><surname>Assmann</surname><given-names>S. M.</given-names></name>
+<article-title>Guard cells:
+a dynamic signaling
+model</article-title>. <source>Curr. Opin. Plant Biol.</source>
+<year>2004</year>, <volume>7</volume><issue>5</issue><fpage>537</fpage>&#x02013;<lpage>546</lpage><pub-id pub-id-type="doi">10.1016/j.pbi.2004.07.009</pub-id>.<pub-id pub-id-type="pmid">15337096</pub-id></mixed-citation></ref><ref id="ref41"><mixed-citation publication-type="journal" id="cit41"><name><surname>Grefen</surname><given-names>C.</given-names></name>; <name><surname>Honsbein</surname><given-names>A.</given-names></name>; <name><surname>Blatt</surname><given-names>M. R.</given-names></name>
+<article-title>Ion transport,
+membrane traffic and
+cellular volume control</article-title>. <source>Curr. Opin. Plant Biol.</source>
+<year>2011</year>, <volume>14</volume><issue>3</issue><fpage>332</fpage>&#x02013;<lpage>339</lpage><pub-id pub-id-type="doi">10.1016/j.pbi.2011.03.017</pub-id>.<pub-id pub-id-type="pmid">21507708</pub-id></mixed-citation></ref><ref id="ref42"><mixed-citation publication-type="journal" id="cit42"><name><surname>Sieben</surname><given-names>C.</given-names></name>; <name><surname>Mikosch</surname><given-names>M.</given-names></name>; <name><surname>Brandizzi</surname><given-names>F.</given-names></name>; <name><surname>Homann</surname><given-names>U.</given-names></name>
+<article-title>Interaction of the
+K+-channel KAT1 with the coat protein complex II coat component Sec24
+depends on a di-acidic endoplasmic reticulum export motif</article-title>. <source>Plant J.</source>
+<year>2008</year>, <volume>56</volume><issue>6</issue><fpage>997</fpage>&#x02013;<lpage>1006</lpage><pub-id pub-id-type="doi">10.1111/j.1365-313X.2008.03658.x</pub-id>.<pub-id pub-id-type="pmid">18702673</pub-id></mixed-citation></ref><ref id="ref43"><mixed-citation publication-type="journal" id="cit43"><name><surname>Phillipson</surname><given-names>B. A.</given-names></name>; <name><surname>Pimpl</surname><given-names>P.</given-names></name>; <name><surname>daSilva</surname><given-names>L. L. P.</given-names></name>; <name><surname>Crofts</surname><given-names>A. J.</given-names></name>; <name><surname>Taylor</surname><given-names>J. P.</given-names></name>; <name><surname>Movafeghi</surname><given-names>A.</given-names></name>; <name><surname>Robinson</surname><given-names>D. G.</given-names></name>; <name><surname>Denecke</surname><given-names>J.</given-names></name>
+<article-title>Secretory bulk flow
+of soluble proteins is efficient and COPII dependent</article-title>. <source>Plant Cell</source>
+<year>2001</year>, <volume>13</volume><issue>9</issue><fpage>2005</fpage>&#x02013;<lpage>2020</lpage><pub-id pub-id-type="doi">10.2307/3871424</pub-id>.<pub-id pub-id-type="pmid">11549760</pub-id></mixed-citation></ref><ref id="ref44"><mixed-citation publication-type="journal" id="cit44"><name><surname>DaSilva</surname><given-names>L. L. P.</given-names></name>; <name><surname>Snapp</surname><given-names>E. L.</given-names></name>; <name><surname>Denecke</surname><given-names>J.</given-names></name>; <name><surname>Lippincott-Schwartz</surname><given-names>J.</given-names></name>; <name><surname>Hawes</surname><given-names>C.</given-names></name>; <name><surname>Brandizzi</surname><given-names>F.</given-names></name>
+<article-title>Endoplasmic
+reticulum export sites
+and golgi bodies behave as single mobile secretory units in plant
+cells</article-title>. <source>Plant Cell</source>
+<year>2004</year>, <volume>16</volume><issue>7</issue><fpage>1753</fpage>&#x02013;<lpage>1771</lpage><pub-id pub-id-type="doi">10.1105/tpc.022673</pub-id>.<pub-id pub-id-type="pmid">15208385</pub-id></mixed-citation></ref><ref id="ref45"><mixed-citation publication-type="journal" id="cit45"><name><surname>Takeuchi</surname><given-names>M.</given-names></name>; <name><surname>Ueda</surname><given-names>T.</given-names></name>; <name><surname>Sato</surname><given-names>K.</given-names></name>; <name><surname>Abe</surname><given-names>H.</given-names></name>; <name><surname>Nagata</surname><given-names>T.</given-names></name>; <name><surname>Nakano</surname><given-names>A.</given-names></name>
+<article-title>A dominant negative mutant of Sar1
+GTPase inhibits
+protein transport from the endoplasmic reticulum to the Golgi apparatus
+in tobacco and Arabidopsis cultured cells</article-title>. <source>Plant
+J.</source>
+<year>2000</year>, <volume>23</volume><issue>4</issue><fpage>517</fpage>&#x02013;<lpage>525</lpage><pub-id pub-id-type="doi">10.1046/j.1365-313x.2000.00823.x</pub-id>.<pub-id pub-id-type="pmid">10972878</pub-id></mixed-citation></ref><ref id="ref46"><mixed-citation publication-type="journal" id="cit46"><name><surname>Yang</surname><given-names>Y. D.</given-names></name>; <name><surname>Elamawi</surname><given-names>R.</given-names></name>; <name><surname>Bubeck</surname><given-names>J.</given-names></name>; <name><surname>Pepperkok</surname><given-names>R.</given-names></name>; <name><surname>Ritzenthaler</surname><given-names>C.</given-names></name>; <name><surname>Robinson</surname><given-names>D. G.</given-names></name>
+<article-title>Dynamics of COPII
+vesicles and the
+Golgi apparatus in cultured Nicotiana tabacum BY-2 cells provides
+evidence for transient association of Golgi stacks with endoplasmic
+reticulum exit sites</article-title>. <source>Plant Cell</source>
+<year>2005</year>, <volume>17</volume><issue>5</issue><fpage>1513</fpage>&#x02013;<lpage>1531</lpage><pub-id pub-id-type="doi">10.1105/tpc.104.026757</pub-id>.<pub-id pub-id-type="pmid">15805489</pub-id></mixed-citation></ref><ref id="ref47"><mixed-citation publication-type="journal" id="cit47"><name><surname>Sheard</surname><given-names>L. B.</given-names></name>; <name><surname>Tan</surname><given-names>X.</given-names></name>; <name><surname>Mao</surname><given-names>H.</given-names></name>; <name><surname>Withers</surname><given-names>J.</given-names></name>; <name><surname>Ben-Nissan</surname><given-names>G.</given-names></name>; <name><surname>Hinds</surname><given-names>T. R.</given-names></name>; <name><surname>Kobayashi</surname><given-names>Y.</given-names></name>; <name><surname>Hsu</surname><given-names>F. F.</given-names></name>; <name><surname>Sharon</surname><given-names>M.</given-names></name>; <name><surname>Browse</surname><given-names>J.</given-names></name>; et al. <article-title>Jasmonate perception by inositol-phosphate-potentiated
+COI1-JAZ co-receptor</article-title>. <source>Nature</source>
+<year>2010</year>, <volume>468</volume><issue>7322</issue><fpage>400</fpage>&#x02013;<lpage>405</lpage><pub-id pub-id-type="doi">10.1038/nature09430</pub-id>.<pub-id pub-id-type="pmid">20927106</pub-id></mixed-citation></ref></ref-list></back></article>

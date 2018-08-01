@@ -1,0 +1,709 @@
+{
+  "id": [
+    "25806518"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25806518"
+  ],
+  "pmcid": [
+    "PMC4373911"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0120385"
+  ],
+  "title": [
+    "Genetic and molecular characterization of submergence response identifies Subtol6 as a major submergence tolerance locus in maize."
+  ],
+  "authorString": [
+    "Campbell MT, Proctor CA, Dou Y, Schmitz AJ, Phansak P, Kruger GR, Zhang C, Walia H."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Campbell MT"
+          ],
+          "firstName": [
+            "Malachy T"
+          ],
+          "lastName": [
+            "Campbell"
+          ],
+          "initials": [
+            "MT"
+          ],
+          "affiliation": [
+            "University of Nebraska-Lincoln, Department of Agronomy and Horticulture, Lincoln, Nebraska, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Proctor CA"
+          ],
+          "firstName": [
+            "Christopher A"
+          ],
+          "lastName": [
+            "Proctor"
+          ],
+          "initials": [
+            "CA"
+          ],
+          "affiliation": [
+            "University of Nebraska-Lincoln, Department of Agronomy and Horticulture, Lincoln, Nebraska, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Dou Y"
+          ],
+          "firstName": [
+            "Yongchao"
+          ],
+          "lastName": [
+            "Dou"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "University of Nebraska-Lincoln, School of Biological Sciences, Lincoln, Nebraska, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Schmitz AJ"
+          ],
+          "firstName": [
+            "Aaron J"
+          ],
+          "lastName": [
+            "Schmitz"
+          ],
+          "initials": [
+            "AJ"
+          ],
+          "affiliation": [
+            "University of Nebraska-Lincoln, Department of Agronomy and Horticulture, Lincoln, Nebraska, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Phansak P"
+          ],
+          "firstName": [
+            "Piyaporn"
+          ],
+          "lastName": [
+            "Phansak"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "University of Nebraska-Lincoln, Department of Agronomy and Horticulture, Lincoln, Nebraska, United States of America; Nakhon Phanom University, Muang District, Thailand."
+          ]
+        },
+        {
+          "fullName": [
+            "Kruger GR"
+          ],
+          "firstName": [
+            "Greg R"
+          ],
+          "lastName": [
+            "Kruger"
+          ],
+          "initials": [
+            "GR"
+          ],
+          "affiliation": [
+            "University of Nebraska-Lincoln, Department of Agronomy and Horticulture, Lincoln, Nebraska, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang C"
+          ],
+          "firstName": [
+            "Chi"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "C"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-1827-8137",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "University of Nebraska-Lincoln, School of Biological Sciences, Lincoln, Nebraska, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Walia H"
+          ],
+          "firstName": [
+            "Harkamal"
+          ],
+          "lastName": [
+            "Walia"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "University of Nebraska-Lincoln, Department of Agronomy and Horticulture, Lincoln, Nebraska, United States of America."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-1827-8137",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "3"
+      ],
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "2258653"
+      ],
+      "dateOfPublication": [
+        "2015"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "e0120385"
+  ],
+  "abstractText": [
+    "Maize is highly sensitive to short term flooding and submergence. Early season flooding reduces germination, survival and growth rate of maize seedlings. We aimed to discover genetic variation for submergence tolerance in maize and elucidate the genetic basis of submergence tolerance through transcriptional profiling and linkage analysis of contrasting genotypes. A diverse set of maize nested association mapping (NAM) founder lines were screened, and two highly tolerant (Mo18W and M162W) and sensitive (B97 and B73) genotypes were identified. Tolerant lines exhibited delayed senescence and lower oxidative stress levels compared to sensitive lines. Transcriptome analysis was performed on these inbreds to provide genome level insights into the molecular responses to submergence. Tolerant lines had higher transcript abundance of several fermentation-related genes and an unannotated Pyrophosphate-Dependent Fructose-6-Phosphate 1-Phosphotransferase gene during submergence. A coexpression network enriched for CBF (C-REPEAT/DRE BINDING FACTOR: C-REPEAT/DRE BINDING FACTOR) genes, was induced by submergence in all four inbreds, but was more activated in the tolerant Mo18W. A recombinant inbred line (RIL) population derived from Mo18W and B73 was screened for submergence tolerance. A major QTL named Subtol6 was mapped to chromosome 6 that explains 22% of the phenotypic variation within the RIL population. We identified two candidate genes (HEMOGLOBIN2 and RAV1) underlying Subtol6 based on contrasting expression patterns observed in B73 and Mo18W. Sources of tolerance identified in this study (Subtol6) can be useful to increase survival rate during flooding events that are predicted to increase in frequency with climate change."
+  ],
+  "affiliation": [
+    "University of Nebraska-Lincoln, Department of Agronomy and Horticulture, Lincoln, Nebraska, United States of America."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Zea mays"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Chromosome Mapping"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Adaptation, Physiological"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oxidative Stress"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Quantitative Trait Loci"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Floods"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Climate Change"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genetic Linkage"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seedlings"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4373911?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4373911"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0120385"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "5"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "ARXPR"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "go"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-02-17"
+  ],
+  "dateOfCreation": [
+    "2015-03-26"
+  ],
+  "dateOfRevision": [
+    "2015-03-31"
+  ],
+  "electronicPublicationDate": [
+    "2015-03-25"
+  ],
+  "firstPublicationDate": [
+    "2015-03-25"
+  ]
+}

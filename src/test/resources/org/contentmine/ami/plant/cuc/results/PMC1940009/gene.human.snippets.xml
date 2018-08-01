@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC1940009/results/gene/human/results.xml">
+  <result pre="The expression of Lipoxygenase2 ( " exact="LOX2" post=", At3g45140) and Allene Oxide Synthase ( AOS, At5g42650), which are involved in the s" xpath="/html[1]/body[1]/div[2]/div[5]/div[6]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="he expression of Lipoxygenase2 ( LOX2, At3g45140) and Allene Oxide Synthase ( " exact="AOS" post=", At5g42650), which are involved in the synthesis of JA, was increased in both cultivars. The LO" xpath="/html[1]/body[1]/div[2]/div[5]/div[6]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="S, At5g42650), which are involved in the synthesis of JA, was increased in both cultivars. The " exact="LOX2 " post="gene is involved in induced indirect defense of A. thaliana and mediates the attraction of t" xpath="/html[1]/body[1]/div[2]/div[5]/div[6]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="iency of cDNA synthesis was assessed by qRT-PCR using primers of the constitutively expressed gene " exact="GAPDH " post="( GAPDH-LEFT; 5'-AGA GCC GCT TCC TTC AAC ATC ATT-3'; GAPDH-RIGHT; 5'-TGG GCA CAC GGA " xpath="/html[1]/body[1]/div[2]/div[5]/div[6]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="ynthesis was assessed by qRT-PCR using primers of the constitutively expressed gene GAPDH ( " exact="GAPDH" post="-LEFT; 5'-AGA GCC GCT TCC TTC AAC ATC ATT-3'; GAPDH-RIGHT; 5'-TGG GCA CAC GGA AGG ACA TAC C-" xpath="/html[1]/body[1]/div[2]/div[5]/div[6]/p[1]" name="human"/>
+  <result pre="titutively expressed gene GAPDH ( GAPDH-LEFT; 5'-AGA GCC GCT TCC TTC AAC ATC ATT-3'; " exact="GAPDH" post="-RIGHT; 5'-TGG GCA CAC GGA AGG ACA TAC C-3'). Gene-specific primers were designed for five B. ol" xpath="/html[1]/body[1]/div[2]/div[5]/div[6]/p[1]" name="human"/>
+  <result pre="g72290, LEFT 5'-TGG TGA CAA GTA GCT GTG GTG-3', RIGHT 5'-TCC AAG TTA TGG GCA GTG G-3'; At3g45140 ( " exact="LOX" post="), LEFT 5'-CTT TGC TCA CAT ACG GTA GAA GC-3', RIGHT 5'-CCT TTG CAT TGG GCT AGT TC-3' (marker gene f" xpath="/html[1]/body[1]/div[2]/div[5]/div[6]/p[1]" name="human"/>
+  <result pre="alues were normalized for differences in cDNA synthesis by subtracting the C T value of " exact="GAPDH " post="from the C T value of the gene of interest. Normalized gene expression was than obtained" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

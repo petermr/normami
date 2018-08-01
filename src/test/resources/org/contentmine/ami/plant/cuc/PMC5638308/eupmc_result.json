@@ -1,0 +1,616 @@
+{
+  "id": [
+    "29023561"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29023561"
+  ],
+  "pmcid": [
+    "PMC5638308"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0186084"
+  ],
+  "title": [
+    "Expression patterns and promoter analyses of aluminum-responsive NAC genes suggest a possible growth regulation of rice mediated by aluminum, hormones and NAC transcription factors."
+  ],
+  "authorString": [
+    "Escobar-Sepúlveda HF, Trejo-Téllez LI, García-Morales S, Gómez-Merino FC."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Escobar-Sepúlveda HF"
+          ],
+          "firstName": [
+            "Hugo Fernando"
+          ],
+          "lastName": [
+            "Escobar-Sepúlveda"
+          ],
+          "initials": [
+            "HF"
+          ],
+          "affiliation": [
+            "Department of Biotechnology, Colegio de Postgraduados Campus Córdoba, Manuel León, Amatlán de los Reyes, Veracruz, Mexico."
+          ]
+        },
+        {
+          "fullName": [
+            "Trejo-Téllez LI"
+          ],
+          "firstName": [
+            "Libia Iris"
+          ],
+          "lastName": [
+            "Trejo-Téllez"
+          ],
+          "initials": [
+            "LI"
+          ],
+          "affiliation": [
+            "Department of Soil Science, Laboratory of Plant Nutrition, Colegio de Postgraduados Campus Montecillo, Montecillo, Texcoco, State of Mexico, Mexico."
+          ]
+        },
+        {
+          "fullName": [
+            "García-Morales S"
+          ],
+          "firstName": [
+            "Soledad"
+          ],
+          "lastName": [
+            "García-Morales"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Plant Biotechnology, CONACYT-Center for Research and Assistance in Technology and Design of the State of Jalisco, Zapopan, Jalisco, Mexico."
+          ]
+        },
+        {
+          "fullName": [
+            "Gómez-Merino FC"
+          ],
+          "firstName": [
+            "Fernando Carlos"
+          ],
+          "lastName": [
+            "Gómez-Merino"
+          ],
+          "initials": [
+            "FC"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-8496-2095",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biotechnology, Colegio de Postgraduados Campus Córdoba, Manuel León, Amatlán de los Reyes, Veracruz, Mexico."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-8496-2095",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "10"
+      ],
+      "volume": [
+        "12"
+      ],
+      "journalIssueId": [
+        "2602763"
+      ],
+      "dateOfPublication": [
+        "2017 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "e0186084"
+  ],
+  "abstractText": [
+    "In acid soils, the solubilized form of aluminum, Al+3, decreases root growth and affects the development of most crops. However, like other toxic elements, Al can have hormetic effects on plant metabolism. Rice (Oryza sativa) is one of the most tolerant species to Al toxicity, and when this element is supplied at low doses, growth stimulation has been observed, which could be due to combined mechanisms that are partly triggered by NAC transcription factors. This protein family can regulate vital processes in plants, including growth, development, and response to environmental stimuli, whether biotic or abiotic. Under our experimental conditions, 200 μM Al stimulated root growth and the formation of tillers; it also caused differential expression of a set of NAC genes. The promoter regions of the genes regulated by Al were analyzed and the cis-acting elements that are potentially involved in the responses to different stimuli, including environmental stress, were identified. Through the Genevestigator platform, data on the expression of NAC genes were obtained by experimental condition, tissue, and vegetative stage. This is the first study on NAC genes where in vivo and in silico data are complementarily analyzed, relating the hormetic effect of Al on plant growth and gene expression with a possible interaction in the response to phytohormones in rice. These findings could help to elucidate the possible convergence between the signaling pathways mediated by phytohormones and the role of the NAC transcription factors in the regulation of growth mediated by low Al doses."
+  ],
+  "affiliation": [
+    "Department of Biotechnology, Colegio de Postgraduados Campus Córdoba, Manuel León, Amatlán de los Reyes, Veracruz, Mexico."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Aluminum"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Growth Regulators"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Regulatory Sequences, Nucleic Acid"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oryza"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Plant Growth Regulators"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Aluminum"
+          ],
+          "registryNumber": [
+            "CPD4NFA903"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5638308?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5638308"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0186084"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2017-10-23"
+  ],
+  "dateOfCreation": [
+    "2017-10-13"
+  ],
+  "dateOfRevision": [
+    "2017-12-19"
+  ],
+  "electronicPublicationDate": [
+    "2017-10-12"
+  ],
+  "firstPublicationDate": [
+    "2017-10-12"
+  ]
+}

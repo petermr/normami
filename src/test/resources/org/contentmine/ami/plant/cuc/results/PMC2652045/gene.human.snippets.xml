@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC2652045/results/gene/human/results.xml">
+  <result pre="lable in Supplementary data at " exact="JXB" post=" online. Real-time PCR verification was performed according to Liu et al. (" xpath="/html[1]/body[1]/div[2]/div[3]/div[6]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="lable in Supplementary data at " exact="JXB" post=" online. Interestingly, 31% of the ESTs were found to be potentially new genes having no similarity" xpath="/html[1]/body[1]/div[2]/div[3]/div[6]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="a href=&quot;http://jxb.oxfordjournals.org/cgi/content/full/ern329/DC1&quot;&gt;Supplementary data available at " exact="JXB" post=" online. For each gene, the EST GenBank accession numbers and the putative molecular function are g" xpath="/html[1]/body[1]/div[2]/div[3]/div[6]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="fferentially expressed genes in each cluster is also shown. (This figure is available in colour at " exact="JXB" post=" online.) " xpath="/html[1]/body[1]/div[2]/div[3]/div[6]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="lable in Supplementary data at " exact="JXB" post=" online. Pyruvate metabolism, glycolysis/gluconeogenesis, pentose and glucuronate interconversions," xpath="/html[1]/body[1]/div[2]/div[3]/div[6]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="lable in Supplementary data at " exact="JXB" post=" online). Transcript abundance patterns were compared at five time points between mutant ‘Hong Anli" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

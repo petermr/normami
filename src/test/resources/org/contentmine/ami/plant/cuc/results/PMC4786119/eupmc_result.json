@@ -1,0 +1,595 @@
+{
+  "id": [
+    "26963095"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26963095"
+  ],
+  "pmcid": [
+    "PMC4786119"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0150582"
+  ],
+  "title": [
+    "Genome-Wide Investigation Using sRNA-Seq, Degradome-Seq and Transcriptome-Seq Reveals Regulatory Networks of microRNAs and Their Target Genes in Soybean during Soybean mosaic virus Infection."
+  ],
+  "authorString": [
+    "Chen H, Arsovski AA, Yu K, Wang A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Chen H"
+          ],
+          "firstName": [
+            "Hui"
+          ],
+          "lastName": [
+            "Chen"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Dept of Biology, The University of Western Ontario, 1151 Richmond ST N. London, Ontario, N6A 5B7, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Arsovski AA"
+          ],
+          "firstName": [
+            "Andrej Adam"
+          ],
+          "lastName": [
+            "Arsovski"
+          ],
+          "initials": [
+            "AA"
+          ],
+          "affiliation": [
+            "Agriculture and Agri-Food Canada, 1391 Sandford ST. London, Ontario, N5T 4T3, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Yu K"
+          ],
+          "firstName": [
+            "Kangfu"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Greenhouse and Processing Crops Research Centre, Agriculture and Agri-Food Canada, 2585 County Rd. 20, Harrow, Ontario, N0R 1G0, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang A"
+          ],
+          "firstName": [
+            "Aiming"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Dept of Biology, The University of Western Ontario, 1151 Richmond ST N. London, Ontario, N6A 5B7, Canada."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "3"
+      ],
+      "volume": [
+        "11"
+      ],
+      "journalIssueId": [
+        "2390957"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "e0150582"
+  ],
+  "abstractText": [
+    "MicroRNAs (miRNAs) play key roles in a variety of cellular processes through regulation of their target gene expression. Accumulated experimental evidence has demonstrated that infections by viruses are associated with the altered expression profile of miRNAs and their mRNA targets in the host. However, the regulatory network of miRNA-mRNA interactions during viral infection remains largely unknown. In this study, we performed small RNA (sRNA)-seq, degradome-seq and as well as a genome-wide transcriptome analysis to profile the global gene and miRNA expression in soybean following infections by three different Soybean mosaic virus (SMV) isolates, L (G2 strain), LRB (G2 strain) and G7 (G7 strain). sRNA-seq analyses revealed a total of 253 soybean miRNAs with a two-fold or greater change in abundance compared with the mock-inoculated control. 125 transcripts were identified as the potential cleavage targets of 105 miRNAs and validated by degradome-seq analyses. Genome-wide transcriptome analysis showed that total 2679 genes are differentially expressed in response to SMV infection including 71 genes predicted as involved in defense response. Finally, complex miRNA-mRNA regulatory networks were derived using the RNAseq, small RNAseq and degradome data. This work represents a comprehensive, global approach to examining virus-host interactions. Genes responsive to SMV infection are identified as are their potential miRNA regulators. Additionally, regulatory changes of the miRNAs themselves are described and the regulatory relationships were supported with degradome data. Taken together these data provide new insights into molecular SMV-soybean interactions and offer candidate miRNAs and their targets for further elucidation of the SMV infection process."
+  ],
+  "affiliation": [
+    "Dept of Biology, The University of Western Ontario, 1151 Richmond ST N. London, Ontario, N6A 5B7, Canada."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Potyvirus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Soybeans"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "VI"
+                  ],
+                  "qualifierName": [
+                    "virology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "RNA, Messenger"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "RNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Plant Diseases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "VI"
+                  ],
+                  "qualifierName": [
+                    "virology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genome-Wide Association Study"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "RNA, Messenger"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4786119?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4786119"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0150582"
+          ]
+        }
+      ]
+    }
+  ],
+  "commentCorrectionList": [
+    {
+      "commentCorrection": [
+        {
+          "id": [
+            "29121117"
+          ],
+          "source": [
+            "MED"
+          ],
+          "reference": [
+            "PLoS One. 2017 Nov 9;12 (11):e0188140"
+          ],
+          "type": [
+            "Erratum in"
+          ],
+          "orderIn": [
+            "65"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "4"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "go"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-08-01"
+  ],
+  "dateOfCreation": [
+    "2016-03-11"
+  ],
+  "dateOfRevision": [
+    "2017-12-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-03-10"
+  ],
+  "firstPublicationDate": [
+    "2016-03-10"
+  ]
+}

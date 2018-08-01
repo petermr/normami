@@ -1,0 +1,753 @@
+{
+  "id": [
+    "26344546"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26344546"
+  ],
+  "pmcid": [
+    "PMC4606454"
+  ],
+  "doi": [
+    "10.7554/elife.06671"
+  ],
+  "title": [
+    "Geminivirus-encoded TrAP suppressor inhibits the histone methyltransferase SUVH4/KYP to counter host defense."
+  ],
+  "authorString": [
+    "Castillo-González C, Castillo-González C, Liu X, Huang C, Zhao C, Ma Z, Hu T, Sun F, Zhou Y, Zhou X, Wang XJ, Zhang X."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Castillo-González C"
+          ],
+          "firstName": [
+            "Claudia"
+          ],
+          "lastName": [
+            "Castillo-González"
+          ],
+          "initials": [
+            "C"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-8359-0231",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Institute for Plant Genomics and Biotechnology, Texas A&M University, College Station, United States."
+          ]
+        },
+        {
+          "fullName": [
+            "Castillo-González C"
+          ],
+          "firstName": [
+            "Claudia"
+          ],
+          "lastName": [
+            "Castillo-González"
+          ],
+          "initials": [
+            "C"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-6250-4317",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Institute for Plant Genomics and Biotechnology, Texas A&M University, College Station, United States."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu X"
+          ],
+          "firstName": [
+            "Xiuying"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Huang C"
+          ],
+          "firstName": [
+            "Changjun"
+          ],
+          "lastName": [
+            "Huang"
+          ],
+          "initials": [
+            "C"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3131-8743",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Yunnan Academy of Tobacco Agricultural Sciences, Yunnan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhao C"
+          ],
+          "firstName": [
+            "Changjiang"
+          ],
+          "lastName": [
+            "Zhao"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "College of Agronomy, Heilongjiang Bayi Agricultural University, Daqing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Ma Z"
+          ],
+          "firstName": [
+            "Zeyang"
+          ],
+          "lastName": [
+            "Ma"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "Institute for Plant Genomics and Biotechnology, Texas A&M University, College Station, United States."
+          ]
+        },
+        {
+          "fullName": [
+            "Hu T"
+          ],
+          "firstName": [
+            "Tao"
+          ],
+          "lastName": [
+            "Hu"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Rice Biology, Institute of Biotechnology, Zhejiang University, Hangzhou, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Sun F"
+          ],
+          "firstName": [
+            "Feng"
+          ],
+          "lastName": [
+            "Sun"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Institute of Plant Protection, Jiangsu Academy of Agricultural Sciences, Nanjing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhou Y"
+          ],
+          "firstName": [
+            "Yijun"
+          ],
+          "lastName": [
+            "Zhou"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Institute of Plant Protection, Jiangsu Academy of Agricultural Sciences, Nanjing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhou X"
+          ],
+          "firstName": [
+            "Xueping"
+          ],
+          "lastName": [
+            "Zhou"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Biotechnology Institute, College of Agriculture & Biotechnology, Zhejiang University, Zhejiang, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang XJ"
+          ],
+          "firstName": [
+            "Xiu-Jie"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "XJ"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang X"
+          ],
+          "firstName": [
+            "Xiuren"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Institute for Plant Genomics and Biotechnology, Texas A&M University, College Station, United States."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-8359-0231",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-3131-8743",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-6250-4317",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "4"
+      ],
+      "journalIssueId": [
+        "2318740"
+      ],
+      "dateOfPublication": [
+        "2015 Sep"
+      ],
+      "monthOfPublication": [
+        "9"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-09-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "eLife"
+          ],
+          "ISOAbbreviation": [
+            "Elife"
+          ],
+          "medlineAbbreviation": [
+            "Elife"
+          ],
+          "NLMid": [
+            "101579614"
+          ],
+          "ISSN": [
+            "2050-084X"
+          ],
+          "ESSN": [
+            "2050-084X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "e06671"
+  ],
+  "abstractText": [
+    "Transcriptional gene silencing (TGS) can serve as an innate immunity against invading DNA viruses throughout Eukaryotes. Geminivirus code for TrAP protein to suppress the TGS pathway. Here, we identified an Arabidopsis H3K9me2 histone methyltransferase, Su(var)3-9 homolog 4/Kryptonite (SUVH4/KYP), as a bona fide cellular target of TrAP. TrAP interacts with the catalytic domain of KYP and inhibits its activity in vitro. TrAP elicits developmental anomalies phenocopying several TGS mutants, reduces the repressive H3K9me2 mark and CHH DNA methylation, and reactivates numerous endogenous KYP-repressed loci in vivo. Moreover, KYP binds to the viral chromatin and controls its methylation to combat virus infection. Notably, kyp mutants support systemic infection of TrAP-deficient Geminivirus. We conclude that TrAP attenuates the TGS of the viral chromatin by inhibiting KYP activity to evade host surveillance. These findings provide new insight on the molecular arms race between host antiviral defense and virus counter defense at an epigenetic level."
+  ],
+  "affiliation": [
+    "Institute for Plant Genomics and Biotechnology, Texas A&M University, College Station, United States."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Research Support, U.S. Gov't, Non-P.H.S.",
+        "Journal Article",
+        "Research Support, N.I.H., Extramural"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "R21 AI097570"
+          ],
+          "agency": [
+            "NIAID NIH HHS"
+          ],
+          "acronym": [
+            "AI"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Geminiviridae"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "IM"
+                  ],
+                  "qualifierName": [
+                    "immunology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "VI"
+                  ],
+                  "qualifierName": [
+                    "virology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Histone-Lysine N-Methyltransferase"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AI"
+                  ],
+                  "qualifierName": [
+                    "antagonists & inhibitors"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AI"
+                  ],
+                  "qualifierName": [
+                    "antagonists & inhibitors"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Viral Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Interaction Mapping"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Binding"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Host-Pathogen Interactions"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Immune Evasion"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Genes",
+        "Arabidopsis",
+        "Viruses",
+        "Geminivirus",
+        "chromosomes",
+        "histone methyltransferase",
+        "Plant Biology",
+        "Viral Suppression",
+        "Epigenetic Silencing",
+        "Host–virus Interaction",
+        "Trap/al2/ac2"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "SUVH4 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "EC 2.1.1.43"
+          ]
+        },
+        {
+          "name": [
+            "Viral Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Histone-Lysine N-Methyltransferase"
+          ],
+          "registryNumber": [
+            "EC 2.1.1.43"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4606454?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4606454"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.7554/eLife.06671"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "12"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL",
+        "INTACT",
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "pdb"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-06-28"
+  ],
+  "dateOfCreation": [
+    "2015-10-17"
+  ],
+  "dateOfRevision": [
+    "2016-10-25"
+  ],
+  "electronicPublicationDate": [
+    "2015-09-07"
+  ],
+  "firstPublicationDate": [
+    "2015-09-07"
+  ]
+}

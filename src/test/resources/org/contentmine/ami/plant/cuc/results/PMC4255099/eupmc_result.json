@@ -1,0 +1,739 @@
+{
+  "id": [
+    "25377253"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25377253"
+  ],
+  "pmcid": [
+    "PMC4255099"
+  ],
+  "doi": [
+    "10.14348/molcells.2014.0127"
+  ],
+  "title": [
+    "Antagonistic regulation of Arabidopsis growth by brassinosteroids and abiotic stresses."
+  ],
+  "authorString": [
+    "Chung Y, Kwon SI, Choe S."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Chung Y"
+          ],
+          "firstName": [
+            "Yuhee"
+          ],
+          "lastName": [
+            "Chung"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "School of Biological Sciences, College of Natural Sciences, Seoul National University, Seoul 151-747, Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Kwon SI"
+          ],
+          "firstName": [
+            "Soon Il"
+          ],
+          "lastName": [
+            "Kwon"
+          ],
+          "initials": [
+            "SI"
+          ],
+          "affiliation": [
+            "Convergence Research Center for Functional Plant Products, Advanced Institutes of Convergence Technology, Suwon 443-270, Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Choe S"
+          ],
+          "firstName": [
+            "Sunghwa"
+          ],
+          "lastName": [
+            "Choe"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "School of Biological Sciences, College of Natural Sciences, Seoul National University, Seoul 151-747, Korea ; Convergence Research Center for Functional Plant Products, Advanced Institutes of Convergence Technology, Suwon 443-270, Korea ; Plant Genomics and Breeding Institute, Seoul National University, Seoul 151-921, Korea."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "11"
+      ],
+      "volume": [
+        "37"
+      ],
+      "journalIssueId": [
+        "2229546"
+      ],
+      "dateOfPublication": [
+        "2014 Nov"
+      ],
+      "monthOfPublication": [
+        "11"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-11-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Molecules and cells"
+          ],
+          "ISOAbbreviation": [
+            "Mol. Cells"
+          ],
+          "medlineAbbreviation": [
+            "Mol Cells"
+          ],
+          "NLMid": [
+            "9610936"
+          ],
+          "ISSN": [
+            "1016-8478"
+          ],
+          "ESSN": [
+            "0219-1032"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "795-803"
+  ],
+  "abstractText": [
+    "To withstand ever-changing environmental stresses, plants are equipped with phytohormone-mediated stress resistance mechanisms. Salt stress triggers abscisic acid (ABA) signaling, which enhances stress tolerance at the expense of growth. ABA is thought to inhibit the action of growth-promoting hormones, including brassinosteroids (BRs). However, the regulatory mechanisms that coordinate ABA and BR activity remain to be discovered. We noticed that ABA-treated seedlings exhibited small, round leaves and short roots, a phenotype that is characteristic of the BR signaling mutant, brassinosteroid insensitive1-9 (bri1-9). To identify genes that are antagonistically regulated by ABA and BRs, we examined published Arabidopsis microarray data sets. Of the list of genes identified, those upregulated by ABA but downregulated by BRs were enriched with a BRRE motif in their promoter sequences. After validating the microarray data using quantitative RT-PCR, we focused on RD26, which is induced by salt stress. Histochemical analysis of transgenic Arabidopsis plants expressing RD26pro:GUS revealed that the induction of GUS expression after NaCl treatment was suppressed by co-treatment with BRs, but enhanced by co-treatment with propiconazole, a BR biosynthetic inhibitor. Similarly, treatment with bikinin, an inhibitor of BIN2 kinase, not only inhibited RD26 expression, but also reduced the survival rate of the plant following exposure to salt stress. Our results suggest that ABA and BRs act antagonistically on their target genes at or after the BIN2 step in BR signaling pathways, and suggest a mechanism by which plants fine-tune their growth, particularly when stress responses and growth compete for resources."
+  ],
+  "affiliation": [
+    "School of Biological Sciences, College of Natural Sciences, Seoul National University, Seoul 151-747, Korea."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sodium Chloride"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Abscisic Acid"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Kinases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Growth Regulators"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Drug Antagonism"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Brassinosteroids"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Nucleotide Motifs"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Root",
+        "ABA",
+        "Abiotic stress",
+        "brassinosteroids",
+        "Bin2",
+        "Rd26"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "BIN2 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "EC 2.7.1.-"
+          ]
+        },
+        {
+          "name": [
+            "RD26 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Sodium Chloride"
+          ],
+          "registryNumber": [
+            "7647-14-5"
+          ]
+        },
+        {
+          "name": [
+            "Plant Growth Regulators"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Protein Kinases"
+          ],
+          "registryNumber": [
+            "EC 2.7.-"
+          ]
+        },
+        {
+          "name": [
+            "Brassinosteroids"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Abscisic Acid"
+          ],
+          "registryNumber": [
+            "72S9A8J5GW"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4255099?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4255099"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.14348/molcells.2014.0127"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "7"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by-nc-sa"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-07-28"
+  ],
+  "dateOfCreation": [
+    "2014-12-05"
+  ],
+  "dateOfRevision": [
+    "2014-12-15"
+  ],
+  "electronicPublicationDate": [
+    "2014-11-05"
+  ],
+  "firstPublicationDate": [
+    "2014-11-05"
+  ]
+}

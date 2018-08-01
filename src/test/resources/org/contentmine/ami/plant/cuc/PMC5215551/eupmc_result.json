@@ -1,0 +1,754 @@
+{
+  "id": [
+    "27545835"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27545835"
+  ],
+  "pmcid": [
+    "PMC5215551"
+  ],
+  "doi": [
+    "10.1111/tpj.13313"
+  ],
+  "title": [
+    "Functional characterization of Arabidopsis phototropin 1 in the hypocotyl apex."
+  ],
+  "authorString": [
+    "Sullivan S, Takemiya A, Kharshiing E, Cloix C, Shimazaki KI, Christie JM."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Sullivan S"
+          ],
+          "firstName": [
+            "Stuart"
+          ],
+          "lastName": [
+            "Sullivan"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Institute of Molecular, Cell and Systems Biology, College of Medical, Veterinary and Life Sciences, University of Glasgow, Bower Building, Glasgow, G12 8QQ, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Takemiya A"
+          ],
+          "firstName": [
+            "Atsushi"
+          ],
+          "lastName": [
+            "Takemiya"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Biology, Faculty of Science, Kyushu University, 744 Motooka, Nishi-ku, Fukuoka, 819-395, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Kharshiing E"
+          ],
+          "firstName": [
+            "Eros"
+          ],
+          "lastName": [
+            "Kharshiing"
+          ],
+          "initials": [
+            "E"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-5570-8669",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Botany, St. Edmund's College, Shillong, 793003, Meghalaya, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Cloix C"
+          ],
+          "firstName": [
+            "Catherine"
+          ],
+          "lastName": [
+            "Cloix"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Institute of Molecular, Cell and Systems Biology, College of Medical, Veterinary and Life Sciences, University of Glasgow, Bower Building, Glasgow, G12 8QQ, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Shimazaki KI"
+          ],
+          "firstName": [
+            "Ken-Ichiro"
+          ],
+          "lastName": [
+            "Shimazaki"
+          ],
+          "initials": [
+            "KI"
+          ],
+          "affiliation": [
+            "Department of Biology, Faculty of Science, Kyushu University, 744 Motooka, Nishi-ku, Fukuoka, 819-395, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Christie JM"
+          ],
+          "firstName": [
+            "John M"
+          ],
+          "lastName": [
+            "Christie"
+          ],
+          "initials": [
+            "JM"
+          ],
+          "affiliation": [
+            "Institute of Molecular, Cell and Systems Biology, College of Medical, Veterinary and Life Sciences, University of Glasgow, Bower Building, Glasgow, G12 8QQ, UK."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-5570-8669",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "6"
+      ],
+      "volume": [
+        "88"
+      ],
+      "journalIssueId": [
+        "2509410"
+      ],
+      "dateOfPublication": [
+        "2016 Dec"
+      ],
+      "monthOfPublication": [
+        "12"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-12-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "The Plant journal : for cell and molecular biology"
+          ],
+          "ISOAbbreviation": [
+            "Plant J."
+          ],
+          "medlineAbbreviation": [
+            "Plant J"
+          ],
+          "NLMid": [
+            "9207397"
+          ],
+          "ISSN": [
+            "0960-7412"
+          ],
+          "ESSN": [
+            "1365-313X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "907-920"
+  ],
+  "abstractText": [
+    "Phototropin (phot1) is a blue light-activated plasma membrane-associated kinase that acts as the principal photoreceptor for shoot phototropism in Arabidopsis in conjunction with the signalling component Non-Phototropic Hypocotyl 3 (NPH3). PHOT1 is uniformly expressed throughout the Arabidopsis hypocotyl, yet decapitation experiments have localized the site of light perception to the upper hypocotyl. This prompted us to investigate in more detail the functional role of the hypocotyl apex, and the regions surrounding it, in establishing phototropism. We used a non-invasive approach where PHOT1-GFP (P1-GFP) expression was targeted to the hypocotyl apex of the phot-deficient mutant using the promoters of CUP-SHAPED COTYLEDON 3 (CUC3) and AINTEGUMENTA (ANT). Expression of CUC3::P1-GFP was clearly visible at the hypocotyl apex, with weaker expression in the cotyledons, whereas ANT::P1-GFP was specifically targeted to the developing leaves. Both lines showed impaired curvature to 0.005 μmol m-2  sec-1 unilateral blue light, indicating that regions below the apical meristem are necessary for phototropism. Curvature was however apparent at higher fluence rates. Moreover, CUC3::P1-GFP partially or fully complemented petiole positioning, leaf flattening and chloroplast accumulation, but not stomatal opening. Yet, tissue analysis of NPH3 de-phosphorylation showed that CUC3::P1-GFP and ANT::P1-GFP mis-express very low levels of phot1 that likely account for this responsiveness. Our spatial targeting approach therefore excludes the hypocotyl apex as the site for light perception for phototropism and shows that phot1-mediated NPH3 de-phosphorylation is tissue autonomous and occurs more prominently in the basal hypocotyl."
+  ],
+  "affiliation": [
+    "Institute of Molecular, Cell and Systems Biology, College of Medical, Veterinary and Life Sciences, University of Glasgow, Bower Building, Glasgow, G12 8QQ, UK."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "BB/M002128/1"
+          ],
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "BB/J016047/1"
+          ],
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Hypocotyl"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phosphoproteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phototropism"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phosphorylation"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Phosphorylation",
+        "Arabidopsis thaliana",
+        "Phototropism",
+        "Phototropin",
+        "Spatial Expression",
+        "Nph3"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "AINTEGUMENTA protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "NPH1 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "NPH3 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "CUC3 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Phosphoproteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5215551?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5215551"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1111/tpj.13313"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "3"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2017-11-07"
+  ],
+  "dateOfCreation": [
+    "2016-08-22"
+  ],
+  "dateOfRevision": [
+    "2017-11-07"
+  ],
+  "electronicPublicationDate": [
+    "2016-10-14"
+  ],
+  "firstPublicationDate": [
+    "2016-10-14"
+  ]
+}

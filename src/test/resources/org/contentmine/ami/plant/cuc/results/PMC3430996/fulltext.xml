@@ -1,0 +1,598 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" "archivearticle3.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">J Exp Bot</journal-id><journal-id journal-id-type="iso-abbrev">J. Exp. Bot</journal-id><journal-id journal-id-type="hwp">jexbot</journal-id><journal-id journal-id-type="publisher-id">exbotj</journal-id><journal-title-group><journal-title>Journal of Experimental Botany</journal-title></journal-title-group><issn pub-type="ppub">0022-0957</issn><issn pub-type="epub">1460-2431</issn><publisher><publisher-name>Oxford University Press</publisher-name><publisher-loc>UK</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3430996</article-id><article-id pub-id-type="doi">10.1093/jxb/ers184</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Paper</subject></subj-group></article-categories><title-group><article-title>The <italic>Arabidopsis</italic> organelle-localized glycyl-tRNA synthetase encoded by <italic>EMBRYO DEFECTIVE DEVELOPMENT1</italic> is required for organ patterning</article-title></title-group><contrib-group><contrib contrib-type="author" corresp="no"><name><surname>Moschopoulos</surname><given-names>Alexis</given-names></name><xref ref-type="aff" rid="AF0001"><sup>1</sup>
+</xref><xref ref-type="aff" rid="AF0003">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author" corresp="no"><name><surname>Derbyshire</surname><given-names>Paul</given-names></name><xref ref-type="aff" rid="AF0001">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" corresp="no"><name><surname>Byrne</surname><given-names>Mary E.</given-names></name><xref ref-type="aff" rid="AF0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="AF0004">
+<sup>&#x02020;</sup>
+</xref></contrib><aff id="AF0001"><sup>1</sup><institution>John Innes Centre, Norwich, NR4 7UH</institution><country>UK</country></aff><aff id="AF0002"><sup>2</sup><institution>School of Biological Sciences, The University of Sydney, NSW 2006</institution><country>Australia</country></aff><aff id="AF0003"><sup>*</sup><addr-line>Present address: </addr-line><institution>Limagrain UK, Doubled Haploid Laboratory</institution><addr-line>, Docking, PE31 8LS</addr-line><country>UK</country></aff><aff id="AF0004"><sup>&#x02020;</sup> To whom correspondence should be addressed. E-mail: <email xlink:href="mary.byrne@sydney.edu.au">mary.byrne@sydney.edu.au</email></aff></contrib-group><pub-date pub-type="ppub"><month>9</month><year>2012</year></pub-date><pub-date pub-type="epub"><day>12</day><month>7</month><year>2012</year></pub-date><pub-date pub-type="pmc-release"><day>12</day><month>7</month><year>2012</year></pub-date><!-- PMC Release delay is 0 months and 0 days and was based on the
+							<pub-date pub-type="epub"/>. --><volume>63</volume><issue>14</issue><fpage>5233</fpage><lpage>5243</lpage><permissions><copyright-statement>&#x000a9; The Author [2012]. Published by Oxford University Press [on behalf of the Society for Experimental Biology]. All rights reserved. For Permissions, please e-mail: journals.permissions@oup.com</copyright-statement><copyright-year>2012</copyright-year><license license-type="open-access"><license-p><!--CREATIVE COMMONS-->This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/bync/3.0/uk/">http://creativecommons.org/licenses/bync/3.0/uk/</ext-link>) which permits unrestricted noncommercial use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><abstract><p>Leaves develop as planar organs, with a morphology that is specialized for photosynthesis. Development of a planar leaf requires genetic networks that set up opposing adaxial and abaxial sides of the leaf, which leads to establishment of dorsoventral polarity. While many genes have been identified that regulate adaxial and abaxial fate there is little information on how this is integrated with cellular function. <italic>EMBRYO DEFECTIVE DEVELOPMENT1</italic> (<italic>EDD1</italic>) is a nuclear gene that encodes a plastid and mitochondrial localized glycyl-tRNA synthetase. Plants with partial loss of EDD1 function have changes in patterning of margin and distal regions of the leaf. In combination with mutations in the MYB domain transcription factor gene <italic>ASYMMETRIC LEAVES1</italic> (<italic>AS1</italic>), partial loss of EDD1 function results in leaves with reduced adaxial fate. EDD1 may influence leaf dorsoventral polarity through regulating the abaxial fate genes <italic>KANADI1</italic> (<italic>KAN1</italic>) and <italic>ETTIN</italic> (<italic>ETT</italic>)/<italic>AUXIN RESPONSE FACTOR3</italic> (<italic>ARF3</italic>) since these genes are upregulated in the <italic>edd1 as1</italic> double mutant. <italic>SCABRA3</italic> (<italic>SCA3</italic>), a nuclear gene that encodes the plastid RNA polymerase is also required for leaf adaxial fate in the absence of <italic>AS1.</italic> These results add a novel component to networks of genetic regulation of leaf development and suggest that organelles, particularly plastids, are required in leaf patterning. Potentially, signalling from organelles is essential for coordination of different cell fates within the developing leaf.</p></abstract><kwd-group><title>Key words:</title><kwd><italic>Arabidopsis</italic></kwd><kwd><italic>AS1</italic></kwd><kwd>chloroplast</kwd><kwd><italic>EDD1</italic></kwd><kwd>leaf patterning</kwd><kwd>mitochondria</kwd><kwd>plastid</kwd><kwd>tRNA synthetase</kwd><kwd>Arabidopsis</kwd><kwd>Arabidopsis</kwd></kwd-group><counts><page-count count="11"/></counts></article-meta></front><body><sec id="s1"><title>Introduction</title><p>Plant shoots are initiated during embryogenesis, when the single cell zygote undergoes cell divisions to form a basal root meristem and a shoot apical meristem. During vegetative development, cells on the flanks of the shoot apical meristem are recruited into the production of leaves. In <italic>Arabidopsis</italic>, initiating leaves develop into determinate, flattened structures with morphologically distinct dorsoventral polarity. The adaxial (dorsal) side of the leaf is specialized for capture of light energy and the abaxial (ventral) side of the leaf is specialized for gas exchange, so that leaf dorsovental polarity is optimized for photosynthesis.</p><p content-type="indent">Development of leaf dorsoventral polarity requires juxtaposition of adaxial and abaxial fates and, in the absence of either fate, leaves develop as radial organs. Dorsoventral polarity is determined by distinct adaxial and abaxial factors. Class III HD-ZIP transcription factor genes <italic>REVOLUTA</italic> (<italic>REV</italic>), <italic>PHABULOSA</italic> (<italic>PHB</italic>), and <italic>PHAVULOTA</italic> (<italic>PHV</italic>) are expressed on the adaxial side of lateral organs and act redundantly in adaxial fate (McConnell et al., 2001; Otsuga et al., 2001; Emery et al., 2003; Prigge et al., 2005). While loss of <italic>PHB</italic> and <italic>PHV</italic> has no phenotypic effect, loss of <italic>REV</italic> results in a reduced number of lateral branches and floral organs, as well as vascular patterning defects (Talbert et al., 1995; Zhong and Ye, 1999; Otsuga et al., 2001; Emery et al., 2003; Prigge et al., 2005). Loss of these three class III HD-ZIP genes in triple mutants results in radial organs (Emery et al., 2003; Prigge et al., 2005). Dominant mutations, which disrupt posttranscriptional regulation of <italic>REV</italic>, <italic>PHB</italic>, and <italic>PHV</italic> by <italic>mir165/166</italic>, result in radial, adaxialized leaves, and in the dominant <italic>phb-1d</italic> mutant <italic>PHB</italic> expression is expanded to the abaxial side of the leaf (McConnell et al., 2001; Emery et al., 2003; Kidner and Martienssen, 2004; Zhong and Ye, 2004). Class III HD-ZIP gene expression is also restricted to the adaxial side of developing leaves through a genetic pathway involving KANADI (KAN) family genes. KANADI genes, which encode GARP-domain transcription factors, are expressed on the abaxial side of lateral organs and act redundantly to promote abaxial fate. Loss of <italic>KANADI1</italic> (<italic>KAN1</italic>) causes mild dorsoventral patterning defects such as upward curled leaves and precocious development of abaxial trichomes (Eshed et al., 2001, 2004; Kerstetter et al., 2001). The extent of leaf adaxialization is increased as more of the KANADI gene family members (<italic>KAN2</italic>, <italic>KAN3</italic>, and <italic>KAN4</italic>) are mutated (Eshed et al., 2001, 2004). In <italic>kan1 kan2</italic>, for example, ectopic patches of adaxial fate on the abaxial side of the leaf leads to ectopic abaxial lamina protrusions. In addition, ectopic expression of <italic>KAN1</italic> throughout the leaf results in development of radial, abaxial organs consistent with a requirement for <italic>KAN1</italic> for abaxial fate (Eshed et al., 2001; Kerstetter et al., 2001). Abaxial fate also requires the AUXIN RESPONSE FACTOR (ARF) family genes <italic>ETTIN</italic> (<italic>ETT</italic>)<italic>/AFR3</italic> and <italic>ARF4</italic>. Loss of both <italic>ETT</italic> and <italic>ARF4</italic> in the <italic>ett arf4</italic> double mutant results in leaves resembling <italic>kan1 kan2</italic> and <italic>kan</italic> mutants are enhanced by loss of either <italic>ETT</italic> or <italic>ARF4</italic>. KANADI and ETT/ARF4 appear to cooperate in specification of abaxial fate, and this could be in part mediated by protein interaction between KAN1 and ETT (Pekker et al., 2005; Kelley et al., 2012).</p><p content-type="indent">Initiation of organ primordia involves the transition of cells from an indeterminate to a determinate cell fate. Two genes involved in this transition are the MYB domain transcription factor gene <italic>ASYMMETRIC LEAVES1</italic> (<italic>AS1</italic>) and the LOB/ASL-domain transcription factor gene <italic>ASYMMETRIC LEAVES2</italic> (<italic>AS2</italic>) (Byrne et al., 2000, 2002; Iwakawa et al., 2002; Lin et al., 2003). <italic>AS1</italic> is expressed throughout developing leaves whereas <italic>AS2</italic> expression is restricted to the adaxial side of the leaf (Byrne et al., 2000; Iwakawa et al., 2002, 2007). AS1 and AS2 act as a heterodimer, which may serve to limit the activity of these two proteins to the adaxial side of the leaf (Xu et al., 2003). <italic>AS1</italic> and <italic>AS2</italic> repress the expression of meristem homeodomain transcription factor class I KNOX genes in determinate organs (Byrne et al., 2000; Iwakawa et al., 2002; Lin et al., 2003). Loss of either <italic>AS1</italic> or <italic>AS2</italic> results in similar phenotypes with changes of leaf shape to short, round and weakly epinastic leaves. Although this phenotype does not suggest a prominent role in leaf dorsoventral polarity, the function of <italic>AS2</italic> in adaxial fate is indicated by the phenotype of plants overexpressing <italic>AS2</italic>, which have leaves similar to <italic>kan1 kan2</italic>, and <italic>AS2</italic> is a direct target of <italic>KAN1</italic> regulation (Lin et al., 2003; Wu et al., 2008). In addition, orthologues of <italic>AS1</italic> in other dicotyledonous species, including <italic>PHANTASTICA</italic> (<italic>PHAN</italic>) in <italic>Antirrhinum</italic>, <italic>CRISPA</italic> in pea, and <italic>NSPHAN</italic> in tobacco, demonstrate a role for these <italic>AS1</italic>-related genes in adaxial fate since loss or reduced function of these genes results in abaxialized and radial leaves (Waites and Hudson, 1995; Waites et al., 1998; McHale and Koning, 2004; Tattersall et al., 2005). Therefore in some species <italic>AS1</italic> has a prominent role in leaf adaxial fate. This function has either been reduced in <italic>Arabidopsis</italic> or alternate pathways mask the contribution of <italic>AS1</italic> to leaf dorsoventral polarity.</p><p content-type="indent">Several genes act in parallel with <italic>AS1</italic> and <italic>AS2</italic> in leaf adaxial fate and enhance the polarity defect of <italic>as1</italic> and <italic>as2</italic> mutants resulting in trumpet-shaped or radial leaves. These genes encode for proteins involved in a diverse range of biological processes. These include <italic>trans</italic>-acting siRNA components that are involved in small RNA-mediated cleavage of <italic>ETT</italic> and <italic>ARF4</italic> transcripts; ARGONAUTE1 (AGO1); the histone deacetylases HDT1/HD2A and HDT2/HD2B; proteasome complex proteins; and Elongator complex proteins (Li et al., 2005; Garcia et al., 2006; Huang et al., 2006; Yang et al., 2006; Ueno et al., 2007; Kojima et al., 2011). Mutations in ribosomal protein genes also enhance <italic>as1</italic> leaf dorsoventral polarity defects (Pinon et al., 2008; Yao et al., 2008; Horiguchi et al., 2011; Szakonyi and Byrne, 2011). In the case of the <italic>piggyback</italic> (<italic>pgy</italic>) ribosomal protein gene mutants, the <italic>as1 pgy</italic> double mutants have ectopic lamina outgrowths on the adaxial side of the leaf. These ribosomal protein mutants enhance the adaxial defect of class III HD-ZIP mutants and suppress the abaxial defect of mutants in KANADI genes, suggesting that ribosomal proteins or the ribosome have a specific function in leaf adaxial fate (Pinon <italic>et al.</italic>, 2008; Yao <italic>et al.</italic>, 2008). How ribosome function influences leaf dorsoventral polarity is not known. Possibly reduced ribosome function selectively affects expression of regulatory genes involved in leaf dorsoventral polarity.</p><p content-type="indent">In this study, <italic>EMBRYO DEFECTIVE DEVELOPMENT1</italic> (<italic>EDD1</italic>) has been identified as a gene that acts with <italic>AS1</italic> in leaf adaxial fate. <italic>EDD1</italic> encodes a glycyl-tRNA synthetase localized to plastids and mitochondria, and loss-of-function mutations in <italic>EDD1</italic> are embryo lethal (Uwer et al., 1998; Duchene et al., 2001; Berg et al., 2005). However, the partial loss-of-function mutant <italic>edd1-3</italic> is viable, revealing a role for organelles in leaf development. Single <italic>edd1</italic> mutants alter patterning of marginal and distal regions of leaves whereas <italic>edd1 as1</italic> double mutants have trumpet-shaped and radial abaxial leaves. Genetic interactions and gene expression analysis indicate that adaxial fate is sensitive to organelle function and suggest that <italic>EDD1</italic> may influence leaf dorsoventrality in part through <italic>KAN1</italic> and <italic>ETT</italic>.</p></sec><sec sec-type="materials|methods" id="s2"><title>Materials and methods</title><sec id="s3"><title>Plant material and growth conditions</title><p>
+<italic>edd1-3</italic> was an ethylmethane sulphonate (EMS)-induced mutation generated in an <italic>as1-1</italic> background, as described previously (Byrne et al., 2002). <italic>edd1-4</italic> was a Ds transposon insertion allele (GT_5_108612) obtained from the European <italic>Arabidopsis</italic> Stock Centre (NASC) (Scholl et al., 2000). <italic>pgy2-1</italic>, <italic>rev-6</italic>, <italic>kan1-2</italic>, and <italic>kan2-1</italic> were obtained as described previously (Pinon et al., 2008). <italic>sca3-1</italic> was obtained from Jos&#x000e9; Micol. All mutants were in the Landsberg <italic>erecta</italic> (L<italic>er</italic>) background. For complementation analysis, a 10.5-kb genomic region encompassing the EDD1 gene was cloned into the pMDC123 binary vector and transformed into <italic>edd1-3 as1/+</italic> plants by the floral dip method (Clough and Bent, 1998; Curtis and Grossniklaus, 2003).</p></sec><sec id="s4"><title>Molecular biology</title><p>DNA and RNA techniques were carried out using standard methods. Genotyping for <italic>edd1-3</italic> was performed by PCR using the primers 5'-GCAGGTAGTGGATTGTTCAAGT-3' and 5'-CGCTCTGCTAGGACAGACC-3', followed by restriction digestion of the product with <italic>Dde</italic>I, which cleaves the mutant allele but not the wild-type allele. Quantitative reverse-transcription PCR (qRT-PCR) analysis was carried out as previously described (Pinon et al., 2008). Total RNA was extracted from 20 10-day-old seedlings using Trizol (Invitrogen) and DNase treated prior to cDNA synthesis using Superscript II reverse transcriptase (Applied Biosystems). qRT-PCR was carried out using SYBR Green JumpStart Taq ReadyMix (Sigma-Aldrich). Three biological replicates were performed. Gene-specific primers for qRT-PCR were KAN1 (5'-GATCCAGCATTCAAAATCAGG-3' and 5'-TTTCTCGTGCCAATCTGGTCT-3'), KAN2 (5'-TTTGCAT-&#x02028;GGGAAGTTAATCG-3' and 5'-TTGTTCCCGAGATGCTTGAT-3'), ETT (5'-GGAAAGCCTGATATCCCTGTC-3' and 5'-ACCATCCG-&#x02028;AACAAGTGTTGA-3'), REV (5'-ATATTCGATGAATCGGGTCGTA-3' and 5'-ATAACTCACATGTCTTCCCATCG-3') and ACTIN2&#x02028; (5'-GCACCCTGTTCTTCTTACCG-3' and 5'-AACCCTCGTAGATTGG-&#x02028;CACA-3'). qRT-PCR data was analysed using MJ Opticon Monitor Data Analysis software. Gene transcript accumulation was normalized to ACTIN2. Statistical analysis was carried out using ANOVA and values &#x02266;0.01 were considered significant.</p></sec><sec id="s5"><title>
+<italic>In situ</italic> hybridization</title><p>RNA <italic>in situ</italic> hybridizations were performed as previously described using a DIG-labelled antisense probe generated from a linearizing plasmid carrying the 5' region of <italic>FIL</italic> (Long et al., 1996; Siegfried et al., 1999).</p></sec><sec id="s6"><title>Histology</title><p>Tissue for sectioning was fixed in 2.5% glutaraldehyde, dehydrated in an ethanol series to 100% and embedded in Technovit 7100 (Heraeus). Resin-embedded samples were sectioned to 10 &#x003bc;m, and stained with 0.1% toluidine blue. For analysis of leaf morphology, three leaves of each genotype were analysed.</p></sec></sec><sec id="s7"><title>Results</title><sec id="s8"><title>
+<italic>edd1</italic> is a weak mutant allele of a nuclear gene encoding an organelle-localized glycyl-tRNA synthetase</title><p>In a genetic screen for modifiers of <italic>as1</italic> a mutant that produced radialized leaves was identified. To identify the new enhancer of <italic>as1</italic> a mapping population was generated by crossing <italic>as1</italic> plants carrying the enhancer in L<italic>er</italic> to Col-0. Analysis of 1050 chromosomes from double mutants located the enhancer to a 44-kb region on chromosome 3 between 17.756 and 17.803kb. Candidate genes in this region were sequenced and revealed a G to A base pair change in the coding sequence of the gene <italic>At3g48110</italic>. This gene encodes a glycyl-tRNA synthetase (GlyRS). Aminoacyl-tRNA synthetases catalyse the addition of amino acids to their cognate tRNAs (Dang, 1986). At3g48110 has been previously named <italic>EDD1</italic> (Uwer et al., 1998). The new mutant allele of this gene was therefore named <italic>edd1-3</italic>. Unless otherwise stated, this allele will be referred to here as <italic>edd1</italic>.</p><p content-type="indent">
+<italic>EDD1</italic> is composed of 33 exons and encodes a 117-kDa protein of 1068 amino acids (<xref ref-type="fig" rid="F1">Fig. 1A</xref>). EDD1 has an N-terminal transit peptide sequence that targets both plastids and mitochondria, and this protein is likely to function in both organelles (Duchene et al., 2001). EDD1 is further divided into an N-terminal &#x02018;a domain&#x02019; and a C-terminal &#x02018;b domain&#x02019; (Uwer et al., 1998). These two domains share homology with the two subunit proteins of GlyRS from <italic>Escherichia coli</italic>. The &#x02018;a domain&#x02019; shares 59% identity with the &#x003b1; subunit protein of GlyRS, which is involved in ATP-dependent formation of the enzyme-bound aminoacyl-adenylate, and the &#x02018;b domain&#x02019; shares 36% identity with the &#x003b2; subunit of GlyRS, which is involved in binding the tRNA (Nagel et al., 1984; Toth and Schimmel, 1990; Uwer et al., 1998). The mutation in <italic>edd1-3</italic> resulted in a proline to leucine substitution in a highly conserved amino acid (816) in the &#x02018;b domain&#x02019; of the protein (<xref ref-type="fig" rid="F1">Fig. 1A</xref>, <xref ref-type="fig" rid="F1">1B</xref>). Since the previously reported null insertion mutant alleles, <italic>edd1-1</italic> and <italic>edd1-S</italic> (designated here as <italic>edd1-2</italic>), are homozygous embryo lethal (Uwer et al., 1998; Berg et al., 2005), it is proposed that the mutation in <italic>edd1-3</italic> is a partial loss-of-function allele, which encodes a protein that retains some activity.</p><fig fig-type="figure" id="F1" position="float"><label>Fig. 1. </label><caption><p>The <italic>edd1</italic> mutation is a partial loss-of-function allele of <italic>EDD1</italic> that disrupts patterning in marginal and distal regions of leaves. (A) The <italic>EDD1</italic> gene, with exons displayed as blue boxes, interconnected by introns displayed as lines. Regions encoding an N-terminal chloroplast and mitochondrial (CP/MT) transit peptide (green), the &#x02018;a domain&#x02019; (red), and the &#x02018;b domain&#x02019; (blue) are shaded. The sites of the <italic>edd1-3</italic> point mutation and other insertion mutant alleles are marked. (B) Alignment of selected region of glycyl-tRNA synthetase genes from different species, showing that the <italic>edd1-3</italic> point mutation causes a proline to leucine substitution in a highly conserved amino acid, marked with an *. (C) Rosette of wild type. (D, E) Rosette of <italic>edd1</italic> (D) and in close-up (E), showing that leaves are pointed and have more prominent serrations (arrowheads). Regions of pale green tissue are visible (E). (F) <italic>edd1</italic> cauline leaves produce an abaxial midvein protrusion (arrowhead). (G&#x02013;J) <italic>edd1</italic> does not alter cells of the leaf lamina but alters the region of the midvein. Comparison of wild-type and <italic>edd1</italic> cell number (G), cell size (H), number of cells in transverse sections that include midvein and leaf blade (I), and distance between adaxial and abaxial leaf surfaces in the region of the leaf blade and midvein (J). Bars, 2mm (A&#x02013;D). Error bars (G&#x02013;J) are standard deviations from three replicates.</p></caption><graphic xlink:href="exbotj_ers184_f0001"/></fig><p content-type="indent">To confirm the new modifier of <italic>as1</italic> is due to the mutation in <italic>EDD1</italic>, a 10.5-kb genomic fragment encompassing <italic>EDD1</italic> was tested for complementation of the <italic>edd1 as1</italic> mutant. In four independent transgenic lines, the wild-type <italic>EDD1</italic> transgene fully suppressed the trumpet and radial leaf phenotypes of <italic>edd1 as1</italic> and the phenotype of these transgenic plants was indistinguishable from <italic>as1</italic> single mutants. Genetic analysis was also carried out to determine whether the mutation in <italic>edd1-3</italic> disrupts EDD1 function. <italic>edd1-3</italic> was crossed with a Ds transposon insertion allele (GT_5_108612), designated <italic>edd1-4</italic> (<xref ref-type="fig" rid="F1">Fig. 1A</xref>). As reported for <italic>edd1-1</italic>, homozygous <italic>edd1-4</italic> individuals were not identified and siliques of <italic>edd1-4/+</italic> plants had 25% aborted seed, indicating this allele is embryo lethal. Plants from a cross of <italic>edd1-3</italic> with <italic>edd1-4/+</italic> resulted in 54% (<italic>n</italic> = 120) embryo lethality, and a reciprocal cross of <italic>edd1-4</italic>/+ with <italic>edd1-3</italic> resulted in 53% embryo lethality (<italic>n</italic> = 99). The lack of complementation demonstrates <italic>edd1-3</italic> is a mutant allele of <italic>EDD1</italic>. Together, complementation and allelism data confirm that the new enhancer of <italic>as1</italic> is due to mutation in <italic>EDD1</italic>.</p></sec><sec id="s9"><title>
+<italic>edd1</italic> disrupts leaf development</title><p>To determine whether the new enhancer of <italic>as1</italic> affects leaf development independently to <italic>as1</italic>, the leaf phenotype of the single <italic>edd1</italic> mutant was examined. In wild type, rosette leaves were elongate and rounded and have very subtle marginal serrations (<xref ref-type="fig" rid="F1">Fig. 1C</xref>). The <italic>edd1</italic> mutant produced pointed leaves with more pronounced marginal serrations but did not produce trumpet-shaped or radial leaves (<xref ref-type="fig" rid="F1">Fig. 1D</xref>, <xref ref-type="fig" rid="F1">1E</xref>). The <italic>edd1</italic> mutant was also characterized by pale green tissue or chlorosis in regions where cells were undergoing proliferation and expansion, including the proximal region of young leaves and immature floral organs (<xref ref-type="fig" rid="F1">Fig. 1E</xref>). The extent of pale tissue was progressively reduced during growth, such that mature organs lacked visible chlorosis. In the majority of plants, at least one cauline leaf had an abaxial outgrowth at the distal tip of the leaf, and this outgrowth appeared to be associated with the midvein (<xref ref-type="fig" rid="F1">Fig. 1F</xref>). The frequency of this phenotype was rare in rosette leaves of plants grown at 22 &#x000b0;C, but increased when plants were grown at 18 &#x000b0;C, where 70% of <italic>edd1</italic> plants had at least one rosette leaf with an abaxial outgrowth at the distal tip of the leaf.</p><p content-type="indent">To determine whether <italic>edd1</italic> disrupts morphology of the leaf, the arrangements of cells in internal tissue layers of wild-type and <italic>edd1</italic> leaves were compared in transverse sections of mature leaves. In wild type, the palisade mesophyll comprises a subepidermal layer of tall, narrow, closely packed cells on the adaxial side of the leaf (Fig. S1A). <italic>edd1</italic> mutants also had a distinct palisade mesophyll layer (Fig. S1C). Comparison of the palisade mesophyll cell number and size showed no significant difference between the wild type and the <italic>edd1</italic> mutant (<xref ref-type="fig" rid="F1">Fig. 1G</xref>, <xref ref-type="fig" rid="F1">1H</xref>). The cell number in an area of the leaf transverse sections that included the leaf vasculature and leaf lamina was also compared. <italic>edd1</italic> had a slight increase in the number of cells in the transverse dimension compared with wild type (<xref ref-type="fig" rid="F1">Fig. 1I</xref>). The distance between the adaxial and abaxial sides of the leaf (thickness) was also used to compare the morphology of <italic>edd1</italic> with wild type. There was no difference in the thickness of the leaf in the region of the leaf lamina, whereas the midvein thickness was greater in <italic>edd1</italic> compared with wild type (<xref ref-type="fig" rid="F1">Fig. 1J</xref>). The increase in cell number in the <italic>edd1</italic> leaf may therefore be associated with a change in development of the midvein. A change in the thickness of the midvein may be associated with the abaxial outgrowth at the distal tip of the leaf. However, the change in leaf shape in <italic>edd1</italic> does not appear to be associated with major changes in internal mesophyll morphology.</p></sec><sec id="s10"><title>
+<italic>edd1 as1</italic> mutants produce trumpet-shaped and radial leaves</title><p>The <italic>edd1</italic> mutant had a more severe effect on leaf development in the <italic>edd1 as1</italic> double mutant. The <italic>as1</italic> single mutant had short, broad, rounded, and slightly epinastic leaves (<xref ref-type="fig" rid="F2">Fig. 2A</xref>). By comparison, the <italic>edd1 as1</italic> double mutant had narrower leaves than <italic>as1</italic> (<xref ref-type="fig" rid="F2">Fig. 2B</xref>). Rosette and cauline leaves of <italic>edd1 as1</italic> were often trumpet-shaped or radial (<xref ref-type="fig" rid="F2">Fig. 2C</xref>, <xref ref-type="fig" rid="F2">2D</xref>, <xref ref-type="fig" rid="F2">2H</xref>). The inner side of trumpet-shaped leaves was dark green and resembled adaxial tissue, while the outer side was light green and resembled abaxial tissue, suggesting that trumpet leaves had reduced adaxial fate and were abaxialized (<xref ref-type="fig" rid="F2">Fig. 2C</xref>). In addition, some <italic>edd1 as1</italic> leaves produced an abaxial outgrowth at the distal tip of the leaf (<xref ref-type="fig" rid="F2">Fig. 2D</xref>). To further determine whether leaf dorsoventral polarity was disrupted in <italic>edd1 as1</italic>, internal vascular tissue in transverse sections of leaves from wild type, <italic>edd1</italic>, and <italic>edd1 as1</italic> were compared. In wild type, vasculature was oriented along the dorsoventral axis with xylem tissue adaxial to phloem (<xref ref-type="fig" rid="F2">Fig. 2E</xref>). Vascular patterning in <italic>edd1</italic> was similar to wild type, whereas vasculature of trumpet-shaped <italic>edd1 as1</italic> leaves was radial with phloem surrounding xylem, indicating these leaves were abaxialized (<xref ref-type="fig" rid="F2">Fig. 2F</xref>, <xref ref-type="fig" rid="F2">2G</xref>). In transverse sections of more severely affected <italic>edd1 as1</italic> radial cauline leaves, the vasculature was disorganized in the proximal region of the leaf and was not clearly evident in the distal region of the leaf, suggesting that radial leaves may have a general reduction in dorsoventral polarity (<xref ref-type="fig" rid="F2">Fig. 2I</xref>, <xref ref-type="fig" rid="F2">2J</xref>).</p><fig fig-type="figure" id="F2" position="float"><label>Fig. 2. </label><caption><p>
+<italic>edd1 as1</italic> produces trumpet-shaped and radial leaves. (A) Rosettes of <italic>as1</italic>. (B) Rosettes of <italic>edd1 as1</italic>. (C) A trumpet-shaped leaf <italic>of edd1 as1</italic>, showing the abaxial (left) and adaxial (right) sides of a leaf. (D) A radial leaf of <italic>edd1 as1</italic>, with minimal lamina and an abaxial midvein protrusion (arrowhead). (E&#x02013;G) Transverse sections through the midvein vasculature of wild type (E), <italic>edd1</italic> (F), and <italic>edd1 as1</italic> (G). (H) <italic>edd1 as1</italic> radial cauline leaves (arrowhead). (I, J) Transverse sections of moderately (I) and more severely (J) affected radial cauline <italic>edd1 as1</italic> leaves. (K, L) <italic>in situ</italic> analysis of <italic>FIL</italic> in transverse sections of <italic>as1</italic> (K) and <italic>edd1 as1</italic> (L) young vegetative shoots. Bars, 2mm (A&#x02013;D, H) and 50 &#x000b5;m (E&#x02013;G, I&#x02013;L).</p></caption><graphic xlink:href="exbotj_ers184_f0002"/></fig><p content-type="indent">Expression of the gene <italic>FILAMENTOUS FLOWER</italic> (<italic>FIL</italic>) is restricted to the abaxial side in developing leaves (Sawa <italic>et al.</italic>, 1999; Siegfried <italic>et al.</italic>, 1999). To further examine leaf polarity in <italic>edd1 as1</italic>, the expression pattern of <italic>FIL</italic> in <italic>edd1 as1</italic> leaves was compared with wild type by <italic>in situ</italic> hybridization. The expression of <italic>FIL</italic> was restricted to the abaxial side of <italic>as1</italic> leaves (<xref ref-type="fig" rid="F2">Fig. 2K</xref>). In <italic>edd1 as1</italic> radial leaves, <italic>FIL</italic> was expressed throughout initiating leaves and, as leaves developed, <italic>FIL</italic> became more highly expressed on the adaxial side of the leaf than on the abaxial side of the leaf (<xref ref-type="fig" rid="F2">Fig. 2L</xref>). This expression pattern confirmed that <italic>edd1 as1</italic> leaves were compromised in adaxial fate. Based on the single mutant phenotype, it is concluded that <italic>EDD1</italic> has a role in leaf dorsoventral polarity that requires <italic>AS1</italic>, whereas <italic>EDD1</italic> patterning of leaf margins and the distal tip of the leaf is independent of <italic>AS1.</italic>
+</p></sec><sec id="s11"><title>
+<italic>edd1</italic> interacts synergistically with <italic>pgy2</italic> in leaf development</title><p>Other enhancers of <italic>as1</italic> with leaf shape phenotypes similar to <italic>edd1</italic> are mutants in ribosomal proteins (Pinon et al., 2008; Yao et al., 2008; Horiguchi et al., 2011; Szakonyi and Byrne, 2011). Ribosomal proteins act with <italic>AS1</italic> to promote adaxial fate. In an <italic>as1</italic> background, ribosomal protein mutants have ectopic outgrowths on the adaxial side of the leaf or have radial leaves. Single ribosomal protein mutants have pointed and serrated leaves like <italic>edd1</italic>, but ribosomal protein mutants also have defects in the internal palisade mesophyll, where cells are less closely aligned than in wild type (Pinon et al., 2008; Yao et al., 2008; Horiguchi et al., 2011; Szakonyi and Byrne, 2011). The <italic>edd1</italic> mutant leaf phenotype therefore has some overlap with ribosomal protein mutants including <italic>pgy1</italic>, which is defective in the ribosomal protein gene <italic>RPL10aB</italic>, and <italic>pgy2</italic>, which is defective in the ribosomal protein gene <italic>RPL9C</italic> (Pinon <italic>et al.</italic>, 2008). To determine whether <italic>EDD1</italic> regulates leaf development in a common genetic pathway with ribosomal proteins, <italic>edd1</italic> was combined with <italic>pgy2</italic> and the leaf phenotype in the double mutant was analysed. Both <italic>edd1</italic> and <italic>pgy2</italic> single mutants had pointed and serrated leaves (<xref ref-type="fig" rid="F3">Fig. 3A</xref>, <xref ref-type="fig" rid="F3">3B</xref>). Compared with either single mutant, the double mutant was reduced in size (<xref ref-type="fig" rid="F3">Fig. 3C</xref>). Leaves of the <italic>edd1 pgy2</italic> double mutant were pointed and serrated, had pale margins, and had an abaxial outgrowth at the distal tip of the leaf suggesting that these two mutations have additive effects on leaf development (<xref ref-type="fig" rid="F3">Fig. 3C</xref>, <xref ref-type="fig" rid="F3">3D</xref>).</p><fig fig-type="figure" id="F3" position="float"><label>Fig. 3. </label><caption><p>Genetic interactions between <italic>edd1</italic> and <italic>pgy1</italic> are additive. (A) Rosette of <italic>edd1.</italic> (B) Rosette of <italic>pgy2</italic>. (C, D) Rosette of <italic>edd1 pgy2</italic> (C) and in close-up (D), showing leaves with pale margins (arrowheads), prominent serrations and an abaxial midvein protrusion (arrows). (E, F) <italic>edd1 as1</italic> grown at 18 &#x000b0;C had trumpet-shaped and radial leaves (arrowhead) (square in E is enlarged in F). (G, H) Phenotype severity of <italic>as1 pgy1</italic> and <italic>edd1 as1</italic> grown at 18, 22, and 26 &#x000b0;C. The leaf phenotype severity was scored, with *, **, and *** for mild trumpet shape, severe trumpet shape, and radial leaf shape, respectively. Scores are means for leaves of 20 individual plants. Bars, 2mm (A&#x02013;E) and 1mm (F).</p></caption><graphic xlink:href="exbotj_ers184_f0003"/></fig><p content-type="indent">The severity of the <italic>edd1 as1</italic> leaf phenotype was found to be temperature sensitive. Therefore the severity of the <italic>edd1 as1</italic> and <italic>as1 pgy1</italic> leaf phenotypes were examined at 18, 22, and 26 &#x000b0;C. The <italic>edd1 as1</italic> adaxial defect was most prominent when plants were grown at 18 &#x000b0;C, where one-third of leaves were trumpet-shaped or radial compared to a low level of defective leaves when plants were grown at 22 and 26 &#x000b0;C (<xref ref-type="fig" rid="F3">Fig. 3E</xref>&#x02013;G). At all temperatures, the severity of the leaf defect was greatest in late rosette and cauline leaves. By contrast, the severity of the <italic>as1 pgy1</italic> leaf phenotype was not increased by growth at 18 &#x000b0;C and instead the frequency of abaxialized leaves in <italic>as1 pgy1</italic> mutants was decreased at 18 &#x000b0;C (<xref ref-type="fig" rid="F3">Fig. 3H</xref>). These leaf phenotypes and the genetic interactions indicate that <italic>EDD1</italic> and the ribosomal <italic>PGY</italic> genes act independently in leaf development.</p></sec><sec id="s12"><title>
+<italic>edd1</italic> enhances <italic>rev</italic> and <italic>kan1 kan2</italic> phenotypes</title><p>To establish whether <italic>EDD1</italic> interacts with other genes involved in leaf dorsoventral polarity, <italic>edd1</italic> was combined with <italic>rev</italic> and with <italic>kan1 kan2</italic>, and the leaf phenotypes were compared to the single mutants. <italic>rev</italic> mutants have long and narrow leaves and a reduced number of lateral branches (Talbert <italic>et al.</italic>, 1995; Zhong and Ye, 1999; Otsuga et al., 2001) (<xref ref-type="fig" rid="F4">Fig. 4A</xref>, <xref ref-type="fig" rid="F4">4B</xref>). The <italic>edd1 rev</italic> double mutant had phenotypes of both single mutants. Leaves of the double mutant were long, narrow, and serrated, had pale margins, and often had an abaxial midvein protrusion (<xref ref-type="fig" rid="F4">Fig. 4C</xref>, <xref ref-type="fig" rid="F4">4D</xref>). The <italic>edd1 rev</italic> double mutant had an increased number of leaves relative to <italic>rev</italic> and many of these leaves were not associated with an axillary branch (<xref ref-type="fig" rid="F4">Fig. 4E</xref>). The <italic>edd1 rev</italic> mutant also had an abnormal pin-like inflorescence, which produced a small number of flowers as well as radial outgrowths that were interpreted to be rudimentary flowers (<xref ref-type="fig" rid="F4">Fig. 4F</xref>). The double mutant phenotypes indicate that <italic>EDD1</italic> and the HD-ZIPIII gene <italic>REV</italic> have additive interactions in leaf development and synergistic interactions in the inflorescence and suggest that these genes act independently in organ development.</p><fig fig-type="figure" id="F4" position="float"><label>Fig. 4. </label><caption><p>
+<italic>edd1</italic> enhanced <italic>rev</italic> inflorescence phenotypes. (A) <italic>edd1.</italic> (B) <italic>rev.</italic> (C, D) <italic>edd1 rev</italic> showed an additive leaf phenotype including long leaves that had serrations (arrowhead) (C) and abaxial midvein protrusion (D). (E) <italic>edd1</italic> enhanced the number of cauline leaves and the number of leaves without branches compared to <italic>rev</italic>. (F) <italic>edd1 rev</italic> produced disorganized floral meristems with radial organs. Bars, 2mm (A&#x02013;C, F).</p></caption><graphic xlink:href="exbotj_ers184_f0004"/></fig><p content-type="indent">The <italic>kan1 kan2</italic> double mutant has small leaves with ectopic leaf lamina protrusions from the abaxial side of the leaf (Eshed et al., 2001) (<xref ref-type="fig" rid="F5">Fig. 5A</xref>). In the <italic>edd1 kan1 kan2</italic> triple mutant, leaves were smaller and narrower than <italic>kan1 kan2</italic> leaves and had a significant reduction in abaxial ectopic outgrowths (<xref ref-type="fig" rid="F5">Fig. 5B</xref>). To further analyse the effect of <italic>edd1</italic> on <italic>kan1 kan2</italic> leaf dorsoventral polarity, the morphology of <italic>edd1 kan1 kan2</italic> and <italic>kan1 kan2</italic> leaves in transverse sections was examined. Leaves in the triple mutants were more rounded than in <italic>kan1 kan2</italic>, consistent with reduced leaf lamina (<xref ref-type="fig" rid="F5">Fig. 5C</xref>, <xref ref-type="fig" rid="F5">5D</xref>). Although <italic>kan1 kan2</italic> leaves had reduced lamina, the leaf vasculature retained dorsoventral polarity (<xref ref-type="fig" rid="F5">Fig. 5E</xref>). In transverse section, <italic>edd1 kan1 kan2</italic> leaf vasculature was less organized than in <italic>kan1 kan2</italic> but vasculature retained dorsoventral polarity (<xref ref-type="fig" rid="F5">Fig. 5F</xref>). Together, the <italic>edd1</italic> mutation suppressed the <italic>kan1 kan2</italic> ectopic abaxial outgrowths and enhanced the leaf lamina expansion defect of <italic>kan1 kan2</italic> but otherwise did not affect leaf dorsoventral polarity.</p><fig fig-type="figure" id="F5" position="float"><label>Fig. 5. </label><caption><p>
+<italic>edd1</italic> alters the kan1 kan2 leaf phenotype. (A) Rosette of <italic>kan1 kan2.</italic> (B) Rosette of <italic>edd1 kan1 kan2</italic>. (C) Transverse section of <italic>kan1 kan2</italic> leaf. (D) Transverse section of <italic>edd1 kan1 kan2</italic> leaf. (E) Close-up of <italic>kan1 kan2</italic> leaf midvein vasculature. (F) Close-up of <italic>edd1 kan1 kan2</italic> leaf midvein vasculature. (G) qRT-PCR expression analysis of <italic>KAN1</italic>, <italic>KAN2</italic>, <italic>ETT</italic>, and <italic>REV</italic> in wild type, <italic>as1</italic>, <italic>edd1</italic>, and <italic>edd1 as1</italic> (**, <italic>P</italic> &#x0003c; 0.01). Bars, 2mm (A, B) and 50 &#x000b5;m (C&#x02013;F).</p></caption><graphic xlink:href="exbotj_ers184_f0005"/></fig><p content-type="indent">Genetic interactions between <italic>edd1</italic> and the leaf polarity genes, <italic>rev</italic> and <italic>kan1 kan2</italic>, indicated that <italic>EDD1</italic> may influence leaf adaxial fate via a pathway partly involving these genes. To further test this possibility, transcript levels of <italic>KAN1</italic>, <italic>KAN2</italic>, <italic>ETT</italic>, and <italic>REV</italic> in the <italic>edd1 as1</italic> mutant were compared with wild type and the two single mutants by qRT-PCR (<xref ref-type="fig" rid="F5">Fig. 5G</xref>). Transcript levels of abaxial fate genes, <italic>KAN1</italic>, <italic>KAN2</italic> and <italic>ETT</italic>, showed no significant changes in the <italic>edd1</italic> single mutant compared to wild type and <italic>as1</italic>. In the <italic>edd1 as1</italic> double mutant, <italic>KAN2</italic> showed no significant changes compared to wild type and <italic>as1</italic>, whereas <italic>KAN1</italic> and <italic>ETT</italic> were upregulated in the double mutant. <italic>REV</italic> transcript levels showed no change in either <italic>edd1 as1</italic> or in the single mutants compared to wild type. Expression of dorsoventral polarity genes in <italic>edd1 as1</italic> suggests either that the <italic>edd1 as1</italic> abaxialized phenotype is due to upregulation of <italic>KAN1</italic> and <italic>ETT</italic> or that upregulation of these genes is a consequence of reduced adaxial fate in <italic>edd1 as1</italic> leaves. <italic>EDD1</italic> may therefore not act as a canonical dorsoventral polarity gene.</p></sec><sec id="s13"><title>
+<italic>edd1</italic> and <italic>scabra3</italic> act synergistically in organ patterning</title><p>EDD1 is targeted to plastids and mitochondria, and potentially the adaxial defect in <italic>edd1 as1</italic> mutants is due to reduced translation in one or both of these organelles. Some other nuclear-encoded genes encoding plastid-localized proteins required for nonphotosynthetic functions of chloroplasts also disrupt leaf development. One of these, <italic>SCABRA3</italic> (<italic>SCA3</italic>), was used to test whether disruption of plastid transcription affects leaf adaxial fate. <italic>SCA3</italic> encodes the protein RpoTp, a nuclear-encoded, plastid-targeted RNA polymerase (Hricova et al., 2006). SCA3 transcribes a subset of plastid genes including genes coding for translational machinery, such as ribosomal proteins and the plastid-encoded DNA polymerase (Hajdukiewicz et al., 1997). Mutations in <italic>SCA3</italic> result in reduced plant growth and abnormal leaf morphology, including pale and serrate margins, similar to <italic>edd1</italic> (Hricova et al., 2006) (<xref ref-type="fig" rid="F6">Fig. 6A</xref>, <xref ref-type="fig" rid="F6">6B</xref>). Given the similarity between the leaf phenotypes of <italic>sca3</italic> and <italic>edd1</italic>, the role of <italic>SCA3</italic> in leaf development and adaxial fate was examined by analysis of <italic>edd1 sca3</italic> and <italic>sca3 as1</italic> double mutants. The <italic>edd1 sca3</italic> double mutant was greatly reduced in size, and leaves had large regions of pale green and white tissue (<xref ref-type="fig" rid="F6">Fig. 6C</xref>). Most leaves had an abaxial outgrowth at the distal tip of the leaf, which occurred at a higher frequency than in <italic>edd1</italic> (<xref ref-type="fig" rid="F6">Fig. 6D</xref>). These abaxial protrusions were not present in <italic>sca3. edd1 sca3</italic> mutants also had additional defects in shoot development. The inflorescence formed a pale and translucent pin-like structure with rudimentary growths, which was interpreted to be floral meristems that have failed to develop organs (<xref ref-type="fig" rid="F6">Fig. 6E</xref>). The enhanced phenotype of the <italic>edd1 sca3</italic> is consistent with both <italic>EDD1</italic> and <italic>SCA3</italic> involvement in organ development, and this may reflect the role of both genes in plastid function. To determine whether plastid function is required for adaxial fate, leaf development in the <italic>sca3 as1</italic> double mutant was examined. Like <italic>edd1 as1</italic>, the <italic>sca3 as1</italic> double mutant produced trumpet-shaped leaves (<xref ref-type="fig" rid="F6">Fig. 6F</xref>). Together, these results indicate that organelles, particularly plastids, are involved in organ patterning.</p><fig fig-type="figure" id="F6" position="float"><label>Fig. 6. </label><caption><p>
+<italic>sca3</italic> interacts with <italic>edd1</italic> and <italic>as1</italic> in leaf development. &#x02028;(A) Rosette of <italic>edd1.</italic> (B) Rosette of <italic>sca3.</italic> (C, D). Leaves of <italic>edd1 sca3</italic> showing chlorosis and abaxial midvein protrusion (arrowheads). (E) <italic>edd1 sca3</italic> floral meristems were surrounded by radial organs (arrowheads). (F) <italic>sca3 as1</italic> produced trumpet-shaped leaves (arrowheads). Bars, 2mm (A&#x02013;F).</p></caption><graphic xlink:href="exbotj_ers184_f0006"/></fig></sec></sec><sec id="s14"><title>Discussion</title><p>
+<italic>EDD1</italic> is essential for plant viability and null mutations in this gene are embryo lethal, which has precluded analysis of EDD1 function in plant development (Uwer et al., 1998). However, <italic>edd1-3</italic> described here is a partial loss-of-function mutation that has uncovered a role for EDD1 in leaf morphogenesis. <italic>edd1 as1</italic> leaves had trumpet-shaped and radial leaves with reduced adaxial fate. Consistent with EDD1 function in adaxial fate the abaxial genes <italic>KAN1</italic> and <italic>ETT</italic> were upregulated in <italic>edd1 as1</italic> plants. <italic>edd1 as1</italic> did not alter leaf dorsoventral polarity in the <italic>rev</italic> mutant, although it is possible that interaction with this class III HD-ZIP gene is masked by redundancy with <italic>PHB</italic> and <italic>PHV</italic>. Furthermore <italic>edd1</italic> suppressed abaxial outgrowths of <italic>kan1 kan2</italic> but reduced the leaf lamina expansion of <italic>kan1 kan2</italic>. The <italic>edd1 kan1 kan2</italic> leaves are reminiscent of <italic>kan1 kan2</italic> leaves that have further reduced abaxial fate through loss of <italic>KAN3</italic> or <italic>YABBY</italic> gene function (Eshed et al., 2004). Therefore <italic>EDD1</italic> may influence adaxial as well as abaxial fate through the class III HD-ZIP and KANADI pathway. The <italic>edd1</italic> leaf has a shape similar to <italic>pgy</italic> ribosomal protein mutants. However, genetic interactions and temperature sensitivity of <italic>edd1 as1</italic> and <italic>as1 pgy</italic> mutants suggest that EDD1 functions independent of ribosomes in leaf dorsoventral polarity.</p><p content-type="indent">Single <italic>edd1</italic> mutants had leaves with pronounced marginal serrations. Leaf serrations are formed at regular intervals along the leaf margin at localized points of auxin maxima, which are established by the auxin efflux transporter PINFORMED1 (PIN1) and the transcription factor CUPSHAPED COTYLEDON2 (CUC2) (Kawamura et al., 2010; Bilsborough et al., 2011; Hasson et al., 2011; Byrne, 2012). The more prominent serrations in <italic>edd1</italic> may reflect a disruption in auxin gradients mediated by PIN1 and CUC2. <italic>edd1</italic> also produced an abaxial outgrowth at the distal tip of the leaf and these outgrowths appeared to be extensions of the midvein. Although the nature and morphogenesis of these outgrowths is unclear, they may reflect a lack of coordination between development of the vasculature and leaf lamina. Similar outgrowths develop on the abaxial side of leaves that are mutant for the two related zinc-finger transcription factor genes <italic>JAGGED</italic> (<italic>JAG</italic>) and <italic>NUBBIN</italic> (<italic>NUB</italic>) (Dinneny et al., 2004, 2006; Ohno et al., 2004). In <italic>jag nub</italic> double mutants, these outgrowths have epidermal cells similar to vasculature, consistent with the possibility that they represent vascular growth without lamina growth. <italic>JAG</italic> and <italic>NUB</italic> promote growth of lateral organs. During leaf development, <italic>JAG</italic> expression becomes restricted to the distal region of the leaf, whereas <italic>NUB</italic> is expressed on the abaxial side of the leaf (Dinneny et al., 2004, 2006; Ohno et al., 2004). Possibly the abaxial outgrowth at the distal tip of the leaf in <italic>edd1</italic> is associated with misregulation of <italic>JAG</italic> and <italic>NUB</italic>. The leaf distal tip phenotypes <italic>edd1</italic> suggests that EDD1 is differentially required along the proximodistal axis of the leaf.</p><p content-type="indent">
+<italic>EDD1</italic> encodes a glycyl-tRNA synthetase that is localized to plastids and mitochondria (Uwer et al., 1998; Duchene et al., 2001). A reasonable prediction is that translation in these organelles is disrupted in the <italic>edd1 mutant.</italic> Other mutants disrupting the nonphotosynthetic functions of chloroplasts or mitochondrial function demonstrate both organelles are required during leaf development. Weak or unstable mutations in a number of genes required for chloroplast function have defects in development of the leaf palisade cell layer. The tomato gene <italic>DEFECTIVE CHLOROPLASTS AND LEAVES</italic> (<italic>DCL</italic>) and the closely related <italic>Arabidopsis</italic> gene <italic>AtDCL</italic> are nuclear genes encoding plastid-localized proteins involved in ribosomal rRNA processing (Bellaoui et al., 2003; Bellaoui and Gruissem, 2004). In unstable <italic>dcl</italic> mutants, plastid organization is aberrant and palisade cells fail to expand in mutant sectors of the leaf (Keddie et al., 1996). The <italic>Antirrhinum</italic> gene <italic>DIFFERENTIATION AND GREEENING</italic> (<italic>DAG</italic>), which encodes a protein of unknown function, and the tobacco gene <italic>VARIEGATED AND DISTORTED LEAF</italic> (<italic>VDL</italic>), which encodes a predicted plastid RNA helicase, are required for the development of mesophyll cell chloroplasts and for development of the leaf palisade (Chatterjee et al., 1996; Wang et al., 2000). Another factor demonstrating a link between chloroplast function and leaf development is <italic>CRUMPLED LEAF</italic> (<italic>CRL</italic>) (Asano et al., 2004). CRL is a novel protein that localizes to the outer envelope of plastids. In the <italic>crl</italic> mutant, plastids are enlarged and planes of cell division are aberrant in multiple tissues. In addition, mutation of the plastid-encoded ribosomal protein gene <italic>rpl36</italic> in tobacco results in slender hyponastic leaves (Fleischmann et al., 2011). Leaf morphology also depends on mitochondrial function. For example, mutations in AtFtsH4, a nuclear-encoded mitochondrial ATP-dependent metalloproteases, have asymmetric leaves with irregular serrations and irregular arrangement of cells in the palisade (Gibala et al., 2009). These mutants have abnormal mitochondria but also have abnormal chloroplasts, so it is unclear whether the leaf defects are a primary or secondary consequence of changes in mitochondrial function.</p><p content-type="indent">The correlation between nonphotosynthetic plastid function and leaf development has prompted the suggestion that a plastid-derived signal promotes palisade cell division and expansion (Chatterjee et al., 1996; Keddie et al., 1996). Many plastid-localized proteins are nuclear encoded, and retrograde signalling, from the chloroplast to the nucleus, controls expression of nuclear genes encoding plastid-localized proteins involved in photosynthesis (Nott et al., 2006). Such retrograde signalling may also control the transition from cell proliferation to cell expansion (Andriankaja et al., 2012). Although significant alteration in cell number or size in the leaf blade of <italic>edd1</italic> was not detected, it may be possible that small changes in palisade cell division and/or expansion in <italic>edd1</italic> and <italic>sca3</italic> lead to disruption of the palisade and that, in combination with <italic>as1</italic>, this results in reduced adaxial fate. One reason for the adaxial palisade mesophyll possibly being more sensitive to signalling from the chloroplast might relate to the duration of cell divisions in this tissue, which is prolonged relative to that of adjacent epidermal cells and spongy mesophyll cell layers (Donnelly et al., 1999). In this case, EDD1 and SCA3 would be acting relatively late in leaf patterning and subsequent to the initial establishment of adaxial fate. Alternatively, the role of plastids in adaxial fate may involve intracellular signalling to determine adaxial fate that is independent of retrograde signalling. EDD1 is likely to be essential for general cellular function. However, some aspects of leaf development have a greater requirement for EDD1 function. Although the mechanism by which EDD1 affects development remains speculative, it is clear that organelle function is critical for leaf morphogenesis.</p><p>Supplementary material</p><p>Supplementary data are available at <italic>JXB</italic> online.</p><p><ext-link ext-link-type="uri" xlink:href="http://jxb.oxfordjournals.org/content/early/2012/07/06/jxb.ers184/suppl/DC1">Supplementary Fig. S1</ext-link>. Transverse sections of wild-type and <italic>edd1</italic> leaves</p></sec>
+<sec sec-type="supplementary-material">
+<title>Supplementary Material</title>
+<supplementary-material id="PMC_1" content-type="local-data">
+<caption>
+<title>Supplementary Data</title>
+</caption>
+<media mimetype="text" mime-subtype="html" xlink:href="supp_63_14_5233__index.html"/>
+<media xlink:role="associated-file" mimetype="application" mime-subtype="pdf"
+xlink:href="supp_ers184_00079277-file001.pdf"/>
+</supplementary-material>
+</sec>
+</body><back><ack><title>Acknowledgements</title><p>The authors thank Catherine Kidner for comments on the manuscript, Andrew Davis for plant photography, Adrian Turner for qRT-PCR advice, Jos&#x000e9; Micol for providing seed, and John Bowman for providing the <italic>FIL in situ</italic> clone. This work was supported by the Biotechnology and Biological Sciences Research Council (BBSRC) and strategic funding from the University of Sydney to MEB.</p></ack><ref-list><title>References</title><ref id="CIT0001"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Andriankaja</surname><given-names>M</given-names></name><name><surname>Dhondt</surname><given-names>S</given-names></name><name><surname>De Bodt</surname><given-names>S</given-names></name><etal/></person-group>
+<year>2012</year>
+<article-title>Exit from proliferation during leaf development in Arabidopsis thaliana: a not-so-gradual process</article-title>
+<source>Developmental Cell</source>
+<volume>22</volume>
+<fpage>64</fpage>
+<lpage>78</lpage>
+<pub-id pub-id-type="pmid">22227310</pub-id></element-citation></ref><ref id="CIT0002"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Asano</surname><given-names>T</given-names></name><name><surname>Yoshioka</surname><given-names>Y</given-names></name><name><surname>Kurei</surname><given-names>S</given-names></name><name><surname>Sakamoto</surname><given-names>W</given-names></name><name><surname>Machida</surname><given-names>Y</given-names></name></person-group>
+<year>2004</year>
+<article-title>A mutation of the <italic>CRUMPLED LEAF</italic> gene that encodes a protein localized in the outer envelope membrane of plastids affects the pattern of cell division, cell differentiation, and plastid division in <italic>Arabidopsis</italic>
+</article-title>
+<source>The Plant Journal</source>
+<volume>38</volume>
+<fpage>448</fpage>
+<lpage>459</lpage>
+<pub-id pub-id-type="pmid">15086805</pub-id></element-citation></ref><ref id="CIT0003"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bellaoui</surname><given-names>M</given-names></name><name><surname>Gruissem</surname><given-names>W</given-names></name></person-group>
+<year>2004</year>
+<article-title>Altered expression of the Arabidopsis ortholog of DCL affects normal plant development</article-title>
+<source>Planta</source>
+<volume>219</volume>
+<fpage>819</fpage>
+<lpage>826</lpage>
+<pub-id pub-id-type="pmid">15197595</pub-id></element-citation></ref><ref id="CIT0004"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bellaoui</surname><given-names>M</given-names></name><name><surname>Keddie</surname><given-names>JS</given-names></name><name><surname>Gruissem</surname><given-names>W</given-names></name></person-group>
+<year>2003</year>
+<article-title>DCL is a plant-specific protein required for plastid ribosomal RNA processing and embryo development.</article-title>
+<source>Plant Molecular Biology</source>
+<volume>53</volume>
+<fpage>531</fpage>
+<lpage>543</lpage>
+<pub-id pub-id-type="pmid">15010617</pub-id></element-citation></ref><ref id="CIT0005"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Berg</surname><given-names>M</given-names></name><name><surname>Rogers</surname><given-names>R</given-names></name><name><surname>Muralla</surname><given-names>R</given-names></name><name><surname>Meinke</surname><given-names>D</given-names></name></person-group>
+<year>2005</year>
+<article-title>Requirement of aminoacyl-tRNA synthetases for gametogenesis and embryo development in <italic>Arabidopsis</italic>
+</article-title>
+<source>The Plant Journal</source>
+<volume>44</volume>
+<fpage>866</fpage>
+<lpage>878</lpage>
+<pub-id pub-id-type="pmid">16297076</pub-id></element-citation></ref><ref id="CIT0006"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bilsborough</surname><given-names>GD</given-names></name><name><surname>Runions</surname><given-names>A</given-names></name><name><surname>Barkoulas</surname><given-names>M</given-names></name><name><surname>Jenkins</surname><given-names>HW</given-names></name><name><surname>Hasson</surname><given-names>A</given-names></name><name><surname>Galinha</surname><given-names>C</given-names></name><name><surname>Laufs</surname><given-names>P</given-names></name><name><surname>Hay</surname><given-names>A</given-names></name><name><surname>Prusinkiewicz</surname><given-names>P</given-names></name><name><surname>Tsiantis</surname><given-names>M</given-names></name></person-group>
+<year>2011</year>
+<article-title>Model for the regulation of Arabidopsis thaliana leaf margin development</article-title>
+<source>Proceedings of the National Academy of Sciences, USA</source>
+<volume>108</volume>
+<fpage>3424</fpage>
+<lpage>3429</lpage>
+</element-citation></ref><ref id="CIT0007"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Byrne</surname><given-names>ME</given-names></name></person-group>
+<year>2012</year>
+<article-title>Making leaves</article-title>
+<source>Current Opinion in Plant Biology</source>
+<volume>15</volume>
+<fpage>24</fpage>
+<lpage>30</lpage>
+<pub-id pub-id-type="pmid">22079784</pub-id></element-citation></ref><ref id="CIT0008"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Byrne</surname><given-names>ME</given-names></name><name><surname>Barley</surname><given-names>R</given-names></name><name><surname>Curtis</surname><given-names>M</given-names></name><name><surname>Arroyo</surname><given-names>JM</given-names></name><name><surname>Dunham</surname><given-names>M</given-names></name><name><surname>Hudson</surname><given-names>A</given-names></name><name><surname>Martienssen</surname><given-names>RA</given-names></name></person-group>
+<year>2000</year>
+<article-title>Asymmetric leaves1 mediates leaf patterning and stem cell function in <italic>Arabidopsis</italic>
+</article-title>
+<source>Nature</source>
+<volume>408</volume>
+<fpage>967</fpage>
+<lpage>971</lpage>
+<pub-id pub-id-type="pmid">11140682</pub-id></element-citation></ref><ref id="CIT0009"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Byrne</surname><given-names>ME</given-names></name><name><surname>Simorowski</surname><given-names>J</given-names></name><name><surname>Martienssen</surname><given-names>RA</given-names></name></person-group>
+<year>2002</year>
+<article-title>ASYMMETRIC LEAVES1 reveals knox gene redundancy in <italic>Arabidopsis</italic>
+</article-title>
+<source>Development</source>
+<volume>129</volume>
+<fpage>1957</fpage>
+<lpage>1965</lpage>
+<pub-id pub-id-type="pmid">11934861</pub-id></element-citation></ref><ref id="CIT0010"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chatterjee</surname><given-names>M</given-names></name><name><surname>Sparvoli</surname><given-names>S</given-names></name><name><surname>Edmunds</surname><given-names>C</given-names></name><name><surname>Garosi</surname><given-names>P</given-names></name><name><surname>Findlay</surname><given-names>K</given-names></name><name><surname>Martin</surname><given-names>C</given-names></name></person-group>
+<year>1996</year>
+<article-title>DAG, a gene required for chloroplast differentiation and palisade development in <italic>Antirrhinum majus</italic>
+</article-title>
+<source>EMBO Journal</source>
+<volume>15</volume>
+<fpage>4194</fpage>
+<lpage>4207</lpage>
+<pub-id pub-id-type="pmid">8861948</pub-id></element-citation></ref><ref id="CIT0011"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Clough</surname><given-names>SJ</given-names></name><name><surname>Bent</surname><given-names>AF</given-names></name></person-group>
+<year>1998</year>
+<article-title>Floral dip: a simplified method for <italic>Agrobacterium</italic>-mediated transformation of <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>The Plant Journal</source>
+<volume>16</volume>
+<fpage>735</fpage>
+<lpage>743</lpage>
+<pub-id pub-id-type="pmid">10069079</pub-id></element-citation></ref><ref id="CIT0012"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Curtis</surname><given-names>MD</given-names></name><name><surname>Grossniklaus</surname><given-names>U</given-names></name></person-group>
+<year>2003</year>
+<article-title>A gateway cloning vector set for high-throughput functional analysis of genes <italic>in planta</italic>
+</article-title>
+<source>Plant Physiology</source>
+<volume>133</volume>
+<fpage>462</fpage>
+<lpage>469</lpage>
+<pub-id pub-id-type="pmid">14555774</pub-id></element-citation></ref><ref id="CIT0013"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dang</surname><given-names>CV</given-names></name></person-group>
+<year>1986</year>
+<article-title>Multienzyme complex of aminoacyl-tRNA synthetases: an essence of being eukaryotic</article-title>
+<source>The Biochemical Journal</source>
+<volume>239</volume>
+<fpage>249</fpage>
+<lpage>255</lpage>
+<pub-id pub-id-type="pmid">3545179</pub-id></element-citation></ref><ref id="CIT0014"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dinneny</surname><given-names>JR</given-names></name><name><surname>Weigel</surname><given-names>D</given-names></name><name><surname>Yanofsky</surname><given-names>MF</given-names></name></person-group>
+<year>2006</year>
+<article-title>NUBBIN and <italic>JAGGED</italic> define stamen and carpel shape in <italic>Arabidopsis</italic>
+</article-title>
+<source>Development</source>
+<volume>133</volume>
+<fpage>1645</fpage>
+<lpage>1655</lpage>
+<pub-id pub-id-type="pmid">16554365</pub-id></element-citation></ref><ref id="CIT0015"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dinneny</surname><given-names>JR</given-names></name><name><surname>Yadegari</surname><given-names>R</given-names></name><name><surname>Fischer</surname><given-names>RL</given-names></name><name><surname>Yanofsky</surname><given-names>MF</given-names></name><name><surname>Weigel</surname><given-names>D</given-names></name></person-group>
+<year>2004</year>
+<article-title>The role of <italic>JAGGED</italic> in shaping lateral organs</article-title>
+<source>Development</source>
+<volume>131</volume>
+<fpage>1101</fpage>
+<lpage>1110</lpage>
+<pub-id pub-id-type="pmid">14973282</pub-id></element-citation></ref><ref id="CIT0016"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Donnelly</surname><given-names>PM</given-names></name><name><surname>Bonetta</surname><given-names>D</given-names></name><name><surname>Tsukaya</surname><given-names>H</given-names></name><name><surname>Dengler</surname><given-names>RE</given-names></name><name><surname>Dengler</surname><given-names>NG</given-names></name></person-group>
+<year>1999</year>
+<article-title>Cell cycling and cell enlargement in developing leaves of <italic>Arabidopsis</italic>
+</article-title>
+<source>Developmental Biology</source>
+<volume>215</volume>
+<fpage>407</fpage>
+<lpage>419</lpage>
+<pub-id pub-id-type="pmid">10545247</pub-id></element-citation></ref><ref id="CIT0017"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Duchene</surname><given-names>AM</given-names></name><name><surname>Peeters</surname><given-names>N</given-names></name><name><surname>Dietrich</surname><given-names>A</given-names></name><name><surname>Cosset</surname><given-names>A</given-names></name><name><surname>Small</surname><given-names>ID</given-names></name><name><surname>Wintz</surname><given-names>H</given-names></name></person-group>
+<year>2001</year>
+<article-title>Overlapping destinations for two dual targeted glycyl-tRNA synthetases in <italic>Arabidopsis thaliana</italic> and <italic>Phaseolus vulgaris</italic>
+</article-title>
+<source>Journal of Biological Chemistry</source>
+<volume>276</volume>
+<fpage>15275</fpage>
+<lpage>15283</lpage>
+<pub-id pub-id-type="pmid">11278923</pub-id></element-citation></ref><ref id="CIT0018"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Emery</surname><given-names>JF</given-names></name><name><surname>Floyd</surname><given-names>SK</given-names></name><name><surname>Alvarez</surname><given-names>J</given-names></name><name><surname>Eshed</surname><given-names>Y</given-names></name><name><surname>Hawker</surname><given-names>NP</given-names></name><name><surname>Izhaki</surname><given-names>A</given-names></name><name><surname>Baum</surname><given-names>SF</given-names></name><name><surname>Bowman</surname><given-names>JL</given-names></name></person-group>
+<year>2003</year>
+<article-title>Radial patterning of <italic>Arabidopsis</italic> shoots by class III HD-ZIP and KANADI genes</article-title>
+<source>Current Biology</source>
+<volume>13</volume>
+<fpage>1768</fpage>
+<lpage>1774</lpage>
+<pub-id pub-id-type="pmid">14561401</pub-id></element-citation></ref><ref id="CIT0019"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Eshed</surname><given-names>Y</given-names></name><name><surname>Baum</surname><given-names>SF</given-names></name><name><surname>Perea</surname><given-names>JV</given-names></name><name><surname>Bowman</surname><given-names>JL</given-names></name></person-group>
+<year>2001</year>
+<article-title>Establishment of polarity in lateral organs of plants</article-title>
+<source>Current Biology</source>
+<volume>11</volume>
+<fpage>1251</fpage>
+<lpage>1260</lpage>
+<pub-id pub-id-type="pmid">11525739</pub-id></element-citation></ref><ref id="CIT0020"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Eshed</surname><given-names>Y</given-names></name><name><surname>Izhaki</surname><given-names>A</given-names></name><name><surname>Baum</surname><given-names>SF</given-names></name><name><surname>Floyd</surname><given-names>SK</given-names></name><name><surname>Bowman</surname><given-names>JL</given-names></name></person-group>
+<year>2004</year>
+<article-title>Asymmetric leaf development and blade expansion in <italic>Arabidopsis</italic> are mediated by KANADI and YABBY activities</article-title>
+<source>Development</source>
+<volume>131</volume>
+<fpage>2997</fpage>
+<lpage>3006</lpage>
+<pub-id pub-id-type="pmid">15169760</pub-id></element-citation></ref><ref id="CIT0021"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fleischmann</surname><given-names>TT</given-names></name><name><surname>Scharff</surname><given-names>LB</given-names></name><name><surname>Alkatib</surname><given-names>S</given-names></name><name><surname>Hasdorf</surname><given-names>S</given-names></name><name><surname>Schottler</surname><given-names>MA</given-names></name><name><surname>Bock</surname><given-names>R</given-names></name></person-group>
+<year>2011</year>
+<article-title>Nonessential plastid-encoded ribosomal proteins in tobacco: a developmental role for plastid translation and implications for reductive genome evolution</article-title>
+<source>The Plant Cell</source>
+<volume>23</volume>
+<fpage>3137</fpage>
+<lpage>3155</lpage>
+<pub-id pub-id-type="pmid">21934145</pub-id></element-citation></ref><ref id="CIT0022"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Garcia</surname><given-names>D</given-names></name><name><surname>Collier</surname><given-names>SA</given-names></name><name><surname>Byrne</surname><given-names>ME</given-names></name><name><surname>Martienssen</surname><given-names>RA</given-names></name></person-group>
+<year>2006</year>
+<article-title>Specification of leaf polarity in <italic>Arabidopsis</italic> via the <italic>trans</italic>-acting siRNA pathway</article-title>
+<source>Current Biology</source>
+<volume>16</volume>
+<fpage>933</fpage>
+<lpage>938</lpage>
+<pub-id pub-id-type="pmid">16682355</pub-id></element-citation></ref><ref id="CIT0023"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gibala</surname><given-names>M</given-names></name><name><surname>Kicia</surname><given-names>M</given-names></name><name><surname>Sakamoto</surname><given-names>W</given-names></name><name><surname>Gola</surname><given-names>EM</given-names></name><name><surname>Kubrakiewicz</surname><given-names>J</given-names></name><name><surname>Smakowska</surname><given-names>E</given-names></name><name><surname>Janska</surname><given-names>H</given-names></name></person-group>
+<year>2009</year>
+<article-title>The lack of mitochondrial AtFtsH4 protease alters <italic>Arabidopsis</italic> leaf morphology at the late stage of rosette development under short-day photoperiod</article-title>
+<source>The Plant Journal</source>
+<volume>59</volume>
+<fpage>685</fpage>
+<lpage>699</lpage>
+<pub-id pub-id-type="pmid">19453455</pub-id></element-citation></ref><ref id="CIT0024"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hajdukiewicz</surname><given-names>PT</given-names></name><name><surname>Allison</surname><given-names>LA</given-names></name><name><surname>Maliga</surname><given-names>P</given-names></name></person-group>
+<year>1997</year>
+<article-title>The two RNA polymerases encoded by the nuclear and the plastid compartments transcribe distinct groups of genes in tobacco plastids</article-title>
+<source>EMBO Journal</source>
+<volume>16</volume>
+<fpage>4041</fpage>
+<lpage>4048</lpage>
+<pub-id pub-id-type="pmid">9233813</pub-id></element-citation></ref><ref id="CIT0025"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hasson</surname><given-names>A</given-names></name><name><surname>Plessis</surname><given-names>A</given-names></name><name><surname>Blein</surname><given-names>T</given-names></name><name><surname>Adroher</surname><given-names>B</given-names></name><name><surname>Grigg</surname><given-names>S</given-names></name><name><surname>Tsiantis</surname><given-names>M</given-names></name><name><surname>Boudaoud</surname><given-names>A</given-names></name><name><surname>Damerval</surname><given-names>C</given-names></name><name><surname>Laufs</surname><given-names>P</given-names></name></person-group>
+<year>2011</year>
+<article-title>Evolution and diverse roles of the <italic>CUP-SHAPED COTYLEDON</italic> genes in <italic>Arabidopsis</italic> leaf development</article-title>
+<source>The Plant Cell</source>
+<volume>23</volume>
+<fpage>54</fpage>
+<lpage>68</lpage>
+<pub-id pub-id-type="pmid">21258003</pub-id></element-citation></ref><ref id="CIT0026"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Horiguchi</surname><given-names>G</given-names></name><name><surname>Molla-Morales</surname><given-names>A</given-names></name><name><surname>Perez-Perez</surname><given-names>JM</given-names></name><name><surname>Kojima</surname><given-names>K</given-names></name><name><surname>Robles</surname><given-names>P</given-names></name><name><surname>Ponce</surname><given-names>MR</given-names></name><name><surname>Micol</surname><given-names>JL</given-names></name><name><surname>Tsukaya</surname><given-names>H</given-names></name></person-group>
+<year>2011</year>
+<article-title>Differential contributions of ribosomal protein genes to <italic>Arabidopsis thaliana</italic> leaf development</article-title>
+<source>The Plant Journal</source>
+<volume>65</volume>
+<fpage>724</fpage>
+<lpage>736</lpage>
+<pub-id pub-id-type="pmid">21251100</pub-id></element-citation></ref><ref id="CIT0027"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hricova</surname><given-names>A</given-names></name><name><surname>Quesada</surname><given-names>V</given-names></name><name><surname>Micol</surname><given-names>JL</given-names></name></person-group>
+<year>2006</year>
+<article-title>The <italic>SCABRA3</italic> nuclear gene encodes the plastid RpoTp RNA polymerase, which is required for chloroplast biogenesis and mesophyll cell proliferation in <italic>Arabidopsis</italic>
+</article-title>
+<source>Plant Physiology</source>
+<volume>141</volume>
+<fpage>942</fpage>
+<lpage>956</lpage>
+<pub-id pub-id-type="pmid">16698900</pub-id></element-citation></ref><ref id="CIT0028"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Huang</surname><given-names>W</given-names></name><name><surname>Pi</surname><given-names>L</given-names></name><name><surname>Liang</surname><given-names>W</given-names></name><name><surname>Xu</surname><given-names>B</given-names></name><name><surname>Wang</surname><given-names>H</given-names></name><name><surname>Cai</surname><given-names>R</given-names></name><name><surname>Huang</surname><given-names>H</given-names></name></person-group>
+<year>2006</year>
+<article-title>The proteolytic function of the <italic>Arabidopsis</italic> 26S proteasome is required for specifying leaf adaxial identity</article-title>
+<source>The Plant Cell</source>
+<volume>18</volume>
+<fpage>2479</fpage>
+<lpage>2492</lpage>
+<pub-id pub-id-type="pmid">17028202</pub-id></element-citation></ref><ref id="CIT0029"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Iwakawa</surname><given-names>H</given-names></name><name><surname>Iwasaki</surname><given-names>M</given-names></name><name><surname>Kojima</surname><given-names>S</given-names></name><name><surname>Ueno</surname><given-names>Y</given-names></name><name><surname>Soma</surname><given-names>T</given-names></name><name><surname>Tanaka</surname><given-names>H</given-names></name><name><surname>Semiarti</surname><given-names>E</given-names></name><name><surname>Machida</surname><given-names>Y</given-names></name><name><surname>Machida</surname><given-names>C</given-names></name></person-group>
+<year>2007</year>
+<article-title>Expression of the ASYMMETRIC LEAVES2 gene in the adaxial domain of <italic>Arabidopsis</italic> leaves represses cell proliferation in this domain and is critical for the development of properly expanded leaves</article-title>
+<source>The Plant Journal</source>
+<volume>51</volume>
+<fpage>173</fpage>
+<lpage>184</lpage>
+<pub-id pub-id-type="pmid">17559509</pub-id></element-citation></ref><ref id="CIT0030"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Iwakawa</surname><given-names>H</given-names></name><name><surname>Ueno</surname><given-names>Y</given-names></name><name><surname>Semiarti</surname><given-names>E</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>The <italic>ASYMMETRIC LEAVES2</italic> gene of <italic>Arabidopsis thaliana</italic>, required for formation of a symmetric flat leaf lamina, encodes a member of a novel family of proteins characterized by cysteine repeats and a leucine zipper</article-title>
+<source>Plant and Cell Physiology</source>
+<volume>43</volume>
+<fpage>467</fpage>
+<lpage>478</lpage>
+<pub-id pub-id-type="pmid">12040093</pub-id></element-citation></ref><ref id="CIT0031"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kawamura</surname><given-names>E</given-names></name><name><surname>Horiguchi</surname><given-names>G</given-names></name><name><surname>Tsukaya</surname><given-names>H</given-names></name></person-group>
+<year>2010</year>
+<article-title>Mechanisms of leaf tooth formation in <italic>Arabidopsis</italic>
+</article-title>
+<source>The Plant Journal</source>
+<volume>62</volume>
+<fpage>429</fpage>
+<lpage>441</lpage>
+<pub-id pub-id-type="pmid">20128880</pub-id></element-citation></ref><ref id="CIT0032"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Keddie</surname><given-names>JS</given-names></name><name><surname>Carroll</surname><given-names>B</given-names></name><name><surname>Jones</surname><given-names>JD</given-names></name><name><surname>Gruissem</surname><given-names>W</given-names></name></person-group>
+<year>1996</year>
+<article-title>The <italic>DCL</italic> gene of tomato is required for chloroplast development and palisade cell morphogenesis in leaves</article-title>
+<source>EMBO Journal</source>
+<volume>15</volume>
+<fpage>4208</fpage>
+<lpage>4217</lpage>
+<pub-id pub-id-type="pmid">8861949</pub-id></element-citation></ref><ref id="CIT0033"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kelley</surname><given-names>DR</given-names></name><name><surname>Arreola</surname><given-names>A</given-names></name><name><surname>Gallagher</surname><given-names>TL</given-names></name><name><surname>Gasser</surname><given-names>CS</given-names></name></person-group>
+<year>2012</year>
+<article-title>ETTIN (ARF3) physically interacts with KANADI proteins to form a functional complex essential for integument development and polarity determination in <italic>Arabidopsis</italic>
+</article-title>
+<source>Development</source>
+<volume>139</volume>
+<fpage>1105</fpage>
+<lpage>1109</lpage>
+<pub-id pub-id-type="pmid">22296848</pub-id></element-citation></ref><ref id="CIT0034"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kerstetter</surname><given-names>RA</given-names></name><name><surname>Bollman</surname><given-names>K</given-names></name><name><surname>Taylor</surname><given-names>RA</given-names></name><name><surname>Bomblies</surname><given-names>K</given-names></name><name><surname>Poethig</surname><given-names>RS</given-names></name></person-group>
+<year>2001</year>
+<article-title>
+<italic>KANADI</italic> regulates organ polarity in <italic>Arabidopsis</italic>
+</article-title>
+<source>Nature</source>
+<volume>411</volume>
+<fpage>706</fpage>
+<lpage>709</lpage>
+<pub-id pub-id-type="pmid">11395775</pub-id></element-citation></ref><ref id="CIT0035"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kidner</surname><given-names>CA</given-names></name><name><surname>Martienssen</surname><given-names>RA</given-names></name></person-group>
+<year>2004</year>
+<article-title>Spatially restricted microRNA directs leaf polarity through ARGONAUTE1</article-title>
+<source>Nature</source>
+<volume>428</volume>
+<fpage>81</fpage>
+<lpage>84</lpage>
+<pub-id pub-id-type="pmid">14999284</pub-id></element-citation></ref><ref id="CIT0036"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kojima</surname><given-names>S</given-names></name><name><surname>Iwasaki</surname><given-names>M</given-names></name><name><surname>Takahashi</surname><given-names>H</given-names></name><name><surname>Imai</surname><given-names>T</given-names></name><name><surname>Matsumura</surname><given-names>Y</given-names></name><name><surname>Fleury</surname><given-names>D</given-names></name><name><surname>Van Lijsebettens</surname><given-names>M</given-names></name><name><surname>Machida</surname><given-names>Y</given-names></name><name><surname>Machida</surname><given-names>C</given-names></name></person-group>
+<year>2011</year>
+<article-title>ASYMMETRIC LEAVES2 and Elongator, a histone acetyltransferase complex, mediate the establishment of polarity in leaves of <italic>Arabidopsis thaliana</italic>
+</article-title>
+<source>Plant and Cell Physiology</source>
+<volume>52</volume>
+<fpage>1259</fpage>
+<lpage>1273</lpage>
+<pub-id pub-id-type="pmid">21700721</pub-id></element-citation></ref><ref id="CIT0037"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Li</surname><given-names>H</given-names></name><name><surname>Xu</surname><given-names>L</given-names></name><name><surname>Wang</surname><given-names>H</given-names></name><name><surname>Yuan</surname><given-names>Z</given-names></name><name><surname>Cao</surname><given-names>X</given-names></name><name><surname>Yang</surname><given-names>Z</given-names></name><name><surname>Zhang</surname><given-names>D</given-names></name><name><surname>Xu</surname><given-names>Y</given-names></name><name><surname>Huang</surname><given-names>H</given-names></name></person-group>
+<year>2005</year>
+<article-title>The Putative RNA-dependent RNA polymerase <italic>RDR6</italic> acts synergistically with <italic>ASYMMETRIC LEAVES1</italic> and 2 to repress <italic>BREVIPEDICELLUS</italic> and MicroRNA165/166 in <italic>Arabidopsis</italic> leaf development</article-title>
+<source>The Plant Cell</source>
+<volume>17</volume>
+<fpage>2157</fpage>
+<lpage>2171</lpage>
+<pub-id pub-id-type="pmid">16006579</pub-id></element-citation></ref><ref id="CIT0038"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lin</surname><given-names>WC</given-names></name><name><surname>Shuai</surname><given-names>B</given-names></name><name><surname>Springer</surname><given-names>PS</given-names></name></person-group>
+<year>2003</year>
+<article-title>The Arabidopsis <italic>LATERAL ORGAN BOUNDARIES</italic>-domain gene <italic>ASYMMETRIC LEAVES2</italic> functions in the repression of <italic>KNOX</italic> gene expression and in adaxial-abaxial patterning</article-title>
+<source>The Plant Cell</source>
+<volume>15</volume>
+<fpage>2241</fpage>
+<lpage>2252</lpage>
+<pub-id pub-id-type="pmid">14508003</pub-id></element-citation></ref><ref id="CIT0039"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Long</surname><given-names>JA</given-names></name><name><surname>Moan</surname><given-names>EI</given-names></name><name><surname>Medford</surname><given-names>JI</given-names></name><name><surname>Barton</surname><given-names>MK</given-names></name></person-group>
+<year>1996</year>
+<article-title>A member of the KNOTTED class of homeodomain proteins encoded by the <italic>STM</italic> gene of <italic>Arabidopsis</italic>
+</article-title>
+<source>Nature</source>
+<volume>379</volume>
+<fpage>66</fpage>
+<lpage>69</lpage>
+<pub-id pub-id-type="pmid">8538741</pub-id></element-citation></ref><ref id="CIT0040"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>McConnell</surname><given-names>JR</given-names></name><name><surname>Emery</surname><given-names>J</given-names></name><name><surname>Eshed</surname><given-names>Y</given-names></name><name><surname>Bao</surname><given-names>N</given-names></name><name><surname>Bowman</surname><given-names>J</given-names></name><name><surname>Barton</surname><given-names>MK</given-names></name></person-group>
+<year>2001</year>
+<article-title>Role of <italic>PHABULOSA</italic> and <italic>PHAVOLUTA</italic> in determining radial patterning in shoots</article-title>
+<source>Nature</source>
+<volume>411</volume>
+<fpage>709</fpage>
+<lpage>713</lpage>
+<pub-id pub-id-type="pmid">11395776</pub-id></element-citation></ref><ref id="CIT0041"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>McHale</surname><given-names>NA</given-names></name><name><surname>Koning</surname><given-names>RE</given-names></name></person-group>
+<year>2004</year>
+<article-title>
+<italic>PHANTASTICA</italic> regulates development of the adaxial mesophyll in <italic>Nicotiana</italic> leaves</article-title>
+<source>The Plant Cell</source>
+<volume>16</volume>
+<fpage>1251</fpage>
+<lpage>1262</lpage>
+<pub-id pub-id-type="pmid">15084717</pub-id></element-citation></ref><ref id="CIT0042"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nagel</surname><given-names>GM</given-names></name><name><surname>Cumberledge</surname><given-names>S</given-names></name><name><surname>Johnson</surname><given-names>MS</given-names></name><name><surname>Petrella</surname><given-names>E</given-names></name><name><surname>Weber</surname><given-names>BH</given-names></name></person-group>
+<year>1984</year>
+<article-title>The <italic>&#x003b2;</italic> subunit of <italic>E. coli</italic> glycyl-tRNA synthetase plays a major role in tRNA recognition</article-title>
+<source>Nucleic Acids Research</source>
+<volume>12</volume>
+<fpage>4377</fpage>
+<lpage>4384</lpage>
+<pub-id pub-id-type="pmid">6374618</pub-id></element-citation></ref><ref id="CIT0043"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nott</surname><given-names>A</given-names></name><name><surname>Jung</surname><given-names>HS</given-names></name><name><surname>Koussevitzky</surname><given-names>S</given-names></name><name><surname>Chory</surname><given-names>J</given-names></name></person-group>
+<year>2006</year>
+<article-title>Plastid-to-nucleus retrograde signaling</article-title>
+<source>Annu Review of Plant Biology</source>
+<volume>57</volume>
+<fpage>739</fpage>
+<lpage>759</lpage>
+</element-citation></ref><ref id="CIT0044"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ohno</surname><given-names>CK</given-names></name><name><surname>Reddy</surname><given-names>GV</given-names></name><name><surname>Heisler</surname><given-names>MG</given-names></name><name><surname>Meyerowitz</surname><given-names>EM</given-names></name></person-group>
+<year>2004</year>
+<article-title>The <italic>Arabidopsis JAGGED</italic> gene encodes a zinc finger protein that promotes leaf tissue development</article-title>
+<source>Development</source>
+<volume>131</volume>
+<fpage>1111</fpage>
+<lpage>1122</lpage>
+<pub-id pub-id-type="pmid">14973281</pub-id></element-citation></ref><ref id="CIT0045"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Otsuga</surname><given-names>D</given-names></name><name><surname>DeGuzman</surname><given-names>B</given-names></name><name><surname>Prigge</surname><given-names>MJ</given-names></name><name><surname>Drews</surname><given-names>GN</given-names></name><name><surname>Clark</surname><given-names>SE</given-names></name></person-group>
+<year>2001</year>
+<article-title>
+<italic>REVOLUTA</italic> regulates meristem initiation at lateral positions</article-title>
+<source>The Plant Journal</source>
+<volume>25</volume>
+<fpage>223</fpage>
+<lpage>236</lpage>
+<pub-id pub-id-type="pmid">11169198</pub-id></element-citation></ref><ref id="CIT0046"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pekker</surname><given-names>I</given-names></name><name><surname>Alvarez</surname><given-names>JP</given-names></name><name><surname>Eshed</surname><given-names>Y</given-names></name></person-group>
+<year>2005</year>
+<article-title>Auxin response factors mediate <italic>Arabidopsis</italic> organ asymmetry via modulation of KANADI activity</article-title>
+<source>The Plant Cell</source>
+<volume>17</volume>
+<fpage>2899</fpage>
+<lpage>2910</lpage>
+<pub-id pub-id-type="pmid">16199616</pub-id></element-citation></ref><ref id="CIT0047"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pinon</surname><given-names>V</given-names></name><name><surname>Etchells</surname><given-names>JP</given-names></name><name><surname>Rossignol</surname><given-names>P</given-names></name><name><surname>Collier</surname><given-names>SA</given-names></name><name><surname>Arroyo</surname><given-names>JM</given-names></name><name><surname>Martienssen</surname><given-names>RA</given-names></name><name><surname>Byrne</surname><given-names>ME</given-names></name></person-group>
+<year>2008</year>
+<article-title>Three <italic>PIGGYBACK</italic> genes that specifically influence leaf patterning encode ribosomal proteins</article-title>
+<source>Development</source>
+<volume>135</volume>
+<fpage>1315</fpage>
+<lpage>1324</lpage>
+<pub-id pub-id-type="pmid">18305008</pub-id></element-citation></ref><ref id="CIT0048"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Prigge</surname><given-names>MJ</given-names></name><name><surname>Otsuga</surname><given-names>D</given-names></name><name><surname>Alonso</surname><given-names>JM</given-names></name><name><surname>Ecker</surname><given-names>JR</given-names></name><name><surname>Drews</surname><given-names>GN</given-names></name><name><surname>Clark</surname><given-names>SE</given-names></name></person-group>
+<year>2005</year>
+<article-title>Class III homeodomain-leucine zipper gene family members have overlapping, antagonistic, and distinct roles in <italic>Arabidopsis</italic> development</article-title>
+<source>The Plant Cell</source>
+<volume>17</volume>
+<fpage>61</fpage>
+<lpage>76</lpage>
+<pub-id pub-id-type="pmid">15598805</pub-id></element-citation></ref><ref id="CIT0049"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sawa</surname><given-names>S</given-names></name><name><surname>Ito</surname><given-names>T</given-names></name><name><surname>Shimura</surname><given-names>Y</given-names></name><name><surname>Okada</surname><given-names>K</given-names></name></person-group>
+<year>1999</year>
+<article-title>
+<italic>FILAMENTOUS FLOWER</italic> controls the formation and development of Arabidopsis inflorescences and floral meristems</article-title>
+<source>The Plant Cell</source>
+<volume>11</volume>
+<fpage>69</fpage>
+<lpage>86</lpage>
+<pub-id pub-id-type="pmid">9878633</pub-id></element-citation></ref><ref id="CIT0050"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Scholl</surname><given-names>RL</given-names></name><name><surname>May</surname><given-names>ST</given-names></name><name><surname>Ware</surname><given-names>DH</given-names></name></person-group>
+<year>2000</year>
+<article-title>Seed and molecular resources for <italic>Arabidopsis</italic>
+</article-title>
+<source>Plant Physiology</source>
+<volume>124</volume>
+<fpage>1477</fpage>
+<lpage>1480</lpage>
+<pub-id pub-id-type="pmid">11115863</pub-id></element-citation></ref><ref id="CIT0051"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Siegfried</surname><given-names>KR</given-names></name><name><surname>Eshed</surname><given-names>Y</given-names></name><name><surname>Baum</surname><given-names>SF</given-names></name><name><surname>Otsuga</surname><given-names>D</given-names></name><name><surname>Drews</surname><given-names>GN</given-names></name><name><surname>Bowman</surname><given-names>JL</given-names></name></person-group>
+<year>1999</year>
+<article-title>Members of the <italic>YABBY</italic> gene family specify abaxial cell fate in <italic>Arabidopsis</italic>
+</article-title>
+<source>Development</source>
+<volume>126</volume>
+<fpage>4117</fpage>
+<lpage>4128</lpage>
+<pub-id pub-id-type="pmid">10457020</pub-id></element-citation></ref><ref id="CIT0052"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Szakonyi</surname><given-names>D</given-names></name><name><surname>Byrne</surname><given-names>ME</given-names></name></person-group>
+<year>2011</year>
+<article-title>Ribosomal protein L27a is required for growth and patterning in <italic>Arabidopsis thaliana</italic>
+</article-title>
+<source>The Plant Journal</source>
+<volume>65</volume>
+<fpage>269</fpage>
+<lpage>281</lpage>
+<pub-id pub-id-type="pmid">21223391</pub-id></element-citation></ref><ref id="CIT0053"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Talbert</surname><given-names>PB</given-names></name><name><surname>Adler</surname><given-names>HT</given-names></name><name><surname>Parks</surname><given-names>DW</given-names></name><name><surname>Comai</surname><given-names>L</given-names></name></person-group>
+<year>1995</year>
+<article-title>The <italic>REVOLUTA</italic> gene is necessary for apical meristem development and for limiting cell divisions in the leaves and stems of <italic>Arabidopsis thaliana</italic>
+</article-title>
+<source>Development</source>
+<volume>121</volume>
+<fpage>2723</fpage>
+<lpage>2735</lpage>
+<pub-id pub-id-type="pmid">7555701</pub-id></element-citation></ref><ref id="CIT0054"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tattersall</surname><given-names>AD</given-names></name><name><surname>Turner</surname><given-names>L</given-names></name><name><surname>Knox</surname><given-names>MR</given-names></name><name><surname>Ambrose</surname><given-names>MJ</given-names></name><name><surname>Ellis</surname><given-names>TH</given-names></name><name><surname>Hofer</surname><given-names>JM</given-names></name></person-group>
+<year>2005</year>
+<article-title>The mutant <italic>crispa</italic> reveals multiple roles for <italic>PHANTASTICA</italic> in pea compound leaf development</article-title>
+<source>The Plant Cell</source>
+<volume>17</volume>
+<fpage>1046</fpage>
+<lpage>1060</lpage>
+<pub-id pub-id-type="pmid">15749758</pub-id></element-citation></ref><ref id="CIT0055"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Toth</surname><given-names>MJ</given-names></name><name><surname>Schimmel</surname><given-names>P</given-names></name></person-group>
+<year>1990</year>
+<article-title>A mutation in the small (&#x003b1;) subunit of glycyl-tRNA synthetase affects amino acid activation and subunit association parameters</article-title>
+<source>Journal of Biological Chemistry</source>
+<volume>265</volume>
+<fpage>1005</fpage>
+<lpage>1009</lpage>
+<pub-id pub-id-type="pmid">2295596</pub-id></element-citation></ref><ref id="CIT0056"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ueno</surname><given-names>Y</given-names></name><name><surname>Ishikawa</surname><given-names>T</given-names></name><name><surname>Watanabe</surname><given-names>K</given-names></name><name><surname>Terakura</surname><given-names>S</given-names></name><name><surname>Iwakawa</surname><given-names>H</given-names></name><name><surname>Okada</surname><given-names>K</given-names></name><name><surname>Machida</surname><given-names>C</given-names></name><name><surname>Machida</surname><given-names>Y</given-names></name></person-group>
+<year>2007</year>
+<article-title>Histone deacetylases and ASYMMETRIC LEAVES2 are involved in the establishment of polarity in leaves of <italic>Arabidopsis</italic>
+</article-title>
+<source>The Plant Cell</source>
+<volume>19</volume>
+<fpage>445</fpage>
+<lpage>457</lpage>
+<pub-id pub-id-type="pmid">17293570</pub-id></element-citation></ref><ref id="CIT0057"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Uwer</surname><given-names>U</given-names></name><name><surname>Willmitzer</surname><given-names>L</given-names></name><name><surname>Altmann</surname><given-names>T</given-names></name></person-group>
+<year>1998</year>
+<article-title>Inactivation of a glycyl-tRNA synthetase leads to an arrest in plant embryo development</article-title>
+<source>The Plant Cell</source>
+<volume>10</volume>
+<fpage>1277</fpage>
+<lpage>1294</lpage>
+<pub-id pub-id-type="pmid">9707529</pub-id></element-citation></ref><ref id="CIT0058"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Waites</surname><given-names>R</given-names></name><name><surname>Hudson</surname><given-names>A</given-names></name></person-group>
+<year>1995</year>
+<article-title>
+<italic>phantastica</italic>: a gene required for dorsoventrality of leaves in <italic>Antirrhinum majus</italic>
+</article-title>
+<source>Development</source>
+<volume>121</volume>
+<fpage>2143</fpage>
+<lpage>2154</lpage>
+</element-citation></ref><ref id="CIT0059"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Waites</surname><given-names>R</given-names></name><name><surname>Selvadurai</surname><given-names>HR</given-names></name><name><surname>Oliver</surname><given-names>IR</given-names></name><name><surname>Hudson</surname><given-names>A</given-names></name></person-group>
+<year>1998</year>
+<article-title>The <italic>PHANTASTICA</italic> gene encodes a MYB transcription factor involved in growth and dorsoventrality of lateral organs in <italic>Antirrhinum</italic>
+</article-title>
+<source>Cell</source>
+<volume>93</volume>
+<fpage>779</fpage>
+<lpage>789</lpage>
+<pub-id pub-id-type="pmid">9630222</pub-id></element-citation></ref><ref id="CIT0060"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>Y</given-names></name><name><surname>Duby</surname><given-names>G</given-names></name><name><surname>Purnelle</surname><given-names>B</given-names></name><name><surname>Boutry</surname><given-names>M</given-names></name></person-group>
+<year>2000</year>
+<article-title>Tobacco <italic>VDL</italic> gene encodes a plastid DEAD box RNA helicase and is involved in chloroplast differentiation and plant morphogenesis</article-title>
+<source>The Plant Cell</source>
+<volume>12</volume>
+<fpage>2129</fpage>
+<lpage>2142</lpage>
+<pub-id pub-id-type="pmid">11090214</pub-id></element-citation></ref><ref id="CIT0061"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wu</surname><given-names>G</given-names></name><name><surname>Lin</surname><given-names>WC</given-names></name><name><surname>Huang</surname><given-names>T</given-names></name><name><surname>Poethig</surname><given-names>RS</given-names></name><name><surname>Springer</surname><given-names>PS</given-names></name><name><surname>Kerstetter</surname><given-names>RA</given-names></name></person-group>
+<year>2008</year>
+<article-title>KANADI1 regulates adaxial-abaxial polarity in <italic>Arabidopsis</italic> by directly repressing the transcription of <italic>ASYMMETRIC LEAVES2</italic>
+</article-title>
+<source>Proceedings of the National Academy Sciences, USA</source>
+<volume>105</volume>
+<fpage>16393</fpage>
+<lpage>16398</lpage>
+</element-citation></ref><ref id="CIT0062"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Xu</surname><given-names>L</given-names></name><name><surname>Xu</surname><given-names>Y</given-names></name><name><surname>Dong</surname><given-names>A</given-names></name><name><surname>Sun</surname><given-names>Y</given-names></name><name><surname>Pi</surname><given-names>L</given-names></name><name><surname>Huang</surname><given-names>H</given-names></name></person-group>
+<year>2003</year>
+<article-title>Novel <italic>as1</italic> and <italic>as2</italic> defects in leaf adaxial-abaxial polarity reveal the requirement for <italic>ASYMMETRIC LEAVES1</italic> and 2 and <italic>ERECTA</italic> functions in specifying leaf adaxial identity</article-title>
+<source>Development</source>
+<volume>130</volume>
+<fpage>4097</fpage>
+<lpage>4107</lpage>
+<pub-id pub-id-type="pmid">12874130</pub-id></element-citation></ref><ref id="CIT0063"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yang</surname><given-names>L</given-names></name><name><surname>Huang</surname><given-names>W</given-names></name><name><surname>Wang</surname><given-names>H</given-names></name><name><surname>Cai</surname><given-names>R</given-names></name><name><surname>Xu</surname><given-names>Y</given-names></name><name><surname>Huang</surname><given-names>H</given-names></name></person-group>
+<year>2006</year>
+<article-title>Characterizations of a hypomorphic <italic>argonaute1</italic> mutant reveal novel <italic>AGO1</italic> functions in <italic>Arabidopsis</italic> lateral organ development</article-title>
+<source>Plant Molecular Biology</source>
+<volume>61</volume>
+<fpage>63</fpage>
+<lpage>78</lpage>
+<pub-id pub-id-type="pmid">16786292</pub-id></element-citation></ref><ref id="CIT0064"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yao</surname><given-names>Y</given-names></name><name><surname>Ling</surname><given-names>Q</given-names></name><name><surname>Wang</surname><given-names>H</given-names></name><name><surname>Huang</surname><given-names>H</given-names></name></person-group>
+<year>2008</year>
+<article-title>Ribosomal proteins promote leaf adaxial identity</article-title>
+<source>Development</source>
+<volume>135</volume>
+<fpage>1325</fpage>
+<lpage>1334</lpage>
+<pub-id pub-id-type="pmid">18305007</pub-id></element-citation></ref><ref id="CIT0065"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhong</surname><given-names>R</given-names></name><name><surname>Ye</surname><given-names>ZH</given-names></name></person-group>
+<year>1999</year>
+<article-title>
+<italic>IFL1</italic>, a gene regulating interfascicular fiber differentiation in <italic>Arabidopsis</italic>, encodes a homeodomain-leucine zipper protein</article-title>
+<source>The Plant Cell</source>
+<volume>11</volume>
+<fpage>2139</fpage>
+<lpage>2152</lpage>
+<pub-id pub-id-type="pmid">10559440</pub-id></element-citation></ref><ref id="CIT0066"><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhong</surname><given-names>R</given-names></name><name><surname>Ye</surname><given-names>ZH</given-names></name></person-group>
+<year>2004</year>
+<article-title>
+<italic>Amphivasal vascular bundle 1</italic>, a gain-of-function mutation of the <italic>IFL1/REV</italic> gene, is associated with alterations in the polarity of leaves, stems and carpels</article-title>
+<source>Plant and Cell Physiology</source>
+<volume>45</volume>
+<fpage>369</fpage>
+<lpage>385</lpage>
+<pub-id pub-id-type="pmid">15111711</pub-id></element-citation></ref></ref-list></back></article>

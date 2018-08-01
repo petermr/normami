@@ -1,0 +1,790 @@
+{
+  "id": [
+    "21059647"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "21059647"
+  ],
+  "pmcid": [
+    "PMC3020774"
+  ],
+  "doi": [
+    "10.1074/jbc.m110.167692"
+  ],
+  "title": [
+    "Nuclear import and DNA binding of the ZHD5 transcription factor is modulated by a competitive peptide inhibitor in Arabidopsis."
+  ],
+  "authorString": [
+    "Hong SY, Kim OK, Kim SG, Yang MS, Park CM."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Hong SY"
+          ],
+          "firstName": [
+            "Shin-Young"
+          ],
+          "lastName": [
+            "Hong"
+          ],
+          "initials": [
+            "SY"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3031-2753",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Kim OK"
+          ],
+          "firstName": [
+            "Ok-Kyoung"
+          ],
+          "lastName": [
+            "Kim"
+          ],
+          "initials": [
+            "OK"
+          ]
+        },
+        {
+          "fullName": [
+            "Kim SG"
+          ],
+          "firstName": [
+            "Sang-Gyu"
+          ],
+          "lastName": [
+            "Kim"
+          ],
+          "initials": [
+            "SG"
+          ]
+        },
+        {
+          "fullName": [
+            "Yang MS"
+          ],
+          "firstName": [
+            "Moon-Sik"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "MS"
+          ]
+        },
+        {
+          "fullName": [
+            "Park CM"
+          ],
+          "firstName": [
+            "Chung-Mo"
+          ],
+          "lastName": [
+            "Park"
+          ],
+          "initials": [
+            "CM"
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-3031-2753",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "2"
+      ],
+      "volume": [
+        "286"
+      ],
+      "journalIssueId": [
+        "1796168"
+      ],
+      "dateOfPublication": [
+        "2011 Jan"
+      ],
+      "monthOfPublication": [
+        "1"
+      ],
+      "yearOfPublication": [
+        "2011"
+      ],
+      "printPublicationDate": [
+        "2011-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "The Journal of biological chemistry"
+          ],
+          "ISOAbbreviation": [
+            "J. Biol. Chem."
+          ],
+          "medlineAbbreviation": [
+            "J Biol Chem"
+          ],
+          "NLMid": [
+            "2985121R"
+          ],
+          "ISSN": [
+            "0021-9258"
+          ],
+          "ESSN": [
+            "1083-351X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2011"
+  ],
+  "pageInfo": [
+    "1659-1668"
+  ],
+  "abstractText": [
+    "Competitive inhibition of transcription factors by small proteins is an intriguing component of gene regulatory networks in both animals and plants. The small interfering proteins possess limited sequence homologies to specific transcription factors but lack one or more protein motifs required for transcription factor activities. They interfere with the activities of transcription factors, such as DNA binding and transcriptional activation, by forming nonfunctional heterodimers. A potential example is the Arabidopsis MIF1 (mini zinc finger 1) protein consisting of 101 residues. It has a zinc finger domain but lacks other protein motifs normally present in transcription factors. In this work, we show that MIF1 and its functional homologues physically interact with a group of zinc finger homeodomain (ZHD) transcription factors, such as ZHD5, that regulate floral architecture and leaf development. Gel mobility shift assays revealed that MIF1 blocks the DNA binding activity of ZHD5 homodimers by competitively forming MIF1-ZHD5 heterodimers. Accordingly, the transcriptional activation activity of ZHD5 was significantly suppressed by MIF1 coexpressed transiently in Arabidopsis protoplasts. Notably, MIF1 also prevents ZHD5 from nuclear localization. Although ZHD5 was localized exclusively in the nucleus, it was scattered throughout the cytoplasm when MIF1 was coexpressed. Transgenic plants overexpressing the ZHD5 gene (35S:ZHD5) exhibited accelerated growth with larger leaves. Consistent with the negative regulation of ZHD5 by MIF1, the 35S:ZHD5 phenotypes were diminished by MIF1 coexpression. These observations indicate that MIF1 regulates the ZHD5 activities in a dual step manner: nuclear import and DNA binding."
+  ],
+  "affiliation": [
+    "Department of Chemistry, Seoul National University, Seoul 151-742, Korea."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cytoplasm"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Carrier Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Homeodomain Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Two-Hybrid System Techniques"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Zinc Fingers"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Active Transport, Cell Nucleus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Dimerization"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcriptional Activation"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Carrier Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Homeodomain Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MIF1 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "ZHD5 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3020774"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/21059647/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/21059647/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "abs"
+          ],
+          "site": [
+            "intl.jbc.org"
+          ],
+          "url": [
+            "http://intl.jbc.org/cgi/content/abstract/286/2/1659"
+          ]
+        },
+        {
+          "availability": [
+            "Free after 12 months"
+          ],
+          "availabilityCode": [
+            "F12"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "intl.jbc.org"
+          ],
+          "url": [
+            "http://intl.jbc.org/cgi/content/full/286/2/1659"
+          ]
+        },
+        {
+          "availability": [
+            "Free after 12 months"
+          ],
+          "availabilityCode": [
+            "F12"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "intl.jbc.org"
+          ],
+          "url": [
+            "http://intl.jbc.org/cgi/reprint/286/2/1659.pdf"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1074/jbc.M110.167692"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "22"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by-nc"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2011-03-02"
+  ],
+  "dateOfCreation": [
+    "2011-01-10"
+  ],
+  "dateOfRevision": [
+    "2013-07-03"
+  ],
+  "electronicPublicationDate": [
+    "2010-11-08"
+  ],
+  "firstPublicationDate": [
+    "2010-11-08"
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "id": [
+    "29515615"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29515615"
+  ],
+  "pmcid": [
+    "PMC5826354"
+  ],
+  "doi": [
+    "10.3389/fpls.2018.00216"
+  ],
+  "title": [
+    "HorTILLUS-A Rich and Renewable Source of Induced Mutations for Forward/Reverse Genetics and Pre-breeding Programs in Barley (Hordeum vulgare L.)."
+  ],
+  "authorString": [
+    "Szurman-Zubrzycka ME, Zbieszczyk J, Marzec M, Jelonek J, Chmielewska B, Kurowska MM, Krok M, Daszkowska-Golec A, Guzy-Wrobelska J, Gruszka D, Gajecka M, Gajewska P, Stolarek M, Tylec P, Sega P, Lip S, Kudełko M, Lorek M, Gorniak-Walas M, Malolepszy A, Podsiadlo N, Szyrajew KP, Keisa A, Mbambo Z, Todorowska E, Gaj M, Nita Z, Orlowska-Job W, Maluszynski M, Szarejko I."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Szurman-Zubrzycka ME"
+          ],
+          "firstName": [
+            "Miriam E"
+          ],
+          "lastName": [
+            "Szurman-Zubrzycka"
+          ],
+          "initials": [
+            "ME"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Zbieszczyk J"
+          ],
+          "firstName": [
+            "Justyna"
+          ],
+          "lastName": [
+            "Zbieszczyk"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Marzec M"
+          ],
+          "firstName": [
+            "Marek"
+          ],
+          "lastName": [
+            "Marzec"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Jelonek J"
+          ],
+          "firstName": [
+            "Janusz"
+          ],
+          "lastName": [
+            "Jelonek"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Chmielewska B"
+          ],
+          "firstName": [
+            "Beata"
+          ],
+          "lastName": [
+            "Chmielewska"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Kurowska MM"
+          ],
+          "firstName": [
+            "Marzena M"
+          ],
+          "lastName": [
+            "Kurowska"
+          ],
+          "initials": [
+            "MM"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Krok M"
+          ],
+          "firstName": [
+            "Milena"
+          ],
+          "lastName": [
+            "Krok"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Daszkowska-Golec A"
+          ],
+          "firstName": [
+            "Agata"
+          ],
+          "lastName": [
+            "Daszkowska-Golec"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Guzy-Wrobelska J"
+          ],
+          "firstName": [
+            "Justyna"
+          ],
+          "lastName": [
+            "Guzy-Wrobelska"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Gruszka D"
+          ],
+          "firstName": [
+            "Damian"
+          ],
+          "lastName": [
+            "Gruszka"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Gajecka M"
+          ],
+          "firstName": [
+            "Monika"
+          ],
+          "lastName": [
+            "Gajecka"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Gajewska P"
+          ],
+          "firstName": [
+            "Patrycja"
+          ],
+          "lastName": [
+            "Gajewska"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Stolarek M"
+          ],
+          "firstName": [
+            "Magdalena"
+          ],
+          "lastName": [
+            "Stolarek"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Tylec P"
+          ],
+          "firstName": [
+            "Piotr"
+          ],
+          "lastName": [
+            "Tylec"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Sega P"
+          ],
+          "firstName": [
+            "Paweł"
+          ],
+          "lastName": [
+            "Sega"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Lip S"
+          ],
+          "firstName": [
+            "Sabina"
+          ],
+          "lastName": [
+            "Lip"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Kudełko M"
+          ],
+          "firstName": [
+            "Monika"
+          ],
+          "lastName": [
+            "Kudełko"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Lorek M"
+          ],
+          "firstName": [
+            "Magdalena"
+          ],
+          "lastName": [
+            "Lorek"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Gorniak-Walas M"
+          ],
+          "firstName": [
+            "Małgorzata"
+          ],
+          "lastName": [
+            "Gorniak-Walas"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Malolepszy A"
+          ],
+          "firstName": [
+            "Anna"
+          ],
+          "lastName": [
+            "Malolepszy"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Podsiadlo N"
+          ],
+          "firstName": [
+            "Nina"
+          ],
+          "lastName": [
+            "Podsiadlo"
+          ],
+          "initials": [
+            "N"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Szyrajew KP"
+          ],
+          "firstName": [
+            "Katarzyna P"
+          ],
+          "lastName": [
+            "Szyrajew"
+          ],
+          "initials": [
+            "KP"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Keisa A"
+          ],
+          "firstName": [
+            "Anete"
+          ],
+          "lastName": [
+            "Keisa"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Microbiology and Biotechnology, Faculty of Biology, University of Latvia, Riga, Latvia."
+          ]
+        },
+        {
+          "fullName": [
+            "Mbambo Z"
+          ],
+          "firstName": [
+            "Zodwa"
+          ],
+          "lastName": [
+            "Mbambo"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "Biosciences, Council for Scientific and Industrial Research, Pretoria, South Africa."
+          ]
+        },
+        {
+          "fullName": [
+            "Todorowska E"
+          ],
+          "firstName": [
+            "Elena"
+          ],
+          "lastName": [
+            "Todorowska"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Agrobioinstitute, Sofia, Bulgaria."
+          ]
+        },
+        {
+          "fullName": [
+            "Gaj M"
+          ],
+          "firstName": [
+            "Marek"
+          ],
+          "lastName": [
+            "Gaj"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Nita Z"
+          ],
+          "firstName": [
+            "Zygmunt"
+          ],
+          "lastName": [
+            "Nita"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "Seed Company Plant Breeding Strzelce Ltd., Plant Breeding and Acclimatization Institute, Błonie, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Orlowska-Job W"
+          ],
+          "firstName": [
+            "Wanda"
+          ],
+          "lastName": [
+            "Orlowska-Job"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "Seed Company Plant Breeding Strzelce Ltd., Plant Breeding and Acclimatization Institute, Błonie, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Maluszynski M"
+          ],
+          "firstName": [
+            "Miroslaw"
+          ],
+          "lastName": [
+            "Maluszynski"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        },
+        {
+          "fullName": [
+            "Szarejko I"
+          ],
+          "firstName": [
+            "Iwona"
+          ],
+          "lastName": [
+            "Szarejko"
+          ],
+          "initials": [
+            "I"
+          ],
+          "affiliation": [
+            "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "9"
+      ],
+      "journalIssueId": [
+        "2644150"
+      ],
+      "dateOfPublication": [
+        "2018 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in Plant Science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "216"
+  ],
+  "abstractText": [
+    "TILLING (Targeting Induced Local Lesions IN Genomes) is a strategy used for functional analysis of genes that combines the classical mutagenesis and a rapid, high-throughput identification of mutations within a gene of interest. TILLING has been initially developed as a discovery platform for functional genomics, but soon it has become a valuable tool in development of desired alleles for crop breeding, alternative to transgenic approach. Here we present the HorTILLUS ( Hordeum-TILLING-University of Silesia) population created for spring barley cultivar \"Sebastian\" after double-treatment of seeds with two chemical mutagens: sodium azide (NaN3) and N-methyl-N-nitrosourea (MNU). The population comprises more than 9,600 M2 plants from which DNA was isolated, seeds harvested, vacuum-packed, and deposited in seed bank. M3 progeny of 3,481 M2 individuals was grown in the field and phenotyped. The screening for mutations was performed for 32 genes related to different aspects of plant growth and development. For each gene fragment, 3,072-6,912 M2 plants were used for mutation identification using LI-COR sequencer. In total, 382 mutations were found in 182.2 Mb screened. The average mutation density in the HorTILLUS, estimated as 1 mutation per 477 kb, is among the highest mutation densities reported for barley. The majority of mutations were G/C to A/T transitions, however about 8% transversions were also detected. Sixty-one percent of mutations found in coding regions were missense, 37.5% silent and 1.1% nonsense. In each gene, the missense mutations with a potential effect on protein function were identified. The HorTILLUS platform is the largest of the TILLING populations reported for barley and best characterized. The population proved to be a useful tool, both in functional genomic studies and in forward selection of barley mutants with required phenotypic changes. We are constantly renewing the HorTILLUS population, which makes it a permanent source of new mutations. We offer the usage of this valuable resource to the interested barley researchers on cooperative basis."
+  ],
+  "affiliation": [
+    "Department of Genetics, Faculty of Biology and Environmental Protection, University of Silesia, Katowice, Poland."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Mutation",
+        "Barley",
+        "Reverse genetics",
+        "Sodium azide",
+        "Tilling",
+        "Mnu"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5826354?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5826354"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2018.00216"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen"
+      ]
+    }
+  ],
+  "dateOfCreation": [
+    "2018-03-09"
+  ],
+  "dateOfRevision": [
+    "2018-03-11"
+  ],
+  "electronicPublicationDate": [
+    "2018-02-21"
+  ],
+  "firstPublicationDate": [
+    "2018-02-21"
+  ]
+}

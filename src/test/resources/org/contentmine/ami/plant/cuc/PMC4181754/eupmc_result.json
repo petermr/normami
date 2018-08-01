@@ -1,0 +1,286 @@
+{
+  "id": [
+    "25279141"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25279141"
+  ],
+  "pmcid": [
+    "PMC4181754"
+  ],
+  "doi": [
+    "10.1186/2046-9063-10-9"
+  ],
+  "title": [
+    "In silico analysis of high affinity potassium transporter (HKT) isoforms in different plants."
+  ],
+  "authorString": [
+    "Zamani Babgohari M, Ebrahimie E, Niazi A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Zamani Babgohari M"
+          ],
+          "firstName": [
+            "Mahbobeh"
+          ],
+          "lastName": [
+            "Zamani Babgohari"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Biotechnology Institute, Shiraz University, Shiraz, Iran."
+          ]
+        },
+        {
+          "fullName": [
+            "Ebrahimie E"
+          ],
+          "firstName": [
+            "Esmaeil"
+          ],
+          "lastName": [
+            "Ebrahimie"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Department of Crop Production & Plant Breeding, College of Agriculture, Shiraz University, Shiraz, Iran ; School of Molecular & Biomedical Science, The University of Adelaide, Adelaide, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Niazi A"
+          ],
+          "firstName": [
+            "Ali"
+          ],
+          "lastName": [
+            "Niazi"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Biotechnology Institute, Shiraz University, Shiraz, Iran."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "2173189"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Aquatic biosystems"
+          ],
+          "ISOAbbreviation": [
+            "Aquat Biosyst"
+          ],
+          "medlineAbbreviation": [
+            "Aquat Biosyst"
+          ],
+          "NLMid": [
+            "101578913"
+          ],
+          "ESSN": [
+            "2046-9063"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "9"
+  ],
+  "abstractText": [
+    "BACKGROUND: High affinity potassium transporters (HKTs) are located in the plasma membrane of the vessels and have significant influence on salt tolerance in some plants. They exclude Na(+) from the parenchyma cells to reduce Na(+) concentration. Despite many studies, the underlying regulatory mechanisms and the exact functions of HKTs within different genomic backgrounds are relatively unknown. In this study, various bioinformatics techniques, including promoter analysis, identification of HKT-surrounding genes, and construction of gene networks, were applied to investigate the HKT regulatory mechanism. RESULTS: Promoter analysis showed that rice HKTs carry ABA response elements. Additionally, jasmonic acid response elements were detected on promoter region of TmHKT1;5. In silico synteny highlighted several unknown and new loci near rice, Arabidopsis thaliana and Physcomitrella patent HKTs, which may play a significant role in salt stress tolerance in concert with HKTs. Gene network prediction unravelled that crosstalk between jasmonate and ethylene reduces AtHKT1;1 expression. Furthermore, antiporter and transferase proteins were found in AtHKT1;1 gene network. Interestingly, regulatory elements on the promoter region of HKT in wild genotype (TmHKT1;5) were more frequent and variable than the ones in cultivated wheat (TaHKT1;5) which provides the possibility of rapid response and better understanding of environmental conditions for wild genotype. CONCLUSION: Detecting ABA and jasmonic acid response elements on promoter regions of HKTs provide valuable clues on underlying regulatory mechanisms of HKTs. In silico synteny and pathway discovery indicated several candidates which act in concert with HKTs in stress condition. We highlighted different arrangement of regulatory elements on promoter region of wild wheat (TmHKT1;5) compared to bread wheat (TaHKT1;5) in this study."
+  ],
+  "affiliation": [
+    "Biotechnology Institute, Shiraz University, Shiraz, Iran."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Promoter",
+        "Regulatory elements",
+        "gene network",
+        "HKT",
+        "Pathway Discovery",
+        "In Silico Synteny"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4181754?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4181754"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/2046-9063-10-9"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2014-10-03"
+  ],
+  "dateOfCreation": [
+    "2014-10-03"
+  ],
+  "dateOfRevision": [
+    "2015-02-09"
+  ],
+  "electronicPublicationDate": [
+    "2014-09-15"
+  ],
+  "firstPublicationDate": [
+    "2014-09-15"
+  ]
+}

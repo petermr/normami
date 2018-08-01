@@ -1,0 +1,624 @@
+{
+  "id": [
+    "28704497"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28704497"
+  ],
+  "pmcid": [
+    "PMC5509165"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0180741"
+  ],
+  "title": [
+    "Genetic mapping of the LOBED LEAF 1 (ClLL1) gene to a 127.6-kb region in watermelon (Citrullus lanatus L.)."
+  ],
+  "authorString": [
+    "Wei C, Chen X, Wang Z, Liu Q, Li H, Zhang Y, Ma J, Yang J, Zhang X."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Wei C"
+          ],
+          "firstName": [
+            "Chunhua"
+          ],
+          "lastName": [
+            "Wei"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "College of Horticulture, Northwest A&F University, Yangling, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Chen X"
+          ],
+          "firstName": [
+            "Xiner"
+          ],
+          "lastName": [
+            "Chen"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "College of Horticulture, Northwest A&F University, Yangling, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang Z"
+          ],
+          "firstName": [
+            "Zhongyuan"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "College of Horticulture, Northwest A&F University, Yangling, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu Q"
+          ],
+          "firstName": [
+            "Qiyan"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "affiliation": [
+            "College of Horticulture, Northwest A&F University, Yangling, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Li H"
+          ],
+          "firstName": [
+            "Hao"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "College of Horticulture, Northwest A&F University, Yangling, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang Y"
+          ],
+          "firstName": [
+            "Yong"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "College of Horticulture, Northwest A&F University, Yangling, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Ma J"
+          ],
+          "firstName": [
+            "Jianxiang"
+          ],
+          "lastName": [
+            "Ma"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "College of Horticulture, Northwest A&F University, Yangling, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yang J"
+          ],
+          "firstName": [
+            "Jianqiang"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "College of Horticulture, Northwest A&F University, Yangling, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang X"
+          ],
+          "firstName": [
+            "Xian"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9254-0730",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "College of Horticulture, Northwest A&F University, Yangling, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-9254-0730",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "7"
+      ],
+      "volume": [
+        "12"
+      ],
+      "journalIssueId": [
+        "2572928"
+      ],
+      "dateOfPublication": [
+        "2017 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "e0180741"
+  ],
+  "abstractText": [
+    "The lobed leaf character is a unique morphologic trait in crops, featuring many potential advantages for agricultural productivity. Although the majority of watermelon varieties feature lobed leaves, the genetic factors responsible for lobed leaf formation remain elusive. The F2:3 leaf shape segregating population offers the opportunity to study the underlying mechanism of lobed leaf formation in watermelon. Genetic analysis revealed that a single dominant allele (designated ClLL1) controlled the lobed leaf trait. A large-sized F3:4 population derived from F2:3 individuals was used to map ClLL1. A total of 5,966 reliable SNPs and indels were identified genome-wide via a combination of BSA and RNA-seq. Using the validated SNP and indel markers, the location of ClLL1 was narrowed down to a 127.6-kb region between markers W08314 and W07061, containing 23 putative ORFs. Expression analysis via qRT-PCR revealed differential expression patterns (fold-changes above 2-fold or below 0.5-fold) of three ORFs (ORF3, ORF11, and ORF18) between lobed and non-lobed leaf plants. Based on gene annotation and expression analysis, ORF18 (encoding an uncharacterized protein) and ORF22 (encoding a homeobox-leucine zipper-like protein) were considered as most likely candidate genes. Furthermore, sequence analysis revealed no polymorphisms in cDNA sequences of ORF18; however, two notable deletions were identified in ORF22. This study is the first report to map a leaf shape gene in watermelon and will facilitate cloning and functional characterization of ClLL1 in future studies."
+  ],
+  "affiliation": [
+    "College of Horticulture, Northwest A&F University, Yangling, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Chromosomes, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Citrullus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Chromosome Mapping"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Polymorphism, Single Nucleotide"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Quantitative Trait Loci"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genetic Linkage"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5509165?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5509165"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0180741"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2017-09-26"
+  ],
+  "dateOfCreation": [
+    "2017-07-13"
+  ],
+  "dateOfRevision": [
+    "2017-09-26"
+  ],
+  "electronicPublicationDate": [
+    "2017-07-13"
+  ],
+  "firstPublicationDate": [
+    "2017-07-13"
+  ]
+}

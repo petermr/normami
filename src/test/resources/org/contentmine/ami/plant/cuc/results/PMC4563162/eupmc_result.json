@@ -1,0 +1,475 @@
+{
+  "id": [
+    "26442000"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26442000"
+  ],
+  "pmcid": [
+    "PMC4563162"
+  ],
+  "doi": [
+    "10.3389/fpls.2015.00676"
+  ],
+  "title": [
+    "NAC transcription factor family genes are differentially expressed in rice during infections with Rice dwarf virus, Rice black-streaked dwarf virus, Rice grassy stunt virus, Rice ragged stunt virus, and Rice transitory yellowing virus."
+  ],
+  "authorString": [
+    "Nuruzzaman M, Sharoni AM, Satoh K, Karim MR, Harikrishna JA, Shimizu T, Sasaya T, Omura T, Haque MA, Hasan SM, Ahmad A, Kikuchi S."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Nuruzzaman M"
+          ],
+          "firstName": [
+            "Mohammed"
+          ],
+          "lastName": [
+            "Nuruzzaman"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Plant Genome Research Unit, Agrogenomics Research Center, National Institute of Agrobiological Sciences Tsukuba, Japan ; Faculty of Science, Centre for Research for Biotechnology for Agriculture, Institute of Biological Sciences, University of Malaya Kuala Lumpur, Malaysia ; Post Harvest Technology, School of Food Science and Technology, University Malaysia Terengganu Kuala Terengganu, Malaysia ; Department of Agronomy and Agricultural Extension, Faculty of Agriculture, University of Rajshahi Rajshahi, Bangladesh."
+          ]
+        },
+        {
+          "fullName": [
+            "Sharoni AM"
+          ],
+          "firstName": [
+            "Akhter M"
+          ],
+          "lastName": [
+            "Sharoni"
+          ],
+          "initials": [
+            "AM"
+          ],
+          "affiliation": [
+            "Plant Genome Research Unit, Agrogenomics Research Center, National Institute of Agrobiological Sciences Tsukuba, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Satoh K"
+          ],
+          "firstName": [
+            "Kouji"
+          ],
+          "lastName": [
+            "Satoh"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Plant Genome Research Unit, Agrogenomics Research Center, National Institute of Agrobiological Sciences Tsukuba, Japan ; Research Team for Vector-Borne Plant Pathogens, National Agricultural Research Center Tsukuba, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Karim MR"
+          ],
+          "firstName": [
+            "Mohammad Rezaul"
+          ],
+          "lastName": [
+            "Karim"
+          ],
+          "initials": [
+            "MR"
+          ],
+          "affiliation": [
+            "Faculty of Science, Centre for Research for Biotechnology for Agriculture, Institute of Biological Sciences, University of Malaya Kuala Lumpur, Malaysia."
+          ]
+        },
+        {
+          "fullName": [
+            "Harikrishna JA"
+          ],
+          "firstName": [
+            "Jennifer A"
+          ],
+          "lastName": [
+            "Harikrishna"
+          ],
+          "initials": [
+            "JA"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4687-709X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Faculty of Science, Centre for Research for Biotechnology for Agriculture, Institute of Biological Sciences, University of Malaya Kuala Lumpur, Malaysia."
+          ]
+        },
+        {
+          "fullName": [
+            "Shimizu T"
+          ],
+          "firstName": [
+            "Takumi"
+          ],
+          "lastName": [
+            "Shimizu"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Research Team for Vector-Borne Plant Pathogens, National Agricultural Research Center Tsukuba, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Sasaya T"
+          ],
+          "firstName": [
+            "Takahide"
+          ],
+          "lastName": [
+            "Sasaya"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Research Team for Vector-Borne Plant Pathogens, National Agricultural Research Center Tsukuba, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Omura T"
+          ],
+          "firstName": [
+            "Toshihiro"
+          ],
+          "lastName": [
+            "Omura"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Research Team for Vector-Borne Plant Pathogens, National Agricultural Research Center Tsukuba, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Haque MA"
+          ],
+          "firstName": [
+            "Mohammad A"
+          ],
+          "lastName": [
+            "Haque"
+          ],
+          "initials": [
+            "MA"
+          ],
+          "affiliation": [
+            "Department of Agronomy and Agricultural Extension, Faculty of Agriculture, University of Rajshahi Rajshahi, Bangladesh."
+          ]
+        },
+        {
+          "fullName": [
+            "Hasan SM"
+          ],
+          "firstName": [
+            "Sayed M Z"
+          ],
+          "lastName": [
+            "Hasan"
+          ],
+          "initials": [
+            "SM"
+          ],
+          "affiliation": [
+            "Post Harvest Technology, School of Food Science and Technology, University Malaysia Terengganu Kuala Terengganu, Malaysia."
+          ]
+        },
+        {
+          "fullName": [
+            "Ahmad A"
+          ],
+          "firstName": [
+            "Aziz"
+          ],
+          "lastName": [
+            "Ahmad"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2270-5197",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centre for Fundamental and Liberal Education, School of Science and Food Technology, Universiti Malaysia Terengganu Kuala Terengganu, Malaysia."
+          ]
+        },
+        {
+          "fullName": [
+            "Kikuchi S"
+          ],
+          "firstName": [
+            "Shoshi"
+          ],
+          "lastName": [
+            "Kikuchi"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Plant Genome Research Unit, Agrogenomics Research Center, National Institute of Agrobiological Sciences Tsukuba, Japan."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-4687-709X",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-2270-5197",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "6"
+      ],
+      "journalIssueId": [
+        "2260598"
+      ],
+      "dateOfPublication": [
+        "2015"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in plant science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "676"
+  ],
+  "abstractText": [
+    "Expression levels of the NAC gene family were studied in rice infected with Rice dwarf virus (RDV), Rice black-streaked dwarf virus (RBSDV), Rice grassy stunt virus (RGSV), Rice ragged stunt virus (RRSV), and Rice transitory yellowing virus (RTYV). Microarray analysis showed that 75 (68%) OsNAC genes were differentially regulated during infection with RDV, RBSDV, RGSV, and RRSV compared with the control. The number of OsNAC genes up-regulated was highest during RGSV infection, while the lowest number was found during RTYV infection. These phenomena correlate with the severity of the syndromes induced by the virus infections. Most of the genes in the NAC subgroups NAC22, SND, ONAC2, ANAC34, and ONAC3 were down-regulated for all virus infections. These OsNAC genes might be related to the health stage maintenance of the host plants. Interestingly, most of the genes in the subgroups TIP and SNAC were more highly expressed during RBSDV and RGSV infections. These results suggested that OsNAC genes might be related to the responses induced by the virus infection. All of the genes assigned to the TIP subgroups were highly expressed during RGSV infection when compared with the control. For RDV infection, the number of activated genes was greatest during infection with the S-strain, followed by the D84-strain and the O-strain, with seven OsNAC genes up-regulated during infection by all three strains. The Os12g03050 and Os11g05614 genes showed higher expression during infection with four of the five viruses, and Os11g03310, Os11g03370, and Os07g37920 genes showed high expression during at least three viral infections. We identified some duplicate genes that are classified as neofunctional and subfunctional according to their expression levels in different viral infections. A number of putative cis-elements were identified, which may help to clarify the function of these key genes in network pathways."
+  ],
+  "affiliation": [
+    "Plant Genome Research Unit, Agrogenomics Research Center, National Institute of Agrobiological Sciences Tsukuba, Japan ; Faculty of Science, Centre for Research for Biotechnology for Agriculture, Institute of Biological Sciences, University of Malaya Kuala Lumpur, Malaysia ; Post Harvest Technology, School of Food Science and Technology, University Malaysia Terengganu Kuala Terengganu, Malaysia ; Department of Agronomy and Agricultural Extension, Faculty of Agriculture, University of Rajshahi Rajshahi, Bangladesh."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Cis-element",
+        "Differential gene expression",
+        "Gene duplication",
+        "Virus infections",
+        "Nac Transcription Factors"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4563162?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4563162"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2015.00676"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "6"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-10-07"
+  ],
+  "dateOfCreation": [
+    "2015-10-07"
+  ],
+  "dateOfRevision": [
+    "2015-10-08"
+  ],
+  "electronicPublicationDate": [
+    "2015-09-09"
+  ],
+  "firstPublicationDate": [
+    "2015-09-09"
+  ]
+}

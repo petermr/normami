@@ -1,0 +1,856 @@
+{
+  "id": [
+    "28640868"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28640868"
+  ],
+  "pmcid": [
+    "PMC5480960"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0179640"
+  ],
+  "title": [
+    "Functional metabolomics as a tool to analyze Mediator function and structure in plants."
+  ],
+  "authorString": [
+    "Davoine C, Abreu IN, Khajeh K, Blomberg J, Kidd BN, Kazan K, Schenk PM, Gerber L, Nilsson O, Moritz T, Björklund S."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Davoine C"
+          ],
+          "firstName": [
+            "Celine"
+          ],
+          "lastName": [
+            "Davoine"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Department of Medical Biochemistry and Biophysics, Umeå University, Umeå, Sweden."
+          ]
+        },
+        {
+          "fullName": [
+            "Abreu IN"
+          ],
+          "firstName": [
+            "Ilka N"
+          ],
+          "lastName": [
+            "Abreu"
+          ],
+          "initials": [
+            "IN"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4728-0161",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Umeå Plant Science Centre, Department of Forest Genetics and Plant Physiology, Swedish University of Agricultural Sciences, Umeå, Sweden."
+          ]
+        },
+        {
+          "fullName": [
+            "Khajeh K"
+          ],
+          "firstName": [
+            "Khalil"
+          ],
+          "lastName": [
+            "Khajeh"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Department of Medical Biochemistry and Biophysics, Umeå University, Umeå, Sweden."
+          ]
+        },
+        {
+          "fullName": [
+            "Blomberg J"
+          ],
+          "firstName": [
+            "Jeanette"
+          ],
+          "lastName": [
+            "Blomberg"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Medical Biochemistry and Biophysics, Umeå University, Umeå, Sweden."
+          ]
+        },
+        {
+          "fullName": [
+            "Kidd BN"
+          ],
+          "firstName": [
+            "Brendan N"
+          ],
+          "lastName": [
+            "Kidd"
+          ],
+          "initials": [
+            "BN"
+          ],
+          "affiliation": [
+            "CSIRO Agriculture and Food, Queensland Bioscience Precinct, 306 Carmody Road, St Lucia, QLD, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Kazan K"
+          ],
+          "firstName": [
+            "Kemal"
+          ],
+          "lastName": [
+            "Kazan"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Queensland Alliance for Agriculture & Food Innovation (QAAFI), University of Queensland, St Lucia, QLD, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Schenk PM"
+          ],
+          "firstName": [
+            "Peer M"
+          ],
+          "lastName": [
+            "Schenk"
+          ],
+          "initials": [
+            "PM"
+          ],
+          "affiliation": [
+            "Queensland Alliance for Agriculture & Food Innovation (QAAFI), University of Queensland, St Lucia, QLD, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Gerber L"
+          ],
+          "firstName": [
+            "Lorenz"
+          ],
+          "lastName": [
+            "Gerber"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Umeå Plant Science Centre, Department of Forest Genetics and Plant Physiology, Swedish University of Agricultural Sciences, Umeå, Sweden."
+          ]
+        },
+        {
+          "fullName": [
+            "Nilsson O"
+          ],
+          "firstName": [
+            "Ove"
+          ],
+          "lastName": [
+            "Nilsson"
+          ],
+          "initials": [
+            "O"
+          ],
+          "affiliation": [
+            "Umeå Plant Science Centre, Department of Forest Genetics and Plant Physiology, Swedish University of Agricultural Sciences, Umeå, Sweden."
+          ]
+        },
+        {
+          "fullName": [
+            "Moritz T"
+          ],
+          "firstName": [
+            "Thomas"
+          ],
+          "lastName": [
+            "Moritz"
+          ],
+          "initials": [
+            "T"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4258-3190",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Umeå Plant Science Centre, Department of Forest Genetics and Plant Physiology, Swedish University of Agricultural Sciences, Umeå, Sweden."
+          ]
+        },
+        {
+          "fullName": [
+            "Björklund S"
+          ],
+          "firstName": [
+            "Stefan"
+          ],
+          "lastName": [
+            "Björklund"
+          ],
+          "initials": [
+            "S"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-1181-0415",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Medical Biochemistry and Biophysics, Umeå University, Umeå, Sweden."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-4728-0161",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-1181-0415",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-4258-3190",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "6"
+      ],
+      "volume": [
+        "12"
+      ],
+      "journalIssueId": [
+        "2562707"
+      ],
+      "dateOfPublication": [
+        "2017 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "e0179640"
+  ],
+  "abstractText": [
+    "Mediator is a multiprotein transcriptional co-regulator complex composed of four modules; Head, Middle, Tail, and Kinase. It conveys signals from promoter-bound transcriptional regulators to RNA polymerase II and thus plays an essential role in eukaryotic gene regulation. We describe subunit localization and activities of Mediator in Arabidopsis through metabolome and transcriptome analyses from a set of Mediator mutants. Functional metabolomic analysis based on the metabolite profiles of Mediator mutants using multivariate statistical analysis and heat-map visualization shows that different subunit mutants display distinct metabolite profiles, which cluster according to the reported localization of the corresponding subunits in yeast. Based on these results, we suggest localization of previously unassigned plant Mediator subunits to specific modules. We also describe novel roles for individual subunits in development, and demonstrate changes in gene expression patterns and specific metabolite levels in med18 and med25, which can explain their phenotypes. We find that med18 displays levels of phytoalexins normally found in wild type plants only after exposure to pathogens. Our results indicate that different Mediator subunits are involved in specific signaling pathways that control developmental processes and tolerance to pathogen infections."
+  ],
+  "affiliation": [
+    "Department of Medical Biochemistry and Biophysics, Umeå University, Umeå, Sweden."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenols"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Galactolipids"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Glucosinolates"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Tryptophan"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Nuclear Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oxylipins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Metabolomics"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mediator Complex"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "PFT1 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Phenols"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Nuclear Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Glucosinolates"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Galactolipids"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Oxylipins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Mediator Complex"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MED18 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Tryptophan"
+          ],
+          "registryNumber": [
+            "8DUH1N11BX"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5480960?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5480960"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0179640"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2017-09-20"
+  ],
+  "dateOfCreation": [
+    "2017-06-22"
+  ],
+  "dateOfRevision": [
+    "2017-09-20"
+  ],
+  "electronicPublicationDate": [
+    "2017-06-22"
+  ],
+  "firstPublicationDate": [
+    "2017-06-22"
+  ]
+}

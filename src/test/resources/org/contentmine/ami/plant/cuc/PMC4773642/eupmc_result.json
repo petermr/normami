@@ -1,0 +1,472 @@
+{
+  "id": [
+    "26973682"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26973682"
+  ],
+  "pmcid": [
+    "PMC4773642"
+  ],
+  "doi": [
+    "10.3389/fpls.2016.00240"
+  ],
+  "title": [
+    "Transcriptomic Analysis Using Olive Varieties and Breeding Progenies Identifies Candidate Genes Involved in Plant Architecture."
+  ],
+  "authorString": [
+    "González-Plaza JJ, Ortiz-Martín I, Muñoz-Mérida A, García-López C, Sánchez-Sevilla JF, Luque F, Trelles O, Bejarano ER, De La Rosa R, Valpuesta V, Beuzón CR."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "González-Plaza JJ"
+          ],
+          "firstName": [
+            "Juan J"
+          ],
+          "lastName": [
+            "González-Plaza"
+          ],
+          "initials": [
+            "JJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9586-6197",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Biología Celular, Genética y Fisiología, Facultad de Ciencias, Instituto de Hortofruticultura Subtropical y Mediterránea, Universidad de Málaga - Consejo Superior de Investigaciones Científicas Málaga, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Ortiz-Martín I"
+          ],
+          "firstName": [
+            "Inmaculada"
+          ],
+          "lastName": [
+            "Ortiz-Martín"
+          ],
+          "initials": [
+            "I"
+          ],
+          "affiliation": [
+            "Departamento de Biología Celular, Genética y Fisiología, Facultad de Ciencias, Instituto de Hortofruticultura Subtropical y Mediterránea, Universidad de Málaga - Consejo Superior de Investigaciones Científicas Málaga, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Muñoz-Mérida A"
+          ],
+          "firstName": [
+            "Antonio"
+          ],
+          "lastName": [
+            "Muñoz-Mérida"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7173-2741",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento Arquitectura de Computadores, Escuela Técnica Superior de Ingeniería Informática, Universidad de Málaga Málaga, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "García-López C"
+          ],
+          "firstName": [
+            "Carmen"
+          ],
+          "lastName": [
+            "García-López"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Center for Advanced Studies in Olive Grove and Olive Oils, University of Jaén Jaén, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Sánchez-Sevilla JF"
+          ],
+          "firstName": [
+            "José F"
+          ],
+          "lastName": [
+            "Sánchez-Sevilla"
+          ],
+          "initials": [
+            "JF"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6690-7196",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centro IFAPA de Churriana Málaga, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Luque F"
+          ],
+          "firstName": [
+            "Francisco"
+          ],
+          "lastName": [
+            "Luque"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Center for Advanced Studies in Olive Grove and Olive Oils, University of Jaén Jaén, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Trelles O"
+          ],
+          "firstName": [
+            "Oswaldo"
+          ],
+          "lastName": [
+            "Trelles"
+          ],
+          "initials": [
+            "O"
+          ],
+          "affiliation": [
+            "Departamento Arquitectura de Computadores, Escuela Técnica Superior de Ingeniería Informática, Universidad de Málaga Málaga, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Bejarano ER"
+          ],
+          "firstName": [
+            "Eduardo R"
+          ],
+          "lastName": [
+            "Bejarano"
+          ],
+          "initials": [
+            "ER"
+          ],
+          "affiliation": [
+            "Departamento de Biología Celular, Genética y Fisiología, Facultad de Ciencias, Instituto de Hortofruticultura Subtropical y Mediterránea, Universidad de Málaga - Consejo Superior de Investigaciones Científicas Málaga, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "De La Rosa R"
+          ],
+          "firstName": [
+            "Raúl"
+          ],
+          "lastName": [
+            "De La Rosa"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Centro IFAPA Alameda del Obispo Córdoba, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Valpuesta V"
+          ],
+          "firstName": [
+            "Victoriano"
+          ],
+          "lastName": [
+            "Valpuesta"
+          ],
+          "initials": [
+            "V"
+          ],
+          "affiliation": [
+            "Departamento de Biología Molecular y Bioquímica, Facultad de Ciencias, Instituto de Hortofruticultura Subtropical y Mediterránea, Universidad de Málaga - Consejo Superior de Investigaciones Científicas Málaga, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Beuzón CR"
+          ],
+          "firstName": [
+            "Carmen R"
+          ],
+          "lastName": [
+            "Beuzón"
+          ],
+          "initials": [
+            "CR"
+          ],
+          "affiliation": [
+            "Departamento de Biología Celular, Genética y Fisiología, Facultad de Ciencias, Instituto de Hortofruticultura Subtropical y Mediterránea, Universidad de Málaga - Consejo Superior de Investigaciones Científicas Málaga, Spain."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-7173-2741",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-6690-7196",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-6888-3845",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-9586-6197",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "7"
+      ],
+      "journalIssueId": [
+        "2373635"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in Plant Science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "240"
+  ],
+  "abstractText": [
+    "Plant architecture is a critical trait in fruit crops that can significantly influence yield, pruning, planting density and harvesting. Little is known about how plant architecture is genetically determined in olive, were most of the existing varieties are traditional with an architecture poorly suited for modern growing and harvesting systems. In the present study, we have carried out microarray analysis of meristematic tissue to compare expression profiles of olive varieties displaying differences in architecture, as well as seedlings from their cross pooled on the basis of their sharing architecture-related phenotypes. The microarray used, previously developed by our group has already been applied to identify candidates genes involved in regulating juvenile to adult transition in the shoot apex of seedlings. Varieties with distinct architecture phenotypes and individuals from segregating progenies displaying opposite architecture features were used to link phenotype to expression. Here, we identify 2252 differentially expressed genes (DEGs) associated to differences in plant architecture. Microarray results were validated by quantitative RT-PCR carried out on genes with functional annotation likely related to plant architecture. Twelve of these genes were further analyzed in individual seedlings of the corresponding pool. We also examined Arabidopsis mutants in putative orthologs of these targeted candidate genes, finding altered architecture for most of them. This supports a functional conservation between species and potential biological relevance of the candidate genes identified. This study is the first to identify genes associated to plant architecture in olive, and the results obtained could be of great help in future programs aimed at selecting phenotypes adapted to modern cultivation practices in this species."
+  ],
+  "affiliation": [
+    "Departamento de Biología Celular, Genética y Fisiología, Facultad de Ciencias, Instituto de Hortofruticultura Subtropical y Mediterránea, Universidad de Málaga - Consejo Superior de Investigaciones Científicas Málaga, Spain."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Microarray",
+        "plant architecture",
+        "Rt-qpcr",
+        "Transcriptomics",
+        "Dwarf Phenotype",
+        "Olea Europea"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4773642?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4773642"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2016.00240"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "2"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-03-14"
+  ],
+  "dateOfCreation": [
+    "2016-03-14"
+  ],
+  "dateOfRevision": [
+    "2016-03-16"
+  ],
+  "electronicPublicationDate": [
+    "2016-03-02"
+  ],
+  "firstPublicationDate": [
+    "2016-03-02"
+  ]
+}

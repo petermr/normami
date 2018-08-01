@@ -1,0 +1,702 @@
+{
+  "id": [
+    "25358340"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25358340"
+  ],
+  "pmcid": [
+    "PMC4299377"
+  ],
+  "doi": [
+    "10.15252/msb.20145470"
+  ],
+  "title": [
+    "An organ boundary-enriched gene regulatory network uncovers regulatory hierarchies underlying axillary meristem initiation."
+  ],
+  "authorString": [
+    "Tian C, Zhang X, He J, Yu H, Wang Y, Shi B, Han Y, Wang G, Feng X, Zhang C, Wang J, Qi J, Yu R, Jiao Y."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Tian C"
+          ],
+          "firstName": [
+            "Caihuan"
+          ],
+          "lastName": [
+            "Tian"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang X"
+          ],
+          "firstName": [
+            "Xiaoni"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China College of Life Sciences, Capital Normal University, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "He J"
+          ],
+          "firstName": [
+            "Jun"
+          ],
+          "lastName": [
+            "He"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yu H"
+          ],
+          "firstName": [
+            "Haopeng"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China University of Chinese Academy of Sciences, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang Y"
+          ],
+          "firstName": [
+            "Ying"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Shi B"
+          ],
+          "firstName": [
+            "Bihai"
+          ],
+          "lastName": [
+            "Shi"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China University of Chinese Academy of Sciences, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Han Y"
+          ],
+          "firstName": [
+            "Yingying"
+          ],
+          "lastName": [
+            "Han"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China University of Chinese Academy of Sciences, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang G"
+          ],
+          "firstName": [
+            "Guoxun"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China University of Chinese Academy of Sciences, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Feng X"
+          ],
+          "firstName": [
+            "Xiaoming"
+          ],
+          "lastName": [
+            "Feng"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang C"
+          ],
+          "firstName": [
+            "Cui"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang J"
+          ],
+          "firstName": [
+            "Jin"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China University of Chinese Academy of Sciences, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Qi J"
+          ],
+          "firstName": [
+            "Jiyan"
+          ],
+          "lastName": [
+            "Qi"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China University of Chinese Academy of Sciences, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yu R"
+          ],
+          "firstName": [
+            "Rong"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "College of Life Sciences, Capital Normal University, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Jiao Y"
+          ],
+          "firstName": [
+            "Yuling"
+          ],
+          "lastName": [
+            "Jiao"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-1189-1676",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China yljiao@genetics.ac.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-1189-1676",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-4924-1716",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "2132448"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Molecular systems biology"
+          ],
+          "ISOAbbreviation": [
+            "Mol. Syst. Biol."
+          ],
+          "medlineAbbreviation": [
+            "Mol Syst Biol"
+          ],
+          "NLMid": [
+            "101235389"
+          ],
+          "ISSN": [
+            "1744-4292"
+          ],
+          "ESSN": [
+            "1744-4292"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "755"
+  ],
+  "abstractText": [
+    "Gene regulatory networks (GRNs) control development via cell type-specific gene expression and interactions between transcription factors (TFs) and regulatory promoter regions. Plant organ boundaries separate lateral organs from the apical meristem and harbor axillary meristems (AMs). AMs, as stem cell niches, make the shoot a ramifying system. Although AMs have important functions in plant development, our knowledge of organ boundary and AM formation remains rudimentary. Here, we generated a cellular-resolution genomewide gene expression map for low-abundance Arabidopsis thaliana organ boundary cells and constructed a genomewide protein-DNA interaction map focusing on genes affecting boundary and AM formation. The resulting GRN uncovers transcriptional signatures, predicts cellular functions, and identifies promoter hub regions that are bound by many TFs. Importantly, further experimental studies determined the regulatory effects of many TFs on their targets, identifying regulators and regulatory relationships in AM initiation. This systems biology approach thus enhances our understanding of a key developmental process."
+  ],
+  "affiliation": [
+    "State Key Laboratory of Plant Genomics, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene Research, Beijing, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Meristem"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genome, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Models, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Gene Regulatory Network",
+        "Axillary Meristem",
+        "Organ Boundary"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4299377?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4299377"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.15252/msb.20145470"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "18"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "ARXPR",
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-02-09"
+  ],
+  "dateOfCreation": [
+    "2014-10-31"
+  ],
+  "dateOfRevision": [
+    "2015-01-24"
+  ],
+  "electronicPublicationDate": [
+    "2014-10-30"
+  ],
+  "firstPublicationDate": [
+    "2014-10-30"
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "id": [
+    "28642780"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28642780"
+  ],
+  "pmcid": [
+    "PMC5463273"
+  ],
+  "doi": [
+    "10.3389/fpls.2017.00981"
+  ],
+  "title": [
+    "RRP42, a Subunit of Exosome, Plays an Important Role in Female Gametophytes Development and Mesophyll Cell Morphogenesis in Arabidopsis."
+  ],
+  "authorString": [
+    "Yan X, Yan Z, Han Y."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Yan X"
+          ],
+          "firstName": [
+            "Xiaoyuan"
+          ],
+          "lastName": [
+            "Yan"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Physiology and Biochemistry, College of Biological Sciences, China Agricultural UniversityBeijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yan Z"
+          ],
+          "firstName": [
+            "Zongyun"
+          ],
+          "lastName": [
+            "Yan"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Physiology and Biochemistry, College of Biological Sciences, China Agricultural UniversityBeijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Han Y"
+          ],
+          "firstName": [
+            "Yuzhen"
+          ],
+          "lastName": [
+            "Han"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Plant Physiology and Biochemistry, College of Biological Sciences, China Agricultural UniversityBeijing, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-8556-5929",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "8"
+      ],
+      "journalIssueId": [
+        "2550591"
+      ],
+      "dateOfPublication": [
+        "2017 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in plant science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "981"
+  ],
+  "abstractText": [
+    "The exosome complex plays a central and essential role in RNA metabolism. However, current research on functions of exosome subunit in plants is limited. Here, we used an egg cell-specific promoter-controlled CRISPR/Cas9 system to knock out RRP42 which encodes a core subunit of the Arabidopsis exosome and presented evidence that RRP42 is essential for the development of female gametophytes. Next, we designed three different amiRNAs targeting RRP42. The rrp42 knock-down mutants mainly displayed variegated and serrated leaves, especially in cauline leaves. The internal anatomy of cauline leaves displayed irregularly shaped palisade cells and a reduced density of mesophyll cells. Interestingly, we detected highly accumulated mRNAs that encode xyloglucan endotransglucosylase/hydrolases (XTHs) and expansins (EXPAs) during later growth stages in rrp42 knock-down mutants. The mRNA decay kinetics analysis for XTH19, EXPA10, and EXPA11 revealed that RRP42 had a role in the decay of these mRNAs in the cytoplasm. RRP42 is localized to both the nucleus and cytoplasm, and RRP42 is preferentially expressed in cauline leaves during later growth stages. Altogether, our results demonstrate that RRP42 is essential for the development of female gametophytes and plays an important role in mesophyll cell morphogenesis."
+  ],
+  "affiliation": [
+    "State Key Laboratory of Plant Physiology and Biochemistry, College of Biological Sciences, China Agricultural UniversityBeijing, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Arabidopsis",
+        "Female gametophytes",
+        "Exosome",
+        "cell morphogenesis",
+        "Mrna Decay"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5463273?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5463273"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2017.00981"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2017-06-23"
+  ],
+  "dateOfRevision": [
+    "2017-08-16"
+  ],
+  "electronicPublicationDate": [
+    "2017-06-08"
+  ],
+  "firstPublicationDate": [
+    "2017-06-08"
+  ]
+}

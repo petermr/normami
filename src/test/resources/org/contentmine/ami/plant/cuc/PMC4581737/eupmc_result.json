@@ -1,0 +1,618 @@
+{
+  "id": [
+    "26401841"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26401841"
+  ],
+  "pmcid": [
+    "PMC4581737"
+  ],
+  "doi": [
+    "10.1371/journal.pgen.1005511"
+  ],
+  "title": [
+    "Arabidopsis AtPLC2 Is a Primary Phosphoinositide-Specific Phospholipase C in Phosphoinositide Metabolism and the Endoplasmic Reticulum Stress Response."
+  ],
+  "authorString": [
+    "Kanehara K, Yu CY, Cho Y, Cheong WF, Torta F, Shui G, Wenk MR, Nakamura Y."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Kanehara K"
+          ],
+          "firstName": [
+            "Kazue"
+          ],
+          "lastName": [
+            "Kanehara"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Institute of Plant and Microbial Biology, Academia Sinica, Taipei, Taiwan; Molecular and Biological Agricultural Sciences Program, Taiwan International Graduate Program, Academia Sinica, Taipei, Taiwan; Graduate Institute of Biotechnology and Department of Life Sciences, National Chung-Hsing University, Taichung, Taiwan; Muroran Institute of Technology, Muroran, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Yu CY"
+          ],
+          "firstName": [
+            "Chao-Yuan"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "CY"
+          ],
+          "affiliation": [
+            "Institute of Plant and Microbial Biology, Academia Sinica, Taipei, Taiwan."
+          ]
+        },
+        {
+          "fullName": [
+            "Cho Y"
+          ],
+          "firstName": [
+            "Yueh"
+          ],
+          "lastName": [
+            "Cho"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Institute of Plant and Microbial Biology, Academia Sinica, Taipei, Taiwan; Molecular and Biological Agricultural Sciences Program, Taiwan International Graduate Program, Academia Sinica, Taipei, Taiwan; Graduate Institute of Biotechnology and Department of Life Sciences, National Chung-Hsing University, Taichung, Taiwan."
+          ]
+        },
+        {
+          "fullName": [
+            "Cheong WF"
+          ],
+          "firstName": [
+            "Wei-Fun"
+          ],
+          "lastName": [
+            "Cheong"
+          ],
+          "initials": [
+            "WF"
+          ],
+          "affiliation": [
+            "Department of Biochemistry, Yong Loo Lin School of Medicine, National University of Singapore, Singapore."
+          ]
+        },
+        {
+          "fullName": [
+            "Torta F"
+          ],
+          "firstName": [
+            "Federico"
+          ],
+          "lastName": [
+            "Torta"
+          ],
+          "initials": [
+            "F"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7545-7484",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biochemistry, Yong Loo Lin School of Medicine, National University of Singapore, Singapore."
+          ]
+        },
+        {
+          "fullName": [
+            "Shui G"
+          ],
+          "firstName": [
+            "Guanghou"
+          ],
+          "lastName": [
+            "Shui"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Life Sciences Institute, National University of Singapore, Singapore; State Key Laboratory of Molecular Developmental Biology, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wenk MR"
+          ],
+          "firstName": [
+            "Markus R"
+          ],
+          "lastName": [
+            "Wenk"
+          ],
+          "initials": [
+            "MR"
+          ],
+          "affiliation": [
+            "Department of Biochemistry, Yong Loo Lin School of Medicine, National University of Singapore, Singapore; Department of Biological Sciences, National University of Singapore, Singapore."
+          ]
+        },
+        {
+          "fullName": [
+            "Nakamura Y"
+          ],
+          "firstName": [
+            "Yuki"
+          ],
+          "lastName": [
+            "Nakamura"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Institute of Plant and Microbial Biology, Academia Sinica, Taipei, Taiwan; Molecular and Biological Agricultural Sciences Program, Taiwan International Graduate Program, Academia Sinica, Taipei, Taiwan; Graduate Institute of Biotechnology and Department of Life Sciences, National Chung-Hsing University, Taichung, Taiwan."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-7545-7484",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "9"
+      ],
+      "volume": [
+        "11"
+      ],
+      "journalIssueId": [
+        "2318697"
+      ],
+      "dateOfPublication": [
+        "2015 Sep"
+      ],
+      "monthOfPublication": [
+        "9"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-09-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PLoS genetics"
+          ],
+          "ISOAbbreviation": [
+            "PLoS Genet."
+          ],
+          "medlineAbbreviation": [
+            "PLoS Genet"
+          ],
+          "NLMid": [
+            "101239074"
+          ],
+          "ISSN": [
+            "1553-7390"
+          ],
+          "ESSN": [
+            "1553-7404"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "e1005511"
+  ],
+  "abstractText": [
+    "Phosphoinositides represent important lipid signals in the plant development and stress response. However, multiple isoforms of the phosphoinositide biosynthetic genes hamper our understanding of the pivotal enzymes in each step of the pathway as well as their roles in plant growth and development. Here, we report that phosphoinositide-specific phospholipase C2 (AtPLC2) is the primary phospholipase in phosphoinositide metabolism and is involved in seedling growth and the endoplasmic reticulum (ER) stress responses in Arabidopsis thaliana. Lipidomic profiling of multiple plc mutants showed that the plc2-1 mutant increased levels of its substrates phosphatidylinositol 4-phosphate and phosphatidylinositol 4,5-bisphosphate, suggesting that the major phosphoinositide metabolic pathway is impaired. AtPLC2 displayed a distinct tissue expression pattern and localized at the plasma membrane in different cell types, where phosphoinositide signaling occurs. The seedlings of plc2-1 mutant showed growth defect that was complemented by heterologous expression of AtPLC2, suggesting that phosphoinositide-specific phospholipase C activity borne by AtPLC2 is required for seedling growth. Moreover, the plc2-1 mutant showed hypersensitive response to ER stress as evidenced by changes in relevant phenotypes and gene expression profiles. Our results revealed the primary enzyme in phosphoinositide metabolism, its involvement in seedling growth and an emerging link between phosphoinositide and the ER stress response."
+  ],
+  "affiliation": [
+    "Institute of Plant and Microbial Biology, Academia Sinica, Taipei, Taiwan; Molecular and Biological Agricultural Sciences Program, Taiwan International Graduate Program, Academia Sinica, Taipei, Taiwan; Graduate Institute of Biotechnology and Department of Life Sciences, National Chung-Hsing University, Taichung, Taiwan; Muroran Institute of Technology, Muroran, Japan."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Subcellular Fractions"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "EN"
+                  ],
+                  "qualifierName": [
+                    "enzymology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "EN"
+                  ],
+                  "qualifierName": [
+                    "enzymology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Roots"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phosphatidylinositols"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phosphoinositide Phospholipase C"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Endoplasmic Reticulum Stress"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Phosphatidylinositols"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Phosphoinositide Phospholipase C"
+          ],
+          "registryNumber": [
+            "EC 3.1.4.11"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4581737?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4581737"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pgen.1005511"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "8"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-05-31"
+  ],
+  "dateOfCreation": [
+    "2015-09-25"
+  ],
+  "dateOfRevision": [
+    "2015-10-02"
+  ],
+  "electronicPublicationDate": [
+    "2015-09-24"
+  ],
+  "firstPublicationDate": [
+    "2015-09-24"
+  ]
+}

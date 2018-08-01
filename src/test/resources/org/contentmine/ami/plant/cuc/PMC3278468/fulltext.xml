@@ -1,0 +1,879 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3278468</article-id><article-id pub-id-type="pmid">22348109</article-id><article-id pub-id-type="publisher-id">PONE-D-11-10396</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0031571</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Computational Biology</subject><subj-group><subject>Molecular Genetics</subject></subj-group></subj-group><subj-group><subject>Ecology</subject><subj-group><subject>Plant Ecology</subject></subj-group></subj-group><subj-group><subject>Genetics</subject><subj-group><subject>Plant Genetics</subject></subj-group></subj-group><subj-group><subject>Genomics</subject></subj-group><subj-group><subject>Molecular Cell Biology</subject><subj-group><subject>Signal Transduction</subject><subj-group><subject>Signaling in Cellular Processes</subject></subj-group></subj-group></subj-group><subj-group><subject>Plant Science</subject><subj-group><subject>Plant Biotechnology</subject></subj-group><subj-group><subject>Plant Ecology</subject></subj-group><subj-group><subject>Plants</subject></subj-group></subj-group><subj-group><subject>Proteomics</subject></subj-group></subj-group></article-categories><title-group><article-title>Changes in Soybean Global Gene Expression after Application of Lipo-Chitooligosaccharide from <italic>Bradyrhizobium japonicum</italic> under Sub-Optimal Temperature</article-title><alt-title alt-title-type="running-head">Changes in Soybean Global Gene Expression by LCOs</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Nan</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Khan</surname><given-names>Wajahatullah</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Smith</surname><given-names>Donald L.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>&#x0002a;</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Department of Plant Science, McGill University, Ste Anne de Bellevue, Quebec, Canada</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Genome Research Chair Unit, Biochemistry Department, College of Science, King Saud University, Riyadh, Saudi Arabia</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Meyer</surname><given-names>Peter</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">University of Leeds, United Kingdom</aff><author-notes><corresp id="cor1">&#x0002a; E-mail: <email>Donald.Smith@McGill.Ca</email></corresp><fn fn-type="con"><p>Conceived and designed the experiments: NW DLS. Performed the experiments: NW DLS. Analyzed the data: NW DLS. Contributed reagents/materials/analysis tools: NW DLS. Wrote the paper: NW WK DLS.</p></fn></author-notes><pub-date pub-type="collection"><year>2012</year></pub-date><pub-date pub-type="epub"><day>13</day><month>2</month><year>2012</year></pub-date><volume>7</volume><issue>2</issue><elocation-id>e31571</elocation-id><history><date date-type="received"><day>8</day><month>6</month><year>2011</year></date><date date-type="accepted"><day>13</day><month>1</month><year>2012</year></date></history><permissions><copyright-statement>Wang et al.</copyright-statement><copyright-year>2012</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p>Lipo-chitooligosaccharides (LCOs), signal compounds produced by N<sub>2</sub>-fixing rhizobacteria after isoflavone induction, initiate nodule formation in host legumes. Given LCOs' structural similarity to pathogen-response-eliciting chitin oligomers, foliar application of LCOs was tested for ability to induce stress-related genes under optimal growth conditions. In order to study the effects of LCO foliar spray under stressed conditions, soybean (<italic>Glycine max</italic>) seedlings grown at optimal temperature were transferred to sub-optimal temperature. After a 5-day acclimation period, the first trifoliate leaves were sprayed with 10<sup>&#x02212;7</sup> M LCO (NodBj-V (C<sub>18&#x02236;1</sub>, MeFuc)) purified from genistein-induced <italic>Bradyrhizobium japonicum</italic> culture, and harvested at 0 and 48 h following treatment. Microarray analysis was performed using Affymetrix GeneChip&#x000ae; Soybean Genome Arrays. Compared to the control at 48 h after LCO treatment, a total of 147 genes were differentially expressed as a result of LCO treatment, including a number of stress-related genes and transcription factors. In addition, during the 48 h time period following foliar spray application, over a thousand genes exhibited differential expression, including hundreds of those specific to the LCO-treated plants. Our results indicated that the dynamic soybean foliar transcriptome was highly responsive to LCO treatment. Quantitative real-time PCR (qPCR) validated the microarray data.</p></abstract><counts><page-count count="22"/></counts></article-meta></front><body><sec id="s1"><title>Introduction</title><p>The legume-rhizobia N<sub>2</sub>-fixation symbiosis is one of the most intensively studied and best characterized plant-microbe interactions because it is the most inexpensive and environmental-friendly source of nitrogen for crop production <xref rid="pone.0031571-Gage1" ref-type="bibr">[1]</xref>. The establishment of the symbiotic relationship involves a signal exchange between the host legume and the N<sub>2</sub>-fixing rhizobia. Legume roots exude (Iso) flavonoids that act as a chemoattractant to rhizobia and induce the rhizobial <italic>nod</italic> genes <xref rid="pone.0031571-Currier1" ref-type="bibr">[2]</xref>, <xref rid="pone.0031571-Firmin1" ref-type="bibr">[3]</xref>. As a result, lipo-chitooligosaccharides (LCOs), also known as Nod factors, are synthesized by rhizobia and excreted as the host-specific rhizobia-to-plant signals <xref rid="pone.0031571-DHaeze1" ref-type="bibr">[4]</xref>, <xref rid="pone.0031571-Denarie1" ref-type="bibr">[5]</xref>. They can be perceived by multiple receptors in host roots and trigger a cascade of signaling events, which are essential for bacterial invasion of the host roots, leading to the formation of N<sub>2</sub>-fixing root nodules <xref rid="pone.0031571-Hirsch1" ref-type="bibr">[6]</xref>. The host plant responses upon exposure to LCOs can be categorized as nodulation-related and non-nodulation-related. The former consists of four events: 1) root hair curling and deformation, 2) electrophysiological responses including ion fluxes, 3) formation of infection threads and development of nodules, 4) activation of early <italic>nodulin</italic> (<italic>enod</italic>) genes in host plants, which encode proteins responsible for early nodule development <xref rid="pone.0031571-Denarie1" ref-type="bibr">[5]</xref>, <xref rid="pone.0031571-Fang1" ref-type="bibr">[7]</xref>&#x02013;<xref rid="pone.0031571-Ramu1" ref-type="bibr">[10]</xref>. LCOs are viewed as a potential class of plant growth regulators <xref rid="pone.0031571-Denarie1" ref-type="bibr">[5]</xref>, and are known to participate in plant development and morphogenesis <xref rid="pone.0031571-Dyachok1" ref-type="bibr">[11]</xref>&#x02013;<xref rid="pone.0031571-Khan2" ref-type="bibr">[19]</xref>, as well as abiotic and biotic stress responses <xref rid="pone.0031571-Duzan1" ref-type="bibr">[20]</xref>&#x02013;<xref rid="pone.0031571-Atti1" ref-type="bibr">[22]</xref>. Hence, the effects of LCOs outside the context of nodulation are of particular interest.</p><p>Microarray studies have previously been carried out on several legume-rhizobia symbiotic systems, illustrating differentially expressed plant genes due to rhizobia infection, nodule development and the onset of N<sub>2</sub>-fixation <xref rid="pone.0031571-Asamizu1" ref-type="bibr">[23]</xref>&#x02013;<xref rid="pone.0031571-ElYahyaoui1" ref-type="bibr">[25]</xref>. The numerous differentially expressed genes identified in various studies are diverse in class, function, expression level and pattern, however, in general 1) nodulation strongly affects metabolism, 2) plant defense mechanisms are engaged, particularly during the early stages of rhizobial infection, 3) genes usually involved in a variety of regulatory components, such as transcription factors, are affected <xref rid="pone.0031571-Brechenmacher1" ref-type="bibr">[24]</xref>, <xref rid="pone.0031571-Colebatch1" ref-type="bibr">[26]</xref>&#x02013;<xref rid="pone.0031571-Mitra1" ref-type="bibr">[28]</xref>. Nonetheless, the profile of the host transcriptome upon the perception of LCOs in the absence of rhizobia has not been well characterized.</p><p>Lindsay <xref rid="pone.0031571-Lindsay1" ref-type="bibr">[12]</xref> found that under optimal growth conditions over 600 soybean genes were differentially expressed 48 h after foliar spray with of LCO (NodBj-V (C<sub>18&#x02236;1</sub>, MeFuc), the bulk of these being related to defense and stress responses. <italic>Nodulin</italic> homologues were also found to be differentially expressed, indicating the possible presence of LCO receptors in the leaves <xref rid="pone.0031571-Lindsay1" ref-type="bibr">[12]</xref>. In contrast to root application, foliar application of LCOs is a relatively new approach for studying their effects and possible roles. It is quite intriguing that a signal compound from the rhizosphere can trigger responses when applied elsewhere on a plant. However, this novel finding facilitates investigation of LCO effects outside the context of nodulation. Among the thousands of differentially expressed genes revealed so far by microarray investigations of nodulating roots, a significant percentage are clearly nodulation-related <xref rid="pone.0031571-Brechenmacher1" ref-type="bibr">[24]</xref>. Because foliar application of LCOs will not lead to the formation of nodules, it will allow us to elucidate general LCO responses, in the absence of specific nodulation related responses. Furthermore, the early signaling events in roots following the exposure of LCOs are highly localized, with only a small portion of the root tissue responding. In this regard, harvesting the entire root system may result in tissue dilution, while separating the root sections at harvest are not practically achievable <xref rid="pone.0031571-Brechenmacher1" ref-type="bibr">[24]</xref>. Using leaf material avoids such problems and may increase the sensitivity of gene expression detection. Moreover, leaves are above-ground and clearly visible, hence it is easier to control the uniformity of the material and the amount of LCO spray applied, which are important in reducing variability in the microarray data analysis.</p><p>A number of lines of evidence indicate a relationship between LCOs and host stress response in the absence of external stress; hence the present study was conducted to investigate the effect of LCOs under stress. Low temperature is an appropriate stress condition and a common stress factor during early spring growing conditions for soybean in Eastern Canada. It has previously been reported that the symbiotic interaction is temperature-sensitive, especially during rhizobial infection and nodule development <xref rid="pone.0031571-Zhang1" ref-type="bibr">[29]</xref>, yet the rhizobia-legume symbiosis is almost always established under sub-optimal temperatures in temperate zones <xref rid="pone.0031571-Prevost1" ref-type="bibr">[30]</xref>. With this in mind, we considered that our investigation would be particularly meaningful if carried out under naturally-occurring conditions. The objective of this work was to investigate the gene expression profile of soybean leaves, under stressed and non-stressed conditions, after foliar application of the LCO NodBj-V (C<sub>18&#x02236;1</sub>, MeFuc) using Affymetrix GeneChip&#x000ae; analysis to screen a large number of soybean transcripts, with a particular focus on genes involved in stress regulation. Thus, we have examined changes in the patterns of gene expression, particularly stress response related genes, of plants already under stressful conditions.</p></sec><sec id="s2"><title>Results</title><p>We have studied the effects of LCO from <italic>B. japonicum</italic> strain 532C on the gene expression profile of soybean leaves following spray application at a sub-optimal growth temperature (15&#x000b0;C), corresponding to typical spring field conditions of eastern Canada.</p><p>The first trifoliate leaves of the control and LCO-treated soybean plants (cv. OAC Bayfield) plants were then sprayed with dH<sub>2</sub>O or 10<sup>&#x02212;7</sup> M LCO, respectively, and harvested at 0 and 48 h after foliar spray. The four gene lists of interest in the microarray experiment were generated from four pair-wise comparisons (or contrasts) of gene expression profiles (<xref ref-type="fig" rid="pone-0031571-g001">Fig. 1</xref>); i.e., gene list 1 was the collection of genes differentially expressed between the dH<sub>2</sub>O-treated control and 10<sup>&#x02212;7</sup> M LCO-treated plants, for leaves harvested immediately (0 h) after the spray treatment; whereas gene list 2 was the list of genes differentially expressed between the dH<sub>2</sub>O-treated control and 10<sup>&#x02212;7</sup> M LCO-treated plants, for leaves harvested after 48 h of foliar spray. Similarly, the gene list 3 included all the differentially expressed genes of the dH<sub>2</sub>O-treated control plants 48 h after foliar spray and the gene list 4 was consisted of those genes that were differentially expressed in the 10<sup>&#x02212;7</sup> M LCO-treated plants 48 h after spray treatment.</p><fig id="pone-0031571-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g001</object-id><label>Figure 1</label><caption><title>The four gene lists of interest in the microarray experiment, generated from four pair-wise comparisons (or contrasts) of gene expression profiles.</title><p>1) gene list 1 is the collection of genes differentially expressed between the dH2O control and 10&#x02212;7 M LCO-treated plants, for leaves harvested 0 h after foliar spray; 2) gene list 2 is a list of genes differentially expressed between the dH<sub>2</sub>O control and 10<sup>&#x02212;7</sup> M LCO-treated plants, for leaves harvested 48 h after foliar spray; 3) gene list 3 includes all the differentially expressed genes of the dH<sub>2</sub>O) control plants during the 48 h time period after foliar spray; 4) gene list 4 consists of genes in the 10<sup>&#x02212;7</sup> M LCO-treated plants that were differentially expressed during the 48 h time period after spray treatment.</p></caption><graphic xlink:href="pone.0031571.g001"/></fig><sec id="s2a"><title>Effects of LCO under cold stress on gene expression</title><p>All the genes in every gene list satisfied the criteria of statistical significance at q&#x02264;0.05 as determined by three statistical algorithms (Cyber-T, LPE and EB (Rocke), and biological significance at fold change &#x02265;1.6. A Volcano plot of the EB (Rocke) algorithm of each gene list is given in <xref ref-type="fig" rid="pone-0031571-g002">Fig. 2</xref>, as a graphical breakdown of the two levels of significance. The number of differentially expressed genes in each gene list is displayed as Venn diagrams (<xref ref-type="fig" rid="pone-0031571-g003">Fig. 3</xref>). The stringency comparison of the three statistical algorithms is listed in <xref ref-type="table" rid="pone-0031571-t001">Table 1</xref>. EB (Rocke) was more stringent than the other two algorithms, given that in three contrasts out of four, it yielded the smallest number of differentially expressed genes, as well as the lowest percentage of genes excluded in the final gene list (<xref ref-type="fig" rid="pone-0031571-g003">Fig. 3</xref>). All of the non-empty gene lists were annotated using Affymetrix annotation files obtained from SoyBase website. The functions of up- and down-regulated genes from each non-empty gene list were studied separately, through Gene Ontology (GO) information in the annotations. The genes were assigned to the following 11 functional classifications: 1) stress response; 2) signal transduction; 3) transcription; 4) protein metabolism; 5) transport; 6) developmental processes; 7) cell organization and biosynthesis; 8) electron transport; 9) other metabolism processes; 10) other functions; 11) function unknown. The four gene lists will be described in detail below. All microarray data were MIAME-compliant and were deposited in the Gene Expression Omnibus (GEO) database (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/">http://www.ncbi.nlm.nih.gov/geo/</ext-link>) with the accession number of GSE20972.</p><fig id="pone-0031571-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g002</object-id><label>Figure 2</label><caption><title>Volcano plots of the EB (Roke algorithm).</title><p>A) contrast 1 (time&#x0200a;=&#x0200a;o h); B) contrast 2 (time&#x0200a;=&#x0200a;48 h); C) contrast 3 (treatment &#x0200a;=&#x0200a; control); D) contrast 4 (treatment &#x0200a;=&#x0200a; LCO). The volcano plot is a graphical breakdown of the statistical analysis of microarray data. Each point in the plot corresponds to a statistically tested gene. The x-axis is the base 2 logaritm of the fold change, and the Y-axis is the negative base 2 logrithm of the q-value (or adjusted p- value). Thresholds for both the statistical significance (q&#x02264;0.05) and the biological significance are highlighted and assembled in the top left and top right corner of the graph, with exception of contrast 1 in which no hit was found.</p></caption><graphic xlink:href="pone.0031571.g002"/></fig><fig id="pone-0031571-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g003</object-id><label>Figure 3</label><caption><title>Venn diagrams of the output of differentially expressed genes, determined by Cyber-T, LPE and EB (Rocke) algorithms.</title><p>A) contrast 1 (treatment &#x0200a;=&#x0200a; control vs. LCO, time&#x0200a;=&#x0200a;0 h), the output is 0 genes; B) contrast 2 (treatment &#x0200a;=&#x0200a; control vs. LCO, time&#x0200a;=&#x0200a;48 h), the output is 147 gene; C) contrast 3 (treatment &#x0200a;=&#x0200a;control, time&#x0200a;=&#x0200a;0 vs. 48 h), the output is 1569 genes; D) contrast 4 (treatment &#x0200a;=&#x0200a; LCO, time &#x0002b; 0 vs. 48 h), the output is 1260 genes.</p></caption><graphic xlink:href="pone.0031571.g003"/></fig><table-wrap id="pone-0031571-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.t001</object-id><label>Table 1</label><caption><title>Stringency comparison of the three algorithms used in microarray data analysis.</title></caption><alternatives><graphic id="pone-0031571-t001-1" xlink:href="pone.0031571.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td colspan="2" align="left" rowspan="1"/><td colspan="3" align="left" rowspan="1">Cyber-T</td><td colspan="3" align="left" rowspan="1">LPE</td><td colspan="3" align="left" rowspan="1">EB (Rocke)</td></tr><tr><td align="left" rowspan="1" colspan="1">Contrast</td><td align="left" rowspan="1" colspan="1">Output in the final gene list</td><td align="left" rowspan="1" colspan="1">Algorithm output</td><td align="left" rowspan="1" colspan="1">Excluded output</td><td align="left" rowspan="1" colspan="1">&#x00025; of excluded output</td><td align="left" rowspan="1" colspan="1">Algorithm output</td><td align="left" rowspan="1" colspan="1">Excluded output</td><td align="left" rowspan="1" colspan="1">&#x00025; of excluded output</td><td align="left" rowspan="1" colspan="1">Algorithm output</td><td align="left" rowspan="1" colspan="1">Excluded output</td><td align="left" rowspan="1" colspan="1">&#x00025; of excluded output</td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">
+<bold>Contrast 1 (treatment &#x0200a;=&#x0200a; LCO, time&#x0200a;=&#x0200a;0 h)</bold>
+</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">235</td><td align="left" rowspan="1" colspan="1">235</td><td align="left" rowspan="1" colspan="1">100.00&#x00025;</td><td align="left" rowspan="1" colspan="1">198</td><td align="left" rowspan="1" colspan="1">198</td><td align="left" rowspan="1" colspan="1">100.00&#x00025;</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<bold>Contrast 2 (treatment &#x0200a;=&#x0200a; LCO, time&#x0200a;=&#x0200a;48 h)</bold>
+</td><td align="left" rowspan="1" colspan="1">147</td><td align="left" rowspan="1" colspan="1">899</td><td align="left" rowspan="1" colspan="1">752</td><td align="left" rowspan="1" colspan="1">83.65&#x00025;</td><td align="left" rowspan="1" colspan="1">466</td><td align="left" rowspan="1" colspan="1">319</td><td align="left" rowspan="1" colspan="1">68.45&#x00025;</td><td align="left" rowspan="1" colspan="1">178</td><td align="left" rowspan="1" colspan="1">31</td><td align="left" rowspan="1" colspan="1">17.42&#x00025;</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<bold>Contrast 3 (treatment &#x0200a;=&#x0200a; LCO, time&#x0200a;=&#x0200a;0 h or 48 h</bold>
+</td><td align="left" rowspan="1" colspan="1">1569</td><td align="left" rowspan="1" colspan="1">3329</td><td align="left" rowspan="1" colspan="1">1760</td><td align="left" rowspan="1" colspan="1">52.87&#x00025;</td><td align="left" rowspan="1" colspan="1">1975</td><td align="left" rowspan="1" colspan="1">406</td><td align="left" rowspan="1" colspan="1">20.56&#x00025;</td><td align="left" rowspan="1" colspan="1">2268</td><td align="left" rowspan="1" colspan="1">699</td><td align="left" rowspan="1" colspan="1">30.82&#x00025;</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<bold>Contrast 4 (treatment &#x0200a;=&#x0200a; LCO, time&#x0200a;=&#x0200a;0 h or 48 h)</bold>
+</td><td align="left" rowspan="1" colspan="1">1260</td><td align="left" rowspan="1" colspan="1">2035</td><td align="left" rowspan="1" colspan="1">775</td><td align="left" rowspan="1" colspan="1">38.08&#x00025;</td><td align="left" rowspan="1" colspan="1">1778</td><td align="left" rowspan="1" colspan="1">518</td><td align="left" rowspan="1" colspan="1">29.13&#x00025;</td><td align="left" rowspan="1" colspan="1">1413</td><td align="left" rowspan="1" colspan="1">153</td><td align="left" rowspan="1" colspan="1">10.83&#x00025;</td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label/><p>The number of differentially expressed genes in the final gene list of each contrast is listed, together with the output of differentially expressed genes determined by each algorithm (Cyber-T, LPE and EB (Rocke)). For each algorithm, the number of genes excluded in the final gene list was calculated by subtracting the final gene list output from the algorithm input, and the percentage of excluded genes was listed and highlighted. EB (Rocke) was more stringent than the other two algorithms in that: 1) it yielded the smallest number of differentially expressed genes in all contrasts except contrast 3; 2) it yielded the lowest percentage of excluded genes in all contrasts, with the exception of contrast 3.</p></fn></table-wrap-foot></table-wrap><p>The gene list 1 (<xref ref-type="fig" rid="pone-0031571-g001">Fig. 1</xref>) i.e. differentially expressed genes resulting from comparison between the water control and 10<sup>&#x02212;7</sup> M LCO-treated plants harvested within the first hour after spray treatment showed that about 235 and 198 genes were differentially expressed by Cyber T and LPE algorithms, respectively. Interestingly, no differential gene expression was detected by the EB (Rocke) algorithm. Therefore, no gene was found significantly up- or down-regulated in this contrast as determined by all three statistical algorithms (<xref ref-type="fig" rid="pone-0031571-g003">Fig. 3A</xref>).</p><p>Gene list 2 (<xref ref-type="fig" rid="pone-0031571-g001">Fig. 1</xref>) contains genes differentially expressed between the water control and 10<sup>&#x02212;7</sup> M LCO-treated plants harvested 48 h after spray treatment. We detected 899, 466 and 178 differentially expressed genes by Cyber T, LPE and EB (Rocke) algorithms, respectively. A total of 147 genes were regarded as differentially expressed in this gene list as determined by all the three statistical algorithms (<xref ref-type="fig" rid="pone-0031571-g003">Fig. 3B</xref>).</p><p>Analysis of gene list 1 led us to conclude that the experimental conditions along with the stringent statistical methods used showed no difference in the gene expression between the two samples, where as the differentially expressed genes identified in gene list 2 probably resulted from 10<sup>&#x02212;7</sup> M LCO foliar spray treatment at 15&#x000b0;C. Due to the very strict criteria for difference detection during data analysis (the selection of relevant genes was based on the overlap of the sets of genes whose expression levels were altered as detected by all 3 alogrithms used) it is possible that some genes responding to LCO treatment may have been missed. However, treated leaves with a material normally thought to be active when applied to roots and, because truly exceptional findings require exceptionally reliable proof. We have used a very cautious approach by using the same stringent statistical approach for all gene sets examined and conclude that the results are unbiased and reliable . Of the 147 differentially expressed genes in this list, we can say we a high degree of certainty that 65 were down-regulated and 82 were up-regulated. The gene list was annotated, and the gene names were determined according to the top hit in UniProt database. Heat maps were constructed separately for the down- (<xref ref-type="fig" rid="pone-0031571-g004">Fig. 4</xref>) and up-regulated genes (<xref ref-type="fig" rid="pone-0031571-g005">Fig. 5</xref>), and functional groups were assigned through GO implications (<xref ref-type="fig" rid="pone-0031571-g006">Fig. 6</xref>).</p><fig id="pone-0031571-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g004</object-id><label>Figure 4</label><caption><title>Heat maps of known genes in gene list 2 showing down-regulated genes.</title><p>The heat map depicts the gene expression data of all replicates in a color scheme: red color represents up-regulation and green represents down-regulation; higher color brightness indicates a greater magnitude of differential expression and vice versa. Ideally, the same group of samples should have similar colors.</p></caption><graphic xlink:href="pone.0031571.g004"/></fig><fig id="pone-0031571-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g005</object-id><label>Figure 5</label><caption><title>Heat maps of known genes in gene list 2 showing up-regulated genes.</title><p>A heat map depicts the gene expression data of all replicates in a color scheme: red color represents up-regulation and green represents down-regulation; higher color brightness indicates a greater magnitude of differential expression and vice versa. Ideally, the same group of samples should have similar colors.</p></caption><graphic xlink:href="pone.0031571.g005"/></fig><fig id="pone-0031571-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g006</object-id><label>Figure 6</label><caption><title>Functional classification of altered gene expression in contrast 2.</title><p>Pie charts represent functional classification according to GO implications of A) down-regulated genes; B) up-regulated genes. Fourteen percent of the down-regulated genes and 15&#x00025; of the up-regulated genes in contrast 2 were related to stress response. Sixteen percent of the down-regulated genes and 2&#x00025; of the up-regulated genes were related to signaling (signal transduction and transcription). This indicates that under sub-optimal growth temperature (15&#x000b0;C), foliar spray of 10<sup>&#x02212;7</sup> M LCO induced the differential expression of stress related genes and components involved in signaling.</p></caption><graphic xlink:href="pone.0031571.g006"/></fig><p>Gene list 3 (<xref ref-type="fig" rid="pone-0031571-g001">Fig. 1</xref>) was constructed to show the collection of differentially expressed genes between the water control plants harvested at 0 and 48 h after spray treatment. Of these, 3329, 1975 and 2268 differentially expressed genes were detected by Cyber T, LPE and EB (Rocke) algorithms, respectively. A total of 1569 genes were regarded as differentially expressed in this gene list, as determined by all the three statistical algorithms (<xref ref-type="fig" rid="pone-0031571-g003">Fig. 3C</xref>), including 694 up-regulated genes and 875 down-regulated genes. Heat maps are given for down- (<xref ref-type="fig" rid="pone-0031571-g007">Figure 7</xref>) and up-regulated genes (<xref ref-type="fig" rid="pone-0031571-g008">Fig. 8</xref>), and functional groups were assigned through GO implications (<xref ref-type="fig" rid="pone-0031571-g009">Fig. 9</xref>).</p><fig id="pone-0031571-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g007</object-id><label>Figure 7</label><caption><title>Heat maps of known genes in gene list 3, showing down-regulated genes.</title></caption><graphic xlink:href="pone.0031571.g007"/></fig><fig id="pone-0031571-g008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g008</object-id><label>Figure 8</label><caption><title>Heat maps of known genes in gene list 3, showing up-regulated genes.</title></caption><graphic xlink:href="pone.0031571.g008"/></fig><fig id="pone-0031571-g009" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g009</object-id><label>Figure 9</label><caption><title>Functional classification of altered gene expression in contrast 3.</title><p>Pie charts show functional classification according to GO implications of A) down-regulated genes; B) up-regulated genes. Nine percent of the down-regulated genes and 12&#x00025; of the up-regulated genes in contrast 3 were related to stress response. Nine percent of the down-regulated genes and 11&#x00025; of the up-regulated genes were related to signaling (signal transduction and transcription). This indicates that under sub-optimal growth temperature (15&#x000b0;C), the gene expression profile of soybean was dynamic over the period of 48 h; stress-related genes and signaling-related components were active during this time period.</p></caption><graphic xlink:href="pone.0031571.g009"/></fig><p>Gene list 4 (<xref ref-type="fig" rid="pone-0031571-g001">Fig. 1</xref>) was the collection of genes differentially expressed between the 10<sup>&#x02212;7</sup> M LCO-treated plants harvested at 0 and 48 h after spray treatment. Of these, 2035, 1778 and 1413 were differentially expressed as detected by Cyber T, LPE and EB (Rocke) algorithms, respectively. A total of 1260 genes were regarded as differentially expressed in this gene list as determined by all the three statistical algorithms (<xref ref-type="fig" rid="pone-0031571-g003">Fig. 3D</xref>). In total, 1260 genes were differentially expressed, including 552 up-regulated genes and 708 down&#x02013;regulated genes. Heat maps are given for the down- (<xref ref-type="fig" rid="pone-0031571-g010">Fig. 10</xref>) and up-regulated genes (<xref ref-type="fig" rid="pone-0031571-g011">Fig. 11</xref>), and functional groups were assigned through GO implications (<xref ref-type="fig" rid="pone-0031571-g012">Fig. 12</xref>).</p><fig id="pone-0031571-g010" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g010</object-id><label>Figure 10</label><caption><title>Heat maps of known genes in gene list 4 showing down-regulated genes.</title></caption><graphic xlink:href="pone.0031571.g010"/></fig><fig id="pone-0031571-g011" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g011</object-id><label>Figure 11</label><caption><title>Heat maps of known genes in gene list 4 showing up-regulated genes.</title></caption><graphic xlink:href="pone.0031571.g011"/></fig><fig id="pone-0031571-g012" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g012</object-id><label>Figure 12</label><caption><title>Functional classification of altered gene expression in contrast 4.</title><p>Pie charts indicate functional classification according to GO implications of A) down-regulated genes; B) up-regulated genes. Seventeen percent of the down-regulated genes and 17&#x00025; of the up-regulated genes in contrast 4 were related to stress response. Five percent of the down-regulated genes and 4&#x00025; of the up-regulated genes were related to signaling (signal transduction and transcription). This indicates that under sub-optimal growth temperature (15&#x000b0;C), the gene expression profile of soybean was dynamic over the period of 48 h following the foliar spray of 10<sup>&#x02212;7</sup> M LCO; stress-related genes and signaling-related components were active during this time period.</p></caption><graphic xlink:href="pone.0031571.g012"/></fig></sec><sec id="s2b"><title>qPCR validation</title><p>In this study, the effects of LCO foliar application on soybean gene expression changes were of specific interest. Given that gene list 2 included most of the genes of interest (<xref ref-type="supplementary-material" rid="pone.0031571.s001">Table S1</xref>), 7 genes were selected from this gene list for qPCR validation using the random-stratified method (<xref ref-type="table" rid="pone-0031571-t002">Table 2</xref>). The reliability of the microarray data was further tested by qPCR; in general, for the seven validated genes the microarray results were repeatable by qPCR at both statistical and biological significance levels (<xref ref-type="fig" rid="pone-0031571-g013">Fig. 13</xref>). For contrast 1, our qPCR results were in conformity with microarray data, where no significant differential gene expression was detected between microarray and qPCR results (<xref ref-type="table" rid="pone-0031571-t003">Table 3</xref>). However, for contrast 2, a high correlation (r<sup>2</sup>&#x0200a;=&#x0200a;0.9) with high statistical significance was observed in fold change values of the qPCR and microarray data except, for only one gene. This indicated that qPCR validation is essential if one is to have a high degree of confidence in microarray data. The qPCR results showed a down-regulation of the <italic>TCP</italic> gene, like the microarray data but, unlike the microaaray data, this numerical difference was not statistically significant (<xref ref-type="table" rid="pone-0031571-t003">Table 3</xref>).</p><fig id="pone-0031571-g013" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.g013</object-id><label>Figure 13</label><caption><title>qPCR validation of the microarray data.</title><p>Selection of target genes for qPCR validation, among the 147 differentially expressed soybean genes in gene list 2, using the random-stratified method. The 147 genes in gene list 2 were sorted in order of fold change, and divided into 7 equal-sized bins, each of which represented a stratum of fold change magnitude. From each stratum, one gene was randomly selected as a target gene for validation. The details of 7 selected genes in this study is shown in <xref ref-type="table" rid="pone-0031571-t002">Table 2</xref>. A) Correlation of microarray data and qPCR data on a log scale; B) Correlation of microarray and qPCR data based on fold change.</p></caption><graphic xlink:href="pone.0031571.g013"/></fig><table-wrap id="pone-0031571-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.t002</object-id><label>Table 2</label><caption><title>The 7 target genes selected for qPCR validation, plus the housekeeping reference gene <italic>&#x003b2;-tubulin</italic>
+<xref rid="pone.0031571-Chen1" ref-type="bibr">[92]</xref>.</title></caption><alternatives><graphic id="pone-0031571-t002-2" xlink:href="pone.0031571.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1">Target Gene</td><td align="left" rowspan="1" colspan="1">Putative Function</td><td align="left" rowspan="1" colspan="1">GenBank ID</td><td align="left" rowspan="1" colspan="1">Primer Name</td><td align="left" rowspan="1" colspan="1">Primer Sequence</td><td align="left" rowspan="1" colspan="1">Tm (&#x000b0;C)</td><td align="left" rowspan="1" colspan="1">AmpliconSize (bp)</td><td align="left" rowspan="1" colspan="1">Amplicon Position</td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">
+<italic>ENO</italic>
+</td><td align="left" rowspan="1" colspan="1">Pectinesterase-2 precursor (EC 3.1.1.11) (Pectin methylesterase) (PE)</td><td align="left" rowspan="1" colspan="1">AW597363.1</td><td align="left" rowspan="1" colspan="1">ENO-FENO-R</td><td align="left" rowspan="1" colspan="1">
+<named-content content-type="gene">CACGAGGTTTAGCCCAAGATCAATTTGTCGCACCAAACAC</named-content>
+</td><td align="left" rowspan="1" colspan="1">59 60</td><td align="left" rowspan="1" colspan="1">223</td><td align="left" rowspan="1" colspan="1">2&#x02013;224 bp of AW597363.1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>HP</italic>
+</td><td align="left" rowspan="1" colspan="1">Cationic peroxidase</td><td align="left" rowspan="1" colspan="1">BE346191.1</td><td align="left" rowspan="1" colspan="1">HP-FHP-R</td><td align="left" rowspan="1" colspan="1">
+<named-content content-type="gene">CAAGCCTTGGTGGTATGCTTTGCATAGTTTCCAGCTTTCG</named-content>
+</td><td align="left" rowspan="1" colspan="1">60 59</td><td align="left" rowspan="1" colspan="1">158</td><td align="left" rowspan="1" colspan="1">31&#x02013;188 bp of BE346191.1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>PEC</italic>
+</td><td align="left" rowspan="1" colspan="1">TCP transcription factor</td><td align="left" rowspan="1" colspan="1">BE474551.1</td><td align="left" rowspan="1" colspan="1">PEC-FPEC-R</td><td align="left" rowspan="1" colspan="1">
+<named-content content-type="gene">GTGCAGGGCTCTTTCAGAACTGCTAGCACCTGCTCCTGTA</named-content>
+</td><td align="left" rowspan="1" colspan="1">60 60</td><td align="left" rowspan="1" colspan="1">181</td><td align="left" rowspan="1" colspan="1">69&#x02013;249 bp of BE474551.1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>POX</italic>
+</td><td align="left" rowspan="1" colspan="1">Putative glycerophosphodiester phosphodiesterase; 42559&#x02013;40170 (Putative glycerophosphodiester phosphodiesterase)</td><td align="left" rowspan="1" colspan="1">BE658341.1</td><td align="left" rowspan="1" colspan="1">POX-FPOX-R</td><td align="left" rowspan="1" colspan="1">
+<named-content content-type="gene">AGAGTCCGTGGATCCTCCATACGAGATTGCCCTAGCACAG</named-content>
+</td><td align="left" rowspan="1" colspan="1">61 60</td><td align="left" rowspan="1" colspan="1">157</td><td align="left" rowspan="1" colspan="1">284&#x02013;440 bp of BE658341.1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>TCP</italic>
+</td><td align="left" rowspan="1" colspan="1">Putative acid phosphatase (EC 3.1.3.2)</td><td align="left" rowspan="1" colspan="1">BI427245.1</td><td align="left" rowspan="1" colspan="1">TCP-FTCP-R</td><td align="left" rowspan="1" colspan="1">
+<named-content content-type="gene">AGGTGGTTCTGCTGCGTATTAGAAGCAGATGATGGCCTGT</named-content>
+</td><td align="left" rowspan="1" colspan="1">60 60</td><td align="left" rowspan="1" colspan="1">238</td><td align="left" rowspan="1" colspan="1">36&#x02013;273 bp of BI427245.1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>GPP</italic>
+</td><td align="left" rowspan="1" colspan="1">Enolase (EC 4.2.1.11) (2-phosphoglycerate dehydratase) (2-phospho-D-glycerate hydro-lyase) (OSE1)</td><td align="left" rowspan="1" colspan="1">BU550899.1</td><td align="left" rowspan="1" colspan="1">GPP-FGPP-R</td><td align="left" rowspan="1" colspan="1">
+<named-content content-type="gene">CGGTTAGAGGTCCATTCCTGAGGGCACATGCTCATAACCT</named-content>
+</td><td align="left" rowspan="1" colspan="1">60 60</td><td align="left" rowspan="1" colspan="1">188</td><td align="left" rowspan="1" colspan="1">194&#x02013;381 bp of BU550899.1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>APH</italic>
+</td><td align="left" rowspan="1" colspan="1">Hypothetical protein</td><td align="left" rowspan="1" colspan="1">CD401609.1</td><td align="left" rowspan="1" colspan="1">APH-FAPH-R</td><td align="left" rowspan="1" colspan="1">
+<named-content content-type="gene">TGGCTTCGTTGCATGTAAAA TGGCCTCTCTTCCTAGTTCC</named-content>
+</td><td align="left" rowspan="1" colspan="1">60 60</td><td align="left" rowspan="1" colspan="1">177</td><td align="left" rowspan="1" colspan="1">460&#x02013;363 bp of CD401609.1</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x003b2; <italic>-tubulin</italic>
+</td><td align="left" rowspan="1" colspan="1">Constituent of microtubules and binds to GTP</td><td align="left" rowspan="1" colspan="1">X60216.1</td><td align="left" rowspan="1" colspan="1">&#x003b2;<italic>-tubulin</italic> &#x02013;F&#x003b2;<italic>-tubulin</italic> &#x02013;R</td><td align="left" rowspan="1" colspan="1">
+<named-content content-type="gene">TTGCAAGGGTTTCAAGTGTGATTGTAAGGCTCCACAACGG</named-content>
+</td><td align="left" rowspan="1" colspan="1">58 60</td><td align="left" rowspan="1" colspan="1">165</td><td align="left" rowspan="1" colspan="1">479&#x02013;643 bp of X60216.1</td></tr></tbody></table></alternatives></table-wrap><table-wrap id="pone-0031571-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0031571.t003</object-id><label>Table 3</label><caption><title>Comparison and correlation between results obtained through qPCR and microarrray, in terms of fold change and p-value (or adjusted p-value).</title></caption><alternatives><graphic id="pone-0031571-t003-3" xlink:href="pone.0031571.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1">Gene</td><td colspan="4" align="left" rowspan="1">Contrast 1</td><td colspan="4" align="left" rowspan="1">Contrast 2</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td colspan="2" align="left" rowspan="1">Log2 (Fold change)</td><td colspan="2" align="left" rowspan="1">(Adjusted) p-value</td><td colspan="2" align="left" rowspan="1">Log2 (Fold change)</td><td colspan="2" align="left" rowspan="1">(Adjusted) p-value</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">qPCR</td><td align="left" rowspan="1" colspan="1">Microarray</td><td align="left" rowspan="1" colspan="1">qPCR</td><td align="left" rowspan="1" colspan="1">Microarray</td><td align="left" rowspan="1" colspan="1">qPCR</td><td align="left" rowspan="1" colspan="1">Microarray</td><td align="left" rowspan="1" colspan="1">qPCR</td><td align="left" rowspan="1" colspan="1">Microarray</td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">APH</td><td align="left" rowspan="1" colspan="1">0.47</td><td align="left" rowspan="1" colspan="1">0.81</td><td align="left" rowspan="1" colspan="1">0.226</td><td align="left" rowspan="1" colspan="1">0.275</td><td align="left" rowspan="1" colspan="1">0.60</td><td align="left" rowspan="1" colspan="1">1.02</td><td align="left" rowspan="1" colspan="1">0.016&#x0002a;</td><td align="left" rowspan="1" colspan="1">0.035&#x0002a;</td></tr><tr><td align="left" rowspan="1" colspan="1">ENO</td><td align="left" rowspan="1" colspan="1">&#x02212;0.33</td><td align="left" rowspan="1" colspan="1">0.72</td><td align="left" rowspan="1" colspan="1">0.404</td><td align="left" rowspan="1" colspan="1">0.549</td><td align="left" rowspan="1" colspan="1">1.46</td><td align="left" rowspan="1" colspan="1">1.36</td><td align="left" rowspan="1" colspan="1">0.001&#x0002a;</td><td align="left" rowspan="1" colspan="1">0.046&#x0002a;</td></tr><tr><td align="left" rowspan="1" colspan="1">GPP</td><td align="left" rowspan="1" colspan="1">&#x02212;0.05</td><td align="left" rowspan="1" colspan="1">0.451</td><td align="left" rowspan="1" colspan="1">0.924</td><td align="left" rowspan="1" colspan="1">0.421</td><td align="left" rowspan="1" colspan="1">1.11</td><td align="left" rowspan="1" colspan="1">0.78</td><td align="left" rowspan="1" colspan="1">0.036&#x0002a;</td><td align="left" rowspan="1" colspan="1">0.040&#x0002a;</td></tr><tr><td align="left" rowspan="1" colspan="1">HP</td><td align="left" rowspan="1" colspan="1">0.65</td><td align="left" rowspan="1" colspan="1">1.37</td><td align="left" rowspan="1" colspan="1">0.170</td><td align="left" rowspan="1" colspan="1">0.293</td><td align="left" rowspan="1" colspan="1">2.14</td><td align="left" rowspan="1" colspan="1">1.64</td><td align="left" rowspan="1" colspan="1">0.001&#x0002a;</td><td align="left" rowspan="1" colspan="1">0.011&#x0002a;</td></tr><tr><td align="left" rowspan="1" colspan="1">PEC</td><td align="left" rowspan="1" colspan="1">&#x02212;0.50</td><td align="left" rowspan="1" colspan="1">&#x02212;1.39</td><td align="left" rowspan="1" colspan="1">0.102</td><td align="left" rowspan="1" colspan="1">0.168</td><td align="left" rowspan="1" colspan="1">&#x02212;1.59</td><td align="left" rowspan="1" colspan="1">&#x02212;1.91</td><td align="left" rowspan="1" colspan="1">0.001&#x0002a;</td><td align="left" rowspan="1" colspan="1">0.033&#x0002a;</td></tr><tr><td align="left" rowspan="1" colspan="1">POX</td><td align="left" rowspan="1" colspan="1">&#x02212;0.04</td><td align="left" rowspan="1" colspan="1">&#x02212;0.10</td><td align="left" rowspan="1" colspan="1">0.967</td><td align="left" rowspan="1" colspan="1">0.734</td><td align="left" rowspan="1" colspan="1">&#x02212;1.604</td><td align="left" rowspan="1" colspan="1">&#x02212;1.05</td><td align="left" rowspan="1" colspan="1">0.003&#x0002a;</td><td align="left" rowspan="1" colspan="1">0.030&#x0002a;</td></tr><tr><td align="left" rowspan="1" colspan="1">TCP</td><td align="left" rowspan="1" colspan="1">&#x02212;0.24</td><td align="left" rowspan="1" colspan="1">&#x02212;0.61</td><td align="left" rowspan="1" colspan="1">0.346</td><td align="left" rowspan="1" colspan="1">0.198</td><td align="left" rowspan="1" colspan="1">&#x02212;0.28</td><td align="left" rowspan="1" colspan="1">&#x02212;0.85</td><td align="left" rowspan="1" colspan="1">0.107</td><td align="left" rowspan="1" colspan="1">0.032&#x0002a;</td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt102"><label/><p>Correlation coefficients of logarithm-scaled fold change derived from qPCR and microarray were calculated in order to determine result repeatability by the two different quantification approaches. Statistically significant results at p&#x0003c;0.05 are marked with asterisk. As no differentially expressed gene was detected by microarray in contrast 1, nor did qPCR yield any statistically significant results existed between the fold change results derived from both methods. In contast 2, a high level of correlation (R<sup>2</sup>&#x0200a;=&#x0200a;0.9) was found in the fold change values derived from qPCR and microarray, and 6 of the 7 genes (marked with asterisk) were regarded as statistically significant by both quantification methods.</p></fn></table-wrap-foot></table-wrap></sec></sec><sec id="s3"><title>Discussion</title><p>The effects of LCO produced by <italic>B. japonicum</italic> strain 532C on the gene expression profile of soybean leaves, non-symbiotic tissue of the symbiotic host, by spray application under a sub-optimal growth temperature, a temperature typical of spring field conditions in eastern Canada was studied. Four gene lists were compiled based on the four pair-wise comparisons (or contrasts) of gene expression profiles i.e., list 1 is a set of genes differentially expressed in the dH<sub>2</sub>O control and 10<sup>&#x02212;7</sup> M LCO-treated plants when the leaves were harvested at 0 h after foliar spray; whereas list 2 contains the genes differentially expressed between the dH<sub>2</sub>O control and 10<sup>&#x02212;7</sup> M LCO-treated plants 48 h after the foliar spray. Gene list 3 contains all differentially expressed genes of the dH<sub>2</sub>0 control plants during the 48 h time period after foliar spray; similarly, list 4 comprised of differentially expressed genes in the 10<sup>&#x02212;7</sup> M LCO-treated plants 48 h after spray treatment.</p><p>No gene was found to be significantly up-regulated or down-regulated between the water control and 10<sup>&#x02212;7</sup> M LCO-treated plants (Gene list 1 and contrast 1) harvested immediately after spray treatment. Although, contrast 1 was excluded from further bioinformatics analysis due to the empty gene list, its importance should not be overlooked; it serves a number of important functions crucial to an accurate interpretation of the other three gene lists. First, the zero output of contrast 1 testifies to the rigor of the statistical methodology used in this study. While some studies in the literature have used only one statistical algorithm for microarray data analysis, such as Cyber-T or LPE <xref rid="pone.0031571-Patten1" ref-type="bibr">[31]</xref>, <xref rid="pone.0031571-Shin1" ref-type="bibr">[32]</xref>, three algorithms were used in this study, and only the overlapping output was deposited into the final gene list. While this data &#x0201c;trimming&#x0201d; procedure might lead to the discovery of fewer differentially expressed genes, it is necessary to minimze false positives and avoiding misleading data. Our evidence indicated that EB (Rocke) was the most stringent algorithm. As shown in <xref ref-type="table" rid="pone-0031571-t001">Table 1</xref>, with the exception of contrast 3, EB (Rocke) yielded the smallest number of differentially expressed genes, and the lowest percentage excluded output. In contrast 1, a number of differentially expressed genes were identified by the Cyber-T and LPE statistical algorithms, but none was identified by EB (Rocke); on the other hand, although stringent, EB (Rocke) still had an exclusion percentage between 10 to 30&#x00025; in the other three contrasts. The use of three algorithms instead of one has provided results that can be accepted with a high degree of confidence, avoiding data points that could otherwise be misleading. Further, the seven genes chosen from gene list 2 were successfully validated through the qPCR approach. Collectively, these lines of evidence demonstrate that the statistical method used for data analysis in this study was reliable and rigorous in distinguishing signal from noise, providing a reliable basis for the correct interpretation of all other results. In addition, the average CV for the data from control and LCO-treated plants harvested at 0 h were both below 10&#x00025;. This argues that the absence of statistical significance in contrast 1 data was not a result of high variability. Furthermore, the zero output in gene list 1 indicated the absence of detectable very early signaling events triggered by 10<sup>&#x02212;7</sup> M LCO foliar spray. According to previous studies, subnanomolar concentrations of LCOs caused rapid electrophysiological changes within minutes on host root hairs and non-host cell suspension cultures <xref rid="pone.0031571-Felle1" ref-type="bibr">[33]</xref>, <xref rid="pone.0031571-Kuchitsu1" ref-type="bibr">[34]</xref>. It is possible that the sub-optimal temperature desensitized soybean trifoliates, so that they responded to the LCO treatment slowly; lower growth temperatures are almost certain to result in slower responses in a non-homeotherm. Another explanation is that the early responses to LCOs are strictly physiological, where existing proteins were activated to pump ions across membranes, without any changes in gene expression activity. In fact, if differential gene expression were detected in contrast 1, it would have been uncertain as to whether this, or any other of the changes, resulted from background noise, experimental variability, error, or true effects triggered by LCO treatment. The zero output in contrast 1 eliminates all of these possibilities; therefore we can be affirmative regarding the stringency of statistical methods, uniformity of plants and experimental conditions, as well as the absence of early signaling events at the gene expression level.</p><p>A total of 482 down-regulated genes and 355 up-regulated genes were shared by contrasts 3 and 4; the overlapping genes account for 53&#x00025; of the genes in list 3, and 66&#x00025; of the genes in list 4, indicating that over half of the genes that were differentially expressed as the plants developed genes were common to both control and LCO-treated plants, although the magnitude of differential expression sometimes differed between the two groups. Functional categorization of these overlapping genes has indicated common transcription activities in the two groups of plants. The data indicate that plants in both contrasts were subject to maturation and aging, as reflected by a number of the gene activity changes, while adapting to the low temperature at the same time. There was also a significant number of overlapping components involved in both secondary metabolism and stress response. The overlapping gene lists of contrasts 3 and 4 also revealed the differential expression of an abundance of genes involved in various aspects of protein metabolism, such as protein phosphorylation, ubiquitination, glycosylation, folding, translation, and proteolysis, including a variety of differentially expressed protein kinases. These genes may be involved in signaling and transcription regulation.</p><p>After eliminating overlapping genes indicated by contrast 4, 393 down-regulated and 339 up-regulated genes were unique to contrast 3. Taken together with the overlapping genes described above, this gene list provides further information regarding gene expression activities unique to the control plants during the biological events occurring by 48 h after treatment, including aging, development, cold acclimation, and stress responses.</p><p>The differential expression of genes related to defence and abiotic stress at 15&#x000b0;C indicated by contrast 3 followed a similar temporal pattern to that of the overlapping gene list. The annotation for many of these genes were the same as that in the overlapping gene list, suggesting that the genes unique to gene list 3 were transcribed from different loci of the same gene family. After removal of overlapping genes demonstrated through contrast 3, 226 down-regulated and 197 up-regulated genes were unique to contrast 4. Genes in this list were differentially expressed, during the 48 h post treatment period, in response to LCO foliar spray. The presence of genes unique to contrast 4 suggests that apart from fine-tuning existing signaling pathways, LCO foliar application induces novel signaling pathways, which eventually leads to differential gene expression by 48 h after treatment, as indicated by contrast 2.</p><p>Genes encoding defence-related products unique to contrast 4 were detected, including the down-regulated defence resistance protein, as well as the up-regulated PAL, chitinase, multi-antimicrobial extrusion protein (MatE), and lipoxygenase. Accepted as a PR-protein, chitinase is represented by subfamilies of PR-3, 4 and 8 <xref rid="pone.0031571-Felle1" ref-type="bibr">[33]</xref>. Chitinase can be induced by a variety of biotic and abiotic stress conditions, as well as SA, JA and ethylene; in addition to enhancing disease resistance during pathogen attack, chitinase suppresses host defence responses in plant-rhizobial and plant-mycorrhizal interactions; chitinase also plays roles in growth, embryogenesis and cold resistance <xref rid="pone.0031571-Kasprzewska1" ref-type="bibr">[35]</xref>. It is very interesting that chitinase has been shown to accumulate under frost conditions and contributes to plant freezing tolerance <xref rid="pone.0031571-Kasprzewska1" ref-type="bibr">[35]</xref>. The induction of chitinase genes in contrast 4 may have indicated interactions between LCO treatment and cold stress. Encoded by a large gene family, MatE proteins are transporters responsible for the detoxification of heavy metals and toxic secondary metabolites; they have also been shown to participate in SA-dependent defence signaling <xref rid="pone.0031571-Moriyama1" ref-type="bibr">[36]</xref>.</p><p>A number of genes associated with development and organization were found to be unique to contrast 4, such as the down-regulated expansin, together with the up-regulated histone H1, and NAC secondary cell wall thickening promoting factor (NST). Histone H1, a linker histone in eukaryotic chromatin, stabilizes chromatin higher-order structures <xref rid="pone.0031571-Wierzbicki1" ref-type="bibr">[37]</xref>). It is noteworthy that as histone H1 exists in numerous isoforms, the differential expression of a few orthologue genes is not likely to cause any fluctuation in global histone H1 level <xref rid="pone.0031571-Wierzbicki1" ref-type="bibr">[37]</xref>. <italic>Arabidopsis</italic> NSTs include the functionally-redundant NST1 and NST2, which are NAC-domain containing transcription factors regulating secondary cell wall thickening in various tissues <xref rid="pone.0031571-Mitsuda1" ref-type="bibr">[38]</xref>. Given the suppression of expansion and induction of NSTs, it is apparent that plants in contrast 4 had ceased expansion and started the synthesis of secondary cell walls. The same conclusion was drawn from contrast 3; nonetheless, in the control and LCO-treated plants, different gene loci were involved regarding secondary growth.</p><p>Similar to contrast 3, genes related to carbohydrate and lipid metabolism in contrast 4 were mostly down-regulated, while those involved in secondary metabolism were mainly up-regulated, such as flavonoid biosynthesis-related CHS and CHI, as well as the JA biosynthesis-related LOX, and secondary cell wall synthesis-related cellulose. As discussed above, many of these genes were members of the cytochrome P450 family. It is interesting that CHS, CHI and LOX are defence-related genes as well. The induction of these genes in contrast 4 may be related to the elicitor-nature of LCO, or cross-talk between secondary development and LCO-induced responses.</p><p>The data obtained from microarray analysis of soybean first trifoliate leaves sprayed with 10<sup>&#x02212;7</sup> M LCO at 15&#x000b0;C revealed the differential expression of 147 genes at 48 h after treatment, compared with the water control. Functional analysis of these genes led to the identification of genetic components associated with biotic/abiotic stress, signal transduction, development, primary and secondary metabolism, as well as transport. Of all the functional categories, unknown genes comprised the largest proportion (close to 30&#x00025;), followed by stress-related genes (around 17&#x00025;). A further breakdown of the stress-related genes led to the revelation of components involved in defense, oxidative stress, cold acclimation, hormonal response, MAPK cascade, phosphate deficiency and sulfolipid metabolism. Evidence also indicated probable cross-talk between LCO-induced response and cold acclimation.</p><sec id="s3a"><title>Effects of 10<sup>&#x02212;7</sup> M LCO foliar application on soybean gene expression at 15&#x000b0;C after 48 h</title><p>A total of 147 genes were differentially expressed 48 h after treatment with 10<sup>&#x02212;7</sup> M LCO foliar spray at 15&#x000b0;C, including 65 down-regulated genes and 82 up-regulated. The functional classification of these genes led to the discovery of components involved in a variety of biological functions; genes related to stress and signaling are of specific interest (for gene list 2 listed in <xref ref-type="supplementary-material" rid="pone.0031571.s001">Table S1</xref>). The putative products of the down-regulated genes included a cationic peroxidase, a protein phosphatase 2C (PP2C)-like protein, two homologues of mitogen-activated protein kinase (MAPK), a number of proteins related to auxin and gibberellin, proteins containing the NAC domain, a receptor kinase homologue, as well as a variety of transcription factors. The up-regulated genes encoded enolase, glutathione S-transferase, purple acid phosphatase, sulfolipid synthase, glutamate carboxypeptidase, chlorophyllase, as well as the defence-related TOM 1 and R 12 proteins.</p></sec><sec id="s3b"><title>Antioxidant enzymes and plant hormones</title><p>Antioxidant genes were responsive to LCO foliar spray, notably the down-regulated cationic peroxidase and the up-regulated glutathione S-transferase (GST). Oxidative burst, referring to the rapid reactive oxygen species (ROS) generation and H<sub>2</sub>O<sub>2</sub> accumulation, are commonly observed during early hypersensitive response following pathogen attack <xref rid="pone.0031571-Lamb1" ref-type="bibr">[39]</xref>. Plant peroxidases (POXs) are bifunctional enzymes involved in both the reduction of H<sub>2</sub>O<sub>2</sub> and the production of ROS during oxidative burst <xref rid="pone.0031571-Bae1" ref-type="bibr">[40]</xref>. Encoded by a large superfamily of genes, plant POXs are found in a variety of isoforms and interact with a broad range of substrates <xref rid="pone.0031571-Bae1" ref-type="bibr">[40]</xref>. POXs play a variety of roles during the life cycle of plants, including roles related to stress (defense, oxidative stress and senescence); POXs are classified as PR-8 proteins <xref rid="pone.0031571-Sels1" ref-type="bibr">[41]</xref>. POXs also participate in cell wall-related activities (lignification, suberization and cell wall protein cross-linking), plant hormone metabolism (auxin catabolism and ethylene biosynthesis), as well as development (somatic embryogenesis, growth regulation, light-mediated responses) <xref rid="pone.0031571-Bae1" ref-type="bibr">[40]</xref>, <xref rid="pone.0031571-Passardi1" ref-type="bibr">[42]</xref>. GSTs are glutathione (GSH)-dependent detoxifying enzymes abundant in plant tissues; encoded by at least 25 genes; GST proteins share as little as 10&#x00025; similarity in amino acid composition <xref rid="pone.0031571-Edwards1" ref-type="bibr">[43]</xref>. Plant GSTs are highly responsive to pathogen attack, environmental stimuli and chemical treatment; GST level enhancement is commonly used as a marker for plant stress response <xref rid="pone.0031571-Edwards1" ref-type="bibr">[43]</xref>. Similar to POXs, GSTs are involved in development (cell division and senescence), and hormone metabolism (auxin and cytokinin) <xref rid="pone.0031571-Edwards1" ref-type="bibr">[43]</xref>.</p><p>Most plant hormone-related components, mainly auxins and gibberellins, were down-regulated, such as AUX1-like auxin carrier protein, gibberellin regulated protein and gibberellic acid-intensive (GAI) protein. Mutation in the <italic>Arabidopsis AUX1</italic> gene led to the loss of root gravitropism, suggesting <italic>AUX1</italic> may encode a protein required for the hormonal regulation of plant root gravitropism <xref rid="pone.0031571-Timpte1" ref-type="bibr">[44]</xref>. GAI protein represses plant response to GA; this repression is reversed by exogenous GA <xref rid="pone.0031571-Peng1" ref-type="bibr">[45]</xref>.</p></sec><sec id="s3c"><title>LCO-induced defense responses</title><p>Defense-related proteins were detected, such as the repressed HcrVf, and the induced TOM1 and R 12. The plant immune system is of two types, 1) transmembrane pattern recognition receptors acting in response to gradually evolving microbial- or pathogen-associated molecular patterns and 2) a response that is basically inside the cell, using the polymorphic NB-LRR protein products of R genes that are named after their characteristic nucleotide binding (NB) and leucine rich repeat (LRR) domains. Pathogen effectors can be recognized by NB-LRR proteins, and mediate matching defence responses. NB-LRR-mediated immune reponse is noticeable against pathogens that propogate on living host tissue, such as obligate biotrophs, or hemi-biotrophic pathogens, however it is not effective against necrotrophs i.e. pathogens that result in host tissue death following colonization <xref rid="pone.0031571-Jones1" ref-type="bibr">[46]</xref>. In gene-for-gene resistance, plant resistance (R) protein confers resistance to a distinct pathogen by specifically recognizing the <italic>avirulence</italic> (<italic>avr</italic>) genes present in the pathogen. R proteins typically consist three functional domains: a leucine-rich-repeat (LRR) domain involved in pathogen recognition, a central nucleotide-binding site (NBS) functioning as a molecular switch, and an amino-terminal domain determining signaling specificity <xref rid="pone.0031571-Takken1" ref-type="bibr">[47]</xref>. The <italic>HcrVf</italic> gene (homologue of the <italic>Cladosporium fulvum</italic> resistance genes of the <italic>Vf</italic> region) is similar to a gene that encodes a protein that promotes apple scab resistance <xref rid="pone.0031571-Boudichevskaia1" ref-type="bibr">[48]</xref>. Different from the previous two, TOM1 is not an R protein, but an integral plant membrane protein required for the propagation of tomato mosaic virus (ToMV); over expression of host TOM1 has been shown to inhibit ToMV multiplication <xref rid="pone.0031571-HagiwaraKomoda1" ref-type="bibr">[49]</xref>.</p></sec><sec id="s3d"><title>Possible cross-talk between cold stress and LCO-induced response</title><p>Understanding the cross talk and the mechanism of stress tolerance induced by LCO treatment by studying the genes involved will shed light on possible role of LCO in stress alleviation.</p><p>Two products of the cold-stress-related enolase gene were up-regulated by about 2-fold 48 h after LCO foliar spray under low temperature conditions, suggesting a possible interaction between cold response and LCO-induced response. Enolase, an enzyme known to participate in glycolysis, has shown to function in plant cold response and human programmed cell death (PCD) <xref rid="pone.0031571-Lee1" ref-type="bibr">[50]</xref>, <xref rid="pone.0031571-Chinnusamy1" ref-type="bibr">[51]</xref>. The mutation of <italic>LOS2</italic>, a locus encoding a bi-functional enolase in <italic>Arabidopsis</italic>, impairs plant freezing and chilling resistance <xref rid="pone.0031571-Lee1" ref-type="bibr">[50]</xref>. The involvement of enolase in primary metabolism, stress and senescence, as well as its responsiveness to LCO treatment under low temperature, indicates its possible protective role during stress conditions.</p><p>Further evidence suggests that there might be a cross-talk between cold response and LCO signaling. Two genes involved in sphingolipid metabolism were up-regulated, including sphingolipid long chain base &#x00394;-8 desaturase and glucoceramide synthase, which may also be involved in the LCO-induced defense signaling. Ceramide is the core component of sphingolipid metabolic pathways. Interestingly, as the product of &#x00394;-8 desaturase serves as the substrate of glucoceramide synthase, it was observed that &#x00394;-8 desaturase activity is enhanced in the presence of glucoceramide <xref rid="pone.0031571-Sperling1" ref-type="bibr">[52]</xref>, which explains why both genes were up-regulated in our study. Plant sphingolipids are involved in signal transduction, membrane stability, host-pathogen interactions and stress responses <xref rid="pone.0031571-Sperling1" ref-type="bibr">[52]</xref>. Sphingolipid confers membrane stability to plants, thus contributing to plant acclimation to drought and cold stress. It has also been found that cold-tolerant plants have higher levels of &#x00394;-8 unsaturated sphingolipids, and lower levels of glucoceramides <xref rid="pone.0031571-Sperling1" ref-type="bibr">[52]</xref>. Thus in our case, the induction of these two genes may be an indication of cross-talk between cold and LCO signaling, but it cannot be determined whether this induction contributes to cold tolerance of the LCO-treated plants. In addition, fungal cerebrosides, which are glycosylated sphigolipids, are pathogenic elicitors leading to hypersensitive response, phytoalexin accumulation and cell death; this elicitation is dependent on the &#x00394;-8 double bond <xref rid="pone.0031571-Sperling1" ref-type="bibr">[52]</xref>. Changes in the expression levels of many protein kinases and phosphatases were detected, including the down-regulated homologues of mitogen-activated protein kinase (MAPK) and protein phosphatase 2C (PP2C). The MAPK cascade is an important signal transduction pathway in plants, functioning in cell devision, differentiation, and hormonal response, as well as a variety of abiotic and biotic stresses; the cascade is a series of phosphorylation-dependent activations of MAPK components, starting with the activation of MAPK upon phosphorylation by MAPKK (MAPK kinase), which itself is activated by MAPKKK (MAPKK kinase) <xref rid="pone.0031571-Mishra1" ref-type="bibr">[53]</xref>. The regulation of MAPK cascades is intricate, as the various cascades form a complex network with cross-talk among the pathways <xref rid="pone.0031571-Mishra1" ref-type="bibr">[53]</xref>. Responses to abiotic stresses such as salt, cold, drought and wounding are mediated by overlapping MAPK cascades <xref rid="pone.0031571-Zhang2" ref-type="bibr">[54]</xref>. MAPKs are deactivated by protein phosphatases; PP2C is one of the major negative regulators of the MAPK cascades, especially during stress and ABA signaling <xref rid="pone.0031571-Schweighofer1" ref-type="bibr">[55]</xref>. The down-regulated MAPKs identified 48 h after LCO foliar spray under sub-optimal temperature may not be directly regulated by PP2C, since the latter was also down-regulated.</p><p>An NAC-domain containing protein and two NAM (no apical meristem) proteins were down-regulated 48 h after LCO exposure at 15&#x000b0;C. NAM, a member of the NAC family, was first characterized in petunia as a protein determining the position of meristems and meristem primordia; <italic>nam</italic> gene mutants usually die at the seedling stage due to failed shoot apical meristem development <xref rid="pone.0031571-Souer1" ref-type="bibr">[56]</xref>. The NAC (NAM, ATAF1,2, CUC2) transcription factors are represented by a large gene family diverse in structure and function; in addition to embryonic, floral and vegetative development, auxin signaling and lateral root formation; members of the NAC family have been shown to regulate responses to pathogen attack and abiotic stress <xref rid="pone.0031571-Hegedus1" ref-type="bibr">[57]</xref>, <xref rid="pone.0031571-Nakashima1" ref-type="bibr">[58]</xref>. NAC proteins are inducible by pathogen infection, wounding, cold shock, dehydration and high salinity; some NAC members are potentially involved in cross-talk with the ABA signaling pathways <xref rid="pone.0031571-Hegedus1" ref-type="bibr">[57]</xref>, <xref rid="pone.0031571-Olsen1" ref-type="bibr">[59]</xref>. Regulated at the transcriptional, post-transcriptional and post-translational levels, NAC proteins may participate in transcription factor networks and interact with other regulators of stress response <xref rid="pone.0031571-Olsen1" ref-type="bibr">[59]</xref>.</p><p>Further evidence is supportive of LCO-induced stress response. Chlorophyllase (Chlase), and non-symbiotic hemoglobin, were up-regulated. Chlase catalyzes the initial step of chlorophyll breakdown during leaf senescence <xref rid="pone.0031571-Matile1" ref-type="bibr">[60]</xref>, <xref rid="pone.0031571-BenYaakov1" ref-type="bibr">[61]</xref>. Symbiotic plant hemoglobins are mainly present in root nodules, regulating oxygen supply to the N<sub>2</sub>-fixing rhizobia, whereas non-symbiotic hemoglobins are induced during hypoxic conditions, ensuring the oxygen supply for plant tissues, and detoxifying nitric oxide (NO) produced during hypoxia <xref rid="pone.0031571-Dordas1" ref-type="bibr">[62]</xref>. Non-symbiotic hemoglobins are also enhanced in active cells such as root tips and germinating seeds, possibly because rapidly growing cells are more likely to develop hypoxia <xref rid="pone.0031571-Dordas1" ref-type="bibr">[62]</xref>. The induction of these two genes indicates that LCO foliar spray may have led to hypoxic response and accelerated leaf senescence.</p></sec><sec id="s3e"><title>Phosphate metabolism-related enzymes</title><p>Multiple copies of purple acid phosphatase (PAP) were up-regulated. Plant PAPs include the 35 kDa small PAPs and the 55 kDa large PAPs; PAP activity is greatly enhanced under phosphate deficient conditions, hydrolyzing both endogenous and exogenous phosphate storage compounds to ensure the phosphate supply <xref rid="pone.0031571-Olczak1" ref-type="bibr">[63]</xref>. In addition, mammalian and plant small PAPs have peroxidase activity, suggesting their involvement in ROS removal during oxidative stress <xref rid="pone.0031571-Olczak1" ref-type="bibr">[63]</xref>.</p><p>Other phosphate metabolism-related enzymes were also up-regulated in the study, including glycerophosphoryl diester phosphodiesterase (GPX-PDE), and sulfolipid synthase. Plant glycerophosphodiesters, which accumulate as a catabolism product of phospholipid during membrane turnover and degradation, are hydrolyzed by GPX-PDE, releasing glycerol phosphate and the corresponding alcohol <xref rid="pone.0031571-vanderRest1" ref-type="bibr">[64]</xref>, <xref rid="pone.0031571-vanderRest2" ref-type="bibr">[65]</xref>. Although the physiological roles of plant GPX-PDE are largely unclear, their accumulation during phosphate deficiency indicates that it may be responsible for releasing phosphate from soil or internal phospholipids <xref rid="pone.0031571-vanderRest2" ref-type="bibr">[65]</xref>. Multiple copies of sulfolipid synthase homologues were up-regulated by at least 2-fold. Being an anionic natural surfactant molecule, sulfolipid is an important structural lipid of the plant photosynthetic membrane; <italic>Arabidopsis</italic> sulfolipd synthase is encoded by <italic>SQD</italic> genes, and mutation in <italic>SQD</italic> genes impaired plant adaptation to phosphate deficiency <xref rid="pone.0031571-Yu1" ref-type="bibr">[66]</xref>, <xref rid="pone.0031571-Benning1" ref-type="bibr">[67]</xref>. This indicates that sulfolipid biosynthesis acts to compensate for the insufficient anionic phospholipid production when phosphate becomes a limiting macronutrient <xref rid="pone.0031571-Yu1" ref-type="bibr">[66]</xref>. Interestingly, apart from phosphate deficiency, sulfolipids accumulate when plants are exposed to salt, drought and cold stress <xref rid="pone.0031571-Benning1" ref-type="bibr">[67]</xref>.</p><p>The up-regulation of phosphoenolpyruvate carboxylase (PEPC) kinase is of specific interest, as the multi-function enzyme is involved in primary metabolism, symbiosis, as well as salt stress response. PEPC is the enzyme catalyzing the primary CO<sub>2</sub> fixation step in C<sub>4</sub> and crassulacean acid (CAM) plants; in C<sub>3</sub> plants, PEPC replenishes the tricarboxylic acid cycle with intermediates <xref rid="pone.0031571-Zhang3" ref-type="bibr">[68]</xref>, <xref rid="pone.0031571-Fukayama1" ref-type="bibr">[69]</xref>. In legume root nodules, PEPC is essential for the synthesis of C<sub>4</sub> dicarboxylate, the carbon skeleton of amino acids assimilated by the bacteroids <xref rid="pone.0031571-Zhang3" ref-type="bibr">[68]</xref>. In addition, PEPC plays roles in fruit ripening, regulating cellular pH, and providing malate to guard cells <xref rid="pone.0031571-Fukayama1" ref-type="bibr">[69]</xref>. PEPC kinase is a Ca<sup>2&#x0002b;</sup>-independent serine/threonine kinase that phosphorylates PEPC; strikingly, PEPC kinase activity was enhanced by salt stress in <italic>Sorghum vulgare</italic>; further analysis revealed that the induction was related to ion toxicity rather than osmotic stress <xref rid="pone.0031571-GarciaMaurino1" ref-type="bibr">[70]</xref>. Although it is uncertain which aspect of PEPC function caused its responsiveness to LCO foliar spray, any of the three indicated could be affected.</p></sec><sec id="s3f"><title>Transport and development</title><p>LCO foliar spray may also have enhanced mitochondrial metabolite exchange, as a number of mitochondrial carrier family (MCF) homologues were up-regulated. Plant mitochondria serve in a variety of functions, including respiration, photorespiration, photosynthesis in C<sub>4</sub> and CAM plants, as well as catabolism of storage compounds during seed germination; there is therefore a need for a mitochondrial transporter system in order to exchange metabolites between the mitochondria and the cytosol <xref rid="pone.0031571-Picault1" ref-type="bibr">[71]</xref>. MCFs are transmembrane proteins with three conservative domains, each of which consists two transmembrane &#x003b1;-helices and a hydrophilic extramembrane loop; however, the physiological roles of most MCF proteins are poorly understood, partially due to the low abundance of transmembrane proteins and technical difficulties in studying them <xref rid="pone.0031571-Picault1" ref-type="bibr">[71]</xref>, <xref rid="pone.0031571-Kuan1" ref-type="bibr">[72]</xref>.</p><p>A rapid alkalinisation factor (RALF) was induced. The abundance of RALF homologues in plants indicates a fundamental function, however, the nature of this function is not yet well known <xref rid="pone.0031571-Haruta1" ref-type="bibr">[73]</xref>&#x02013;<xref rid="pone.0031571-Moura1" ref-type="bibr">[75]</xref>. Although extracellular alkalinization is a phenomenon that commonly occurs during pathogen attack and environmental stimuli, a study in poplar cell culture demonstrated that the suppression of RALF by MeJa was more likely to be development-related than stress-related <xref rid="pone.0031571-Haruta1" ref-type="bibr">[73]</xref>.</p><p>Glutamate carboxypeptidase (GCP) II was found to be up-regulated in contrast 2. GCP is encoded by the <italic>AMP 1</italic> (<italic>ALTERED MERISTEM PROGRAM 1</italic>) gene in <italic>Arabidopsis</italic>; functional studies through mutational analysis revealed its involvement in the development of shoot apical meristems, flowering, photomorphogenesis, and cytokinin biosynthesis <xref rid="pone.0031571-Helliwell1" ref-type="bibr">[76]</xref>, <xref rid="pone.0031571-Vidaurre1" ref-type="bibr">[77]</xref>.</p></sec><sec id="s3g"><title>Transcription factors</title><p>A variety of transcription factors and other signaling-related components were detected. A sigma E-like factor (sigE), which is a component of the prokaryotic RNA polymerase that specifically recognizes and binds to the gene promoter region <xref rid="pone.0031571-Raina1" ref-type="bibr">[78]</xref>, was down-regulated. Plant sigE is encoded by both plastid and nuclear genes, and plays an important role in maintaining the RNA polymerase function <xref rid="pone.0031571-Fujiwara1" ref-type="bibr">[79]</xref>. The BTB/POPZ-domain containing proteins were differentially expressed, three copies of which were induced while two were suppressed. The BTB (Broad Complex, tramtrack and bric &#x000e0; brac) or POZ (poxvirus and zinc finger) is a conserved domain found at the NH<sub>2</sub>-terminal of zinc fingers, poxvirus and actin-binding proteins; it is a protein-protein interaction motif involved in the organization of macromolecular complexes <xref rid="pone.0031571-Albagli1" ref-type="bibr">[80]</xref>. Strikingly, the two suppressed copies of BTB/POZ protein were also homologous to the phototropic-response protein NPH3 (nonphototropic hypocotyl 3), which is a UV-A/blue light receptor inducing the phototropic response <xref rid="pone.0031571-Sakai1" ref-type="bibr">[81]</xref>.</p></sec><sec id="s3h"><title>qPCR validation of microarray results</title><p>Our results indicated that in general, microarray data patterns were reproducible when qPCR was performed at both statistical and biological significance levels and all the 7 selected target genes showed comparable expression patterns demonstrated by two methodologies.</p><p>In agreement with our Microarray data, for contrast 1, where no differential gene expression was detected by microarray, our qPCR results were not statistically significant (<xref ref-type="table" rid="pone-0031571-t003">Table 3</xref>). Since most of the qPCR p-values were higher than 0.3, it is reasonable to assume that the expression levels of these genes were not affected by LCO treatment at 0 h. However, our results also indicate that qPCR validation is still necessary for microarray discoveries, as some minor disagreement in statistical significance was still found for one of the 7 validated genes. The qPCR results revealed a down-regulation of the <italic>TCP</italic> gene by 1.2 fold, but it was not statistically significant. A number of factors might have contributed to this disagreement. First, the amplification-based qPCR method is more sensitive and accurate in gene quantification, while the hybridization-based microarray technique is more powerful in large-scale gene expression analysis <xref rid="pone.0031571-Czechowski1" ref-type="bibr">[82]</xref>, <xref rid="pone.0031571-Kawasaki1" ref-type="bibr">[83]</xref>. Also, only 3 biological replicates were used for microarray analysis in this study, while 6 biological replicates were used for qPCR validation. Thus, it is reasonable that the fold change and significance levels derived from the two methods were similar but not identical. Further, the TCP gene encodes a transcription factor generally expressed at low levels. It is suggested in other studies that accurate quantification by microarray is challenged by low transcript abundance, such as in the case of transcription factors; the low hybridization signal of rare transcripts is often treated as background noise, while lowering the detection threshold leads to higher rates of false positives <xref rid="pone.0031571-ElYahyaoui1" ref-type="bibr">[25]</xref>, <xref rid="pone.0031571-Colebatch1" ref-type="bibr">[26]</xref>, <xref rid="pone.0031571-Colebatch2" ref-type="bibr">[84]</xref>. High throughput qPCR profiling was shown to be a better alternative to quantify transcription factors <xref rid="pone.0031571-Czechowski1" ref-type="bibr">[82]</xref>. As indicated by previous studies, more emphasis should be placed on the direction of gene expression change indicated by microarray, rather than the magnitude of change <xref rid="pone.0031571-Yauk1" ref-type="bibr">[85]</xref>.</p><p>Although previous studies have shown that LCO foliar spray may trigger differential expression of stress-related genes in the absence of external stress, this study revealed that in the presence of external stress (low temperature), LCO foliar spray also caused differential expression of stress-related genes, possibly through re-programming of host stress response. In addition to the analysis carried out at 48 h after treatment, a temporal analysis of control and LCO-treated plants during the 48 h following foliar spray was performed, which had led to the identification of thousands of differentially expressed genes in both treatment-groups. Over half of temporally altered genes in the control and LCO-treated plants were overlapping. Both the overlapping and treatment-specific genes were functionally categorized. Similar to findings at the 48 h time point, stress-related genes occupied the second largest percentage (around 17&#x00025;), after unknown genes (around 30&#x00025;). These stress-related genes are known to be involved in defence, cold acclimation, hormonal response, transcription regulation, and secondary metabolism. Notably, cold acclimation-related genes were mostly down-regulated, along with components responsible for carbohydrate and lipid metabolism; while genes related to the biosynthesis of secondary metabolites such as flavonoids and lignin were mainly up-regulated. The data indicate that plants in both treatment-groups were subject to maturation and aging, while adapting to the low temperature stress conditions at the same time. The data also suggest that under sub-optimal temperature, soybean plants respond to LCO foliar spray by both re-programming existing signaling pathways and activating novel pathways.</p><p>To summarize, the genes differentially expressed as a result of LCO foliar spray under sub-optimal temperature, were those related to enhancement of various stress resistances, senescence and development-related genes, especially those involved in defence, cold, oxidative stress, and phosphate deficiency. It is also interesting that most plant hormone-related genes were down-regulated, together with the MAPK-related components. This suggests that LCO can be perceived by an unknown receptor(s) in non-symbiotic tissues under sub-optimal temperature, leading to the reprogramming of plant stress responses.</p></sec></sec><sec sec-type="materials|methods" id="s4"><title>Materials and Methods</title><sec id="s4a"><title>Approach to the data</title><p>We exerted strict criteria at every stage, from data collection to statistical analysis. Total RNA was extracted, and the quality was monitored to ensure the quality and consistency. The transcript abundance profiles in the soybean trifoliates were analyzed prior to all data analysis. The microarray raw data were observed in the form of intensity maps to ensure that the data points were positioned similarly to the physical array, and the color scale corresponded to the signal intensities. Our results showed no obvious defect in the intensity maps of any of the 12 arrays we performed, indicating good physical conditions of all the arrays used in this study. The expression data was normalized using the RMA algorithm. The microarray experiment in this study was designed in a circular manner, comprising 4 gene lists generated by 4 contrasts of biologically relevant samples (<xref ref-type="fig" rid="pone-0031571-g001">Fig. 1</xref>) We performed Principal Component Analysis (PCA) on the normalized arrays which simplify data sets by capturing the major sources of variance in the study, leading to reduced dimensions, indicating that the biological replicates were uniform in nature and responded similarly to the same treatment.</p></sec><sec id="s4b"><title>LCO purification via HPLC</title><p>
+<italic>Bradyrhizobium japonicum</italic> strain 532C was grown in Yeast Extract Mannitol (YEM) broth medium (10 g mannitol, 0.5 g K<sub>2</sub>HPO<sub>4</sub>, 0.1 g MgSO<sub>4</sub>, 0.2 g MgSO<sub>4</sub>&#x02022;7H<sub>2</sub>O, 0.1 g NaCl, 0.4 g yeast extract, 1 L dH<sub>2</sub>O, 15 g agar) at 28&#x000b0;C until the cell density, as determined from OD<sub>600</sub> values, reached 4&#x000d7;10<sup>8</sup> cells per mL. The rhizobia were sub-cultured in fresh YEM medium, until they reached the exponential growth phase (4 days). To induce LCO production, genistein (Sigma, St. Louis, USA) stock solution in 100&#x00025; methanol was added into the medium to a final concentration of 5 &#x000b5;M. The culture was incubated for another 2 days to allow sufficient LCO production.</p><p>Extraction was started by using phase partitioning against 40&#x00025; HPLC-grade n-butanol while shaking for 30 min at 150 rpm. The organic fraction was collected and evaporated at 50&#x000b0;C in a rotary evaporator (Yamato, NJ, USA) under vacuum. The brown and viscous remaining material was redissolved in 18&#x00025; acetonitrile, loaded onto a C18 column (PRESEP&#x02122; Fisher Scientific, Montreal, QC, Canada), and eluted three times with 10 mL of 30&#x00025; acetonitrile. Another elution was performed with 10 mL of 60&#x00025; acetonitrile. This eluent contained the LCO, and was further fractionated by HPLC, with Waters 501 pumps and a Waters 401 detector set at 214 nm, and a WISP712 autosampler using a C18 reverse phase column (Vydac, CA, USA). The chromatography was conducted for 60 min with an acetonitrile linear gradient from 18 to 60&#x00025;. The peak displaying the same retention time as that of an LCO standard (NodBj-V (C<sub>18&#x02236;1</sub>, MeFuc)) from <italic>B. japonium</italic> strain 532C was identified as the LCO peak of interest. The eluent containing this peak was collected, freeze-dried, rechromatographed and the peak collected. The LCO concentration was determined by measuring the area under the HPLC peak of a standard of a known concentration, and comparing it with the peak of the purified LCO sample.</p></sec><sec id="s4c"><title>Plant growth, treatment and harvest</title><p>The soybean cultivar (cv.) used in this study was OAC Bayfield. The seeds were first surface-sterilized with 25&#x00025; commercial bleach for 2 min, and rinsed five times with distilled water (dH<sub>2</sub>O). Sterilized seeds were scattered evenly on a 5 cm thick bed of autoclaved vermiculite (Holiday&#x000ae;, Normiska Co.), covered with another 1 cm layer of vermiculite, and watered thoroughly with dH<sub>2</sub>O to allow germination in a growth chamber. The chamber temperature was maintained at a constant 25&#x000b0;C with a 16 h photoperiod and an 8 h period of darkness. On the 7<sup>th</sup> day after sowing (DAS), uniform V1-stage seedlings <xref rid="pone.0031571-Fehr1" ref-type="bibr">[86]</xref> were selected and transferred to 10 cm pots containing a 1&#x02236;1 v/v mixture of autoclaved sand and turface, and grown under the conditions described above. At 12 DAS, V2-stage seedlings were transferred to a different growth chamber and kept at 15&#x000b0;C, with a 16 h photoperiod and a dark period of 8 h. After acclimatizing at 15&#x000b0;C for 5 days, plants were ready for treatment and harvest. The plants were watered with &#x000bd; strength Hoagland's solution <xref rid="pone.0031571-Hoagland1" ref-type="bibr">[87]</xref> at the same time every day from transplant to harvest.</p><p>At 17 DAS, the V3-stage soybean plants were divided into groups, each group representing a treatment and sampling time. The first trifoliolate leaf of each plant was sprayed with 2 mL of sterilized dH<sub>2</sub>O containing one of the following treatments:</p><list list-type="order"><list-item><p>
+<bold>Control</bold>: 0.02&#x00025; Tween&#x000ae; 20</p></list-item><list-item><p>
+<bold>10<sup>&#x02212;7</sup> M LCO</bold>: 10<sup>&#x02212;7</sup> M LCO and 0.02&#x00025; Tween&#x000ae; 20</p></list-item></list><p>The sprayed trifoliolate leaves of each plant were harvested at 0 (within 20 min of spray application) and 48 h after treatment. The leaves were rapidly cut off from the stem with a scalpel, wrapped individually in aluminum foil and immediately submerged in liquid N<sub>2</sub>. All samples were stored at &#x02212;80&#x000b0;C until extraction.</p></sec><sec id="s4d"><title>RNA extraction, array labeling, hybridization and scanning</title><p>Frozen leaf tissue was rapidly ground in liquid N<sub>2</sub>, and total RNA was extracted from &#x0223c;80 mg of finely-ground, frozen tissue using the Qiagen RNeasy&#x000ae; Plant Mini Kit (Qiagen, Missisauga, ON, Canada), following the protocol provided by the manufacturer. Following RNA extraction, the concentration of total isolated RNA was measured using a NanoDrop&#x000ae; ND-1000 spectrophotometer (NanoDrop Technologies, Wilmington, DE, USA). All samples were stored at &#x02212;80&#x000b0;C until use.</p><p>Total RNA was isolated as described above, and adjusted to a concentration of 250 ng &#x000b5;L<sup>&#x02212;1</sup>. Transcript abundance was measured using GeneChip&#x000ae; Soybean Genome Arrays (Affymetrix, Santa Clara, CA, USA). RNA quality was determined using a 2100 Bioanalyzer (Agilent Technologies, Santa Clara, CA, USA). All samples were of good quality and 3.5 &#x000b5;g RNA was used to synthesize labeled target cRNA using the GeneChip&#x000ae; HT One-Cycle Target Labeling and Control kit (Affymetrix). Fifteen micrograms of fragmented cRNA were hybridized overnight with the chip, followed by staining and washes using the GeneChip&#x000ae; Fluidics Station 450 robot (Affymetrix). The microarray chips were scanned with a GeneChip&#x000ae; Scanner 3000 7 G (Affymetrix) for fluorescence intensity profile.</p></sec><sec id="s4e"><title>Microarray experimental design and data analysis</title><p>For each treatment and each sampling time, a total of 6 plants were harvested for RNA extraction. Half of those samples were used for microarray hybridization, while all of them were used for qPCR validation. The microarray experiment was structured following a Completely Randomized Design (CRD) with 3 replicates per treatment per sampling time. After foliar spray treatment, each plant was randomly positioned in the growth chamber. The presence of 2 treatment conditions (dH<sub>2</sub>O control and 10<sup>&#x02212;7</sup> M LCO) and 2 sampling times (0 and 48 h post treatment) led to the generation of 4 gene lists in this study. Each gene list was generated from a pair-wise comparison of gene expression profiles between relevant groups of plants.</p><p>All calculations were performed by FlexArray software <xref rid="pone.0031571-Blazejczyk1" ref-type="bibr">[88]</xref>, version 1.4.1. The robust multi-array average (RMA) algorithm <xref rid="pone.0031571-Bolstad1" ref-type="bibr">[89]</xref> was utilized to normalize the microarray raw data; this corrects the background by subtracting estimates derived from the lowest signals, in order to enforce a common probe distribution across all 12 arrays used. After RMA normalization, the median log-scale expression measure of each GeneChip&#x000ae; was zero, as the base 2 logarithm of RMA signals were median-centered. Three separate algorithms were used to calculate p-values: Cyber-T, Local Pooled Error (LPE) and Empirical Bayes (EB; Rocke). For each algorithm, the False Discovery Rate (FDR) correction procedure was used, with the Benjamini Hochberg algorithm. As a result, an adjusted p-value (<italic>q</italic>-value) was produced for each comparison. The corrected data was then filtered with two criteria: data points with <italic>q</italic>-values of &#x02264;0.05 were considered statistically significant, and genes expressed at fold-changes of &#x02265;1.6 or &#x02264;&#x02212;1.6 were considered biologically significant. A gene list was created by combining all data points that qualified based on the two significance criteria for all 3 algorithms. Genes from that list were further examined for biological relevance in the context of the treatment conditions. The derived gene lists were annotated using the Affymetrix GeneChip&#x000ae; Soybean Genome Array Annotation, obtained from the SoyBase website <xref rid="pone.0031571-Grant1" ref-type="bibr">[90]</xref>. Functional implications of the genes in the lists were specified in Gene Ontology (GO) information contained in the annotation file. Gene functions were classified into groups according to the GO biological process information.</p></sec><sec id="s4f"><title>DNase treatment and cDNA generation</title><p>For qPCR validation, the same batch of RNA samples was used as for microarray hybridization. All samples were treated with Turbo&#x02122; RNase-free DNase (Ambion Inc., Applied Biosystems, Streetsville, ON, Canada) prior to reverse-transcription (RT), in order to remove any contaminating genomic DNA (gDNA) that would interfere with the accuracy and specificity of qPCR validation. From each sample, 1 &#x000b5;g of RNA was used with oligo-dT primers (Invitrogen, Burlington, ON, Canada) to construct cDNA via RT reaction using the OmniScript&#x000ae; Reverse Transcription Kit (Qiagen), following the manufacturer's instructions. After the reaction, all cDNA samples were stored at &#x02212;20&#x000b0;C until further use.</p></sec><sec id="s4g"><title>Real-time qRT-PCR</title><p>A total of 7 genes were selected from the gene list of interest for qPCR validation, using the random-stratified method <xref rid="pone.0031571-Miron1" ref-type="bibr">[91]</xref>. The housekeeping soybean <italic>&#x003b2;-tubulin</italic> gene was used as the reference gene for relative quantification <xref rid="pone.0031571-Chen1" ref-type="bibr">[92]</xref>. Target gene-specific primers for qPCR were designed using Primer3 on-line software <xref rid="pone.0031571-Rozen1" ref-type="bibr">[93]</xref>, version 0.4.0.</p><p>Quantitative real-time PCR was performed using the Stratagene Mx3000P Real-Time PCR System (Agilent Technologies, Santa Clara, CA, USA). Each reaction contained 12.5 &#x000b5;L of 2&#x000d7; Stratagene Brilliant&#x000ae; SYBR&#x000ae; Green QPCR Master Mix (Agilent Technologies), 0.375 &#x000b5;L of freshly diluted reference dye (1&#x02236;500 v/v), optimized volumes of sample cDNA, the forward and reverse primers of one target or reference gene, and a variable volume of nuclease-free PCR-grade water for a final volume of 25 &#x000b5;L. The reactions were performed in 0.2 mL volume strip tubes and sealed with flat optical caps (Stratagene, Agilent Technologies). The amplification for the <italic>&#x003b2;-tubulin</italic> gene consisted of a 10 min incubation at 95&#x000b0;C to activate the Taq DNA polymerase, 45 cycles of 30 s at 95&#x000b0;C, 1 min at 55&#x000b0;C, and 30 s at 72&#x000b0;C followed by dissociation curve analysis over a 40&#x000b0;C temperature gradient at 0.066&#x000b0;C s<sup>&#x02212;1</sup> from 55 to 95&#x000b0;C. The amplification of the other target genes followed the same procedure as above, but was performed at specific annealing temperatures, as optimized beforehand. The specificity of amplification was confirmed by a single melting point on the dissociation curve, a single band on 2&#x00025; agarose gel, as well as the sequencing results (Sequencing Platform, G&#x000e9;nome Qu&#x000e9;bec and McGill University Innovation Centre).</p><p>Transcript levels for the target genes were determined by an automatic comparison of individual cycle threshold (Ct) values with the serial dilution qPCR standard curve for each specific gene. The qPCR efficiency was also reflected in the standard curves, which ranged from 85 to 100&#x00025;. Relative gene expression was calculated using the Relative Expression Software Tool (REST; <xref rid="pone.0031571-Pfaffl1" ref-type="bibr">[94]</xref>, <xref rid="pone.0031571-Pfaffl2" ref-type="bibr">[95]</xref>), version 2008_2.0.7, which used the following equation to calculate the ratio of gene expression:<disp-formula><graphic xlink:href="pone.0031571.e001.jpg" mimetype="image" position="float"/></disp-formula>
+</p><p>In this equation, E<sub>target</sub> and E<sub>ref</sub> refer to the qPCR amplification efficiencies of the target gene and the reference gene respectively, as indicated by the standard curves; whereas CP, referring to the cross point, is equivalent to the Ct value <xref rid="pone.0031571-Pfaffl2" ref-type="bibr">[95]</xref>. A gene was determined to be significantly up-regulated or down-regulated, relative to the control treatment, at p&#x02264;0.05.</p></sec></sec><sec sec-type="supplementary-material" id="s5"><title>Supporting Information</title><supplementary-material content-type="local-data" id="pone.0031571.s001"><label>Table S1</label><caption><p>
+<bold>List of genes related to stress and signal transduction in gene list 2.</bold> The putative products ofthe down-regulated genes included a cationic peroxidase, a protein phosphatase 2C (PP2C)-like protein, two homologues of mitogen-activated protein kinase (MAPK), a number of proteins related to auxin and gibberellin, proteins containing the NAC domain, a receptor kinase homologue, as well as a variety of transcription factors. The up-regulated genes encoded enolase, glutathione S-transferase, purple acid phosphatase, sulfolipid synthase, glutamate carboxypeptidase, and chlorophyllase, as well as defence-related TOM 1 and R 12 proteins.</p><p>(DOCX)</p></caption><media xlink:href="pone.0031571.s001.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><fn-group><fn fn-type="COI-statement"><p><bold>Competing Interests: </bold>The authors have declared that no competing interests exist.</p></fn><fn fn-type="financial-disclosure"><p><bold>Funding: </bold>Funding for this research was provided by the Canadian Natural Sciences and Engineering Research Council of Canada (NSERC) for support through the Green Crop Network and a Discovery grant, both held by D. Smith. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></fn></fn-group><ref-list><title>References</title><ref id="pone.0031571-Gage1"><label>1</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gage</surname><given-names>D</given-names></name></person-group>
+<year>2004</year>
+<article-title>Infection and invasion of roots by symbiotic, nitrogen-fixing rhizobia during nodulation of temperate legumes.</article-title>
+<source>Microbiol Mol Biol R</source>
+<volume>68</volume>
+<issue>2</issue>
+<fpage>280</fpage>
+<lpage>300</lpage>
+</element-citation></ref><ref id="pone.0031571-Currier1"><label>2</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Currier</surname><given-names>W</given-names></name><name><surname>Strobel</surname><given-names>G</given-names></name></person-group>
+<year>1976</year>
+<article-title>Chemotaxis of Rhizobium spp. to plant root exudates.</article-title>
+<source>Plant Physiol</source>
+<volume>57</volume>
+<issue>5</issue>
+<fpage>820</fpage>
+<lpage>823</lpage>
+<pub-id pub-id-type="pmid">16659577</pub-id></element-citation></ref><ref id="pone.0031571-Firmin1"><label>3</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Firmin</surname><given-names>J</given-names></name><name><surname>Wilson</surname><given-names>K</given-names></name><name><surname>Rossen</surname><given-names>L</given-names></name><name><surname>Johnston</surname><given-names>AWB</given-names></name></person-group>
+<year>1986</year>
+<article-title>Flavonoid activation of nodulation genes in Rhizobium reversed by other compounds present in plants.</article-title>
+<source>Nature</source>
+<volume>324</volume>
+<issue>6092</issue>
+<fpage>90</fpage>
+<lpage>92</lpage>
+</element-citation></ref><ref id="pone.0031571-DHaeze1"><label>4</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>D'Haeze</surname><given-names>W</given-names></name><name><surname>Holsters</surname><given-names>M</given-names></name></person-group>
+<year>2002</year>
+<article-title>Nod factor structures, responses, and perception during initiation of nodule development.</article-title>
+<source>Glycobiol</source>
+<volume>12</volume>
+<fpage>79</fpage>
+<lpage>105</lpage>
+</element-citation></ref><ref id="pone.0031571-Denarie1"><label>5</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Denarie</surname><given-names>J</given-names></name><name><surname>Debelle</surname><given-names>F</given-names></name><name><surname>Prome</surname><given-names>JC</given-names></name></person-group>
+<year>1996</year>
+<article-title>Rhizobium lipo-chitooligosaccharide nodulation factors: signaling molecules mediating recognition and morphogenesis.</article-title>
+<source>Annu Rev Biochem</source>
+<volume>65</volume>
+<issue>1</issue>
+<fpage>503</fpage>
+<lpage>535</lpage>
+<pub-id pub-id-type="pmid">8811188</pub-id></element-citation></ref><ref id="pone.0031571-Hirsch1"><label>6</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Hirsch</surname><given-names>S</given-names></name><name><surname>Oldroyd</surname><given-names>G</given-names></name></person-group>
+<year>2009</year>
+<article-title>Integrated Nod factor signaling in plants.</article-title>
+<source>Signaling in Plants</source>
+<publisher-name>Springer Berlin Heidelber</publisher-name>
+<fpage>71</fpage>
+<lpage>90</lpage>
+</element-citation></ref><ref id="pone.0031571-Fang1"><label>7</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fang</surname><given-names>Y</given-names></name><name><surname>Hirsch</surname><given-names>A</given-names></name></person-group>
+<year>1998</year>
+<article-title>Studying early nodulin gene ENOD40 expression and induction by nodulation factor and cytokinin in transgenic alfalfa.</article-title>
+<source>Plant Physiol</source>
+<volume>116</volume>
+<issue>1</issue>
+<fpage>53</fpage>
+<lpage>68</lpage>
+<pub-id pub-id-type="pmid">9449836</pub-id></element-citation></ref><ref id="pone.0031571-Gamas1"><label>8</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gamas</surname><given-names>P</given-names></name><name><surname>de Billy</surname><given-names>F</given-names></name><name><surname>Truchet</surname><given-names>G</given-names></name></person-group>
+<year>1998</year>
+<article-title>Symbiosis-specific expression of two <italic>Medicago truncatula</italic> nodulin genes, MtN1 and MtN13, encoding products homologous to plant defense proteins.</article-title>
+<source>Mol Plant Microbe In</source>
+<volume>11</volume>
+<issue>5</issue>
+<fpage>393</fpage>
+<lpage>403</lpage>
+</element-citation></ref><ref id="pone.0031571-Kamst1"><label>9</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kamst</surname><given-names>E</given-names></name><name><surname>Spaink</surname><given-names>H</given-names></name><name><surname>Kafetzopoulos</surname><given-names>D</given-names></name></person-group>
+<year>1998</year>
+<article-title>Biosynthesis and secretion of rhizobial lipochitin-oligosaccharide signal molecules.</article-title>
+<source>Subcell Biochem</source>
+<volume>29</volume>
+<fpage>29</fpage>
+<lpage>70</lpage>
+<pub-id pub-id-type="pmid">9594644</pub-id></element-citation></ref><ref id="pone.0031571-Ramu1"><label>10</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ramu</surname><given-names>S</given-names></name><name><surname>Peng</surname><given-names>H</given-names></name><name><surname>Cook</surname><given-names>DR</given-names></name></person-group>
+<year>2002</year>
+<article-title>Nod factor induction of reactive oxygen species production is correlated with expression of the early nodulin gene rip1 in <italic>Medicago truncatula</italic>.</article-title>
+<source>Mol Plant Microbe In</source>
+<volume>15</volume>
+<issue>6</issue>
+<fpage>522</fpage>
+<lpage>528</lpage>
+</element-citation></ref><ref id="pone.0031571-Dyachok1"><label>11</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dyachok</surname><given-names>J</given-names></name><name><surname>Wiweger</surname><given-names>M</given-names></name><name><surname>Kenne</surname><given-names>L</given-names></name><name><surname>von Arnold</surname><given-names>S</given-names></name></person-group>
+<year>2002</year>
+<article-title>Endogenous nod-factor-like signal molecules promote early somatic embryo development in Norway spruce.</article-title>
+<source>Plant Physiol</source>
+<volume>128</volume>
+<issue>2</issue>
+<fpage>523</fpage>
+<lpage>533</lpage>
+<pub-id pub-id-type="pmid">11842156</pub-id></element-citation></ref><ref id="pone.0031571-Lindsay1"><label>12</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lindsay</surname><given-names>J</given-names></name></person-group>
+<year>2007</year>
+<article-title>The effect of lipo-chitooligosaccharide from <italic>Bradyrhizobium japonicum</italic>, on soybean salicylic acid, pathogenesis-related protein activity and gene expression.</article-title>
+<source>M Sc Thesis, McGill University</source>
+</element-citation></ref><ref id="pone.0031571-Schmidt1"><label>13</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schmidt</surname><given-names>J</given-names></name><name><surname>Rohrig</surname><given-names>H</given-names></name><name><surname>John</surname><given-names>M</given-names></name><name><surname>Wieneke</surname><given-names>U</given-names></name><name><surname>Stacey</surname><given-names>G</given-names></name><etal/></person-group>
+<year>1993</year>
+<article-title>Alteration of plant growth and development by Rhizobium nodA and nodB genes involved in the synthesis of oligosaccharide signal molecules.</article-title>
+<source>Plant J</source>
+<volume>4</volume>
+<issue>4</issue>
+<fpage>651</fpage>
+<lpage>658</lpage>
+</element-citation></ref><ref id="pone.0031571-Souleimanov1"><label>14</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Souleimanov</surname><given-names>A</given-names></name><name><surname>Prithiviraj</surname><given-names>B</given-names></name><name><surname>Smith</surname><given-names>DL</given-names></name></person-group>
+<year>2002</year>
+<article-title>The major Nod factor of <italic>Bradyrhizobium japonicum</italic> promotes early growth of soybean and corn.</article-title>
+<source>J Exp Bot</source>
+<volume>53</volume>
+<fpage>1929</fpage>
+<lpage>1934</lpage>
+<pub-id pub-id-type="pmid">12177132</pub-id></element-citation></ref><ref id="pone.0031571-Prithiviraj1"><label>15</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Prithiviraj</surname><given-names>B</given-names></name><name><surname>Zhou</surname><given-names>X</given-names></name><name><surname>Souleimanov</surname><given-names>A</given-names></name><name><surname>Wajahatullah</surname><given-names>MK</given-names></name><name><surname>Smith</surname><given-names>DL</given-names></name></person-group>
+<year>2003</year>
+<article-title>A host specific bacteria-to-plant signal molecule (Nod factor) enhances germination and early growth of diverse crop plants.</article-title>
+<source>Planta</source>
+<volume>216</volume>
+<fpage>437</fpage>
+<lpage>445</lpage>
+<pub-id pub-id-type="pmid">12520335</pub-id></element-citation></ref><ref id="pone.0031571-Olah1"><label>16</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Olah</surname><given-names>B</given-names></name><name><surname>Briere</surname><given-names>C</given-names></name><name><surname>Becard</surname><given-names>G</given-names></name><name><surname>Denarie</surname><given-names>J</given-names></name><name><surname>Gough</surname><given-names>C</given-names></name></person-group>
+<year>2005</year>
+<article-title>Nod factors and a diffusible factor from arbuscular mycorrhizal fungi stimulate lateral root formation in <italic>Medicago truncatula</italic> via the DMI1/DMI2 signalling pathway.</article-title>
+<source>Plant J</source>
+<volume>44</volume>
+<issue>2</issue>
+<fpage>195</fpage>
+<lpage>207</lpage>
+<pub-id pub-id-type="pmid">16212600</pub-id></element-citation></ref><ref id="pone.0031571-Almaraz1"><label>17</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Almaraz</surname><given-names>JJ</given-names></name><name><surname>Zhou</surname><given-names>X</given-names></name><name><surname>Souleimanov</surname><given-names>A</given-names></name><name><surname>Smith</surname><given-names>D</given-names></name></person-group>
+<year>2007</year>
+<article-title>Gas exchange characteristics and dry matter accumulation of soybean treated with Nod factors.</article-title>
+<source>J Plant Physiol</source>
+<volume>164</volume>
+<fpage>1391</fpage>
+<lpage>1393</lpage>
+<pub-id pub-id-type="pmid">17485139</pub-id></element-citation></ref><ref id="pone.0031571-Khan1"><label>18</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Khan</surname><given-names>W</given-names></name><name><surname>Prithiviraj</surname><given-names>B</given-names></name><name><surname>Smith</surname><given-names>DL</given-names></name></person-group>
+<year>2008</year>
+<article-title>Nod factor [Nod Bj V (C18:1, MeFuc)] and lumichrome enhance photosynthesis and growth of corn and soybean.</article-title>
+<source>J Plant Physiol</source>
+<volume>165</volume>
+<fpage>1342</fpage>
+<lpage>1351</lpage>
+<pub-id pub-id-type="pmid">18190997</pub-id></element-citation></ref><ref id="pone.0031571-Khan2"><label>19</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Khan</surname><given-names>W</given-names></name><name><surname>Costa</surname><given-names>C</given-names></name><name><surname>Souleimanov</surname><given-names>A</given-names></name><name><surname>Prithiviraj</surname><given-names>B</given-names></name><name><surname>Smith</surname><given-names>DL</given-names></name></person-group>
+<year>2011</year>
+<article-title>Response of <italic>Arabidopsis thaliana</italic> roots to Lipo-chitooligosaccharide from <italic>Bradyrhizobium japonicum</italic> and other chitin-like Compounds.</article-title>
+<source>Plant Growth Regul</source>
+<volume>63</volume>
+<fpage>243</fpage>
+<lpage>249</lpage>
+</element-citation></ref><ref id="pone.0031571-Duzan1"><label>20</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Duzan</surname><given-names>HM</given-names></name><name><surname>Mabood</surname><given-names>F</given-names></name><name><surname>Zhou</surname><given-names>X</given-names></name><name><surname>Souleimanov</surname><given-names>A</given-names></name><name><surname>Smith</surname><given-names>DL</given-names></name></person-group>
+<year>2005</year>
+<article-title>Nod factor induces soybean resistance to powdery mildew.</article-title>
+<source>Plant Physiol Bioch</source>
+<volume>43</volume>
+<issue>10&#x02013;11</issue>
+<fpage>1022</fpage>
+<lpage>1030</lpage>
+</element-citation></ref><ref id="pone.0031571-Miransari1"><label>21</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miransari</surname><given-names>M</given-names></name><name><surname>Balakrishnan</surname><given-names>P</given-names></name><name><surname>Smith</surname><given-names>D</given-names></name><name><surname>Mackenzie</surname><given-names>AF</given-names></name><name><surname>Bahrami</surname><given-names>HA</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>Overcoming the stressful effect of low pH on soybean root hair curling using lipochitooligosacharides.</article-title>
+<source>Commun Soil Sci Plant Anal</source>
+<volume>37</volume>
+<issue>7&#x02013;8</issue>
+<fpage>1103</fpage>
+<lpage>1110</lpage>
+</element-citation></ref><ref id="pone.0031571-Atti1"><label>22</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Atti</surname><given-names>S</given-names></name><name><surname>Bonnell</surname><given-names>R</given-names></name><name><surname>Prasher</surname><given-names>S</given-names></name><name><surname>Smith</surname><given-names>DL</given-names></name></person-group>
+<year>2005</year>
+<article-title>Response of soybean {<italic>Glycine max</italic> (L.) Merr} under chronic water deficit to LCO application during flowering and pod filling.</article-title>
+<source>Irrig Drain</source>
+<volume>54</volume>
+<issue>1</issue>
+<fpage>15</fpage>
+<lpage>30</lpage>
+</element-citation></ref><ref id="pone.0031571-Asamizu1"><label>23</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Asamizu</surname><given-names>E</given-names></name><name><surname>Nakamura</surname><given-names>Y</given-names></name><name><surname>Sato</surname><given-names>S</given-names></name><name><surname>Tabata</surname><given-names>S</given-names></name></person-group>
+<year>2005</year>
+<article-title>Comparison of the transcript profiles from the root and the nodulating root of the model legume <italic>Lotus japonicus</italic> by serial analysis of gene expression.</article-title>
+<source>Mol Plant Microbe In</source>
+<volume>18</volume>
+<issue>5</issue>
+<fpage>487</fpage>
+<lpage>498</lpage>
+</element-citation></ref><ref id="pone.0031571-Brechenmacher1"><label>24</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Brechenmacher</surname><given-names>L</given-names></name><name><surname>Kim</surname><given-names>M</given-names></name><name><surname>Benitez</surname><given-names>M</given-names></name><name><surname>Li</surname><given-names>M</given-names></name><name><surname>Joshi</surname><given-names>T</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Transcription profiling of soybean nodulation by <italic>Bradyrhizobium japonicum</italic>.</article-title>
+<source>Mol Plant Microbe In</source>
+<volume>21</volume>
+<issue>5</issue>
+<fpage>631</fpage>
+<lpage>645</lpage>
+</element-citation></ref><ref id="pone.0031571-ElYahyaoui1"><label>25</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>El Yahyaoui</surname><given-names>F</given-names></name><name><surname>Kuster</surname><given-names>H</given-names></name><name><surname>Amor</surname><given-names>BB</given-names></name><name><surname>Hohnjec</surname><given-names>N</given-names></name><name><surname>P&#x000fc;hler</surname><given-names>A</given-names></name></person-group>
+<year>2004</year>
+<article-title>Expression profiling in <italic>Medicago truncatula</italic> identifies more than 750 genes differentially expressed during nodulation, including many potential regulators of the symbiotic program.</article-title>
+<source>Plant Physiol</source>
+<volume>136</volume>
+<issue>2</issue>
+<fpage>3159</fpage>
+<lpage>3176</lpage>
+<pub-id pub-id-type="pmid">15466239</pub-id></element-citation></ref><ref id="pone.0031571-Colebatch1"><label>26</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Colebatch</surname><given-names>G</given-names></name><name><surname>Desbrosses</surname><given-names>G</given-names></name><name><surname>Ott</surname><given-names>T</given-names></name><name><surname>Krusell</surname><given-names>L</given-names></name><name><surname>Montanari</surname><given-names>O</given-names></name></person-group>
+<year>2004</year>
+<article-title>Global changes in transcription orchestrate metabolic differentiation during symbiotic nitrogen fixation in <italic>Lotus japonicus</italic>.</article-title>
+<source>Plant J</source>
+<volume>39</volume>
+<issue>4</issue>
+<fpage>487</fpage>
+<lpage>512</lpage>
+<pub-id pub-id-type="pmid">15272870</pub-id></element-citation></ref><ref id="pone.0031571-Kouchi1"><label>27</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kouchi</surname><given-names>H</given-names></name><name><surname>Shimomura</surname><given-names>K</given-names></name><name><surname>Hata</surname><given-names>S</given-names></name><name><surname>Hirota</surname><given-names>A</given-names></name><name><surname>Wu</surname><given-names>GJ</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>Large-scale analysis of gene expression profiles during early stages of root nodule formation in a model legume, <italic>Lotus japonicus</italic>.</article-title>
+<source>DNA Res</source>
+<volume>11</volume>
+<issue>4</issue>
+<fpage>263</fpage>
+<lpage>274</lpage>
+<pub-id pub-id-type="pmid">15500251</pub-id></element-citation></ref><ref id="pone.0031571-Mitra1"><label>28</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mitra</surname><given-names>R</given-names></name><name><surname>Shaw</surname><given-names>S</given-names></name><name><surname>Long</surname><given-names>SR</given-names></name></person-group>
+<year>2004</year>
+<article-title>Six nonnodulating plant mutants defective for Nod factor-induced transcriptional changes associated with the legume-rhizobia symbiosis.</article-title>
+<source>Proc Natl Acad Sci</source>
+<volume>101</volume>
+<issue>27</issue>
+<fpage>10217</fpage>
+<lpage>10222</lpage>
+<pub-id pub-id-type="pmid">15220482</pub-id></element-citation></ref><ref id="pone.0031571-Zhang1"><label>29</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhang</surname><given-names>F</given-names></name><name><surname>Smith</surname><given-names>D</given-names></name></person-group>
+<year>1994</year>
+<article-title>Effects of low root zone temperatures on the early stages of symbiosis establishment between soybean [<italic>Glycine max</italic> (L.) Merr.] and <italic>Bradyrhizobium japonicum</italic>.</article-title>
+<source>J Exp Bot</source>
+<volume>45</volume>
+<issue>10</issue>
+<fpage>1467</fpage>
+<lpage>1473</lpage>
+</element-citation></ref><ref id="pone.0031571-Prevost1"><label>30</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Prevost</surname><given-names>D</given-names></name><name><surname>Antoun</surname><given-names>H</given-names></name><name><surname>Bordeleau</surname><given-names>LM</given-names></name></person-group>
+<year>1987</year>
+<article-title>Effects of low temperatures on nitrogenase activity in sainfoin (<italic>Onobrychis viciifolia)</italic> nodulated by arctic rhizobia.</article-title>
+<source>FEMS Microbiol Lett</source>
+<volume>45</volume>
+<issue>4</issue>
+<fpage>205</fpage>
+<lpage>210</lpage>
+</element-citation></ref><ref id="pone.0031571-Patten1"><label>31</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Patten</surname><given-names>CL</given-names></name><name><surname>Kirchhof</surname><given-names>MG</given-names></name><name><surname>Schertzberg</surname><given-names>MR</given-names></name><name><surname>Morton</surname><given-names>RA</given-names></name><name><surname>Schellhorn</surname><given-names>HE</given-names></name></person-group>
+<year>2004</year>
+<article-title>Microarray analysis of RpoS-mediated gene expression in Escherichia coli K-12.</article-title>
+<source>Mol Genet Genom</source>
+<volume>272</volume>
+<issue>5</issue>
+<fpage>580</fpage>
+<lpage>591</lpage>
+</element-citation></ref><ref id="pone.0031571-Shin1"><label>32</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shin</surname><given-names>Y</given-names></name><name><surname>Kitayama</surname><given-names>A</given-names></name><name><surname>Koide</surname><given-names>T</given-names></name><name><surname>Peiffer</surname><given-names>DA</given-names></name><name><surname>Mochii</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Identification of neural genes using Xenopus DNA microarrays.</article-title>
+<source>Dev Dyn</source>
+<volume>232</volume>
+<fpage>432</fpage>
+<lpage>444</lpage>
+<pub-id pub-id-type="pmid">15614765</pub-id></element-citation></ref><ref id="pone.0031571-Felle1"><label>33</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Felle</surname><given-names>HH</given-names></name><name><surname>Kondorosi</surname><given-names>&#x000c1;</given-names></name><name><surname>Kondorosi</surname><given-names>&#x000c9;</given-names></name><name><surname>Schultze</surname></name></person-group>
+<year>1996</year>
+<article-title>Rapid alkalinization in alfalfa root hairs in response to rhizobial lipochitooligosaccharide signals.</article-title>
+<source>Plant J</source>
+<volume>10</volume>
+<fpage>295</fpage>
+<lpage>301</lpage>
+</element-citation></ref><ref id="pone.0031571-Kuchitsu1"><label>34</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kuchitsu</surname><given-names>K</given-names></name><name><surname>Kikuyama</surname><given-names>M</given-names></name><name><surname>Shibuya</surname><given-names>N</given-names></name></person-group>
+<year>1993</year>
+<article-title>N-acetylchitooligosaccharides, biotic elicitor for phytoalexin production, induce transient membrane depolarization in suspension-cultured rice cells.</article-title>
+<source>Protoplasma</source>
+<volume>174</volume>
+<fpage>79</fpage>
+<lpage>81</lpage>
+</element-citation></ref><ref id="pone.0031571-Kasprzewska1"><label>35</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kasprzewska</surname><given-names>A</given-names></name></person-group>
+<year>2003</year>
+<article-title>Plant chitinases-regulation and function.</article-title>
+<source>Cell Mol Biol Lett</source>
+<volume>8</volume>
+<issue>3</issue>
+<fpage>809</fpage>
+<lpage>824</lpage>
+<pub-id pub-id-type="pmid">12949620</pub-id></element-citation></ref><ref id="pone.0031571-Moriyama1"><label>36</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Moriyama</surname><given-names>Y</given-names></name><name><surname>Hiasa</surname><given-names>M</given-names></name><name><surname>Matsumoto</surname><given-names>T</given-names></name><name><surname>Omote</surname><given-names>H</given-names></name></person-group>
+<year>2008</year>
+<article-title>Multidrug and toxic compound extrusion (MATE)-type proteins as anchor transporters for the excretion of metabolic waste products and xenobiotics.</article-title>
+<source>Xenobiotica</source>
+<volume>38</volume>
+<issue>7&#x02013;8</issue>
+<fpage>1107</fpage>
+<lpage>1118</lpage>
+<pub-id pub-id-type="pmid">18668441</pub-id></element-citation></ref><ref id="pone.0031571-Wierzbicki1"><label>37</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wierzbicki</surname><given-names>A</given-names></name><name><surname>Jerzmanowski</surname><given-names>A</given-names></name></person-group>
+<year>2005</year>
+<article-title>Suppression of histone H1 genes in <italic>Arabidopsis</italic> results in heritable developmental defects and stochastic changes in DNA methylation.</article-title>
+<source>Genetics</source>
+<volume>169</volume>
+<issue>2</issue>
+<fpage>997</fpage>
+<lpage>1008</lpage>
+<pub-id pub-id-type="pmid">15489532</pub-id></element-citation></ref><ref id="pone.0031571-Mitsuda1"><label>38</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mitsuda</surname><given-names>N</given-names></name><name><surname>Seki</surname><given-names>M</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name><name><surname>Ohme-Takagi</surname><given-names>M</given-names></name></person-group>
+<year>2005</year>
+<article-title>The NAC transcription factors NST1 and NST2 of Arabidopsis regulate secondary wall thickenings and are required for anther dehiscence.</article-title>
+<source>Plant Cell</source>
+<volume>17</volume>
+<fpage>2993</fpage>
+<lpage>3006</lpage>
+<pub-id pub-id-type="pmid">16214898</pub-id></element-citation></ref><ref id="pone.0031571-Lamb1"><label>39</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lamb</surname><given-names>C</given-names></name><name><surname>Dixon</surname><given-names>R</given-names></name></person-group>
+<year>1997</year>
+<article-title>The oxidative burst in plant disease resistance.</article-title>
+<source>Annu Rev Plant Biol</source>
+<volume>48</volume>
+<issue>1</issue>
+<fpage>251</fpage>
+<lpage>275</lpage>
+</element-citation></ref><ref id="pone.0031571-Bae1"><label>40</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bae</surname><given-names>E</given-names></name><name><surname>Lee</surname><given-names>H</given-names></name><name><surname>Lee</surname><given-names>JS</given-names></name><name><surname>Noh</surname><given-names>EW</given-names></name><name><surname>Jo</surname><given-names>J</given-names></name></person-group>
+<year>2006</year>
+<article-title>Molecular cloning of a peroxidase gene from poplar and its expression in response to stress.</article-title>
+<source>Tree Physiol</source>
+<volume>26</volume>
+<issue>11</issue>
+<fpage>1405</fpage>
+<lpage>1412</lpage>
+<pub-id pub-id-type="pmid">16877325</pub-id></element-citation></ref><ref id="pone.0031571-Sels1"><label>41</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sels</surname><given-names>J</given-names></name><name><surname>Mathys</surname><given-names>J</given-names></name><name><surname>De Coninck</surname><given-names>BMA</given-names></name><name><surname>Cammue</surname><given-names>BPA</given-names></name><name><surname>De Bolle</surname><given-names>MFC</given-names></name></person-group>
+<year>2008</year>
+<article-title>Plant pathogenesis-related (PR) proteins: a focus on PR peptides.</article-title>
+<source>Plant Physiol Bioch</source>
+<volume>46</volume>
+<issue>11</issue>
+<fpage>941</fpage>
+<lpage>950</lpage>
+</element-citation></ref><ref id="pone.0031571-Passardi1"><label>42</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Passardi</surname><given-names>F</given-names></name><name><surname>Penel</surname><given-names>C</given-names></name><name><surname>Dunand</surname><given-names>C</given-names></name></person-group>
+<year>2004</year>
+<article-title>Performing the paradoxical: how plant peroxidases modify the cell wall.</article-title>
+<source>Trends Plant Sci</source>
+<volume>9</volume>
+<issue>11</issue>
+<fpage>534</fpage>
+<lpage>540</lpage>
+<pub-id pub-id-type="pmid">15501178</pub-id></element-citation></ref><ref id="pone.0031571-Edwards1"><label>43</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Edwards</surname><given-names>R</given-names></name><name><surname>Dixon</surname><given-names>D</given-names></name><name><surname>Walbot</surname><given-names>V</given-names></name></person-group>
+<year>2000</year>
+<article-title>Plant glutathione S-transferases: enzymes with multiple functions in sickness and in health.</article-title>
+<source>Trends Plant Sci</source>
+<volume>5</volume>
+<issue>5</issue>
+<fpage>193</fpage>
+<lpage>198</lpage>
+<pub-id pub-id-type="pmid">10785664</pub-id></element-citation></ref><ref id="pone.0031571-Timpte1"><label>44</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Timpte</surname><given-names>C</given-names></name><name><surname>Lincoln</surname><given-names>C</given-names></name><name><surname>Pickett</surname><given-names>EB</given-names></name><name><surname>Turner</surname><given-names>J</given-names></name><name><surname>Estelle</surname><given-names>M</given-names></name></person-group>
+<year>1995</year>
+<article-title>The AXRI and AUXI genes of Arabidopsis function in separate auxin-response pathways.</article-title>
+<source>Plant J</source>
+<volume>8</volume>
+<fpage>561</fpage>
+<lpage>569</lpage>
+<pub-id pub-id-type="pmid">11536712</pub-id></element-citation></ref><ref id="pone.0031571-Peng1"><label>45</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Peng</surname><given-names>J</given-names></name><name><surname>Carol</surname><given-names>P</given-names></name><name><surname>Richards</surname><given-names>DE</given-names></name><name><surname>King</surname><given-names>KE</given-names></name><name><surname>Cowling</surname><given-names>RJ</given-names></name><etal/></person-group>
+<year>1997</year>
+<article-title>The Arabidopsis GAI gene defines a signaling pathway that negatively regulates gibberellin responses.</article-title>
+<source>Genes Dev</source>
+<volume>11</volume>
+<issue>23</issue>
+<fpage>3194</fpage>
+<lpage>3205</lpage>
+<pub-id pub-id-type="pmid">9389651</pub-id></element-citation></ref><ref id="pone.0031571-Jones1"><label>46</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jones</surname><given-names>JDG</given-names></name><name><surname>Dangl</surname><given-names>JL</given-names></name></person-group>
+<year>2006</year>
+<article-title>The plant immune system.</article-title>
+<source>Nature</source>
+<volume>444</volume>
+<fpage>323</fpage>
+<lpage>329</lpage>
+<pub-id pub-id-type="pmid">17108957</pub-id></element-citation></ref><ref id="pone.0031571-Takken1"><label>47</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Takken</surname><given-names>F</given-names></name><name><surname>Albrecht</surname><given-names>M</given-names></name><name><surname>Tameling</surname><given-names>WIL</given-names></name></person-group>
+<year>2006</year>
+<article-title>Resistance proteins: molecular switches of plant defence.</article-title>
+<source>Curr Opin Plant Biol</source>
+<volume>9</volume>
+<issue>4</issue>
+<fpage>383</fpage>
+<lpage>390</lpage>
+<pub-id pub-id-type="pmid">16713729</pub-id></element-citation></ref><ref id="pone.0031571-Boudichevskaia1"><label>48</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Boudichevskaia</surname><given-names>A</given-names></name><name><surname>Flachowsky</surname><given-names>H</given-names></name><name><surname>Dunemann</surname><given-names>F</given-names></name></person-group>
+<year>2009</year>
+<article-title>Identification and molecular analysis of candidate genes homologous to HcrVf genes for scab resistance in apple.</article-title>
+<source>Plant Breeding</source>
+<volume>128</volume>
+<issue>1</issue>
+<fpage>84</fpage>
+<lpage>91</lpage>
+</element-citation></ref><ref id="pone.0031571-HagiwaraKomoda1"><label>49</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hagiwara-Komoda</surname><given-names>Y</given-names></name><name><surname>Hirai</surname><given-names>K</given-names></name><name><surname>Mochizukia</surname><given-names>A</given-names></name><name><surname>Nishiguchid</surname><given-names>M</given-names></name><name><surname>Meshia</surname><given-names>T</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Overexpression of a host factor TOM1 inhibits tomato mosaic virus propagation and suppression of RNA silencing.</article-title>
+<source>Virology</source>
+<volume>376</volume>
+<issue>1</issue>
+<fpage>132</fpage>
+<pub-id pub-id-type="pmid">18440043</pub-id></element-citation></ref><ref id="pone.0031571-Lee1"><label>50</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lee</surname><given-names>H</given-names></name><name><surname>Guo</surname><given-names>Y</given-names></name><name><surname>Ohta</surname><given-names>M</given-names></name><name><surname>Xiong</surname><given-names>L</given-names></name><name><surname>Stevenson</surname><given-names>B</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>LOS2, a genetic locus required for cold-responsive gene transcription encodes a bi-functional enolase.</article-title>
+<source>EMBO J</source>
+<volume>21</volume>
+<issue>11</issue>
+<fpage>2692</fpage>
+<lpage>2702</lpage>
+<pub-id pub-id-type="pmid">12032082</pub-id></element-citation></ref><ref id="pone.0031571-Chinnusamy1"><label>51</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chinnusamy</surname><given-names>V</given-names></name><name><surname>Zhu</surname><given-names>J</given-names></name><name><surname>Zhu</surname><given-names>JK</given-names></name></person-group>
+<year>2006</year>
+<article-title>Gene regulation during cold acclimation in plants. Physio.</article-title>
+<source>Plantarum</source>
+<volume>126</volume>
+<issue>1</issue>
+<fpage>52</fpage>
+<lpage>61</lpage>
+</element-citation></ref><ref id="pone.0031571-Sperling1"><label>52</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sperling</surname><given-names>P</given-names></name><name><surname>Heinz</surname><given-names>E</given-names></name></person-group>
+<year>2003</year>
+<article-title>Plant sphingolipids: structural diversity, biosynthesis, first genes and functions.</article-title>
+<source>Biochim Biophys Acta</source>
+<volume>1632</volume>
+<issue>1&#x02013;3</issue>
+<fpage>1</fpage>
+<lpage>15</lpage>
+<pub-id pub-id-type="pmid">12782146</pub-id></element-citation></ref><ref id="pone.0031571-Mishra1"><label>53</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mishra</surname><given-names>N</given-names></name><name><surname>Tuteja</surname><given-names>R</given-names></name><name><surname>Tuteja</surname><given-names>N</given-names></name></person-group>
+<year>2006</year>
+<article-title>Signaling through MAP kinase networks in plants.</article-title>
+<source>Arch Biochem Biophys</source>
+<volume>452</volume>
+<issue>1</issue>
+<fpage>55</fpage>
+<lpage>68</lpage>
+<pub-id pub-id-type="pmid">16806044</pub-id></element-citation></ref><ref id="pone.0031571-Zhang2"><label>54</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhang</surname><given-names>S</given-names></name><name><surname>Klessig</surname><given-names>D</given-names></name></person-group>
+<year>2001</year>
+<article-title>MAPK cascades in plant defense signaling.</article-title>
+<source>Trends Plant Sci</source>
+<volume>6</volume>
+<issue>11</issue>
+<fpage>520</fpage>
+<lpage>527</lpage>
+<pub-id pub-id-type="pmid">11701380</pub-id></element-citation></ref><ref id="pone.0031571-Schweighofer1"><label>55</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schweighofer</surname><given-names>A</given-names></name><name><surname>Hirt</surname><given-names>H</given-names></name><name><surname>Meskiene</surname><given-names>L</given-names></name></person-group>
+<year>2004</year>
+<article-title>Plant PP2C phosphatases: emerging functions in stress signaling.</article-title>
+<source>Trends Plant Sci</source>
+<volume>9</volume>
+<issue>5</issue>
+<fpage>236</fpage>
+<lpage>243</lpage>
+<pub-id pub-id-type="pmid">15130549</pub-id></element-citation></ref><ref id="pone.0031571-Souer1"><label>56</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Souer</surname><given-names>E</given-names></name><name><surname>Houwelingen</surname><given-names>AV</given-names></name><name><surname>Kloos</surname><given-names>D</given-names></name><name><surname>Mol</surname><given-names>J</given-names></name><name><surname>Koes</surname><given-names>R</given-names></name></person-group>
+<year>1996</year>
+<article-title>The no apical meristem gene of Petunia is required for pattern formation in embryos and flowers and is expressed at meristem and primordia boundaries.</article-title>
+<source>Cell</source>
+<volume>85</volume>
+<fpage>159</fpage>
+<lpage>170</lpage>
+<pub-id pub-id-type="pmid">8612269</pub-id></element-citation></ref><ref id="pone.0031571-Hegedus1"><label>57</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hegedus</surname><given-names>D</given-names></name><name><surname>Yu</surname><given-names>M</given-names></name><name><surname>Baldwin</surname><given-names>D</given-names></name><name><surname>Gruber</surname><given-names>M</given-names></name><name><surname>Sharpe</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>Molecular characterization of <italic>Brassica napus</italic> NAC domain transcriptional activators induced in response to biotic and abiotic stress.</article-title>
+<source>Plant Mol Biol</source>
+<volume>53</volume>
+<issue>3</issue>
+<fpage>383</fpage>
+<lpage>397</lpage>
+<pub-id pub-id-type="pmid">14750526</pub-id></element-citation></ref><ref id="pone.0031571-Nakashima1"><label>58</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nakashima</surname><given-names>K</given-names></name><name><surname>Tran</surname><given-names>L</given-names></name><name><surname>Nguyen</surname><given-names>DV</given-names></name><name><surname>Fujita</surname><given-names>M</given-names></name><name><surname>Maruyama</surname><given-names>K</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Functional analysis of a NAC-type transcription factor OsNAC6 involved in abiotic and biotic stress-responsive gene expression in rice.</article-title>
+<source>Plant J</source>
+<volume>51</volume>
+<issue>4</issue>
+<fpage>617</fpage>
+<lpage>630</lpage>
+<pub-id pub-id-type="pmid">17587305</pub-id></element-citation></ref><ref id="pone.0031571-Olsen1"><label>59</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Olsen</surname><given-names>A</given-names></name><name><surname>Ernst</surname><given-names>H</given-names></name><name><surname>Leggio</surname><given-names>L</given-names></name><name><surname>Skriver</surname><given-names>K</given-names></name></person-group>
+<year>2005</year>
+<article-title>NAC transcription factors: structurally distinct, functionally diverse.</article-title>
+<source>Trends Plant Sci</source>
+<volume>10</volume>
+<issue>2</issue>
+<fpage>79</fpage>
+<lpage>87</lpage>
+<pub-id pub-id-type="pmid">15708345</pub-id></element-citation></ref><ref id="pone.0031571-Matile1"><label>60</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Matile</surname><given-names>P</given-names></name><name><surname>H&#x000f6;rtensteiner</surname><given-names>S</given-names></name><name><surname>Thomas</surname><given-names>H</given-names></name></person-group>
+<year>1999</year>
+<article-title>Chlorophyll degradation.</article-title>
+<source>Annu Rev Plant Biol</source>
+<volume>50</volume>
+<issue>1</issue>
+<fpage>67</fpage>
+<lpage>95</lpage>
+</element-citation></ref><ref id="pone.0031571-BenYaakov1"><label>61</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ben-Yaakov</surname><given-names>E</given-names></name><name><surname>Harpaz-Saad</surname><given-names>S</given-names></name><name><surname>Galili</surname><given-names>D</given-names></name><name><surname>Eyal</surname><given-names>Y</given-names></name><name><surname>Goldschmidt</surname><given-names>E</given-names></name></person-group>
+<year>2006</year>
+<article-title>The relationship between chlorophyllase activity and chlorophyll degradation during the course of leaf senescence in various plant species.</article-title>
+<source>Isr J Plant Sci</source>
+<volume>54</volume>
+<issue>2</issue>
+<fpage>129</fpage>
+<lpage>135</lpage>
+</element-citation></ref><ref id="pone.0031571-Dordas1"><label>62</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dordas</surname><given-names>C</given-names></name><name><surname>Rivoal</surname><given-names>J</given-names></name><name><surname>Hill</surname><given-names>RD</given-names></name></person-group>
+<year>2003</year>
+<article-title>Plant haemoglobins, nitric oxide and hypoxic stress.</article-title>
+<source>Ann Bot</source>
+<volume>91</volume>
+<issue>2</issue>
+<fpage>173</fpage>
+<lpage>178</lpage>
+<pub-id pub-id-type="pmid">12509338</pub-id></element-citation></ref><ref id="pone.0031571-Olczak1"><label>63</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Olczak</surname><given-names>M</given-names></name><name><surname>Morawiecka</surname><given-names>B</given-names></name><name><surname>Watorek</surname><given-names>W</given-names></name></person-group>
+<year>2003</year>
+<article-title>Plant purple acid phosphatases-genes, structures and biological function.</article-title>
+<source>Acta Biochim Pol - English Edition</source>
+<volume>50</volume>
+<issue>4</issue>
+<fpage>1245</fpage>
+<lpage>1256</lpage>
+</element-citation></ref><ref id="pone.0031571-vanderRest1"><label>64</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>van der Rest</surname><given-names>B</given-names></name><name><surname>Boisson</surname><given-names>A</given-names></name><name><surname>Gout</surname><given-names>E</given-names></name><name><surname>Bligny</surname><given-names>R</given-names></name><name><surname>Douce</surname><given-names>R</given-names></name></person-group>
+<year>2002</year>
+<article-title>Glycerophosphocholine metabolism in higher plant cells. Evidence of a new glyceryl-phosphodiester phosphodiesterase.</article-title>
+<source>Plant Physiol</source>
+<volume>130</volume>
+<issue>1</issue>
+<fpage>244</fpage>
+<lpage>255</lpage>
+<pub-id pub-id-type="pmid">12226504</pub-id></element-citation></ref><ref id="pone.0031571-vanderRest2"><label>65</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>van der Rest</surname><given-names>B</given-names></name><name><surname>Rolland</surname><given-names>N</given-names></name><name><surname>Boisson</surname><given-names>AM</given-names></name><name><surname>Ferro</surname><given-names>M</given-names></name><name><surname>Bligny</surname><given-names>R</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>Identification and characterization of plant glycerophosphodiester phosphodiesterase.</article-title>
+<source>Biochem J</source>
+<volume>379</volume>
+<issue>3</issue>
+<fpage>601</fpage>
+<lpage>607</lpage>
+<pub-id pub-id-type="pmid">14750903</pub-id></element-citation></ref><ref id="pone.0031571-Yu1"><label>66</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yu</surname><given-names>B</given-names></name><name><surname>Xu</surname><given-names>C</given-names></name><name><surname>Benning</surname><given-names>C</given-names></name></person-group>
+<year>2002</year>
+<article-title>Arabidopsis disrupted in SQD2 encoding sulfolipid synthase is impaired in phosphate-limited growth.</article-title>
+<source>Proc Natl Acad Sci</source>
+<volume>99</volume>
+<issue>8</issue>
+<fpage>5732</fpage>
+<lpage>5737</lpage>
+<pub-id pub-id-type="pmid">11960029</pub-id></element-citation></ref><ref id="pone.0031571-Benning1"><label>67</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Benning</surname><given-names>C</given-names></name><name><surname>Garavito</surname><given-names>R</given-names></name><name><surname>Shimojima</surname><given-names>M</given-names></name></person-group>
+<year>2008</year>
+<article-title>Sulfolipid biosynthesis and function in plants. In: Hell R. Dahl C. Knaff D. and Lenslexk T. (eds) Sulfer metabolism in phototrophic organism.</article-title>
+<source>Springer, Dordrecht</source>
+<fpage>185</fpage>
+<lpage>200</lpage>
+</element-citation></ref><ref id="pone.0031571-Zhang3"><label>68</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhang</surname><given-names>X</given-names></name><name><surname>Li</surname><given-names>B</given-names></name><name><surname>Chollet</surname><given-names>R</given-names></name></person-group>
+<year>1995</year>
+<article-title>In vivo regulatory phosphorylation of soybean nodule phosphoenolpyruvate carboxylase.</article-title>
+<source>Plant Physiol</source>
+<volume>108</volume>
+<issue>4</issue>
+<fpage>1561</fpage>
+<lpage>1568</lpage>
+<pub-id pub-id-type="pmid">12228563</pub-id></element-citation></ref><ref id="pone.0031571-Fukayama1"><label>69</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fukayama</surname><given-names>H</given-names></name><name><surname>Tamai</surname><given-names>T</given-names></name><name><surname>Taniguchi</surname><given-names>Y</given-names></name><name><surname>Sullivan</surname><given-names>S</given-names></name><name><surname>Miyao</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>Characterization and functional analysis of phosphoenolpyruvate carboxylase kinase genes in rice.</article-title>
+<source>Plant J</source>
+<volume>47</volume>
+<issue>2</issue>
+<fpage>258</fpage>
+<pub-id pub-id-type="pmid">16762031</pub-id></element-citation></ref><ref id="pone.0031571-GarciaMaurino1"><label>70</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Garcia-Maurino</surname><given-names>S</given-names></name><name><surname>Monreal</surname><given-names>J</given-names></name><name><surname>Alvarez</surname><given-names>R</given-names></name><name><surname>Vidal</surname><given-names>J</given-names></name><name><surname>Echevarr&#x000ed;a</surname><given-names>C</given-names></name></person-group>
+<year>2003</year>
+<article-title>Characterization of salt stress-enhanced phosphoenolpyruvate carboxylase kinase activity in leaves of <italic>Sorghum vulgare</italic>: independence from osmotic stress, involvement of ion toxicity and significance of dark phosphorylation.</article-title>
+<source>Planta</source>
+<volume>216</volume>
+<issue>4</issue>
+<fpage>648</fpage>
+<lpage>655</lpage>
+<pub-id pub-id-type="pmid">12569407</pub-id></element-citation></ref><ref id="pone.0031571-Picault1"><label>71</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Picault</surname><given-names>N</given-names></name><name><surname>Hodges</surname><given-names>M</given-names></name><name><surname>Palmieri</surname><given-names>L</given-names></name><name><surname>Palmieri</surname><given-names>F</given-names></name></person-group>
+<year>2004</year>
+<article-title>The growing family of mitochondrial carriers in Arabidopsis.</article-title>
+<source>Trends Plant Sci</source>
+<volume>9</volume>
+<issue>3</issue>
+<fpage>138</fpage>
+<lpage>146</lpage>
+<pub-id pub-id-type="pmid">15003237</pub-id></element-citation></ref><ref id="pone.0031571-Kuan1"><label>72</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kuan</surname><given-names>J</given-names></name><name><surname>Saier</surname><given-names>M</given-names></name></person-group>
+<year>1993</year>
+<article-title>The mitochondrial carrier family of transport proteins: structural, functional, and evolutionary relationships.</article-title>
+<source>Crit Rev Biochem Mol</source>
+<volume>28</volume>
+<issue>3</issue>
+<fpage>209</fpage>
+<lpage>233</lpage>
+</element-citation></ref><ref id="pone.0031571-Haruta1"><label>73</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Haruta</surname><given-names>M</given-names></name><name><surname>Constabel</surname><given-names>C</given-names></name></person-group>
+<year>2003</year>
+<article-title>Rapid alkalinization factors in poplar cell cultures. Peptide isolation, cDNA cloning, and differential expression in leaves and methyl jasmonate-treated cells.</article-title>
+<source>Plant Physiol</source>
+<volume>131</volume>
+<issue>2</issue>
+<fpage>814</fpage>
+<pub-id pub-id-type="pmid">12586905</pub-id></element-citation></ref><ref id="pone.0031571-Pearce1"><label>74</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pearce</surname><given-names>G</given-names></name><name><surname>Yamaguchi</surname><given-names>Y</given-names></name><name><surname>Munske</surname><given-names>G</given-names></name><name><surname>Ryan</surname><given-names>CA</given-names></name></person-group>
+<year>2010</year>
+<article-title>Structure-activity studies of RALF, Rapid Alkalinization Factor, reveal an essential-YISY-motif.</article-title>
+<source>Peptides</source>
+<volume>31</volume>
+<issue>11</issue>
+<fpage>1973</fpage>
+<lpage>1977</lpage>
+<pub-id pub-id-type="pmid">20800638</pub-id></element-citation></ref><ref id="pone.0031571-Moura1"><label>75</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Moura</surname><given-names>D</given-names></name><name><surname>Pearce</surname><given-names>G</given-names></name><name><surname>Ryan</surname><given-names>CA</given-names></name></person-group>
+<year>2006</year>
+<article-title>RALF peptides. In: Kastin, A.J. Handbook of Biologically Active Peptides.</article-title>
+<source>Academic press, San Diego</source>
+<fpage>33</fpage>
+<lpage>37</lpage>
+</element-citation></ref><ref id="pone.0031571-Helliwell1"><label>76</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Helliwell</surname><given-names>C</given-names></name><name><surname>Chin-Atkins</surname><given-names>A</given-names></name><name><surname>Wilson</surname><given-names>IW</given-names></name><name><surname>Chapple</surname><given-names>R</given-names></name><name><surname>Dennis</surname><given-names>ES</given-names></name><etal/></person-group>
+<year>2001</year>
+<article-title>The Arabidopsis AMP1 gene encodes a putative glutamate carboxypeptidase.</article-title>
+<source>Plant Cell</source>
+<volume>13</volume>
+<issue>9</issue>
+<fpage>2115</fpage>
+<lpage>2125</lpage>
+<pub-id pub-id-type="pmid">11549767</pub-id></element-citation></ref><ref id="pone.0031571-Vidaurre1"><label>77</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vidaurre</surname><given-names>D</given-names></name><name><surname>Ploense</surname><given-names>S</given-names></name><name><surname>Krogan</surname><given-names>NT</given-names></name><name><surname>Berleth</surname><given-names>T</given-names></name></person-group>
+<year>2007</year>
+<article-title>AMP1 and MP antagonistically regulate embryo and meristem development in Arabidopsis.</article-title>
+<source>Development</source>
+<volume>134</volume>
+<issue>14</issue>
+<fpage>2561</fpage>
+<lpage>2567</lpage>
+<pub-id pub-id-type="pmid">17553903</pub-id></element-citation></ref><ref id="pone.0031571-Raina1"><label>78</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Raina</surname><given-names>S</given-names></name><name><surname>Missiakas</surname><given-names>D</given-names></name><name><surname>Georgopoulos</surname><given-names>C</given-names></name></person-group>
+<year>1995</year>
+<article-title>The rpoE gene encoding the &#x003c3;<sup>E</sup> (&#x003c3;24) heat-shock sigma factor of <italic>Escherichia coli</italic>.</article-title>
+<source>EMBO J</source>
+<volume>14</volume>
+<fpage>1043</fpage>
+<lpage>1055</lpage>
+<pub-id pub-id-type="pmid">7889935</pub-id></element-citation></ref><ref id="pone.0031571-Fujiwara1"><label>79</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fujiwara</surname><given-names>M</given-names></name><name><surname>Nagashima</surname><given-names>A</given-names></name><name><surname>Kanamaru</surname><given-names>K</given-names></name><name><surname>Tanaka</surname><given-names>K</given-names></name><name><surname>Takahashi</surname><given-names>H</given-names></name></person-group>
+<year>2000</year>
+<article-title>Three new nuclear genes, sigD, sigE and sigF, encoding putative plastid RNA polymerase factors in <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>FEBS Letters</source>
+<volume>481</volume>
+<issue>1</issue>
+<fpage>47</fpage>
+<lpage>52</lpage>
+<pub-id pub-id-type="pmid">10984613</pub-id></element-citation></ref><ref id="pone.0031571-Albagli1"><label>80</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Albagli</surname><given-names>O</given-names></name><name><surname>Dhordain</surname><given-names>P</given-names></name><name><surname>Deweindt</surname><given-names>C</given-names></name><name><surname>Lecocq</surname><given-names>G</given-names></name><name><surname>Le-prince</surname><given-names>D</given-names></name></person-group>
+<year>1995</year>
+<article-title>The BTB/POZ domain: a new protein-protein interaction motif common to DNA-and actin-binding proteins.</article-title>
+<source>Cell Growth Differ</source>
+<volume>6</volume>
+<issue>9</issue>
+<fpage>1193</fpage>
+<lpage>1198</lpage>
+<pub-id pub-id-type="pmid">8519696</pub-id></element-citation></ref><ref id="pone.0031571-Sakai1"><label>81</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sakai</surname><given-names>T</given-names></name><name><surname>Wada</surname><given-names>T</given-names></name><name><surname>Ishiguroa</surname><given-names>S</given-names></name><name><surname>Okadaa</surname><given-names>K</given-names></name></person-group>
+<year>2000</year>
+<article-title>RPT2: a signal transducer of the phototropic response in Arabidopsis.</article-title>
+<source>Plant Cell</source>
+<volume>12</volume>
+<issue>2</issue>
+<fpage>225</fpage>
+<lpage>236</lpage>
+<pub-id pub-id-type="pmid">10662859</pub-id></element-citation></ref><ref id="pone.0031571-Czechowski1"><label>82</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Czechowski</surname><given-names>T</given-names></name><name><surname>Bari</surname><given-names>R</given-names></name><name><surname>Stitt</surname><given-names>M</given-names></name><name><surname>Scheible</surname><given-names>WR</given-names></name><name><surname>Udvardi</surname><given-names>MK</given-names></name></person-group>
+<year>2004</year>
+<article-title>Real-time RT-PCR profiling of over 1400 Arabidopsis transcription factors: unprecedented sensitivity reveals novel root-and shoot-specific genes.</article-title>
+<source>Plant J</source>
+<volume>38</volume>
+<issue>2</issue>
+<fpage>366</fpage>
+<lpage>379</lpage>
+<pub-id pub-id-type="pmid">15078338</pub-id></element-citation></ref><ref id="pone.0031571-Kawasaki1"><label>83</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kawasaki</surname><given-names>E</given-names></name></person-group>
+<year>2006</year>
+<article-title>The end of the microarray tower of babel: will universal standards lead the way?</article-title>
+<source>J Biomol Tech</source>
+<volume>17</volume>
+<issue>3</issue>
+<fpage>200</fpage>
+<lpage>206</lpage>
+<pub-id pub-id-type="pmid">16870711</pub-id></element-citation></ref><ref id="pone.0031571-Colebatch2"><label>84</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Colebatch</surname><given-names>G</given-names></name><name><surname>Kloska</surname><given-names>S</given-names></name><name><surname>Trevaskis</surname><given-names>B</given-names></name><name><surname>Freund</surname><given-names>S</given-names></name><name><surname>Altman</surname><given-names>T</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>Novel aspects of symbiotic nitrogen fixation uncovered by transcript profiling with cDNA arrays.</article-title>
+<source>Mol Plant Microbe In</source>
+<volume>15</volume>
+<issue>5</issue>
+<fpage>411</fpage>
+<lpage>420</lpage>
+</element-citation></ref><ref id="pone.0031571-Yauk1"><label>85</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yauk</surname><given-names>C</given-names></name><name><surname>Berndt</surname><given-names>M</given-names></name></person-group>
+<year>2007</year>
+<article-title>Review of the literature examining the correlation among DNA microarray technologies.</article-title>
+<source>Environ Mol Mutagen</source>
+<volume>48</volume>
+<issue>5</issue>
+<fpage>380</fpage>
+<lpage>394</lpage>
+<pub-id pub-id-type="pmid">17370338</pub-id></element-citation></ref><ref id="pone.0031571-Fehr1"><label>86</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fehr</surname><given-names>W</given-names></name><name><surname>Caviness</surname><given-names>C</given-names></name><name><surname>Burmood</surname><given-names>DT</given-names></name><name><surname>Pennington</surname><given-names>JS</given-names></name></person-group>
+<year>1971</year>
+<article-title>Stage of development descriptions for soybeans, <italic>Glycine max</italic> (L.) Merrill.</article-title>
+<source>Crop Sci</source>
+<volume>11</volume>
+<issue>6</issue>
+<fpage>929</fpage>
+<lpage>931</lpage>
+</element-citation></ref><ref id="pone.0031571-Hoagland1"><label>87</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoagland</surname><given-names>D</given-names></name><name><surname>Arnon</surname><given-names>D</given-names></name></person-group>
+<year>1950</year>
+<article-title>The water culture method for growing plants without soil.</article-title>
+<source>Calif Agric Exp Stn Circ</source>
+<volume>347</volume>
+<issue>1</issue>
+<fpage>32</fpage>
+</element-citation></ref><ref id="pone.0031571-Blazejczyk1"><label>88</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Blazejczyk</surname><given-names>M</given-names></name><name><surname>Miron</surname><given-names>M</given-names></name><name><surname>Nadon</surname><given-names>R</given-names></name></person-group>
+<year>2007</year>
+<article-title>FlexArray: A statistical data analysis software for gene expression microarrays.</article-title>
+<source>Genome Qu&#x000e9;bec, Montr&#x000e9;al, Canada.</source>
+<comment><ext-link ext-link-type="uri" xlink:href="http://genomequebec.mcgill.ca/FlexArray">http://genomequebec.mcgill.ca/FlexArray</ext-link></comment>
+</element-citation></ref><ref id="pone.0031571-Bolstad1"><label>89</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bolstad</surname><given-names>B</given-names></name><name><surname>Irizarry</surname><given-names>R</given-names></name><name><surname>&#x000c5;strand</surname><given-names>M</given-names></name><name><surname>Speed</surname><given-names>TP</given-names></name></person-group>
+<year>2003</year>
+<article-title>A comparison of normalization methods for high density oligonucleotide array data based on variance and bias,</article-title>
+<source>Oxford Univ Press</source>
+<volume>19</volume>
+<fpage>185</fpage>
+<lpage>193</lpage>
+</element-citation></ref><ref id="pone.0031571-Grant1"><label>90</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Grant</surname><given-names>D</given-names></name><name><surname>Imsande</surname><given-names>M</given-names></name><name><surname>Shoemaker</surname><given-names>RC</given-names></name></person-group>
+<year>2002</year>
+<article-title>Soybase; the USDA-ARS soybean genome database.</article-title>
+<source>Published online by USDA-ARS</source>
+</element-citation></ref><ref id="pone.0031571-Miron1"><label>91</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miron</surname><given-names>M</given-names></name><name><surname>Woody</surname><given-names>O</given-names></name><name><surname>Marcil</surname><given-names>A</given-names></name><name><surname>Murie</surname><given-names>C</given-names></name><name><surname>Sladek</surname><given-names>R</given-names></name><name><surname>Nadon</surname><given-names>R</given-names></name></person-group>
+<year>2006</year>
+<article-title>A methodology for global validation of microarray experiments.</article-title>
+<source>BMC Bioinformatics</source>
+<volume>7</volume>
+<issue>1</issue>
+<fpage>333</fpage>
+<pub-id pub-id-type="pmid">16822306</pub-id></element-citation></ref><ref id="pone.0031571-Chen1"><label>92</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chen</surname><given-names>H</given-names></name><name><surname>Seguin</surname><given-names>P</given-names></name><name><surname>Archambault</surname><given-names>A</given-names></name><name><surname>Constan</surname><given-names>L</given-names></name><name><surname>Jabaji</surname><given-names>S</given-names></name></person-group>
+<year>2009</year>
+<article-title>Gene expression and isoflavone concentrations in soybean sprouts treated with chitosan.</article-title>
+<source>Crop Sci</source>
+<volume>49</volume>
+<issue>1</issue>
+<fpage>224</fpage>
+<lpage>236</lpage>
+</element-citation></ref><ref id="pone.0031571-Rozen1"><label>93</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rozen</surname><given-names>S</given-names></name><name><surname>Skaletsky</surname><given-names>H</given-names></name></person-group>
+<year>2000</year>
+<article-title>Primer3 on the WWW for general users and for biologist programmers.</article-title>
+<source>Methods Mol Biol</source>
+<volume>132</volume>
+<issue>3</issue>
+<fpage>365</fpage>
+<lpage>386</lpage>
+<pub-id pub-id-type="pmid">10547847</pub-id></element-citation></ref><ref id="pone.0031571-Pfaffl1"><label>94</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pfaffl</surname><given-names>M</given-names></name></person-group>
+<year>2001</year>
+<article-title>A new mathematical model for relative quantification in real-time RT&#x02013;PCR.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>29</volume>
+<issue>9</issue>
+<fpage>2002</fpage>
+<lpage>2007</lpage>
+</element-citation></ref><ref id="pone.0031571-Pfaffl2"><label>95</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pfaffl</surname><given-names>M</given-names></name><name><surname>Horgan</surname><given-names>G</given-names></name><name><surname>Dempfle</surname><given-names>L</given-names></name></person-group>
+<year>2002</year>
+<article-title>Relative expression software tool (REST (C)) for group-wise comparison and statistical analysis of relative expression results in real-time PCR.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>30</volume>
+<issue>9</issue>
+<fpage>1</fpage>
+<lpage>10</lpage>
+<pub-id pub-id-type="pmid">11752241</pub-id></element-citation></ref></ref-list></back></article>

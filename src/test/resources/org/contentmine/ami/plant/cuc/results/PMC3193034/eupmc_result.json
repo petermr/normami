@@ -1,0 +1,586 @@
+{
+  "id": [
+    "21943253"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "21943253"
+  ],
+  "pmcid": [
+    "PMC3193034"
+  ],
+  "doi": [
+    "10.1186/1471-2229-11-129"
+  ],
+  "title": [
+    "The NAC domain-containing protein, GmNAC6, is a downstream component of the ER stress- and osmotic stress-induced NRP-mediated cell-death signaling pathway."
+  ],
+  "authorString": [
+    "Faria JA, Reis PA, Reis MT, Rosado GL, Pinheiro GL, Mendes GC, Fontes EP."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Faria JA"
+          ],
+          "firstName": [
+            "Jerusa A Q A"
+          ],
+          "lastName": [
+            "Faria"
+          ],
+          "initials": [
+            "JA"
+          ]
+        },
+        {
+          "fullName": [
+            "Reis PA"
+          ],
+          "firstName": [
+            "Pedro A B"
+          ],
+          "lastName": [
+            "Reis"
+          ],
+          "initials": [
+            "PA"
+          ]
+        },
+        {
+          "fullName": [
+            "Reis MT"
+          ],
+          "firstName": [
+            "Marco T B"
+          ],
+          "lastName": [
+            "Reis"
+          ],
+          "initials": [
+            "MT"
+          ]
+        },
+        {
+          "fullName": [
+            "Rosado GL"
+          ],
+          "firstName": [
+            "Gustavo L"
+          ],
+          "lastName": [
+            "Rosado"
+          ],
+          "initials": [
+            "GL"
+          ]
+        },
+        {
+          "fullName": [
+            "Pinheiro GL"
+          ],
+          "firstName": [
+            "Guilherme L"
+          ],
+          "lastName": [
+            "Pinheiro"
+          ],
+          "initials": [
+            "GL"
+          ]
+        },
+        {
+          "fullName": [
+            "Mendes GC"
+          ],
+          "firstName": [
+            "Giselle C"
+          ],
+          "lastName": [
+            "Mendes"
+          ],
+          "initials": [
+            "GC"
+          ]
+        },
+        {
+          "fullName": [
+            "Fontes EP"
+          ],
+          "firstName": [
+            "Elizabeth P B"
+          ],
+          "lastName": [
+            "Fontes"
+          ],
+          "initials": [
+            "EP"
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-0377-666X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "11"
+      ],
+      "journalIssueId": [
+        "1800930"
+      ],
+      "dateOfPublication": [
+        "2011 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2011"
+      ],
+      "printPublicationDate": [
+        "2011-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC plant biology"
+          ],
+          "ISOAbbreviation": [
+            "BMC Plant Biol."
+          ],
+          "medlineAbbreviation": [
+            "BMC Plant Biol"
+          ],
+          "NLMid": [
+            "100967807"
+          ],
+          "ISSN": [
+            "1471-2229"
+          ],
+          "ESSN": [
+            "1471-2229"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2011"
+  ],
+  "pageInfo": [
+    "129"
+  ],
+  "abstractText": [
+    "BACKGROUND: The endoplasmic reticulum (ER) is a major signaling organelle, which integrates a variety of responses against physiological stresses. In plants, one such stress-integrating response is the N-rich protein (NRP)-mediated cell death signaling pathway, which is synergistically activated by combined ER stress and osmotic stress signals. Despite the potential of this integrated signaling to protect plant cells against different stress conditions, mechanistic knowledge of the pathway is lacking, and downstream components have yet to be identified. RESULTS: In the present investigation, we discovered an NAC domain-containing protein from soybean, GmNAC6 (Glycine max NAC6), to be a downstream component of the integrated pathway. Similar to NRP-A and NRP-B, GmNAC6 is induced by ER stress and osmotic stress individually, but requires both signals for full activation. Transient expression of GmNAC6 promoted cell death and hypersensitive-like responses in planta. GmNAC6 and NRPs also share overlapping responses to biotic signals, but the induction of NRPs peaked before the increased accumulation of GmNAC6 transcripts. Consistent with the delayed kinetics of GmNAC6 induction, increased levels of NRP-A and NRP-B transcripts induced promoter activation and the expression of the GmNAC6 gene. CONCLUSIONS: Collectively, our results biochemically link GmNAC6 to the ER stress- and osmotic stress-integrating cell death response and show that GmNAC6 may act downstream of the NRPs."
+  ],
+  "affiliation": [
+    "Departamento de Bioquímica e Biologia Molecular/BIOAGRO, Universidade Federal de Viçosa, Minas Gerais, Brazil."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Endoplasmic Reticulum"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Soybeans"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CY"
+                  ],
+                  "qualifierName": [
+                    "cytology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Tobacco"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CY"
+                  ],
+                  "qualifierName": [
+                    "cytology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Soybean Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Cell Death"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Osmosis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Endoplasmic Reticulum Stress"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Soybean Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3193034?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3193034"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/21943253/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/21943253/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1471-2229-11-129"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "31"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2012-02-03"
+  ],
+  "dateOfCreation": [
+    "2011-10-17"
+  ],
+  "dateOfRevision": [
+    "2013-06-27"
+  ],
+  "electronicPublicationDate": [
+    "2011-09-26"
+  ],
+  "firstPublicationDate": [
+    "2011-09-26"
+  ]
+}

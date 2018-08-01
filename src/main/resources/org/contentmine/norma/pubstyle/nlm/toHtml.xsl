@@ -32,6 +32,16 @@
 	<xsl:template match="*" >
 	    <div class="unknown" title="{local-name()}">
 	    <xsl:message>UNKNOWN nlm: <xsl:value-of select="local-name()"/>: 
+		<!-- unknowns:
+UNKNOWN nlm: data-title: 
+UNKNOWN nlm: license_ref: 
+UNKNOWN nlm: sans-serif: 
+UNKNOWN nlm: chem-struct:
+UNKNOWN nlm: term-head: 
+UNKNOWN nlm: def-head:
+UNKNOWN nlm: alt-text: 
+  	    -->
+	    
 	    <!-- <xsl:value-of select="."/> -->
 	    </xsl:message>
 	        <xsl:attribute name="tagxxx"><xsl:value-of select="local-name()"/></xsl:attribute>
@@ -684,6 +694,9 @@
 	      <xsl:apply-templates/>
 	    </xsl:when>
 	    <xsl:otherwise>
+			<!--
+			UNKNOWN OBJECT-ID TYPE: art-access-id : 4QEN
+				-->
 	      <xsl:message>UNKNOWN OBJECT-ID TYPE: <xsl:value-of select="@pub-id-type"/> : <xsl:value-of select="."/></xsl:message>
 	    </xsl:otherwise>
 	  </xsl:choose>

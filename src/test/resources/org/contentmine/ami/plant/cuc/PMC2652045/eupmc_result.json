@@ -1,0 +1,764 @@
+{
+  "id": [
+    "19218315"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "19218315"
+  ],
+  "pmcid": [
+    "PMC2652045"
+  ],
+  "doi": [
+    "10.1093/jxb/ern329"
+  ],
+  "title": [
+    "Transcriptome analysis of a spontaneous mutant in sweet orange [Citrus sinensis (L.) Osbeck] during fruit development."
+  ],
+  "authorString": [
+    "Liu Q, Zhu A, Chai L, Zhou W, Yu K, Ding J, Xu J, Deng X."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Liu Q"
+          ],
+          "firstName": [
+            "Qing"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "Q"
+          ]
+        },
+        {
+          "fullName": [
+            "Zhu A"
+          ],
+          "firstName": [
+            "Andan"
+          ],
+          "lastName": [
+            "Zhu"
+          ],
+          "initials": [
+            "A"
+          ]
+        },
+        {
+          "fullName": [
+            "Chai L"
+          ],
+          "firstName": [
+            "Lijun"
+          ],
+          "lastName": [
+            "Chai"
+          ],
+          "initials": [
+            "L"
+          ]
+        },
+        {
+          "fullName": [
+            "Zhou W"
+          ],
+          "firstName": [
+            "Wenjing"
+          ],
+          "lastName": [
+            "Zhou"
+          ],
+          "initials": [
+            "W"
+          ]
+        },
+        {
+          "fullName": [
+            "Yu K"
+          ],
+          "firstName": [
+            "Keqin"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "K"
+          ]
+        },
+        {
+          "fullName": [
+            "Ding J"
+          ],
+          "firstName": [
+            "Jian"
+          ],
+          "lastName": [
+            "Ding"
+          ],
+          "initials": [
+            "J"
+          ]
+        },
+        {
+          "fullName": [
+            "Xu J"
+          ],
+          "firstName": [
+            "Juan"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "J"
+          ]
+        },
+        {
+          "fullName": [
+            "Deng X"
+          ],
+          "firstName": [
+            "Xiuxin"
+          ],
+          "lastName": [
+            "Deng"
+          ],
+          "initials": [
+            "X"
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "3"
+      ],
+      "volume": [
+        "60"
+      ],
+      "journalIssueId": [
+        "1603596"
+      ],
+      "dateOfPublication": [
+        "2009 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2009"
+      ],
+      "printPublicationDate": [
+        "2009-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2009"
+  ],
+  "pageInfo": [
+    "801-813"
+  ],
+  "abstractText": [
+    "Bud mutations often arise in citrus. The selection of mutants is one of the most important breeding channels in citrus. However, the molecular basis of bud mutation has rarely been studied. To identify differentially expressed genes in a spontaneous sweet orange [C. sinensis (L.) Osbeck] bud mutation which causes lycopene accumulation, low citric acid, and high sucrose in fruit, suppression subtractive hybridization and microarray analysis were performed to decipher this bud mutation during fruit development. After sequencing of the differentially expressed clones, a total of 267 non-redundant transcripts were obtained and 182 (68.2%) of them shared homology (E-value < or = 1x10(-10)) with known gene products. Few genes were constitutively up- or down-regulated (fold change > or = 2) in the bud mutation during fruit development. Self-organizing tree algorithm analysis results showed that 95.1% of the differentially expressed genes were extensively coordinated with the initiation of lycopene accumulation. Metabolic process, cellular process, establishment of localization, response to stimulus, and biological regulation-related transcripts were among the most regulated genes. These genes were involved in many biological processes such as organic acid metabolism, lipid metabolism, transport, and pyruvate metabolism, etc. Moreover, 13 genes which were differentially regulated at 170 d after flowering shared homology with previously described signal transduction or transcription factors. The information generated in this study provides new clues to aid in the understanding of bud mutation in citrus."
+  ],
+  "affiliation": [
+    "National Key Laboratory of Crop Genetic Improvement, Huazhong Agricultural University, Wuhan 430070, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Citrus sinensis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Flowers"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Fruit"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Pyruvates"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oligonucleotide Array Sequence Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cluster Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Reproducibility of Results"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Reverse Transcriptase Polymerase Chain Reaction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Nucleic Acid Hybridization"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Library"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Regulator"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Expressed Sequence Tags"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Metabolic Networks and Pathways"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Pyruvates"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2652045?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2652045"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/19218315/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/19218315/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "abs"
+          ],
+          "site": [
+            "jxb.oxfordjournals.org"
+          ],
+          "url": [
+            "http://jxb.oxfordjournals.org/cgi/content/abstract/60/3/801"
+          ]
+        },
+        {
+          "availability": [
+            "Free after 12 months"
+          ],
+          "availabilityCode": [
+            "F12"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "jxb.oxfordjournals.org"
+          ],
+          "url": [
+            "http://jxb.oxfordjournals.org/cgi/reprint/60/3/801.pdf"
+          ]
+        },
+        {
+          "availability": [
+            "Free after 12 months"
+          ],
+          "availabilityCode": [
+            "F12"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "jxb.oxfordjournals.org"
+          ],
+          "url": [
+            "http://jxb.oxfordjournals.org/cgi/content/full/60/3/801"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/ern329"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "32"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "ARXPR",
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by-nc"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2009-05-26"
+  ],
+  "dateOfCreation": [
+    "2009-03-09"
+  ],
+  "dateOfRevision": [
+    "2013-06-02"
+  ],
+  "electronicPublicationDate": [
+    "2009-02-13"
+  ],
+  "firstPublicationDate": [
+    "2009-02-13"
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "id": [
+    "29723301"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29723301"
+  ],
+  "pmcid": [
+    "PMC5933797"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0196953"
+  ],
+  "title": [
+    "Genome-wide analysis of the NAC transcription factor family and their expression during the development and ripening of the Fragaria × ananassa fruits."
+  ],
+  "authorString": [
+    "Moyano E, Martínez-Rivas FJ, Blanco-Portales R, Molina-Hidalgo FJ, Ric-Varas P, Matas-Arroyo AJ, Caballero JL, Muñoz-Blanco J, Rodríguez-Franco A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Moyano E"
+          ],
+          "firstName": [
+            "Enriqueta"
+          ],
+          "lastName": [
+            "Moyano"
+          ],
+          "initials": [
+            "E"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-8773-5971",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Bioquímica y Biología Molecular, Campus de Rabanales, Edificio Severo Ochoa, Universidad de Córdoba, Córdoba, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Martínez-Rivas FJ"
+          ],
+          "firstName": [
+            "Félix J"
+          ],
+          "lastName": [
+            "Martínez-Rivas"
+          ],
+          "initials": [
+            "FJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3808-9306",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Bioquímica y Biología Molecular, Campus de Rabanales, Edificio Severo Ochoa, Universidad de Córdoba, Córdoba, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Blanco-Portales R"
+          ],
+          "firstName": [
+            "Rosario"
+          ],
+          "lastName": [
+            "Blanco-Portales"
+          ],
+          "initials": [
+            "R"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7540-6417",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Bioquímica y Biología Molecular, Campus de Rabanales, Edificio Severo Ochoa, Universidad de Córdoba, Córdoba, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Molina-Hidalgo FJ"
+          ],
+          "firstName": [
+            "Francisco Javier"
+          ],
+          "lastName": [
+            "Molina-Hidalgo"
+          ],
+          "initials": [
+            "FJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-1184-6354",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Bioquímica y Biología Molecular, Campus de Rabanales, Edificio Severo Ochoa, Universidad de Córdoba, Córdoba, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Ric-Varas P"
+          ],
+          "firstName": [
+            "Pablo"
+          ],
+          "lastName": [
+            "Ric-Varas"
+          ],
+          "initials": [
+            "P"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-8307-1650",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Instituto de Hortofruticultura Subtropical y Mediterránea \"La Mayora\" (IHSM-UMA-CSIC), Departamento de Biología Vegetal, Universidad de Málaga, Málaga, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Matas-Arroyo AJ"
+          ],
+          "firstName": [
+            "Antonio J"
+          ],
+          "lastName": [
+            "Matas-Arroyo"
+          ],
+          "initials": [
+            "AJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4348-3930",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Instituto de Hortofruticultura Subtropical y Mediterránea \"La Mayora\" (IHSM-UMA-CSIC), Departamento de Biología Vegetal, Universidad de Málaga, Málaga, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Caballero JL"
+          ],
+          "firstName": [
+            "José Luis"
+          ],
+          "lastName": [
+            "Caballero"
+          ],
+          "initials": [
+            "JL"
+          ],
+          "affiliation": [
+            "Departamento de Bioquímica y Biología Molecular, Campus de Rabanales, Edificio Severo Ochoa, Universidad de Córdoba, Córdoba, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Muñoz-Blanco J"
+          ],
+          "firstName": [
+            "Juan"
+          ],
+          "lastName": [
+            "Muñoz-Blanco"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Departamento de Bioquímica y Biología Molecular, Campus de Rabanales, Edificio Severo Ochoa, Universidad de Córdoba, Córdoba, Spain."
+          ]
+        },
+        {
+          "fullName": [
+            "Rodríguez-Franco A"
+          ],
+          "firstName": [
+            "Antonio"
+          ],
+          "lastName": [
+            "Rodríguez-Franco"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-0431-8273",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Departamento de Bioquímica y Biología Molecular, Campus de Rabanales, Edificio Severo Ochoa, Universidad de Córdoba, Córdoba, Spain."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-0431-8273",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4348-3930",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-7540-6417",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-8773-5971",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-3808-9306",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-1184-6354",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-8307-1650",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "5"
+      ],
+      "volume": [
+        "13"
+      ],
+      "journalIssueId": [
+        "2678126"
+      ],
+      "dateOfPublication": [
+        "2018 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "e0196953"
+  ],
+  "abstractText": [
+    "NAC proteins are a family of transcription factors which have a variety of important regulatory roles in plants. They present a very well conserved group of NAC subdomains in the N-terminal region and a highly variable domain at the C-terminus. Currently, knowledge concerning NAC family in the strawberry plant remains very limited. In this work, we analyzed the NAC family of Fragaria vesca, and a total of 112 NAC proteins were identified after we curated the annotations from the version 4.0.a1 genome. They were placed into the ligation groups (pseudo-chromosomes) and described its physicochemical and genetic features. A microarray transcriptomic analysis showed six of them expressed during the development and ripening of the Fragaria x ananassa fruit. Their expression patterns were studied in fruit (receptacle and achenes) in different stages of development and in vegetative tissues. Also, the expression level under different hormonal treatments (auxins, ABA) and drought stress was investigated. In addition, they were clustered with other NAC transcription factor with known function related to growth and development, senescence, fruit ripening, stress response, and secondary cell wall and vascular development. Our results indicate that these six strawberry NAC proteins could play different important regulatory roles in the process of development and ripening of the fruit, providing the basis for further functional studies and the selection for NAC candidates suitable for biotechnological applications."
+  ],
+  "affiliation": [
+    "Departamento de Bioquímica y Biología Molecular, Campus de Rabanales, Edificio Severo Ochoa, Universidad de Córdoba, Córdoba, Spain."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5933797?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5933797"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0196953"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "sprot"
+      ]
+    }
+  ],
+  "dateOfCreation": [
+    "2018-05-04"
+  ],
+  "dateOfRevision": [
+    "2018-05-20"
+  ],
+  "electronicPublicationDate": [
+    "2018-05-03"
+  ],
+  "firstPublicationDate": [
+    "2018-05-03"
+  ]
+}

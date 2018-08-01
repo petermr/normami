@@ -1,0 +1,681 @@
+{
+  "id": [
+    "24713992"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "24713992"
+  ],
+  "pmcid": [
+    "PMC4036505"
+  ],
+  "doi": [
+    "10.1093/jxb/eru116"
+  ],
+  "title": [
+    "Large-scale screening of transcription factor-promoter interactions in spruce reveals a transcriptional network involved in vascular development."
+  ],
+  "authorString": [
+    "Duval I, Lachance D, Giguère I, Bomal C, Morency MJ, Pelletier G, Boyle B, MacKay JJ, Séguin A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Duval I"
+          ],
+          "firstName": [
+            "Isabelle"
+          ],
+          "lastName": [
+            "Duval"
+          ],
+          "initials": [
+            "I"
+          ],
+          "affiliation": [
+            "Natural Resources Canada, Canadian Forest Service, Laurentian Forestry Centre, Québec, QC, G1V 4C7, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Lachance D"
+          ],
+          "firstName": [
+            "Denis"
+          ],
+          "lastName": [
+            "Lachance"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Natural Resources Canada, Canadian Forest Service, Laurentian Forestry Centre, Québec, QC, G1V 4C7, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Giguère I"
+          ],
+          "firstName": [
+            "Isabelle"
+          ],
+          "lastName": [
+            "Giguère"
+          ],
+          "initials": [
+            "I"
+          ],
+          "affiliation": [
+            "Centre d'Étude de la Forêt, Université Laval, Québec, QC, G1V A06, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Bomal C"
+          ],
+          "firstName": [
+            "Claude"
+          ],
+          "lastName": [
+            "Bomal"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Centre d'Étude de la Forêt, Université Laval, Québec, QC, G1V A06, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Morency MJ"
+          ],
+          "firstName": [
+            "Marie-Josée"
+          ],
+          "lastName": [
+            "Morency"
+          ],
+          "initials": [
+            "MJ"
+          ],
+          "affiliation": [
+            "Natural Resources Canada, Canadian Forest Service, Laurentian Forestry Centre, Québec, QC, G1V 4C7, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Pelletier G"
+          ],
+          "firstName": [
+            "Gervais"
+          ],
+          "lastName": [
+            "Pelletier"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Natural Resources Canada, Canadian Forest Service, Laurentian Forestry Centre, Québec, QC, G1V 4C7, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Boyle B"
+          ],
+          "firstName": [
+            "Brian"
+          ],
+          "lastName": [
+            "Boyle"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Centre d'Étude de la Forêt, Université Laval, Québec, QC, G1V A06, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "MacKay JJ"
+          ],
+          "firstName": [
+            "John J"
+          ],
+          "lastName": [
+            "MacKay"
+          ],
+          "initials": [
+            "JJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4883-195X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centre d'Étude de la Forêt, Université Laval, Québec, QC, G1V A06, Canada Department of Plant Sciences, University of Oxford, Oxford, OX1 2RB, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Séguin A"
+          ],
+          "firstName": [
+            "Armand"
+          ],
+          "lastName": [
+            "Séguin"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Natural Resources Canada, Canadian Forest Service, Laurentian Forestry Centre, Québec, QC, G1V 4C7, Canada armand.seguin@nrcan.gc.ca."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-4883-195X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "9"
+      ],
+      "volume": [
+        "65"
+      ],
+      "journalIssueId": [
+        "2162941"
+      ],
+      "dateOfPublication": [
+        "2014 Jun"
+      ],
+      "monthOfPublication": [
+        "6"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-06-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "2319-2333"
+  ],
+  "abstractText": [
+    "This research aimed to investigate the role of diverse transcription factors (TFs) and to delineate gene regulatory networks directly in conifers at a relatively high-throughput level. The approach integrated sequence analyses, transcript profiling, and development of a conifer-specific activation assay. Transcript accumulation profiles of 102 TFs and potential target genes were clustered to identify groups of coordinately expressed genes. Several different patterns of transcript accumulation were observed by profiling in nine different organs and tissues: 27 genes were preferential to secondary xylem both in stems and roots, and other genes were preferential to phelloderm and periderm or were more ubiquitous. A robust system has been established as a screening approach to define which TFs have the ability to regulate a given promoter in planta. Trans-activation or repression effects were observed in 30% of TF-candidate gene promoter combinations. As a proof of concept, phylogenetic analysis and expression and trans-activation data were used to demonstrate that two spruce NAC-domain proteins most likely play key roles in secondary vascular growth as observed in other plant species. This study tested many TFs from diverse families in a conifer tree species, which broadens the knowledge of promoter-TF interactions in wood development and enables comparisons of gene regulatory networks found in angiosperms and gymnosperms."
+  ],
+  "affiliation": [
+    "Natural Resources Canada, Canadian Forest Service, Laurentian Forestry Centre, Québec, QC, G1V 4C7, Canada."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Picea"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Binding"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Xylem"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Transcription factor",
+        "Somatic embryogenesis",
+        "Expression pattern",
+        "Conifer",
+        "Secondary cell wall",
+        "Xylem.",
+        "Picea Glauca",
+        "Trans-activation Assay"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4036505?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4036505"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24713992/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24713992/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/eru116"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "21"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-01-09"
+  ],
+  "dateOfCreation": [
+    "2014-05-26"
+  ],
+  "electronicPublicationDate": [
+    "2014-04-08"
+  ],
+  "firstPublicationDate": [
+    "2014-04-08"
+  ]
+}

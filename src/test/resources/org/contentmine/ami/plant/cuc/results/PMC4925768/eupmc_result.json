@@ -1,0 +1,410 @@
+{
+  "id": [
+    "26972600"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26972600"
+  ],
+  "pmcid": [
+    "PMC4925768"
+  ],
+  "doi": [
+    "10.2183/pjab.92.98"
+  ],
+  "title": [
+    "Signaling, transcriptional regulation, and asynchronous pattern formation governing plant xylem development."
+  ],
+  "authorString": [
+    "Fukuda H."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Fukuda H"
+          ],
+          "firstName": [
+            "Hiroo"
+          ],
+          "lastName": [
+            "Fukuda"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Biological Sciences, Graduate School of Science, The University of Tokyo."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "3"
+      ],
+      "volume": [
+        "92"
+      ],
+      "journalIssueId": [
+        "2386060"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Proceedings of the Japan Academy. Series B, Physical and biological sciences"
+          ],
+          "ISOAbbreviation": [
+            "Proc. Jpn. Acad., Ser. B, Phys. Biol. Sci."
+          ],
+          "medlineAbbreviation": [
+            "Proc Jpn Acad Ser B Phys Biol Sci"
+          ],
+          "NLMid": [
+            "9318162"
+          ],
+          "ISSN": [
+            "0386-2208"
+          ],
+          "ESSN": [
+            "1349-2896"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "98-107"
+  ],
+  "abstractText": [
+    "In plants, vascular stem cells continue to give rise to all xylem and phloem cells, which constitute the plant vascular system. During plant vascular development, the peptide, tracheary element differentiation inhibitory factor (TDIF), regulates vascular stem cell fate in a non-cell-autonomous fashion. TDIF promotes vascular stem cell proliferation through up-regulating the transcription factor gene WUS-related HOMEOBOX4, and it suppresses xylem differentiation from vascular stem cells through the activation of Glycogen Synthase Kinase 3 proteins. VASCULAR-RELATED NAC-DOMAIN6 and 7 (VND6 and 7) are master transcription factors, and ectopic expression of VND6 and VND7 in various plants induces differentiation of different types of cells into metaxylem and protoxylem tracheary elements, respectively. These genes up-regulate genes involved in both patterned secondary cell wall formation and programmed cell death to form tracheary elements. Secondary wall patterns are formed by localized deposition of cellulose microfibrils, which is guided by cortical microtubules. Local activation of the small G-protein, Rho-type 11 determines distribution of cortical microtubules."
+  ],
+  "affiliation": [
+    "Department of Biological Sciences, Graduate School of Science, The University of Tokyo."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "review-article",
+        "Review",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cell Wall"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "EM"
+                  ],
+                  "qualifierName": [
+                    "embryology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Body Patterning"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Xylem"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "EM"
+                  ],
+                  "qualifierName": [
+                    "embryology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4925768?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4925768"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.2183/pjab.92.98"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "3"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-12-13"
+  ],
+  "dateOfCreation": [
+    "2016-03-14"
+  ],
+  "dateOfRevision": [
+    "2016-12-30"
+  ],
+  "firstPublicationDate": [
+    "2016-01-01"
+  ]
+}

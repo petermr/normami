@@ -1,0 +1,322 @@
+{
+  "id": [
+    "24137171"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "24137171"
+  ],
+  "pmcid": [
+    "PMC3797442"
+  ],
+  "doi": [
+    "10.3389/fpls.2013.00406"
+  ],
+  "title": [
+    "Analysis of the role of Arabidopsis class I TCP genes AtTCP7, AtTCP8, AtTCP22, and AtTCP23 in leaf development."
+  ],
+  "authorString": [
+    "Aguilar-Martínez JA, Sinha N."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Aguilar-Martínez JA"
+          ],
+          "firstName": [
+            "José A"
+          ],
+          "lastName": [
+            "Aguilar-Martínez"
+          ],
+          "initials": [
+            "JA"
+          ],
+          "affiliation": [
+            "Department of Plant Biology, University of California Davis, CA, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Sinha N"
+          ],
+          "firstName": [
+            "Neelima"
+          ],
+          "lastName": [
+            "Sinha"
+          ],
+          "initials": [
+            "N"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-1494-7065",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-1494-7065",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "4"
+      ],
+      "journalIssueId": [
+        "2003510"
+      ],
+      "dateOfPublication": [
+        "2013 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in plant science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "406"
+  ],
+  "abstractText": [
+    "TCP family of plant-specific transcription factors regulates plant form through control of cell proliferation and differentiation. This gene family is comprised of two groups, class I and class II. While the role of class II TCP genes in plant development is well known, data about the function of some class I TCP genes is lacking. We studied a group of phylogenetically related class I TCP genes: AtTCP7, AtTCP8, AtTCP22, and AtTCP23. The similar expression pattern in young growing leaves found for this group suggests similarity in gene function. Gene redundancy is characteristic in this group, as also seen in the class II TCP genes. We generated a pentuple mutant tcp8 tcp15 tcp21 tcp22 tcp23 and show that loss of function of these genes results in changes in leaf developmental traits. We also determined that these factors are able to mutually interact in a yeast two-hybrid assay and regulate the expression of KNOX1 genes. To circumvent the issue of genetic redundancy, dominant negative forms with SRDX repressor domain were used. Analysis of transgenic plants expressing AtTCP7-SRDX and AtTCP23-SRDX indicate a role of these factors in the control of cell proliferation."
+  ],
+  "affiliation": [
+    "Department of Plant Biology, University of California Davis, CA, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Arabidopsis",
+        "Transcription factor",
+        "TCP",
+        "leaf development",
+        "Srdx Construct"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3797442?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3797442"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24137171/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24137171/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2013.00406"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "27"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2013-10-18"
+  ],
+  "dateOfCreation": [
+    "2013-10-18"
+  ],
+  "dateOfRevision": [
+    "2014-01-24"
+  ],
+  "electronicPublicationDate": [
+    "2013-10-16"
+  ],
+  "firstPublicationDate": [
+    "2013-10-16"
+  ]
+}

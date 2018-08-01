@@ -1,0 +1,349 @@
+{
+  "id": [
+    "27162496"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27162496"
+  ],
+  "pmcid": [
+    "PMC4785002"
+  ],
+  "doi": [
+    "10.1270/jsbbs.66.244"
+  ],
+  "title": [
+    "Development of cleaved amplified polymorphic sequence markers and a CAPS-based genetic linkage map in watermelon (Citrullus lanatus [Thunb.] Matsum. and Nakai) constructed using whole-genome re-sequencing data."
+  ],
+  "authorString": [
+    "Liu S, Gao P, Zhu Q, Luan F, Davis AR, Wang X."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Liu S"
+          ],
+          "firstName": [
+            "Shi"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Horticulture College, Northeast Agricultural University, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China; Key Laboratory of Biology and Genetic Improvement of Horticultural Crops (Northeast Region), Ministry of Agriculture, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Gao P"
+          ],
+          "firstName": [
+            "Peng"
+          ],
+          "lastName": [
+            "Gao"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Horticulture College, Northeast Agricultural University, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China; Key Laboratory of Biology and Genetic Improvement of Horticultural Crops (Northeast Region), Ministry of Agriculture, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhu Q"
+          ],
+          "firstName": [
+            "Qianglong"
+          ],
+          "lastName": [
+            "Zhu"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "affiliation": [
+            "Horticulture College, Northeast Agricultural University, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China; Key Laboratory of Biology and Genetic Improvement of Horticultural Crops (Northeast Region), Ministry of Agriculture, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Luan F"
+          ],
+          "firstName": [
+            "Feishi"
+          ],
+          "lastName": [
+            "Luan"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "Horticulture College, Northeast Agricultural University, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China; Key Laboratory of Biology and Genetic Improvement of Horticultural Crops (Northeast Region), Ministry of Agriculture, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Davis AR"
+          ],
+          "firstName": [
+            "Angela R"
+          ],
+          "lastName": [
+            "Davis"
+          ],
+          "initials": [
+            "AR"
+          ],
+          "affiliation": [
+            "South Central Agricultural Research Laboratory, Agricultural Research Service, U.S. Department of Agriculture . Currently with HM. Clause, 9241 Mace Blvd, Davis, CA 95618 , USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang X"
+          ],
+          "firstName": [
+            "Xiaolu"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Horticulture College, Northeast Agricultural University, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China; Key Laboratory of Biology and Genetic Improvement of Horticultural Crops (Northeast Region), Ministry of Agriculture, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-5355-8815",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "2"
+      ],
+      "volume": [
+        "66"
+      ],
+      "journalIssueId": [
+        "2407068"
+      ],
+      "dateOfPublication": [
+        "2016 Mar"
+      ],
+      "monthOfPublication": [
+        "3"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-03-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Breeding science"
+          ],
+          "ISOAbbreviation": [
+            "Breed. Sci."
+          ],
+          "medlineAbbreviation": [
+            "Breed Sci"
+          ],
+          "NLMid": [
+            "9888571"
+          ],
+          "ISSN": [
+            "1344-7610"
+          ],
+          "ESSN": [
+            "1347-3735"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "244-259"
+  ],
+  "abstractText": [
+    "Cleaved amplified polymorphic sequence (CAPS) markers are useful tools for detecting single nucleotide polymorphisms (SNPs). This study detected and converted SNP sites into CAPS markers based on high-throughput re-sequencing data in watermelon, for linkage map construction and quantitative trait locus (QTL) analysis. Two inbred lines, Cream of Saskatchewan (COS) and LSW-177 had been re-sequenced and analyzed by Perl self-compiled script for CAPS marker development. 88.7% and 78.5% of the assembled sequences of the two parental materials could map to the reference watermelon genome, respectively. Comparative assembled genome data analysis provided 225,693 and 19,268 SNPs and indels between the two materials. 532 pairs of CAPS markers were designed with 16 restriction enzymes, among which 271 pairs of primers gave distinct bands of the expected length and polymorphic bands, via PCR and enzyme digestion, with a polymorphic rate of 50.94%. Using the new CAPS markers, an initial CAPS-based genetic linkage map was constructed with the F2 population, spanning 1836.51 cM with 11 linkage groups and 301 markers. 12 QTLs were detected related to fruit flesh color, length, width, shape index, and brix content. These newly CAPS markers will be a valuable resource for breeding programs and genetic studies of watermelon."
+  ],
+  "affiliation": [
+    "Horticulture College, Northeast Agricultural University, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China; Key Laboratory of Biology and Genetic Improvement of Horticultural Crops (Northeast Region), Ministry of Agriculture, No. 59 Mucai Street Harbin, Heilongjiang Province, 150030, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Linkage map",
+        "Watermelon",
+        "SNP",
+        "Perl",
+        "CAPs",
+        "Citrullus",
+        "Re-sequencing Data"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4785002?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4785002"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1270/jsbbs.66.244"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by-nc-nd"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-05-10"
+  ],
+  "dateOfCreation": [
+    "2016-05-10"
+  ],
+  "dateOfRevision": [
+    "2016-05-12"
+  ],
+  "electronicPublicationDate": [
+    "2016-03-01"
+  ],
+  "firstPublicationDate": [
+    "2016-03-01"
+  ]
+}

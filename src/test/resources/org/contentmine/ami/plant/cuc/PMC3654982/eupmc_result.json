@@ -1,0 +1,522 @@
+{
+  "id": [
+    "23691254"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "23691254"
+  ],
+  "pmcid": [
+    "PMC3654982"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0064594"
+  ],
+  "title": [
+    "Comprehensive genome-wide survey, genomic constitution and expression profiling of the NAC transcription factor family in foxtail millet (Setaria italica L.)."
+  ],
+  "authorString": [
+    "Puranik S, Sahu PP, Mandal SN, B VS, Parida SK, Prasad M."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Puranik S"
+          ],
+          "firstName": [
+            "Swati"
+          ],
+          "lastName": [
+            "Puranik"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "National Institute of Plant Genome Research, Aruna Asaf Ali Marg, New Delhi, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Sahu PP"
+          ],
+          "firstName": [
+            "Pranav Pankaj"
+          ],
+          "lastName": [
+            "Sahu"
+          ],
+          "initials": [
+            "PP"
+          ]
+        },
+        {
+          "fullName": [
+            "Mandal SN"
+          ],
+          "firstName": [
+            "Sambhu Nath"
+          ],
+          "lastName": [
+            "Mandal"
+          ],
+          "initials": [
+            "SN"
+          ]
+        },
+        {
+          "fullName": [
+            "B VS"
+          ],
+          "firstName": [
+            "Venkata Suresh"
+          ],
+          "lastName": [
+            "B"
+          ],
+          "initials": [
+            "VS"
+          ]
+        },
+        {
+          "fullName": [
+            "Parida SK"
+          ],
+          "firstName": [
+            "Swarup Kumar"
+          ],
+          "lastName": [
+            "Parida"
+          ],
+          "initials": [
+            "SK"
+          ]
+        },
+        {
+          "fullName": [
+            "Prasad M"
+          ],
+          "firstName": [
+            "Manoj"
+          ],
+          "lastName": [
+            "Prasad"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-0691-0163",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-0691-0163",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "5"
+      ],
+      "volume": [
+        "8"
+      ],
+      "journalIssueId": [
+        "2036605"
+      ],
+      "dateOfPublication": [
+        "2013 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "e64594"
+  ],
+  "abstractText": [
+    "The NAC proteins represent a major plant-specific transcription factor family that has established enormously diverse roles in various plant processes. Aided by the availability of complete genomes, several members of this family have been identified in Arabidopsis, rice, soybean and poplar. However, no comprehensive investigation has been presented for the recently sequenced, naturally stress tolerant crop, Setaria italica (foxtail millet) that is famed as a model crop for bioenergy research. In this study, we identified 147 putative NAC domain-encoding genes from foxtail millet by systematic sequence analysis and physically mapped them onto nine chromosomes. Genomic organization suggested that inter-chromosomal duplications may have been responsible for expansion of this gene family in foxtail millet. Phylogenetically, they were arranged into 11 distinct sub-families (I-XI), with duplicated genes fitting into one cluster and possessing conserved motif compositions. Comparative mapping with other grass species revealed some orthologous relationships and chromosomal rearrangements including duplication, inversion and deletion of genes. The evolutionary significance as duplication and divergence of NAC genes based on their amino acid substitution rates was understood. Expression profiling against various stresses and phytohormones provides novel insights into specific and/or overlapping expression patterns of SiNAC genes, which may be responsible for functional divergence among individual members in this crop. Further, we performed structure modeling and molecular simulation of a stress-responsive protein, SiNAC128, proffering an initial framework for understanding its molecular function. Taken together, this genome-wide identification and expression profiling unlocks new avenues for systematic functional analysis of novel NAC gene family candidates which may be applied for improvising stress adaption in plants."
+  ],
+  "affiliation": [
+    "National Institute of Plant Genome Research, Aruna Asaf Ali Marg, New Delhi, India."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-Print"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Chromosomes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Panicum"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phylogeny"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Amino Acid Sequence"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Homology, Amino Acid"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Molecular Sequence Data"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3654982?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3654982"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23691254/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23691254/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0064594"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "48"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "pdb"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2014-01-07"
+  ],
+  "dateOfCreation": [
+    "2013-05-22"
+  ],
+  "dateOfRevision": [
+    "2018-03-21"
+  ],
+  "electronicPublicationDate": [
+    "2013-05-15"
+  ],
+  "firstPublicationDate": [
+    "2013-05-15"
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "id": [
+    "24833228"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "24833228"
+  ],
+  "pmcid": [
+    "PMC4009792"
+  ],
+  "doi": [
+    "10.3390/biology2041338"
+  ],
+  "title": [
+    "DNA damage response in plants: conserved and variable response compared to animals."
+  ],
+  "authorString": [
+    "Yoshiyama KO, Sakaguchi K, Kimura S."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Yoshiyama KO"
+          ],
+          "firstName": [
+            "Kaoru Okamoto"
+          ],
+          "lastName": [
+            "Yoshiyama"
+          ],
+          "initials": [
+            "KO"
+          ],
+          "affiliation": [
+            "Department of Bioresource and Environmental Sciences, Kyoto Sangyo University, Kamigamo-Motoyama, Kitaku, Kyoto 603-8555, Japan. kaoru.o@cc.kyoto-su.ac.jp."
+          ]
+        },
+        {
+          "fullName": [
+            "Sakaguchi K"
+          ],
+          "firstName": [
+            "Kengo"
+          ],
+          "lastName": [
+            "Sakaguchi"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Research Institute for Science and Technology, Tokyo University of Science, 2641 Yamazaki, Noda, Chiba 278-8510, Japan. kengo@rs.noda.tus.ac.jp."
+          ]
+        },
+        {
+          "fullName": [
+            "Kimura S"
+          ],
+          "firstName": [
+            "Seisuke"
+          ],
+          "lastName": [
+            "Kimura"
+          ],
+          "initials": [
+            "S"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6796-3675",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Bioresource and Environmental Sciences, Kyoto Sangyo University, Kamigamo-Motoyama, Kitaku, Kyoto 603-8555, Japan. seisuke@cc.kyoto-su.ac.jp."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-6796-3675",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "4"
+      ],
+      "volume": [
+        "2"
+      ],
+      "journalIssueId": [
+        "2160556"
+      ],
+      "dateOfPublication": [
+        "2013 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Biology"
+          ],
+          "ISOAbbreviation": [
+            "Biology (Basel)"
+          ],
+          "medlineAbbreviation": [
+            "Biology (Basel)"
+          ],
+          "NLMid": [
+            "101587988"
+          ],
+          "ISSN": [
+            "2079-7737"
+          ],
+          "ESSN": [
+            "2079-7737"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "1338-1356"
+  ],
+  "abstractText": [
+    "The genome of an organism is under constant attack from endogenous and exogenous DNA damaging factors, such as reactive radicals, radiation, and genotoxins. Therefore, DNA damage response systems to sense DNA damage, arrest cell cycle, repair DNA lesions, and/or induce programmed cell death are crucial for maintenance of genomic integrity and survival of the organism. Genome sequences revealed that, although plants possess many of the DNA damage response factors that are present in the animal systems, they are missing some of the important regulators, such as the p53 tumor suppressor. These observations suggest differences in the DNA damage response mechanisms between plants and animals. In this review the DNA damage responses in plants and animals are compared and contrasted. In addition, the function of SUPPRESSOR OF GAMMA RESPONSE 1 (SOG1), a plant-specific transcription factor that governs the robust response to DNA damage, is discussed."
+  ],
+  "affiliation": [
+    "Department of Bioresource and Environmental Sciences, Kyoto Sangyo University, Kamigamo-Motoyama, Kitaku, Kyoto 603-8555, Japan. kaoru.o@cc.kyoto-su.ac.jp."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "review-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4009792?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4009792"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24833228/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24833228/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3390/biology2041338"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "16"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2014-05-16"
+  ],
+  "dateOfCreation": [
+    "2014-05-16"
+  ],
+  "dateOfRevision": [
+    "2014-05-19"
+  ],
+  "electronicPublicationDate": [
+    "2013-11-21"
+  ],
+  "firstPublicationDate": [
+    "2013-11-21"
+  ]
+}

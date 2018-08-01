@@ -1,0 +1,437 @@
+{
+  "id": [
+    "26347751"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26347751"
+  ],
+  "pmcid": [
+    "PMC4542685"
+  ],
+  "doi": [
+    "10.3389/fpls.2015.00610"
+  ],
+  "title": [
+    "De novo assembly of the Japanese lawngrass (Zoysia japonica Steud.) root transcriptome and identification of candidate unigenes related to early responses under salt stress."
+  ],
+  "authorString": [
+    "Xie Q, Niu J, Xu X, Xu L, Zhang Y, Fan B, Liang X, Zhang L, Yin S, Han L."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Xie Q"
+          ],
+          "firstName": [
+            "Qi"
+          ],
+          "lastName": [
+            "Xie"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "affiliation": [
+            "Institute of Turfgrass Science, College of Forestry, Beijing Forestry University Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Niu J"
+          ],
+          "firstName": [
+            "Jun"
+          ],
+          "lastName": [
+            "Niu"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Lab of Systematic Evolution and Biogeography of Woody Plants, College of Nature Conservation, Beijing Forestry University Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Xu X"
+          ],
+          "firstName": [
+            "Xilin"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Bioinformatics, College of Plant Protection, Hunan Agricultural University Changsha, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Xu L"
+          ],
+          "firstName": [
+            "Lixin"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Institute of Turfgrass Science, College of Forestry, Beijing Forestry University Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang Y"
+          ],
+          "firstName": [
+            "Yinbing"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Institute of Turfgrass Science, College of Forestry, Beijing Forestry University Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Fan B"
+          ],
+          "firstName": [
+            "Bo"
+          ],
+          "lastName": [
+            "Fan"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Institute of Turfgrass Science, College of Forestry, Beijing Forestry University Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liang X"
+          ],
+          "firstName": [
+            "Xiaohong"
+          ],
+          "lastName": [
+            "Liang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Institute of Turfgrass Science, College of Forestry, Beijing Forestry University Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang L"
+          ],
+          "firstName": [
+            "Lijuan"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Shenzhen Tourism College, Jinan University Shenzhen, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yin S"
+          ],
+          "firstName": [
+            "Shuxia"
+          ],
+          "lastName": [
+            "Yin"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Institute of Turfgrass Science, College of Forestry, Beijing Forestry University Beijing, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Han L"
+          ],
+          "firstName": [
+            "Liebao"
+          ],
+          "lastName": [
+            "Han"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Institute of Turfgrass Science, College of Forestry, Beijing Forestry University Beijing, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "6"
+      ],
+      "journalIssueId": [
+        "2260598"
+      ],
+      "dateOfPublication": [
+        "2015"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in plant science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "610"
+  ],
+  "abstractText": [
+    "Japanese lawngrass (Zoysia japonica Steud.) is an important warm-season turfgrass that is able to survive in a range of soils, from infertile sands to clays, and to grow well under saline conditions. However, little is known about the molecular mechanisms involved in its resistance to salt stress. Here, we used high-throughput RNA sequencing (RNA-seq) to investigate the changes in gene expression of Zoysia grass at high NaCl concentrations. We first constructed two sequencing libraries, including control and NaCl-treated samples, and sequenced them using the Illumina HiSeq™ 2000 platform. Approximately 157.20 million paired-end reads with a total length of 68.68 Mb were obtained. Subsequently, 100,800 unigenes with an N50 length of 1104 bp were assembled using Trinity, among which 70,127 unigenes were functionally annotated (E ≤ 10(-5)) in the non-redundant protein (NR) database. Furthermore, three public databases, the Kyoto Encyclopedia of Genes and Genomes (KEGG), Swiss-prot, and Clusters of Orthologous Groups (COGs), were used for gene function analysis and enrichment. The annotated genes included 46 Gene Ontology (GO) terms, 120 KEGG pathways, and 25 COGs. Compared with the control, 6035 genes were significantly different (false discovery rate ≤0.01, |log2Ratio|≥1) in the NaCl-treated samples. These genes were enriched in 10 KEGG pathways and 58 GO terms, and subjected to 25 COG categories. Using high-throughput next-generation sequencing, we built a database as a global transcript resource for Z. japonica Steud. roots. The results of this study will advance our understanding of the early salt response in Japanese lawngrass roots."
+  ],
+  "affiliation": [
+    "Institute of Turfgrass Science, College of Forestry, Beijing Forestry University Beijing, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Transcription factor",
+        "Zoysia japonica Steud.",
+        "Salt-stress",
+        "Simple sequence repeats (SSRs)",
+        "Rna Sequencing (Rna-seq)"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4542685?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4542685"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2015.00610"
+          ]
+        }
+      ]
+    }
+  ],
+  "commentCorrectionList": [
+    {
+      "commentCorrection": [
+        {
+          "id": [
+            "26500661"
+          ],
+          "source": [
+            "MED"
+          ],
+          "reference": [
+            "Front Plant Sci. 2015;6:811"
+          ],
+          "type": [
+            "Erratum in"
+          ],
+          "orderIn": [
+            "1"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "5"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2015-09-08"
+  ],
+  "dateOfCreation": [
+    "2015-09-08"
+  ],
+  "dateOfRevision": [
+    "2015-10-27"
+  ],
+  "electronicPublicationDate": [
+    "2015-08-20"
+  ],
+  "firstPublicationDate": [
+    "2015-08-20"
+  ]
+}

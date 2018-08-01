@@ -1,0 +1,525 @@
+{
+  "id": [
+    "26558288"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26558288"
+  ],
+  "pmcid": [
+    "PMC4617879"
+  ],
+  "doi": [
+    "10.1155/2015/391234"
+  ],
+  "title": [
+    "Transcriptome Analysis of Gelatin Seed Treatment as a Biostimulant of Cucumber Plant Growth."
+  ],
+  "authorString": [
+    "Wilson HT, Xu K, Taylor AG."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Wilson HT"
+          ],
+          "firstName": [
+            "H T"
+          ],
+          "lastName": [
+            "Wilson"
+          ],
+          "initials": [
+            "HT"
+          ],
+          "affiliation": [
+            "Cornell University School of Integrated Plant Science, New York State Agriculture Experimental Station, Geneva, NY 24456, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Xu K"
+          ],
+          "firstName": [
+            "K"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Cornell University School of Integrated Plant Science, New York State Agriculture Experimental Station, Geneva, NY 24456, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Taylor AG"
+          ],
+          "firstName": [
+            "A G"
+          ],
+          "lastName": [
+            "Taylor"
+          ],
+          "initials": [
+            "AG"
+          ],
+          "affiliation": [
+            "Cornell University School of Integrated Plant Science, New York State Agriculture Experimental Station, Geneva, NY 24456, USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "2015"
+      ],
+      "journalIssueId": [
+        "2246983"
+      ],
+      "dateOfPublication": [
+        "2015 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "TheScientificWorldJournal"
+          ],
+          "ISOAbbreviation": [
+            "ScientificWorldJournal"
+          ],
+          "medlineAbbreviation": [
+            "ScientificWorldJournal"
+          ],
+          "NLMid": [
+            "101131163"
+          ],
+          "ISSN": [
+            "2356-6140"
+          ],
+          "ESSN": [
+            "1537-744X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "391234"
+  ],
+  "abstractText": [
+    "The beneficial effects of gelatin capsule seed treatment on enhanced plant growth and tolerance to abiotic stress have been reported in a number of crops, but the molecular mechanisms underlying such effects are poorly understood. Using mRNA sequencing based approach, transcriptomes of one- and two-week-old cucumber plants from gelatin capsule treated and nontreated seeds were characterized. The gelatin treated plants had greater total leaf area, fresh weight, frozen weight, and nitrogen content. Pairwise comparisons of the RNA-seq data identified 620 differentially expressed genes between treated and control two-week-old plants, consistent with the timing when the growth related measurements also showed the largest differences. Using weighted gene coexpression network analysis, significant coexpression gene network module of 208 of the 620 differentially expressed genes was identified, which included 16 hub genes in the blue module, a NAC transcription factor, a MYB transcription factor, an amino acid transporter, an ammonium transporter, a xenobiotic detoxifier-glutathione S-transferase, and others. Based on the putative functions of these genes, the identification of the significant WGCNA module and the hub genes provided important insights into the molecular mechanisms of gelatin seed treatment as a biostimulant to enhance plant growth."
+  ],
+  "affiliation": [
+    "Cornell University School of Integrated Plant Science, New York State Agriculture Experimental Station, Geneva, NY 24456, USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cucumis sativus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seeds"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Nitrogen"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gelatin"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cluster Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Organ Specificity"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Time Factors"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Gelatin"
+          ],
+          "registryNumber": [
+            "9000-70-8"
+          ]
+        },
+        {
+          "name": [
+            "Nitrogen"
+          ],
+          "registryNumber": [
+            "N762921K75"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4617879?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4617879"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1155/2015/391234"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "4"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-08-19"
+  ],
+  "dateOfCreation": [
+    "2015-11-11"
+  ],
+  "dateOfRevision": [
+    "2017-04-12"
+  ],
+  "electronicPublicationDate": [
+    "2015-10-08"
+  ],
+  "firstPublicationDate": [
+    "2015-10-08"
+  ]
+}

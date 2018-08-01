@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC4219692/results/gene/human/results.xml">
+  <result pre="NAC ( " exact="NAM" post=", ATAF1, 2 and CUC2) family is a plant-specific transcription factor and it co" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="NAC ( NAM, " exact="ATAF1" post=", 2 and CUC2) family is a plant-specific transcription factor and it controls various" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="NAC ( NAM, ATAF1, 2 and " exact="CUC2" post=") family is a plant-specific transcription factor and it controls various plant developmental proce" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="The NAC ( " exact="NAM" post=", ATAF1, 2 and CUC2) family is one of the largest families of plant-specific t" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="The NAC ( NAM, " exact="ATAF1" post=", 2 and CUC2) family is one of the largest families of plant-specific transcription f" xpath="/html[1]/body[1]/div[2]/div[1]/p[2]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="The NAC ( NAM, ATAF1, 2 and " exact="CUC2" post=") family is one of the largest families of plant-specific transcription factors and exists widely i" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

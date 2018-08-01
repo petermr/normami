@@ -1,0 +1,675 @@
+{
+  "id": [
+    "29166861"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29166861"
+  ],
+  "pmcid": [
+    "PMC5700690"
+  ],
+  "doi": [
+    "10.1186/s12870-017-1170-8"
+  ],
+  "title": [
+    "Comprehensive transcriptome analysis reveals distinct regulatory programs during vernalization and floral bud development of orchardgrass (Dactylis glomerata L.)."
+  ],
+  "authorString": [
+    "Feng G, Huang L, Li J, Wang J, Xu L, Pan L, Zhao X, Wang X, Huang T, Zhang X."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Feng G"
+          ],
+          "firstName": [
+            "Guangyan"
+          ],
+          "lastName": [
+            "Feng"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Huang L"
+          ],
+          "firstName": [
+            "Linkai"
+          ],
+          "lastName": [
+            "Huang"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Li J"
+          ],
+          "firstName": [
+            "Ji"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang J"
+          ],
+          "firstName": [
+            "Jianping"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Agronomy Department, University of Florida, Gainesville, FL, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Xu L"
+          ],
+          "firstName": [
+            "Lei"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Pan L"
+          ],
+          "firstName": [
+            "Ling"
+          ],
+          "lastName": [
+            "Pan"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhao X"
+          ],
+          "firstName": [
+            "Xinxin"
+          ],
+          "lastName": [
+            "Zhao"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang X"
+          ],
+          "firstName": [
+            "Xia"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Huang T"
+          ],
+          "firstName": [
+            "Ting"
+          ],
+          "lastName": [
+            "Huang"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang X"
+          ],
+          "firstName": [
+            "Xinquan"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China. zhangxq@sicau.edu.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "17"
+      ],
+      "journalIssueId": [
+        "2614088"
+      ],
+      "dateOfPublication": [
+        "2017 Nov"
+      ],
+      "monthOfPublication": [
+        "11"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-11-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC plant biology"
+          ],
+          "ISOAbbreviation": [
+            "BMC Plant Biol."
+          ],
+          "medlineAbbreviation": [
+            "BMC Plant Biol"
+          ],
+          "NLMid": [
+            "100967807"
+          ],
+          "ISSN": [
+            "1471-2229"
+          ],
+          "ESSN": [
+            "1471-2229"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "216"
+  ],
+  "abstractText": [
+    "Vernalization and the transition from vegetative to reproductive growth involve multiple pathways, vital for controlling floral organ formation and flowering time. However, little transcription information is available about the mechanisms behind environmental adaption and growth regulation. Here, we used high-throughput sequencing to analyze the comprehensive transcriptome of Dactylis glomerata L. during six different growth periods.During vernalization, 4689 differentially expressed genes (DEGs) significantly increased in abundance, while 3841 decreased. Furthermore, 12,967 DEGs were identified during booting stage and flowering stage, including 7750 up-regulated and 5219 down-regulated DEGs. Pathway analysis indicated that transcripts related to circadian rhythm, photoperiod, photosynthesis, flavonoid biosynthesis, starch, and sucrose metabolism changed significantly at different stages. Coexpression and weighted correlation network analysis (WGCNA) analysis linked different stages to transcriptional changes and provided evidence of inner relation modules associated with signal transduction, stress responses, cell division, and hormonal transport.We found enrichment in transcription factors (TFs) related to WRKY, NAC, AP2/EREBP, AUX/IAA, MADS-BOX, ABI3/VP1, bHLH, and the CCAAT family during vernalization and floral bud development. TFs expression patterns revealed intricate temporal variations, suggesting relatively separate regulatory programs of TF modules. Further study will unlock insights into the ability of the circadian rhythm and photoperiod to regulate vernalization and flowering time in perennial grass."
+  ],
+  "affiliation": [
+    "Department of Grassland Science, College of Animal Science and Technology, Sichuan Agricultural University, Chengdu, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "NSFC 31372363"
+          ],
+          "agency": [
+            "National Natural Science Foundation of China (CN)"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "No. CARS-35-05"
+          ],
+          "agency": [
+            "Modern Agro-industry Technology Research System"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "No. 2014CB138705"
+          ],
+          "agency": [
+            "The National Basic Research Program (973 program)"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Dactylis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Flowers"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cold Temperature"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Vernalization",
+        "Transcriptome",
+        "High-throughput Sequencing",
+        "Orchardgrass",
+        "Flowering Regulation",
+        "Dactylis Glomerata L."
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5700690?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5700690"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12870-017-1170-8"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2018-06-05"
+  ],
+  "dateOfCreation": [
+    "2017-11-24"
+  ],
+  "dateOfRevision": [
+    "2018-07-10"
+  ],
+  "electronicPublicationDate": [
+    "2017-11-22"
+  ],
+  "firstPublicationDate": [
+    "2017-11-22"
+  ]
+}

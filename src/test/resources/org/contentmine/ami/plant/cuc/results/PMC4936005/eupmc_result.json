@@ -1,0 +1,371 @@
+{
+  "id": [
+    "27390589"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27390589"
+  ],
+  "pmcid": [
+    "PMC4936005"
+  ],
+  "doi": [
+    "10.1186/s13068-016-0551-9"
+  ],
+  "title": [
+    "Improving total saccharification yield of Arabidopsis plants by vessel-specific complementation of caffeoyl shikimate esterase (cse) mutants."
+  ],
+  "authorString": [
+    "Vargas L, Cesarino I, Vanholme R, Voorend W, de Lyra Soriano Saleme M, Morreel K, Boerjan W."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Vargas L"
+          ],
+          "firstName": [
+            "Lívia"
+          ],
+          "lastName": [
+            "Vargas"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+          ]
+        },
+        {
+          "fullName": [
+            "Cesarino I"
+          ],
+          "firstName": [
+            "Igor"
+          ],
+          "lastName": [
+            "Cesarino"
+          ],
+          "initials": [
+            "I"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6789-2432",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Botany, Institute of Biosciences, University of São Paulo, Butantã, SP Brazil."
+          ]
+        },
+        {
+          "fullName": [
+            "Vanholme R"
+          ],
+          "firstName": [
+            "Ruben"
+          ],
+          "lastName": [
+            "Vanholme"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+          ]
+        },
+        {
+          "fullName": [
+            "Voorend W"
+          ],
+          "firstName": [
+            "Wannes"
+          ],
+          "lastName": [
+            "Voorend"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+          ]
+        },
+        {
+          "fullName": [
+            "de Lyra Soriano Saleme M"
+          ],
+          "firstName": [
+            "Marina"
+          ],
+          "lastName": [
+            "de Lyra Soriano Saleme"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+          ]
+        },
+        {
+          "fullName": [
+            "Morreel K"
+          ],
+          "firstName": [
+            "Kris"
+          ],
+          "lastName": [
+            "Morreel"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+          ]
+        },
+        {
+          "fullName": [
+            "Boerjan W"
+          ],
+          "firstName": [
+            "Wout"
+          ],
+          "lastName": [
+            "Boerjan"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-6789-2432",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "9"
+      ],
+      "journalIssueId": [
+        "2534063"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Biotechnology for biofuels"
+          ],
+          "ISOAbbreviation": [
+            "Biotechnol Biofuels"
+          ],
+          "medlineAbbreviation": [
+            "Biotechnol Biofuels"
+          ],
+          "NLMid": [
+            "101316935"
+          ],
+          "ISSN": [
+            "1754-6834"
+          ],
+          "ESSN": [
+            "1754-6834"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "139"
+  ],
+  "abstractText": [
+    "Caffeoyl shikimate esterase (CSE) was recently characterized as an enzyme central to the lignin biosynthetic pathway in Arabidopsis thaliana. The cse-2 loss-of-function mutant shows a typical phenotype of lignin-deficient mutants, including collapsed vessels, reduced lignin content, and lignin compositional shift, in addition to a fourfold increase in cellulose-to-glucose conversion when compared to the wild type. However, this mutant exhibits a substantial developmental arrest, which might outweigh the gains in fermentable sugar yield. To restore its normal growth and further improve its saccharification yield, we investigated a possible cause for the yield penalty of the cse-2 mutant. Furthermore, we evaluated whether CSE expression is under the same multi-leveled transcriptional regulatory network as other lignin biosynthetic genes and analyzed the transcriptional responses of the phenylpropanoid pathway upon disruption of CSE.Transactivation analysis demonstrated that only second-level MYB master switches (MYB46 and MYB83) and lignin-specific activators (MYB63 and MYB85), but not top-level NAC master switches or other downstream transcription factors, effectively activate the CSE promoter in our protoplast-based system. The cse-2 mutant exhibited transcriptional repression of genes upstream of CSE, while downstream genes were mainly unaffected, indicating transcriptional feedback of CSE loss-of-function on monolignol biosynthetic genes. In addition, we found that the expression of CSE under the control of the vessel-specific VND7 promoter in the cse-2 background restored the vasculature integrity resulting in improved growth parameters, while the overall lignin content remained relatively low. Thus, by restoring the vascular integrity and biomass parameters of cse-2, we further improved glucose release per plant without pretreatment, with an increase of up to 36 % compared to the cse-2 mutant and up to 154 % compared to the wild type.Our results contribute to a better understanding of how the expression of CSE is regulated by secondary wall-associated transcription factors and how the expression of lignin genes is affected upon CSE loss-of-function in Arabidopsis. Moreover, we found evidence that vasculature collapse is underlying the yield penalty found in the cse-2 mutant. Through a vessel-specific complementation approach, vasculature morphology and final stem weight were restored, leading to an even higher total glucose release per plant."
+  ],
+  "affiliation": [
+    "Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Lignin",
+        "Genetic engineering",
+        "Arabidopsis thaliana",
+        "Saccharification",
+        "Secondary cell wall",
+        "Caffeoyl Shikimate Esterase (Cse)",
+        "Vessel-specific Complementation"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4936005?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4936005"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s13068-016-0551-9"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "7"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-07-08"
+  ],
+  "dateOfCreation": [
+    "2016-07-08"
+  ],
+  "dateOfRevision": [
+    "2017-07-18"
+  ],
+  "electronicPublicationDate": [
+    "2016-07-07"
+  ],
+  "firstPublicationDate": [
+    "2016-07-07"
+  ]
+}

@@ -1,0 +1,813 @@
+{
+  "id": [
+    "24659488"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "24659488"
+  ],
+  "pmcid": [
+    "PMC4106440"
+  ],
+  "doi": [
+    "10.1093/jxb/eru112"
+  ],
+  "title": [
+    "Gene regulatory cascade of senescence-associated NAC transcription factors activated by ETHYLENE-INSENSITIVE2-mediated leaf senescence signalling in Arabidopsis."
+  ],
+  "authorString": [
+    "Kim HJ, Hong SH, Kim YW, Lee IH, Jun JH, Phee BK, Rupak T, Jeong H, Lee Y, Hong BS, Nam HG, Woo HR, Lim PO."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Kim HJ"
+          ],
+          "firstName": [
+            "Hyo Jung"
+          ],
+          "lastName": [
+            "Kim"
+          ],
+          "initials": [
+            "HJ"
+          ],
+          "affiliation": [
+            "Center for Plant Aging Research, Institute for Basic Science (IBS), Daegu 711-873, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Hong SH"
+          ],
+          "firstName": [
+            "Sung Hyun"
+          ],
+          "lastName": [
+            "Hong"
+          ],
+          "initials": [
+            "SH"
+          ],
+          "affiliation": [
+            "Center for Plant Aging Research, Institute for Basic Science (IBS), Daegu 711-873, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Kim YW"
+          ],
+          "firstName": [
+            "You Wang"
+          ],
+          "lastName": [
+            "Kim"
+          ],
+          "initials": [
+            "YW"
+          ],
+          "affiliation": [
+            "Department of New Biology, Daegu Gyeongbuk Institute of Science & Technology (DGIST), Daegu 711-873, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Lee IH"
+          ],
+          "firstName": [
+            "Il Hwan"
+          ],
+          "lastName": [
+            "Lee"
+          ],
+          "initials": [
+            "IH"
+          ],
+          "affiliation": [
+            "Department of Life Sciences, POSTECH, Pohang, Gyeongbuk 790-784, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Jun JH"
+          ],
+          "firstName": [
+            "Ji Hyung"
+          ],
+          "lastName": [
+            "Jun"
+          ],
+          "initials": [
+            "JH"
+          ],
+          "affiliation": [
+            "Department of Life Sciences, POSTECH, Pohang, Gyeongbuk 790-784, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Phee BK"
+          ],
+          "firstName": [
+            "Bong-Kwan"
+          ],
+          "lastName": [
+            "Phee"
+          ],
+          "initials": [
+            "BK"
+          ],
+          "affiliation": [
+            "Center for Plant Aging Research, Institute for Basic Science (IBS), Daegu 711-873, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Rupak T"
+          ],
+          "firstName": [
+            "Timilsina"
+          ],
+          "lastName": [
+            "Rupak"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "School of Interdisciplinary Bioscience and Bioengineering, POSTECH, Pohang, Gyeongbuk 790-784, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Jeong H"
+          ],
+          "firstName": [
+            "Hana"
+          ],
+          "lastName": [
+            "Jeong"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of New Biology, Daegu Gyeongbuk Institute of Science & Technology (DGIST), Daegu 711-873, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Lee Y"
+          ],
+          "firstName": [
+            "Yeonmi"
+          ],
+          "lastName": [
+            "Lee"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Center for Plant Aging Research, Institute for Basic Science (IBS), Daegu 711-873, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Hong BS"
+          ],
+          "firstName": [
+            "Byoung Seok"
+          ],
+          "lastName": [
+            "Hong"
+          ],
+          "initials": [
+            "BS"
+          ],
+          "affiliation": [
+            "Department of New Biology, Daegu Gyeongbuk Institute of Science & Technology (DGIST), Daegu 711-873, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Nam HG"
+          ],
+          "firstName": [
+            "Hong Gil"
+          ],
+          "lastName": [
+            "Nam"
+          ],
+          "initials": [
+            "HG"
+          ],
+          "affiliation": [
+            "Center for Plant Aging Research, Institute for Basic Science (IBS), Daegu 711-873, Republic of Korea Department of New Biology, Daegu Gyeongbuk Institute of Science & Technology (DGIST), Daegu 711-873, Republic of Korea polim@dgist.ac.kr hrwoo@dgist.ac.kr nam@dgist.ac.kr."
+          ]
+        },
+        {
+          "fullName": [
+            "Woo HR"
+          ],
+          "firstName": [
+            "Hye Ryun"
+          ],
+          "lastName": [
+            "Woo"
+          ],
+          "initials": [
+            "HR"
+          ],
+          "affiliation": [
+            "Department of New Biology, Daegu Gyeongbuk Institute of Science & Technology (DGIST), Daegu 711-873, Republic of Korea polim@dgist.ac.kr hrwoo@dgist.ac.kr nam@dgist.ac.kr."
+          ]
+        },
+        {
+          "fullName": [
+            "Lim PO"
+          ],
+          "firstName": [
+            "Pyung Ok"
+          ],
+          "lastName": [
+            "Lim"
+          ],
+          "initials": [
+            "PO"
+          ],
+          "affiliation": [
+            "Department of New Biology, Daegu Gyeongbuk Institute of Science & Technology (DGIST), Daegu 711-873, Republic of Korea polim@dgist.ac.kr hrwoo@dgist.ac.kr nam@dgist.ac.kr."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "14"
+      ],
+      "volume": [
+        "65"
+      ],
+      "journalIssueId": [
+        "2183390"
+      ],
+      "dateOfPublication": [
+        "2014 Jul"
+      ],
+      "monthOfPublication": [
+        "7"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-07-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "4023-4036"
+  ],
+  "abstractText": [
+    "Leaf senescence is a finely tuned and genetically programmed degeneration process, which is critical to maximize plant fitness by remobilizing nutrients from senescing leaves to newly developing organs. Leaf senescence is a complex process that is driven by extensive reprogramming of global gene expression in a highly coordinated manner. Understanding how gene regulatory networks involved in controlling leaf senescence are organized and operated is essential to decipher the mechanisms of leaf senescence. It was previously reported that the trifurcate feed-forward pathway involving EIN2, ORE1, and miR164 in Arabidopsis regulates age-dependent leaf senescence and cell death. Here, new components of this pathway have been identified, which enhances knowledge of the gene regulatory networks governing leaf senescence. Comparative gene expression analysis revealed six senescence-associated NAC transcription factors (TFs) (ANAC019, AtNAP, ANAC047, ANAC055, ORS1, and ORE1) as candidate downstream components of ETHYLENE-INSENSITIVE2 (EIN2). EIN3, a downstream signalling molecule of EIN2, directly bound the ORE1 and AtNAP promoters and induced their transcription. This suggests that EIN3 positively regulates leaf senescence by activating ORE1 and AtNAP, previously reported as key regulators of leaf senescence. Genetic and gene expression analyses in the ore1 atnap double mutant revealed that ORE1 and AtNAP act in distinct and overlapping signalling pathways. Transient transactivation assays further demonstrated that ORE1 and AtNAP could activate common as well as differential NAC TF targets. Collectively, the data provide insight into an EIN2-mediated senescence signalling pathway that coordinates global gene expression during leaf senescence via a gene regulatory network involving EIN3 and senescence-associated NAC TFs."
+  ],
+  "affiliation": [
+    "Center for Plant Aging Research, Institute for Basic Science (IBS), Daegu 711-873, Republic of Korea."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Receptors, Cell Surface"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Binding"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Models, Biological"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Arabidopsis",
+        "Gene",
+        "EIN3",
+        "Ein2-mediated Senescence Signalling",
+        "Nac Transcription Factor."
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "EIN2 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Receptors, Cell Surface"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4106440?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4106440"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24659488/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24659488/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/eru112"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "47"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-03-30"
+  ],
+  "dateOfCreation": [
+    "2014-07-23"
+  ],
+  "electronicPublicationDate": [
+    "2014-03-22"
+  ],
+  "firstPublicationDate": [
+    "2014-03-22"
+  ]
+}

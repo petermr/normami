@@ -1,0 +1,995 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="review-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Plants (Basel)</journal-id><journal-id journal-id-type="iso-abbrev">Plants (Basel)</journal-id><journal-id journal-id-type="publisher-id">plants</journal-id><journal-title-group><journal-title>Plants</journal-title></journal-title-group><issn pub-type="epub">2223-7747</issn><publisher><publisher-name>MDPI</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4844312</article-id><article-id pub-id-type="doi">10.3390/plants3010001</article-id><article-id pub-id-type="publisher-id">plants-03-00001</article-id><article-categories><subj-group subj-group-type="heading"><subject>Review</subject></subj-group></article-categories><title-group><article-title>Regulation of Compound Leaf Development</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Yuan</given-names></name></contrib><contrib contrib-type="author"><name><surname>Chen</surname><given-names>Rujin</given-names></name><xref rid="c1-plants-03-00001" ref-type="corresp">*</xref></contrib></contrib-group><aff id="af1-plants-03-00001">Plant Biology Division, Samuel Roberts Noble Foundation, Ardmore, OK 73401, USA; E-Mail: <email>ywang@noble.org</email></aff><author-notes><corresp id="c1-plants-03-00001"><label>*</label>Author to whom correspondence should be addressed; E-Mail: <email>rchen@noble.org</email>.</corresp></author-notes><pub-date pub-type="epub"><day>19</day><month>12</month><year>2013</year></pub-date><pub-date pub-type="collection"><month>3</month><year>2014</year></pub-date><volume>3</volume><issue>1</issue><fpage>1</fpage><lpage>17</lpage><history><date date-type="received"><day>16</day><month>9</month><year>2013</year></date><date date-type="rev-recd"><day>30</day><month>11</month><year>2013</year></date><date date-type="accepted"><day>11</day><month>12</month><year>2013</year></date></history><permissions><copyright-statement>&#x000a9; 2013 by the authors; licensee MDPI, Basel, Switzerland.</copyright-statement><copyright-year>2013</copyright-year><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/3.0/"><license-p><!--CREATIVE COMMONS-->This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution license (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</ext-link>).</license-p></license></permissions><abstract><p>Leaf morphology is one of the most variable, yet inheritable, traits in the plant kingdom. How plants develop a variety of forms and shapes is a major biological question. Here, we discuss some recent progress in understanding the development of compound or dissected leaves in model species, such as tomato (<italic>Solanum lycopersicum</italic>), <italic>Cardamine hirsuta</italic> and <italic>Medicago truncatula</italic>, with an emphasis on recent discoveries in legumes. We also discuss progress in gene regulations and hormonal actions in compound leaf development. These studies facilitate our understanding of the underlying regulatory mechanisms and put forward a prospective in compound leaf studies.</p></abstract><kwd-group><kwd>compound leaf development</kwd><kwd>gene regulation</kwd><kwd>hormones</kwd><kwd>tomato</kwd><kwd><italic>Cardamine hirsuta</italic></kwd><kwd><italic>Medicago truncatula</italic></kwd></kwd-group></article-meta></front><body><sec><title>1. Introduction</title><p>Plant leaves are the primary photosynthetic organs responsible for the conversion of carbon dioxide (CO<sub>2</sub>) and water (H<sub>2</sub>O) to carbohydrate (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>) and oxygen (O<sub>2</sub>) using solar energy. As such, it provides the fixed carbon for plant growth and atmospheric oxygen essential for aerobic lives. Together, photosynthetic organisms, including plants, algae and some bacteria, capture approximately 100 terawatts (10<sup>12</sup> watts) of solar energy and convert about 100&#x02013;150 petagrams (10<sup>15</sup> grams) of carbon into biomass per year [<xref rid="B1-plants-03-00001" ref-type="bibr">1</xref>,<xref rid="B2-plants-03-00001" ref-type="bibr">2</xref>]. The photosynthetic structures of the earliest vascular plants are believed to be branched axes, which evolved into three-dimensional lateral branch systems identified as the earliest leaves in the fossil record [<xref rid="B3-plants-03-00001" ref-type="bibr">3</xref>]. From ferns to angiosperms, enormous variations in leaf forms have been evolved. Conceptually, leaf forms can be broadly grouped into two categories: simple and compound or dissected. A simple leaf consists of a single undivided blade with an entire, serrated or lobed margin, and a compound leaf consists of multiple blades, known as leaflets, organized as pinnate, palmate or higher-ordered structures [<xref rid="B4-plants-03-00001" ref-type="bibr">4</xref>]. Both developmental and environmental factors influence leaf morphogenesis [<xref rid="B5-plants-03-00001" ref-type="bibr">5</xref>]. Many plants exhibit consistent leaf forms, although variations in the leaf morphology, called heteroblasty, often occur during the course of plant growth [<xref rid="B6-plants-03-00001" ref-type="bibr">6</xref>]. Different leaf forms can be found in closely-related plants, such as <italic>Arabidopsis thaliana</italic>, with simple leaves, and <italic>Cardamine hirsuta</italic>, with compound leaves [<xref rid="B7-plants-03-00001" ref-type="bibr">7</xref>]. In addition, different leaf forms can be found in the same plant, such as green ash (<italic>Fraxinus pennsylvanica</italic> var. <italic>lanceolata</italic>) and <italic>Medicago truncatula</italic>, in which leaf forms change from simple to compound along the shoot axis [<xref rid="B8-plants-03-00001" ref-type="bibr">8</xref>,<xref rid="B9-plants-03-00001" ref-type="bibr">9</xref>].</p><p>The diverse leaf shape and form variation seen in extant plants may reflect natural selection on the function of leaves as the primary photosynthetic organ critical to plant growth and survival [<xref rid="B10-plants-03-00001" ref-type="bibr">10</xref>,<xref rid="B11-plants-03-00001" ref-type="bibr">11</xref>,<xref rid="B12-plants-03-00001" ref-type="bibr">12</xref>]. Studies of leaf evolution suggest that compound leaves evolved independently several times during plant evolution [<xref rid="B13-plants-03-00001" ref-type="bibr">13</xref>,<xref rid="B14-plants-03-00001" ref-type="bibr">14</xref>]. Consistent with this, both conserved and distinct molecular mechanisms underlying the development of different leaf forms have been uncovered in different lineages [<xref rid="B13-plants-03-00001" ref-type="bibr">13</xref>,<xref rid="B15-plants-03-00001" ref-type="bibr">15</xref>]. </p><p>In earlier studies, numerous leaf form mutants have been isolated and characterized in both simple- and compound-leafed species, such as maize (<italic>Zea may</italic>), snapdragon (<italic>Antirrhinum majus</italic>), <italic>Arabidopsis</italic> (<italic>A. thaliana</italic>), tobacco (<italic>Nicotiana tabacum</italic>), pea (<italic>Pisum sativum</italic>), tomato (<italic>Solanum lycopersicum</italic>), <italic>C. hirsuta</italic> and <italic>M. truncatula</italic>. In the last few decades, many genetic loci responsible for some of the classic leaf form mutants have been cloned, unveiling the nature of genes and the associated regulatory mechanisms underlying leaf development in diverse species. These provide opportunities to compare the regulatory mechanisms for compound- and simple-leaf development and provide new insights on leaf form evolution.</p></sec><sec><title>2. Compound Leaf Development</title><p>Plant leaves, either simple or compound, initiate as peg-like structures from the flanks of the shoot apical meristem (SAM), a pluripotent structure capable of self-renewal. Studies have shown that class I knotted-like homeodomain transcription factors, KNOXI proteins, are required for the maintenance of the meristematic activity of the SAM [<xref rid="B16-plants-03-00001" ref-type="bibr">16</xref>,<xref rid="B17-plants-03-00001" ref-type="bibr">17</xref>,<xref rid="B18-plants-03-00001" ref-type="bibr">18</xref>]. Leaf initiation requires downregulation of <italic>KNOXI</italic> genes at the incipient sites of leaf primordia (P0, P for plastochron). In species with simple leaves, downregulation of <italic>KNOXI</italic> genes is permanent, whereas in most compound-leafed eudicot species, including tomato and <italic>C. hirsuta</italic>, <italic>KNOXI</italic> genes are reactivated in leaf primordia after initial downregulation to initiate leaf development [<xref rid="B16-plants-03-00001" ref-type="bibr">16</xref>,<xref rid="B17-plants-03-00001" ref-type="bibr">17</xref>]. In C. hirsuta and tomato, downregulation of <italic>KNOXI</italic> genes result in compound leaves with reduced leaflets [<xref rid="B7-plants-03-00001" ref-type="bibr">7</xref>,<xref rid="B19-plants-03-00001" ref-type="bibr">19</xref>,<xref rid="B20-plants-03-00001" ref-type="bibr">20</xref>]. On the other hand, ectopic overexpression of <italic>KNOXI</italic> genes in the tomato dominant mutants, <italic>Mouse Ears</italic> (<italic>me</italic>) and <italic>Curl</italic> (<italic>Cu</italic>) [<xref rid="B21-plants-03-00001" ref-type="bibr">21</xref>,<xref rid="B22-plants-03-00001" ref-type="bibr">22</xref>], or ectopic expression of <italic>KNOXI</italic> genes in tomato plants [<xref rid="B23-plants-03-00001" ref-type="bibr">23</xref>,<xref rid="B24-plants-03-00001" ref-type="bibr">24</xref>] results in a dramatic increase in leaf complexity. </p><p>Leaf development can be divided into three distinct stages, initiation, primary morphogenesis and secondary morphogenesis or histogenesis [<xref rid="B20-plants-03-00001" ref-type="bibr">20</xref>,<xref rid="B25-plants-03-00001" ref-type="bibr">25</xref>,<xref rid="B26-plants-03-00001" ref-type="bibr">26</xref>]. During primary morphogenesis of compound leaves, leaf primordia after initiating from the flanks of the SAM expand laterally and develop secondary structures from specific meristematic regions at the leaf margin, termed marginal blastozones [<xref rid="B27-plants-03-00001" ref-type="bibr">27</xref>]. During secondary morphogenesis, leaves undergo extensive cell expansion and differentiation. Depending on the timing of expression, overexpression of <italic>KNOXI</italic> genes in tomato results in different effects on leaf shapes, consistent with a context-dependent role of <italic>KNOXI</italic> genes in promoting meristematic activity and preventing maturation [<xref rid="B20-plants-03-00001" ref-type="bibr">20</xref>]. </p><p>In contrast to KNOXI, the CINCINNATA (CIN)-like TCP transcription factor, LANCEOLATE (LA), restricts the activity of the leaf marginal blastozone in tomato. <italic>La-2</italic>, a dominant <italic>LA</italic> mutant, has simple leaves with uniform blades; whereas overexpression of miR319, which targets and downregulates several <italic>LA</italic>-like genes, results in compound leaves with indeterminate growth [<xref rid="B28-plants-03-00001" ref-type="bibr">28</xref>,<xref rid="B29-plants-03-00001" ref-type="bibr">29</xref>,<xref rid="B30-plants-03-00001" ref-type="bibr">30</xref>]. </p><p>The MYB domain protein encoded by the <italic>ARP</italic> gene, <italic>ASYMMETRIC LEAF1</italic> (<italic>AS1</italic>) in <italic>Arabidopsis</italic> (<italic>A. thaliana</italic>), has been shown to act together with the LATERAL ORGAN BOUNDARY (LOB) domain protein, AS2, to exclude expression of <italic>KNOXI</italic> genes in incipient leaf primordia. <italic>SHOOT APICAL MERISTEMLESS</italic> (<italic>STM</italic>), a <italic>KNOXI</italic> gene, acts, in turn, to exclude <italic>AS1</italic> expression in the SAM. These antagonistic interactions are not only important for the maintenance of the meristematic activity of the SAM, but also for the development of leaf primordia in <italic>Arabidopsis</italic>. In compound-leafed <italic>C. hirsuta</italic>, mutations in the <italic>AS1</italic> gene result in ectopic expression of <italic>STM</italic> and compound leaves with an increased order of complexity [<xref rid="B7-plants-03-00001" ref-type="bibr">7</xref>,<xref rid="B31-plants-03-00001" ref-type="bibr">31</xref>]. These results indicate that the MYB domain protein, ARP, also plays a role in compound leaf development by restricting the expression of <italic>KNOXI</italic> genes. However, the regulatory relationship between <italic>ARP</italic> and <italic>KNOXI</italic> genes is more complex in tomato [<xref rid="B32-plants-03-00001" ref-type="bibr">32</xref>]. It has been shown that downregulation of the tomato <italic>PHAN</italic> gene, <italic>SlPHAN</italic>, results in radialized or peltately-palmate compound leaves and a loss of the typical pinnate compound leaves of wild-type plants [<xref rid="B33-plants-03-00001" ref-type="bibr">33</xref>]. </p></sec><sec><title>3. Auxin Plays a Critical Role in the Initiation, Patterning and Morphogenesis of Compound Leaves</title><p>The plant hormone, auxin, plays a critical role in diverse plant growth and developmental processes, such as organogenesis, vascular tissue differentiation and tropisms. At the periphery of the SAM, convergence of the auxin efflux carrier PIN1 protein in the L1 layer mediates the formation of auxin maxima and marks the incipient sites of leaf primordia [<xref rid="B34-plants-03-00001" ref-type="bibr">34</xref>]. Furthermore, the spatiotemporal distribution of the convergence points and associated auxin maxima at the flanks of the SAM determines phyllotactic arrangements of leaves [<xref rid="B34-plants-03-00001" ref-type="bibr">34</xref>,<xref rid="B35-plants-03-00001" ref-type="bibr">35</xref>].</p><p>In compound-leafed species, including tomato, <italic>C. hirsuta</italic> and <italic>M. truncatula</italic>, auxin maxima and convergence points of PIN1 proteins coincide with leaf and leaflet initiation [<xref rid="B31-plants-03-00001" ref-type="bibr">31</xref>,<xref rid="B36-plants-03-00001" ref-type="bibr">36</xref>,<xref rid="B37-plants-03-00001" ref-type="bibr">37</xref>]. Whole-plant treatments with exogenous auxin lead to ectopic blade outgrowth along the leaf rachis [<xref rid="B31-plants-03-00001" ref-type="bibr">31</xref>], and intriguingly, local applications of auxin induce leaflet initiation [<xref rid="B31-plants-03-00001" ref-type="bibr">31</xref>,<xref rid="B36-plants-03-00001" ref-type="bibr">36</xref>]. On the other hand, treatments with auxin transport inhibitors or auxin antagonists result in simplification of leaf forms in pea, tomato and <italic>C. hirsuta</italic> [<xref rid="B31-plants-03-00001" ref-type="bibr">31</xref>,<xref rid="B36-plants-03-00001" ref-type="bibr">36</xref>,<xref rid="B38-plants-03-00001" ref-type="bibr">38</xref>,<xref rid="B39-plants-03-00001" ref-type="bibr">39</xref>]. Consistent with physiological studies, <italic>C. hirsuta</italic><italic>pin1</italic> mutants develop simple leaves [<xref rid="B31-plants-03-00001" ref-type="bibr">31</xref>]. Interestingly, loss-of-function mutations of the <italic>Medicago</italic>
+<italic>PIN10</italic> gene (<italic>MtPIN10</italic>), the <italic>PIN1</italic> ortholog, result in compound leaves with various numbers of leaflets, consistent with fusion of leaf primordia at various developmental stages [<xref rid="B40-plants-03-00001" ref-type="bibr">40</xref>], and with smooth leaf margins [<xref rid="B37-plants-03-00001" ref-type="bibr">37</xref>,<xref rid="B40-plants-03-00001" ref-type="bibr">40</xref>]. Collectively, these studies uncover that auxin maxima generated by convergence points of auxin efflux transporters direct leaf and leaflet initiation. In addition, it has been shown that auxin is required for KNOXI-mediated leaf dissection in tomato [<xref rid="B31-plants-03-00001" ref-type="bibr">31</xref>]. Together, these studies support that the auxin activity maxima are one of the earliest molecular events for leaflet initiation. Previous studies have shown that auxin signaling and response play a role in leaf dissection. It is known that auxin responsive Aux/IAA proteins negatively regulate AUXIN RESPONSE FACTOR (ARF) protein activities and, thereby, repress auxin response [<xref rid="B41-plants-03-00001" ref-type="bibr">41</xref>,<xref rid="B42-plants-03-00001" ref-type="bibr">42</xref>]. Downregulation of <italic>SlIAA9</italic> in antisense transgenic plants results in simplified leaves, phenocopying a spontaneous tomato mutant, <italic>entire</italic> (<italic>e</italic>), caused by a single base deletion in the <italic>SlIAA9</italic> gene [<xref rid="B43-plants-03-00001" ref-type="bibr">43</xref>,<xref rid="B44-plants-03-00001" ref-type="bibr">44</xref>]. <italic>E</italic>/<italic>SlIAA9</italic> is expressed in the leaf marginal blastozone and vascular tissues [<xref rid="B36-plants-03-00001" ref-type="bibr">36</xref>,<xref rid="B45-plants-03-00001" ref-type="bibr">45</xref>] and functions to restrict lamina outgrowth between leaflets [<xref rid="B36-plants-03-00001" ref-type="bibr">36</xref>,<xref rid="B45-plants-03-00001" ref-type="bibr">45</xref>]. SlARF10, a positive regulator of auxin response, functions as a repressor of lamina outgrowth in tomato [<xref rid="B46-plants-03-00001" ref-type="bibr">46</xref>], further supporting a role of auxin response in leaf blade outgrowth. Recently, E/SlIAA9 has been shown to directly interact with the auxin receptors, SlTIR1 and SlAFB6, and is subject to degradation by the ubiquitin 26S proteasome SCF<sup>TIR1/AFB</sup> in an auxin-dependent manner, and these resemble the Aux/IAA proteins in <italic>A. thaliana</italic> [<xref rid="B45-plants-03-00001" ref-type="bibr">45</xref>,<xref rid="B47-plants-03-00001" ref-type="bibr">47</xref>,<xref rid="B48-plants-03-00001" ref-type="bibr">48</xref>]. Similarly, tomato <italic>goblet</italic> (<italic>gob</italic>) mutants of the <italic>NO APICAL MERISTEM</italic> (<italic>NAM</italic>)/<italic>CUP-SHAPED COTYLEDON</italic> (<italic>CUC</italic>) gene also develop primarily primary leaflets [<xref rid="B49-plants-03-00001" ref-type="bibr">49</xref>]. In both <italic>e</italic> and <italic>gob</italic> mutants, the auxin signal, as shown by the DR5 auxin response sensor, expands to the entire leaf margin [<xref rid="B45-plants-03-00001" ref-type="bibr">45</xref>]. Inhibition of auxin transport and activity suppresses the <italic>GOB</italic> overexpression phenotype [<xref rid="B45-plants-03-00001" ref-type="bibr">45</xref>]. These observations are consistent with the hypothesis that proper leaflet initiation and separation requires distinct boundaries between regions of lamina growth and adjacent regions of growth suppression [<xref rid="B45-plants-03-00001" ref-type="bibr">45</xref>]. </p></sec><sec><title>4. Gibberellic Acid and Cytokinin in Compound Leaf Development</title><p>Gibberellic acid (GA) and cytokinin (CK) are both growth-promoting hormones, but they function through different mechanisms: CK primarily promotes cell division, and GA regulates cell expansion and differentiation. Interestingly, in many different developmental processes, they act antagonistically, and these antagonistic interactions may occur during biosynthesis, catabolism or signaling [<xref rid="B50-plants-03-00001" ref-type="bibr">50</xref>,<xref rid="B51-plants-03-00001" ref-type="bibr">51</xref>,<xref rid="B52-plants-03-00001" ref-type="bibr">52</xref>,<xref rid="B53-plants-03-00001" ref-type="bibr">53</xref>,<xref rid="B54-plants-03-00001" ref-type="bibr">54</xref>]. In the SAM, CK suppresses GA-mediated cell differentiation to maintain the indeterminacy of the meristem, whereas GA represses CK-mediated cell division at the sites of leaf initiation, allowing leaf organogenesis [<xref rid="B55-plants-03-00001" ref-type="bibr">55</xref>]. It is known that KNOXI proteins promote and maintain the activity of the SAM through activating the biosynthesis of CKs, which, in turn, represses GA activities [<xref rid="B54-plants-03-00001" ref-type="bibr">54</xref>,<xref rid="B56-plants-03-00001" ref-type="bibr">56</xref>,<xref rid="B57-plants-03-00001" ref-type="bibr">57</xref>]. </p><p>The involvement of GA in dissected leaf development was proposed as early as the 1950s. Recent physiological, genetic and molecular studies support and further refine the earlier studies. It has been observed that exogenous applications of GA to developing leaves lead to a simplified leaf form and smooth leaf margins in tomato [<xref rid="B56-plants-03-00001" ref-type="bibr">56</xref>,<xref rid="B58-plants-03-00001" ref-type="bibr">58</xref>,<xref rid="B59-plants-03-00001" ref-type="bibr">59</xref>,<xref rid="B60-plants-03-00001" ref-type="bibr">60</xref>]. 2-oxoglutarate-dependent dioxygenase, GA20 oxidase (GA20ox), is a key enzyme in the GA biosynthesis [<xref rid="B61-plants-03-00001" ref-type="bibr">61</xref>,<xref rid="B62-plants-03-00001" ref-type="bibr">62</xref>], whereas GA2 oxidase (GA2ox) deactivates bioactive GAs [<xref rid="B63-plants-03-00001" ref-type="bibr">63</xref>,<xref rid="B64-plants-03-00001" ref-type="bibr">64</xref>]. These genes coordinately regulate levels of bioactive GAs in plants and, thus, determine the homeostasis of GAs. Overexpression of <italic>SlGA2ox4</italic> in tomato leaves results in an increased leaf complexity [<xref rid="B29-plants-03-00001" ref-type="bibr">29</xref>]. These observations support that dissected leaf morphogenesis is sensitive to alterations in the GA activity in tomato.</p><p>GA regulates plant growth and development by suppressing the growth repressors, DELLA proteins [<xref rid="B65-plants-03-00001" ref-type="bibr">65</xref>,<xref rid="B66-plants-03-00001" ref-type="bibr">66</xref>]. A mutation in <italic>PROCERA</italic> (<italic>PRO</italic>), encoding a DELLA protein, results in simplified leaves and smooth leaf margins, supporting that the DELLA-dependent GA signaling negatively regulates leaflet initiation during early leaf development in tomato [<xref rid="B67-plants-03-00001" ref-type="bibr">67</xref>,<xref rid="B68-plants-03-00001" ref-type="bibr">68</xref>,<xref rid="B69-plants-03-00001" ref-type="bibr">69</xref>,<xref rid="B70-plants-03-00001" ref-type="bibr">70</xref>,<xref rid="B71-plants-03-00001" ref-type="bibr">71</xref>,<xref rid="B72-plants-03-00001" ref-type="bibr">72</xref>]. It has been postulated that DELLA proteins regulate the leaflet number by defining the appropriate timing for leaflet initiation. </p><p>Up until now, it is still not fully understood how GA participates in dissected leaf development. Experimental evidence supports that GA signaling partly mediates the function of KNOXI proteins. On the other hand, KNOXI proteins directly repress the expression of GA20ox and activate the expression of GA2ox in both simple- and compound-leafed species [<xref rid="B52-plants-03-00001" ref-type="bibr">52</xref>,<xref rid="B54-plants-03-00001" ref-type="bibr">54</xref>,<xref rid="B56-plants-03-00001" ref-type="bibr">56</xref>,<xref rid="B73-plants-03-00001" ref-type="bibr">73</xref>]. Thus, KNOXI proteins antagonize the GA activity. Genetic analyses indicate that altered GA homeostasis or signaling modulates <italic>KNOXI</italic> misexpression phenotypes in <italic>A. thaliana</italic>. Moreover, exogenous GA applications or the <italic>pro</italic> mutations suppress the super-compound leaf phenotype in the tomato dominant mutant, <italic>Mouse ears</italic> (<italic>Me</italic>), in which the tomato <italic>KNOXI</italic> gene, <italic>Tkn2</italic>, is misexpressed [<xref rid="B56-plants-03-00001" ref-type="bibr">56</xref>]. Although reducing the GA activity itself is not sufficient to increase the leaflet number in wild-type tomato, it enhances the competence to develop more leaflets of <italic>Me</italic> or <italic>Curl</italic> (<italic>Cu</italic>) mutants [<xref rid="B54-plants-03-00001" ref-type="bibr">54</xref>]. The recessive loss-of-function <italic>clausa</italic> (<italic>clau</italic>) mutant, which fails to delimit <italic>KNOXI</italic> expression domains, displays elevated and broadened <italic>KNOXI</italic> expression and increased leaf complexity. Exogenous GA applications or <italic>pro</italic> mutations suppress the compound leaf phenotype of the <italic>clau</italic> mutant, whereas mutations that lead to GA deficiency act conversely, suggesting that GA signaling acts downstream of the endogenous <italic>KNOXI</italic> pathway in tomato [<xref rid="B54-plants-03-00001" ref-type="bibr">54</xref>]. Thus, KNOXI proteins function in the maintenance of the SAM and promote compound leaf development partly by repressing GA homeostasis and response.</p><p>GA signaling is considered to partly mediate the LANCEOLATE (LA) activity in tomato. As discussed earlier, the maintenance of the morphogenetic activity of the leaf marginal blastozone required for the elaboration of leaflets involves the positive regulators, KNOXI proteins, and the negative regulator, LA, in tomato. <italic>LA</italic> promotes determinate growth and is negatively regulated by miR319 [<xref rid="B30-plants-03-00001" ref-type="bibr">30</xref>]. Interestingly, GA-treated wild-type plants resemble the <italic>La-2</italic> mutant in leaf complexity, leaf margin serration, hypocotyl length and anthocyanin content [<xref rid="B29-plants-03-00001" ref-type="bibr">29</xref>]. Exogenous GA applications or constitutive GA responses conditioned by the <italic>pro</italic> mutation suppress the indeterminate leaf growth caused by overexpression of miR319. In addition, the long hypocotyl phenotype of the <italic>La-2</italic> mutant is suppressed by mutations that lead to GA deficiencies or by applications of GA biosynthesis inhibitors, further supporting that the gain-of-function phenotype of <italic>La-2</italic> is mediated by an increased GA activity [<xref rid="B29-plants-03-00001" ref-type="bibr">29</xref>]. Consistent with this, genes involved in the GA metabolism or response is differentially regulated in the <italic>La-2</italic> mutant. Of particular interest among the differentially-regulated genes is <italic>SlGA2ox4</italic>. Overexpression of <italic>SlGA2ox4</italic> partially suppresses the simple-leaf phenotype of <italic>La-2</italic>. The relationship between the GA pathway and LA function appears to be evolutionarily conserved, at least in <italic>A. thaliana</italic> and tomato [<xref rid="B29-plants-03-00001" ref-type="bibr">29</xref>].</p><p>CK coordinates a wide range of plant developmental processes [<xref rid="B55-plants-03-00001" ref-type="bibr">55</xref>,<xref rid="B74-plants-03-00001" ref-type="bibr">74</xref>]. During shoot development, CK positively regulates the size and activity of the SAM [<xref rid="B75-plants-03-00001" ref-type="bibr">75</xref>,<xref rid="B76-plants-03-00001" ref-type="bibr">76</xref>,<xref rid="B77-plants-03-00001" ref-type="bibr">77</xref>,<xref rid="B78-plants-03-00001" ref-type="bibr">78</xref>,<xref rid="B79-plants-03-00001" ref-type="bibr">79</xref>,<xref rid="B80-plants-03-00001" ref-type="bibr">80</xref>,<xref rid="B81-plants-03-00001" ref-type="bibr">81</xref>]. Interactions between genes related to CK biosynthesis and response and genes required for the SAM maintenance exist at various levels. As discussed, KNOXI proteins activate CK biosynthesis [<xref rid="B54-plants-03-00001" ref-type="bibr">54</xref>,<xref rid="B57-plants-03-00001" ref-type="bibr">57</xref>]. In turn, CK regulates expression and activity of <italic>WUSCHEL</italic>, a key regulator of the meristem [<xref rid="B77-plants-03-00001" ref-type="bibr">77</xref>,<xref rid="B82-plants-03-00001" ref-type="bibr">82</xref>]. </p><p>Recently, it has been reported that cytokinin regulates dissected leaf morphogenesis in tomato [<xref rid="B83-plants-03-00001" ref-type="bibr">83</xref>]. Manipulation of the endogenous CK level by ectopic expression of the CK metabolic genes, <italic>AtIPT7</italic> and <italic>AtCKX3</italic>, in developing leaf primordia alters leaf complexity in tomato. This has been attributed to CK regulation of the window of morphogenetic activity at leaf margins. Consistent with this, an extended CK response in leaf margins, as indicated by the upregulation of the CK response markers, RRs, has been shown to correlate with an increased leaf complexity [<xref rid="B83-plants-03-00001" ref-type="bibr">83</xref>]. Both local applications of auxin to developing leaf primordia and mutations in <italic>SlIAA9</italic> encoding an auxin response repressor suppress the <italic>AtIPT7</italic>-induced supercompound leaf phenotype, suggesting that CK regulation of dissected leaf morphogenesis requires a localized auxin response. Interestingly, auxin transport and distribution do not appear to be affected by alterations of the CK level. A decrease in the endogenous CK level suppresses and an increase in the CK level compensates for the effect of KNOXI on leaf complexity, supporting the notion that CK acts downstream of KNOXI proteins in dissected leaf development, similar to their interactions in the SAM [<xref rid="B83-plants-03-00001" ref-type="bibr">83</xref>]. Thus, CK positively regulates leaf complexity in tomato. </p><p>The antagonistic interactions between GA and CK are dependent on the GA/CK ratio rather than the levels of each hormone, at least in tomato [<xref rid="B60-plants-03-00001" ref-type="bibr">60</xref>]. Intriguingly, the interactions between GA and CK during compound leaf development do not appear to be dependent on the DELLA protein. Together, these results suggest that GA and CK act downstream of the KNOXI and LA proteins to fine-tune the morphogenetic window and, thereby, regulate compound leaf development in tomato.</p></sec><sec><title>5. Compound Leaf Development in Legumes</title><p>KNOXI proteins maintain the indeterminacy required for compound leaf development in most eudicot species, including tomato and <italic>C. hirsuta</italic>. However, in some leguminous plants (Fabaceae) that belong to the inverted repeat lacking clade (IRLC), <italic>UNIFOLIATA</italic> (<italic>UNI</italic>) in pea and <italic>SINGLE LEAFLET1</italic> (<italic>SGL1</italic>) in <italic>M. truncatula</italic>, encoding legume FLORICAULA (FLO)/LEAFY (LFY)-type transcription factors, have been shown to play a similar role in compound leaf development as <italic>KNOXI</italic> genes in tomato and <italic>C. hirsuta</italic> [<xref rid="B9-plants-03-00001" ref-type="bibr">9</xref>,<xref rid="B84-plants-03-00001" ref-type="bibr">84</xref>]. This is mainly due to the following observations. Firstly, <italic>KNOXI</italic> genes and encoded proteins are not expressed in leaves and leaf primordia and, therefore, do not likely play a role in compound leaf development in pea and <italic>Medicago</italic> [<xref rid="B9-plants-03-00001" ref-type="bibr">9</xref>,<xref rid="B13-plants-03-00001" ref-type="bibr">13</xref>,<xref rid="B85-plants-03-00001" ref-type="bibr">85</xref>,<xref rid="B86-plants-03-00001" ref-type="bibr">86</xref>], although a conflicting report shows that a low level of expression of <italic>KNOXI</italic> genes could be detected in developing leaves in pea and <italic>M. truncatula</italic> [<xref rid="B87-plants-03-00001" ref-type="bibr">87</xref>]. Secondly, pea <italic>uni</italic> and <italic>Medicago</italic>
+<italic>sgl1</italic> mutants exhibit simple leaves and <italic>Medicago</italic>
+<italic>palmate-like pentafoliata</italic> (<italic>palm1</italic>) mutants, in which <italic>SGL1</italic> is ectopically upregulated, exhibit an increased complexity of compound leaves [<xref rid="B88-plants-03-00001" ref-type="bibr">88</xref>]. Thirdly, a loss-of-function mutant of the <italic>Medicago</italic>
+<italic>KNOXI</italic> gene, <italic>BREVIPEDICELLUS</italic> (<italic>MtBP</italic>), does not exhibit compound leaf defects [<xref rid="B89-plants-03-00001" ref-type="bibr">89</xref>].</p><p><italic>M. truncatula</italic> has been selected as a model species for genetics and genomics studies in legumes, because it has a relatively small and diploid genome (~600 Mb), a short lifecycle and an available genetic transformation system. Recently, its genome has been sequenced [<xref rid="B90-plants-03-00001" ref-type="bibr">90</xref>]. Also available are several comprehensive mutant collections, including the ethyl methane sulfonate (EMS) collection [<xref rid="B91-plants-03-00001" ref-type="bibr">91</xref>], the fast neutron bombardment (FNB) deletion mutant collection [<xref rid="B86-plants-03-00001" ref-type="bibr">86</xref>,<xref rid="B92-plants-03-00001" ref-type="bibr">92</xref>,<xref rid="B93-plants-03-00001" ref-type="bibr">93</xref>] and the insertion mutant collections [<xref rid="B94-plants-03-00001" ref-type="bibr">94</xref>,<xref rid="B95-plants-03-00001" ref-type="bibr">95</xref>,<xref rid="B96-plants-03-00001" ref-type="bibr">96</xref>,<xref rid="B97-plants-03-00001" ref-type="bibr">97</xref>,<xref rid="B98-plants-03-00001" ref-type="bibr">98</xref>]. These mutant collections are excellent resources for forward and reverse genetic studies. </p><p>Similar to alfalfa (<italic>M. sativa</italic>) and soybean (<italic>Glycine max</italic>), <italic>M. truncatula</italic> plants exhibit trifoliate compound leaves. <italic>Medicago</italic>
+<italic>single leaflet1</italic> (<italic>sgl1</italic>) mutants fail to initiate lateral leaflets and exhibit only simple leaves, similar to pea <italic>uni</italic> mutants, and the mutant phenotypes are consistent with the role of SGL1/UNI in maintaining the morphogenetic activity at leaf margins to elaborate lateral leaflets (<xref ref-type="fig" rid="plants-03-00001-f001">Figure 1</xref>) [<xref rid="B9-plants-03-00001" ref-type="bibr">9</xref>,<xref rid="B84-plants-03-00001" ref-type="bibr">84</xref>]. It has been shown that <italic>SGL1</italic> also plays a role in the proximal-distal axis development, because <italic>sgl1</italic> mutants exhibit significantly reduced petioles [<xref rid="B9-plants-03-00001" ref-type="bibr">9</xref>,<xref rid="B86-plants-03-00001" ref-type="bibr">86</xref>]. </p><fig id="plants-03-00001-f001" position="float"><label>Figure 1</label><caption><p>Compound leaf development in inverted repeat lacking clade (IRLC) legumes. Based on the understanding of compound leaf development in <italic>Medicago truncatula</italic> and pea (<italic>Pisum sativa</italic>) belonging to the IRLC clade of legumes, a genetic model that governs compound leaf development is proposed. The class I homeodomain transcription factor <italic>KNOXI</italic> genes are expressed in the shoot apical meristem (SAM), but their expression is excluded from incipient sites of leaf primordia at the periphery of SAM and subsequent leaf primordia. Loss-of-function mutants of the <italic>FLO/LFY</italic>/<italic>UNI</italic> ortholog, <italic>SGL1</italic>, exhibit simple leaves with reduced petioles, consistent with the role of <italic>SGL1/UNI</italic> in lateral leaflet initiation and leaf proximodistal axis development. The C2H2 zinc finger transcription factor, PALM1, directly represses the expression of <italic>SGL1</italic> to regulate its spatiotemporal expression domain. <italic>FCL1</italic>, encoding a class M KNOX protein, is required for the leaf proximodistal axis development and leaflet boundary formation. <italic>FCL1</italic> and <italic>SGL1</italic> act in parallel pathways, and both are required for leaf petiole development. <italic>Medicago</italic> auxin efflux PIN10 protein (MtPIN10), the <italic>Arabidopsis</italic> PIN1 ortholog, mediates auxin activity maxima that precede and are required for the initiation of leaf and leaflet primordia and leaflet serration at the distal leaflet margin. The <italic>Medicago</italic>
+<italic>NAM</italic>/<italic>CUC</italic> gene, <italic>MtNAM</italic>, functions in the development of lateral organ boundaries.</p></caption><graphic xlink:href="plants-03-00001-g001"/></fig><p>In contrast to the <italic>sgl1</italic> mutants with simple leaves, <italic>Medicago</italic>
+<italic>palm1</italic> mutants develop dissected leaves with five leaflets clustered at the leaf tip and increased petioles [<xref rid="B88-plants-03-00001" ref-type="bibr">88</xref>]. The appearance of two extra lateral leaflets occurs at the P3 stage of leaf primordia [<xref rid="B88-plants-03-00001" ref-type="bibr">88</xref>]. <italic>PALM1</italic> encodes a novel transcription factor with an <italic>N</italic>-terminal Cys(2)His(2) zinc finger DNA-binding domain [<xref rid="B100-plants-03-00001" ref-type="bibr">100</xref>] and a <italic>C</italic>-terminal EAR transcription repressor domain [<xref rid="B88-plants-03-00001" ref-type="bibr">88</xref>,<xref rid="B100-plants-03-00001" ref-type="bibr">100</xref>,<xref rid="B101-plants-03-00001" ref-type="bibr">101</xref>]. PALM1 binds to a specific sequence located in the promoter region of <italic>SGL1</italic> and negatively regulates the spatiotemporal expression of <italic>SGL1</italic>. Double mutant analysis shows that <italic>SGL1</italic> is required for the development of lateral leaflets in the <italic>palm1</italic> background. Thus, the intricate interactions between <italic>PALM1</italic> and <italic>SGL1</italic> determine the trifoliate leaf form in <italic>M. truncatula</italic> (<xref ref-type="fig" rid="plants-03-00001-f001">Figure 1</xref>). Intriguingly, ectopic expression of <italic>PALM1</italic> completely suppresses leaf lobing phenotypes of <italic>A. thaliana</italic> plants that overexpress the <italic>KNOXI</italic> gene, <italic>KNAT1</italic>. This suggests that although KNOXI proteins are not associated with compound leaf development in <italic>M. truncatula</italic>, <italic>PALM1</italic> has the capacity to negatively regulate downstream targets or regulatory networks that are responsive to KNOXI activities. An extension of this hypothesis is that the negative regulation of KNOXI activities by <italic>PALM1</italic> orthologs may be operational in non-IRLC legumes, in which KNOXI proteins may play a role in leaf development. Phylogenetic analysis shows that <italic>PALM1</italic> homologous sequences exist in diverse species, ranging from closely-related legumes to lower land plants [<xref rid="B101-plants-03-00001" ref-type="bibr">101</xref>], suggesting an ancient origin and divergent function of <italic>PALM1</italic> in the development of different leaf forms. Interestingly, loss-of-function of <italic>PALM1</italic> also results in the loss of epicuticular wax crystals on the abaxial leaf surface, suggesting a role of <italic>PALM1</italic> in epicuticular wax biosynthesis and/or distribution [<xref rid="B102-plants-03-00001" ref-type="bibr">102</xref>]. </p><p>Recently, a class M <italic>KNOX</italic> gene, <italic>FUSED COMPOUND LEAF1</italic> (<italic>FCL1</italic>) has been shown to play a positive role in boundary and proximodistal axis development of compound leaves in <italic>M. truncatula</italic> [<xref rid="B86-plants-03-00001" ref-type="bibr">86</xref>]. Positional cloning and genetic complementation tests reveal that <italic>FCL1</italic> encodes a class M KNOX protein, with a MEINOX domain, but without the DNA-binding homeodomain normally present in the canonical KNOXI proteins. Double mutant analyses show that <italic>fcl1</italic> is epistatic to <italic>palm1</italic>, and on the other hand, <italic>sgl1</italic> is epistatic to <italic>fcl1</italic> in leaf complexity; in terms of petiole development, <italic>SGL1</italic> and <italic>FCL1</italic> act additively. It is not yet clear how <italic>FCL1</italic> regulates compound leaf development in <italic>M. truncatula</italic>. Class M KNOX genes are also found in <italic>Arabidopsis</italic> and tomato [<xref rid="B103-plants-03-00001" ref-type="bibr">103</xref>,<xref rid="B104-plants-03-00001" ref-type="bibr">104</xref>]. It has been shown that the encoded proteins form heterodimers with BEL1-like homeodomain (BELL) proteins that themselves are KNOXI-interacting partners and, thereby, interfere with nuclear targeting and downstream regulatory networks of KNOXI-BELL complexes [<xref rid="B103-plants-03-00001" ref-type="bibr">103</xref>,<xref rid="B104-plants-03-00001" ref-type="bibr">104</xref>]. Although no loss-of-function mutants have been isolated from <italic>A. thaliana</italic> and tomato, ectopic expression of <italic>KNATM-B</italic> results in elongated petioles and narrow, shorter and serrated leaves in <italic>Arabidopsis</italic> [<xref rid="B104-plants-03-00001" ref-type="bibr">104</xref>]. In tomato, a semi-dominant <italic>Petroselinum</italic> (<italic>Pts</italic>) mutant that overexpresses the tomato class M <italic>KNOX</italic> gene, <italic>PTS/TKD1</italic>, due to a promoter mutation, exhibits a proliferation of compound leaves, affecting both primary and secondary leaflets [<xref rid="B103-plants-03-00001" ref-type="bibr">103</xref>]. In <italic>M. truncatula</italic>, the canonical <italic>KNOXI</italic> genes are not expressed in the leaf primordia of wild-type and <italic>fcl1</italic> mutants [<xref rid="B86-plants-03-00001" ref-type="bibr">86</xref>]. It is unlikely that FCL1 interferes with the function of the canonical KNOXI proteins during leaf development. However, FCL1 has been shown to interact in a yeast two-hybrid system with a subset of the <italic>Arabidopsis</italic> BELL homeodomain proteins, albeit with slightly different substrate specificities from KNATM-B [<xref rid="B86-plants-03-00001" ref-type="bibr">86</xref>]. It is plausible that FCL1 plays a role in compound leaf development through interactions with specific BELL proteins in <italic>M. truncatula</italic>. The <italic>fcl1</italic> mutant phenotypes suggest that FCL1 is required to maintain a window of organogenetic activities at leaf margins. Loss-of-function mutations of <italic>FCL1</italic> shorten the window of organogenetic activities and promote precocious leaf maturation, leading to leaflet fusion and clustering and a reduction in petiole length (<xref ref-type="fig" rid="plants-03-00001-f001">Figure 1</xref>). </p><p><italic>MtPIN10</italic>, encoding an auxin efflux carrier protein orthologous to the <italic>Arabidopsis</italic> PIN1 protein, has been shown to play a key role in lateral organ development in <italic>M. truncatula</italic> [<xref rid="B37-plants-03-00001" ref-type="bibr">37</xref>,<xref rid="B40-plants-03-00001" ref-type="bibr">40</xref>]. <italic>Medicago</italic>
+<italic>pin10</italic> mutants (also named <italic>smooth leaf margin1</italic> or <italic>slm1</italic>) exhibit pleiotropic phenotypes, including an increased number of cotyledons, an increase in compound leaf complexity, smooth leaf margins, altered phyllotaxy and defective flower development. <italic>Trans</italic>-species genetic complementation studies demonstrate that MtPIN10 and <italic>Arabidopsis</italic> PIN1 are functional orthologs. Consistent with previous studies on PIN1 orthologs in compound-leafed species, MtPIN10/SLM1 mediates local auxin activity maxima in incipient sites of leaf primordia and leaflet serration in <italic>M. truncatula</italic> (<xref ref-type="fig" rid="plants-03-00001-f001">Figure 1</xref>). The various compound leaf phenotypes observed in the <italic>mtpin10</italic> mutants have been attributed to a failure in separating leaf primordia at the flanks of the SAM, which leads to the fusion of leaf primordia at various developmental stages [<xref rid="B40-plants-03-00001" ref-type="bibr">40</xref>]. </p><p>Boundary genes are required for the separation of leaflets. As discussed earlier, the <italic>NAM/CUC</italic> genes, from the large and evolutionarily conserved family of NAC transcription factor genes, specify organ boundaries in a diverse range of eudicot species [<xref rid="B105-plants-03-00001" ref-type="bibr">105</xref>]. The <italic>M. truncatula</italic>
+<italic>NAM/CUC2</italic> ortholog<italic>, NO APICAL MERISTEM</italic> (<italic>MtNAM</italic>), has been shown to exert a similar function as <italic>NAM/CUC</italic> genes in other species [<xref rid="B106-plants-03-00001" ref-type="bibr">106</xref>]<italic>.</italic> Besides the conserved function in organ separation, <italic>MtNAM</italic> has been shown to play a role in floral organ identity regulation.</p></sec><sec><title>6. Perspective and Biological Significance of Leaf Development Studies in <italic>M. truncatula</italic></title><p>Because of the availability of a high-quality genome sequence, orthologous genes of key regulators of compound leaf development from other species can be, in most cases, identified in <italic>M. truncatula</italic>. Conservation and divergence can be further analyzed using protein coding and flanking sequences and synteny information across species. Reverse genetic screening is available to isolate mutant alleles of the orthologous genes, for phenotypic analysis. Genetic interactions between different compound leaf regulators can also be explored by double mutant analysis. These phylogenetic, genetic and functional studies are thus far used to dissect and compare gene regulatory networks controlling compound leaf development in <italic>M. truncatula</italic> and other species. On the other hand, the forward genetic approach has been used to isolate and characterize novel mutants with defects in leaf form, shape or patterning. Collectively, these ongoing studies will likely reveal new insight into novel regulators or the deployment of conserved regulators of compound leaf development. Recently, small RNAs, including microRNA and <italic>trans</italic>-acting small interfering RNA (<italic>t</italic>a-siRNA), known to play a role in plant growth, development and responses to the environment [<xref rid="B107-plants-03-00001" ref-type="bibr">107</xref>,<xref rid="B108-plants-03-00001" ref-type="bibr">108</xref>], have also been shown to regulate dissected leaf development [<xref rid="B30-plants-03-00001" ref-type="bibr">30</xref>,<xref rid="B109-plants-03-00001" ref-type="bibr">109</xref>,<xref rid="B110-plants-03-00001" ref-type="bibr">110</xref>,<xref rid="B111-plants-03-00001" ref-type="bibr">111</xref>]. It is foreseeable that the small RNA pathways will also be identified in forward or reverse genetic screens of compound leaf mutants in <italic>M. truncatula</italic>. </p><p>Leguminous plants, belonging to the third largest family of flowering plants, include many important grain and forage crops, such as soybean (<italic>Glycine max</italic>), lentil (<italic>Lens culinaris</italic>) and alfalfa (<italic>M. sativa</italic>). Various leaf forms, such as pinnate, palmate or higher-ordered compound leaf forms, are found in legume species. However, it is not yet known how these different leaf forms are regulated at the molecular level. Studies of compound leaf development in <italic>M. truncatula</italic> not only expand our knowledge of the regulatory mechanisms that underlie compound leaf development in legumes, but also provide the basis for genetic improvements of the yield and quality of legume crops that are an integral part of sustainable agriculture. </p></sec><sec><title>7. Conclusions</title><p>Studies in tomato, <italic>C. hirsuta</italic> and legumes with compound leaves and <italic>Arabidopsis</italic> and maize with simple leaves unravel that several conserved genetic frameworks are deployed in different morphogenetic processes, including leaf margin serration and patterning during simple and dissected leaf development in diverse species. One is the auxin efflux PIN protein-mediated auxin concentration gradients, or activity maxima, which precede the initiation of leaves from the flanks of the SAM and leaflets from leaf marginal blastozones and serrations from leaf margins. Another one involves the homeodomain KNOXI proteins that promote indeterminacy and the CIN-like TCP protein that promotes leaf maturation. GA and CK act downstream of KNOXI and TCP to fine-tune the morphogenetic activity for compound leaf development. The NAM/CUC proteins, controlling the organ boundary, also play a role in compound leaf development by suppressing the auxin signal between regions of lamina outgrowth. </p><p>Interestingly, SGL1 and PALM1 proteins fine-tune the morphogenetic activity at leaf margins and control compound leaf development in <italic>M. truncatula</italic>, which belongs to the IRLC clade of legumes (<xref ref-type="fig" rid="plants-03-00001-f001">Figure 1</xref>). In IRLC legumes, KNOXI proteins are not recruited in compound leaf development. However, the processes involving PIN-mediated auxin activity maxima and NAM/CUC proteins are involved in compound leaf development in <italic>M. truncatula</italic>. Intriguingly, a class M KNOX protein with the MEINOX domain, but without the DNA-binding homeodomain, plays a role in trifoliate leaf development. It is foreseeable that future studies in areas of gene regulatory networks, small RNAs and plant growth regulators will expand our knowledge on the origin and evolution of dissected leaves in angiosperm.</p></sec></body><back><ack><title>Acknowledgments</title><p>Funding of this work was provided in part by the Samuel Roberts Noble Foundation, National Science Foundation (IOS-1127155) and Oklahoma Center for The Advancement of Science and Technology (PS12-036).</p></ack><notes><title>Conflicts of Interest</title><p>The authors declare no conflict of interest.</p></notes><ref-list><title>References</title><ref id="B1-plants-03-00001"><label>1.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nealson</surname><given-names>K.</given-names></name><name><surname>Conrad</surname><given-names>P.</given-names></name></person-group>
+<article-title>Life: Past, present and future</article-title>
+<source>Phil. Trans. R. Soc. B</source>
+<year>1999</year>
+<volume>354</volume>
+<fpage>1923</fpage>
+<lpage>1939</lpage>
+<pub-id pub-id-type="doi">10.1098/rstb.1999.0532</pub-id>
+<pub-id pub-id-type="pmid">10670014</pub-id></element-citation></ref><ref id="B2-plants-03-00001"><label>2.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Field</surname><given-names>C.</given-names></name><name><surname>Behrenfeld</surname><given-names>M.</given-names></name><name><surname>Randerson</surname><given-names>J.</given-names></name><name><surname>Falkowski</surname><given-names>P.</given-names></name></person-group>
+<article-title>Primary production of the biosphere: Integrating terrestrial and oceanic components</article-title>
+<source>Science</source>
+<year>1998</year>
+<volume>281</volume>
+<fpage>237</fpage>
+<lpage>240</lpage>
+<pub-id pub-id-type="doi">10.1126/science.281.5374.237</pub-id>
+<pub-id pub-id-type="pmid">9657713</pub-id></element-citation></ref><ref id="B3-plants-03-00001"><label>3.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zimmermann</surname><given-names>W.</given-names></name></person-group>
+<article-title>Main results of the telome theory</article-title>
+<source>Palaeobotanist</source>
+<year>1952</year>
+<volume>1</volume>
+<fpage>456</fpage>
+<lpage>470</lpage>
+</element-citation></ref><ref id="B4-plants-03-00001"><label>4.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Champagne</surname><given-names>C.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>Compound leaves: Equal to the sum of their parts?</article-title>
+<source>Development</source>
+<year>2004</year>
+<volume>131</volume>
+<fpage>4401</fpage>
+<lpage>4412</lpage>
+<pub-id pub-id-type="doi">10.1242/dev.01338</pub-id>
+<pub-id pub-id-type="pmid">15342471</pub-id></element-citation></ref><ref id="B5-plants-03-00001"><label>5.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Goliber</surname><given-names>T.</given-names></name><name><surname>Kessler</surname><given-names>S.</given-names></name><name><surname>Chen</surname><given-names>J.J.</given-names></name><name><surname>Bharathan</surname><given-names>G.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>Genetic, molecular, and morphological analysis of compound leaf development</article-title>
+<source>Curr. Top. Dev. Biol.</source>
+<year>1999</year>
+<volume>43</volume>
+<fpage>259</fpage>
+<lpage>290</lpage>
+<pub-id pub-id-type="pmid">9891889</pub-id></element-citation></ref><ref id="B6-plants-03-00001"><label>6.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Allsopp</surname><given-names>A.</given-names></name></person-group>
+<article-title>Land and water forms: Physiological aspects</article-title>
+<source>Handb. Pflanzenphysiol.</source>
+<year>1965</year>
+<volume>15</volume>
+<fpage>1236</fpage>
+<lpage>1255</lpage>
+</element-citation></ref><ref id="B7-plants-03-00001"><label>7.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>The genetic basis for differences in leaf form between <italic>Arabidopsis thaliana</italic> and its wild relative <italic>Cardamine hirsuta</italic></article-title>
+<source>Nat. Genet.</source>
+<year>2006</year>
+<volume>38</volume>
+<fpage>942</fpage>
+<lpage>947</lpage>
+<pub-id pub-id-type="doi">10.1038/ng1835</pub-id>
+<pub-id pub-id-type="pmid">16823378</pub-id></element-citation></ref><ref id="B8-plants-03-00001"><label>8.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Merrill</surname><given-names>E.</given-names></name></person-group>
+<article-title>Heteroblastic seedlings of green ash. I. Predictability of leaf form and primordial length</article-title>
+<source>Can. J. Bot.</source>
+<year>1986</year>
+<volume>64</volume>
+<fpage>2645</fpage>
+<lpage>2649</lpage>
+<pub-id pub-id-type="doi">10.1139/b86-348</pub-id>
+</element-citation></ref><ref id="B9-plants-03-00001"><label>9.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>H.</given-names></name><name><surname>Chen</surname><given-names>J.</given-names></name><name><surname>Wen</surname><given-names>J.</given-names></name><name><surname>Tadege</surname><given-names>M.</given-names></name><name><surname>Li</surname><given-names>G.</given-names></name><name><surname>Liu</surname><given-names>Y.</given-names></name><name><surname>Mysore</surname><given-names>K.S.</given-names></name><name><surname>Ratet</surname><given-names>P.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<article-title>Control of compound leaf development by <italic>FLORICAULA/LEAFY</italic> ortholog <italic>SINGLE LEAFLET1</italic> in <italic>Medicago truncatula</italic></article-title>
+<source>Plant Physiol.</source>
+<year>2008</year>
+<volume>146</volume>
+<fpage>1759</fpage>
+<lpage>1772</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.108.117044</pub-id>
+<pub-id pub-id-type="pmid">18287485</pub-id></element-citation></ref><ref id="B10-plants-03-00001"><label>10.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Givnish</surname><given-names>T.J.</given-names></name></person-group>
+<article-title>Comparative studies of leaf form: Assessing the relative roles of selective pressures and phylogenetic constraints</article-title>
+<source>New Phytol.</source>
+<year>1987</year>
+<volume>106</volume>
+<fpage>131</fpage>
+<lpage>160</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1469-8137.1987.tb04687.x</pub-id>
+</element-citation></ref><ref id="B11-plants-03-00001"><label>11.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Niinemets</surname><given-names>&#x000dc;.</given-names></name></person-group>
+<article-title>Are compound-leaved woody species inherently shade-intolerant? An analysis of species ecological requirements and foliar support costs</article-title>
+<source>Plant Ecol.</source>
+<year>1998</year>
+<volume>134</volume>
+<fpage>1</fpage>
+<lpage>11</lpage>
+<pub-id pub-id-type="doi">10.1023/A:1009773704558</pub-id>
+</element-citation></ref><ref id="B12-plants-03-00001"><label>12.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Popma</surname><given-names>J.</given-names></name><name><surname>Bongers</surname><given-names>F.</given-names></name><name><surname>Werger</surname><given-names>M.</given-names></name></person-group>
+<article-title>Gap-dependence and leaf characteristics of trees in a tropical lowland rain forest in Mexico</article-title>
+<source>Oikos</source>
+<year>1992</year>
+<volume>63</volume>
+<fpage>207</fpage>
+<lpage>214</lpage>
+<pub-id pub-id-type="doi">10.2307/3545380</pub-id>
+</element-citation></ref><ref id="B13-plants-03-00001"><label>13.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Champagne</surname><given-names>C.E.</given-names></name><name><surname>Goliber</surname><given-names>T.E.</given-names></name><name><surname>Wojciechowski</surname><given-names>M.F.</given-names></name><name><surname>Mei</surname><given-names>R.W.</given-names></name><name><surname>Townsley</surname><given-names>B.T.</given-names></name><name><surname>Wang</surname><given-names>K.</given-names></name><name><surname>Paz</surname><given-names>M.M.</given-names></name><name><surname>Geeta</surname><given-names>R.</given-names></name><name><surname>Sinha</surname><given-names>N.R.</given-names></name></person-group>
+<article-title>Compound leaf development and evolution in the legumes</article-title>
+<source>Plant Cell</source>
+<year>2007</year>
+<volume>19</volume>
+<fpage>3369</fpage>
+<lpage>3378</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.107.052886</pub-id>
+<pub-id pub-id-type="pmid">17993625</pub-id></element-citation></ref><ref id="B14-plants-03-00001"><label>14.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cronk</surname><given-names>Q.C.</given-names></name></person-group>
+<article-title>Plant evolution and development in a post-genomic context</article-title>
+<source>Nat. Rev. Genet.</source>
+<year>2001</year>
+<volume>2</volume>
+<fpage>607</fpage>
+<lpage>619</lpage>
+<pub-id pub-id-type="doi">10.1038/35084556</pub-id>
+<pub-id pub-id-type="pmid">11483985</pub-id></element-citation></ref><ref id="B15-plants-03-00001"><label>15.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bharathan</surname><given-names>G.</given-names></name><name><surname>Sinha</surname><given-names>N.R.</given-names></name></person-group>
+<article-title>The regulation of compound leaf development</article-title>
+<source>Plant Physiol.</source>
+<year>2001</year>
+<volume>127</volume>
+<fpage>1533</fpage>
+<lpage>1538</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.010867</pub-id>
+<pub-id pub-id-type="pmid">11743098</pub-id></element-citation></ref><ref id="B16-plants-03-00001"><label>16.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hake</surname><given-names>S.</given-names></name><name><surname>Smith</surname><given-names>H.M.</given-names></name><name><surname>Holtan</surname><given-names>H.</given-names></name><name><surname>Magnani</surname><given-names>E.</given-names></name><name><surname>Mele</surname><given-names>G.</given-names></name><name><surname>Ramirez</surname><given-names>J.</given-names></name></person-group>
+<article-title>The role of <italic>knox</italic> genes in plant development</article-title>
+<source>Annu. Rev. Cell Dev. Biol.</source>
+<year>2004</year>
+<volume>20</volume>
+<fpage>125</fpage>
+<lpage>151</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev.cellbio.20.031803.093824</pub-id>
+<pub-id pub-id-type="pmid">15473837</pub-id></element-citation></ref><ref id="B17-plants-03-00001"><label>17.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title><italic>KNOX</italic> genes: Versatile regulators of plant development and diversity</article-title>
+<source>Development</source>
+<year>2010</year>
+<volume>137</volume>
+<fpage>3153</fpage>
+<lpage>3165</lpage>
+<pub-id pub-id-type="doi">10.1242/dev.030049</pub-id>
+<pub-id pub-id-type="pmid">20823061</pub-id></element-citation></ref><ref id="B18-plants-03-00001"><label>18.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Long</surname><given-names>J.A.</given-names></name><name><surname>Moan</surname><given-names>E.I.</given-names></name><name><surname>Medford</surname><given-names>J.I.</given-names></name><name><surname>Barton</surname><given-names>M.K.</given-names></name></person-group>
+<article-title>A member of the KNOTTED class of homeodomain proteins encoded by the <italic>STM</italic> gene of Arabidopsis</article-title>
+<source>Nature</source>
+<year>1996</year>
+<volume>379</volume>
+<fpage>66</fpage>
+<lpage>69</lpage>
+<pub-id pub-id-type="doi">10.1038/379066a0</pub-id>
+<pub-id pub-id-type="pmid">8538741</pub-id></element-citation></ref><ref id="B19-plants-03-00001"><label>19.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Burko</surname><given-names>Y.</given-names></name><name><surname>Shleizer-Burko</surname><given-names>S.</given-names></name><name><surname>Yanai</surname><given-names>O.</given-names></name><name><surname>Shwartz</surname><given-names>I.</given-names></name><name><surname>Zelnik</surname><given-names>I.D.</given-names></name><name><surname>Jacob-Hirsch</surname><given-names>J.</given-names></name><name><surname>Kela</surname><given-names>I.</given-names></name><name><surname>Eshed-Williams</surname><given-names>L.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>A role for APETALA1/FRUITFULL transcription factors in tomato leaf development</article-title>
+<source>Plant Cell</source>
+<year>2013</year>
+<pub-id pub-id-type="doi">10.1105/tpc.1113.113035</pub-id>
+</element-citation></ref><ref id="B20-plants-03-00001"><label>20.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shani</surname><given-names>E.</given-names></name><name><surname>Burko</surname><given-names>Y.</given-names></name><name><surname>Ben-Yaakov</surname><given-names>L.</given-names></name><name><surname>Berger</surname><given-names>Y.</given-names></name><name><surname>Amsellem</surname><given-names>Z.</given-names></name><name><surname>Goldshmidt</surname><given-names>A.</given-names></name><name><surname>Sharon</surname><given-names>E.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>Stage-specific regulation of <italic>Solanum lycopersicum</italic> leaf maturation by class 1 KNOTTED1-LIKE HOMEOBOX proteins</article-title>
+<source>Plant Cell</source>
+<year>2009</year>
+<volume>21</volume>
+<fpage>3078</fpage>
+<lpage>3092</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.109.068148</pub-id>
+<pub-id pub-id-type="pmid">19820191</pub-id></element-citation></ref><ref id="B21-plants-03-00001"><label>21.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chen</surname><given-names>J.J.</given-names></name><name><surname>Janssen</surname><given-names>B.J.</given-names></name><name><surname>Williams</surname><given-names>A.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>A gene fusion at a homeobox locus: Alterations in leaf shape and implications for morphological evolution</article-title>
+<source>Plant Cell</source>
+<year>1997</year>
+<volume>9</volume>
+<fpage>1289</fpage>
+<lpage>1304</lpage>
+<pub-id pub-id-type="pmid">9286107</pub-id></element-citation></ref><ref id="B22-plants-03-00001"><label>22.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Parnis</surname><given-names>A.</given-names></name><name><surname>Cohen</surname><given-names>O.</given-names></name><name><surname>Gutfinger</surname><given-names>T.</given-names></name><name><surname>Hareven</surname><given-names>D.</given-names></name><name><surname>Zamir</surname><given-names>D.</given-names></name><name><surname>Lifschitz</surname><given-names>E.</given-names></name></person-group>
+<article-title>The dominant developmental mutants of tomato, <italic>Mouse-ear</italic> and <italic>Curl</italic>, are associated with distinct modes of abnormal transcriptional regulation of a <italic>Knotted</italic> gene</article-title>
+<source>Plant Cell</source>
+<year>1997</year>
+<volume>9</volume>
+<fpage>2143</fpage>
+<lpage>2158</lpage>
+<pub-id pub-id-type="pmid">9437860</pub-id></element-citation></ref><ref id="B23-plants-03-00001"><label>23.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hareven</surname><given-names>D.</given-names></name><name><surname>Gutfinger</surname><given-names>T.</given-names></name><name><surname>Parnis</surname><given-names>A.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name><name><surname>Lifschitz</surname><given-names>E.</given-names></name></person-group>
+<article-title>The making of a compound leaf: genetic manipulation of leaf architecture in tomato</article-title>
+<source>Cell</source>
+<year>1996</year>
+<volume>84</volume>
+<fpage>735</fpage>
+<lpage>744</lpage>
+<pub-id pub-id-type="doi">10.1016/S0092-8674(00)81051-X</pub-id>
+<pub-id pub-id-type="pmid">8625411</pub-id></element-citation></ref><ref id="B24-plants-03-00001"><label>24.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Janssen</surname><given-names>B.J.</given-names></name><name><surname>Lund</surname><given-names>L.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>Overexpression of a homeobox gene, <italic>LeT6</italic>, reveals indeterminate features in the tomato compound leaf</article-title>
+<source>Plant Physiol.</source>
+<year>1998</year>
+<volume>117</volume>
+<fpage>771</fpage>
+<lpage>786</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.117.3.771</pub-id>
+<pub-id pub-id-type="pmid">9662520</pub-id></element-citation></ref><ref id="B25-plants-03-00001"><label>25.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Efroni</surname><given-names>I.</given-names></name><name><surname>Blum</surname><given-names>E.</given-names></name><name><surname>Goldshmidt</surname><given-names>A.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name></person-group>
+<article-title>A protracted and dynamic maturation schedule underlies Arabidopsis leaf development</article-title>
+<source>Plant Cell</source>
+<year>2008</year>
+<volume>20</volume>
+<fpage>2293</fpage>
+<lpage>2306</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.107.057521</pub-id>
+<pub-id pub-id-type="pmid">18805992</pub-id></element-citation></ref><ref id="B26-plants-03-00001"><label>26.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Poethig</surname><given-names>R.S.</given-names></name></person-group>
+<article-title>Leaf morphogenesis in flowering plants</article-title>
+<source>Plant Cell</source>
+<year>1997</year>
+<volume>9</volume>
+<fpage>1077</fpage>
+<lpage>1087</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.9.7.1077</pub-id>
+<pub-id pub-id-type="pmid">9254931</pub-id></element-citation></ref><ref id="B27-plants-03-00001"><label>27.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hagemann</surname><given-names>W.</given-names></name><name><surname>Gleissberg</surname><given-names>S.</given-names></name></person-group>
+<article-title>Organogenetic capacity of leaves: The significance of marginal blastozones in angiosperms</article-title>
+<source>Plant Syst. Evol.</source>
+<year>1996</year>
+<volume>199</volume>
+<fpage>121</fpage>
+<lpage>152</lpage>
+<pub-id pub-id-type="doi">10.1007/BF00984901</pub-id>
+</element-citation></ref><ref id="B28-plants-03-00001"><label>28.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ben-Gera</surname><given-names>H.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>Auxin and LANCEOLATE affect leaf shape in tomato via different developmental processes</article-title>
+<source>Plant Signal Behav.</source>
+<year>2012</year>
+<volume>7</volume>
+<fpage>1255</fpage>
+<lpage>1257</lpage>
+<pub-id pub-id-type="doi">10.4161/psb.21550</pub-id>
+<pub-id pub-id-type="pmid">22902691</pub-id></element-citation></ref><ref id="B29-plants-03-00001"><label>29.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yanai</surname><given-names>O.</given-names></name><name><surname>Shani</surname><given-names>E.</given-names></name><name><surname>Russ</surname><given-names>D.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>Gibberellin partly mediates LANCEOLATE activity in tomato</article-title>
+<source>Plant J.</source>
+<year>2011</year>
+<volume>68</volume>
+<fpage>571</fpage>
+<lpage>582</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2011.04716.x</pub-id>
+<pub-id pub-id-type="pmid">21771122</pub-id></element-citation></ref><ref id="B30-plants-03-00001"><label>30.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ori</surname><given-names>N.</given-names></name><name><surname>Cohen</surname><given-names>A.R.</given-names></name><name><surname>Etzioni</surname><given-names>A.</given-names></name><name><surname>Brand</surname><given-names>A.</given-names></name><name><surname>Yanai</surname><given-names>O.</given-names></name><name><surname>Shleizer</surname><given-names>S.</given-names></name><name><surname>Menda</surname><given-names>N.</given-names></name><name><surname>Amsellem</surname><given-names>Z.</given-names></name><name><surname>Efroni</surname><given-names>I.</given-names></name><name><surname>Pekker</surname><given-names>I.</given-names></name><etal/></person-group>
+<article-title>Regulation of <italic>LANCEOLATE</italic> by miR319 is required for compound-leaf development in tomato</article-title>
+<source>Nat. Genet.</source>
+<year>2007</year>
+<volume>39</volume>
+<fpage>787</fpage>
+<lpage>791</lpage>
+<pub-id pub-id-type="doi">10.1038/ng2036</pub-id>
+<pub-id pub-id-type="pmid">17486095</pub-id></element-citation></ref><ref id="B31-plants-03-00001"><label>31.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Barkoulas</surname><given-names>M.</given-names></name><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Kougioumoutzi</surname><given-names>E.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>A developmental framework for dissected leaf formation in the <italic>Arabidopsis</italic> relative <italic>Cardamine hirsuta</italic></article-title>
+<source>Nat. Genet.</source>
+<year>2008</year>
+<volume>40</volume>
+<fpage>1136</fpage>
+<lpage>1141</lpage>
+<pub-id pub-id-type="doi">10.1038/ng.189</pub-id>
+<pub-id pub-id-type="pmid">19165928</pub-id></element-citation></ref><ref id="B32-plants-03-00001"><label>32.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zoulias</surname><given-names>N.</given-names></name><name><surname>Koenig</surname><given-names>D.</given-names></name><name><surname>Hamidi</surname><given-names>A.</given-names></name><name><surname>McCormick</surname><given-names>S.</given-names></name><name><surname>Kim</surname><given-names>M.</given-names></name></person-group>
+<article-title>A role for <italic>PHANTASTICA</italic> in medio-lateral regulation of adaxial domain development in tomato and tobacco leaves</article-title>
+<source>Ann. Bot.</source>
+<year>2012</year>
+<volume>109</volume>
+<fpage>407</fpage>
+<lpage>418</lpage>
+<pub-id pub-id-type="doi">10.1093/aob/mcr295</pub-id>
+<pub-id pub-id-type="pmid">22184618</pub-id></element-citation></ref><ref id="B33-plants-03-00001"><label>33.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kim</surname><given-names>M.</given-names></name><name><surname>McCormick</surname><given-names>S.</given-names></name><name><surname>Timmermans</surname><given-names>M.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>The expression domain of <italic>PHANTASTICA</italic> determines leaflet placement in compound leaves</article-title>
+<source>Nature</source>
+<year>2003</year>
+<volume>424</volume>
+<fpage>438</fpage>
+<lpage>443</lpage>
+<pub-id pub-id-type="doi">10.1038/nature01820</pub-id>
+<pub-id pub-id-type="pmid">12879073</pub-id></element-citation></ref><ref id="B34-plants-03-00001"><label>34.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Reinhardt</surname><given-names>D.</given-names></name><name><surname>Pesce</surname><given-names>E.-R.</given-names></name><name><surname>Stieger</surname><given-names>P.</given-names></name><name><surname>Mandel</surname><given-names>T.</given-names></name><name><surname>Baltensperger</surname><given-names>K.</given-names></name><name><surname>Bennett</surname><given-names>M.</given-names></name><name><surname>Traas</surname><given-names>J.</given-names></name><name><surname>Friml</surname><given-names>J.</given-names></name><name><surname>Kuhlemeier</surname><given-names>C.</given-names></name></person-group>
+<article-title>Regulation of phyllotaxis by polar auxin transport</article-title>
+<source>Nature</source>
+<year>2003</year>
+<volume>426</volume>
+<fpage>255</fpage>
+<lpage>260</lpage>
+<pub-id pub-id-type="doi">10.1038/nature02081</pub-id>
+<pub-id pub-id-type="pmid">14628043</pub-id></element-citation></ref><ref id="B35-plants-03-00001"><label>35.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pinon</surname><given-names>V.</given-names></name><name><surname>Prasad</surname><given-names>K.</given-names></name><name><surname>Grigg</surname><given-names>S.P.</given-names></name><name><surname>Sanchez-Perez</surname><given-names>G.F.</given-names></name><name><surname>Scheres</surname><given-names>B.</given-names></name></person-group>
+<article-title>Local auxin biosynthesis regulation by PLETHORA transcription factors controls phyllotaxis in <italic>Arabidopsis</italic></article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2012</year>
+<volume>110</volume>
+<fpage>1</fpage>
+<lpage>6</lpage>
+</element-citation></ref><ref id="B36-plants-03-00001"><label>36.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Koenig</surname><given-names>D.</given-names></name><name><surname>Bayer</surname><given-names>E.</given-names></name><name><surname>Kang</surname><given-names>J.</given-names></name><name><surname>Kuhlemeier</surname><given-names>C.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>Auxin patterns <italic>Solanum lycopersicum</italic> leaf morphogenesis</article-title>
+<source>Development</source>
+<year>2009</year>
+<volume>136</volume>
+<fpage>2997</fpage>
+<lpage>3006</lpage>
+<pub-id pub-id-type="doi">10.1242/dev.033811</pub-id>
+<pub-id pub-id-type="pmid">19666826</pub-id></element-citation></ref><ref id="B37-plants-03-00001"><label>37.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhou</surname><given-names>C.</given-names></name><name><surname>Han</surname><given-names>L.</given-names></name><name><surname>Hou</surname><given-names>C.</given-names></name><name><surname>Metelli</surname><given-names>A.</given-names></name><name><surname>Qi</surname><given-names>L.</given-names></name><name><surname>Tadege</surname><given-names>M.</given-names></name><name><surname>Mysore</surname><given-names>K.S.</given-names></name><name><surname>Wang</surname><given-names>Z.Y.</given-names></name></person-group>
+<article-title>Developmental analysis of a <italic>Medicago truncatula smooth leaf margin1</italic> mutant reveals context-dependent effects on compound leaf development</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>2106</fpage>
+<lpage>2124</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.111.085464</pub-id>
+<pub-id pub-id-type="pmid">21693694</pub-id></element-citation></ref><ref id="B38-plants-03-00001"><label>38.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>DeMason</surname><given-names>D.A.</given-names></name><name><surname>Chawla</surname><given-names>R.</given-names></name></person-group>
+<article-title>Roles for auxin during morphogenesis of the compound leaves of pea (<italic>Pisum sativum</italic>)</article-title>
+<source>Planta</source>
+<year>2004</year>
+<volume>218</volume>
+<fpage>435</fpage>
+<lpage>448</lpage>
+<pub-id pub-id-type="doi">10.1007/s00425-003-1100-x</pub-id>
+<pub-id pub-id-type="pmid">12942326</pub-id></element-citation></ref><ref id="B39-plants-03-00001"><label>39.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Avasarala</surname><given-names>S.</given-names></name><name><surname>Yang</surname><given-names>J.</given-names></name><name><surname>Caruso</surname><given-names>J.L.</given-names></name></person-group>
+<article-title>Production of phenocopies of the lanceolate mutant in tomato using polar auxin transport inhibitors</article-title>
+<source>J. Exp. Bot.</source>
+<year>1996</year>
+<volume>47</volume>
+<fpage>709</fpage>
+<lpage>712</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/47.5.709</pub-id>
+</element-citation></ref><ref id="B40-plants-03-00001"><label>40.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Peng</surname><given-names>J.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<article-title>Auxin efflux transporter MtPIN10 regulates compound leaf and flower development in <italic>Medicago truncatula</italic></article-title>
+<source>Plant Signal Behav.</source>
+<year>2011</year>
+<volume>6</volume>
+<fpage>1537</fpage>
+<lpage>1544</lpage>
+<pub-id pub-id-type="doi">10.4161/psb.6.10.17326</pub-id>
+<pub-id pub-id-type="pmid">21900740</pub-id></element-citation></ref><ref id="B41-plants-03-00001"><label>41.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kawamura</surname><given-names>E.</given-names></name><name><surname>Horiguchi</surname><given-names>G.</given-names></name><name><surname>Tsukaya</surname><given-names>H.</given-names></name></person-group>
+<article-title>Mechanisms of leaf tooth formation in <italic>Arabidopsis</italic></article-title>
+<source>Plant J.</source>
+<year>2010</year>
+<volume>62</volume>
+<fpage>429</fpage>
+<lpage>441</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2010.04156.x</pub-id>
+<pub-id pub-id-type="pmid">20128880</pub-id></element-citation></ref><ref id="B42-plants-03-00001"><label>42.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Quint</surname><given-names>M.</given-names></name><name><surname>Gray</surname><given-names>W.M.</given-names></name></person-group>
+<article-title>Auxin signaling</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2006</year>
+<volume>9</volume>
+<fpage>448</fpage>
+<lpage>453</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2006.07.006</pub-id>
+<pub-id pub-id-type="pmid">16877027</pub-id></element-citation></ref><ref id="B43-plants-03-00001"><label>43.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>H.</given-names></name><name><surname>Jones</surname><given-names>B.</given-names></name><name><surname>Li</surname><given-names>Z.</given-names></name><name><surname>Frasse</surname><given-names>P.</given-names></name><name><surname>Delalande</surname><given-names>C.</given-names></name><name><surname>Regad</surname><given-names>F.</given-names></name><name><surname>Chaabouni</surname><given-names>S.</given-names></name><name><surname>Latche</surname><given-names>A.</given-names></name><name><surname>Pech</surname><given-names>J.C.</given-names></name><name><surname>Bouzayen</surname><given-names>M.</given-names></name></person-group>
+<article-title>The tomato Aux/IAA transcription factor IAA9 is involved in fruit development and leaf morphogenesis</article-title>
+<source>Plant Cell</source>
+<year>2005</year>
+<volume>17</volume>
+<fpage>2676</fpage>
+<lpage>2692</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.105.033415</pub-id>
+<pub-id pub-id-type="pmid">16126837</pub-id></element-citation></ref><ref id="B44-plants-03-00001"><label>44.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhang</surname><given-names>J.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name><name><surname>Xiao</surname><given-names>J.</given-names></name><name><surname>Qian</surname><given-names>C.</given-names></name><name><surname>Wang</surname><given-names>T.</given-names></name><name><surname>Li</surname><given-names>H.</given-names></name><name><surname>Ouyang</surname><given-names>B.</given-names></name><name><surname>Ye</surname><given-names>Z.</given-names></name></person-group>
+<article-title>A single-base deletion mutation in <italic>SlIAA9</italic> gene causes tomato (<italic>Solanum lycopersicum</italic>) <italic>entire</italic> mutant</article-title>
+<source>J. Plant Res.</source>
+<year>2007</year>
+<volume>120</volume>
+<fpage>671</fpage>
+<lpage>678</lpage>
+<pub-id pub-id-type="doi">10.1007/s10265-007-0109-9</pub-id>
+<pub-id pub-id-type="pmid">17955175</pub-id></element-citation></ref><ref id="B45-plants-03-00001"><label>45.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ben-Gera</surname><given-names>H.</given-names></name><name><surname>Shwartz</surname><given-names>I.</given-names></name><name><surname>Shao</surname><given-names>M.R.</given-names></name><name><surname>Shani</surname><given-names>E.</given-names></name><name><surname>Estelle</surname><given-names>M.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title><italic>ENTIRE</italic> and <italic>GOBLET</italic> promote leaflet development in tomato by modulating auxin response</article-title>
+<source>Plant J.</source>
+<year>2012</year>
+<volume>70</volume>
+<fpage>903</fpage>
+<lpage>915</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2012.04939.x</pub-id>
+<pub-id pub-id-type="pmid">22332729</pub-id></element-citation></ref><ref id="B46-plants-03-00001"><label>46.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hendelman</surname><given-names>A.</given-names></name><name><surname>Buxdorf</surname><given-names>K.</given-names></name><name><surname>Stav</surname><given-names>R.</given-names></name><name><surname>Kravchik</surname><given-names>M.</given-names></name><name><surname>Arazi</surname><given-names>T.</given-names></name></person-group>
+<article-title>Inhibition of lamina outgrowth following <italic>Solanum lycopersicum</italic>
+<italic>AUXIN RESPONSE FACTOR 10</italic> (<italic>SlARF10</italic>) derepression</article-title>
+<source>Plant Mol. Biol.</source>
+<year>2012</year>
+<volume>78</volume>
+<fpage>561</fpage>
+<lpage>576</lpage>
+<pub-id pub-id-type="doi">10.1007/s11103-012-9883-4</pub-id>
+<pub-id pub-id-type="pmid">22287097</pub-id></element-citation></ref><ref id="B47-plants-03-00001"><label>47.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dharmasiri</surname><given-names>N.</given-names></name><name><surname>Dharmasiri</surname><given-names>S.</given-names></name><name><surname>Estelle</surname><given-names>M.</given-names></name></person-group>
+<article-title>The F-box protein TIR1 is an auxin receptor</article-title>
+<source>Nature</source>
+<year>2005</year>
+<volume>435</volume>
+<fpage>441</fpage>
+<lpage>445</lpage>
+<pub-id pub-id-type="doi">10.1038/nature03543</pub-id>
+<pub-id pub-id-type="pmid">15917797</pub-id></element-citation></ref><ref id="B48-plants-03-00001"><label>48.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kepinski</surname><given-names>S.</given-names></name><name><surname>Leyser</surname><given-names>O.</given-names></name></person-group>
+<article-title>The <italic>Arabidopsis</italic> F-box protein TIR1 is an auxin receptor</article-title>
+<source>Nature</source>
+<year>2005</year>
+<volume>435</volume>
+<fpage>446</fpage>
+<lpage>451</lpage>
+<pub-id pub-id-type="doi">10.1038/nature03542</pub-id>
+<pub-id pub-id-type="pmid">15917798</pub-id></element-citation></ref><ref id="B49-plants-03-00001"><label>49.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Berger</surname><given-names>Y.</given-names></name><name><surname>Harpaz-Saad</surname><given-names>S.</given-names></name><name><surname>Brand</surname><given-names>A.</given-names></name><name><surname>Melnik</surname><given-names>H.</given-names></name><name><surname>Sirding</surname><given-names>N.</given-names></name><name><surname>Alvarez</surname><given-names>J.P.</given-names></name><name><surname>Zinder</surname><given-names>M.</given-names></name><name><surname>Samach</surname><given-names>A.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>The NAC-domain transcription factor GOBLET specifies leaflet boundaries in compound tomato leaves</article-title>
+<source>Development</source>
+<year>2009</year>
+<volume>136</volume>
+<fpage>823</fpage>
+<lpage>832</lpage>
+<pub-id pub-id-type="doi">10.1242/dev.031625</pub-id>
+<pub-id pub-id-type="pmid">19176589</pub-id></element-citation></ref><ref id="B50-plants-03-00001"><label>50.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Weiss</surname><given-names>D.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>Mechanisms of cross talk between gibberellin and other hormones</article-title>
+<source>Plant Physiol.</source>
+<year>2007</year>
+<volume>144</volume>
+<fpage>1240</fpage>
+<lpage>1246</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.107.100370</pub-id>
+<pub-id pub-id-type="pmid">17616507</pub-id></element-citation></ref><ref id="B51-plants-03-00001"><label>51.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Greenboim-Wainberg</surname><given-names>Y.</given-names></name><name><surname>Maymon</surname><given-names>I.</given-names></name><name><surname>Borochov</surname><given-names>R.</given-names></name><name><surname>Alvarez</surname><given-names>J.</given-names></name><name><surname>Olszewski</surname><given-names>N.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name><name><surname>Weiss</surname><given-names>D.</given-names></name></person-group>
+<article-title>Cross talk between gibberellin and cytokinin: The <italic>Arabidopsis</italic> GA response inhibitor SPINDLY plays a positive role in cytokinin signaling</article-title>
+<source>Plant Cell</source>
+<year>2005</year>
+<volume>17</volume>
+<fpage>92</fpage>
+<lpage>102</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.104.028472</pub-id>
+<pub-id pub-id-type="pmid">15608330</pub-id></element-citation></ref><ref id="B52-plants-03-00001"><label>52.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bolduc</surname><given-names>N.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>The Maize transcription factor KNOTTED1 directly regulates the gibberellin catabolism gene ga2ox1</article-title>
+<source>Plant Cell</source>
+<year>2009</year>
+<volume>21</volume>
+<fpage>1647</fpage>
+<lpage>1658</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.109.068221</pub-id>
+<pub-id pub-id-type="pmid">19567707</pub-id></element-citation></ref><ref id="B53-plants-03-00001"><label>53.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Maekawa</surname><given-names>T.</given-names></name><name><surname>Maekawa-Yoshikawa</surname><given-names>M.</given-names></name><name><surname>Takeda</surname><given-names>N.</given-names></name><name><surname>Imaizumi-Anraku</surname><given-names>H.</given-names></name><name><surname>Murooka</surname><given-names>Y.</given-names></name><name><surname>Hayashi</surname><given-names>M.</given-names></name></person-group>
+<article-title>Gibberellin controls the nodulation signaling pathway in <italic>Lotus japonicus</italic></article-title>
+<source>Plant J.</source>
+<year>2009</year>
+<volume>58</volume>
+<fpage>183</fpage>
+<lpage>194</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2008.03774.x</pub-id>
+<pub-id pub-id-type="pmid">19121107</pub-id></element-citation></ref><ref id="B54-plants-03-00001"><label>54.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jasinski</surname><given-names>S.</given-names></name><name><surname>Piazza</surname><given-names>P.</given-names></name><name><surname>Craft</surname><given-names>J.</given-names></name><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Woolley</surname><given-names>L.</given-names></name><name><surname>Rieu</surname><given-names>I.</given-names></name><name><surname>Phillips</surname><given-names>A.</given-names></name><name><surname>Hedden</surname><given-names>P.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>KNOX action in <italic>Arabidopsis</italic> is mediated by coordinate regulation of cytokinin and gibberellin activities</article-title>
+<source>Curr. Biol.</source>
+<year>2005</year>
+<volume>15</volume>
+<fpage>1560</fpage>
+<lpage>1565</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2005.07.023</pub-id>
+<pub-id pub-id-type="pmid">16139211</pub-id></element-citation></ref><ref id="B55-plants-03-00001"><label>55.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Perilli</surname><given-names>S.</given-names></name><name><surname>Moubayidin</surname><given-names>L.</given-names></name><name><surname>Sabatini</surname><given-names>S.</given-names></name></person-group>
+<article-title>The molecular basis of cytokinin function</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2010</year>
+<volume>13</volume>
+<fpage>21</fpage>
+<lpage>26</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2009.09.018</pub-id>
+<pub-id pub-id-type="pmid">19850510</pub-id></element-citation></ref><ref id="B56-plants-03-00001"><label>56.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Kaur</surname><given-names>H.</given-names></name><name><surname>Phillips</surname><given-names>A.</given-names></name><name><surname>Hedden</surname><given-names>P.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>The gibberellin pathway mediates <italic>KNOTTED1</italic>-type homeobox function in plants with different body plans</article-title>
+<source>Curr. Biol.</source>
+<year>2002</year>
+<volume>12</volume>
+<fpage>1557</fpage>
+<lpage>1565</lpage>
+<pub-id pub-id-type="doi">10.1016/S0960-9822(02)01125-9</pub-id>
+<pub-id pub-id-type="pmid">12372247</pub-id></element-citation></ref><ref id="B57-plants-03-00001"><label>57.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yanai</surname><given-names>O.</given-names></name><name><surname>Shani</surname><given-names>E.</given-names></name><name><surname>Dolezal</surname><given-names>K.</given-names></name><name><surname>Tarkowski</surname><given-names>P.</given-names></name><name><surname>Sablowski</surname><given-names>R.</given-names></name><name><surname>Sandberg</surname><given-names>G.</given-names></name><name><surname>Samach</surname><given-names>A.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title><italic>Arabidopsis</italic> KNOXI proteins activate cytokinin biosynthesis</article-title>
+<source>Curr. Biol.</source>
+<year>2005</year>
+<volume>15</volume>
+<fpage>1566</fpage>
+<lpage>1571</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2005.07.060</pub-id>
+<pub-id pub-id-type="pmid">16139212</pub-id></element-citation></ref><ref id="B58-plants-03-00001"><label>58.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gray</surname><given-names>R.A.</given-names></name></person-group>
+<article-title>Alteration of leaf size and shape and other changes caused by gibberellins in plants</article-title>
+<source>Am. J. Bot.</source>
+<year>1957</year>
+<fpage>674</fpage>
+<lpage>682</lpage>
+<pub-id pub-id-type="doi">10.2307/2438632</pub-id>
+</element-citation></ref><ref id="B59-plants-03-00001"><label>59.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jones</surname><given-names>M.G.</given-names></name></person-group>
+<article-title>Gibberellins and the <italic>procera</italic> mutants of tomato</article-title>
+<source>Planta</source>
+<year>1987</year>
+<volume>172</volume>
+<fpage>280</fpage>
+<lpage>284</lpage>
+<pub-id pub-id-type="doi">10.1007/BF00394598</pub-id>
+<pub-id pub-id-type="pmid">24225881</pub-id></element-citation></ref><ref id="B60-plants-03-00001"><label>60.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fleishon</surname><given-names>S.</given-names></name><name><surname>Shani</surname><given-names>E.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name><name><surname>Weiss</surname><given-names>D.</given-names></name></person-group>
+<article-title>Negative reciprocal interactions between gibberellin and cytokinin in tomato</article-title>
+<source>New Phytol.</source>
+<year>2011</year>
+<volume>190</volume>
+<fpage>609</fpage>
+<lpage>617</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1469-8137.2010.03616.x</pub-id>
+<pub-id pub-id-type="pmid">21244434</pub-id></element-citation></ref><ref id="B61-plants-03-00001"><label>61.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Phillips</surname><given-names>A.L.</given-names></name><name><surname>Ward</surname><given-names>D.A.</given-names></name><name><surname>Uknes</surname><given-names>S.</given-names></name><name><surname>Appleford</surname><given-names>N.E.J.</given-names></name><name><surname>Lange</surname><given-names>T.</given-names></name><name><surname>Huttly</surname><given-names>A.K.</given-names></name><name><surname>Gaskin</surname><given-names>P.</given-names></name><name><surname>Graebe</surname><given-names>J.E.</given-names></name><name><surname>Hedden</surname><given-names>P.</given-names></name></person-group>
+<article-title>Isolation and expression of three gibberellin 20-oxidase cDNA clones from <italic>Arabidopsis</italic></article-title>
+<source>Plant Physiol.</source>
+<year>1995</year>
+<volume>108</volume>
+<fpage>1049</fpage>
+<lpage>1057</lpage>
+<pub-id pub-id-type="pmid">7630935</pub-id></element-citation></ref><ref id="B62-plants-03-00001"><label>62.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Coles</surname><given-names>J.P.</given-names></name><name><surname>Phillips</surname><given-names>A.L.</given-names></name><name><surname>Croker</surname><given-names>S.J.</given-names></name><name><surname>Garcia-Lepe</surname><given-names>R.</given-names></name><name><surname>Lewis</surname><given-names>M.J.</given-names></name><name><surname>Hedden</surname><given-names>P.</given-names></name></person-group>
+<article-title>Modification of gibberellin production and plant development in <italic>Arabidopsis</italic> by sense and antisense expression of gibberellin 20-oxidase genes</article-title>
+<source>Plant J.</source>
+<year>1999</year>
+<volume>17</volume>
+<fpage>547</fpage>
+<lpage>556</lpage>
+<pub-id pub-id-type="doi">10.1046/j.1365-313X.1999.00410.x</pub-id>
+<pub-id pub-id-type="pmid">10205907</pub-id></element-citation></ref><ref id="B63-plants-03-00001"><label>63.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Thomas</surname><given-names>S.G.</given-names></name><name><surname>Phillips</surname><given-names>A.L.</given-names></name><name><surname>Hedden</surname><given-names>P.</given-names></name></person-group>
+<article-title>Molecular cloning and functional expression of gibberellin 2-oxidases, multifunctional enzymes involved in gibberellin deactivation</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>1999</year>
+<volume>96</volume>
+<fpage>4698</fpage>
+<lpage>4703</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.96.8.4698</pub-id>
+<pub-id pub-id-type="pmid">10200325</pub-id></element-citation></ref><ref id="B64-plants-03-00001"><label>64.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yamaguchi</surname><given-names>S.</given-names></name></person-group>
+<article-title>Gibberellin metabolism and its regulation</article-title>
+<source>Annu. Rev. Plant Biol.</source>
+<year>2008</year>
+<volume>59</volume>
+<fpage>225</fpage>
+<lpage>251</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev.arplant.59.032607.092804</pub-id>
+<pub-id pub-id-type="pmid">18173378</pub-id></element-citation></ref><ref id="B65-plants-03-00001"><label>65.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Silverstone</surname><given-names>A.L.</given-names></name><name><surname>Jung</surname><given-names>H.-S.</given-names></name><name><surname>Dill</surname><given-names>A.</given-names></name><name><surname>Kawaide</surname><given-names>H.</given-names></name><name><surname>Kamiya</surname><given-names>Y.</given-names></name><name><surname>Sun</surname><given-names>T.-P.</given-names></name></person-group>
+<article-title>Repressing a repressor: Gibberellin-induced rapid reduction of the RGA protein in <italic>Arabidopsis</italic></article-title>
+<source>Plant Cell</source>
+<year>2001</year>
+<volume>13</volume>
+<fpage>1555</fpage>
+<lpage>1565</lpage>
+<pub-id pub-id-type="pmid">11449051</pub-id></element-citation></ref><ref id="B66-plants-03-00001"><label>66.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sun</surname><given-names>T.P.</given-names></name><name><surname>Gubler</surname><given-names>F.</given-names></name></person-group>
+<article-title>Molecular mechanism of gibberellin signaling in plants</article-title>
+<source>Annu. Rev. Plant Biol.</source>
+<year>2004</year>
+<volume>55</volume>
+<fpage>197</fpage>
+<lpage>223</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev.arplant.55.031903.141753</pub-id>
+<pub-id pub-id-type="pmid">15377219</pub-id></element-citation></ref><ref id="B67-plants-03-00001"><label>67.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jupe</surname><given-names>S.C.</given-names></name><name><surname>Causton</surname><given-names>D.R.</given-names></name><name><surname>Scott</surname><given-names>I.M.</given-names></name></person-group>
+<article-title>Cellular basis of the effects of gibberelin and the PRO gene on stem growth in tomato</article-title>
+<source>Planta</source>
+<year>1988</year>
+<volume>174</volume>
+<fpage>106</fpage>
+<lpage>111</lpage>
+<pub-id pub-id-type="doi">10.1007/BF00394881</pub-id>
+<pub-id pub-id-type="pmid">24221425</pub-id></element-citation></ref><ref id="B68-plants-03-00001"><label>68.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Peng</surname><given-names>J.</given-names></name><name><surname>Carol</surname><given-names>P.</given-names></name><name><surname>Richards</surname><given-names>D.E.</given-names></name><name><surname>King</surname><given-names>K.E.</given-names></name><name><surname>Cowling</surname><given-names>R.J.</given-names></name><name><surname>Murphy</surname><given-names>G.P.</given-names></name><name><surname>Harberd</surname><given-names>N.P.</given-names></name></person-group>
+<article-title>The <italic>Arabidopsis GAI</italic> gene defines a signaling pathway that negatively regulates gibberellin responses</article-title>
+<source>Genes Dev.</source>
+<year>1997</year>
+<volume>11</volume>
+<fpage>3194</fpage>
+<lpage>3205</lpage>
+<pub-id pub-id-type="doi">10.1101/gad.11.23.3194</pub-id>
+<pub-id pub-id-type="pmid">9389651</pub-id></element-citation></ref><ref id="B69-plants-03-00001"><label>69.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Van Tuinen</surname><given-names>A.</given-names></name><name><surname>Peters</surname><given-names>A.H.L.J.</given-names></name><name><surname>Kendrick</surname><given-names>R.E.</given-names></name><name><surname>Zeevaart</surname><given-names>J.A.D.</given-names></name><name><surname>Koornneef</surname><given-names>M.</given-names></name></person-group>
+<article-title>Characterisation of the <italic>procera</italic> mutant of tomato and the interaction of gibberellins with end-of-day far-red light treatments</article-title>
+<source>Physiol. Plant</source>
+<year>1999</year>
+<volume>106</volume>
+<fpage>121</fpage>
+<lpage>128</lpage>
+<pub-id pub-id-type="doi">10.1034/j.1399-3054.1999.106117.x</pub-id>
+</element-citation></ref><ref id="B70-plants-03-00001"><label>70.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Marti</surname><given-names>C.</given-names></name><name><surname>Orzaez</surname><given-names>D.</given-names></name><name><surname>Ellul</surname><given-names>P.</given-names></name><name><surname>Moreno</surname><given-names>V.</given-names></name><name><surname>Carbonell</surname><given-names>J.</given-names></name><name><surname>Granell</surname><given-names>A.</given-names></name></person-group>
+<article-title>Silencing of DELLA induces facultative parthenocarpy in tomato fruits</article-title>
+<source>Plant J.</source>
+<year>2007</year>
+<volume>52</volume>
+<fpage>865</fpage>
+<lpage>876</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2007.03282.x</pub-id>
+<pub-id pub-id-type="pmid">17883372</pub-id></element-citation></ref><ref id="B71-plants-03-00001"><label>71.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bassel</surname><given-names>G.W.</given-names></name><name><surname>Mullen</surname><given-names>R.T.</given-names></name><name><surname>Bewley</surname><given-names>J.D.</given-names></name></person-group>
+<article-title><italic>procera</italic> is a putative DELLA mutant in tomato (<italic>Solanum lycopersicum</italic>): Effects on the seed and vegetative plant</article-title>
+<source>J. Exp. Bot.</source>
+<year>2008</year>
+<volume>59</volume>
+<fpage>585</fpage>
+<lpage>593</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/erm354</pub-id>
+<pub-id pub-id-type="pmid">18250077</pub-id></element-citation></ref><ref id="B72-plants-03-00001"><label>72.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jasinski</surname><given-names>S.</given-names></name><name><surname>Tattersall</surname><given-names>A.</given-names></name><name><surname>Piazza</surname><given-names>P.</given-names></name><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Martinez-Garcia</surname><given-names>J.F.</given-names></name><name><surname>Schmitz</surname><given-names>G.</given-names></name><name><surname>Theres</surname><given-names>K.</given-names></name><name><surname>McCormick</surname><given-names>S.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title><italic>PROCERA</italic> encodes a DELLA protein that mediates control of dissected leaf form in tomato</article-title>
+<source>Plant J.</source>
+<year>2008</year>
+<volume>56</volume>
+<fpage>603</fpage>
+<lpage>612</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2008.03628.x</pub-id>
+<pub-id pub-id-type="pmid">18643984</pub-id></element-citation></ref><ref id="B73-plants-03-00001"><label>73.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sakamoto</surname><given-names>T.</given-names></name><name><surname>Kamiya</surname><given-names>N.</given-names></name><name><surname>Ueguchi-Tanaka</surname><given-names>M.</given-names></name><name><surname>Iwahori</surname><given-names>S.</given-names></name><name><surname>Matsuoka</surname><given-names>M.</given-names></name></person-group>
+<article-title>KNOX homeodomain protein directly suppresses the expression of a gibberellin biosynthetic gene in the tobacco shoot apical meristem</article-title>
+<source>Genes Dev.</source>
+<year>2001</year>
+<volume>15</volume>
+<fpage>581</fpage>
+<lpage>590</lpage>
+<pub-id pub-id-type="doi">10.1101/gad.867901</pub-id>
+<pub-id pub-id-type="pmid">11238378</pub-id></element-citation></ref><ref id="B74-plants-03-00001"><label>74.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Werner</surname><given-names>T.</given-names></name><name><surname>Schmuelling</surname><given-names>T.</given-names></name></person-group>
+<article-title>Cytokinin action in plant development</article-title>
+<source>Curr. Opin. Plant. Biol.</source>
+<year>2009</year>
+<volume>12</volume>
+<fpage>527</fpage>
+<lpage>538</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2009.07.002</pub-id>
+<pub-id pub-id-type="pmid">19740698</pub-id></element-citation></ref><ref id="B75-plants-03-00001"><label>75.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Werner</surname><given-names>T.</given-names></name><name><surname>Motyka</surname><given-names>V.</given-names></name><name><surname>Strnad</surname><given-names>M.</given-names></name><name><surname>Schmuelling</surname><given-names>T.</given-names></name></person-group>
+<article-title>Regulation of plant growth by cytokinin</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2001</year>
+<volume>98</volume>
+<fpage>10487</fpage>
+<lpage>10492</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.171304098</pub-id>
+<pub-id pub-id-type="pmid">11504909</pub-id></element-citation></ref><ref id="B76-plants-03-00001"><label>76.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Giulini</surname><given-names>A.</given-names></name><name><surname>Wang</surname><given-names>J.</given-names></name><name><surname>Jackson</surname><given-names>D.</given-names></name></person-group>
+<article-title>Control of phyllotaxy by the cytokinin-inducible response regulator homologue ABPHYL1</article-title>
+<source>Nature</source>
+<year>2004</year>
+<volume>430</volume>
+<fpage>1031</fpage>
+<lpage>1034</lpage>
+<pub-id pub-id-type="doi">10.1038/nature02778</pub-id>
+<pub-id pub-id-type="pmid">15329722</pub-id></element-citation></ref><ref id="B77-plants-03-00001"><label>77.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Leibfried</surname><given-names>A.</given-names></name><name><surname>To</surname><given-names>J.P.C.</given-names></name><name><surname>Busch</surname><given-names>W.</given-names></name><name><surname>Stehling</surname><given-names>S.</given-names></name><name><surname>Kehle</surname><given-names>A.</given-names></name><name><surname>Demar</surname><given-names>M.</given-names></name><name><surname>Kieber</surname><given-names>J.J.</given-names></name><name><surname>Lohmann</surname><given-names>J.U.</given-names></name></person-group>
+<article-title>WUSCHEL controls meristem function by direct regulation of cytokinin-inducible response regulators</article-title>
+<source>Nature</source>
+<year>2005</year>
+<volume>438</volume>
+<fpage>1172</fpage>
+<lpage>1175</lpage>
+<pub-id pub-id-type="doi">10.1038/nature04270</pub-id>
+<pub-id pub-id-type="pmid">16372013</pub-id></element-citation></ref><ref id="B78-plants-03-00001"><label>78.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kurakawa</surname><given-names>T.</given-names></name><name><surname>Ueda</surname><given-names>N.</given-names></name><name><surname>Maekawa</surname><given-names>M.</given-names></name><name><surname>Kobayashi</surname><given-names>K.</given-names></name><name><surname>Kojima</surname><given-names>M.</given-names></name><name><surname>Nagato</surname><given-names>Y.</given-names></name><name><surname>Sakakibara</surname><given-names>H.</given-names></name><name><surname>Kyozuka</surname><given-names>J.</given-names></name></person-group>
+<article-title>Direct control of shoot meristem activity by a cytokinin-activating enzyme</article-title>
+<source>Nature</source>
+<year>2007</year>
+<volume>445</volume>
+<fpage>652</fpage>
+<lpage>655</lpage>
+<pub-id pub-id-type="doi">10.1038/nature05504</pub-id>
+<pub-id pub-id-type="pmid">17287810</pub-id></element-citation></ref><ref id="B79-plants-03-00001"><label>79.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sablowski</surname><given-names>R.</given-names></name></person-group>
+<article-title>The dynamic plant stem cell niches</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2007</year>
+<volume>10</volume>
+<fpage>639</fpage>
+<lpage>644</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2007.07.001</pub-id>
+<pub-id pub-id-type="pmid">17692560</pub-id></element-citation></ref><ref id="B80-plants-03-00001"><label>80.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhao</surname><given-names>Z.</given-names></name><name><surname>Andersen</surname><given-names>S.U.</given-names></name><name><surname>Ljung</surname><given-names>K.</given-names></name><name><surname>Dolezal</surname><given-names>K.</given-names></name><name><surname>Miotk</surname><given-names>A.</given-names></name><name><surname>Schultheiss</surname><given-names>S.J.</given-names></name><name><surname>Lohmann</surname><given-names>J.U.</given-names></name></person-group>
+<article-title>Hormonal control of the shoot stem-cell niche</article-title>
+<source>Nature</source>
+<year>2010</year>
+<volume>465</volume>
+<fpage>U1089</fpage>
+<lpage>U1154</lpage>
+<pub-id pub-id-type="doi">10.1038/nature09126</pub-id>
+</element-citation></ref><ref id="B81-plants-03-00001"><label>81.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Werner</surname><given-names>T.</given-names></name><name><surname>Motyka</surname><given-names>V.</given-names></name><name><surname>Laucou</surname><given-names>V.</given-names></name><name><surname>Smets</surname><given-names>R.</given-names></name><name><surname>Van Onckelen</surname><given-names>H.</given-names></name><name><surname>Schmulling</surname><given-names>T.</given-names></name></person-group>
+<article-title>Cytokinin-deficient transgenic Arabidopsis plants show multiple developmental alterations indicating opposite functions of cytokinins in the regulation of shoot and root meristem activity</article-title>
+<source>Plant Cell</source>
+<year>2003</year>
+<volume>15</volume>
+<fpage>2532</fpage>
+<lpage>2550</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.014928</pub-id>
+<pub-id pub-id-type="pmid">14555694</pub-id></element-citation></ref><ref id="B82-plants-03-00001"><label>82.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lindsay</surname><given-names>D.L.</given-names></name><name><surname>Sawhney</surname><given-names>V.K.</given-names></name><name><surname>Bonham-Smith</surname><given-names>P.C.</given-names></name></person-group>
+<article-title>Cytokinin-induced changes in <italic>CLAVATA1</italic> and <italic>WUSCHEL</italic> expression temporally coincide with altered floral development in <italic>Arabidopsis</italic></article-title>
+<source>Plant Sci.</source>
+<year>2006</year>
+<volume>170</volume>
+<fpage>1111</fpage>
+<lpage>1117</lpage>
+<pub-id pub-id-type="doi">10.1016/j.plantsci.2006.01.015</pub-id>
+</element-citation></ref><ref id="B83-plants-03-00001"><label>83.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shani</surname><given-names>E.</given-names></name><name><surname>Ben-Gera</surname><given-names>H.</given-names></name><name><surname>Shleizer-Burko</surname><given-names>S.</given-names></name><name><surname>Burko</surname><given-names>Y.</given-names></name><name><surname>Weiss</surname><given-names>D.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>Cytokinin regulates compound leaf development in tomato</article-title>
+<source>Plant Cell</source>
+<year>2010</year>
+<volume>22</volume>
+<fpage>3206</fpage>
+<lpage>3217</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.110.078253</pub-id>
+<pub-id pub-id-type="pmid">20959562</pub-id></element-citation></ref><ref id="B84-plants-03-00001"><label>84.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hofer</surname><given-names>J.</given-names></name><name><surname>Turner</surname><given-names>L.</given-names></name><name><surname>Hellens</surname><given-names>R.</given-names></name><name><surname>Ambrose</surname><given-names>M.</given-names></name><name><surname>Matthews</surname><given-names>P.</given-names></name><name><surname>Michael</surname><given-names>A.</given-names></name><name><surname>Ellis</surname><given-names>N.</given-names></name></person-group>
+<article-title><italic>UNIFOLIATA</italic> regulates leaf and flower morphogenesis in pea</article-title>
+<source>Curr. Biol.</source>
+<year>1997</year>
+<volume>7</volume>
+<fpage>581</fpage>
+<lpage>587</lpage>
+<pub-id pub-id-type="doi">10.1016/S0960-9822(06)00257-0</pub-id>
+<pub-id pub-id-type="pmid">9259553</pub-id></element-citation></ref><ref id="B85-plants-03-00001"><label>85.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hofer</surname><given-names>J.</given-names></name><name><surname>Gourlay</surname><given-names>C.</given-names></name><name><surname>Michael</surname><given-names>A.</given-names></name><name><surname>Ellis</surname><given-names>T.H.</given-names></name></person-group>
+<article-title>Expression of a class 1 <italic>knotted1</italic>-like homeobox gene is down-regulated in pea compound leaf primordia</article-title>
+<source>Plant Mol. Biol.</source>
+<year>2001</year>
+<volume>45</volume>
+<fpage>387</fpage>
+<lpage>398</lpage>
+<pub-id pub-id-type="doi">10.1023/A:1010739812836</pub-id>
+<pub-id pub-id-type="pmid">11352458</pub-id></element-citation></ref><ref id="B86-plants-03-00001"><label>86.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Peng</surname><given-names>J.</given-names></name><name><surname>Yu</surname><given-names>J.</given-names></name><name><surname>Wang</surname><given-names>H.</given-names></name><name><surname>Guo</surname><given-names>Y.</given-names></name><name><surname>Li</surname><given-names>G.</given-names></name><name><surname>Bai</surname><given-names>G.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<article-title>Regulation of compound leaf development in <italic>Medicago truncatula</italic> by <italic>fused compound leaf1</italic>, a class M <italic>KNOX</italic> gene</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>3929</fpage>
+<lpage>3943</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.111.089128</pub-id>
+<pub-id pub-id-type="pmid">22080596</pub-id></element-citation></ref><ref id="B87-plants-03-00001"><label>87.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Di Giacomo</surname><given-names>E.</given-names></name><name><surname>Sestili</surname><given-names>F.</given-names></name><name><surname>Iannelli</surname><given-names>M.A.</given-names></name><name><surname>Testone</surname><given-names>G.</given-names></name><name><surname>Mariotti</surname><given-names>D.</given-names></name><name><surname>Frugis</surname><given-names>G.</given-names></name></person-group>
+<article-title>Characterization of <italic>KNOX</italic> genes in <italic>Medicago truncatula</italic></article-title>
+<source>Plant Mol. Biol.</source>
+<year>2008</year>
+<volume>67</volume>
+<fpage>135</fpage>
+<lpage>150</lpage>
+<pub-id pub-id-type="doi">10.1007/s11103-008-9307-7</pub-id>
+<pub-id pub-id-type="pmid">18274864</pub-id></element-citation></ref><ref id="B88-plants-03-00001"><label>88.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chen</surname><given-names>J.</given-names></name><name><surname>Yu</surname><given-names>J.</given-names></name><name><surname>Ge</surname><given-names>L.</given-names></name><name><surname>Wang</surname><given-names>H.</given-names></name><name><surname>Berbel</surname><given-names>A.</given-names></name><name><surname>Liu</surname><given-names>Y.</given-names></name><name><surname>Chen</surname><given-names>Y.</given-names></name><name><surname>Li</surname><given-names>G.</given-names></name><name><surname>Tadege</surname><given-names>M.</given-names></name><name><surname>Wen</surname><given-names>J.</given-names></name><etal/></person-group>
+<article-title>Control of dissected leaf morphology by a Cys(2)His(2) zinc finger transcription factor in the model legume <italic>Medicago truncatula</italic></article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2010</year>
+<volume>107</volume>
+<fpage>10754</fpage>
+<lpage>10759</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.1003954107</pub-id>
+<pub-id pub-id-type="pmid">20498057</pub-id></element-citation></ref><ref id="B89-plants-03-00001"><label>89.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ge</surname><given-names>L.</given-names></name><name><surname>Peng</surname><given-names>J.</given-names></name><name><surname>Berbel</surname><given-names>A.</given-names></name><name><surname>Madueno</surname><given-names>F.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<article-title>Regulation of compound leaf development by <italic>PHANTASTICA</italic> in <italic>Medicago truncatula</italic></article-title>
+<source>Plant Physiol.</source>
+<year>2013</year>
+<pub-id pub-id-type="doi">10.1104/pp.113.229914</pub-id>
+</element-citation></ref><ref id="B90-plants-03-00001"><label>90.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Young</surname><given-names>N.D.</given-names></name><name><surname>Debell&#x000e9;</surname><given-names>F.</given-names></name><name><surname>Oldroyd</surname><given-names>G.E.D.</given-names></name><name><surname>Geurts</surname><given-names>R.</given-names></name><name><surname>Cannon</surname><given-names>S.B.</given-names></name><name><surname>Udvardi</surname><given-names>M.K.</given-names></name><name><surname>Benedito</surname><given-names>V.A.</given-names></name><name><surname>Mayer</surname><given-names>K.F.X.</given-names></name><name><surname>Gouzy</surname><given-names>J.</given-names></name><name><surname>Schoof</surname><given-names>H.</given-names></name><etal/></person-group>
+<article-title>The <italic>Medicago</italic> genome provides insight into the evolution of rhizobial symbioses</article-title>
+<source>Nature</source>
+<year>2011</year>
+<volume>480</volume>
+<fpage>520</fpage>
+<lpage>524</lpage>
+<pub-id pub-id-type="pmid">22089132</pub-id></element-citation></ref><ref id="B91-plants-03-00001"><label>91.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Benaben</surname><given-names>V.</given-names></name><name><surname>Duc</surname><given-names>G.</given-names></name><name><surname>Lefebvre</surname><given-names>V.</given-names></name><name><surname>Huguet</surname><given-names>T.</given-names></name></person-group>
+<article-title><italic>TE7</italic>, an inefficient symbiotic mutant of <italic>Medicago truncatula</italic> Gaertn. cv. Jemalong</article-title>
+<source>Plant. Physiol.</source>
+<year>1995</year>
+<volume>107</volume>
+<fpage>53</fpage>
+<lpage>62</lpage>
+<pub-id pub-id-type="pmid">12228341</pub-id></element-citation></ref><ref id="B92-plants-03-00001"><label>92.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rogers</surname><given-names>C.</given-names></name><name><surname>Wen</surname><given-names>J.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name><name><surname>Oldroyd</surname><given-names>G.</given-names></name></person-group>
+<article-title>Deletion-based reverse genetics in <italic>Medicago truncatula</italic></article-title>
+<source>Plant Physiol.</source>
+<year>2009</year>
+<volume>151</volume>
+<fpage>1077</fpage>
+<lpage>1086</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.109.142919</pub-id>
+<pub-id pub-id-type="pmid">19759346</pub-id></element-citation></ref><ref id="B93-plants-03-00001"><label>93.</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>H.</given-names></name><name><surname>Li</surname><given-names>G.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<article-title>Fast neutron bombardment (FNB) induced deletion mutagenesis for forward and reverse genetic studies in plants</article-title>
+<source>Floriculture, Ornamental and Plant Biotechnology: Advances and Topical Issues</source>
+<edition>1st ed.</edition>
+<person-group person-group-type="editor"><name><surname>Da Silva</surname><given-names>J.T.</given-names></name></person-group>
+<publisher-name>Global Science Books</publisher-name>
+<publisher-loc>Isleworth, UK</publisher-loc>
+<year>2006</year>
+<fpage>629</fpage>
+<lpage>639</lpage>
+</element-citation></ref><ref id="B94-plants-03-00001"><label>94.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Scholte</surname><given-names>M.</given-names></name><name><surname>d&#x02019;Erfurth</surname><given-names>I.</given-names></name><name><surname>Rippa</surname><given-names>S.</given-names></name><name><surname>Mondy</surname><given-names>S.</given-names></name><name><surname>Cosson</surname><given-names>V.</given-names></name><name><surname>Durand</surname><given-names>P.</given-names></name><name><surname>Breda</surname><given-names>C.</given-names></name><name><surname>Trinh</surname><given-names>H.</given-names></name><name><surname>Rodriguez-Llorente</surname><given-names>I.</given-names></name><name><surname>Kondorosi</surname><given-names>E.</given-names></name><etal/></person-group>
+<article-title>T-DNA tagging in the model legume <italic>Medicago truncatula</italic> allows efficient gene discovery</article-title>
+<source>Mol. Breeding</source>
+<year>2002</year>
+<volume>10</volume>
+<fpage>203</fpage>
+<lpage>215</lpage>
+<pub-id pub-id-type="doi">10.1023/A:1020564612093</pub-id>
+</element-citation></ref><ref id="B95-plants-03-00001"><label>95.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>d'Erfurth</surname><given-names>I.</given-names></name><name><surname>Cosson</surname><given-names>V.</given-names></name><name><surname>Mondy</surname><given-names>S.</given-names></name><name><surname>Brocard</surname><given-names>L.</given-names></name><name><surname>Kondorosi</surname><given-names>A.</given-names></name><name><surname>Ratet</surname><given-names>P.</given-names></name></person-group>
+<article-title>The low level of activity of <italic>Arabidopsis thaliana Tag1</italic> transposon correlates with the absence of two minor transcripts in <italic>Medicago truncatula</italic></article-title>
+<source>Mol. Breeding</source>
+<year>2006</year>
+<volume>17</volume>
+<fpage>317</fpage>
+<lpage>328</lpage>
+<pub-id pub-id-type="doi">10.1007/s11032-006-9003-8</pub-id>
+</element-citation></ref><ref id="B96-plants-03-00001"><label>96.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>d&#x02019;Erfurth</surname><given-names>I.</given-names></name><name><surname>Cosson</surname><given-names>V.</given-names></name><name><surname>Eschstruth</surname><given-names>A.</given-names></name><name><surname>Lucas</surname><given-names>H.</given-names></name><name><surname>Kondorosi</surname><given-names>A.</given-names></name><name><surname>Ratet</surname><given-names>P.</given-names></name></person-group>
+<article-title>Efficient transposition of the <italic>Tnt1</italic> tobacco retrotransposon in the model legume <italic>Medicago truncatula</italic></article-title>
+<source>Plant J.</source>
+<year>2003</year>
+<volume>34</volume>
+<fpage>95</fpage>
+<lpage>106</lpage>
+<pub-id pub-id-type="doi">10.1046/j.1365-313X.2003.01701.x</pub-id>
+<pub-id pub-id-type="pmid">12662312</pub-id></element-citation></ref><ref id="B97-plants-03-00001"><label>97.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>d&#x02019;Erfurth</surname><given-names>I.</given-names></name><name><surname>Cosson</surname><given-names>V.</given-names></name><name><surname>Eschstruth</surname><given-names>A.</given-names></name><name><surname>Rippa</surname><given-names>S.</given-names></name><name><surname>Messinese</surname><given-names>E.</given-names></name><name><surname>Durand</surname><given-names>P.</given-names></name><name><surname>Trinh</surname><given-names>H.</given-names></name><name><surname>Kondorosi</surname><given-names>A.</given-names></name><name><surname>Ratet</surname><given-names>P.</given-names></name></person-group>
+<article-title>Rapid inactivation of the maize transposable element <italic>En</italic>/<italic>Spm</italic> in <italic>Medicago truncatula</italic></article-title>
+<source>Mol. Gen. Genet.</source>
+<year>2003</year>
+<volume>269</volume>
+<fpage>732</fpage>
+<lpage>745</lpage>
+<pub-id pub-id-type="doi">10.1007/s00438-003-0889-0</pub-id>
+</element-citation></ref><ref id="B98-plants-03-00001"><label>98.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tadege</surname><given-names>M.</given-names></name><name><surname>Wen</surname><given-names>J.</given-names></name><name><surname>He</surname><given-names>J.</given-names></name><name><surname>Tu</surname><given-names>H.</given-names></name><name><surname>Kwak</surname><given-names>Y.</given-names></name><name><surname>Eschstruth</surname><given-names>A.</given-names></name><name><surname>Cayrel</surname><given-names>A.</given-names></name><name><surname>Endre</surname><given-names>G.</given-names></name><name><surname>Zhao</surname><given-names>P.X.</given-names></name><name><surname>Chabaud</surname><given-names>M.</given-names></name><etal/></person-group>
+<article-title>Large-scale insertional mutagenesis using the <italic>Tnt1</italic> retrotransposon in the model legume <italic>Medicago truncatula</italic></article-title>
+<source>Plant J.</source>
+<year>2008</year>
+<volume>54</volume>
+<fpage>335</fpage>
+<lpage>347</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2008.03418.x</pub-id>
+<pub-id pub-id-type="pmid">18208518</pub-id></element-citation></ref><ref id="B99-plants-03-00001"><label>99.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Takatsuji</surname><given-names>H.</given-names></name></person-group>
+<article-title>Zinc-finger proteins: The classical zinc finger emerges in contemporary plant science</article-title>
+<source>Plant Mol. Biol.</source>
+<year>1999</year>
+<volume>39</volume>
+<fpage>1073</fpage>
+<lpage>1078</lpage>
+<pub-id pub-id-type="doi">10.1023/A:1006184519697</pub-id>
+<pub-id pub-id-type="pmid">10380795</pub-id></element-citation></ref><ref id="B100-plants-03-00001"><label>100.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ohta</surname><given-names>M.</given-names></name><name><surname>Matsui</surname><given-names>K.</given-names></name><name><surname>Hiratsu</surname><given-names>K.</given-names></name><name><surname>Shinshi</surname><given-names>H.</given-names></name><name><surname>Ohme-Takagi</surname><given-names>M.</given-names></name></person-group>
+<article-title>Repression domains of class II ERF transcriptional repressors share an essential motif for active repression</article-title>
+<source>Plant Cell</source>
+<year>2001</year>
+<volume>13</volume>
+<fpage>1959</fpage>
+<lpage>1968</lpage>
+<pub-id pub-id-type="pmid">11487705</pub-id></element-citation></ref><ref id="B101-plants-03-00001"><label>101.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ge</surname><given-names>L.</given-names></name><name><surname>Chen</surname><given-names>J.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<article-title><italic>Palmate-like pentafoliata1</italic> encodes a novel Cys(2)His(2) zinc finger transcription factor essential for compound leaf morphogenesis in <italic>Medicago truncatula</italic></article-title>
+<source>Plant Signal Behav.</source>
+<year>2010</year>
+<volume>5</volume>
+<fpage>1134</fpage>
+<lpage>1137</lpage>
+<pub-id pub-id-type="doi">10.4161/psb.5.9.12640</pub-id>
+<pub-id pub-id-type="pmid">20724826</pub-id></element-citation></ref><ref id="B102-plants-03-00001"><label>102.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Uppalapati</surname><given-names>S.R.</given-names></name><name><surname>Ishiga</surname><given-names>Y.</given-names></name><name><surname>Doraiswamy</surname><given-names>V.</given-names></name><name><surname>Bedair</surname><given-names>M.</given-names></name><name><surname>Mittal</surname><given-names>S.</given-names></name><name><surname>Chen</surname><given-names>J.</given-names></name><name><surname>Nakashima</surname><given-names>J.</given-names></name><name><surname>Tang</surname><given-names>Y.</given-names></name><name><surname>Tadege</surname><given-names>M.</given-names></name><name><surname>Ratet</surname><given-names>P.</given-names></name><etal/></person-group>
+<article-title>Loss of abaxial leaf epicuticular wax in <italic>Medicago truncatula irg1</italic>/<italic>palm1</italic> mutants results in reduced spore differentiation of anthracnose and nonhost rust pathogens</article-title>
+<source>Plant Cell</source>
+<year>2012</year>
+<volume>24</volume>
+<fpage>353</fpage>
+<lpage>370</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.111.093104</pub-id>
+<pub-id pub-id-type="pmid">22294617</pub-id></element-citation></ref><ref id="B103-plants-03-00001"><label>103.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kimura</surname><given-names>S.</given-names></name><name><surname>Koenig</surname><given-names>D.</given-names></name><name><surname>Kang</surname><given-names>J.</given-names></name><name><surname>Yoong</surname><given-names>F.Y.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>Natural variation in leaf morphology results from mutation of a novel <italic>KNOX</italic> gene</article-title>
+<source>Curr. Biol.</source>
+<year>2008</year>
+<volume>18</volume>
+<fpage>672</fpage>
+<lpage>677</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2008.04.008</pub-id>
+<pub-id pub-id-type="pmid">18424140</pub-id></element-citation></ref><ref id="B104-plants-03-00001"><label>104.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Magnani</surname><given-names>E.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title><italic>KNOX</italic> lost the <italic>OX</italic>: The <italic>Arabidopsis KNATM</italic> gene defines a novel class of KNOX transcriptional regulators missing the homeodomain</article-title>
+<source>Plant Cell</source>
+<year>2008</year>
+<volume>20</volume>
+<fpage>875</fpage>
+<lpage>887</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.108.058495</pub-id>
+<pub-id pub-id-type="pmid">18398054</pub-id></element-citation></ref><ref id="B105-plants-03-00001"><label>105.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Blein</surname><given-names>T.</given-names></name><name><surname>Pulido</surname><given-names>A.</given-names></name><name><surname>Vialette-Guiraud</surname><given-names>A.</given-names></name><name><surname>Nikovics</surname><given-names>K.</given-names></name><name><surname>Morin</surname><given-names>H.</given-names></name><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Johansen</surname><given-names>I.E.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name><name><surname>Laufs</surname><given-names>P.</given-names></name></person-group>
+<article-title>A conserved molecular framework for compound leaf development</article-title>
+<source>Science</source>
+<year>2008</year>
+<volume>322</volume>
+<fpage>1835</fpage>
+<lpage>1839</lpage>
+<pub-id pub-id-type="doi">10.1126/science.1166168</pub-id>
+<pub-id pub-id-type="pmid">19095941</pub-id></element-citation></ref><ref id="B106-plants-03-00001"><label>106.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cheng</surname><given-names>X.</given-names></name><name><surname>Peng</surname><given-names>J.</given-names></name><name><surname>Ma</surname><given-names>J.</given-names></name><name><surname>Tang</surname><given-names>Y.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name><name><surname>Mysore</surname><given-names>K.S.</given-names></name><name><surname>Wen</surname><given-names>J.</given-names></name></person-group>
+<article-title><italic>NO APICAL MERISTEM</italic> (<italic>MtNAM</italic>) regulates floral organ identity and lateral organ separation in <italic>Medicago truncatula</italic></article-title>
+<source>New Phytol.</source>
+<year>2012</year>
+<volume>195</volume>
+<fpage>71</fpage>
+<lpage>84</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1469-8137.2012.04147.x</pub-id>
+<pub-id pub-id-type="pmid">22530598</pub-id></element-citation></ref><ref id="B107-plants-03-00001"><label>107.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chuck</surname><given-names>G.</given-names></name><name><surname>Candela</surname><given-names>H.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Big impacts by small RNAs in plant development</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2009</year>
+<volume>12</volume>
+<fpage>81</fpage>
+<lpage>86</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2008.09.008</pub-id>
+<pub-id pub-id-type="pmid">18980858</pub-id></element-citation></ref><ref id="B108-plants-03-00001"><label>108.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pulido</surname><given-names>A.</given-names></name><name><surname>Laufs</surname><given-names>P.</given-names></name></person-group>
+<article-title>Co-ordination of developmental processes by small RNAs during leaf development</article-title>
+<source>J. Exp. Bot.</source>
+<year>2010</year>
+<volume>61</volume>
+<fpage>1277</fpage>
+<lpage>1291</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/erp397</pub-id>
+<pub-id pub-id-type="pmid">20097843</pub-id></element-citation></ref><ref id="B109-plants-03-00001"><label>109.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chitwood</surname><given-names>D.H.</given-names></name><name><surname>Nogueira</surname><given-names>F.T.S.</given-names></name><name><surname>Howell</surname><given-names>M.D.</given-names></name><name><surname>Montgomery</surname><given-names>T.A.</given-names></name><name><surname>Carrington</surname><given-names>J.C.</given-names></name><name><surname>Timmermans</surname><given-names>M.C.P.</given-names></name></person-group>
+<article-title>Pattern formation via small RNA mobility</article-title>
+<source>Genes Dev.</source>
+<year>2009</year>
+<volume>23</volume>
+<fpage>549</fpage>
+<lpage>554</lpage>
+<pub-id pub-id-type="doi">10.1101/gad.1770009</pub-id>
+<pub-id pub-id-type="pmid">19270155</pub-id></element-citation></ref><ref id="B110-plants-03-00001"><label>110.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yan</surname><given-names>J.</given-names></name><name><surname>Cai</surname><given-names>X.</given-names></name><name><surname>Luo</surname><given-names>J.</given-names></name><name><surname>Sato</surname><given-names>S.</given-names></name><name><surname>Jiang</surname><given-names>Q.</given-names></name><name><surname>Yang</surname><given-names>J.</given-names></name><name><surname>Cao</surname><given-names>X.</given-names></name><name><surname>Hu</surname><given-names>X.</given-names></name><name><surname>Tabata</surname><given-names>S.</given-names></name><name><surname>Gresshoff</surname><given-names>P.M.</given-names></name><etal/></person-group>
+<article-title>The <italic>REDUCED LEAFLET</italic> genes encode key components of the <italic>trans</italic>-acting small interfering RNA pathway and regulate compound leaf and flower development in <italic>Lotus japonicus</italic></article-title>
+<source>Plant Physiol.</source>
+<year>2010</year>
+<volume>152</volume>
+<fpage>797</fpage>
+<lpage>807</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.109.140947</pub-id>
+<pub-id pub-id-type="pmid">19955265</pub-id></element-citation></ref><ref id="B111-plants-03-00001"><label>111.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yifhar</surname><given-names>T.</given-names></name><name><surname>Pekker</surname><given-names>I.</given-names></name><name><surname>Peled</surname><given-names>D.</given-names></name><name><surname>Friedlander</surname><given-names>G.</given-names></name><name><surname>Pistunov</surname><given-names>A.</given-names></name><name><surname>Sabban</surname><given-names>M.</given-names></name><name><surname>Wachsman</surname><given-names>G.</given-names></name><name><surname>Alvarez</surname><given-names>J.P.</given-names></name><name><surname>Amsellem</surname><given-names>Z.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name></person-group>
+<article-title>Failure of the Tomato trans-acting short interfering RNA program to regulate AUXIN RESPONSE FACTOR3 and ARF4 underlies the wiry leaf syndrome</article-title>
+<source>Plant Cell</source>
+<year>2012</year>
+<volume>24</volume>
+<fpage>3575</fpage>
+<lpage>3589</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.112.100222</pub-id>
+<pub-id pub-id-type="pmid">23001036</pub-id></element-citation></ref></ref-list></back></article>

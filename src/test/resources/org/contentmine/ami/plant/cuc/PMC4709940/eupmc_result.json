@@ -1,0 +1,603 @@
+{
+  "id": [
+    "26755210"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26755210"
+  ],
+  "pmcid": [
+    "PMC4709940"
+  ],
+  "doi": [
+    "10.1186/s12864-016-2372-4"
+  ],
+  "title": [
+    "Transcriptomic analysis reveals the gene expression profile that specifically responds to IBA during adventitious rooting in mung bean seedlings."
+  ],
+  "authorString": [
+    "Li SW, Shi RF, Leng Y, Zhou Y."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Li SW"
+          ],
+          "firstName": [
+            "Shi-Weng"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "SW"
+          ],
+          "affiliation": [
+            "School of Environmental and Municipal Engineering, Key Laboratory of Extreme Environmental Microbial Resources and Engineering Gansu Province, Lanzhou Jiaotong University, 88 West Anning Road, Lanzhou, 730070, P. R. China. lishweng@mail.lzjtu.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Shi RF"
+          ],
+          "firstName": [
+            "Rui-Fang"
+          ],
+          "lastName": [
+            "Shi"
+          ],
+          "initials": [
+            "RF"
+          ],
+          "affiliation": [
+            "School of Chemical and Biological Engineering, Lanzhou Jiaotong University, 88 West Anning Road, Lanzhou, 730070, P.R. China. 02130564@stu.lzjtu."
+          ]
+        },
+        {
+          "fullName": [
+            "Leng Y"
+          ],
+          "firstName": [
+            "Yan"
+          ],
+          "lastName": [
+            "Leng"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "School of Chemical and Biological Engineering, Lanzhou Jiaotong University, 88 West Anning Road, Lanzhou, 730070, P.R. China. lengyan_cool@126.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhou Y"
+          ],
+          "firstName": [
+            "Yuan"
+          ],
+          "lastName": [
+            "Zhou"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "School of Chemical and Biological Engineering, Lanzhou Jiaotong University, 88 West Anning Road, Lanzhou, 730070, P.R. China. zhouy@mail.lzjtu.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "17"
+      ],
+      "journalIssueId": [
+        "2401365"
+      ],
+      "dateOfPublication": [
+        "2016 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "43"
+  ],
+  "abstractText": [
+    "Auxin plays a critical role in inducing adventitious rooting in many plants. Indole-3-butyric acid (IBA) is the most widely employed auxin for adventitious rooting. However, the molecular mechanisms by which auxin regulate the process of adventitious rooting are less well known.The RNA-Seq data analysis indicated that IBA treatment greatly increased the amount of clean reads and the amount of expressed unigenes by 24.29 % and 27.42 % and by 4.3 % and 5.04 % at two time points, respectively, and significantly increased the numbers of unigenes numbered with RPKM = 10-100 and RPKM = 500-1000 by 13.04 % and 3.12 % and by 24.66 % and 108.2 % at two time points, respectively. Gene Ontology (GO) enrichment analysis indicated that the enrichment of down-regulated GOs was 2.87-fold higher than that of up-regulated GOs at stage 1, suggesting that IBA significantly down-regulated gene expression at 6 h. The GO functional category indicated that IBA significantly up- or down-regulated processes associated with auxin signaling, ribosome assembly and protein synthesis, photosynthesis, oxidoreductase activity and extracellular region, secondary cell wall biogenesis, and the cell wall during the development process. Kyoto Encyclopedia of Genes and Genomes (KEGG) pathway enrichment indicated that ribosome biogenesis, plant hormone signal transduction, pentose and glucuronate interconversions, photosynthesis, phenylpropanoid biosynthesis, sesquiterpenoid and triterpenoid biosynthesis, ribosome, cutin, flavonoid biosynthesis, and phenylalanine metabolism were the pathways most highly regulated by IBA. A total of 6369 differentially expressed (2-fold change > 2) unigenes (DEGs) with 3693 (58 %) that were up-regulated and 2676 (42 %) down-regulated, 5433 unigenes with 2208 (40.6 %) that were up-regulated and 3225 (59.4 %) down-regulated, and 7664 unigenes with 3187 (41.6 %) that were up-regulated and 4477 (58.4 %) down-regulated were detected at stage 1, stage 2, and between stage 1 and stage 2, respectively, suggesting that IBA treatment increased the number of DEGs. A total of 143 DEGs specifically involved in plant hormone signaling and 345 transcription factor (TF) genes were also regulated by IBA. qRT-PCR validation of the 36 genes with known functions indicated a strong correlation with the RNA-Seq data.The changes in GO functional categories, KEGG pathways, and global DEG profiling during adventitious rooting induced by IBA were analyzed. These results provide valuable information about the molecular traits of IBA regulation of adventitious rooting."
+  ],
+  "affiliation": [
+    "School of Environmental and Municipal Engineering, Key Laboratory of Extreme Environmental Microbial Resources and Engineering Gansu Province, Lanzhou Jiaotong University, 88 West Anning Road, Lanzhou, 730070, P. R. China. lishweng@mail.lzjtu.cn."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phaseolus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Roots"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Indoleacetic Acids"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Indoles"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Ontology"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seedlings"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Indoleacetic Acids"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Indoles"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "indolebutyric acid"
+          ],
+          "registryNumber": [
+            "061SKE27JP"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4709940?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4709940"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12864-016-2372-4"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "4"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen",
+        "go"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-09-28"
+  ],
+  "dateOfCreation": [
+    "2016-01-12"
+  ],
+  "dateOfRevision": [
+    "2016-01-14"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-12"
+  ],
+  "firstPublicationDate": [
+    "2016-01-12"
+  ]
+}

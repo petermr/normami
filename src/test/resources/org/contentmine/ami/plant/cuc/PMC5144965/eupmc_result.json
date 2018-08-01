@@ -1,0 +1,807 @@
+{
+  "id": [
+    "27784753"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27784753"
+  ],
+  "pmcid": [
+    "PMC5144965"
+  ],
+  "doi": [
+    "10.1534/g3.116.034512"
+  ],
+  "title": [
+    "Characterization, Expression, and Functional Analysis of a Novel NAC Gene Associated with Resistance to Verticillium Wilt and Abiotic Stress in Cotton."
+  ],
+  "authorString": [
+    "Wang W, Yuan Y, Yang C, Geng S, Sun Q, Long L, Cai C, Chu Z, Liu X, Wang G, Du X, Miao C, Zhang X, Cai Y."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Wang W"
+          ],
+          "firstName": [
+            "Weina"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "College of Bioinformation, Chongqing University of Posts and Telecommunications, 400065 Sichuan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yuan Y"
+          ],
+          "firstName": [
+            "Youlu"
+          ],
+          "lastName": [
+            "Yuan"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, Cotton Institute of the Chinese Academy of Agricultural Sciences, Key Laboratory of Cotton Genetic Improvement, Ministry of Agriculture, Anyang, 455000 Henan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yang C"
+          ],
+          "firstName": [
+            "Can"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "College of Bioinformation, Chongqing University of Posts and Telecommunications, 400065 Sichuan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Geng S"
+          ],
+          "firstName": [
+            "Shuaipeng"
+          ],
+          "lastName": [
+            "Geng"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, College of Life Science, Henan Key Laboratory of Plant Stress Biology, Henan University, Kaifeng, 475004 Henan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Sun Q"
+          ],
+          "firstName": [
+            "Quan"
+          ],
+          "lastName": [
+            "Sun"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "affiliation": [
+            "College of Bioinformation, Chongqing University of Posts and Telecommunications, 400065 Sichuan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Long L"
+          ],
+          "firstName": [
+            "Lu"
+          ],
+          "lastName": [
+            "Long"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, College of Life Science, Henan Key Laboratory of Plant Stress Biology, Henan University, Kaifeng, 475004 Henan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Cai C"
+          ],
+          "firstName": [
+            "Chaowei"
+          ],
+          "lastName": [
+            "Cai"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, College of Life Science, Henan Key Laboratory of Plant Stress Biology, Henan University, Kaifeng, 475004 Henan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Chu Z"
+          ],
+          "firstName": [
+            "Zongyan"
+          ],
+          "lastName": [
+            "Chu"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "Kaifeng Academy of Agriculture and Forestry, 475004 Henan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu X"
+          ],
+          "firstName": [
+            "Xin"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, College of Life Science, Henan Key Laboratory of Plant Stress Biology, Henan University, Kaifeng, 475004 Henan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang G"
+          ],
+          "firstName": [
+            "Guanghao"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, College of Life Science, Henan Key Laboratory of Plant Stress Biology, Henan University, Kaifeng, 475004 Henan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Du X"
+          ],
+          "firstName": [
+            "Xiongming"
+          ],
+          "lastName": [
+            "Du"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, Cotton Institute of the Chinese Academy of Agricultural Sciences, Key Laboratory of Cotton Genetic Improvement, Ministry of Agriculture, Anyang, 455000 Henan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Miao C"
+          ],
+          "firstName": [
+            "Chen"
+          ],
+          "lastName": [
+            "Miao"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, College of Life Science, Henan Key Laboratory of Plant Stress Biology, Henan University, Kaifeng, 475004 Henan, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang X"
+          ],
+          "firstName": [
+            "Xiao"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, College of Life Science, Henan Key Laboratory of Plant Stress Biology, Henan University, Kaifeng, 475004 Henan, China yingfancai@outlook.com xzhang@henu.edu.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Cai Y"
+          ],
+          "firstName": [
+            "Yingfan"
+          ],
+          "lastName": [
+            "Cai"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology, College of Life Science, Henan Key Laboratory of Plant Stress Biology, Henan University, Kaifeng, 475004 Henan, China yingfancai@outlook.com xzhang@henu.edu.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "12"
+      ],
+      "volume": [
+        "6"
+      ],
+      "journalIssueId": [
+        "2503817"
+      ],
+      "dateOfPublication": [
+        "2016 Dec"
+      ],
+      "monthOfPublication": [
+        "12"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-12-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "G3 (Bethesda, Md.)"
+          ],
+          "ISOAbbreviation": [
+            "G3 (Bethesda)"
+          ],
+          "medlineAbbreviation": [
+            "G3 (Bethesda)"
+          ],
+          "NLMid": [
+            "101566598"
+          ],
+          "ISSN": [
+            "2160-1836"
+          ],
+          "ESSN": [
+            "2160-1836"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "3951-3961"
+  ],
+  "abstractText": [
+    "Elucidating the mechanism of resistance to biotic and abiotic stress is of great importance in cotton. In this study, a gene containing the NAC domain, designated GbNAC1, was identified from Gossypium barbadense L. Homologous sequence alignment indicated that GbNAC1 belongs to the TERN subgroup. GbNAC1 protein localized to the cell nucleus. GbNAC1 was expressed in roots, stems, and leaves, and was especially highly expressed in vascular bundles. Functional analysis showed that cotton resistance to Verticillium wilt was reduced when the GbNAC1 gene was silenced using the virus-induced gene silencing (VIGS) method. GbNAC1-overexpressing Arabidopsis showed enhanced resistance to Verticillium dahliae compared to wild-type. Thus, GbNAC1 is involved in the positive regulation of resistance to Verticillium wilt. In addition, analysis of GbNAC1-overexpressing Arabidopsis under different stress treatments indicated that it is involved in plant growth, development, and response to various abiotic stresses (ABA, mannitol, and NaCl). This suggests that GbNAC1 plays an important role in resistance to biotic and abiotic stresses in cotton. This study provides a foundation for further study of the function of NAC genes in cotton and other plants."
+  ],
+  "affiliation": [
+    "College of Bioinformation, Chongqing University of Posts and Telecommunications, 400065 Sichuan, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Verticillium"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gossypium"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CL"
+                  ],
+                  "qualifierName": [
+                    "classification"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "MI"
+                  ],
+                  "qualifierName": [
+                    "microbiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phylogeny"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Organ Specificity"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Diseases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "MI"
+                  ],
+                  "qualifierName": [
+                    "microbiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Silencing"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Amino Acid Sequence"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Transport"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Disease Resistance"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Cotton",
+        "Verticillium wilt",
+        "biotic and abiotic stress",
+        "Nac Transcription Factor",
+        "Vigs"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5144965?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5144965"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1534/g3.116.034512"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2017-11-09"
+  ],
+  "dateOfCreation": [
+    "2016-11-03"
+  ],
+  "dateOfRevision": [
+    "2018-01-02"
+  ],
+  "electronicPublicationDate": [
+    "2016-12-07"
+  ],
+  "firstPublicationDate": [
+    "2016-12-07"
+  ]
+}

@@ -1,0 +1,566 @@
+{
+  "id": [
+    "24651267"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "24651267"
+  ],
+  "pmcid": [
+    "PMC3961409"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0092598"
+  ],
+  "title": [
+    "Transcriptome analysis of salt tolerant common bean (Phaseolus vulgaris L.) under saline conditions."
+  ],
+  "authorString": [
+    "Hiz MC, Canher B, Niron H, Turet M."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Hiz MC"
+          ],
+          "firstName": [
+            "Mahmut Can"
+          ],
+          "lastName": [
+            "Hiz"
+          ],
+          "initials": [
+            "MC"
+          ],
+          "affiliation": [
+            "Bogazici University Department of Molecular Biology and Genetics, Istanbul, Turkey."
+          ]
+        },
+        {
+          "fullName": [
+            "Canher B"
+          ],
+          "firstName": [
+            "Balkan"
+          ],
+          "lastName": [
+            "Canher"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Bogazici University Department of Molecular Biology and Genetics, Istanbul, Turkey."
+          ]
+        },
+        {
+          "fullName": [
+            "Niron H"
+          ],
+          "firstName": [
+            "Harun"
+          ],
+          "lastName": [
+            "Niron"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Bogazici University Department of Molecular Biology and Genetics, Istanbul, Turkey."
+          ]
+        },
+        {
+          "fullName": [
+            "Turet M"
+          ],
+          "firstName": [
+            "Muge"
+          ],
+          "lastName": [
+            "Turet"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Bogazici University Department of Molecular Biology and Genetics, Istanbul, Turkey."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "3"
+      ],
+      "volume": [
+        "9"
+      ],
+      "journalIssueId": [
+        "2135647"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "e92598"
+  ],
+  "abstractText": [
+    "Salinity is one of the important abiotic stress factors that limit crop production. Common bean, Phaseolus vulgaris L., a major protein source in developing countries, is highly affected by soil salinity and the information on genes that play a role in salt tolerance is scarce. We aimed to identify differentially expressed genes (DEGs) and related pathways by comprehensive analysis of transcriptomes of both root and leaf tissues of the tolerant genotype grown under saline and control conditions in hydroponic system. We have generated a total of 158 million high-quality reads which were assembled into 83,774 all-unigenes with a mean length of 813 bp and N50 of 1,449 bp. Among the all-unigenes, 58,171 were assigned with Nr annotations after homology analyses. It was revealed that 6,422 and 4,555 all-unigenes were differentially expressed upon salt stress in leaf and root tissues respectively. Validation of the RNA-seq quantifications (RPKM values) was performed by qRT-PCR (Quantitative Reverse Transcription PCR) analyses. Enrichment analyses of DEGs based on GO and KEGG databases have shown that both leaf and root tissues regulate energy metabolism, transmembrane transport activity, and secondary metabolites to cope with salinity. A total of 2,678 putative common bean transcription factors were identified and classified under 59 transcription factor families; among them 441 were salt responsive. The data generated in this study will help in understanding the fundamentals of salt tolerance in common bean and will provide resources for functional genomic studies."
+  ],
+  "affiliation": [
+    "Bogazici University Department of Molecular Biology and Genetics, Istanbul, Turkey."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phaseolus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sodium Chloride"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Reproducibility of Results"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Computational Biology"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Salinity"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Salt-Tolerance"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Molecular Sequence Annotation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Sodium Chloride"
+          ],
+          "registryNumber": [
+            "451W47IQ8X"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3961409?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3961409"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24651267/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24651267/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0092598"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "20"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen",
+        "go"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2014-11-07"
+  ],
+  "dateOfCreation": [
+    "2014-03-22"
+  ],
+  "dateOfRevision": [
+    "2018-04-06"
+  ],
+  "electronicPublicationDate": [
+    "2014-03-20"
+  ],
+  "firstPublicationDate": [
+    "2014-03-20"
+  ]
+}

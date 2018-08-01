@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC2930629/results/gene/human/results.xml">
+  <result pre="s the covariance matrix between X and Y, i is the iteration index and u " exact="SVD " post=" denotes the first left singular vector (normalized) obtained from a full Singular Value Deco" xpath="/html[1]/body[1]/div[2]/div[5]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="Where v " exact="SVD " post=" denotes the first right singular vector (normalized) obtained from a full SVD of K. " xpath="/html[1]/body[1]/div[2]/div[5]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="ber of known positive TFs involved in the same biological process (original input), N " exact="ASCCA " post=" as the number of TFs fished out by ASCCA, and N pos∩ ASCCA &lt;/sub" xpath="/html[1]/body[1]/div[2]/div[5]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre=" ASCCA as the number of TFs fished out by ASCCA, and N pos∩ " exact="ASCCA " post=" as the number of known positive TFs that are fished out by ASCCA. Then based on the ratio of" xpath="/html[1]/body[1]/div[2]/div[5]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="positive TFs identified by ASCCA is ( N pos / N)* N " exact="ASCCA " post=" which is an ideal criterion to be compared with N pos∩ ASCCA &lt;/su" xpath="/html[1]/body[1]/div[2]/div[5]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="ub&gt; ASCCA which is an ideal criterion to be compared with N pos∩ " exact="ASCCA" post=" , the actual number of positive TFs identified by ASCCA. To make the above criterion more st" xpath="/html[1]/body[1]/div[2]/div[5]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="by an enrichment factor ( EF) which varies from 1~5. That is, if N pos∩ " exact="ASCCA " post=" &amp;amp;gt; EF * ( N pos / N)* N ASCCA" xpath="/html[1]/body[1]/div[2]/div[5]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="CCA &amp;amp;gt; EF * ( N pos / N)* N " exact="ASCCA" post=" , the hooked TF set is saved and discarded otherwise. For all the sample results shown in th" xpath="/html[1]/body[1]/div[2]/div[5]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="n X and Y, then save the resulted set of candidate TFs if N pos∩ " exact="ASCCA " post=" &amp;amp;gt; EF * ( N pos / N)* N ASCCA" xpath="/html[1]/body[1]/div[2]/div[5]/div[5]/p[6]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="CCA &amp;amp;gt; EF * ( N pos / N)* N " exact="ASCCA " post=" and discard otherwise " dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC5540570/results/search/pectin/results.xml">
+  <result pre="values &amp;lt;20 were filtered out, resulting in a gene expression" exact="matrix" post="that included 29,316 maize genes (rows) and 787 RNA-Seq"/>
+  <result pre="were more likely to have larger variances. The gene expression" exact="matrix" post="was transformed via log-transformation to reduce such mean-variance dependency"/>
+  <result pre="with RNA-Seq data [ 33– 40]. The log-transformed gene expression" exact="matrix" post="was then used for the calculation of partial correlation"/>
+  <result pre="(#155). Furthermore, identified were modules for primary (#543) and secondary" exact="cell wall" post="biosynthesis (#13), and for the signaling pathways of development"/>
+  <result pre="varies significantly. Those involved in carpels, Casparian strip, epidermis, and" exact="cell wall" post="development are conserved, all of which constitute the basic"/>
+  <result pre="assembly (#49), ribosomal functions (#125, 140), plastid development (#308), primary" exact="cell wall" post="biosynthesis (#543), and ER stress response (#95). These modules"/>
+  <result pre="expression data were then merged into a single gene expression" exact="matrix" post="with 787 columns, and the low expressed genes (maximum"/>
+  <result pre="being less than 20) were filtered out, resulting in a" exact="matrix" post="with 29,316 genes and 787 columns. The matrix was"/>
+  <result pre="in a matrix with 29,316 genes and 787 columns. The" exact="matrix" post="was log-transformed [ 32– 40] via the log 2"/>
+  <result pre="dependency (Additional file 2: Fig. S1). The log-transformed gene expression" exact="matrix" post="was then used for partial correlation calculation, following a"/>
+  <result pre="gene network was also constructed directly from the gene expression" exact="matrix" post="with the original FPKM values without data transformation, designated"/>
+  <result pre="van Bolderen-Veldkamp RP Marshall A Widera P Gilbert J Drost" exact="HG" post="Bassel GW Muller K King JR et al. Transcriptional"/>
+  <result pre="Schäfer J, Strimmer K. A shrinkage approach to large-scale covariance" exact="matrix" post="estimation and implications for functional genomics. Stat Appl Genet"/>
+ </snippets>
+</snippetsTree>

@@ -1,0 +1,336 @@
+{
+  "id": [
+    "25071798"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25071798"
+  ],
+  "pmcid": [
+    "PMC4076795"
+  ],
+  "doi": [
+    "10.3389/fpls.2014.00315"
+  ],
+  "title": [
+    "Regulation of xylem cell fate."
+  ],
+  "authorString": [
+    "Kondo Y, Tamaki T, Fukuda H."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Kondo Y"
+          ],
+          "firstName": [
+            "Yuki"
+          ],
+          "lastName": [
+            "Kondo"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Laboratory of Cellular Biochemistry, Department of Biological Sciences, Graduate School of Science, The University of Tokyo Tokyo, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Tamaki T"
+          ],
+          "firstName": [
+            "Takayuki"
+          ],
+          "lastName": [
+            "Tamaki"
+          ],
+          "initials": [
+            "T"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-8813-1560",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Laboratory of Cellular Biochemistry, Department of Biological Sciences, Graduate School of Science, The University of Tokyo Tokyo, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Fukuda H"
+          ],
+          "firstName": [
+            "Hiroo"
+          ],
+          "lastName": [
+            "Fukuda"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Laboratory of Cellular Biochemistry, Department of Biological Sciences, Graduate School of Science, The University of Tokyo Tokyo, Japan."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-8813-1560",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "5"
+      ],
+      "journalIssueId": [
+        "2120434"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in Plant Science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "315"
+  ],
+  "abstractText": [
+    "The vascular system is organized throughout the plant body for transporting water, nutrients, and signaling molecules. During vascular development, xylem, phloem, and procambial/cambial cells are produced in a spatiotemporally organized manner. Several key regulators for xylem cell patterning and differentiation have been discovered, including auxin, cytokinin, CLE peptides, microRNAs, HD-ZIPIIIs, VNDs, and moving transcription factors SHR and AHLs. Recent studies are identifying functional interactions among these factors that ultimately determine xylem cell fate. This review focuses on regulatory networks underlying xylem cell fate determination in root vascular development."
+  ],
+  "affiliation": [
+    "Laboratory of Cellular Biochemistry, Department of Biological Sciences, Graduate School of Science, The University of Tokyo Tokyo, Japan."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "review-article",
+        "Review",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Differentiation",
+        "Transcription factor",
+        "Hormone",
+        "Patterning",
+        "xylem"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4076795?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4076795"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/25071798/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/25071798/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2014.00315"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "10"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2014-07-29"
+  ],
+  "dateOfCreation": [
+    "2014-07-29"
+  ],
+  "dateOfRevision": [
+    "2014-07-31"
+  ],
+  "electronicPublicationDate": [
+    "2014-07-01"
+  ],
+  "firstPublicationDate": [
+    "2014-07-01"
+  ]
+}

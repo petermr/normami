@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC4268804/results/gene/human/results.xml">
+  <result pre="er mosaic virus 35S promoter in the Arabidopsis uge4 mutant background. Loss of function of " exact="UGE4" post=" results in a reduced root elongation rate and swelling of root epidermal cells probably as a resul" xpath="/html[1]/body[1]/div[2]/div[2]/div[5]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="specific construct ( pIRX5:NST1-UGE2). The fiber-specific construct is under control of the " exact="IRX5" post=" promoter and in addition expresses the transcription factor NST1 leading to a positive-artificial " xpath="/html[1]/body[1]/div[2]/div[2]/div[5]/p[1]" name="human"/>
+  <result pre="eased wall thickness in fiber cells, as previously reported [ 2]. In this construct " exact="UGE2" post=" is expressed from the same pIRX5 promoter, separated from NST1 with the 2A sequence " xpath="/html[1]/body[1]/div[2]/div[2]/div[5]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="2]. In this construct UGE2 is expressed from the same pIRX5 promoter, separated from " exact="NST1" post=" with the 2A sequence from foot-and-mouth disease virus allowing coordinate expression of multiple " dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

@@ -1,0 +1,748 @@
+{
+  "id": [
+    "24914054"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "24914054"
+  ],
+  "pmcid": [
+    "PMC4081100"
+  ],
+  "doi": [
+    "10.1093/nar/gku502"
+  ],
+  "title": [
+    "A DNA-binding-site landscape and regulatory network analysis for NAC transcription factors in Arabidopsis thaliana."
+  ],
+  "authorString": [
+    "Lindemose S, Jensen MK, Van de Velde J, O'Shea C, Heyndrickx KS, Workman CT, Vandepoele K, Skriver K, De Masi F."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Lindemose S"
+          ],
+          "firstName": [
+            "Søren"
+          ],
+          "lastName": [
+            "Lindemose"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Copenhagen, 2200 Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Jensen MK"
+          ],
+          "firstName": [
+            "Michael K"
+          ],
+          "lastName": [
+            "Jensen"
+          ],
+          "initials": [
+            "MK"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7574-4707",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Novo Nordisk Foundation Center for Biosustainability, Technical University of Denmark, DK-2970 Hørsholm, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Van de Velde J"
+          ],
+          "firstName": [
+            "Jan"
+          ],
+          "lastName": [
+            "Van de Velde"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Plant Systems Biology, VIB, 9052 Ghent, Belgium Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+          ]
+        },
+        {
+          "fullName": [
+            "O'Shea C"
+          ],
+          "firstName": [
+            "Charlotte"
+          ],
+          "lastName": [
+            "O'Shea"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Copenhagen, 2200 Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Heyndrickx KS"
+          ],
+          "firstName": [
+            "Ken S"
+          ],
+          "lastName": [
+            "Heyndrickx"
+          ],
+          "initials": [
+            "KS"
+          ],
+          "affiliation": [
+            "Department of Plant Systems Biology, VIB, 9052 Ghent, Belgium Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+          ]
+        },
+        {
+          "fullName": [
+            "Workman CT"
+          ],
+          "firstName": [
+            "Christopher T"
+          ],
+          "lastName": [
+            "Workman"
+          ],
+          "initials": [
+            "CT"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2210-3743",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Center for Biological Sequence Analysis, Institute for Systems Biology, Technical University of Denmark, 2800 Kgs. Lyngby, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Vandepoele K"
+          ],
+          "firstName": [
+            "Klaas"
+          ],
+          "lastName": [
+            "Vandepoele"
+          ],
+          "initials": [
+            "K"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4790-2725",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Plant Systems Biology, VIB, 9052 Ghent, Belgium Department of Plant Biotechnology and Bioinformatics, Ghent University, 9052 Ghent, Belgium."
+          ]
+        },
+        {
+          "fullName": [
+            "Skriver K"
+          ],
+          "firstName": [
+            "Karen"
+          ],
+          "lastName": [
+            "Skriver"
+          ],
+          "initials": [
+            "K"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2225-4012",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biology, University of Copenhagen, 2200 Copenhagen, Denmark KSkriver@bio.ku.dk."
+          ]
+        },
+        {
+          "fullName": [
+            "De Masi F"
+          ],
+          "firstName": [
+            "Federico"
+          ],
+          "lastName": [
+            "De Masi"
+          ],
+          "initials": [
+            "F"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4859-4170",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Center for Biological Sequence Analysis, Institute for Systems Biology, Technical University of Denmark, 2800 Kgs. Lyngby, Denmark fdemasi@cbs.dtu.dk."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-7574-4707",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4790-2725",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-2210-3743",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-2225-4012",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4859-4170",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "12"
+      ],
+      "volume": [
+        "42"
+      ],
+      "journalIssueId": [
+        "2179918"
+      ],
+      "dateOfPublication": [
+        "2014 Jul"
+      ],
+      "monthOfPublication": [
+        "7"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-07-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Nucleic acids research"
+          ],
+          "ISOAbbreviation": [
+            "Nucleic Acids Res."
+          ],
+          "medlineAbbreviation": [
+            "Nucleic Acids Res"
+          ],
+          "NLMid": [
+            "0411011"
+          ],
+          "ISSN": [
+            "0305-1048"
+          ],
+          "ESSN": [
+            "1362-4962"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "7681-7693"
+  ],
+  "abstractText": [
+    "Target gene identification for transcription factors is a prerequisite for the systems wide understanding of organismal behaviour. NAM-ATAF1/2-CUC2 (NAC) transcription factors are amongst the largest transcription factor families in plants, yet limited data exist from unbiased approaches to resolve the DNA-binding preferences of individual members. Here, we present a TF-target gene identification workflow based on the integration of novel protein binding microarray data with gene expression and multi-species promoter sequence conservation to identify the DNA-binding specificities and the gene regulatory networks of 12 NAC transcription factors. Our data offer specific single-base resolution fingerprints for most TFs studied and indicate that NAC DNA-binding specificities might be predicted from their DNA-binding domain's sequence. The developed methodology, including the application of complementary functional genomics filters, makes it possible to translate, for each TF, protein binding microarray data into a set of high-quality target genes. With this approach, we confirm NAC target genes reported from independent in vivo analyses. We emphasize that candidate target gene sets together with the workflow associated with functional modules offer a strong resource to unravel the regulatory potential of NAC genes and that this workflow could be used to study other families of transcription factors."
+  ],
+  "affiliation": [
+    "Department of Biology, University of Copenhagen, 2200 Copenhagen, Denmark."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "NNF10CC1016517"
+          ],
+          "agency": [
+            "Novo Nordisk Fonden"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Repressor Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "DNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Binding Sites"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Repressor Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "DNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "NAC2 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4081100?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4081100"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24914054/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24914054/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/nar/gku502"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "20"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2014-09-02"
+  ],
+  "dateOfCreation": [
+    "2014-07-04"
+  ],
+  "dateOfRevision": [
+    "2015-01-06"
+  ],
+  "electronicPublicationDate": [
+    "2014-06-09"
+  ],
+  "firstPublicationDate": [
+    "2014-06-09"
+  ]
+}

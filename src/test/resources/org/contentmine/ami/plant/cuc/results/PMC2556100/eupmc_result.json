@@ -1,0 +1,782 @@
+{
+  "id": [
+    "18827894"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "18827894"
+  ],
+  "pmcid": [
+    "PMC2556100"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0003306"
+  ],
+  "title": [
+    "Promoter DNA hypermethylation and gene repression in undifferentiated Arabidopsis cells."
+  ],
+  "authorString": [
+    "Berdasco M, Alcázar R, García-Ortiz MV, Ballestar E, Fernández AF, Roldán-Arjona T, Tiburcio AF, Altabella T, Buisine N, Quesneville H, Baudry A, Lepiniec L, Alaminos M, Rodríguez R, Lloyd A, Colot V, Bender J, Canal MJ, Esteller M, Fraga MF."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Berdasco M"
+          ],
+          "firstName": [
+            "María"
+          ],
+          "lastName": [
+            "Berdasco"
+          ],
+          "initials": [
+            "M"
+          ]
+        },
+        {
+          "fullName": [
+            "Alcázar R"
+          ],
+          "firstName": [
+            "Rubén"
+          ],
+          "lastName": [
+            "Alcázar"
+          ],
+          "initials": [
+            "R"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-3567-7586",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "García-Ortiz MV"
+          ],
+          "firstName": [
+            "María Victoria"
+          ],
+          "lastName": [
+            "García-Ortiz"
+          ],
+          "initials": [
+            "MV"
+          ]
+        },
+        {
+          "fullName": [
+            "Ballestar E"
+          ],
+          "firstName": [
+            "Esteban"
+          ],
+          "lastName": [
+            "Ballestar"
+          ],
+          "initials": [
+            "E"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-1400-2440",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Fernández AF"
+          ],
+          "firstName": [
+            "Agustín F"
+          ],
+          "lastName": [
+            "Fernández"
+          ],
+          "initials": [
+            "AF"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-3792-4085",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Roldán-Arjona T"
+          ],
+          "firstName": [
+            "Teresa"
+          ],
+          "lastName": [
+            "Roldán-Arjona"
+          ],
+          "initials": [
+            "T"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2842-3956",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Tiburcio AF"
+          ],
+          "firstName": [
+            "Antonio F"
+          ],
+          "lastName": [
+            "Tiburcio"
+          ],
+          "initials": [
+            "AF"
+          ]
+        },
+        {
+          "fullName": [
+            "Altabella T"
+          ],
+          "firstName": [
+            "Teresa"
+          ],
+          "lastName": [
+            "Altabella"
+          ],
+          "initials": [
+            "T"
+          ]
+        },
+        {
+          "fullName": [
+            "Buisine N"
+          ],
+          "firstName": [
+            "Nicolas"
+          ],
+          "lastName": [
+            "Buisine"
+          ],
+          "initials": [
+            "N"
+          ]
+        },
+        {
+          "fullName": [
+            "Quesneville H"
+          ],
+          "firstName": [
+            "Hadi"
+          ],
+          "lastName": [
+            "Quesneville"
+          ],
+          "initials": [
+            "H"
+          ]
+        },
+        {
+          "fullName": [
+            "Baudry A"
+          ],
+          "firstName": [
+            "Antoine"
+          ],
+          "lastName": [
+            "Baudry"
+          ],
+          "initials": [
+            "A"
+          ]
+        },
+        {
+          "fullName": [
+            "Lepiniec L"
+          ],
+          "firstName": [
+            "Loïc"
+          ],
+          "lastName": [
+            "Lepiniec"
+          ],
+          "initials": [
+            "L"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-5845-3323",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Alaminos M"
+          ],
+          "firstName": [
+            "Miguel"
+          ],
+          "lastName": [
+            "Alaminos"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4876-2672",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Rodríguez R"
+          ],
+          "firstName": [
+            "Roberto"
+          ],
+          "lastName": [
+            "Rodríguez"
+          ],
+          "initials": [
+            "R"
+          ]
+        },
+        {
+          "fullName": [
+            "Lloyd A"
+          ],
+          "firstName": [
+            "Alan"
+          ],
+          "lastName": [
+            "Lloyd"
+          ],
+          "initials": [
+            "A"
+          ]
+        },
+        {
+          "fullName": [
+            "Colot V"
+          ],
+          "firstName": [
+            "Vincent"
+          ],
+          "lastName": [
+            "Colot"
+          ],
+          "initials": [
+            "V"
+          ]
+        },
+        {
+          "fullName": [
+            "Bender J"
+          ],
+          "firstName": [
+            "Judith"
+          ],
+          "lastName": [
+            "Bender"
+          ],
+          "initials": [
+            "J"
+          ]
+        },
+        {
+          "fullName": [
+            "Canal MJ"
+          ],
+          "firstName": [
+            "María Jesús"
+          ],
+          "lastName": [
+            "Canal"
+          ],
+          "initials": [
+            "MJ"
+          ]
+        },
+        {
+          "fullName": [
+            "Esteller M"
+          ],
+          "firstName": [
+            "Manel"
+          ],
+          "lastName": [
+            "Esteller"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4490-6093",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Fraga MF"
+          ],
+          "firstName": [
+            "Mario F"
+          ],
+          "lastName": [
+            "Fraga"
+          ],
+          "initials": [
+            "MF"
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-2842-3956",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4490-6093",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-1639-9672",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4876-2672",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-3792-4085",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-5845-3323",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-3567-7586",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-1400-2440",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "10"
+      ],
+      "volume": [
+        "3"
+      ],
+      "journalIssueId": [
+        "1558930"
+      ],
+      "dateOfPublication": [
+        "2008 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2008"
+      ],
+      "printPublicationDate": [
+        "2008-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2008"
+  ],
+  "pageInfo": [
+    "e3306"
+  ],
+  "abstractText": [
+    "Maintaining and acquiring the pluripotent cell state in plants is critical to tissue regeneration and vegetative multiplication. Histone-based epigenetic mechanisms are important for regulating this undifferentiated state. Here we report the use of genetic and pharmacological experimental approaches to show that Arabidopsis cell suspensions and calluses specifically repress some genes as a result of promoter DNA hypermethylation. We found that promoters of the MAPK12, GSTU10 and BXL1 genes become hypermethylated in callus cells and that hypermethylation also affects the TTG1, GSTF5, SUVH8, fimbrin and CCD7 genes in cell suspensions. Promoter hypermethylation in undifferentiated cells was associated with histone hypoacetylation and primarily occurred at CpG sites. Accordingly, we found that the process specifically depends on MET1 and DRM2 methyltransferases, as demonstrated with DNA methyltransferase mutants. Our results suggest that promoter DNA methylation may be another important epigenetic mechanism for the establishment and/or maintenance of the undifferentiated state in plant cells."
+  ],
+  "affiliation": [
+    "Cancer Epigenetics Laboratory, Molecular Pathology Programme, Spanish National Cancer Centre (CNIO), Madrid, Spain."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CY"
+                  ],
+                  "qualifierName": [
+                    "cytology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Chromatin Immunoprecipitation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Reverse Transcriptase Polymerase Chain Reaction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cell Differentiation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "DNA Methylation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Epigenesis, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2556100?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2556100"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/18827894/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/18827894/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0003306"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "42"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2008-12-12"
+  ],
+  "dateOfCreation": [
+    "2008-10-01"
+  ],
+  "dateOfRevision": [
+    "2013-06-05"
+  ],
+  "electronicPublicationDate": [
+    "2008-10-01"
+  ],
+  "firstPublicationDate": [
+    "2008-10-01"
+  ]
+}

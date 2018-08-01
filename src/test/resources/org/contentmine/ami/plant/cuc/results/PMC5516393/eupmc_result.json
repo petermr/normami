@@ -1,0 +1,729 @@
+{
+  "id": [
+    "28720072"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28720072"
+  ],
+  "pmcid": [
+    "PMC5516393"
+  ],
+  "doi": [
+    "10.1186/s12864-017-3902-4"
+  ],
+  "title": [
+    "Tissue and cell-specific transcriptomes in cotton reveal the subtleties of gene regulation underlying the diversity of plant secondary cell walls."
+  ],
+  "authorString": [
+    "MacMillan CP, Birke H, Chuah A, Brill E, Tsuji Y, Ralph J, Dennis ES, Llewellyn D, Pettolino FA."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "MacMillan CP"
+          ],
+          "firstName": [
+            "Colleen P"
+          ],
+          "lastName": [
+            "MacMillan"
+          ],
+          "initials": [
+            "CP"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3594-5373",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "CSIRO Agriculture and Food, PO Box 1700, Canberra, ACT, 2601, Australia. colleen.macmillan@csiro.au."
+          ]
+        },
+        {
+          "fullName": [
+            "Birke H"
+          ],
+          "firstName": [
+            "Hannah"
+          ],
+          "lastName": [
+            "Birke"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "CSIRO Agriculture and Food, PO Box 1700, Canberra, ACT, 2601, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Chuah A"
+          ],
+          "firstName": [
+            "Aaron"
+          ],
+          "lastName": [
+            "Chuah"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3066-701X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "John Curtin School of Medical Research, The Australian National University, ACT, Canberra, 2601, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Brill E"
+          ],
+          "firstName": [
+            "Elizabeth"
+          ],
+          "lastName": [
+            "Brill"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "CSIRO Agriculture and Food, PO Box 1700, Canberra, ACT, 2601, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Tsuji Y"
+          ],
+          "firstName": [
+            "Yukiko"
+          ],
+          "lastName": [
+            "Tsuji"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Department of Biochemistry and the Department of Energy's Great Lakes BioEnergy Research Center, The Wisconsin Energy Institute, 1552 University Avenue, Madison, WI, 53726-4084, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Ralph J"
+          ],
+          "firstName": [
+            "John"
+          ],
+          "lastName": [
+            "Ralph"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Biochemistry and the Department of Energy's Great Lakes BioEnergy Research Center, The Wisconsin Energy Institute, 1552 University Avenue, Madison, WI, 53726-4084, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Dennis ES"
+          ],
+          "firstName": [
+            "Elizabeth S"
+          ],
+          "lastName": [
+            "Dennis"
+          ],
+          "initials": [
+            "ES"
+          ],
+          "affiliation": [
+            "CSIRO Agriculture and Food, PO Box 1700, Canberra, ACT, 2601, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Llewellyn D"
+          ],
+          "firstName": [
+            "Danny"
+          ],
+          "lastName": [
+            "Llewellyn"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "CSIRO Agriculture and Food, PO Box 1700, Canberra, ACT, 2601, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Pettolino FA"
+          ],
+          "firstName": [
+            "Filomena A"
+          ],
+          "lastName": [
+            "Pettolino"
+          ],
+          "initials": [
+            "FA"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-9077-1532",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "CSIRO Agriculture and Food, PO Box 1700, Canberra, ACT, 2601, Australia."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-9077-1532",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-3594-5373",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-3066-701X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "18"
+      ],
+      "journalIssueId": [
+        "2572181"
+      ],
+      "dateOfPublication": [
+        "2017 Jul"
+      ],
+      "monthOfPublication": [
+        "7"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-07-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "539"
+  ],
+  "abstractText": [
+    "Knowledge of plant secondary cell wall (SCW) regulation and deposition is mainly based on the Arabidopsis model of a 'typical' lignocellulosic SCW. However, SCWs in other plants can vary from this. The SCW of mature cotton seed fibres is highly cellulosic and lacks lignification whereas xylem SCWs are lignocellulosic. We used cotton as a model to study different SCWs and the expression of the genes involved in their formation via RNA deep sequencing and chemical analysis of stem and seed fibre.Transcriptome comparisons from cotton xylem and pith as well as from a developmental series of seed fibres revealed tissue-specific and developmentally regulated expression of several NAC transcription factors some of which are likely to be important as top tier regulators of SCW formation in xylem and/or seed fibre. A so far undescribed hierarchy was identified between the top tier NAC transcription factors SND1-like and NST1/2 in cotton. Key SCW MYB transcription factors, homologs of Arabidopsis MYB46/83, were practically absent in cotton stem xylem. Lack of expression of other lignin-specific MYBs in seed fibre relative to xylem could account for the lack of lignin deposition in seed fibre. Expression of a MYB103 homolog correlated with temporal expression of SCW CesAs and cellulose synthesis in seed fibres. FLAs were highly expressed and may be important structural components of seed fibre SCWs. Finally, we made the unexpected observation that cell walls in the pith of cotton stems contained lignin and had a higher S:G ratio than in xylem, despite that tissue's lacking many of the gene transcripts normally associated with lignin biosynthesis.Our study in cotton confirmed some features of the currently accepted gene regulatory cascade for 'typical' plant SCWs, but also revealed substantial differences, especially with key downstream NACs and MYBs. The lignocellulosic SCW of cotton xylem appears to be achieved differently from that in Arabidopsis. Pith cell walls in cotton stems are compositionally very different from that reported for other plant species, including Arabidopsis. The current definition of a 'typical' primary or secondary cell wall might not be applicable to all cell types in all plant species."
+  ],
+  "affiliation": [
+    "CSIRO Agriculture and Food, PO Box 1700, Canberra, ACT, 2601, Australia. colleen.macmillan@csiro.au."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Research Support, U.S. Gov't, Non-P.H.S.",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cell Wall"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gossypium"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CY"
+                  ],
+                  "qualifierName": [
+                    "cytology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Stems"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Propanols"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cellulose"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Organ Specificity"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription, Genetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Lignin",
+        "Cotton",
+        "Transcription factor",
+        "Gossypium hirsutum",
+        "Secondary cell wall",
+        "Syringyl",
+        "Guaiacyl",
+        "Cellulose Synthase",
+        "Primary Cell Wall",
+        "P-hydroxyphenyl"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Cellulose"
+          ],
+          "registryNumber": [
+            "9004-34-6"
+          ]
+        },
+        {
+          "name": [
+            "Propanols"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "1-phenylpropanol"
+          ],
+          "registryNumber": [
+            "0F897O3O4M"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5516393?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5516393"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12864-017-3902-4"
+          ]
+        }
+      ]
+    }
+  ],
+  "commentCorrectionList": [
+    {
+      "commentCorrection": [
+        {
+          "id": [
+            "29665776"
+          ],
+          "source": [
+            "MED"
+          ],
+          "reference": [
+            "BMC Genomics. 2018 Apr 17;19(1):261"
+          ],
+          "type": [
+            "Erratum in"
+          ],
+          "orderIn": [
+            "84"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2018-03-14"
+  ],
+  "dateOfCreation": [
+    "2017-07-20"
+  ],
+  "dateOfRevision": [
+    "2018-04-18"
+  ],
+  "electronicPublicationDate": [
+    "2017-07-18"
+  ],
+  "firstPublicationDate": [
+    "2017-07-18"
+  ]
+}

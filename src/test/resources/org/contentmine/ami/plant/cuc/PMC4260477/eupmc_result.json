@@ -1,0 +1,286 @@
+{
+  "id": [
+    "25538725"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25538725"
+  ],
+  "pmcid": [
+    "PMC4260477"
+  ],
+  "doi": [
+    "10.3389/fpls.2014.00697"
+  ],
+  "title": [
+    "Salicylic acid signal transduction: the initiation of biosynthesis, perception and transcriptional reprogramming."
+  ],
+  "authorString": [
+    "Seyfferth C, Tsuda K."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Seyfferth C"
+          ],
+          "firstName": [
+            "Carolin"
+          ],
+          "lastName": [
+            "Seyfferth"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Department of Plant Microbe Interactions, Max Planck Institute for Plant Breeding Research , Cologne, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Tsuda K"
+          ],
+          "firstName": [
+            "Kenichi"
+          ],
+          "lastName": [
+            "Tsuda"
+          ],
+          "initials": [
+            "K"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7074-0731",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Plant Microbe Interactions, Max Planck Institute for Plant Breeding Research , Cologne, Germany."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-7074-0731",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "5"
+      ],
+      "journalIssueId": [
+        "2120434"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in Plant Science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "697"
+  ],
+  "abstractText": [
+    "The phytohormone salicylic acid (SA) is a small phenolic compound that regulates diverse physiological processes, in particular plant resistance against pathogens. Understanding SA-mediated signaling has been a major focus of plant research. Pathogen-induced SA is mainly synthesized via the isochorismate pathway in chloroplasts, with ICS1 (ISOCHORISMATE SYNTHASE 1) being a critical enzyme. Calcium signaling regulates activities of a subset of transcription factors thereby activating nuclear ICS1 expression. The produced SA triggers extensive transcriptional reprogramming in which NPR1 (NON-EXPRESSOR of PATHOGENESIS-RELATED GENES 1) functions as the central coactivator of TGA transcription factors. Recently, two alternative but not exclusive models for SA perception mechanisms were proposed. The first model is that NPR1 homologs, NPR3 and NPR4, perceive SA thereby regulating NPR1 protein accumulation. The second model describes that NPR1 itself perceives SA, triggering an NPR1 conformational change thereby activating SA-mediated transcription. Besides the direct SA binding, NPR1 is also regulated by SA-mediated redox changes and phosphorylation. Emerging evidence show that pathogen virulence effectors target SA signaling, further strengthening the importance of SA-mediated immunity."
+  ],
+  "affiliation": [
+    "Department of Plant Microbe Interactions, Max Planck Institute for Plant Breeding Research , Cologne, Germany."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Salicylic acid",
+        "Calcium",
+        "npr1",
+        "Plant Immunity",
+        "Transcriptional Reprogramming",
+        "Ics1",
+        "Sa Perception"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4260477?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4260477"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2014.00697"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "32"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2014-12-24"
+  ],
+  "dateOfCreation": [
+    "2014-12-24"
+  ],
+  "dateOfRevision": [
+    "2014-12-31"
+  ],
+  "electronicPublicationDate": [
+    "2014-12-09"
+  ],
+  "firstPublicationDate": [
+    "2014-12-09"
+  ]
+}

@@ -1,0 +1,541 @@
+{
+  "id": [
+    "21985325"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "21985325"
+  ],
+  "pmcid": [
+    "PMC3209450"
+  ],
+  "doi": [
+    "10.1186/1471-2229-11-135"
+  ],
+  "title": [
+    "Identification and analysis of common bean (Phaseolus vulgaris L.) transcriptomes by massively parallel pyrosequencing."
+  ],
+  "authorString": [
+    "Kalavacharla V, Liu Z, Meyers BC, Thimmapuram J, Melmaiee K."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Kalavacharla V"
+          ],
+          "firstName": [
+            "Venu"
+          ],
+          "lastName": [
+            "Kalavacharla"
+          ],
+          "initials": [
+            "V"
+          ]
+        },
+        {
+          "fullName": [
+            "Liu Z"
+          ],
+          "firstName": [
+            "Zhanji"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "Z"
+          ]
+        },
+        {
+          "fullName": [
+            "Meyers BC"
+          ],
+          "firstName": [
+            "Blake C"
+          ],
+          "lastName": [
+            "Meyers"
+          ],
+          "initials": [
+            "BC"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3436-6097",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Thimmapuram J"
+          ],
+          "firstName": [
+            "Jyothi"
+          ],
+          "lastName": [
+            "Thimmapuram"
+          ],
+          "initials": [
+            "J"
+          ]
+        },
+        {
+          "fullName": [
+            "Melmaiee K"
+          ],
+          "firstName": [
+            "Kalpalatha"
+          ],
+          "lastName": [
+            "Melmaiee"
+          ],
+          "initials": [
+            "K"
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-3436-6097",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "11"
+      ],
+      "journalIssueId": [
+        "1800930"
+      ],
+      "dateOfPublication": [
+        "2011 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2011"
+      ],
+      "printPublicationDate": [
+        "2011-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC plant biology"
+          ],
+          "ISOAbbreviation": [
+            "BMC Plant Biol."
+          ],
+          "medlineAbbreviation": [
+            "BMC Plant Biol"
+          ],
+          "NLMid": [
+            "100967807"
+          ],
+          "ISSN": [
+            "1471-2229"
+          ],
+          "ESSN": [
+            "1471-2229"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2011"
+  ],
+  "pageInfo": [
+    "135"
+  ],
+  "abstractText": [
+    "BACKGROUND: Common bean (Phaseolus vulgaris) is the most important food legume in the world. Although this crop is very important to both the developed and developing world as a means of dietary protein supply, resources available in common bean are limited. Global transcriptome analysis is important to better understand gene expression, genetic variation, and gene structure annotation in addition to other important features. However, the number and description of common bean sequences are very limited, which greatly inhibits genome and transcriptome research. Here we used 454 pyrosequencing to obtain a substantial transcriptome dataset for common bean. RESULTS: We obtained 1,692,972 reads with an average read length of 207 nucleotides (nt). These reads were assembled into 59,295 unigenes including 39,572 contigs and 19,723 singletons, in addition to 35,328 singletons less than 100 bp. Comparing the unigenes to common bean ESTs deposited in GenBank, we found that 53.40% or 31,664 of these unigenes had no matches to this dataset and can be considered as new common bean transcripts. Functional annotation of the unigenes carried out by Gene Ontology assignments from hits to Arabidopsis and soybean indicated coverage of a broad range of GO categories. The common bean unigenes were also compared to the bean bacterial artificial chromosome (BAC) end sequences, and a total of 21% of the unigenes (12,724) including 9,199 contigs and 3,256 singletons match to the 8,823 BAC-end sequences. In addition, a large number of simple sequence repeats (SSRs) and transcription factors were also identified in this study. CONCLUSIONS: This work provides the first large scale identification of the common bean transcriptome derived by 454 pyrosequencing. This research has resulted in a 150% increase in the number of Phaseolus vulgaris ESTs. The dataset obtained through this analysis will provide a platform for functional genomics in common bean and related legumes and will aid in the development of molecular markers that can be used for tagging genes of interest. Additionally, these sequences will provide a means for better annotation of the on-going common bean whole genome sequencing."
+  ],
+  "affiliation": [
+    "College of Agriculture & Related Sciences, Delaware State University, Dover, DE 19901, USA. vkalavacharla@desu.edu"
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Research Support, U.S. Gov't, Non-P.H.S.",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phaseolus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, DNA"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Microsatellite Repeats"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Library"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genome, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Expressed Sequence Tags"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Comparative Genomic Hybridization"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3209450?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3209450"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/21985325/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/21985325/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1471-2229-11-135"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "20"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2012-02-03"
+  ],
+  "dateOfCreation": [
+    "2011-11-07"
+  ],
+  "dateOfRevision": [
+    "2013-06-27"
+  ],
+  "electronicPublicationDate": [
+    "2011-10-11"
+  ],
+  "firstPublicationDate": [
+    "2011-10-11"
+  ]
+}

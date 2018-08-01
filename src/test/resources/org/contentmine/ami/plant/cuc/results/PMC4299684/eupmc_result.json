@@ -1,0 +1,651 @@
+{
+  "id": [
+    "25491154"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25491154"
+  ],
+  "pmcid": [
+    "PMC4299684"
+  ],
+  "doi": [
+    "10.1186/1471-2164-15-1083"
+  ],
+  "title": [
+    "Small RNA profiling reveals regulation of Arabidopsis miR168 and heterochromatic siRNA415 in response to fungal elicitors."
+  ],
+  "authorString": [
+    "Baldrich P, Kakar K, Siré C, Moreno AB, Berger A, García-Chapa M, López-Moya JJ, Riechmann JL, San Segundo B."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Baldrich P"
+          ],
+          "firstName": [
+            "Patricia"
+          ],
+          "lastName": [
+            "Baldrich"
+          ],
+          "initials": [
+            "P"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4669-6632",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Kakar K"
+          ],
+          "firstName": [
+            "Klementina"
+          ],
+          "lastName": [
+            "Kakar"
+          ],
+          "initials": [
+            "K"
+          ]
+        },
+        {
+          "fullName": [
+            "Siré C"
+          ],
+          "firstName": [
+            "Christelle"
+          ],
+          "lastName": [
+            "Siré"
+          ],
+          "initials": [
+            "C"
+          ]
+        },
+        {
+          "fullName": [
+            "Moreno AB"
+          ],
+          "firstName": [
+            "Ana Beatriz"
+          ],
+          "lastName": [
+            "Moreno"
+          ],
+          "initials": [
+            "AB"
+          ]
+        },
+        {
+          "fullName": [
+            "Berger A"
+          ],
+          "firstName": [
+            "Angélique"
+          ],
+          "lastName": [
+            "Berger"
+          ],
+          "initials": [
+            "A"
+          ]
+        },
+        {
+          "fullName": [
+            "García-Chapa M"
+          ],
+          "firstName": [
+            "Meritxell"
+          ],
+          "lastName": [
+            "García-Chapa"
+          ],
+          "initials": [
+            "M"
+          ]
+        },
+        {
+          "fullName": [
+            "López-Moya JJ"
+          ],
+          "firstName": [
+            "Juan José"
+          ],
+          "lastName": [
+            "López-Moya"
+          ],
+          "initials": [
+            "JJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-3176-9651",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Riechmann JL"
+          ],
+          "firstName": [
+            "José Luis"
+          ],
+          "lastName": [
+            "Riechmann"
+          ],
+          "initials": [
+            "JL"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-1108-1945",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "San Segundo B"
+          ],
+          "firstName": [
+            "Blanca"
+          ],
+          "lastName": [
+            "San Segundo"
+          ],
+          "initials": [
+            "B"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7409-3172",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centre for Research in Agricultural Genomics (CRAG) CSIC-IRTA-UAB-UB, Edifici CRAG, Campus UAB, Bellaterra (Cerdanyola del Vallés), 08193 Barcelona, Spain. blanca.sansegundo@cragenomica.es."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-4669-6632",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-7409-3172",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-3176-9651",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-1108-1945",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "15"
+      ],
+      "journalIssueId": [
+        "2131045"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "1083"
+  ],
+  "abstractText": [
+    "BACKGROUND: Small RNAs (sRNAs), including small interfering RNAs (siRNAs) and microRNAs (miRNAs), have emerged as important regulators of eukaryotic gene expression. In plants, miRNAs play critical roles in development, nutrient homeostasis and abiotic stress responses. Accumulating evidence also reveals that sRNAs are involved in plant immunity. Most studies on pathogen-regulated sRNAs have been conducted in Arabidopsis plants infected with the bacterial pathogen Pseudomonas syringae, or treated with the flagelin-derived elicitor peptide flg22 from P. syringae. This work investigates sRNAs that are regulated by elicitors from the fungus Fusarium oxysporum in Arabidopsis. RESULTS: Microarray analysis revealed alterations on the accumulation of a set of sRNAs in response to elicitor treatment, including miRNAs and small RNA sequences derived from massively parallel signature sequencing. Among the elicitor-regulated miRNAs was miR168 which regulates ARGONAUTE1, the core component of the RNA-induced silencing complex involved in miRNA functioning. Promoter analysis in transgenic Arabidopsis plants revealed transcriptional activation of MIR168 by fungal elicitors. Furthermore, transgenic plants expressing a GFP-miR168 sensor gene confirmed that the elicitor-induced miR168 is active. MiR823, targeting Chromomethylase3 (CMT3) involved in RNA-directed DNA methylation (RdDM) was also found to be regulated by fungal elicitors. In addition to known miRNAs, microarray analysis allowed the identification of an elicitor-inducible small RNA that was incorrectly annotated as a miRNA. Studies on Arabidopsis mutants impaired in small RNA biogenesis demonstrated that this sRNA, is a heterochromatic-siRNA (hc-siRNA) named as siRNA415. Hc-siRNAs are known to be involved in RNA-directed DNA methylation (RdDM). SiRNA415 is detected in several plant species. CONCLUSION: Results here presented support a transcriptional regulatory mechanism underlying MIR168 expression. This finding highlights the importance of miRNA functioning in adaptive processes of Arabidopsis plants to fungal infection. The results of this study also lay a foundation for the involvement of RdDM processes through the activity of siRNA415 and miR823 in mediating regulation of immune responses in Arabidopsis plants."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Fungi"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "MI"
+                  ],
+                  "qualifierName": [
+                    "microbiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Small Interfering"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA Precursors"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Diseases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "MI"
+                  ],
+                  "qualifierName": [
+                    "microbiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcriptional Activation"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "RNA Precursors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Small Interfering"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4299684?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4299684"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1471-2164-15-1083"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "8"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-07-08"
+  ],
+  "dateOfCreation": [
+    "2014-12-16"
+  ],
+  "dateOfRevision": [
+    "2015-01-21"
+  ],
+  "electronicPublicationDate": [
+    "2014-12-10"
+  ],
+  "firstPublicationDate": [
+    "2014-12-10"
+  ]
+}

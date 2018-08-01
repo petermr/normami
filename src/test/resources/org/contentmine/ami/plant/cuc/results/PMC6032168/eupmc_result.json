@@ -1,0 +1,533 @@
+{
+  "id": [
+    "29848989"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29848989"
+  ],
+  "pmcid": [
+    "PMC6032168"
+  ],
+  "doi": [
+    "10.3390/ijms19061614"
+  ],
+  "title": [
+    "GBS Mapping and Analysis of Genes Conserved between Gossypium tomentosum and Gossypium hirsutum Cotton Cultivars that Respond to Drought Stress at the Seedling Stage of the BC₂F₂ Generation."
+  ],
+  "authorString": [
+    "Magwanga RO, Lu P, Kirungu JN, Diouf L, Dong Q, Hu Y, Cai X, Xu Y, Hou Y, Zhou Z, Wang X, Wang K, Liu F."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Magwanga RO"
+          ],
+          "firstName": [
+            "Richard Odongo"
+          ],
+          "lastName": [
+            "Magwanga"
+          ],
+          "initials": [
+            "RO"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-1900-5798",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. magwangarichard@yahoo.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Lu P"
+          ],
+          "firstName": [
+            "Pu"
+          ],
+          "lastName": [
+            "Lu"
+          ],
+          "initials": [
+            "P"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-6350-8416",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. lupu1992@cricaas.com.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Kirungu JN"
+          ],
+          "firstName": [
+            "Joy Nyangasi"
+          ],
+          "lastName": [
+            "Kirungu"
+          ],
+          "initials": [
+            "JN"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-9299-1176",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. joynk@cricaas.com.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Diouf L"
+          ],
+          "firstName": [
+            "Latyr"
+          ],
+          "lastName": [
+            "Diouf"
+          ],
+          "initials": [
+            "L"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-8048-9472",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. latyr@cricaas.com.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Dong Q"
+          ],
+          "firstName": [
+            "Qi"
+          ],
+          "lastName": [
+            "Dong"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. dongqi@cricaas.com.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Hu Y"
+          ],
+          "firstName": [
+            "Yangguang"
+          ],
+          "lastName": [
+            "Hu"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. huygsh@163.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Cai X"
+          ],
+          "firstName": [
+            "Xiaoyan"
+          ],
+          "lastName": [
+            "Cai"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. caixy@cricaas.com.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Xu Y"
+          ],
+          "firstName": [
+            "Yanchao"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-2432-3325",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. xuyanchao2016@163.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Hou Y"
+          ],
+          "firstName": [
+            "Yuqing"
+          ],
+          "lastName": [
+            "Hou"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. houyp@cricaas.com.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhou Z"
+          ],
+          "firstName": [
+            "Zhongli"
+          ],
+          "lastName": [
+            "Zhou"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. zhouzl@cricaas.com.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang X"
+          ],
+          "firstName": [
+            "Xingxing"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. wangxx@cricaas.com.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang K"
+          ],
+          "firstName": [
+            "Kunbo"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. wkbcri@cricaas.com.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu F"
+          ],
+          "firstName": [
+            "Fang"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. liufang@caas.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-1900-5798",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-8048-9472",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-6350-8416",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-2432-3325",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-9299-1176",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "6"
+      ],
+      "volume": [
+        "19"
+      ],
+      "journalIssueId": [
+        "2686510"
+      ],
+      "dateOfPublication": [
+        "2018 May"
+      ],
+      "monthOfPublication": [
+        "5"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-05-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "International journal of molecular sciences"
+          ],
+          "ISOAbbreviation": [
+            "Int J Mol Sci"
+          ],
+          "medlineAbbreviation": [
+            "Int J Mol Sci"
+          ],
+          "NLMid": [
+            "101092791"
+          ],
+          "ISSN": [
+            "1422-0067"
+          ],
+          "ESSN": [
+            "1422-0067"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "abstractText": [
+    "Cotton production is on the decline due to ever-changing environmental conditions. Drought and salinity stress contribute to over 30% of total loss in cotton production, the situation has worsened more due to the narrow genetic base of the cultivated upland cotton. The genetic diversity of upland cotton has been eroded over the years due to intense selection and inbreeding. To break the bottleneck, the wild cotton progenitors offer unique traits which can be introgressed into the cultivated cotton, thereby improving their performance. In this research, we developed a BC₂F₂ population between wild male parent, G. tomentosum as the donor, known for its high tolerance to drought and the elite female parent, G. hirsutum as the recurrent parent, which is high yielding but sensitive to drought stress. The population was genotyped through the genotyping by sequencing (GBS) method, in which 10,888 single-nucleotide polymorphism (SNP) s were generated and used to construct a genetic map. The map spanned 4191.3 cM, with average marker distance of 0.3849 cM. The map size of the two sub genomes had a narrow range, 2149 cM and 2042.3 cM for At and Dt_sub genomes respectively. A total of 66,434 genes were mined, with 32,032 (48.2%) and 34,402 (51.8%) genes being obtained within the At and Dt_sub genomes respectively. Pkinase (PF00069) was found to be the dominant domain, with 1069 genes. Analysis of the main sub family, serine threonine protein kinases through gene ontology (GO), cis element and miRNA targets analysis revealed that most of the genes were involved in various functions aimed at enhancing abiotic stress tolerance. Further analysis of the RNA sequence data and qRT-PCR validation revealed 16 putative genes, which were highly up regulated under drought stress condition, and were found to be targeted by ghr-miR169a and ghr-miR164, previously associated with NAC(NAM, ATAF1/2 and CUC2) and myeloblastosis (MYB), the top rank drought stress tolerance genes. These genes can be exploited further to aid in development of more drought tolerant cotton genotypes."
+  ],
+  "affiliation": [
+    "State Key Laboratory of Cotton Biology/Institute of Cotton Research, Chinese Academy of Agricultural Sciences, Anyang 455000, China. magwangarichard@yahoo.com."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Cotton",
+        "Genetic diversity",
+        "Backcross",
+        "Drought",
+        "Genotyping By Sequencing"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC6032168?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC6032168"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3390/ijms19061614"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "sprot",
+        "pfam",
+        "go"
+      ]
+    }
+  ],
+  "dateOfCreation": [
+    "2018-06-01"
+  ],
+  "dateOfRevision": [
+    "2018-07-15"
+  ],
+  "electronicPublicationDate": [
+    "2018-05-30"
+  ],
+  "firstPublicationDate": [
+    "2018-05-30"
+  ]
+}

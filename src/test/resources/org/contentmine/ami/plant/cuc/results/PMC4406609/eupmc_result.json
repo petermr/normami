@@ -1,0 +1,744 @@
+{
+  "id": [
+    "25901577"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25901577"
+  ],
+  "pmcid": [
+    "PMC4406609"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0125031"
+  ],
+  "title": [
+    "Integrated RNA-Seq and sRNA-Seq Analysis Identifies Chilling and Freezing Responsive Key Molecular Players and Pathways in Tea Plant (Camellia sinensis)."
+  ],
+  "authorString": [
+    "Zheng C, Zhao L, Wang Y, Shen J, Zhang Y, Jia S, Li Y, Ding Z."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Zheng C"
+          ],
+          "firstName": [
+            "Chao"
+          ],
+          "lastName": [
+            "Zheng"
+          ],
+          "initials": [
+            "C"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-0290-2177",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Tea Research Institute, Qingdao Agricultural University, Qingdao, Shandong, China; Key Laboratory of Genetic Improvement and Breeding for Horticultural Plants, Qingdao, Shandong, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhao L"
+          ],
+          "firstName": [
+            "Lei"
+          ],
+          "lastName": [
+            "Zhao"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Tea Research Institute, Qingdao Agricultural University, Qingdao, Shandong, China; Key Laboratory of Genetic Improvement and Breeding for Horticultural Plants, Qingdao, Shandong, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang Y"
+          ],
+          "firstName": [
+            "Yu"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Tea Research Institute, Qingdao Agricultural University, Qingdao, Shandong, China; Key Laboratory of Genetic Improvement and Breeding for Horticultural Plants, Qingdao, Shandong, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Shen J"
+          ],
+          "firstName": [
+            "Jiazhi"
+          ],
+          "lastName": [
+            "Shen"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Tea Research Institute, Qingdao Agricultural University, Qingdao, Shandong, China; Key Laboratory of Genetic Improvement and Breeding for Horticultural Plants, Qingdao, Shandong, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang Y"
+          ],
+          "firstName": [
+            "Yinfei"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Tea Research Institute, Qingdao Agricultural University, Qingdao, Shandong, China; Key Laboratory of Genetic Improvement and Breeding for Horticultural Plants, Qingdao, Shandong, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Jia S"
+          ],
+          "firstName": [
+            "Sisi"
+          ],
+          "lastName": [
+            "Jia"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Tea Research Institute, Qingdao Agricultural University, Qingdao, Shandong, China; Key Laboratory of Genetic Improvement and Breeding for Horticultural Plants, Qingdao, Shandong, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Li Y"
+          ],
+          "firstName": [
+            "Yusheng"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Fruit and Tea Technology Extension Station, Jinan, Shandong, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Ding Z"
+          ],
+          "firstName": [
+            "Zhaotang"
+          ],
+          "lastName": [
+            "Ding"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "Tea Research Institute, Qingdao Agricultural University, Qingdao, Shandong, China; Key Laboratory of Genetic Improvement and Breeding for Horticultural Plants, Qingdao, Shandong, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-0290-2177",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "4"
+      ],
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "2269260"
+      ],
+      "dateOfPublication": [
+        "2015"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "e0125031"
+  ],
+  "abstractText": [
+    "Tea [Camellia sinensis (L) O. Kuntze, Theaceae] is one of the most popular non-alcoholic beverages worldwide. Cold stress is one of the most severe abiotic stresses that limit tea plants' growth, survival and geographical distribution. However, the genetic regulatory network and signaling pathways involved in cold stress responses in tea plants remain unearthed. Using RNA-Seq, DGE and sRNA-Seq technologies, we performed an integrative analysis of miRNA and mRNA expression profiling and their regulatory network of tea plants under chilling (4℃) and freezing (-5℃) stress. Differentially expressed (DE) miRNA and mRNA profiles were obtained based on fold change analysis, miRNAs and target mRNAs were found to show both coherent and incoherent relationships in the regulatory network. Furthermore, we compared several key pathways (e.g., 'Photosynthesis'), GO terms (e.g., 'response to karrikin') and transcriptional factors (TFs, e.g., DREB1b/CBF1) which were identified as involved in the early chilling and/or freezing response of tea plants. Intriguingly, we found that karrikins, a new group of plant growth regulators, and β-primeverosidase (BPR), a key enzyme functionally relevant with the formation of tea aroma might play an important role in both early chilling and freezing response of tea plants. Quantitative reverse transcriptase-polymerase chain reaction (qRT-PCR) analysis further confirmed the results from RNA-Seq and sRNA-Seq analysis. This is the first study to simultaneously profile the expression patterns of both miRNAs and mRNAs on a genome-wide scale to elucidate the molecular mechanisms of early responses of tea plants to cold stress. In addition to gaining a deeper insight into the cold resistant characteristics of tea plants, we provide a good case study to analyse mRNA/miRNA expression and profiling of non-model plant species using next-generation sequencing technology."
+  ],
+  "affiliation": [
+    "Tea Research Institute, Qingdao Agricultural University, Qingdao, Shandong, China; Key Laboratory of Genetic Improvement and Breeding for Horticultural Plants, Qingdao, Shandong, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Camellia sinensis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Glycoside Hydrolases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Growth Regulators"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Messenger"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Freezing"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Tea"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "High-Throughput Nucleotide Sequencing"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "RNA, Messenger"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Plant Growth Regulators"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "beta-primeverosidase"
+          ],
+          "registryNumber": [
+            "EC 3.2.1.149"
+          ]
+        },
+        {
+          "name": [
+            "Glycoside Hydrolases"
+          ],
+          "registryNumber": [
+            "EC 3.2.1.-"
+          ]
+        },
+        {
+          "name": [
+            "Tea"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4406609?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4406609"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0125031"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "13"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-04-11"
+  ],
+  "dateOfCreation": [
+    "2015-04-23"
+  ],
+  "dateOfRevision": [
+    "2018-04-29"
+  ],
+  "electronicPublicationDate": [
+    "2015-04-22"
+  ],
+  "firstPublicationDate": [
+    "2015-04-22"
+  ]
+}

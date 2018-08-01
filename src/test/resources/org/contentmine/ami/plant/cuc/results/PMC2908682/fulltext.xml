@@ -1,0 +1,665 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS Genet</journal-id><journal-id journal-id-type="iso-abbrev">PLoS Genet</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosgen</journal-id><journal-title-group><journal-title>PLoS Genetics</journal-title></journal-title-group><issn pub-type="ppub">1553-7390</issn><issn pub-type="epub">1553-7404</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2908682</article-id><article-id pub-id-type="pmid">20661442</article-id><article-id pub-id-type="publisher-id">09-PLGE-RA-0437R3</article-id><article-id pub-id-type="doi">10.1371/journal.pgen.1001031</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline"><subject>Genetics and Genomics/Functional Genomics</subject><subject>Genetics and Genomics/Gene Discovery</subject><subject>Genetics and Genomics/Plant Genetics and Gene Expression</subject><subject>Plant Biology/Plant Growth and Development</subject></subj-group></article-categories><title-group><article-title>A Collection of Target Mimics for Comprehensive Analysis of MicroRNA Function in <italic>Arabidopsis thaliana</italic>
+</article-title><alt-title alt-title-type="running-head">MicroRNA Target Mimics in <italic>A. thaliana</italic></alt-title></title-group><contrib-group><contrib contrib-type="author" equal-contrib="yes"><name><surname>Todesco</surname><given-names>Marco</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" equal-contrib="yes"><name><surname>Rubio-Somoza</surname><given-names>Ignacio</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Paz-Ares</surname><given-names>Javier</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Weigel</surname><given-names>Detlef</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>&#x0002a;</sup>
+</xref></contrib></contrib-group><aff id="aff1"><label>1</label><addr-line>Department of Molecular Biology, Max Planck Institute for Developmental Biology, T&#x000fc;bingen, Germany</addr-line></aff><aff id="aff2"><label>2</label><addr-line>Department of Plant Molecular Genetics, Centro Nacional de Biotecnolog&#x000ed;a&#x02013;Consejo Superior de Investigaciones Cient&#x000ed;ficas, Madrid, Spain</addr-line></aff><contrib-group><contrib contrib-type="editor"><name><surname>Copenhaver</surname><given-names>Gregory P.</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">The University of North Carolina at Chapel Hill, United States of America</aff><author-notes><corresp id="cor1">&#x0002a; E-mail: <email>weigel@weigelworld.org</email></corresp><fn fn-type="con"><p>Conceived and designed the experiments: MT IRS JPA DW. Performed the experiments: MT IRS. Analyzed the data: MT IRS DW. Wrote the paper: MT IRS DW.</p></fn></author-notes><pub-date pub-type="collection"><month>7</month><year>2010</year></pub-date><pub-date pub-type="epub"><day>22</day><month>7</month><year>2010</year></pub-date><volume>6</volume><issue>7</issue><elocation-id>e1001031</elocation-id><history><date date-type="received"><day>17</day><month>3</month><year>2009</year></date><date date-type="accepted"><day>17</day><month>6</month><year>2010</year></date></history><permissions><copyright-statement>Todesco et al.</copyright-statement><copyright-year>2010</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p>Many targets of plant microRNAs (miRNAs) are thought to play important roles in plant physiology and development. However, because plant miRNAs are typically encoded by medium-size gene families, it has often been difficult to assess their precise function. We report the generation of a large-scale collection of knockdowns for <italic>Arabidopsis thaliana</italic> miRNA families; this has been achieved using artificial miRNA target mimics, a recently developed technique fashioned on an endogenous mechanism of miRNA regulation. Morphological defects in the aerial part were observed for &#x0223c;20&#x00025; of analyzed families, all of which are deeply conserved in land plants. In addition, we find that non-cleavable mimic sites can confer translational regulation in cis. Phenotypes of plants expressing target mimics directed against miRNAs involved in development were in several cases consistent with previous reports on plants expressing miRNA&#x02013;resistant forms of individual target genes, indicating that a limited number of targets mediates most effects of these miRNAs. That less conserved miRNAs rarely had obvious effects on plant morphology suggests that most of them do not affect fundamental aspects of development. In addition to insight into modes of miRNA action, this study provides an important resource for the study of miRNA function in plants.</p></abstract><abstract abstract-type="summary"><title>Author Summary</title><p>MiRNAs are small RNA molecules that play an important role in regulating gene function, both in animals and in plants. In plants, miRNA target mimicry is an endogenous mechanism used to negatively regulate the activity of a specific miRNA family, through the production of a false target transcript that cannot be cleaved. This mechanism can be engineered to target different miRNA families. Using this technique, we have generated artificial target mimics predicted to reduce the activity of most of the miRNA families in <italic>Arabidopsis thaliana</italic> and have observed their effects on plant development. We found that deeply conserved miRNAs tend to have a strong impact on plant growth, while more recently evolved ones had generally less obvious effects, suggesting either that they primarily affect processes other than development, or else that they have more subtle or conditional functions or are even dispensable. In several cases, the effects on plant development that we observed closely resembled those seen in plants expressing miRNA&#x02013;resistant versions of the major predicted targets, indicating that a limited number of targets mediates most effects of these miRNAs. Analyses of mimic expressing plants also support that plant miRNAs affect both transcript stability and protein accumulation. The artificial target mimic collection will be a useful resource to further investigate the function of individual miRNA families.</p></abstract><counts><page-count count="10"/></counts></article-meta></front><body><sec id="s1"><title>Introduction</title><p>MicroRNAs (miRNAs) are a class of small RNA (sRNA) molecules that has recently emerged as a key regulator of gene activity. In plants, miRNAs are released from larger precursors (pri-miRNAs) in the nucleus mainly, by DICER-LIKE1 (DCL1) <xref rid="pgen.1001031-Kurihara1" ref-type="bibr">[1]</xref>. The resulting sRNA duplex is methylated and translocated to the cytoplasm where it can be loaded into an RNA-induced silencing complex (RISC) that includes a member of the ARGONAUTE (AGO) family as catalytic component. The RISC can then recognize mRNAs containing sequences complementary to the loaded miRNA <xref rid="pgen.1001031-Ramachandran1" ref-type="bibr">[2]</xref>. In plants, cleavage of the target mRNA is an important mechanism for plant miRNA action, but there are also direct effects on protein accumulation, as reported for many animal miRNAs <xref rid="pgen.1001031-Dugas1" ref-type="bibr">[3]</xref>&#x02013;<xref rid="pgen.1001031-Voinnet1" ref-type="bibr">[11]</xref>.</p><p>The spatio-temporal expression pattern of miRNA genes is regulated to a large extent at the transcriptional level, and different members of a miRNA family can have distinct, specialized expression domains <xref rid="pgen.1001031-Baker1" ref-type="bibr">[12]</xref>&#x02013;<xref rid="pgen.1001031-Wu1" ref-type="bibr">[17]</xref>. An additional layer of regulation in miRNA action has been reported by Franco-Zorrilla and colleagues <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>. <italic>IPS1</italic> (<italic>INDUCED BY PHOSPHATE STARVATION 1</italic>) encodes a non-coding RNA with a short motif that is highly complementary to the sequence of miR399, which like <italic>IPS1</italic> is involved in the response to phosphate starvation <xref rid="pgen.1001031-Burleigh1" ref-type="bibr">[19]</xref>&#x02013;<xref rid="pgen.1001031-Shin1" ref-type="bibr">[23]</xref>. In contrast to regular miRNA target sites, the <italic>IPS1</italic> sequence contains a three-nucleotide insertion in the center, corresponding to the position where normally miRNA-guided cleavage takes place, and this bulge in the miRNA/target pair prevents endonucleolytic cleavage of <italic>IPS1</italic> transcripts. This results in sequestration of RISC<sup>miR399</sup>, leading to a reduction of miR399 activity. A similar phenomenon, negative regulation of small RNA activity by a partially complementary mRNA, has been recently described in bacteria as well <xref rid="pgen.1001031-FigueroaBossi1" ref-type="bibr">[24]</xref>, <xref rid="pgen.1001031-Overgaard1" ref-type="bibr">[25]</xref>.</p><p>MiRNA target mimicry can be exploited to study the effects of reducing the function of entire miRNA families <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>. Simultaneous inactivation of all miRNA family members by constructing multiply mutant lines has so far been achieved for only two relatively small families <xref rid="pgen.1001031-Sieber1" ref-type="bibr">[16]</xref>, <xref rid="pgen.1001031-Allen1" ref-type="bibr">[26]</xref>. Plant target mimics are conceptually similar to miRNA sponges, used to reduce miRNA activity in animals. MiRNA sponges are transcripts containing multiple miRNA binding sites that compete with endogenous target mRNAs, thereby reducing the efficiency of the corresponding miRNA <xref rid="pgen.1001031-Ebert1" ref-type="bibr">[27]</xref>. Although in animals perfect-match miRNA binding sites seems sufficient to sequester miRNAs <xref rid="pgen.1001031-Gentner1" ref-type="bibr">[28]</xref>, such optimal sites would be generally cleaved in plants, and they would not succeed in sequestering the miRNA-loaded RISC. Consistent with this, plants overexpressing non-modified versions of miR156 and miR319 target genes show much milder phenotypes than plants expressing the corresponding target mimics <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>, <xref rid="pgen.1001031-Palatnik1" ref-type="bibr">[29]</xref>, <xref rid="pgen.1001031-Wu2" ref-type="bibr">[30]</xref>. Modifications of the miRNA binding site that prevent cleavage but still allow miRNA binding are therefore required to reduce miRNA activity in plants.</p><p>Here, we present a collection of transgenic plants expressing artificial target mimics designed to knockdown the majority of <italic>Arabidopsis thaliana</italic> miRNA families. One fifth of these lines have obvious morphological defects, which is in the same range as the approximately 10&#x00025; of miRNA knockouts that caused phenotypic abnormalities or lethality in <italic>Caenorhabditis elegans</italic>
+<xref rid="pgen.1001031-Miska1" ref-type="bibr">[31]</xref>. We found a clear correlation between the evolutionary conservation of plant miRNA families and their effect on aerial plant morphology.</p></sec><sec id="s2"><title>Results/Discussion</title><sec id="s2a"><title>Design of target mimics</title><p>We generated artificial target mimics for 73 different families or subfamilies of miRNAs and expressed them in <italic>Arabidopsis thaliana</italic> plants under the control of the constitutive 35S CaMV promoter. As described <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>, we modified the 23 nucleotide, miR399-complementary motif in <italic>IPS1</italic>. The different constructs, and the corresponding transgenic lines, are named &#x0201c;<italic>MIM</italic>&#x0201d;, followed by the numeric identifier of the targeted miRNA family or subfamily. We targeted all miRNA families reported in miRBase (<ext-link ext-link-type="uri" xlink:href="http://microrna.sanger.ac.uk/sequences/index.shtml">http://microrna.sanger.ac.uk/sequences/index.shtml</ext-link>) and ASRP (<ext-link ext-link-type="uri" xlink:href="http://asrp.cgrb.oregonstate.edu">http://asrp.cgrb.oregonstate.edu</ext-link>) <xref rid="pgen.1001031-Gustafson1" ref-type="bibr">[32]</xref> at the beginning of 2007, plus some of the miRNAs described subsequently <xref rid="pgen.1001031-Rajagopalan1" ref-type="bibr">[33]</xref>. The majority of the analyzed families have only been described in <italic>Arabidopsis thaliana</italic> and <italic>Arabidopsis lyrata</italic>
+<xref rid="pgen.1001031-Ma1" ref-type="bibr">[34]</xref>, <xref rid="pgen.1001031-Fahlgren1" ref-type="bibr">[35]</xref>. The remaining families are shared with other angiosperms, and less than a quarter has been detected in non-flowering plants, including gymnosperms, ferns or mosses <xref rid="pgen.1001031-Gustafson1" ref-type="bibr">[32]</xref>, <xref rid="pgen.1001031-Rajagopalan1" ref-type="bibr">[33]</xref>, <xref rid="pgen.1001031-Fahlgren2" ref-type="bibr">[36]</xref>, <xref rid="pgen.1001031-Axtell1" ref-type="bibr">[37]</xref>. A complete list of <italic>MIM</italic> constructs, and the primer pairs used to generate them, can be found in <xref ref-type="supplementary-material" rid="pgen.1001031.s004">Table S1</xref>. For miRNA target predictions, see <xref rid="pgen.1001031-JonesRhoades1" ref-type="bibr">[8]</xref>, <xref rid="pgen.1001031-Rajagopalan1" ref-type="bibr">[33]</xref>, unless stated otherwise.</p><p>A single artificial target mimic could be designed for most miRNA families. The mature miRNAs produced by members of the miR169 and miR171 families differ slightly, and different target mimics were designed for these subfamilies. Two target mimics were also designed for the miR161 family, which produce two mature miRNAs that have only partially overlapping sequences, and that target similar subsets of the <italic>PPR</italic> gene family <xref rid="pgen.1001031-Howell1" ref-type="bibr">[38]</xref>. Conversely, some miRNA families have very similar sequences and overlapping in vivo targets (e.g., miR159/319, miR156/157 and miR170/171a), and artificial target mimics might not be able to unambiguously discriminate between different miRNAs.</p><p>In some cases, the sequence of the bulge in the miRNA/target mimic pair had to be modified. For example, maintaining the original central sequence of <italic>IPS1</italic> in <italic>MIM172</italic> could have reconstituted a cleavage site for miR172. Consistent with such modifications being important, plants expressing the appropriately modified version of <italic>MIM172</italic> showed an altered phenotype (see below), whereas plants expressing an initial version of <italic>MIM172</italic> in which a putative miR172 cleavage site was present (<italic>MIM172cs</italic>) did not. Moreover, plants expressing a <italic>MIM172</italic> version with only a single-nucleotide mismatch corresponding to position 11 of the mature miRNA (<italic>MIM172sn</italic>) did not show any abnormal phenotype either, suggesting that the three-nucleotide bulge is required for target mimic activity (<xref ref-type="fig" rid="pgen-1001031-g001">Figure 1</xref>).</p><fig id="pgen-1001031-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pgen.1001031.g001</object-id><label>Figure 1</label><caption><title>Requirement of a bulge at the cleavage site for target mimicry.</title><p>(A) A target mimic with an unmodified central sequence (<italic>MIM172cs</italic>), which retained complementarity to the central portion of miR172 across the cleavage site (red line) opposite position 10 to 11 of the miRNA, did not change flowering time. Modification of the central sequence (TCTA to GAGT; <italic>MIM172</italic>) restored a three nucleotide bulge found in <italic>IPS1</italic> and generated a functional target mimic, causing a delay in flowering. However, a single nucleotide mismatch introduced into the center of an authentic miR172 target site (<italic>MIM172sn</italic>), but without a bulge, was not sufficient to reduce miR172 activity. (B) Four-week old plants grown at 23&#x000b0;C in long days. <italic>MIM172cs</italic> and <italic>MIM172sn</italic> are phenotypically indistinguishable from wild-type Col-0 plants (see also <xref ref-type="supplementary-material" rid="pgen.1001031.s001">Figure S1B</xref>). (C) Distribution of flowering times of primary transformants grown in the same conditions; compare with Col-0 plants transformed with an empty binary vector in <xref ref-type="supplementary-material" rid="pgen.1001031.s002">Figure S2</xref>.</p></caption><graphic xlink:href="pgen.1001031.g001"/></fig></sec><sec id="s2b"><title>Effects of target mimics on morphology and development</title><p>We generated at least 20 independent transformants for each of 75 separate constructs. Of these, 15, targeting 14 different families, caused reproducible phenotypes in the shoot system of the plants, which are described below. Phenotypic alterations were consistent across most, if not all, independent transformants examined for each construct. An example of the phenotypic variation among primary transformants is shown in the histograms in <xref ref-type="fig" rid="pgen-1001031-g001">Figure 1</xref>. An overview of all lines with morphological defects is given in <xref ref-type="table" rid="pgen-1001031-t001">Table 1</xref>, together with the main target genes of the corresponding miRNA family and a list of other taxa in which they can be found. The phenotypes of <italic>MIM156</italic> and <italic>MIM319</italic> plants have been briefly described before <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>, <xref rid="pgen.1001031-Wu3" ref-type="bibr">[39]</xref>. All miRNA families whose inactivation resulted in visible phenotypical alterations are conserved among the angiosperms, and most of them are also found in non-flowering plants.</p><table-wrap id="pgen-1001031-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pgen.1001031.t001</object-id><label>Table 1</label><caption><title>Artificial target mimics causing visible phenotypes.</title></caption><alternatives><graphic id="pgen-1001031-t001-1" xlink:href="pgen.1001031.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1">Mimic</td><td align="left" rowspan="1" colspan="1">miRNAs<xref ref-type="table-fn" rid="nt101">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">Phenotype</td><td align="left" rowspan="1" colspan="1">miRNA targets</td><td align="left" rowspan="1" colspan="1">Conservation<xref ref-type="table-fn" rid="nt102">&#x0002a;&#x0002a;</xref>
+</td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM156</italic>
+</td><td align="left" rowspan="1" colspan="1">miR156</td><td align="left" rowspan="1" colspan="1">Longer plastochron. Altered morphology of cotyledons and true leaves.</td><td align="left" rowspan="1" colspan="1">
+<italic>SPL2</italic>, <italic>SPL3</italic>, <italic>SPL4</italic>, <italic>SPL5</italic>, <italic>SPL6</italic>, <italic>SPL9</italic>, <italic>SPL10</italic>, <italic>SPL11</italic>, <italic>SPL13</italic>, <italic>SPL15</italic>
+</td><td align="left" rowspan="1" colspan="1">1, 2, 3, 4</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM157</italic>
+</td><td align="left" rowspan="1" colspan="1">miR157</td><td align="left" rowspan="1" colspan="1">Similar to <italic>MIM156</italic>.</td><td align="left" rowspan="1" colspan="1">
+<italic>SPL2</italic>, <italic>SPL4</italic>, <italic>SPL5</italic>, <italic>SPL6</italic>, <italic>SPL9</italic>, <italic>SPL10</italic>, <italic>SPL11</italic>, <italic>SPL13</italic>, <italic>SPL15</italic>
+</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM159</italic>
+</td><td align="left" rowspan="1" colspan="1">miR159</td><td align="left" rowspan="1" colspan="1">Reduced size and stature. Thicker, upward curled leaves. Incomplete development of sepals, petals and anthers.</td><td align="left" rowspan="1" colspan="1">
+<italic>MYB33</italic>, <italic>MYB65</italic>, <italic>MYB81</italic>, <italic>MYB97</italic>, <italic>MYB101</italic>, <italic>MYB104</italic>, <italic>MYB120</italic>, <italic>DUO1</italic>
+</td><td align="left" rowspan="1" colspan="1">1, 2, 3</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM160</italic>
+</td><td align="left" rowspan="1" colspan="1">miR160</td><td align="left" rowspan="1" colspan="1">Smaller plants, with serrated and curled upward leaves.</td><td align="left" rowspan="1" colspan="1">
+<italic>ARF10</italic>, <italic>ARF16</italic>, <italic>ARF17</italic>
+</td><td align="left" rowspan="1" colspan="1">1, 3, 4</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM164</italic>
+</td><td align="left" rowspan="1" colspan="1">miR164</td><td align="left" rowspan="1" colspan="1">Partially serrated leaves. Ectopic tissue growth in the developing fruit.</td><td align="left" rowspan="1" colspan="1">
+<italic>NAC1</italic>, <italic>CUC1</italic>, <italic>CUC2</italic>, <italic>ANAC079, ANAC092</italic>, <italic>ANAC100</italic>, <italic>AT3G12977</italic>
+</td><td align="left" rowspan="1" colspan="1">1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM165/166</italic>
+</td><td align="left" rowspan="1" colspan="1">miR165/miR166</td><td align="left" rowspan="1" colspan="1">Rounder leaves. Younger leaves cup-shaped, with an irregular surface.</td><td align="left" rowspan="1" colspan="1">
+<italic>PHV</italic>, <italic>PHB</italic>, <italic>REV</italic>, <italic>ATHB-8</italic>, <italic>ATHB-15</italic>
+</td><td align="left" rowspan="1" colspan="1">1, 2, 3</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM167</italic>
+</td><td align="left" rowspan="1" colspan="1">miR167</td><td align="left" rowspan="1" colspan="1">Delayed flowering. Twisted leaves, rolled downward. Defects in anther and seed development.</td><td align="left" rowspan="1" colspan="1">
+<italic>ARF6</italic>, <italic>ARF8</italic>
+</td><td align="left" rowspan="1" colspan="1">1, 3</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM169</italic>
+</td><td align="left" rowspan="1" colspan="1">miR169a&#x02013;c, h&#x02013;n</td><td align="left" rowspan="1" colspan="1">Reduced rosette size.</td><td align="left" rowspan="1" colspan="1">
+<italic>HAP2A</italic>, <italic>HAP2B</italic>, <italic>HAP2C</italic>, <italic>AT1G17590</italic>, <italic>AT1G54160</italic>, <italic>AT3G20910</italic>, <italic>AT5G06510</italic>
+</td><td align="left" rowspan="1" colspan="1">1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM169defg</italic>
+</td><td align="left" rowspan="1" colspan="1">miR169dd&#x02013;g</td><td align="left" rowspan="1" colspan="1">Similar to <italic>MIM169.</italic>
+</td><td align="left" rowspan="1" colspan="1">
+<italic>HAP2A</italic>, <italic>HAP2B</italic>, <italic>HAP2C</italic>, <italic>AT1G17590</italic>, <italic>AT1G54160</italic>, <italic>AT3G20910</italic>, <italic>AT5G06510</italic>
+</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM170</italic>
+</td><td align="left" rowspan="1" colspan="1">miR170</td><td align="left" rowspan="1" colspan="1">Round leaves of pale green color. Anthesis defects, causing reduced fertility.</td><td align="left" rowspan="1" colspan="1">
+<italic>AT2G45160</italic>, <italic>AT3G60630</italic>, <italic>AT4G00150</italic>
+</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM171a</italic>
+</td><td align="left" rowspan="1" colspan="1">miR171a</td><td align="left" rowspan="1" colspan="1">Similar to <italic>MIM170</italic>.</td><td align="left" rowspan="1" colspan="1">
+<italic>AT2G45160</italic>, <italic>AT3G60630</italic>, <italic>AT4G00150</italic>
+</td><td align="left" rowspan="1" colspan="1">1, 2, 3, 4</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM172</italic>
+</td><td align="left" rowspan="1" colspan="1">miR172</td><td align="left" rowspan="1" colspan="1">Delay in flowering time. Narrow leaves, mildly rolled downward. Reduced apical dominance.</td><td align="left" rowspan="1" colspan="1">
+<italic>AP2</italic>, <italic>TOE1</italic>, <italic>TOE2</italic>, <italic>TOE3</italic>, <italic>SMZ</italic>, <italic>SNZ</italic>
+</td><td align="left" rowspan="1" colspan="1">1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM319</italic>
+</td><td align="left" rowspan="1" colspan="1">miR319</td><td align="left" rowspan="1" colspan="1">Similar to <italic>MIM159</italic>. In some lines, leaves curled downward.</td><td align="left" rowspan="1" colspan="1">
+<italic>TCP2</italic>, <italic>TCP3</italic>, <italic>TCP4</italic>, <italic>TCP10 TCP24</italic>, <italic>MYB33</italic>, <italic>MYB65</italic>, <italic>MYB81</italic>, <italic>MYB97</italic>, <italic>MYB104</italic>, <italic>MYB120</italic>
+</td><td align="left" rowspan="1" colspan="1">1, 2, 3, 4</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM393</italic>
+</td><td align="left" rowspan="1" colspan="1">miR393</td><td align="left" rowspan="1" colspan="1">Narrow leaves, curled downward.</td><td align="left" rowspan="1" colspan="1">
+<italic>AFB2</italic>, <italic>AFB3</italic>, <italic>TIR1</italic>, <italic>GRH1</italic>, <italic>AT3G23690</italic>
+</td><td align="left" rowspan="1" colspan="1">1</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>MIM394</italic>
+</td><td align="left" rowspan="1" colspan="1">miR394</td><td align="left" rowspan="1" colspan="1">Narrow leaves, curled downward.</td><td align="left" rowspan="1" colspan="1">
+<italic>AT1G27340</italic>
+</td><td align="left" rowspan="1" colspan="1">1</td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label/><p>&#x0002a;If no letter is given, the entire family was targeted.</p></fn><fn id="nt102"><label/><p>&#x0002a;&#x0002a;The conservation of miRNA families in the following groups is reported: (1) Other dicots and monocots, (2) gymnosperms, (3) ferns, (4) mosses.</p></fn></table-wrap-foot></table-wrap><p>
+<italic>MIM156</italic> and <italic>MIM157</italic> plants (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>) had reduced leaf initiation rates, such that they flowered at about the same time as wild type, but with only two or three true leaves. This phenotype is similar to what is seen in plants carrying non-targetable versions of <italic>SPL9</italic> or <italic>SPL10</italic>, two of the miR156/157 targets, and opposite of plants overexpressing miR156b or <italic>spl9 spl15</italic> double mutants <xref rid="pgen.1001031-Schwab1" ref-type="bibr">[10]</xref>, <xref rid="pgen.1001031-Schwarz1" ref-type="bibr">[40]</xref>&#x02013;<xref rid="pgen.1001031-Wang2" ref-type="bibr">[42]</xref>. In addition, these plants had bent, spoon-shaped cotyledons. The few rosette leaves were characterized by serrated margins, indicating adult leaf identity, consistent with a role of miR156 and its targets in controlling phase change <xref rid="pgen.1001031-Wu2" ref-type="bibr">[30]</xref>.</p><fig id="pgen-1001031-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pgen.1001031.g002</object-id><label>Figure 2</label><caption><title>Leaf rosettes of target mimic expressing plants.</title><p>Three-week-old plants. Bar corresponds to 1 cm for all panels.</p></caption><graphic xlink:href="pgen.1001031.g002"/></fig><p>
+<italic>MIM159</italic> plants had extensive pleiotropic defects, and similar phenotypes were observed in most <italic>MIM319</italic> lines. These plants had reduced stature, with rounder, upward curled leaves (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>), shorter stem internodes, and smaller flowers with short sepals, reduced petals and anthers that did not develop completely. More severe <italic>MIM319</italic> lines were progressively smaller, had warped leaves and lacked well-developed petals (<xref ref-type="fig" rid="pgen-1001031-g003">Figure 3A</xref>). Stem elongation was often completely suppressed (<xref ref-type="fig" rid="pgen-1001031-g003">Figure 3B</xref>). Most plants had reduced fertility, and this phenotype was particularly severe in <italic>MIM319</italic> plants, for which only a few viable seeds could be recovered after they were grown for prolonged periods at 16&#x000b0;C in long days. Both vegetative and floral phenotypes reminiscent of <italic>MIM159</italic> defects have been reported for plants that express non-targetable forms of miR159 target genes <xref rid="pgen.1001031-Palatnik1" ref-type="bibr">[29]</xref>, and in plants doubly mutant for miR159a and miR159b <xref rid="pgen.1001031-Allen1" ref-type="bibr">[26]</xref>. In particular, upward curled leaves have been observed in plant expressing non-targetable forms of <italic>MYB33</italic>, which can be targeted both by miR159 and miR319 <xref rid="pgen.1001031-Palatnik2" ref-type="bibr">[43]</xref>. Milder <italic>MIM319</italic> lines showed different leaf defects, with leaves curled downward (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>). This is consistent with what has been reported for plants that express non-targetable forms of <italic>TCP2</italic> and <italic>TCP4</italic>, which are both exclusive miR319 targets <xref rid="pgen.1001031-Palatnik1" ref-type="bibr">[29]</xref>, suggesting that target mimics can at least partially discriminate between these two miRNA families.</p><fig id="pgen-1001031-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pgen.1001031.g003</object-id><label>Figure 3</label><caption><title>Details of defects observed in target mimic expressing plants.</title><p>(A) Smaller flowers in severe <italic>MIM319</italic> lines. The most strongly affected flowers lacked petals and did not have fully developed anthers (left side); in milder lines, flowers had short sepals, narrow petals, but were fertile (middle). Two flowers from wild type Col-0 are shown on the right side of the panel. (B) Severe <italic>MIM159</italic> and <italic>MIM319</italic> lines were very small and compact, without any stem elongation. (C) Leaves of <italic>MIM164</italic> plants (compared to a leaf from wild type Col-0, on the far left). (D, E) Developing fruits of <italic>MIM164</italic> with ectopic growths emanating from valve margins (D), which can develop into pseudo-pistils in severe lines (E). (F) Anthers in <italic>MIM167</italic> lines did not mature completely (top), resulting in reduced pollen production (compared to a wild type Col-0 flower, bottom). (G) Seeds of <italic>MIM167</italic> plants often do not fill completely, and remained attached to the dried silique (compared to a silique of wild type Col-0, on the right). (H, I) <italic>MIM171A</italic> lines suffered from defects in the separation of sepals, which prevented emergence of the pistil (H), and caused the plants to be mostly sterile (I, on the left, compared to a wild-type Col-0 plant, on the right). Bars correspond to 1 cm in (A&#x02013;C) and I, and to 0.1 cm in (D&#x02013;H).</p></caption><graphic xlink:href="pgen.1001031.g003"/></fig><p>Serrated and hyponastic leaves were seen in <italic>MIM160</italic> plants (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>), in agreement with the phenotype of plants that express non-targetable versions of <italic>ARF10</italic> or <italic>ARF17</italic>, two of the three miR160 targets <xref rid="pgen.1001031-Liu1" ref-type="bibr">[44]</xref>, <xref rid="pgen.1001031-Mallory1" ref-type="bibr">[45]</xref>. In addition, <italic>MIM160</italic> plants were smaller than wild type. Compared to other constructs, fewer transformants were recovered, consistent with the known requirement of miR160 for seed viability or germination <xref rid="pgen.1001031-Liu1" ref-type="bibr">[44]</xref>.</p><p>A different type of leaf serration was caused by <italic>MIM164</italic> (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>), similar to what has been reported for plants expressing a non-targetable version of <italic>CUC2</italic>, one of the miR164 targets, and for plants lacking one of the miR164 isoforms, miR164a <xref rid="pgen.1001031-Nikovics1" ref-type="bibr">[13]</xref>. While expression of <italic>MIM160</italic> affected the entire leaf, with the serrations being regular and jagged, <italic>MIM164</italic> caused mainly serration of the basal part of the leaf, with more irregular and rounded sinuses and teeth (<xref ref-type="fig" rid="pgen-1001031-g003">Figure 3C</xref>). Although carpel fusion defects have been described for plants lacking miR164c <xref rid="pgen.1001031-Baker1" ref-type="bibr">[12]</xref>, the carpel defects in <italic>MIM164</italic> plants seemed to be different, with ectopic growths forming at the valve margins (<xref ref-type="fig" rid="pgen-1001031-g003">Figure 3D</xref>), resembling those seen in the <italic>cuc2-1D</italic> mutant, in which a point mutation affects the miR164 complementary motif in <italic>CUC2</italic>
+<xref rid="pgen.1001031-Larue1" ref-type="bibr">[46]</xref>. In some cases, this tissue could develop into adventitious pistil-like structures (<xref ref-type="fig" rid="pgen-1001031-g003">Figure 3E</xref>).</p><p>Rounder leaves with an irregular surface, which appeared to be hollowed out between the main veins, were caused by <italic>MIM165/166</italic>. Younger leaves tended also to be cup-shaped (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>). Targets of miR165/166, including the transcription factor-encoding genes <italic>PHAVOLUTA</italic> and <italic>PHABULOSA</italic>, control leaf polarity, and dominant mutations that disrupt the miRNA target site in these genes cause severe alterations in leaf morphology <xref rid="pgen.1001031-Mallory2" ref-type="bibr">[47]</xref>&#x02013;<xref rid="pgen.1001031-Ochando1" ref-type="bibr">[49]</xref>.</p><p>A substantial delay in flowering was observed in <italic>MIM167</italic> plants, which flowered with 20.8&#x000b1;4.2 (mean &#x000b1; standard deviation; <italic>n</italic>&#x0200a;=&#x0200a;30) leaves in long days, compared to 13.0&#x000b1;0.9 rosette leaves in wild-type plants (<xref ref-type="supplementary-material" rid="pgen.1001031.s001">Figure S1A</xref> and <xref ref-type="supplementary-material" rid="pgen.1001031.s002">Figure S2</xref>). These plants had in addition twisted leaves (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>), as well as defects in the maturation of anthers (<xref ref-type="fig" rid="pgen-1001031-g003">Figure 3F</xref>) and in the development and shattering of seeds, which often remained attached to the dehiscent siliques (<xref ref-type="fig" rid="pgen-1001031-g003">Figure 3G</xref>), resulting in reduced seed production and germination (not shown). This is consistent with what has been observed in plants that express a non-targetable form of the miR167 target <italic>ARF6</italic> or <italic>ARF8</italic>. Such plants have smaller leaves and are often sterile due to defects both in ovule and anther development <xref rid="pgen.1001031-Wu1" ref-type="bibr">[17]</xref>. Effects on flowering time have not been previously associated with miR167 <xref rid="pgen.1001031-Wu1" ref-type="bibr">[17]</xref>, <xref rid="pgen.1001031-Ru1" ref-type="bibr">[50]</xref>, and the late-flowering phenotype of <italic>MIM167</italic> plants reveals a new role for this miRNA family.</p><p>Two constructs were used to downregulate different subfamilies of miR169 family, whose main targets are <italic>HAP</italic> transcription factors. <italic>MIM169</italic> was designed for miR169a, b, c, h, i, j, k, l, m and n, and <italic>MIM169defg</italic> for miR169d, e, f and g. Both target mimics reduced the size of transgenic plants (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>).</p><p>MiR170 and miR171 target a group of <italic>SCARECROW</italic>-like transcription factor genes <xref rid="pgen.1001031-Llave1" ref-type="bibr">[9]</xref>, and both <italic>MIM170</italic> and <italic>MIM171A</italic> plants had round, pale leaves (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>), as well as defective flowers, with sepals that did not separate properly, resulting in reduced fertility (<xref ref-type="fig" rid="pgen-1001031-g003">Figure 3H and 3I</xref>). Expression of target mimics against the b and c members of the miR171 family did not confer any phenotype, suggesting less important roles for these two miRNAs.</p><p>
+<italic>MIM172</italic> plants were also late flowering, with 20.0&#x000b1;3.5 (<italic>n</italic>&#x0200a;=&#x0200a;30) rosette leaves in long days (<xref ref-type="supplementary-material" rid="pgen.1001031.s001">Figure S1B</xref>), consistent with the flowering time phenotype of plants that have increased expression of miR172 targets <xref rid="pgen.1001031-Aukerman1" ref-type="bibr">[4]</xref>, <xref rid="pgen.1001031-Chen1" ref-type="bibr">[6]</xref>, <xref rid="pgen.1001031-Schmid1" ref-type="bibr">[51]</xref>. In addition, leaves of <italic>MIM172</italic> plants appeared to be somewhat narrower than those of wild type, and mildly curled downward, and severe <italic>MIM172</italic> lines presented reduced apical dominance (not shown). In contrast to plants that express a non-targetable version of <italic>AP2</italic>
+<xref rid="pgen.1001031-Zhao1" ref-type="bibr">[52]</xref>, flowers of <italic>MIM172</italic> plants were normal. These differential effects could be due to the particularly high levels of miR172 levels during early flower development <xref rid="pgen.1001031-Chen1" ref-type="bibr">[6]</xref>.</p><p>MiR393 targets a small group of auxin receptor genes. <italic>MIM393</italic> plants had mild defects in leaf morphology, with narrow leaves that were curled downward (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>). Leaf epinasty is often associated with high auxin levels <xref rid="pgen.1001031-Romano1" ref-type="bibr">[53]</xref>, and is consistent with an increase of auxin signaling caused by downregulation of miR393 activity.</p><p>Finally, epinastic leaves were observed also in <italic>MIM394</italic> plants (<xref ref-type="fig" rid="pgen-1001031-g002">Figure 2</xref>). MiR394 is predicted to target a gene encoding an F-box protein.</p></sec><sec id="s2c"><title>Effects of target mimics on miRNA target genes</title><p>Artificial target mimics are thought to sequester their target miRNAs, presumably by stably binding to miRNA-loaded RISCs. To obtain additional evidence for such interactions, we embedded a functional <italic>MIM159</italic> site in the 3&#x02032;-UTR of a triple- Enhanced Yellow Fluorescent Protein (EYFP) reporter; stable recruitment of RISC<sup>miR399</sup> to the mimic site could be expected to interfere with EYFP translation. In 80&#x00025; of <italic>MIM159</italic> expressing T1 plants, as in control plants, the EYFP transgene was completely silenced. In the remaining 20&#x00025;, we detected EYFP signal that was strongly reduced in the region where <italic>MIR159</italic> genes are known to be expressed (<xref ref-type="fig" rid="pgen-1001031-g004">Figure 4A</xref>) <xref rid="pgen.1001031-Allen1" ref-type="bibr">[26]</xref>. In addition, these plants presented the typical phenotypic defects of <italic>MIM159</italic> plants, confirming that the <italic>EYFP:MIM159</italic> construct functions properly as a target mimic.</p><fig id="pgen-1001031-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pgen.1001031.g004</object-id><label>Figure 4</label><caption><title>Effects of artificial mimics on levels of miRNAs and miRNA targets.</title><p>(A) Nine-day-old plants. Introduction of a <italic>MIM159</italic> fragment into the 3&#x02032; UTR silences a constitutively expressed 3xEYFP in the <italic>MIR159</italic> expression domain (compare <italic>p35S:3xEYFP</italic> and <italic>p35S:3xEYFP-MIM159</italic>), which is revealed in the <italic>pMIR159:GUS</italic> lines. MiR159 activity is also indirectly revealed by comparing the effect of expressing <italic>MIM159</italic> in a genomic <italic>MYB33:GUS</italic> line. (B) Transcript levels of select miRNA targets in two independent lines for each <italic>MIM</italic> construct (represented by bars of different shades of gray). (C) Expression levels of miRNA targets in mutants impaired in miRNA biogenesis or targeting. Expression values are reported as the average of two biological and two technical replicates, and are normalized to the expression levels in wild type Col-0 plants (dotted line). (D) <italic>CIP4</italic> mRNA and protein levels in four independent <italic>MIM834</italic> lines. Band intensity relative to the wild-type control is reported. (E) Levels of mature miRNAs in several <italic>MIM</italic> lines. U6 accumulation is shown as control. Increased accumulation of miR156 (lower band in the blot) was observed upon expression of a resistant version of a miR156 target (consistent with what observed for miRNA156a precursor levels in <xref rid="pgen.1001031-Wu3" ref-type="bibr">[39]</xref>) or inhibition of miRNA activity in the <italic>ago1</italic>-27 mutants. The decrease in miR156 levels in <italic>MIM156</italic> plants is then not an indirect consequence of increased <italic>SPL</italic> transcript levels.</p></caption><graphic xlink:href="pgen.1001031.g004"/></fig><p>RISC<sup>miRNA</sup> sequestration in turn should relieve target genes from miRNA-dependent regulation, resulting in increased levels of the encoded protein. In agreement with such a scenario, activity levels of a genomic <italic>MYB33:GUS</italic> reporter were markedly increased in <italic>MIM159</italic> plants (<xref ref-type="fig" rid="pgen-1001031-g004">Figure 4A</xref>). In analogy with <italic>EYFP:MIM159</italic>, reporter activity was increased in the tissues expressing <italic>MIR159</italic> genes <xref rid="pgen.1001031-Allen1" ref-type="bibr">[26]</xref>, as expected.</p><p>Sequestration of RISC<sup>miR399</sup> by the natural target mimic <italic>IPS1</italic> prevents miR399-guided cleavage of <italic>PHO2</italic> mRNA, thus increasing <italic>PHO2</italic> mRNA levels <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>. To assess the effects of artificial target mimics on the levels of mRNA of miRNA target genes, we tested them by reverse transcription followed by quantitative PCR (qRT-PCR) in a subset of <italic>MIM</italic> lines. We preferentially analyzed organs in which miRNA abundance was high according to the ASRP database <xref rid="pgen.1001031-Gustafson1" ref-type="bibr">[32]</xref>, <xref rid="pgen.1001031-Backman1" ref-type="bibr">[54]</xref>, or organs with major phenotypic alterations in <italic>MIM</italic> lines. Two independent lines were tested for each construct. Among the miRNA targets, we chose ones known to induce phenotypic defects when expressed as non-targetable forms <xref rid="pgen.1001031-Liu1" ref-type="bibr">[44]</xref>, <xref rid="pgen.1001031-Mallory1" ref-type="bibr">[45]</xref>, <xref rid="pgen.1001031-Mallory2" ref-type="bibr">[47]</xref> and ones that show altered expression in miRNA biogenesis mutants <xref rid="pgen.1001031-Gustafson1" ref-type="bibr">[32]</xref>, <xref rid="pgen.1001031-Backman1" ref-type="bibr">[54]</xref>, <xref rid="pgen.1001031-Allen2" ref-type="bibr">[55]</xref>. PCR products spanned the miRNA target sequence, allowing quantification of the attenuation in slicing activity by the corresponding miRNA. Surprisingly, in most cases there were no major changes in target transcript levels (<xref ref-type="fig" rid="pgen-1001031-g004">Figure 4B</xref> and <xref ref-type="supplementary-material" rid="pgen.1001031.s003">Figure S3</xref>).</p><p>For comparison, we examined the expression of the same miRNA target genes in seedlings of several mutants impaired in small RNA biogenesis and function, including <italic>dcl1-</italic>100, <italic>se-</italic>1, <italic>hyl1-2</italic> and <italic>ago1-</italic>27, and in plants overexpressing viral silencing suppressors that are known to counteract the action of the small RNA machinery, including P1/HC-Pro, P0, P19 and p21 <xref rid="pgen.1001031-Baumberger1" ref-type="bibr">[56]</xref>&#x02013;<xref rid="pgen.1001031-Pfeffer1" ref-type="bibr">[60]</xref>. In most cases, the changes seen in <italic>MIM</italic> lines correlated with those seen in miRNA biogenesis mutants. Stronger effects were observed only in <italic>dcl1</italic>-100 plants (<xref ref-type="fig" rid="pgen-1001031-g004">Figure 4C</xref>). These results are consistent with what has been observed in microarray studies of miRNA biogenesis mutants, including other <italic>dcl1</italic> alleles, <italic>se</italic> and <italic>hyl1</italic>
+<xref rid="pgen.1001031-Allen2" ref-type="bibr">[55]</xref>, .</p><p>As in animals, inhibition of translation is an important component of miRNA function in plants <xref rid="pgen.1001031-Aukerman1" ref-type="bibr">[4]</xref>, <xref rid="pgen.1001031-Chen1" ref-type="bibr">[6]</xref>, <xref rid="pgen.1001031-Voinnet1" ref-type="bibr">[11]</xref>. To test whether artificial mimics impact miRNA effects independent of changes in target transcript accumulation, we monitored the protein levels produced by <italic>CIP4</italic>, a gene that is regulated by miR834 through translational inhibition <xref rid="pgen.1001031-Brodersen1" ref-type="bibr">[5]</xref>, <xref rid="pgen.1001031-Lanet1" ref-type="bibr">[62]</xref>. In <italic>MIM834</italic> lines, CIP4 levels were appreciably increased, while <italic>CIP4</italic> mRNA levels were unchanged (<xref ref-type="fig" rid="pgen-1001031-g004">Figure 4D</xref>). Direct effects on protein translation could explain the absence of a clear correlation between target mRNA levels and plant phenotype in plants expressing artificial target mimics.</p><p>Finally, we investigated the levels of mature miRNAs in plants expressing artificial target mimics. In all <italic>MIM</italic> lines we examined, levels of the targeted miRNA were decreased, suggesting that unproductive interaction of RISC<sup>miRNA</sup> with a decoy affects miRNA stability (<xref ref-type="fig" rid="pgen-1001031-g004">Figure 4E</xref>). Although such an effect has not been observed in case of the endogenous IPS1-miR399 interaction <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>, a similar reduction in small RNA levels triggered by a target mimic has been reported in bacteria <xref rid="pgen.1001031-FigueroaBossi1" ref-type="bibr">[24]</xref>, <xref rid="pgen.1001031-Overgaard1" ref-type="bibr">[25]</xref>.</p></sec><sec id="s2d"><title>Conclusions</title><p>We have generated a collection of transgenic plants expressing artificial target mimics designed to reduce activity for most of the known miRNA families in <italic>Arabidopsis thaliana</italic>. Inhibiting the function of 14 out of 71 miRNA families with target mimics led to morphological abnormalities. All of these families belong to the more abundant and widely conserved miRNA families, which were the first ones to be discovered (<xref ref-type="table" rid="pgen-1001031-t001">Table 1</xref>). This agrees with results from experiments in which miRNAs were overexpressed, miRNA target genes were mutated, or miRNA genes were inactivated by conventional knockouts [reviewed in 63]. Together, these findings are consistent with the scenario of frequent birth and death of miRNA genes, with only a few becoming fixed early on during evolution because they acquired a relevant function in plant development <xref rid="pgen.1001031-Rajagopalan1" ref-type="bibr">[33]</xref>, <xref rid="pgen.1001031-Fahlgren2" ref-type="bibr">[36]</xref>. More recently evolved, species-specific miRNAs could instead play a role in adaptation to certain abiotic or biotic challenges, or have no discernable function at all. Some miRNAs are known to regulate physiological traits, and they do not cause morphological abnormalities under standard benign conditions <xref rid="pgen.1001031-Chiou1" ref-type="bibr">[20]</xref>, <xref rid="pgen.1001031-Fujii1" ref-type="bibr">[21]</xref>, <xref rid="pgen.1001031-Sunkar1" ref-type="bibr">[64]</xref>. Such conditional effects would have escaped our screen, as would have defects in the root system of the plant. Moreover, compared to expression of non-targetable forms of miRNA target genes, or miRNA loss-of-function mutants, the defects of <italic>MIM</italic> plants were often weaker. Examples are the absence of an altered floral phenotype in <italic>MIM172</italic> plants, which is seen in plants that express a non-targetable version of <italic>AP2</italic> under the control of normal regulatory sequences <xref rid="pgen.1001031-Zhao1" ref-type="bibr">[52]</xref>, or the extra-petals phenotype seen in <italic>mir164c</italic> mutants, but not in <italic>MIM164</italic> plants <xref rid="pgen.1001031-Baker1" ref-type="bibr">[12]</xref>. Another caveat is that some miRNAs might be required for embryonic development, in which case only lines with relatively weak expression of the artificial target mimic might have survived. Such limitations could be overcome by tissue-specific or inducible expression of target mimics. On the other hand, while artificial mimics increase levels of individual miRNA target genes less strongly than what can be achieved by expression of miRNA-resistant forms, mimics have the advantage that they affect all targets simultaneously <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>. Apart from translational regulation <xref rid="pgen.1001031-Dugas1" ref-type="bibr">[3]</xref>&#x02013;<xref rid="pgen.1001031-Gandikota1" ref-type="bibr">[7]</xref>, another possibility for the absence of a clear correlation between phenotypic severity and change in mRNA levels of miRNA targets could be that many miRNAs affect their targets only in a small set of cells. In these cases, assaying expression in whole organs would obscure the effects of miRNA downregulation on mRNA levels.</p><p>It has recently been suggested that plant miRNAs could also repress the translation of target mRNAs that have only limited sequence complementarity, as often happens in animals <xref rid="pgen.1001031-Brodersen1" ref-type="bibr">[5]</xref>. Support for the existence of miRNA binding sites with reduced complementarity in plants comes from an analysis of miR398, which regulates <italic>COPPER SUPEROXIDE DISMUTASE</italic> (<italic>CSD</italic>) genes. Certain mutations in the miR398 complementary motif site reduced the effects of miR398 on <italic>CSD</italic> mRNA, but not on protein levels <xref rid="pgen.1001031-Dugas1" ref-type="bibr">[3]</xref>. We have shown that mimic-like sites, when introduced into the 3&#x02032;-UTR of a protein-coding gene, not only are active in sequestering the targeted miRNA, but can also reduce protein levels produced by the mRNA linked in cis. This reduction likely occurs at the translational level, since mimic sites are not subject to miRNA-dependent slicing <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>. This observation opens an intriguing scenario in which mRNAs containing mimic-like sites, or possibly other sites with reduced complementarity to miRNAs, are regulated by miRNAs exclusively through translational inhibition. A further level of complexity is added by such sites reducing the effects of an miRNA on other mRNA with a sliceable miRNA targeting motif, similarly to what has been recently proposed in animal systems <xref rid="pgen.1001031-Seitz1" ref-type="bibr">[65]</xref>.</p><p>Nevertheless, as pointed out before <xref rid="pgen.1001031-Palatnik2" ref-type="bibr">[43]</xref>, miRNA overexpression and knockout of major target genes normally produce very similar phenotypes, and these are generally the opposite of what is seen in plants with reduced activity of the miRNA. These observations are supported by our finding of extensive similarities between phenotypes caused by target mimics and by expressing resistant forms of individual targets. We conclude that, at least for the instances in which developmental defects could be observed, target genes with extensive complementarity likely account for the majority of miRNA effects, but that in certain cases targets regulated solely through translational inhibition via diverged target sites might be important as well.</p></sec></sec><sec sec-type="materials|methods" id="s3"><title>Materials and Methods</title><sec id="s3a"><title>Plant material</title><p>Plants were grown on soil in long days (16 h light/8 hours dark) under a mixture of cool and warm white fluorescent light at 23&#x000b0;C and 65&#x00025; humidity. The <italic>se-</italic>1, <italic>ago1-</italic>27, and <italic>hyl1-</italic>2 and <italic>dcl1</italic>-100 mutants have been described <xref rid="pgen.1001031-Laubinger1" ref-type="bibr">[66]</xref>&#x02013;<xref rid="pgen.1001031-Vazquez1" ref-type="bibr">[69]</xref>. <italic>MIM834</italic> plants were grown on MS media plates supplemented with 1&#x00025; sucrose for 14 days in long days at 23&#x000b0;C. Plants overexpressing viral proteins Hc-Pro, P0, P19 and P21 were a kind gift from the Carrington lab.</p></sec><sec id="s3b"><title>Transgenic lines</title><p>Artificial target mimics were generated by modifying the sequence of the <italic>IPS1</italic> gene <xref rid="pgen.1001031-FrancoZorrilla1" ref-type="bibr">[18]</xref>. All target mimics constructs were placed behind the constitutive CaMV 35S promoter in the pGREEN vector conferring resistance to BASTA <xref rid="pgen.1001031-Hellens1" ref-type="bibr">[70]</xref>. For the <italic>MYB33:GUS</italic> reporter, a <italic>MYB33</italic> genomic fragment was PCR amplified, cloned into the TOPO-PCR8 Gateway vector (Invitrogen), and recombined through LR clonase reaction into pGWB433 <xref rid="pgen.1001031-Nakagawa1" ref-type="bibr">[71]</xref> to generate a GUS translational fusion. The <italic>MIM159</italic> construct was introduced into three independent <italic>MYB33-GUS</italic> T2 lines. A <italic>MIM159</italic> site was placed in the 3&#x02032;-UTR of a triple-EYFP sequence linked to a fragment encoding a nuclear localization signal (NLS) and driven by a CaMV 35S promoter. Constructs were introduced into <italic>A. thaliana</italic> (accession Col-0) plants by <italic>Agrobacterium tumefaciens</italic>-mediated transformation <xref rid="pgen.1001031-Weigel1" ref-type="bibr">[72]</xref>.</p></sec><sec id="s3c"><title>Histochemical assays</title><p>Nine-day-old seedlings from three independent T2 lines for all the GUS reporter backgrounds were fixed in acetone 90&#x00025;. GUS activity was assayed as described <xref rid="pgen.1001031-Blzquez1" ref-type="bibr">[73]</xref>.</p></sec><sec id="s3d"><title>RNA analysis</title><p>Total RNA was extracted from 11-day old seedlings and 30-day old inflorescences (47 days for the <italic>MIM172</italic> lines), using TRIzol Reagent (Invitrogen). For <italic>dcl-</italic>100, 13-day old seedlings were collected, to obtain a similar developmental stage compared to the other plants. For real time RT-PCR, two biological replicates with tissue pooled from 8 to 10 plants were assayed from two independent <italic>MIM</italic> lines per miRNA family or subfamily. Complementary DNA was produced with the RevertAid First Strand cDNA Synthesis Kit (Fermentas), using as starting material 4 &#x000b5;g of total RNA that had been treated with DNase I (Fermentas). PCR was carried out in presence of SYBR Green (Invitrogen) and monitored in real time with the Opticon Continuous Fluorescence Detection System (MJR). Oligonucleotide primers are given in <xref ref-type="supplementary-material" rid="pgen.1001031.s005">Table S2</xref>. Small RNA blots were performed on the same RNA used as template for real time RT-PCR, with DNA oligonucleotides as probes.</p></sec><sec id="s3e"><title>Protein analysis</title><p>Proteins were extracted from four <italic>MIM834</italic> lines using a Tris buffer (50 mM Tris pH 7,5; 150 mM NaCl; 1 mM EDTA; 10&#x00025; [v/v] Glycerol; 1 mM DTT; 1 mM Pefablock and 1 complete protease inhibitor cocktail [Roche]). Protein concentration was measured using a commercial Bradford assay (BioRad). 50 &#x000b5;g of raw protein extract per sample were resolved on an 8&#x00025; acrylamide gel. Blotting and antibody incubation were performed as described <xref rid="pgen.1001031-Brodersen1" ref-type="bibr">[5]</xref>, except that the secondary antibody was incubated for 8 hours at 4&#x000b0;C. Two biological replicates from 4 independent lines were analyzed. Band intensity was measured using the ImageJ software (<ext-link ext-link-type="uri" xlink:href="http://rsbweb.nih.gov/ij/">http://rsbweb.nih.gov/ij/</ext-link>).</p></sec></sec><sec sec-type="supplementary-material" id="s4"><title>Supporting Information</title><supplementary-material content-type="local-data" id="pgen.1001031.s001"><label>Figure S1</label><caption><p>Flowering behavior of <italic>MIM167</italic> and <italic>MIM172</italic> plants. Five-week-old, long-day grown plants expressing <italic>MIM167</italic> (A) and <italic>MIM172</italic> (B) next to wild-type Col-0 plants on the left.</p><p>(0.89 MB PDF)</p></caption><media xlink:href="pgen.1001031.s001.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1001031.s002"><label>Figure S2</label><caption><p>Flowering time of <italic>MIM167</italic> plants and Col-0 controls. Distribution of flowering times of primary transformants of plants transformed with <italic>MIM167</italic> or empty pGREEN binary vector, grown at 23&#x000b0;C in long days.</p><p>(0.09 MB PDF)</p></caption><media xlink:href="pgen.1001031.s002.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1001031.s003"><label>Figure S3</label><caption><p>Expression of miRNA targets in inflorescences of <italic>MIM</italic> lines. Transcript levels of select miRNA targets in two independent lines for each <italic>MIM</italic> construct (represented by bars of different shades of gray). Expression levels are reported as the average of two biological and two technical replicates, and are normalized to the expression levels in wild-type Col-0 plants (dotted line).</p><p>(0.10 MB PDF)</p></caption><media xlink:href="pgen.1001031.s003.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1001031.s004"><label>Table S1</label><caption><p>Oligonucleotide primers used to modify the IPS1 sequence in <italic>MIM</italic> constructs.</p><p>(0.11 MB PDF)</p></caption><media xlink:href="pgen.1001031.s004.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1001031.s005"><label>Table S2</label><caption><p>Oligonucleotide primers for qRT-PCR.</p><p>(0.07 MB PDF)</p></caption><media xlink:href="pgen.1001031.s005.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack><p>We thank the following colleagues for seeds: the Carrington lab for plants expressing viral silencing suppressors, Sascha Laubinger for <italic>dcl1-</italic>100 mutants, Jia-Wei Wang for <italic>rSPL3</italic> plants, Anthony Millar for <italic>pMIR159a:GUS</italic> and <italic>pMIR159b:GUS</italic> lines. We thank Tsuyoshi Nakagawa for pGWB433 and Schallum Werner for the triple-EYFP vector, Peter Brodersen and Olivier Voinnet for crucial support in CIP4 protein studies, Roosa Laitinen and Juan Jos&#x000e9; Ripoll-Samper for critical reading of the manuscript, and members of Weigelworld Team MiRNA for comments and discussion. All mimicry constructs are available from the European Arabidopsis Stock Center (NASC).</p></ack><fn-group><fn fn-type="COI-statement"><p>The authors have declared that no competing interests exist.</p></fn><fn fn-type="financial-disclosure"><p>Supported by an EMBO Long-term Fellowship (IR-S), Marie Curie RTN SY-STEM, grant BIO2008-04715 from Spanish Ministry of Science and Innovation (MICINN) (JP-A), French-German-Spanish Trilateral program on Plant Genomics (TRANSNET project funded by MCINN and BMBF; JP-A and DW), European Community FP6 IP SIROCCO (contract LSHG-CT-2006-037900), a Gottfried Wilhelm Leibniz Award of the DFG, and the Max Planck Society (DW). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></fn></fn-group><ref-list><title>References</title><ref id="pgen.1001031-Kurihara1"><label>1</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kurihara</surname><given-names>Y</given-names></name><name><surname>Watanabe</surname><given-names>Y</given-names></name></person-group>
+<year>2004</year>
+<article-title>
+<italic>Arabidopsis</italic> micro-RNA biogenesis through <italic>Dicer-like 1</italic> protein functions.</article-title>
+<source>Proc Natl Acad Sci USA</source>
+<volume>101</volume>
+<fpage>12753</fpage>
+<lpage>12758</lpage>
+<pub-id pub-id-type="pmid">15314213</pub-id></element-citation></ref><ref id="pgen.1001031-Ramachandran1"><label>2</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ramachandran</surname><given-names>V</given-names></name><name><surname>Chen</surname><given-names>X</given-names></name></person-group>
+<year>2008</year>
+<article-title>Small RNA metabolism in <italic>Arabidopsis</italic>.</article-title>
+<source>Trends Plant Sci</source>
+<volume>13</volume>
+<fpage>368</fpage>
+<lpage>374</lpage>
+<pub-id pub-id-type="pmid">18501663</pub-id></element-citation></ref><ref id="pgen.1001031-Dugas1"><label>3</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dugas</surname><given-names>DV</given-names></name><name><surname>Bartel</surname><given-names>B</given-names></name></person-group>
+<year>2008</year>
+<article-title>Sucrose induction of <italic>Arabidopsis</italic> miR398 represses two Cu/Zn superoxide dismutases.</article-title>
+<source>Plant Mol Biol</source>
+<volume>67</volume>
+<fpage>403</fpage>
+<lpage>417</lpage>
+<pub-id pub-id-type="pmid">18392778</pub-id></element-citation></ref><ref id="pgen.1001031-Aukerman1"><label>4</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Aukerman</surname><given-names>MJ</given-names></name><name><surname>Sakai</surname><given-names>H</given-names></name></person-group>
+<year>2003</year>
+<article-title>Regulation of flowering time and floral organ identity by a microRNA and its <italic>APETALA2</italic>-like target genes.</article-title>
+<source>Plant Cell</source>
+<volume>15</volume>
+<fpage>2730</fpage>
+<lpage>2741</lpage>
+<pub-id pub-id-type="pmid">14555699</pub-id></element-citation></ref><ref id="pgen.1001031-Brodersen1"><label>5</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Brodersen</surname><given-names>P</given-names></name><name><surname>Sakvarelidze-Achard</surname><given-names>L</given-names></name><name><surname>Bruun-Rasmussen</surname><given-names>M</given-names></name><name><surname>Dunoyer</surname><given-names>P</given-names></name><name><surname>Yamamoto</surname><given-names>YY</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Widespread translational inhibition by plant miRNAs and siRNAs.</article-title>
+<source>Science</source>
+<volume>320</volume>
+<fpage>1185</fpage>
+<lpage>1190</lpage>
+<pub-id pub-id-type="pmid">18483398</pub-id></element-citation></ref><ref id="pgen.1001031-Chen1"><label>6</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chen</surname><given-names>X</given-names></name></person-group>
+<year>2004</year>
+<article-title>A microRNA as a translational repressor of <italic>APETALA2</italic> in <italic>Arabidopsis</italic> flower development.</article-title>
+<source>Science</source>
+<volume>303</volume>
+<fpage>2022</fpage>
+<lpage>2025</lpage>
+<pub-id pub-id-type="pmid">12893888</pub-id></element-citation></ref><ref id="pgen.1001031-Gandikota1"><label>7</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gandikota</surname><given-names>M</given-names></name><name><surname>Birkenbihl</surname><given-names>RP</given-names></name><name><surname>Hohmann</surname><given-names>S</given-names></name><name><surname>Cardon</surname><given-names>GH</given-names></name><name><surname>Saedler</surname><given-names>H</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>The miRNA156/157 recognition element in the 3&#x02032; UTR of the Arabidopsis SBP box gene <italic>SPL3</italic> prevents early flowering by translational inhibition in seedlings.</article-title>
+<source>Plant J</source>
+<volume>49</volume>
+<fpage>683</fpage>
+<lpage>693</lpage>
+<pub-id pub-id-type="pmid">17217458</pub-id></element-citation></ref><ref id="pgen.1001031-JonesRhoades1"><label>8</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jones-Rhoades</surname><given-names>MW</given-names></name><name><surname>Bartel</surname><given-names>DP</given-names></name></person-group>
+<year>2004</year>
+<article-title>Computational Identification of plant microRNAs and their targets, including a stress-induced miRNA.</article-title>
+<source>Mol Cell</source>
+<volume>14</volume>
+<fpage>787</fpage>
+<lpage>799</lpage>
+<pub-id pub-id-type="pmid">15200956</pub-id></element-citation></ref><ref id="pgen.1001031-Llave1"><label>9</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Llave</surname><given-names>C</given-names></name><name><surname>Xie</surname><given-names>Z</given-names></name><name><surname>Kasschau</surname><given-names>KD</given-names></name><name><surname>Carrington</surname><given-names>JC</given-names></name></person-group>
+<year>2002</year>
+<article-title>Cleavage of <italic>Scarecrow-like</italic> mRNA targets directed by a class of <italic>Arabidopsis</italic> miRNA.</article-title>
+<source>Science</source>
+<volume>297</volume>
+<fpage>2053</fpage>
+<lpage>2056</lpage>
+<pub-id pub-id-type="pmid">12242443</pub-id></element-citation></ref><ref id="pgen.1001031-Schwab1"><label>10</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schwab</surname><given-names>R</given-names></name><name><surname>Palatnik</surname><given-names>JF</given-names></name><name><surname>Riester</surname><given-names>M</given-names></name><name><surname>Schommer</surname><given-names>C</given-names></name><name><surname>Schmid</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Specific effects of microRNAs on the plant transcriptome.</article-title>
+<source>Dev Cell</source>
+<volume>8</volume>
+<fpage>517</fpage>
+<lpage>527</lpage>
+<pub-id pub-id-type="pmid">15809034</pub-id></element-citation></ref><ref id="pgen.1001031-Voinnet1"><label>11</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Voinnet</surname><given-names>O</given-names></name></person-group>
+<year>2009</year>
+<article-title>Origin, biogenesis, and activity of plant microRNAs.</article-title>
+<source>Cell</source>
+<volume>136</volume>
+<fpage>669</fpage>
+<lpage>687</lpage>
+<pub-id pub-id-type="pmid">19239888</pub-id></element-citation></ref><ref id="pgen.1001031-Baker1"><label>12</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Baker</surname><given-names>CC</given-names></name><name><surname>Sieber</surname><given-names>P</given-names></name><name><surname>Wellmer</surname><given-names>F</given-names></name><name><surname>Meyerowitz</surname><given-names>EM</given-names></name></person-group>
+<year>2005</year>
+<article-title>The <italic>early extra petals1</italic> mutant uncovers a role for microRNA <italic>miR164c</italic> in regulating petal number in <italic>Arabidopsis</italic>.</article-title>
+<source>Curr Biol</source>
+<volume>15</volume>
+<fpage>303</fpage>
+<lpage>315</lpage>
+<pub-id pub-id-type="pmid">15723790</pub-id></element-citation></ref><ref id="pgen.1001031-Nikovics1"><label>13</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nikovics</surname><given-names>K</given-names></name><name><surname>Blein</surname><given-names>T</given-names></name><name><surname>Peaucelle</surname><given-names>A</given-names></name><name><surname>Ishida</surname><given-names>T</given-names></name><name><surname>Morin</surname><given-names>H</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>The balance between the <italic>MIR164A</italic> and <italic>CUC2</italic> genes controls leaf margin serration in <italic>Arabidopsis</italic>.</article-title>
+<source>Plant Cell</source>
+<volume>18</volume>
+<fpage>2929</fpage>
+<lpage>2945</lpage>
+<pub-id pub-id-type="pmid">17098808</pub-id></element-citation></ref><ref id="pgen.1001031-Nogueira1"><label>14</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nogueira</surname><given-names>FT</given-names></name><name><surname>Chitwood</surname><given-names>DH</given-names></name><name><surname>Madi</surname><given-names>S</given-names></name><name><surname>Ohtsu</surname><given-names>K</given-names></name><name><surname>Schnable</surname><given-names>PS</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Regulation of small RNA accumulation in the maize shoot apex.</article-title>
+<source>PLoS Genet</source>
+<volume>5</volume>
+<fpage>e1000320</fpage>
+<comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pgen.1000320">10.1371/journal.pgen.1000320</ext-link></comment>
+<pub-id pub-id-type="pmid">19119413</pub-id></element-citation></ref><ref id="pgen.1001031-Raman1"><label>15</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Raman</surname><given-names>S</given-names></name><name><surname>Greb</surname><given-names>T</given-names></name><name><surname>Peaucelle</surname><given-names>A</given-names></name><name><surname>Blein</surname><given-names>T</given-names></name><name><surname>Laufs</surname><given-names>P</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Interplay of miR164, <italic>CUP-SHAPED COTYLEDON</italic> genes and <italic>LATERAL SUPPRESSOR</italic> controls axillary meristem formation in <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>Plant J</source>
+<volume>55</volume>
+<fpage>65</fpage>
+<lpage>76</lpage>
+<pub-id pub-id-type="pmid">18346190</pub-id></element-citation></ref><ref id="pgen.1001031-Sieber1"><label>16</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sieber</surname><given-names>P</given-names></name><name><surname>Wellmer</surname><given-names>F</given-names></name><name><surname>Gheyselinck</surname><given-names>J</given-names></name><name><surname>Riechmann</surname><given-names>JL</given-names></name><name><surname>Meyerowitz</surname><given-names>EM</given-names></name></person-group>
+<year>2007</year>
+<article-title>Redundancy and specialization among plant microRNAs: role of the <italic>MIR164</italic> family in developmental robustness.</article-title>
+<source>Development</source>
+<volume>134</volume>
+<fpage>1051</fpage>
+<lpage>1060</lpage>
+<pub-id pub-id-type="pmid">17287247</pub-id></element-citation></ref><ref id="pgen.1001031-Wu1"><label>17</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wu</surname><given-names>MF</given-names></name><name><surname>Tian</surname><given-names>Q</given-names></name><name><surname>Reed</surname><given-names>JW</given-names></name></person-group>
+<year>2006</year>
+<article-title>
+<italic>Arabidopsis microRNA167</italic> controls patterns of <italic>ARF6</italic> and <italic>ARF8</italic> expression, and regulates both female and male reproduction.</article-title>
+<source>Development</source>
+<volume>133</volume>
+<fpage>4211</fpage>
+<lpage>4218</lpage>
+<pub-id pub-id-type="pmid">17021043</pub-id></element-citation></ref><ref id="pgen.1001031-FrancoZorrilla1"><label>18</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Franco-Zorrilla</surname><given-names>JM</given-names></name><name><surname>Valli</surname><given-names>A</given-names></name><name><surname>Todesco</surname><given-names>M</given-names></name><name><surname>Mateos</surname><given-names>I</given-names></name><name><surname>Puga</surname><given-names>MI</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Target mimicry provides a new mechanism for regulation of microRNA activity.</article-title>
+<source>Nat Genet</source>
+<volume>39</volume>
+<fpage>1033</fpage>
+<lpage>1037</lpage>
+<pub-id pub-id-type="pmid">17643101</pub-id></element-citation></ref><ref id="pgen.1001031-Burleigh1"><label>19</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Burleigh</surname><given-names>SH</given-names></name><name><surname>Harrison</surname><given-names>MJ</given-names></name></person-group>
+<year>1999</year>
+<article-title>The down-regulation of <italic>Mt4</italic>-like genes by phosphate fertilization occurs systemically and involves phosphate translocation to the shoots.</article-title>
+<source>Plant Physiol</source>
+<volume>119</volume>
+<fpage>241</fpage>
+<lpage>248</lpage>
+<pub-id pub-id-type="pmid">9880366</pub-id></element-citation></ref><ref id="pgen.1001031-Chiou1"><label>20</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chiou</surname><given-names>TJ</given-names></name><name><surname>Aung</surname><given-names>K</given-names></name><name><surname>Lin</surname><given-names>SI</given-names></name><name><surname>Wu</surname><given-names>CC</given-names></name><name><surname>Chiang</surname><given-names>SF</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>Regulation of phosphate homeostasis by microRNA in <italic>Arabidopsis</italic>.</article-title>
+<source>Plant Cell</source>
+<volume>18</volume>
+<fpage>412</fpage>
+<lpage>421</lpage>
+<pub-id pub-id-type="pmid">16387831</pub-id></element-citation></ref><ref id="pgen.1001031-Fujii1"><label>21</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fujii</surname><given-names>H</given-names></name><name><surname>Chiou</surname><given-names>TJ</given-names></name><name><surname>Lin</surname><given-names>SI</given-names></name><name><surname>Aung</surname><given-names>K</given-names></name><name><surname>Zhu</surname><given-names>JK</given-names></name></person-group>
+<year>2005</year>
+<article-title>A miRNA involved in phosphate-starvation response in <italic>Arabidopsis</italic>.</article-title>
+<source>Curr Biol</source>
+<volume>15</volume>
+<fpage>2038</fpage>
+<lpage>2043</lpage>
+<pub-id pub-id-type="pmid">16303564</pub-id></element-citation></ref><ref id="pgen.1001031-Martin1"><label>22</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Martin</surname><given-names>AC</given-names></name><name><surname>del Pozo</surname><given-names>JC</given-names></name><name><surname>Iglesias</surname><given-names>J</given-names></name><name><surname>Rubio</surname><given-names>V</given-names></name><name><surname>Solano</surname><given-names>R</given-names></name><etal/></person-group>
+<year>2000</year>
+<article-title>Influence of cytokinins on the expression of phosphate starvation responsive genes in <italic>Arabidopsis</italic>.</article-title>
+<source>Plant J</source>
+<volume>24</volume>
+<fpage>559</fpage>
+<lpage>567</lpage>
+<pub-id pub-id-type="pmid">11123795</pub-id></element-citation></ref><ref id="pgen.1001031-Shin1"><label>23</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shin</surname><given-names>H</given-names></name><name><surname>Shin</surname><given-names>HS</given-names></name><name><surname>Chen</surname><given-names>R</given-names></name><name><surname>Harrison</surname><given-names>MJ</given-names></name></person-group>
+<year>2006</year>
+<article-title>Loss of <italic>At4</italic> function impacts phosphate distribution between the roots and the shoots during phosphate starvation.</article-title>
+<source>Plant J</source>
+<volume>45</volume>
+<fpage>712</fpage>
+<lpage>726</lpage>
+<pub-id pub-id-type="pmid">16460506</pub-id></element-citation></ref><ref id="pgen.1001031-FigueroaBossi1"><label>24</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Figueroa-Bossi</surname><given-names>N</given-names></name><name><surname>Valentini</surname><given-names>M</given-names></name><name><surname>Malleret</surname><given-names>L</given-names></name><name><surname>Fiorini</surname><given-names>F</given-names></name><name><surname>Bossi</surname><given-names>L</given-names></name></person-group>
+<year>2009</year>
+<article-title>Caught at its own game: regulatory small RNA inactivated by an inducible transcript mimicking its target.</article-title>
+<source>Genes Dev</source>
+<volume>23</volume>
+<fpage>2004</fpage>
+<lpage>2015</lpage>
+<pub-id pub-id-type="pmid">19638370</pub-id></element-citation></ref><ref id="pgen.1001031-Overgaard1"><label>25</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Overgaard</surname><given-names>M</given-names></name><name><surname>Johansen</surname><given-names>J</given-names></name><name><surname>M&#x000f8;ller-Jensen</surname><given-names>J</given-names></name><name><surname>Valentin-Hansen</surname><given-names>P</given-names></name></person-group>
+<year>2009</year>
+<article-title>Switching off small RNA regulation with trap-mRNA.</article-title>
+<source>Mol Microbiol</source>
+<volume>73</volume>
+<fpage>790</fpage>
+<lpage>800</lpage>
+<pub-id pub-id-type="pmid">19682266</pub-id></element-citation></ref><ref id="pgen.1001031-Allen1"><label>26</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Allen</surname><given-names>RS</given-names></name><name><surname>Li</surname><given-names>J</given-names></name><name><surname>Stahle</surname><given-names>MI</given-names></name><name><surname>Dubroue</surname><given-names>A</given-names></name><name><surname>Gubler</surname><given-names>F</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Genetic analysis reveals functional redundancy and the major target genes of the <italic>Arabidopsis</italic> miR159 family.</article-title>
+<source>Proc Natl Acad Sci USA</source>
+<volume>104</volume>
+<fpage>16371</fpage>
+<lpage>16376</lpage>
+<pub-id pub-id-type="pmid">17916625</pub-id></element-citation></ref><ref id="pgen.1001031-Ebert1"><label>27</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ebert</surname><given-names>MS</given-names></name><name><surname>Neilson</surname><given-names>JR</given-names></name><name><surname>Sharp</surname><given-names>PA</given-names></name></person-group>
+<year>2007</year>
+<article-title>MicroRNA sponges: competitive inhibitors of small RNAs in mammalian cells.</article-title>
+<source>Nat Methods</source>
+<volume>4</volume>
+<fpage>721</fpage>
+<lpage>726</lpage>
+<pub-id pub-id-type="pmid">17694064</pub-id></element-citation></ref><ref id="pgen.1001031-Gentner1"><label>28</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gentner</surname><given-names>B</given-names></name><name><surname>Schira</surname><given-names>G</given-names></name><name><surname>Giustacchini</surname><given-names>A</given-names></name><name><surname>Amendola</surname><given-names>M</given-names></name><name><surname>Brown</surname><given-names>BD</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Stable knockdown of microRNA in vivo by lentiviral vectors.</article-title>
+<source>Nat Methods</source>
+<volume>6</volume>
+<fpage>63</fpage>
+<lpage>66</lpage>
+<pub-id pub-id-type="pmid">19043411</pub-id></element-citation></ref><ref id="pgen.1001031-Palatnik1"><label>29</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Palatnik</surname><given-names>JF</given-names></name><name><surname>Allen</surname><given-names>E</given-names></name><name><surname>Wu</surname><given-names>X</given-names></name><name><surname>Schommer</surname><given-names>C</given-names></name><name><surname>Schwab</surname><given-names>R</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>Control of leaf morphogenesis by microRNAs.</article-title>
+<source>Nature</source>
+<volume>425</volume>
+<fpage>257</fpage>
+<lpage>263</lpage>
+<pub-id pub-id-type="pmid">12931144</pub-id></element-citation></ref><ref id="pgen.1001031-Wu2"><label>30</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wu</surname><given-names>G</given-names></name><name><surname>Poethig</surname><given-names>RS</given-names></name></person-group>
+<year>2006</year>
+<article-title>Temporal regulation of shoot development in Arabidopsis thaliana by miR156 and its target <italic>SPL3</italic>.</article-title>
+<source>Development</source>
+<volume>133</volume>
+<fpage>3539</fpage>
+<lpage>3547</lpage>
+<pub-id pub-id-type="pmid">16914499</pub-id></element-citation></ref><ref id="pgen.1001031-Miska1"><label>31</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miska</surname><given-names>EA</given-names></name><name><surname>Alvarez-Saavedra</surname><given-names>E</given-names></name><name><surname>Abbott</surname><given-names>AL</given-names></name><name><surname>Lau</surname><given-names>NC</given-names></name><name><surname>Hellman</surname><given-names>AB</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Most <italic>Caenorhabditis elegans</italic> microRNAs are individually not essential for development or viability.</article-title>
+<source>PLoS Genet</source>
+<volume>3</volume>
+<fpage>e215</fpage>
+<comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pgen.0030215">10.1371/journal.pgen.0030215</ext-link></comment>
+<pub-id pub-id-type="pmid">18085825</pub-id></element-citation></ref><ref id="pgen.1001031-Gustafson1"><label>32</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gustafson</surname><given-names>AM</given-names></name><name><surname>Allen</surname><given-names>E</given-names></name><name><surname>Givan</surname><given-names>S</given-names></name><name><surname>Smith</surname><given-names>D</given-names></name><name><surname>Carrington</surname><given-names>JC</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>ASRP: the <italic>Arabidopsis</italic> Small RNA Project Database.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>33</volume>
+<fpage>D637</fpage>
+<lpage>640</lpage>
+<pub-id pub-id-type="pmid">15608278</pub-id></element-citation></ref><ref id="pgen.1001031-Rajagopalan1"><label>33</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rajagopalan</surname><given-names>R</given-names></name><name><surname>Vaucheret</surname><given-names>H</given-names></name><name><surname>Trejo</surname><given-names>J</given-names></name><name><surname>Bartel</surname><given-names>DP</given-names></name></person-group>
+<year>2006</year>
+<article-title>A diverse and evolutionarily fluid set of microRNAs in <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>Genes Dev</source>
+<volume>20</volume>
+<fpage>3407</fpage>
+<lpage>3425</lpage>
+<pub-id pub-id-type="pmid">17182867</pub-id></element-citation></ref><ref id="pgen.1001031-Ma1"><label>34</label><element-citation publication-type="other">
+<person-group person-group-type="author"><name><surname>Ma</surname><given-names>Z</given-names></name><name><surname>Coruh</surname><given-names>C</given-names></name><name><surname>Axtell</surname><given-names>MJ</given-names></name></person-group>
+<year>2010</year>
+<article-title>
+<italic>Arabidopsis lyrata</italic> small RNAs: transient <italic>MIRNA</italic> and small interfering RNA loci within the <italic>Arabidopsis</italic> genus.</article-title>
+<comment>Plant Cell 22:ePub April 22, 2010 </comment>
+</element-citation></ref><ref id="pgen.1001031-Fahlgren1"><label>35</label><element-citation publication-type="other">
+<person-group person-group-type="author"><name><surname>Fahlgren</surname><given-names>N</given-names></name><name><surname>Jogdeo</surname><given-names>S</given-names></name><name><surname>Kasschau</surname><given-names>KD</given-names></name><name><surname>Sullivan</surname><given-names>CM</given-names></name><name><surname>Chapman</surname><given-names>EJ</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>MicroRNA gene evolution in <italic>Arabidopsis lyrata</italic> and <italic>Arabidopsis thaliana</italic>.</article-title>
+<comment>Plant Cell 22:ePub April 22, 2010</comment>
+</element-citation></ref><ref id="pgen.1001031-Fahlgren2"><label>36</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fahlgren</surname><given-names>N</given-names></name><name><surname>Howell</surname><given-names>MD</given-names></name><name><surname>Kasschau</surname><given-names>KD</given-names></name><name><surname>Chapman</surname><given-names>EJ</given-names></name><name><surname>Sullivan</surname><given-names>CM</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>High-throughput sequencing of <italic>Arabidopsis</italic> microRNAs: evidence for frequent birth and death of <italic>MIRNA</italic> genes.</article-title>
+<source>PLoS ONE</source>
+<volume>2</volume>
+<fpage>e219</fpage>
+<comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0000219">10.1371/journal.pone.0000219</ext-link></comment>
+<pub-id pub-id-type="pmid">17299599</pub-id></element-citation></ref><ref id="pgen.1001031-Axtell1"><label>37</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Axtell</surname><given-names>MJ</given-names></name><name><surname>Bartel</surname><given-names>DP</given-names></name></person-group>
+<year>2005</year>
+<article-title>Antiquity of microRNAs and their targets in land plants.</article-title>
+<source>Plant Cell</source>
+<volume>17</volume>
+<fpage>1658</fpage>
+<lpage>1673</lpage>
+<pub-id pub-id-type="pmid">15849273</pub-id></element-citation></ref><ref id="pgen.1001031-Howell1"><label>38</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Howell</surname><given-names>MD</given-names></name><name><surname>Fahlgren</surname><given-names>N</given-names></name><name><surname>Chapman</surname><given-names>EJ</given-names></name><name><surname>Cumbie</surname><given-names>JS</given-names></name><name><surname>Sullivan</surname><given-names>CM</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Genome-wide analysis of the RNA-DEPENDENT RNA POLYMERASE6/DICER-LIKE4 pathway in <italic>Arabidopsis</italic> reveals dependency on miRNA- and tasiRNA-directed targeting.</article-title>
+<source>Plant Cell</source>
+<volume>19</volume>
+<fpage>926</fpage>
+<lpage>942</lpage>
+<pub-id pub-id-type="pmid">17400893</pub-id></element-citation></ref><ref id="pgen.1001031-Wu3"><label>39</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wu</surname><given-names>G</given-names></name><name><surname>Park</surname><given-names>MY</given-names></name><name><surname>Conway</surname><given-names>SR</given-names></name><name><surname>Wang</surname><given-names>JW</given-names></name><name><surname>Weigel</surname><given-names>D</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>The sequential action of miR156 and miR172 regulates developmental timing in <italic>Arabidopsis</italic>.</article-title>
+<source>Cell</source>
+<volume>138</volume>
+<fpage>750</fpage>
+<lpage>759</lpage>
+<pub-id pub-id-type="pmid">19703400</pub-id></element-citation></ref><ref id="pgen.1001031-Schwarz1"><label>40</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schwarz</surname><given-names>S</given-names></name><name><surname>Grande</surname><given-names>AV</given-names></name><name><surname>Bujdoso</surname><given-names>N</given-names></name><name><surname>Saedler</surname><given-names>H</given-names></name><name><surname>Huijser</surname><given-names>P</given-names></name></person-group>
+<year>2008</year>
+<article-title>The microRNA regulated SBP-box genes <italic>SPL9</italic> and <italic>SPL15</italic> control shoot maturation in <italic>Arabidopsis</italic>.</article-title>
+<source>Plant Mol Biol</source>
+<volume>67</volume>
+<fpage>183</fpage>
+<lpage>195</lpage>
+<pub-id pub-id-type="pmid">18278578</pub-id></element-citation></ref><ref id="pgen.1001031-Wang1"><label>41</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>JW</given-names></name><name><surname>Schwab</surname><given-names>R</given-names></name><name><surname>Czech</surname><given-names>B</given-names></name><name><surname>Mica</surname><given-names>E</given-names></name><name><surname>Weigel</surname><given-names>D</given-names></name></person-group>
+<year>2008</year>
+<article-title>Dual effects of miR156-targeted <italic>SPL</italic> genes and <italic>CYP78A5/KLUH</italic> on plastochron length and organ size in <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>Plant Cell</source>
+<volume>20</volume>
+<fpage>1231</fpage>
+<lpage>1243</lpage>
+<pub-id pub-id-type="pmid">18492871</pub-id></element-citation></ref><ref id="pgen.1001031-Wang2"><label>42</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>JW</given-names></name><name><surname>Czech</surname><given-names>B</given-names></name><name><surname>Weigel</surname><given-names>D</given-names></name></person-group>
+<year>2009</year>
+<article-title>miR156-regulated SPL transcription factors define an endogenous flowering pathway in <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>Cell</source>
+<volume>138</volume>
+<fpage>738</fpage>
+<lpage>749</lpage>
+<pub-id pub-id-type="pmid">19703399</pub-id></element-citation></ref><ref id="pgen.1001031-Palatnik2"><label>43</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Palatnik</surname><given-names>JF</given-names></name><name><surname>Wollmann</surname><given-names>H</given-names></name><name><surname>Schommer</surname><given-names>C</given-names></name><name><surname>Schwab</surname><given-names>R</given-names></name><name><surname>Boisbouvier</surname><given-names>J</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Sequence and expression differences underlie functional specialization of <italic>Arabidopsis</italic> microRNAs miR159 and miR319.</article-title>
+<source>Dev Cell</source>
+<volume>13</volume>
+<fpage>115</fpage>
+<lpage>125</lpage>
+<pub-id pub-id-type="pmid">17609114</pub-id></element-citation></ref><ref id="pgen.1001031-Liu1"><label>44</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Liu</surname><given-names>PP</given-names></name><name><surname>Montgomery</surname><given-names>TA</given-names></name><name><surname>Fahlgren</surname><given-names>N</given-names></name><name><surname>Kasschau</surname><given-names>KD</given-names></name><name><surname>Nonogaki</surname><given-names>H</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Repression of <italic>AUXIN RESPONSE FACTOR10</italic> by microRNA160 is critical for seed germination and post-germination stages.</article-title>
+<source>Plant J</source>
+<volume>52</volume>
+<fpage>133</fpage>
+<lpage>146</lpage>
+<pub-id pub-id-type="pmid">17672844</pub-id></element-citation></ref><ref id="pgen.1001031-Mallory1"><label>45</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mallory</surname><given-names>AC</given-names></name><name><surname>Bartel</surname><given-names>DP</given-names></name><name><surname>Bartel</surname><given-names>B</given-names></name></person-group>
+<year>2005</year>
+<article-title>MicroRNA-directed regulation of Arabidopsis <italic>AUXIN RESPONSE FACTOR17</italic> is essential for proper development and modulates expression of early auxin response genes.</article-title>
+<source>Plant Cell</source>
+<volume>17</volume>
+<fpage>1360</fpage>
+<lpage>1375</lpage>
+<pub-id pub-id-type="pmid">15829600</pub-id></element-citation></ref><ref id="pgen.1001031-Larue1"><label>46</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Larue</surname><given-names>CT</given-names></name><name><surname>Wen</surname><given-names>J</given-names></name><name><surname>Walker</surname><given-names>JC</given-names></name></person-group>
+<year>2009</year>
+<article-title>A microRNA-transcription factor module regulates lateral organ size and patterning in <italic>Arabidopsis</italic>.</article-title>
+<source>Plant J</source>
+<volume>58</volume>
+<fpage>450</fpage>
+<lpage>63</lpage>
+<pub-id pub-id-type="pmid">19154203</pub-id></element-citation></ref><ref id="pgen.1001031-Mallory2"><label>47</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mallory</surname><given-names>AC</given-names></name><name><surname>Reinhart</surname><given-names>BJ</given-names></name><name><surname>Jones-Rhoades</surname><given-names>MW</given-names></name><name><surname>Tang</surname><given-names>G</given-names></name><name><surname>Zamore</surname><given-names>PD</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>MicroRNA control of <italic>PHABULOSA</italic> in leaf development: importance of pairing to the microRNA 5&#x02032; region.</article-title>
+<source>EMBO J</source>
+<volume>23</volume>
+<fpage>3356</fpage>
+<lpage>3364</lpage>
+<pub-id pub-id-type="pmid">15282547</pub-id></element-citation></ref><ref id="pgen.1001031-McConnell1"><label>48</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>McConnell</surname><given-names>JR</given-names></name><name><surname>Emery</surname><given-names>J</given-names></name><name><surname>Eshed</surname><given-names>Y</given-names></name><name><surname>Bao</surname><given-names>N</given-names></name><name><surname>Bowman</surname><given-names>J</given-names></name><etal/></person-group>
+<year>2001</year>
+<article-title>Role of <italic>PHABULOSA</italic> and <italic>PHAVOLUTA</italic> in determining radial patterning in shoots.</article-title>
+<source>Nature</source>
+<volume>411</volume>
+<fpage>709</fpage>
+<lpage>713</lpage>
+<pub-id pub-id-type="pmid">11395776</pub-id></element-citation></ref><ref id="pgen.1001031-Ochando1"><label>49</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ochando</surname><given-names>I</given-names></name><name><surname>Jover-Gil</surname><given-names>S</given-names></name><name><surname>Ripoll</surname><given-names>JJ</given-names></name><name><surname>Candela</surname><given-names>H</given-names></name><name><surname>Vera</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>Mutations in the microRNA complementarity site of the <italic>INCURVATA4</italic> gene perturb meristem function and adaxialize lateral organs in Arabidopsis.</article-title>
+<source>Plant Physiol</source>
+<volume>141</volume>
+<fpage>607</fpage>
+<lpage>619</lpage>
+<pub-id pub-id-type="pmid">16617092</pub-id></element-citation></ref><ref id="pgen.1001031-Ru1"><label>50</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ru</surname><given-names>P</given-names></name><name><surname>Xu</surname><given-names>L</given-names></name><name><surname>Ma</surname><given-names>H</given-names></name><name><surname>Huang</surname><given-names>H</given-names></name></person-group>
+<year>2006</year>
+<article-title>Plant fertility defects induced by the enhanced expression of microRNA167.</article-title>
+<source>Cell Res</source>
+<volume>16</volume>
+<fpage>457</fpage>
+<lpage>465</lpage>
+<pub-id pub-id-type="pmid">16699541</pub-id></element-citation></ref><ref id="pgen.1001031-Schmid1"><label>51</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schmid</surname><given-names>M</given-names></name><name><surname>Uhlenhaut</surname><given-names>NH</given-names></name><name><surname>Godard</surname><given-names>F</given-names></name><name><surname>Demar</surname><given-names>M</given-names></name><name><surname>Bressan</surname><given-names>R</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>Dissection of floral induction pathways using global expression analysis.</article-title>
+<source>Development</source>
+<volume>130</volume>
+<fpage>6001</fpage>
+<lpage>6012</lpage>
+<pub-id pub-id-type="pmid">14573523</pub-id></element-citation></ref><ref id="pgen.1001031-Zhao1"><label>52</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhao</surname><given-names>L</given-names></name><name><surname>Kim</surname><given-names>Y</given-names></name><name><surname>Dinh</surname><given-names>TT</given-names></name><name><surname>Chen</surname><given-names>X</given-names></name></person-group>
+<year>2007</year>
+<article-title>miR172 regulates stem cell fate and defines the inner boundary of <italic>APETALA3</italic> and <italic>PISTILLATA</italic> expression domain in <italic>Arabidopsis</italic> floral meristems.</article-title>
+<source>Plant J</source>
+<volume>51</volume>
+<fpage>840</fpage>
+<lpage>849</lpage>
+<pub-id pub-id-type="pmid">17573799</pub-id></element-citation></ref><ref id="pgen.1001031-Romano1"><label>53</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Romano</surname><given-names>CP</given-names></name><name><surname>Cooper</surname><given-names>ML</given-names></name><name><surname>Klee</surname><given-names>HJ</given-names></name></person-group>
+<year>1993</year>
+<article-title>Uncoupling auxin and ethylene effects in transgenic tobacco and <italic>Arabidopsis</italic> plants.</article-title>
+<source>Plant Cell</source>
+<volume>5</volume>
+<fpage>181</fpage>
+<lpage>189</lpage>
+<pub-id pub-id-type="pmid">12271061</pub-id></element-citation></ref><ref id="pgen.1001031-Backman1"><label>54</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Backman</surname><given-names>TW</given-names></name><name><surname>Sullivan</surname><given-names>CM</given-names></name><name><surname>Cumbie</surname><given-names>JS</given-names></name><name><surname>Miller</surname><given-names>ZA</given-names></name><name><surname>Chapman</surname><given-names>EJ</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Update of ASRP: the <italic>Arabidopsis</italic> Small RNA Project database.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>36</volume>
+<fpage>D982</fpage>
+<lpage>D985</lpage>
+<pub-id pub-id-type="pmid">17999994</pub-id></element-citation></ref><ref id="pgen.1001031-Allen2"><label>55</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Allen</surname><given-names>E</given-names></name><name><surname>Xie</surname><given-names>Z</given-names></name><name><surname>Gustafson</surname><given-names>AM</given-names></name><name><surname>Carrington</surname><given-names>JC</given-names></name></person-group>
+<year>2005</year>
+<article-title>microRNA-directed phasing during trans-acting siRNA biogenesis in plants.</article-title>
+<source>Cell</source>
+<volume>121</volume>
+<fpage>207</fpage>
+<lpage>221</lpage>
+<pub-id pub-id-type="pmid">15851028</pub-id></element-citation></ref><ref id="pgen.1001031-Baumberger1"><label>56</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Baumberger</surname><given-names>N</given-names></name><name><surname>Tsai</surname><given-names>CH</given-names></name><name><surname>Lie</surname><given-names>M</given-names></name><name><surname>Havecker</surname><given-names>E</given-names></name><name><surname>Baulcombe</surname><given-names>DC</given-names></name></person-group>
+<year>2007</year>
+<article-title>The polerovirus silencing suppressor P0 targets ARGONAUTE proteins for degradation.</article-title>
+<source>Curr Biol</source>
+<volume>17</volume>
+<fpage>1609</fpage>
+<lpage>1614</lpage>
+<pub-id pub-id-type="pmid">17869110</pub-id></element-citation></ref><ref id="pgen.1001031-Bortolamiol1"><label>57</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bortolamiol</surname><given-names>D</given-names></name><name><surname>Pazhouhandeh</surname><given-names>M</given-names></name><name><surname>Marrocco</surname><given-names>K</given-names></name><name><surname>Genschik</surname><given-names>P</given-names></name><name><surname>Ziegler-Graff</surname><given-names>V</given-names></name></person-group>
+<year>2007</year>
+<article-title>The polerovirus F box protein P0 targets ARGONAUTE1 to suppress RNA silencing.</article-title>
+<source>Curr Biol</source>
+<volume>17</volume>
+<fpage>1615</fpage>
+<lpage>1621</lpage>
+<pub-id pub-id-type="pmid">17869109</pub-id></element-citation></ref><ref id="pgen.1001031-Chapman1"><label>58</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chapman</surname><given-names>EJ</given-names></name><name><surname>Prokhnevsky</surname><given-names>AI</given-names></name><name><surname>Gopinath</surname><given-names>K</given-names></name><name><surname>Dolja</surname><given-names>VV</given-names></name><name><surname>Carrington</surname><given-names>JC</given-names></name></person-group>
+<year>2004</year>
+<article-title>Viral RNA silencing suppressors inhibit the microRNA pathway at an intermediate step.</article-title>
+<source>Genes Dev</source>
+<volume>18</volume>
+<fpage>1179</fpage>
+<lpage>1186</lpage>
+<pub-id pub-id-type="pmid">15131083</pub-id></element-citation></ref><ref id="pgen.1001031-Dunoyer1"><label>59</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dunoyer</surname><given-names>P</given-names></name><name><surname>Lecellier</surname><given-names>CH</given-names></name><name><surname>Parizotto</surname><given-names>EA</given-names></name><name><surname>Himber</surname><given-names>C</given-names></name><name><surname>Voinnet</surname><given-names>O</given-names></name></person-group>
+<year>2004</year>
+<article-title>Probing the microRNA and small interfering RNA pathways with virus-encoded suppressors of RNA silencing.</article-title>
+<source>Plant Cell</source>
+<volume>16</volume>
+<fpage>1235</fpage>
+<lpage>1250</lpage>
+<pub-id pub-id-type="pmid">15084715</pub-id></element-citation></ref><ref id="pgen.1001031-Pfeffer1"><label>60</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pfeffer</surname><given-names>S</given-names></name><name><surname>Dunoyer</surname><given-names>P</given-names></name><name><surname>Heim</surname><given-names>F</given-names></name><name><surname>Richards</surname><given-names>KE</given-names></name><name><surname>Jonard</surname><given-names>G</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>P0 of beet Western yellows virus is a suppressor of posttranscriptional gene silencing.</article-title>
+<source>J Virol</source>
+<volume>76</volume>
+<fpage>6815</fpage>
+<lpage>6824</lpage>
+<pub-id pub-id-type="pmid">12050394</pub-id></element-citation></ref><ref id="pgen.1001031-Ronemus1"><label>61</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ronemus</surname><given-names>M</given-names></name><name><surname>Vaughn</surname><given-names>MW</given-names></name><name><surname>Martienssen</surname><given-names>RA</given-names></name></person-group>
+<year>2006</year>
+<article-title>MicroRNA-targeted and small interfering RNA-mediated mRNA degradation is regulated by argonaute, dicer, and RNA-dependent RNA polymerase in <italic>Arabidopsis</italic>.</article-title>
+<source>Plant Cell</source>
+<volume>18</volume>
+<fpage>1559</fpage>
+<lpage>1574</lpage>
+<pub-id pub-id-type="pmid">16798886</pub-id></element-citation></ref><ref id="pgen.1001031-Lanet1"><label>62</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lanet</surname><given-names>E</given-names></name><name><surname>Delannoy</surname><given-names>E</given-names></name><name><surname>Sormani</surname><given-names>R</given-names></name><name><surname>Floris</surname><given-names>M</given-names></name><name><surname>Brodersen</surname><given-names>P</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Biochemical evidence for translational repression by <italic>Arabidopsis</italic> microRNAs.</article-title>
+<source>Plant Cell</source>
+<volume>21</volume>
+<fpage>1762</fpage>
+<lpage>1768</lpage>
+<pub-id pub-id-type="pmid">19531599</pub-id></element-citation></ref><ref id="pgen.1001031-Willmann1"><label>63</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Willmann</surname><given-names>MR</given-names></name><name><surname>Poethig</surname><given-names>RS</given-names></name></person-group>
+<year>2007</year>
+<article-title>Conservation and evolution of miRNA regulatory programs in plant development.</article-title>
+<source>Curr Opin Plant Biol</source>
+<volume>10</volume>
+<fpage>503</fpage>
+<lpage>511</lpage>
+<pub-id pub-id-type="pmid">17709279</pub-id></element-citation></ref><ref id="pgen.1001031-Sunkar1"><label>64</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sunkar</surname><given-names>R</given-names></name><name><surname>Kapoor</surname><given-names>A</given-names></name><name><surname>Zhu</surname><given-names>JK</given-names></name></person-group>
+<year>2006</year>
+<article-title>Posttranscriptional induction of two Cu/Zn superoxide dismutase genes in <italic>Arabidopsis</italic> is mediated by downregulation of miR398 and important for oxidative stress tolerance.</article-title>
+<source>Plant Cell</source>
+<volume>18</volume>
+<fpage>2051</fpage>
+<lpage>2065</lpage>
+<pub-id pub-id-type="pmid">16861386</pub-id></element-citation></ref><ref id="pgen.1001031-Seitz1"><label>65</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Seitz</surname><given-names>H</given-names></name></person-group>
+<year>2009</year>
+<article-title>Redefining microRNA targets.</article-title>
+<source>Curr Biol</source>
+<volume>19</volume>
+<fpage>870</fpage>
+<lpage>873</lpage>
+<pub-id pub-id-type="pmid">19375315</pub-id></element-citation></ref><ref id="pgen.1001031-Laubinger1"><label>66</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Laubinger</surname><given-names>S</given-names></name><name><surname>Sachsenberg</surname><given-names>T</given-names></name><name><surname>Zeller</surname><given-names>G</given-names></name><name><surname>Busch</surname><given-names>W</given-names></name><name><surname>Lohmann</surname><given-names>JU</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Dual roles of the nuclear cap-binding complex and SERRATE in pre-mRNA splicing and microRNA processing in <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>Proc Natl Acad Sci USA</source>
+<volume>105</volume>
+<fpage>8795</fpage>
+<lpage>8800</lpage>
+<pub-id pub-id-type="pmid">18550839</pub-id></element-citation></ref><ref id="pgen.1001031-Morel1"><label>67</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Morel</surname><given-names>JB</given-names></name><name><surname>Godon</surname><given-names>C</given-names></name><name><surname>Mourrain</surname><given-names>P</given-names></name><name><surname>B&#x000e9;clin</surname><given-names>C</given-names></name><name><surname>Boutet</surname><given-names>S</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>Fertile hypomorphic <italic>ARGONAUTE</italic> (<italic>ago1</italic>) mutants impaired in post-transcriptional gene silencing and virus resistance.</article-title>
+<source>Plant Cell</source>
+<volume>14</volume>
+<fpage>629</fpage>
+<lpage>639</lpage>
+<pub-id pub-id-type="pmid">11910010</pub-id></element-citation></ref><ref id="pgen.1001031-Rede1"><label>68</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rede&#x000ed;</surname><given-names>GP</given-names></name></person-group>
+<year>1965</year>
+<article-title>Non-Mendelian megagametogenesis in <italic>Arabidopsis</italic>.</article-title>
+<source>Genetics</source>
+<volume>51</volume>
+<fpage>857</fpage>
+<lpage>872</lpage>
+<pub-id pub-id-type="pmid">17248261</pub-id></element-citation></ref><ref id="pgen.1001031-Vazquez1"><label>69</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vazquez</surname><given-names>F</given-names></name><name><surname>Gasciolli</surname><given-names>V</given-names></name><name><surname>Cr&#x000e9;t&#x000e9;</surname><given-names>P</given-names></name><name><surname>Vaucheret</surname><given-names>H</given-names></name></person-group>
+<year>2004</year>
+<article-title>The nuclear dsRNA binding protein HYL1 is required for microRNA accumulation and plant development, but not posttranscriptional transgene silencing.</article-title>
+<source>Curr Biol</source>
+<volume>14</volume>
+<fpage>346</fpage>
+<lpage>351</lpage>
+<pub-id pub-id-type="pmid">14972688</pub-id></element-citation></ref><ref id="pgen.1001031-Hellens1"><label>70</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hellens</surname><given-names>RP</given-names></name><name><surname>Edwards</surname><given-names>EA</given-names></name><name><surname>Leyland</surname><given-names>NR</given-names></name><name><surname>Bean</surname><given-names>S</given-names></name><name><surname>Mullineaux</surname><given-names>PM</given-names></name></person-group>
+<year>2000</year>
+<article-title>pGreen: a versatile and flexible binary Ti vector for <italic>Agrobacterium</italic>-mediated plant transformation.</article-title>
+<source>Plant Mol Biol</source>
+<volume>42</volume>
+<fpage>819</fpage>
+<lpage>832</lpage>
+<pub-id pub-id-type="pmid">10890530</pub-id></element-citation></ref><ref id="pgen.1001031-Nakagawa1"><label>71</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nakagawa</surname><given-names>T</given-names></name><name><surname>Suzuki</surname><given-names>T</given-names></name><name><surname>Murata</surname><given-names>S</given-names></name><name><surname>Nakamura</surname><given-names>S</given-names></name><name><surname>Hino</surname><given-names>T</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Improved Gateway binary vectors: high-performance vectors for creation of fusion constructs in transgenic analysis of plants.</article-title>
+<source>Biosci Biotechnol Biochem</source>
+<volume>71</volume>
+<fpage>2095</fpage>
+<lpage>2100</lpage>
+<pub-id pub-id-type="pmid">17690442</pub-id></element-citation></ref><ref id="pgen.1001031-Weigel1"><label>72</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Weigel</surname><given-names>D</given-names></name><name><surname>Glazebrook</surname><given-names>J</given-names></name></person-group>
+<year>2002</year>
+<article-title>Arabidopsis: A Laboratory Manual.</article-title>
+<publisher-loc>Cold Spring Harbor, NY</publisher-loc>
+<publisher-name>Cold Spring Harbor Laboratory Press.</publisher-name>
+<size units="page">354</size>
+</element-citation></ref><ref id="pgen.1001031-Blzquez1"><label>73</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bl&#x000e1;zquez</surname><given-names>MA</given-names></name><name><surname>Soowal</surname><given-names>L</given-names></name><name><surname>Lee</surname><given-names>I</given-names></name><name><surname>Weigel</surname><given-names>D</given-names></name></person-group>
+<year>1997</year>
+<article-title>
+<italic>LEAFY</italic> expression and flower initiation in <italic>Arabidopsis</italic>.</article-title>
+<source>Development</source>
+<volume>124</volume>
+<fpage>3835</fpage>
+<lpage>3844</lpage>
+<pub-id pub-id-type="pmid">9367439</pub-id></element-citation></ref></ref-list></back></article>

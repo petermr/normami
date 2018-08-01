@@ -1,0 +1,737 @@
+{
+  "id": [
+    "23521840"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "23521840"
+  ],
+  "pmcid": [
+    "PMC3618336"
+  ],
+  "doi": [
+    "10.1186/1471-2164-14-201"
+  ],
+  "title": [
+    "Xylem transcription profiles indicate potential metabolic responses for economically relevant characteristics of Eucalyptus species."
+  ],
+  "authorString": [
+    "Salazar MM, Nascimento LC, Camargo EL, Gonçalves DC, Lepikson Neto J, Marques WL, Teixeira PJ, Mieczkowski P, Mondego JM, Carazzolle MF, Deckmann AC, Pereira GA."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Salazar MM"
+          ],
+          "firstName": [
+            "Marcela Mendes"
+          ],
+          "lastName": [
+            "Salazar"
+          ],
+          "initials": [
+            "MM"
+          ]
+        },
+        {
+          "fullName": [
+            "Nascimento LC"
+          ],
+          "firstName": [
+            "Leandro Costa"
+          ],
+          "lastName": [
+            "Nascimento"
+          ],
+          "initials": [
+            "LC"
+          ]
+        },
+        {
+          "fullName": [
+            "Camargo EL"
+          ],
+          "firstName": [
+            "Eduardo Leal Oliveira"
+          ],
+          "lastName": [
+            "Camargo"
+          ],
+          "initials": [
+            "EL"
+          ]
+        },
+        {
+          "fullName": [
+            "Gonçalves DC"
+          ],
+          "firstName": [
+            "Danieli Cristina"
+          ],
+          "lastName": [
+            "Gonçalves"
+          ],
+          "initials": [
+            "DC"
+          ]
+        },
+        {
+          "fullName": [
+            "Lepikson Neto J"
+          ],
+          "firstName": [
+            "Jorge"
+          ],
+          "lastName": [
+            "Lepikson Neto"
+          ],
+          "initials": [
+            "J"
+          ]
+        },
+        {
+          "fullName": [
+            "Marques WL"
+          ],
+          "firstName": [
+            "Wesley Leoricy"
+          ],
+          "lastName": [
+            "Marques"
+          ],
+          "initials": [
+            "WL"
+          ]
+        },
+        {
+          "fullName": [
+            "Teixeira PJ"
+          ],
+          "firstName": [
+            "Paulo José Pereira Lima"
+          ],
+          "lastName": [
+            "Teixeira"
+          ],
+          "initials": [
+            "PJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-0776-5044",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Mieczkowski P"
+          ],
+          "firstName": [
+            "Piotr"
+          ],
+          "lastName": [
+            "Mieczkowski"
+          ],
+          "initials": [
+            "P"
+          ]
+        },
+        {
+          "fullName": [
+            "Mondego JM"
+          ],
+          "firstName": [
+            "Jorge Maurício Costa"
+          ],
+          "lastName": [
+            "Mondego"
+          ],
+          "initials": [
+            "JM"
+          ]
+        },
+        {
+          "fullName": [
+            "Carazzolle MF"
+          ],
+          "firstName": [
+            "Marcelo Falsarella"
+          ],
+          "lastName": [
+            "Carazzolle"
+          ],
+          "initials": [
+            "MF"
+          ]
+        },
+        {
+          "fullName": [
+            "Deckmann AC"
+          ],
+          "firstName": [
+            "Ana Carolina"
+          ],
+          "lastName": [
+            "Deckmann"
+          ],
+          "initials": [
+            "AC"
+          ]
+        },
+        {
+          "fullName": [
+            "Pereira GA"
+          ],
+          "firstName": [
+            "Gonçalo Amarante Guimarães"
+          ],
+          "lastName": [
+            "Pereira"
+          ],
+          "initials": [
+            "GA"
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-0776-5044",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "14"
+      ],
+      "journalIssueId": [
+        "2003464"
+      ],
+      "dateOfPublication": [
+        "2013 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "201"
+  ],
+  "abstractText": [
+    "BACKGROUND: Eucalyptus is one of the most important sources of industrial cellulose. Three species of this botanical group are intensively used in breeding programs: E. globulus, E. grandis and E. urophylla. E. globulus is adapted to subtropical/temperate areas and is considered a source of high-quality cellulose; E. grandis grows rapidly and is adapted to tropical/subtropical climates; and E. urophylla, though less productive, is considered a source of genes related to robustness. Wood, or secondary xylem, results from cambium vascular differentiation and is mostly composed of cellulose, lignin and hemicelluloses. In this study, the xylem transcriptomes of the three Eucalyptus species were investigated in order to provide insights on the particularities presented by each of these species. RESULTS: Data analysis showed that (1) most Eucalyptus genes are expressed in xylem; (2) most genes expressed in species-specific way constitutes genes with unknown functions and are interesting targets for future studies; (3) relevant differences were observed in the phenylpropanoid pathway: E. grandis xylem presents higher expression of genes involved in lignin formation whereas E. urophylla seems to deviates the pathway towards flavonoid formation; (4) stress-related genes are considerably more expressed in E. urophylla, suggesting that these genes may contribute to its robustness. CONCLUSIONS: The comparison of these three transcriptomes indicates the molecular signatures underlying some of their distinct wood characteristics. This information may contribute to the understanding of xylogenesis, thus increasing the potential of genetic engineering approaches aiming at the improvement of Eucalyptus forest plantations productivity."
+  ],
+  "affiliation": [
+    "Laboratório de Genômica e Expressão, Departamento de Genética Evolução e Bioagentes, Instituto de Biologia, Universidade Estadual de Campinas, São Paulo CEP: 13083-970, Campinas, Brasil."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cell Wall"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Eucalyptus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Heat-Shock Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Contig Mapping"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Databases, Factual"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Xylem"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Heat-Shock Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3618336?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3618336"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23521840/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23521840/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1471-2164-14-201"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "13"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2013-10-21"
+  ],
+  "dateOfCreation": [
+    "2013-04-08"
+  ],
+  "electronicPublicationDate": [
+    "2013-03-22"
+  ],
+  "firstPublicationDate": [
+    "2013-03-22"
+  ]
+}

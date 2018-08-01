@@ -1,0 +1,499 @@
+{
+  "id": [
+    "29755499"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29755499"
+  ],
+  "pmcid": [
+    "PMC5933171"
+  ],
+  "doi": [
+    "10.3389/fpls.2018.00561"
+  ],
+  "title": [
+    "Genetic Dissection of Maize Embryonic Callus Regenerative Capacity Using Multi-Locus Genome-Wide Association Studies."
+  ],
+  "authorString": [
+    "Ma L, Liu M, Yan Y, Qing C, Zhang X, Zhang Y, Long Y, Wang L, Pan L, Zou C, Li Z, Wang Y, Peng H, Pan G, Jiang Z, Shen Y."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Ma L"
+          ],
+          "firstName": [
+            "Langlang"
+          ],
+          "lastName": [
+            "Ma"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu M"
+          ],
+          "firstName": [
+            "Min"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yan Y"
+          ],
+          "firstName": [
+            "Yuanyuan"
+          ],
+          "lastName": [
+            "Yan"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Qing C"
+          ],
+          "firstName": [
+            "Chunyan"
+          ],
+          "lastName": [
+            "Qing"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang X"
+          ],
+          "firstName": [
+            "Xiaoling"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang Y"
+          ],
+          "firstName": [
+            "Yanling"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Long Y"
+          ],
+          "firstName": [
+            "Yun"
+          ],
+          "lastName": [
+            "Long"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang L"
+          ],
+          "firstName": [
+            "Lei"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Pan L"
+          ],
+          "firstName": [
+            "Lang"
+          ],
+          "lastName": [
+            "Pan"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zou C"
+          ],
+          "firstName": [
+            "Chaoying"
+          ],
+          "lastName": [
+            "Zou"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Li Z"
+          ],
+          "firstName": [
+            "Zhaoling"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang Y"
+          ],
+          "firstName": [
+            "Yanli"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Peng H"
+          ],
+          "firstName": [
+            "Huanwei"
+          ],
+          "lastName": [
+            "Peng"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Institute of Animal Nutrition, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Pan G"
+          ],
+          "firstName": [
+            "Guangtang"
+          ],
+          "lastName": [
+            "Pan"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Jiang Z"
+          ],
+          "firstName": [
+            "Zhou"
+          ],
+          "lastName": [
+            "Jiang"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Shen Y"
+          ],
+          "firstName": [
+            "Yaou"
+          ],
+          "lastName": [
+            "Shen"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "9"
+      ],
+      "journalIssueId": [
+        "2644150"
+      ],
+      "dateOfPublication": [
+        "2018 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in Plant Science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "561"
+  ],
+  "abstractText": [
+    "The regenerative capacity of the embryonic callus, a complex quantitative trait, is one of the main limiting factors for maize transformation. This trait was decomposed into five traits, namely, green callus rate (GCR), callus differentiating rate (CDR), callus plantlet number (CPN), callus rooting rate (CRR), and callus browning rate (CBR). To dissect the genetic foundation of maize transformation, in this study multi-locus genome-wide association studies (GWAS) for the five traits were performed in a population of 144 inbred lines genotyped with 43,427 SNPs. Using the phenotypic values in three environments and best linear unbiased prediction (BLUP) values, as a result, a total of 127, 56, 160, and 130 significant quantitative trait nucleotides (QTNs) were identified by mrMLM, FASTmrEMMA, ISIS EM-BLASSO, and pLARmEB, respectively. Of these QTNs, 63 QTNs were commonly detected, including 15 across multiple environments and 58 across multiple methods. Allele distribution analysis showed that the proportion of superior alleles for 36 QTNs was <50% in 31 elite inbred lines. Meanwhile, these superior alleles had obviously additive effect on the regenerative capacity. This indicates that the regenerative capacity-related traits can be improved by proper integration of the superior alleles using marker-assisted selection. Moreover, a total of 40 candidate genes were found based on these common QTNs. Some annotated genes were previously reported to relate with auxin transport, cell fate, seed germination, or embryo development, especially, GRMZM2G108933 (WOX2) was found to promote maize transgenic embryonic callus regeneration. These identified candidate genes will contribute to a further understanding of the genetic foundation of maize embryonic callus regeneration."
+  ],
+  "affiliation": [
+    "Key Laboratory of Biology and Genetic Improvement of Maize in Southwest Region, Maize Research Institute, Sichuan Agricultural University, Chengdu, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Maize",
+        "Candidate gene",
+        "embryonic callus",
+        "Regenerative Capacity",
+        "Multi-locus Gwas"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5933171?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5933171"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2018.00561"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2018-05-15"
+  ],
+  "dateOfRevision": [
+    "2018-05-17"
+  ],
+  "electronicPublicationDate": [
+    "2018-04-26"
+  ],
+  "firstPublicationDate": [
+    "2018-04-26"
+  ]
+}

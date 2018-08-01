@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="synbioPhrases">
+ <result pre="by transcription of the DORNRÖSCHEN-LIKE ( DRNL) AP2-type transcription factor" exact="gene" post="in a spiral phyllotaxy from near the centre of"/>
+ <result pre="PHOSPHOTRANSFER PROTEIN 6 (AHP6) [ 18]. AHP6 is a target" exact="gene" post="of DRNL [ 19] and the AHP6 and DRNL"/>
+ <result pre="[ 24]. Despite the identification of some components of the" exact="gene" post="regulatory networks (GRNs), including hormonal signals, which affect lateral"/>
+ <result pre="by both GFP+ and GFP− protoplast populations and according to" exact="gene" post="ontology (GO) enrichment analysis for the domain &quot;Cellular component&quot;,"/>
+ <result pre="Protoplasting not only activated additional genes, but also affected differential" exact="gene" post="expression; at a threshold of p ≤ 0.01, 12,264 nuclear genes"/>
+ <result pre="scattergraph (Fig. 1e). A principal components analysis (Fig. 3a) on" exact="gene" post="expression showed that the biological replicates for GFP+ and"/>
+ <result pre="http://www.ncbi.nlm.nih.gov/geo/). Fig. 3 a Principal component analysis (PCA) of global" exact="gene" post="expression from different biological replicates of RNA samples for"/>
+ <result pre="in DRNL::GFP+ protoplasts, showing that transcription of the endogenous DRNL" exact="gene" post="reflects expression of the DRNL::GFP marker. The next-highest differentially"/>
+ <result pre="reflects expression of the DRNL::GFP marker. The next-highest differentially expressed" exact="gene" post="was AHP6 (FC = +18.08), which is a DRNL target that"/>
+ <result pre="Fig. 3c. As a general stress-responsive marker, we included the" exact="gene" post="encoding HEAT-SHOCK PROTEN 70 ( HSP70), which is downregulated"/>
+ <result pre="cycle progression/division for morphogenesis. Fig. 4 Networks based on enriched" exact="gene" post="ontology (GO) categories of genes in DRNL::GFP-expressing cells compared"/>
+ <result pre="diagram In contrast, the over-represented GO categories in the downregulated" exact="gene" post="group are: response to stress, response to biotic, abiotic,"/>
+ <result pre="signalling networks and show altered cellular physiology and metabolism. Differential" exact="gene" post="expression supports the lateral organ founder-cell identity of DRNL::GFP-positive"/>
+ <result pre="addition to the dramatic transcriptional upregulation of the DRNL target" exact="gene" post="AHP6 (FC = +18.08), many of the differentially expressed transcripts have"/>
+ <result pre="AINTEGUMENTA ( ANT), PUCHI, JAGGED ( JAG), the homeodomain-less KNOX" exact="gene" post="KNATM, PRESSED FLOWER ( PRS/WOX3), HOMEOBOX GENE1 ( ATH1)"/>
+ <result pre="transcriptome dataset and, is therefore, highly relevant. Fig. 5 The" exact="gene" post="network within DRNL::GFP-positive founder cells in the ap1 cal"/>
+ <result pre="For auxin response, we assessed changes in the expression of" exact="gene" post="families encoding auxin response factors (ARFs) and their cognate"/>
+ <result pre="from DESeq2 analysis: a Aux/ IAA genes; b the PIN" exact="gene" post="family; c the auxin response factor family; d genes"/>
+ <result pre="and lowly expressed genes. Among the PIN efflux auxin transporter" exact="gene" post="family, PIN3, PIN4, PIN5, PIN7 and PIN8 were significantly"/>
+ <result pre="regulators, genes encoding type-B ARR transcription factors that mediate cytokinin-regulated" exact="gene" post="expression were hardly transcriptionally affected i.e., ARR1, ARR2, ARR10,"/>
+ <result pre="WALL THICKENING PROMOTING FACTOR1 ( NST1) . Post-transcriptional and epigenetic" exact="gene" post="regulation Because many transcription factors are regulated post-transcriptionally by"/>
+ <result pre="correspondingly, ETT/ARF3, the known target gene, was upregulated. Considering epigenetic" exact="gene" post="regulation, a group of 10 genes was significantly upregulated"/>
+ <result pre="the transcriptional activation of individual lateral organ markers, entire regulatory" exact="gene" post="modules are coordinately upregulated in DRNL::GFP+ cells. One well-characterised"/>
+ <result pre="transcriptional network are the upregulation of JLO and AS2, whose" exact="gene" post="products repress the class I KNOX genes STM and"/>
+ <result pre="polarity of lateral organs. The RNA-seq data furthermore suggest that" exact="gene" post="interactions involved in polarity at other developmental stages might"/>
+ <result pre="ARF5/ MP. MONOPTEROS is a master regulator, which instigates a" exact="gene" post="regulatory network via LFY transcription that leads to FM"/>
+ <result pre="specification either rely on post-transcriptional control mechanisms or on individual" exact="gene" post="activities, such as the large increase in AHP6. Alternatively,"/>
+ <result pre="of APETALA2 ( AP2)-type genes, including the floral organ identity" exact="gene" post="AP2, by blocking mRNA translation [ 63], which is"/>
+ <result pre="downregulation of the demethylase, DML3 [ 67], suggest that epigenetic" exact="gene" post="regulation contributes to the specification of founder cells marked"/>
+ <result pre="ftp://ftp.arabidopsis.org/home/tair/Genes/TAIR10_genome_release) using TopHat2 [ 75] using the default parameters and" exact="gene" post="quantification was performed using a combination of Cufflinks ["/>
+ <result pre="with annotations obtained with biomaRt from EnsemblGenomes, version 26. The" exact="gene" post="lists were filtered according to the fold change (FC)"/>
+ <result pre="project based on library size-normalised read counts (NRC). In contrast," exact="gene" post="expression for the individual samples was calculated by the"/>
+ <result pre="2-transformed FPKM values as obtained from the Cufflinks analysis. The" exact="gene" post="ontology grouping of differentially expressed genes was performed at"/>
+ <result pre="Alvarez JP Bowman JL Eshed Y Signals derived from YABBY" exact="gene" post="activities in organ primordia regulate growth and partitioning of"/>
+ <result pre="Tavakkoli M Xie M Girke T Reddy GV A high-resolution" exact="gene" post="expression map of the Arabidopsis shoot meristem stem cell"/>
+ <result pre="J Mecchia MA et al. Dynamics of chromatin accessibility and" exact="gene" post="regulation by MADS-domain transcription factors in flower development Genome"/>
+ <result pre="ZR Berleth T Studies on the role of the Arabidopsis" exact="gene" post="MONOPTEROS in vascular development and plant cell axialization Planta"/>
+ <result pre="Howell SH Chua NH The ENHANCER OF SHOOT REGENERATION 2" exact="gene" post="in Arabidopsis regulates CUP-SHAPED COTYLEDON 1 at the transcriptional"/>
+ <result pre="Otsuga D Drews GN Bowman JL Members of the YABBY" exact="gene" post="family specify abaxial cell fate in Arabidopsis Development 1999"/>
+ <result pre="Kuiper M BiNGO: a cytoscape plugin to assess overrepresentation of" exact="gene" post="ontology categories in biological networks Bioinformatics 2005 21 3448"/>
+ <result pre="10.1104/pp.111.182253 21976484 35. Schultz EA Haughn GW LEAFY, a homeotic" exact="gene" post="that regulates inflorescence development in Arabidopsis Plant Cell 1991"/>
+ <result pre="B Yanofsky MF Molecular characterization of the Arabidopsis floral homeotic" exact="gene" post="APETALA1 Nature 1992 360 273 277 10.1038/360273a0 1359429 37."/>
+ <result pre="CK Reddy GV Heisler MG Meyerowitz EM The Arabidopsis JAGGED" exact="gene" post="encodes a zinc finger protein that promotes leaf tissue"/>
+ <result pre="17557810 51. Kang NY Lee HW Kim J The AP2/EREBP" exact="gene" post="PUCHI co-acts with LBD16/ ASL18 and LBD18/ ASL20 downstream"/>
+ <result pre="SR Srinivasan Cloning and characterization of a pentatricopeptide protein encoding" exact="gene" post="( LOJ) that is specifically expressed in lateral organ"/>
+ <result pre="alignment of transcriptomes in the presence of insertions, deletions and" exact="gene" post="fusions Genome Biol 2013 14 R36 10.1186/gb-2013-14-4-r36 23618408 76."/>
+ <result pre="10.1101/gr.1239303 14597658 80. Livak KJ Schmittgen TD Analysis of relative" exact="gene" post="expression data using real-time quantitative PCR and the 2(-delta"/>
+</results>

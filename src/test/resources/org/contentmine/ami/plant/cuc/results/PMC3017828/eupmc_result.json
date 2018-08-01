@@ -1,0 +1,616 @@
+{
+  "id": [
+    "20959019"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "20959019"
+  ],
+  "pmcid": [
+    "PMC3017828"
+  ],
+  "doi": [
+    "10.1186/1471-2229-10-224"
+  ],
+  "title": [
+    "Transcriptome changes in grapevine (Vitis vinifera L.) cv. Malbec leaves induced by ultraviolet-B radiation."
+  ],
+  "authorString": [
+    "Pontin MA, Piccoli PN, Francisco R, Bottini R, Martinez-Zapater JM, Lijavetzky D."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Pontin MA"
+          ],
+          "firstName": [
+            "Mariela A"
+          ],
+          "lastName": [
+            "Pontin"
+          ],
+          "initials": [
+            "MA"
+          ]
+        },
+        {
+          "fullName": [
+            "Piccoli PN"
+          ],
+          "firstName": [
+            "Patricia N"
+          ],
+          "lastName": [
+            "Piccoli"
+          ],
+          "initials": [
+            "PN"
+          ]
+        },
+        {
+          "fullName": [
+            "Francisco R"
+          ],
+          "firstName": [
+            "Rita"
+          ],
+          "lastName": [
+            "Francisco"
+          ],
+          "initials": [
+            "R"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7728-8477",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Bottini R"
+          ],
+          "firstName": [
+            "Ruben"
+          ],
+          "lastName": [
+            "Bottini"
+          ],
+          "initials": [
+            "R"
+          ]
+        },
+        {
+          "fullName": [
+            "Martinez-Zapater JM"
+          ],
+          "firstName": [
+            "Jose M"
+          ],
+          "lastName": [
+            "Martinez-Zapater"
+          ],
+          "initials": [
+            "JM"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7217-4454",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Lijavetzky D"
+          ],
+          "firstName": [
+            "Diego"
+          ],
+          "lastName": [
+            "Lijavetzky"
+          ],
+          "initials": [
+            "D"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4207-3067",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-4207-3067",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-7217-4454",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-7728-8477",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "1698124"
+      ],
+      "dateOfPublication": [
+        "2010 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2010"
+      ],
+      "printPublicationDate": [
+        "2010-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC plant biology"
+          ],
+          "ISOAbbreviation": [
+            "BMC Plant Biol."
+          ],
+          "medlineAbbreviation": [
+            "BMC Plant Biol"
+          ],
+          "NLMid": [
+            "100967807"
+          ],
+          "ISSN": [
+            "1471-2229"
+          ],
+          "ESSN": [
+            "1471-2229"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2010"
+  ],
+  "pageInfo": [
+    "224"
+  ],
+  "abstractText": [
+    "BACKGROUND: Ultraviolet-B radiation (UV-B, 280-315 nm) is a natural component of sunlight, which has numerous regulatory effects on plant physiology. The nature of the response to UV-B is dependent on fluence rate, dose, duration and wavelength of the UV-B treatment. Some reports have analyzed the changes in gene expression caused by UV-B light on several plant species using microarray technology. However, there is no information on the transcriptome response triggered by UV-B in grapevine. In this paper we investigate the gene expression responses of leaves from in vitro cultured Vitis vinifera cv. Malbec plants subjected to the same dose of biologically effective UV-B radiation (4.75 kJ m-2 d-1) administered at two different fluence rates (16 h at ≅ 8.25 μW cm-2, 4 h at ≅ 33 μW cm-2) using a new custom made GrapeGen Affymetrix GeneChip®. RESULTS: The number of genes modulated by high fluence rate UV-B doubled the number of genes modulated by low fluence UV-B. Their functional analyses revealed several functional categories commonly regulated by both UV-B treatments as well as categories more specifically modulated depending on UV-B fluence rate. General protective responses, namely the induction of pathways regulating synthesis of UV-B absorbing compounds such as the Phenylpropanoid pathway, the induction of different antioxidant defense systems and the activation of pathways commonly associated with pathogen defense and abiotic stress responses seem to play critical roles in grapevine responses against UV-B radiation. Furthermore, high fluence rate UV-B seemed to specifically modulate additional pathways and processes in order to protect grapevine plantlets against UV-B-induced oxidative stress, stop the cell cycle progression, and control protein degradation. On the other hand, low fluence rate UV-B regulated the expression of specific responses in the metabolism of auxin and abscisic acid as well as in the modification of cell walls that could be involved in UV-B acclimation-like processes. CONCLUSION: Our results show the UV-B radiation effects on the leaf transcriptome of grapevine (Vitis vinifera cv. Malbec) plantlets. Functional categories commonly modulated under both UV-B treatments as well as transcripts specifically regulated in an UV-B-intensity dependent way were identified. While high fluence rate UV-B had regulatory effects mainly on defense or general multiple-stress responses pathways, low fluence rate UV-B promoted the expression of genes that could be involved in UV-B protection or the amelioration of the UV-B-induced damage. This study also provides an extensive list of genes regulating multiple metabolic pathways involved in the response of grapevine to UV-B that can be used for future researches."
+  ],
+  "affiliation": [
+    "Instituto de Biología Agrícola de Mendoza, Facultad de Ciencias Agrarias, Consejo Nacional de Investigaciones Científicas y Tecnológicas-Universidad Nacional de Cuyo, Almirante Brown 500, M5528AHB Chacras de Coria, Argentina."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Vitis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oligonucleotide Array Sequence Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cluster Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Reverse Transcriptase Polymerase Chain Reaction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Ultraviolet Rays"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Dose-Response Relationship, Radiation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "RE"
+                  ],
+                  "qualifierName": [
+                    "radiation effects"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3017828?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3017828"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "BioMedCentral"
+          ],
+          "url": [
+            "http://www.biomedcentral.com/content/pdf/1471-2229-10-224.pdf"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "BioMedCentral"
+          ],
+          "url": [
+            "http://www.biomedcentral.com/1471-2229/10/224"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "abs"
+          ],
+          "site": [
+            "BioMedCentral"
+          ],
+          "url": [
+            "http://www.biomedcentral.com/1471-2229/10/224/abstract"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/20959019/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/20959019/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1471-2229-10-224"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "41"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "ARXPR"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "arrayexpress"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2011-03-18"
+  ],
+  "dateOfCreation": [
+    "2010-11-03"
+  ],
+  "dateOfRevision": [
+    "2013-07-03"
+  ],
+  "electronicPublicationDate": [
+    "2010-10-20"
+  ],
+  "firstPublicationDate": [
+    "2010-10-20"
+  ]
+}

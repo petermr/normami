@@ -1,0 +1,581 @@
+{
+  "id": [
+    "25431125"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25431125"
+  ],
+  "pmcid": [
+    "PMC4301461"
+  ],
+  "doi": [
+    "10.1186/1471-2164-15-1030"
+  ],
+  "title": [
+    "Transcriptome analysis during berry development provides insights into co-regulated and altered gene expression between a seeded wine grape variety and its seedless somatic variant."
+  ],
+  "authorString": [
+    "Nwafor CC, Gribaudo I, Schneider A, Wehrens R, Grando MS, Costantini L."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Nwafor CC"
+          ],
+          "firstName": [
+            "Chinedu Charles"
+          ],
+          "lastName": [
+            "Nwafor"
+          ],
+          "initials": [
+            "CC"
+          ]
+        },
+        {
+          "fullName": [
+            "Gribaudo I"
+          ],
+          "firstName": [
+            "Ivana"
+          ],
+          "lastName": [
+            "Gribaudo"
+          ],
+          "initials": [
+            "I"
+          ]
+        },
+        {
+          "fullName": [
+            "Schneider A"
+          ],
+          "firstName": [
+            "Anna"
+          ],
+          "lastName": [
+            "Schneider"
+          ],
+          "initials": [
+            "A"
+          ]
+        },
+        {
+          "fullName": [
+            "Wehrens R"
+          ],
+          "firstName": [
+            "Ron"
+          ],
+          "lastName": [
+            "Wehrens"
+          ],
+          "initials": [
+            "R"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-8798-5599",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Grando MS"
+          ],
+          "firstName": [
+            "Maria Stella"
+          ],
+          "lastName": [
+            "Grando"
+          ],
+          "initials": [
+            "MS"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6889-1968",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Costantini L"
+          ],
+          "firstName": [
+            "Laura"
+          ],
+          "lastName": [
+            "Costantini"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Fondazione Edmund Mach, Research and Innovation Centre, Via E, Mach 1-38010 San Michele all'Adige, Trento, Italy. laura.costantini@fmach.it."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-8798-5599",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-6889-1968",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "15"
+      ],
+      "journalIssueId": [
+        "2131045"
+      ],
+      "dateOfPublication": [
+        "2014 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "1030"
+  ],
+  "abstractText": [
+    "BACKGROUND: Seedless grapes are greatly appreciated for fresh and dry fruit consumption. Parthenocarpy and stenospermocarpy have been described as the main phenomena responsible for seedlessness in Vitis vinifera. However, the key genes underpinning molecular and cellular processes that play a significant role in seed development are not well characterized. To identify important regulators and mechanisms that may be altered in the seedless phenotype, we performed a comprehensive transcriptional analysis to compare the transcriptomes of a popular seeded wine cultivar (wild-type) and its seedless somatic variant (mutant) at three key developmental stages. RESULTS: The transcriptomes revealed by Illumina mRNA-Seq technology had approximately 98% of grapevine annotated transcripts and about 80% of them were commonly expressed in the two lines. Differential gene expression analysis revealed a total of 1075 differentially expressed genes (DE) in the pairwise comparison of developmental stages, which included DE genes specific to the wild-type background, DE genes specific to the mutant background and DE genes commonly shared in both backgrounds. The analysis of differential expression patterns and functional category enrichment of wild-type and mutant DE genes highlighted significant coordination and enrichment of pollen and ovule developmental pathways. The expression of some selected DE genes was further confirmed by real-time RT-PCR analysis. CONCLUSIONS: This study represents the most comprehensive attempt to characterize the genetic bases of seed formation in grapevine. With a high throughput method, we have shown that a seeded wine grape and its seedless somatic variant are similar in several biological processes. Nevertheless, we could identify an inventory of genes with altered expression in the mutant compared to the wild-type, which may be responsible for the seedless phenotype. The genes located within known genomic regions regulating seed content may be used for the development of molecular tools to assist table grape breeding. Therefore the data reported here have provided a rich genomic resource for practical use and functional characterization of the genes that potentially underpin seedlessness in grapevine."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Vitis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Fruit"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seeds"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seedling"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Messenger"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Diploidy"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Wine"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "RNA, Messenger"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4301461?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4301461"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1471-2164-15-1030"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "6"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "ARXPR",
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-07-29"
+  ],
+  "dateOfCreation": [
+    "2014-12-10"
+  ],
+  "dateOfRevision": [
+    "2015-01-22"
+  ],
+  "electronicPublicationDate": [
+    "2014-11-27"
+  ],
+  "firstPublicationDate": [
+    "2014-11-27"
+  ]
+}

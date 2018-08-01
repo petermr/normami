@@ -1,0 +1,479 @@
+{
+  "id": [
+    "29059200"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29059200"
+  ],
+  "pmcid": [
+    "PMC5653301"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0186376"
+  ],
+  "title": [
+    "De novo RNA sequencing transcriptome of Rhododendron obtusum identified the early heat response genes involved in the transcriptional regulation of photosynthesis."
+  ],
+  "authorString": [
+    "Fang L, Tong J, Dong Y, Xu D, Mao J, Zhou Y."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Fang L"
+          ],
+          "firstName": [
+            "Linchuan"
+          ],
+          "lastName": [
+            "Fang"
+          ],
+          "initials": [
+            "L"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7605-1267",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Institute of Fruit & Forest Tree, Wuhan Academy of Agricultural Science & Technology, Wuhan, Hubei, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Tong J"
+          ],
+          "firstName": [
+            "Jun"
+          ],
+          "lastName": [
+            "Tong"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Institute of Fruit & Forest Tree, Wuhan Academy of Agricultural Science & Technology, Wuhan, Hubei, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Dong Y"
+          ],
+          "firstName": [
+            "Yanfang"
+          ],
+          "lastName": [
+            "Dong"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Institute of Fruit & Forest Tree, Wuhan Academy of Agricultural Science & Technology, Wuhan, Hubei, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Xu D"
+          ],
+          "firstName": [
+            "Dongyun"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Institute of Fruit & Forest Tree, Wuhan Academy of Agricultural Science & Technology, Wuhan, Hubei, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Mao J"
+          ],
+          "firstName": [
+            "Jing"
+          ],
+          "lastName": [
+            "Mao"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Institute of Fruit & Forest Tree, Wuhan Academy of Agricultural Science & Technology, Wuhan, Hubei, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhou Y"
+          ],
+          "firstName": [
+            "Yuan"
+          ],
+          "lastName": [
+            "Zhou"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Institute of Fruit & Forest Tree, Wuhan Academy of Agricultural Science & Technology, Wuhan, Hubei, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-7605-1267",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "10"
+      ],
+      "volume": [
+        "12"
+      ],
+      "journalIssueId": [
+        "2602763"
+      ],
+      "dateOfPublication": [
+        "2017 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "e0186376"
+  ],
+  "abstractText": [
+    "Rhododendron spp. is an important ornamental species that is widely cultivated for landscape worldwide. Heat stress is a major obstacle for its cultivation in south China. Previous studies on rhododendron principally focused on its physiological and biochemical processes, which are involved in a series of stress tolerance. However, molecular or genetic properties of rhododendron's response to heat stress are still poorly understood. The phenotype and chlorophyll fluorescence kinetics parameters of four rhododendron cultivars were compared under normal or heat stress conditions, and a cultivar with highest heat tolerance, \"Yanzhimi\" (R. obtusum) was selected for transcriptome sequencing. A total of 325,429,240 high quality reads were obtained and assembled into 395,561 transcripts and 92,463 unigenes. Functional annotation showed that 38,724 unigenes had sequence similarity to known genes in at least one of the proteins or nucleotide databases used in this study. These 38,724 unigenes were categorized into 51 functional groups based on Gene Ontology classification and were blasted to 24 known cluster of orthologous groups. A total of 973 identified unigenes belonged to 57 transcription factor families, including the stress-related HSF, DREB, ZNF, and NAC genes. Photosynthesis was significantly enriched in the Kyoto Encyclopedia of Genes and Genomes pathway, and the changed expression pattern was illustrated. The key pathways and signaling components that contribute to heat tolerance in rhododendron were revealed. These results provide a potentially valuable resource that can be used for heat-tolerance breeding."
+  ],
+  "affiliation": [
+    "Institute of Fruit & Forest Tree, Wuhan Academy of Agricultural Science & Technology, Wuhan, Hubei, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Validation Studies",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Rhododendron"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Photosynthesis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription, Genetic"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Real-Time Polymerase Chain Reaction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5653301?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5653301"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0186376"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "bioproject"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2017-11-13"
+  ],
+  "dateOfCreation": [
+    "2017-10-24"
+  ],
+  "dateOfRevision": [
+    "2017-12-19"
+  ],
+  "electronicPublicationDate": [
+    "2017-10-23"
+  ],
+  "firstPublicationDate": [
+    "2017-10-23"
+  ]
+}

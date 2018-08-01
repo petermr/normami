@@ -1,0 +1,685 @@
+{
+  "id": [
+    "26111009"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26111009"
+  ],
+  "pmcid": [
+    "PMC4949643"
+  ],
+  "doi": [
+    "10.1111/tpj.12921"
+  ],
+  "title": [
+    "Auxin influx importers modulate serration along the leaf margin."
+  ],
+  "authorString": [
+    "Kasprzewska A, Carter R, Swarup R, Bennett M, Monk N, Hobbs JK, Fleming A."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Kasprzewska A"
+          ],
+          "firstName": [
+            "Ania"
+          ],
+          "lastName": [
+            "Kasprzewska"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Animal and Plant Science, University of Sheffield, Sheffield, S10 2TN, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Carter R"
+          ],
+          "firstName": [
+            "Ross"
+          ],
+          "lastName": [
+            "Carter"
+          ],
+          "initials": [
+            "R"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6251-7545",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Physics & Astronomy, University of Sheffield, Sheffield, S10 2TN, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Swarup R"
+          ],
+          "firstName": [
+            "Ranjan"
+          ],
+          "lastName": [
+            "Swarup"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Centre for Plant Integrative Biology, University of Nottingham, Sutton Bonington, LE12 5RD, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Bennett M"
+          ],
+          "firstName": [
+            "Malcolm"
+          ],
+          "lastName": [
+            "Bennett"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-0475-390X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centre for Plant Integrative Biology, University of Nottingham, Sutton Bonington, LE12 5RD, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Monk N"
+          ],
+          "firstName": [
+            "Nick"
+          ],
+          "lastName": [
+            "Monk"
+          ],
+          "initials": [
+            "N"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-5465-4857",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "School of Mathematics and Statistics, University of Sheffield, Sheffield, S10 2TN, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Hobbs JK"
+          ],
+          "firstName": [
+            "Jamie K"
+          ],
+          "lastName": [
+            "Hobbs"
+          ],
+          "initials": [
+            "JK"
+          ],
+          "affiliation": [
+            "Department of Physics & Astronomy, University of Sheffield, Sheffield, S10 2TN, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Fleming A"
+          ],
+          "firstName": [
+            "Andrew"
+          ],
+          "lastName": [
+            "Fleming"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Animal and Plant Science, University of Sheffield, Sheffield, S10 2TN, UK."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-6251-7545",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-0475-390X",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-5465-4857",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "4"
+      ],
+      "volume": [
+        "83"
+      ],
+      "journalIssueId": [
+        "2312815"
+      ],
+      "dateOfPublication": [
+        "2015 Aug"
+      ],
+      "monthOfPublication": [
+        "8"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-08-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "The Plant journal : for cell and molecular biology"
+          ],
+          "ISOAbbreviation": [
+            "Plant J."
+          ],
+          "medlineAbbreviation": [
+            "Plant J"
+          ],
+          "NLMid": [
+            "9207397"
+          ],
+          "ISSN": [
+            "0960-7412"
+          ],
+          "ESSN": [
+            "1365-313X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "705-718"
+  ],
+  "abstractText": [
+    "Leaf shape in Arabidopsis is modulated by patterning events in the margin that utilize a PIN-based auxin exporter/CUC2 transcription factor system to define regions of promotion and retardation of growth, leading to morphogenesis. In addition to auxin exporters, leaves also express auxin importers, notably members of the AUX1/LAX family. In contrast to their established roles in embryogenesis, lateral root and leaf initiation, the function of these transporters in leaf development is poorly understood. We report that three of these genes (AUX1, LAX1 and LAX2) show specific and dynamic patterns of expression during early leaf development in Arabidopsis, and that loss of expression of all three genes is required for observation of a phenotype in which morphogenesis (serration) is decreased. We used these expression patterns and mutant phenotypes to develop a margin-patterning model that incorporates an AUX1/LAX1/LAX2 auxin import module that influences the extent of leaf serration. Testing of this model by margin-localized expression of axr3-1 (AXR17) provides further insight into the role of auxin in leaf morphogenesis."
+  ],
+  "affiliation": [
+    "Department of Animal and Plant Science, University of Sheffield, Sheffield, S10 2TN, UK."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "BB/C514958/1"
+          ],
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Indoleacetic Acids"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Membrane Transport Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Leaf",
+        "Morphogenesis",
+        "Arabidopsis thaliana",
+        "Shape",
+        "auxin",
+        "Modelling"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "AUX1 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Indoleacetic Acids"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Membrane Transport Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "LAX1 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "LAX2 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4949643?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4949643"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1111/tpj.12921"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "8"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-05-23"
+  ],
+  "dateOfCreation": [
+    "2015-08-10"
+  ],
+  "dateOfRevision": [
+    "2017-09-22"
+  ],
+  "electronicPublicationDate": [
+    "2015-07-27"
+  ],
+  "firstPublicationDate": [
+    "2015-07-27"
+  ]
+}

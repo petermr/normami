@@ -1,0 +1,784 @@
+{
+  "id": [
+    "26865731"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26865731"
+  ],
+  "pmcid": [
+    "PMC4809280"
+  ],
+  "doi": [
+    "10.1093/jxb/erw020"
+  ],
+  "title": [
+    "A partial loss-of-function mutation in an Arabidopsis RNA polymerase III subunit leads to pleiotropic defects."
+  ],
+  "authorString": [
+    "Johnson KC, Yu Y, Gao L, Eng RC, Wasteneys GO, Chen X, Li X."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Johnson KC"
+          ],
+          "firstName": [
+            "Kaeli C M"
+          ],
+          "lastName": [
+            "Johnson"
+          ],
+          "initials": [
+            "KC"
+          ],
+          "affiliation": [
+            "Department of Botany, University of British Columbia, Vancouver, V6T 1Z4, Canada Michael Smith Laboratories, University of British Columbia, Vancouver, V6T 1Z4, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Yu Y"
+          ],
+          "firstName": [
+            "Yu"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Institute for Integrative Genome Biology, Department of Botany and Plant Sciences, University of California Riverside, Riverside, CA 92521, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Gao L"
+          ],
+          "firstName": [
+            "Lei"
+          ],
+          "lastName": [
+            "Gao"
+          ],
+          "initials": [
+            "L"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6488-0292",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Institute for Integrative Genome Biology, Department of Botany and Plant Sciences, University of California Riverside, Riverside, CA 92521, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Eng RC"
+          ],
+          "firstName": [
+            "Ryan C"
+          ],
+          "lastName": [
+            "Eng"
+          ],
+          "initials": [
+            "RC"
+          ],
+          "affiliation": [
+            "Department of Botany, University of British Columbia, Vancouver, V6T 1Z4, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Wasteneys GO"
+          ],
+          "firstName": [
+            "Geoffrey O"
+          ],
+          "lastName": [
+            "Wasteneys"
+          ],
+          "initials": [
+            "GO"
+          ],
+          "affiliation": [
+            "Department of Botany, University of British Columbia, Vancouver, V6T 1Z4, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Chen X"
+          ],
+          "firstName": [
+            "Xuemei"
+          ],
+          "lastName": [
+            "Chen"
+          ],
+          "initials": [
+            "X"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-5209-1157",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Institute for Integrative Genome Biology, Department of Botany and Plant Sciences, University of California Riverside, Riverside, CA 92521, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Li X"
+          ],
+          "firstName": [
+            "Xin"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Department of Botany, University of British Columbia, Vancouver, V6T 1Z4, Canada Michael Smith Laboratories, University of British Columbia, Vancouver, V6T 1Z4, Canada xinli@msl.ubc.ca."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-6488-0292",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-5209-1157",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "8"
+      ],
+      "volume": [
+        "67"
+      ],
+      "journalIssueId": [
+        "2391370"
+      ],
+      "dateOfPublication": [
+        "2016 Apr"
+      ],
+      "monthOfPublication": [
+        "4"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-04-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "2219-2230"
+  ],
+  "abstractText": [
+    "Plants employ five DNA-dependent RNA polymerases (Pols) in transcription. One of these polymerases, Pol III, has previously been reported to transcribe 5S rRNA, tRNAs, and a number of small RNAs. However, in-depth functional analysis is complicated by the fact that knockout mutations in Pol subunits are typically lethal. Here, we report the characterization of the first known viable Pol III subunit mutant,nrpc7-1 This mutant was originally isolated from a forward genetic screen designed to identify enhancers of the autoimmune mutantsnc1, which contains a gain-of-function mutation in a nucleotide-binding leucine-rich repeat (NLR) immune receptor-encoding gene. Thenrpc7-1mutation occurs in an intron-exon splice site and results in intron retention in someNRPC7transcripts. There is a global disruption in RNA equilibrium innrpc7-1, exemplified by the altered expression of a number of RNA molecules, some of which are not reported to be transcribed by Pol III. There are developmental defects associated with the mutation, as homozygous mutant plants are dwarf, have stunted roots and siliques, and possess serrated leaves. These defects are possibly due to altered small RNA stability or activity. Additionally, thenrpc7-1mutation confers anNLR-specific alternative splicing defect that correlates with enhanced disease resistance, highlighting the importance of alternative splicing in regulating NLR activity. Altogether, these results reveal novel roles for Pol III in maintaining RNA homeostasis, adjusting the expression of a diverse suite of genes, and indirectly modulating gene splicing. Future analyses using thenrpc7-1mutant will be instrumental in examining other unknown Pol III functions."
+  ],
+  "affiliation": [
+    "Department of Botany, University of British Columbia, Vancouver, V6T 1Z4, Canada Michael Smith Laboratories, University of British Columbia, Vancouver, V6T 1Z4, Canada."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Chromosomes, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cell Nucleus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Subcellular Fractions"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "EN"
+                  ],
+                  "qualifierName": [
+                    "enzymology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "IM"
+                  ],
+                  "qualifierName": [
+                    "immunology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA Polymerase III"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Subunits"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cloning, Molecular"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA Splicing"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Base Sequence"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Immunity"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Genetic Pleiotropy"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Arabidopsis",
+        "Alternative splicing",
+        "RNA polymerase III",
+        "Plant Immunity",
+        "Pol Iii",
+        "Nrpc7",
+        "Rpc25."
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Protein Subunits"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA Polymerase III"
+          ],
+          "registryNumber": [
+            "EC 2.7.7.6"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4809280?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4809280"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/erw020"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "4"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-12-13"
+  ],
+  "dateOfCreation": [
+    "2016-03-29"
+  ],
+  "dateOfRevision": [
+    "2016-12-30"
+  ],
+  "electronicPublicationDate": [
+    "2016-02-10"
+  ],
+  "firstPublicationDate": [
+    "2016-02-10"
+  ]
+}

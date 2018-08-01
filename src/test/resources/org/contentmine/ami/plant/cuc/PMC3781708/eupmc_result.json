@@ -1,0 +1,1004 @@
+{
+  "id": [
+    "23578292"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "23578292"
+  ],
+  "pmcid": [
+    "PMC3781708"
+  ],
+  "doi": [
+    "10.1111/tpj.12194"
+  ],
+  "title": [
+    "A local regulatory network around three NAC transcription factors in stress responses and senescence in Arabidopsis leaves."
+  ],
+  "authorString": [
+    "Hickman R, Hill C, Penfold CA, Breeze E, Bowden L, Moore JD, Zhang P, Jackson A, Cooke E, Bewicke-Copley F, Mead A, Beynon J, Wild DL, Denby KJ, Ott S, Buchanan-Wollaston V."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Hickman R"
+          ],
+          "firstName": [
+            "Richard"
+          ],
+          "lastName": [
+            "Hickman"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Hill C"
+          ],
+          "firstName": [
+            "Claire"
+          ],
+          "lastName": [
+            "Hill"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "School of Life Sciences, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Penfold CA"
+          ],
+          "firstName": [
+            "Christopher A"
+          ],
+          "lastName": [
+            "Penfold"
+          ],
+          "initials": [
+            "CA"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-5823-4705",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Breeze E"
+          ],
+          "firstName": [
+            "Emily"
+          ],
+          "lastName": [
+            "Breeze"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Bowden L"
+          ],
+          "firstName": [
+            "Laura"
+          ],
+          "lastName": [
+            "Bowden"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "School of Life Sciences, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Moore JD"
+          ],
+          "firstName": [
+            "Jonathan D"
+          ],
+          "lastName": [
+            "Moore"
+          ],
+          "initials": [
+            "JD"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-5486-0407",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang P"
+          ],
+          "firstName": [
+            "Peijun"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "School of Life Sciences, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Jackson A"
+          ],
+          "firstName": [
+            "Alison"
+          ],
+          "lastName": [
+            "Jackson"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "School of Life Sciences, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Cooke E"
+          ],
+          "firstName": [
+            "Emma"
+          ],
+          "lastName": [
+            "Cooke"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Molecular Organisation and Assembly of Cells Doctoral Training Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Bewicke-Copley F"
+          ],
+          "firstName": [
+            "Findlay"
+          ],
+          "lastName": [
+            "Bewicke-Copley"
+          ],
+          "initials": [
+            "F"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-1292-7965",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "School of Life Sciences, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Mead A"
+          ],
+          "firstName": [
+            "Andrew"
+          ],
+          "lastName": [
+            "Mead"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4909-8235",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "School of Life Sciences, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Beynon J"
+          ],
+          "firstName": [
+            "Jim"
+          ],
+          "lastName": [
+            "Beynon"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Wild DL"
+          ],
+          "firstName": [
+            "David L"
+          ],
+          "lastName": [
+            "Wild"
+          ],
+          "initials": [
+            "DL"
+          ],
+          "affiliation": [
+            "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Denby KJ"
+          ],
+          "firstName": [
+            "Katherine J"
+          ],
+          "lastName": [
+            "Denby"
+          ],
+          "initials": [
+            "KJ"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-7857-6814",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Ott S"
+          ],
+          "firstName": [
+            "Sascha"
+          ],
+          "lastName": [
+            "Ott"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Buchanan-Wollaston V"
+          ],
+          "firstName": [
+            "Vicky"
+          ],
+          "lastName": [
+            "Buchanan-Wollaston"
+          ],
+          "initials": [
+            "V"
+          ],
+          "affiliation": [
+            "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-5486-0407",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-4909-8235",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-5823-4705",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-1292-7965",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-7857-6814",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "75"
+      ],
+      "journalIssueId": [
+        "2050054"
+      ],
+      "dateOfPublication": [
+        "2013 Jul"
+      ],
+      "monthOfPublication": [
+        "7"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-07-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "The Plant journal : for cell and molecular biology"
+          ],
+          "ISOAbbreviation": [
+            "Plant J."
+          ],
+          "medlineAbbreviation": [
+            "Plant J"
+          ],
+          "NLMid": [
+            "9207397"
+          ],
+          "ISSN": [
+            "0960-7412"
+          ],
+          "ESSN": [
+            "1365-313X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "26-39"
+  ],
+  "abstractText": [
+    "A model is presented describing the gene regulatory network surrounding three similar NAC transcription factors that have roles in Arabidopsis leaf senescence and stress responses. ANAC019, ANAC055 and ANAC072 belong to the same clade of NAC domain genes and have overlapping expression patterns. A combination of promoter DNA/protein interactions identified using yeast 1-hybrid analysis and modelling using gene expression time course data has been applied to predict the regulatory network upstream of these genes. Similarities and divergence in regulation during a variety of stress responses are predicted by different combinations of upstream transcription factors binding and also by the modelling. Mutant analysis with potential upstream genes was used to test and confirm some of the predicted interactions. Gene expression analysis in mutants of ANAC019 and ANAC055 at different times during leaf senescence has revealed a distinctly different role for each of these genes. Yeast 1-hybrid analysis is shown to be a valuable tool that can distinguish clades of binding proteins and be used to test and quantify protein binding to predicted promoter motifs."
+  ],
+  "affiliation": [
+    "Warwick Systems Biology Centre, University of Warwick, Coventry, CV4 7AL, UK."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "EP/I036575/1"
+          ],
+          "agency": [
+            "Engineering and Physical Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "BB/F005806/1"
+          ],
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Botrytis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oligonucleotide Array Sequence Analysis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Two-Hybrid System Techniques"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Diseases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MI"
+                  ],
+                  "qualifierName": [
+                    "microbiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Binding"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cellular Senescence"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "ANAC019 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "ANAC055 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "ANAC072 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3781708?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3781708"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23578292/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23578292/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1111/tpj.12194"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "45"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "ARXPR",
+        "EMBL",
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2014-03-03"
+  ],
+  "dateOfCreation": [
+    "2013-04-13"
+  ],
+  "dateOfRevision": [
+    "2018-01-29"
+  ],
+  "electronicPublicationDate": [
+    "2013-05-11"
+  ],
+  "firstPublicationDate": [
+    "2013-05-11"
+  ]
+}

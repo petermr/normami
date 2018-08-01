@@ -1,0 +1,546 @@
+{
+  "id": [
+    "28212614"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28212614"
+  ],
+  "pmcid": [
+    "PMC5316208"
+  ],
+  "doi": [
+    "10.1186/s12864-017-3576-y"
+  ],
+  "title": [
+    "Transcriptomic profiling provides molecular insights into hydrogen peroxide-induced adventitious rooting in mung bean seedlings."
+  ],
+  "authorString": [
+    "Li SW, Leng Y, Shi RF."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Li SW"
+          ],
+          "firstName": [
+            "Shi-Weng"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "SW"
+          ],
+          "affiliation": [
+            "School of Environmental and Municipal Engineering, Key Laboratory of Extreme Environmental Microbial Resources and Engineering, Gansu Province, Lanzhou Jiaotong University, 88 West Anning Road, Lanzhou, 730070, People's Republic of China. lishweng@mail.lzjtu.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Leng Y"
+          ],
+          "firstName": [
+            "Yan"
+          ],
+          "lastName": [
+            "Leng"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "School of Environmental and Municipal Engineering, Key Laboratory of Extreme Environmental Microbial Resources and Engineering, Gansu Province, Lanzhou Jiaotong University, 88 West Anning Road, Lanzhou, 730070, People's Republic of China."
+          ]
+        },
+        {
+          "fullName": [
+            "Shi RF"
+          ],
+          "firstName": [
+            "Rui-Fang"
+          ],
+          "lastName": [
+            "Shi"
+          ],
+          "initials": [
+            "RF"
+          ],
+          "affiliation": [
+            "School of Environmental and Municipal Engineering, Key Laboratory of Extreme Environmental Microbial Resources and Engineering, Gansu Province, Lanzhou Jiaotong University, 88 West Anning Road, Lanzhou, 730070, People's Republic of China."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "18"
+      ],
+      "journalIssueId": [
+        "2519614"
+      ],
+      "dateOfPublication": [
+        "2017 Feb"
+      ],
+      "monthOfPublication": [
+        "2"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-02-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "188"
+  ],
+  "abstractText": [
+    "Hydrogen peroxide (H2O2) has been known to function as a signalling molecule involved in the modulation of various physiological processes in plants. H2O2 has been shown to act as a promoter during adventitious root formation in hypocotyl cuttings. In this study, RNA-Seq was performed to reveal the molecular mechanisms underlying H2O2-induced adventitious rooting.RNA-Seq data revealed that H2O2 treatment greatly increased the numbers of clean reads and expressed genes and abundance of gene expression relative to the water treatment. Gene Ontology (GO) and Kyoto Encyclopedia of Genes and Genomes (KEGG) pathway enrichment analyses indicated that a profound change in gene function occurred in the 6-h H2O2 treatment and that H2O2 mainly enhanced gene expression levels at the 6-h time point but reduced gene expression levels at the 24-h time point compared with the water treatment. In total, 4579 differentially expressed (2-fold change > 2) unigenes (DEGs), of which 78.3% were up-regulated and 21.7% were down-regulated; 3525 DEGs, of which 64.0% were up-regulated and 36.0% were down-regulated; and 7383 DEGs, of which 40.8% were up-regulated and 59.2% were down-regulated were selected in the 6-h, 24-h, and from 6- to 24-h treatments, respectively. The number of DEGs in the 6-h treatment was 29.9% higher than that in the 24-h treatment. The functions of the most highly regulated genes were associated with stress response, cell redox homeostasis and oxidative stress response, cell wall loosening and modification, metabolic processes, and transcription factors (TFs), as well as plant hormone signalling, including auxin, ethylene, cytokinin, gibberellin, and abscisic acid pathways. Notably, a large number of genes encoding for heat shock proteins (HSPs) and heat shock transcription factors (HSFs) were significantly up-regulated during H2O2 treatments. Furthermore, real-time quantitative PCR (qRT-PCR) results showed that, during H2O2 treatments, the expression levels of ARFs, IAAs, AUXs, NACs, RD22, AHKs, MYBs, PIN1, AUX15A, LBD29, LBD41, ADH1b, and QORL were significantly up-regulated at the 6- and/or 24-h time points. In contrast, PER1 and PER2 were significantly down-regulated by H2O2 treatment. These qRT-PCR results strongly correlated with the RNA-Seq data.Using RNA-Seq and qRT-PCR techniques, we analysed the global changes in gene expression and functional profiling during H2O2-induced adventitious rooting in mung bean seedlings. These results strengthen the current understanding of H2O2-induced adventitious rooting and the molecular traits of H2O2 priming in plants."
+  ],
+  "affiliation": [
+    "School of Environmental and Municipal Engineering, Key Laboratory of Extreme Environmental Microbial Resources and Engineering, Gansu Province, Lanzhou Jiaotong University, 88 West Anning Road, Lanzhou, 730070, People's Republic of China. lishweng@mail.lzjtu.cn."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Roots"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Hydrogen Peroxide"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Heat-Shock Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seedlings"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Vigna"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Adventitious roots",
+        "Transcriptome",
+        "Gene Expression",
+        "Rna-seq",
+        "Hydrogen Peroxide (H2o2)",
+        "Vigna Radiata (L.) R. Wilczek"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Heat-Shock Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Hydrogen Peroxide"
+          ],
+          "registryNumber": [
+            "BBX060AN9V"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5316208?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5316208"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12864-017-3576-y"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2017-12-25"
+  ],
+  "dateOfCreation": [
+    "2017-02-19"
+  ],
+  "dateOfRevision": [
+    "2018-03-04"
+  ],
+  "electronicPublicationDate": [
+    "2017-02-17"
+  ],
+  "firstPublicationDate": [
+    "2017-02-17"
+  ]
+}

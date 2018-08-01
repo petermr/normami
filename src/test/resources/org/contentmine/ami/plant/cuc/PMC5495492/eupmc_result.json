@@ -1,0 +1,976 @@
+{
+  "id": [
+    "28628608"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28628608"
+  ],
+  "pmcid": [
+    "PMC5495492"
+  ],
+  "doi": [
+    "10.1371/journal.pgen.1006856"
+  ],
+  "title": [
+    "TCP4-dependent induction of CONSTANS transcription requires GIGANTEA in photoperiodic flowering in Arabidopsis."
+  ],
+  "authorString": [
+    "Kubota A, Ito S, Shim JS, Johnson RS, Song YH, Breton G, Goralogia GS, Kwon MS, Laboy Cintrón D, Koyama T, Ohme-Takagi M, Pruneda-Paz JL, Kay SA, MacCoss MJ, Imaizumi T."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Kubota A"
+          ],
+          "firstName": [
+            "Akane"
+          ],
+          "lastName": [
+            "Kubota"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Washington, Seattle, Washington, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Ito S"
+          ],
+          "firstName": [
+            "Shogo"
+          ],
+          "lastName": [
+            "Ito"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Washington, Seattle, Washington, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Shim JS"
+          ],
+          "firstName": [
+            "Jae Sung"
+          ],
+          "lastName": [
+            "Shim"
+          ],
+          "initials": [
+            "JS"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Washington, Seattle, Washington, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Johnson RS"
+          ],
+          "firstName": [
+            "Richard S"
+          ],
+          "lastName": [
+            "Johnson"
+          ],
+          "initials": [
+            "RS"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-8150-1338",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Genome Sciences, University of Washington, Seattle, Washington, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Song YH"
+          ],
+          "firstName": [
+            "Yong Hun"
+          ],
+          "lastName": [
+            "Song"
+          ],
+          "initials": [
+            "YH"
+          ],
+          "affiliation": [
+            "Department of Life Sciences, Ajou University, Suwon, Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Breton G"
+          ],
+          "firstName": [
+            "Ghislain"
+          ],
+          "lastName": [
+            "Breton"
+          ],
+          "initials": [
+            "G"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-6400-3858",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Section of Cell and Developmental Biology, Division of Biological Sciences, University of California at San Diego, La Jolla, California, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Goralogia GS"
+          ],
+          "firstName": [
+            "Greg S"
+          ],
+          "lastName": [
+            "Goralogia"
+          ],
+          "initials": [
+            "GS"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4222-3264",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biology, University of Washington, Seattle, Washington, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Kwon MS"
+          ],
+          "firstName": [
+            "Michael S"
+          ],
+          "lastName": [
+            "Kwon"
+          ],
+          "initials": [
+            "MS"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-0943-568X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biology, University of Washington, Seattle, Washington, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Laboy Cintrón D"
+          ],
+          "firstName": [
+            "Dianne"
+          ],
+          "lastName": [
+            "Laboy Cintrón"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Washington, Seattle, Washington, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Koyama T"
+          ],
+          "firstName": [
+            "Tomotsugu"
+          ],
+          "lastName": [
+            "Koyama"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Bioorganic Research Center, Suntory Foundation for Life Sciences, Kyoto, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Ohme-Takagi M"
+          ],
+          "firstName": [
+            "Masaru"
+          ],
+          "lastName": [
+            "Ohme-Takagi"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Graduate School of Science and Engineering, Saitama University, Saitama, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Pruneda-Paz JL"
+          ],
+          "firstName": [
+            "Jose L"
+          ],
+          "lastName": [
+            "Pruneda-Paz"
+          ],
+          "initials": [
+            "JL"
+          ],
+          "affiliation": [
+            "Section of Cell and Developmental Biology, Division of Biological Sciences, University of California at San Diego, La Jolla, California, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Kay SA"
+          ],
+          "firstName": [
+            "Steve A"
+          ],
+          "lastName": [
+            "Kay"
+          ],
+          "initials": [
+            "SA"
+          ],
+          "affiliation": [
+            "Keck School of Medicine, University of Southern California, Los Angeles, California, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "MacCoss MJ"
+          ],
+          "firstName": [
+            "Michael J"
+          ],
+          "lastName": [
+            "MacCoss"
+          ],
+          "initials": [
+            "MJ"
+          ],
+          "affiliation": [
+            "Department of Genome Sciences, University of Washington, Seattle, Washington, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Imaizumi T"
+          ],
+          "firstName": [
+            "Takato"
+          ],
+          "lastName": [
+            "Imaizumi"
+          ],
+          "initials": [
+            "T"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9396-4412",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biology, University of Washington, Seattle, Washington, United States of America."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-9396-4412",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-8150-1338",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-6400-3858",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4222-3264",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-0943-568X",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "6"
+      ],
+      "volume": [
+        "13"
+      ],
+      "journalIssueId": [
+        "2562432"
+      ],
+      "dateOfPublication": [
+        "2017 Jun"
+      ],
+      "monthOfPublication": [
+        "6"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-06-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PLoS genetics"
+          ],
+          "ISOAbbreviation": [
+            "PLoS Genet."
+          ],
+          "medlineAbbreviation": [
+            "PLoS Genet"
+          ],
+          "NLMid": [
+            "101239074"
+          ],
+          "ISSN": [
+            "1553-7390"
+          ],
+          "ESSN": [
+            "1553-7404"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "e1006856"
+  ],
+  "abstractText": [
+    "Photoperiod is one of the most reliable environmental cues for plants to regulate flowering timing. In Arabidopsis thaliana, CONSTANS (CO) transcription factor plays a central role in regulating photoperiodic flowering. In contrast to posttranslational regulation of CO protein, still little was known about CO transcriptional regulation. Here we show that the CINCINNATA (CIN) clade of class II TEOSINTE BRANCHED 1/ CYCLOIDEA/ PROLIFERATING CELL NUCLEAR ANTIGEN FACTOR (TCP) proteins act as CO activators. Our yeast one-hybrid analysis revealed that class II CIN-TCPs, including TCP4, bind to the CO promoter. TCP4 induces CO expression around dusk by directly associating with the CO promoter in vivo. In addition, TCP4 binds to another flowering regulator, GIGANTEA (GI), in the nucleus, and induces CO expression in a GI-dependent manner. The physical association of TCP4 with the CO promoter was reduced in the gi mutant, suggesting that GI may enhance the DNA-binding ability of TCP4. Our tandem affinity purification coupled with mass spectrometry (TAP-MS) analysis identified all class II CIN-TCPs as the components of the in vivo TCP4 complex, and the gi mutant did not alter the composition of the TCP4 complex. Taken together, our results demonstrate a novel function of CIN-TCPs as photoperiodic flowering regulators, which may contribute to coordinating plant development with flowering regulation."
+  ],
+  "affiliation": [
+    "Department of Biology, University of Washington, Seattle, Washington, United States of America."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "R01 GM056006"
+          ],
+          "agency": [
+            "NIGMS NIH HHS"
+          ],
+          "acronym": [
+            "GM"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "R01 GM067837"
+          ],
+          "agency": [
+            "NIGMS NIH HHS"
+          ],
+          "acronym": [
+            "GM"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "RC2 GM092412"
+          ],
+          "agency": [
+            "NIGMS NIH HHS"
+          ],
+          "acronym": [
+            "GM"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "R25 HG007153"
+          ],
+          "agency": [
+            "NHGRI NIH HHS"
+          ],
+          "acronym": [
+            "HG"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "R01 GM079712"
+          ],
+          "agency": [
+            "NIGMS NIH HHS"
+          ],
+          "acronym": [
+            "GM"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Flowers"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "DNA-Binding Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Transcription, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Circadian Rhythm"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Photoperiod"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Development"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "CONSTANS protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "GI protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "DNA-Binding Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "TCP4 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5495492?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5495492"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pgen.1006856"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "5"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2017-07-18"
+  ],
+  "dateOfCreation": [
+    "2017-06-20"
+  ],
+  "dateOfRevision": [
+    "2018-06-29"
+  ],
+  "electronicPublicationDate": [
+    "2017-06-19"
+  ],
+  "firstPublicationDate": [
+    "2017-06-19"
+  ]
+}

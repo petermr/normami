@@ -1,0 +1,723 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName archivearticle3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Evol Appl</journal-id><journal-id journal-id-type="iso-abbrev">Evol Appl</journal-id><journal-id journal-id-type="doi">10.1111/(ISSN)1752-4571</journal-id><journal-id journal-id-type="publisher-id">EVA</journal-id><journal-title-group><journal-title>Evolutionary Applications</journal-title></journal-title-group><issn pub-type="epub">1752-4571</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4908462</article-id><article-id pub-id-type="doi">10.1111/eva.12382</article-id><article-id pub-id-type="publisher-id">EVA12382</article-id><article-categories><subj-group subj-group-type="overline"><subject>Original Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Original Articles</subject></subj-group></article-categories><title-group><article-title>Insight into the durability of plant resistance to aphids from a demo&#x02010;genetic study of <italic>Aphis gossypii</italic> in melon crops</article-title><alt-title alt-title-type="left-running-head">Thomas et&#x000a0;al.</alt-title></title-group><contrib-group><contrib id="eva12382-cr-0001" contrib-type="author"><name><surname>Thomas</surname><given-names>Sophie</given-names></name><xref ref-type="aff" rid="eva12382-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="eva12382-cr-0002" contrib-type="author"><name><surname>Vanlerberghe&#x02010;Masutti</surname><given-names>Flavie</given-names></name><xref ref-type="aff" rid="eva12382-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="eva12382-cr-0003" contrib-type="author"><name><surname>Mistral</surname><given-names>Pascale</given-names></name><xref ref-type="aff" rid="eva12382-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="eva12382-cr-0004" contrib-type="author"><name><surname>Loiseau</surname><given-names>Anne</given-names></name><xref ref-type="aff" rid="eva12382-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="eva12382-cr-0005" contrib-type="author" corresp="yes"><name><surname>Boissot</surname><given-names>Nathalie</given-names></name><xref ref-type="aff" rid="eva12382-aff-0002">
+<sup>2</sup>
+</xref></contrib></contrib-group><aff id="eva12382-aff-0001"><label><sup>1</sup></label><named-content content-type="organisation-division">INRA, CBGP</named-content><institution>UMR 1062</institution><named-content content-type="city">Montferrier&#x02010;sur&#x02010;Lez</named-content><country country="FR">France</country></aff><aff id="eva12382-aff-0002"><label><sup>2</sup></label><named-content content-type="organisation-division">INRA, GAFL</named-content><institution>UR 1052</institution><named-content content-type="city">Avignon</named-content><country country="FR">France</country></aff><author-notes><corresp id="correspondenceTo"><label>*</label><bold>Correspondence</bold><break/>
+Nathalie Boissot, INRA, GAFL, CS60094, 84143 Avignon, France.<break/>
+Tel.: +33 432 72 2745;<break/>
+fax: +33 432 72 2702;<break/>
+e&#x02010;mail: <email>Nathalie.Boissot@avignon.inra.fr</email><break/></corresp></author-notes><pub-date pub-type="epub"><day>13</day><month>5</month><year>2016</year></pub-date><pub-date pub-type="collection"><month>7</month><year>2016</year></pub-date><volume>9</volume><issue>6</issue><issue-id pub-id-type="doi">10.1111/eva.2016.9.issue-6</issue-id><fpage>756</fpage><lpage>768</lpage><history><date date-type="received"><day>04</day><month>11</month><year>2015</year></date><date date-type="accepted"><day>11</day><month>3</month><year>2016</year></date></history><permissions><!--<copyright-statement content-type="issue-copyright"> &#x000a9; 2016 John Wiley & Sons Ltd <copyright-statement>--><copyright-statement content-type="article-copyright">&#x000a9; 2016 INRA. GAFL. <italic>Evolutionary Applications</italic> published by John Wiley &#x00026; Sons Ltd.</copyright-statement><license license-type="creativeCommonsBy"><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="file:EVA-9-756.pdf"/><abstract id="eva12382-abs-0001"><title>Abstract</title><p>Resistance breakdown has been observed following the deployment of plant cultivars resistant to pests. Assessing the durability of a resistance requires long&#x02010;term experiments at least at a regional scale. We collected such data for melon resistance conferred by the <italic>Vat</italic> gene cluster to melon aphids. We examined landscape&#x02010;level populations of <italic>Aphis gossypii</italic> collected in 2004&#x02013;2015, from melon&#x02010;producing regions with and without the deployment of <italic>Vat</italic> resistance and with different climates. We conducted demo&#x02010;genetic analyses of the aphid populations on <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants during the cropping seasons. The <italic>Vat</italic> resistance decreased the density of aphid populations in all areas and changed the genetic structure and composition of these populations. Two bottlenecks were identified in the dynamics of adapted clones, due to the low levels of production of dispersal morphs and winter extinction. Our results suggest that (i) <italic>Vat</italic> resistance will not be durable in the Lesser Antilles, where no bottleneck affected the dynamics of adapted clones, (ii) <italic>Vat</italic> resistance will be durable in south&#x02010;west France, where both bottlenecks affected the dynamics of adapted clones and (iii) <italic>Vat</italic> resistance will be less durable in south&#x02010;east France, where only one of the two bottlenecks was observed.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="eva12382-kwd-0001">agriculture</kwd><kwd id="eva12382-kwd-0002">contemporary evolution</kwd><kwd id="eva12382-kwd-0003">landscape effect</kwd><kwd id="eva12382-kwd-0004"><italic>Vat</italic> gene</kwd></kwd-group><funding-group><award-group><funding-source>French Ministry of Agriculture</funding-source><award-id>C06/02</award-id></award-group></funding-group><funding-group><award-group><funding-source>VirAphid project</funding-source><award-id>ANR&#x02010;2010&#x02010;STRA&#x02010;001&#x02010;01</award-id></award-group></funding-group><funding-group><award-group><funding-source>Agence Nationale de la Recherche</funding-source></award-group></funding-group><funding-group><award-group><funding-source>INRA</funding-source></award-group></funding-group><funding-group><award-group><funding-source>R&#x000e9;gion Provence&#x02010;Alpes&#x02010;C&#x000f4;te d'Azur, France</funding-source></award-group></funding-group><counts><page-count count="13"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>eva12382</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>July 2016</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:4.9.1 mode:remove_FC converted:15.06.2016</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="eva12382-sec-0001"><title>Introduction</title><p>During the 1970s, the concept of &#x02018;durable resistance&#x02019; was used to describe resistance that remained effective after deployment at a large scale, over an extended period of time, in ecosystems favourable to the pathogen (Johnson and Law <xref rid="eva12382-bib-0024" ref-type="ref">1975</xref>; Nelson <xref rid="eva12382-bib-0032" ref-type="ref">1978</xref>). This concept can be used to assess resistance durability only after deployment of the resistance concerned. Thus, starting from the early 1980s, research focused on modelling to obtain an <italic>a priori</italic> estimate of durability of resistance to insects (Gould <xref rid="eva12382-bib-0017" ref-type="ref">1986a</xref>,<xref rid="eva12382-bib-0018" ref-type="ref">b</xref>, <xref rid="eva12382-bib-0019" ref-type="ref">1998</xref>) and to pathogens (see van den Bosch and Gilligan (<xref rid="eva12382-bib-0005" ref-type="ref">2003</xref>) for a review). Apart from <italic>Bt</italic> resistance to lepidopteran populations (Gould <xref rid="eva12382-bib-0020" ref-type="ref">2003</xref>; Zhao et&#x000a0;al. <xref rid="eva12382-bib-0048" ref-type="ref">2003</xref>), the validity of such predictions for natural plant resistance systems has not been documented. As reviewed in Brown (<xref rid="eva12382-bib-0007" ref-type="ref">2015</xref>), predictions about the durability of resistance are hypotheses about evolution. In this context, the deployment of resistant plants, like the spraying of pesticides, exerts a selective pressure on the demographic features and genetic structure of the targeted pest populations, favouring the selection of individuals adapted to plant resistance. The frequency of adapted genotypes then depends on the frequency of the resistance gene in the agrosystem and on the fitness costs associated with the adaptation. As underline by Brown (<xref rid="eva12382-bib-0007" ref-type="ref">2015</xref>), estimating cost of virulence is usually challenging especially because cost may vary between different environments. Actually, the effects of plant genotypes on sets of isolates have been frequently characterized under controlled conditions, but such effects have been little investigated at the level of the pathogen or pest population in agrosystems. The most documented example is in the rice/rice blight pathosystem (Vera Cruz et&#x000a0;al. <xref rid="eva12382-bib-0046" ref-type="ref">2000</xref>), for which field and laboratory studies converged to the role of the fitness cost in adapted blight isolates to explain the durability of the resistance gene <italic>Xa7</italic>.</p><p>According to McDonald and Linde (<xref rid="eva12382-bib-0029" ref-type="ref">2002</xref>), the greatest risk of host resistance being overcome is encountered with pathogens with both sexual and asexual reproduction systems, a high gene flow potential, large effective population sizes and high mutation rates. Aphids, the major arthropod pests of cultivated plants (Dedryver et&#x000a0;al. <xref rid="eva12382-bib-0011" ref-type="ref">2010</xref>), display most of these features (Hales et&#x000a0;al. <xref rid="eva12382-bib-0022" ref-type="ref">1997</xref>). Host plant resistance to some aphid species may be efficient and durable, as observed for resistance to phylloxera (<italic>Daktulosphaira&#x000a0;vitifoliae</italic>) in <italic>Vitis</italic> (Granett et&#x000a0;al. <xref rid="eva12382-bib-0021" ref-type="ref">2001</xref>; Korosi et&#x000a0;al. <xref rid="eva12382-bib-0026" ref-type="ref">2007</xref>). Conversely, resistance&#x02010;breaking biotypes have emerged in a number of plant&#x02013;aphid systems reviewed by Smith and Chuang (<xref rid="eva12382-bib-0040" ref-type="ref">2014</xref>), but the processes by which plant resistance to aphids is overcome at the population level are poorly understood. Investigations of these processes require knowledge of the genetic control of resistance and the importance of resistance deployment on the one hand and of the biology and structure of the aphid populations targeted on the other. This information is available for the <italic>Aphis gossypii</italic>/melon relationship in France which therefore was chosen as a study case.</p><p>The melon&#x02010;cotton aphid, <italic>A.&#x000a0;gossypii,</italic> is a cosmopolitan, polyphagous species with populations structured into several host races specialized in different crops (Carletto et&#x000a0;al. <xref rid="eva12382-bib-0009" ref-type="ref">2009</xref>). Each of the host races is distributed worldwide and characterized by a small number of asexual clones, probably because of host plant selection and pest management practices (Carletto et&#x000a0;al. <xref rid="eva12382-bib-0010" ref-type="ref">2010</xref>; Br&#x000e9;vault et&#x000a0;al. <xref rid="eva12382-bib-0006" ref-type="ref">2011</xref>). One host race is specialized in cucurbits and is by far the most serious pest of Cucurbitaceae crops worldwide. A large genetic survey of winged <italic>A.&#x000a0;gossypii</italic> populations visiting melon crops in spring revealed an unexpectedly high level of genetic diversity within the species <italic>A.&#x000a0;gossypii</italic> (Thomas et&#x000a0;al. <xref rid="eva12382-bib-0041" ref-type="ref">2012a</xref>), calling into question the widespread assumption that the melon aphid reproduces exclusively by obligate parthenogenesis in temperate regions (Blackman and Eastop <xref rid="eva12382-bib-0001" ref-type="ref">2007</xref>). These winged individuals resulted from a population that occurred at the landscape level, consisting of sexual lineages probably originating from wild plants and asexual lineages specializing on cultivated host plants (Thomas et&#x000a0;al. <xref rid="eva12382-bib-0041" ref-type="ref">2012a</xref>). The winged aphids giving rise to nymphs on melon crops belonged to the genetic groups containing the asexual lineages specialized in cucurbits. During this sedentary reproduction period, the aphids are wingless but in large colonies, when both the mothers and their offspring experience crowding, winged morphs differentiate allowing dispersal (Dixon <xref rid="eva12382-bib-0012" ref-type="ref">1985</xref>).</p><p>Aphid resistance in melon (<italic>Cucumis melo</italic> L.) is controlled by the <italic>Vat</italic> gene cluster and quantitative trait loci (QTLs) (Boissot et&#x000a0;al. <xref rid="eva12382-bib-0002" ref-type="ref">2010</xref>, <xref rid="eva12382-bib-0003" ref-type="ref">2016</xref>). In 1987, Margot became the first melon cultivar declared resistant to the melon aphid <italic>A.&#x000a0;gossypii</italic> to be listed in the French catalogue. A further 110 Charentais&#x02010;type cultivars have since been declared resistant to this aphid in the French or EU catalogues (GEVES data). Using a specific marker of the <italic>Vat&#x02010;1</italic> allele, we found that 95% of these cultivars carried resistance to aphids that was probably derived from Margot (GEVES data). In France, melons are cultivated in the south&#x02010;east (SE) and south&#x02010;west (SW) and on two islands of the Lesser Antilles (LA). Given the commercial success of some of the resistant cultivars, about 80% of the cultivated melon crops in SE France have been assumed to contain this resistance since 2000. Resistant varieties are rarely used in SW France and entirely absent from the LA. In laboratory experiments, the <italic>Vat</italic> cluster present in Margot has been shown to decrease the plant acceptance by <italic>A.&#x000a0;gossypii</italic> (i.e. aphids leave the plant after testing) and to decrease the reproductive rate (Boissot et&#x000a0;al. <xref rid="eva12382-bib-0003" ref-type="ref">2016</xref>). The efficiency of the resistance was found to be dependent on the aphid clone (Thomas et&#x000a0;al. <xref rid="eva12382-bib-0041" ref-type="ref">2012a</xref>, <xref rid="eva12382-bib-0042" ref-type="ref">b</xref>; Boissot et&#x000a0;al. <xref rid="eva12382-bib-0003" ref-type="ref">2016</xref>).</p><p>The response of aphid field populations to the selection pressure exerted by <italic>Vat</italic> plants might be expected to depend on their genetic composition, which is influenced by the characteristics of the agrosystem. The present study was carried out over almost 10&#x000a0;years, in three melon&#x02010;producing regions with tropical and temperate climates, with and without <italic>Vat</italic>&#x02010;mediated resistance deployment and with contrasting cucurbit crops availability. We conducted a demo&#x02010;genetic analysis of aphid populations at the crop level taking into account the key phases in the dynamics of crop infestation: visiting by spring migrants (winged), infestation with the wingless nymphs originating from these migrants, development into aphid colonies and the production of winged individuals in large colonies, for dispersal. The aims were (i) to investigate the impact of <italic>Vat</italic> resistance on the density and dispersal of <italic>A.&#x000a0;gossypii</italic> populations at the crop level, (ii) to identify resistance&#x02010;breaking clones and agrosystem characteristics promoting their emergence and (iii) to infer the durability of <italic>Vat</italic>&#x02010;mediated resistance in particular regions and agrosystems.</p></sec><sec id="eva12382-sec-0002"><title>Materials and methods</title><sec id="eva12382-sec-0003"><title>Field trials</title><p>We investigated the <italic>in&#x000a0;situ</italic> effect of the <italic>Vat</italic>&#x02010;mediated resistance in 21 field trials, using in each trial a pair of melon populations with homogeneous genetic backgrounds with and without resistance (Boissot et&#x000a0;al. <xref rid="eva12382-bib-0002" ref-type="ref">2010</xref>, <xref rid="eva12382-bib-0003" ref-type="ref">2016</xref>) referred to as <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> melons, respectively (Table&#x000a0;<xref rid="eva12382-tbl-0001" ref-type="table-wrap">1</xref>). The melon plants were grown from 2006 to 2013, at three sites in SE France (Aramon, Saint&#x02010;Andiol and Avignon), one site in SW France (Moissac) and one site in the LA (Petit&#x02010;Canal) (Table&#x000a0;<xref rid="eva12382-tbl-0001" ref-type="table-wrap">1</xref>). The study fields were located at INRA experimental units (Avignon and Petit&#x02010;Canal) or at the <italic>Centre d'Exp&#x000e9;rimentation des Fruits et L&#x000e9;gumes</italic> (Moissac), or at sites belonging to the seed companies Rijk Zwaan and De Ruiter (Aramon and Saint&#x02010;Andiol), who gave permission for the use of their sites and provided technical assistance. All these sites are located in melon&#x02010;producing regions under conventional mode of production. Cereals, vineyards and fruit trees occupy most of the SE region, whereas cereals and oleaginous plants are the major crops in the SW. In Guadeloupe (LA), where sugarcane and banana are the major crops, melon crops are located on Grande&#x02010;Terre Island, a limestone plateau that regularly experiences severe droughts.</p><table-wrap id="eva12382-tbl-0001" xml:lang="en" orientation="portrait" position="float"><label>Table 1</label><caption><p>Characteristics of the field design</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Region</th><th align="left" valign="bottom" rowspan="1" colspan="1">Region characteristic Cultivated surface<xref ref-type="fn" rid="eva12382-note-0002">a</xref> Climate</th><th align="left" valign="bottom" rowspan="1" colspan="1">Melon cultivation Surface<xref ref-type="fn" rid="eva12382-note-0002">a</xref> Period Type Crop cycle length</th><th align="left" valign="bottom" rowspan="1" colspan="1">Location</th><th align="left" valign="bottom" rowspan="1" colspan="1">Coordinates</th><th align="left" valign="bottom" rowspan="1" colspan="1">2006</th><th align="left" valign="bottom" rowspan="1" colspan="1">2008</th><th align="left" valign="bottom" rowspan="1" colspan="1">2009</th><th align="left" valign="bottom" rowspan="1" colspan="1">2011</th><th align="left" valign="bottom" rowspan="1" colspan="1">2012</th><th align="left" valign="bottom" rowspan="1" colspan="1">2013</th></tr></thead><tbody><tr><td align="left" rowspan="3" colspan="1">South&#x02010;east France</td><td align="left" rowspan="3" colspan="1">
+1.14 10<sup>6</sup>&#x000a0;ha<break/>
+Mediterranean
+</td><td align="left" rowspan="3" colspan="1">
+14 10<sup>3</sup>&#x000a0;ha<break/>
+March &#x02013; August<break/>
+Greenhouses and open field<break/>
+130&#x000a0;days
+</td><td align="left" rowspan="1" colspan="1">Aramon</td><td align="left" rowspan="1" colspan="1">
+43&#x000b0;54&#x02032;59&#x02032;&#x02019;N<break/>
+04&#x000b0;43&#x02032;08&#x02032;&#x02019;E
+</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">Saint&#x02010;Andiol</td><td align="left" rowspan="1" colspan="1">
+43&#x000b0;50&#x02032;07&#x02032;&#x02019;N<break/>
+04&#x000b0;56&#x02032;40&#x02032;&#x02019;E
+</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">Avignon</td><td align="left" rowspan="1" colspan="1">
+43&#x000b0;56&#x02032;44&#x02033;N<break/>
+04&#x000b0;51&#x02032;52&#x02033;E
+</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1</td></tr><tr><td align="left" rowspan="1" colspan="1">South&#x02010;west France</td><td align="left" rowspan="1" colspan="1">
+4.19 10<sup>6</sup>&#x000a0;ha<break/>
+Oceanic
+</td><td align="left" rowspan="1" colspan="1">
+4 10<sup>3</sup>&#x000a0;ha<break/>
+May to September<break/>
+Open field<break/>
+150&#x000a0;days
+</td><td align="left" rowspan="1" colspan="1">Moissac</td><td align="left" rowspan="1" colspan="1">
+44&#x000b0;07&#x02032;13&#x02032;&#x02019;N<break/>
+01&#x000b0;03&#x02032;17&#x02032;&#x02019;E
+</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1</td></tr><tr><td align="left" rowspan="1" colspan="1">Lesser Antilles</td><td align="left" rowspan="1" colspan="1">
+0.65 10<sup>6</sup>&#x000a0;ha<break/>
+Tropical
+</td><td align="left" rowspan="1" colspan="1">
+0.4 10<sup>3</sup>&#x000a0;ha<break/>
+All year long<break/>
+Open field<break/>
+100&#x000a0;days
+</td><td align="left" rowspan="1" colspan="1">Petit&#x02010;Canal</td><td align="left" rowspan="1" colspan="1">
+16&#x000b0;24&#x02032;04&#x02032;&#x02019;N<break/>
+61&#x000b0;29&#x02032;09&#x02032;&#x02019;W
+</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1</td></tr></tbody></table><table-wrap-foot><fn id="eva12382-note-0001"><p>Number of field trials at each site, by year and site characteristics.</p></fn><fn id="eva12382-note-0002"><label>a</label><p>For Lesser Antilles data concerned Guadeloupe and Martinique Islands, both melon producers in the Lesser Antilles.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &#x00026; Sons, Ltd</copyright-holder></permissions></table-wrap><p>Melon seeds were sown in a greenhouse, in 60&#x02010;mL pots filled with potting soil. The seedlings were transplanted into the field on black plastic mulch after 14&#x02013;22&#x000a0;days, depending on the trial. They were planted in rows separated by a distance of 2&#x000a0;m, and the plants in each row were 50&#x000a0;cm apart. Drip irrigation was used in all trials. Each trial was divided into two plots of approximately 150&#x000a0;m&#x000b2; each, corresponding to <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> melons. Each plot contained 147&#x02013;208 plants distributed in four to seven rows. <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plots were separated by at least 3&#x02013;5&#x000a0;m and plants were cut back severely along the border, to prevent the transfer of wingless aphids from plant to plant between the two plots. No insecticides were sprayed during the experiments, except in Petit&#x02010;Canal, where the insecticides used only targeted soil or chewing insects. In this region, diazinon (Basudin<sup>&#x000ae;</sup> Syngenta Agro SAS, Guyancourt, France) was applied a few days before transplantation, to control the mole cricket. <italic>Bacillus thuringiensis</italic> serotype 3 (<italic>Bt</italic>) and diflubenzuron were applied to control <italic>Diaphania hyalinata</italic>, a lepidopteran species that damages leaves. These two insecticides were each applied one to three times during the crop cycle, depending on the year, except in 2011, when <italic>Bt</italic> was applied five times and diflubenzuron was not applied.</p></sec><sec id="eva12382-sec-0004"><title>Estimation of <italic>Aphis&#x000a0;gossypii</italic> population density and colony occurrence</title><p>We estimated sedentary aphid density in the field trials by a qualitative visual counting method (Boll et&#x000a0;al. <xref rid="eva12382-bib-0004" ref-type="ref">2002</xref>). We tagged 17 areas of 1&#x000a0;m&#x000b2; each (except during the first year, when only eight areas were tagged) per plot, and we then scored aphid density in each area. In total, we monitored aphid density in 288 areas in the SE, 168 areas in the SW and 225 areas in the LA. Four to seven times each crop cycle, we observed 10 leaves in each area and awarded them a score from 0 (no aphids) to 4. Scores of 1 and 2 were assigned to leaves with &#x0003c;10 isolated aphids and small colonies (&#x0003c;50 aphids), respectively. Scores of 3 were assigned to leaves with large colonies (containing up to a few hundred aphids) and scores of 4 were attributed to leaves with larger colonies (some containing more than a thousand aphids) (see Boll et&#x000a0;al. (<xref rid="eva12382-bib-0004" ref-type="ref">2002</xref>) for details relating to this scale). Because large colonies are inducing the production of winged individuals, only areas obtaining a score of at least 3 were considered likely to produce dispersal morphs.</p><p>For each area, the mean of the scores assigned to the 10 leaves was calculated and the density index (DI) was calculated as the area under the mean score progression curve. The conditions for normality were respected for ln(DI&#x000a0;+&#x000a0;1) in the SE, SW and LA regions, according to the Shapiro&#x02013;Wilk's test, for an <italic>&#x003b1;</italic> risk of 0.01 (<italic>P&#x000a0;</italic>=<italic>&#x000a0;</italic>0.09 for the SE and SW data and <italic>P&#x000a0;</italic>=<italic>&#x000a0;</italic>0.03 for the LA data). We then conducted three independent <sc>anova</sc>s with the ln(DI&#x000a0;+&#x000a0;1) values obtained for the trials in the SE, SW and LA regions, analysing the <italic>Vat</italic> effect nested within the trial effect. If residuals after <sc>anova</sc> did not fit normality, we calculated the median of DI obtained for <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants for each trial in the region. A Friedman test was then conducted on paired medians.</p></sec><sec id="eva12382-sec-0005"><title>
+<italic>Aphis gossypii</italic> sampling, DNA analysis and multilocus genotype assignment</title><p>We sampled spring migrant populations from 2004 in the SE and 2008 in the SW to 2015, as described by (Thomas et&#x000a0;al. <xref rid="eva12382-bib-0041" ref-type="ref">2012a</xref>), on melon crops including the field trials described above, except for the SW in 2011. The details of the sampling, corresponding to a total of 2251 aphids, are presented in the supplementary materials (Table&#x000a0;S1).</p><p>In the field trials, wingless aphids were sampled weekly for 6&#x000a0;weeks, beginning 3&#x000a0;weeks after planting, in each trial. We collected 26&#x02013;121 wingless individuals per plot, corresponding to either singletons or an individual from a colony produced by a single asexual founding mother (foundress), resulting in a total of 3611 aphids. Each colony was tagged to prevent resampling.</p><p>DNA was extracted from each individual aphid with a 5% (w/v) Chelex resin solution, as previously described (Fuller et&#x000a0;al. <xref rid="eva12382-bib-0016" ref-type="ref">1999</xref>). We amplified eight microsatellite loci specific to the <italic>A.&#x000a0;gossypii</italic> genome (Vanlerberghe&#x02010;Masutti et&#x000a0;al. <xref rid="eva12382-bib-0044" ref-type="ref">1999</xref>) in two PCRs, as previously described (Carletto et&#x000a0;al. <xref rid="eva12382-bib-0009" ref-type="ref">2009</xref>). The amplification products were analysed on an ABI capillary sequencer, with the SeqGen platform (CeMEB LabEx, Montpellier, France). The size of the allele at each locus was determined by comparison with a molecular size standard in GeneMapper v3.7 software (Applied Biosystems, Foster City, California, USA), and a multilocus genotype (MLG) was subsequently assigned to each aphid.</p></sec><sec id="eva12382-sec-0006"><title>
+<italic>Aphis gossypii</italic> diversity analyses</title><p>The MLGs identified in the different populations were analysed with the Bayesian software program STRUCTURE (Pritchard et&#x000a0;al. <xref rid="eva12382-bib-0036" ref-type="ref">2000</xref>). We used an admixture model with a burn&#x02010;in of 500&#x000a0;000 and a subsequent Markov chain of 250&#x000a0;000 iterations. For each putative number of clusters (<italic>K</italic>; varying from 1 to 10), 10 replicate runs were compared to assess the consistency of the estimated values. We used the Evanno method to determine the most likely number of genetic clusters (Evanno et&#x000a0;al. <xref rid="eva12382-bib-0014" ref-type="ref">2005</xref>). For the two most probable numbers of clusters, we used the admixture model for one run, with a burn&#x02010;in of 500&#x000a0;000 and a subsequent Markov chain of 1&#x000a0;000&#x000a0;000 iterations. We checked the consistency between the two clustering results, by considering the proximity matrix between the percentages of inferred ancestry of individuals within the different clusters (Pearson's coefficient). MLGs were assigned to a given cluster when the percentage of its inferred ancestry to the given cluster was at least 0.75.</p><sec id="eva12382-sec-0007"><title>Genetic diversity of wingless aphids on <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants</title><p>The clonal diversity of an <italic>A.&#x000a0;gossypii</italic> population of <italic>N</italic> individuals was calculated from the Shannon&#x02013;Wiener index: <italic>H&#x000a0;</italic>=&#x000a0;&#x02013;&#x003a3;<sub><italic>i</italic></sub>
+<italic>p</italic>
+<sub><italic>i</italic></sub> ln <italic>p</italic>
+<sub><italic>i</italic></sub>, where <italic>p</italic>
+<sub><italic>i</italic></sub> represents the relative frequency of the ith MLG. Clonal diversity is expressed as e<sup><italic>H</italic></sup>, as previously described (Vanoverbeke and De Meester <xref rid="eva12382-bib-0045" ref-type="ref">1997</xref>), to account for the number of individuals in the sample and the evenness of the relative abundance of the different MLGs. The e<sup><italic>H</italic></sup> values ranged from 1 (i.e. all individuals have the same MLG) to <italic>N</italic> (i.e. all individuals have a different MLG). We used a bootstrap procedure to estimate the standard error of <italic>H</italic>. We created balanced sets, using the <italic>N</italic> bootstrapped data: <italic>N</italic> values were randomly selected with replacement (i.e. each sampled aphid was returned to the data pool before another aphid was sampled). Random sampling and the calculation of <italic>H</italic> were repeated 30 times. For each trail, we calculated the mean e<sup><italic>H</italic></sup> of aphid populations collected on <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants and a Friedman test was then conducted on these paired e<sup><italic>H</italic></sup> means considering all trials of a given area.</p></sec><sec id="eva12382-sec-0008"><title>Analysis of the selective effect of <italic>Vat</italic> on the development of aphid colonies</title><p>If colonies develop at random from wingless individuals regardless of their genotype and <italic>Vat</italic> status, then MLG frequencies should be similar between individuals and colonies. We therefore compared the distribution of MLGs between wingless individuals and colonies. We conducted permutation tests (Manly <xref rid="eva12382-bib-0028" ref-type="ref">1991</xref>) in each geographic region, considering the entire population collected from <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants. In the SE, where the genetic composition of aphid populations was shown to be similar at the various sites (Thomas et&#x000a0;al. <xref rid="eva12382-bib-0041" ref-type="ref">2012a</xref>), we pooled data for all sites. For each geographic region, <italic>N</italic>
+<sub>Vat</sub> is the number of wingless individuals collected from <italic>Vat</italic> plants and <italic>n</italic>
+<sub>Vat</sub> is the number of colonies collected from these plants. The mean probability, <italic>P</italic>
+<sub>MLG&#x02010;Vat</sub>, was calculated as follows, for each MLG collected from the colonies. We randomly selected 1000 times, without replacement, <italic>n</italic>
+<sub>Vat</sub> from the <italic>N</italic>
+<sub>Vat</sub> individuals. Individuals with a MLG present in the random sampling but absent in the <italic>n</italic>
+<sub>Vat</sub> were grouped, to calculate <italic>P</italic>
+<sub>other&#x02010;Vat</sub>. For each MLG collected from colonies and the &#x02018;other&#x02019; group, the square difference between <italic>P</italic>
+<sub>MLG&#x02010;Vat</sub> and the MLG frequency observed for the collected <italic>n</italic>
+<sub>Vat</sub> individuals was calculated and summed to determine the observed deviation. In total, 1000 sampled deviations were obtained according to this process, for 1000 random samplings without replacement of the same number <italic>n</italic>
+<sub>Vat</sub> among <italic>N</italic>
+<sub>Vat</sub> individuals. We investigated whether MLG distributions differed significantly between wingless populations and colonies, by calculating the <italic>P</italic>&#x02010;value of the observed deviation, estimated as the relative frequency of simulated deviations greater than the observed deviation. The same procedure was followed for samples collected from non&#x02010;<italic>Vat</italic> plants.</p></sec></sec></sec><sec id="eva12382-sec-0009"><title>Results</title><sec id="eva12382-sec-0010"><title>Effects of <italic>Vat</italic>&#x02010;mediated resistance on <italic>Aphis gossypii</italic> demography</title><sec id="eva12382-sec-0011"><title>Aphid density on <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> melon plants</title><p>On non&#x02010;<italic>Vat</italic> plants, <italic>A.&#x000a0;gossypii</italic> densities differed between trials, ranging from approximately 3000&#x000a0;aphids/m&#x000b2; in the SW in 2011 to more than 500&#x000a0;000&#x000a0;aphids/m&#x000b2; in the LA in 2013 (Figure&#x000a0;S1). Within trials, the highest aphid densities were observed on non&#x02010;<italic>Vat</italic> melon plants, except in the SW/2011 trial in which aphid densities were very low on all plants. The <italic>Vat</italic> and trial effects accounted for 64, 57 and 51% of the DI variation (adjusted <italic>r</italic>&#x000b2;) in the SE, SW and LA, respectively. The trials had a significant effect in the SE (<italic>P</italic>&#x000a0;=&#x000a0;0.012), but no effect in the SW (<italic>P</italic>&#x000a0;=&#x000a0;0.23) and LA (<italic>P</italic>&#x000a0;=&#x000a0;0.26). The <italic>Vat</italic> effect was highly significant in each of the three regions (<italic>P&#x000a0;</italic>&#x0003c;<italic>&#x000a0;</italic>0.0001). Because residuals did not fit normality in the SE, we confirmed the significant <italic>Vat</italic> effect using a nonparametric test (<italic>P</italic>&#x000a0;=&#x000a0;0.02). Nevertheless, in the SE, the resistance effect was not strong enough to keep aphid density below the threshold for insecticide sprays in 2009 and 2012, and <italic>Vat</italic>&#x02010;mediated resistance was clearly overcome in 2013 (Fig.&#x000a0;<xref rid="eva12382-fig-0001" ref-type="fig">1</xref>). In the SW, <italic>Vat</italic>&#x02010;mediated resistance remained above the threshold value, except in 2013. In the LA, <italic>Vat</italic>&#x02010;mediated resistance has been largely overcome since 2009.</p><fig fig-type="Figure" xml:lang="en" id="eva12382-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Effect of <italic>Vat</italic>&#x02010;mediated resistance on aphid density. The density index (<styled-content style="fixed-case">DI</styled-content>) observed in 654 areas (1&#x000a0;m&#x000b2;) in 21 trials, on <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> melon plants grown in three melon&#x02010;producing regions. For each year, median and mean are shown by full marks on the left and right sides of the data set. The green line indicates the threshold for insecticide application.</p></caption><graphic id="nlm-graphic-1" xlink:href="EVA-9-756-g001"/></fig></sec><sec id="eva12382-sec-0012"><title>Estimation of <italic>Aphis gossypii</italic> colony occurrence</title><p>The proportion of areas with and without large colonies are shown for each year and region in Fig.&#x000a0;<xref rid="eva12382-fig-0002" ref-type="fig">2</xref>. This proportion was used as a proxy for the occurrence of the dispersal morph because (i) the production of winged individuals is induced by crowding within the colony and (ii) we observed no nymphs with wing sleeves among the isolated aphids collected (<italic>N&#x000a0;</italic>=<italic>&#x000a0;</italic>3491) from leaves with a score of &#x0003c;3, from either <italic>Vat</italic> or non&#x02010;<italic>Vat</italic> plants. In the SE region, areas of non&#x02010;<italic>Vat</italic> plants with large colonies were observed erratically (Fig.&#x000a0;<xref rid="eva12382-fig-0002" ref-type="fig">2</xref>); thus, dispersal morphs were probably not produced every year. For <italic>Vat</italic> plants, we observed only one area in 1&#x000a0;year with large colonies, suggesting that &#x0003c;1% of the <italic>Vat</italic> plant area produced winged morphs over the 6&#x02010;year study period. In the SW trials, some non&#x02010;<italic>Vat</italic> plant areas were considered likely to produce dispersal morphs in 2008 and 2013, but none on the <italic>Vat</italic> plants. In the LA, production of winged individuals occurred every year for both <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> melon plants, but this happened significantly less often for <italic>Vat</italic> than for non&#x02010;<italic>Vat</italic> plants (<italic>&#x003c7;</italic>&#x000b2; test, <italic>P&#x000a0;</italic>&#x0003c;<italic>&#x000a0;</italic>0.0001).</p><fig fig-type="Figure" xml:lang="en" id="eva12382-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>Effect of <italic>Vat</italic>&#x02010;mediated resistance on the production of dispersal morphs. Number of 1&#x000a0;m&#x000b2; areas obtaining maximum scores of &#x02265;3 (producing dispersal morphs, plain bars) or &#x0003c;3 (not producing dispersal morphs, spotted bars) in the 21 trials in three melon&#x02010;producing regions. Number of areas on <italic>Vat</italic> plants are in red and on non&#x02010;<italic>Vat</italic> in blue. Stars indicate significant difference between pairs (<italic>&#x003c7;</italic>
+<sup>2</sup> test, <italic>P</italic>&#x000a0;&#x0003c;&#x000a0;0.05).</p></caption><graphic id="nlm-graphic-3" xlink:href="EVA-9-756-g002"/></fig></sec></sec><sec id="eva12382-sec-0013"><title>Effects of <italic>Vat</italic>&#x02010;mediated resistance on the genetic diversity of <italic>Aphis gossypii</italic> populations</title><p>We identified 616 MLGs in the 2251 winged and 3611 wingless <italic>A.&#x000a0;gossypii</italic> collected on melon plants in the three regions. They formed seven genetic clusters (Figure&#x000a0;S2). We identified 449 MLGs in the winged sample and 230 in the wingless sample. Most of the individuals collected from colonies (99.5%) and most of the wingless individuals (95%) were assigned to three clusters (Figure&#x000a0;S2) that were therefore considered to group MLGs belonging to the race specialized in Cucurbitaceae. We named them clusters I, II and III. Conversely, only 78% of the winged individuals were assigned to the Cucurbitaceae race (i.e. clusters I, II or III).</p><sec id="eva12382-sec-0014"><title>Spring migrant populations visiting melon crops</title><p>In the SE, the percentage of spring migrants belonging to the Cucurbitaceae race varied from 60% to 95% (Fig.&#x000a0;<xref rid="eva12382-fig-0003" ref-type="fig">3</xref>). Over the years, the frequency of cluster I spring migrants increased, whereas that of cluster III migrants decreased, mostly due to a decline in a particular MLG called NM1. In the SW, the proportion of spring migrants belonging to the Cucurbitaceae race varied from 40% to 85%. Cluster II spring migrants were the most abundant in all years, with no particular trend observed over time.</p><fig fig-type="Figure" xml:lang="en" id="eva12382-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>Genetic composition of spring migrant populations over time. Percentage of winged <italic>Aphis&#x000a0;gossypii</italic> belonging to the Cucurbitaceae race (grey) collected on melon plants during the 3&#x000a0;weeks after melon transplantation in <styled-content style="fixed-case">SE</styled-content> and <styled-content style="fixed-case">SW</styled-content> France and their distribution in the genetic clusters I (red), II (blue) and III (green). Bars indicate interval of confidence at <italic>&#x003b1;&#x000a0;</italic>=&#x000a0;0.05</p></caption><graphic id="nlm-graphic-5" xlink:href="EVA-9-756-g003"/></fig></sec><sec id="eva12382-sec-0015"><title>Wingless aphid populations on <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> melon plants</title><p>Overall, 147 of the 230 MLGs identified in the wingless aphids collected in field trials concerned only one individual. Four MLGs (CUC1, GWD, C6 and NM1) accounted for about 60% of the individuals. Cluster I grouped together 93 MLGs (68% of the individuals), cluster II contained 48 MLGs (14% of the individuals), and cluster III contained 22 MLGs (9% of the individuals). Only 23 MLGs were observed in the LA, and none of them had ever been observed in France. Only 33 MLGs were observed in both the SE and SW regions, and they belonged to the clusters I, II or III.</p><p>In the SE, we identified 114 MLGs in the 1466 individuals collected. No consistent change in the index of clonal diversity was found between paired aphid populations collected on <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants over the nine trials (Friedman test, <italic>&#x003b1;</italic>
+<sub>S</sub>&#x000a0;=&#x000a0;0.32, Figure&#x000a0;S3). However, when focusing on MLGs with frequencies &#x0003e;5% (Fig.&#x000a0;<xref rid="eva12382-fig-0004" ref-type="fig">4</xref>), we found significant differences between <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants in eight of nine trials. The genetic composition of <italic>A.&#x000a0;gossypii</italic> populations on both types of melon plant fluctuated from year to year, but some trends were observed. The high frequency of MLGs C9 (cluster I) and NM1 (cluster III) decreased over time, with these MLGs disappearing earlier on <italic>Vat</italic> plants than on non&#x02010;<italic>Vat</italic> plants. Conversely, an increase in MLG CUC1 (cluster I), first observed on <italic>Vat</italic> plants in 2008, was observed, with this MLG becoming predominant on both <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants in 2011. MLG GEL7 (cluster II) emerged in 2011 and was subsequently detected on both <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants.</p><fig fig-type="Figure" xml:lang="en" id="eva12382-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>Effect of <italic>Vat&#x02010;mediated resistance</italic> on the composition of the wingless aphid population on melon plants. Proportions of individuals collected from non&#x02010;<italic>Vat</italic> and <italic>Vat</italic> plants assigned to multilocus genotypes (<styled-content style="fixed-case">MLG</styled-content>s) (at frequencies &#x0003e;5%) in 21 trials in the <styled-content style="fixed-case">SE</styled-content> (<styled-content style="fixed-case">AVG</styled-content>&#x000a0;=&#x000a0;Avignon, <styled-content style="fixed-case">ARM</styled-content>&#x000a0;=&#x000a0;Aramon, <styled-content style="fixed-case">STA</styled-content>&#x000a0;=&#x000a0;St&#x02010;Andiol), <styled-content style="fixed-case">SW</styled-content> and the Lesser Antilles. <italic>&#x003c7;</italic>&#x000b2; tests (Monte Carlo) were used to compare the frequencies of aphid <styled-content style="fixed-case">MLG</styled-content>s on <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants.</p></caption><graphic id="nlm-graphic-7" xlink:href="EVA-9-756-g004"/></fig><p>In the SW, 125 MLGs were detected in 913 individuals. As in the SE, <italic>Vat</italic> had no consistent effect on the clonal diversity of these populations over the trials (Friedman test, <italic>&#x003b1;</italic>
+<sub>S</sub>&#x000a0;=&#x000a0;0.66, Figure&#x000a0;S3). Nevertheless, the composition of the aphid population was significantly different when <italic>Vat</italic> was present in all trials (Fig.&#x000a0;<xref rid="eva12382-fig-0004" ref-type="fig">4</xref>). The MLG NM1 was observed every year on non&#x02010;<italic>Vat</italic> plants, but only sporadically on <italic>Vat</italic> plants. Consistent with the findings for the SE, two MLGs emerged, CUC1 in 2009 and GEL7 in 2011, with CUC1 subsequently abundant on both <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants.</p><p>In the LA, 23 MLGs were detected in 1232 individuals, and 99.5% of these individuals had a cluster I MLG. Clonal diversity was lower than in the SE and SW (Figure&#x000a0;S3). Remarkably, clonal diversity was lower on non&#x02010;<italic>Vat</italic> plants than on <italic>Vat</italic> plants until 2009, with the opposite pattern observed during the next 2&#x000a0;years. Only two MLGs, C6 and GWD, were observed until 2009 (Fig.&#x000a0;<xref rid="eva12382-fig-0004" ref-type="fig">4</xref>). The composition of the aphid population was significantly different on <italic>Vat</italic> plants in only five of seven trials, reflecting a higher frequency of the MLG C6 on <italic>Vat</italic> plants than on non&#x02010;<italic>Vat</italic> plants.</p><p>We sampled one aphid per colony from 197 colonies in 14 trials: 141 from non&#x02010;<italic>Vat</italic> plants and 56 from <italic>Vat</italic> plants. We identified 26 different MLGs in these colonies (Table&#x000a0;<xref rid="eva12382-tbl-0002" ref-type="table-wrap">2</xref>), representing only 10&#x02013;21% of the MLGs assigned to clusters I, II or III, regardless of the cluster (Monte Carlo test, <italic>P&#x000a0;</italic>=<italic>&#x000a0;</italic>0.65). The individuals giving rise to colonies had MLGs with a frequency of more than 5% in the wingless population. The Shannon index was lower for colonies than for the wingless populations, for almost all <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plots (Figure&#x000a0;S4). We therefore investigated whether colonies developed at random from the wingless population.</p><table-wrap id="eva12382-tbl-0002" xml:lang="en" orientation="portrait" position="float"><label>Table 2</label><caption><p>Effect of <italic>Vat</italic>&#x02010;mediated resistance on aphid colony development on melon plants</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="2" valign="bottom" colspan="1">Region</th><th align="left" rowspan="2" valign="bottom" colspan="1">Cluster</th><th align="left" rowspan="2" valign="bottom" colspan="1">MLG</th><th align="left" colspan="2" style="border-bottom:solid 1px #000000" valign="bottom" rowspan="1">Non&#x02010;<italic>Vat</italic> plant</th><th align="left" colspan="2" style="border-bottom:solid 1px #000000" valign="bottom" rowspan="1">
+<italic>Vat</italic> plants</th></tr><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Collected</th><th align="left" valign="bottom" rowspan="1" colspan="1">Expected</th><th align="left" valign="bottom" rowspan="1" colspan="1">Collected</th><th align="left" valign="bottom" rowspan="1" colspan="1">Expected</th></tr></thead><tbody><tr><td align="left" rowspan="9" colspan="1">South&#x02010;east</td><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">C9</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1.8</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">CUC1</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">7.1</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">1.9</td></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">CUC6</td><td align="left" rowspan="1" colspan="1">12</td><td align="left" rowspan="1" colspan="1">1.4</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">0.4</td></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">CUCU91</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">0.4</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">II</td><td align="left" rowspan="1" colspan="1">CUCU3</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.1</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">III</td><td align="left" rowspan="1" colspan="1">NM1</td><td align="left" rowspan="1" colspan="1">4</td><td align="left" rowspan="1" colspan="1">3.9</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Others</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">6.3</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">1.7</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Total</td><td align="left" rowspan="1" colspan="1">21</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">4</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">
+<italic>P</italic>
+<sup><italic>a</italic></sup>
+</td><td align="left" rowspan="1" colspan="1">0.01</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">0.12</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="16" colspan="1">South&#x02010;west</td><td align="left" rowspan="1" colspan="1">NA</td><td align="left" rowspan="1" colspan="1">C11</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1.0</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">CU103</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1.0</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1.0</td></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">CUC1</td><td align="left" rowspan="1" colspan="1">14</td><td align="left" rowspan="1" colspan="1">11.4</td><td align="left" rowspan="1" colspan="1">4</td><td align="left" rowspan="1" colspan="1">5.3</td></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">CUC3</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.4</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">CUCU100</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.1</td></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">M12&#x02010;59</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.1</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">II</td><td align="left" rowspan="1" colspan="1">AM13&#x02010;2</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.1</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">II</td><td align="left" rowspan="1" colspan="1">CUCU3</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1.0</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">II</td><td align="left" rowspan="1" colspan="1">GEL7</td><td align="left" rowspan="1" colspan="1">14</td><td align="left" rowspan="1" colspan="1">4.5</td><td align="left" rowspan="1" colspan="1">9</td><td align="left" rowspan="1" colspan="1">2.4</td></tr><tr><td align="left" rowspan="1" colspan="1">II</td><td align="left" rowspan="1" colspan="1">MTB</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">7.2</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.8</td></tr><tr><td align="left" rowspan="1" colspan="1">II</td><td align="left" rowspan="1" colspan="1">U13&#x02010;39</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.1</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">III</td><td align="left" rowspan="1" colspan="1">M13&#x02010;28</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">0.2</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.1</td></tr><tr><td align="left" rowspan="1" colspan="1">III</td><td align="left" rowspan="1" colspan="1">NM1</td><td align="left" rowspan="1" colspan="1">6</td><td align="left" rowspan="1" colspan="1">5.2</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">1.4</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Others</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">15.5</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">7.8</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Total</td><td align="left" rowspan="1" colspan="1">48</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">19</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">
+<italic>P</italic>
+</td><td align="left" rowspan="1" colspan="1">&#x0003c;0.001</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">&#x0003c;0.001</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="10" colspan="1">Lesser Antilles</td><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">C6</td><td align="left" rowspan="1" colspan="1">9</td><td align="left" rowspan="1" colspan="1">10.2</td><td align="left" rowspan="1" colspan="1">18</td><td align="left" rowspan="1" colspan="1">12.3</td></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">GWD</td><td align="left" rowspan="1" colspan="1">35</td><td align="left" rowspan="1" colspan="1">49.9</td><td align="left" rowspan="1" colspan="1">15</td><td align="left" rowspan="1" colspan="1">17.1</td></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">GWD2</td><td align="left" rowspan="1" colspan="1">21</td><td align="left" rowspan="1" colspan="1">8.0</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">GWD3</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.8</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">GWD4</td><td align="left" rowspan="1" colspan="1">4</td><td align="left" rowspan="1" colspan="1">1.2</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">M12&#x02010;40</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.1</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">I</td><td align="left" rowspan="1" colspan="1">M12&#x02010;42</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">0.1</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Others</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">1.6</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">3.6</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Total</td><td align="left" rowspan="1" colspan="1">72</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">33</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">
+<italic>P</italic>
+</td><td align="left" rowspan="1" colspan="1">0.005</td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">0.08</td><td align="left" rowspan="1" colspan="1"/></tr></tbody></table><table-wrap-foot><fn id="eva12382-note-0003"><p>MLG, multilocus genotype.</p></fn><fn id="eva12382-note-0004"><p>Collected: number of individuals, by MLG, sampled from colonies on <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> melon plants in three melon&#x02010;producing regions. Expected: number of individuals, by MLG, estimated <italic>in silico</italic> from 751 and 715 wingless individuals collected on non&#x02010;<italic>Vat</italic> and <italic>Vat</italic> plants in the SE, 500 and 412 wingless individuals in the SW, and 591 and 641 individuals in the Lesser Antilles.</p></fn><fn id="eva12382-note-0005"><p>
+<italic>P</italic>
+<sup><italic>a</italic></sup> probability for H0 collected&#x000a0;=&#x000a0;expected.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &#x00026; Sons, Ltd</copyright-holder></permissions></table-wrap><p>In the SE, the MLG composition of the colonies collected from non&#x02010;<italic>Vat</italic> plants was significantly different from the expected composition (Table&#x000a0;<xref rid="eva12382-tbl-0002" ref-type="table-wrap">2</xref>); in particular, CUC6 was more frequent than expected. CUC6 was also more frequent than expected on <italic>Vat</italic> plants, although the MLG composition of the colonies on these plants did not differ significantly from the expected composition (permutation test, <italic>P&#x000a0;</italic>=<italic>&#x000a0;</italic>0.12), probably reflecting the low power of the test due to the small number of colonies considered.</p><p>In the SW, the MLG composition of the colonies differed significantly from the expected composition, with GEL7 more frequent than expected on both <italic>Vat</italic> and non&#x02010;<italic>Vat</italic> plants (Table&#x000a0;<xref rid="eva12382-tbl-0002" ref-type="table-wrap">2</xref>).</p><p>In the LA, the MLG composition of the colonies on non&#x02010;<italic>Vat</italic> plants was significantly different from the expected composition, with a higher frequency of GWD2 and a lower frequency of GWD than expected. On <italic>Vat</italic> plants, C6 was observed slightly more frequently than expected (<italic>P&#x000a0;</italic>=<italic>&#x000a0;</italic>0.08) (Table&#x000a0;<xref rid="eva12382-tbl-0002" ref-type="table-wrap">2</xref>).</p></sec></sec></sec><sec id="eva12382-sec-0016"><title>Discussion</title><p>According to the definition of a durable resistance (Johnson <xref rid="eva12382-bib-0023" ref-type="ref">1984</xref>) largely shared, assessing the durability of a resistance requires long&#x02010;term experiments at least at a regional scale. We addressed this issue, by studying aphid population dynamics and genetics on almost isogenic melon plants, differing only in terms of the presence or absence of <italic>Vat</italic>&#x02010;mediated resistance to the melon aphid <italic>A.&#x000a0;gossypii,</italic> in three regions over almost 10&#x000a0;years equivalent to numerous generations of aphids.</p><sec id="eva12382-sec-0017"><title>The effects of <italic>Vat</italic>&#x02010;mediated resistance depend on the genetic composition of the aphid populations</title><p>As mentioned previously, the dynamics of crop infestation by aphids displays four key phases: visiting by winged aphids, infestation with the wingless nymphs they laid, development into colonies and production of winged individuals for dispersal. The analysis of the dynamics of the first two phases on melon crops revealed a significant decrease in clonal diversity between the spring migrant and wingless populations, reflecting selection by the host plant (Thomas et&#x000a0;al. <xref rid="eva12382-bib-0041" ref-type="ref">2012a</xref>). We show here that this reduction in clonal diversity continues into the third phase, as only a proportion of the wingless individuals gave rise to colonies (Figure&#x000a0;S4). This decrease in diversity, which was particularly large if initial clonal diversity was high, probably reflects differences in fitness or competition between clones on melon plants, as previously observed for <italic>A.&#x000a0;gossypii</italic> populations infesting greenhouse cucurbits (Fuller et&#x000a0;al. <xref rid="eva12382-bib-0016" ref-type="ref">1999</xref>). The densities of wingless populations were reduced on <italic>Vat</italic> plants as compared to non&#x02010;<italic>Vat</italic> plants whatever the year and the region (Figure&#x000a0;S1), but significant differences were observed between regions.</p><p>In the SE and SW, the dynamics of the aphid population on <italic>Vat</italic> plants almost never reached phase 3 (Fig.&#x000a0;<xref rid="eva12382-fig-0002" ref-type="fig">2</xref>), showing that the containment of the populations by <italic>Vat</italic>&#x02010;mediated resistance was sufficient to prevent colony development and, thus, the production of dispersal morphs (Fig.&#x000a0;<xref rid="eva12382-fig-0002" ref-type="fig">2</xref>). Moreover, in these trials, <italic>Vat</italic>&#x02010;mediated resistance significantly selected against aphids assigned to the cluster III (Fig.&#x000a0;<xref rid="eva12382-fig-0004" ref-type="fig">4</xref>). These findings are consistent with those of a previous laboratory study (Lombaert et&#x000a0;al. <xref rid="eva12382-bib-0027" ref-type="ref">2009</xref>) showing that <italic>Vat</italic>&#x02010;mediated resistance affects the biotic potential of 90% of cluster III clones (NM1) and only 40% of clones assigned to cluster I or II on the basis of their MLG. This selective process has been at work for years in the SE, following the widespread deployment of <italic>Vat</italic> varieties over the agricultural landscape over the last 15&#x000a0;years, as NM1 accounted for 30% of the spring migrant population in 2004 but has not been observed since 2013. As NM1 was the main MLG of cluster III, the decrease in frequency of this MLG drove the decline in this cluster (Fig.&#x000a0;<xref rid="eva12382-fig-0003" ref-type="fig">3</xref>).</p><p>In the LA, <italic>Vat</italic>&#x02010;mediated resistance reduced the density of field populations but could not contain the development and dispersal of aphid colonies (Figure&#x000a0;S1 and Fig.&#x000a0;<xref rid="eva12382-fig-0002" ref-type="fig">2</xref>). Genetic diversity was very low in this geographic area, restricted to three major MLGs &#x02013; C6, GWD and GWD2 &#x02013; all belonging to cluster I (Table&#x000a0;<xref rid="eva12382-tbl-0002" ref-type="table-wrap">2</xref>). On <italic>Vat</italic> plants, only two MLGs developed large colonies, with C6 displaying a selective advantage over GWD (Table&#x000a0;<xref rid="eva12382-tbl-0002" ref-type="table-wrap">2</xref>). These findings are consistent with those of a laboratory study reporting a greater capacity to colonize <italic>Vat</italic> plants for a C6 clone than for GWD and GWD2 clones (Boissot et&#x000a0;al. <xref rid="eva12382-bib-0003" ref-type="ref">2016</xref>).</p><p>Overall, the results of this study indicate that <italic>Vat</italic>&#x02010;mediated resistance affected the <italic>A.&#x000a0;gossypii</italic> populations differently in the three regions, due to differences in the genetic composition of the populations visiting the crops, these differences themselves being conditioned by the agrosystem.</p></sec><sec id="eva12382-sec-0018"><title>The durability of <italic>Vat</italic>&#x02010;mediated resistance depends on regular bottlenecks occurring in the agrosystem</title><p>We addressed Mundt's question &#x02018;How do landscape factors influence the population biology of plant pathogens and disease spread?&#x02019; raised in a recent review on resistance durability (Mundt <xref rid="eva12382-bib-0031" ref-type="ref">2014</xref>). Local selective effects, such as those described above for melon crops during the growing season, may jeopardize the effectiveness of the resistance gene. Nevertheless, local effects may be effaced by gene flow and local extinctions (Burdon and Thrall <xref rid="eva12382-bib-0008" ref-type="ref">1999</xref>; Kaltz and Shykoff <xref rid="eva12382-bib-0025" ref-type="ref">2002</xref>). In <italic>A.&#x000a0;gossypii</italic>, a cosmopolitan pest occurring in various climates and agrosystems, gene flow is dependent on the mode of reproduction and dispersion capacity. Local extinction is dependent on dispersion capacity and resource availability. We inferred the durability of the <italic>Vat&#x02010;</italic>mediated resistance in the three agrosystems, taking climate, cucurbit resources and <italic>Vat</italic> deployment characteristics into account, together with aphid population data over a number of years.</p><p>The SW and SE regions have several features in common: (i) cold winters with short day lengths that might induce sexual reproduction in <italic>A.&#x000a0;gossypii</italic> (Thomas et&#x000a0;al. <xref rid="eva12382-bib-0041" ref-type="ref">2012a</xref>); (ii) MLGs recurring from year to year (Fig.&#x000a0;<xref rid="eva12382-fig-0004" ref-type="fig">4</xref>), indicating that a proportion of the population overwinters parthenogenetically; and (iii) erratic production of dispersal morphs on melon crops (Fig.&#x000a0;<xref rid="eva12382-fig-0002" ref-type="fig">2</xref>). However, the SW and SE agrosystems also displayed several significant differences. In the SE, melon crops account for about 70% of the area under cucurbits grown from January until the end of the autumn, either under cover or in open fields. On the contrary, the melon is the only cucurbit grown at a large scale in the SW, exclusively in open fields, from spring to summer. This difference may explain why spring migrants from the Cucurbitaceae race were less frequent in the SW than in the SE (Fig.&#x000a0;<xref rid="eva12382-fig-0003" ref-type="fig">3</xref>). Second, the rate of production of dispersal morphs on melon crops was lower in the SW than in the SE (Fig.&#x000a0;<xref rid="eva12382-fig-0002" ref-type="fig">2</xref>). Thus, aphid populations specialized in melon plants probably experience a higher rate of local extinctions at the end of the cropping season and during the winter in the SW. For example, MTB appeared to be competitive during infestation in 2008, but it was not observed in subsequent years, either among the spring migrants or in the wingless populations. Third, <italic>Vat</italic> varieties have been deployed at a large scale in the SE and imposed a selective pressure on aphid populations for several years, favouring the elimination of clones belonging to the cluster III such as NM1 and the emergence of clones belonging to cluster I and able to multiply on <italic>Vat</italic> plants such as CUC1. CUC1 has been observed every year since 2007 (18% of the spring migrants) and has predominated since 2011 (74% of the spring migrants (Fig.&#x000a0;<xref rid="eva12382-fig-0003" ref-type="fig">3</xref>). CUC1 did not appear to be highly competitive for the production of dispersal morphs on non&#x02010;<italic>Vat</italic> or <italic>Vat</italic> plants (Table&#x000a0;<xref rid="eva12382-tbl-0002" ref-type="table-wrap">2</xref>), but its frequency increased steadily at the landscape level, probably reflecting its considerable overwintering capacity. In the SE, the CUC1 clone is probably jeopardizing the efficacy of <italic>Vat</italic>&#x02010;mediated resistance. On the contrary, in the SW, the frequency of cluster III MLGs, such as NM1, was not decreasing with time (Fig.&#x000a0;<xref rid="eva12382-fig-0003" ref-type="fig">3</xref>), reflecting an absence of recurrent selection against individuals belonging to this cluster in this region where <italic>Vat</italic> varieties have not been deployed. Remarkably, CUC1, the predominant MLG in the SE after 2009, became predominant in the wingless population in the SW after 2011 (Fig.&#x000a0;<xref rid="eva12382-fig-0004" ref-type="fig">4</xref>). This suggests an expansion of CUC1 from the SE to the SW, probably through the transport of infested plantlets rather than through dispersal flights, although the frequency and efficiency of long&#x02010;distance flights by parthenogenetic populations are poorly understood. The deployment of <italic>Vat</italic>&#x02010;mediated resistance in the SW might favour the development of this clone, but the combination of a sharp bottleneck at the dispersal morph production stage on crops and heavy local extinctions in the winter may decrease the risk of its expansion.</p><p>The LA region has insular agrosystems, in which no dispersion of aphids over long distances is expected, and a tropical climate in which no sexual reproduction occurs. Thus, resource availability and local dispersion of the clones are the key factors to be considered. Cucurbit resources are typically available year&#x02010;round, because cucurbit crops are grown throughout the year (pumpkin and chayote in Creole gardens, with melons being the second most abundant fruit produced after the banana). High rates of local extinction were therefore not expected, and no incidences of local extinction were observed in this study. Large numbers of dispersal morphs were produced in this region, with no bottleneck occurring at this level. <italic>Vat</italic> varieties were not deployed in LA, at least until 2011, but two MLGs, GWD and C6, appeared to display pre&#x02010;existing adaptation to <italic>Vat</italic>&#x02010;mediated resistance, as they were immediately able to develop very large colonies on <italic>Vat</italic> plants. This hypothesis was supported by the detection of C6 since 2002 on Guadeloupe (Carletto et&#x000a0;al. <xref rid="eva12382-bib-0009" ref-type="ref">2009</xref>). Similarly, virulent biotypes of <italic>Schizaphis graminum</italic> were observed before the deployment of certain resistance genes in wheat (Porter et&#x000a0;al. <xref rid="eva12382-bib-0035" ref-type="ref">1997</xref>). However, this selective advantage by itself did not allow these virulent biotypes to become predominant in the resistant crops. Conversely, in the LA, <italic>Vat</italic>&#x02010;mediated resistance is clearly not durable because <italic>A.&#x000a0;gossypii</italic> clones capable of overcoming this resistance expanded as soon as <italic>Vat</italic> plants were grown and lasted over years.</p></sec><sec id="eva12382-sec-0019"><title>How can we increase the durability of <italic>Vat</italic>&#x02010;mediated resistance?</title><p>In the last decade, there has been some application of evolutionary principles to manage plant resistance efficiency through time in order to achieve sustainable disease control in agricultural ecosystems (Thrall et&#x000a0;al. <xref rid="eva12382-bib-0043" ref-type="ref">2011</xref>; Zhan et&#x000a0;al. <xref rid="eva12382-bib-0047" ref-type="ref">2015</xref>). The spatial scales also appeared crucial to understanding the evolution of plants and pathogens interactions and landscape influence on evolution of resistance efficiency has been investigated (Papaix et&#x000a0;al. <xref rid="eva12382-bib-0033" ref-type="ref">2011</xref>, <xref rid="eva12382-bib-0034" ref-type="ref">2015</xref>; Fabre et&#x000a0;al. <xref rid="eva12382-bib-0015" ref-type="ref">2015</xref>). Our results suggest that, for a cosmopolitan pest such as <italic>A</italic>.&#x000a0;<italic>gossypii</italic>, decisions concerning resistance deployment should take into account the population genetic structure of the pest at the regional scale. This is consistent with the recent extension of the influenza paradigm to the control of plant pathogens. This paradigm suggests that a knowledge of pathogen population genetics and evolution through continual sampling and monitoring should drive the temporal changes in the deployment of effective resistance genes (Michelmore et&#x000a0;al. <xref rid="eva12382-bib-0030" ref-type="ref">2013</xref>). However, this strategy of deploying different genes is hampered by the scarcity of resistance genes and a lack of allelic diversity (see examples in Sage&#x02010;Palloix et&#x000a0;al. (<xref rid="eva12382-bib-0039" ref-type="ref">2007</xref>); Dogimont et&#x000a0;al. (<xref rid="eva12382-bib-0013" ref-type="ref">2010</xref>)).</p><p>In addition, the observations reported here suggest that two processes, the erratic production of small numbers of dispersal morphs on crops and local winter extinction, induce genetic drift and condition the dynamics of populations adapted to <italic>Vat</italic> plants. The manipulation of agrosystems to enhance winter extinction appears unrealistic in the cucurbit/aphid system. In contrast, several strategies could be investigated to avoid production of dispersal morphs. First specific breeding programme could be built to combine several resistance genes. Enhanced genetic drift due to QTLs has recently been shown to contribute to the durability of a major gene conferring resistance to a virus (Quenouille et&#x000a0;al. <xref rid="eva12382-bib-0037" ref-type="ref">2013</xref>). Similar effects may occur in many plant&#x02013;pathogen systems and, by analogy, in plant&#x02013;aphid systems. The use of such a strategy would require the identification of melon QTLs decreasing the production of dispersal morphs on <italic>Vat</italic> plants for use in the breeding programme. Second, insecticide applications to keep aphid population densities under the threshold of winged individual differentiation could be a strategy. This strategy is probably implemented by growers without particular guidance. Third, biocontrol strategy could be associated with <italic>Vat</italic> resistance deployment to keep aphid population levels under the fateful threshold for dispersion occurrence. This strategy could be easily implemented for melons grown in greenhouse where biological control is already used. In open field, biocontrol by conservation is under investigation to decrease the risk of development of aphid colonies on <italic>Vat</italic> plants (Schoeny et&#x000a0;al. <xref rid="eva12382-bib-0501" ref-type="ref">2014</xref>). Because the combination of different agricultural practices and their spatial and temporal management may lead to local bottlenecks of aphid populations resulting in loss of locally adapted variants, it could play a critical role in determining <italic>Vat</italic> resistance durability.</p></sec></sec><sec id="eva12382-sec-0021"><title>Data archiving statement</title><p>Data available from the Dryad Digital Repository: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5061/dryad.gf54q">http://dx.doi.org/10.5061/dryad.gf54q</ext-link>.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material content-type="local-data"><caption><p>
+<bold>Table&#x000a0;S1.</bold> Number of winged aphids collected on melon plants 1&#x02013;3&#x000a0;weeks after transplantation, in sites located in SE and SW France.</p><p>
+<bold>Figure&#x000a0;S1</bold>. Effect of <italic>Vat&#x02010;</italic>mediated resistance on aphid density.</p><p>
+<bold>Figure&#x000a0;S2</bold>. Clustering of the MLGs detected in the aphid populations collected on melon plants.</p><p>
+<bold>Figure&#x000a0;S3</bold>. Effect of <italic>Vat&#x02010;mediated resistance</italic> on aphid diversity.</p><p>
+<bold>Figure&#x000a0;S4</bold>. Effect of <italic>Vat&#x02010;mediated resistance</italic> on the diversity of aphids giving rise to colonies.</p></caption><media xlink:href="EVA-9-756-s001.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="eva12382-sec-0020"><title>Acknowledgements</title><p>We thank GEVES for providing information on the declared aphid&#x02010;resistant cultivars in the French and EU catalogues. We would like to thank Virginie Chareyron, Fabrice Mausse and the staff of the experimental units of the <italic>Institut National de la Recherche Agronomique</italic> in Guadeloupe and Avignon and the <italic>Centre d'Exp&#x000e9;rimentation des Fruits et L&#x000e9;gumes</italic>, especially Daniel Lavigne, for technical assistance. We would also like to thank the seed companies Gautier, Rijk Zwaan, ASL, Takii and De Ruiter for technical assistance. Joel Chad&#x00153;uf helped develop the permutation tests, and Michel Pitrat participated in the discussion on Cucurbitaceae cultivation in the different agrosystems tested; we would also like to thank these two individuals for reviewing this manuscript. This work was successively supported through funding from the French Ministry of Agriculture (contract C06/02), and the VirAphid project (Project ANR&#x02010;2010&#x02010;STRA&#x02010;001&#x02010;01) of the <italic>Agence Nationale de la Recherche</italic> (ANR). Sophie Thomas received a PhD fellowship from INRA and the R&#x000e9;gion Provence&#x02010;Alpes&#x02010;C&#x000f4;te d'Azur, France.</p></ack><ref-list content-type="cited-references" id="eva12382-bibl-0001"><title>Literature cited</title><ref id="eva12382-bib-0001"><mixed-citation publication-type="book" id="eva12382-cit-0001">
+<string-name>
+<surname>Blackman</surname>, <given-names>R. L.</given-names>
+</string-name>, and <string-name>
+<given-names>V. F.</given-names>
+<surname>Eastop</surname>
+</string-name>
+<year>2007</year>
+<chapter-title>Taxonomic issues</chapter-title> In: <person-group person-group-type="editor"><name><surname>van Emden</surname><given-names>H. F.</given-names></name></person-group>, and <person-group person-group-type="editor"><name><surname>Harrigton</surname><given-names>R.</given-names></name></person-group>, eds. <source>Aphids as Crop Pests, pp. 10&#x02013;11</source>. <publisher-name>CABI</publisher-name>, <publisher-loc>Oxfordshire, UK</publisher-loc>.</mixed-citation></ref><ref id="eva12382-bib-0002"><mixed-citation publication-type="journal" id="eva12382-cit-0002">
+<string-name>
+<surname>Boissot</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Thomas</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Sauvion</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Marchal</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Pavis</surname>
+</string-name>, and <string-name>
+<given-names>C.</given-names>
+<surname>Dogimont</surname>
+</string-name>
+<year>2010</year>
+<article-title>Mapping and validation of QTLs for resistance to aphids and whiteflies in melon</article-title>. <source>Theoretical and Applied Genetics</source>
+<volume>121</volume>:<fpage>117</fpage>&#x02013;<lpage>125</lpage>.<pub-id pub-id-type="pmid">20204320</pub-id></mixed-citation></ref><ref id="eva12382-bib-0003"><mixed-citation publication-type="journal" id="eva12382-cit-0003">
+<string-name>
+<surname>Boissot</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Thomas</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Chovelon</surname>
+</string-name>, and <string-name>
+<given-names>H.</given-names>
+<surname>Lecoq</surname>
+</string-name>
+<year>2016</year>
+<article-title>NBS&#x02010;LRR&#x02010;mediated resistance triggered by aphids: viruses do not adapt; aphids adapt via different mechanisms</article-title>. <source>Bmc Plant Biology</source>
+<volume>16</volume>:<fpage>25</fpage>.<pub-id pub-id-type="pmid">26801763</pub-id></mixed-citation></ref><ref id="eva12382-bib-0004"><mixed-citation publication-type="journal" id="eva12382-cit-0004">
+<string-name>
+<surname>Boll</surname>, <given-names>R.</given-names>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Franco</surname>
+</string-name>, <string-name>
+<given-names>A.&#x02010;M.</given-names>
+<surname>Geria</surname>
+</string-name>, <string-name>
+<given-names>J.&#x02010;B.</given-names>
+<surname>Moutin</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Rochat</surname>
+</string-name>, and <string-name>
+<given-names>L.</given-names>
+<surname>Lapchin</surname>
+</string-name>
+<year>2002</year>
+<article-title>D&#x000e9;nombrement visuel du puceron <italic>Aphis gossypii</italic> Glover en culture de melon au champ</article-title>. <source>Phytoma</source>
+<volume>548</volume>:<fpage>47</fpage>&#x02013;<lpage>50</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0005"><mixed-citation publication-type="journal" id="eva12382-cit-0005">
+<string-name>
+<surname>van den Bosch</surname>, <given-names>F.</given-names>
+</string-name>, and <string-name>
+<given-names>C. A.</given-names>
+<surname>Gilligan</surname>
+</string-name>
+<year>2003</year>
+<article-title>Measures of durability of resistance</article-title>. <source>Phytopathology</source>
+<volume>93</volume>:<fpage>616</fpage>&#x02013;<lpage>625</lpage>.<pub-id pub-id-type="pmid">18942985</pub-id></mixed-citation></ref><ref id="eva12382-bib-0006"><mixed-citation publication-type="journal" id="eva12382-cit-0006">
+<string-name>
+<surname>Br&#x000e9;vault</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Carletto</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Tribot</surname>
+</string-name>, and <string-name>
+<given-names>F.</given-names>
+<surname>Vanlerberghe&#x02010;Masutti</surname>
+</string-name>
+<year>2011</year>
+<article-title>Insecticide use and competition shape the genetic diversity of the aphid <italic>Aphis gossypii</italic> in a cotton&#x02010;growing landscape</article-title>. <source>Bulletin of Entomological Research</source>
+<volume>101</volume>:<fpage>407</fpage>&#x02013;<lpage>413</lpage>.<pub-id pub-id-type="pmid">21320362</pub-id></mixed-citation></ref><ref id="eva12382-bib-0007"><mixed-citation publication-type="journal" id="eva12382-cit-0007">
+<string-name>
+<surname>Brown</surname>, <given-names>J. K. M.</given-names>
+</string-name>
+<year>2015</year>
+<article-title>Durable resistance of crops to disease: a Darwinian perspective</article-title>. <source>Annual Review of Phytopathology</source>
+<volume>53</volume>:<fpage>513</fpage>&#x02013;<lpage>519</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0008"><mixed-citation publication-type="journal" id="eva12382-cit-0008">
+<string-name>
+<surname>Burdon</surname>, <given-names>J. J.</given-names>
+</string-name>, and <string-name>
+<given-names>P. H.</given-names>
+<surname>Thrall</surname>
+</string-name>
+<year>1999</year>
+<article-title>Spatial and temporal patterns in coevolving plant and pathogen associations</article-title>. <source>American Naturalist</source>
+<volume>153</volume>:<fpage>15</fpage>&#x02013;<lpage>33</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0009"><mixed-citation publication-type="journal" id="eva12382-cit-0009">
+<string-name>
+<surname>Carletto</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Lombaert</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Chavigny</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Brevault</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Lapchin</surname>
+</string-name>, and <string-name>
+<given-names>F.</given-names>
+<surname>Vanlerberghe&#x02010;Masutti</surname>
+</string-name>
+<year>2009</year>
+<article-title>Ecological specialization of the aphid <italic>Aphis gossypii</italic> Glover on cultivated host plants</article-title>. <source>Molecular Ecology</source>
+<volume>18</volume>:<fpage>2198</fpage>&#x02013;<lpage>2212</lpage>.<pub-id pub-id-type="pmid">19635073</pub-id></mixed-citation></ref><ref id="eva12382-bib-0010"><mixed-citation publication-type="journal" id="eva12382-cit-0010">
+<string-name>
+<surname>Carletto</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Martin</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Vanlerberghe&#x02010;Masutti</surname>
+</string-name>, and <string-name>
+<given-names>T.</given-names>
+<surname>Br&#x000e9;vault</surname>
+</string-name>
+<year>2010</year>
+<article-title>Insecticide resistance traits differ among and within host races in <italic>Aphis gossypii</italic>
+</article-title>. <source>Pest Management Science</source>
+<volume>66</volume>:<fpage>301</fpage>&#x02013;<lpage>307</lpage>.<pub-id pub-id-type="pmid">19908228</pub-id></mixed-citation></ref><ref id="eva12382-bib-0011"><mixed-citation publication-type="journal" id="eva12382-cit-0011">
+<string-name>
+<surname>Dedryver</surname>, <given-names>C.&#x02010;A.</given-names>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Le Ralec</surname>
+</string-name>, and <string-name>
+<given-names>F.</given-names>
+<surname>Fabre</surname>
+</string-name>
+<year>2010</year>
+<article-title>The conflicting relationships between aphids and men: a review of aphid damage and control strategies</article-title>. <source>Comptes&#x02010;Rendus de Biologies</source>
+<volume>333</volume>:<fpage>539</fpage>&#x02013;<lpage>553</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0012"><mixed-citation publication-type="book" id="eva12382-cit-0012">
+<string-name>
+<surname>Dixon</surname>, <given-names>A. F. G.</given-names>
+</string-name>
+<year>1985</year>
+<source>Aphid Ecology</source>. <publisher-name>Chapman, Hall</publisher-name>, <publisher-loc>London, UK</publisher-loc>.</mixed-citation></ref><ref id="eva12382-bib-0013"><mixed-citation publication-type="journal" id="eva12382-cit-0013">
+<string-name>
+<surname>Dogimont</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Bendahmane</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Chovelon</surname>
+</string-name>, and <string-name>
+<given-names>N.</given-names>
+<surname>Boissot</surname>
+</string-name>
+<year>2010</year>
+<article-title>Aphid resistance in cultivated crops: genetic and molecular bases and interaction with aphid populations</article-title>. <source>Comptes&#x02010;Rendus de Biologies</source>
+<volume>333</volume>:<fpage>566</fpage>&#x02013;<lpage>576</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0014"><mixed-citation publication-type="journal" id="eva12382-cit-0014">
+<string-name>
+<surname>Evanno</surname>, <given-names>G.</given-names>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Regnaut</surname>
+</string-name>, and <string-name>
+<given-names>J.</given-names>
+<surname>Goudet</surname>
+</string-name>
+<year>2005</year>
+<article-title>Detecting the number of clusters of individuals using the software STRUCTURE: a simulation study</article-title>. <source>Molecular Ecology</source>
+<volume>14</volume>:<fpage>2611</fpage>&#x02013;<lpage>2620</lpage>.<pub-id pub-id-type="pmid">15969739</pub-id></mixed-citation></ref><ref id="eva12382-bib-0015"><mixed-citation publication-type="journal" id="eva12382-cit-0015">
+<string-name>
+<surname>Fabre</surname>, <given-names>F.</given-names>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Rousseau</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Mailleret</surname>
+</string-name>, and <string-name>
+<given-names>B.</given-names>
+<surname>Moury</surname>
+</string-name>
+<year>2015</year>
+<article-title>Epidemiological and evolutionary management of plant resistance: optimizing the deployment of cultivar mixtures in time and space in agricultural landscapes</article-title>. <source>Evolutionary Applications</source>
+<volume>8</volume>:<fpage>919</fpage>&#x02013;<lpage>932</lpage>.<pub-id pub-id-type="pmid">26640518</pub-id></mixed-citation></ref><ref id="eva12382-bib-0016"><mixed-citation publication-type="journal" id="eva12382-cit-0016">
+<string-name>
+<surname>Fuller</surname>, <given-names>S. J.</given-names>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Chavigny</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Lapchin</surname>
+</string-name>, and <string-name>
+<given-names>F.</given-names>
+<surname>Vanlerberghe&#x02010;Masutti</surname>
+</string-name>
+<year>1999</year>
+<article-title>Variation in clonal diversity in glasshouse infestations of the aphid, <italic>Aphis gossypii</italic> Glover in southern France</article-title>. <source>Molecular Ecology</source>
+<volume>8</volume>:<fpage>1867</fpage>&#x02013;<lpage>1877</lpage>.<pub-id pub-id-type="pmid">10620230</pub-id></mixed-citation></ref><ref id="eva12382-bib-0017"><mixed-citation publication-type="journal" id="eva12382-cit-0017">
+<string-name>
+<surname>Gould</surname>, <given-names>F.</given-names>
+</string-name>
+<year>1986a</year>
+<article-title>Simulation models for predicting durability of insect&#x02010;resistant germ plasm: a deterministic diploid, two&#x02010;locus model</article-title>. <source>Environmental Entomology</source>
+<volume>15</volume>:<fpage>1</fpage>&#x02013;<lpage>10</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0018"><mixed-citation publication-type="journal" id="eva12382-cit-0018">
+<string-name>
+<surname>Gould</surname>, <given-names>F.</given-names>
+</string-name>
+<year>1986b</year>
+<article-title>Simulation models for predicting durability of insect&#x02010;resistant germ plasm: hessian fly (Diptera: Cecidomyiidae)&#x02010;resistant winter wheat</article-title>. <source>Environmental Entomology</source>
+<volume>15</volume>:<fpage>11</fpage>&#x02013;<lpage>23</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0019"><mixed-citation publication-type="journal" id="eva12382-cit-0019">
+<string-name>
+<surname>Gould</surname>, <given-names>F.</given-names>
+</string-name>
+<year>1998</year>
+<article-title>Sustainability of transgenic insecticidal cultivars: integrating pest genetics and ecology</article-title>. <source>Annual Review of Entomology</source>
+<volume>43</volume>:<fpage>701</fpage>&#x02013;<lpage>726</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0020"><mixed-citation publication-type="journal" id="eva12382-cit-0020">
+<string-name>
+<surname>Gould</surname>, <given-names>F.</given-names>
+</string-name>
+<year>2003</year>
+<article-title>Bt&#x02010;resistance management&#x02010;theory meets data</article-title>. <source>Nature Biotechnology</source>
+<volume>21</volume>:<fpage>1450</fpage>&#x02013;<lpage>1451</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0021"><mixed-citation publication-type="journal" id="eva12382-cit-0021">
+<string-name>
+<surname>Granett</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<given-names>M. A.</given-names>
+<surname>Walker</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Kocsis</surname>
+</string-name>, and <string-name>
+<given-names>A. D.</given-names>
+<surname>Omer</surname>
+</string-name>
+<year>2001</year>
+<article-title>Biology and management of grape <italic>Phylloxera</italic>
+</article-title>. <source>Annual Review of Entomology</source>
+<volume>46</volume>:<fpage>387</fpage>&#x02013;<lpage>412</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0022"><mixed-citation publication-type="journal" id="eva12382-cit-0022">
+<string-name>
+<surname>Hales</surname>, <given-names>D. F.</given-names>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Tomiuk</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>W&#x000f6;hrmann</surname>
+</string-name>, and <string-name>
+<given-names>P.</given-names>
+<surname>Sunnucks</surname>
+</string-name>
+<year>1997</year>
+<article-title>Evolutionary and genetic aspects of aphid biology: a review</article-title>. <source>European Journal of Entomology</source>
+<volume>94</volume>:<fpage>1</fpage>&#x02013;<lpage>55</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0023"><mixed-citation publication-type="journal" id="eva12382-cit-0023">
+<string-name>
+<surname>Johnson</surname>, <given-names>R.</given-names>
+</string-name>
+<year>1984</year>
+<article-title>A critical analysis of durable resistance</article-title>. <source>Annual Review of Phytopathology</source>
+<volume>22</volume>:<fpage>309</fpage>&#x02013;<lpage>330</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0024"><mixed-citation publication-type="journal" id="eva12382-cit-0024">
+<string-name>
+<surname>Johnson</surname>, <given-names>R.</given-names>
+</string-name>, and <string-name>
+<given-names>C. N.</given-names>
+<surname>Law</surname>
+</string-name>
+<year>1975</year>
+<article-title>Genetic control of durable resistance to yellow rust (<italic>Puccinia striiformis</italic>) in the wheat cultivar Hybride de Bersee</article-title>. <source>Annals of Applied Biology</source>
+<volume>81</volume>:<fpage>385</fpage>&#x02013;<lpage>391</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0025"><mixed-citation publication-type="journal" id="eva12382-cit-0025">
+<string-name>
+<surname>Kaltz</surname>, <given-names>O.</given-names>
+</string-name>, and <string-name>
+<given-names>J. A.</given-names>
+<surname>Shykoff</surname>
+</string-name>
+<year>2002</year>
+<article-title>Within&#x02010; and among&#x02010;population variation in infectivity, latency and spore production in a host&#x02010;pathogen system</article-title>. <source>Journal of Evolutionary Biology</source>
+<volume>15</volume>:<fpage>850</fpage>&#x02013;<lpage>860</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0026"><mixed-citation publication-type="miscellaneous" id="eva12382-cit-0026">
+<string-name>
+<surname>Korosi</surname>, <given-names>G. A.</given-names>
+</string-name>, <string-name>
+<given-names>C. J.</given-names>
+<surname>Trethowan</surname>
+</string-name>, and <string-name>
+<given-names>K. S.</given-names>
+<surname>Powell</surname>
+</string-name>
+<year>2007</year>
+<article-title>Screening for rootstock resistance to grapevine Phylloxera genotypes from Australian vineyards under controlled conditions</article-title>. Paper read at Third International Grapevine Phylloxera Symposium.</mixed-citation></ref><ref id="eva12382-bib-0027"><mixed-citation publication-type="journal" id="eva12382-cit-0027">
+<string-name>
+<surname>Lombaert</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Carletto</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Piotte</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Fauvergue</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Lecoq</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Vanlerberghe&#x02010;Masutti</surname>
+</string-name>, and <string-name>
+<given-names>L.</given-names>
+<surname>Lapchin</surname>
+</string-name>
+<year>2009</year>
+<article-title>Response of the melon aphid, <italic>Aphis gossypii</italic>, to host&#x02010;plant resistance: evidence for high adaptative potential despite low genetic variability</article-title>. <source>Entomologia Experimentalis et Applicata</source>
+<volume>133</volume>:<fpage>46</fpage>&#x02013;<lpage>56</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0028"><mixed-citation publication-type="book" id="eva12382-cit-0028">
+<string-name>
+<surname>Manly</surname>, <given-names>B. F. J.</given-names>
+</string-name>
+<year>1991</year>
+<source>Randomization and Monte Carlo Methods in Biology</source>. <publisher-name>Champan and Hall</publisher-name>, <publisher-loc>London</publisher-loc>.</mixed-citation></ref><ref id="eva12382-bib-0029"><mixed-citation publication-type="journal" id="eva12382-cit-0029">
+<string-name>
+<surname>McDonald</surname>, <given-names>B. A.</given-names>
+</string-name>, and <string-name>
+<given-names>C.</given-names>
+<surname>Linde</surname>
+</string-name>
+<year>2002</year>
+<article-title>Pathogen population genetics, evolutionary potential, and durable resistance</article-title>. <source>Annual Review of Phytopathology</source>
+<volume>40</volume>:<fpage>349</fpage>&#x02013;<lpage>379</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0030"><mixed-citation publication-type="journal" id="eva12382-cit-0030">
+<string-name>
+<surname>Michelmore</surname>, <given-names>R. W.</given-names>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Christopoulou</surname>
+</string-name>, and <string-name>
+<given-names>K. S.</given-names>
+<surname>Caldwell</surname>
+</string-name>
+<year>2013</year>
+<article-title>Impacts of resistance gene genetics, function, and evolution on a durable future</article-title>. <source>Annual Review of Phytopathology</source>
+<volume>51</volume>:<fpage>291</fpage>&#x02013;<lpage>319</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0031"><mixed-citation publication-type="journal" id="eva12382-cit-0031">
+<string-name>
+<surname>Mundt</surname>, <given-names>C.</given-names>
+</string-name>
+<year>2014</year>
+<article-title>Durable resistance: a key to sustainable management of pathogens and pests</article-title>. <source>Infection, Genetics and Evolution</source>
+<volume>27</volume>:<fpage>446</fpage>&#x02013;<lpage>455</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0032"><mixed-citation publication-type="journal" id="eva12382-cit-0032">
+<string-name>
+<surname>Nelson</surname>, <given-names>R. R.</given-names>
+</string-name>
+<year>1978</year>
+<article-title>Genetics of horizontal resistance to plant diseases</article-title>. <source>Annual Review of Phytopathology</source>
+<volume>16</volume>:<fpage>359</fpage>&#x02013;<lpage>378</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0033"><mixed-citation publication-type="journal" id="eva12382-cit-0033">
+<string-name>
+<surname>Papaix</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Goyeau</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Du Cheyron</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Monod</surname>
+</string-name>, and <string-name>
+<given-names>C.</given-names>
+<surname>Lannou</surname>
+</string-name>
+<year>2011</year>
+<article-title>Influence of cultivated landscape composition on variety resistance: an assessment based on wheat leaf rust epidemics</article-title>. <source>New Phytologist</source>
+<volume>191</volume>:<fpage>1095</fpage>&#x02013;<lpage>1107</lpage>.<pub-id pub-id-type="pmid">21585391</pub-id></mixed-citation></ref><ref id="eva12382-bib-0034"><mixed-citation publication-type="journal" id="eva12382-cit-0034">
+<string-name>
+<surname>Papaix</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<given-names>J. J.</given-names>
+<surname>Burdon</surname>
+</string-name>, <string-name>
+<given-names>J. S.</given-names>
+<surname>Zhan</surname>
+</string-name>, and <string-name>
+<given-names>P. H.</given-names>
+<surname>Thrall</surname>
+</string-name>
+<year>2015</year>
+<article-title>Crop pathogen emergence and evolution in agro&#x02010;ecological landscapes</article-title>. <source>Evolutionary Applications</source>
+<volume>8</volume>:<fpage>385</fpage>&#x02013;<lpage>402</lpage>.<pub-id pub-id-type="pmid">25926883</pub-id></mixed-citation></ref><ref id="eva12382-bib-0035"><mixed-citation publication-type="journal" id="eva12382-cit-0035">
+<string-name>
+<surname>Porter</surname>, <given-names>D. R.</given-names>
+</string-name>, <string-name>
+<given-names>J. D.</given-names>
+<surname>Burd</surname>
+</string-name>, <string-name>
+<given-names>K. A.</given-names>
+<surname>Shufran</surname>
+</string-name>, <string-name>
+<given-names>J. A.</given-names>
+<surname>Webster</surname>
+</string-name>, and <string-name>
+<given-names>G. L.</given-names>
+<surname>Teetes</surname>
+</string-name>
+<year>1997</year>
+<article-title>Greenbug (Homoptera: Aphididae) biotypes: selected by resistant cultivars or preadapted opportunists?</article-title>
+<source>Journal of Economic Entomology</source>
+<volume>90</volume>:<fpage>1055</fpage>&#x02013;<lpage>1065</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0036"><mixed-citation publication-type="journal" id="eva12382-cit-0036">
+<string-name>
+<surname>Pritchard</surname>, <given-names>J. K.</given-names>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Stephens</surname>
+</string-name>, and <string-name>
+<given-names>P.</given-names>
+<surname>Donnelly</surname>
+</string-name>
+<year>2000</year>
+<article-title>Inference of population structure using multilocus genotype data</article-title>. <source>Genetics</source>
+<volume>155</volume>:<fpage>945</fpage>&#x02013;<lpage>959</lpage>.<pub-id pub-id-type="pmid">10835412</pub-id></mixed-citation></ref><ref id="eva12382-bib-0037"><mixed-citation publication-type="journal" id="eva12382-cit-0037">
+<string-name>
+<surname>Quenouille</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Montarry</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Palloix</surname>
+</string-name>, and <string-name>
+<given-names>B.</given-names>
+<surname>Moury</surname>
+</string-name>
+<year>2013</year>
+<article-title>Farther, slower, stronger: how the plant genetic background protects a major resistance gene from breakdown</article-title>. <source>Molecular Plant Pathology</source>
+<volume>14</volume>:<fpage>109</fpage>&#x02013;<lpage>118</lpage>.<pub-id pub-id-type="pmid">23046402</pub-id></mixed-citation></ref><ref id="eva12382-bib-0039"><mixed-citation publication-type="miscellaneous" id="eva12382-cit-0039">
+<string-name>
+<surname>Sage&#x02010;Palloix</surname>, <given-names>A. M.</given-names>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Jourdan</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Phaly</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Nemouchi</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Lefebvre</surname>
+</string-name>, and <string-name>
+<given-names>A.</given-names>
+<surname>Palloix</surname>
+</string-name>
+<year>2007</year>
+<article-title>Analysis of diversity in pepper genetic resources: distribution of horticultural and resistance traits in the INRA pepper germplasm</article-title>. Paper read at 13th EUCARPIA meeting on genetics and breeding of Capsicum and eggplant, at Warsaw, Poland.</mixed-citation></ref><ref id="eva12382-bib-0501"><mixed-citation publication-type="journal" id="eva12382-cit-0501">
+<string-name>
+<surname>Schoeny</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Boissot</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Lambion</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Wipf&#x02010;Scheibel</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Mistral</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Gognalons</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Nozeran</surname>
+</string-name>, et al. <year>2014</year>
+<article-title>Conception and evaluation of flower strips to control aphids and viruses in melon crops</article-title>. <source>Innovations Agronomiques</source>
+<volume>40</volume>:<fpage>113</fpage>&#x02013;<lpage>114</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0040"><mixed-citation publication-type="journal" id="eva12382-cit-0040">
+<string-name>
+<surname>Smith</surname>, <given-names>C. M.</given-names>
+</string-name>, and <string-name>
+<given-names>W.&#x02010;P.</given-names>
+<surname>Chuang</surname>
+</string-name>
+<year>2014</year>
+<article-title>Plant resistance to aphid feeding: behavioral, physiological, genetic and molecular cues regulate aphid host selection and feeding</article-title>. <source>Pest Management Science</source>
+<volume>70</volume>:<fpage>528</fpage>&#x02013;<lpage>540</lpage>.<pub-id pub-id-type="pmid">24282145</pub-id></mixed-citation></ref><ref id="eva12382-bib-0041"><mixed-citation publication-type="journal" id="eva12382-cit-0041">
+<string-name>
+<surname>Thomas</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Boissot</surname>
+</string-name>, and <string-name>
+<given-names>F.</given-names>
+<surname>Vanlerberghe&#x02010;Masutti</surname>
+</string-name>
+<year>2012a</year>
+<article-title>What do spring migrants reveal about sex and host selection in the melon aphid?</article-title>
+<source>BMC Evolutionary Biology</source>
+<volume>12</volume>:<fpage>47</fpage>.<pub-id pub-id-type="pmid">22471629</pub-id></mixed-citation></ref><ref id="eva12382-bib-0042"><mixed-citation publication-type="journal" id="eva12382-cit-0042">
+<string-name>
+<surname>Thomas</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Dogimont</surname>
+</string-name>, and <string-name>
+<given-names>N.</given-names>
+<surname>Boissot</surname>
+</string-name>
+<year>2012b</year>
+<article-title>Association between <italic>Aphis gossypii</italic> genotype and phenotype on melon accessions</article-title>. <source>Arthropod&#x02010;Plant Interactions</source>
+<volume>6</volume>:<fpage>93</fpage>&#x02013;<lpage>101</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0043"><mixed-citation publication-type="journal" id="eva12382-cit-0043">
+<string-name>
+<surname>Thrall</surname>, <given-names>P. H.</given-names>
+</string-name>, <string-name>
+<given-names>J. G.</given-names>
+<surname>Oakeshott</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Fitt</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Southerton</surname>
+</string-name>, <string-name>
+<given-names>J. J.</given-names>
+<surname>Burdon</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Sheppard</surname>
+</string-name>, <string-name>
+<given-names>R. J.</given-names>
+<surname>Russell</surname>
+</string-name> et&#x000a0;al. <year>2011</year>
+<article-title>Evolution in agriculture: the application of evolutionary approaches to the management of biotic interactions in agro&#x02010;ecosystems</article-title>. <source>Evolutionary Applications</source>
+<volume>4</volume>:<fpage>200</fpage>&#x02013;<lpage>215</lpage>.<pub-id pub-id-type="pmid">25567968</pub-id></mixed-citation></ref><ref id="eva12382-bib-0044"><mixed-citation publication-type="journal" id="eva12382-cit-0044">
+<string-name>
+<surname>Vanlerberghe&#x02010;Masutti</surname>, <given-names>F.</given-names>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Chavigny</surname>
+</string-name>, and <string-name>
+<given-names>S. J.</given-names>
+<surname>Fuller</surname>
+</string-name>
+<year>1999</year>
+<article-title>Characterization of microsatellite loci in the aphid species <italic>Aphis gossypii</italic> Glover</article-title>. <source>Molecular Ecology</source>
+<volume>8</volume>:<fpage>685</fpage>&#x02013;<lpage>702</lpage>.<pub-id pub-id-type="pmid">10327662</pub-id></mixed-citation></ref><ref id="eva12382-bib-0045"><mixed-citation publication-type="journal" id="eva12382-cit-0045">
+<string-name>
+<surname>Vanoverbeke</surname>, <given-names>J.</given-names>
+</string-name>, and <string-name>
+<given-names>L.</given-names>
+<surname>De Meester</surname>
+</string-name>
+<year>1997</year>
+<article-title>Among&#x02010;populational genetic differentiation in the cyclical parthenogen <italic>Daphnia magna</italic> (Crustacea, Anomopoda) and its relation to geographic distance and clonal diversity</article-title>. <source>Hydrobiologia</source>
+<volume>360</volume>:<fpage>135</fpage>&#x02013;<lpage>142</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0046"><mixed-citation publication-type="journal" id="eva12382-cit-0046">
+<string-name>
+<surname>Vera Cruz</surname>, <given-names>C. M.</given-names>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Bai</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Ona</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Leung</surname>
+</string-name>, <string-name>
+<given-names>R. J.</given-names>
+<surname>Nelson</surname>
+</string-name>, <string-name>
+<given-names>T.&#x02010;W.</given-names>
+<surname>Mew</surname>
+</string-name>, and <string-name>
+<given-names>J. E.</given-names>
+<surname>Leach</surname>
+</string-name>
+<year>2000</year>
+<article-title>Predicting durability of a disease resistance gene based on assessment of the fitness loss and epidemiological consequences of avirulence gene mutation</article-title>. <source>Proceeding of the National Academy of Sciences of the USA</source>
+<volume>97</volume>:<fpage>13500</fpage>&#x02013;<lpage>13505</lpage>.</mixed-citation></ref><ref id="eva12382-bib-0047"><mixed-citation publication-type="journal" id="eva12382-cit-0047">
+<string-name>
+<surname>Zhan</surname>, <given-names>J. S.</given-names>
+</string-name>, <string-name>
+<given-names>P. H.</given-names>
+<surname>Thrall</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Papaix</surname>
+</string-name>, <string-name>
+<given-names>L. H.</given-names>
+<surname>Xie</surname>
+</string-name>, and <string-name>
+<given-names>J. J.</given-names>
+<surname>Burdon</surname>
+</string-name>
+<year>2015</year>
+<article-title>Playing on a pathogen's weakness: using evolution to guide sustainable plant disease control strategies</article-title>. <source>Annual Review of Phytopathology</source>
+<volume>53</volume>:<fpage>19</fpage>&#x02013;<lpage>43</lpage>, edited by N. K. VanAlfen.</mixed-citation></ref><ref id="eva12382-bib-0048"><mixed-citation publication-type="journal" id="eva12382-cit-0048">
+<string-name>
+<surname>Zhao</surname>, <given-names>J. Z.</given-names>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Cao</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>H. L.</given-names>
+<surname>Collins</surname>
+</string-name>, <string-name>
+<given-names>R. T.</given-names>
+<surname>Roush</surname>
+</string-name>, <string-name>
+<given-names>E. D.</given-names>
+<surname>Earle</surname>
+</string-name>, and <string-name>
+<given-names>A. M.</given-names>
+<surname>Shelton</surname>
+</string-name>
+<year>2003</year>
+<article-title>Transgenic plants expressing two <italic>Bacillus thuringiensis</italic> toxins delay insect resistance evolution</article-title>. <source>Nature Biotechnology</source>
+<volume>21</volume>:<fpage>1493</fpage>&#x02013;<lpage>1497</lpage>.</mixed-citation></ref></ref-list></back></article>

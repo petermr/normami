@@ -1,0 +1,347 @@
+{
+  "id": [
+    "23596455"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "23596455"
+  ],
+  "pmcid": [
+    "PMC3627145"
+  ],
+  "doi": [
+    "10.3389/fpls.2013.00096"
+  ],
+  "title": [
+    "Expression of human ARGONAUTE 2 inhibits endogenous microRNA activity in Arabidopsis."
+  ],
+  "authorString": [
+    "Deveson I, Li J, Millar AA."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Deveson I"
+          ],
+          "firstName": [
+            "Ira"
+          ],
+          "lastName": [
+            "Deveson"
+          ],
+          "initials": [
+            "I"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-3861-0472",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Li J"
+          ],
+          "firstName": [
+            "Junyan"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "J"
+          ]
+        },
+        {
+          "fullName": [
+            "Millar AA"
+          ],
+          "firstName": [
+            "Anthony A"
+          ],
+          "lastName": [
+            "Millar"
+          ],
+          "initials": [
+            "AA"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6668-1326",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-6668-1326",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-3861-0472",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "4"
+      ],
+      "journalIssueId": [
+        "2003510"
+      ],
+      "dateOfPublication": [
+        "2013 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in plant science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "96"
+  ],
+  "abstractText": [
+    "Plant and animal microRNA (miRNA) pathways share many analogous components, the ARGONAUTE (AGO) proteins being foremost among them. We sought to ascertain the degree of functional conservation shared by Homo sapiens ARGONAUTE 2 (HsAGO2) and Arabidopsis thaliana ARGONAUTE 1 (AtAGO1), which are the predominant AGO family members involved with miRNA activity in their respective species. Transgenic Arabidopsis plants expressing HsAGO2 were indistinguishable from counterparts over-expressing AtAGO1, each group exhibiting the morphological and molecular hallmarks of miRNA-pathway loss-of-function alleles. However, unlike AtAGO1, HsAGO2 was unable to rescue the ago1-27 allele. We conclude that, despite the evolutionary gulf between them, HsAGO2 is likely capable of interacting with some component/s of the Arabidopsis miRNA pathway, thereby perturbing its operation, although differences have arisen such that HsAGO2 alone is insufficient to confer efficient silencing of miRNA targets in planta."
+  ],
+  "affiliation": [
+    "Plant Sciences Division, Research School of Biology, Australian National University Canberra, ACT, Australia."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Arabidopsis",
+        "MicroRNA",
+        "Atago1",
+        "Hsago2",
+        "Ago1–27"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3627145?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC3627145"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23596455/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23596455/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2013.00096"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2013-04-19"
+  ],
+  "dateOfCreation": [
+    "2013-04-18"
+  ],
+  "dateOfRevision": [
+    "2013-08-13"
+  ],
+  "electronicPublicationDate": [
+    "2013-04-16"
+  ],
+  "firstPublicationDate": [
+    "2013-04-16"
+  ]
+}

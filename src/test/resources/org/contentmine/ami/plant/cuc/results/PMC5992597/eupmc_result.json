@@ -1,0 +1,777 @@
+{
+  "id": [
+    "29650590"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29650590"
+  ],
+  "pmcid": [
+    "PMC5992597"
+  ],
+  "doi": [
+    "10.1242/dev.157081"
+  ],
+  "title": [
+    "Coordination of meristem and boundary functions by transcription factors in the SHOOT MERISTEMLESS regulatory network."
+  ],
+  "authorString": [
+    "Scofield S, Murison A, Jones A, Fozard J, Aida M, Band LR, Bennett M, Murray JAH."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Scofield S"
+          ],
+          "firstName": [
+            "Simon"
+          ],
+          "lastName": [
+            "Scofield"
+          ],
+          "initials": [
+            "S"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-5466-314X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "School of Biosciences, Cardiff University, Museum Avenue, Cardiff  CF10 3AX, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Murison A"
+          ],
+          "firstName": [
+            "Alexander"
+          ],
+          "lastName": [
+            "Murison"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Princess Margaret Cancer Centre, University Health Network, Toronto, Ontario M5G 2M9, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Jones A"
+          ],
+          "firstName": [
+            "Angharad"
+          ],
+          "lastName": [
+            "Jones"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "School of Biosciences, Cardiff University, Museum Avenue, Cardiff  CF10 3AX, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Fozard J"
+          ],
+          "firstName": [
+            "John"
+          ],
+          "lastName": [
+            "Fozard"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Department of Computational and Systems Biology, John Innes Centre, Norwich NR4 7UH, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Aida M"
+          ],
+          "firstName": [
+            "Mitsuhiro"
+          ],
+          "lastName": [
+            "Aida"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "International Research Organization for Advanced Science and Technology (IROAST) Kumamoto University, 2-39-1 Kurokami, Chuo-ku, Kumamoto 860-8555, Japan."
+          ]
+        },
+        {
+          "fullName": [
+            "Band LR"
+          ],
+          "firstName": [
+            "Leah R"
+          ],
+          "lastName": [
+            "Band"
+          ],
+          "initials": [
+            "LR"
+          ],
+          "affiliation": [
+            "Centre for Plant Integrative Biology, Division of Plant and Crop Sciences, School of Biosciences, University of Nottingham, Loughborough LE12 5RD, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Bennett M"
+          ],
+          "firstName": [
+            "Malcolm"
+          ],
+          "lastName": [
+            "Bennett"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-0475-390X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Centre for Plant Integrative Biology, Division of Plant and Crop Sciences, School of Biosciences, University of Nottingham, Loughborough LE12 5RD, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Murray JAH"
+          ],
+          "firstName": [
+            "James A H"
+          ],
+          "lastName": [
+            "Murray"
+          ],
+          "initials": [
+            "JAH"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-2282-3839",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "School of Biosciences, Cardiff University, Museum Avenue, Cardiff  CF10 3AX, UK murrayja1@cardiff.ac.uk."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-5466-314X",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-0475-390X",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-2282-3839",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "9"
+      ],
+      "volume": [
+        "145"
+      ],
+      "journalIssueId": [
+        "2676200"
+      ],
+      "dateOfPublication": [
+        "2018 Apr"
+      ],
+      "monthOfPublication": [
+        "4"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-04-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Development (Cambridge, England)"
+          ],
+          "ISOAbbreviation": [
+            "Development"
+          ],
+          "medlineAbbreviation": [
+            "Development"
+          ],
+          "NLMid": [
+            "8701744"
+          ],
+          "ISSN": [
+            "0950-1991"
+          ],
+          "ESSN": [
+            "1477-9129"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "abstractText": [
+    "The Arabidopsis homeodomain transcription factor SHOOT MERISTEMLESS (STM) is crucial for shoot apical meristem (SAM) function, yet the components and structure of the STM gene regulatory network (GRN) are largely unknown. Here, we show that transcriptional regulators are overrepresented among STM-regulated genes and, using these as GRN components in Bayesian network analysis, we infer STM GRN associations and reveal regulatory relationships between STM and factors involved in multiple aspects of SAM function. These include hormone regulation, TCP-mediated control of cell differentiation, AIL/PLT-mediated regulation of pluripotency and phyllotaxis, and specification of meristem-organ boundary zones via CUC1. We demonstrate a direct positive transcriptional feedback loop between STM and CUC1, despite their distinct expression patterns in the meristem and organ boundary, respectively. Our further finding that STM activates expression of the CUC1-targeting microRNA miR164c combined with mathematical modelling provides a potential solution for this apparent contradiction, demonstrating that these proposed regulatory interactions coupled with STM mobility could be sufficient to provide a mechanism for CUC1 localisation at the meristem-organ boundary. Our findings highlight the central role for the STM GRN in coordinating SAM functions."
+  ],
+  "affiliation": [
+    "School of Biosciences, Cardiff University, Museum Avenue, Cardiff  CF10 3AX, UK."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "BB/I005661/1"
+          ],
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CY"
+                  ],
+                  "qualifierName": [
+                    "cytology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Meristem"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CY"
+                  ],
+                  "qualifierName": [
+                    "cytology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Homeodomain Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Models, Biological"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Regulatory Networks"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Meristem",
+        "Arabidopsis",
+        "Transcriptional regulation",
+        "Gene Regulatory Network",
+        "Homeodomain",
+        "Knox",
+        "Shoot Meristemless"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "STM protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "CUC1 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Homeodomain Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "microRNA-164, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5992597"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1242/dev.157081"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "N"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "arrayexpress"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2018-05-21"
+  ],
+  "dateOfCreation": [
+    "2018-04-14"
+  ],
+  "dateOfRevision": [
+    "2018-06-24"
+  ],
+  "electronicPublicationDate": [
+    "2018-04-30"
+  ],
+  "firstPublicationDate": [
+    "2018-04-30"
+  ]
+}

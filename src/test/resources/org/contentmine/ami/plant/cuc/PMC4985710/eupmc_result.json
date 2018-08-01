@@ -1,0 +1,580 @@
+{
+  "id": [
+    "27528282"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27528282"
+  ],
+  "pmcid": [
+    "PMC4985710"
+  ],
+  "doi": [
+    "10.1038/srep31568"
+  ],
+  "title": [
+    "Overexpression of the Eggplant (Solanum melongena) NAC Family Transcription Factor SmNAC Suppresses Resistance to Bacterial Wilt."
+  ],
+  "authorString": [
+    "Na C, Shuanghua W, Jinglong F, Bihao C, Jianjun L, Changming C, Jin J."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Na C"
+          ],
+          "firstName": [
+            "Chen"
+          ],
+          "lastName": [
+            "Na"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "College of Horticulture, South Agricultural University, Guangzhou City, 510642, P.R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Shuanghua W"
+          ],
+          "firstName": [
+            "Wu"
+          ],
+          "lastName": [
+            "Shuanghua"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "College of Horticulture, South Agricultural University, Guangzhou City, 510642, P.R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Jinglong F"
+          ],
+          "firstName": [
+            "Fu"
+          ],
+          "lastName": [
+            "Jinglong"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "College of Horticulture, South Agricultural University, Guangzhou City, 510642, P.R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Bihao C"
+          ],
+          "firstName": [
+            "Cao"
+          ],
+          "lastName": [
+            "Bihao"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "College of Horticulture, South Agricultural University, Guangzhou City, 510642, P.R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Jianjun L"
+          ],
+          "firstName": [
+            "Lei"
+          ],
+          "lastName": [
+            "Jianjun"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "College of Horticulture, South Agricultural University, Guangzhou City, 510642, P.R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Changming C"
+          ],
+          "firstName": [
+            "Chen"
+          ],
+          "lastName": [
+            "Changming"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "College of Horticulture, South Agricultural University, Guangzhou City, 510642, P.R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Jin J"
+          ],
+          "firstName": [
+            "Jiang"
+          ],
+          "lastName": [
+            "Jin"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "College of Horticulture, South Agricultural University, Guangzhou City, 510642, P.R. China."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "6"
+      ],
+      "journalIssueId": [
+        "2477989"
+      ],
+      "dateOfPublication": [
+        "2016 Aug"
+      ],
+      "monthOfPublication": [
+        "8"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-08-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Scientific reports"
+          ],
+          "ISOAbbreviation": [
+            "Sci Rep"
+          ],
+          "medlineAbbreviation": [
+            "Sci Rep"
+          ],
+          "NLMid": [
+            "101563288"
+          ],
+          "ISSN": [
+            "2045-2322"
+          ],
+          "ESSN": [
+            "2045-2322"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "31568"
+  ],
+  "abstractText": [
+    "Bacterial wilt (BW) is a serious disease that affects eggplant (Solanum melongena) production. Although resistance to this disease has been reported, the underlying mechanism is unknown. In this study, we identified a NAC family transcription factor (SmNAC) from eggplant and characterized its expression, its localization at the tissue and subcellular levels, and its role in BW resistance. To this end, transgenic eggplant lines were generated in which the expression of SmNAC was constitutively up regulated or suppressed using RNAi. The results indicated that overexpression of SmNAC decreases resistance to BW. Moreover, SmNAC overexpression resulted in the reduced accumulation of the plant immune signaling molecule salicylic acid (SA) and reduced expression of ICS1 (a gene that encode isochorismate synthase 1, which is involved in SA biosynthesis). We propose that reduced SA content results in increased bacterial wilt susceptibility in the transgenic lines. Our results provide important new insights into the regulatory mechanisms of bacterial wilt resistance in eggplant."
+  ],
+  "affiliation": [
+    "College of Horticulture, South Agricultural University, Guangzhou City, 510642, P.R. China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Ralstonia solanacearum"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PY"
+                  ],
+                  "qualifierName": [
+                    "pathogenicity"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Solanum melongena"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "IM"
+                  ],
+                  "qualifierName": [
+                    "immunology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "MI"
+                  ],
+                  "qualifierName": [
+                    "microbiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Immunohistochemistry"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, RNA"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Diseases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "IM"
+                  ],
+                  "qualifierName": [
+                    "immunology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "MI"
+                  ],
+                  "qualifierName": [
+                    "microbiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Amino Acid Sequence"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Homology, Amino Acid"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4985710?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4985710"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1038/srep31568"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2018-07-03"
+  ],
+  "dateOfCreation": [
+    "2016-08-17"
+  ],
+  "dateOfRevision": [
+    "2018-07-03"
+  ],
+  "electronicPublicationDate": [
+    "2016-08-16"
+  ],
+  "firstPublicationDate": [
+    "2016-08-16"
+  ]
+}

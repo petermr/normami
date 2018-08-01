@@ -1,0 +1,473 @@
+{
+  "id": [
+    "28248421"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "28248421"
+  ],
+  "pmcid": [
+    "PMC5638099"
+  ],
+  "doi": [
+    "10.1111/nph.14449"
+  ],
+  "title": [
+    "A common developmental program can produce diverse leaf shapes."
+  ],
+  "authorString": [
+    "Runions A, Tsiantis M, Prusinkiewicz P."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Runions A"
+          ],
+          "firstName": [
+            "Adam"
+          ],
+          "lastName": [
+            "Runions"
+          ],
+          "initials": [
+            "A"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-7758-7423",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "University of Calgary, 2500 University Dr NW, Calgary, Alberta, T2N 1N4, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Tsiantis M"
+          ],
+          "firstName": [
+            "Miltos"
+          ],
+          "lastName": [
+            "Tsiantis"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Max Planck Institute for Plant Breeding Research, Carl-von-Linné-Weg 10, Köln, 50829, Germany."
+          ]
+        },
+        {
+          "fullName": [
+            "Prusinkiewicz P"
+          ],
+          "firstName": [
+            "Przemyslaw"
+          ],
+          "lastName": [
+            "Prusinkiewicz"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "University of Calgary, 2500 University Dr NW, Calgary, Alberta, T2N 1N4, Canada."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-7758-7423",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "2"
+      ],
+      "volume": [
+        "216"
+      ],
+      "journalIssueId": [
+        "2598677"
+      ],
+      "dateOfPublication": [
+        "2017 Oct"
+      ],
+      "monthOfPublication": [
+        "10"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-10-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "The New phytologist"
+          ],
+          "ISOAbbreviation": [
+            "New Phytol."
+          ],
+          "medlineAbbreviation": [
+            "New Phytol"
+          ],
+          "NLMid": [
+            "9882884"
+          ],
+          "ISSN": [
+            "1469-8137"
+          ],
+          "ESSN": [
+            "1469-8137"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "401-418"
+  ],
+  "abstractText": [
+    "Eudicot leaves have astoundingly diverse shapes. The central problem addressed in this paper is the developmental origin of this diversity. To investigate this problem, we propose a computational model of leaf development that generalizes the largely conserved molecular program for the reference plants Arabidopsis thaliana, Cardamine hirsuta and Solanum lycopersicum. The model characterizes leaf development as a product of three interwoven processes: the patterning of serrations, lobes and/or leaflets on the leaf margin; the patterning of the vascular system; and the growth of the leaf blade spanning the main veins. The veins play a significant morphogenetic role as a local determinant of growth directions. We show that small variations of this model can produce diverse leaf shapes, from simple to lobed to compound. It is thus plausible that diverse shapes of eudicot leaves result from small variations of a common developmental program."
+  ],
+  "affiliation": [
+    "University of Calgary, 2500 University Dr NW, Calgary, Alberta, T2N 1N4, Canada."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "BB/G023905/1"
+          ],
+          "agency": [
+            "Biotechnology and Biological Sciences Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Morus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Morphogenesis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Models, Biological"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Time Factors"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Computer Simulation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Vascular Bundle"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Vascular system",
+        "leaf development",
+        "Computational Model",
+        "Directional Growth",
+        "Shape Diversity",
+        "Hofmeister's Rule",
+        "Pin Convergence Point",
+        "Blastozone"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5638099?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5638099"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1111/nph.14449"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "5"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2018-05-21"
+  ],
+  "dateOfCreation": [
+    "2017-03-02"
+  ],
+  "dateOfRevision": [
+    "2018-05-21"
+  ],
+  "electronicPublicationDate": [
+    "2017-03-01"
+  ],
+  "firstPublicationDate": [
+    "2017-03-01"
+  ]
+}

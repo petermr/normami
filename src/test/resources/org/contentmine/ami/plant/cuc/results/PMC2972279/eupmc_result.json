@@ -1,0 +1,548 @@
+{
+  "id": [
+    "20973960"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "20973960"
+  ],
+  "pmcid": [
+    "PMC2972279"
+  ],
+  "doi": [
+    "10.1186/1743-422x-7-281"
+  ],
+  "title": [
+    "MicroRNA profiling of tomato leaf curl New Delhi virus (tolcndv) infected tomato leaves indicates that deregulation of mir159/319 and mir172 might be linked with leaf curl disease."
+  ],
+  "authorString": [
+    "Naqvi AR, Haq QM, Mukherjee SK."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Naqvi AR"
+          ],
+          "firstName": [
+            "Afsar R"
+          ],
+          "lastName": [
+            "Naqvi"
+          ],
+          "initials": [
+            "AR"
+          ]
+        },
+        {
+          "fullName": [
+            "Haq QM"
+          ],
+          "firstName": [
+            "Qazi M R"
+          ],
+          "lastName": [
+            "Haq"
+          ],
+          "initials": [
+            "QM"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4239-4808",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ]
+        },
+        {
+          "fullName": [
+            "Mukherjee SK"
+          ],
+          "firstName": [
+            "Sunil K"
+          ],
+          "lastName": [
+            "Mukherjee"
+          ],
+          "initials": [
+            "SK"
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-4239-4808",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "7"
+      ],
+      "journalIssueId": [
+        "1698085"
+      ],
+      "dateOfPublication": [
+        "2010 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2010"
+      ],
+      "printPublicationDate": [
+        "2010-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Virology journal"
+          ],
+          "ISOAbbreviation": [
+            "Virol. J."
+          ],
+          "medlineAbbreviation": [
+            "Virol J"
+          ],
+          "NLMid": [
+            "101231645"
+          ],
+          "ISSN": [
+            "1743-422X"
+          ],
+          "ESSN": [
+            "1743-422X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2010"
+  ],
+  "pageInfo": [
+    "281"
+  ],
+  "abstractText": [
+    "BACKGROUND: Tomato leaf curl virus (ToLCV), a constituent of the genus Begomovirus, infects tomato and other plants with a hallmark disease symptom of upward leaf curling. Since microRNAs (miRs) are known to control plants developmental processes, we evaluated the roles of miRNAs in Tomato leaf curl New Delhi virus (ToLCNDV) induced leaf curling. RESULTS: Microarray analyses of miRNAs, isolated from the leaves of both healthy and ToLCNDV agroinfected tomato cv Pusa Ruby, revealed that ToLCNDV infection significantly deregulated various miRNAs representing ~13 different conserved families (e.g., miR319, miR172, etc.). The precursors of these miRNAs showed similar deregulated patterns, indicating that the transcription regulation of respective miRNA genes was perhaps the cause of deregulation. The expression levels of the miRNA-targeted genes were antagonistic with respect to the amount of corresponding miRNA. Such deregulation was tissue-specific in nature as no analogous misexpression was found in flowers. The accumulation of miR159/319 and miR172 was observed to increase with the days post inoculation (dpi) of ToLCNDV agroinfection in tomato cv Pusa Ruby. Similarly, these miRs were also induced in ToLCNDV agroinfected tomato cv JK Asha and chilli plants, both exhibiting leaf curl symptoms. Our results indicate that miR159/319 and miR172 might be associated with leaf curl symptoms. This report raises the possibility of using miRNA(s) as potential signature molecules for ToLCNDV infection. CONCLUSIONS: The expression of several host miRNAs is affected in response to viral infection. The levels of the corresponding pre-miRs and the predicted targets were also deregulated. This change in miRNA expression levels was specific to leaf tissues and observed to be associated with disease progression. Thus, certain host miRs are likely indicator of viral infection and could be potentially employed to develop viral resistance strategies."
+  ],
+  "affiliation": [
+    "Plant Molecular Biology Group, International Centre for Genetic Engineering and Biotechnology, Aruna Asaf Ali Marg, New Delhi-110067, India."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Lycopersicon esculentum"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "VI"
+                  ],
+                  "qualifierName": [
+                    "virology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "VI"
+                  ],
+                  "qualifierName": [
+                    "virology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AN"
+                  ],
+                  "qualifierName": [
+                    "analysis"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Blotting, Northern"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Profiling"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Reverse Transcriptase Polymerase Chain Reaction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Diseases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "VI"
+                  ],
+                  "qualifierName": [
+                    "virology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Begomovirus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PY"
+                  ],
+                  "qualifierName": [
+                    "pathogenicity"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2972279?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2972279"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/20973960/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/20973960/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/1743-422X-7-281"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "47"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2010-12-01"
+  ],
+  "dateOfCreation": [
+    "2010-11-04"
+  ],
+  "dateOfRevision": [
+    "2013-07-03"
+  ],
+  "electronicPublicationDate": [
+    "2010-10-25"
+  ],
+  "firstPublicationDate": [
+    "2010-10-25"
+  ]
+}

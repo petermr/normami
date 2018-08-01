@@ -1,0 +1,636 @@
+{
+  "id": [
+    "17726048"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "17726048"
+  ],
+  "pmcid": [
+    "PMC2034473"
+  ],
+  "doi": [
+    "10.1093/nar/gkm643"
+  ],
+  "title": [
+    "Efficient expression of gene variants that harbour AGA codons next to the initiation codon."
+  ],
+  "authorString": [
+    "Zamora-Romo E, Cruz-Vera LR, Vivanco-Domínguez S, Magos-Castro MA, Guarneros G."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Zamora-Romo E"
+          ],
+          "firstName": [
+            "Efraín"
+          ],
+          "lastName": [
+            "Zamora-Romo"
+          ],
+          "initials": [
+            "E"
+          ]
+        },
+        {
+          "fullName": [
+            "Cruz-Vera LR"
+          ],
+          "firstName": [
+            "Luis Rogelio"
+          ],
+          "lastName": [
+            "Cruz-Vera"
+          ],
+          "initials": [
+            "LR"
+          ]
+        },
+        {
+          "fullName": [
+            "Vivanco-Domínguez S"
+          ],
+          "firstName": [
+            "Serafín"
+          ],
+          "lastName": [
+            "Vivanco-Domínguez"
+          ],
+          "initials": [
+            "S"
+          ]
+        },
+        {
+          "fullName": [
+            "Magos-Castro MA"
+          ],
+          "firstName": [
+            "Marco Antonio"
+          ],
+          "lastName": [
+            "Magos-Castro"
+          ],
+          "initials": [
+            "MA"
+          ]
+        },
+        {
+          "fullName": [
+            "Guarneros G"
+          ],
+          "firstName": [
+            "Gabriel"
+          ],
+          "lastName": [
+            "Guarneros"
+          ],
+          "initials": [
+            "G"
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "17"
+      ],
+      "volume": [
+        "35"
+      ],
+      "journalIssueId": [
+        "1471147"
+      ],
+      "dateOfPublication": [
+        "2007 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2007"
+      ],
+      "printPublicationDate": [
+        "2007-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Nucleic acids research"
+          ],
+          "ISOAbbreviation": [
+            "Nucleic Acids Res."
+          ],
+          "medlineAbbreviation": [
+            "Nucleic Acids Res"
+          ],
+          "NLMid": [
+            "0411011"
+          ],
+          "ISSN": [
+            "0305-1048"
+          ],
+          "ESSN": [
+            "1362-4962"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2007"
+  ],
+  "pageInfo": [
+    "5966-5974"
+  ],
+  "abstractText": [
+    "In an effort to improve the knowledge about the rules which direct the effect of the early ORF sequences on translation efficiency, we have analyzed the effect of pairs of the six arginine codons at the second and third positions on the expression of lacZ variants. Whereas the pairs of identical AGA or AGG codons were favorable for the gene expression, identical pairs of each of the four CGN codons were very inefficient. This result was unexpected because tandems of AGA or AGG codons located in more internal gene positions provoke deficient expression whilst internally located CGU and CGC are the most abundant and efficiently translated arginine codons. The mixed combinations of AGA and each of the CGN codons usually resulted in efficient rates of lacZ expression independently of the peptidyl-tRNA propensity to dissociate from the ribosome. Thus, the variant harboring the pair of AGA codons was expressed as efficiently as the variant carrying a pair of AAA codons in the same positions, a configuration reported as one of the most common and efficient for gene expression. We explain these results assuming that the presence of adenines in these early positions enhance gene expression. As expected, specific mRNA levels correlated with the intensity of lacZ expression for each variant. However, the induction of lacZ AGA AGA gene in pth cells accumulated peptidyl-tRNA(Arg4) as well as a short 5'-proximal lacZ mRNA fragment suggesting ribosome stalling due to depletion of aminoacylated-tRNA(Arg4)."
+  ],
+  "affiliation": [
+    "Departamento de Genética y Biología Molecular, Centro de Investigación y de Estudios Avanzados del IPN, Apartado Postal 14-740, 07000 México DF."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Escherichia coli"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Carboxylic Ester Hydrolases"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "beta-Galactosidase"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arginine"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Transfer, Amino Acyl"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Messenger"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Codon"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Codon, Initiator"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Protein Biosynthesis"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Bacterial"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genes, Reporter"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genetic Variation"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "tRNA, peptidyl-"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "aminoacyl-tRNA hydrolase"
+          ],
+          "registryNumber": [
+            "EC 3.1.1.29"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Messenger"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arginine"
+          ],
+          "registryNumber": [
+            "74-79-3"
+          ]
+        },
+        {
+          "name": [
+            "beta-Galactosidase"
+          ],
+          "registryNumber": [
+            "EC 3.2.1.23"
+          ]
+        },
+        {
+          "name": [
+            "Codon"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Transfer, Amino Acyl"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Codon, Initiator"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Carboxylic Ester Hydrolases"
+          ],
+          "registryNumber": [
+            "EC 3.1.1.-"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2034473?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC2034473"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/nar/gkm643"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "9"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "license": [
+    "cc by-nc"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2007-11-05"
+  ],
+  "dateOfCreation": [
+    "2007-09-28"
+  ],
+  "dateOfRevision": [
+    "2009-11-18"
+  ],
+  "electronicPublicationDate": [
+    "2007-08-28"
+  ],
+  "firstPublicationDate": [
+    "2007-08-28"
+  ]
+}

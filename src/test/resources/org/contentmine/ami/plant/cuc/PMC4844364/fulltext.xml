@@ -1,0 +1,1154 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="review-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Plants (Basel)</journal-id><journal-id journal-id-type="iso-abbrev">Plants (Basel)</journal-id><journal-id journal-id-type="publisher-id">plants</journal-id><journal-title-group><journal-title>Plants</journal-title></journal-title-group><issn pub-type="epub">2223-7747</issn><publisher><publisher-name>MDPI</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4844364</article-id><article-id pub-id-type="doi">10.3390/plants2020317</article-id><article-id pub-id-type="publisher-id">plants-02-00317</article-id><article-categories><subj-group subj-group-type="heading"><subject>Review</subject></subj-group></article-categories><title-group><article-title>TALE and Shape: How to Make a Leaf Different</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Di Giacomo</surname><given-names>Elisabetta</given-names></name></contrib><contrib contrib-type="author"><name><surname>Iannelli</surname><given-names>Maria Adelaide</given-names></name></contrib><contrib contrib-type="author"><name><surname>Frugis</surname><given-names>Giovanna</given-names></name><xref rid="c1-plants-02-00317" ref-type="corresp">*</xref></contrib></contrib-group><aff id="af1-plants-02-00317">Istituto di Biologia e Biotecnologia Agraria, UOS Roma, Consiglio Nazionale delle Ricerche, Via Salaria Km. 29,300, Monterotondo Scalo, 00015 Roma, Italy; E-Mails: <email>elisabetta.digiacomo@mlib.ibba.cnr.it</email> (E.D.G.); <email>iannelli@ibba.cnr.it</email> (M.A.I.)</aff><author-notes><corresp id="c1-plants-02-00317"><label>*</label>Author to whom correspondence should be addressed; E-Mail: <email>frugis@ibba.cnr.it</email>; Tel.: +39-06-06-9067-2857; Fax: +39-06-06-9067-2856.</corresp></author-notes><pub-date pub-type="epub"><day>06</day><month>5</month><year>2013</year></pub-date><pub-date pub-type="collection"><month>6</month><year>2013</year></pub-date><volume>2</volume><issue>2</issue><fpage>317</fpage><lpage>342</lpage><history><date date-type="received"><day>18</day><month>2</month><year>2013</year></date><date date-type="rev-recd"><day>10</day><month>4</month><year>2013</year></date><date date-type="accepted"><day>19</day><month>4</month><year>2013</year></date></history><permissions><copyright-statement>&#x000a9; 2013 by the authors; licensee MDPI, Basel, Switzerland.</copyright-statement><copyright-year>2013</copyright-year><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/3.0/"><license-p><!--CREATIVE COMMONS-->This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution license (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</ext-link>).</license-p></license></permissions><abstract><p>The <underline>T</underline>hree <underline>A</underline>mino acid <underline>L</underline>oop <underline>E</underline>xtension (TALE) proteins constitute an ancestral superclass of homeodomain transcription factors conserved in animals, plants and fungi. In plants they comprise two classes, KNOTTED1-LIKE homeobox (KNOX) and BEL1-like homeobox (BLH or BELL, hereafter referred to as BLH), which are involved in shoot apical meristem (SAM) function, as well as in the determination and morphological development of leaves, stems and inflorescences. Selective protein-protein interactions between KNOXs and BLHs affect heterodimer subcellular localization and target affinity. KNOXs exert their roles by maintaining a proper balance between undifferentiated and differentiated cell state through the modulation of multiple hormonal pathways. A pivotal function of KNOX in evolutionary diversification of leaf morphology has been assessed. In the SAM of both simple- and compound-leafed seed species, downregulation of most class 1 <italic>KNOX</italic> (<italic>KNOX1</italic>) genes marks the sites of leaf primordia initiation. However, <italic>KNOX1</italic> expression is re-established during leaf primordia development of compound-leafed species to maintain transient indeterminacy and morphogenetic activity at the leaf margins. Despite the increasing knowledge available about KNOX1 protein function in plant development, a comprehensive view on their downstream effectors remains elusive. This review highlights the role of TALE proteins in leaf initiation and morphological plasticity with a focus on recent advances in the identification of downstream target genes and pathways. </p></abstract><kwd-group><kwd>TALE</kwd><kwd>BLH</kwd><kwd>KNOX</kwd><kwd>homeobox transcription factors</kwd><kwd>target genes</kwd><kwd>leaf development</kwd><kwd>vascular development</kwd><kwd>cell fate</kwd><kwd>cell differentiation</kwd><kwd>shoot apical meristem</kwd></kwd-group></article-meta></front><body><sec><title>1. Introduction</title><p>Homeodomain (HD) transcription factors play major roles in the development of complex organisms, ranging from humans to plants. Increasing morphological complexity requires finely tuned processes of polarized growth along different axis to establish specialized organs with determinate shapes and symmetries. This process is fundamental during development and involves the integration of multiple signals from different parts of the organism&#x02019;s body. </p><p>Several classes of HD proteins participate in developmental signal integration and coordinated growth in complex organisms, among these the TALE (<underline>T</underline>hree <underline>A</underline>mino acid <underline>L</underline>oop <underline>E</underline>xtension) superclass is characterized by three extra amino acids between helix 1 and helix 2 of the homeodomain [<xref rid="B1-plants-02-00317" ref-type="bibr">1</xref>,<xref rid="B2-plants-02-00317" ref-type="bibr">2</xref>,<xref rid="B3-plants-02-00317" ref-type="bibr">3</xref>]. In animals, among the four subgroups of TALEs identified, the members of MEIS/PREP and Pre-B cell leukaemia transcription factors (PBX) form heterotrimers with homeobox proteins (Hox). Together they act within transcriptional regulation complexes to specify anteroposterior identities and regulate genetic programs during development [<xref rid="B4-plants-02-00317" ref-type="bibr">4</xref>]. Besides the role of PBX/MEIS interactions in heterodimer nuclear targeting and in increasing DNA binding specificity of PBX/HOX/MEIS complexes [<xref rid="B5-plants-02-00317" ref-type="bibr">5</xref>,<xref rid="B6-plants-02-00317" ref-type="bibr">6</xref>], a Hox-independent role of PBXs has been recently proposed in integrating transduction signals to regulate gene expression programs [<xref rid="B4-plants-02-00317" ref-type="bibr">4</xref>]. In higher plants, TALE superclass comprises two subgroups of proteins, the KNOTTED1-LIKE homeobox (KNOX) and BEL1-like homeobox (BLH or BELL, hereafter referred to as BLH) [<xref rid="B3-plants-02-00317" ref-type="bibr">3</xref>]. Similar to animal TALEs, BLH/KNOX heterodimerization is functional to nuclear localization [<xref rid="B7-plants-02-00317" ref-type="bibr">7</xref>,<xref rid="B8-plants-02-00317" ref-type="bibr">8</xref>] and to DNA binding affinity [<xref rid="B9-plants-02-00317" ref-type="bibr">9</xref>]. However, no specific interaction with other non-TALE homeodomain proteins has been described so far. Interaction with MADS homeotic, but not homeodomain proteins, has been reported in flower development [<xref rid="B10-plants-02-00317" ref-type="bibr">10</xref>]. </p><p>TALEs are encoded by two small subfamilies in the <italic>Arabidopsis thaliana</italic> genome where the sequences of eight <italic>KNOX</italic> and 13 <italic>BLH</italic> genes have been identified [<xref rid="B11-plants-02-00317" ref-type="bibr">11</xref>]. <italic>KNOX</italic> genes are further subdivided into two phylogenetic classes. <italic>STM</italic>, <italic>KNAT1/BP</italic>, <italic>KNAT2</italic> and <italic>KNAT6</italic> fall into class 1 (hereafter referred to as <italic>KNOX1</italic>) while <italic>KNAT3</italic>, <italic>KNAT4</italic>, <italic>KNAT5</italic> and <italic>KNAT7</italic> into class 2 (hereafter referred to as <italic>KNOX2</italic>). These two classes are characterized by specific intron number and position, structural similarities in the consensus domain outside the homeobox and by different expression pathways [<xref rid="B12-plants-02-00317" ref-type="bibr">12</xref>,<xref rid="B13-plants-02-00317" ref-type="bibr">13</xref>]. Recently, a novel <italic>KNOX</italic> lacking the homeobox, <italic>KNATM</italic>, was identified in the Arabidopsis genome [<xref rid="B14-plants-02-00317" ref-type="bibr">14</xref>]. <italic>KNOX1</italic> transcripts are less abundant, with a more localized expression in specific domains of shoot apical meristems (SAMs), whereas <italic>KNOX2</italic> genes are expressed in most plant organs. <italic>KNATM</italic> is expressed in proximal-lateral domains of organ primordia, at the boundary of mature organs and in leaf hydathodes. As mentioned before, members of KNOX and BLH proteins can physically interact (<xref ref-type="table" rid="plants-02-00317-t001">Table 1</xref>) through a bi-partite consensus domain located upstream of the HD, namely MEINOX and BEL respectively, and this interaction is functional to KNOX/BLH heterodimer translocation from cytoplasm into the nucleus (<xref ref-type="fig" rid="plants-02-00317-f001">Figure 1</xref>) [<xref rid="B7-plants-02-00317" ref-type="bibr">7</xref>,<xref rid="B8-plants-02-00317" ref-type="bibr">8</xref>]. A matter of debate is whether KNOX and BLH can exert some of their functions independently of each other or whether the formation of KNOX/BLH heterodimers is mandatory for TALEs to work. </p><table-wrap id="plants-02-00317-t001" position="float"><object-id pub-id-type="pii">plants-02-00317-t001_Table 1</object-id><label>Table 1</label><caption><p>Interaction between <italic>A. thaliana</italic> KNOX and BLH proteins. KNOTTED1-LIKE homeobox (KNOX) proteins are indicated in rows and BEL1-like homeobox (BLH) proteins in columns with corresponding gene ID numbers. Interaction data deriving from both low and high throughput two-hybrid screens are indicated in grey, interactions that were confirmed <italic>in planta</italic> are highlighted in green. </p></caption><table frame="hsides" rules="all" style="border:solid thin"><thead><tr style="background:#EAF1DD"><th rowspan="3" colspan="2" align="left" valign="middle"></th><th colspan="9" align="center" valign="middle" rowspan="1">KNOX</th></tr><tr><th align="center" valign="middle" rowspan="1" colspan="1">STM</th><th align="center" valign="middle" rowspan="1" colspan="1">KNAT1/BP</th><th align="center" valign="middle" rowspan="1" colspan="1">KNAT2</th><th align="center" valign="middle" rowspan="1" colspan="1">KNAT6</th><th align="center" valign="middle" rowspan="1" colspan="1">KNAT3</th><th align="center" valign="middle" rowspan="1" colspan="1">KNAT4</th><th align="center" valign="middle" rowspan="1" colspan="1">KNAT5</th><th align="center" valign="middle" rowspan="1" colspan="1">KNAT7</th><th align="center" valign="middle" rowspan="1" colspan="1">KNATM</th></tr><tr style="border-top:hidden"><th align="center" valign="middle" rowspan="1" colspan="1">AT1G62360</th><th align="center" valign="middle" rowspan="1" colspan="1">AT4G08150</th><th align="center" valign="middle" rowspan="1" colspan="1">AT1G70510</th><th align="center" valign="middle" rowspan="1" colspan="1">AT1G23380</th><th align="center" valign="middle" rowspan="1" colspan="1">AT5G25220</th><th align="center" valign="middle" rowspan="1" colspan="1">AT5G11060</th><th align="center" valign="middle" rowspan="1" colspan="1">AT4G32040</th><th align="center" valign="middle" rowspan="1" colspan="1">AT1G62990</th><th align="center" valign="middle" rowspan="1" colspan="1">AT1G14760</th></tr></thead><tbody><tr><td rowspan="26" align="center" valign="middle" style="background:#EAF1DD" colspan="1">
+<bold>BLH/BELL</bold>
+</td><td align="center" valign="middle" rowspan="1" colspan="1">
+<bold>ATH1</bold></td><td rowspan="2" align="center" valign="middle" style="background:#339966" colspan="1">[<xref rid="B8-plants-02-00317" ref-type="bibr">8</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B8-plants-02-00317" ref-type="bibr">8</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:#339966" colspan="1">[<xref rid="B15-plants-02-00317" ref-type="bibr">15</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:#339966" colspan="1">[<xref rid="B15-plants-02-00317" ref-type="bibr">15</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT4G32980</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+<bold>BEL1</bold></td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>,<xref rid="B17-plants-02-00317" ref-type="bibr">17</xref>,<xref rid="B18-plants-02-00317" ref-type="bibr">18</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>,<xref rid="B18-plants-02-00317" ref-type="bibr">18</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>,<xref rid="B17-plants-02-00317" ref-type="bibr">17</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B17-plants-02-00317" ref-type="bibr">17</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B14-plants-02-00317" ref-type="bibr">14</xref>]</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT5G41410</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+<bold>BLH1</bold></td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT2G35940</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><bold>BLH2/</bold>SAW1</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B14-plants-02-00317" ref-type="bibr">14</xref>]</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT4G36870</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+<bold>BLH3</bold></td><td rowspan="2" align="center" valign="middle" style="background:#339966" colspan="1">[<xref rid="B8-plants-02-00317" ref-type="bibr">8</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:#339966" colspan="1">[<xref rid="B8-plants-02-00317" ref-type="bibr">8</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT1G75410</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><bold>BLH4/</bold>SAW2</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B14-plants-02-00317" ref-type="bibr">14</xref>]</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT2G23760</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+<bold>BLH5</bold></td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT2G27220</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+<bold>BLH6</bold></td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT4G34610</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+<bold>BLH7</bold></td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>,<xref rid="B19-plants-02-00317" ref-type="bibr">19</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT2G16400</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><bold>BLH8</bold>/PNF</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B18-plants-02-00317" ref-type="bibr">18</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>,<xref rid="B18-plants-02-00317" ref-type="bibr">18</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT2G27990</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><bold>BLH9</bold>/PNY/BLR</td><td rowspan="2" align="center" valign="middle" style="background:#339966" colspan="1">[<xref rid="B8-plants-02-00317" ref-type="bibr">8</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:#339966" colspan="1">[<xref rid="B8-plants-02-00317" ref-type="bibr">8</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B7-plants-02-00317" ref-type="bibr">7</xref>,<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:#339966" colspan="1">[<xref rid="B14-plants-02-00317" ref-type="bibr">14</xref>]</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT5G020309</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+<bold>BLH10</bold></td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" style="background:silver" colspan="1">[<xref rid="B16-plants-02-00317" ref-type="bibr">16</xref>]</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT1G19700</bold></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1">
+<bold>BLH11</bold></td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td><td rowspan="2" align="center" valign="middle" colspan="1">
+</td></tr><tr><td align="center" valign="middle" style="border-top:hidden" rowspan="1" colspan="1"><bold>AT1G75430</bold></td></tr></tbody></table></table-wrap><p>Plant KNOX1 proteins have been largely characterized in monocotyledons and dicotyledons as key players in developmental processes where a fine equilibrium between undifferentiated and differentiated cell fate is required [<xref rid="B20-plants-02-00317" ref-type="bibr">20</xref>,<xref rid="B21-plants-02-00317" ref-type="bibr">21</xref>]. Most interestingly, KNOX1 play a pivotal role in evolutionary diversification of leaf morphology, as different expression patterns in leaves coincide with different degrees of leaf lamina serration and complexity [<xref rid="B22-plants-02-00317" ref-type="bibr">22</xref>]. Members of the BLH family may act redundantly as interacting partners of KNOX to regulate plant development [<xref rid="B23-plants-02-00317" ref-type="bibr">23</xref>]. However, very little is known about the functional meaning of KNOX/BLH interactions or the extent to which they contribute to specific developmental processes in plants. </p><p>In this review, we summarize the current evidence for a critical role of TALEs in leaf development. For more information addressing the contribution of KNOX to the evolution of leaf morphology we refer the reader to several reviews recently published [<xref rid="B24-plants-02-00317" ref-type="bibr">24</xref>,<xref rid="B25-plants-02-00317" ref-type="bibr">25</xref>,<xref rid="B26-plants-02-00317" ref-type="bibr">26</xref>,<xref rid="B27-plants-02-00317" ref-type="bibr">27</xref>,<xref rid="B28-plants-02-00317" ref-type="bibr">28</xref>,<xref rid="B29-plants-02-00317" ref-type="bibr">29</xref>,<xref rid="B30-plants-02-00317" ref-type="bibr">30</xref>]. A detailed overview of TALE function in other important developmental processes lies outside the scope of the present review [<xref rid="B21-plants-02-00317" ref-type="bibr">21</xref>,<xref rid="B23-plants-02-00317" ref-type="bibr">23</xref>,<xref rid="B31-plants-02-00317" ref-type="bibr">31</xref>]. However, we will introduce the role of TALEs in the shoot apical meristem (SAM) to discuss molecular mechanisms shared by leaf shape determination and organogenesis at the SAM. We will critically discuss novel findings regarding the identification of direct or indirect target genes and pathways that may act downstream of TALEs in leaf formation and development.</p><fig id="plants-02-00317-f001" position="float"><label>Figure 1</label><caption><p>KNOTTED1-LIKE homeobox (KNOX) intracellular localization is regulated by protein-protein interactions. KNOX/BLH interaction through the MEINOX and BELL domains, respectively, targets the complex to the nucleus (<bold>A</bold>). KNATM interacts with someBEL1-like homeobox (BLHs) through its MEINOX domain and interferes with KNOX/BLH complex formation and nuclear import (<bold>B</bold>). Interaction with the microtubule-associated protein MBP2C targets KNOX to the plasma membrane (<bold>C</bold>) [<xref rid="B32-plants-02-00317" ref-type="bibr">32</xref>]. Some KNOXs are able to move from cell to cell through plasmodesmata (<bold>D</bold>) [<xref rid="B33-plants-02-00317" ref-type="bibr">33</xref>,<xref rid="B34-plants-02-00317" ref-type="bibr">34</xref>,<xref rid="B35-plants-02-00317" ref-type="bibr">35</xref>,<xref rid="B36-plants-02-00317" ref-type="bibr">36</xref>].</p></caption><graphic xlink:href="plants-02-00317-g001"/></fig></sec><sec><title>2. Overview of the Role of TALEs in Shoot Apical Meristem</title><p>The first plant homeobox gene was identified in the laboratory of Sarah Hake [<xref rid="B37-plants-02-00317" ref-type="bibr">37</xref>] through the molecular characterization of <italic>knotted1</italic> (<italic>kn1</italic>), a gain-of-function mutant of maize that displayed transformation of leaf blade cellular fate towards sheath-like identity. The first evidence for a KNOX1 involvement in SAM formation and meristem boundaries maintenance derived from the characterization of a recessive mutation in a <italic>KN1-like</italic> Arabidopsis gene, <italic>SHOOT MERISTEMLESS</italic> (<italic>STM</italic>) [<xref rid="B38-plants-02-00317" ref-type="bibr">38</xref>,<xref rid="B39-plants-02-00317" ref-type="bibr">39</xref>]. Plants carrying the <italic>stm-1</italic> allele in <italic>A. thaliana</italic> Landsberg background were unable to form or maintain a functional SAM and only produced two cotyledons, often fused at their base. Plants harbouring weak alleles of <italic>stm</italic> or RNA interference (RNAi) constructs in <italic>A. thaliana</italic> Columbia background revealed an additional role of <italic>STM</italic> in vegetative-to-reproductive phase change as well as inflorescence and flower meristem formation [<xref rid="B40-plants-02-00317" ref-type="bibr">40</xref>,<xref rid="B41-plants-02-00317" ref-type="bibr">41</xref>,<xref rid="B42-plants-02-00317" ref-type="bibr">42</xref>,<xref rid="B43-plants-02-00317" ref-type="bibr">43</xref>]. These <italic>stm</italic> mutants can be fully phenocopied by the triple mutant that combined lesions in the <italic>BLH</italic> genes <italic>ARABIDOPSIS THALIANA HOMEOBOX 1 (ATH1</italic>), <italic>PENNYWISE (PNY)</italic> and <italic>POUND-FOOLISH</italic> (<italic>PNF</italic>). Hence, the observed meristem defects may result from loss of combinatorial BLH-STM heterodimers control [<xref rid="B44-plants-02-00317" ref-type="bibr">44</xref>]. Among the three <italic>BLH</italic> genes involved in SAM maintenance, <italic>ATH1</italic> mainly contributes to the vegetative meristem function whereas the <italic>PNY</italic> and <italic>PNF</italic> roles prevail in inflorescence stem architecture and flower development [<xref rid="B44-plants-02-00317" ref-type="bibr">44</xref>]. Studies on both maize <italic>KN1</italic> null and gain-of-function mutants, suggested that KN1 regulates leaf proximal identity and that when KN1 is absent leaves may fail to form because the proximal boundary is not defined [<xref rid="B45-plants-02-00317" ref-type="bibr">45</xref>]. Both <italic>KN1</italic> and <italic>STM</italic> are expressed in the central zone (CZ) and peripheral zone (PZ) of the SAM but are downregulated at the site of leaf primordia initiation (P0). Besides its involvement in SAM formation, STM may contribute to maintain a boundary between the CZ and PZ [<xref rid="B31-plants-02-00317" ref-type="bibr">31</xref>,<xref rid="B40-plants-02-00317" ref-type="bibr">40</xref>] and to regulate the allocation of cells into initiating organ primordia [<xref rid="B46-plants-02-00317" ref-type="bibr">46</xref>]. In the PZ, KN1/STM may act to define the meristem-organ boundary, which separates the meristem from the developing leaf [<xref rid="B12-plants-02-00317" ref-type="bibr">12</xref>,<xref rid="B31-plants-02-00317" ref-type="bibr">31</xref>,<xref rid="B47-plants-02-00317" ref-type="bibr">47</xref>,<xref rid="B48-plants-02-00317" ref-type="bibr">48</xref>,<xref rid="B49-plants-02-00317" ref-type="bibr">49</xref>,<xref rid="B50-plants-02-00317" ref-type="bibr">50</xref>]. Studies of other KNOX1 transcription factors in Arabidopsis have suggested that KNAT2, KNAT6 and KNAT1/BP proteins may contribute redundantly to meristem and meristem-organ boundaries maintenance [<xref rid="B23-plants-02-00317" ref-type="bibr">23</xref>]. </p></sec><sec><title>3. TALE Contribution to Leaf Initiation and Morphology in Simple and Compound-Leafed Plant Species</title><p>The leaves of seed plants evolved from a primitive shoot system as determinate growth organs that arise at the flank of the shoot apical meristem. Leaves are formed by a structural vascular net (leaf veins), which is continuous with the shoot vascular bundles, and a lamina with dorsiventral, mediolateral and proximal-distal polarities. The blade of dicot leaves is intersected by an intricate arrangement of successive orders of branched veins with a central primary vein (midvein) that develops acropetally at the center of the leaf and extends along the whole leaf length. Differently, leaves from monocots are characterized by a parallel vein system. Leaves display an enormous degree of morphological variability and are mainly classified into simple and compound. Simple leaves consist of a single leaf blade while compound leaves bear several leaflets departing from a major axis, named rachis (<xref ref-type="fig" rid="plants-02-00317-f002">Figure 2</xref>).</p><p>Leaf development encompasses three continuous and overlapping phases [<xref rid="B26-plants-02-00317" ref-type="bibr">26</xref>,<xref rid="B51-plants-02-00317" ref-type="bibr">51</xref>,<xref rid="B52-plants-02-00317" ref-type="bibr">52</xref>,<xref rid="B53-plants-02-00317" ref-type="bibr">53</xref>,<xref rid="B54-plants-02-00317" ref-type="bibr">54</xref>,<xref rid="B55-plants-02-00317" ref-type="bibr">55</xref>]. During the first phase of leaf initiation, the leaf primordium emerges from the flanks of the SAM at positions determined by specific phyllotactic patterns. In the second phase, the leaf expands laterally and primary morphogenesis (PM) events occur from specific meristematic regions at the leaf margin (blastozones) [<xref rid="B56-plants-02-00317" ref-type="bibr">56</xref>]. In the third phase of secondary morphogenesis (SM), extensive cell expansion and histogenesis occurs.</p><p>TALE transcription factors have been involved in key morphogenetic processes occurring at early stages of leaf development: (i) leaf primodia initiation; (ii) formation of leaf serrations; (iii) leaflet formation in compound leaves.</p><fig id="plants-02-00317-f002" position="float"><label>Figure 2</label><caption><p>Schematic representation of simple and compound leaves. Leaves are traditionally divided into two major morphogenetic classes: simple (<bold>A</bold>) and compound (<bold>B</bold>). Simple leaves have a single flat blade/lamina, the margins of which are continuous and may be smooth, lobed, or serrated (with asymmetrical teeth pointing forward). The blades of compound leaves of eudicot plants are composed of several regularly spaced sessile or petiolated appendages called leaflets that are attached to a central rachis, the latter corresponding to the middle vein of a simple leaf. The leaf blade, or the rachis in compound leaves, is attached to the stem by the petiole.</p></caption><graphic xlink:href="plants-02-00317-g002"/></fig><sec><title>3.1. TALE Genes in Organ Primordia Initiation</title><p>Leaf primordia initiate at the SAM, in a species-dependent phyllotactic pattern, at specific sites marked by auxin maxima. Organ outgrowth is preceded by cell microtubule rearrangement and the entire sequence of events leading to leaf formation can be triggered by local changes in the cell expansion rate [<xref rid="B57-plants-02-00317" ref-type="bibr">57</xref>]. This was shown by experiments where local external application, or expression of the cell wall lubricating protein expansins, could induce organ outgrowth from the meristem [<xref rid="B58-plants-02-00317" ref-type="bibr">58</xref>,<xref rid="B59-plants-02-00317" ref-type="bibr">59</xref>,<xref rid="B60-plants-02-00317" ref-type="bibr">60</xref>]. Recently, an involvement of enzymes that modify the methyl-esterification of the pectin cell wall component in organ outgrowth has been shown [<xref rid="B61-plants-02-00317" ref-type="bibr">61</xref>,<xref rid="B62-plants-02-00317" ref-type="bibr">62</xref>], further implicating cell wall modification in the organogenesis processes at the SAM. In both simple and compound leaves, downregulation of <italic>KNOX1</italic> genes marks early the sites of leaf primordia initiation. It has been suggested that <italic>KNOXs</italic> downregulation may be functional to organ formation, acquisition of lateral organ identity and cell differentiation [<xref rid="B20-plants-02-00317" ref-type="bibr">20</xref>]. However, ectopic expression of <italic>KNOX1</italic> under the control of CaMV 35S promoter in plant tissues including leaf primordia, does not prevent leaf initiation but dramatically alters the vascular venation pattern and the morphology of leaves. Lobes or indeterminate structures form at the margin of simple-leafed species while increased lamina dissection is observed in compound leaves (see Subsection 3.2) [<xref rid="B20-plants-02-00317" ref-type="bibr">20</xref>]. Moreover, when <italic>STM</italic> was expressed in leaf primordia under the control of <italic>AINTEGUMENTA</italic> (<italic>ANT</italic>) promoter, which is active in primordia of cotyledons and leaves [<xref rid="B63-plants-02-00317" ref-type="bibr">63</xref>], the observed phenotype was similar to that of <italic>35S::STM</italic> plants. The leaves were lobed and smaller than in the wild type, and in the most extreme cases, were reduced to small finger-like structures [<xref rid="B64-plants-02-00317" ref-type="bibr">64</xref>]. Conversely, overexpression of <italic>WUSCHEL</italic> (<italic>WUS</italic>), another major regulator of SAM formation and maintenance, under the control of the <italic>ANT</italic> promoter, resulted in plants with an enlarged meristem that lack lateral organ formation [<xref rid="B64-plants-02-00317" ref-type="bibr">64</xref>]. These studies suggest that misexpression of <italic>KNOX1</italic> in leaf initials would not prevent organ outgrowth but would rather affect organ boundary formation, later stages of cell differentiation and establishment of leaf vein patterning. Nonetheless, a role for <italic>KNOX1</italic> downregulation in organ outgrowth cannot be excluded. Post-transcriptional events such as mRNA and protein instability or protein-protein interactions may impede KNOX1 activity in leaf founder cells even when ectopically expressed. Most importantly, expression of KNOX1 proteins in leaf initials might be ineffective due to lack of proper BLH interactors. In fact, the few studies on mRNA localization of <italic>BLH</italic> genes, such as <italic>BELLRINGER (BLR/BLH9)</italic>, showed <italic>BLH</italic> downregulation at the site of organ primordia initiation [<xref rid="B65-plants-02-00317" ref-type="bibr">65</xref>]. </p><p>Very recently, a new <italic>BLR/BLH9</italic> mutant, <italic>blr-6</italic>, was found to bear ectopic flowers at the shoot apex and altered phyllotaxis, together with reduced pectin methylesterification in the meristem caused by the upregulation of the <italic>PECTIN METHYLESTERASE 5</italic> (<italic>PME5)</italic> gene [<xref rid="B62-plants-02-00317" ref-type="bibr">62</xref>]. Complete restoration of meristem phyllotaxis was observed in <italic>blr-6/pme5-1</italic> double mutant, thus showing that the altered phyllotaxis in the <italic>blr-6</italic> mutant in the meristem could be explained entirely by the ectopic <italic>PME5</italic> expression in the meristem dome. These studies point to pectin demethylesterification as a critical step in the loss of meristem identity and in the allocation of the cell to an organ primordium. The function of BLH9 would therefore be to inhibit <italic>PME</italic> in the shoot meristem, which is consistent with the observation that overexpression of a PME inhibitor (PMEI3) completely prevents primordia formation [<xref rid="B61-plants-02-00317" ref-type="bibr">61</xref>]. </p></sec><sec><title>3.2. TALE Genes in the Control of Simple Leaf Morphology</title><p>Margins of simple leaves can be lobed, serrated, or smooth. Leaf margin morphogenesis is primarily achieved through the regulation of differential growth of the leaf blade at the peripheral zone of the SAM. A putative role for TALE proteins in leaf marginal outgrowth has been suggested by <italic>KNOX</italic> overexpression studies that showed formation of highly lobed leaves and marginal outgrowth in different simple-leafed plant species [<xref rid="B20-plants-02-00317" ref-type="bibr">20</xref>]. For instance, leaves of plants expressing <italic>KNAT1/BP</italic> from the 35S promoter are lobed and folded upwards with ectopic stipules and meristems in the sinus regions [<xref rid="B66-plants-02-00317" ref-type="bibr">66</xref>]. During a screen to identify genes that negatively regulated <italic>KNOX</italic> expression <italic>asymmetric leaves1</italic> (<italic>as1</italic>), <italic>asymmetric leaves 2</italic> (<italic>as2</italic>) and <italic>serrate</italic> (<italic>se</italic>) Arabidopsis mutants were isolated [<xref rid="B67-plants-02-00317" ref-type="bibr">67</xref>]. The <italic>se</italic> mutant displayed strong leaf serration whereas <italic>as1</italic> and <italic>as2</italic> showed rumpled rosette leaves reminiscent of tobacco leaves overexpressing <italic>KNAT1</italic> [<xref rid="B67-plants-02-00317" ref-type="bibr">67</xref>]. Indeed, double <italic>as1/as2</italic> mutants displayed misexpression of <italic>KNAT1/BP</italic> and <italic>KNAT2</italic> in the leaves whereas <italic>se</italic> increased <italic>as1/as2</italic> leaf lobing phenotype although no misexpression of <italic>KNAT1/BP</italic> in this single mutant was observed. A direct link between TALEs and leaf serration was further established through the characterization of two <italic>BLH</italic> genes, <italic>SAWTOOTH1</italic> (<italic>SAW1</italic>) and <italic>SAW2</italic>, formerly called <italic>BLH2</italic> and <italic>BLH4</italic>, respectively [<xref rid="B68-plants-02-00317" ref-type="bibr">68</xref>]. The <italic>saw1-1 saw2-1</italic> Arabidopsis double mutants showed increased serrations in leaf margins and revolute leaves with margins curled abaxially. This phenotype was accompanied by reactivation of the <italic>KNOX</italic> genes <italic>KNAT1/BP</italic> and <italic>KNAT2</italic> in the leaves [<xref rid="B68-plants-02-00317" ref-type="bibr">68</xref>]. SAW1 interacts with STM, KNAT1/BP, KNAT2, KNAT3, KNAT6 and KNAT5 and was shown to repress <italic>KNAT1/BP</italic> expression in leaf hydathodes [<xref rid="B68-plants-02-00317" ref-type="bibr">68</xref>], differently from <italic>asymmetric</italic> mutants where <italic>KNOX</italic> reactivation was observed in leaf petioles and vascular veins [<xref rid="B67-plants-02-00317" ref-type="bibr">67</xref>]. KNATM, the KNOX protein lacking the homeobox, interacts with the BLH proteins SAW1, SAW2, BEL1, BLH9 and with KNAT1/BP [<xref rid="B14-plants-02-00317" ref-type="bibr">14</xref>]. Plants overexpressing <italic>KNATM</italic> displayed leaf serration phenotypes that resembled <italic>saw1-saw2</italic> mutants. Further functional studies revealed an antagonistic relationship between KNATM and SAWs [<xref rid="B14-plants-02-00317" ref-type="bibr">14</xref>]. </p><p>A further role for KNOX in leaf lamina margin morphology was assessed by studying several <italic>Arabidopsis</italic> species, such as <italic>A. arenas</italic>, <italic>A. halleri</italic>, <italic>A. suecica</italic> and <italic>A. lyrata</italic>, which display a wide range of leaf lobing and serrations [<xref rid="B69-plants-02-00317" ref-type="bibr">69</xref>]. Different degrees of marginal outgrowth were associated with the expression of <italic>STM-like</italic> genes in leaves. It was proposed that the evolution of the unlobed shape of <italic>A. thaliana</italic> leaf may have involved <italic>STM</italic> loss of expression in the leaves and that cis-regulatory divergence contributed to margin diversification [<xref rid="B69-plants-02-00317" ref-type="bibr">69</xref>]. However, recent works reported on the occasional and feeble <italic>STM</italic> expression at the sinus of <italic>A. thaliana</italic> Columbia wild type leaves, suggest that STM may also be involved in serration formation in <italic>A. thaliana</italic> [<xref rid="B70-plants-02-00317" ref-type="bibr">70</xref>].</p><p>Several other genetic moieties could participate to KNOX-mediated leaf shape diversity as <italic>KNOX1</italic> repression in leaves is under epigenetic regulation at the chromatin level [<xref rid="B21-plants-02-00317" ref-type="bibr">21</xref>]. Indeed, multiprotein complexes are involved such as: (a) the chromatin remodeling factor Histone Cell Cycle Regulation defective homolog A (HIRA) [<xref rid="B71-plants-02-00317" ref-type="bibr">71</xref>] that includes AS1, a myb transcription factor, and AS2, a LATERAL ORGAN BOUNDARY DOMAIN (LBD) protein; (b) the POLYCOMB REPRESSIVE COMPLEXES (PRCs) 1 and 2 [<xref rid="B72-plants-02-00317" ref-type="bibr">72</xref>]; (c) the LEUNIG-YABBY complex [<xref rid="B73-plants-02-00317" ref-type="bibr">73</xref>]; (d) the transcriptional repression complex that contains the co-repressor TOPLESS (TPL) and TPL-related (TPR) that interacts with AS1 [<xref rid="B74-plants-02-00317" ref-type="bibr">74</xref>]. Interestingly, several TALE homeobox proteins contain the Ethylene-responsive element binding-factor-associated amphiphilic repression (EAR) motif [<xref rid="B75-plants-02-00317" ref-type="bibr">75</xref>], a consensus sequence that identifies transcription factors acting as repressors of gene expression and mediates physical interactions with TOPLESS co-repressors [<xref rid="B76-plants-02-00317" ref-type="bibr">76</xref>]. Therefore, interactions of TALEs with TPL and TPR co-repressor complexes could change their transcription factor properties from gene expression activators to repressors.</p><p>Additional transcription factors, other than TALE homeodomain, play a pivotal role in leaf margin morphology in <italic>A. thaliana</italic>. Investigation on the evolution and specific roles of <italic>NAM/CUC</italic> (<italic>NO APICAL MERISTEM</italic> and <italic>CUP-SHAPED COTYLEDON</italic>) meristem boundary genes in leaves showed that <italic>CUC2</italic> is essential for margins morphology of Arabidopsis wild type plants [<xref rid="B77-plants-02-00317" ref-type="bibr">77</xref>]. Inactivation of <italic>CUC3</italic> can suppress serrations, indicating a role for this gene in leaf shaping. Moreover, the lobed leaf phenotype of plants that overexpress <italic>KNOX1</italic> genes was suppressed in <italic>cuc2-3</italic> mutants, suggesting that CUCs act downstream of KNOX-induced leaf morphology alteration [<xref rid="B77-plants-02-00317" ref-type="bibr">77</xref>].</p><p>Further studies, which combined developmental genetics and computational modeling, showed that serration development is the morphological read-out of a spatially distributed regulatory mechanism, which creates reiterated activity peaks of auxin and the CUC2 transcription factor [<xref rid="B70-plants-02-00317" ref-type="bibr">70</xref>,<xref rid="B78-plants-02-00317" ref-type="bibr">78</xref>]. Therefore, CUC2 activity and auxin transport and signaling are regulated and integrated to sculpt leaf margin serrations in plant species. The contribution of <italic>KNOX1</italic> genes in this process is not completely clear in <italic>A. thaliana</italic> because of conflicting results on <italic>STM-like</italic> gene expression in wild type leaves [<xref rid="B70-plants-02-00317" ref-type="bibr">70</xref>,<xref rid="B78-plants-02-00317" ref-type="bibr">78</xref>].</p></sec><sec><title>3.3. TALE Genes in the Control of Compound Leaf Morphology</title><p>Tomato (<italic>Solanum lycopersicum</italic>) [<xref rid="B26-plants-02-00317" ref-type="bibr">26</xref>,<xref rid="B29-plants-02-00317" ref-type="bibr">29</xref>] and the close Arabidopsis relative <italic>Cardamine hirsuta</italic> [<xref rid="B24-plants-02-00317" ref-type="bibr">24</xref>] have been extensively studied to unravel genetic and molecular mechanisms at the base of leaf dissection. The first evidence of a role for TALEs in compound leaf development derived from overexpression studies of the maize <italic>KN1</italic> in tomato. In these plants, two to four additional reiterated rounds of ramification of the blade were induced, generating supercompound leaves bearing thousands of leaflets [<xref rid="B79-plants-02-00317" ref-type="bibr">79</xref>] (<xref ref-type="fig" rid="plants-02-00317-f003">Figure 3</xref>B). Most compound-leafed species, differently from species with simple leaves, recapitulate <italic>KNOX1</italic> gene expression in leaf primordia after the initial downregulation at P0 (<xref ref-type="fig" rid="plants-02-00317-f003">Figure 3</xref>) [<xref rid="B22-plants-02-00317" ref-type="bibr">22</xref>,<xref rid="B27-plants-02-00317" ref-type="bibr">27</xref>]. Expression of <italic>KNOXs</italic> during leaf primordia development has been correlated to the maintenance of an indeterminate state that would prompt the leaf to undertake morphological processes for leaflet production [<xref rid="B55-plants-02-00317" ref-type="bibr">55</xref>]. </p><fig id="plants-02-00317-f003" position="float"><label>Figure 3</label><caption><p>Overexpression of <italic>KNOX1</italic> genes in plants with simple or compound leaves. Schematic representation of the lobed leaf phenotype of Arabidopsis plants that overexpress <italic>KNOX1</italic> genes (<bold>A</bold>) or the supercompound leaf phenotype due to <italic>KNOX1</italic> overexpression in tomato (<bold>B</bold>). In the lower part of the panels the expression of <italic>KNOX1</italic> genes in the shoot apical meristem (SAM) of plants with either simple (<bold>A</bold>) or compound (<bold>B</bold>) leaves is schematized. <italic>KNOX1</italic> expression domains are shown in orange.</p></caption><graphic xlink:href="plants-02-00317-g003"/></fig><p>However, a set of studies on tomato, including the <italic>KN1</italic> overexpression in mutants with different levels of leaf dissection [<xref rid="B79-plants-02-00317" ref-type="bibr">79</xref>] and the switch of KNOX1 proteins into repressors combined with the time-regulated expression in leaf primordia [<xref rid="B55-plants-02-00317" ref-type="bibr">55</xref>], revealed that: (a) the sensitivity to KNOX1 action varies during leaf development; (b) the KNOX1 activity is restricted to the developmental window of primary morphogensis [<xref rid="B38-plants-02-00317" ref-type="bibr">38</xref>]. The extent of this organogenesis window is defined by the antagonistic activities of maturation promoting (e.g., TCP transcription factors, gibberellins, florigen) and maturation delaying factors (e.g., KNOX1, cytokinins) [<xref rid="B25-plants-02-00317" ref-type="bibr">25</xref>,<xref rid="B26-plants-02-00317" ref-type="bibr">26</xref>,<xref rid="B29-plants-02-00317" ref-type="bibr">29</xref>]. Additional evidences for a TALE role in compound leaf development arose from the molecular characterization of a tomato single semidominant locus, named <italic>Petroselinum</italic> (<italic>Pts</italic>), and the tomato classical mutant <italic>bipinnata</italic> (<italic>bip</italic>). Both the <italic>Pts</italic> locus and <italic>bip</italic> mutations conferred similar phenotypes which consisted of increased primary and secondary leaflet production, as well as development of tertiary and quaternary leaflets, not observed in wild type tomato [<xref rid="B80-plants-02-00317" ref-type="bibr">80</xref>]. <italic>Pts</italic> resulted to be a gain-of-function mutant of a novel <italic>KNOX</italic> lacking the homeobox, homologous to the Arabidopsis <italic>KNATM</italic>, whereas <italic>bip</italic> was a loss-of-function mutant of a <italic>BLH</italic> gene. PTS was demonstrated to antagonize KNOX1/BIP function, thus showing that alterations in BLH/KNOX heterodimers homeostasis can affect compound leaf development. </p><p>In the absence of <italic>KNOX</italic> loss-of-function tomato mutants, the final confirmation that endogenous KNOX regulated leaf lamina dissection in compound-leafed species was provided by studies in <italic>Cardamine hirsuta.</italic> The partial inactivation of the <italic>STM</italic> gene converted the compound leaf into a simple leaf, thus demonstrating that KNOX proteins are necessary for compound leaf development [<xref rid="B81-plants-02-00317" ref-type="bibr">81</xref>]. </p><p>Besides <italic>KNOX</italic> homeobox genes, the <italic>NAM/CUC</italic> transcription factors also participate in compound leaf development. Refined experiments of gene silencing and mutant analyses were conducted in four distantly related eudicot compound-leafed species. Reducing the function of <italic>NAM/CUC</italic> boundary genes led to the suppression of blade margin outgrowths and the production of few and fused leaflets [<xref rid="B25-plants-02-00317" ref-type="bibr">25</xref>]. It was therefore proposed that <italic>NAM/CUC</italic> genes promote formation of a boundary domain that delimits leaflets [<xref rid="B25-plants-02-00317" ref-type="bibr">25</xref>].</p></sec><sec><title>3.4. ILRC Subgroup of Legumes: An Exception to the TALE Rule?</title><p>As previously stated, <italic>KNOX1</italic> expression is downregulated at the site of leaf primordia initiation in both simple- and compound-leafed species. However in most plants with compound leaves, <italic>KNOX1</italic> expression is re-activated at the leaf primordium and plays a role in leaflet formation. The pattern of <italic>KNOX1</italic> gene expression in several vascular plants revealed a correlation between <italic>KNOX</italic> expression and leaf complexity [<xref rid="B22-plants-02-00317" ref-type="bibr">22</xref>]. However, a specific Inverted Repeat Lacking Clade (IRLC) of legumes, which comprises pea and <italic>Medicago</italic> genus, was suggested to follow alternative pathways that did not involve reactivation of <italic>KNOX1</italic> genes in leaves. Pea <italic>KNOX1</italic> are excluded from compound leaves and KNOX1 proteins were not detected using KNOX1 antibodies in leaves of the IRLC legume group [<xref rid="B82-plants-02-00317" ref-type="bibr">82</xref>]. However, three <italic>KNOX1</italic> mRNAs were detected in trifoliate developing leaves of <italic>Medicago truncatula</italic> [<xref rid="B18-plants-02-00317" ref-type="bibr">18</xref>]. </p><p>Despite conflicting results on <italic>KNOX1</italic> expression in <italic>M. truncatula</italic> leaf primordia, genetic studies implicated alternative pathways for the control of compound leaf morphology in these species (<xref ref-type="fig" rid="plants-02-00317-f004">Figure 4</xref>). In pea, mutants of the Arabidopsis <italic>LEAFY</italic> (<italic>LFY</italic>) ortholog <italic>UNIFOLIATA</italic> (<italic>UNI</italic>) lacked tendrils and displayed simplified leaf complexity, besides floral defects similar to those of the Arabidopsis <italic>lfy</italic> mutant [<xref rid="B83-plants-02-00317" ref-type="bibr">83</xref>]. In <italic>M. truncatula</italic>, mutants in the <italic>LFY</italic> ortholog <italic>SINGLE LEAFLET1</italic> (<italic>SGL1</italic>) only developed simple leaves due to failure in initiating lateral leaflet primordia [<xref rid="B84-plants-02-00317" ref-type="bibr">84</xref>]. <italic>LFY</italic> is a plant-specific transcription factor that promotes the floral fate of meristems and is found as a single gene in most land plant species. Downregulation of <italic>LFY</italic> homologs in species outside of IRLC was also shown to induce a simplification of compound leaves [<xref rid="B82-plants-02-00317" ref-type="bibr">82</xref>]. This phenomenon might rely on a &#x0201c;cryptic&#x0201d; function of LFY to promote an indeterminate and meristematic state [<xref rid="B85-plants-02-00317" ref-type="bibr">85</xref>]. SGL1 function in <italic>M. truncatula</italic> leaf dissection was confirmed by the isolation of a negative regulator of <italic>SGL1</italic>, a Cys(2)His(2) zinc finger (<italic>PALM1</italic>) transcription factor. In loss-of-function <italic>palm1</italic> mutants, the lack of <italic>SGL1</italic> negative regulation resulted in an increase in the morphogenetic activity, which led to enhanced leaflet production [<xref rid="B86-plants-02-00317" ref-type="bibr">86</xref>]. Very interestingly, an additional <italic>M. truncatula</italic> mutant that displayed leaflet fusion and simplified leaf morphology resulted from loss-of-function of <italic>FUSED COMPOUND LEAF1</italic> (<italic>FCL1</italic>), an ortholog of the Arabidopsis <italic>KNATM</italic> [<xref rid="B87-plants-02-00317" ref-type="bibr">87</xref>]. As previously described, KNATM interferes with BLH/KNOX complexes homeostasis to promote KNOX1 morphogenetic activity by sequestering the SAW1,2 KNOX1 negative regulators. This raises the question whether KNOX1 can be somehow involved in leaf complexity in <italic>M. truncatula</italic>. Indeed, genetic analyses indicate that both <italic>SGL1</italic> and <italic>FCL1</italic> are required for the development of the higher complexity leaf displayed by <italic>palm</italic> mutant, suggesting the direct involvement of KNOX1 regulators in IRLC legume leaf development. However, loss-of-function mutants of <italic>STM-like KNOX1</italic> genes of <italic>M. truncatula</italic> did not display any simplification of the trifoliate leaf [<xref rid="B88-plants-02-00317" ref-type="bibr">88</xref>]. Overexpression of either <italic>STM</italic> or <italic>MtKNOX STM-like</italic> genes in <italic>M. truncatula</italic> altered shoot meristem activity and leaflet shape but failed to produce leaves with increased complexity [<xref rid="B89-plants-02-00317" ref-type="bibr">89</xref>]. However, overexpression of a tomato <italic>KNOX1</italic> gene in <italic>M. sativa</italic> was capable of producing extra leaflets on the rachis of the leaves [<xref rid="B82-plants-02-00317" ref-type="bibr">82</xref>].</p><fig id="plants-02-00317-f004" position="float"><label>Figure 4</label><caption><p>Genetic pathways involved in compound leaf development of <italic>Medicago truncatula</italic>. Leaf development in IRLC clade of legumes, including <italic>Medicago</italic> genus, seems to involve pathways alternative to KNOXs. <italic>M. truncatula</italic> mutations affecting leaflet number identified homologs of Arabidopsis <italic>LFY</italic>, <italic>CUC</italic>s and <italic>KNATM</italic> as genes promoting leaf complexity. A novel Cys(2)His(2) zinc finger transcription factor (<italic>PALM1</italic>) acts as a repressor of <italic>SGL1/LFY</italic> to reduce leaf complexity. Differently from <italic>Cardamine hirsuta</italic>, mutations in <italic>PIN-like</italic> genes result in increased formation of leaflets. The role of TALEs in <italic>Medicago</italic> leaf morphology remains unclear due to conflicting data regarding detection of mRNA in developing leaves and the effect of <italic>KNOX1</italic> overexpression on leaf complexity.</p></caption><graphic xlink:href="plants-02-00317-g004"/></fig><p>The pattern of vasculature growth and leaf morphology varies during phase change from juvenile to adult with the reproductive phase, this phenomenon is termed heteroblasty. Genes involved in phase change and response to flowering, such as <italic>L</italic>FY and <italic>FLOWERING LOCUS T</italic> (<italic>FT</italic>) [<xref rid="B90-plants-02-00317" ref-type="bibr">90</xref>], or <italic>SQUAMOSA PROMOTER-BINDING PROTEIN-LIKE</italic> (<italic>SPL</italic>) transcription factors [<xref rid="B91-plants-02-00317" ref-type="bibr">91</xref>], genetically interact with <italic>KNOX1</italic> and <italic>BLH</italic>. This would suggest that TALEs may coordinate morphogenetic processes in response to environmental and developmental issues in different phases of shoot transition, through direct or indirect interactions with maturation promoting and maturation delaying factors. In this context, additional compound leaf mutants of <italic>M. truncatula</italic>, affected in homologs of genes involved in phase change, may help to further elucidate the cross-talk between TALEs and flowering transition factors.</p></sec></sec><sec><title>4. TALEs Work at the Boundaries: How to Establish the Confines between Undifferentiated Cells and Organ Primordia</title><p>Leaves originally derived from modified branches so as to provide increased surface areas for light harvesting and photosynthesis. Leaf lamina growth follows the development of primary and secondary vascular strands. Simple and compound leaves mainly differ in degree and time at which lamina are initiated along the vascular growth axis, the latter may reflect the degree of determinate/indeterminate growth of the vascular tissues. In simple leaves, blade differentiation occurs early after the establishment of the primary vein, whereas in compound leaves the main vein branches several times before lamina differentiation occurs. Characterization of the <italic>phantastica</italic> (<italic>phan</italic>) mutant of snapdragon [<xref rid="B92-plants-02-00317" ref-type="bibr">92</xref>] and the <italic>phabulosa</italic> (<italic>phb</italic>) mutant of <italic>A. thaliana</italic> [<xref rid="B93-plants-02-00317" ref-type="bibr">93</xref>] showed that the establishment of dorsoventrality in the leaf primordium is an essential step for the initiation of marginal meristem activity leading to leaf blade formation. In <italic>BLADE-ON-PETIOLE</italic> (<italic>bop</italic>) mutants, the formation of ectopic outgrowths of blade tissue along the leaf petiole is accompanied by ectopic <italic>KNOX</italic> gene expression [<xref rid="B94-plants-02-00317" ref-type="bibr">94</xref>,<xref rid="B95-plants-02-00317" ref-type="bibr">95</xref>]. KNOX1 may therefore be involved in setting the boundaries between vascular identity or leaf blade identity. </p><p>Establishing boundaries between undifferentiated cells and the sites of organ or tissue outgrowth constitutes a constant prerequisite in morphogenetic processes where differential areas of growth and polarity axis have to be established. Leaflet formation in compound leaves, and serrations in simple leaves, somehow recapitulate lateral organ primordia initiation occurring at the SAM. Common molecular players and regulators are involved in these processes (<xref ref-type="fig" rid="plants-02-00317-f005">Figure 5</xref>). Recent evidence involved the so-called &#x0201c;morphogen&#x0201d; auxin, KNOX and CUCs as key interacting players in these morphogenetic events. The establishment of PIN-directed auxin gradients to form auxin maxima at the sites of organ or tissue outgrowth was shown to underlie organogenesis processes at the shoot apex [<xref rid="B96-plants-02-00317" ref-type="bibr">96</xref>], formation of compound leaf in <italic>Cardamine hirsuta</italic> [<xref rid="B97-plants-02-00317" ref-type="bibr">97</xref>] and tomato [<xref rid="B98-plants-02-00317" ref-type="bibr">98</xref>] as well as serration onset at the leaf margins [<xref rid="B70-plants-02-00317" ref-type="bibr">70</xref>,<xref rid="B78-plants-02-00317" ref-type="bibr">78</xref>].</p><p>The current model for leaf margin serrations predicts that the presence of CUC2 enables the reorientation of PINs whereas auxin, in turn, would inhibit CUC2 to stabilize the position of auxin maxima (<xref ref-type="fig" rid="plants-02-00317-f005">Figure 5</xref>B). Therefore, the protrusion and indentations of the serrations would constitute a morphological readout of the sites of high auxin and CUC2 concentrations, respectively [<xref rid="B78-plants-02-00317" ref-type="bibr">78</xref>]. </p><p>During compound leaf development, KNOX1 would contribute to maintain a prolonged undifferentiated cell fate in leaf primordia that would allow cells to respond to PIN-dependent auxin/CUC regulatory network for the reiteration of sites with no expansion (boundaries) and tissue outgrowth in correspondence to auxin peaks (<xref ref-type="fig" rid="plants-02-00317-f005">Figure 5</xref>C). Surprisingly, different molecular mechanisms seem to occur in the marginal blastozone of the IRLC legume <italic>M. truncatula</italic> for compound leaf development (<xref ref-type="fig" rid="plants-02-00317-f004">Figure 4</xref>). Mutations in <italic>PIN1-like</italic> genes, which displayed altered auxin maxima formation, resulted in increased formation of leaflets [<xref rid="B99-plants-02-00317" ref-type="bibr">99</xref>,<xref rid="B100-plants-02-00317" ref-type="bibr">100</xref>], thus showing an opposite effect with respect to other compound-leafed species where loss of auxin transport induced leaf simplification [<xref rid="B71-plants-02-00317" ref-type="bibr">71</xref>]. However, acropetal or basipetal growth of petioles, rachis and various orders of vein vasculature are species-specific and may take account of the different involvement of PIN-mediated auxin distribution in morphogenesis processes. </p><fig id="plants-02-00317-f005" position="float"><label>Figure 5</label><caption><p>Common genetic pathways involved in lateral organ formation at the SAM (<bold>A</bold>), formation of leaf serrations (<bold>B</bold>) or leaflets in compound leaf development (<bold>C</bold>). PIN1-dependent auxin transport (blue arrows) leads to formation of auxin maxima (blue smarties) for organ/tissue outgrowth. Localized <italic>CUC</italic>s expression (in purple) and a positive feedback loop between CUCs and TALEs are required for setting boundaries and proper organ separation. TALE would maintain the indeterminate environment for morphogenesis whereas auxin and CUCs would ensure organ/tissue patterning and separation. In the SAM, TALEs would repress <italic>PME</italic> expression to prevent cell expansion. Continuous or discontinuous black arrows indicate either direct or indirect induction, respectively. </p></caption><graphic xlink:href="plants-02-00317-g005"/></fig><p>Detailed studies on vascular axis growth in various compound-leafed species are envisaged in order to correlate gene expression pathways and function and to build predictive models that integrate morphological and molecular data. Identification of novel mutations in <italic>TALE</italic> and <italic>PIN</italic> genes in various members of IRLC legumes will help to unravel how the compound leaf pathway is established in these species. </p></sec><sec><title>5. A Matter of Targets: the Secret Agents of TALEs</title><p>In order to understand TALE dependent cell behavior during development and diversification of morphogenetic structures, it is essential to identify many of their downstream genes. So far, only a few KNOX1 target genes have been characterized. Novel data from genome-wide studies are beginning to shed light on the complex regulatory network controlled by TALEs (<xref ref-type="fig" rid="plants-02-00317-f006">Figure 6</xref>).</p><fig id="plants-02-00317-f006" position="float"><label>Figure 6</label><caption><p>Functional categories of TALE target genes. Putative TALE direct targets belong to three main functional categories: hormonal pathways (grey box), transcriptional regulation (pink box) and cell wall metabolism (light blue box). KNOX1 positively regulate cytokinin biosynthesis and signaling through induction of <italic>ISOPENTENYL TRANSFERASE (IPTs)</italic> and <italic>ARABIDOPSIS RESPONSE REGULATORS</italic> (<italic>ARRs</italic>) genes. Low active gibberellins levels are maintained by KNOX1 through repression of GA biosynthetic genes (<italic>GA20ox</italic>) and induction of GA degradation by <italic>GA2ox</italic> genes. <italic>CUC1</italic> TF has been identified as a direct target of STM in Arabidopsis. Arabidopsis KNAT1/BP was shown to repress several genes involved in lignin biosinthesis. Arabidopsis BLH9/BLR negatively regulate <italic>PECTIN METHYLESTERASE 5</italic> (<italic>PME5)</italic> gene to repress cell expansion in the SAM. Recent studies of ChIP-seq and RNA-seq identified KN1 modulated and bound genes enriched in TFs and hormone metabolism, most notably auxin.</p></caption><graphic xlink:href="plants-02-00317-g006"/></fig><sec><title>5.1. Links to Hormones</title><p>Cytokinins and gibberellins hormonal pathways were first identified as downstream targets of KNOX1 transcription factors [<xref rid="B101-plants-02-00317" ref-type="bibr">101</xref>,<xref rid="B102-plants-02-00317" ref-type="bibr">102</xref>,<xref rid="B103-plants-02-00317" ref-type="bibr">103</xref>,<xref rid="B104-plants-02-00317" ref-type="bibr">104</xref>,<xref rid="B105-plants-02-00317" ref-type="bibr">105</xref>,<xref rid="B106-plants-02-00317" ref-type="bibr">106</xref>]. Cytokinins (CK) are master regulators of plant development that stimulate cell division and induce shoot apical meristem formation in plant tissue culture. Several plant species overexpressing <italic>KNOX1</italic> genes accumulate high levels of cytokinins [<xref rid="B101-plants-02-00317" ref-type="bibr">101</xref>,<xref rid="B102-plants-02-00317" ref-type="bibr">102</xref>,<xref rid="B107-plants-02-00317" ref-type="bibr">107</xref>,<xref rid="B108-plants-02-00317" ref-type="bibr">108</xref>]. Independent studies have provided direct molecular evidence for the positive regulation of CK biosynthesis by KNOX1, through the induction of <italic>ISOPENTENYL TRANSFERASE</italic> genes, in Arabidopsis [<xref rid="B104-plants-02-00317" ref-type="bibr">104</xref>,<xref rid="B105-plants-02-00317" ref-type="bibr">105</xref>] and rice [<xref rid="B109-plants-02-00317" ref-type="bibr">109</xref>]. Lettuce plants overexpressing <italic>KNAT1/BP</italic> showed cytokinin overproduction and accumulation at the leaf margins, accompanied by ectopic leaves initiation [<xref rid="B108-plants-02-00317" ref-type="bibr">108</xref>] suggesting that KNOX1 would induce local changes in cytokinin content to increase the morphogenetic potential of leaf margins. This finding was confirmed by studies in tomato where ectopic expression of <italic>IPT7</italic> in leaves led to the formation of super-compound leaves whereas decreasing CK levels resulted in reduced leaf complexity [<xref rid="B110-plants-02-00317" ref-type="bibr">110</xref>]. </p><p>Gibberellins (GA) promote polar cell expansion and organ outgrowth. The first evidence for a direct involvement of KNOX1 in regulating GA metabolism came from induction of the <italic>STM</italic> ortholog <italic>NTH15</italic> in tobacco. <italic>NTH15</italic> induction resulted in rapid repression of GA biosynthesis and transcript levels of the <italic>GA 20-oxidase gene</italic>, <italic>NTC12</italic> [<xref rid="B76-plants-02-00317" ref-type="bibr">76</xref>]. Recombinant NTH15 protein was also shown to bind specifically to a sequence in the first intron of <italic>NTC12</italic> [<xref rid="B103-plants-02-00317" ref-type="bibr">103</xref>]. Similarly, induction of the maize KN1 activity in Arabidopsis resulted in rapid repression of the <italic>AtGA20ox1</italic> transcript [<xref rid="B111-plants-02-00317" ref-type="bibr">111</xref>]. In <italic>Solanum tuberosum</italic>, the cooperative interaction between the TALE proteins StBEL5 and POTH1 directly repressed the potato <italic>ga20ox1</italic> gene by binding a specific promoter sequence [<xref rid="B112-plants-02-00317" ref-type="bibr">112</xref>]. The expression of <italic>AtGA2ox2</italic>, which encodes an enzyme involved in inactivation of bioactive GA was upregulated in response to STM in Arabidopsis and accumulated in leaves of the dominant maize mutant <italic>Kn1-N</italic> [<xref rid="B113-plants-02-00317" ref-type="bibr">113</xref>]. KN1 directly binds to a cis-regulatory element present in an intron of <italic>ga2ox1</italic> [<xref rid="B106-plants-02-00317" ref-type="bibr">106</xref>]. Thus TALE TFs maintain low quantities of active GA through direct repression of GA biosynthesis and up-regulation of GA catabolism. A similar antagonistic relationship exists between the <italic>Tomato Knotted2</italic> (<italic>TKN2)</italic> gene and <italic>LeGA20ox1</italic> in the dissected leaves of tomato. The dominant mutants <italic>Mouse ears</italic> (<italic>Me</italic>) and <italic>Curl</italic> (<italic>Cu</italic>), that misexpress <italic>TKN2</italic>, displayed increased leaf complexity and reduced <italic>LeGA20ox1</italic> transcript [<xref rid="B111-plants-02-00317" ref-type="bibr">111</xref>]. Constitutive GA signalling by the <italic>procera</italic> mutation suppresses the leaf dissection level in tomato and the increased leaf dissection seen in the <italic>Me</italic> mutant [<xref rid="B111-plants-02-00317" ref-type="bibr">111</xref>]. <italic>PROCERA</italic> encodes a DELLA growth repressor that is required at the early stages of leaf development both to promote leaflet formation and to restrict growth of the leaf primordia [<xref rid="B114-plants-02-00317" ref-type="bibr">114</xref>]. Thus the KNOX/GA interaction seems to be a component of a developmental module controlling indeterminacy in both SAM and leaves. </p><p>Novel potential TALE target genes have been recently identified using ChIP-seq and RNA-seq high throughput technologies on maize <italic>KN1</italic> loss-of-function (<italic>kn1-e1</italic>) or gain-of-function (<italic>Kn1-N</italic>) mutants [<xref rid="B115-plants-02-00317" ref-type="bibr">115</xref>]. It was found that KN1 binds to several thousand loci that include 643 genes that are modulated in one or multiple tissues [<xref rid="B115-plants-02-00317" ref-type="bibr">115</xref>]. These genes were divided into functional categories and hormone metabolism was among those presenting the most significant enrichment. ChIP-seq results highlighted the preferential binding of KN1 near genes belonging to the GA, brassinosteroid (BR), and auxin pathways, but modulated genes were mainly enriched for the auxin pathway [<xref rid="B115-plants-02-00317" ref-type="bibr">115</xref>]. Cytokinin genes were not enriched as a group in this survey. However, few genes involved in CK perception and signalling, which included a homolog of the CK receptor <italic>WOODEN LEG</italic>, were modulated in <italic>KN1</italic> mutants. The latter suggested that KN1 may trigger CK synthesis and signalling by directly targeting only a few players in the CK pathway [<xref rid="B115-plants-02-00317" ref-type="bibr">115</xref>].</p><p>The identification of auxin as the main hormonal pathway regulated by KN1 was unexpected. Genes involved in auxin synthesis, transport, and signaling were both bound and modulated, particularly in leaves of <italic>Kn1-N</italic> [<xref rid="B115-plants-02-00317" ref-type="bibr">115</xref>]. The antagonistic relationship between KNOX1 and auxin has been suggested to operate in multiple contexts throughout plant development to promote organ initiation and the elaboration of organ boundaries [<xref rid="B21-plants-02-00317" ref-type="bibr">21</xref>,<xref rid="B116-plants-02-00317" ref-type="bibr">116</xref>]. Strikingly, lateral veins of <italic>Kn1-N</italic> displayed high auxin signaling, monitored by the auxin response sensor DR5, that overlapped with <italic>KN1</italic> accumulation [<xref rid="B115-plants-02-00317" ref-type="bibr">115</xref>]. This finding is a novelty since in the SAM high auxin activity occurs at sites of organ initiation where <italic>KNOX1</italic> genes are not expressed [<xref rid="B117-plants-02-00317" ref-type="bibr">117</xref>,<xref rid="B118-plants-02-00317" ref-type="bibr">118</xref>]. However, the identified target genes may be regulated in opposite ways by alternative KNOX/BLH complexes acting as transcriptional activators or repressors in different cells. It is worth noting that this survey identified several auxin response factors (<italic>ARF)</italic> and <italic>Aux/IAA</italic> genes as putative KN1 targets. Recently, a significant effort to unravel auxin signaling networking at the SAM was made using gene expression and interactome data, mathematical modeling and novel auxin markers [<xref rid="B119-plants-02-00317" ref-type="bibr">119</xref>]. This work provided evidence that the simple alteration of <italic>ARF</italic> and <italic>Aux/IAA</italic> global expression can establish a differential auxin sensitivity between the centre and the periphery of the SAM. It would be tempting to speculate that one of the as-of-yet unknown functions of TALEs could be the modulation of auxin sensitivity through the regulation of global <italic>ARF</italic> and <italic>Aux/IAA</italic> expression. KN1 was shown to bind <italic>AUXIN SIGNALING F-BOX like</italic> (<italic>AFB-like</italic>) genes that encode F-box auxin coreceptors in Arabidopsis [<xref rid="B120-plants-02-00317" ref-type="bibr">120</xref>]. The existence of such regulation may suggest a role of KN1 in auxin-dependent selective protein degradation through the ubiquitin proteasome system (UPS). Recently, we reviewed our current knowledge on the role of UPS in SAM function and integrated this survey with <italic>in silico</italic> analysis of available public databases to identify ubiquitin ligases (E3) that are expressed in specific areas within the SAM [<xref rid="B121-plants-02-00317" ref-type="bibr">121</xref>,<xref rid="B122-plants-02-00317" ref-type="bibr">122</xref>]. Interestingly, several substrate adaptors of SCF ubiquitin E3 ligases, including <italic>AFB-like</italic>, were predicted to express in specific domains of the SAM [<xref rid="B97-plants-02-00317" ref-type="bibr">97</xref>,<xref rid="B98-plants-02-00317" ref-type="bibr">98</xref>]. In addition, the distribution of other <italic>AFB</italic> co-receptor genes (such as <italic>TIR1</italic> and <italic>AFB5</italic>) was shown to vary between the centre and the periphery of the SAM [<xref rid="B119-plants-02-00317" ref-type="bibr">119</xref>]. Namely, the low <italic>TIR1</italic> expression at the centre and the high <italic>AFB5</italic> transcription in the internal tissues of the organ primordia suggest that these genes could also contribute to create domains with differential sensitivity to auxin [<xref rid="B119-plants-02-00317" ref-type="bibr">119</xref>]. </p><p>In summary, KN1 can bind several genes involved in hormone biosynthesis, perception, degradation and signal transduction, as well as auxin transport, confirming and extending a pivotal role of TALEs in regulating hormonal homeostasis at multiple levels. However, activation or repression of target genes subsets may vary in different cells depending on the availability of BLH partners and other molecular interactions.</p></sec><sec><title>5.2. Transcription Factors</title><p>Transcript profiling by microarray analysis of transgenic lines in which <italic>STM</italic> was induced, identified <italic>CUC1</italic> as a direct target [<xref rid="B123-plants-02-00317" ref-type="bibr">123</xref>]. Hence, strict connection between <italic>CUC</italic> boundary genes and <italic>KNOX1</italic> was confirmed in morphogenetic processes where a mutual activation is necessary for the establishment of organ outgrowth. Many <italic>NAM-ATAF1,2-CUC2 (NAC)</italic> genes were also bound by KN1 and modulated in the ChIP-seq/RNA-seq on maize <italic>KN1</italic> loss-of-function or gain-of-function mutants [<xref rid="B115-plants-02-00317" ref-type="bibr">115</xref>], although this class of TF was not significantly enriched. Interestingly, KN1 direct targets were strongly enriched for transcription factors. The homeobox (HB) family prevailed among the bound TFs and comprised several <italic>BLH</italic> and 10 <italic>KNOX</italic> genes, including <italic>KN1</italic>. This points to the existence of complex regulatory feedback loops/networks controlling <italic>KNOX</italic> and <italic>BLH</italic> abundance and confirmed the importance of autofeedback regulation as previously demonstrated in rice for <italic>OSH1</italic> [<xref rid="B124-plants-02-00317" ref-type="bibr">124</xref>]. Other TF genes included members of the <italic>HOMEODOMAIN LEUCINE ZIPPER</italic> (<italic>HD-ZIP</italic>) and <italic>MADS-box</italic>. Among these classes, homologs of <italic>REVOLUTA</italic> (<italic>REV</italic>), <italic>PHABULOSA</italic> (<italic>PHB</italic>) and <italic>YABBY</italic> were also bound by KN1. The latter TFs are key regulators of leaf organ adaxial/abaxial polarity and blade outgrowth, and a regulatory link between these TFs and KNOX1 may account for coordination of lamina initiation and growth along the vascular growth axis in both simple and compound leaves. </p></sec><sec><title>5.3. Cell Wall Proteins</title><p>Lignin biosynthesis was identified as a major target of the KNOX1 transcription factor KNAT1/BPin high density microarrays conducted on the <italic>brevipedicellus</italic> Arabidopsis mutant (<italic>bp-9</italic>) [<xref rid="B125-plants-02-00317" ref-type="bibr">125</xref>]. KNAT1/BP acts to repress lignin biosynthesis in order to prevent premature cell death as lignin deposition is a signature for irreversible cell differentiation [<xref rid="B126-plants-02-00317" ref-type="bibr">126</xref>]. Besides lignin biosynthetic enzymes, several other genes involved in the metabolism of cell wall polysaccharide components, such as cellulose and pectin, were altered in the <italic>bp-9</italic> mutant [<xref rid="B125-plants-02-00317" ref-type="bibr">125</xref>]. In transgenic lines where <italic>STM</italic> was induced [<xref rid="B123-plants-02-00317" ref-type="bibr">123</xref>], several cell wall genes were modulated besides <italic>CUC1</italic> [<xref rid="B123-plants-02-00317" ref-type="bibr">123</xref>], including genes involved in pectin, cellulose and lignin metabolism. </p><p>This is very interesting in the light of recent findings that place pectin methylesterase genes (<italic>PME</italic>) downstream of the TALE BLH9/PNY transcription factor. A regulated demethylesterification of homogalacturonans (HGs), main constituents of the pectin, was shown to play a crucial role in cell wall loosening processes for organ primordia outgrowth at the shoot apex [<xref rid="B61-plants-02-00317" ref-type="bibr">61</xref>]. BLH9 would repress <italic>PME5</italic> gene expression in the inflorescence meristem to limit primordia formation. In meristem periphery, <italic>BLH9</italic> downregulation would allow <italic>PME5</italic> expression, thus triggering cell expansion events for primordia initiation [<xref rid="B62-plants-02-00317" ref-type="bibr">62</xref>]. </p><p>These findings suggest that TALE homeobox proteins may modify cell wall properties by directly modulating genes involved in cell wall plasticity. In this respect, it would be interesting to study whether changes in pectin methylesterification status could be part of the mechanism involving auxin, KNOX and CUCs for leaflet formation in compound leaves and leaf margin morphogenesis. The characterization of the leaf phenotype of mutants in <italic>BLH</italic> and <italic>PME</italic> genes in compound leaf species would help in further dissecting the molecular mechanisms underlying leaf development and shape. </p></sec></sec><sec><title>6. Conclusions and Perspectives</title><p>Common genetic pathways have been unravelled in different developmental programs such as organ primordia initiation at the shoot apical meristem and the morphogenetic events that shape margins and complexity of leaves. TALEs play a key role in orchestrating the intricate regulatory network that underlies these processes. Recent genome wide analyses support and extend previous data pointing to TALEs involvement in controlling multiple hormonal signals and transcriptional regulators. Newly identified direct targets are enriched for transcription factors and genes participating in hormonal pathways, most significantly auxin. This is of particular interest given the key role of auxin in both initiation and elaboration of final morphology of leaves and vascular networks, the main processes affected in plants misexpressing TALE transcription factors.</p><p>Due to the conservation of the consensus DNA binding domain, thousands of loci are potentially bound by TALEs. A future challenge will be to identify what and how specific KNOX and BLH homo- and heterodimers regulate subsets of target genes in different cells as well as developmental context. To assess the role of different members of TALE family in leaf morphology and evolution will require the characterization of additional Arabidopsis mutants by fine phenotyping and gene expression profiling. Next Generation Sequencing (NGS) techniques will allow the extension of these analyses to non-model and crop species to increase our knowledge of the role of TALEs in leaf morphogenesis processes. Systems biology approaches combining gene expression data, interactome and mathematical modeling will be required to unravel the intricate network of genetic and molecular interactions that underlies TALE function.</p></sec></body><back><ack><title>Acknowledgements</title><p>We thank Donato Giannino and Renato Rodrigues-Pousada for comments on the manuscript and helpful discussion. This work was supported by the Agri-food CNR strategic project (AG.P01.003): Genetic, Physiological and Molecular Basis of Development and Differentiation of Model and Crop Species of interest to Agro-food in response to endogenous and environmental cues. </p></ack><ref-list><title>References</title><ref id="B1-plants-02-00317"><label>1.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bertolino</surname><given-names>E.</given-names></name><name><surname>Reimund</surname><given-names>B.</given-names></name><name><surname>Wildt-Perinic</surname><given-names>D.</given-names></name><name><surname>Clerc</surname><given-names>R.G.</given-names></name></person-group>
+<article-title>A novel homeobox protein which recognizes a TGT core and functionally interferes with a retinoid-responsive motif</article-title>
+<source>J. Biol. Chem.</source>
+<year>1995</year>
+<volume>270</volume>
+<fpage>31178</fpage>
+<lpage>31188</lpage>
+<pub-id pub-id-type="pmid">8537382</pub-id></element-citation></ref><ref id="B2-plants-02-00317"><label>2.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Burglin</surname><given-names>T.R.</given-names></name></person-group>
+<article-title>Analysis of TALE superclass homeobox genes (MEIS, PBC, KNOX, Iroquois, TGIF) reveals a novel domain conserved between plants and animals</article-title>
+<source>Nucleic Acids Res.</source>
+<year>1997</year>
+<volume>25</volume>
+<fpage>4173</fpage>
+<lpage>4180</lpage>
+<pub-id pub-id-type="doi">10.1093/nar/25.21.4173</pub-id>
+<pub-id pub-id-type="pmid">9336443</pub-id></element-citation></ref><ref id="B3-plants-02-00317"><label>3.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Burglin</surname><given-names>T.R.</given-names></name></person-group>
+<article-title>The PBC domain contains a MEINOX domain: Coevolution of Hox and TALE homeobox genes?</article-title>
+<source>Dev. Genes Evol.</source>
+<year>1998</year>
+<volume>208</volume>
+<fpage>113</fpage>
+<lpage>116</lpage>
+<pub-id pub-id-type="doi">10.1007/s004270050161</pub-id>
+<pub-id pub-id-type="pmid">9569353</pub-id></element-citation></ref><ref id="B4-plants-02-00317"><label>4.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Laurent</surname><given-names>A.</given-names></name><name><surname>Bihan</surname><given-names>R.</given-names></name><name><surname>Omilli</surname><given-names>F.</given-names></name><name><surname>Deschamps</surname><given-names>S.</given-names></name><name><surname>Pellerin</surname><given-names>I.</given-names></name></person-group>
+<article-title>PBX proteins: Much more than Hox cofactors</article-title>
+<source>Int. J. Dev. Biol.</source>
+<year>2008</year>
+<volume>52</volume>
+<fpage>9</fpage>
+<lpage>20</lpage>
+<pub-id pub-id-type="doi">10.1387/ijdb.072304al</pub-id>
+<pub-id pub-id-type="pmid">18033668</pub-id></element-citation></ref><ref id="B5-plants-02-00317"><label>5.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Berthelsen</surname><given-names>J.</given-names></name><name><surname>Kilstrup-Nielsen</surname><given-names>C.</given-names></name><name><surname>Blasi</surname><given-names>F.</given-names></name><name><surname>Mavilio</surname><given-names>F.</given-names></name><name><surname>Zappavigna</surname><given-names>V.</given-names></name></person-group>
+<article-title>The subcellular localization of PBX1 and EXD proteins depends on nuclear import and export signals and is modulated by association with PREP1 and HTH</article-title>
+<source>Genes Dev.</source>
+<year>1999</year>
+<volume>13</volume>
+<fpage>946</fpage>
+<lpage>953</lpage>
+<pub-id pub-id-type="doi">10.1101/gad.13.8.946</pub-id>
+<pub-id pub-id-type="pmid">10215622</pub-id></element-citation></ref><ref id="B6-plants-02-00317"><label>6.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Saleh</surname><given-names>M.</given-names></name><name><surname>Huang</surname><given-names>H.</given-names></name><name><surname>Green</surname><given-names>N.C.</given-names></name><name><surname>Featherstone</surname><given-names>M.S.</given-names></name></person-group>
+<article-title>A conformational change in PBX1A is necessary for its nuclear localization</article-title>
+<source>Exp. Cell Res.</source>
+<year>2000</year>
+<volume>260</volume>
+<fpage>105</fpage>
+<lpage>115</lpage>
+<pub-id pub-id-type="pmid">11010815</pub-id></element-citation></ref><ref id="B7-plants-02-00317"><label>7.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bhatt</surname><given-names>A.M.</given-names></name><name><surname>Etchells</surname><given-names>J.P.</given-names></name><name><surname>Canales</surname><given-names>C.</given-names></name><name><surname>Lagodienko</surname><given-names>A.</given-names></name><name><surname>Dickinson</surname><given-names>H.</given-names></name></person-group>
+<article-title>VAAMANA&#x02014;A BEL1-like homeodomain protein, interacts with KNOX proteins BP and STM and regulates inflorescence stem growth in Arabidopsis</article-title>
+<source>Gene</source>
+<year>2004</year>
+<volume>328</volume>
+<fpage>103</fpage>
+<lpage>111</lpage>
+<pub-id pub-id-type="doi">10.1016/j.gene.2003.12.033</pub-id>
+<pub-id pub-id-type="pmid">15019989</pub-id></element-citation></ref><ref id="B8-plants-02-00317"><label>8.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cole</surname><given-names>M.</given-names></name><name><surname>Nolte</surname><given-names>C.</given-names></name><name><surname>Werr</surname><given-names>W.</given-names></name></person-group>
+<article-title>Nuclear import of the transcription factor SHOOT MERISTEMLESS depends on heterodimerization with BLH proteins expressed in discrete sub-domains of the shoot apical meristem of Arabidopsis thaliana</article-title>
+<source>Nucleic Acids Res.</source>
+<year>2006</year>
+<volume>34</volume>
+<fpage>1281</fpage>
+<lpage>1292</lpage>
+<pub-id pub-id-type="doi">10.1093/nar/gkl016</pub-id>
+<pub-id pub-id-type="pmid">16513846</pub-id></element-citation></ref><ref id="B9-plants-02-00317"><label>9.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Smith</surname><given-names>H.M.</given-names></name><name><surname>Boschke</surname><given-names>I.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Selective interaction of plant homeodomain proteins mediates high DNA-binding affinity</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2002</year>
+<volume>99</volume>
+<fpage>9579</fpage>
+<lpage>9584</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.092271599</pub-id>
+<pub-id pub-id-type="pmid">12093897</pub-id></element-citation></ref><ref id="B10-plants-02-00317"><label>10.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Smaczniak</surname><given-names>C.</given-names></name><name><surname>Immink</surname><given-names>R.G.</given-names></name><name><surname>Muino</surname><given-names>J.M.</given-names></name><name><surname>Blanvillain</surname><given-names>R.</given-names></name><name><surname>Busscher</surname><given-names>M.</given-names></name><name><surname>Busscher-Lange</surname><given-names>J.</given-names></name><name><surname>Dinh</surname><given-names>Q.D.</given-names></name><name><surname>Liu</surname><given-names>S.</given-names></name><name><surname>Westphal</surname><given-names>A.H.</given-names></name><name><surname>Boeren</surname><given-names>S.</given-names></name><etal/></person-group>
+<article-title>Characterization of MADS-domain transcription factor complexes in Arabidopsis flower development</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2012</year>
+<volume>109</volume>
+<fpage>1560</fpage>
+<lpage>1565</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.1112871109</pub-id>
+<pub-id pub-id-type="pmid">22238427</pub-id></element-citation></ref><ref id="B11-plants-02-00317"><label>11.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mukherjee</surname><given-names>K.</given-names></name><name><surname>Brocchieri</surname><given-names>L.</given-names></name><name><surname>Burglin</surname><given-names>T.R.</given-names></name></person-group>
+<article-title>A comprehensive classification and evolutionary analysis of plant homeobox genes</article-title>
+<source>Mol. Biol. Evol.</source>
+<year>2009</year>
+<volume>26</volume>
+<fpage>2775</fpage>
+<lpage>2794</lpage>
+<pub-id pub-id-type="doi">10.1093/molbev/msp201</pub-id>
+<pub-id pub-id-type="pmid">19734295</pub-id></element-citation></ref><ref id="B12-plants-02-00317"><label>12.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kerstetter</surname><given-names>R.</given-names></name><name><surname>Vollbrecht</surname><given-names>E.</given-names></name><name><surname>Lowe</surname><given-names>B.</given-names></name><name><surname>Veit</surname><given-names>B.</given-names></name><name><surname>Yamaguchi</surname><given-names>J.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Sequence analysis and expression patterns divide the maize knotted1-like homeobox genes into two classes</article-title>
+<source>Plant Cell</source>
+<year>1994</year>
+<volume>6</volume>
+<fpage>1877</fpage>
+<lpage>1887</lpage>
+<pub-id pub-id-type="pmid">7866030</pub-id></element-citation></ref><ref id="B13-plants-02-00317"><label>13.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Reiser</surname><given-names>L.</given-names></name><name><surname>Sanchez-Baracaldo</surname><given-names>P.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Knots in the family tree: Evolutionary relationships and functions of knox homeobox genes</article-title>
+<source>Plant Mol. Biol.</source>
+<year>2000</year>
+<volume>42</volume>
+<fpage>151</fpage>
+<lpage>166</lpage>
+<pub-id pub-id-type="doi">10.1023/A:1006384122567</pub-id>
+<pub-id pub-id-type="pmid">10688134</pub-id></element-citation></ref><ref id="B14-plants-02-00317"><label>14.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Magnani</surname><given-names>E.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>KNOX lost the OX: The Arabidopsis KNATM gene defines a novel class of KNOX transcriptional regulators missing the homeodomain</article-title>
+<source>Plant Cell</source>
+<year>2008</year>
+<volume>20</volume>
+<fpage>875</fpage>
+<lpage>887</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.108.058495</pub-id>
+<pub-id pub-id-type="pmid">18398054</pub-id></element-citation></ref><ref id="B15-plants-02-00317"><label>15.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Li</surname><given-names>Y.</given-names></name><name><surname>Pi</surname><given-names>L.</given-names></name><name><surname>Huang</surname><given-names>H.</given-names></name><name><surname>Xu</surname><given-names>L.</given-names></name></person-group>
+<article-title>ATH1 and KNAT2 proteins act together in regulation of plant inflorescence architecture</article-title>
+<source>J. Exp. Bot.</source>
+<year>2012</year>
+<volume>63</volume>
+<fpage>1423</fpage>
+<lpage>1433</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/err376</pub-id>
+<pub-id pub-id-type="pmid">22140242</pub-id></element-citation></ref><ref id="B16-plants-02-00317"><label>16.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hackbusch</surname><given-names>J.</given-names></name><name><surname>Richter</surname><given-names>K.</given-names></name><name><surname>Muller</surname><given-names>J.</given-names></name><name><surname>Salamini</surname><given-names>F.</given-names></name><name><surname>Uhrig</surname><given-names>J.F.</given-names></name></person-group>
+<article-title>A central role of Arabidopsis thaliana ovate family proteins in networking and subcellular localization of 3-aa loop extension homeodomain proteins</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2005</year>
+<volume>102</volume>
+<fpage>4908</fpage>
+<lpage>4912</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.0501181102</pub-id>
+<pub-id pub-id-type="pmid">15781858</pub-id></element-citation></ref><ref id="B17-plants-02-00317"><label>17.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bellaoui</surname><given-names>M.</given-names></name><name><surname>Pidkowich</surname><given-names>M.S.</given-names></name><name><surname>Samach</surname><given-names>A.</given-names></name><name><surname>Kushalappa</surname><given-names>K.</given-names></name><name><surname>Kohalmi</surname><given-names>S.E.</given-names></name><name><surname>Modrusan</surname><given-names>Z.</given-names></name><name><surname>Crosby</surname><given-names>W.L.</given-names></name><name><surname>Haughn</surname><given-names>G.W.</given-names></name></person-group>
+<article-title>The Arabidopsis BELL1 and KNOX TALE homeodomain proteins interact through a domain conserved between plants and animals</article-title>
+<source>Plant Cell</source>
+<year>2001</year>
+<volume>13</volume>
+<fpage>2455</fpage>
+<lpage>2470</lpage>
+<pub-id pub-id-type="pmid">11701881</pub-id></element-citation></ref><ref id="B18-plants-02-00317"><label>18.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Di Giacomo</surname><given-names>E.</given-names></name><name><surname>Sestili</surname><given-names>F.</given-names></name><name><surname>Iannelli</surname><given-names>M.A.</given-names></name><name><surname>Testone</surname><given-names>G.</given-names></name><name><surname>Mariotti</surname><given-names>D.</given-names></name><name><surname>Frugis</surname><given-names>G.</given-names></name></person-group>
+<article-title>Characterization of KNOX genes in Medicago truncatula</article-title>
+<source>Plant Mol. Biol.</source>
+<year>2008</year>
+<volume>67</volume>
+<fpage>135</fpage>
+<lpage>150</lpage>
+<pub-id pub-id-type="doi">10.1007/s11103-008-9307-7</pub-id>
+<pub-id pub-id-type="pmid">18274864</pub-id></element-citation></ref><ref id="B19-plants-02-00317"><label>19.</label><element-citation publication-type="journal">
+<collab>Arabidopsis Interactome Mapping Consortium</collab>
+<article-title>Evidence for network evolution in an Arabidopsis interactome map</article-title>
+<source>Science</source>
+<year>2011</year>
+<volume>333</volume>
+<fpage>601</fpage>
+<lpage>607</lpage>
+<pub-id pub-id-type="doi">10.1126/science.1203877</pub-id>
+<pub-id pub-id-type="pmid">21798944</pub-id></element-citation></ref><ref id="B20-plants-02-00317"><label>20.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hake</surname><given-names>S.</given-names></name><name><surname>Smith</surname><given-names>H.M.</given-names></name><name><surname>Holtan</surname><given-names>H.</given-names></name><name><surname>Magnani</surname><given-names>E.</given-names></name><name><surname>Mele</surname><given-names>G.</given-names></name><name><surname>Ramirez</surname><given-names>J.</given-names></name></person-group>
+<article-title>The role of knox genes in plant development</article-title>
+<source>Annu. Rev. Cell Dev. Biol.</source>
+<year>2004</year>
+<volume>20</volume>
+<fpage>125</fpage>
+<lpage>151</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev.cellbio.20.031803.093824</pub-id>
+<pub-id pub-id-type="pmid">15473837</pub-id></element-citation></ref><ref id="B21-plants-02-00317"><label>21.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>KNOX genes: Versatile regulators of plant development and diversity</article-title>
+<source>Development</source>
+<year>2010</year>
+<volume>137</volume>
+<fpage>3153</fpage>
+<lpage>3165</lpage>
+<pub-id pub-id-type="doi">10.1242/dev.030049</pub-id>
+<pub-id pub-id-type="pmid">20823061</pub-id></element-citation></ref><ref id="B22-plants-02-00317"><label>22.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bharathan</surname><given-names>G.</given-names></name><name><surname>Goliber</surname><given-names>T.E.</given-names></name><name><surname>Moore</surname><given-names>C.</given-names></name><name><surname>Kessler</surname><given-names>S.</given-names></name><name><surname>Pham</surname><given-names>T.</given-names></name><name><surname>Sinha</surname><given-names>N.R.</given-names></name></person-group>
+<article-title>Homologies in leaf form inferred from KNOXI gene expression during development</article-title>
+<source>Science</source>
+<year>2002</year>
+<volume>296</volume>
+<fpage>1858</fpage>
+<lpage>1860</lpage>
+<pub-id pub-id-type="doi">10.1126/science.1070343</pub-id>
+<pub-id pub-id-type="pmid">12052958</pub-id></element-citation></ref><ref id="B23-plants-02-00317"><label>23.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hamant</surname><given-names>O.</given-names></name><name><surname>Pautot</surname><given-names>V.</given-names></name></person-group>
+<article-title>Plant development: A TALE story</article-title>
+<source>C. R. Biol.</source>
+<year>2010</year>
+<volume>333</volume>
+<fpage>371</fpage>
+<lpage>381</lpage>
+<pub-id pub-id-type="doi">10.1016/j.crvi.2010.01.015</pub-id>
+<pub-id pub-id-type="pmid">20371112</pub-id></element-citation></ref><ref id="B24-plants-02-00317"><label>24.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Canales</surname><given-names>C.</given-names></name><name><surname>Barkoulas</surname><given-names>M.</given-names></name><name><surname>Galinha</surname><given-names>C.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>Weeds of change: Cardamine hirsuta as a new model system for studying dissected leaf development</article-title>
+<source>J. Plant Res.</source>
+<year>2010</year>
+<volume>123</volume>
+<fpage>25</fpage>
+<lpage>33</lpage>
+<pub-id pub-id-type="doi">10.1007/s10265-009-0263-3</pub-id>
+<pub-id pub-id-type="pmid">19821009</pub-id></element-citation></ref><ref id="B25-plants-02-00317"><label>25.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Blein</surname><given-names>T.</given-names></name><name><surname>Hasson</surname><given-names>A.</given-names></name><name><surname>Laufs</surname><given-names>P.</given-names></name></person-group>
+<article-title>Leaf development: What it needs to be complex</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2010</year>
+<volume>13</volume>
+<fpage>75</fpage>
+<lpage>82</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2009.09.017</pub-id>
+<pub-id pub-id-type="pmid">19853496</pub-id></element-citation></ref><ref id="B26-plants-02-00317"><label>26.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Efroni</surname><given-names>I.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name><name><surname>Lifschitz</surname><given-names>E.</given-names></name></person-group>
+<article-title>Morphogenesis of simple and compound leaves: A critical review</article-title>
+<source>Plant Cell</source>
+<year>2010</year>
+<volume>22</volume>
+<fpage>1019</fpage>
+<lpage>1032</lpage>
+<pub-id pub-id-type="pmid">20435903</pub-id></element-citation></ref><ref id="B27-plants-02-00317"><label>27.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Uchida</surname><given-names>N.</given-names></name><name><surname>Kimura</surname><given-names>S.</given-names></name><name><surname>Koenig</surname><given-names>D.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>Coordination of leaf development via regulation of KNOX1 genes</article-title>
+<source>J. Plant Res.</source>
+<year>2010</year>
+<volume>123</volume>
+<fpage>7</fpage>
+<lpage>14</lpage>
+<pub-id pub-id-type="doi">10.1007/s10265-009-0248-2</pub-id>
+<pub-id pub-id-type="pmid">19506991</pub-id></element-citation></ref><ref id="B28-plants-02-00317"><label>28.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Moon</surname><given-names>J.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>How a leaf gets its shape</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2011</year>
+<volume>14</volume>
+<fpage>24</fpage>
+<lpage>30</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2010.08.012</pub-id>
+<pub-id pub-id-type="pmid">20870452</pub-id></element-citation></ref><ref id="B29-plants-02-00317"><label>29.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Burko</surname><given-names>Y.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>The tomato leaf as a model system for organogenesis</article-title>
+<source>Methods Mol. Biol.</source>
+<year>2013</year>
+<volume>959</volume>
+<fpage>1</fpage>
+<lpage>19</lpage>
+<pub-id pub-id-type="doi">10.1007/978-1-62703-221-6_1</pub-id>
+<pub-id pub-id-type="pmid">23299665</pub-id></element-citation></ref><ref id="B30-plants-02-00317"><label>30.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hasson</surname><given-names>A.</given-names></name><name><surname>Blein</surname><given-names>T.</given-names></name><name><surname>Laufs</surname><given-names>P.</given-names></name></person-group>
+<article-title>Leaving the meristem behind: The genetic and molecular control of leaf patterning and morphogenesis</article-title>
+<source>C. R. Biol.</source>
+<year>2010</year>
+<volume>333</volume>
+<fpage>350</fpage>
+<lpage>360</lpage>
+<pub-id pub-id-type="doi">10.1016/j.crvi.2010.01.013</pub-id>
+<pub-id pub-id-type="pmid">20371110</pub-id></element-citation></ref><ref id="B31-plants-02-00317"><label>31.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wu</surname><given-names>S.</given-names></name><name><surname>Smith</surname><given-names>M.S.</given-names></name></person-group>
+<article-title>Out of step:The function of TALE homeodomain transcription factors that regulate shoot meristem maintenance and meristem identity</article-title>
+<source>Front Biol.</source>
+<year>2012</year>
+<volume>7</volume>
+<fpage>144</fpage>
+<lpage>154</lpage>
+</element-citation></ref><ref id="B32-plants-02-00317"><label>32.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Winter</surname><given-names>N.</given-names></name><name><surname>Kollwig</surname><given-names>G.</given-names></name><name><surname>Zhang</surname><given-names>S.</given-names></name><name><surname>Kragler</surname><given-names>F.</given-names></name></person-group>
+<article-title>MPB2C, a microtubule-associated protein, regulates non-cell-autonomy of the homeodomain protein KNOTTED1</article-title>
+<source>Plant Cell</source>
+<year>2007</year>
+<volume>19</volume>
+<fpage>3001</fpage>
+<lpage>3018</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.107.044354</pub-id>
+<pub-id pub-id-type="pmid">17965274</pub-id></element-citation></ref><ref id="B33-plants-02-00317"><label>33.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kim</surname><given-names>J.Y.</given-names></name><name><surname>Yuan</surname><given-names>Z.</given-names></name><name><surname>Cilia</surname><given-names>M.</given-names></name><name><surname>Khalfan-Jagani</surname><given-names>Z.</given-names></name><name><surname>Jackson</surname><given-names>D.</given-names></name></person-group>
+<article-title>Intercellular trafficking of a KNOTTED1 green fluorescent protein fusion in the leaf and shoot meristem of Arabidopsis</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2002</year>
+<volume>99</volume>
+<fpage>4103</fpage>
+<lpage>4108</lpage>
+<pub-id pub-id-type="pmid">11891300</pub-id></element-citation></ref><ref id="B34-plants-02-00317"><label>34.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kim</surname><given-names>J.Y.</given-names></name><name><surname>Yuan</surname><given-names>Z.</given-names></name><name><surname>Jackson</surname><given-names>D.</given-names></name></person-group>
+<article-title>Developmental regulation and significance of KNOX protein trafficking in Arabidopsis</article-title>
+<source>Development</source>
+<year>2003</year>
+<volume>130</volume>
+<fpage>4351</fpage>
+<lpage>4362</lpage>
+<pub-id pub-id-type="doi">10.1242/dev.00618</pub-id>
+<pub-id pub-id-type="pmid">12900451</pub-id></element-citation></ref><ref id="B35-plants-02-00317"><label>35.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kim</surname><given-names>J.Y.</given-names></name><name><surname>Rim</surname><given-names>Y.</given-names></name><name><surname>Wang</surname><given-names>J.</given-names></name><name><surname>Jackson</surname><given-names>D.</given-names></name></person-group>
+<article-title>A novel cell-to-cell trafficking assay indicates that the KNOX homeodomain is necessary and sufficient for intercellular protein and mRNA trafficking</article-title>
+<source>Genes Dev.</source>
+<year>2005</year>
+<volume>19</volume>
+<fpage>788</fpage>
+<lpage>793</lpage>
+<pub-id pub-id-type="doi">10.1101/gad.332805</pub-id>
+<pub-id pub-id-type="pmid">15805469</pub-id></element-citation></ref><ref id="B36-plants-02-00317"><label>36.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Xu</surname><given-names>X.M.</given-names></name><name><surname>Wang</surname><given-names>J.</given-names></name><name><surname>Xuan</surname><given-names>Z.</given-names></name><name><surname>Goldshmidt</surname><given-names>A.</given-names></name><name><surname>Borrill</surname><given-names>P.G.</given-names></name><name><surname>Hariharan</surname><given-names>N.</given-names></name><name><surname>Kim</surname><given-names>J.Y.</given-names></name><name><surname>Jackson</surname><given-names>D.</given-names></name></person-group>
+<article-title>Chaperonins facilitate KNOTTED1 cell-to-cell trafficking and stem cell function</article-title>
+<source>Science</source>
+<year>2011</year>
+<volume>333</volume>
+<fpage>1141</fpage>
+<lpage>1144</lpage>
+<pub-id pub-id-type="pmid">21868675</pub-id></element-citation></ref><ref id="B37-plants-02-00317"><label>37.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vollbrecht</surname><given-names>E.</given-names></name><name><surname>Veit</surname><given-names>B.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>The developmental gene Knotted-1 is a member of a maize homeobox gene family</article-title>
+<source>Nature</source>
+<year>1991</year>
+<volume>350</volume>
+<fpage>241</fpage>
+<lpage>243</lpage>
+<pub-id pub-id-type="doi">10.1038/350241a0</pub-id>
+<pub-id pub-id-type="pmid">1672445</pub-id></element-citation></ref><ref id="B38-plants-02-00317"><label>38.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Barton</surname><given-names>M.K.</given-names></name></person-group>
+<article-title>Twenty years on: The inner workings of the shoot apical meristem, a developmental dynamo</article-title>
+<source>Dev. Biol.</source>
+<year>2010</year>
+<volume>341</volume>
+<fpage>95</fpage>
+<lpage>113</lpage>
+<pub-id pub-id-type="doi">10.1016/j.ydbio.2009.11.029</pub-id>
+<pub-id pub-id-type="pmid">19961843</pub-id></element-citation></ref><ref id="B39-plants-02-00317"><label>39.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Long</surname><given-names>J.A.</given-names></name><name><surname>Moan</surname><given-names>E.I.</given-names></name><name><surname>Medford</surname><given-names>J.I.</given-names></name><name><surname>Barton</surname><given-names>M.K.</given-names></name></person-group>
+<article-title>A member of the KNOTTED class of homeodomain proteins encoded by the STM gene of Arabidopsis</article-title>
+<source>Nature</source>
+<year>1996</year>
+<volume>379</volume>
+<fpage>66</fpage>
+<lpage>69</lpage>
+<pub-id pub-id-type="pmid">8538741</pub-id></element-citation></ref><ref id="B40-plants-02-00317"><label>40.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Clark</surname><given-names>S.E.</given-names></name><name><surname>Jacobsen</surname><given-names>S.E.</given-names></name><name><surname>Levin</surname><given-names>J.Z.</given-names></name><name><surname>Meyerowitz</surname><given-names>E.M.</given-names></name></person-group>
+<article-title>The CLAVATA and SHOOT MERISTEMLESS loci competitively regulate meristem activity in Arabidopsis</article-title>
+<source>Development</source>
+<year>1996</year>
+<volume>122</volume>
+<fpage>1567</fpage>
+<lpage>1575</lpage>
+<pub-id pub-id-type="pmid">8625843</pub-id></element-citation></ref><ref id="B41-plants-02-00317"><label>41.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Endrizzi</surname><given-names>K.</given-names></name><name><surname>Moussian</surname><given-names>B.</given-names></name><name><surname>Haecker</surname><given-names>A.</given-names></name><name><surname>Levin</surname><given-names>J.Z.</given-names></name><name><surname>Laux</surname><given-names>T.</given-names></name></person-group>
+<article-title>The SHOOT MERISTEMLESS gene is required for maintenance of undifferentiated cells in Arabidopsis shoot and floral meristems and acts at a different regulatory level than the meristem genes WUSCHEL and ZWILLE</article-title>
+<source>Plant J.</source>
+<year>1996</year>
+<volume>10</volume>
+<fpage>967</fpage>
+<lpage>979</lpage>
+<pub-id pub-id-type="pmid">9011081</pub-id></element-citation></ref><ref id="B42-plants-02-00317"><label>42.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kanrar</surname><given-names>S.</given-names></name><name><surname>Onguka</surname><given-names>O.</given-names></name><name><surname>Smith</surname><given-names>H.M.</given-names></name></person-group>
+<article-title>Arabidopsis inflorescence architecture requires the activities of KNOX-BELL homeodomain heterodimers</article-title>
+<source>Planta</source>
+<year>2006</year>
+<volume>224</volume>
+<fpage>1163</fpage>
+<lpage>1173</lpage>
+<pub-id pub-id-type="doi">10.1007/s00425-006-0298-9</pub-id>
+<pub-id pub-id-type="pmid">16741748</pub-id></element-citation></ref><ref id="B43-plants-02-00317"><label>43.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Scofield</surname><given-names>S.</given-names></name><name><surname>Dewitte</surname><given-names>W.</given-names></name><name><surname>Murray</surname><given-names>J.A.</given-names></name></person-group>
+<article-title>The KNOX gene SHOOT MERISTEMLESS is required for the development of reproductive meristematic tissues in Arabidopsis</article-title>
+<source>Plant J.</source>
+<year>2007</year>
+<volume>50</volume>
+<fpage>767</fpage>
+<lpage>781</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2007.03095.x</pub-id>
+<pub-id pub-id-type="pmid">17461793</pub-id></element-citation></ref><ref id="B44-plants-02-00317"><label>44.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rutjens</surname><given-names>B.</given-names></name><name><surname>Bao</surname><given-names>D.</given-names></name><name><surname>van Eck-Stouten</surname><given-names>E.</given-names></name><name><surname>Brand</surname><given-names>M.</given-names></name><name><surname>Smeekens</surname><given-names>S.</given-names></name><name><surname>Proveniers</surname><given-names>M.</given-names></name></person-group>
+<article-title>Shoot apical meristem function in Arabidopsis requires the combined activities of three BEL1-like homeodomain proteins</article-title>
+<source>Plant J.</source>
+<year>2009</year>
+<volume>58</volume>
+<fpage>641</fpage>
+<lpage>654</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2009.03809.x</pub-id>
+<pub-id pub-id-type="pmid">19175771</pub-id></element-citation></ref><ref id="B45-plants-02-00317"><label>45.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ramirez</surname><given-names>J.</given-names></name><name><surname>Bolduc</surname><given-names>N.</given-names></name><name><surname>Lisch</surname><given-names>D.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Distal expression of knotted1 in maize leaves leads to reestablishment of proximal/distal patterning and leaf dissection</article-title>
+<source>Plant Physiol.</source>
+<year>2009</year>
+<volume>151</volume>
+<fpage>1878</fpage>
+<lpage>1888</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.109.145920</pub-id>
+<pub-id pub-id-type="pmid">19854860</pub-id></element-citation></ref><ref id="B46-plants-02-00317"><label>46.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Takano</surname><given-names>S.</given-names></name><name><surname>Niihama</surname><given-names>M.</given-names></name><name><surname>Smith</surname><given-names>H.M.</given-names></name><name><surname>Tasaka</surname><given-names>M.</given-names></name><name><surname>Aida</surname><given-names>M.</given-names></name></person-group>
+<article-title>gorgon, a novel missense mutation in the SHOOT MERISTEMLESS gene, impairs shoot meristem homeostasis in Arabidopsis</article-title>
+<source>Plant Cell Physiol.</source>
+<year>2010</year>
+<volume>51</volume>
+<fpage>621</fpage>
+<lpage>634</lpage>
+<pub-id pub-id-type="doi">10.1093/pcp/pcq028</pub-id>
+<pub-id pub-id-type="pmid">20208065</pub-id></element-citation></ref><ref id="B47-plants-02-00317"><label>47.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Long</surname><given-names>J.A.</given-names></name><name><surname>Barton</surname><given-names>M.K.</given-names></name></person-group>
+<article-title>The development of apical embryonic pattern in Arabidopsis</article-title>
+<source>Development</source>
+<year>1998</year>
+<volume>125</volume>
+<fpage>3027</fpage>
+<lpage>3035</lpage>
+<pub-id pub-id-type="pmid">9671577</pub-id></element-citation></ref><ref id="B48-plants-02-00317"><label>48.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Aida</surname><given-names>M.</given-names></name><name><surname>Ishida</surname><given-names>T.</given-names></name><name><surname>Tasaka</surname><given-names>M.</given-names></name></person-group>
+<article-title>Shoot apical meristem and cotyledon formation during Arabidopsis embryogenesis: Interaction among the CUP-SHAPED COTYLEDON and SHOOT MERISTEMLESS genes</article-title>
+<source>Development</source>
+<year>1999</year>
+<volume>126</volume>
+<fpage>1563</fpage>
+<lpage>1570</lpage>
+<pub-id pub-id-type="pmid">10079219</pub-id></element-citation></ref><ref id="B49-plants-02-00317"><label>49.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vollbrecht</surname><given-names>E.</given-names></name><name><surname>Reiser</surname><given-names>L.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Shoot meristem size is dependent on inbred background and presence of the maize homeobox gene, knotted1</article-title>
+<source>Development</source>
+<year>2000</year>
+<volume>127</volume>
+<fpage>3161</fpage>
+<lpage>3172</lpage>
+<pub-id pub-id-type="pmid">10862752</pub-id></element-citation></ref><ref id="B50-plants-02-00317"><label>50.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Takada</surname><given-names>S.</given-names></name><name><surname>Hibara</surname><given-names>K.</given-names></name><name><surname>Ishida</surname><given-names>T.</given-names></name><name><surname>Tasaka</surname><given-names>M.</given-names></name></person-group>
+<article-title>The CUP-SHAPED COTYLEDON1 gene of Arabidopsis regulates shoot apical meristem formation</article-title>
+<source>Development</source>
+<year>2001</year>
+<volume>128</volume>
+<fpage>1127</fpage>
+<lpage>1135</lpage>
+<pub-id pub-id-type="pmid">11245578</pub-id></element-citation></ref><ref id="B51-plants-02-00317"><label>51.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Poethig</surname><given-names>R.S.</given-names></name></person-group>
+<article-title>Leaf morphogenesis in flowering plants</article-title>
+<source>Plant Cell</source>
+<year>1997</year>
+<volume>9</volume>
+<fpage>1077</fpage>
+<lpage>1087</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.9.7.1077</pub-id>
+<pub-id pub-id-type="pmid">9254931</pub-id></element-citation></ref><ref id="B52-plants-02-00317"><label>52.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dengler</surname><given-names>N.</given-names></name><name><surname>Kang</surname><given-names>J.</given-names></name></person-group>
+<article-title>Vascular patterning and leaf shape</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2001</year>
+<volume>4</volume>
+<fpage>50</fpage>
+<lpage>56</lpage>
+<pub-id pub-id-type="pmid">11163168</pub-id></element-citation></ref><ref id="B53-plants-02-00317"><label>53.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Holtan</surname><given-names>H.E.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Quantitative trait locus analysis of leaf dissection in tomato using Lycopersicon pennellii segmental introgression lines</article-title>
+<source>Genetics</source>
+<year>2003</year>
+<volume>165</volume>
+<fpage>1541</fpage>
+<lpage>1550</lpage>
+<pub-id pub-id-type="pmid">14668401</pub-id></element-citation></ref><ref id="B54-plants-02-00317"><label>54.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Barkoulas</surname><given-names>M.</given-names></name><name><surname>Galinha</surname><given-names>C.</given-names></name><name><surname>Grigg</surname><given-names>S.P.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>From genes to shape: Regulatory interactions in leaf development</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2007</year>
+<volume>10</volume>
+<fpage>660</fpage>
+<lpage>666</lpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2007.07.012</pub-id>
+<pub-id pub-id-type="pmid">17869569</pub-id></element-citation></ref><ref id="B55-plants-02-00317"><label>55.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shani</surname><given-names>E.</given-names></name><name><surname>Burko</surname><given-names>Y.</given-names></name><name><surname>Ben-Yaakov</surname><given-names>L.</given-names></name><name><surname>Berger</surname><given-names>Y.</given-names></name><name><surname>Amsellem</surname><given-names>Z.</given-names></name><name><surname>Goldshmidt</surname><given-names>A.</given-names></name><name><surname>Sharon</surname><given-names>E.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>Stage-specific regulation of Solanum lycopersicum leaf maturation by class 1 KNOTTED1-LIKE HOMEOBOX proteins</article-title>
+<source>Plant Cell</source>
+<year>2009</year>
+<volume>21</volume>
+<fpage>3078</fpage>
+<lpage>3092</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.109.068148</pub-id>
+<pub-id pub-id-type="pmid">19820191</pub-id></element-citation></ref><ref id="B56-plants-02-00317"><label>56.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gleissberg</surname><given-names>H.A.</given-names></name></person-group>
+<article-title>Organogenetic capacity of leaves: The significance of marginal blastozones in angiosperms</article-title>
+<source>Plant Syst. Evol.</source>
+<year>1996</year>
+<volume>199</volume>
+<fpage>31</fpage>
+</element-citation></ref><ref id="B57-plants-02-00317"><label>57.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Murray</surname><given-names>J.A.</given-names></name><name><surname>Jones</surname><given-names>A.</given-names></name><name><surname>Godin</surname><given-names>C.</given-names></name><name><surname>Traas</surname><given-names>J.</given-names></name></person-group>
+<article-title>Systems analysis of shoot apical meristem growth and development: Integrating hormonal and mechanical signaling</article-title>
+<source>Plant Cell</source>
+<year>2012</year>
+<volume>24</volume>
+<fpage>3907</fpage>
+<lpage>3919</lpage>
+<pub-id pub-id-type="pmid">23110895</pub-id></element-citation></ref><ref id="B58-plants-02-00317"><label>58.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fleming</surname><given-names>A.J.</given-names></name><name><surname>McQueen-Mason</surname><given-names>S.</given-names></name><name><surname>Mandel</surname><given-names>T.</given-names></name><name><surname>Kuhlemeier</surname><given-names>C.</given-names></name></person-group>
+<article-title>Induction of leaf primordia by the cell wall protein expansin</article-title>
+<source>Science</source>
+<year>1997</year>
+<volume>276</volume>
+<fpage>1415</fpage>
+<lpage>1418</lpage>
+</element-citation></ref><ref id="B59-plants-02-00317"><label>59.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Reinhardt</surname><given-names>D.</given-names></name><name><surname>Wittwer</surname><given-names>F.</given-names></name><name><surname>Mandel</surname><given-names>T.</given-names></name><name><surname>Kuhlemeier</surname><given-names>C.</given-names></name></person-group>
+<article-title>Localized upregulation of a new expansin gene predicts the site of leaf formation in the tomato meristem</article-title>
+<source>Plant Cell</source>
+<year>1998</year>
+<volume>10</volume>
+<fpage>1427</fpage>
+<lpage>1437</lpage>
+<pub-id pub-id-type="pmid">9724690</pub-id></element-citation></ref><ref id="B60-plants-02-00317"><label>60.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pien</surname><given-names>S.</given-names></name><name><surname>Wyrzykowska</surname><given-names>J.</given-names></name><name><surname>McQueen-Mason</surname><given-names>S.</given-names></name><name><surname>Smart</surname><given-names>C.</given-names></name><name><surname>Fleming</surname><given-names>A.</given-names></name></person-group>
+<article-title>Local expression of expansin induces the entire process of leaf development and modifies leaf shape</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2001</year>
+<volume>98</volume>
+<fpage>11812</fpage>
+<lpage>11817</lpage>
+<pub-id pub-id-type="pmid">11562463</pub-id></element-citation></ref><ref id="B61-plants-02-00317"><label>61.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Peaucelle</surname><given-names>A.</given-names></name><name><surname>Louvet</surname><given-names>R.</given-names></name><name><surname>Johansen</surname><given-names>J.N.</given-names></name><name><surname>Hofte</surname><given-names>H.</given-names></name><name><surname>Laufs</surname><given-names>P.</given-names></name><name><surname>Pelloux</surname><given-names>J.</given-names></name><name><surname>Mouille</surname><given-names>G.</given-names></name></person-group>
+<article-title>Arabidopsis phyllotaxis is controlled by the methyl-esterification status of cell-wall pectins</article-title>
+<source>Curr. Biol.</source>
+<year>2008</year>
+<volume>18</volume>
+<fpage>1943</fpage>
+<lpage>1948</lpage>
+<pub-id pub-id-type="pmid">19097903</pub-id></element-citation></ref><ref id="B62-plants-02-00317"><label>62.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Peaucelle</surname><given-names>A.</given-names></name><name><surname>Louvet</surname><given-names>R.</given-names></name><name><surname>Johansen</surname><given-names>J.N.</given-names></name><name><surname>Salsac</surname><given-names>F.</given-names></name><name><surname>Morin</surname><given-names>H.</given-names></name><name><surname>Fournet</surname><given-names>F.</given-names></name><name><surname>Belcram</surname><given-names>K.</given-names></name><name><surname>Gillet</surname><given-names>F.</given-names></name><name><surname>Hofte</surname><given-names>H.</given-names></name><name><surname>Laufs</surname><given-names>P.</given-names></name><etal/></person-group>
+<article-title>The transcription factor BELLRINGER modulates phyllotaxis by regulating the expression of a pectin methylesterase in Arabidopsis</article-title>
+<source>Development</source>
+<year>2011</year>
+<volume>138</volume>
+<fpage>4733</fpage>
+<lpage>4741</lpage>
+<pub-id pub-id-type="doi">10.1242/dev.072496</pub-id>
+<pub-id pub-id-type="pmid">21965608</pub-id></element-citation></ref><ref id="B63-plants-02-00317"><label>63.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Elliott</surname><given-names>R.C.</given-names></name><name><surname>Betzner</surname><given-names>A.S.</given-names></name><name><surname>Huttner</surname><given-names>E.</given-names></name><name><surname>Oakes</surname><given-names>M.P.</given-names></name><name><surname>Tucker</surname><given-names>W.Q.</given-names></name><name><surname>Gerentes</surname><given-names>D.</given-names></name><name><surname>Perez</surname><given-names>P.</given-names></name><name><surname>Smyth</surname><given-names>D.R.</given-names></name></person-group>
+<article-title>AINTEGUMENTA, an APETALA2-like gene of Arabidopsis with pleiotropic roles in ovule development and floral organ growth</article-title>
+<source>Plant Cell</source>
+<year>1996</year>
+<volume>8</volume>
+<fpage>155</fpage>
+<lpage>168</lpage>
+<pub-id pub-id-type="pmid">8742707</pub-id></element-citation></ref><ref id="B64-plants-02-00317"><label>64.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lenhard</surname><given-names>M.</given-names></name><name><surname>Jurgens</surname><given-names>G.</given-names></name><name><surname>Laux</surname><given-names>T.</given-names></name></person-group>
+<article-title>The WUSCHEL and SHOOTMERISTEMLESS genes fulfil complementary roles in Arabidopsis shoot meristem regulation</article-title>
+<source>Development</source>
+<year>2002</year>
+<volume>129</volume>
+<fpage>3195</fpage>
+<lpage>3206</lpage>
+<pub-id pub-id-type="pmid">12070094</pub-id></element-citation></ref><ref id="B65-plants-02-00317"><label>65.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Byrne</surname><given-names>M.E.</given-names></name><name><surname>Kidner</surname><given-names>C.A.</given-names></name><name><surname>Martienssen</surname><given-names>R.A.</given-names></name></person-group>
+<article-title>Plant stem cells: Divergent pathways and common themes in shoots and roots</article-title>
+<source>Curr. Opin. Genet. Dev.</source>
+<year>2003</year>
+<volume>13</volume>
+<fpage>551</fpage>
+<lpage>557</lpage>
+<pub-id pub-id-type="doi">10.1016/j.gde.2003.08.008</pub-id>
+<pub-id pub-id-type="pmid">14550423</pub-id></element-citation></ref><ref id="B66-plants-02-00317"><label>66.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chuck</surname><given-names>G.</given-names></name><name><surname>Lincoln</surname><given-names>C.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>KNAT1 induces lobed leaves with ectopic meristems when overexpressed in Arabidopsis</article-title>
+<source>Plant Cell</source>
+<year>1996</year>
+<volume>8</volume>
+<fpage>1277</fpage>
+<lpage>1289</lpage>
+<pub-id pub-id-type="pmid">8776897</pub-id></element-citation></ref><ref id="B67-plants-02-00317"><label>67.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ori</surname><given-names>N.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name><name><surname>Chuck</surname><given-names>G.</given-names></name><name><surname>Bowman</surname><given-names>J.L.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Mechanisms that control knox gene expression in the Arabidopsis shoot</article-title>
+<source>Development</source>
+<year>2000</year>
+<volume>127</volume>
+<fpage>5523</fpage>
+<lpage>5532</lpage>
+<pub-id pub-id-type="pmid">11076771</pub-id></element-citation></ref><ref id="B68-plants-02-00317"><label>68.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kumar</surname><given-names>R.</given-names></name><name><surname>Kushalappa</surname><given-names>K.</given-names></name><name><surname>Godt</surname><given-names>D.</given-names></name><name><surname>Pidkowich</surname><given-names>M.S.</given-names></name><name><surname>Pastorelli</surname><given-names>S.</given-names></name><name><surname>Hepworth</surname><given-names>S.R.</given-names></name><name><surname>Haughn</surname><given-names>G.W.</given-names></name></person-group>
+<article-title>The Arabidopsis BEL1-LIKE HOMEODOMAIN proteins SAW1 and SAW2 act redundantly to regulate KNOX expression spatially in leaf margins</article-title>
+<source>Plant Cell</source>
+<year>2007</year>
+<volume>19</volume>
+<fpage>2719</fpage>
+<lpage>2735</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.106.048769</pub-id>
+<pub-id pub-id-type="pmid">17873098</pub-id></element-citation></ref><ref id="B69-plants-02-00317"><label>69.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Piazza</surname><given-names>P.</given-names></name><name><surname>Bailey</surname><given-names>C.D.</given-names></name><name><surname>Cartolano</surname><given-names>M.</given-names></name><name><surname>Krieger</surname><given-names>J.</given-names></name><name><surname>Cao</surname><given-names>J.</given-names></name><name><surname>Ossowski</surname><given-names>S.</given-names></name><name><surname>Schneeberger</surname><given-names>K.</given-names></name><name><surname>He</surname><given-names>F.</given-names></name><name><surname>de Meaux</surname><given-names>J.</given-names></name><name><surname>Hall</surname><given-names>N.</given-names></name><etal/></person-group>
+<article-title>Arabidopsis thaliana leaf form evolved via loss of KNOX expression in leaves in association with a selective sweep</article-title>
+<source>Curr. Biol.</source>
+<year>2010</year>
+<volume>20</volume>
+<fpage>2223</fpage>
+<lpage>2228</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2010.11.037</pub-id>
+<pub-id pub-id-type="pmid">21129970</pub-id></element-citation></ref><ref id="B70-plants-02-00317"><label>70.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kawamura</surname><given-names>E.</given-names></name><name><surname>Horiguchi</surname><given-names>G.</given-names></name><name><surname>Tsukaya</surname><given-names>H.</given-names></name></person-group>
+<article-title>Mechanisms of leaf tooth formation in Arabidopsis</article-title>
+<source>Plant J.</source>
+<year>2010</year>
+<volume>62</volume>
+<fpage>429</fpage>
+<lpage>441</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2010.04156.x</pub-id>
+<pub-id pub-id-type="pmid">20128880</pub-id></element-citation></ref><ref id="B71-plants-02-00317"><label>71.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Phelps-Durr</surname><given-names>T.L.</given-names></name><name><surname>Thomas</surname><given-names>J.</given-names></name><name><surname>Vahab</surname><given-names>P.</given-names></name><name><surname>Timmermans</surname><given-names>M.C.</given-names></name></person-group>
+<article-title>Maize rough sheath2 and its Arabidopsis orthologue ASYMMETRIC LEAVES1 interact with HIRA, a predicted histone chaperone, to maintain knox gene silencing and determinacy during organogenesis</article-title>
+<source>Plant Cell</source>
+<year>2005</year>
+<volume>17</volume>
+<fpage>2886</fpage>
+<lpage>2898</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.105.035477</pub-id>
+<pub-id pub-id-type="pmid">16243907</pub-id></element-citation></ref><ref id="B72-plants-02-00317"><label>72.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Xu</surname><given-names>L.</given-names></name><name><surname>Shen</surname><given-names>W.H.</given-names></name></person-group>
+<article-title>Polycomb silencing of KNOX genes confines shoot stem cell niches in Arabidopsis</article-title>
+<source>Curr. Biol.</source>
+<year>2008</year>
+<volume>18</volume>
+<fpage>1966</fpage>
+<lpage>1971</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2008.11.019</pub-id>
+<pub-id pub-id-type="pmid">19097900</pub-id></element-citation></ref><ref id="B73-plants-02-00317"><label>73.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Stahle</surname><given-names>M.I.</given-names></name><name><surname>Kuehlich</surname><given-names>J.</given-names></name><name><surname>Staron</surname><given-names>L.</given-names></name><name><surname>von Arnim</surname><given-names>A.G.</given-names></name><name><surname>Golz</surname><given-names>J.F.</given-names></name></person-group>
+<article-title>YABBYs and the transcriptional corepressors LEUNIG and LEUNIG_HOMOLOG maintain leaf polarity and meristem activity in Arabidopsis</article-title>
+<source>Plant Cell</source>
+<year>2009</year>
+<volume>21</volume>
+<fpage>3105</fpage>
+<lpage>3118</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.109.070458</pub-id>
+<pub-id pub-id-type="pmid">19837869</pub-id></element-citation></ref><ref id="B74-plants-02-00317"><label>74.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Causier</surname><given-names>B.</given-names></name><name><surname>Ashworth</surname><given-names>M.</given-names></name><name><surname>Guo</surname><given-names>W.</given-names></name><name><surname>Davies</surname><given-names>B.</given-names></name></person-group>
+<article-title>The TOPLESS interactome: A framework for gene repression in Arabidopsis</article-title>
+<source>Plant Physiol.</source>
+<year>2012</year>
+<volume>158</volume>
+<fpage>423</fpage>
+<lpage>438</lpage>
+<pub-id pub-id-type="pmid">22065421</pub-id></element-citation></ref><ref id="B75-plants-02-00317"><label>75.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ohta</surname><given-names>M.</given-names></name><name><surname>Matsui</surname><given-names>K.</given-names></name><name><surname>Hiratsu</surname><given-names>K.</given-names></name><name><surname>Shinshi</surname><given-names>H.</given-names></name><name><surname>Ohme-Takagi</surname><given-names>M.</given-names></name></person-group>
+<article-title>Repression domains of class II ERF transcriptional repressors share an essential motif for active repression</article-title>
+<source>Plant Cell</source>
+<year>2001</year>
+<volume>13</volume>
+<fpage>1959</fpage>
+<lpage>1968</lpage>
+<pub-id pub-id-type="pmid">11487705</pub-id></element-citation></ref><ref id="B76-plants-02-00317"><label>76.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kagale</surname><given-names>S.</given-names></name><name><surname>Rozwadowski</surname><given-names>K.</given-names></name></person-group>
+<article-title>EAR motif-mediated transcriptional repression in plants: An underlying mechanism for epigenetic regulation of gene expression</article-title>
+<source>Epigenetics</source>
+<year>2011</year>
+<volume>6</volume>
+<fpage>141</fpage>
+<lpage>146</lpage>
+<pub-id pub-id-type="doi">10.4161/epi.6.2.13627</pub-id>
+<pub-id pub-id-type="pmid">20935498</pub-id></element-citation></ref><ref id="B77-plants-02-00317"><label>77.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hasson</surname><given-names>A.</given-names></name><name><surname>Plessis</surname><given-names>A.</given-names></name><name><surname>Blein</surname><given-names>T.</given-names></name><name><surname>Adroher</surname><given-names>B.</given-names></name><name><surname>Grigg</surname><given-names>S.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name><name><surname>Boudaoud</surname><given-names>A.</given-names></name><name><surname>Damerval</surname><given-names>C.</given-names></name><name><surname>Laufs</surname><given-names>P.</given-names></name></person-group>
+<article-title>Evolution and diverse roles of the CUP-SHAPED COTYLEDON genes in Arabidopsis leaf development</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>54</fpage>
+<lpage>68</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.110.081448</pub-id>
+<pub-id pub-id-type="pmid">21258003</pub-id></element-citation></ref><ref id="B78-plants-02-00317"><label>78.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bilsborough</surname><given-names>G.D.</given-names></name><name><surname>Runions</surname><given-names>A.</given-names></name><name><surname>Barkoulas</surname><given-names>M.</given-names></name><name><surname>Jenkins</surname><given-names>H.W.</given-names></name><name><surname>Hasson</surname><given-names>A.</given-names></name><name><surname>Galinha</surname><given-names>C.</given-names></name><name><surname>Laufs</surname><given-names>P.</given-names></name><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Prusinkiewicz</surname><given-names>P.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>Model for the regulation of Arabidopsis thaliana leaf margin development</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2011</year>
+<volume>108</volume>
+<fpage>3424</fpage>
+<lpage>3429</lpage>
+<pub-id pub-id-type="doi">10.1073/pnas.1015162108</pub-id>
+<pub-id pub-id-type="pmid">21300866</pub-id></element-citation></ref><ref id="B79-plants-02-00317"><label>79.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hareven</surname><given-names>D.</given-names></name><name><surname>Gutfinger</surname><given-names>T.</given-names></name><name><surname>Parnis</surname><given-names>A.</given-names></name><name><surname>Eshed</surname><given-names>Y.</given-names></name><name><surname>Lifschitz</surname><given-names>E.</given-names></name></person-group>
+<article-title>The making of a compound leaf: Genetic manipulation of leaf architecture in tomato</article-title>
+<source>Cell</source>
+<year>1996</year>
+<volume>84</volume>
+<fpage>735</fpage>
+<lpage>744</lpage>
+<pub-id pub-id-type="pmid">8625411</pub-id></element-citation></ref><ref id="B80-plants-02-00317"><label>80.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kimura</surname><given-names>S.</given-names></name><name><surname>Koenig</surname><given-names>D.</given-names></name><name><surname>Kang</surname><given-names>J.</given-names></name><name><surname>Yoong</surname><given-names>F.Y.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>Natural variation in leaf morphology results from mutation of a novel KNOX gene</article-title>
+<source>Curr. Biol.</source>
+<year>2008</year>
+<volume>18</volume>
+<fpage>672</fpage>
+<lpage>677</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2008.04.008</pub-id>
+<pub-id pub-id-type="pmid">18424140</pub-id></element-citation></ref><ref id="B81-plants-02-00317"><label>81.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>The genetic basis for differences in leaf form between Arabidopsis thaliana and its wild relative Cardamine hirsuta</article-title>
+<source>Nat. Genet.</source>
+<year>2006</year>
+<volume>38</volume>
+<fpage>942</fpage>
+<lpage>947</lpage>
+<pub-id pub-id-type="doi">10.1038/ng1835</pub-id>
+<pub-id pub-id-type="pmid">16823378</pub-id></element-citation></ref><ref id="B82-plants-02-00317"><label>82.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Champagne</surname><given-names>C.E.</given-names></name><name><surname>Goliber</surname><given-names>T.E.</given-names></name><name><surname>Wojciechowski</surname><given-names>M.F.</given-names></name><name><surname>Mei</surname><given-names>R.W.</given-names></name><name><surname>Townsley</surname><given-names>B.T.</given-names></name><name><surname>Wang</surname><given-names>K.</given-names></name><name><surname>Paz</surname><given-names>M.M.</given-names></name><name><surname>Geeta</surname><given-names>R.</given-names></name><name><surname>Sinha</surname><given-names>N.R.</given-names></name></person-group>
+<article-title>Compound leaf development and evolution in the legumes</article-title>
+<source>Plant Cell</source>
+<year>2007</year>
+<volume>19</volume>
+<fpage>3369</fpage>
+<lpage>3378</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.107.052886</pub-id>
+<pub-id pub-id-type="pmid">17993625</pub-id></element-citation></ref><ref id="B83-plants-02-00317"><label>83.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hofer</surname><given-names>J.</given-names></name><name><surname>Turner</surname><given-names>L.</given-names></name><name><surname>Hellens</surname><given-names>R.</given-names></name><name><surname>Ambrose</surname><given-names>M.</given-names></name><name><surname>Matthews</surname><given-names>P.</given-names></name><name><surname>Michael</surname><given-names>A.</given-names></name><name><surname>Ellis</surname><given-names>N.</given-names></name></person-group>
+<article-title>UNIFOLIATA regulates leaf and flower morphogenesis in pea</article-title>
+<source>Curr. Biol.</source>
+<year>1997</year>
+<volume>7</volume>
+<fpage>581</fpage>
+<lpage>587</lpage>
+<pub-id pub-id-type="pmid">9259553</pub-id></element-citation></ref><ref id="B84-plants-02-00317"><label>84.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>H.</given-names></name><name><surname>Chen</surname><given-names>J.</given-names></name><name><surname>Wen</surname><given-names>J.</given-names></name><name><surname>Tadege</surname><given-names>M.</given-names></name><name><surname>Li</surname><given-names>G.</given-names></name><name><surname>Liu</surname><given-names>Y.</given-names></name><name><surname>Mysore</surname><given-names>K.S.</given-names></name><name><surname>Ratet</surname><given-names>P.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<article-title>Control of compound leaf development by FLORICAULA/LEAFY ortholog SINGLE LEAFLET1 in Medicago truncatula</article-title>
+<source>Plant Physiol.</source>
+<year>2008</year>
+<volume>146</volume>
+<fpage>1759</fpage>
+<lpage>1772</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.108.117044</pub-id>
+<pub-id pub-id-type="pmid">18287485</pub-id></element-citation></ref><ref id="B85-plants-02-00317"><label>85.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Moyroud</surname><given-names>E.</given-names></name><name><surname>Minguet</surname><given-names>E.G.</given-names></name><name><surname>Ott</surname><given-names>F.</given-names></name><name><surname>Yant</surname><given-names>L.</given-names></name><name><surname>Pose</surname><given-names>D.</given-names></name><name><surname>Monniaux</surname><given-names>M.</given-names></name><name><surname>Blanchet</surname><given-names>S.</given-names></name><name><surname>Bastien</surname><given-names>O.</given-names></name><name><surname>Thevenon</surname><given-names>E.</given-names></name><name><surname>Weigel</surname><given-names>D.</given-names></name><etal/></person-group>
+<article-title>Prediction of regulatory interactions from genome sequences using a biophysical model for the Arabidopsis LEAFY transcription factor</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>1293</fpage>
+<lpage>1306</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.111.083329</pub-id>
+<pub-id pub-id-type="pmid">21515819</pub-id></element-citation></ref><ref id="B86-plants-02-00317"><label>86.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chen</surname><given-names>J.</given-names></name><name><surname>Yu</surname><given-names>J.</given-names></name><name><surname>Ge</surname><given-names>L.</given-names></name><name><surname>Wang</surname><given-names>H.</given-names></name><name><surname>Berbel</surname><given-names>A.</given-names></name><name><surname>Liu</surname><given-names>Y.</given-names></name><name><surname>Chen</surname><given-names>Y.</given-names></name><name><surname>Li</surname><given-names>G.</given-names></name><name><surname>Tadege</surname><given-names>M.</given-names></name><name><surname>Wen</surname><given-names>J.</given-names></name><etal/></person-group>
+<article-title>Control of dissected leaf morphology by a Cys(2)His(2) zinc finger transcription factor in the model legume Medicago truncatula</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2010</year>
+<volume>107</volume>
+<fpage>10754</fpage>
+<lpage>10759</lpage>
+<pub-id pub-id-type="pmid">20498057</pub-id></element-citation></ref><ref id="B87-plants-02-00317"><label>87.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Peng</surname><given-names>J.</given-names></name><name><surname>Yu</surname><given-names>J.</given-names></name><name><surname>Wang</surname><given-names>H.</given-names></name><name><surname>Guo</surname><given-names>Y.</given-names></name><name><surname>Li</surname><given-names>G.</given-names></name><name><surname>Bai</surname><given-names>G.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<article-title>Regulation of compound leaf development in Medicago truncatula by fused compound leaf1, a class M KNOX gene</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>3929</fpage>
+<lpage>3943</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.111.089128</pub-id>
+<pub-id pub-id-type="pmid">22080596</pub-id></element-citation></ref><ref id="B88-plants-02-00317"><label>88.</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<source>Personal communication</source>
+<publisher-name>Plant Biology Division, The Samuel Roberts Noble Foundation</publisher-name>
+<publisher-loc>Ardmore, OK, USA</publisher-loc>
+<year>2012</year>
+</element-citation></ref><ref id="B89-plants-02-00317"><label>89.</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Di Giacomo</surname><given-names>E.</given-names></name></person-group>
+<source>Personal communication</source>
+<publisher-name>Istituto di Biologia e Biotecnologia Agraria, UOS Roma, Consiglio Nazionale delle Ricerche</publisher-name>
+<publisher-loc>Monterotondo Scalo, Roma, Italy</publisher-loc>
+<year>2011</year>
+</element-citation></ref><ref id="B90-plants-02-00317"><label>90.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Smith</surname><given-names>H.M.</given-names></name><name><surname>Ung</surname><given-names>N.</given-names></name><name><surname>Lal</surname><given-names>S.</given-names></name><name><surname>Courtier</surname><given-names>J.</given-names></name></person-group>
+<article-title>Specification of reproductive meristems requires the combined function of SHOOT MERISTEMLESS and floral integrators FLOWERING LOCUS T and FD during Arabidopsis inflorescence development</article-title>
+<source>J. Exp. Bot.</source>
+<year>2011</year>
+<volume>62</volume>
+<fpage>583</fpage>
+<lpage>593</lpage>
+<pub-id pub-id-type="doi">10.1093/jxb/erq296</pub-id>
+<pub-id pub-id-type="pmid">20937733</pub-id></element-citation></ref><ref id="B91-plants-02-00317"><label>91.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lal</surname><given-names>S.</given-names></name><name><surname>Pacis</surname><given-names>L.B.</given-names></name><name><surname>Smith</surname><given-names>H.M.</given-names></name></person-group>
+<article-title>Regulation of the SQUAMOSA PROMOTER-BINDING PROTEIN-LIKE genes/microRNA156 module by the homeodomain proteins PENNYWISE and POUND-FOOLISH in Arabidopsis</article-title>
+<source>Mol. Plant</source>
+<year>2011</year>
+<volume>4</volume>
+<fpage>1123</fpage>
+<lpage>1132</lpage>
+<pub-id pub-id-type="pmid">21653282</pub-id></element-citation></ref><ref id="B92-plants-02-00317"><label>92.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Waites</surname><given-names>R.</given-names></name><name><surname>Selvadurai</surname><given-names>H.R.</given-names></name><name><surname>Oliver</surname><given-names>I.R.</given-names></name><name><surname>Hudson</surname><given-names>A.</given-names></name></person-group>
+<article-title>The PHANTASTICA gene encodes a MYB transcription factor involved in growth and dorsoventrality of lateral organs in Antirrhinum</article-title>
+<source>Cell</source>
+<year>1998</year>
+<volume>93</volume>
+<fpage>779</fpage>
+<lpage>789</lpage>
+<pub-id pub-id-type="doi">10.1016/S0092-8674(00)81439-7</pub-id>
+<pub-id pub-id-type="pmid">9630222</pub-id></element-citation></ref><ref id="B93-plants-02-00317"><label>93.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>McConnell</surname><given-names>J.R.</given-names></name><name><surname>Barton</surname><given-names>M.K.</given-names></name></person-group>
+<article-title>Leaf polarity and meristem formation in Arabidopsis</article-title>
+<source>Development</source>
+<year>1998</year>
+<volume>125</volume>
+<fpage>2935</fpage>
+<lpage>2942</lpage>
+<pub-id pub-id-type="pmid">9655815</pub-id></element-citation></ref><ref id="B94-plants-02-00317"><label>94.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ha</surname><given-names>C.M.</given-names></name><name><surname>Jun</surname><given-names>J.H.</given-names></name><name><surname>Fletcher</surname><given-names>J.C.</given-names></name></person-group>
+<article-title>Control of Arabidopsis leaf morphogenesis through regulation of the YABBY and KNOX families of transcription factors</article-title>
+<source>Genetics</source>
+<year>2010</year>
+<volume>186</volume>
+<fpage>197</fpage>
+<lpage>206</lpage>
+<pub-id pub-id-type="doi">10.1534/genetics.110.118703</pub-id>
+<pub-id pub-id-type="pmid">20610407</pub-id></element-citation></ref><ref id="B95-plants-02-00317"><label>95.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jun</surname><given-names>J.H.</given-names></name><name><surname>Ha</surname><given-names>C.M.</given-names></name><name><surname>Fletcher</surname><given-names>J.C.</given-names></name></person-group>
+<article-title>BLADE-ON-PETIOLE1 coordinates organ determinacy and axial polarity in arabidopsis by directly activating ASYMMETRIC LEAVES2</article-title>
+<source>Plant Cell</source>
+<year>2010</year>
+<volume>22</volume>
+<fpage>62</fpage>
+<lpage>76</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.109.070763</pub-id>
+<pub-id pub-id-type="pmid">20118228</pub-id></element-citation></ref><ref id="B96-plants-02-00317"><label>96.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Reinhardt</surname><given-names>D.</given-names></name><name><surname>Kuhlemeier</surname><given-names>C.</given-names></name></person-group>
+<article-title>Plant architecture</article-title>
+<source>EMBO Rep.</source>
+<year>2002</year>
+<volume>3</volume>
+<fpage>846</fpage>
+<lpage>851</lpage>
+<pub-id pub-id-type="doi">10.1093/embo-reports/kvf177</pub-id>
+<pub-id pub-id-type="pmid">12223466</pub-id></element-citation></ref><ref id="B97-plants-02-00317"><label>97.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Barkoulas</surname><given-names>M.</given-names></name><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Kougioumoutzi</surname><given-names>E.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>A developmental framework for dissected leaf formation in the Arabidopsis relative Cardamine hirsuta</article-title>
+<source>Nat. Genet.</source>
+<year>2008</year>
+<volume>40</volume>
+<fpage>1136</fpage>
+<lpage>1141</lpage>
+<pub-id pub-id-type="doi">10.1038/ng.189</pub-id>
+<pub-id pub-id-type="pmid">19165928</pub-id></element-citation></ref><ref id="B98-plants-02-00317"><label>98.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ben-Gera</surname><given-names>H.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>Auxin and LANCEOLATE affect leaf shape in tomato via different developmental processes</article-title>
+<source>Plant Signal. Behav.</source>
+<year>2012</year>
+<volume>7</volume>
+<fpage>1255</fpage>
+<lpage>1257</lpage>
+<pub-id pub-id-type="doi">10.4161/psb.21550</pub-id>
+<pub-id pub-id-type="pmid">22902691</pub-id></element-citation></ref><ref id="B99-plants-02-00317"><label>99.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Peng</surname><given-names>J.</given-names></name><name><surname>Chen</surname><given-names>R.</given-names></name></person-group>
+<article-title>Auxin efflux transporter MtPIN10 regulates compound leaf and flower development in Medicago truncatula</article-title>
+<source>Plant Signal. Behav.</source>
+<year>2011</year>
+<volume>6</volume>
+<fpage>1537</fpage>
+<lpage>1544</lpage>
+<pub-id pub-id-type="doi">10.4161/psb.6.10.17326</pub-id>
+<pub-id pub-id-type="pmid">21900740</pub-id></element-citation></ref><ref id="B100-plants-02-00317"><label>100.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhou</surname><given-names>C.</given-names></name><name><surname>Han</surname><given-names>L.</given-names></name><name><surname>Hou</surname><given-names>C.</given-names></name><name><surname>Metelli</surname><given-names>A.</given-names></name><name><surname>Qi</surname><given-names>L.</given-names></name><name><surname>Tadege</surname><given-names>M.</given-names></name><name><surname>Mysore</surname><given-names>K.S.</given-names></name><name><surname>Wang</surname><given-names>Z.Y.</given-names></name></person-group>
+<article-title>Developmental analysis of a Medicago truncatula smooth leaf margin1 mutant reveals context-dependent effects on compound leaf development</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>2106</fpage>
+<lpage>2124</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.111.085464</pub-id>
+<pub-id pub-id-type="pmid">21693694</pub-id></element-citation></ref><ref id="B101-plants-02-00317"><label>101.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ori</surname><given-names>N.</given-names></name><name><surname>Juarez</surname><given-names>M.T.</given-names></name><name><surname>Jackson</surname><given-names>D.</given-names></name><name><surname>Yamaguchi</surname><given-names>J.</given-names></name><name><surname>Banowetz</surname><given-names>G.M.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Leaf senescence is delayed in tobacco plants expressing the maize homeobox gene knotted1 under the control of a senescence-activated promoter</article-title>
+<source>Plant Cell</source>
+<year>1999</year>
+<volume>11</volume>
+<fpage>1073</fpage>
+<lpage>1080</lpage>
+<pub-id pub-id-type="pmid">10368178</pub-id></element-citation></ref><ref id="B102-plants-02-00317"><label>102.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Frugis</surname><given-names>G.</given-names></name><name><surname>Giannino</surname><given-names>D.</given-names></name><name><surname>Mele</surname><given-names>G.</given-names></name><name><surname>Nicolodi</surname><given-names>C.</given-names></name><name><surname>Innocenti</surname><given-names>A.M.</given-names></name><name><surname>Chiappetta</surname><given-names>A.</given-names></name><name><surname>Bitonti</surname><given-names>M.B.</given-names></name><name><surname>Dewitte</surname><given-names>W.</given-names></name><name><surname>van Onckelen</surname><given-names>H.</given-names></name><name><surname>Mariotti</surname><given-names>D.</given-names></name></person-group>
+<article-title>Are homeobox knotted-like genes and cytokinins the leaf architects?</article-title>
+<source>Plant Physiol.</source>
+<year>1999</year>
+<volume>119</volume>
+<fpage>371</fpage>
+<lpage>374</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.119.2.371</pub-id>
+<pub-id pub-id-type="pmid">9952431</pub-id></element-citation></ref><ref id="B103-plants-02-00317"><label>103.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sakamoto</surname><given-names>T.</given-names></name><name><surname>Kamiya</surname><given-names>N.</given-names></name><name><surname>Ueguchi-Tanaka</surname><given-names>M.</given-names></name><name><surname>Iwahori</surname><given-names>S.</given-names></name><name><surname>Matsuoka</surname><given-names>M.</given-names></name></person-group>
+<article-title>KNOX homeodomain protein directly suppresses the expression of a gibberellin biosynthetic gene in the tobacco shoot apical meristem</article-title>
+<source>Genes Dev.</source>
+<year>2001</year>
+<volume>15</volume>
+<fpage>581</fpage>
+<lpage>590</lpage>
+<pub-id pub-id-type="doi">10.1101/gad.867901</pub-id>
+<pub-id pub-id-type="pmid">11238378</pub-id></element-citation></ref><ref id="B104-plants-02-00317"><label>104.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yanai</surname><given-names>O.</given-names></name><name><surname>Shani</surname><given-names>E.</given-names></name><name><surname>Dolezal</surname><given-names>K.</given-names></name><name><surname>Tarkowski</surname><given-names>P.</given-names></name><name><surname>Sablowski</surname><given-names>R.</given-names></name><name><surname>Sandberg</surname><given-names>G.</given-names></name><name><surname>Samach</surname><given-names>A.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>Arabidopsis KNOXI proteins activate cytokinin biosynthesis</article-title>
+<source>Curr. Biol.</source>
+<year>2005</year>
+<volume>15</volume>
+<fpage>1566</fpage>
+<lpage>1571</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2005.07.060</pub-id>
+<pub-id pub-id-type="pmid">16139212</pub-id></element-citation></ref><ref id="B105-plants-02-00317"><label>105.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jasinski</surname><given-names>S.</given-names></name><name><surname>Piazza</surname><given-names>P.</given-names></name><name><surname>Craft</surname><given-names>J.</given-names></name><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Woolley</surname><given-names>L.</given-names></name><name><surname>Rieu</surname><given-names>I.</given-names></name><name><surname>Phillips</surname><given-names>A.</given-names></name><name><surname>Hedden</surname><given-names>P.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>KNOX action in Arabidopsis is mediated by coordinate regulation of cytokinin and gibberellin activities</article-title>
+<source>Curr. Biol.</source>
+<year>2005</year>
+<volume>15</volume>
+<fpage>1560</fpage>
+<lpage>1565</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2005.07.023</pub-id>
+<pub-id pub-id-type="pmid">16139211</pub-id></element-citation></ref><ref id="B106-plants-02-00317"><label>106.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bolduc</surname><given-names>N.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>The maize transcription factor KNOTTED1 directly regulates the gibberellin catabolism gene ga2ox1</article-title>
+<source>Plant Cell</source>
+<year>2009</year>
+<volume>21</volume>
+<fpage>1647</fpage>
+<lpage>1658</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.109.068221</pub-id>
+<pub-id pub-id-type="pmid">19567707</pub-id></element-citation></ref><ref id="B107-plants-02-00317"><label>107.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hewelt</surname><given-names>A.</given-names></name><name><surname>Prinsen</surname><given-names>E.</given-names></name><name><surname>Thomas</surname><given-names>M.</given-names></name><name><surname>van Onckelen</surname><given-names>H.</given-names></name><name><surname>Meins</surname><given-names>F.</given-names><suffix>Jr.</suffix></name></person-group>
+<article-title>Ectopic expression of maize knotted1 results in the cytokinin-autotrophic growth of cultured tobacco tissues</article-title>
+<source>Planta</source>
+<year>2000</year>
+<volume>210</volume>
+<fpage>884</fpage>
+<lpage>889</lpage>
+<pub-id pub-id-type="doi">10.1007/s004250050693</pub-id>
+<pub-id pub-id-type="pmid">10872218</pub-id></element-citation></ref><ref id="B108-plants-02-00317"><label>108.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Frugis</surname><given-names>G.</given-names></name><name><surname>Giannino</surname><given-names>D.</given-names></name><name><surname>Mele</surname><given-names>G.</given-names></name><name><surname>Nicolodi</surname><given-names>C.</given-names></name><name><surname>Chiappetta</surname><given-names>A.</given-names></name><name><surname>Bitonti</surname><given-names>M.B.</given-names></name><name><surname>Innocenti</surname><given-names>A.M.</given-names></name><name><surname>Dewitte</surname><given-names>W.</given-names></name><name><surname>van Onckelen</surname><given-names>H.</given-names></name><name><surname>Mariotti</surname><given-names>D.</given-names></name></person-group>
+<article-title>Overexpression of KNAT1 in lettuce shifts leaf determinate growth to a shoot-like indeterminate growth associated with an accumulation of isopentenyl-type cytokinins</article-title>
+<source>Plant Physiol.</source>
+<year>2001</year>
+<volume>126</volume>
+<fpage>1370</fpage>
+<lpage>1380</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.126.4.1370</pub-id>
+<pub-id pub-id-type="pmid">11500537</pub-id></element-citation></ref><ref id="B109-plants-02-00317"><label>109.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sakamoto</surname><given-names>T.</given-names></name><name><surname>Sakakibara</surname><given-names>H.</given-names></name><name><surname>Kojima</surname><given-names>M.</given-names></name><name><surname>Yamamoto</surname><given-names>Y.</given-names></name><name><surname>Nagasaki</surname><given-names>H.</given-names></name><name><surname>Inukai</surname><given-names>Y.</given-names></name><name><surname>Sato</surname><given-names>Y.</given-names></name><name><surname>Matsuoka</surname><given-names>M.</given-names></name></person-group>
+<article-title>Ectopic expression of KNOTTED1-like homeobox protein induces expression of cytokinin biosynthesis genes in rice</article-title>
+<source>Plant Physiol.</source>
+<year>2006</year>
+<volume>142</volume>
+<fpage>54</fpage>
+<lpage>62</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.106.085811</pub-id>
+<pub-id pub-id-type="pmid">16861569</pub-id></element-citation></ref><ref id="B110-plants-02-00317"><label>110.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shani</surname><given-names>E.</given-names></name><name><surname>Ben-Gera</surname><given-names>H.</given-names></name><name><surname>Shleizer-Burko</surname><given-names>S.</given-names></name><name><surname>Burko</surname><given-names>Y.</given-names></name><name><surname>Weiss</surname><given-names>D.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name></person-group>
+<article-title>Cytokinin regulates compound leaf development in tomato</article-title>
+<source>Plant Cell</source>
+<year>2010</year>
+<volume>22</volume>
+<fpage>3206</fpage>
+<lpage>3217</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.110.078253</pub-id>
+<pub-id pub-id-type="pmid">20959562</pub-id></element-citation></ref><ref id="B111-plants-02-00317"><label>111.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Kaur</surname><given-names>H.</given-names></name><name><surname>Phillips</surname><given-names>A.</given-names></name><name><surname>Hedden</surname><given-names>P.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>The gibberellin pathway mediates KNOTTED1-type homeobox function in plants with different body plans</article-title>
+<source>Curr. Biol.</source>
+<year>2002</year>
+<volume>12</volume>
+<fpage>1557</fpage>
+<lpage>1565</lpage>
+<pub-id pub-id-type="doi">10.1016/S0960-9822(02)01125-9</pub-id>
+<pub-id pub-id-type="pmid">12372247</pub-id></element-citation></ref><ref id="B112-plants-02-00317"><label>112.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chen</surname><given-names>H.</given-names></name><name><surname>Banerjee</surname><given-names>A.K.</given-names></name><name><surname>Hannapel</surname><given-names>D.J.</given-names></name></person-group>
+<article-title>The tandem complex of BEL and KNOX partners is required for transcriptional repression of ga20ox1</article-title>
+<source>Plant J.</source>
+<year>2004</year>
+<volume>38</volume>
+<fpage>276</fpage>
+<lpage>284</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2004.02048.x</pub-id>
+<pub-id pub-id-type="pmid">15078330</pub-id></element-citation></ref><ref id="B113-plants-02-00317"><label>113.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kessler</surname><given-names>S.</given-names></name><name><surname>Townsley</surname><given-names>B.</given-names></name><name><surname>Sinha</surname><given-names>N.</given-names></name></person-group>
+<article-title>L1 division and differentiation patterns influence shoot apical meristem maintenance</article-title>
+<source>Plant Physiol.</source>
+<year>2006</year>
+<volume>141</volume>
+<fpage>1349</fpage>
+<lpage>1362</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.105.076075</pub-id>
+<pub-id pub-id-type="pmid">16798950</pub-id></element-citation></ref><ref id="B114-plants-02-00317"><label>114.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jasinski</surname><given-names>S.</given-names></name><name><surname>Tattersall</surname><given-names>A.</given-names></name><name><surname>Piazza</surname><given-names>P.</given-names></name><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Martinez-Garcia</surname><given-names>J.F.</given-names></name><name><surname>Schmitz</surname><given-names>G.</given-names></name><name><surname>Theres</surname><given-names>K.</given-names></name><name><surname>McCormick</surname><given-names>S.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>PROCERA encodes a DELLA protein that mediates control of dissected leaf form in tomato</article-title>
+<source>Plant J.</source>
+<year>2008</year>
+<volume>56</volume>
+<fpage>603</fpage>
+<lpage>612</lpage>
+<pub-id pub-id-type="doi">10.1111/j.1365-313X.2008.03628.x</pub-id>
+<pub-id pub-id-type="pmid">18643984</pub-id></element-citation></ref><ref id="B115-plants-02-00317"><label>115.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bolduc</surname><given-names>N.</given-names></name><name><surname>Yilmaz</surname><given-names>A.</given-names></name><name><surname>Mejia-Guerra</surname><given-names>M.K.</given-names></name><name><surname>Morohashi</surname><given-names>K.</given-names></name><name><surname>O&#x02019;Connor</surname><given-names>D.</given-names></name><name><surname>Grotewold</surname><given-names>E.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>Unraveling the KNOTTED1 regulatory network in maize meristems</article-title>
+<source>Genes Dev.</source>
+<year>2012</year>
+<volume>26</volume>
+<fpage>1685</fpage>
+<lpage>1690</lpage>
+<pub-id pub-id-type="doi">10.1101/gad.193433.112</pub-id>
+<pub-id pub-id-type="pmid">22855831</pub-id></element-citation></ref><ref id="B116-plants-02-00317"><label>116.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hay</surname><given-names>A.</given-names></name><name><surname>Barkoulas</surname><given-names>M.</given-names></name><name><surname>Tsiantis</surname><given-names>M.</given-names></name></person-group>
+<article-title>PINning down the connections: Transcription factors and hormones in leaf morphogenesis</article-title>
+<source>Curr. Opin. Plant Biol.</source>
+<year>2006</year>
+<volume>9</volume>
+<fpage>443</fpage>
+<pub-id pub-id-type="doi">10.1016/j.pbi.2006.05.015</pub-id>
+</element-citation></ref><ref id="B117-plants-02-00317"><label>117.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Heisler</surname><given-names>M.G.</given-names></name><name><surname>Ohno</surname><given-names>C.</given-names></name><name><surname>Das</surname><given-names>P.</given-names></name><name><surname>Sieber</surname><given-names>P.</given-names></name><name><surname>Reddy</surname><given-names>G.V.</given-names></name><name><surname>Long</surname><given-names>J.A.</given-names></name><name><surname>Meyerowitz</surname><given-names>E.M.</given-names></name></person-group>
+<article-title>Patterns of auxin transport and gene expression during primordium development revealed by live imaging of the Arabidopsis inflorescence meristem</article-title>
+<source>Curr. Biol.</source>
+<year>2005</year>
+<volume>15</volume>
+<fpage>1899</fpage>
+<lpage>1911</lpage>
+<pub-id pub-id-type="doi">10.1016/j.cub.2005.09.052</pub-id>
+<pub-id pub-id-type="pmid">16271866</pub-id></element-citation></ref><ref id="B118-plants-02-00317"><label>118.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gallavotti</surname><given-names>A.</given-names></name><name><surname>Yang</surname><given-names>Y.</given-names></name><name><surname>Schmidt</surname><given-names>R.J.</given-names></name><name><surname>Jackson</surname><given-names>D.</given-names></name></person-group>
+<article-title>The Relationship between auxin transport and maize branching</article-title>
+<source>Plant Physiol.</source>
+<year>2008</year>
+<volume>147</volume>
+<fpage>1913</fpage>
+<lpage>1923</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.108.121541</pub-id>
+<pub-id pub-id-type="pmid">18550681</pub-id></element-citation></ref><ref id="B119-plants-02-00317"><label>119.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vernoux</surname><given-names>T.</given-names></name><name><surname>Brunoud</surname><given-names>G.</given-names></name><name><surname>Farcot</surname><given-names>E.</given-names></name><name><surname>Morin</surname><given-names>V.</given-names></name><name><surname>van den Daele</surname><given-names>H.</given-names></name><name><surname>Legrand</surname><given-names>J.</given-names></name><name><surname>Oliva</surname><given-names>M.</given-names></name><name><surname>Das</surname><given-names>P.</given-names></name><name><surname>Larrieu</surname><given-names>A.</given-names></name><name><surname>Wells</surname><given-names>D.</given-names></name><etal/></person-group>
+<article-title>The auxin signalling network translates dynamic input into robust patterning at the shoot apex</article-title>
+<source>Mol. Syst. Biol.</source>
+<year>2011</year>
+<volume>7</volume>
+<fpage>508</fpage>
+<pub-id pub-id-type="pmid">21734647</pub-id></element-citation></ref><ref id="B120-plants-02-00317"><label>120.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chapman</surname><given-names>E.J.</given-names></name><name><surname>Estelle</surname><given-names>M.</given-names></name></person-group>
+<article-title>Mechanism of auxin-regulated gene expression in plants</article-title>
+<source>Annu. Rev. Genet.</source>
+<year>2009</year>
+<volume>43</volume>
+<fpage>265</fpage>
+<lpage>285</lpage>
+<pub-id pub-id-type="doi">10.1146/annurev-genet-102108-134148</pub-id>
+<pub-id pub-id-type="pmid">19686081</pub-id></element-citation></ref><ref id="B121-plants-02-00317"><label>121.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Di Giacomo</surname><given-names>E.</given-names></name><name><surname>Serino</surname><given-names>G.</given-names></name><name><surname>Frugis</surname><given-names>G.</given-names></name></person-group>
+<article-title>Emerging role of the ubiquitin proteasome system in the control of shoot apical meristem function</article-title>
+<source>J. Integr. Plant Biol.</source>
+<year>2013</year>
+<volume>55</volume>
+<fpage>7</fpage>
+<lpage>20</lpage>
+<pub-id pub-id-type="doi">10.1111/jipb.12010</pub-id>
+<pub-id pub-id-type="pmid">23164365</pub-id></element-citation></ref><ref id="B122-plants-02-00317"><label>122.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yadav</surname><given-names>R.K.</given-names></name><name><surname>Girke</surname><given-names>T.</given-names></name><name><surname>Pasala</surname><given-names>S.</given-names></name><name><surname>Xie</surname><given-names>M.</given-names></name><name><surname>Reddy</surname><given-names>G.V.</given-names></name></person-group>
+<article-title>Gene expression map of the Arabidopsis shoot apical meristem stem cell niche</article-title>
+<source>Proc. Natl. Acad. Sci. USA</source>
+<year>2009</year>
+<volume>106</volume>
+<fpage>4941</fpage>
+<lpage>4946</lpage>
+<pub-id pub-id-type="pmid">19258454</pub-id></element-citation></ref><ref id="B123-plants-02-00317"><label>123.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Spinelli</surname><given-names>S.V.</given-names></name><name><surname>Martin</surname><given-names>A.P.</given-names></name><name><surname>Viola</surname><given-names>I.L.</given-names></name><name><surname>Gonzalez</surname><given-names>D.H.</given-names></name><name><surname>Palatnik</surname><given-names>J.F.</given-names></name></person-group>
+<article-title>A mechanistic link between STM and CUC1 during Arabidopsis development</article-title>
+<source>Plant Physiol.</source>
+<year>2011</year>
+<volume>156</volume>
+<fpage>1894</fpage>
+<lpage>1904</lpage>
+<pub-id pub-id-type="pmid">21685178</pub-id></element-citation></ref><ref id="B124-plants-02-00317"><label>124.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tsuda</surname><given-names>K.</given-names></name><name><surname>Ito</surname><given-names>Y.</given-names></name><name><surname>Sato</surname><given-names>Y.</given-names></name><name><surname>Kurata</surname><given-names>N.</given-names></name></person-group>
+<article-title>Positive autoregulation of a KNOX gene is essential for shoot apical meristem maintenance in rice</article-title>
+<source>Plant Cell</source>
+<year>2011</year>
+<volume>23</volume>
+<fpage>4368</fpage>
+<lpage>4381</lpage>
+<pub-id pub-id-type="doi">10.1105/tpc.111.090050</pub-id>
+<pub-id pub-id-type="pmid">22207572</pub-id></element-citation></ref><ref id="B125-plants-02-00317"><label>125.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mele</surname><given-names>G.</given-names></name><name><surname>Ori</surname><given-names>N.</given-names></name><name><surname>Sato</surname><given-names>Y.</given-names></name><name><surname>Hake</surname><given-names>S.</given-names></name></person-group>
+<article-title>The knotted1-like homeobox gene BREVIPEDICELLUS regulates cell differentiation by modulating metabolic pathways</article-title>
+<source>Genes Dev.</source>
+<year>2003</year>
+<volume>17</volume>
+<fpage>2088</fpage>
+<lpage>2093</lpage>
+<pub-id pub-id-type="doi">10.1101/gad.1120003</pub-id>
+<pub-id pub-id-type="pmid">12923061</pub-id></element-citation></ref><ref id="B126-plants-02-00317"><label>126.</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Groover</surname><given-names>A.</given-names></name><name><surname>Jones</surname><given-names>A.M.</given-names></name></person-group>
+<article-title>Tracheary element differentiation uses a novel mechanism coordinating programmed cell death and secondary cell wall synthesis</article-title>
+<source>Plant Physiol.</source>
+<year>1999</year>
+<volume>119</volume>
+<fpage>375</fpage>
+<lpage>384</lpage>
+<pub-id pub-id-type="doi">10.1104/pp.119.2.375</pub-id>
+<pub-id pub-id-type="pmid">9952432</pub-id></element-citation></ref></ref-list></back></article>

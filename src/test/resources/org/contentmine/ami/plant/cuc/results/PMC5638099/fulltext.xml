@@ -1,0 +1,1470 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName archivearticle3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">New Phytol</journal-id><journal-id journal-id-type="iso-abbrev">New Phytol</journal-id><journal-id journal-id-type="doi">10.1111/(ISSN)1469-8137</journal-id><journal-id journal-id-type="publisher-id">NPH</journal-id><journal-title-group><journal-title>The New Phytologist</journal-title></journal-title-group><issn pub-type="ppub">0028-646X</issn><issn pub-type="epub">1469-8137</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5638099</article-id><article-id pub-id-type="doi">10.1111/nph.14449</article-id><article-id pub-id-type="publisher-id">NPH14449</article-id><article-id pub-id-type="other">2016-22980</article-id><article-categories><subj-group subj-group-type="overline"><subject>Full Paper</subject></subj-group><subj-group subj-group-type="heading"><subject>Research</subject><subj-group subj-group-type="heading"><subject>Full Papers</subject></subj-group></subj-group></article-categories><title-group><article-title>A common developmental program can produce diverse leaf shapes</article-title></title-group><contrib-group><contrib id="nph14449-cr-0001" contrib-type="author" corresp="yes"><name><surname>Runions</surname><given-names>Adam</given-names></name><address><email>runions@mpipz.mpg.de</email></address><xref ref-type="aff" rid="nph14449-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="nph14449-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="nph14449-cr-0002" contrib-type="author"><name><surname>Tsiantis</surname><given-names>Miltos</given-names></name><xref ref-type="aff" rid="nph14449-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="nph14449-cr-0003" contrib-type="author" corresp="yes"><name><surname>Prusinkiewicz</surname><given-names>Przemyslaw</given-names></name><address><email>pwp@ucalgary.ca</email></address><xref ref-type="aff" rid="nph14449-aff-0001">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="nph14449-aff-0001">
+<label><sup>1</sup></label>
+<institution>University of Calgary</institution>
+<named-content content-type="street">2500 University Dr NW</named-content>
+<named-content content-type="city">Calgary</named-content>
+<named-content content-type="country-part">Alberta</named-content>
+<named-content content-type="post-code">T2N 1N4</named-content>
+<country country="CA">Canada</country>
+</aff><aff id="nph14449-aff-0002">
+<label><sup>2</sup></label>
+<institution>Max Planck Institute for Plant Breeding Research</institution>
+<named-content content-type="street">Carl&#x02010;von&#x02010;Linn&#x000e9;&#x02010;Weg 10</named-content>
+<named-content content-type="city">K&#x000f6;ln</named-content>
+<named-content content-type="post-code">50829</named-content>
+<country country="DE">Germany</country>
+</aff><author-notes><corresp id="correspondenceTo"><label>*</label>
+Authors for correspondence:<break/><italic>Adam Runions</italic><break/><italic>Tel: +49 221 5062 133</italic><break/><italic>Email: </italic><email>runions@mpipz.mpg.de</email><break/><italic>Przemyslaw Prusinkiewicz</italic><break/><italic>Tel: +1 403 220 5494</italic><break/><italic>Email: </italic><email>pwp@ucalgary.ca</email><break/></corresp></author-notes><pub-date pub-type="epub"><day>01</day><month>3</month><year>2017</year></pub-date><pub-date pub-type="ppub"><month>10</month><year>2017</year></pub-date><volume>216</volume><issue>2</issue><issue-id pub-id-type="doi">10.1111/nph.2017.216.issue-2</issue-id><issue-title content-type="special-issue-title">Plant developmental evolution</issue-title><fpage>401</fpage><lpage>418</lpage><history><date date-type="received"><day>07</day><month>10</month><year>2016</year></date><date date-type="accepted"><day>06</day><month>12</month><year>2016</year></date></history><permissions><!--<copyright-statement content-type="issue-copyright"> Copyright &#x000a9; 2017 New Phytologist Trust <copyright-statement>--><copyright-statement content-type="article-copyright">&#x000a9; 2017 The Authors. New Phytologist &#x000a9; 2017 New Phytologist Trust</copyright-statement><license license-type="creativeCommonsBy"><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="file:NPH-216-401.pdf"/><abstract id="nph14449-abs-0001"><title>Summary</title><p>
+<list list-type="bullet" id="nph14449-list-0001"><list-item><p>Eudicot leaves have astoundingly diverse shapes. The central problem addressed in this paper is the developmental origin of this diversity.</p></list-item><list-item><p>To investigate this problem, we propose a computational model of leaf development that generalizes the largely conserved molecular program for the reference plants <italic>Arabidopsis thaliana</italic>,<italic> Cardamine hirsuta</italic> and <italic>Solanum lycopersicum</italic>. The model characterizes leaf development as a product of three interwoven processes: the patterning of serrations, lobes and/or leaflets on the leaf margin; the patterning of the vascular system; and the growth of the leaf blade spanning the main veins. The veins play a significant morphogenetic role as a local determinant of growth directions.</p></list-item><list-item><p>We show that small variations of this model can produce diverse leaf shapes, from simple to lobed to compound.</p></list-item><list-item><p>It is thus plausible that diverse shapes of eudicot leaves result from small variations of a common developmental program.</p></list-item></list>
+</p></abstract><abstract abstract-type="short" id="nph14449-abs-1001"><p>See also the Commentary on this article by <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/nph.14807">Thomas &#x00026; Ougham, <bold>216</bold>: 337&#x02013;338</ext-link>.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="nph14449-kwd-0001">blastozone</kwd><kwd id="nph14449-kwd-0002">computational model</kwd><kwd id="nph14449-kwd-0003">directional growth</kwd><kwd id="nph14449-kwd-0004">Hofmeister's rule</kwd><kwd id="nph14449-kwd-0005">leaf development</kwd><kwd id="nph14449-kwd-0006">PIN convergence point</kwd><kwd id="nph14449-kwd-0007">shape diversity</kwd><kwd id="nph14449-kwd-0008">vascular system</kwd></kwd-group><funding-group><award-group><funding-source>Human Frontier Science Program</funding-source></award-group><award-group><funding-source>Natural Sciences and Engineering Research Council of Canada</funding-source></award-group><award-group><funding-source>BBSRC Research Development Fellowship</funding-source><award-id>BB/G023905/1</award-id></award-group><award-group><funding-source>Max&#x02010;Planck&#x02010;Gesellschaft</funding-source></award-group><award-group><funding-source>Plant Phenotyping and Imaging Research Centre</funding-source></award-group><award-group><funding-source>Cluster of Excellence on Plant Sciences</funding-source></award-group></funding-group><counts><fig-count count="13"/><table-count count="0"/><page-count count="18"/><word-count count="12174"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>nph14449</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>October 2017</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:5.2.1 mode:remove_FC converted:12.10.2017</meta-value></custom-meta></custom-meta-group></article-meta><notes><fn-group id="nph14449-ntgp-0011"><fn id="nph14449-note-1501"><p>See also the Commentary on this article by <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/nph.14807">Thomas &#x00026; Ougham, <bold>216</bold>: 337&#x02013;338</ext-link>.</p></fn></fn-group></notes></front><body><sec id="nph14449-sec-0001"><title>Introduction</title><p>Leaves of eudicots show tremendous morphological diversity (Fig.&#x000a0;<xref rid="nph14449-fig-0001" ref-type="fig">1</xref>). They can be simple or dissected, that is, partitioned into distinct leaflets, and have margins that are entire (smooth) or have teeth, lobes or sinuses of varying shape and depth (see Supporting Information Fig.&#x000a0;<xref rid="nph14449-sup-0001" ref-type="supplementary-material">S1</xref> for related terminology). In addition, the vascular systems supporting leaf blades may have diverse architectures (Hickey, <xref rid="nph14449-bib-0041" ref-type="ref">1973</xref>; Ash <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0003" ref-type="ref">1999</xref>). Remarkably different leaf morphologies may occur between closely related species, as within&#x02010;species variants, or even in the same plant (Kidner &#x00026; Umbreen, <xref rid="nph14449-bib-0049" ref-type="ref">2010</xref>; Nicotra <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0062" ref-type="ref">2011</xref>). These differences are illustrated by numerous case studies including the leaves of <italic>Pelargonium</italic> (Nicotra <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0061" ref-type="ref">2007</xref>; Jones <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0045" ref-type="ref">2009</xref>), grape vine (<italic>Vitis</italic> spp.) (Chitwood <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0019" ref-type="ref">2014</xref>, <xref rid="nph14449-bib-0018" ref-type="ref">2016</xref>), tomato (<italic>Solanum lycopersicum</italic>) (Nuez <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0065" ref-type="ref">2004</xref>), and the poppy family (Gleissberg, <xref rid="nph14449-bib-0032" ref-type="ref">2004</xref>). Diverse leaf shapes also emerge in molecular&#x02010;level studies of reference plants including <italic>Arabidopsis thaliana</italic>,<italic> Cardamine hirsuta</italic> and tomato, where small genetic or hormonal changes yield significantly different forms (reviewed by Bar &#x00026; Ori, <xref rid="nph14449-bib-0005" ref-type="ref">2014</xref>; Koenig &#x00026; Sinha, <xref rid="nph14449-bib-0052" ref-type="ref">2010</xref>; Scarpella <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0083" ref-type="ref">2010</xref>). This lability of shapes, juxtaposed with similar molecular mechanisms underlying leaf development in reference plants, suggests that the striking diversity of eudicot leaves results from variations of a common generative program (Burko &#x00026; Ori, <xref rid="nph14449-bib-0017" ref-type="ref">2013</xref>).</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Examples of diverse shapes and features of eudicot leaves. (a) <italic>Quercus imbricaria</italic>. (b) <italic>Garcinia spicata</italic>. (c) <italic>Catalpa bignonioides</italic>. (d) <italic>Populus tremula</italic>. (e) <italic>Crataegus marshallii</italic>. (f) <italic>Fatsia japonica</italic>. (g) <italic>Quercus rubra</italic>. (h) <italic>Acer saccharinum</italic>. (i) <italic>Pueraria montana</italic> var. <italic>lobata</italic>. (j) <italic>Cannabis sativa</italic>. (k)&#x000a0;<italic>Handroanthus</italic> sp. (l) <italic>Robinia pseudoacacia</italic>. Photograph sources and credits (see also Supporting Information Notes <xref rid="nph14449-sup-0001" ref-type="supplementary-material">S1</xref>): (a) Jan De Langhe, courtesy of Foundation Arboretum Wespelaar (<ext-link ext-link-type="uri" xlink:href="http://www.arboretumwespelaar.be">www.arboretumwespelaar.be</ext-link>); (b) Ir&#x000e8;ne Bouguerra and Nicolas Lagarrigue, Pitchandikulam Forest Virtual Herbarium (<ext-link ext-link-type="uri" xlink:href="http://www.pitchandikulam-herbarium.org">www.pitchandikulam-herbarium.org</ext-link>), licensed under <styled-content style="fixed-case">CC</styled-content>&#x02010;Attribution&#x02010;NonCommercial&#x02010;ShareAlike 4.0; (c) W. Mark and J. Reimer, courtesy of SelecTree (<ext-link ext-link-type="uri" xlink:href="http://www.selectree.calpoly.edu">www.selectree.calpoly.edu</ext-link>); (d) commons.wikimedia.org, licensed under <styled-content style="fixed-case">CC</styled-content>&#x02010;Attribution&#x02010;Share Alike 3.0; (e) John Pickering, courtesy of Discover Life (<ext-link ext-link-type="uri" xlink:href="http://www.discoverlife.org">www.discoverlife.org</ext-link>); (f) commons.wikimedia.org, licensed under <styled-content style="fixed-case">CC</styled-content>&#x02010;Attribution&#x02010;Share Alike 3.0; (h) Renn Tumlison, Henderson State University (www.hsu.edu/Academics/<styled-content style="fixed-case">ARN</styled-content>atureTrivia/), used with permission; (i, l) J. K. Marlow, courtesy of Native and Naturalized Plants of the Carolinas and Georgia (<ext-link ext-link-type="uri" xlink:href="http://www.namethatplant.net">www.namethatplant.net</ext-link>); (j) <ext-link ext-link-type="uri" xlink:href="http://commons.wikimedia.org">http://commons.wikimedia.org</ext-link>, image in public domain; Karen Blixen (<ext-link ext-link-type="uri" xlink:href="http://www.flickr.com">www.flickr.com</ext-link>), licensed under <styled-content style="fixed-case">CC</styled-content>&#x02010;Attribution&#x02010;NonCommercial&#x02010;ShareAlike 2.0.</p></caption><graphic id="nlm-graphic-1" xlink:href="NPH-216-401-g001"/></fig><p>To better understand the essence of this program and examine how it produces diverse forms, we constructed a parametrized computational model of leaf development. The model integrates three perspectives on leaf development: the growth of the leaf blade viewed as a continuous surface, the morphogenetic role of the leaf margin, and the role of the vascular system.</p><sec id="nph14449-sec-0002"><title>The continuous surface perspective</title><p>The continuous surface perspective has its roots in measurements and a mathematical description of growing tobacco (<italic>Nicotina tabacum</italic>) leaves (Avery, <xref rid="nph14449-bib-0004" ref-type="ref">1933</xref>; Richards &#x00026; Kavanagh, <xref rid="nph14449-bib-0074" ref-type="ref">1943</xref>). In present terms, the development of the leaf blade is quantified by a growth tensor field (Hejnowicz &#x00026; Romberger, <xref rid="nph14449-bib-0040" ref-type="ref">1984</xref>), which is formally equivalent to the strain tensor field defined in continuum mechanics. Local growth is integrated into a global description of the developing leaf blade using the mechanical notion of stress&#x02013;strain relations (Boudaoud, <xref rid="nph14449-bib-0016" ref-type="ref">2010</xref>). The continuous&#x02010;surface perspective embedded into the computational framework developed by Kennaway <italic>et&#x000a0;al</italic>. (<xref rid="nph14449-bib-0048" ref-type="ref">2011</xref>) was applied to characterize the development of entire <italic>A.&#x000a0;thaliana</italic> leaves (Kuchen <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0055" ref-type="ref">2012</xref>) and winged&#x02010;shaped mutant barley (<italic>Hordeum vulgare</italic>) bracts (Richardson <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0075" ref-type="ref">2016</xref>). The latter model explains the emergence of the lobe&#x02010;like wings in terms of polarizers that define different growth directions within a continuous blade.</p></sec><sec id="nph14449-sec-0003"><title>Morphogenetic role of the leaf margin</title><p>The modelling and understanding of leaf shapes can be facilitated by characterizing them in a more structured way. In particular, the patterning of leaflets, lobes or teeth is largely dependent on the processes that take place at the adaxial&#x02013;abaxial boundary of a leaf primordium, termed the marginal (leaf) blastozone by Hagemann &#x00026; Gleissberg (<xref rid="nph14449-bib-0034" ref-type="ref">1996</xref>). They pointed out that &#x02013; even in early development, when the leaf primordium is a three&#x02010;dimensional bump &#x02013; the blastozone forms a line that &#x02018;anticipates and circumscribes&#x02019;, the eventual leaf surface. The blastozone can thus be viewed as a one&#x02010;dimensional boundary of a two&#x02010;dimensional leaf, similar to the epidermis of a shoot apical meristem being viewed as a two&#x02010;dimensional boundary of the&#x000a0;three&#x02010;dimensional meristem (Floyd &#x00026; Bowman, <xref rid="nph14449-bib-0031" ref-type="ref">2010</xref>; Prusinkiewicz &#x00026; Runions, <xref rid="nph14449-bib-0071" ref-type="ref">2012</xref>; Alvarez <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0001" ref-type="ref">2016</xref>).</p><p>In a growing meristem, feedback between auxin and PIN&#x02010;FORMED1 (PIN1) proteins &#x02013; auxin efflux carriers &#x02013; leads to the emergence of PIN1 convergence points that position new primordia where space is available for them (Reinhardt <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0073" ref-type="ref">2003</xref>; J&#x000f6;nsson <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0046" ref-type="ref">2006</xref>; Smith <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0087" ref-type="ref">2006</xref>). This feedback provides a molecular implementation of Hofmeister's rule, according to which new primordia emerge at locations that are sufficiently distant from the nearest primordia formed previously (Hofmeister, <xref rid="nph14449-bib-0042" ref-type="ref">1868</xref>; see also Kirchoff, <xref rid="nph14449-bib-0051" ref-type="ref">2003</xref>). The convergence points also position the endpoints of midveins within the emerging primordia (Bayer <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0008" ref-type="ref">2009</xref>). In a similar manner, PIN1 convergence points on the margin of <italic>A.&#x000a0;thaliana</italic> leaves position leaf serrations (Hay <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0038" ref-type="ref">2006</xref>) and the endpoints of emerging veins (Scarpella <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0084" ref-type="ref">2006</xref>) (Fig.&#x000a0;<xref rid="nph14449-fig-0002" ref-type="fig">2</xref>a,b). This patterning mechanism is largely conserved in other reference plants (Koenig &#x00026; Sinha, <xref rid="nph14449-bib-0052" ref-type="ref">2010</xref>; Scarpella <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0083" ref-type="ref">2010</xref>; Bar &#x00026; Ori, <xref rid="nph14449-bib-0005" ref-type="ref">2014</xref>; Tameshige <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0088" ref-type="ref">2016</xref>). The molecular context in which marginal convergence points appear determines whether serrations, lobes or leaflets will develop. For instance, <italic>CUP&#x02010;SHAPED COTYLEDON</italic> (<italic>CUC</italic>) genes specify the boundary between serrations in wild&#x02010;type <italic>A.&#x000a0;thaliana</italic> (Bilsborough <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0013" ref-type="ref">2011</xref>) (Fig.&#x000a0;<xref rid="nph14449-fig-0002" ref-type="fig">2</xref>b), but induce lobes by deepening the sinuses when overexpressed (Nikovics <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0063" ref-type="ref">2006</xref>). In compound <italic>C. hirsuta</italic> leaves CUC2 marks the boundaries between leaflets (Blein <italic>et&#x000a0;al</italic>.,<xref rid="nph14449-bib-0015" ref-type="ref">2008</xref>; Hasson <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0037" ref-type="ref">2011</xref>; Rast&#x02010;Somssich <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0072" ref-type="ref">2015</xref>) (Fig.&#x000a0;<xref rid="nph14449-fig-0002" ref-type="fig">2</xref>b,c). The postulated interaction between auxin, PIN1 and CUC2 on the growing leaf margin has been included in the computational model of wild&#x02010;type and mutant <italic>A.&#x000a0;thaliana</italic> leaves (Bilsborough <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0013" ref-type="ref">2011</xref>). An even simpler model, focused on the feedback between auxin and PIN1 alone, faithfully reproduced lobed ivy (<italic>Hedera</italic> sp.) leaves (Prusinkiewicz &#x00026; Lane, <xref rid="nph14449-bib-0070" ref-type="ref">2013</xref>). In these models, auxin concentration controlled the outward expansion of the leaf margin: faster at the PIN1 convergence points and slower between them. A possible tangential component of growth and the displacement of distal leaf parts by growing proximal parts were ignored. Consequently, the geometry of complex leaf shapes, with a hierarchy of growth axes, could only be captured with limited accuracy (Nakamasu <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0059" ref-type="ref">2014</xref>).</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>Observations supporting the morphogenetic role of the leaf margin and the alignment of growth axes with veins. (a) Convergence points (<styled-content style="fixed-case">CP</styled-content>s) of <styled-content style="fixed-case">PIN</styled-content>&#x02010;<styled-content style="fixed-case">FORMED</styled-content>1 (<styled-content style="fixed-case">PIN</styled-content>1) polarization on the margin of an <italic>Arabidopsis thaliana</italic> leaf localize a serration and the tip of a vein. Green, <styled-content style="fixed-case">PIN</styled-content>1::<styled-content style="fixed-case">PIN</styled-content>1&#x02010;<styled-content style="fixed-case">GFP</styled-content>. (b) <styled-content style="fixed-case">CUP</styled-content>&#x02010;<styled-content style="fixed-case">SHAPED COTYLEDON</styled-content>2 (<styled-content style="fixed-case">CUC</styled-content>2) delimits serrations in <italic>A.&#x000a0;thaliana</italic> leaves. Green, <styled-content style="fixed-case">DR</styled-content>5::<styled-content style="fixed-case">GFP</styled-content>; yellow, <styled-content style="fixed-case">CUC</styled-content>2::<styled-content style="fixed-case">CUC</styled-content>2&#x02010;<styled-content style="fixed-case">VENUS</styled-content>. (c) <styled-content style="fixed-case">CUC</styled-content>2 marks boundaries between leaflets in a <italic>Cardamine hirsuta</italic> leaf; green, <styled-content style="fixed-case">PIN</styled-content>1::<styled-content style="fixed-case">PIN</styled-content>1&#x02010;<styled-content style="fixed-case">GFP</styled-content>; yellow, <styled-content style="fixed-case">CUC</styled-content>2::<styled-content style="fixed-case">CUC</styled-content>2&#x02010;<styled-content style="fixed-case">VENUS</styled-content>. (d)&#x000a0;Growth of the narrow lobes of a multifid <italic>Pelargonium graveolens</italic> leaf is necessarily aligned with the main veins. (e) Variegation of an <italic>Aegopodium podagraria</italic> leaf indicates the alignment of blade growth directions with the vasculature. Image sources and credits: (a) Hay <italic>et&#x000a0;al</italic>. (<xref rid="nph14449-bib-0038" ref-type="ref">2006</xref>) adapted with permission from <italic>Development</italic>; (b) adapted from&#x000a0;Bilsborough <italic>et&#x000a0;al</italic>. (<xref rid="nph14449-bib-0013" ref-type="ref">2011</xref>); (c) image kindly provided by Gemma Bilsborough.</p></caption><graphic id="nlm-graphic-3" xlink:href="NPH-216-401-g002"/></fig></sec><sec id="nph14449-sec-0004"><title>Morphogenetic role of the vascular system</title><p>Growth directions are inherently accounted for in the third perspective on leaf development, which treats leaves as modified shoots (Arber, <xref rid="nph14449-bib-0002" ref-type="ref">1950</xref>). This perspective is related to telome theory, according to which leaves evolved by connecting, or webbing, the free&#x02010;standing branching structure of ancestral plants (Zimmermann, <xref rid="nph14449-bib-0093" ref-type="ref">1952</xref>; see also Beerling &#x00026; Fleming, <xref rid="nph14449-bib-0009" ref-type="ref">2007</xref>). The local alignment of growth directions with main veins &#x02013; the present&#x02010;day counterpart of ancestral branching structures &#x02013; is evident in multifid leaves, such as the <italic>Pelargonium graveolens</italic> leaf in Fig.&#x000a0;<xref rid="nph14449-fig-0002" ref-type="fig">2</xref>(d). Its blade consists of narrow segments, which can only acquire their form by growing faster in the direction of midveins than perpendicular to them. Examination of variegated leaves, in which the dominant directions of growth are indicated by groups of cells with contrasting colours, indicates that they are also aligned with the major veins in leaves with a broad lamina (Dolan &#x00026; Poethig, <xref rid="nph14449-bib-0028" ref-type="ref">1998</xref>) (Fig.&#x000a0;<xref rid="nph14449-fig-0002" ref-type="fig">2</xref>e). The relative rigidity of veins (Hagemann, <xref rid="nph14449-bib-0033" ref-type="ref">1999</xref>; Bar&#x02010;Sinai <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0007" ref-type="ref">2016</xref>) predisposes them mechanically to act as the main axes of growth, with the leaf blade spanning the skeleton of veins. As observed by Dengler &#x00026; Kang (<xref rid="nph14449-bib-0027" ref-type="ref">2001</xref>) commenting on an earlier hypothesis by Van Volkenburgh (<xref rid="nph14449-bib-0090" ref-type="ref">1999</xref>), vascular parenchyma may act as a driver of leaf development, that is, provide the motive force for overall leaf expansion, while mechanical resistance is offered by the epidermis. At the molecular level, the patterning of veins is commonly explained in terms of the canalization theory (Sachs, <xref rid="nph14449-bib-0080" ref-type="ref">1981</xref>), which posits that veins differentiate along self&#x02010;organizing paths of auxin flow. In this process, a positive feedback between polar auxin transport and the distribution of auxin transporters in cells creates narrow canals of auxin transport in a manner analogous to the carving of rivers by flowing water (Sachs, <xref rid="nph14449-bib-0081" ref-type="ref">2003</xref>). The canalization theory is consistent with experimental data and computational models, in which new vascular strands emerge as gradually refined conduits of auxin, connecting convergence points with the existing vasculature (Scarpella <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0084" ref-type="ref">2006</xref>; Bayer <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0008" ref-type="ref">2009</xref>; O'Connor <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0066" ref-type="ref">2014</xref>; Cieslak <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0020" ref-type="ref">2015</xref>). Models with the aim of capturing the essence of the canalization process at a higher, geometric level of abstraction have also been proposed (Rodkaew <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0076" ref-type="ref">2003</xref>; Runions <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0078" ref-type="ref">2005</xref>; Owens <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0068" ref-type="ref">2016</xref>).</p></sec></sec><sec id="nph14449-sec-0005"><title>Description</title><p>To better understand the development of leaf form and the basis of leaf diversity, we have constructed a computational model of leaf development that builds upon the three perspectives discussed in the previous section. The model is specified in the L&#x000a0;+&#x000a0;C extension of the C++ programming language (Karwowski &#x00026; Prusinkiewicz, <xref rid="nph14449-bib-0047" ref-type="ref">2003</xref>). The source code and parameter files are available from the authors&#x02019; website (<ext-link ext-link-type="uri" xlink:href="http://algorithmicbotany.org/papers/leaves2017.html">http://algorithmicbotany.org/papers/leaves2017.html</ext-link>). Parameters of all models are also collected in Table&#x000a0;<xref rid="nph14449-sup-0002" ref-type="supplementary-material">S1</xref>. Simulations can be executed and visualized using the V<sc>irtual</sc> L<sc>aboratory</sc> software environment (<ext-link ext-link-type="uri" xlink:href="http://algorithmicbotany.org/virtual_laboratory">http://algorithmicbotany.org/virtual_laboratory</ext-link>). The structure and operation of the model are described in the remainder of this section; further details are given in Notes <xref rid="nph14449-sup-0003" ref-type="supplementary-material">S2</xref>.</p><sec id="nph14449-sec-0006"><title>Leaf representation</title><p>Consistent with previous models of leaf shape (Bilsborough <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0013" ref-type="ref">2011</xref>; Prusinkiewicz &#x00026; Lane, <xref rid="nph14449-bib-0070" ref-type="ref">2013</xref>; Nakamasu <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0059" ref-type="ref">2014</xref>), we disregard the adaxial&#x02013;abaxial leaf dimension and model the developing leaf as a two&#x02010;dimensional structure. We further simplify models by considering development as a planar process, thus ignoring possible three&#x02010;dimensional wrinkling and folding of the leaf. We follow Hagemann &#x00026; Gleissberg (<xref rid="nph14449-bib-0034" ref-type="ref">1996</xref>) in abstracting from the cellular&#x02010;level details of leaf development and focusing on larger components. The leaf is thus represented as three coupled data structures: an open polygon representing the leaf margin (marginal blastozone), a two&#x02010;dimensional tree representing the main veins (synonymous with growth axes), and a triangle mesh representing the leaf blade (Fig.&#x000a0;<xref rid="nph14449-fig-0003" ref-type="fig">3</xref>a). The margin polygon is defined by a sequence of vertices, referred to as the sample points, which begins and ends at the bottom of the petiole. The vascular system is approximated as an open branching structure with straight branches (we do not consider reticulate venation patterns). The root of this system is located at the leaf base, and the terminal points coincide with the convergence points on the margin. The points in the neighbourhood of each convergence point define the margin segment that is associated with this point and with the vein that terminates at it. Each margin point can be characterized further by the presence or absence of one or more morphogens that affect the patterning of subsequent convergence points and/or the growth of the margin (Fig.&#x000a0;<xref rid="nph14449-fig-0003" ref-type="fig">3</xref>b). Please note that we use the noun &#x02018;morphogen&#x02019; as a general term denoting a substance involved in the production of form (Turing, <xref rid="nph14449-bib-0089" ref-type="ref">1952</xref>). We do not require that morphogens form gradients.</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>Key elements of the model. (a) Data structures representing a leaf: a polygon representing the leaf margin (black), a tree representing the main veins (blue), and a triangular mesh representing the lamina (green). Yellow circles indicate convergence points, black dots are additional sample points on the margin, and blue dots indicate the vertices at which the mesh coincides with the veins. (b&#x02013;d) Example of patterning on the margin. (b) Margin fragment with two convergence points, <italic>CP</italic>
+<sub>1</sub> and <italic>CP</italic>
+<sub>2</sub>, and the associated margin segments (green bars). Red bars indicate the presence of a morphogen. (c) Distance relations change as a result of margin growth. An interval with red morphogen reaches threshold length &#x003bb;. (d) A new convergence point <italic>CP</italic>&#x02032; forms in the middle of the red interval and initiates a new vein. Sample points at distance &#x003b4; or less from <italic>CP</italic>&#x02032; become the margin segment associated with <italic>CP</italic>&#x02032;. The red morphogen is excluded from points closer than &#x003c1;<sub>r</sub> to <italic>CP</italic>&#x02032;. Another morphogen (blue bars) is introduced at distances greater than &#x003c1;<sub>bmin</sub> and less than&#x000a0;&#x003c1;<sub>bmax</sub> from <italic>CP</italic>&#x02032;.</p></caption><graphic id="nlm-graphic-5" xlink:href="NPH-216-401-g003"/></fig><p>A sample point is thus specified by its position in space, type (convergence point or not), pointer to the convergence point/vein it is associated with, and one or more flags representing the presence or absence of morphogens. The leaf blade is represented by a triangle mesh, constrained such that all vertices and edges of the leaf margin and the vascular system coincide with vertices and edges of the mesh. During simulation this mesh is dynamically refined to allow for faithful representation of details of the leaf shape as it develops (see Notes S2.1).</p></sec><sec id="nph14449-sec-0007"><title>Simulation outline</title><p>Leaf form emerges as an outcome of development, simulated as a feedback loop of growth, patterning of the margin and the insertion of new veins. The initial shape of the leaf (leaf primordium with a midvein) and the distribution of morphogens on its margin are specified explicitly at the beginning of the simulation (Fig.&#x000a0;<xref rid="nph14449-fig-0004" ref-type="fig">4</xref>a). The simulation proceeds iteratively. Each iteration begins with a growth step, driven by expansion of the vascular system. The expansion increases distances measured along the margin and modifies the distribution of morphogens that affect patterning or growth. These changes may trigger the insertion of new convergence points followed by a further modification to the distribution of morphogens (Fig.&#x000a0;<xref rid="nph14449-fig-0004" ref-type="fig">4</xref>b). The insertion of new convergence points leads to the creation of veins that connect these points to the existing vascular structure and define new growth axes. This step closes the feedback loop: the system is now ready for the next growth step (Fig.&#x000a0;<xref rid="nph14449-fig-0004" ref-type="fig">4</xref>c,d). The leaf blade interior, spanning the space between the branching vascular system and the leaf margin, expands passively, following the growth of veins and propagation of the leaf margin.</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>Overview of the model operation. (a&#x02013;d) Two iterations of simulated development. Coloured lines along the margin indicate morphogens that control development. In this case, the red morphogen enables formation of convergence points and defines sinuses, and the blue morphogen defines the petiole. (a) A leaf at the beginning of the simulation. (b) The midvein grows, driving the expansion of the margin and the blade. New convergence points (yellow circles) emerge on the margin, causing the insertion of new veins and dividing the leaf into regions associated with each vein. (c) Beginning of the next iteration: the veins grow again, causing differential expansion of the leaf in the directions associated with veins. (d) The shape of the margin is further affected by the margin propagation (webbing). (e) Vascular system expansion. Vein elongation is limited to the bottom portion of the leaf (shown in red). This portion does not propagate with the growing leaf and is limited to the vasculature points within the same distance from the leaf base in each simulation step. Vein segments <italic>AB</italic> and <italic>BP</italic> are outside the growth zone and do not elongate (e.g. |<italic>AB</italic>|&#x000a0;=&#x000a0;|<italic>A</italic>&#x02032;<italic>B</italic>&#x02032;| and |<italic>BP</italic>|&#x000a0;=&#x000a0;|<italic>B</italic>&#x02032;<italic>P</italic>&#x02032;|). Although distal parts of the leaf do not grow, they are displaced by the growing bottom part; for instance, point <italic>P</italic> moves to <italic>P</italic>&#x02032;. (f) Margin growth. Points within a margin segment (e.g. <italic>A</italic>,<italic> B</italic>) are projected perpendicularly onto the corresponding veins (<italic>A</italic>&#x02032;, <italic>B</italic>&#x02032;). A boundary point (<italic>C</italic>) is projected onto the branching point between veins (<italic>C</italic>&#x02032;). Following vein expansion, point <italic>D</italic> is moved by the same vector as its projection: <mml:math id="nlm-math-1"><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>D</mml:mi><mml:mi>E</mml:mi></mml:mrow><mml:mo stretchy="false">&#x02192;</mml:mo></mml:mover><mml:mo>=</mml:mo><mml:mover accent="true"><mml:mrow><mml:msup><mml:mi>D</mml:mi><mml:mo>&#x02032;</mml:mo></mml:msup><mml:msup><mml:mi>E</mml:mi><mml:mo>&#x02032;</mml:mo></mml:msup></mml:mrow><mml:mo stretchy="false">&#x02192;</mml:mo></mml:mover></mml:mrow></mml:math>.</p></caption><graphic id="nlm-graphic-7" xlink:href="NPH-216-401-g004"/></fig></sec><sec id="nph14449-sec-0008"><title>Growth of the vascular system</title><p>Leaf growth is modelled as the superposition of two processes: uniform expansion of the blade, which represents the isotropic component of growth, and growth driven by veins, which introduces an anisotropic component. The growth of veins is modelled, in turn, as the sum of two factors: the addition of new vein segments of a given length at vein tips, and the elongation of existing segments. The latter factor is defined in terms of the relative elementary rate of growth (RERG) (Richards &#x00026; Kavanagh, <xref rid="nph14449-bib-0074" ref-type="ref">1943</xref>; Hejnowicz &#x00026; Romberger, <xref rid="nph14449-bib-0040" ref-type="ref">1984</xref>): <disp-formula id="nph14449-disp-0001"><label>(Eqn 1)</label><mml:math id="nlm-math-2"><mml:mrow><mml:mtext>RERG</mml:mtext><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi>P</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mi>l</mml:mi></mml:mrow><mml:mrow><mml:mi>l</mml:mi><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>,</mml:mo></mml:mrow></mml:math></disp-formula>
+</p><p>where <italic>l</italic> is the length of an (infinitesimal) vein segment at point <italic>P</italic>, and &#x00394;<italic>l</italic> is the increase of this segment's length over time &#x00394;<italic>t</italic>. The elongation of a finite&#x02010;length vein segment between points <italic>P</italic>
+<sub>1</sub> and <italic>P</italic>
+<sub>2</sub> is thus the line integral: <disp-formula id="nph14449-disp-0002"><label>(Eqn 2)</label><mml:math id="nlm-math-3"><mml:mrow><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mi>l</mml:mi><mml:mrow><mml:msub><mml:mi>P</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:msub><mml:mi>P</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msubsup><mml:mo>&#x0222b;</mml:mo><mml:mrow><mml:msub><mml:mi>P</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:mrow><mml:msub><mml:mi>P</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:msubsup><mml:mtext>RERG</mml:mtext><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi>P</mml:mi><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi>s</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mi>d</mml:mi><mml:mi>s</mml:mi><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula>
+</p><p>In general, the RERG may be a highly nonlinear function of&#x000a0;position <italic>P</italic> (Kuchen <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0055" ref-type="ref">2012</xref>). For simplicity, we assume that:</p><p>
+<list list-type="bullet" id="nph14449-list-0002"><list-item><p>RERG(P) is a function of the arc&#x02010;length distance between point <italic>P</italic> and the leaf base, measured along the vascular structure;</p></list-item><list-item><p>the above function is piecewise&#x02010;linear (we use this assumption to calculate the integral (Eqn&#x000a0;<xref rid="nph14449-disp-0002" ref-type="disp-formula">2</xref>) analytically); and</p></list-item><list-item><p>growth preserves vein orientation.</p></list-item></list>
+</p><p>We consider two elongation patterns: uniform (the same rate for all vein segments) and basipetal (growth rates decrease away from the leaf base; Fig.&#x000a0;<xref rid="nph14449-fig-0004" ref-type="fig">4</xref>e). These patterns are common in eudicots, although other patterns are possible (Jeune &#x00026; Lacroix, <xref rid="nph14449-bib-0044" ref-type="ref">1993</xref>; Das Gupta &#x00026; Nath, <xref rid="nph14449-bib-0025" ref-type="ref">2015</xref>, <xref rid="nph14449-bib-0026" ref-type="ref">2016</xref>).</p></sec><sec id="nph14449-sec-0009"><title>Margin development</title><p>Margin development other than isotropic expansion is driven by growing veins. To this end, the margin is partitioned into segments, each associated with a specific vein. This association is defined dynamically, by assigning a margin interval surrounding a newly created convergence point to the vein that terminates at this point. When the vascular system expands, the margin segments are carried with their associated veins. This process is implemented by projecting points on the margin orthographically on these veins, and translating each margin point by the same vector that describes the displacement of the corresponding vein point (Fig.&#x000a0;<xref rid="nph14449-fig-0004" ref-type="fig">4</xref>f). As a result, protrusions elongate in the direction of veins. Growth in width is modelled by also propagating margin points in the normal direction (perpendicular to the margin; cf Bilsborough <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0013" ref-type="ref">2011</xref>). The final component of margin development is a minimization of the stretching and bending of the leaf contour, implemented computationally as geometric fairing (see Notes S2.2). This minimization is intended to reflect mechanical properties of the margin and blade, which may adopt smooth forms when stretched. As stronger minimization leads to shallower sinuses, we refer to it as the strength or rate of webbing.</p></sec><sec id="nph14449-sec-0010"><title>Patterning on the margin</title><p>Consistent with the extension of Hofmeister's rule to the leaf margin, new convergence points are created at margin positions that exceed a threshold arc&#x02010;length distance (measured along the margin) from pre&#x02010;existing convergence points or the leaf base (Fig.&#x000a0;<xref rid="nph14449-fig-0005" ref-type="fig">5</xref>a). The introduction of new convergence points may be limited to regions in which specific morphogens are &#x02013; or are not &#x02013; expressed, to leaf parts within a certain distance from the leaf base (measured along the veins), and/or to a temporal competence window defined by leaf age. The initial morphogen distribution is determined by the modeller at the beginning of the simulation. The introduction of a convergence point may modify this distribution by eliminating or introducing new morphogens in its proximity (Figs&#x000a0;<xref rid="nph14449-fig-0003" ref-type="fig">3</xref>b&#x02013;d, <xref rid="nph14449-fig-0005" ref-type="fig">5</xref>b,c). In addition to affecting the creation of new convergence points, morphogens typically regulate the rate of webbing and may locally modify the measure of distances between convergence points. A segment of the margin surrounding a newly formed convergence point becomes a part of the incipient protrusion.</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0005" orientation="portrait" position="float"><label>Figure 5</label><caption><p>Elements of the model operation: (a&#x02013;c) patterning on the margin and (d&#x02013;e) vein insertion. (a) Insertion of a convergence point (orange circle) and the associated vein. (b) Elimination of a morphogen near a new convergence point. (c) Introduction of a morphogen near a new convergence point. Morphogens can determine where convergence points can be inserted. For example, in case (b) the CP can be inserted where the morphogen is present, and in case (c) it can be inserted where the morphogen is absent. (d) Potential attachment points of the new vein. A region of leaf lamina is bordered by the leaf margin and vein segments. A new vein, originating at convergence point <italic>CP</italic>, may attach to an existing vein (<italic>P</italic>
+<sub>1</sub>, <italic>P</italic>
+<sub>2</sub>) or a branching point between the existing veins (<italic>Q</italic>). (e) Calculation of vein direction. With <italic>b</italic>&#x000a0;&#x02192;&#x000a0;&#x0221e;, the new vein <italic>D</italic> meets an existing vein at a right angle. With <italic>b</italic>&#x02192;<italic>v</italic>, the new vein <italic>F</italic> attaches to the branching point <italic>Q</italic> between existing veins. For intermediate values <italic>b</italic>, the new vein <italic>A</italic> may attach to a pre&#x02010;existing vein at some angle &#x003b8;. Symbols <italic>A</italic> to <italic>F</italic> represent the lengths of the respective segments in the derivation for a formula for &#x003b8; (Supporting Information Notes S2.3). The angle &#x003c3; between the new vein and the normal to the margin is clamped to &#x000b1;&#x003c3;<sub>max</sub>.</p></caption><graphic id="nlm-graphic-9" xlink:href="NPH-216-401-g005"/></fig></sec><sec id="nph14449-sec-0011"><title>Vein insertion</title><p>Consistent with molecular data (Scarpella <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0084" ref-type="ref">2006</xref>; Bayer <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0008" ref-type="ref">2009</xref>; O'Connor <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0066" ref-type="ref">2014</xref>), a new convergence point on the leaf margin induces a vein that connects this point to the existing vasculature. The attachment point <italic>P</italic> at which this vein will meet the vasculature is computed using two heuristics (Fig.&#x000a0;<xref rid="nph14449-fig-0005" ref-type="fig">5</xref>d). The first heuristic is motivated by the observation that vascular strands tend to provide short and straight connections between sources and sinks (Bayer <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0008" ref-type="ref">2009</xref>), and the hypothesis that these connections may minimize resistance to the transport of water and photosynthates in the leaf (Sack &#x00026; Scoffoni, <xref rid="nph14449-bib-0082" ref-type="ref">2013</xref>). According to this heuristic, the attachment point <italic>P</italic> is found&#x000a0;by&#x000a0;minimizing the expression &#x003c4;&#x000a0;=&#x000a0;<italic>b</italic>|<italic>CP</italic>&#x02212;<italic>P</italic>| + <italic>v</italic>|<italic>P</italic>&#x02212;<italic>B</italic>|, where |<italic>CP</italic>&#x02212;<italic>P</italic>| is the length of the inserted vein (the distance between the new convergence point <italic>CP</italic> and the attachment point <italic>P</italic>), |<italic>P</italic>&#x02212;<italic>B</italic>| is the length of the path from the attachment point to the leaf base <italic>B</italic> (the arc&#x02010;length distance from <italic>P</italic> to <italic>B</italic>, measured along the veins), and parameters <italic>b&#x000a0;</italic>&#x02265;&#x000a0;<italic>v</italic>&#x000a0;&#x0003e;&#x000a0;0 are the resistances to transport per unit distance in the leaf blade and in the veins, respectively. Variable &#x003c4; thus represents the total resistance to transport from the convergence point to the leaf base. It can be shown that any vein minimizing &#x003c4; meets an existing vein at a constant branching angle &#x003b8;&#x000a0;=&#x000a0;arccos(<italic>v</italic>/<italic>b</italic>) (Notes <xref rid="nph14449-sup-0003" ref-type="supplementary-material">S3</xref>) or is attached to an existing branching point. Assuming that resistance to the transport of water and sugars is anticipated by resistance to the transport of auxin that patterns the vascular system, the resistance&#x02010;based model is qualitatively supported by the observed reduction of the angle at which secondary veins meet the midvein in plants treated with an auxin transport inhibitor (Mattsson <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0057" ref-type="ref">1999</xref>). The second heuristic constrains the angle between the new vein and the normal to the margin to an interval [&#x02212;&#x003c3;<sub>max</sub>, &#x003c3;<sub>max</sub>]. It prevents veins from approaching the margin at unnaturally small grazing angles.</p></sec></sec><sec id="nph14449-sec-0012"><title>Results</title><p>The parameter values for the leaf forms and developmental sequences discussed in this section are listed in Table&#x000a0;<xref rid="nph14449-sup-0002" ref-type="supplementary-material">S1</xref>. These values were found in two types of <italic>in silico</italic> experiment. In the first type (theoretical morphospace exploration; McGhee, <xref rid="nph14449-bib-0058" ref-type="ref">1999</xref>), we systematically modified one or two parameters while keeping the remaining parameters constant to visualize the space of resulting forms. In the second type (synergistic human&#x02010;computer problem solving; Licklider, <xref rid="nph14449-bib-0056" ref-type="ref">1960</xref>), we modified and refined parameter values interactively to approximate select real leaves. When needed, this process also involved adjustments to the model code, gradually yielding the current implementation.</p><sec id="nph14449-sec-0013"><title>Plausible patterns of leaf development emerge from a self&#x02010;organizing process</title><p>A basic pattern of development produced by the model is illustrated in Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>(a&#x02013;f) (Movie <xref rid="nph14449-sup-0003" ref-type="supplementary-material">S1</xref>). A heart&#x02010;shaped leaf with branching venation is produced in a self&#x02010;organizing process, in which convergence points determine veins, veins determine growth directions, and growth of the margin leads to the formation of new convergence points. The only leaf part excluded from this loop is the petiole, where a locally expressed morphogen suppresses lateral growth and inhibits the formation of convergence points. The overall form is not defined globally, but results from the integration of local subprocesses.</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0006" orientation="portrait" position="float"><label>Figure 6</label><caption><p>Self&#x02010;organizing development of simple leaves and the role of selected parameters. (a&#x02013;f) Simulation of the development of a generic simple leaf (bars indicate constant reference length). The leaf is initiated as a small primordium, with a single convergence point at its apex (a). The midvein connects this convergence point to the leaf base and determines the initial direction of growth. As the leaf grows, the increasing distance from the leaf base to the tip, measured along the margin, leads to the emergence of new convergence points and the lateral veins associated with them (b). Further convergence points and veins subsequently emerge, gradually expanding the leaf in the lateral (c, d) and basal (e, f) directions. The blue morphogen delineates the petiole. Bars indicate the relative size of the leaf at different developmental stages. (g, h) The impact of different growth rates on leaf shape. (g) Moderately and (h)&#x000a0;strongly reduced marginal growth of lateral veins, compared with the sequence (a&#x02013;f), produces elongated leaves. (i&#x02013;m) Impact of vein growth at the tip on leaf shape. The growth at the vein tip increases from leaf (i) to (m), producing increasingly broad leaves (bars indicate constant reference length). The emergent vascular pattern changes from pinnate (with a single main vein) to hierarchically branching. Total growth duration decreases from (i) to (m). (n&#x02013;p) The impact of growth distribution. With the growth increasingly limited to the basal portion of the leaf, the leaf form shifts from elliptic (n) to ovate (o) to oblong (p). (q&#x02013;t) The impact of parameters controlling the insertion angle of new veins on leaf form. The branching angle &#x003b8; is smaller in (q) and larger in (r) than in the reference leaf (e). Decreasing the range &#x003c3;<sub>max</sub> of admissible angles between the vein and the normal to the margin results in more varied vein directions (s, t).</p></caption><graphic id="nlm-graphic-11" xlink:href="NPH-216-401-g006"/></fig></sec><sec id="nph14449-sec-0014"><title>Growth distribution controls both the shape and venation pattern of simple leaves</title><p>The impact of additive marginal growth at vein tips is illustrated in Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>(g,h,i&#x02013;m). If the marginal growth is small, the vascular system expands uniformly. Lateral veins, inserted after the midvein, are relatively short, and this proportion is maintained throughout the subsequent growth of the leaf. The result is an elongated leaf with a strictly or approximately pinnate venation (Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>g,h,i,j). A uniform increase in the marginal component of growth gradually reduces the relative differences in vein lengths, producing leaves with broader blades (Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>k,l). With even stronger marginal growth, higher order veins emerge near the leaf base, yielding cordate leaf forms (Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>f,m).</p><p>Limiting growth to basal portions of the leaf prevents elongation of veins in more distal positions, which results in a transition of leaf shape from elliptic to ovate to oblong (Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>n&#x02013;p). The aspect ratio (width: length) of a leaf also depends on the branching angle &#x003b8; between the veins: as this angle increases, the leaf becomes wider (Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>q,r). Decreasing the range &#x003c3;<sub>max</sub> of angles that a vein can form with respect to the margin prevents veins from reaching the margin tangentially (compare the veins near the base of the leaf in Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>q with those in Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>s,t). If clamping to &#x000b1;&#x003c3;<sub>max</sub> overrides other criteria of vein insertion, small values of &#x003c3;<sub>max</sub> may induce a variation in the branching angles &#x003b8; between veins. This variation is reflected in variable vein orientations and a less regular leaf margin (Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>s,t).</p></sec><sec id="nph14449-sec-0015"><title>Differences in webbing control the margin of simple leaves</title><p>Webbing plays a critical role in defining the leaf margin. Strong webbing, characterized by a significant resistance to stretching and bending, results in a smooth margin (Figs&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>i&#x02013;p, <xref rid="nph14449-fig-0007" ref-type="fig">7</xref>a). With reduced webbing, the parts of the margin further from the extending tips lag behind those near the tips, resulting in the formation of teeth. The shape of these teeth depends on the resistance of the leaf margin to bending (Fig.&#x000a0;<xref rid="nph14449-fig-0007" ref-type="fig">7</xref>b,c). Different resistance for stretching at the proximal and distal segments of the polygonal approximation of the margin, meeting at a convergence point, results in asymmetric serrations (Fig.&#x000a0;<xref rid="nph14449-fig-0007" ref-type="fig">7</xref>d).</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0007" orientation="portrait" position="float"><label>Figure 7</label><caption><p>Control of the leaf margin. (a&#x02013;d) Webbing and the shape of protrusions. The differences in the protrusions are highlighted by zooming in on the margin (second row). Strong webbing produces an entire (smooth) leaf margin (a). Weaker webbing produces sinuate margins when the resistance to bending is relatively strong (b), and dentate margins, with pointed teeth, when the resistance to bending is weaker (c). Asymmetry in the influence of veins on their proximal and distal sides produces serrations pointing towards the leaf apex (d). (e&#x02013;g) Emergence of compound teeth. As the expansion of the leaf becomes more uniform from (e) to (g), the form of teeth progresses from simple to compound (bars represent the same length). (h, i) Example of model application: a photograph (h) and model (i) of a <italic>Platanus occidentalis</italic> (sycamore) leaf with compound teeth. Following the primary morphogenesis responsible for the patterning of protrusions and veins, the simulated leaf was assumed to expand anisotropically (faster in width than in length) to achieve the correct aspect ratio (width&#x000a0;:&#x000a0;length &#x0003e;&#x000a0;1). Photograph (h) by Brian Bale (<ext-link ext-link-type="uri" xlink:href="http://www.treeplantflowerid.com">www.treeplantflowerid.com</ext-link>), used with permission.</p></caption><graphic id="nlm-graphic-13" xlink:href="NPH-216-401-g007"/></fig></sec><sec id="nph14449-sec-0016"><title>Uniform expansion promotes the emergence of compound teeth</title><p>In the examples discussed so far, different parts of the leaf blade expand anisotropically following the growth of veins in their proximity. A margin segment spanning the endpoints of two parallel growing veins may thus not expand at all. By contrast, an isotropic expansion of the entire leaf increases all distances along its margin uniformly. This may lead to the recursive insertion of intercalary convergence points between those formed previously, inducing a hierarchy of teeth (Fig.&#x000a0;<xref rid="nph14449-fig-0007" ref-type="fig">7</xref>e&#x02013;g; Movie <xref rid="nph14449-sup-0004" ref-type="supplementary-material">S2</xref>). Similar hierarchies occur in many leaves in nature; for instance, compare the model in Fig.&#x000a0;<xref rid="nph14449-fig-0007" ref-type="fig">7</xref>(g) with the photograph of a <italic>Crataegus marshallii</italic> (parsley hawthorn) leaf in Fig.&#x000a0;<xref rid="nph14449-fig-0001" ref-type="fig">1</xref>(e). Another example is given in Fig.&#x000a0;<xref rid="nph14449-fig-0007" ref-type="fig">7</xref>(h,i), which compares a photograph and model of a <italic>Platanus occidentalis</italic> (American sycamore) leaf. Note the similarities in both the shape of the leaf and the structure of its vascular system.</p></sec><sec id="nph14449-sec-0017"><title>Inhibition of convergence point formation in sinuses yields leaves with lobes</title><p>Decreasing the strength of webbing deepens the indentations between teeth. If, in addition, a morphogen inhibits the formation of new convergence points in these indentations, a lobed leaf results (Fig.&#x000a0;<xref rid="nph14449-fig-0008" ref-type="fig">8</xref>a&#x02013;e; Movie <xref rid="nph14449-sup-0005" ref-type="supplementary-material">S3</xref>). The formation of new convergence points, and thus new veins and higher order lobes, is then limited to the distal (subapical) part of each lobe. With different parameter values, this model captures the shape of many common leaves. For instance, Fig.&#x000a0;<xref rid="nph14449-fig-0008" ref-type="fig">8</xref>(f&#x02013;h) shows the palmately lobed leaves of three maple species.</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0008" orientation="portrait" position="float"><label>Figure 8</label><caption><p>Modelling lobed leaves. (a&#x02013;e) Simulation of the development of a generic palmately lobed leaf (bars indicate constant reference length). The red morphogen inhibits the formation of intercalary convergence points and deepens the sinuses. (a) At the beginning of the simulation, the red morphogen is present near the base of the incipient leaf. (b) As the leaf grows, new convergence points emerge in the morphogen&#x02010;free intervals, and new intervals of the red morphogen form between the old and new convergence points (arrows). (c&#x02013;e) Iteration of this process elaborates leaf shape while preventing the formation of new convergence points in the sinuses. As in the previous examples, the blue morphogen defines the petiole. (f&#x02013;h) Modelling leaf diversity: photographs and models of (f) <italic>Acer macrophyllum</italic> (big leaf maple), (g) <italic>Acer campestre</italic> (field maple) and (h) <italic>Acer grandidentatum</italic> (bigtooth maple). All models result from small changes in the parameter values of the generic palmate leaf model illustrated in (e). (i) A photograph and model of a pinnately compound <italic>Quercus rubra</italic> (northern red oak) leaf. The transition from palmately to pinnately compound form results from a larger window of morphogenetic competence for the red morphogen, enabling the insertion of primary lobes further from the leaf base, compared with the palmately lobed leaves. Photograph sources and credits: (f) Dan Anderson (<ext-link ext-link-type="uri" xlink:href="http://www.tree-species.blogspot.com">www.tree-species.blogspot.com</ext-link>), used with permission; (g) Middle European Woods data set (Novotn&#x000fd; &#x00026; Suk, <xref rid="nph14449-bib-0064" ref-type="ref">2013</xref>) (<ext-link ext-link-type="uri" xlink:href="http://zoi.utia.cas.cz/node/662">http://zoi.utia.cas.cz/node/662</ext-link>), licensed under <styled-content style="fixed-case">CC</styled-content>&#x02010;Attribution&#x02010;ShareAlike 3.0; (h) Adapted from a photograph by Dean Hueber (<ext-link ext-link-type="uri" xlink:href="http://www.pbase.com/deanhueber/image/90024562">http://www.pbase.com/deanhueber/image/90024562</ext-link>; downloaded 20 July 2016).</p></caption><graphic id="nlm-graphic-15" xlink:href="NPH-216-401-g008"/></fig><p>In Fig.&#x000a0;<xref rid="nph14449-fig-0008" ref-type="fig">8</xref>(a&#x02013;h), first&#x02010;order lobes are initiated close to the leaf base. If the window of morphogenetic competence is moved upward from the leaf base, a more elongated leaf blade supported by a pinnate vascular system results (Fig.&#x000a0;<xref rid="nph14449-fig-0008" ref-type="fig">8</xref>i). A similar dependence of leaf type (palmate vs pinnate) on the position of the window of morphogenetic competence was observed in the model study by Jeune &#x00026; Lacroix (<xref rid="nph14449-bib-0044" ref-type="ref">1993</xref>).</p><p>Elongated pinnately lobed leaves also emerge when the growth of lateral veins is delayed with respect to the insertion of convergence points that induce these veins. Conversely, broader palmately lobed leaves emerge if the growth of lateral veins is accelerated (Movie <xref rid="nph14449-sup-0007" ref-type="supplementary-material">S5</xref>). The morphospace in Fig.&#x000a0;<xref rid="nph14449-fig-0009" ref-type="fig">9</xref> illustrates the combined effect of this delay/acceleration and the rate of webbing. The latter factor controls a progression of leaf shapes from simple to recursively lobed. Select forms in this morphospace resemble leaves of different <italic>Pelargonium</italic> and <italic>Chrysanthemum</italic> species, although the full spectrum of their diversity is larger (Jones <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0045" ref-type="ref">2009</xref>; Kim <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0050" ref-type="ref">2014</xref>).</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0009" orientation="portrait" position="float"><label>Figure 9</label><caption><p>Morphospace of leaves controlled by the timing of lateral outgrowth and the rate of webbing. The action of the red and blue morphogen is as in Fig. <xref rid="nph14449-fig-0008" ref-type="fig">8</xref>. With accelerated outgrowth, leaves become more rounded, and the vascular pattern gradually changes from pinnate to palmate. A decrease in webbing increases the depth of sinuses. The resulting increase in margin length leads to the emergence of additional convergence points, and the simulated shapes shift from entire to recursively lobed.</p></caption><graphic id="nlm-graphic-17" xlink:href="NPH-216-401-g009"/></fig></sec><sec id="nph14449-sec-0018"><title>Spatio&#x02010;temporally limited competence to create convergence points yields leaves with simple lobes</title><p>The progression from leaves with compound teeth (Fig.&#x000a0;<xref rid="nph14449-fig-0007" ref-type="fig">7</xref>e&#x02013;i) to leaves with compound lobes (Figs&#x000a0;<xref rid="nph14449-fig-0008" ref-type="fig">8</xref>, <xref rid="nph14449-fig-0009" ref-type="fig">9</xref>) was modelled by introducing a morphogen that suppressed the emergence of convergence points and growth in sinuses. An additional developmental control is needed to suppress the formation of higher order lobes. It can be effected by a spatio&#x02010;temporal window of morphogenetic competence that limits the formation of sinuses to early stages of leaf development and to locations near the leaf base (Fig.&#x000a0;<xref rid="nph14449-fig-0010" ref-type="fig">10</xref>a; Movie <xref rid="nph14449-sup-0007" ref-type="supplementary-material">S5</xref>). Small changes in the duration of competence yield leaves with different numbers of lobes (Fig.&#x000a0;<xref rid="nph14449-fig-0010" ref-type="fig">10</xref>b,c). The simple, quantitative nature of these changes may explain the lability of lobe numbers common in some plant species, for example <italic>Brachychiton acerifolius</italic> (flame tree; Fig. <xref rid="nph14449-fig-0010" ref-type="fig">10</xref>d). Moreover, small differences in the initial development of the left and right sides of the leaf, for example as a result of differences in the distribution of morphogens, may be amplified by further development producing asymmetric leaves with different numbers of lobes on the left and right sides (Fig.&#x000a0;<xref rid="nph14449-fig-0011" ref-type="fig">11</xref>).</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0010" orientation="portrait" position="float"><label>Figure 10</label><caption><p>Modelling palmately lobed leaves with simple lobes. (a) Development of a generic leaf (bars indicate constant reference length). The red morphogen acts in early stages of development by deepening the sinuses and decreasing the measure of distances, which fosters the early initiation of several lobes. The blue morphogen delineates the petiole. Secondary veins form later, when the leaf is relatively large, without adjacent growth repression. The role of these veins is limited to broadening the lobes. (b&#x02013;d)&#x000a0;Variation in the number of lobes resulting from different temporal competence for lobe formation. Two sequences, with (b) stronger and (c) weaker action of the morphogen controlling growth in the sinuses (red), are shown. Similar variations are observed in <italic>Brachychiton acerifolius</italic> (flame tree) leaves (d), in which one to seven lobes occur apparently at random within the same tree.</p></caption><graphic id="nlm-graphic-19" xlink:href="NPH-216-401-g010"/></fig><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0011" orientation="portrait" position="float"><label>Figure 11</label><caption><p>A model and photograph of different mulberry (<italic>Morus alba</italic>) leaves originating from the same plant. The model is similar to that illustrated in Fig.&#x000a0;<xref rid="nph14449-fig-0010" ref-type="fig">10</xref>. Asymmetries are attributable to the initial unequal distribution of morphogens on the left and right sides of the leaves. Adapted from a photograph by Evelyn Fitzgerald (<ext-link ext-link-type="uri" xlink:href="https://www.flickr.com/photos/evelynfitzgerald/3917066690/sizes/l">https://www.flickr.com/photos/evelynfitzgerald/3917066690/sizes/l</ext-link>, downloaded 2 July 2016).</p></caption><graphic id="nlm-graphic-21" xlink:href="NPH-216-401-g011"/></fig></sec><sec id="nph14449-sec-0019"><title>Strong inhibition of webbing in sinuses yields dissected leaves</title><p>Increasing the inhibition of webbing by a morphogen acting in sinuses shifts leaf form from moderately to strongly lobed to palmately compound (Fig.&#x000a0;<xref rid="nph14449-fig-0012" ref-type="fig">12</xref>a&#x02013;c). Development of pinnately compound leaves is more complex. Not only must the webbing be suppressed along the midvein to produce the petiole and rachis, but the elongation of the rachis must also be suppressed at the points of leaflet attachment to prevent excessive widening of the leaflet bases. These requirements can be satisfied by the coordinated action of two morphogens (Fig.&#x000a0;<xref rid="nph14449-fig-0012" ref-type="fig">12</xref>d; Movie <xref rid="nph14449-sup-0008" ref-type="supplementary-material">S6</xref>). The first morphogen suppresses lateral growth in sinuses, as in Fig.&#x000a0;<xref rid="nph14449-fig-0012" ref-type="fig">12</xref>(c). It does not prevent, however, the formation of new convergence points. The growth of the petiole and rachis can thus induce new convergence points and leaflets. The second morphogen is generated near each convergence point and defines the leaflet boundary at its point of attachment to the rachis. It inhibits longitudinal growth of the rachis, as required to properly form leaflet bases, and divides the margin into intervals within which distances are measured independently. This division stabilizes the development of leaflets by isolating them from the processes that initiate new leaflets along the midvein. Through varying model parameters, both sessile and nonsessile leaf forms arise (Fig.&#x000a0;<xref rid="nph14449-fig-0012" ref-type="fig">12</xref>e,f). In addition, the model can capture subtle asymmetries in leaflet shape along the proximo&#x02010;distal leaf axis, as a result of slightly different initial conditions on the two sides of the petiolules (Fig.&#x000a0;<xref rid="nph14449-fig-0012" ref-type="fig">12</xref>g).</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0012" orientation="portrait" position="float"><label>Figure 12</label><caption><p>Modelling compound leaves. (a&#x02013;c)&#x000a0;Transition from a palmately lobed to a palmately compound leaf. The increasingly strong action of the red morphogen decreases webbing of sinuses, resulting in a progression of leaf forms from (a)&#x000a0;moderately to (b) strongly indented palmately lobed leaves to (c) a palmately compound leaf. (d) Development of a pinnately compound leaf (bars indicate constant reference length). The purple morphogen inhibits webbing, which results in the formation of a linear petiole and rachis. The cyan morphogen delimits the leaflets at their base and divides the leaf margin into intervals. Distances are measured independently within each interval, thus separating the development of individual leaflets from the development of the rachis. (e&#x02013;g) Variations of the compound leaf form from (d). Leaflets are sessile (attached directly to the rachis) in leaf (e), and supported by petiolules (small petioles) in leaves (f) and (g). The leaflets in (f) and (g) are slightly asymmetric as a consequence of a difference in the initial position of the morphogens on the lower (proximal) and upper (distal) sides of the leaflet primordia relative to the supporting vein.</p></caption><graphic id="nlm-graphic-23" xlink:href="NPH-216-401-g012"/></fig></sec></sec><sec id="nph14449-sec-0020"><title>Discussion</title><p>The central question addressed in our paper is the developmental origin of leaf diversity. Following the inferences of Hagemann &#x00026; Gleissberg (<xref rid="nph14449-bib-0034" ref-type="ref">1996</xref>), molecular data, and previous computational models outlined in the Introduction, we have attributed patterning of protrusions and indentations to morphogenetic processes taking place on the leaf margin. Furthermore, based on observations of multifid and variegated leaves, and taking into account the mechanical rigidity of veins, we hypothesized that main veins play an important morphogenetic role by defining local growth directions, that is locally polarizing growth. Consistent with the hypotheses of Van Volkenburgh (<xref rid="nph14449-bib-0090" ref-type="ref">1999</xref>) and Dengler &#x00026; Kang (<xref rid="nph14449-bib-0027" ref-type="ref">2001</xref>), we also assumed that the intervening leaf blade tissue locally follows these directions. With different parameters, our model captures the essential aspects of the development and shape of a wide range of eudicot leaves, which supports its plausibility and leads to the following conclusions.</p><sec id="nph14449-sec-0021"><title>Leaf development is a self&#x02010;organizing process</title><p>Molecular&#x02010;level processes apparently act by establishing the &#x02018;rules of the game&#x02019; that integrate growth, dynamic patterning on the leaf margin, and the formation of the vascular pattern into a self&#x02010;organizing system characterized by several feedback loops (Fig.&#x000a0;<xref rid="nph14449-fig-0013" ref-type="fig">13</xref>). In particular, auxin&#x02010;driven interactions on the leaf margin establish a metric (distance measure) for patterning protrusions and indentations, and the vascular system complements the morphogenetic role of the margin by specifying local growth directions.</p><fig fig-type="Figure" xml:lang="en" id="nph14449-fig-0013" orientation="portrait" position="float"><label>Figure 13</label><caption><p>Relation between processes underlying leaf development. (1)&#x000a0;Growth yields form. (2) Changes in the margin geometry induce new convergence points and modify the distribution of morphogens. (3)&#x000a0;Existing convergence points and morphogens provide the context in which changes take place. (4) Convergence points and morphogens control the rates of leaf growth. (5) Convergence points induce veins. (6)&#x000a0;The course of new veins is affected by the existing vasculature. (7)&#x000a0;Veins specify local growth directions. (8) The geometry of the vascular system changes as the leaf grows. (9) Hypothetically, veins may also affect the induction of convergence points, although this influence is not included in the present model.</p></caption><graphic id="nlm-graphic-25" xlink:href="NPH-216-401-g013"/></fig></sec><sec id="nph14449-sec-0022"><title>A common mechanism can produce widely diverse leaf forms</title><p>It is known that small modifications to a self&#x02010;organizing process can fundamentally change its outcome (Wolfram, <xref rid="nph14449-bib-0092" ref-type="ref">1984</xref>). This does not preclude different molecular implementations of the same developmental program, or, conversely, the recruitment of the same molecular process for different morphogenetic purposes. The self&#x02010;organizing character of leaf development is probably essential to the diversity of leaf forms. For example, the frequently observed transitions between simple, lobed and recursively lobed leaves (e.g. Hareven <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0036" ref-type="ref">1996</xref>; Hay &#x00026; Tsiantis, <xref rid="nph14449-bib-0039" ref-type="ref">2006</xref>; Jones <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0045" ref-type="ref">2009</xref>; Efroni <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0030" ref-type="ref">2010</xref>; Bar &#x00026; Ori, <xref rid="nph14449-bib-0005" ref-type="ref">2014</xref>) (Fig.&#x000a0;<xref rid="nph14449-fig-0009" ref-type="fig">9</xref>) may be attributed to the feedback loop in which weaker webbing produces deeper sinuses, and the resulting increase in the length of the leaf margin creates space for new convergence points, veins and lobes. Such changes can be plausibly attributed to small modifications of the plant genotype, differences in developmental context (heteroblasty), or environmental factors (Nicotra <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0062" ref-type="ref">2011</xref>).</p></sec><sec id="nph14449-sec-0023"><title>Hofmeister's rule extends to leaf development</title><p>The insertion of new convergence points when the distances to previously formed points exceed a threshold plays a prominent role in leaf development. In the context of phyllotactic patterning, this distance&#x02010;based criterion is known as Hofmeister's rule. Hofmeister noticed that &#x02018;the appearance of new lateral organs in the largest of the spaces between the nearest older organs of the same type on the same axis is a phenomenon of almost complete universality&#x02019; (quoted after Kirchoff, <xref rid="nph14449-bib-0051" ref-type="ref">2003</xref>). We observe that the universality of this rule exceeds even its author's expectations: it applies to the emergence of new outgrowth not only &#x02018;on the same axis&#x02019;, but along the leaf margin as well.</p><p>The extension of Hofmeister's rule from phyllotaxis to leaf formation has its source in the similarities between the molecular processes governing the two phenomena. They include the creation of convergence points through the interaction between PIN1 and auxin, the role of additional morphogens, such as CUC proteins, as factors shaping boundaries, and the formation of vascular strands by auxin&#x02010;driven canalization beginning at convergence points (Floyd &#x00026; Bowman, <xref rid="nph14449-bib-0031" ref-type="ref">2010</xref>; Alvarez <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0001" ref-type="ref">2016</xref>). These similarities may reflect the common nature of the developmental problem solved by plants in each case: how to place a number of elements (flowers, floral organs, leaves, leaflets and lobes) within the constraints of available space. The strikingly different appearance of spiral phyllotactic patterns and leaves results &#x02018;not from fundamentally different morphogenetic processes, but from different geometries on which they operate: an approximately paraboloid SAM (shoot apical meristem) dynamically maintaining its form vs a flattening leaf that changes its shape and size&#x02019; (Prusinkiewicz &#x00026; Runions, <xref rid="nph14449-bib-0071" ref-type="ref">2012</xref>).</p></sec><sec id="nph14449-sec-0024"><title>The telome theory and the notion of blastozone are related to each other</title><p>Zimmerman's telome theory postulates that leaves evolved by webbing the branching structures of early land plants. It does not specify, however, whether the control of development has remained with the branching structure &#x02013; corresponding to the leaf vasculature &#x02013; or has been transferred to another part of the leaf. Hagemann and Gleisberg's blastozone theory implies that the control of development has been transferred to the leaf margin. Over the last decade, it found strong experimental support in molecular studies of reference plants. From an evolutionary perspective, the transfer of control from the branching structure to the leaf boundary has the advantage of creating a vascular scaffolding in concert with the available space on the leaf margin. This phenomenon can be observed, for example, in the gradual proliferation of veins near the base of cordate leaves (e.g. Figs&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>a&#x02013;f, <xref rid="nph14449-fig-0007" ref-type="fig">7</xref>h,i) and the emergence of small veins supporting higher order protrusions in recursively lobed leaves (compare leaves in the right column of Fig.&#x000a0;<xref rid="nph14449-fig-0009" ref-type="fig">9</xref>).</p></sec><sec id="nph14449-sec-0025"><title>Geometric models provide a framework for interpreting molecular mechanisms of leaf development</title><p>Geometric terms are an abstraction that highlights the morphogenetic role of specific molecular&#x02010;level processes (Prusinkiewicz &#x00026; Runions, <xref rid="nph14449-bib-0071" ref-type="ref">2012</xref>; Runions <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0079" ref-type="ref">2014</xref>). For instance, the interaction between auxin and PIN proteins in the epidermis of the shoot apical meristem or on the leaf margin can be characterized as a mechanism for distance measurement. This characterization furnishes an explanation for the initiation of convergence points in regular patterns (J&#x000f6;nsson <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0046" ref-type="ref">2006</xref>; Smith <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0087" ref-type="ref">2006</xref>; Bilsborough <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0013" ref-type="ref">2011</xref>; O'Connor <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0066" ref-type="ref">2014</xref>), although additional biomechanical (Hamant <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0035" ref-type="ref">2008</xref>) or biochemical factors (e.g. CUC proteins; Bilsborough <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0013" ref-type="ref">2011</xref>) are also relevant.</p><p>The current understanding of CUC proteins suggests that they are involved in shaping the boundaries of protrusions, such as serrations in <italic>A.&#x000a0;thaliana</italic> leaves (Nikovics <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0063" ref-type="ref">2006</xref>; Blein <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0015" ref-type="ref">2008</xref>; Bilsborough <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0013" ref-type="ref">2011</xref>), or leaflets in the compound leaves of tomato (Berger <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0011" ref-type="ref">2009</xref>) and <italic>C.&#x000a0;hirsuta</italic> (Rast&#x02010;Somssich <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0072" ref-type="ref">2015</xref>). However, CUC also plays an important role in enabling the formation of convergence points (Bilsborough <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0013" ref-type="ref">2011</xref>). This role was not conserved in all the models devised in our work, suggesting that the coordination between the initiation of protrusions and the sculpting of the indentations between them may be more diversified than studies of current reference plants indicate.</p><p>Other genes and proteins can also be interpreted in the context of our models. The recently discovered growth inhibitor REDUCED COMPLEXITY (RCO) contributes to leaf dissection (Sicard <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0086" ref-type="ref">2014</xref>; Vlad <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0091" ref-type="ref">2014</xref>) and appears to play a critical role in defining linear elements &#x02013; the rachis and petiolules &#x02013; of compound leaves (Vlad <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0091" ref-type="ref">2014</xref>). A similar role may be played by several auxin response factors (ARFs) in tomato (Ben&#x02010;Gera <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0010" ref-type="ref">2016</xref>). The development of compound leaves also involves class I <italic>KNOTTED&#x02010;like homeobox</italic> (<italic>KNOX</italic>) genes (Bharathan <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0012" ref-type="ref">2002</xref>; Bar &#x00026; Ori, <xref rid="nph14449-bib-0005" ref-type="ref">2014</xref>), which delay the progression of leaf maturation, and appear to extend the spatio&#x02010;temporal window of marginal patterning. By contrast, <italic>TB1 CYCLOIDEA PCF</italic> (<italic>TCP</italic>) genes (Bar &#x00026; Ori, <xref rid="nph14449-bib-0005" ref-type="ref">2014</xref>) accelerate differentiation and reduce the duration of marginal pattering, at least in part by antagonizing CUC activity (Koyama <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0054" ref-type="ref">2010</xref>; Rubio&#x02010;Somoza <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0077" ref-type="ref">2014</xref>). Accordingly, decreasing <italic>TCP</italic> expression delays maturation and increases the number of protrusions initiated at the leaf margin (Barkoulas <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0006" ref-type="ref">2007</xref>; Bar &#x00026; Ori, <xref rid="nph14449-bib-0005" ref-type="ref">2014</xref>). With research in progress on the molecular underpinnings of leaf shape, computational modelling is likely to continue to play a significant role in verifying whether the spatio&#x02010;temporal patterns of gene expression and morphogen distribution are consistent with the morphogenetic roles attributed to them, synthesizing our understanding of leaf development, and providing a framework for considering this development from an evolutionary perspective.</p></sec><sec id="nph14449-sec-0026"><title>Open problems</title><p>The mechanism by which the veins extending from a convergence point find their target location is unclear (Bayer <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0008" ref-type="ref">2009</xref>) and, consequently, so is the developmental mechanism that determines the branching angles between veins of different orders. The heuristics used in this paper provide a working hypothesis, but also highlight the need for research exposing the molecular mechanisms through which veins find their attachment point and create particular branching angles. Moreover, the assumption of an open venation system is conspicuously violated in brochidodromous patterns, in which secondary veins form pronounced loops. Although some models can create closed loops (Couder <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0021" ref-type="ref">2002</xref>; Runions <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0078" ref-type="ref">2005</xref>), the mechanisms that control the development of closed venation patterns remain largely unknown (Scarpella <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0083" ref-type="ref">2010</xref>). Even in open venation systems, the assumption of straight veins is a simplification, as different processes &#x02013; for example, nonuniform expansion of the lamina with the embedded veins &#x02013; may yield curved veins. In addition, some leaves include veins that penetrate indentations rather than protrusions. A detailed investigation of the paths of veins and the mechanisms that produce them remains an intriguing open problem, bridging molecular biology and differential geometry.</p><p>Our model postulates that growth directions are locally aligned with the veins. With veins running in different directions, as dictated by their branching pattern, the growth directions and magnitudes may form a highly nonuniform field. A detailed multiscale analysis of growing leaves is needed to reveal whether this mathematical possibility holds for real leaves. The growth tensor would then be scale dependent, in the same way as distance measures are scale dependent in fractal objects. The fractal nature of the growth field may be obscured when considering leaves at larger scales. This would explain why the average values of the growth tensor inherent in continuous&#x02010;surface models suffice when characterizing and modelling simple or broadly lobed leaves (Kuchen <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0055" ref-type="ref">2012</xref>; Richardson <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0075" ref-type="ref">2016</xref>).</p><p>Recent experimental results obtained by Das Gupta &#x00026; Nath (<xref rid="nph14449-bib-0026" ref-type="ref">2016</xref>) indicate that different leaf growth patterns, at a coarse level manifested by the distinction between basipetal, uniform and acropetal growth, occur across eudicot species, contributing to the diversity of their leaves. We have acknowledged this source of diversity in our paper (Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>n&#x02013;p), but its interplay with other morphogenetic factors and impact on the final leaf forms is presently unclear and awaits further study.</p><p>Our model ignores departures of leaves from planarity. The molecular basis of leaf curvature &#x02013; for example a delayed arrest of growth near the leaf margin &#x02013; is increasingly well understood (Nath <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0060" ref-type="ref">2003</xref>; Sharon <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0085" ref-type="ref">2007</xref>; Efroni <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0029" ref-type="ref">2008</xref>; Prusinkiewicz &#x00026; de Reuille, <xref rid="nph14449-bib-0069" ref-type="ref">2010</xref>), but modelling the morphogenesis of leaves that are curved as well as lobed or serrated remains an open problem. Extending the model described in this paper to curved leaves would probably entail incorporating a biomechanical component, as their forms can most readily be expressed as states of minimum energy of surfaces resisting stretching and bending. Challenges are posed by the nonhomogeneous structure of leaves, with veins embedded within a thin leaf blade (Hong <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0043" ref-type="ref">2005</xref>), and the need to replace straight vein segments with their more complicated counterparts defined on curved surfaces: the geodesic curves.</p><p>Many leaves are folded as they develop. This folding may play an important morphogenetic role, especially in the case of leaves that develop within the confines of a bud (Couturier <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0023" ref-type="ref">2009</xref>, <xref rid="nph14449-bib-0024" ref-type="ref">2011</xref>, <xref rid="nph14449-bib-0022" ref-type="ref">2012</xref>). Reconciling models described in this paper with those attributing a significant morphogenetic role to folding remains an open problem, although a link between them can be foreseen (for instance, convergence points may define how the leaf is folded).</p><p>While the leaves discussed so far can be approximated as flat or curved surfaces (formally, two manifolds), some succulent leaves are fully three&#x02010;dimensional, volumetric structures (three manifolds) and have a correspondingly three&#x02010;dimensional vasculature (Korn, <xref rid="nph14449-bib-0053" ref-type="ref">2011</xref>; Ogburn &#x00026; Edwards, <xref rid="nph14449-bib-0067" ref-type="ref">2013</xref>). It would be most interesting to determine whether our model can be extended to this case as well, possibly shedding light on the evolutionary path between surface&#x02010;like and volumetric leaves.</p><p>Finally, our models are supported by visual comparisons of generated forms with photographs of mature leaves. This brings into focus the lack of adequate data concerning the development of diverse leaves from the earliest stage of leaf primordia to maturity. Acquiring such data using current methods is a tedious process (cf. Kuchen <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0055" ref-type="ref">2012</xref>); however, recent results indicate that the diversity of growth patterns is not well represented by the limited spectrum of current reference plants (Das Gupta &#x00026; Nath, <xref rid="nph14449-bib-0025" ref-type="ref">2015</xref>, <xref rid="nph14449-bib-0026" ref-type="ref">2016</xref>). In addition, visual comparisons should be complemented by measurements and comparison criteria rooted in leaf morphometrics (for example, see Biot <italic>et&#x000a0;al</italic>., <xref rid="nph14449-bib-0014" ref-type="ref">2016</xref> and references therein). An examination of models in light of quantitative data will provide an opportunity to refine the models and validate them objectively; conversely, we expect that the models will provide a useful theoretical framework for interpreting new experimental results.</p></sec></sec><sec id="nph14449-sec-0028"><title>Author contributions</title><p>P.P. and A.R. designed the research; A.R. performed the research; P.P., A.R. and M.T. analyzed and interpreted the results; P.P. and A.R. wrote the paper with input from M.T.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material content-type="local-data"><p>Please note: Wiley Blackwell are not responsible for the content or functionality of any Supporting Information supplied by the authors. Any queries (other than missing material) should be directed to the <italic>New Phytologist</italic> Central Office.</p></supplementary-material><supplementary-material content-type="local-data" id="nph14449-sup-0001"><caption><p>
+<bold>Fig.&#x000a0;S1</bold> Selected terms pertinent to leaf morphology.</p><p>
+<bold>Notes S1</bold> Image sources and credits.</p><p>
+<bold>Notes S2</bold> Additional details regarding the implementation of the generative model of leaf form development.</p><p>
+<bold>Notes S3</bold> A proof of the relationship between resistance and branching angle given in the main text.</p></caption><media xlink:href="NPH-216-401-s001.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="nph14449-sup-0002"><caption><p>
+<bold>Table&#x000a0;S1</bold> Parameter values used in simulations</p></caption><media xlink:href="NPH-216-401-s002.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="nph14449-sup-0003"><caption><p>
+<bold>Movie S1</bold> Simulation of the development of a generic simple leaf (corresponds to Fig.&#x000a0;<xref rid="nph14449-fig-0006" ref-type="fig">6</xref>a&#x02013;f).</p></caption><media xlink:href="NPH-216-401-s003.mov"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="nph14449-sup-0004"><caption><p>
+<bold>Movie S2</bold> Simulation of the development of a leaf with compound teeth (corresponds to Fig.&#x000a0;<xref rid="nph14449-fig-0007" ref-type="fig">7</xref>g).</p></caption><media xlink:href="NPH-216-401-s004.mov"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="nph14449-sup-0005"><caption><p>
+<bold>Movie S3</bold> Simulation of a generic palmately lobed leaf (corresponds to Fig.&#x000a0;<xref rid="nph14449-fig-0008" ref-type="fig">8</xref>a&#x02013;e).</p></caption><media xlink:href="NPH-216-401-s005.mov"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="nph14449-sup-0006"><caption><p>
+<bold>Movie S4</bold> Simulation of the development of a representative leaf from the 2D morphospace in Fig.&#x000a0;<xref rid="nph14449-fig-0009" ref-type="fig">9</xref> (row 3, column 4).</p></caption><media xlink:href="NPH-216-401-s006.mov"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="nph14449-sup-0007"><caption><p>
+<bold>Movie S5</bold> Simulation of the development of a generic palmate leaf with sequential emergence of lobes (corresponds to Fig.&#x000a0;<xref rid="nph14449-fig-0010" ref-type="fig">10</xref>a).</p></caption><media xlink:href="NPH-216-401-s007.mov"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="nph14449-sup-0008"><caption><p>
+<bold>Movie S6</bold> Simulation of the development of a pinnately compound leaf (corresponds to Fig.&#x000a0;<xref rid="nph14449-fig-0012" ref-type="fig">12</xref>d).</p></caption><media xlink:href="NPH-216-401-s008.mov"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="nph14449-sec-0027"><title>Acknowledgements</title><p>We thank Gemma Bilsborough for providing the confocal image of a <italic>C. hirsuta</italic> leaf (Fig.&#x000a0;<xref rid="nph14449-fig-0003" ref-type="fig">3</xref>c), Christine Beveridge and Jim Hanan for hosting P.P. at the University of Queensland while writing this paper, and reviewers for their insightful and constructive comments. Support of this work by a Research Grant from the Human Frontiers Science Program (M.T. and P.P.), a Discovery Grant from the Natural Sciences and Engineering Research Council of Canada (P.P.), BBSRC Research Development Fellowship BB/G023905/1 (M.T.), and a core grant by the Max Planck Society (M.T.) is gratefully acknowledged. P.P. and M.T. also acknowledge the support of the Plant Phenotyping and Imaging Research Centre and the Cluster of Excellence on Plant Sciences, respectively.</p></ack><ref-list content-type="cited-references" id="nph14449-bibl-0001"><title>References</title><ref id="nph14449-bib-0001"><mixed-citation publication-type="journal" id="nph14449-cit-0001">
+<string-name>
+<surname>Alvarez</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Furumizu</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Efroni</surname>
+<given-names>I</given-names>
+</string-name>, <string-name>
+<surname>Eshed</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Bowman</surname>
+<given-names>J</given-names>
+</string-name>. <year>2016</year>
+<article-title>Active suppression of a leaf meristem orchestrates determinate leaf growth</article-title>. <source>eLife</source>
+<volume>5</volume>: <fpage>e15023</fpage>.<pub-id pub-id-type="pmid">27710768</pub-id></mixed-citation></ref><ref id="nph14449-bib-0002"><mixed-citation publication-type="book" id="nph14449-cit-0002">
+<string-name>
+<surname>Arber</surname>
+<given-names>A</given-names>
+</string-name>. <year>1950</year>
+<source>Natural philosophy of plant form</source>. <publisher-loc>Cambridge, UK</publisher-loc>: <publisher-name>University Press</publisher-name>.</mixed-citation></ref><ref id="nph14449-bib-0003"><mixed-citation publication-type="book" id="nph14449-cit-0003">
+<string-name>
+<surname>Ash</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Ellis</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Hickey</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Johnson</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Wilf</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Wing</surname>
+<given-names>S</given-names>
+</string-name>. <year>1999</year>
+<source>Manual of leaf architecture. Morphological description and categorization of dicotyledonous and net&#x02010;veined monocotyledonous angiosperms</source>. <publisher-loc>Washington, DC, USA</publisher-loc>: <publisher-name>Leaf Architecture Working Group, Smithsonian Institution</publisher-name>.</mixed-citation></ref><ref id="nph14449-bib-0004"><mixed-citation publication-type="journal" id="nph14449-cit-0004">
+<string-name>
+<surname>Avery</surname>
+<given-names>G</given-names>
+</string-name>. <year>1933</year>
+<article-title>Structure and development of the tobacco leaf</article-title>. <source>American Journal of Botany</source>
+<volume>20</volume>: <fpage>565</fpage>&#x02013;<lpage>592</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0005"><mixed-citation publication-type="journal" id="nph14449-cit-0005">
+<string-name>
+<surname>Bar</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Ori</surname>
+<given-names>N</given-names>
+</string-name>. <year>2014</year>
+<article-title>Leaf development and morphogenesis</article-title>. <source>Development</source>
+<volume>141</volume>: <fpage>4219</fpage>&#x02013;<lpage>4230</lpage>.<pub-id pub-id-type="pmid">25371359</pub-id></mixed-citation></ref><ref id="nph14449-bib-0006"><mixed-citation publication-type="journal" id="nph14449-cit-0006">
+<string-name>
+<surname>Barkoulas</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Galinha</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Grigg</surname>
+<given-names>SP</given-names>
+</string-name>, <string-name>
+<surname>Tsiantis</surname>
+<given-names>M</given-names>
+</string-name>. <year>2007</year>
+<article-title>From genes to shape: regulatory interactions in leaf development</article-title>. <source>Current Opinion in Plant Biology</source>
+<volume>10</volume>: <fpage>660</fpage>&#x02013;<lpage>666</lpage>.<pub-id pub-id-type="pmid">17869569</pub-id></mixed-citation></ref><ref id="nph14449-bib-0007"><mixed-citation publication-type="journal" id="nph14449-cit-0007">
+<string-name>
+<surname>Bar&#x02010;Sinai</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Julien</surname>
+<given-names>J&#x02010;D</given-names>
+</string-name>, <string-name>
+<surname>Sharon</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Armon</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Nakayama</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Adda&#x02010;Bedia</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Boudaoud</surname>
+<given-names>A</given-names>
+</string-name>. <year>2016</year>
+<article-title>Mechanical stress induces remodeling of vascular networks in growing leaves</article-title>. <source>PLoS Computational Biology</source>
+<volume>12</volume>: <fpage>1</fpage>&#x02013;<lpage>21</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0008"><mixed-citation publication-type="journal" id="nph14449-cit-0008">
+<string-name>
+<surname>Bayer</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Smith</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Mandel</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Nakayama</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Sauer</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Kuhlemeier</surname>
+<given-names>C</given-names>
+</string-name>. <year>2009</year>
+<article-title>Integration of transport&#x02010;based models for phyllotaxis and midvein formation</article-title>. <source>Genes &#x00026; Development</source>
+<volume>23</volume>: <fpage>373</fpage>&#x02013;<lpage>384</lpage>.<pub-id pub-id-type="pmid">19204121</pub-id></mixed-citation></ref><ref id="nph14449-bib-0009"><mixed-citation publication-type="journal" id="nph14449-cit-0009">
+<string-name>
+<surname>Beerling</surname>
+<given-names>DF</given-names>
+</string-name>, <string-name>
+<surname>Fleming</surname>
+<given-names>AJ</given-names>
+</string-name>. <year>2007</year>
+<article-title>Zimmermann's telome theory of megaphyll leaf evolution: a molecular and cellular critique</article-title>. <source>Current Opinion in Plant Biology</source>
+<volume>10</volume>: <fpage>4</fpage>&#x02013;<lpage>12</lpage>.<pub-id pub-id-type="pmid">17141552</pub-id></mixed-citation></ref><ref id="nph14449-bib-0010"><mixed-citation publication-type="journal" id="nph14449-cit-0010">
+<string-name>
+<surname>Ben&#x02010;Gera</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Dafna</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Alvarez</surname>
+<given-names>JP</given-names>
+</string-name>, <string-name>
+<surname>Bar</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Mauerer</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Ori</surname>
+<given-names>N</given-names>
+</string-name>. <year>2016</year>
+<article-title>Auxin&#x02010;mediated lamina growth in tomato leaves is restricted by two parallel mechanisms</article-title>. <source>Plant Journal</source>
+<volume>86</volume>: <fpage>443</fpage>&#x02013;<lpage>457</lpage>.<pub-id pub-id-type="pmid">27121172</pub-id></mixed-citation></ref><ref id="nph14449-bib-0011"><mixed-citation publication-type="journal" id="nph14449-cit-0011">
+<string-name>
+<surname>Berger</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Harpaz&#x02010;Saad</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Brand</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Melnik</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Sirding</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Alvarez</surname>
+<given-names>JP</given-names>
+</string-name>, <string-name>
+<surname>Zinder</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Samach</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Eshed</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Ori</surname>
+<given-names>N</given-names>
+</string-name>. <year>2009</year>
+<article-title>The NAC&#x02010;domain transcription factor GOBLET specifies leaflet boundaries in compound tomato leaves</article-title>. <source>Development</source>
+<volume>136</volume>: <fpage>823</fpage>&#x02013;<lpage>832</lpage>.<pub-id pub-id-type="pmid">19176589</pub-id></mixed-citation></ref><ref id="nph14449-bib-0012"><mixed-citation publication-type="journal" id="nph14449-cit-0012">
+<string-name>
+<surname>Bharathan</surname>
+<given-names>G</given-names>
+</string-name>, <string-name>
+<surname>Goliber</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Moore</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Kessler</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Pham</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Sinha</surname>
+<given-names>N</given-names>
+</string-name>. <year>2002</year>
+<article-title>Homologies in leaf form inferred from <italic>KNOXI</italic> gene expression during development</article-title>. <source>Science</source>
+<volume>296</volume>: <fpage>1858</fpage>&#x02013;<lpage>1860</lpage>.<pub-id pub-id-type="pmid">12052958</pub-id></mixed-citation></ref><ref id="nph14449-bib-0013"><mixed-citation publication-type="journal" id="nph14449-cit-0013">
+<string-name>
+<surname>Bilsborough</surname>
+<given-names>G</given-names>
+</string-name>, <string-name>
+<surname>Runions</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Barkoulas</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Jenkins</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Hasson</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Galinha</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Laufs</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Hay</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Tsiantis</surname>
+<given-names>M</given-names>
+</string-name>. <year>2011</year>
+<article-title>Model for the regulation of <italic>Arabidopsis thaliana</italic> leaf margin development</article-title>. <source>Proceedings of the National Academy of Sciences, USA</source>
+<volume>108</volume>: <fpage>3424</fpage>&#x02013;<lpage>3429</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0014"><mixed-citation publication-type="journal" id="nph14449-cit-0014">
+<string-name>
+<surname>Biot</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Cortizo</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Burguet</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Kiss</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Oughou</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Maugarny&#x02010;Cal&#x000e8;s</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Gon&#x000e7;alves</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Adroher</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Andrey</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Boudaoud</surname>
+<given-names>A</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic>
+<year>2016</year>
+<article-title>Multiscale quantification of morphodynamics: MorphoLeaf, software for 2&#x02010;D shape analysis</article-title>. <source>Development</source>
+<volume>143</volume>: <fpage>3417</fpage>&#x02013;<lpage>3428</lpage>.<pub-id pub-id-type="pmid">27387872</pub-id></mixed-citation></ref><ref id="nph14449-bib-0015"><mixed-citation publication-type="journal" id="nph14449-cit-0015">
+<string-name>
+<surname>Blein</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Pulido</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Vialette&#x02010;Guiraud</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Nikovics</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Morin</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Hay</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Johansen</surname>
+<given-names>I</given-names>
+</string-name>, <string-name>
+<surname>Tsiantis</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Laufs</surname>
+<given-names>P</given-names>
+</string-name>. <year>2008</year>
+<article-title>A conserved molecular framework for compound leaf development</article-title>. <source>Science</source>
+<volume>322</volume>: <fpage>1835</fpage>&#x02013;<lpage>1839</lpage>.<pub-id pub-id-type="pmid">19095941</pub-id></mixed-citation></ref><ref id="nph14449-bib-0016"><mixed-citation publication-type="journal" id="nph14449-cit-0016">
+<string-name>
+<surname>Boudaoud</surname>
+<given-names>A</given-names>
+</string-name>. <year>2010</year>
+<article-title>An introduction to the mechanics of morphogenesis for plant biologists</article-title>. <source>Trends in Plant Science</source>
+<volume>15</volume>: <fpage>353</fpage>&#x02013;<lpage>360</lpage>.<pub-id pub-id-type="pmid">20427223</pub-id></mixed-citation></ref><ref id="nph14449-bib-0017"><mixed-citation publication-type="book" id="nph14449-cit-0017">
+<string-name>
+<surname>Burko</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Ori</surname>
+<given-names>N</given-names>
+</string-name>. <year>2013</year>
+<chapter-title>The tomato leaf as a model system for organogenesis</chapter-title> In: <person-group person-group-type="editor"><name><surname>De Smet</surname><given-names>I</given-names></name></person-group>, ed. <source>Plant organogenesis: methods and protocols</source>. <publisher-loc>New York, NY, USA</publisher-loc>: <publisher-name>Springer</publisher-name>, <fpage>1</fpage>&#x02013;<lpage>19</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0018"><mixed-citation publication-type="journal" id="nph14449-cit-0018">
+<string-name>
+<surname>Chitwood</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Klein</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>O'Hanlon</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Chacko</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Greg</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Kitchen</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Miller</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Londo</surname>
+<given-names>J</given-names>
+</string-name>. <year>2016</year>
+<article-title>Latent developmental and evolutionary shapes embedded within the grapevine leaf</article-title>. <source>New Phytologist</source>
+<volume>210</volume>: <fpage>343</fpage>&#x02013;<lpage>355</lpage>.<pub-id pub-id-type="pmid">26580864</pub-id></mixed-citation></ref><ref id="nph14449-bib-0019"><mixed-citation publication-type="journal" id="nph14449-cit-0019">
+<string-name>
+<surname>Chitwood</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Ranjan</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Martinez</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Headland</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Thiem</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Kumar</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Covington</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Hatcher</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Naylor</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Zimmerman</surname>
+<given-names>S</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic>
+<year>2014</year>
+<article-title>A modern ampelography: a genetic basis for leaf shape and venation patterning in grape</article-title>. <source>Plant Physiology</source>
+<volume>164</volume>: <fpage>259</fpage>&#x02013;<lpage>272</lpage>.<pub-id pub-id-type="pmid">24285849</pub-id></mixed-citation></ref><ref id="nph14449-bib-0020"><mixed-citation publication-type="journal" id="nph14449-cit-0020">
+<string-name>
+<surname>Cieslak</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Runions</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>. <year>2015</year>
+<article-title>Auxin&#x02010;driven patterning with unidirectional fluxes</article-title>. <source>Journal of Experimental Botany</source>
+<volume>66</volume>: <fpage>5083</fpage>&#x02013;<lpage>5102</lpage>.<pub-id pub-id-type="pmid">26116915</pub-id></mixed-citation></ref><ref id="nph14449-bib-0021"><mixed-citation publication-type="journal" id="nph14449-cit-0021">
+<string-name>
+<surname>Couder</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Pauchard</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Allain</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Adda&#x02010;Bedia</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Douady</surname>
+<given-names>S</given-names>
+</string-name>. <year>2002</year>
+<article-title>The leaf venation as formed in a tensorial field</article-title>. <source>European Physical Journal B</source>
+<volume>28</volume>: <fpage>135</fpage>&#x02013;<lpage>138</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0022"><mixed-citation publication-type="journal" id="nph14449-cit-0022">
+<string-name>
+<surname>Couturier</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Brunel</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Douady</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Nakayama</surname>
+<given-names>N</given-names>
+</string-name>. <year>2012</year>
+<article-title>Abaxial growth and steric constraints guide leaf folding and shape in <italic>Acer pseudoplatanus</italic>
+</article-title>. <source>American Journal of Botany</source>
+<volume>99</volume>: <fpage>1289</fpage>&#x02013;<lpage>1299</lpage>.<pub-id pub-id-type="pmid">22875594</pub-id></mixed-citation></ref><ref id="nph14449-bib-0023"><mixed-citation publication-type="journal" id="nph14449-cit-0023">
+<string-name>
+<surname>Couturier</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Pont Courrech du</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Douady</surname>
+<given-names>S</given-names>
+</string-name>. <year>2009</year>
+<article-title>A global regulation inducing the shape of growing folded leaves</article-title>. <source>PLoS ONE</source>
+<volume>4</volume>: <fpage>1</fpage>&#x02013;<lpage>12</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0024"><mixed-citation publication-type="journal" id="nph14449-cit-0024">
+<string-name>
+<surname>Couturier</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Pont Courrech du</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Douady</surname>
+<given-names>S</given-names>
+</string-name>. <year>2011</year>
+<article-title>The filling law: a general framework for leaf folding and its consequences on leaf shape diversity</article-title>. <source>Journal of Theoretical Biology</source>
+<volume>289</volume>: <fpage>47</fpage>&#x02013;<lpage>64</lpage>.<pub-id pub-id-type="pmid">21875601</pub-id></mixed-citation></ref><ref id="nph14449-bib-0025"><mixed-citation publication-type="journal" id="nph14449-cit-0025">
+<string-name>
+<surname>Das Gupta</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Nath</surname>
+<given-names>U</given-names>
+</string-name>. <year>2015</year>
+<article-title>Divergence in patterns of leaf growth polarity is associated with the expression divergence of miR396</article-title>. <source>Plant Cell</source>
+<volume>27</volume>: <fpage>2785</fpage>&#x02013;<lpage>2799</lpage>.<pub-id pub-id-type="pmid">26410303</pub-id></mixed-citation></ref><ref id="nph14449-bib-0026"><mixed-citation publication-type="journal" id="nph14449-cit-0026">
+<string-name>
+<surname>Das Gupta</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Nath</surname>
+<given-names>U</given-names>
+</string-name>. <year>2016</year>
+<article-title>On the evolution of developmental mechanisms: divergent polarities in leaf growth as a case study</article-title>. <source>Plant Signaling &#x00026; Behavior</source>
+<volume>11</volume>: <fpage>e1126030</fpage>.<pub-id pub-id-type="pmid">26817939</pub-id></mixed-citation></ref><ref id="nph14449-bib-0027"><mixed-citation publication-type="journal" id="nph14449-cit-0027">
+<string-name>
+<surname>Dengler</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Kang</surname>
+<given-names>J</given-names>
+</string-name>. <year>2001</year>
+<article-title>Vascular patterning and leaf shape</article-title>. <source>Current Opinion in Plant Biology</source>
+<volume>4</volume>: <fpage>50</fpage>&#x02013;<lpage>56</lpage>.<pub-id pub-id-type="pmid">11163168</pub-id></mixed-citation></ref><ref id="nph14449-bib-0028"><mixed-citation publication-type="journal" id="nph14449-cit-0028">
+<string-name>
+<surname>Dolan</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Poethig</surname>
+<given-names>S</given-names>
+</string-name>. <year>1998</year>
+<article-title>Clonal analysis of leaf development in cotton</article-title>. <source>American Journal of Botany</source>
+<volume>85</volume>: <fpage>315</fpage>.<pub-id pub-id-type="pmid">21684913</pub-id></mixed-citation></ref><ref id="nph14449-bib-0029"><mixed-citation publication-type="journal" id="nph14449-cit-0029">
+<string-name>
+<surname>Efroni</surname>
+<given-names>I</given-names>
+</string-name>, <string-name>
+<surname>Blum</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Goldshmidt</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Eshed</surname>
+<given-names>Y</given-names>
+</string-name>. <year>2008</year>
+<article-title>A protracted and dynamic maturation schedule underlies <italic>Arabidopsis</italic> leaf development</article-title>. <source>Plant Cell</source>
+<volume>20</volume>: <fpage>2293</fpage>&#x02013;<lpage>2306</lpage>.<pub-id pub-id-type="pmid">18805992</pub-id></mixed-citation></ref><ref id="nph14449-bib-0030"><mixed-citation publication-type="journal" id="nph14449-cit-0030">
+<string-name>
+<surname>Efroni</surname>
+<given-names>I</given-names>
+</string-name>, <string-name>
+<surname>Eshed</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Lifschitz</surname>
+<given-names>E</given-names>
+</string-name>. <year>2010</year>
+<article-title>Morphogenesis of simple and compound leaves: a critical review</article-title>. <source>Plant Cell</source>
+<volume>22</volume>: <fpage>1019</fpage>&#x02013;<lpage>1032</lpage>.<pub-id pub-id-type="pmid">20435903</pub-id></mixed-citation></ref><ref id="nph14449-bib-0031"><mixed-citation publication-type="journal" id="nph14449-cit-0031">
+<string-name>
+<surname>Floyd</surname>
+<given-names>SK</given-names>
+</string-name>, <string-name>
+<surname>Bowman</surname>
+<given-names>JL</given-names>
+</string-name>. <year>2010</year>
+<article-title>Gene expression patterns in seed plant shoot meristems and leaves: homoplasy or homology?</article-title>
+<source>Journal of Plant Research</source>
+<volume>123</volume>: <fpage>43</fpage>&#x02013;<lpage>55</lpage>.<pub-id pub-id-type="pmid">19784716</pub-id></mixed-citation></ref><ref id="nph14449-bib-0032"><mixed-citation publication-type="journal" id="nph14449-cit-0032">
+<string-name>
+<surname>Gleissberg</surname>
+<given-names>S</given-names>
+</string-name>. <year>2004</year>
+<article-title>Comparative analysis of leaf shape development in <italic>Eschscholzia californica</italic> and other Papaveraceae&#x02010;Eschscholzioideae</article-title>. <source>American Journal of Botany</source>
+<volume>91</volume>: <fpage>306</fpage>&#x02013;<lpage>312</lpage>.<pub-id pub-id-type="pmid">21653387</pub-id></mixed-citation></ref><ref id="nph14449-bib-0033"><mixed-citation publication-type="journal" id="nph14449-cit-0033">
+<string-name>
+<surname>Hagemann</surname>
+<given-names>W</given-names>
+</string-name>. <year>1999</year>
+<article-title>Towards an organismic concept of land plants: the marginal blastozone and the development of the vegetation body of selected frondose gametophytes of liverworts and ferns</article-title>. <source>Plant Systematics and Evolution</source>, <volume>216</volume>: <fpage>81</fpage>&#x02013;<lpage>133</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0034"><mixed-citation publication-type="journal" id="nph14449-cit-0034">
+<string-name>
+<surname>Hagemann</surname>
+<given-names>W</given-names>
+</string-name>, <string-name>
+<surname>Gleissberg</surname>
+<given-names>S</given-names>
+</string-name>. <year>1996</year>
+<article-title>Organogenetic capacity of leaves: the significance of marginal blastozones in angiosperms</article-title>. <source>Plant Systematics and Evolution</source>
+<volume>199</volume>: <fpage>121</fpage>&#x02013;<lpage>152</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0035"><mixed-citation publication-type="journal" id="nph14449-cit-0035">
+<string-name>
+<surname>Hamant</surname>
+<given-names>O</given-names>
+</string-name>, <string-name>
+<surname>Heisler</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>J&#x000f6;nsson</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Krupinski</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Uyttewaal</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Bokov</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Corson</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Sahlin</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Boudaoud</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Meyerowitz</surname>
+<given-names>E</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic>
+<year>2008</year>
+<article-title>Developmental patterning by mechanical signals in <italic>Arabidopsis</italic>
+</article-title>. <source>Science</source>
+<volume>322</volume>: <fpage>1650</fpage>&#x02013;<lpage>1655</lpage>.<pub-id pub-id-type="pmid">19074340</pub-id></mixed-citation></ref><ref id="nph14449-bib-0036"><mixed-citation publication-type="journal" id="nph14449-cit-0036">
+<string-name>
+<surname>Hareven</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Gutfinger</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Parnis</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Eshed</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Lifschitz</surname>
+<given-names>E</given-names>
+</string-name>. <year>1996</year>
+<article-title>The making of a compound leaf: genetic manipulation of leaf architecture in tomato</article-title>. <source>Cell</source>
+<volume>84</volume>: <fpage>735</fpage>&#x02013;<lpage>744</lpage>.<pub-id pub-id-type="pmid">8625411</pub-id></mixed-citation></ref><ref id="nph14449-bib-0037"><mixed-citation publication-type="journal" id="nph14449-cit-0037">
+<string-name>
+<surname>Hasson</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Plessis</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Blein</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Adroher</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Grigg</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Tsiantis</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Boudaoud</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Damerval</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Laufs</surname>
+<given-names>P</given-names>
+</string-name>. <year>2011</year>
+<article-title>Evolution and diverse roles of the <italic>CUP&#x02010;SHAPED COTYLEDON</italic> genes in <italic>Arabidopsis</italic> leaf development</article-title>. <source>Plant Cell</source>
+<volume>23</volume>: <fpage>54</fpage>&#x02013;<lpage>68</lpage>.<pub-id pub-id-type="pmid">21258003</pub-id></mixed-citation></ref><ref id="nph14449-bib-0038"><mixed-citation publication-type="journal" id="nph14449-cit-0038">
+<string-name>
+<surname>Hay</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Barkoulas</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Tsiantis</surname>
+<given-names>M</given-names>
+</string-name>. <year>2006</year>
+<article-title>ASYMMETRIC LEAVES1 and auxin activities converge to repress <italic>BREVIPEDICELLUS</italic> expression and promote leaf development in <italic>Arabidopsis</italic>
+</article-title>. <source>Development</source>
+<volume>133</volume>: <fpage>3955</fpage>&#x02013;<lpage>3961</lpage>.<pub-id pub-id-type="pmid">16971475</pub-id></mixed-citation></ref><ref id="nph14449-bib-0039"><mixed-citation publication-type="journal" id="nph14449-cit-0039">
+<string-name>
+<surname>Hay</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Tsiantis</surname>
+<given-names>M</given-names>
+</string-name>. <year>2006</year>
+<article-title>The genetic basis for differences in leaf form between <italic>Arabidopsis thaliana</italic> and its wild relative <italic>Cardamine hirsuta</italic>
+</article-title>. <source>Nature Genetics</source>
+<volume>38</volume>: <fpage>942</fpage>&#x02013;<lpage>947</lpage>.<pub-id pub-id-type="pmid">16823378</pub-id></mixed-citation></ref><ref id="nph14449-bib-0040"><mixed-citation publication-type="journal" id="nph14449-cit-0040">
+<string-name>
+<surname>Hejnowicz</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name>
+<surname>Romberger</surname>
+<given-names>J</given-names>
+</string-name>. <year>1984</year>
+<article-title>Growth tensor of plant organs</article-title>. <source>Journal of Theoretical Biology</source>
+<volume>110</volume>: <fpage>93</fpage>&#x02013;<lpage>114</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0041"><mixed-citation publication-type="journal" id="nph14449-cit-0041">
+<string-name>
+<surname>Hickey</surname>
+<given-names>L</given-names>
+</string-name>. <year>1973</year>
+<article-title>Classification of the architecture of dicotyledonous leaves</article-title>. <source>American Journal of Botany</source>
+<volume>60</volume>: <fpage>17</fpage>&#x02013;<lpage>33</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0042"><mixed-citation publication-type="book" id="nph14449-cit-0042">
+<string-name>
+<surname>Hofmeister</surname>
+<given-names>W</given-names>
+</string-name>. <year>1868</year>
+<chapter-title>Allgemeine Morphologie der Gewachse</chapter-title> In: <person-group person-group-type="editor"><name><surname>Hofmeister</surname><given-names>W</given-names></name></person-group>, ed. <source>Handbuch der Physiologischen Botanik, 1</source>. <publisher-loc>Leipzig, Germany</publisher-loc>: <publisher-name>Engelmann</publisher-name>, <fpage>405</fpage>&#x02013;<lpage>664</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0043"><mixed-citation publication-type="journal" id="nph14449-cit-0043">
+<string-name>
+<surname>Hong</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Simpson</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Baranoski</surname>
+<given-names>G</given-names>
+</string-name>. <year>2005</year>
+<article-title>Interactive venation&#x02010;based leaf shape modeling</article-title>. <source>Computer Animation and Virtual Worlds</source>
+<volume>16</volume>: <fpage>415</fpage>&#x02013;<lpage>427</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0044"><mixed-citation publication-type="journal" id="nph14449-cit-0044">
+<string-name>
+<surname>Jeune</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Lacroix</surname>
+<given-names>C</given-names>
+</string-name>. <year>1993</year>
+<article-title>A quantitative model of leaflet initiation illustrated by <italic>Murraya paniculata</italic> (Rutaceae)</article-title>. <source>Canadian Journal of Botany</source>
+<volume>71</volume>: <fpage>457</fpage>&#x02013;<lpage>465</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0045"><mixed-citation publication-type="journal" id="nph14449-cit-0045">
+<string-name>
+<surname>Jones</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Bakker</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Schlichting</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Nicotra</surname>
+<given-names>A</given-names>
+</string-name>. <year>2009</year>
+<article-title>Leaf shape evolution in the South African genus <italic>Pelargonium</italic> L'H&#x000e9;r. (Geraniaceae)</article-title>. <source>Evolution</source>
+<volume>63</volume>: <fpage>479</fpage>&#x02013;<lpage>497</lpage>.<pub-id pub-id-type="pmid">19154370</pub-id></mixed-citation></ref><ref id="nph14449-bib-0046"><mixed-citation publication-type="journal" id="nph14449-cit-0046">
+<string-name>
+<surname>J&#x000f6;nsson</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Heisler</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Shapiro</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Meyerowitz</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Mjolsness</surname>
+<given-names>E</given-names>
+</string-name>. <year>2006</year>
+<article-title>An auxin&#x02010;driven polarized transport model for phyllotaxis</article-title>. <source>Proceedings of the National Academy of Sciences, USA</source>
+<volume>103</volume>: <fpage>1633</fpage>&#x02013;<lpage>1638</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0047"><mixed-citation publication-type="journal" id="nph14449-cit-0047">
+<string-name>
+<surname>Karwowski</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>. <year>2003</year>
+<article-title>Design and implementation of the L+C modeling language</article-title>. <source>Electronic Notes in Theoretical Computer Science</source>
+<volume>86</volume>: <fpage>134</fpage>&#x02013;<lpage>152</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0048"><mixed-citation publication-type="journal" id="nph14449-cit-0048">
+<string-name>
+<surname>Kennaway</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Coen</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Green</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Bangham</surname>
+<given-names>A</given-names>
+</string-name>. <year>2011</year>
+<article-title>Generation of diverse biological forms through combinatorial interactions between tissue polarity and growth</article-title>. <source>PLoS Computational Biology</source>
+<volume>7</volume>: <fpage>e1002071</fpage>.<pub-id pub-id-type="pmid">21698124</pub-id></mixed-citation></ref><ref id="nph14449-bib-0049"><mixed-citation publication-type="journal" id="nph14449-cit-0049">
+<string-name>
+<surname>Kidner</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Umbreen</surname>
+<given-names>S</given-names>
+</string-name>. <year>2010</year>
+<article-title>Why is leaf shape so variable?</article-title>
+<source>International Journal of Plant Developmental Biology</source>
+<volume>4</volume>: <fpage>64</fpage>&#x02013;<lpage>75</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0050"><mixed-citation publication-type="journal" id="nph14449-cit-0050">
+<string-name>
+<surname>Kim</surname>
+<given-names>SJ</given-names>
+</string-name>, <string-name>
+<surname>Lee</surname>
+<given-names>CH</given-names>
+</string-name>, <string-name>
+<surname>Kim</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Kim</surname>
+<given-names>KS</given-names>
+</string-name>. <year>2014</year>
+<article-title>Phylogenetic analysis of Korean native <italic>Chrysanthemum</italic> species based on morphological characteristics</article-title>. <source>Scientia Horticulturae</source>
+<volume>175</volume>: <fpage>278</fpage>&#x02013;<lpage>289</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0051"><mixed-citation publication-type="journal" id="nph14449-cit-0051">
+<string-name>
+<surname>Kirchoff</surname>
+<given-names>B</given-names>
+</string-name>. <year>2003</year>
+<article-title>Shape matters: Hofmeister's rule, primordium shape, and flower orientation</article-title>. <source>International Journal of Plant Sciences</source>
+<volume>164</volume>: <fpage>505</fpage>&#x02013;<lpage>517</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0052"><mixed-citation publication-type="book" id="nph14449-cit-0052">
+<string-name>
+<surname>Koenig</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Sinha</surname>
+<given-names>N</given-names>
+</string-name>. <year>2010</year>
+<chapter-title>Evolution of leaf shape: a pattern emerges</chapter-title> In: <person-group person-group-type="editor"><name><surname>Timmermans</surname><given-names>M</given-names></name></person-group>, ed. <source>Plant development, volume 91 of Current topics in developmental biology</source>. <publisher-loc>Amsterdam, the Netherlands</publisher-loc>: <publisher-name>Academic Press/Elsevier</publisher-name>, <fpage>169</fpage>&#x02013;<lpage>183</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0053"><mixed-citation publication-type="journal" id="nph14449-cit-0053">
+<string-name>
+<surname>Korn</surname>
+<given-names>R</given-names>
+</string-name>. <year>2011</year>
+<article-title>Window patterns in Lithops</article-title>. <source>International Journal of Plant Sciences</source>
+<volume>172</volume>: <fpage>1101</fpage>&#x02013;<lpage>1109</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0054"><mixed-citation publication-type="journal" id="nph14449-cit-0054">
+<string-name>
+<surname>Koyama</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Mitsuda</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Seki</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Shinozaki</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Ohme&#x02010;Takagi</surname>
+<given-names>M</given-names>
+</string-name>. <year>2010</year>
+<article-title>TCP transcription factors regulate the activities of ASYMMETRIC LEAVES1 and miR164, as well as the auxin response, during differentiation of leaves in <italic>Arabidopsis</italic>
+</article-title>. <source>Plant Cell</source>
+<volume>22</volume>: <fpage>3574</fpage>&#x02013;<lpage>3588</lpage>.<pub-id pub-id-type="pmid">21119060</pub-id></mixed-citation></ref><ref id="nph14449-bib-0055"><mixed-citation publication-type="journal" id="nph14449-cit-0055">
+<string-name>
+<surname>Kuchen</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Fox</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Reuille Barbier de</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Kennaway</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Bensmihen</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Avondo</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Calder</surname>
+<given-names>G</given-names>
+</string-name>, <string-name>
+<surname>Southam</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Robinson</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Bangham</surname>
+<given-names>A</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic>
+<year>2012</year>
+<article-title>Generation of leaf shape through early patterns of growth and tissue polarity</article-title>. <source>Science</source>
+<volume>335</volume>: <fpage>1092</fpage>&#x02013;<lpage>1096</lpage>.<pub-id pub-id-type="pmid">22383846</pub-id></mixed-citation></ref><ref id="nph14449-bib-0056"><mixed-citation publication-type="journal" id="nph14449-cit-0056">
+<string-name>
+<surname>Licklider</surname>
+<given-names>J</given-names>
+</string-name>. <year>1960</year>
+<article-title>Man&#x02010;computer symbiosis</article-title>. <source>IRE Transactions on Human Factors in Electronics</source>
+<volume>1</volume>: <fpage>4</fpage>&#x02013;<lpage>11</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0057"><mixed-citation publication-type="journal" id="nph14449-cit-0057">
+<string-name>
+<surname>Mattsson</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Sung</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name>
+<surname>Berleth</surname>
+<given-names>T</given-names>
+</string-name>. <year>1999</year>
+<article-title>Responses of plant vascular systems to auxin transport inhibition</article-title>. <source>Development</source>
+<volume>126</volume>: <fpage>2979</fpage>&#x02013;<lpage>2991</lpage>.<pub-id pub-id-type="pmid">10357941</pub-id></mixed-citation></ref><ref id="nph14449-bib-0058"><mixed-citation publication-type="book" id="nph14449-cit-0058">
+<string-name>
+<surname>McGhee</surname>
+<given-names>G</given-names>
+</string-name>. <year>1999</year>
+<source>Theoretical morphology: the concept and its applications</source>. <publisher-loc>New York, NY, USA</publisher-loc>: <publisher-name>Columbia University Press</publisher-name>.</mixed-citation></ref><ref id="nph14449-bib-0059"><mixed-citation publication-type="journal" id="nph14449-cit-0059">
+<string-name>
+<surname>Nakamasu</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Nakayama</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Nakayama</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Suematsu</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Kimura</surname>
+<given-names>S</given-names>
+</string-name>. <year>2014</year>
+<article-title>A developmental model for branching morphogenesis of Lake Cress compound leaf</article-title>. <source>PLoS ONE</source>
+<volume>9</volume>: <fpage>e111615</fpage>.<pub-id pub-id-type="pmid">25375102</pub-id></mixed-citation></ref><ref id="nph14449-bib-0060"><mixed-citation publication-type="journal" id="nph14449-cit-0060">
+<string-name>
+<surname>Nath</surname>
+<given-names>U</given-names>
+</string-name>, <string-name>
+<surname>Crawford</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Carpenter</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Coen</surname>
+<given-names>E</given-names>
+</string-name>. <year>2003</year>
+<article-title>Genetic control of surface curvature</article-title>. <source>Science</source>
+<volume>299</volume>: <fpage>1404</fpage>&#x02013;<lpage>1407</lpage>.<pub-id pub-id-type="pmid">12610308</pub-id></mixed-citation></ref><ref id="nph14449-bib-0061"><mixed-citation publication-type="journal" id="nph14449-cit-0061">
+<string-name>
+<surname>Nicotra</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Cosgrove</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Cowling</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Schlichting</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Jones</surname>
+<given-names>C</given-names>
+</string-name>. <year>2007</year>
+<article-title>Leaf shape linked to photosynthetic rates and temperature optima in South African <italic>Pelargonium</italic> species</article-title>. <source>Oecologia</source>
+<volume>154</volume>: <fpage>625</fpage>&#x02013;<lpage>635</lpage>.<pub-id pub-id-type="pmid">17943318</pub-id></mixed-citation></ref><ref id="nph14449-bib-0062"><mixed-citation publication-type="journal" id="nph14449-cit-0062">
+<string-name>
+<surname>Nicotra</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Leigh</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Boyce</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Jones</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Niklas</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Royer</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Tsukaya</surname>
+<given-names>H</given-names>
+</string-name>. <year>2011</year>
+<article-title>The evolution and functional significance of leaf shape in the angiosperms</article-title>. <source>Functional Plant Biology</source>
+<volume>38</volume>: <fpage>535</fpage>.</mixed-citation></ref><ref id="nph14449-bib-0063"><mixed-citation publication-type="journal" id="nph14449-cit-0063">
+<string-name>
+<surname>Nikovics</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Blein</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Peaucelle</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Ishida</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Morin</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Aida</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Laufs</surname>
+<given-names>P</given-names>
+</string-name>. <year>2006</year>
+<article-title>The balance between the <italic>MIR164A</italic> and <italic>CUC2</italic> genes controls leaf margin serration in <italic>Arabidopsis</italic>
+</article-title>. <source>Plant Cell</source>
+<volume>18</volume>: <fpage>2929</fpage>&#x02013;<lpage>2945</lpage>.<pub-id pub-id-type="pmid">17098808</pub-id></mixed-citation></ref><ref id="nph14449-bib-0064"><mixed-citation publication-type="journal" id="nph14449-cit-0064">
+<string-name>
+<surname>Novotn&#x000fd;</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Suk</surname>
+<given-names>T</given-names>
+</string-name>. <year>2013</year>
+<article-title>Leaf recognition of woody species in Central Europe</article-title>. <source>Biosystems Engineering</source>
+<volume>115</volume>: <fpage>444</fpage>&#x02013;<lpage>452</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0065"><mixed-citation publication-type="journal" id="nph14449-cit-0065">
+<string-name>
+<surname>Nuez</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Prohens</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Blanca</surname>
+<given-names>J</given-names>
+</string-name>. <year>2004</year>
+<article-title>Relationships, origin, and diversity of Galapagos tomatoes: implications for the conservation of natural populations</article-title>. <source>American Journal of Botany</source>
+<volume>91</volume>: <fpage>86</fpage>&#x02013;<lpage>99</lpage>.<pub-id pub-id-type="pmid">21653366</pub-id></mixed-citation></ref><ref id="nph14449-bib-0066"><mixed-citation publication-type="journal" id="nph14449-cit-0066">
+<string-name>
+<surname>O'Connor</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Runions</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Sluis</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Bragg</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Vogel</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Hake</surname>
+<given-names>S</given-names>
+</string-name>. <year>2014</year>
+<article-title>A division in PIN&#x02010;mediated auxin patterning during organ initiation in grasses</article-title>. <source>PLoS Computational Biology</source>
+<volume>10</volume>: <fpage>e1003447</fpage>.<pub-id pub-id-type="pmid">24499933</pub-id></mixed-citation></ref><ref id="nph14449-bib-0067"><mixed-citation publication-type="journal" id="nph14449-cit-0067">
+<string-name>
+<surname>Ogburn</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Edwards</surname>
+<given-names>E</given-names>
+</string-name>. <year>2013</year>
+<article-title>Repeated origin of three&#x02010;dimensional leaf venation releases constraints on the evolution of succulence in plants</article-title>. <source>Current Biology</source>
+<volume>23</volume>: <fpage>722</fpage>&#x02013;<lpage>726</lpage>.<pub-id pub-id-type="pmid">23583553</pub-id></mixed-citation></ref><ref id="nph14449-bib-0068"><mixed-citation publication-type="journal" id="nph14449-cit-0068">
+<string-name>
+<surname>Owens</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Cieslak</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Hart</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Classen&#x02010;Bockhoff</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>. <year>2016</year>
+<article-title>Modeling dense inflorescences</article-title>. <source>ACM Transactions on Graphics</source>
+<volume>35</volume>: <fpage>136</fpage>.</mixed-citation></ref><ref id="nph14449-bib-0069"><mixed-citation publication-type="journal" id="nph14449-cit-0069">
+<string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>de Reuille</surname>
+<given-names>PB</given-names>
+</string-name>. <year>2010</year>
+<article-title>Constraints of space in plant development</article-title>. <source>Journal of Experimental Botany</source>
+<volume>61</volume>: <fpage>2117</fpage>&#x02013;<lpage>2129</lpage>.<pub-id pub-id-type="pmid">20388746</pub-id></mixed-citation></ref><ref id="nph14449-bib-0070"><mixed-citation publication-type="book" id="nph14449-cit-0070">
+<string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Lane</surname>
+<given-names>B</given-names>
+</string-name>. <year>2013</year>
+<chapter-title>Modeling morphogenesis in multicellular structures with cell complexes and L&#x02010;systems</chapter-title> In: <person-group person-group-type="editor"><name><surname>Capasso</surname><given-names>V</given-names></name></person-group>, <person-group person-group-type="editor"><name><surname>Gromov</surname><given-names>M</given-names></name></person-group>, <person-group person-group-type="editor"><name><surname>Harel&#x02010;Bellan</surname><given-names>A</given-names></name></person-group>, <person-group person-group-type="editor"><name><surname>Morozova</surname><given-names>N</given-names></name></person-group>, <person-group person-group-type="editor"><name><surname>Pritchard</surname><given-names>L</given-names></name></person-group>, eds. <source>Pattern formation in morphogenesis</source>. <publisher-loc>Berlin, Germany</publisher-loc>: <publisher-name>Springer</publisher-name>, <fpage>137</fpage>&#x02013;<lpage>151</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0071"><mixed-citation publication-type="journal" id="nph14449-cit-0071">
+<string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Runions</surname>
+<given-names>A</given-names>
+</string-name>. <year>2012</year>
+<article-title>Computational models of plant development and form</article-title>. <source>New Phytologist</source>
+<volume>193</volume>: <fpage>549</fpage>&#x02013;<lpage>569</lpage>.<pub-id pub-id-type="pmid">22235985</pub-id></mixed-citation></ref><ref id="nph14449-bib-0072"><mixed-citation publication-type="journal" id="nph14449-cit-0072">
+<string-name>
+<surname>Rast&#x02010;Somssich</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Broholm</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Jenkins</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Canales</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Vlad</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Kwantes</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Bilsborough</surname>
+<given-names>G</given-names>
+</string-name>, <string-name>
+<surname>Dello Ioio</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Ewing</surname>
+<given-names>RM</given-names>
+</string-name>, <string-name>
+<surname>Laufs</surname>
+<given-names>P</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic>
+<year>2015</year>
+<article-title>Alternate wiring of a <italic>KNOXI</italic> genetic network underlies differences in leaf development of <italic>A. thaliana</italic> and <italic>C. hirsuta</italic>
+</article-title>. <source>Genes &#x00026; Development</source>
+<volume>29</volume>: <fpage>2391</fpage>&#x02013;<lpage>2404</lpage>.<pub-id pub-id-type="pmid">26588991</pub-id></mixed-citation></ref><ref id="nph14449-bib-0073"><mixed-citation publication-type="journal" id="nph14449-cit-0073">
+<string-name>
+<surname>Reinhardt</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Pesce</surname>
+<given-names>E&#x02010;R</given-names>
+</string-name>, <string-name>
+<surname>Stieger</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Mandel</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Baltensperger</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Bennett</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Traas</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Friml</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Kuhlemeier</surname>
+<given-names>C</given-names>
+</string-name>. <year>2003</year>
+<article-title>Regulation of phyllotaxis by polar auxin transport</article-title>. <source>Nature</source>
+<volume>426</volume>: <fpage>255</fpage>&#x02013;<lpage>260</lpage>.<pub-id pub-id-type="pmid">14628043</pub-id></mixed-citation></ref><ref id="nph14449-bib-0074"><mixed-citation publication-type="journal" id="nph14449-cit-0074">
+<string-name>
+<surname>Richards</surname>
+<given-names>O</given-names>
+</string-name>, <string-name>
+<surname>Kavanagh</surname>
+<given-names>A</given-names>
+</string-name>. <year>1943</year>
+<article-title>The analysis of the relative growth gradients and changing form of growing organisms</article-title>. <source>American Naturalist</source>
+<volume>77</volume>: <fpage>385</fpage>&#x02013;<lpage>399</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0075"><mixed-citation publication-type="journal" id="nph14449-cit-0075">
+<string-name>
+<surname>Richardson</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Rebocho</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Coen</surname>
+<given-names>E</given-names>
+</string-name>. <year>2016</year>
+<article-title>Ectopic <italic>KNOX</italic> expression affects plant development by altering tissue cell polarity and identity</article-title>. <source>Plant Cell</source>
+<volume>33</volume>: <fpage>2079</fpage>&#x02013;<lpage>2096</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0076"><mixed-citation publication-type="book" id="nph14449-cit-0076">
+<string-name>
+<surname>Rodkaew</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Chongstitvatana</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Siripant</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Lursinsap</surname>
+<given-names>C</given-names>
+</string-name>. <year>2003</year>
+<chapter-title>Particle systems for plant modeling</chapter-title> In: <person-group person-group-type="editor"><name><surname>Hu</surname><given-names>B&#x02010;G</given-names></name></person-group>, <person-group person-group-type="editor"><name><surname>Jaeger</surname><given-names>M</given-names></name></person-group>, eds. <source>Plant growth modeling and applications. Proceedings of PMA03</source>. <publisher-loc>Beijing, China</publisher-loc>: <publisher-name>Tsinghua University Press and Springer</publisher-name>, <fpage>210</fpage>&#x02013;<lpage>217</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0077"><mixed-citation publication-type="journal" id="nph14449-cit-0077">
+<string-name>
+<surname>Rubio&#x02010;Somoza</surname>
+<given-names>I</given-names>
+</string-name>, <string-name>
+<surname>Zhou</surname>
+<given-names>C&#x02010;M</given-names>
+</string-name>, <string-name>
+<surname>Confraria</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Martinho</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Born</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Baena&#x02010;Gonzalez</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Wang</surname>
+<given-names>J&#x02010;W</given-names>
+</string-name>, <string-name>
+<surname>Weigel</surname>
+<given-names>D</given-names>
+</string-name>. <year>2014</year>
+<article-title>Temporal control of leaf complexity by miRNA&#x02010;regulated licensing of protein complexes</article-title>. <source>Current Biology</source>
+<volume>24</volume>: <fpage>2714</fpage>&#x02013;<lpage>2719</lpage>.<pub-id pub-id-type="pmid">25448000</pub-id></mixed-citation></ref><ref id="nph14449-bib-0078"><mixed-citation publication-type="journal" id="nph14449-cit-0078">
+<string-name>
+<surname>Runions</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Fuhrer</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Lane</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Federl</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Rolland&#x02010;Lagan</surname>
+<given-names>A&#x02010;G</given-names>
+</string-name>, <string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>. <year>2005</year>
+<article-title>Modeling and visualization of leaf venation patterns</article-title>. <source>ACM Transactions on Graphics</source>
+<volume>24</volume>: <fpage>702</fpage>&#x02013;<lpage>711</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0079"><mixed-citation publication-type="book" id="nph14449-cit-0079">
+<string-name>
+<surname>Runions</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Smith</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>. <year>2014</year>
+<chapter-title>Computational models of auxin&#x02010;driven development</chapter-title> In: <person-group person-group-type="editor"><name><surname>Za&#x0017e;&#x000ed;malov&#x000e1;</surname><given-names>E</given-names></name></person-group>, <person-group person-group-type="editor"><name><surname>Petr&#x000e1;&#x00161;ek</surname><given-names>J</given-names></name></person-group>, <person-group person-group-type="editor"><name><surname>Benkov&#x000e1;</surname><given-names>E</given-names></name></person-group>, eds. <source>Auxin and its role in plant development</source>. <publisher-loc>Wien, Austria</publisher-loc>: <publisher-name>Springer</publisher-name>, <fpage>315</fpage>&#x02013;<lpage>357</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0080"><mixed-citation publication-type="journal" id="nph14449-cit-0080">
+<string-name>
+<surname>Sachs</surname>
+<given-names>T</given-names>
+</string-name>. <year>1981</year>
+<article-title>The control of patterned differentiation of vascular tissues</article-title>. <source>Advances in Botanical Research</source>
+<volume>9</volume>: <fpage>151</fpage>&#x02013;<lpage>262</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0081"><mixed-citation publication-type="journal" id="nph14449-cit-0081">
+<string-name>
+<surname>Sachs</surname>
+<given-names>T</given-names>
+</string-name>. <year>2003</year>
+<article-title>Collective specification of cellular development</article-title>. <source>BioEssays</source>
+<volume>25</volume>: <fpage>897</fpage>&#x02013;<lpage>903</lpage>.<pub-id pub-id-type="pmid">12938179</pub-id></mixed-citation></ref><ref id="nph14449-bib-0082"><mixed-citation publication-type="journal" id="nph14449-cit-0082">
+<string-name>
+<surname>Sack</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Scoffoni</surname>
+<given-names>C</given-names>
+</string-name>. <year>2013</year>
+<article-title>Leaf venation: structure, function, development, evolution, ecology and applications in the past, present and future</article-title>. <source>New Phytologist</source>
+<volume>198</volume>: <fpage>983</fpage>&#x02013;<lpage>1000</lpage>.<pub-id pub-id-type="pmid">23600478</pub-id></mixed-citation></ref><ref id="nph14449-bib-0083"><mixed-citation publication-type="journal" id="nph14449-cit-0083">
+<string-name>
+<surname>Scarpella</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Barkoulas</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Tsiantis</surname>
+<given-names>M</given-names>
+</string-name>. <year>2010</year>
+<article-title>Control of leaf and vein development by auxin</article-title>. <source>Cold Spring Harbor Perspectives in Biology</source>
+<volume>2</volume>: <fpage>a001511</fpage>.<pub-id pub-id-type="pmid">20182604</pub-id></mixed-citation></ref><ref id="nph14449-bib-0084"><mixed-citation publication-type="journal" id="nph14449-cit-0084">
+<string-name>
+<surname>Scarpella</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Marcos</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Friml</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Berleth</surname>
+<given-names>T</given-names>
+</string-name>. <year>2006</year>
+<article-title>Control of leaf vascular patterning by polar auxin transport</article-title>. <source>Genes &#x00026; Development</source>
+<volume>20</volume>: <fpage>1015</fpage>&#x02013;<lpage>1027</lpage>.<pub-id pub-id-type="pmid">16618807</pub-id></mixed-citation></ref><ref id="nph14449-bib-0085"><mixed-citation publication-type="journal" id="nph14449-cit-0085">
+<string-name>
+<surname>Sharon</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Roman</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Swinney</surname>
+<given-names>H</given-names>
+</string-name>. <year>2007</year>
+<article-title>Geometrically driven wrinkling observed in free plastic sheets and leaves</article-title>. <source>Physical Review E</source>
+<volume>75</volume>: <fpage>046211</fpage>.</mixed-citation></ref><ref id="nph14449-bib-0086"><mixed-citation publication-type="journal" id="nph14449-cit-0086">
+<string-name>
+<surname>Sicard</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Thamm</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Marona</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Lee</surname>
+<given-names>YW</given-names>
+</string-name>, <string-name>
+<surname>Wahl</surname>
+<given-names>V</given-names>
+</string-name>, <string-name>
+<surname>Stinchcombe</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Wright</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Kappel</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Lenhard</surname>
+<given-names>M</given-names>
+</string-name>. <year>2014</year>
+<article-title>Repeated evolutionary changes of leaf morphology caused by mutations to a homeobox gene</article-title>. <source>Current Biology</source>
+<volume>24</volume>: <fpage>1880</fpage>&#x02013;<lpage>1886</lpage>.<pub-id pub-id-type="pmid">25127212</pub-id></mixed-citation></ref><ref id="nph14449-bib-0087"><mixed-citation publication-type="journal" id="nph14449-cit-0087">
+<string-name>
+<surname>Smith</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Guyomarc'h</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Mandel</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Reinhardt</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Kuhlemeier</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Prusinkiewicz</surname>
+<given-names>P</given-names>
+</string-name>. <year>2006</year>
+<article-title>A plausible model of phyllotaxis</article-title>. <source>Proceedings of the National Academy of Sciences, USA</source>
+<volume>103</volume>: <fpage>1301</fpage>&#x02013;<lpage>1306</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0088"><mixed-citation publication-type="journal" id="nph14449-cit-0088">
+<string-name>
+<surname>Tameshige</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Okamoto</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Lee</surname>
+<given-names>JS</given-names>
+</string-name>, <string-name>
+<surname>Aida</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Tasaka</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Torii</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Uchida</surname>
+<given-names>N</given-names>
+</string-name>. <year>2016</year>
+<article-title>A secreted peptide and its receptors shape the auxin response pattern and leaf margin morphogenesis</article-title>. <source>Current Biology</source>
+<volume>26</volume>: <fpage>1</fpage>&#x02013;<lpage>8</lpage>.<pub-id pub-id-type="pmid">26725201</pub-id></mixed-citation></ref><ref id="nph14449-bib-0089"><mixed-citation publication-type="journal" id="nph14449-cit-0089">
+<string-name>
+<surname>Turing</surname>
+<given-names>AM</given-names>
+</string-name>. <year>1952</year>
+<article-title>The chemical basis of morphogenesis</article-title>. <source>Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences</source>
+<volume>237</volume>: <fpage>37</fpage>&#x02013;<lpage>72</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0090"><mixed-citation publication-type="journal" id="nph14449-cit-0090">
+<string-name>
+<surname>Van Volkenburgh</surname>
+<given-names>E</given-names>
+</string-name>. <year>1999</year>
+<article-title>Leaf expansion &#x02013; an integrating plant behaviour</article-title>. <source>Plant, Cell &#x00026; Environment</source>
+<volume>22</volume>: <fpage>1463</fpage>&#x02013;<lpage>1473</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0091"><mixed-citation publication-type="journal" id="nph14449-cit-0091">
+<string-name>
+<surname>Vlad</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Kierzkowski</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Rast</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Vuolo</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Dello Ioio</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Galinha</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Gan</surname>
+<given-names>X</given-names>
+</string-name>, <string-name>
+<surname>Hajheidari</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Hay</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Smith</surname>
+<given-names>R</given-names>
+</string-name>
+<italic>et&#x000a0;al</italic>
+<year>2014</year>
+<article-title>Leaf shape evolution through duplication, regulatory diversification, and loss of a homeobox gene</article-title>. <source>Science</source>
+<volume>343</volume>: <fpage>780</fpage>&#x02013;<lpage>783</lpage>.<pub-id pub-id-type="pmid">24531971</pub-id></mixed-citation></ref><ref id="nph14449-bib-0092"><mixed-citation publication-type="journal" id="nph14449-cit-0092">
+<string-name>
+<surname>Wolfram</surname>
+<given-names>S</given-names>
+</string-name>. <year>1984</year>
+<article-title>Universality and complexity in cellular automata</article-title>. <source>Physica D: Nonlinear Phenomena</source>
+<volume>10</volume>: <fpage>1</fpage>&#x02013;<lpage>35</lpage>.</mixed-citation></ref><ref id="nph14449-bib-0093"><mixed-citation publication-type="journal" id="nph14449-cit-0093">
+<string-name>
+<surname>Zimmermann</surname>
+<given-names>W</given-names>
+</string-name>. <year>1952</year>
+<article-title>Main results of the &#x02018;telome theory&#x02019;</article-title>. <source>Paleobotanist</source>
+<volume>1</volume>: <fpage>456</fpage>&#x02013;<lpage>570</lpage>.</mixed-citation></ref></ref-list></back></article>

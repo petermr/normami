@@ -1,0 +1,687 @@
+{
+  "id": [
+    "25946015"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "25946015"
+  ],
+  "pmcid": [
+    "PMC4422737"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0125514"
+  ],
+  "title": [
+    "Cesium Toxicity Alters MicroRNA Processing and AGO1 Expressions in Arabidopsis thaliana."
+  ],
+  "authorString": [
+    "Jung IL, Ryu M, Cho SK, Shah P, Lee JH, Bae H, Kim IG, Yang SW."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Jung IL"
+          ],
+          "firstName": [
+            "Il Lae"
+          ],
+          "lastName": [
+            "Jung"
+          ],
+          "initials": [
+            "IL"
+          ],
+          "affiliation": [
+            "Department of Radiation Biology, Environmental Radiation Research Group, Korea Atomic Energy Research Institute, Daejeon, 305-353, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Ryu M"
+          ],
+          "firstName": [
+            "Moonyoung"
+          ],
+          "lastName": [
+            "Ryu"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Department of Plant and Environmental Sciences, Faculty of Science, University of Copenhagen, Thorvaldsensvej 40, DK-1871, Frederiksberg, Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Cho SK"
+          ],
+          "firstName": [
+            "Seok Keun"
+          ],
+          "lastName": [
+            "Cho"
+          ],
+          "initials": [
+            "SK"
+          ],
+          "affiliation": [
+            "Department of Plant and Environmental Sciences, Faculty of Science, University of Copenhagen, Thorvaldsensvej 40, DK-1871, Frederiksberg, Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Shah P"
+          ],
+          "firstName": [
+            "Pratik"
+          ],
+          "lastName": [
+            "Shah"
+          ],
+          "initials": [
+            "P"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4755-1267",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Plant and Environmental Sciences, Faculty of Science, University of Copenhagen, Thorvaldsensvej 40, DK-1871, Frederiksberg, Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Lee JH"
+          ],
+          "firstName": [
+            "Ju Hye"
+          ],
+          "lastName": [
+            "Lee"
+          ],
+          "initials": [
+            "JH"
+          ],
+          "affiliation": [
+            "Department of Radiation Biology, Environmental Radiation Research Group, Korea Atomic Energy Research Institute, Daejeon, 305-353, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Bae H"
+          ],
+          "firstName": [
+            "Hansol"
+          ],
+          "lastName": [
+            "Bae"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "Department of Plant and Environmental Sciences, Faculty of Science, University of Copenhagen, Thorvaldsensvej 40, DK-1871, Frederiksberg, Copenhagen, Denmark."
+          ]
+        },
+        {
+          "fullName": [
+            "Kim IG"
+          ],
+          "firstName": [
+            "In Gyu"
+          ],
+          "lastName": [
+            "Kim"
+          ],
+          "initials": [
+            "IG"
+          ],
+          "affiliation": [
+            "Department of Radiation Biology, Environmental Radiation Research Group, Korea Atomic Energy Research Institute, Daejeon, 305-353, Republic of Korea."
+          ]
+        },
+        {
+          "fullName": [
+            "Yang SW"
+          ],
+          "firstName": [
+            "Seong Wook"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "SW"
+          ],
+          "affiliation": [
+            "Department of Plant and Environmental Sciences, Faculty of Science, University of Copenhagen, Thorvaldsensvej 40, DK-1871, Frederiksberg, Copenhagen, Denmark."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-4755-1267",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "5"
+      ],
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "2278532"
+      ],
+      "dateOfPublication": [
+        "2015"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "e0125514"
+  ],
+  "abstractText": [
+    "MicroRNAs (miRNAs) are short RNA fragments that play important roles in controlled gene silencing, thus regulating many biological processes in plants. Recent studies have indicated that plants modulate miRNAs to sustain their survival in response to a variety of environmental stimuli, such as biotic stresses, cold, drought, nutritional starvation, and toxic heavy metals. Cesium and radio-cesium contaminations have arisen as serious problems that both impede plant growth and enter the food chain through contaminated plants. Many studies have been performed to define plant responses against cesium intoxication. However, the complete profile of miRNAs in plants during cesium intoxication has not been established. Here we show the differential expression of the miRNAs that are mostly down-regulated during cesium intoxication. Furthermore, we found that cesium toxicity disrupts both the processing of pri-miRNAs and AGONOUTE 1 (AGO1)-mediated gene silencing. AGO 1 seems to be especially destabilized by cesium toxicity, possibly through a proteolytic regulatory pathway. Our study presents a comprehensive profile of cesium-responsive miRNAs, which is distinct from that of potassium, and suggests two possible mechanisms underlying the cesium toxicity on miRNA metabolism."
+  ],
+  "affiliation": [
+    "Department of Radiation Biology, Environmental Radiation Research Group, Korea Atomic Energy Research Institute, Daejeon, 305-353, Republic of Korea."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Roots"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cesium"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "TO"
+                  ],
+                  "qualifierName": [
+                    "toxicity"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Potassium"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "TO"
+                  ],
+                  "qualifierName": [
+                    "toxicity"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Argonaute Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "AGO1 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Argonaute Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Potassium"
+          ],
+          "registryNumber": [
+            "RWP5GA015D"
+          ]
+        },
+        {
+          "name": [
+            "Cesium"
+          ],
+          "registryNumber": [
+            "1KSV9V4Y4I"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4422737?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4422737"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0125514"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-04-25"
+  ],
+  "dateOfCreation": [
+    "2015-05-07"
+  ],
+  "dateOfRevision": [
+    "2015-05-13"
+  ],
+  "electronicPublicationDate": [
+    "2015-05-06"
+  ],
+  "firstPublicationDate": [
+    "2015-05-06"
+  ]
+}

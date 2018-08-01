@@ -1,0 +1,592 @@
+{
+  "id": [
+    "27542984"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27542984"
+  ],
+  "pmcid": [
+    "PMC4992245"
+  ],
+  "doi": [
+    "10.1186/s12870-016-0867-4"
+  ],
+  "title": [
+    "Ubiquitous miR159 repression of MYB33/65 in Arabidopsis rosettes is robust and is not perturbed by a wide range of stresses."
+  ],
+  "authorString": [
+    "Li Y, Alonso-Peral M, Wong G, Wang MB, Millar AA."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Li Y"
+          ],
+          "firstName": [
+            "Yanjiao"
+          ],
+          "lastName": [
+            "Li"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Plant Science Division, Research School of Biology, Australian National University, Canberra, 2601, ACT, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Alonso-Peral M"
+          ],
+          "firstName": [
+            "Maria"
+          ],
+          "lastName": [
+            "Alonso-Peral"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Plant Science Division, Research School of Biology, Australian National University, Canberra, 2601, ACT, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Wong G"
+          ],
+          "firstName": [
+            "Gigi"
+          ],
+          "lastName": [
+            "Wong"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Plant Science Division, Research School of Biology, Australian National University, Canberra, 2601, ACT, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang MB"
+          ],
+          "firstName": [
+            "Ming-Bo"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "MB"
+          ],
+          "affiliation": [
+            "CSIRO, Agriculture, Canberra, 2601, ACT, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Millar AA"
+          ],
+          "firstName": [
+            "Anthony A"
+          ],
+          "lastName": [
+            "Millar"
+          ],
+          "initials": [
+            "AA"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6668-1326",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Plant Science Division, Research School of Biology, Australian National University, Canberra, 2601, ACT, Australia. tony.millar@anu.edu.au."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-6668-1326",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "16"
+      ],
+      "journalIssueId": [
+        "2518853"
+      ],
+      "dateOfPublication": [
+        "2016 Aug"
+      ],
+      "monthOfPublication": [
+        "8"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-08-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC plant biology"
+          ],
+          "ISOAbbreviation": [
+            "BMC Plant Biol."
+          ],
+          "medlineAbbreviation": [
+            "BMC Plant Biol"
+          ],
+          "NLMid": [
+            "100967807"
+          ],
+          "ISSN": [
+            "1471-2229"
+          ],
+          "ESSN": [
+            "1471-2229"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "179"
+  ],
+  "abstractText": [
+    "The microR159 (miR159) - GAMYB pathway is conserved in higher plants, where GAMYB, expression promotes programmed cell death in seeds (aleurone) and anthers (tapetum). In cereals, restriction of GAMYB expression to seeds and anthers is mainly achieved transcriptionally, whereas in Arabidopsis this is achieved post-transcriptionally, as miR159 silences GAMYB (MYB33 and MYB65) in vegetative tissues, but not in seeds and anthers. However, we cannot rule out a role for miR159-MYB33/65 pathway in Arabidopsis vegetative tissues; a loss-of-function mir159 Arabidopsis mutant displays strong pleiotropic defects and numerous reports have documented changes in miR159 abundance during stress and hormone treatments. Hence, we have investigated the functional role of this pathway in vegetative tissues.It was found that the miR159-MYB33/65 pathway was ubiquitously present throughout rosette development. However, miR159 appears to continuously repress MYB33/MYB65 expression to levels that have no major impact on rosette development. Inducible inhibition of miR159 resulted in MYB33/65 de-repression and associated phenotypic defects, indicating that a potential role in vegetative development is only possible through MYB33 and MYB65 if miR159 levels decrease. However, miR159 silencing of MYB33/65 appeared extremely robust; no tested abiotic stress resulted in strong miR159 repression. Consistent with this, the stress responses of an Arabidopsis mutant lacking the miR159-MYB33/65 pathway were indistinguishable from wild-type. Moreover, expression of viral silencing suppressors, either via transgenesis or viral infection, was unable to prevent miR159 repression of MYB33/65, highlighting the robustness of miR159-mediated silencing.Despite being ubiquitously present, molecular, genetic and physiological analysis failed to find a major functional role for the miR159-MYB33/65 pathway in Arabidopsis rosette development or stress response. Although it is likely that this pathway is important for a stress not tested here or in different plant species, our findings argue against the miR159-MYB33/65 pathway playing a major conserved role in general stress response. Finally, in light of the robustness of miR159-mediated repression of MYB33/65, it appears unlikely that low fold-level changes of miR159 abundance in response to stress would have any major physiological impact in Arabidopsis."
+  ],
+  "affiliation": [
+    "Plant Science Division, Research School of Biology, Australian National University, Canberra, 2601, ACT, Australia."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Ubiquitination"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Arabidopsis",
+        "Stress",
+        "Mir159",
+        "Gamyb-like",
+        "Viral Silencing Suppressors"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MIRN159 microRNA, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Myb33 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Myb65 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4992245?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4992245"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12870-016-0867-4"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "2"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2017-08-18"
+  ],
+  "dateOfCreation": [
+    "2016-08-21"
+  ],
+  "dateOfRevision": [
+    "2017-12-20"
+  ],
+  "electronicPublicationDate": [
+    "2016-08-19"
+  ],
+  "firstPublicationDate": [
+    "2016-08-19"
+  ]
+}

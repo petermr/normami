@@ -1,0 +1,683 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName archivearticle3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Plant J</journal-id><journal-id journal-id-type="iso-abbrev">Plant J</journal-id><journal-id journal-id-type="doi">10.1111/(ISSN)1365-313X</journal-id><journal-id journal-id-type="publisher-id">TPJ</journal-id><journal-title-group><journal-title>The Plant Journal</journal-title></journal-title-group><issn pub-type="ppub">0960-7412</issn><issn pub-type="epub">1365-313X</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5215551</article-id><article-id pub-id-type="doi">10.1111/tpj.13313</article-id><article-id pub-id-type="publisher-id">TPJ13313</article-id><article-categories><subj-group subj-group-type="overline"><subject>Original Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Featured Article</subject></subj-group></article-categories><title-group><article-title>Functional characterization of Arabidopsis phototropin 1 in the hypocotyl apex</article-title><alt-title alt-title-type="left-running-head">Stuart Sullivan et&#x000a0;al.</alt-title></title-group><contrib-group><contrib id="tpj13313-cr-0001" contrib-type="author"><name><surname>Sullivan</surname><given-names>Stuart</given-names></name><xref ref-type="aff" rid="tpj13313-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="tpj13313-cr-0002" contrib-type="author"><name><surname>Takemiya</surname><given-names>Atsushi</given-names></name><xref ref-type="aff" rid="tpj13313-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="tpj13313-curr-0001">
+<sup>4</sup>
+</xref></contrib><contrib id="tpj13313-cr-0003" contrib-type="author"><name><surname>Kharshiing</surname><given-names>Eros</given-names></name><xref ref-type="aff" rid="tpj13313-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="tpj13313-aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib id="tpj13313-cr-0004" contrib-type="author"><name><surname>Cloix</surname><given-names>Catherine</given-names></name><xref ref-type="aff" rid="tpj13313-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="tpj13313-curr-0002">
+<sup>5</sup>
+</xref></contrib><contrib id="tpj13313-cr-0005" contrib-type="author"><name><surname>Shimazaki</surname><given-names>Ken&#x02010;ichiro</given-names></name><xref ref-type="aff" rid="tpj13313-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="tpj13313-cr-0006" contrib-type="author" corresp="yes"><name><surname>Christie</surname><given-names>John M.</given-names></name><address><email>john.christie@glasgow.ac.uk</email></address><xref ref-type="aff" rid="tpj13313-aff-0001">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="tpj13313-aff-0001"><label><sup>1</sup></label><named-content content-type="organisation-division">Institute of Molecular, Cell and Systems Biology</named-content><institution>College of Medical, Veterinary and Life Sciences</institution><institution>University of Glasgow</institution><named-content content-type="street">Bower Building</named-content><named-content content-type="city">Glasgow</named-content><named-content content-type="post-code">G12 8QQ</named-content><country country="GB">UK</country></aff><aff id="tpj13313-aff-0002"><label><sup>2</sup></label><named-content content-type="organisation-division">Department of Biology</named-content><named-content content-type="organisation-division">Faculty of Science</named-content><institution>Kyushu University</institution><named-content content-type="street">744 Motooka, Nishi&#x02010;ku</named-content><named-content content-type="city">Fukuoka</named-content><named-content content-type="post-code">819&#x02010;395</named-content><country country="JP">Japan</country></aff><aff id="tpj13313-aff-0003"><label><sup>3</sup></label><named-content content-type="organisation-division">Department of Botany</named-content><institution>St. Edmund's College</institution><named-content content-type="city">Shillong</named-content><named-content content-type="post-code">793003</named-content><named-content content-type="country-part">Meghalaya</named-content><country country="IN">India</country></aff><aff id="tpj13313-curr-0001"><label><sup>4</sup></label>Present address: <named-content content-type="organisation-division">Graduate School of Sciences and Technology for Innovation</named-content><institution>Yamaguchi University</institution><named-content content-type="street">1677&#x02010;1 Yoshida</named-content><named-content content-type="city">Yamaguchi</named-content><named-content content-type="post-code">753&#x02010;8512</named-content><country country="JP">Japan</country></aff><aff id="tpj13313-curr-0002"><label><sup>5</sup></label>Present address: <institution>Beatson Institute for Cancer Research</institution><named-content content-type="street">Garscube Estate, Switchback Road</named-content><named-content content-type="city">Bearsden, Glasgow</named-content><named-content content-type="post-code">G61 1BD</named-content><country country="GB">UK</country></aff><author-notes><corresp id="correspondenceTo"><label>*</label>For correspondence (e&#x02010;mail <email>john.christie@glasgow.ac.uk</email>).</corresp></author-notes><pub-date pub-type="epub"><day>14</day><month>10</month><year>2016</year></pub-date><pub-date pub-type="ppub"><month>12</month><year>2016</year></pub-date><volume>88</volume><issue>6</issue><issue-id pub-id-type="doi">10.1111/tpj.2016.88.issue-6</issue-id><fpage>907</fpage><lpage>920</lpage><history><date date-type="received"><day>04</day><month>7</month><year>2016</year></date><date date-type="rev-recd"><day>15</day><month>8</month><year>2016</year></date><date date-type="accepted"><day>19</day><month>8</month><year>2016</year></date></history><permissions><!--<copyright-statement content-type="issue-copyright"> Copyright &#x000a9; 2016 John Wiley & Sons Ltd and the Society for Experimental Biology <copyright-statement>--><copyright-statement content-type="article-copyright">&#x000a9; 2016 The Authors. <italic>The Plant Journal</italic> published by Society for Experimental Biology and John Wiley &#x00026; Sons Ltd.</copyright-statement><license license-type="creativeCommonsBy"><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="file:TPJ-88-907.pdf"/><abstract id="tpj13313-abs-0001"><title>Summary</title><p>Phototropin (phot1) is a blue light&#x02010;activated plasma membrane&#x02010;associated kinase that acts as the principal photoreceptor for shoot phototropism in Arabidopsis in conjunction with the signalling component Non&#x02010;Phototropic Hypocotyl 3 (<styled-content style="fixed-case">NPH</styled-content>3). <italic><styled-content style="fixed-case">PHOT</styled-content>1</italic> is uniformly expressed throughout the Arabidopsis hypocotyl, yet decapitation experiments have localized the site of light perception to the upper hypocotyl. This prompted us to investigate in more detail the functional role of the hypocotyl apex, and the regions surrounding it, in establishing phototropism. We used a non&#x02010;invasive approach where <italic><styled-content style="fixed-case">PHOT</styled-content>1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> (<italic>P1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic>) expression was targeted to the hypocotyl apex of the phot&#x02010;deficient mutant using the promoters of <italic><styled-content style="fixed-case">CUP</styled-content>&#x02010;<styled-content style="fixed-case">SHAPED COTYLEDON</styled-content> 3</italic> (<italic><styled-content style="fixed-case">CUC</styled-content>3</italic>) and <italic><styled-content style="fixed-case">AINTEGUMENTA</styled-content></italic> (<italic><styled-content style="fixed-case">ANT</styled-content></italic>). Expression of <italic><styled-content style="fixed-case">CUC</styled-content>3::P1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> was clearly visible at the hypocotyl apex, with weaker expression in the cotyledons, whereas <italic><styled-content style="fixed-case">ANT</styled-content>::P1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> was specifically targeted to the developing leaves. Both lines showed impaired curvature to 0.005&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> unilateral blue light, indicating that regions below the apical meristem are necessary for phototropism. Curvature was however apparent at higher fluence rates. Moreover, <italic><styled-content style="fixed-case">CUC</styled-content>3::P1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> partially or fully complemented petiole positioning, leaf flattening and chloroplast accumulation, but not stomatal opening. Yet, tissue analysis of <styled-content style="fixed-case">NPH</styled-content>3 de&#x02010;phosphorylation showed that <italic><styled-content style="fixed-case">CUC</styled-content>3::P1&#x02013;<styled-content style="fixed-case">GFP</styled-content> and <styled-content style="fixed-case">ANT</styled-content>::P1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> mis&#x02010;express very low levels of phot1 that likely account for this responsiveness. Our spatial targeting approach therefore excludes the hypocotyl apex as the site for light perception for phototropism and shows that phot1&#x02010;mediated <styled-content style="fixed-case">NPH</styled-content>3 de&#x02010;phosphorylation is tissue autonomous and occurs more prominently in the basal hypocotyl.</p></abstract><abstract abstract-type="short" id="tpj13313-abs-0002"><title>Significance Statement</title><p>Phototropism in Arabidopsis is mediated by the blue light receptor phototropin 1 (phot1), a plasma membrane&#x02010;associated kinase. Here we examined which tissues are important for establishing phototropism and other phot1&#x02010;mediated processes. Using targeted expression analysis of <italic>PHOT1,</italic> we excluded the hypocotyl apex as the site for light perception and showed that de&#x02010;phosphorylation of the phot1&#x02010;interacting protein NPH3 is tissue autonomous and occurs more prominently in the basal hypocotyl.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="tpj13313-kwd-0001"><italic>Arabidopsis thaliana</italic></kwd><kwd id="tpj13313-kwd-0002"><styled-content style="fixed-case">NPH</styled-content>3</kwd><kwd id="tpj13313-kwd-0003">phosphorylation</kwd><kwd id="tpj13313-kwd-0004">phototropin</kwd><kwd id="tpj13313-kwd-0005">phototropism</kwd><kwd id="tpj13313-kwd-0006">spatial expression</kwd></kwd-group><funding-group><award-group><funding-source>UK Biotechnology and Biological Sciences Research Council</funding-source><award-id>BB/J016047/1</award-id><award-id>BB/M002128/1</award-id></award-group></funding-group><funding-group><award-group><funding-source>Department of Biotechnology</funding-source></award-group></funding-group><counts><fig-count count="6"/><table-count count="0"/><page-count count="14"/><word-count count="8788"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>tpj13313</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>December 2016</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:5.0.0 mode:remove_FC converted:05.01.2017</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="tpj13313-sec-0001"><title>Introduction</title><p>Light is an important environmental stimulus that regulates numerous aspects of plant growth and development. Phototropism, the re&#x02010;orientation of shoot growth towards a directional light source, is important during germination to promote light capture and early seedling growth, as well as photomorphogenesis (Christie and Murphy, <xref rid="tpj13313-bib-0005" ref-type="ref">2013</xref>; Fankhauser and Christie, <xref rid="tpj13313-bib-0017" ref-type="ref">2015</xref>). Traditionally, dark&#x02010;grown (etiolated) seedlings are used to study phototropism in both monocotyledonous and dicotyledonous species (Christie and Murphy, <xref rid="tpj13313-bib-0005" ref-type="ref">2013</xref>). Recent studies using the model flowering plant, <italic>Arabidopsis thaliana</italic> have extended this analysis to light&#x02010;grown (de&#x02010;etiolated) seedlings which show retained phototropic responsiveness (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0008" ref-type="ref">2011</xref>; Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>, <xref rid="tpj13313-bib-0038" ref-type="ref">2015</xref>) Yet, despite over a decade of research, the signalling mechanisms underlying this differential growth response remain largely unresolved.</p><p>Much of our understanding of the photodetection mechanisms responsible for phototropism has come from the isolation of Arabidopsis mutants with impaired phototropic responses (Sakai and Haga, <xref rid="tpj13313-bib-0040" ref-type="ref">2012</xref>; Briggs, <xref rid="tpj13313-bib-0001" ref-type="ref">2014</xref>; Liscum <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0033" ref-type="ref">2014</xref>). Hypocotyl phototropism in Arabidopsis is induced by UV&#x02010;A/blue wavelengths (320&#x02013;500&#x000a0;nm) and is perceived by plasma membrane&#x02010;associated photoreceptors known as the phototropins (Christie, <xref rid="tpj13313-bib-0004" ref-type="ref">2007</xref>; Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0009" ref-type="ref">2015</xref>). Arabidopsis, like all flowering plants, contains two phototropins (phot1 and phot2) which overlap in function to regulate hypocotyl phototropism. Phot1 is the main phototropic receptor mediating curvature to low (&#x02264;1&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) and high (&#x0003e;1&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) fluence rates of blue light, whereas phot2 functions predominantly at higher light intensities (Sakai <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0041" ref-type="ref">2001</xref>). Blue light detection via the cryptochrome blue light receptors also contributes to regulating phototropic responsiveness in Arabidopsis (Whippo and Hangarter, <xref rid="tpj13313-bib-0055" ref-type="ref">2003</xref>). Similarly, it is well established that phytochrome can modulate hypocotyl curvature (Sakai and Haga, <xref rid="tpj13313-bib-0040" ref-type="ref">2012</xref>; Goyal <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0018" ref-type="ref">2013</xref>). For example, pre&#x02010;treatment of etiolated seedlings from above with red or blue light prior to directional blue light stimulation enhances the curvature response through the co&#x02010;action phyA (Sullivan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0500" ref-type="ref">2016a</xref>). Besides phototropism, phot1 and phot2 also act to control a range of other photomovement responses including leaf positioning, chloroplast relocation and stomatal opening (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0009" ref-type="ref">2015</xref>), all of which contribute to optimising photosynthetic light capture and promote growth under low light conditions (Takemiya <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0048" ref-type="ref">2005</xref>).</p><p>Phototropins are serine/threonine kinases that undergo autophosphorylation in response to blue light activation (Christie, <xref rid="tpj13313-bib-0004" ref-type="ref">2007</xref>; Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0009" ref-type="ref">2015</xref>). The kinase domain of phototropin is located at the C&#x02010;terminus of the protein and belongs to the AGCVIII family (Willige and Chory, <xref rid="tpj13313-bib-0056" ref-type="ref">2015</xref>). Although autophosphorylation occurs on multiple residues throughout the protein (Inoue <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0023" ref-type="ref">2008a</xref>; Sullivan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0045" ref-type="ref">2008</xref>), phosphorylation of sites within the activation loop of the kinase domain have been reported to be essential for phototropin function (Inoue <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0023" ref-type="ref">2008a</xref>, <xref rid="tpj13313-bib-0025" ref-type="ref">2011</xref>). Light regulation of phototropin kinase activity is mediated by the N&#x02010;terminus of the protein which contains two specialised PAS domains designated LOV1 and LOV2 (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0006" ref-type="ref">1999</xref>). Both light, oxygen, or voltage (LOV) domains serve as binding sites for the chromophore flavin mononucleotide, but several lines of evidence have shown that LOV2 functions as the predominant light sensor (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0007" ref-type="ref">2002</xref>; Cho <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0003" ref-type="ref">2007</xref>; Kaiserli <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0027" ref-type="ref">2009</xref>). LOV1, conversely, appears to play a minor role in photodetection (Cho <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0003" ref-type="ref">2007</xref>; Suetsugu <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0044" ref-type="ref">2013</xref>), rather acting to modulate the regulatory action of LOV2 on phototropin kinase activity (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0007" ref-type="ref">2002</xref>; Okajima <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0035" ref-type="ref">2014</xref>).</p><p>While much is known with respect to phototropin activation by blue light, the signalling mechanisms following receptor autophosphorylation are less well defined. Phototropic curvature ultimately arises from an increase in cell elongation on the shaded side of the hypocotyl as a consequence of auxin accumulation (Christie and Murphy, <xref rid="tpj13313-bib-0005" ref-type="ref">2013</xref>; Fankhauser and Christie, <xref rid="tpj13313-bib-0017" ref-type="ref">2015</xref>). How phototropin coordinates this lateral redistribution of auxin in the hypocotyl remains unknown. Mutants lacking the phot1&#x02010;interacting protein, Non&#x02010;Phototropic Hypocotyl 3 (NPH3) are aphototropic (Liscum and Briggs, <xref rid="tpj13313-bib-0032" ref-type="ref">1995</xref>) and fail to show lateral auxin accumulation in response to phototropic stimulation (Haga <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0019" ref-type="ref">2005</xref>). Blue light activation of phot1 leads to rapid de&#x02010;phosphorylation of NPH3, which can be detected by immunoblotting owing to its enhanced electrophoretic mobility after blue light irradiation compared to a dark control (Pedmale and Liscum, <xref rid="tpj13313-bib-0036" ref-type="ref">2007</xref>). Although the biological significance of this de&#x02010;phosphorylation is not known, NPH3 is proposed to regulate auxin redistribution through ubiquitin&#x02010;mediated proteolysis or re&#x02010;localization of target proteins involved in auxin transport (Roberts <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0039" ref-type="ref">2011</xref>; Wan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0053" ref-type="ref">2012</xref>). A better understanding of NPH3 and its mechanism of action will therefore be key to unlocking the auxin transport mechanism(s) associated with phototropic growth and how these processes are initiated.</p><p>Imaging of auxin response sensors such as <italic>DR5::GFP</italic> has been used to assess the occurrence of auxin gradients in Arabidopsis hypocotyls following phototropic stimulation (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0008" ref-type="ref">2011</xref>; Ding <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0012" ref-type="ref">2011</xref>; Sakai and Haga, <xref rid="tpj13313-bib-0040" ref-type="ref">2012</xref>). Initiation of lateral auxin gradients has been observed in the upper hypocotyl of de&#x02010;etiolated seedlings (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0008" ref-type="ref">2011</xref>), implying that this region is important for light perception. Decapitation experiments concur with this conclusion as curvature is still observed when the cotyledons are excised (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0008" ref-type="ref">2011</xref>), but is reduced when the cotyledonary node, including the shoot apical meristem (SAM) and leaf primordia are removed (Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>). Similar decapitation experiments have been performed using etiolated seedlings and again localize the site of light perception to the upper hypocotyl (Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>; Yamamoto <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0057" ref-type="ref">2014</xref>).</p><p>Despite the importance of the upper hypocotyl in initiating phototropic growth, phot1 is localized throughout the seedling in Arabidopsis (Sakamoto and Briggs, <xref rid="tpj13313-bib-0042" ref-type="ref">2002</xref>). However, expression of <italic>PHOT1</italic> within the upper hypocotyl, under the control of the <italic>PHYTOCHROME KINASE SUBSTRATE 4 (PKS4)</italic> promoter or the <italic>CHLOROPHYLL A/B BINDING PROTEIN3</italic> (<italic>CAB3</italic>) promoter, has been shown to be sufficient to restore a phototropic response in etiolated seedlings (Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>). We therefore investigated how further restriction of <italic>PHOT1</italic> through tissues&#x02010;specific expression at regions within and surrounding the SAM, could impact its ability to initiate phototropic responses, as well as other phot1&#x02010;dependent processes in Arabidopsis.</p></sec><sec id="tpj13313-sec-0002"><title>Results</title><sec id="tpj13313-sec-0003"><title>Expression and localization of <italic>CUC3::PHOT1&#x02013;GFP</italic>
+</title><p>In order to target phot1 to the hypocotyl apex, the promoter of <italic>CUP&#x02010;SHAPED COTYLEDON 3</italic> (<italic>CUC3</italic>) was used to drive the expression of <italic>PHOT1</italic> translationally fused to the coding sequence of <italic>GFP</italic> (<italic>CUC3::P1&#x02013;GFP</italic>). <italic>CUC3</italic> is a NAC (<italic>NAM/ATAF1,2/CUC2</italic>) transcription factor required for boundary and shoot meristem formation and is expressed in the seedling apex at the boundaries between the SAM and the cotyledons (Vroemen <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0051" ref-type="ref">2003</xref>). The <italic>CUC3::P1&#x02013;GFP</italic> construct was used to transform the <italic>phot1 phot2</italic> double mutant and three independent homozygous lines were isolated (1, 11 and 18).</p><p>Initially we compared the spatial localization of phot1&#x02013;GFP in the <italic>CUC3::P1&#x02013;GFP</italic> transgenic lines with <italic>phot1 phot2</italic> plants expressing phot1&#x02013;GFP driven by the native <italic>PHOT1</italic> promoter (<italic>P1::P1&#x02013;GFP</italic>) by confocal microscopy. Consistent with the known expression pattern of <italic>CUC3</italic> in embryos (Vroemen <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0051" ref-type="ref">2003</xref>; Hibara <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0022" ref-type="ref">2006</xref>), <italic>CUC3::P1&#x02013;GFP</italic> was restricted to the embryonic apex at the junction with the developing cotyledons (Figures&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>a and S1a). In contrast, no GFP signal could be detected in embryos expressing <italic>P1::P1&#x02013;GFP</italic> indicating that phot1 is not expressed at this developmental stage. In etiolated seedlings, <italic>CUC3::P1&#x02013;GFP</italic> was similarly expressed at the hypocotyl apex at the boundary of the SAM, with weaker expression also detectable within the cotyledons in each of the lines (Figures&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>b and S1b). As previously reported, <italic>P1::P1&#x02013;GFP</italic> is expressed throughout the hypocotyl and the cotyledons of etiolated seedlings (Sakamoto and Briggs, <xref rid="tpj13313-bib-0042" ref-type="ref">2002</xref>; Wan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0052" ref-type="ref">2008</xref>). Due to the closed cotyledons of etiolated seedlings partially obscuring the GFP signal observed in the <italic>CUC3::P1&#x02013;GFP</italic> seedlings, we also examined its localization in de&#x02010;etiolated seedlings with open cotyledons imaged from above (Figures&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>c and S1c). Here, <italic>CUC3::P1&#x02013;GFP</italic> expression can be seen as a ring of GFP signal surrounding the two developing leaves in de&#x02010;etiolated seedlings.</p><fig fig-type="Figure" xml:lang="en" id="tpj13313-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Expression and localization of <italic><styled-content style="fixed-case">PHOT</styled-content>1::<styled-content style="fixed-case">PHOT</styled-content>1&#x02010;</italic>
+<styled-content style="fixed-case">GFP</styled-content> (P1::P1&#x02013;<styled-content style="fixed-case">GFP</styled-content>) and <italic><styled-content style="fixed-case">CUC</styled-content>3::<styled-content style="fixed-case">PHOT</styled-content>1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> (<styled-content style="fixed-case">CUC</styled-content>3::P1&#x02013;<styled-content style="fixed-case">GFP</styled-content>) in transgenic lines.</p><p>(a) Localization in embryos. SUM projection images of embryos expressing P1::P1&#x02013;GFP or CUC3::P1&#x02013;GFP. GFP is shown in green and FM4&#x02010;64 in magenta. Bar, 25&#x000a0;&#x003bc;m.</p><p>(b) Localization in etiolated seedlings. SUM projection images of 3&#x02010;day&#x02010;old etiolated seedlings expressing P1::P1&#x02013;GFP or CUC3::P1&#x02013;GFP. GFP is shown in green and the bright&#x02010;field image in grey. Bar, 100&#x000a0;&#x003bc;m.</p><p>(c) Localization in de&#x02010;etiolated seedlings. SUM projection images of 4&#x02010;day&#x02010;old de&#x02010;etiolated seedlings expressing P1::P1&#x02013;GFP or CUC3::P1&#x02013;GFP. GFP is shown in green and FM4&#x02010;64 in magenta. Bar, 50&#x000a0;&#x003bc;m.</p><p>(d) Immunoblot analysis of total protein extracts from whole 3&#x02010;day&#x02010;old seedlings expressing P1::P1&#x02013;GFP, three independent lines expressing CUC3::P1&#x02013;GFP (lines 1, 11 and 18) and the <italic>phot1 phot2</italic> double mutant (p1p2). For P1::P1&#x02013;GFP a 1 in 50 dilution of the total protein extract was loaded. Protein extracts were probed with anti&#x02010;phot1 antibody (phot1) and antibody raised against UDP&#x02010;glucose pyrophosphorylase (UGPase) as a loading control.</p><p>(e) Picture&#x000a0;of a 3&#x02010;day&#x02010;old etiolated seedling showing positioning of dissections of apical and basal segments.</p><p>(f) Immunoblot analysis of total protein extracts from 3&#x02010;day&#x02010;old etiolated seedlings dissected into apical (Ap) and basal (Ba) segments. Protein extracts were probed with anti&#x02010;phot1 antibody (phot1) and antibody raised against UDP&#x02010;glucose pyrophosphorylase (UGPase) as a loading control.</p></caption><graphic id="nlm-graphic-1" xlink:href="TPJ-88-907-g001"/></fig><p>Immunoblot analysis of whole 3&#x02010;day&#x02010;old etiolated seedlings showed that phot1&#x02013;GFP protein levels are significantly lower in all three <italic>CUC3::P1&#x02013;GFP</italic> lines compared to <italic>P1::P1&#x02013;GFP</italic> (Figure&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>d), consistent with the restricted expression pattern observed by confocal microscopy. To further confirm that <italic>CUC3::P1&#x02013;GFP</italic> expression was limited to the seedling apex, protein extracts were prepared from etiolated seedlings dissected into apical and basal sections. Apical segments comprised the upper hypocotyl including the cotyledons and apical hook, whereas basal segments consisted of the remainder of the hypocotyl above the shoot&#x02010;root transition zone (Figure&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>e). Phot1&#x02013;GFP was only detectable in protein extracts isolated from the apical segments in all three <italic>CUC3::P1&#x02013;GFP</italic> transgenic lines, while phot1&#x02013;GFP was apparent in both apical and basal segments in <italic>P1::P1&#x02013;GFP</italic> seedlings (Figure&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>f). In contrast to decapitation experiments (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0008" ref-type="ref">2011</xref>; Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>; Yamamoto <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0057" ref-type="ref">2014</xref>), <italic>CUC3::P1&#x02013;GFP</italic> seedlings offer a means to non&#x02010;invasively examine how localization in the hypocotyl apex, and to a lesser extent in the cotyledons, contributes to phot1 function.</p></sec><sec id="tpj13313-sec-0004"><title>Assessment of phototropism in <italic>CUC3::P1&#x02013;GFP</italic> etiolated seedlings</title><p>Having confirmed the localization of phot1&#x02013;GFP to the hypocotyl apex in the <italic>CUC3::P1&#x02013;GFP</italic> transgenic lines, we next assessed the ability of <italic>CUC3::P1&#x02013;GFP</italic> to restore phototropism in the <italic>phot1 phot2</italic> double mutant background. Phot1 can mediate second&#x02010;positive phototropism even under very low fluence rates of blue light irradiation (Sakai <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0041" ref-type="ref">2001</xref>). Therefore, continuous light&#x02010;induced second&#x02010;positive phototropism was examined by time&#x02010;lapse imaging of free&#x02010;standing etiolated seedlings irradiated with 0.005&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of unilateral blue light for 4&#x000a0;h (Figure&#x000a0;<xref rid="tpj13313-fig-0002" ref-type="fig">2</xref>a). For wild&#x02010;type (WT) seedlings curvature commenced after &#x02248;50&#x000a0;min of irradiation and reached an angle of &#x02248;70&#x000b0; after 180&#x000a0;min. Phototropism was restored in seedlings expressing <italic>P1::P1&#x02013;GFP</italic> with slightly delayed kinetics and reduced responsiveness compared to WT seedlings. These findings are however in agreement with previous publications showing that phot1&#x02013;GFP exhibits somewhat reduced functionality for phototropism (Sakamoto and Briggs, <xref rid="tpj13313-bib-0042" ref-type="ref">2002</xref>; Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>). In contrast, <italic>CUC3::P1&#x02013;GFP</italic> seedlings were greatly impaired in the magnitude of response under these light conditions indicating that restriction of phot1 to the hypocotyl apex, in addition to the cotyledons, is not sufficient to fully complement phototropism to very low fluence rates of unilateral blue light.</p><fig fig-type="Figure" xml:lang="en" id="tpj13313-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>
+<italic><styled-content style="fixed-case">CUC</styled-content>3::<styled-content style="fixed-case">PHOT</styled-content>1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> restores phototropism in the <italic>phot1 phot2</italic> double mutant under higher fluence rate blue light.</p><p>Phototropism of 3&#x02010;day&#x02010;old etiolated wild&#x02010;type (WT) seedlings, seedlings expressing <italic>PHOT1::PHOT1&#x02013;GFP</italic> (P1::P1&#x02013;GFP) or three independent lines expressing <italic>CUC3::PHOT1&#x02013;GFP</italic> (CUC3::P1&#x02013;GFP lines 1, 11 and 18).</p><p>(a) Seedlings irradiated with 0.005&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of unilateral blue light for 4&#x000a0;h.</p><p>(b) Seedlings irradiated with 0.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of unilateral blue light for 4&#x000a0;h. Hypocotyl curvatures were measured every 10&#x000a0;min and each value is the mean&#x000a0;&#x000b1;&#x000a0;standard error (SE) of 18&#x02013;20 seedlings.</p></caption><graphic id="nlm-graphic-3" xlink:href="TPJ-88-907-g002"/></fig><p>We also examined the phototropic responsiveness of <italic>CUC3::P1&#x02013;GFP</italic> seedlings to higher fluence rates of unilateral&#x000a0;blue light. Curvature in WT seedlings irradiated with low fluence rate blue light (0.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) commenced slightly later than when irradiated with 0.005&#x000a0;&#x003bc;mol m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> (Figure&#x000a0;<xref rid="tpj13313-fig-0002" ref-type="fig">2</xref>a,b), as has been reported recently (Haga <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0019" ref-type="ref">2005</xref>). The reduced responsiveness of the <italic>P1::P1&#x02013;GFP</italic> seedlings compared to WT seedlings was also apparent under low fluence rate blue light conditions, although pronounced curvatures were observed (Figure&#x000a0;<xref rid="tpj13313-fig-0002" ref-type="fig">2</xref>b). Although a minimal response was detected for <italic>CUC3::P1&#x02013;GFP</italic> seedlings under very low blue light conditions, these were fully complemented for phototropism at higher light intensities, with kinetics similar to the <italic>P1::P1&#x02013;GFP</italic> expressing seedlings. Thus, <italic>CUC3::P1&#x02013;GFP</italic> is able to fully complement phototropism in the <italic>phot1 phot2</italic> double mutant but only under the higher blue light conditions examined.</p></sec><sec id="tpj13313-sec-0005"><title>Localization of phot1&#x02010;mediated signalling in <italic>CUC3::P1&#x02013;GFP</italic> seedlings</title><p>NPH3 is an essential component of the phototropic signalling pathway that couples blue light activation of the phototropins to the re&#x02010;orientation of hypocotyl growth. It is well established that NPH3 is rapidly de&#x02010;phosphorylated upon blue light irradiation in a phot1&#x02010;dependent manner (Pedmale and Liscum, <xref rid="tpj13313-bib-0036" ref-type="ref">2007</xref>). Therefore, we investigated the phosphorylation status of NPH3 in response to blue light irradiation in dissected apical and basal segments of etiolated seedlings in order to gain a better understanding of how this phot1&#x02010;mediated signalling event is spatially initiated.</p><p>Etiolated seedlings either maintained in darkness (D) or irradiated with blue light (L; 20&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) were subsequently dissected into apical and basal segments under a dim red safe light. Immunoblot analysis of total protein extracts revealed an enhanced electrophoretic mobility of NPH3 in both apical and basal segments of light treated WT seedlings, but not in the <italic>phot1 phot2</italic> double mutant (Figure&#x000a0;<xref rid="tpj13313-fig-0003" ref-type="fig">3</xref>a), consistent with the localization pattern of phot1 in both these segments (Figure&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>f). De&#x02010;phosphorylated NPH3 was more evident in the basal sections compared to the apical sections. Unexpectedly, in <italic>CUC3::P1&#x02013;GFP</italic> seedlings (line 1) de&#x02010;phosphorylated NPH3 was barely detectable in the apical segments of blue light irradiated seedlings but was clearly visible in the basal segments (Figure&#x000a0;<xref rid="tpj13313-fig-0003" ref-type="fig">3</xref>a), a pattern that was opposite to the phot1 expression profile detected by GFP imaging (Figure&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>a&#x02013;c) and immunoblotting (Figure&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>f).</p><fig fig-type="Figure" xml:lang="en" id="tpj13313-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>
+<styled-content style="fixed-case">NPH</styled-content>3 phosphorylation status in apical and basal hypocotyl segments.</p><p>Immunoblot analysis of total protein extracts from 3&#x02010;day&#x02010;old etiolated wild&#x02010;type (WT) seedlings, seedlings expressing <italic>CUC3::PHOT1&#x02013;GFP</italic> (CUC3::P1&#x02013;GFP line 1) or the <italic>phot1 phot2</italic> double mutant (p1p2). Seedlings were maintained in darkness (D) or irradiated with 20&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of blue light for 15&#x000a0;min (L).</p><p>(a) Seedlings were dissected into apical and basal segments after blue light irradiation.</p><p>(b) Seedlings were dissected into apical and basal segments prior to blue light irradiation. Protein extracts were probed with anti&#x02010;NPH3 antibody. Dashed line indicates lowest mobility edge.</p></caption><graphic id="nlm-graphic-5" xlink:href="TPJ-88-907-g003"/></fig><p>Preuten <italic>et&#x000a0;al</italic>., (<xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>) have proposed that the activation of phot1 in one cell layer is able to induce NPH3 de&#x02010;phosphorylation in all cell layers throughout the hypocotyl due to a mobile signal. In order to determine whether signalling events initiated in the hypocotyl apex of the <italic>CUC3::P1&#x02013;GFP</italic> seedlings were able to induce NPH3 de&#x02010;phosphorylation in the basal segments of the hypocotyl, the above experiment was repeated except this time seedlings were dissected into apical and basal segments prior to irradiation (Figure&#x000a0;<xref rid="tpj13313-fig-0003" ref-type="fig">3</xref>b). Once again, immunoblot analysis showed that de&#x02010;phosphorylated NPH3 was clearly present in the basal segments of <italic>CUC3::P1&#x02013;GFP</italic> seedlings (Figure&#x000a0;<xref rid="tpj13313-fig-0003" ref-type="fig">3</xref>b). Similar findings were also observed for the other <italic>CUC3::P1&#x02013;GFP</italic> lines (Figure&#x000a0;S2). This hypocotyl dissection analysis shows that the NPH3 de&#x02010;phosphorylation detected within the basal hypocotyl of <italic>CUC3::P1&#x02013;GFP</italic> seedlings cannot be attributed to a mobile signal from the upper hypocotyl. Rather, a sufficient level of phot1&#x02013;GFP must be present within the basal hypocotyl to mediate NPH3 de&#x02010;phosphorylation in this tissue, although this was not apparent from confocal microscopy or immunoblot analysis (Figure&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>). Indeed, <italic>PHOT1</italic> transcripts were detectable in both apical and basal seedling segments of <italic>CUC3::P1&#x02013;GFP</italic> seedlings by RT&#x02010;PCR analysis (Figure&#x000a0;S3a).</p></sec><sec id="tpj13313-sec-0006"><title>Complementation of phot1&#x02010;mediated responses in light&#x02010;grown plants</title><p>Phot1 mediates a variety of responses in plants which together promote plant growth through maximising light capture and optimising photosynthesis (Takemiya <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0048" ref-type="ref">2005</xref>; de Carbonnel <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0002" ref-type="ref">2010</xref>). These include petiole and leaf positioning and leaf expansion (Inoue <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0024" ref-type="ref">2008b</xref>). Given the presence of phot1&#x02013;GFP in the cotyledons of etiolated and de&#x02010;etiolated <italic>CUC3::P1&#x02013;GFP</italic> seedlings (Figures&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>b and S1b) and the detection of phot1 activity in the basal hypocotyl, as measured by NPH3 de&#x02010;phosphorylation (Figures&#x000a0;<xref rid="tpj13313-fig-0003" ref-type="fig">3</xref> and S2), we examined the ability of <italic>CUC3::P1&#x02013;GFP</italic> to complement these aforementioned responses.</p><p>We measured the petiole angle of the first true leaves of seedlings irradiated with low intensity (10&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) and moderate intensity (50&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) white light. In WT seedlings the petioles grew obliquely upwards under both light conditions, whereas in the petioles of <italic>phot1 phot2</italic> double mutant seedlings grew downwards under low white light and were horizontal under high white light (Figure&#x000a0;<xref rid="tpj13313-fig-0004" ref-type="fig">4</xref>a). <italic>CUC3::P1&#x02013;GFP</italic> only partially restored leaf positioning in the <italic>phot1 phot2</italic> double mutant under low white light but fully restored leaf positioning under high white light irradiation (Figure&#x000a0;<xref rid="tpj13313-fig-0004" ref-type="fig">4</xref>a).</p><fig fig-type="Figure" xml:lang="en" id="tpj13313-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>
+<italic><styled-content style="fixed-case">CUC</styled-content>3::<styled-content style="fixed-case">PHOT</styled-content>1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> restores leaf positioning and leaf expansion in the <italic>phot1 phot2</italic> double mutant.</p><p>Leaf positioning and leaf expansion of wild&#x02010;type (WT), <italic>phot1 phot2</italic> (p1p2) mutant and three independent lines expressing <italic>CUC3::PHOT1&#x02013;GFP</italic> (CUC3::P1&#x02013;GFP lines 1, 11 and 18).</p><p>(a) Seedlings were grown on soil under white light at 80&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> for 7&#x000a0;days (16&#x000a0;h/8&#x000a0;h L/D cycle), then transferred to 10&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> (10) or 50&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> (50) white light (16&#x000a0;h/8&#x000a0;h L/D cycle) for 5&#x000a0;days before seedlings were photographed. Petiole angle from the horizontal was measured for the first true leaves. Each value is the mean&#x000a0;&#x000b1;&#x000a0;standard error (SE) of 10 seedlings.</p><p>(b) Plants were grown on soil under white light at 80&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> for 24&#x000a0;days (16&#x000a0;h/8&#x000a0;h L/D cycle.) The leaf expansion index of the 5<sup>th</sup> rosette leaf was expressed as the ratio of the leaf area before and after artificial uncurling. Each value is the mean&#x000a0;&#x000b1;&#x000a0;SE of 10 leaves. Images of leaf sections illustrate the leaf expansion phenotype.</p></caption><graphic id="nlm-graphic-7" xlink:href="TPJ-88-907-g004"/></fig><p>A characteristic feature of the <italic>phot1 phot2</italic> double mutant is the epinastic curled phenotype of the rosette leaves. In Arabidopsis, leaf expansion can be quantified by the leaf expansion index, which is the ratio of the leaf area measured before and after manual uncurling of the leaf (Takemiya <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0048" ref-type="ref">2005</xref>). All three <italic>CUC3::P1&#x02013;GFP</italic> lines fully complemented the <italic>phot1 phot2</italic> double mutant leaf expansion phenotype (Figure&#x000a0;<xref rid="tpj13313-fig-0004" ref-type="fig">4</xref>b). Consistent with this, <italic>PHOT1</italic> transcripts were readily detectable in rosette leaves of all three <italic>CUC3::P1&#x02013;GFP</italic> lines (Figure&#x000a0;S3b).</p></sec><sec id="tpj13313-sec-0007"><title>
+<italic>CUC3::P1&#x02013;GFP</italic> complements chloroplast accumulation but not stomatal opening</title><p>Chloroplast accumulation is a cell&#x02010;autonomous response mediated by both phot1 and phot2 which allows plants to maximise light capture under low light conditions (Kong and Wada, <xref rid="tpj13313-bib-0030" ref-type="ref">2014</xref>). The accumulation response can be visualised by the slit band assay, where a dark band appears on the leaf when irradiated with low fluence blue light (1.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) through a 1&#x000a0;mm slit (Suetsugu <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0043" ref-type="ref">2005</xref>). A dark band was observed on the leaves of all three <italic>CUC3::P1&#x02013;GFP</italic> expressing lines, similar to leaves from WT plants, whereas no response was observed in the <italic>phot1 phot2</italic> double mutant (Figure&#x000a0;<xref rid="tpj13313-fig-0005" ref-type="fig">5</xref>a,b). This ability to restore chloroplast accumulation movement further demonstrates expression of phot1&#x02013;GFP in rosette leaves of <italic>CUC3::P1&#x02013;GFP</italic> expressing plants (Figure&#x000a0;S3b).</p><fig fig-type="Figure" xml:lang="en" id="tpj13313-fig-0005" orientation="portrait" position="float"><label>Figure 5</label><caption><p>
+<italic><styled-content style="fixed-case">CUC</styled-content>3::<styled-content style="fixed-case">PHOT</styled-content>1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> complements chloroplast accumulation but not stomatal opening in the <italic>phot1 phot2</italic> double mutant.</p><p>(a) Slit band assays of chloroplast accumulation in wild&#x02010;type (WT), <italic>phot1 phot2</italic> (p1p2) mutant and three independent lines expressing <italic>CUC3::PHOT1&#x02013;GFP</italic> (CUC3::P1&#x02013;GFP lines 1, 11 and 18). Plants were grown on soil under white light at 80&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> for 3&#x000a0;weeks (16&#x000a0;h/8&#x000a0;h L/D cycle). Detached rosette leaves were placed on agar plates and irradiated with 1.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> blue light through a 1&#x000a0;mm slit for 1&#x000a0;h. Arrowheads indicate the irradiated areas.</p><p>(b) Quantification of the slit band assays. The slit band intensity was quantified using ImageJ and the relative band intensities expressed as the ratio of the irradiated to the non&#x02010;irradiated areas. Ratios &#x0003e;1 indicate accumulation. The dashed line indicates a ratio of 1. Each value is the mean&#x000a0;&#x000b1;&#x000a0;SE of 12 leaves.</p><p>(c) Thermal images of wild&#x02010;type (WT), <italic>phot1 phot2</italic> (p1p2) mutant and three independent lines expressing <italic>CUC3::PHOT1&#x02013;GFP</italic> (CUC3::P1&#x02013;GFP lines 1, 11 and 18). Plants were irradiated with red light (80&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) for 50&#x000a0;min before 5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of blue light was superimposed. Images were obtained by subtracting an image taken under red light from one taken after 15&#x000a0;min of blue light irradiation. Lower panels show the plants. Bar, 1&#x000a0;cm.</p><p>(d) Stomatal opening in of wild&#x02010;type (WT), <italic>phot1 phot2</italic> (p1p2) mutant and three independent lines expressing <italic>CUC3::PHOT1&#x02013;GFP</italic> (CUC3::P1&#x02013;GFP lines 1, 11 and 18). Epidermal strips from dark&#x02010;adapted plants were irradiated with red light (50&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) with or without blue light (10&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) for 2&#x000a0;h. Each value is the mean&#x000a0;&#x000b1;&#x000a0;SE of 75 stomata, pooled from triplicate experiments.</p></caption><graphic id="nlm-graphic-9" xlink:href="TPJ-88-907-g005"/></fig><p>Phototropins also optimise photosynthesis by regulating stomatal opening in response to blue light (Kinoshita <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0028" ref-type="ref">2001</xref>). Stomatal opening is accompanied by increased leaf transpiration, which results in a decrease in leaf temperature that can be monitored by infrared thermography (Takemiya <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0049" ref-type="ref">2013</xref>). When WT plants were irradiated with 5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of blue light superimposed on a background of 80&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> red light, leaf temperature decreased by &#x02248;1&#x000b0;C (Figure&#x000a0;<xref rid="tpj13313-fig-0005" ref-type="fig">5</xref>c). No change in leaf temperature was observed in <italic>phot1 phot2</italic> double mutant plants, or in the three lines expressing <italic>CUC3::P1&#x02013;GFP</italic>. We also measured the stomatal aperture of epidermal strips in darkness, irradiated with&#x000a0;red light or irradiated with red and blue light. Blue&#x02010;light&#x02010;induced stomatal opening was observed in epidermal strips from WT plants, but not in the <italic>phot1 phot2</italic> double mutant (Figure&#x000a0;<xref rid="tpj13313-fig-0005" ref-type="fig">5</xref>d). Furthermore, no change in stomatal aperture was observed in epidermal strips from plants expressing <italic>CUC3::P1&#x02013;GFP,</italic> confirming the results obtained by infrared thermography.</p></sec><sec id="tpj13313-sec-0008"><title>Localization and functionality of <italic>ANT::P1&#x02013;GFP</italic>
+</title><p>In addition to targeting <italic>PHOT1</italic> expression to the hypocotyl apex, we also sought to localize phot1 further above the hypocotyl, to a region that would not be expected to restore phototropism in the <italic>phot1 phot2</italic> mutant. To achieve this, we chose the promoter of <italic>AINTEGUMENTA</italic> (<italic>ANT</italic>), an <italic>APETALA2</italic> (<italic>AP2</italic>)&#x02010;like transcription factor that is expressed in all organ primordia except roots (Elliott <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0014" ref-type="ref">1996</xref>) and therefore would be expected to be only expressed in leaf primordia in young seedlings. The <italic>ANT::P1&#x02013;GFP</italic> construct was introduced into the <italic>phot1 phot2</italic> double mutant and two independent homozygous lines were isolated (lines 2 and 4).</p><p>Confocal microscopy with 3&#x02010;day&#x02010;old etiolated seedlings showed that localization of phot1&#x02013;GFP was only observed in the developing leaves and this expression pattern was confirmed, and more clearly imaged in de&#x02010;etiolated seedlings viewed from above (Figure&#x000a0;<xref rid="tpj13313-fig-0006" ref-type="fig">6</xref>a). As somewhat&#x000a0;expected from the results obtained from earlier decapitation experiments (Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>; Yamamoto <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0057" ref-type="ref">2014</xref>), both <italic>ANT::P1&#x02013;GFP</italic> expressing lines were unable to mediate phototropic curvature under 0.005&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup> sec<sup>&#x02212;1</sup> of blue light irradiation (Figure&#x000a0;<xref rid="tpj13313-fig-0006" ref-type="fig">6</xref>b). However, both <italic>ANT::P1&#x02013;GFP</italic> lines displayed measurable hypocotyl phototropism in response to continuous unilateral blue light irradiation at 0.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> (Figure&#x000a0;<xref rid="tpj13313-fig-0006" ref-type="fig">6</xref>c), although the magnitude and kinetics were greatly reduced compared to WT and <italic>P1::P1&#x02013;GFP</italic> expressing seedlings.</p><fig fig-type="Figure" xml:lang="en" id="tpj13313-fig-0006" orientation="portrait" position="float"><label>Figure 6</label><caption><p>Localization and functionality of <italic><styled-content style="fixed-case">ANT</styled-content>::<styled-content style="fixed-case">PHOT</styled-content>1&#x02013;<styled-content style="fixed-case">GFP</styled-content></italic> (<styled-content style="fixed-case">ANT</styled-content>::P1&#x02013;<styled-content style="fixed-case">GFP</styled-content>, lines 2 and 4) in transgenic lines.</p><p>(a) Localization in etiolated and de&#x02010;etiolated seedlings. SUM projection images of 3&#x02010;day&#x02010;old etiolated seedlings (upper panels) and 4&#x02010;day&#x02010;old de&#x02010;etiolated seedlings (lower panels). GFP is shown in green and the bright&#x02010;field image in grey. Upper panels, bar 100&#x000a0;&#x003bc;m; lower panels, bar 50&#x000a0;&#x003bc;m.</p><p>(b) Phototropism of 3&#x02010;day&#x02010;old etiolated wild&#x02010;type (WT) seedlings, seedlings expressing <italic>PHOT1::PHOT1&#x02013;GFP</italic> (P1::P1&#x02013;GFP) or two independent lines expressing <italic>ANT::PHOT1&#x02013;GFP</italic> (ANT::P1&#x02013;GFP lines 2 and 4). Seedlings irradiated with 0.005&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of unilateral blue light for 4&#x000a0;h. Hypocotyl curvatures were measured every 10&#x000a0;min and each value is the mean&#x000a0;&#x000b1;&#x000a0;standard error (SE) of 19&#x02013;20 seedlings.</p><p>(c) Phototropism of 3&#x02010;day&#x02010;old etiolated seedlings performed as in (b), except seedlings were irradiated with 0.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of unilateral blue light.</p></caption><graphic id="nlm-graphic-11" xlink:href="TPJ-88-907-g006"/></fig><p>We once again measured the phosphorylation status of NPH3 as a proxy for phot1 activity in <italic>ANT::P1&#x02013;GFP</italic> seedlings to determine how this correlated with receptor localization. As with <italic>CUC3::P1&#x02013;GFP</italic> seedlings (Figure&#x000a0;<xref rid="tpj13313-fig-0003" ref-type="fig">3</xref>b), hypocotyls from etiolated seedlings were dissected into apical and basal sections prior to blue light irradiation to stimulate NPH3 de&#x02010;phosphorylation. De&#x02010;phosphorylation of NPH3 was barely detectable in the apical segments, but was clearly visible in the basal hypocotyl of <italic>ANT::P1&#x02013;GFP</italic> seedlings (Figure&#x000a0;S4), although no phot1&#x02013;GFP could be observed by confocal microscopy (Figure&#x000a0;<xref rid="tpj13313-fig-0006" ref-type="fig">6</xref>a). We therefore conclude that <italic>ANT::P1&#x02013;GFP</italic> seedlings, similar to <italic>CUC3::P1&#x02013;GFP</italic> seedlings, produce sufficient amounts of phot1&#x02013;GFP within the basal hypocotyl to induce NPH3 de&#x02010;phosphorylation that is below the level of detection by confocal imaging.</p></sec></sec><sec id="tpj13313-sec-0009"><title>Discussion</title><p>Tissue&#x02010;specific localization of phytochrome and cryptochrome photoreceptors has proven to be a useful approach for identifying the site(s) of action of light&#x02010;mediated responses, as well as discriminating between local and long&#x02010;distance signalling pathways (Endo <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0015" ref-type="ref">2005</xref>, <xref rid="tpj13313-bib-0016" ref-type="ref">2007</xref>; Warnasooriya and Montgomery, <xref rid="tpj13313-bib-0054" ref-type="ref">2009</xref>; Costigan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0010" ref-type="ref">2011</xref>; Kirchenbauer <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0029" ref-type="ref">2016</xref>). Similar strategies have been applied to the study of phototropins. Kozuka <italic>et&#x000a0;al</italic>., (<xref rid="tpj13313-bib-0031" ref-type="ref">2011</xref>) demonstrated that expression of <italic>PHOT2</italic> in mesophyll cells, but not in the epidermis, promoted palisade cell development in leaves in response to blue light. Likewise, spatial expression studies indicate that the action of phyA on phot1 signalling for phototropism occurs in tissues other than the epidermis (Kirchenbauer <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0029" ref-type="ref">2016</xref>; Sullivan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0500" ref-type="ref">2016a</xref>). Preuten <italic>et&#x000a0;al</italic>., (<xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>) recently showed that the expression of <italic>PHOT1</italic> in the upper hypocotyl under the control of the <italic>PKS4</italic> promoter was sufficient to restore phototropism in the <italic>phot1 phot2</italic> double mutant in response to 1.0&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of unilateral blue light. <italic>PHOT1</italic> expression in the cotyledons and apical hook driven by the <italic>CAB3</italic> promoter also restored phototropism (Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>). We therefore examined whether targeted expression of <italic>PHOT1</italic> to the hypocotyl apex using the <italic>CUC3</italic> promoter was sufficient to restore phototropism in the <italic>phot1 phot2</italic> double mutant. The <italic>ANT</italic> promoter was also used to express <italic>PHOT1</italic> in the developing leaves, above the SAM.</p><p>While phototropism was fully complemented in <italic>CUC3::P1&#x02013;GFP</italic> seedlings irradiated with 0.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of unilateral blue light, they showed only a marginal response at very low fluence rates (Figure&#x000a0;<xref rid="tpj13313-fig-0002" ref-type="fig">2</xref>), demonstrating that <italic>CUC3::P1&#x02013;GFP</italic> is only partially functional for this response. Moreover, the detection of <italic>PHOT1</italic> transcripts and de&#x02010;phosphorylated NPH3 within the basal hypocotyl segments of <italic>CUC3::P1&#x02013;GFP</italic> seedlings showed that <italic>PHOT1</italic> was more widely expressed in these seedlings than was evident by confocal microscopy or immunoblot analysis (Figures&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>, S1 and S3a). <italic>ANT::P1&#x02013;GFP</italic> was not expected to restore phototropism since <italic>PHOT1</italic> is not expressed in the hypocotyl (Figure&#x000a0;<xref rid="tpj13313-fig-0006" ref-type="fig">6</xref>a). Although <italic>ANT::P1&#x02013;GFP</italic> seedlings were aphototropic under very low blue light (Figure&#x000a0;<xref rid="tpj13313-fig-0006" ref-type="fig">6</xref>b), they displayed a weak phototropic response at 0.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> (Figure&#x000a0;<xref rid="tpj13313-fig-0006" ref-type="fig">6</xref>c). However, NPH3 de&#x02010;phosphorylation was clearly visible in the basal hypocotyl segments of <italic>ANT::P1&#x02013;GFP</italic> seedlings (Figure&#x000a0;S4) implying that <italic>PHOT1</italic> was more widely expressed than was evident by confocal imaging (Figure&#x000a0;<xref rid="tpj13313-fig-0006" ref-type="fig">6</xref>a).</p><p>The results obtained in this study therefore highlight the difficulties and precautions that should be considered when ascribing the restoration of phototropism. In particular, mis&#x02010;expression of even very low levels of <italic>PHOT1</italic> could mediate phototropism depending upon the fluence rate of blue light used. Indeed, It has been reported previously that transgenic lines expressing <italic>PHOT1</italic> at levels significantly lower than wild&#x02010;type are fully complemented for phototropism (Christie <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0007" ref-type="ref">2002</xref>; Doi <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0013" ref-type="ref">2004</xref>; Cho <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0003" ref-type="ref">2007</xref>; Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>). However, the fluence rates used in these studies were 0.1&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> or higher. Based on our results, we propose that phototropism under very low fluence rates (such as 0.005&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup>) would provide a more discriminating test for functional complementation. Transgenic lines that mediate phototropism under these conditions could be viewed as fully&#x02010;complementing. In contrast, lines which only restore phototropism under higher fluence rates could arise from low levels of <italic>PHOT1</italic> expression. In the case here for <italic>CUC3::P1&#x02013;GFP</italic> and <italic>ANT::P1&#x02013;GFP,</italic> this is likely to arise from weak mis&#x02010;expression in other tissues/cell types. While <italic>CUC3::P1&#x02013;GFP</italic> did promote a weak phototropic response under very low fluence rates (Figure&#x000a0;<xref rid="tpj13313-fig-0002" ref-type="fig">2</xref>a), our results obtained at very low fluence rates would indicate that expression of <italic>PHOT1</italic> at or above the SAM boundary was not sufficient to fully restore phototropism in the phot&#x02010;deficient mutant.</p><p>Our data also illustrates how NPH3 de&#x02010;phosphorylation can be used as a sensitive readout for detecting phot1 activity in different tissues. <italic>CUC3::P1&#x02013;GFP</italic> and <italic>ANT::P1&#x02013;GFP</italic> promoted less NPH3 de&#x02010;phosphorylation as compared to WT, which would be consistent with the very low phot1 levels in these lines. NPH3 de&#x02010;phosphorylation was also clearly evident in the basal hypocotyl segments from both <italic>CUC3::P1&#x02013;GFP</italic> (Figure&#x000a0;<xref rid="tpj13313-fig-0003" ref-type="fig">3</xref>) and <italic>ANT::P1&#x02013;GFP</italic> (Figure&#x000a0;S4) seedlings even though phot1&#x02013;GFP was not detected. At first, we rationalised that this basal NPH3 de&#x02010;phosphorylation could arise from long&#x02010;distance signalling from phot1 in the apical tissues. However, no difference in the degree of apical or basal NPH3 de&#x02010;phosphorylation was observed in <italic>CUC3::P1&#x02013;GFP</italic> seedlings when dissections were performed either before or after blue light irradiation. These findings demonstrate the NPH3 de&#x02010;phosphorylation is tissue autonomous and argues against a mobile signal originating from phot1&#x02013;GFP in hypocotyl apex.</p><p>We previously generated transgenic lines expressing <italic>PHOT1&#x02013;GFP</italic> under the control of the epidermal&#x02010;specific promoter <italic>MERISTEM LAYER 1</italic> (<italic>ML1</italic>) in the <italic>phot1 phot2</italic> double mutant background (Sullivan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0500" ref-type="ref">2016a</xref>). Expression of <italic>ML1::P1&#x02013;GFP</italic> was able to restore phototropism in response to 0.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of unilateral blue light irradiation, however both the magnitude and kinetics of hypocotyl curvature were greatly reduced compared to <italic>P1::P1&#x02013;GFP</italic> expressing seedlings (Sullivan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0500" ref-type="ref">2016a</xref>). NPH3, like phot1, is broadly expressed throughout the Arabidopsis hypocotyl (Preuten <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0037" ref-type="ref">2013</xref>; Haga <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0020" ref-type="ref">2015</xref>). We therefore examined <italic>ML1::P1&#x02013;GFP</italic> seedlings for changes in NPH3 phosphorylation in response to blue light irradiation&#x000a0;(Figure&#x000a0;S5). Robust blue light&#x02010;induced NPH3 de&#x02010;phosphorylation was detected in total protein extracts isolated from <italic>P1::P1&#x02013;GFP</italic> seedlings (Figure&#x000a0;S5), whereas two bands corresponding to both the phosphorylated and de&#x02010;phosphorylated form of NPH3 were visible in two independent <italic>ML1::P1&#x02013;GFP</italic> expressing lines (1M1 and 2A3). This pattern of NPH3 de&#x02010;phosphorylation would be expected if this process is restricted to the epidermis, rather than all cell layers. Taken together, these findings suggest that phot1&#x02010;mediated NPH3 de&#x02010;phosphorylation occurs locally in&#x000a0;cells/tissues where both proteins are present. NPH3 de&#x02010;phosphorylation, combined with the high sensitivity of this response, also provides a useful means to assess the specificity of <italic>PHOT1</italic> expression when placed under the control of different promoters.</p><p>NPH3 de&#x02010;phosphorylation in WT seedlings occurs in both the apical and basal regions of etiolated seedlings (Figure&#x000a0;<xref rid="tpj13313-fig-0003" ref-type="fig">3</xref>) consistent with the expression of <italic>PHOT1</italic> in all tissues. De&#x02010;phosphorylation was found however to be more pronounced in the basal hypocotyl. A similar trend was observed in <italic>CUC3::P1&#x02013;GFP</italic> and <italic>ANT1::GFP</italic> (Figures&#x000a0;<xref rid="tpj13313-fig-0003" ref-type="fig">3</xref> and S4) seedlings. The phosphorylated form of NPH3 is proposed to be the active form in mediating hypocotyl phototropism (Haga <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0020" ref-type="ref">2015</xref>). Hence, the lower level of NPH3 de&#x02010;phosphorylation in the apical region could reflect a requirement for active NPH3 in the upper hypocotyl to initiate phototropism. Higher levels of NPH3 de&#x02010;phosphorylation in the lower hypocotyl would also correlate with a lack of phototropic signalling in this region. Alternatively, the spatial difference in NPH3 de&#x02010;phosphorylation could arise from the optical properties of the tissues examined. A large proportion the apical segment examined consists of the cotyledons, which are far more opaque than the translucent hypocotyl which comprises the basal segment. Reduced light penetration of the cotyledons could therefore account for the lower levels of de&#x02010;phosphorylated NPH3 in the tissues. Further experiments will be required to differentiate between these possibilities.</p><p>Although the <italic>CUC3</italic> promoter was chosen to target <italic>PHOT1</italic> expression to the hypocotyl apex, phot1&#x02013;GFP signals were also detected in the petioles and cotyledons via confocal microscopy (Figures&#x000a0;<xref rid="tpj13313-fig-0001" ref-type="fig">1</xref>b and S1b) and <italic>PHOT1</italic> transcripts were detected in rosette leaves (Figure&#x000a0;S3b). Indeed, <italic>CUC2</italic> and <italic>CUC3</italic> have been shown to be expressed in the leaves where they are both involved in leaf serration (Nikovics <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0034" ref-type="ref">2006</xref>; Hasson <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0021" ref-type="ref">2011</xref>). This prompted us to assess the ability of <italic>CUC3::P1&#x02013;GFP</italic> to restore other phot1&#x02010;mediated responses when expressed in the <italic>phot1 phot2</italic> double mutant background. Petiole positioning, leaf flattening and chloroplast accumulation to blue light intensities were all partially or fully complemented in the three independent <italic>CUC3::P1&#x02013;GFP</italic> lines (Figures&#x000a0;<xref rid="tpj13313-fig-0004" ref-type="fig">4</xref> and <xref rid="tpj13313-fig-0005" ref-type="fig">5</xref>a,b), indicating the presence of phot1&#x02013;GFP throughout the leaf tissue (Figure&#x000a0;S3b). Petiole positioning, like phototropism, was only fully restored at higher fluence rates, possibly due to low phot1 protein levels in the cells/tissues required for this response. However, blue light induced stomatal opening was absent from the <italic>CUC3::P1&#x02013;GFP</italic> lines (Figure&#x000a0;<xref rid="tpj13313-fig-0005" ref-type="fig">5</xref>c,d), indicating that the <italic>CUC3</italic> promoter does not lead to expression of phot1&#x02013;GFP within the guard cells. In this regard, <italic>CUC3::P1&#x02013;GFP</italic> lines phenocopy the <italic>blue light signaling1</italic> (<italic>blus1)</italic> mutant (Takemiya <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0049" ref-type="ref">2013</xref>). <italic>BLUS1</italic> encodes a protein kinase that is directly phosphorylated by phot1, and whose activity is required for blue light induced stomatal opening. While <italic>blus1</italic> mutants are defective in phot1&#x02010;mediated stomatal opening, they are not impaired in phototropism, leaf flattening or chloroplast movements (Takemiya <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0049" ref-type="ref">2013</xref>).</p><p>In conclusion, while our work emphasises important considerations when devising a promoter&#x02010;targeting approach to characterize phototropin function, the phototropism studies performed under very low fluence rates suggest that localization of phot1 to or above the hypocotyl apex is not sufficient to completely restore hypocotyl curvature in etiolated seedlings. A major challenge now will be to further define the region(s) within the upper hypocotyl where phot1 signalling is initiated and to decipher how NPH3 coordinates the changes in auxin accumulation that are ultimately required to promote this differential growth response.</p></sec><sec id="tpj13313-sec-0010"><title>Experimental procedures</title><sec id="tpj13313-sec-0011"><title>Plant material and growth conditions</title><p>Wild&#x02010;type <italic>Arabidopsis thaliana</italic> (<italic>gl&#x02010;1,</italic> ecotype Columbia), the <italic>phot1&#x02010;5 phot2&#x02010;1</italic> double mutant and transgenic plants expressing <italic>PHOT1::PHOT1&#x02013;GFP/phot1&#x02010;5 phot2&#x02010;1</italic> have been described previously (Kagawa <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0026" ref-type="ref">2001</xref>; Sullivan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0500" ref-type="ref">2016a</xref>). Unless otherwise stated, seeds were planted on soil or surface sterilised and grown on vertically orientated plates containing half&#x02010;strength Murashige and Skoog (MS) medium with 0.8% agar (w/v). After cold treatment (4&#x000b0;C) for 2&#x02013;4&#x000a0;days, seedlings were grown in a controlled environment room (Fitotron; Weiss&#x02010;Gallenkamp, Loughborough, UK) under 16&#x000a0;h 22&#x000b0;C: 8&#x000a0;h 18&#x000b0;C, light: dark cycles or maintained in darkness for etiolated seedlings. De&#x02010;etiolated seedlings were grown in darkness for 3&#x000a0;days and then transferred to 80&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of white light in a 16&#x000a0;h: 8&#x000a0;h light: dark cycle for 1&#x000a0;day. Fluence rates for all light sources were measured with a Li&#x02010;250A and quantum sensor (LI&#x02010;COR, Cambridge, UK)</p></sec><sec id="tpj13313-sec-0012"><title>Tissue&#x02010;specific expression of phototropin 1</title><p>The transformation vectors for <italic>CUC3::PHOT1&#x02013;GFP</italic> and <italic>ANT::PHOT1&#x02013;GFP</italic> were constructed using the modified binary expression vector pEZR(K)&#x02010;LN (Kaiserli <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0027" ref-type="ref">2009</xref>). The <italic>35S</italic> promoter was removed using restriction sites <italic>Sac</italic>I and <italic>Kpn</italic>I and replaced with the promoter of <italic>CUP&#x02010;SHAPED COTYLEDON 3</italic> (<italic>CUC3</italic>) or <italic>AINTEGUMENTA</italic> (<italic>ANT</italic>), which were amplified from Columbia genomic DNA. The 5.1 kB <italic>CUC3</italic> promoter was amplified with primers pCUC3&#x02010;F (5&#x02032;&#x02010;AAAAGAGCTCATCCTTACCTTTGCAAGAATTC&#x02010;3&#x02032;) and pCUC3&#x02010;R (5&#x02032;&#x02010;AAAAGGTACCCTTTTACTTAATATAACTGAAAAAG&#x02010;3&#x02032;). The 5.1 kB <italic>ANT</italic> promoter was amplified with primers pANT&#x02010;F (5&#x02032;&#x02010;AAAAGAGCTCCGTGACATATTGGCCTCGAT&#x02010;3&#x02032;) and pANT&#x02010;R (5&#x02032;&#x02010;AAAAGGTACCTTTGGTTTCTGCTTCTCTTCTTTCT&#x02010;3&#x02032;). The full&#x02010;length coding sequence of <italic>PHOT1</italic> was amplified from cDNA and inserted using restriction sites <italic>Kpn</italic>I and <italic>Bam</italic>HI to generate <italic>CUC3::PHOT1&#x02013;GFP</italic> or <italic>ANT::PHOT1&#x02013;GFP</italic> constructs. The <italic>phot1&#x02010;5 phot 2&#x02010;1</italic> double mutant was transformed with <italic>Agrobacterium tumefaciens</italic> strain GV3101 as previously described (Davis <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0011" ref-type="ref">2009</xref>). Based on the segregation of kanamycin resistance, independent T2 lines containing a single insertion were selected by confocal microscopy for tissue&#x02010;specific expression and resulting independent homozygous T3 lines were selected for analysis.</p></sec><sec id="tpj13313-sec-0013"><title>Confocal microscopy</title><p>Localization of GFP&#x02010;tagged phot1 was visualised using a Zeiss LSM 510 or Leica SP8 laser scanning confocal microscope. For FM4&#x02010;64 staining, embryos dissected from developing seeds and apical segments of de&#x02010;etiolated seedling cut below the cotyledonary node were submerged in 8.2&#x000a0;&#x003bc;<sc>m</sc> FM4&#x02010;64 (Sigma&#x02010;Aldrich, Gillingham, UK) in distilled water for 10&#x000a0;min, rinsed in distilled water and observed immediately. The 488&#x000a0;nm excitation line was used; GFP fluorescence collected between 505&#x02013;530&#x000a0;nm and FM4&#x02010;64 fluorescence collected between 560&#x02013;615&#x000a0;nm. SUM projection images were constructed from z&#x02010;stacks using ImageJ software, version 2.0.0 (<ext-link ext-link-type="uri" xlink:href="http://rsb.info.nih.gov/ij/">http://rsb.info.nih.gov/ij/</ext-link>).</p></sec><sec id="tpj13313-sec-0014"><title>Immunoblot analysis</title><p>Total proteins were extracted from 3&#x02010;day&#x02010;old etiolated seedlings by directly grinding 100 seedlings in 100&#x000a0;&#x003bc;l of 2&#x000d7; SDS sample buffer. Dissection of seedlings into apical and basal segments was performed under a dissecting microscope with micro scissors (Fine Science Tools, Heidelberg, Germany) with red safe light illumination. Proteins were transferred onto polyvinylidene fluoride membrane (GE Healthcare, Little Chalfont, UK) by electroblotting and detected with anti&#x02010;phot1 polyclonal antibody (Cho <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0003" ref-type="ref">2007</xref>), anti&#x02010;NPH3 polyclonal antibody (Tsuchida&#x02010;Mayama <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0050" ref-type="ref">2008</xref>) and anti&#x02010;UGPase polyclonal antibody (Agrisera, V&#x000e4;nn&#x000e4;s, Sweden). Blots were developed with horseradish peroxidase&#x02010;linked secondary antibodies (Promega, Southampton, UK) and Pierce ECL Plus Western Blotting Substrate (Thermo Fisher Scientific, Renfrew, UK).</p></sec><sec id="tpj13313-sec-0015"><title>Phototropism</title><p>Phototropism of 3&#x02010;day&#x02010;old etiolated seedlings grown on a layer of silicon dioxide (Sigma&#x02010;Aldrich) watered with quarter&#x02010;strength MS medium was performed as previously described (Sullivan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0500" ref-type="ref">2016a</xref>). Images of seedlings were captured every 10&#x000a0;min for 4&#x000a0;h during unilateral illumination with 0.5&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> or 0.005&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of blue light with a Retiga 6000 CCD camera (QImaging, Surrey, BC, Canada) connected to a PC running QCapture Pro 7 software (QImaging) with supplemental infrared light emitting diode (LED) illumination. Measurements of hypocotyl angles were made using ImageJ software.</p></sec><sec id="tpj13313-sec-0016"><title>Petiole positioning and leaf expansion</title><p>For petiole positioning seedlings were grown on soil under 80&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of white light in a 16&#x000a0;h: 8&#x000a0;h light: dark cycle for 7&#x000a0;days before being transferred to 10&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> or 50&#x000a0;&#x003bc;mol&#x000a0;m<sup>&#x02212;2</sup>&#x000a0;sec<sup>&#x02212;1</sup> of white light for a further 5&#x000a0;days. One cotyledon was removed and seedlings were placed flat on agar plates and photographed. Petiole angles from the horizontal were measured using ImageJ software. Measurement of leaf expansion was carried out as described previously (Sullivan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0046" ref-type="ref">2016b</xref>b) from 4&#x02010;week&#x02010;old soil grown plants. Leaf areas were measured before and after uncurling and the ratio of the curled to uncurled area designated as the leaf expansion index. Leaf area was measured using ImageJ software.</p></sec><sec id="tpj13313-sec-0017"><title>Chloroplast accumulation</title><p>Measurements of chloroplast accumulation were performed as described previously (Inoue <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0025" ref-type="ref">2011</xref>; Sullivan <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0046" ref-type="ref">2016b</xref>b). Band intensities were quantified using ImageJ software and the relative band intensities expressed as the ratio of the irradiated to the non&#x02010;irradiated areas.</p></sec><sec id="tpj13313-sec-0018"><title>Thermal imaging and stomatal opening</title><p>Leaf temperature measurements by infrared thermography were preformed using a TVS&#x02010;8500 camera (NEC Avio Infrared Technologies, Tokyo, Japan) as described previously (Takemiya <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0049" ref-type="ref">2013</xref>). Stomatal aperture measurements from the abaxial epidermis were performed as described previously (Takemiya <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0049" ref-type="ref">2013</xref>) using an Eclipse TS100 microscope (Nikon, Tokyo, Japan).</p></sec><sec id="tpj13313-sec-0019"><title>RNA extraction and RT&#x02010;PCR</title><p>Total RNA was isolated from 3&#x02010;day&#x02010;old etiolated seedlings dissected into apical and basal segments and rosette leaves from 3&#x02010;week&#x02010;old soil grown plants using the RNeasy Plant Mini Kit (Qiagen, Manchester, UK). Total RNA was DNase treated (Turbo DNA&#x02010;free; Thermo Fisher Scientific) and complementary DNA (cDNA) synthesised using random hexamers and SuperScript IV reverse transcriptase (Thermo Fisher Scientific). Reverse&#x02010;transcription PCR (RT&#x02010;PCR) was performed with GoTaq Hot Start Green Master Mix (Promega) and primers to amplify <italic>PHOT1</italic> and <italic>ACTIN2</italic> as described previously (Kaiserli <italic>et&#x000a0;al</italic>., <xref rid="tpj13313-bib-0027" ref-type="ref">2009</xref>).</p></sec></sec><sec id="tpj13313-sec-0021"><title>Author contributions</title><p>J.M.C., S.S. and K.I. designed and directed the research. S.S., A.T., E. K. and C.C. planned and performed experiments. All authors analysed the data. J.M.C. and S.S. wrote the manuscript. All authors commented on the manuscript.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material content-type="local-data"><caption><p>
+<bold>Figure&#x000a0;S1.</bold> Localization of <italic>CUC3::PHOT1&#x02013;GFP</italic> (CUC3::P1&#x02013;GFP, lines 11 and 18) in transgenic lines.</p><p>
+<bold>Figure&#x000a0;S2.</bold> NPH3 phosphorylation status in apical and basal hypocotyl segments.</p><p>
+<bold>Figure&#x000a0;S3.</bold> RT&#x02010;PCR analysis of <italic>PHOT1</italic> transcripts.</p><p>
+<bold>Figure&#x000a0;S4.</bold> NPH3 phosphorylation status in ANT::P1&#x02013;GFP transgenic lines.</p><p>
+<bold>Figure&#x000a0;S5.</bold> NPH3 phosphorylation status in ML1::P1&#x02013;GFP transgenic lines.</p></caption><media xlink:href="TPJ-88-907-s001.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data"><caption><p>&#x000a0;</p></caption><media xlink:href="TPJ-88-907-s002.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="tpj13313-sec-0020"><title>Acknowledgements</title><p>We thank Tatsuya Sakai for providing anti&#x02010;NPH3 antibody. We are grateful for funding support from the UK Biotechnology and Biological Sciences Research Council (BB/J016047/1 and BB/M002128/1 to J.M.C) and from the Department of Biotechnology, Government of India for a Biotechnology Overseas Associateship (to E.K.). The authors declare no conflict of interest.</p></ack><ref-list content-type="cited-references" id="tpj13313-bibl-0001"><title>References</title><ref id="tpj13313-bib-0001"><mixed-citation publication-type="journal" id="tpj13313-cit-0001">
+<string-name>
+<surname>Briggs</surname>, <given-names>W.R.</given-names>
+</string-name> (<year>2014</year>) <article-title>Phototropism: some history, some puzzles, and a look ahead</article-title>. <source>Plant Physiol.</source>
+<volume>164</volume>, <fpage>13</fpage>&#x02013;<lpage>23</lpage>.<pub-id pub-id-type="pmid">24399823</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0002"><mixed-citation publication-type="journal" id="tpj13313-cit-0002">
+<string-name>
+<surname>de Carbonnel</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Davis</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Roelfsema</surname>, <given-names>M.R.</given-names>
+</string-name>, <string-name>
+<surname>Inoue</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Schepens</surname>, <given-names>I.</given-names>
+</string-name>, <string-name>
+<surname>Lariguet</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Geisler</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Shimazaki</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Hangarter</surname>, <given-names>R.</given-names>
+</string-name> and <string-name>
+<surname>Fankhauser</surname>, <given-names>C.</given-names>
+</string-name> (<year>2010</year>) <article-title>The Arabidopsis PHYTOCHROME KINASE SUBSTRATE2 protein is a phototropin signaling element that regulates leaf flattening and leaf positioning</article-title>. <source>Plant Physiol.</source>
+<volume>152</volume>, <fpage>1391</fpage>&#x02013;<lpage>1405</lpage>.<pub-id pub-id-type="pmid">20071603</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0003"><mixed-citation publication-type="journal" id="tpj13313-cit-0003">
+<string-name>
+<surname>Cho</surname>, <given-names>H.Y.</given-names>
+</string-name>, <string-name>
+<surname>Tseng</surname>, <given-names>T.S.</given-names>
+</string-name>, <string-name>
+<surname>Kaiserli</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>Sullivan</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> and <string-name>
+<surname>Briggs</surname>, <given-names>W.R.</given-names>
+</string-name> (<year>2007</year>) <article-title>Physiological roles of the light, oxygen, or voltage domains of phototropin 1 and phototropin 2 in Arabidopsis</article-title>. <source>Plant Physiol.</source>
+<volume>143</volume>, <fpage>517</fpage>&#x02013;<lpage>529</lpage>.<pub-id pub-id-type="pmid">17085510</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0004"><mixed-citation publication-type="journal" id="tpj13313-cit-0004">
+<string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> (<year>2007</year>) <article-title>Phototropin blue&#x02010;light receptors</article-title>. <source>Annu. Rev. Plant Biol.</source>
+<volume>58</volume>, <fpage>21</fpage>&#x02013;<lpage>45</lpage>.<pub-id pub-id-type="pmid">17067285</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0005"><mixed-citation publication-type="journal" id="tpj13313-cit-0005">
+<string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> and <string-name>
+<surname>Murphy</surname>, <given-names>A.S.</given-names>
+</string-name> (<year>2013</year>) <article-title>Shoot phototropism in higher plants: new light through old concepts</article-title>. <source>Am. J. Bot.</source>
+<volume>100</volume>, <fpage>35</fpage>&#x02013;<lpage>46</lpage>.<pub-id pub-id-type="pmid">23048016</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0006"><mixed-citation publication-type="journal" id="tpj13313-cit-0006">
+<string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name>, <string-name>
+<surname>Salomon</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Nozue</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Wada</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Briggs</surname>, <given-names>W.R.</given-names>
+</string-name> (<year>1999</year>) <article-title>LOV (light, oxygen, or voltage) domains of the blue&#x02010;light photoreceptor phototropin (nph1): binding sites for the chromophore flavin mononucleotide</article-title>. <source>Proc. Natl Acad. Sci. USA</source>, <volume>96</volume>, <fpage>8779</fpage>&#x02013;<lpage>8783</lpage>.<pub-id pub-id-type="pmid">10411952</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0007"><mixed-citation publication-type="journal" id="tpj13313-cit-0007">
+<string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name>, <string-name>
+<surname>Swartz</surname>, <given-names>T.E.</given-names>
+</string-name>, <string-name>
+<surname>Bogomolni</surname>, <given-names>R.A.</given-names>
+</string-name> and <string-name>
+<surname>Briggs</surname>, <given-names>W.R.</given-names>
+</string-name> (<year>2002</year>) <article-title>Phototropin LOV domains exhibit distinct roles in regulating photoreceptor function</article-title>. <source>Plant J.</source>
+<volume>32</volume>, <fpage>205</fpage>&#x02013;<lpage>219</lpage>.<pub-id pub-id-type="pmid">12383086</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0008"><mixed-citation publication-type="journal" id="tpj13313-cit-0008">
+<string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name>, <string-name>
+<surname>Yang</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Richter</surname>, <given-names>G.L.</given-names>
+</string-name>
+<italic><bold>et&#x000a0;al.</bold></italic> (<year>2011</year>) <article-title>phot1 inhibition of ABCB19 primes lateral auxin fluxes in the shoot apex required for phototropism</article-title>. <source>PLoS Biol.</source>
+<volume>9</volume>, <fpage>e1001076</fpage>.<pub-id pub-id-type="pmid">21666806</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0009"><mixed-citation publication-type="journal" id="tpj13313-cit-0009">
+<string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name>, <string-name>
+<surname>Blackwood</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Petersen</surname>, <given-names>J.</given-names>
+</string-name> and <string-name>
+<surname>Sullivan</surname>, <given-names>S.</given-names>
+</string-name> (<year>2015</year>) <article-title>Plant flavoprotein photoreceptors</article-title>. <source>Plant Cell Physiol.</source>
+<volume>56</volume>, <fpage>401</fpage>&#x02013;<lpage>413</lpage>.<pub-id pub-id-type="pmid">25516569</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0010"><mixed-citation publication-type="journal" id="tpj13313-cit-0010">
+<string-name>
+<surname>Costigan</surname>, <given-names>S.E.</given-names>
+</string-name>, <string-name>
+<surname>Warnasooriya</surname>, <given-names>S.N.</given-names>
+</string-name>, <string-name>
+<surname>Humphries</surname>, <given-names>B.A.</given-names>
+</string-name> and <string-name>
+<surname>Montgomery</surname>, <given-names>B.L.</given-names>
+</string-name> (<year>2011</year>) <article-title>Root&#x02010;localized phytochrome chromophore synthesis is required for photoregulation of root elongation and impacts root sensitivity to jasmonic acid in Arabidopsis</article-title>. <source>Plant Physiol.</source>
+<volume>157</volume>, <fpage>1138</fpage>&#x02013;<lpage>1150</lpage>.<pub-id pub-id-type="pmid">21875894</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0011"><mixed-citation publication-type="journal" id="tpj13313-cit-0011">
+<string-name>
+<surname>Davis</surname>, <given-names>A.M.</given-names>
+</string-name>, <string-name>
+<surname>Hall</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Millar</surname>, <given-names>A.J.</given-names>
+</string-name>, <string-name>
+<surname>Darrah</surname>, <given-names>C.</given-names>
+</string-name> and <string-name>
+<surname>Davis</surname>, <given-names>S.J.</given-names>
+</string-name> (<year>2009</year>) <article-title>Protocol: streamlined sub&#x02010;protocols for floral&#x02010;dip transformation and selection of transformants in <italic>Arabidopsis thaliana</italic>
+</article-title>. <source>Plant Methods</source>, <volume>5</volume>, <fpage>3</fpage>.<pub-id pub-id-type="pmid">19250520</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0012"><mixed-citation publication-type="journal" id="tpj13313-cit-0012">
+<string-name>
+<surname>Ding</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name>
+<surname>Galvan&#x02010;Ampudia</surname>, <given-names>C.S.</given-names>
+</string-name>, <string-name>
+<surname>Demarsy</surname>, <given-names>E.</given-names>
+</string-name>
+<italic><bold>et&#x000a0;al.</bold></italic> (<year>2011</year>) <article-title>Light&#x02010;mediated polarization of the PIN3 auxin transporter for the phototropic response in Arabidopsis</article-title>. <source>Nat. Cell Biol.</source>
+<volume>13</volume>, <fpage>447</fpage>&#x02013;<lpage>452</lpage>.<pub-id pub-id-type="pmid">21394084</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0013"><mixed-citation publication-type="journal" id="tpj13313-cit-0013">
+<string-name>
+<surname>Doi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Shigenaga</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Emi</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Kinoshita</surname>, <given-names>T.</given-names>
+</string-name> and <string-name>
+<surname>Shimazaki</surname>, <given-names>K.</given-names>
+</string-name> (<year>2004</year>) <article-title>A transgene encoding a blue&#x02010;light receptor, phot1, restores blue&#x02010;light responses in the Arabidopsis phot1 phot2 double mutant</article-title>. <source>J. Exp. Bot.</source>
+<volume>55</volume>, <fpage>517</fpage>&#x02013;<lpage>523</lpage>.<pub-id pub-id-type="pmid">14739272</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0014"><mixed-citation publication-type="journal" id="tpj13313-cit-0014">
+<string-name>
+<surname>Elliott</surname>, <given-names>R.C.</given-names>
+</string-name>, <string-name>
+<surname>Betzner</surname>, <given-names>A.S.</given-names>
+</string-name>, <string-name>
+<surname>Huttner</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>Oakes</surname>, <given-names>M.P.</given-names>
+</string-name>, <string-name>
+<surname>Tucker</surname>, <given-names>W.Q.</given-names>
+</string-name>, <string-name>
+<surname>Gerentes</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Perez</surname>, <given-names>P.</given-names>
+</string-name> and <string-name>
+<surname>Smyth</surname>, <given-names>D.R.</given-names>
+</string-name> (<year>1996</year>) <article-title>AINTEGUMENTA, an APETALA2&#x02010;like gene of Arabidopsis with pleiotropic roles in ovule development and floral organ growth</article-title>. <source>Plant Cell</source>, <volume>8</volume>, <fpage>155</fpage>&#x02013;<lpage>168</lpage>.<pub-id pub-id-type="pmid">8742707</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0015"><mixed-citation publication-type="journal" id="tpj13313-cit-0015">
+<string-name>
+<surname>Endo</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Nakamura</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Araki</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Mochizuki</surname>, <given-names>N.</given-names>
+</string-name> and <string-name>
+<surname>Nagatani</surname>, <given-names>A.</given-names>
+</string-name> (<year>2005</year>) <article-title>Phytochrome B in the mesophyll delays flowering by suppressing FLOWERING LOCUS T expression in Arabidopsis vascular bundles</article-title>. <source>Plant Cell</source>, <volume>17</volume>, <fpage>1941</fpage>&#x02013;<lpage>1952</lpage>.<pub-id pub-id-type="pmid">15965119</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0016"><mixed-citation publication-type="journal" id="tpj13313-cit-0016">
+<string-name>
+<surname>Endo</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Mochizuki</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Suzuki</surname>, <given-names>T.</given-names>
+</string-name> and <string-name>
+<surname>Nagatani</surname>, <given-names>A.</given-names>
+</string-name> (<year>2007</year>) <article-title>CRYPTOCHROME2 in vascular bundles regulates flowering in Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>19</volume>, <fpage>84</fpage>&#x02013;<lpage>93</lpage>.<pub-id pub-id-type="pmid">17259260</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0017"><mixed-citation publication-type="journal" id="tpj13313-cit-0017">
+<string-name>
+<surname>Fankhauser</surname>, <given-names>C.</given-names>
+</string-name> and <string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> (<year>2015</year>) <article-title>Plant phototropic growth</article-title>. <source>Curr. Biol.</source>
+<volume>25</volume>, <fpage>R384</fpage>&#x02013;<lpage>R389</lpage>.<pub-id pub-id-type="pmid">25942556</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0018"><mixed-citation publication-type="journal" id="tpj13313-cit-0018">
+<string-name>
+<surname>Goyal</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Szarzynska</surname>, <given-names>B.</given-names>
+</string-name> and <string-name>
+<surname>Fankhauser</surname>, <given-names>C.</given-names>
+</string-name> (<year>2013</year>) <article-title>Phototropism: at the crossroads of light&#x02010;signaling pathways</article-title>. <source>Trends Plant Sci.</source>
+<volume>18</volume>, <fpage>393</fpage>&#x02013;<lpage>401</lpage>.<pub-id pub-id-type="pmid">23562459</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0019"><mixed-citation publication-type="journal" id="tpj13313-cit-0019">
+<string-name>
+<surname>Haga</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Takano</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Neumann</surname>, <given-names>R.</given-names>
+</string-name> and <string-name>
+<surname>Iino</surname>, <given-names>M.</given-names>
+</string-name> (<year>2005</year>) <article-title>The rice COLEOPTILE PHOTOTROPISM1 gene encoding an ortholog of Arabidopsis NPH3 is required for phototropism of coleoptiles and lateral translocation of auxin</article-title>. <source>Plant Cell</source>, <volume>17</volume>, <fpage>103</fpage>&#x02013;<lpage>115</lpage>.<pub-id pub-id-type="pmid">15598797</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0020"><mixed-citation publication-type="journal" id="tpj13313-cit-0020">
+<string-name>
+<surname>Haga</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Tsuchida&#x02010;Mayama</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Yamada</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Sakai</surname>, <given-names>T.</given-names>
+</string-name> (<year>2015</year>) <article-title>Arabidopsis ROOT PHOTOTROPISM2 contributes to the adaptation to high&#x02010;intensity light in phototropic responses</article-title>. <source>Plant Cell</source>, <volume>27</volume>, <fpage>1098</fpage>&#x02013;<lpage>1112</lpage>.<pub-id pub-id-type="pmid">25873385</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0021"><mixed-citation publication-type="journal" id="tpj13313-cit-0021">
+<string-name>
+<surname>Hasson</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Plessis</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Blein</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Adroher</surname>, <given-names>B.</given-names>
+</string-name>, <string-name>
+<surname>Grigg</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Tsiantis</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Boudaoud</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Damerval</surname>, <given-names>C.</given-names>
+</string-name> and <string-name>
+<surname>Laufs</surname>, <given-names>P.</given-names>
+</string-name> (<year>2011</year>) <article-title>Evolution and diverse roles of the CUP&#x02010;SHAPED COTYLEDON genes in Arabidopsis leaf development</article-title>. <source>Plant Cell</source>, <volume>23</volume>, <fpage>54</fpage>&#x02013;<lpage>68</lpage>.<pub-id pub-id-type="pmid">21258003</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0022"><mixed-citation publication-type="journal" id="tpj13313-cit-0022">
+<string-name>
+<surname>Hibara</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Karim</surname>, <given-names>M.R.</given-names>
+</string-name>, <string-name>
+<surname>Takada</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Taoka</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Furutani</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Aida</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Tasaka</surname>, <given-names>M.</given-names>
+</string-name> (<year>2006</year>) <article-title>Arabidopsis CUP&#x02010;SHAPED COTYLEDON3 regulates postembryonic shoot meristem and organ boundary formation</article-title>. <source>Plant Cell</source>, <volume>18</volume>, <fpage>2946</fpage>&#x02013;<lpage>2957</lpage>.<pub-id pub-id-type="pmid">17122068</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0023"><mixed-citation publication-type="journal" id="tpj13313-cit-0023">
+<string-name>
+<surname>Inoue</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Kinoshita</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Matsumoto</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Nakayama</surname>, <given-names>K.I.</given-names>
+</string-name>, <string-name>
+<surname>Doi</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Shimazaki</surname>, <given-names>K.</given-names>
+</string-name> (<year>2008a</year>) <article-title>Blue light&#x02010;induced autophosphorylation of phototropin is a primary step for signaling</article-title>. <source>Proc. Natl Acad. Sci. USA</source>, <volume>105</volume>, <fpage>5626</fpage>&#x02013;<lpage>5631</lpage>.<pub-id pub-id-type="pmid">18378899</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0024"><mixed-citation publication-type="journal" id="tpj13313-cit-0024">
+<string-name>
+<surname>Inoue</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Kinoshita</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Takemiya</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Doi</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Shimazaki</surname>, <given-names>K.</given-names>
+</string-name> (<year>2008b</year>) <article-title>Leaf positioning of Arabidopsis in response to blue light</article-title>. <source>Mol. Plant</source>, <volume>1</volume>, <fpage>15</fpage>&#x02013;<lpage>26</lpage>.<pub-id pub-id-type="pmid">20031912</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0025"><mixed-citation publication-type="journal" id="tpj13313-cit-0025">
+<string-name>
+<surname>Inoue</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Matsushita</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Tomokiyo</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Matsumoto</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Nakayama</surname>, <given-names>K.I.</given-names>
+</string-name>, <string-name>
+<surname>Kinoshita</surname>, <given-names>T.</given-names>
+</string-name> and <string-name>
+<surname>Shimazaki</surname>, <given-names>K.</given-names>
+</string-name> (<year>2011</year>) <article-title>Functional analyses of the activation loop of phototropin2 in Arabidopsis</article-title>. <source>Plant Physiol.</source>
+<volume>156</volume>, <fpage>117</fpage>&#x02013;<lpage>128</lpage>.<pub-id pub-id-type="pmid">21427282</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0026"><mixed-citation publication-type="journal" id="tpj13313-cit-0026">
+<string-name>
+<surname>Kagawa</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Sakai</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Suetsugu</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Oikawa</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Ishiguro</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Kato</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Tabata</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Okada</surname>, <given-names>K.</given-names>
+</string-name> and <string-name>
+<surname>Wada</surname>, <given-names>M.</given-names>
+</string-name> (<year>2001</year>) <article-title>Arabidopsis NPL1: a phototropin homolog controlling the chloroplast high&#x02010;light avoidance response</article-title>. <source>Science</source>, <volume>291</volume>, <fpage>2138</fpage>&#x02013;<lpage>2141</lpage>.<pub-id pub-id-type="pmid">11251116</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0027"><mixed-citation publication-type="journal" id="tpj13313-cit-0027">
+<string-name>
+<surname>Kaiserli</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>Sullivan</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Jones</surname>, <given-names>M.A.</given-names>
+</string-name>, <string-name>
+<surname>Feeney</surname>, <given-names>K.A.</given-names>
+</string-name> and <string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> (<year>2009</year>) <article-title>Domain swapping to assess the mechanistic basis of Arabidopsis phototropin 1 receptor kinase activation and endocytosis by blue light</article-title>. <source>Plant Cell</source>, <volume>21</volume>, <fpage>3226</fpage>&#x02013;<lpage>3244</lpage>.<pub-id pub-id-type="pmid">19880798</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0028"><mixed-citation publication-type="journal" id="tpj13313-cit-0028">
+<string-name>
+<surname>Kinoshita</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Doi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Suetsugu</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Kagawa</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Wada</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Shimazaki</surname>, <given-names>K.</given-names>
+</string-name> (<year>2001</year>) <article-title>Phot1 and phot2 mediate blue light regulation of stomatal opening</article-title>. <source>Nature</source>, <volume>414</volume>, <fpage>656</fpage>&#x02013;<lpage>660</lpage>.<pub-id pub-id-type="pmid">11740564</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0029"><mixed-citation publication-type="journal" id="tpj13313-cit-0029">
+<string-name>
+<surname>Kirchenbauer</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Viczian</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Adam</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>Hegedus</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name>
+<surname>Klose</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Leppert</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Hiltbrunner</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Kircher</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Schafer</surname>, <given-names>E.</given-names>
+</string-name> and <string-name>
+<surname>Nagy</surname>, <given-names>F.</given-names>
+</string-name> (<year>2016</year>) <article-title>Characterization of photomorphogenic responses and signaling cascades controlled by phytochrome&#x02010;A expressed in different tissues</article-title>. <source>New Phytol.</source>
+<volume>211</volume>, <fpage>584</fpage>&#x02013;<lpage>598</lpage>.<pub-id pub-id-type="pmid">27027866</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0030"><mixed-citation publication-type="journal" id="tpj13313-cit-0030">
+<string-name>
+<surname>Kong</surname>, <given-names>S.G.</given-names>
+</string-name> and <string-name>
+<surname>Wada</surname>, <given-names>M.</given-names>
+</string-name> (<year>2014</year>) <article-title>Recent advances in understanding the molecular mechanism of chloroplast photorelocation movement</article-title>. <source>Biochim. Biophys. Acta</source>, <volume>1837</volume>, <fpage>522</fpage>&#x02013;<lpage>530</lpage>.<pub-id pub-id-type="pmid">24333784</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0031"><mixed-citation publication-type="journal" id="tpj13313-cit-0031">
+<string-name>
+<surname>Kozuka</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Kong</surname>, <given-names>S.G.</given-names>
+</string-name>, <string-name>
+<surname>Doi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Shimazaki</surname>, <given-names>K.</given-names>
+</string-name> and <string-name>
+<surname>Nagatani</surname>, <given-names>A.</given-names>
+</string-name> (<year>2011</year>) <article-title>Tissue&#x02010;autonomous promotion of palisade cell development by phototropin 2 in Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>23</volume>, <fpage>3684</fpage>&#x02013;<lpage>3695</lpage>.<pub-id pub-id-type="pmid">21972260</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0032"><mixed-citation publication-type="journal" id="tpj13313-cit-0032">
+<string-name>
+<surname>Liscum</surname>, <given-names>E.</given-names>
+</string-name> and <string-name>
+<surname>Briggs</surname>, <given-names>W.R.</given-names>
+</string-name> (<year>1995</year>) <article-title>Mutations in the NPH1 locus of Arabidopsis disrupt the perception of phototropic stimuli</article-title>. <source>Plant Cell</source>, <volume>7</volume>, <fpage>473</fpage>&#x02013;<lpage>485</lpage>.<pub-id pub-id-type="pmid">7773019</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0033"><mixed-citation publication-type="journal" id="tpj13313-cit-0033">
+<string-name>
+<surname>Liscum</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>Askinosie</surname>, <given-names>S.K.</given-names>
+</string-name>, <string-name>
+<surname>Leuchtman</surname>, <given-names>D.L.</given-names>
+</string-name>, <string-name>
+<surname>Morrow</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Willenburg</surname>, <given-names>K.T.</given-names>
+</string-name> and <string-name>
+<surname>Coats</surname>, <given-names>D.R.</given-names>
+</string-name> (<year>2014</year>) <article-title>Phototropism: growing towards an understanding of plant movement</article-title>. <source>Plant Cell</source>, <volume>26</volume>, <fpage>38</fpage>&#x02013;<lpage>55</lpage>.<pub-id pub-id-type="pmid">24481074</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0034"><mixed-citation publication-type="journal" id="tpj13313-cit-0034">
+<string-name>
+<surname>Nikovics</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Blein</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Peaucelle</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Ishida</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Morin</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Aida</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Laufs</surname>, <given-names>P.</given-names>
+</string-name> (<year>2006</year>) <article-title>The balance between the MIR164A and CUC2 genes controls leaf margin serration in Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>18</volume>, <fpage>2929</fpage>&#x02013;<lpage>2945</lpage>.<pub-id pub-id-type="pmid">17098808</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0035"><mixed-citation publication-type="journal" id="tpj13313-cit-0035">
+<string-name>
+<surname>Okajima</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Aihara</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Takayama</surname>, <given-names>Y.</given-names>
+</string-name>
+<italic><bold>et&#x000a0;al.</bold></italic> (<year>2014</year>) <article-title>Light&#x02010;induced conformational changes of LOV1 (light oxygen voltage&#x02010;sensing domain 1) and LOV2 relative to the kinase domain and regulation of kinase activity in Chlamydomonas phototropin</article-title>. <source>J. Biol. Chem.</source>
+<volume>289</volume>, <fpage>413</fpage>&#x02013;<lpage>422</lpage>.<pub-id pub-id-type="pmid">24285544</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0036"><mixed-citation publication-type="journal" id="tpj13313-cit-0036">
+<string-name>
+<surname>Pedmale</surname>, <given-names>U.V.</given-names>
+</string-name> and <string-name>
+<surname>Liscum</surname>, <given-names>E.</given-names>
+</string-name> (<year>2007</year>) <article-title>Regulation of phototropic signaling in Arabidopsis via phosphorylation state changes in the phototropin 1&#x02010;interacting protein NPH3</article-title>. <source>J. Biol. Chem.</source>
+<volume>282</volume>, <fpage>19992</fpage>&#x02013;<lpage>20001</lpage>.<pub-id pub-id-type="pmid">17493935</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0037"><mixed-citation publication-type="journal" id="tpj13313-cit-0037">
+<string-name>
+<surname>Preuten</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Hohm</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Bergmann</surname>, <given-names>S.</given-names>
+</string-name> and <string-name>
+<surname>Fankhauser</surname>, <given-names>C.</given-names>
+</string-name> (<year>2013</year>) <article-title>Defining the site of light perception and initiation of phototropism in Arabidopsis</article-title>. <source>Curr. Biol.</source>
+<volume>23</volume>, <fpage>1934</fpage>&#x02013;<lpage>1938</lpage>.<pub-id pub-id-type="pmid">24076239</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0038"><mixed-citation publication-type="journal" id="tpj13313-cit-0038">
+<string-name>
+<surname>Preuten</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Blackwood</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> and <string-name>
+<surname>Fankhauser</surname>, <given-names>C.</given-names>
+</string-name> (<year>2015</year>) <article-title>Lipid anchoring of Arabidopsis phototropin 1 to assess the functional significance of receptor internalization: should I stay or should I go?</article-title>
+<source>New Phytol.</source>
+<volume>206</volume>, <fpage>1038</fpage>&#x02013;<lpage>1050</lpage>.<pub-id pub-id-type="pmid">25643813</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0039"><mixed-citation publication-type="journal" id="tpj13313-cit-0039">
+<string-name>
+<surname>Roberts</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Pedmale</surname>, <given-names>U.V.</given-names>
+</string-name>, <string-name>
+<surname>Morrow</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Sachdev</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Lechner</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>Tang</surname>, <given-names>X.</given-names>
+</string-name>, <string-name>
+<surname>Zheng</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Hannink</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Genschik</surname>, <given-names>P.</given-names>
+</string-name> and <string-name>
+<surname>Liscum</surname>, <given-names>E.</given-names>
+</string-name> (<year>2011</year>) <article-title>Modulation of phototropic responsiveness in Arabidopsis through ubiquitination of phototropin 1 by the CUL3&#x02010;Ring E3 ubiquitin ligase CRL3(NPH3)</article-title>. <source>Plant Cell</source>, <volume>23</volume>, <fpage>3627</fpage>&#x02013;<lpage>3640</lpage>.<pub-id pub-id-type="pmid">21990941</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0040"><mixed-citation publication-type="journal" id="tpj13313-cit-0040">
+<string-name>
+<surname>Sakai</surname>, <given-names>T.</given-names>
+</string-name> and <string-name>
+<surname>Haga</surname>, <given-names>K.</given-names>
+</string-name> (<year>2012</year>) <article-title>Molecular genetic analysis of phototropism in Arabidopsis</article-title>. <source>Plant Cell Physiol.</source>
+<volume>53</volume>, <fpage>1517</fpage>&#x02013;<lpage>1534</lpage>.<pub-id pub-id-type="pmid">22864452</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0041"><mixed-citation publication-type="journal" id="tpj13313-cit-0041">
+<string-name>
+<surname>Sakai</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Kagawa</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Kasahara</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Swartz</surname>, <given-names>T.E.</given-names>
+</string-name>, <string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name>, <string-name>
+<surname>Briggs</surname>, <given-names>W.R.</given-names>
+</string-name>, <string-name>
+<surname>Wada</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Okada</surname>, <given-names>K.</given-names>
+</string-name> (<year>2001</year>) <article-title>Arabidopsis nph1 and npl1: blue light receptors that mediate both phototropism and chloroplast relocation</article-title>. <source>Proc. Natl Acad. Sci. USA</source>, <volume>98</volume>, <fpage>6969</fpage>&#x02013;<lpage>6974</lpage>.<pub-id pub-id-type="pmid">11371609</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0042"><mixed-citation publication-type="journal" id="tpj13313-cit-0042">
+<string-name>
+<surname>Sakamoto</surname>, <given-names>K.</given-names>
+</string-name> and <string-name>
+<surname>Briggs</surname>, <given-names>W.R.</given-names>
+</string-name> (<year>2002</year>) <article-title>Cellular and subcellular localization of phototropin 1</article-title>. <source>Plant Cell</source>, <volume>14</volume>, <fpage>1723</fpage>&#x02013;<lpage>1735</lpage>.<pub-id pub-id-type="pmid">12172018</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0043"><mixed-citation publication-type="journal" id="tpj13313-cit-0043">
+<string-name>
+<surname>Suetsugu</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Kagawa</surname>, <given-names>T.</given-names>
+</string-name> and <string-name>
+<surname>Wada</surname>, <given-names>M.</given-names>
+</string-name> (<year>2005</year>) <article-title>An auxilin&#x02010;like J&#x02010;domain protein, JAC1, regulates phototropin&#x02010;mediated chloroplast movement in Arabidopsis</article-title>. <source>Plant Physiol.</source>
+<volume>139</volume>, <fpage>151</fpage>&#x02013;<lpage>162</lpage>.<pub-id pub-id-type="pmid">16113208</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0044"><mixed-citation publication-type="journal" id="tpj13313-cit-0044">
+<string-name>
+<surname>Suetsugu</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Kong</surname>, <given-names>S.G.</given-names>
+</string-name>, <string-name>
+<surname>Kasahara</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Wada</surname>, <given-names>M.</given-names>
+</string-name> (<year>2013</year>) <article-title>Both LOV1 and LOV2 domains of phototropin2 function as the photosensory domain for hypocotyl phototropic responses in <italic>Arabidopsis thaliana</italic> (Brassicaceae)</article-title>. <source>Am. J. Bot.</source>
+<volume>100</volume>, <fpage>60</fpage>&#x02013;<lpage>69</lpage>.<pub-id pub-id-type="pmid">23196397</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0045"><mixed-citation publication-type="journal" id="tpj13313-cit-0045">
+<string-name>
+<surname>Sullivan</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Thomson</surname>, <given-names>C.E.</given-names>
+</string-name>, <string-name>
+<surname>Lamont</surname>, <given-names>D.J.</given-names>
+</string-name>, <string-name>
+<surname>Jones</surname>, <given-names>M.A.</given-names>
+</string-name> and <string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> (<year>2008</year>) <article-title>In vivo phosphorylation site mapping and functional characterization of Arabidopsis phototropin 1</article-title>. <source>Mol. Plant</source>, <volume>1</volume>, <fpage>178</fpage>&#x02013;<lpage>194</lpage>.<pub-id pub-id-type="pmid">20031924</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0500"><mixed-citation publication-type="journal" id="tpj13313-cit-0500">
+<string-name>
+<surname>Sullivan</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Hart</surname>, <given-names>J.E.</given-names>
+</string-name>, <string-name>
+<surname>Rasch</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Walker</surname>, <given-names>C.H.</given-names>
+</string-name> and <string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> (<year>2016a</year>) <article-title>Phytochrome a mediates blue&#x02010;light enhancement of second&#x02010;positive phototropism in Arabidopsis</article-title>. <source>Front. Plant Sci.</source>, <volume>7</volume>, <fpage>290</fpage>.<pub-id pub-id-type="pmid">27014313</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0046"><mixed-citation publication-type="journal" id="tpj13313-cit-0046">
+<string-name>
+<surname>Sullivan</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Petersen</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Blackwood</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Papanatsiou</surname>, <given-names>M.</given-names>
+</string-name> and <string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> (<year>2016b</year>) <article-title>Functional characterization of Ostreococcus tauri phototropin</article-title>. <source>New Phytol.</source>
+<volume>209</volume>, <fpage>612</fpage>&#x02013;<lpage>623</lpage>.<pub-id pub-id-type="pmid">26414490</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0048"><mixed-citation publication-type="journal" id="tpj13313-cit-0048">
+<string-name>
+<surname>Takemiya</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Inoue</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Doi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Kinoshita</surname>, <given-names>T.</given-names>
+</string-name> and <string-name>
+<surname>Shimazaki</surname>, <given-names>K.</given-names>
+</string-name> (<year>2005</year>) <article-title>Phototropins promote plant growth in response to blue light in low light environments</article-title>. <source>Plant Cell</source>, <volume>17</volume>, <fpage>1120</fpage>&#x02013;<lpage>1127</lpage>.<pub-id pub-id-type="pmid">15749755</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0049"><mixed-citation publication-type="journal" id="tpj13313-cit-0049">
+<string-name>
+<surname>Takemiya</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Sugiyama</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Fujimoto</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Tsutsumi</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Yamauchi</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Hiyama</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Tada</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Christie</surname>, <given-names>J.M.</given-names>
+</string-name> and <string-name>
+<surname>Shimazaki</surname>, <given-names>K.</given-names>
+</string-name> (<year>2013</year>) <article-title>Phosphorylation of BLUS1 kinase by phototropins is a primary step in stomatal opening</article-title>. <source>Nat. Commun.</source>
+<volume>4</volume>, <fpage>2094</fpage>.<pub-id pub-id-type="pmid">23811955</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0050"><mixed-citation publication-type="journal" id="tpj13313-cit-0050">
+<string-name>
+<surname>Tsuchida&#x02010;Mayama</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Nakano</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Uehara</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Sano</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Fujisawa</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Okada</surname>, <given-names>K.</given-names>
+</string-name> and <string-name>
+<surname>Sakai</surname>, <given-names>T.</given-names>
+</string-name> (<year>2008</year>) <article-title>Mapping of the phosphorylation sites&#x000a0;on the phototropic signal transducer, NPH3</article-title>. <source>Plant Sci.</source>
+<volume>174</volume>, <fpage>626</fpage>&#x02013;<lpage>633</lpage>.</mixed-citation></ref><ref id="tpj13313-bib-0051"><mixed-citation publication-type="journal" id="tpj13313-cit-0051">
+<string-name>
+<surname>Vroemen</surname>, <given-names>C.W.</given-names>
+</string-name>, <string-name>
+<surname>Mordhorst</surname>, <given-names>A.P.</given-names>
+</string-name>, <string-name>
+<surname>Albrecht</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Kwaaitaal</surname>, <given-names>M.A.</given-names>
+</string-name> and <string-name>
+<surname>de Vries</surname>, <given-names>S.C.</given-names>
+</string-name> (<year>2003</year>) <article-title>The CUP&#x02010;SHAPED COTYLEDON3 gene is required for boundary and shoot meristem formation in Arabidopsis</article-title>. <source>Plant Cell</source>, <volume>15</volume>, <fpage>1563</fpage>&#x02013;<lpage>1577</lpage>.<pub-id pub-id-type="pmid">12837947</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0052"><mixed-citation publication-type="journal" id="tpj13313-cit-0052">
+<string-name>
+<surname>Wan</surname>, <given-names>Y.L.</given-names>
+</string-name>, <string-name>
+<surname>Eisinger</surname>, <given-names>W.</given-names>
+</string-name>, <string-name>
+<surname>Ehrhardt</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Kubitscheck</surname>, <given-names>U.</given-names>
+</string-name>, <string-name>
+<surname>Baluska</surname>, <given-names>F.</given-names>
+</string-name> and <string-name>
+<surname>Briggs</surname>, <given-names>W.</given-names>
+</string-name> (<year>2008</year>) <article-title>The subcellular localization and blue&#x02010;light&#x02010;induced movement of phototropin 1&#x02013;GFP in etiolated seedlings of <italic>Arabidopsis thaliana</italic>
+</article-title>. <source>Mol. Plant</source>, <volume>1</volume>, <fpage>103</fpage>&#x02013;<lpage>117</lpage>.<pub-id pub-id-type="pmid">20031918</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0053"><mixed-citation publication-type="journal" id="tpj13313-cit-0053">
+<string-name>
+<surname>Wan</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Jasik</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Wang</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Hao</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Volkmann</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Menzel</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Mancuso</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Baluska</surname>, <given-names>F.</given-names>
+</string-name> and <string-name>
+<surname>Lin</surname>, <given-names>J.</given-names>
+</string-name> (<year>2012</year>) <article-title>The signal transducer NPH3 integrates the phototropin1 photosensor with PIN2&#x02010;based polar auxin transport in Arabidopsis root phototropism</article-title>. <source>Plant Cell</source>, <volume>24</volume>, <fpage>551</fpage>&#x02013;<lpage>565</lpage>.<pub-id pub-id-type="pmid">22374399</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0054"><mixed-citation publication-type="journal" id="tpj13313-cit-0054">
+<string-name>
+<surname>Warnasooriya</surname>, <given-names>S.N.</given-names>
+</string-name> and <string-name>
+<surname>Montgomery</surname>, <given-names>B.L.</given-names>
+</string-name> (<year>2009</year>) <article-title>Detection of spatial&#x02010;specific phytochrome responses using targeted expression of biliverdin reductase in Arabidopsis</article-title>. <source>Plant Physiol.</source>
+<volume>149</volume>, <fpage>424</fpage>&#x02013;<lpage>433</lpage>.<pub-id pub-id-type="pmid">18971430</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0055"><mixed-citation publication-type="journal" id="tpj13313-cit-0055">
+<string-name>
+<surname>Whippo</surname>, <given-names>C.W.</given-names>
+</string-name> and <string-name>
+<surname>Hangarter</surname>, <given-names>R.P.</given-names>
+</string-name> (<year>2003</year>) <article-title>Second positive phototropism results from coordinated co&#x02010;action of the phototropins and cryptochromes</article-title>. <source>Plant Physiol.</source>
+<volume>132</volume>, <fpage>1499</fpage>&#x02013;<lpage>1507</lpage>.<pub-id pub-id-type="pmid">12857830</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0056"><mixed-citation publication-type="journal" id="tpj13313-cit-0056">
+<string-name>
+<surname>Willige</surname>, <given-names>B.C.</given-names>
+</string-name> and <string-name>
+<surname>Chory</surname>, <given-names>J.</given-names>
+</string-name> (<year>2015</year>) <article-title>A current perspective on the role of AGCVIII kinases in PIN&#x02010;mediated apical hook development</article-title>. <source>Front. Plant Sci.</source>
+<volume>6</volume>, <fpage>767</fpage>.<pub-id pub-id-type="pmid">26500658</pub-id></mixed-citation></ref><ref id="tpj13313-bib-0057"><mixed-citation publication-type="journal" id="tpj13313-cit-0057">
+<string-name>
+<surname>Yamamoto</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Suzuki</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Aihara</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Haga</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Sakai</surname>, <given-names>T.</given-names>
+</string-name> and <string-name>
+<surname>Nagatani</surname>, <given-names>A.</given-names>
+</string-name> (<year>2014</year>) <article-title>The phototropic response is locally regulated within the topmost light&#x02010;responsive region of the <italic>Arabidopsis thaliana</italic> seedling</article-title>. <source>Plant Cell Physiol.</source>
+<volume>55</volume>, <fpage>497</fpage>&#x02013;<lpage>506</lpage>.<pub-id pub-id-type="pmid">24334375</pub-id></mixed-citation></ref></ref-list></back></article>

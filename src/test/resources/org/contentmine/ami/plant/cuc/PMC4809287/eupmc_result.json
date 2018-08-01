@@ -1,0 +1,819 @@
+{
+  "id": [
+    "26889012"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26889012"
+  ],
+  "pmcid": [
+    "PMC4809287"
+  ],
+  "doi": [
+    "10.1093/jxb/erw032"
+  ],
+  "title": [
+    "The banana fruit Dof transcription factor MaDof23 acts as a repressor and interacts with MaERF9 in regulating ripening-related genes."
+  ],
+  "authorString": [
+    "Feng BH, Han YC, Xiao YY, Kuang JF, Fan ZQ, Chen JY, Lu WJ."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Feng BH"
+          ],
+          "firstName": [
+            "Bi-hong"
+          ],
+          "lastName": [
+            "Feng"
+          ],
+          "initials": [
+            "BH"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources/Guangdong Key Laboratory for Postharvest Science, College of Horticultural Science, South China Agricultural University, Guangzhou 510642, PR China College of Agriculture, GuangXi University, Nanning 530004, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Han YC"
+          ],
+          "firstName": [
+            "Yan-chao"
+          ],
+          "lastName": [
+            "Han"
+          ],
+          "initials": [
+            "YC"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources/Guangdong Key Laboratory for Postharvest Science, College of Horticultural Science, South China Agricultural University, Guangzhou 510642, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Xiao YY"
+          ],
+          "firstName": [
+            "Yun-yi"
+          ],
+          "lastName": [
+            "Xiao"
+          ],
+          "initials": [
+            "YY"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources/Guangdong Key Laboratory for Postharvest Science, College of Horticultural Science, South China Agricultural University, Guangzhou 510642, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Kuang JF"
+          ],
+          "firstName": [
+            "Jian-fei"
+          ],
+          "lastName": [
+            "Kuang"
+          ],
+          "initials": [
+            "JF"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9192-2155",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "State Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources/Guangdong Key Laboratory for Postharvest Science, College of Horticultural Science, South China Agricultural University, Guangzhou 510642, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Fan ZQ"
+          ],
+          "firstName": [
+            "Zhong-qi"
+          ],
+          "lastName": [
+            "Fan"
+          ],
+          "initials": [
+            "ZQ"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources/Guangdong Key Laboratory for Postharvest Science, College of Horticultural Science, South China Agricultural University, Guangzhou 510642, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Chen JY"
+          ],
+          "firstName": [
+            "Jian-ye"
+          ],
+          "lastName": [
+            "Chen"
+          ],
+          "initials": [
+            "JY"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-8975-6941",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "State Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources/Guangdong Key Laboratory for Postharvest Science, College of Horticultural Science, South China Agricultural University, Guangzhou 510642, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Lu WJ"
+          ],
+          "firstName": [
+            "Wang-jin"
+          ],
+          "lastName": [
+            "Lu"
+          ],
+          "initials": [
+            "WJ"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources/Guangdong Key Laboratory for Postharvest Science, College of Horticultural Science, South China Agricultural University, Guangzhou 510642, PR China wjlu@scau.edu.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-8975-6941",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-9192-2155",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "8"
+      ],
+      "volume": [
+        "67"
+      ],
+      "journalIssueId": [
+        "2391370"
+      ],
+      "dateOfPublication": [
+        "2016 Apr"
+      ],
+      "monthOfPublication": [
+        "4"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-04-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "2263-2275"
+  ],
+  "abstractText": [
+    "The DNA binding with one finger (Dof) proteins, a family of plant-specific transcription factors, are involved in a variety of plant biological processes. However, little information is available on their involvement in fruit ripening. We have characterized 25 MaDof genes from banana fruit (Musa acuminata), designated as MaDof1-MaDof25 Gene expression analysis in fruit subjected to different ripening conditions revealed that MaDofs were differentially expressed during different stages of ripening. MaDof10, 23, 24, and 25 were ethylene-inducible and nuclear-localized, and their transcript levels increased during fruit ripening. Moreover, yeast two-hybrid and bimolecular fluorescence complementation analyses demonstrated a physical interaction between MaDof23 and MaERF9, a potential regulator of fruit ripening reported in a previous study. We determined that MaDof23 is a transcriptional repressor, whereas MaERF9 is a transcriptional activator. We suggest that they might act antagonistically in regulating 10 ripening-related genes, including MaEXP1/2/3/5, MaXET7, MaPG1, MaPME3, MaPL2, MaCAT, and MaPDC, which are associated with cell wall degradation and aroma formation. Taken together, our findings provide new insight into the transcriptional regulation network controlling banana fruit ripening."
+  ],
+  "affiliation": [
+    "State Key Laboratory for Conservation and Utilization of Subtropical Agro-bioresources/Guangdong Key Laboratory for Postharvest Science, College of Horticultural Science, South China Agricultural University, Guangzhou 510642, PR China College of Agriculture, GuangXi University, Nanning 530004, PR China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cell Nucleus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Subcellular Fractions"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Saccharomyces cerevisiae"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Tobacco"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Musa"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Fruit"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Repressor Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Alignment"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, DNA"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Amino Acid Sequence"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Binding"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Transport"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcriptional Activation"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Banana",
+        "Fruit ripening",
+        "Protein interaction",
+        "ERF",
+        "Transcriptional Regulation.",
+        "Dof",
+        "Musa Acuminate"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Repressor Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4809287?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4809287"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/erw032"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "7"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-12-13"
+  ],
+  "dateOfCreation": [
+    "2016-03-29"
+  ],
+  "dateOfRevision": [
+    "2016-12-30"
+  ],
+  "electronicPublicationDate": [
+    "2016-02-17"
+  ],
+  "firstPublicationDate": [
+    "2016-02-17"
+  ]
+}

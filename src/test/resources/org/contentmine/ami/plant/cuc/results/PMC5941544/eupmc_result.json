@@ -1,0 +1,340 @@
+{
+  "id": [
+    "29739311"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29739311"
+  ],
+  "pmcid": [
+    "PMC5941544"
+  ],
+  "doi": [
+    "10.1186/s12864-018-4727-5"
+  ],
+  "title": [
+    "Transcriptome analysis reveals new microRNAs-mediated pathway involved in anther development in male sterile wheat."
+  ],
+  "authorString": [
+    "Sun L, Sun G, Shi C, Sun D."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Sun L"
+          ],
+          "firstName": [
+            "Longqing"
+          ],
+          "lastName": [
+            "Sun"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "College of plant science & technology, Huazhong Agricultural University, Wuhan, 430070, Hubei, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Sun G"
+          ],
+          "firstName": [
+            "Genlou"
+          ],
+          "lastName": [
+            "Sun"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Biology Department, Saint Mary's University, Halifax, Nova Scotia, B3H 3C3, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Shi C"
+          ],
+          "firstName": [
+            "Chenxia"
+          ],
+          "lastName": [
+            "Shi"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "College of plant science & technology, Huazhong Agricultural University, Wuhan, 430070, Hubei, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Sun D"
+          ],
+          "firstName": [
+            "Dongfa"
+          ],
+          "lastName": [
+            "Sun"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "College of plant science & technology, Huazhong Agricultural University, Wuhan, 430070, Hubei, China. sundongfa1@mail.hzau.edu.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "19"
+      ],
+      "journalIssueId": [
+        "2678327"
+      ],
+      "dateOfPublication": [
+        "2018 May"
+      ],
+      "monthOfPublication": [
+        "5"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-05-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC genomics"
+          ],
+          "ISOAbbreviation": [
+            "BMC Genomics"
+          ],
+          "medlineAbbreviation": [
+            "BMC Genomics"
+          ],
+          "NLMid": [
+            "100965258"
+          ],
+          "ISSN": [
+            "1471-2164"
+          ],
+          "ESSN": [
+            "1471-2164"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "333"
+  ],
+  "abstractText": [
+    "337S is a novel bi-pole-photo-thermo-sensitive genic male sterile line in wheat, and sensitive to both long day length/high temperature and short day length/low temperature condition. Although the regulatory function of MicroRNAs (miRNAs) in reproductive development has been increasingly studied, their roles in pre-meiotic and meiotic cells formation of plants have not been clearly explored. Here, we explored the roles of miRNAs in regulating male sterility of 337S at short day length/low temperature condition.Small RNA sequencing and degradome analyses were employed to identify miRNAs and their targets in the 337S whose meiotic cells collapsed rapidly during male meiotic prophase, resulting in failure of meiosis at SL condition. A total of 102 unique miRNAs were detected. Noticeably, the largest miRNA family was MiR1122. The target CCR4-associated factor 1 (CAF1) of miR2275, a subunit of the Carbon Catabolite Repressed 4-Negative on TATA-less (CCR4-NOT) complex, contributes to the process of early meiosis, and was first identified here. Further studies showed that the expression of several pivotal anther-related miRNAs was altered in 337S at SL condition, especially tae-miR1127a, which may be related to male sterility of 337S. Here, we also identified a new member of SWI/SNF factors SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily A, member 3-like 3 (SMARCA3L3) targeted by tae-miR1127a, whose function might be involved in faithful progression of meiosis in male reproductive cells.The miRNA-target interactions of tae-miR2275-CAF1 and tae-miR1127a-SMARCA3L3 might be involved in regulating male fertility in 337S. Our results also implied that multiple roles for SMARCA3L3 and CAF1 in DNA repair and transcriptional regulation jointly orchestrated a tight and orderly system for maintaining chromatin and genome integrity during meiosis."
+  ],
+  "affiliation": [
+    "College of plant science & technology, Huazhong Agricultural University, Wuhan, 430070, Hubei, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "2015M582241"
+          ],
+          "agency": [
+            "China Postdoctoral Science Foundation"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "31601294"
+          ],
+          "agency": [
+            "National Natural Science Foundation of China"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "2016YFD0101601"
+          ],
+          "agency": [
+            "National Key Research and Development Program of China"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Meiosis",
+        "Wheat",
+        "miRNAs",
+        "Male Sterility",
+        "Degradome",
+        "Small Rna Sequencing",
+        "Tae-mir2275",
+        "Tae-mir1127a"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5941544?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5941544"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12864-018-4727-5"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2018-05-10"
+  ],
+  "dateOfRevision": [
+    "2018-05-15"
+  ],
+  "electronicPublicationDate": [
+    "2018-05-08"
+  ],
+  "firstPublicationDate": [
+    "2018-05-08"
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "id": [
+    "29321811"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29321811"
+  ],
+  "pmcid": [
+    "PMC5759196"
+  ],
+  "doi": [
+    "10.1186/s13068-017-1007-6"
+  ],
+  "title": [
+    "Gene stacking of multiple traits for high yield of fermentable sugars in plant biomass."
+  ],
+  "authorString": [
+    "Aznar A, Chalvin C, Shih PM, Maimann M, Ebert B, Birdseye DS, Loqué D, Scheller HV."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Aznar A"
+          ],
+          "firstName": [
+            "Aude"
+          ],
+          "lastName": [
+            "Aznar"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Feedstocks Division, Joint BioEnergy Institute, Lawrence Berkeley National Laboratory, Berkeley, CA 94720 USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Chalvin C"
+          ],
+          "firstName": [
+            "Camille"
+          ],
+          "lastName": [
+            "Chalvin"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Feedstocks Division, Joint BioEnergy Institute, Lawrence Berkeley National Laboratory, Berkeley, CA 94720 USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Shih PM"
+          ],
+          "firstName": [
+            "Patrick M"
+          ],
+          "lastName": [
+            "Shih"
+          ],
+          "initials": [
+            "PM"
+          ],
+          "affiliation": [
+            "Feedstocks Division, Joint BioEnergy Institute, Lawrence Berkeley National Laboratory, Berkeley, CA 94720 USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Maimann M"
+          ],
+          "firstName": [
+            "Michael"
+          ],
+          "lastName": [
+            "Maimann"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Feedstocks Division, Joint BioEnergy Institute, Lawrence Berkeley National Laboratory, Berkeley, CA 94720 USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Ebert B"
+          ],
+          "firstName": [
+            "Berit"
+          ],
+          "lastName": [
+            "Ebert"
+          ],
+          "initials": [
+            "B"
+          ],
+          "affiliation": [
+            "Feedstocks Division, Joint BioEnergy Institute, Lawrence Berkeley National Laboratory, Berkeley, CA 94720 USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Birdseye DS"
+          ],
+          "firstName": [
+            "Devon S"
+          ],
+          "lastName": [
+            "Birdseye"
+          ],
+          "initials": [
+            "DS"
+          ],
+          "affiliation": [
+            "Feedstocks Division, Joint BioEnergy Institute, Lawrence Berkeley National Laboratory, Berkeley, CA 94720 USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Loqué D"
+          ],
+          "firstName": [
+            "Dominique"
+          ],
+          "lastName": [
+            "Loqué"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Feedstocks Division, Joint BioEnergy Institute, Lawrence Berkeley National Laboratory, Berkeley, CA 94720 USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Scheller HV"
+          ],
+          "firstName": [
+            "Henrik V"
+          ],
+          "lastName": [
+            "Scheller"
+          ],
+          "initials": [
+            "HV"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-6702-3560",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Feedstocks Division, Joint BioEnergy Institute, Lawrence Berkeley National Laboratory, Berkeley, CA 94720 USA."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-6702-3560",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "11"
+      ],
+      "journalIssueId": [
+        "2639734"
+      ],
+      "dateOfPublication": [
+        "2018 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Biotechnology for Biofuels"
+          ],
+          "ISOAbbreviation": [
+            "Biotechnol Biofuels"
+          ],
+          "medlineAbbreviation": [
+            "Biotechnol Biofuels"
+          ],
+          "NLMid": [
+            "101316935"
+          ],
+          "ISSN": [
+            "1754-6834"
+          ],
+          "ESSN": [
+            "1754-6834"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "2"
+  ],
+  "abstractText": [
+    "Second-generation biofuels produced from biomass can help to decrease dependency on fossil fuels, bringing about many economic and environmental benefits. To make biomass more suitable for biorefinery use, we need a better understanding of plant cell wall biosynthesis. Increasing the ratio of C6 to C5 sugars in the cell wall and decreasing the lignin content are two important targets in engineering of plants that are more suitable for downstream processing for second-generation biofuel production.We have studied the basic mechanisms of cell wall biosynthesis and identified genes involved in biosynthesis of pectic galactan, including the GALS1 galactan synthase and the UDP-galactose/UDP-rhamnose transporter URGT1. We have engineered plants with a more suitable biomass composition by applying these findings, in conjunction with synthetic biology and gene stacking tools. Plants were engineered to have up to fourfold more pectic galactan in stems by overexpressing GALS1, URGT1, and UGE2, a UDP-glucose epimerase. Furthermore, the increased galactan trait was engineered into plants that were already engineered to have low xylan content by restricting xylan biosynthesis to vessels where this polysaccharide is essential. Finally, the high galactan and low xylan traits were stacked with the low lignin trait obtained by expressing the QsuB gene encoding dehydroshikimate dehydratase in lignifying cells.The results show that approaches to increasing C6 sugar content, decreasing xylan, and reducing lignin content can be combined in an additive manner. Thus, the engineered lines obtained by this trait-stacking approach have substantially improved properties from the perspective of biofuel production, and they do not show any obvious negative growth effects. The approach used in this study can be readily transferred to bioenergy crop plants."
+  ],
+  "affiliation": [
+    "Feedstocks Division, Joint BioEnergy Institute, Lawrence Berkeley National Laboratory, Berkeley, CA 94720 USA."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Lignin",
+        "Arabidopsis",
+        "Xylan",
+        "pectin",
+        "Plant Engineering",
+        "Plant Cell Wall",
+        "Galactan",
+        "Jstack"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5759196?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5759196"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s13068-017-1007-6"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2018-01-12"
+  ],
+  "dateOfRevision": [
+    "2018-02-10"
+  ],
+  "electronicPublicationDate": [
+    "2018-01-09"
+  ],
+  "firstPublicationDate": [
+    "2018-01-09"
+  ]
+}

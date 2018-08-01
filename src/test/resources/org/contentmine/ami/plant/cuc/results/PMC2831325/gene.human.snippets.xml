@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC2831325/results/gene/human/results.xml">
+  <result pre=" the 5′ or the 3′ side of P2: mutP2-5′: 581GCA GAU GAA 589 to 581 " exact="AAU" post=" GAU CAA 589 and mutP2-3′: 785ACU GUC UGC 793 to 785&lt;/" xpath="/html[1]/body[1]/div[2]/div[3]/div[5]/p[1]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="&gt;589 and mutP2-3′: 785ACU GUC UGC 793 to 785AC G GUC " exact="AUU" post=" 793, both mutants drastically destabilise the first segment of P2 [Δ G mutP" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

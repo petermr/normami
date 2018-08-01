@@ -1,0 +1,307 @@
+{
+  "id": [
+    "27135503"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27135503"
+  ],
+  "pmcid": [
+    "PMC4844297"
+  ],
+  "doi": [
+    "10.3390/plants3020251"
+  ],
+  "title": [
+    "LEAFY and Polar Auxin Transport Coordinately Regulate Arabidopsis Flower Development."
+  ],
+  "authorString": [
+    "Yamaguchi N, Wu MF, Winter CM, Wagner D."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Yamaguchi N"
+          ],
+          "firstName": [
+            "Nobutoshi"
+          ],
+          "lastName": [
+            "Yamaguchi"
+          ],
+          "initials": [
+            "N"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, PA 19104, USA. nobuy@sas.upenn.edu."
+          ]
+        },
+        {
+          "fullName": [
+            "Wu MF"
+          ],
+          "firstName": [
+            "Miin-Feng"
+          ],
+          "lastName": [
+            "Wu"
+          ],
+          "initials": [
+            "MF"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, PA 19104, USA. miin@sas.upenn.edu."
+          ]
+        },
+        {
+          "fullName": [
+            "Winter CM"
+          ],
+          "firstName": [
+            "Cara M"
+          ],
+          "lastName": [
+            "Winter"
+          ],
+          "initials": [
+            "CM"
+          ],
+          "affiliation": [
+            "Department of Biology, Duke University, Box 90338, Durham, NC 27708, USA. cara.winter@duke.edu."
+          ]
+        },
+        {
+          "fullName": [
+            "Wagner D"
+          ],
+          "firstName": [
+            "Doris"
+          ],
+          "lastName": [
+            "Wagner"
+          ],
+          "initials": [
+            "D"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4656-2490",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, PA 19104, USA. wagnerdo@sas.upenn.edu."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-4656-2490",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "2"
+      ],
+      "volume": [
+        "3"
+      ],
+      "journalIssueId": [
+        "2403399"
+      ],
+      "dateOfPublication": [
+        "2014"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Plants (Basel, Switzerland)"
+          ],
+          "ISOAbbreviation": [
+            "Plants (Basel)"
+          ],
+          "medlineAbbreviation": [
+            "Plants (Basel)"
+          ],
+          "NLMid": [
+            "101596181"
+          ],
+          "ISSN": [
+            "2223-7747"
+          ],
+          "ESSN": [
+            "2223-7747"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "251-265"
+  ],
+  "abstractText": [
+    "The plant specific transcription factor LEAFY (LFY) plays a pivotal role in the developmental switch to floral meristem identity in Arabidopsis. Our recent study revealed that LFY additionally acts downstream of AUXIN RESPONSE FACTOR5/MONOPTEROS to promote flower primordium initiation. LFY also promotes initiation of the floral organ and floral organ identity. To further investigate the interplay between LFY and auxin during flower development, we examined the phenotypic consequence of disrupting polar auxin transport in lfy mutants by genetic means. Plants with compromised LFY activity exhibit increased sensitivity to disruption of polar auxin transport. Compromised polar auxin transport activity in the lfy mutant background resulted in formation of fewer floral organs, abnormal gynoecium development, and fused sepals. In agreement with these observations, expression of the auxin response reporter DR5rev::GFP as well as of the direct LFY target CUP-SHAPED COTYLEDON2 were altered in lfy mutant flowers. We also uncovered reduced expression of ETTIN, a regulator of gynoecium development and a direct LFY target. Our results suggest that LFY and polar auxin transport coordinately modulate flower development by regulating genes required for elaboration of the floral organs."
+  ],
+  "affiliation": [
+    "Department of Biology, University of Pennsylvania, Philadelphia, PA 19104, USA. nobuy@sas.upenn.edu."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Arabidopsis thaliana",
+        "Flower development",
+        "Auxin transport",
+        "LEAFY",
+        "Pinoid",
+        "Ettin",
+        "Cup-shaped Cotyledon2",
+        "Pin-formed1"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4844297"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3390/plants3020251"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "N"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "4"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-05-04"
+  ],
+  "dateOfCreation": [
+    "2016-05-04"
+  ],
+  "dateOfRevision": [
+    "2016-05-06"
+  ],
+  "electronicPublicationDate": [
+    "2014-04-30"
+  ],
+  "firstPublicationDate": [
+    "2014-04-30"
+  ]
+}

@@ -1,0 +1,690 @@
+{
+  "id": [
+    "26567355"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26567355"
+  ],
+  "pmcid": [
+    "PMC4737076"
+  ],
+  "doi": [
+    "10.1093/jxb/erv494"
+  ],
+  "title": [
+    "Integrated mapping and characterization of the gene underlying the okra leaf trait in Gossypium hirsutum L."
+  ],
+  "authorString": [
+    "Zhu QH, Zhang J, Liu D, Stiller W, Liu D, Zhang Z, Llewellyn D, Wilson I."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Zhu QH"
+          ],
+          "firstName": [
+            "Qian-Hao"
+          ],
+          "lastName": [
+            "Zhu"
+          ],
+          "initials": [
+            "QH"
+          ],
+          "affiliation": [
+            "CSIRO Agriculture, Black Mountain Laboratories, ACT 2601, Australia Qianhao.zhu@csiro.au Wilson.iain@csiro.au zhangzs@swu.edu.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang J"
+          ],
+          "firstName": [
+            "Jian"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "CSIRO Agriculture, Black Mountain Laboratories, ACT 2601, Australia College of Agronomy and Biotechnology, Southwest University, Chongqing 400716, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu D"
+          ],
+          "firstName": [
+            "Dexin"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "College of Agronomy and Biotechnology, Southwest University, Chongqing 400716, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Stiller W"
+          ],
+          "firstName": [
+            "Warwick"
+          ],
+          "lastName": [
+            "Stiller"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "CSIRO Agriculture, Locked Bag 59, Narrabri NSW 2390, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Liu D"
+          ],
+          "firstName": [
+            "Dajun"
+          ],
+          "lastName": [
+            "Liu"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "College of Agronomy and Biotechnology, Southwest University, Chongqing 400716, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang Z"
+          ],
+          "firstName": [
+            "Zhengsheng"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "College of Agronomy and Biotechnology, Southwest University, Chongqing 400716, PR China Qianhao.zhu@csiro.au Wilson.iain@csiro.au zhangzs@swu.edu.cn."
+          ]
+        },
+        {
+          "fullName": [
+            "Llewellyn D"
+          ],
+          "firstName": [
+            "Danny"
+          ],
+          "lastName": [
+            "Llewellyn"
+          ],
+          "initials": [
+            "D"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9535-8707",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "CSIRO Agriculture, Black Mountain Laboratories, ACT 2601, Australia."
+          ]
+        },
+        {
+          "fullName": [
+            "Wilson I"
+          ],
+          "firstName": [
+            "Iain"
+          ],
+          "lastName": [
+            "Wilson"
+          ],
+          "initials": [
+            "I"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-4626-8059",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "CSIRO Agriculture, Black Mountain Laboratories, ACT 2601, Australia Qianhao.zhu@csiro.au Wilson.iain@csiro.au zhangzs@swu.edu.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-9535-8707",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0002-4626-8059",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "3"
+      ],
+      "volume": [
+        "67"
+      ],
+      "journalIssueId": [
+        "2370350"
+      ],
+      "dateOfPublication": [
+        "2016 Feb"
+      ],
+      "monthOfPublication": [
+        "2"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-02-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "763-774"
+  ],
+  "abstractText": [
+    "Diverse leaf morphology has been observed among accessions of Gossypium hirsutum, including okra leaf, which has advantages and disadvantages in cotton production. The okra leaf locus has been mapped to chromosome 15 of the Dt subgenome, but the underlying gene has yet to be identified. In this study, we used a combination of targeted association analysis, F2 population-based fine mapping, and comparative sequencing of orthologues to identify a candidate gene underlying the okra leaf trait in G. hirsutum. The okra leaf gene identified, GhOKRA, encoded a homeodomain leucine-zipper class I protein, whose closely related genes in several other plant species have been shown to be involved in regulating leaf morphology. The transcript levels of GhOKRA in shoot apices were positively correlated with the phenotypic expression of the okra leaf trait. Of the multiple sequence variations observed in the coding region among GrOKRA of Gossypium raimondii and GhOKRA-Dt of normal and okra/superokra leaf G. hirsutum accessions, a non-synonymous substitution near the N terminus and the variable protein sequences at the C terminus may be related to the leaf shape difference. Our results suggest that both transcription and protein activity of GhOKRA may be involved in regulating leaf shape. Furthermore, we found that non-reciprocal homoeologous recombination, or gene conversion, may have played a role in the origin of the okra leaf allele. Our results provided tools for further investigating and understanding the fundamental biological processes that are responsible for the cotton leaf shape variation and will help in the design of cotton plants with an ideal leaf shape for enhanced cotton production."
+  ],
+  "affiliation": [
+    "CSIRO Agriculture, Black Mountain Laboratories, ACT 2601, Australia Qianhao.zhu@csiro.au Wilson.iain@csiro.au zhangzs@swu.edu.cn."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Abelmoschus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gossypium"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "AH"
+                  ],
+                  "qualifierName": [
+                    "anatomy & histology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "CH"
+                  ],
+                  "qualifierName": [
+                    "chemistry"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Chromosome Mapping"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "MT"
+                  ],
+                  "qualifierName": [
+                    "methods"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Crosses, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Analysis, Protein"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Quantitative Trait, Heritable"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Alleles"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Genes, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genetic Loci"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Ecotype"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Fine mapping",
+        "Cotton (Gossypium Spp.)",
+        "Homeodomain Leucine-zipper Class I Transcription Factor",
+        "Non-reciprocal Homoeologous Recombination",
+        "Okra Leaf Morphology",
+        "Targeted Association Analysis."
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4737076?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4737076"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/erv494"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "8"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-10-25"
+  ],
+  "dateOfCreation": [
+    "2016-02-03"
+  ],
+  "dateOfRevision": [
+    "2016-12-30"
+  ],
+  "electronicPublicationDate": [
+    "2015-11-12"
+  ],
+  "firstPublicationDate": [
+    "2015-11-12"
+  ]
+}

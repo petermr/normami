@@ -1,0 +1,629 @@
+{
+  "id": [
+    "29538450"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29538450"
+  ],
+  "pmcid": [
+    "PMC5851633"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0194326"
+  ],
+  "title": [
+    "DkNAC7, a novel high-CO2/hypoxia-induced NAC transcription factor, regulates persimmon fruit de-astringency."
+  ],
+  "authorString": [
+    "Jin R, Zhu QG, Shen XY, Wang MM, Jamil W, Grierson D, Yin XR, Chen KS."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Jin R"
+          ],
+          "firstName": [
+            "Rong"
+          ],
+          "lastName": [
+            "Jin"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "Zhejiang Provincial Key Laboratory of Horticultural Plant Integrative Biology, Zhejiang University, Zijingang Campus, Hangzhou, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhu QG"
+          ],
+          "firstName": [
+            "Qing-Gang"
+          ],
+          "lastName": [
+            "Zhu"
+          ],
+          "initials": [
+            "QG"
+          ],
+          "affiliation": [
+            "Zhejiang Provincial Key Laboratory of Horticultural Plant Integrative Biology, Zhejiang University, Zijingang Campus, Hangzhou, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Shen XY"
+          ],
+          "firstName": [
+            "Xin-Yue"
+          ],
+          "lastName": [
+            "Shen"
+          ],
+          "initials": [
+            "XY"
+          ],
+          "affiliation": [
+            "Zhejiang Provincial Key Laboratory of Horticultural Plant Integrative Biology, Zhejiang University, Zijingang Campus, Hangzhou, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang MM"
+          ],
+          "firstName": [
+            "Miao-Miao"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "MM"
+          ],
+          "affiliation": [
+            "Zhejiang Provincial Key Laboratory of Horticultural Plant Integrative Biology, Zhejiang University, Zijingang Campus, Hangzhou, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Jamil W"
+          ],
+          "firstName": [
+            "Wajeeha"
+          ],
+          "lastName": [
+            "Jamil"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "Zhejiang Provincial Key Laboratory of Horticultural Plant Integrative Biology, Zhejiang University, Zijingang Campus, Hangzhou, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Grierson D"
+          ],
+          "firstName": [
+            "Donald"
+          ],
+          "lastName": [
+            "Grierson"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Zhejiang Provincial Key Laboratory of Horticultural Plant Integrative Biology, Zhejiang University, Zijingang Campus, Hangzhou, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yin XR"
+          ],
+          "firstName": [
+            "Xue-Ren"
+          ],
+          "lastName": [
+            "Yin"
+          ],
+          "initials": [
+            "XR"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-1282-4432",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Zhejiang Provincial Key Laboratory of Horticultural Plant Integrative Biology, Zhejiang University, Zijingang Campus, Hangzhou, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Chen KS"
+          ],
+          "firstName": [
+            "Kun-Song"
+          ],
+          "lastName": [
+            "Chen"
+          ],
+          "initials": [
+            "KS"
+          ],
+          "affiliation": [
+            "Zhejiang Provincial Key Laboratory of Horticultural Plant Integrative Biology, Zhejiang University, Zijingang Campus, Hangzhou, PR China."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-1282-4432",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "3"
+      ],
+      "volume": [
+        "13"
+      ],
+      "journalIssueId": [
+        "2656076"
+      ],
+      "dateOfPublication": [
+        "2018 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "e0194326"
+  ],
+  "abstractText": [
+    "Artificial high-CO2 atmosphere (AHCA, 95% CO2 and 1% O2) has been widely applied as a postharvest de-astringency treatment for persimmon fruit. AHCA increases expression of transcription factors, including ethylene response factors (DkERF), that target de-astringency genes. Here, the promoter of DkERF9, a previously characterized AHCA-inducible and de-astringency regulator, was utilized to screen a cDNA library by yeast one hybrid assay. A novel NAC transcription factor, named DkNAC7, was identified. Dual-luciferase assay indicated that DkNAC7 could not only trans-activate the promoter of DkERF9, but also activated the previously identified deastringency-related gene DkPDC2. Real-time PCR analysis showed that DkNAC7 was up-regulated by AHCA treatment, in concert with the removal of astringency from persimmon fruit and subcellular localization showed DkNAC7 was located in the nucleus. Thus, these results indicate that DkNAC7 is a putative transcriptional activator involved in regulating persimmon fruit deastringency by trans-activition on both DkERF9 and DkPDC2, which encodes pyruvate decarboxylase."
+  ],
+  "affiliation": [
+    "Zhejiang Provincial Key Laboratory of Horticultural Plant Integrative Biology, Zhejiang University, Zijingang Campus, Hangzhou, PR China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Diospyros"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "CL"
+                  ],
+                  "qualifierName": [
+                    "classification"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Fruit"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Cloning, Molecular"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phylogeny"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Binding"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Transport"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Genetic Association Studies"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5851633?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5851633"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0194326"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL",
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2018-07-02"
+  ],
+  "dateOfCreation": [
+    "2018-03-15"
+  ],
+  "dateOfRevision": [
+    "2018-07-02"
+  ],
+  "electronicPublicationDate": [
+    "2018-03-14"
+  ],
+  "firstPublicationDate": [
+    "2018-03-14"
+  ]
+}

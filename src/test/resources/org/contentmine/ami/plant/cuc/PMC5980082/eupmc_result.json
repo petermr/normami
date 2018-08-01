@@ -1,0 +1,362 @@
+{
+  "id": [
+    "29581461"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29581461"
+  ],
+  "pmcid": [
+    "PMC5980082"
+  ],
+  "doi": [
+    "10.1038/s41598-018-23558-1"
+  ],
+  "title": [
+    "Transcriptome-wide identification and screening of WRKY factors involved in the regulation of taxol biosynthesis in Taxus chinensis."
+  ],
+  "authorString": [
+    "Zhang M, Chen Y, Nie L, Jin X, Liao W, Zhao S, Fu C, Yu L."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Zhang M"
+          ],
+          "firstName": [
+            "Meng"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Institute of Resource Biology and Biotechnology, Department of Biotechnology, College of Life Science and Technology, Huazhong University of Science and Technology, No.1037 Luoyu Road, Wuhan, 430074, Hubei, P. R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Chen Y"
+          ],
+          "firstName": [
+            "Ying"
+          ],
+          "lastName": [
+            "Chen"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "Institute of Resource Biology and Biotechnology, Department of Biotechnology, College of Life Science and Technology, Huazhong University of Science and Technology, No.1037 Luoyu Road, Wuhan, 430074, Hubei, P. R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Nie L"
+          ],
+          "firstName": [
+            "Lin"
+          ],
+          "lastName": [
+            "Nie"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Institute of Resource Biology and Biotechnology, Department of Biotechnology, College of Life Science and Technology, Huazhong University of Science and Technology, No.1037 Luoyu Road, Wuhan, 430074, Hubei, P. R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Jin X"
+          ],
+          "firstName": [
+            "Xiaofei"
+          ],
+          "lastName": [
+            "Jin"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Institute of Resource Biology and Biotechnology, Department of Biotechnology, College of Life Science and Technology, Huazhong University of Science and Technology, No.1037 Luoyu Road, Wuhan, 430074, Hubei, P. R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Liao W"
+          ],
+          "firstName": [
+            "Weifang"
+          ],
+          "lastName": [
+            "Liao"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "Institute of Resource Biology and Biotechnology, Department of Biotechnology, College of Life Science and Technology, Huazhong University of Science and Technology, No.1037 Luoyu Road, Wuhan, 430074, Hubei, P. R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhao S"
+          ],
+          "firstName": [
+            "Shengying"
+          ],
+          "lastName": [
+            "Zhao"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Institute of Resource Biology and Biotechnology, Department of Biotechnology, College of Life Science and Technology, Huazhong University of Science and Technology, No.1037 Luoyu Road, Wuhan, 430074, Hubei, P. R. China."
+          ]
+        },
+        {
+          "fullName": [
+            "Fu C"
+          ],
+          "firstName": [
+            "Chunhua"
+          ],
+          "lastName": [
+            "Fu"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "Institute of Resource Biology and Biotechnology, Department of Biotechnology, College of Life Science and Technology, Huazhong University of Science and Technology, No.1037 Luoyu Road, Wuhan, 430074, Hubei, P. R. China. fuch2003@126.com."
+          ]
+        },
+        {
+          "fullName": [
+            "Yu L"
+          ],
+          "firstName": [
+            "Longjiang"
+          ],
+          "lastName": [
+            "Yu"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Institute of Resource Biology and Biotechnology, Department of Biotechnology, College of Life Science and Technology, Huazhong University of Science and Technology, No.1037 Luoyu Road, Wuhan, 430074, Hubei, P. R. China."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "8"
+      ],
+      "journalIssueId": [
+        "2656503"
+      ],
+      "dateOfPublication": [
+        "2018 Mar"
+      ],
+      "monthOfPublication": [
+        "3"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-03-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Scientific reports"
+          ],
+          "ISOAbbreviation": [
+            "Sci Rep"
+          ],
+          "medlineAbbreviation": [
+            "Sci Rep"
+          ],
+          "NLMid": [
+            "101563288"
+          ],
+          "ISSN": [
+            "2045-2322"
+          ],
+          "ESSN": [
+            "2045-2322"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "5197"
+  ],
+  "abstractText": [
+    "WRKY, a plant-specific transcription factor family, plays important roles in pathogen defense, abiotic cues, phytohormone signaling, and regulation of plant secondary metabolism. However, little is known about the roles, functions, and mechanisms of WRKY in taxane biosynthesis in Taxus spp. In this study, 61 transcripts were identified from Taxus chinensis transcriptome datasets by using hidden Markov model search. All of these transcripts encoded proteins containing WRKY domains, which were designated as TcWRKY1-61. After phylogenetic analysis of the WRKY domains of TcWRKYs and AtWRKYs, 16, 8, 10, 14, 5, 7, and 1 TcWRKYs were cladded into Group I, IIa-IIe, and III, respectively. Then, six representative TcWRKYs were selected to classify their effects on taxol biosynthesis. After MeJA (methyl jasmonate acid) and SA (salicylic acid) treatments, all of the six TcWRKYs were upregulated by MeJA treatment. TcWRKY44 (IId) and TcWRKY47 (IIa) were upregulated, whereas TcWRKY8 (IIc), TcWRKY20 (III), TcWRKY26 (I), TcWRKY41 (IIe), and TcWRKY52 (IIb) were downregulated by SA treatment. Overexpression experiments showed that the six selected TcWRKYs exerted different effects on taxol biosynthesis. In specific, TcWRKY8 and TcWRKY47 significantly improved the expression levels of taxol-biosynthesis-related genes. Transcriptome-wide identification of WRKY factors in Taxus not only enhances our understanding of plant WRKY factors but also identifies candidate regulators of taxol biosynthesis."
+  ],
+  "affiliation": [
+    "Institute of Resource Biology and Biotechnology, Department of Biotechnology, College of Life Science and Technology, Huazhong University of Science and Technology, No.1037 Luoyu Road, Wuhan, 430074, Hubei, P. R. China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5980082?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5980082"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1038/s41598-018-23558-1"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "pfam"
+      ]
+    }
+  ],
+  "dateOfCreation": [
+    "2018-03-28"
+  ],
+  "dateOfRevision": [
+    "2018-06-07"
+  ],
+  "electronicPublicationDate": [
+    "2018-03-26"
+  ],
+  "firstPublicationDate": [
+    "2018-03-26"
+  ]
+}

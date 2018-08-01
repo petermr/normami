@@ -1,0 +1,614 @@
+{
+  "id": [
+    "24692652"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "24692652"
+  ],
+  "pmcid": [
+    "PMC4106442"
+  ],
+  "doi": [
+    "10.1093/jxb/eru125"
+  ],
+  "title": [
+    "QTL meta-analysis in Arabidopsis reveals an interaction between leaf senescence and resource allocation to seeds."
+  ],
+  "authorString": [
+    "Chardon F, Jasinski S, Durandet M, Lécureuil A, Soulay F, Bedu M, Guerche P, Masclaux-Daubresse C."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Chardon F"
+          ],
+          "firstName": [
+            "Fabien"
+          ],
+          "lastName": [
+            "Chardon"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "UMR1318 INRA AgroParisTech, Institut Jean-Pierre Bourgin, INRA Versailles, Route Saint Cyr, 78026 Versailles Cedex, France Fabien.Chardon@versailles.inra.fr."
+          ]
+        },
+        {
+          "fullName": [
+            "Jasinski S"
+          ],
+          "firstName": [
+            "Sophie"
+          ],
+          "lastName": [
+            "Jasinski"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "UMR1318 INRA AgroParisTech, Institut Jean-Pierre Bourgin, INRA Versailles, Route Saint Cyr, 78026 Versailles Cedex, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Durandet M"
+          ],
+          "firstName": [
+            "Monique"
+          ],
+          "lastName": [
+            "Durandet"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "UMR1318 INRA AgroParisTech, Institut Jean-Pierre Bourgin, INRA Versailles, Route Saint Cyr, 78026 Versailles Cedex, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Lécureuil A"
+          ],
+          "firstName": [
+            "Alain"
+          ],
+          "lastName": [
+            "Lécureuil"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "UMR1318 INRA AgroParisTech, Institut Jean-Pierre Bourgin, INRA Versailles, Route Saint Cyr, 78026 Versailles Cedex, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Soulay F"
+          ],
+          "firstName": [
+            "Fabienne"
+          ],
+          "lastName": [
+            "Soulay"
+          ],
+          "initials": [
+            "F"
+          ],
+          "affiliation": [
+            "UMR1318 INRA AgroParisTech, Institut Jean-Pierre Bourgin, INRA Versailles, Route Saint Cyr, 78026 Versailles Cedex, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Bedu M"
+          ],
+          "firstName": [
+            "Magali"
+          ],
+          "lastName": [
+            "Bedu"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "UMR1318 INRA AgroParisTech, Institut Jean-Pierre Bourgin, INRA Versailles, Route Saint Cyr, 78026 Versailles Cedex, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Guerche P"
+          ],
+          "firstName": [
+            "Philippe"
+          ],
+          "lastName": [
+            "Guerche"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "UMR1318 INRA AgroParisTech, Institut Jean-Pierre Bourgin, INRA Versailles, Route Saint Cyr, 78026 Versailles Cedex, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Masclaux-Daubresse C"
+          ],
+          "firstName": [
+            "Céline"
+          ],
+          "lastName": [
+            "Masclaux-Daubresse"
+          ],
+          "initials": [
+            "C"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-0719-9350",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "UMR1318 INRA AgroParisTech, Institut Jean-Pierre Bourgin, INRA Versailles, Route Saint Cyr, 78026 Versailles Cedex, France."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0003-0719-9350",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "14"
+      ],
+      "volume": [
+        "65"
+      ],
+      "journalIssueId": [
+        "2183390"
+      ],
+      "dateOfPublication": [
+        "2014 Jul"
+      ],
+      "monthOfPublication": [
+        "7"
+      ],
+      "yearOfPublication": [
+        "2014"
+      ],
+      "printPublicationDate": [
+        "2014-07-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2014"
+  ],
+  "pageInfo": [
+    "3949-3962"
+  ],
+  "abstractText": [
+    "Sequential and monocarpic senescence are observed at vegetative and reproductive stages, respectively. Both facilitate nitrogen (N) remobilization and control the duration of carbon (C) fixation. Genetic and environmental factors control N and C resource allocation to seeds. Studies of natural variation in Arabidopsis thaliana revealed differences between accessions for leaf senescence phenotypes, seed N and C contents, and N remobilization efficiency-related traits. Here, a quantitative genetics approach was used to gain a better understanding of seed filling regulation in relation to leaf senescence and resource allocation. For that purpose, three Arabidopsis recombinant inbred line populations (Ct-1×Col-0, Cvi-0×Col-0, Bur-0×Col-0) were used to map QTL (quantitative trait loci) for ten traits related to senescence, resource allocation, and seed filling. The use of common markers across the three different maps allowed direct comparisons of the positions of the detected QTL in a single consensus map. QTL meta-analysis was then used to identify interesting regions (metaQTL) where QTL for several traits co-localized. MetaQTL were compared with positions of candidate genes known to be involved in senescence processes and flowering time. Finally, investigation of the correlation between yield and seed N concentration in the three populations suggests that leaf senescence disrupts the negative correlation generally observed between these two traits."
+  ],
+  "affiliation": [
+    "UMR1318 INRA AgroParisTech, Institut Jean-Pierre Bourgin, INRA Versailles, Route Saint Cyr, 78026 Versailles Cedex, France Fabien.Chardon@versailles.inra.fr."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Meta-Analysis",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Flowers"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seeds"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Leaves"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Chromosome Mapping"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Inbreeding"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Quantitative Trait, Heritable"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Quantitative Trait Loci"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Models, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Genetic Association Studies"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Yield",
+        "Leaf senescence",
+        "Harvest index",
+        "Flowering Time.",
+        "Nitrogen And Carbon Allocation"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4106442?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4106442"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24692652/pdf/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Free"
+          ],
+          "availabilityCode": [
+            "F"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "PubMedCentral"
+          ],
+          "url": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/24692652/?tool=EBI"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/eru125"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "Y"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "7"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2015-03-30"
+  ],
+  "dateOfCreation": [
+    "2014-07-23"
+  ],
+  "electronicPublicationDate": [
+    "2014-04-01"
+  ],
+  "firstPublicationDate": [
+    "2014-04-01"
+  ]
+}

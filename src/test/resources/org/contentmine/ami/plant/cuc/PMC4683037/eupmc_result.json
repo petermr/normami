@@ -1,0 +1,458 @@
+{
+  "id": [
+    "26681181"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26681181"
+  ],
+  "pmcid": [
+    "PMC4683037"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0145424"
+  ],
+  "title": [
+    "Genome-Wide Dissection of the MicroRNA Expression Profile in Rice Embryo during Early Stages of Seed Germination."
+  ],
+  "authorString": [
+    "He D, Wang Q, Wang K, Yang P."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "He D"
+          ],
+          "firstName": [
+            "Dongli"
+          ],
+          "lastName": [
+            "He"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Key Laboratory of Plant Germplasm Enhancement and Speciality Agriculture, Wuhan Botanical Garden, Chinese Academy of Sciences, Wuhan 430074, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang Q"
+          ],
+          "firstName": [
+            "Qiong"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "Q"
+          ],
+          "affiliation": [
+            "Key Laboratory of Plant Germplasm Enhancement and Speciality Agriculture, Wuhan Botanical Garden, Chinese Academy of Sciences, Wuhan 430074, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang K"
+          ],
+          "firstName": [
+            "Kun"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "College of life science, Wuhan University, Wuhan 430072, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yang P"
+          ],
+          "firstName": [
+            "Pingfang"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "P"
+          ],
+          "affiliation": [
+            "Key Laboratory of Plant Germplasm Enhancement and Speciality Agriculture, Wuhan Botanical Garden, Chinese Academy of Sciences, Wuhan 430074, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "12"
+      ],
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "2347465"
+      ],
+      "dateOfPublication": [
+        "2015"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "e0145424"
+  ],
+  "abstractText": [
+    "The first 24 hours after imbibition (HAI) is pivotal for rice seed germination, during which embryo cells switch from a quiescent state to a metabolically active state rapidly. MicroRNAs (miRNAs) have increasingly been shown to play important roles in rice development. Nevertheless, limited knowledge about miRNA regulation has been obtained in the early stages of rice seed germination. In this study, the small RNAs (sRNAs) from embryos of 0, 12, and 24 HAI rice seeds were sequenced to investigate the composition and expression patterns of miRNAs. The bioinformatics analysis identified 289 miRNA loci, including 59 known and 230 novel miRNAs, and 35 selected miRNAs were confirmed by stem-loop real-time RT-PCR. Expression analysis revealed that the dry and imbibed seeds have unique miRNA expression patterns compared with other tissues, particularly for the dry seeds. Using three methods, Mireap, psRNATarget and degradome analyses, 1197 potential target genes of identified miRNAs involved in various molecular functions were predicted. Among these target genes, 39 had significantly negative correlations with their corresponding miRNAs as inferred from published transcriptome data, and 6 inversely expressed miRNA-target pairs were confirmed by 5'-RACE assay. Our work provides an inventory of miRNA expression profiles and miRNA-target interactions in rice embryos, and lays a foundation for further studies of miRNA-mediated regulation in initial seed germination."
+  ],
+  "affiliation": [
+    "Key Laboratory of Plant Germplasm Enhancement and Speciality Agriculture, Wuhan Botanical Garden, Chinese Academy of Sciences, Wuhan 430074, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Germination"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Developmental"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Transcriptome"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Oryza"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "RNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4683037?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4683037"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0145424"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "5"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-07-06"
+  ],
+  "dateOfCreation": [
+    "2015-12-19"
+  ],
+  "dateOfRevision": [
+    "2018-04-15"
+  ],
+  "electronicPublicationDate": [
+    "2015-12-17"
+  ],
+  "firstPublicationDate": [
+    "2015-12-17"
+  ]
+}

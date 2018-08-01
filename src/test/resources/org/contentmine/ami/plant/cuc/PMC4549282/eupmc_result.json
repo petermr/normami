@@ -1,0 +1,618 @@
+{
+  "id": [
+    "26305210"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26305210"
+  ],
+  "pmcid": [
+    "PMC4549282"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0135667"
+  ],
+  "title": [
+    "The Wheat NAC Transcription Factor TaNAC2L Is Regulated at the Transcriptional and Post-Translational Levels and Promotes Heat Stress Tolerance in Transgenic Arabidopsis."
+  ],
+  "authorString": [
+    "Guo W, Zhang J, Zhang N, Xin M, Peng H, Hu Z, Ni Z, Du J."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Guo W"
+          ],
+          "firstName": [
+            "Weiwei"
+          ],
+          "lastName": [
+            "Guo"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE), Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China; National Plant Gene Research Centre (Beijing), Beijing, 100193, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang J"
+          ],
+          "firstName": [
+            "Jinxia"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE), Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China; National Plant Gene Research Centre (Beijing), Beijing, 100193, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhang N"
+          ],
+          "firstName": [
+            "Ning"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "N"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE), Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China; National Plant Gene Research Centre (Beijing), Beijing, 100193, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Xin M"
+          ],
+          "firstName": [
+            "Mingming"
+          ],
+          "lastName": [
+            "Xin"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE), Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China; National Plant Gene Research Centre (Beijing), Beijing, 100193, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Peng H"
+          ],
+          "firstName": [
+            "Huiru"
+          ],
+          "lastName": [
+            "Peng"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE), Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China; National Plant Gene Research Centre (Beijing), Beijing, 100193, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Hu Z"
+          ],
+          "firstName": [
+            "Zhaorong"
+          ],
+          "lastName": [
+            "Hu"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE), Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China; National Plant Gene Research Centre (Beijing), Beijing, 100193, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Ni Z"
+          ],
+          "firstName": [
+            "Zhongfu"
+          ],
+          "lastName": [
+            "Ni"
+          ],
+          "initials": [
+            "Z"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE), Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China; National Plant Gene Research Centre (Beijing), Beijing, 100193, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Du J"
+          ],
+          "firstName": [
+            "Jinkun"
+          ],
+          "lastName": [
+            "Du"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE), Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China; National Plant Gene Research Centre (Beijing), Beijing, 100193, China."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "8"
+      ],
+      "volume": [
+        "10"
+      ],
+      "journalIssueId": [
+        "2309735"
+      ],
+      "dateOfPublication": [
+        "2015"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "e0135667"
+  ],
+  "abstractText": [
+    "Heat stress poses a serious threat to global crop production. In efforts that aim to mitigate the adverse effects of heat stress on crops, a variety of genetic tools are being used to develop plants with improved thermotolerance. The characterization of important regulators of heat stress tolerance provides essential information for this aim. In this study, we examine the wheat (Triticum aestivum) NAC transcription factor gene TaNAC2L. High temperature induced TaNAC2L expression in wheat and overexpression of TaNAC2L in Arabidopsis thaliana enhanced acquired heat tolerance without causing obvious alterations in phenotype compared with wild type under normal conditions. TaNAC2L overexpression also activated the expression of heat-related genes in the transgenic Arabidopsis plants, suggesting that TaNAC2L may improve heat tolerance by regulating the expression of stress-responsive genes. Notably, TaNAC2L is also regulated at the post-translational level and might be degraded via a proteasome-mediated pathway. Thus, this wheat transcription factor may have potential uses in enhancing thermotolerance in crops."
+  ],
+  "affiliation": [
+    "State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE), Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China; National Plant Gene Research Centre (Beijing), Beijing, 100193, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Triticum"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Repressor Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Protein Processing, Post-Translational"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Heat-Shock Response"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Hot Temperature"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Repressor Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "NAC2 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4549282?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4549282"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0135667"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "2"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-05-11"
+  ],
+  "dateOfCreation": [
+    "2015-08-26"
+  ],
+  "dateOfRevision": [
+    "2015-09-02"
+  ],
+  "electronicPublicationDate": [
+    "2015-08-25"
+  ],
+  "firstPublicationDate": [
+    "2015-08-25"
+  ]
+}

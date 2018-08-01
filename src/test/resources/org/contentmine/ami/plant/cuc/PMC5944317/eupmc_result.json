@@ -1,0 +1,297 @@
+{
+  "id": [
+    "29774043"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29774043"
+  ],
+  "pmcid": [
+    "PMC5944317"
+  ],
+  "doi": [
+    "10.3389/fpls.2018.00589"
+  ],
+  "title": [
+    "Integration of the Pokeweed miRNA and mRNA Transcriptomes Reveals Targeting of Jasmonic Acid-Responsive Genes."
+  ],
+  "authorString": [
+    "Neller KCM, Klenov A, Guzman JC, Hudak KA."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Neller KCM"
+          ],
+          "firstName": [
+            "Kira C M"
+          ],
+          "lastName": [
+            "Neller"
+          ],
+          "initials": [
+            "KCM"
+          ],
+          "affiliation": [
+            "Department of Biology, York University, Toronto, ON, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Klenov A"
+          ],
+          "firstName": [
+            "Alexander"
+          ],
+          "lastName": [
+            "Klenov"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Biology, York University, Toronto, ON, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Guzman JC"
+          ],
+          "firstName": [
+            "Juan C"
+          ],
+          "lastName": [
+            "Guzman"
+          ],
+          "initials": [
+            "JC"
+          ],
+          "affiliation": [
+            "Department of Electrical Engineering and Computer Science, York University, Toronto, ON, Canada."
+          ]
+        },
+        {
+          "fullName": [
+            "Hudak KA"
+          ],
+          "firstName": [
+            "Katalin A"
+          ],
+          "lastName": [
+            "Hudak"
+          ],
+          "initials": [
+            "KA"
+          ],
+          "affiliation": [
+            "Department of Biology, York University, Toronto, ON, Canada."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "9"
+      ],
+      "journalIssueId": [
+        "2644150"
+      ],
+      "dateOfPublication": [
+        "2018 "
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2018"
+      ],
+      "printPublicationDate": [
+        "2018-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in plant science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2018"
+  ],
+  "pageInfo": [
+    "589"
+  ],
+  "abstractText": [
+    "The American pokeweed plant, Phytolacca americana, displays broad-spectrum resistance to plant viruses and is a heavy metal hyperaccumulator. However, little is known about the regulation of biotic and abiotic stress responses in this non-model plant. To investigate the control of miRNAs in gene expression, we sequenced the small RNA transcriptome of pokeweed treated with jasmonic acid (JA), a hormone that mediates pathogen defense and stress tolerance. We predicted 145 miRNAs responsive to JA, most of which were unique to pokeweed. These miRNAs were low in abundance and condition-specific, with discrete expression change. Integration of paired mRNA-Seq expression data enabled us to identify correlated, novel JA-responsive targets that mediate hormone biosynthesis, signal transduction, and pathogen defense. The expression of approximately half the pairs was positively correlated, an uncommon finding that we functionally validated by mRNA cleavage. Importantly, we report that a pokeweed-specific miRNA targets the transcript of OPR3, novel evidence that a miRNA regulates a JA biosynthesis enzyme. This first large-scale small RNA study of a Phytolaccaceae family member shows that miRNA-mediated control is a significant component of the JA response, associated with widespread changes in expression of genes required for stress adaptation."
+  ],
+  "affiliation": [
+    "Department of Biology, York University, Toronto, ON, Canada."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Small RNA",
+        "miRNA",
+        "plant defense",
+        "Transcriptome",
+        "jasmonic acid",
+        "phytolacca americana",
+        "Pokeweed"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5944317?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5944317"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2018.00589"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCreation": [
+    "2018-05-19"
+  ],
+  "dateOfRevision": [
+    "2018-05-20"
+  ],
+  "electronicPublicationDate": [
+    "2018-05-03"
+  ],
+  "firstPublicationDate": [
+    "2018-05-03"
+  ]
+}

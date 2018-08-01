@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippetsTree>
+ <snippets file="target/jupyter/demos/cuc/PMC3281924/results/gene/human/results.xml">
+  <result pre="embryo development are caused by the mutation of genes regulating SAM formation. Mutations of rice " exact="SHOOTLESS2" post=" ( SHL2), SHL4/ SHOOT ORGANIZATION2 ( SHO2), and SHO1 result in " xpath="/html[1]/body[1]/div[2]/div[1]/p[4]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="re caused by the mutation of genes regulating SAM formation. Mutations of rice SHOOTLESS2 ( " exact="SHL2" post="), SHL4/ SHOOT ORGANIZATION2 ( SHO2), and SHO1 result in the defective " xpath="/html[1]/body[1]/div[2]/div[1]/p[4]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="he mutation of genes regulating SAM formation. Mutations of rice SHOOTLESS2 ( SHL2), " exact="SHL4" post="/ SHOOT ORGANIZATION2 ( SHO2), and SHO1 result in the defective expression of " xpath="/html[1]/body[1]/div[2]/div[1]/p[4]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="ion. Mutations of rice SHOOTLESS2 ( SHL2), SHL4/ SHOOT ORGANIZATION2 ( " exact="SHO2" post="), and SHO1 result in the defective expression of homeodomain-leucine zipper (HD-ZIPIII) fam" xpath="/html[1]/body[1]/div[2]/div[1]/p[4]" dictionary="hgnc" dictionaryCheck="false" name="human"/>
+  <result pre="rice SHOOTLESS2 ( SHL2), SHL4/ SHOOT ORGANIZATION2 ( SHO2), and " exact="SHO1" post=" result in the defective expression of homeodomain-leucine zipper (HD-ZIPIII) family transcription " dictionary="hgnc" dictionaryCheck="false" name="human"/>
+ </snippets>
+</snippetsTree>

@@ -1,0 +1,498 @@
+{
+  "id": [
+    "27604581"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27604581"
+  ],
+  "pmcid": [
+    "PMC5013670"
+  ],
+  "doi": [
+    "10.1186/s12870-016-0882-5"
+  ],
+  "title": [
+    "Comprehensive analysis and discovery of drought-related NAC transcription factors in common bean."
+  ],
+  "authorString": [
+    "Wu J, Wang L, Wang S."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Wu J"
+          ],
+          "firstName": [
+            "Jing"
+          ],
+          "lastName": [
+            "Wu"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Germplasm Resources and Utilization, Ministry of Agriculture, The National Key Facility for Crop Gene Resources and Genetic Improvement, Institute of Crop Science, the Chinese Academy of Agricultural Sciences, Beijing, 100081, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang L"
+          ],
+          "firstName": [
+            "Lanfen"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Germplasm Resources and Utilization, Ministry of Agriculture, The National Key Facility for Crop Gene Resources and Genetic Improvement, Institute of Crop Science, the Chinese Academy of Agricultural Sciences, Beijing, 100081, China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang S"
+          ],
+          "firstName": [
+            "Shumin"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Key Laboratory of Crop Germplasm Resources and Utilization, Ministry of Agriculture, The National Key Facility for Crop Gene Resources and Genetic Improvement, Institute of Crop Science, the Chinese Academy of Agricultural Sciences, Beijing, 100081, China. wangshumin@caas.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "1"
+      ],
+      "volume": [
+        "16"
+      ],
+      "journalIssueId": [
+        "2461808"
+      ],
+      "dateOfPublication": [
+        "2016 Sep"
+      ],
+      "monthOfPublication": [
+        "9"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-09-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "BMC plant biology"
+          ],
+          "ISOAbbreviation": [
+            "BMC Plant Biol."
+          ],
+          "medlineAbbreviation": [
+            "BMC Plant Biol"
+          ],
+          "NLMid": [
+            "100967807"
+          ],
+          "ISSN": [
+            "1471-2229"
+          ],
+          "ESSN": [
+            "1471-2229"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "193"
+  ],
+  "abstractText": [
+    "Common bean (Phaseolus vulgaris L.) is an important warm-season food legume. Drought is the most important environmental stress factor affecting large areas of common bean via plant death or reduced global production. The NAM, ATAF1/2 and CUC2 (NAC) domain protein family are classic transcription factors (TFs) involved in a variety of abiotic stresses, particularly drought stress. However, the NAC TFs in common bean have not been characterized.In the present study, 86 putative NAC TF proteins were identified from the common bean genome database and located on 11 common bean chromosomes. The proteins were phylogenetically clustered into 8 distinct subfamilies. The gene structure and motif composition of common bean NACs were similar in each subfamily. These results suggest that NACs in the same subfamily may possess conserved functions. The expression patterns of common bean NAC genes were also characterized. The majority of NACs exhibited specific temporal and spatial expression patterns. We identified 22 drought-related NAC TFs based on transcriptome data for drought-tolerant and drought-sensitive genotypes. Quantitative real-time PCR (qRT-PCR) was performed to confirm the expression patterns of the 20 drought-related NAC genes.Based on the common bean genome sequence, we analyzed the structural characteristics, genome distribution, and expression profiles of NAC gene family members and analyzed drought-responsive NAC genes. Our results provide useful information for the functional characterization of common bean NAC genes and rich resources and opportunities for understanding common bean drought stress tolerance mechanisms."
+  ],
+  "affiliation": [
+    "Key Laboratory of Crop Germplasm Resources and Utilization, Ministry of Agriculture, The National Key Facility for Crop Gene Resources and Genetic Improvement, Institute of Crop Science, the Chinese Academy of Agricultural Sciences, Beijing, 100081, China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phaseolus"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Water"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Droughts"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Common bean",
+        "Transcription factors",
+        "Drought"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Plant Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Water"
+          ],
+          "registryNumber": [
+            "059QF0KO0R"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5013670?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5013670"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12870-016-0882-5"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "gen",
+        "pfam"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2017-08-15"
+  ],
+  "dateOfCreation": [
+    "2016-09-09"
+  ],
+  "dateOfRevision": [
+    "2017-12-20"
+  ],
+  "electronicPublicationDate": [
+    "2016-09-07"
+  ],
+  "firstPublicationDate": [
+    "2016-09-07"
+  ]
+}

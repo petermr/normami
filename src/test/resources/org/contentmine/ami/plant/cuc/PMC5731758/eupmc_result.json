@@ -1,0 +1,634 @@
+{
+  "id": [
+    "29244865"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "29244865"
+  ],
+  "pmcid": [
+    "PMC5731758"
+  ],
+  "doi": [
+    "10.1371/journal.pone.0189788"
+  ],
+  "title": [
+    "The Arabidopsis thaliana F-box gene HAWAIIAN SKIRT is a new player in the microRNA pathway."
+  ],
+  "authorString": [
+    "Zhang X, Jayaweera D, Peters JL, Szecsi J, Bendahmane M, Roberts JA, González-Carranza ZH."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Zhang X"
+          ],
+          "firstName": [
+            "Xuebin"
+          ],
+          "lastName": [
+            "Zhang"
+          ],
+          "initials": [
+            "X"
+          ],
+          "affiliation": [
+            "Plant and Crop Sciences Division, School of Biosciences, University of Nottingham, Sutton Bonington Campus, Loughborough, Leicestershire, United Kingdom."
+          ]
+        },
+        {
+          "fullName": [
+            "Jayaweera D"
+          ],
+          "firstName": [
+            "Dasuni"
+          ],
+          "lastName": [
+            "Jayaweera"
+          ],
+          "initials": [
+            "D"
+          ],
+          "affiliation": [
+            "Plant and Crop Sciences Division, School of Biosciences, University of Nottingham, Sutton Bonington Campus, Loughborough, Leicestershire, United Kingdom."
+          ]
+        },
+        {
+          "fullName": [
+            "Peters JL"
+          ],
+          "firstName": [
+            "Janny L"
+          ],
+          "lastName": [
+            "Peters"
+          ],
+          "initials": [
+            "JL"
+          ],
+          "affiliation": [
+            "Department of Molecular Plant Physiology, Institute for Water and Wetland Research, Radboud University Nijmegen, Nijmegen, The Netherlands."
+          ]
+        },
+        {
+          "fullName": [
+            "Szecsi J"
+          ],
+          "firstName": [
+            "Judit"
+          ],
+          "lastName": [
+            "Szecsi"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "Laboratoire Reproduction et Développement des Plantes, Univ Lyon, ENS de Lyon, Université Claude Bernard Lyon 1, CNRS, INRA, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Bendahmane M"
+          ],
+          "firstName": [
+            "Mohammed"
+          ],
+          "lastName": [
+            "Bendahmane"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Laboratoire Reproduction et Développement des Plantes, Univ Lyon, ENS de Lyon, Université Claude Bernard Lyon 1, CNRS, INRA, Lyon, France."
+          ]
+        },
+        {
+          "fullName": [
+            "Roberts JA"
+          ],
+          "firstName": [
+            "Jeremy A"
+          ],
+          "lastName": [
+            "Roberts"
+          ],
+          "initials": [
+            "JA"
+          ],
+          "affiliation": [
+            "Plant and Crop Sciences Division, School of Biosciences, University of Nottingham, Sutton Bonington Campus, Loughborough, Leicestershire, United Kingdom."
+          ]
+        },
+        {
+          "fullName": [
+            "González-Carranza ZH"
+          ],
+          "firstName": [
+            "Zinnia H"
+          ],
+          "lastName": [
+            "González-Carranza"
+          ],
+          "initials": [
+            "ZH"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-9127-3252",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Plant and Crop Sciences Division, School of Biosciences, University of Nottingham, Sutton Bonington Campus, Loughborough, Leicestershire, United Kingdom."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-9127-3252",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "12"
+      ],
+      "volume": [
+        "12"
+      ],
+      "journalIssueId": [
+        "2632138"
+      ],
+      "dateOfPublication": [
+        "2017"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2017"
+      ],
+      "printPublicationDate": [
+        "2017-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PloS one"
+          ],
+          "ISOAbbreviation": [
+            "PLoS ONE"
+          ],
+          "medlineAbbreviation": [
+            "PLoS One"
+          ],
+          "NLMid": [
+            "101285081"
+          ],
+          "ISSN": [
+            "1932-6203"
+          ],
+          "ESSN": [
+            "1932-6203"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2017"
+  ],
+  "pageInfo": [
+    "e0189788"
+  ],
+  "abstractText": [
+    "In Arabidopsis, the F-box HAWAIIAN SKIRT (HWS) protein is important for organ growth. Loss of function of HWS exhibits pleiotropic phenotypes including sepal fusion. To dissect the HWS role, we EMS-mutagenized hws-1 seeds and screened for mutations that suppress hws-1 associated phenotypes. We identified shs-2 and shs-3 (suppressor of hws-2 and 3) mutants in which the sepal fusion phenotype of hws-1 was suppressed. shs-2 and shs-3 (renamed hst-23/hws-1 and hst-24/hws-1) carry transition mutations that result in premature terminations in the plant homolog of Exportin-5 HASTY (HST), known to be important in miRNA biogenesis, function and transport. Genetic crosses between hws-1 and mutant lines for genes in the miRNA pathway also suppress the phenotypes associated with HWS loss of function, corroborating epistatic relations between the miRNA pathway genes and HWS. In agreement with these data, accumulation of miRNA is modified in HWS loss or gain of function mutants. Our data propose HWS as a new player in the miRNA pathway, important for plant growth."
+  ],
+  "affiliation": [
+    "Plant and Crop Sciences Division, School of Biosciences, University of Nottingham, Sutton Bonington Campus, Loughborough, Leicestershire, United Kingdom."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Seeds"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "F-Box Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Signal Transduction"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Phenotype"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Mutation"
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "F-Box Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "HWS protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5731758?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5731758"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pone.0189788"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "0"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2018-01-02"
+  ],
+  "dateOfCreation": [
+    "2017-12-16"
+  ],
+  "dateOfRevision": [
+    "2018-01-02"
+  ],
+  "electronicPublicationDate": [
+    "2017-12-15"
+  ],
+  "firstPublicationDate": [
+    "2017-12-15"
+  ]
+}

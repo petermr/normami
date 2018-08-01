@@ -1,0 +1,299 @@
+{
+  "id": [
+    "26858735"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26858735"
+  ],
+  "pmcid": [
+    "PMC4729950"
+  ],
+  "doi": [
+    "10.3389/fpls.2016.00011"
+  ],
+  "title": [
+    "Microarray Analysis of Rice d1 (RGA1) Mutant Reveals the Potential Role of G-Protein Alpha Subunit in Regulating Multiple Abiotic Stresses Such as Drought, Salinity, Heat, and Cold."
+  ],
+  "authorString": [
+    "Jangam AP, Pathak RR, Raghuram N."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Jangam AP"
+          ],
+          "firstName": [
+            "Annie P"
+          ],
+          "lastName": [
+            "Jangam"
+          ],
+          "initials": [
+            "AP"
+          ],
+          "affiliation": [
+            "University School of Biotechnology, Guru Gobind Singh Indraprastha University Dwarka, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Pathak RR"
+          ],
+          "firstName": [
+            "Ravi R"
+          ],
+          "lastName": [
+            "Pathak"
+          ],
+          "initials": [
+            "RR"
+          ],
+          "affiliation": [
+            "University School of Biotechnology, Guru Gobind Singh Indraprastha University Dwarka, India."
+          ]
+        },
+        {
+          "fullName": [
+            "Raghuram N"
+          ],
+          "firstName": [
+            "Nandula"
+          ],
+          "lastName": [
+            "Raghuram"
+          ],
+          "initials": [
+            "N"
+          ],
+          "affiliation": [
+            "University School of Biotechnology, Guru Gobind Singh Indraprastha University Dwarka, India."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "7"
+      ],
+      "journalIssueId": [
+        "2373635"
+      ],
+      "dateOfPublication": [
+        "2016"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Frontiers in Plant Science"
+          ],
+          "ISOAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "medlineAbbreviation": [
+            "Front Plant Sci"
+          ],
+          "NLMid": [
+            "101568200"
+          ],
+          "ISSN": [
+            "1664-462X"
+          ],
+          "ESSN": [
+            "1664-462X"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "11"
+  ],
+  "abstractText": [
+    "The genome-wide role of heterotrimeric G-proteins in abiotic stress response in rice has not been examined from a functional genomics perspective, despite the availability of mutants and evidences involving individual genes/processes/stresses. Our rice whole transcriptome microarray analysis (GSE 20925 at NCBI GEO) using the G-alpha subunit (RGA1) null mutant (Daikoku 1 or d1) and its corresponding wild type (Oryza sativa Japonica Nipponbare) identified 2270 unique differentially expressed genes (DEGs). Out of them, we mined for all the potentially abiotic stress-responsive genes using Gene Ontology terms, STIFDB2.0 and Rice DB. The first two approaches produced smaller subsets of the 1886 genes found at Rice DB. The GO approach revealed similar regulation of several families of stress-responsive genes in RGA1 mutant. The Genevestigator analysis of the stress-responsive subset of the RGA1-regulated genes from STIFDB revealed cold and drought-responsive clusters. Meta data analysis at Rice DB revealed large stress-response categories such as cold (878 up/810 down), drought (882 up/837 down), heat (913 up/777 down), and salt stress (889 up/841 down). One thousand four hundred ninety-eight of them are common to all the four abiotic stresses, followed by fewer genes common to smaller groups of stresses. The RGA1-regulated genes that uniquely respond to individual stresses include 111 in heat stress, eight each in cold only and drought only stresses, and two genes in salt stress only. The common DEGs (1498) belong to pathways such as the synthesis of polyamine, glycine-betaine, proline, and trehalose. Some of the common DEGs belong to abiotic stress signaling pathways such as calcium-dependent pathway, ABA independent and dependent pathway, and MAP kinase pathway in the RGA1 mutant. Gene ontology of the common stress responsive DEGs revealed 62 unique molecular functions such as transporters, enzyme regulators, transferases, hydrolases, carbon and protein metabolism, binding to nucleotides, carbohydrates, receptors and lipids, morphogenesis, flower development, and cell homeostasis. We also mined 63 miRNAs that bind to the stress responsive transcripts identified in this study, indicating their post-transcriptional regulation. Overall, these results indicate the potentially extensive role of RGA1 in the regulation of multiple abiotic stresses in rice for further validation."
+  ],
+  "affiliation": [
+    "University School of Biotechnology, Guru Gobind Singh Indraprastha University Dwarka, India."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Stress",
+        "Rice",
+        "G-protein",
+        "Heat",
+        "Drought",
+        "Salt",
+        "cold",
+        "Rga1"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4729950?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4729950"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3389/fpls.2016.00011"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "4"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "EMBL",
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "Y"
+  ],
+  "tmAccessionTypeList": [
+    {
+      "accessionType": [
+        "go"
+      ]
+    }
+  ],
+  "dateOfCompletion": [
+    "2016-02-09"
+  ],
+  "dateOfCreation": [
+    "2016-02-09"
+  ],
+  "dateOfRevision": [
+    "2016-02-11"
+  ],
+  "electronicPublicationDate": [
+    "2016-01-28"
+  ],
+  "firstPublicationDate": [
+    "2016-01-28"
+  ]
+}

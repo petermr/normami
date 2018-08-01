@@ -1,0 +1,768 @@
+{
+  "id": [
+    "26139822"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "26139822"
+  ],
+  "pmcid": [
+    "PMC4566987"
+  ],
+  "doi": [
+    "10.1093/jxb/erv312"
+  ],
+  "title": [
+    "Salt-induced transcription factor MYB74 is regulated by the RNA-directed DNA methylation pathway in Arabidopsis."
+  ],
+  "authorString": [
+    "Xu R, Wang Y, Zheng H, Lu W, Wu C, Huang J, Yan K, Yang G, Zheng C."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Xu R"
+          ],
+          "firstName": [
+            "Rui"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "R"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China Shandong Provincial Hospital Affiliated to Shandong University, Jinan, Shandong 250021, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wang Y"
+          ],
+          "firstName": [
+            "Yuhan"
+          ],
+          "lastName": [
+            "Wang"
+          ],
+          "initials": [
+            "Y"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zheng H"
+          ],
+          "firstName": [
+            "Hao"
+          ],
+          "lastName": [
+            "Zheng"
+          ],
+          "initials": [
+            "H"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Lu W"
+          ],
+          "firstName": [
+            "Wei"
+          ],
+          "lastName": [
+            "Lu"
+          ],
+          "initials": [
+            "W"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Wu C"
+          ],
+          "firstName": [
+            "Changai"
+          ],
+          "lastName": [
+            "Wu"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Huang J"
+          ],
+          "firstName": [
+            "Jinguang"
+          ],
+          "lastName": [
+            "Huang"
+          ],
+          "initials": [
+            "J"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yan K"
+          ],
+          "firstName": [
+            "Kang"
+          ],
+          "lastName": [
+            "Yan"
+          ],
+          "initials": [
+            "K"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Yang G"
+          ],
+          "firstName": [
+            "Guodong"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China."
+          ]
+        },
+        {
+          "fullName": [
+            "Zheng C"
+          ],
+          "firstName": [
+            "Chengchao"
+          ],
+          "lastName": [
+            "Zheng"
+          ],
+          "initials": [
+            "C"
+          ],
+          "affiliation": [
+            "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China cczheng@sdau.edu.cn."
+          ]
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "19"
+      ],
+      "volume": [
+        "66"
+      ],
+      "journalIssueId": [
+        "2323431"
+      ],
+      "dateOfPublication": [
+        "2015 Sep"
+      ],
+      "monthOfPublication": [
+        "9"
+      ],
+      "yearOfPublication": [
+        "2015"
+      ],
+      "printPublicationDate": [
+        "2015-09-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Journal of experimental botany"
+          ],
+          "ISOAbbreviation": [
+            "J. Exp. Bot."
+          ],
+          "medlineAbbreviation": [
+            "J Exp Bot"
+          ],
+          "NLMid": [
+            "9882906"
+          ],
+          "ISSN": [
+            "0022-0957"
+          ],
+          "ESSN": [
+            "1460-2431"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2015"
+  ],
+  "pageInfo": [
+    "5997-6008"
+  ],
+  "abstractText": [
+    "Salt stress is one of the major abiotic stresses in agriculture worldwide that causes crop failure by interfering with the profile of gene expression and cell metabolism. Transcription factors and RNA-directed DNA methylation (RdDM) play an important role in the regulation of gene activation under abiotic stress in plants. This work characterized AtMYB74, a member of the R2R3-MYB gene family, which is transcriptionally regulated mainly by RdDM as a response in salt stress in Arabidopsis. Bisulphite sequencing indicated that 24-nt siRNAs target a region approximately 500bp upstream of the transcription initiation site of AtMYB74, which is heavily methylated. Levels of DNA methylation in this region were significantly reduced in wild type plants under salt stress, whereas no changes were found in RdDM mutants. Northern blot and quantitative real-time reverse transcription PCR analysis showed that the accumulation of 24-nt siRNAs was decreased in WT plants under salt stress. Further promoter deletion analysis revealed that the siRNA target region is essential for maintaining AtMYB74 expression patterns. In addition, transgenic plants overexpressing AtMYB74 displayed hypersensitivity to NaCl during seed germination. These results suggest that changes in the levels of the five 24-nt siRNAs regulate the AtMYB74 transcription factor via RdDM in response to salt stress."
+  ],
+  "affiliation": [
+    "State Key Laboratory of Crop Biology, College of Life Sciences, Shandong Agricultural University, Taian, Shandong 271018, PR China Shandong Provincial Hospital Affiliated to Shandong University, Jinan, Shandong 250021, PR China."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print-Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "PH"
+                  ],
+                  "qualifierName": [
+                    "physiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sodium Chloride"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "PD"
+                  ],
+                  "qualifierName": [
+                    "pharmacology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Transcription Factors"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Small Interfering"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Sequence Alignment"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "DNA Methylation"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "DE"
+                  ],
+                  "qualifierName": [
+                    "drug effects"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Amino Acid Sequence"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Salt-Tolerance"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Arabidopsis",
+        "Transcription",
+        "Salt stress",
+        "SiRNA",
+        "Rna-directed Dna Methylation",
+        "Transcription Factor.",
+        "Atmyb74"
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "Transcription Factors"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Arabidopsis Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Small Interfering"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Sodium Chloride"
+          ],
+          "registryNumber": [
+            "451W47IQ8X"
+          ]
+        },
+        {
+          "name": [
+            "MYB74 protein, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4566987?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4566987"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1093/jxb/erv312"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "18"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "Y"
+  ],
+  "dbCrossReferenceList": [
+    {
+      "dbName": [
+        "UNIPROT"
+      ]
+    }
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-07-14"
+  ],
+  "dateOfCreation": [
+    "2015-09-12"
+  ],
+  "dateOfRevision": [
+    "2015-09-16"
+  ],
+  "electronicPublicationDate": [
+    "2015-07-02"
+  ],
+  "firstPublicationDate": [
+    "2015-07-02"
+  ]
+}

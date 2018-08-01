@@ -1,0 +1,516 @@
+{
+  "id": [
+    "22289475"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "22289475"
+  ],
+  "pmcid": [
+    "PMC5054152"
+  ],
+  "doi": [
+    "10.1016/s1672-0229(11)60022-3"
+  ],
+  "title": [
+    "Plant small RNAs: biogenesis, mode of action and their roles in abiotic stresses."
+  ],
+  "authorString": [
+    "Guleria P, Mahajan M, Bhardwaj J, Yadav SK."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Guleria P"
+          ],
+          "firstName": [
+            "Praveen"
+          ],
+          "lastName": [
+            "Guleria"
+          ],
+          "initials": [
+            "P"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-5235-4829",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Plant Metabolic Engineering, Biotechnology Division, CSIR-Institute of Himalayan Bioresource Technology, CSIR, Palampur 176061 (HP), India."
+          ]
+        },
+        {
+          "fullName": [
+            "Mahajan M"
+          ],
+          "firstName": [
+            "Monika"
+          ],
+          "lastName": [
+            "Mahajan"
+          ],
+          "initials": [
+            "M"
+          ]
+        },
+        {
+          "fullName": [
+            "Bhardwaj J"
+          ],
+          "firstName": [
+            "Jyoti"
+          ],
+          "lastName": [
+            "Bhardwaj"
+          ],
+          "initials": [
+            "J"
+          ]
+        },
+        {
+          "fullName": [
+            "Yadav SK"
+          ],
+          "firstName": [
+            "Sudesh Kumar"
+          ],
+          "lastName": [
+            "Yadav"
+          ],
+          "initials": [
+            "SK"
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-5235-4829",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "6"
+      ],
+      "volume": [
+        "9"
+      ],
+      "journalIssueId": [
+        "1900428"
+      ],
+      "dateOfPublication": [
+        "2011 Dec"
+      ],
+      "monthOfPublication": [
+        "12"
+      ],
+      "yearOfPublication": [
+        "2011"
+      ],
+      "printPublicationDate": [
+        "2011-12-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Genomics, proteomics & bioinformatics"
+          ],
+          "ISOAbbreviation": [
+            "Genomics Proteomics Bioinformatics"
+          ],
+          "medlineAbbreviation": [
+            "Genomics Proteomics Bioinformatics"
+          ],
+          "NLMid": [
+            "101197608"
+          ],
+          "ISSN": [
+            "1672-0229"
+          ],
+          "ESSN": [
+            "2210-3244"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2011"
+  ],
+  "pageInfo": [
+    "183-199"
+  ],
+  "abstractText": [
+    "Small RNAs (sRNAs) are 18-30 nt non-coding regulatory elements found in diverse organisms, which were initially identified as small double-stranded RNAs in Caenorhabditis elegans. With the development of new and improved technologies, sRNAs have also been identified and characterized in plant systems. Among them, micro RNAs (miRNAs) and small interfering RNAs (siRNAs) are found to be very important riboregulators in plants. Various types of sRNAs differ in their mode of biogenesis and in their function of gene regulation. sRNAs are involved in gene regulation at both transcriptional and post-transcriptional levels. They are known to regulate growth and development of plants. Furthermore, sRNAs especially plant miRNAs have been found to be involved in various stress responses, such as oxidative, mineral nutrient deficiency, dehydration, and even mechanical stimulus. Therefore, in the present review, we focus on the current understanding of biogenesis and regulatory mechanisms of plant sRNAs and their responses to various abiotic stresses."
+  ],
+  "affiliation": [
+    "Plant Metabolic Engineering, Biotechnology Division, CSIR-Institute of Himalayan Bioresource Technology, CSIR, Palampur 176061 (HP), India."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Print"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "review-article",
+        "Review",
+        "Journal Article"
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Animals"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Caenorhabditis elegans"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Small Interfering"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "RNA, Plant"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Stress, Physiological"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "RNA, Plant"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "RNA, Small Interfering"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5054152?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC5054152"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1016/S1672-0229(11)60022-3"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "28"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by-nc-sa"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2012-07-02"
+  ],
+  "dateOfCreation": [
+    "2012-01-31"
+  ],
+  "dateOfRevision": [
+    "2016-11-02"
+  ],
+  "firstPublicationDate": [
+    "2011-12-01"
+  ]
+}

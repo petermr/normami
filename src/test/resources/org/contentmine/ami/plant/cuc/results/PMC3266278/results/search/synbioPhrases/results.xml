@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results title="synbioPhrases">
+ <result pre="author and source are properly credited. Abstract Mutational robustness of" exact="gene" post="regulatory networks refers to their ability to generate constant"/>
+ <result pre="structure. Such networks contain regulatory interactions (transcription factor – target" exact="gene" post="interactions) but often also protein-protein interactions between transcription factors."/>
+ <result pre="factors provides indirect evidence. page-count: Introduction Transcription factors (TFs) regulate" exact="gene" post="expression by binding to DNA adjacent to target genes."/>
+ <result pre="the kinetics of the TF-DNA search process [8]. Perturbations of" exact="gene" post="regulatory networks, either through input concentrations, parameters of the"/>
+ <result pre="Robustness and evolvability of a BN under the process of" exact="gene" post="duplication followed by divergence was studied, and it was"/>
+ <result pre="on their topology [22]. Importantly, various experimental analyses indicate that" exact="gene" post="regulatory networks can be highly robust against network rewiring"/>
+ <result pre="In these networks, two types of interactions were present: TF-target" exact="gene" post="(regulatory) interactions, and TF-TF protein-protein interactions. In contrast with"/>
+ <result pre="using specified topology parameters and within ensembles, TF-TF and TF-target" exact="gene" post="interaction parameters were sampled. We applied two types of"/>
+ <result pre="of our study of evolutionary robustness. ( a) Models for" exact="gene" post="regulatory networks containing transcription factor – transcription factor (protein-protein)"/>
+ <result pre="– transcription factor (protein-protein) interactions and transcription factor – target" exact="gene" post="interactions were simulated. Mutations changing the network topology were"/>
+ <result pre="and D mut cutoffs In our analysis of robustness of" exact="gene" post="regulatory networks against network rewiring, we want to characterize"/>
+ <result pre="D mut values obtained by analyzing a number of different" exact="gene" post="expression datasets. We performed two inter-species comparisons, where we"/>
+ <result pre="quantifies expression differences between orthologs (interspecies sets) or the same" exact="gene" post="in various conditions (intraspecies sets). Interspecies analysis was performed"/>
+ <result pre="give a definite answer on how to define whether a" exact="gene" post="regulatory network mutation has a &quot;large&quot; effect. However, to"/>
+ <result pre="cutoffs ( Text S1, Table S1). Simulation results To simulate" exact="gene" post="regulatory networks, systems of ordinary differential equations (ODEs) were"/>
+ <result pre="equations (ODEs) were used, which describe TF-TF dimerization and TF-target" exact="gene" post="regulation (via Hill functions). To investigate the stability upon"/>
+ <result pre="of the genes that it regulates is changed to another" exact="gene" post="(which it did not yet regulate). In this case,"/>
+ <result pre="separately ( Text S1, Table S2). Figure 3 Variation of" exact="gene" post="regulatory network robustness. ( a) Percentage of networks whose"/>
+ <result pre="protein interaction mutations a Simulations were performed with models of" exact="gene" post="regulatory networks, both for wildtype and mutated versions of"/>
+ <result pre="best way to validate our predictions would be to compare" exact="gene" post="regulatory networks across different species. In combination with expression"/>
+ <result pre="been reported that activators are somewhat more frequently conserved among" exact="bacterial" post="genomes than repressors [35]. That same study also reported"/>
+ <result pre="logic has been described [36], and a study on combinatorial" exact="gene" post="regulation reported turnover of cis-acting sequence and the formation"/>
+ <result pre="prediction is correct, it could be an important aspect of" exact="gene" post="regulatory network evolution that robustness against different types of"/>
+ <result pre="fluctuations in concentrations [41], and hence how mutational robustness of" exact="gene" post="regulatory networks is influenced by autoregulatory interactions is an"/>
+ <result pre="in biological networks can have various origins. First, redundancy of" exact="gene" post="functions is important, as genes with overlapping functions will"/>
+ <result pre="in dimeric networks, the change in expression of a target" exact="gene" post="caused by a regulatory mutation will not only influence"/>
+ <result pre="had a direct effect (changing expression level of the target" exact="gene" post="targeted by the mutation) or mainly an indirect effect"/>
+ <result pre="interactions, protein-protein interactions are an important type of connections in" exact="gene" post="regulatory networks [4]. Our analysis provides insight into how"/>
+ <result pre="taking protein-protein interactions into account when studying the robustness of" exact="gene" post="regulatory networks. Although much attention in studying gene regulatory"/>
+ <result pre="robustness of gene regulatory networks. Although much attention in studying" exact="gene" post="regulatory networks and their evolution has been focused on"/>
+ <result pre="dynamics, activating or repressing Hill functions were used to model" exact="gene" post="regulation, which are combined with dimerization reactions and monomer"/>
+ <result pre="K ik are Hill function parameters for the regulation of" exact="gene" post="i by dimer k (in a more general setting"/>
+ <result pre="possible protein-protein interaction or regulatory interaction, ensuring however that each" exact="gene" post="is regulated by at least one dimer or monomer."/>
+ <result pre="of the genes that it regulates is changed to another" exact="gene" post="(which it did not yet regulate). All parameters remain"/>
+ <result pre="obtained for D mut by analyzing a set of different" exact="gene" post="expression datasets. These included two inter-species comparisons, using expression"/>
+ <result pre="parameter, redundancy of interactions was calculated as a proxy for" exact="gene" post="function redundancy. Here, we calculated interaction similarity, for dimer"/>
+ <result pre="Smolen P Baxter DA Byrne JH 2000 Mathematical modeling of" exact="gene" post="networks. Neuron 26 567 580 10896154 7 Buchler NE"/>
+ <result pre="Gutenkunst RN Myers CR 2008 Sloppiness, robustness, and evolvability in" exact="systems biology." post="Current Opinion in Biotechnology 19 389 395 18620054 18"/>
+ <result pre="OC Wagner A 2007 Innovation and robustness in complex regulatory" exact="gene" post="networks. Proceedings of the National Academy of Sciences of"/>
+ <result pre="Wagner A 2007 Robustness can evolve gradually in complex regulatory" exact="gene" post="networks with varying topology. Plos Computational Biology 3 164"/>
+ <result pre="Beltrao P et al. 2008 Evolvability and hierarchy in rewired" exact="bacterial" post="gene networks. Nature 452 840 U842 18421347 26 Homann"/>
+ <result pre="P et al. 2008 Evolvability and hierarchy in rewired bacterial" exact="gene" post="networks. Nature 452 840 U842 18421347 26 Homann OR"/>
+ <result pre="27 Hinman VF Yankura KA McCauley BS 2009 Evolution of" exact="gene" post="regulatory network architectures: Examples of subcircuit conservation and plasticity"/>
+ <result pre="Cavalieri D Hartl DL 2003 Population genetic variation in genome-wide" exact="gene" post="expression. Molecular Biology and Evolution 20 955 963 12716989"/>
+ <result pre="Harmon KL McIntyre LM 2004 Common pattern of evolution of" exact="gene" post="expression level and protein sequence in Drosophila. Molecular Biology"/>
+ <result pre="Henz SR Pape UJ Demar M et al. 2005 A" exact="gene" post="expression map of Arabidopsis thaliana development. Nature Genetics 37"/>
+ <result pre="BioGPS: an extensible and customizable portal for querying and organizing" exact="gene" post="annotation resources. Genome Biology 10 32 Leclerc RD 2008"/>
+ <result pre="10 32 Leclerc RD 2008 Survival of the sparsest: robust" exact="gene" post="networks are parsimonious. Molecular Systems Biology 4 33 Tan"/>
+ <result pre="AD Li H Johnson AD 2008 The evolution of combinatorial" exact="gene" post="regulation in fungi. Plos Biology 6 352 364 38"/>
+ <result pre="12417193 41 Becskei A Serrano L 2000 Engineering stability in" exact="gene" post="networks by autoregulation. Nature 405 590 593 10850721 42"/>
+ <result pre="Backup without redundancy: genetic interactions reveal the cost of duplicate" exact="gene" post="loss. Molecular Systems Biology 3 44 Gu Z Steinmetz"/>
+</results>

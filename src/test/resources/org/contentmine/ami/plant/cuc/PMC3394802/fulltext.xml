@@ -1,0 +1,705 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3394802</article-id><article-id pub-id-type="pmid">22808152</article-id><article-id pub-id-type="publisher-id">PONE-D-12-05794</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0040397</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Agriculture</subject><subj-group><subject>Agricultural Biotechnology</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Biotechnology</subject><subj-group><subject>Genetic Engineering</subject><subj-group><subject>Transgenics</subject></subj-group></subj-group><subj-group><subject>Plant Biotechnology</subject><subj-group><subject>Transgenic Plants</subject></subj-group></subj-group></subj-group><subj-group><subject>Molecular Cell Biology</subject><subj-group><subject>Signal Transduction</subject><subj-group><subject>Signaling Cascades</subject><subj-group><subject>Stress Signaling Cascade</subject></subj-group></subj-group></subj-group><subj-group><subject>Cellular Stress Responses</subject></subj-group></subj-group><subj-group><subject>Plant Science</subject><subj-group><subject>Plant Biotechnology</subject><subj-group><subject>Transgenic Plants</subject></subj-group></subj-group></subj-group></subj-group></article-categories><title-group><article-title>Expression of a Finger Millet Transcription Factor, <italic>EcNAC1,</italic> in Tobacco Confers Abiotic Stress-Tolerance</article-title><alt-title alt-title-type="running-head"><italic>EcNAC1</italic> Confers Abiotic Stress-Tolerance in Tobacco</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Ramegowda</surname><given-names>Venkategowda</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="author-notes" rid="fn1">
+<sup>&#x000a4;</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Senthil-Kumar</surname><given-names>Muthappa</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Nataraja</surname><given-names>Karaba N.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Reddy</surname><given-names>Malireddy K.</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Mysore</surname><given-names>Kirankumar S.</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Udayakumar</surname><given-names>Makarla</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>&#x0002a;</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Department of Crop Physiology, University of Agricultural Sciences, Bangalore, Karnataka, India</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Plant Biology Division, The Samuel Roberts Noble Foundation, Ardmore, Oklahoma, United States of America</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>International Centre for Genetic Engineering and Biotechnology, New Delhi, Delhi, India</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Wu</surname><given-names>Keqiang</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">National Taiwan University, Taiwan</aff><author-notes><corresp id="cor1">&#x0002a; E-mail: <email>udayakumar_m@yahoo.com</email></corresp><fn fn-type="con"><p>Conceived and designed the experiments: MU KNN VR. Performed the experiments: VR. Analyzed the data: VR MS KNN MU. Contributed reagents/materials/analysis tools: MKR KSM. Wrote the paper: VR MU. Edited the draft manuscript: MS KNN MKR KSM.</p></fn><fn id="fn1" fn-type="current-aff"><label>&#x000a4;</label><p>Current address: Department of Crop, Soil and Environmental Sciences, University of Arkansas, Fayetteville, Arkansas, United States of America</p></fn></author-notes><pub-date pub-type="collection"><year>2012</year></pub-date><pub-date pub-type="epub"><day>11</day><month>7</month><year>2012</year></pub-date><volume>7</volume><issue>7</issue><elocation-id>e40397</elocation-id><history><date date-type="received"><day>17</day><month>2</month><year>2012</year></date><date date-type="accepted"><day>6</day><month>6</month><year>2012</year></date></history><permissions><copyright-statement>Ramegowda et al.</copyright-statement><copyright-year>2012</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p>NAC (<underline>N</underline>AM, <underline>A</underline>TAF1-2, and <underline>C</underline>UC2) proteins constitute one of the largest families of plant-specific transcription factors and have been shown to be involved in diverse plant processes including plant growth, development, and stress-tolerance. In this study, a stress-responsive <italic>NAC</italic> gene, <italic>EcNAC1</italic>, was isolated from the subtracted stress cDNA library generated from a drought adapted crop, finger millet, and characterized for its role in stress-tolerance. The expression analysis showed that <italic>EcNAC1</italic> was highly induced during water-deficit and salt stress. <italic>EcNAC1</italic> shares high amino acid similarity with rice genes that have been phylogenetically classified into stress-related <italic>NAC</italic> genes. Our results demonstrated that tobacco transgenic plants expressing <italic>EcNAC1</italic> exhibit tolerance to various abiotic stresses like simulated osmotic stress, by polyethylene glycol (PEG) and mannitol, and salinity stress. The transgenic plants also showed enhanced tolerance to methyl-viologen (MV) induced oxidative stress. Reduced levels of reactive oxygen species (ROS) and ROS-induced damage were noticed in pot grown transgenic lines under water-deficit and natural high light conditions. Root growth under stress and recovery growth after stress alleviation was more in transgenic plants. Many stress-responsive genes were found to be up-regulated in transgenic lines expressing <italic>EcNAC1.</italic> Our results suggest that <italic>EcNAC1</italic> overexpression confers tolerance against abiotic stress in susceptible species, tobacco.</p></abstract><counts><page-count count="12"/></counts></article-meta></front><body><sec id="s1"><title>Introduction</title><p>Plants maintain cellular homeostasis under abiotic stress by adjusting their metabolic systems. The early events of plant adaptation to the environmental stresses involve stress-signal perception and transduction leading to the expression of stress-responsive genes and activation of various physiological and metabolic responses <xref rid="pone.0040397-Bray1" ref-type="bibr">[1]</xref>, <xref rid="pone.0040397-Thomashow1" ref-type="bibr">[2]</xref>, <xref rid="pone.0040397-Shinozaki1" ref-type="bibr">[3]</xref>. The products of stress-responsive genes can either directly protect cells against abiotic stress or regulate the expression of other genes. The stress regulatory molecules, including mitogen-activated protein kinases, histidine kinases, Ca<sup>2&#x0002b;</sup>-dependent protein kinases, as well as transcription factors are well characterized <xref rid="pone.0040397-Jin1" ref-type="bibr">[4]</xref>, <xref rid="pone.0040397-Singh1" ref-type="bibr">[5]</xref>. The expression of stress-responsive genes is largely governed by specific transcription factors. Stress-responsive transcription factors predominantly interact with promoter elements of stress genes often resulting in expression of many functional genes. This has been elegantly shown for DREB and bZIP transcription factors which recognize drought responsible element (DRE) and the abscisic acid responsive element (ABRE), respectively, and activate an array of stress genes <xref rid="pone.0040397-YamaguchiShinozaki1" ref-type="bibr">[6]</xref>. Several families of transcription factors, including ERF/AP2, HSF, bZIP, MYB, MYC, NAC, WRKY, and Zinc-finger, have been well characterized for their regulatory roles in eliciting plant stress-responses <xref rid="pone.0040397-Singh1" ref-type="bibr">[5]</xref>, <xref rid="pone.0040397-Liu1" ref-type="bibr">[7]</xref>&#x02013;<xref rid="pone.0040397-YamaguchiShinozaki2" ref-type="bibr">[10]</xref>.</p><p>NAC family proteins are plant-specific transcription factors that are characterized by a conserved DNA-binding NAC domain located in the N-terminal region and a variable C-terminal domain <xref rid="pone.0040397-Ooka1" ref-type="bibr">[11]</xref>. Although the genomes of rice and <italic>Arabidopsis</italic> were predicted to contain 140 and 75 <italic>NAC</italic> genes, respectively, <xref rid="pone.0040397-Fang1" ref-type="bibr">[12]</xref>, <xref rid="pone.0040397-Xiong1" ref-type="bibr">[13]</xref>, only a few members of this large family have been characterized and most of them were reported to be involved in plant growth, development, and hormone signaling <xref rid="pone.0040397-Olsen1" ref-type="bibr">[14]</xref>. Recently, a few NAC proteins have been described as mediators of biotic and abiotic stress signaling. Expression analysis showed that <italic>NAC</italic> genes, such as <italic>ANAC019, ANAC055, and ANAC072</italic> from <italic>Arabidopsis</italic>
+<xref rid="pone.0040397-Fujita1" ref-type="bibr">[15]</xref>, and <italic>BnNAC</italic> from <italic>Brassica napus</italic>
+<xref rid="pone.0040397-Hegedus1" ref-type="bibr">[16]</xref>, were induced by various environmental stresses. Furthermore, overexpression of a few <italic>NAC</italic> genes has been shown to improve abiotic stress-tolerance in <italic>Arabidopsis</italic> and rice through activation of several stress genes <xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref>&#x02013;<xref rid="pone.0040397-Wu1" ref-type="bibr">[21]</xref>. <italic>NAC</italic> genes seem to have non-redundant functions though they are stress-induced <xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref>, <xref rid="pone.0040397-Hu2" ref-type="bibr">[18]</xref>, <xref rid="pone.0040397-Nakashima1" ref-type="bibr">[22]</xref>. In addition, the function of same transcription factor could behave differently between the species. Surprisingly, overexpression of seven stress-induced <italic>NACs</italic> did not give tolerant phenotype in <italic>Arabidopsis</italic>
+<xref rid="pone.0040397-Fujita2" ref-type="bibr">[23]</xref>. However, Dubouzet et al. <xref rid="pone.0040397-Dubouzet1" ref-type="bibr">[24]</xref> demonstrated that overexpression of <italic>OsDREB1A</italic> in <italic>Arabidopsis</italic> and rice improves tolerance to drought, salinity and freezing although a few target genes were not up-regulated in <italic>Arabidopsis,</italic> which were induced in rice.</p><p>Significant genetic diversity exists among plant species for stress adaptation; hence elucidating the transcriptome from abiotic stress adapted species has greater significance. Several reports have shown that genes from stress adapted species are functionally more efficient in imparting tolerance <xref rid="pone.0040397-Bartels1" ref-type="bibr">[25]</xref>, <xref rid="pone.0040397-Whittaker1" ref-type="bibr">[26]</xref>, <xref rid="pone.0040397-Mundree1" ref-type="bibr">[27]</xref>. Although the studies with <italic>Arabidopsis</italic> dissected several abiotic stress pathways, <italic>Arabidopsis</italic> being a susceptible species the focus has now been on its related tolerant family or species, namely, <italic>Thellungiella halophila, Thlaspi caerulescens</italic> and <italic>Arabidopsis halleri</italic>
+<xref rid="pone.0040397-Amtmann1" ref-type="bibr">[28]</xref>&#x02013;<xref rid="pone.0040397-Sarret1" ref-type="bibr">[31]</xref>. Apart from these, other stress adapted species and resurrection plants with very high tolerance threshold may possess mechanisms and genes which make them survive extreme conditions. Two of our recent studies <xref rid="pone.0040397-Gopalakrishna1" ref-type="bibr">[32]</xref>, <xref rid="pone.0040397-Govind1" ref-type="bibr">[33]</xref> and also other reports <xref rid="pone.0040397-Waditte1" ref-type="bibr">[34]</xref>, <xref rid="pone.0040397-Majee1" ref-type="bibr">[35]</xref> support this concept. Though stress adapted crops such as sorghum and maize genomes have several <italic>NAC</italic> genes, there is no information on the functional relevance of these genes in imparting stress-tolerance and stress-responsive <italic>NACs</italic> are yet to be identified in these species. Hence, discovery and characterization of stress-responsive NAC transcription factors from stress adapted species would provide insight on the importance of these transcription factors.</p><p>Figner millet [<italic>Eleusine coracana</italic> (L.) Gaertn], a crop which is widely grown in semi-arid and arid tropics of Africa and Asia is widely adapted to a broad range of abiotic stresses. Finger millet survives under severe water-deficit and osmotic stress and shows remarkable recovery on alleviation of stress <xref rid="pone.0040397-Govind1" ref-type="bibr">[33]</xref>, <xref rid="pone.0040397-Uma1" ref-type="bibr">[36]</xref>. In this study, we report the identification of a putative NAC family transcription factor, denoted as <italic>EcNAC1</italic>, from a subtracted cDNA library of finger millet. We show that <italic>EcNAC1</italic> is induced by various abiotic stresses and expression of this gene in susceptible species, tobacco, imparts abiotic stress-tolerance.</p></sec><sec sec-type="materials|methods" id="s2"><title>Materials and Methods</title><sec id="s2a"><title>Construction of cDNA Library in Finger Millet and Identification of <italic>EcNAC1</italic>
+</title><sec id="s2a1"><title>Plant material and growth conditions</title><p>Finger millet (var. GPU28) seeds were sown in pots filled with mixture of soil, sand and farmyard manure (3&#x02236;1&#x02236;1 proportion). Seeds of <italic>Nicotiana tabacum</italic> [tobacco (var. KST 19)] were germinated, transplanted in soil at two or three leaf stage, and maintained in greenhouse conditions at a day/night temperature of 25&#x000b1;1&#x000b0;C.</p></sec><sec id="s2a2"><title>Stress imposition</title><p>Twenty-five-days after sowing, water-deficit stress was imposed to finger millet seedlings simulating field condition. Rain-out shelter was used to protect plants from adverse weather; otherwise plants were exposed to natural vapor pressure deficit. Desired stress levels were achieved gradually by gravimetric approach <xref rid="pone.0040397-Impa1" ref-type="bibr">[37]</xref>, <xref rid="pone.0040397-Kathuria1" ref-type="bibr">[38]</xref>. Progressive stress was applied for a set of plants over a period of 5 days to reach 80&#x00025; field capacity (FC), likewise 8 days to reach 60&#x00025; and 10 days to reach 35&#x00025; FC. Leaf tissue was harvested on same day for all stress levels. To study the expression of native <italic>NAC</italic> gene in tobacco, dehydration stress was created on two weeks old seedlings by transferring them to Petri-plates (9 cm diameter) containing MS medium supplemented with 5&#x00025; PEG-10000 (w/v) and tissue was harvested at 24 h after treatment. To create salinity stress, two weeks old seedlings were watered with 200 mM NaCl solution and tissue was harvested at 24 h. In all the treatments a set of control seedlings were maintained.</p></sec><sec id="s2a3"><title>cDNA library</title><p>Total RNA was isolated <xref rid="pone.0040397-Datta1" ref-type="bibr">[39]</xref> from fully expanded young leaves of both control and stressed (80&#x00025;, 60&#x00025; and 35&#x00025; FC) finger millet plants and subtractive hybridization was performed according to Mishra et al. <xref rid="pone.0040397-Mishra1" ref-type="bibr">[40]</xref>. The differentially expressed subtracted poly(A&#x0002b;) RNA was used to synthesize double-stranded cDNA and uni-directionally ligated to a phage lambda-ZAP vector, <italic>in-vitro</italic> packaged and infected to XL1-blue <italic>Escherichia coli</italic> cells according to the manufacturer&#x02019;s instructions using a Uni-ZAP XR cDNA library construction kit (Stratagene, CA, USA). The cDNA inserts from individual recombinant plaques were verified by PCR with universal M13 forward and reverse primers using 1 &#x000b5;l of recombinant phage suspension as a template in 50 &#x000b5;l reaction volume for 30 cycles with the following PCR conditions, 94&#x000b0;C for 1 min, 55&#x000b0;C for 1 min and 72&#x000b0;C for 2 min. PCR amplified cDNA inserts were sequenced using universal T7 primers.</p></sec><sec id="s2a4"><title>Identification of <italic>EcNAC1</italic>
+</title><p>A truncated NAC domain containing gene was identified from the sequenced clones of cDNA library by NCBI BLAST search and comparative analysis. The missing 5&#x02032; end was amplified using RNA Ligase Mediated Rapid Amplification of cDNA Ends (RLM-RACE) kit (Invitrogen Corporation, Carlsbad, CA, USA) according to manufacturer&#x02019;s instruction.</p></sec><sec id="s2a5"><title>Bioinformatic analysis</title><p>The <italic>EcNAC1</italic> was compared with 140 <italic>NAC&#x02019;s</italic> of rice <xref rid="pone.0040397-Fang1" ref-type="bibr">[12]</xref>. The full-length protein sequences were multiple aligned with deduced protein sequence of <italic>EcNAC1</italic> and phylogenetic tree was constructed with the program ClustalW <xref rid="pone.0040397-Chenna1" ref-type="bibr">[41]</xref>. The program multiple EM for motif elicitation (MEME) <xref rid="pone.0040397-Bailey1" ref-type="bibr">[42]</xref> was used to predict the potential motifs in the sequences. All motifs discovered by MEME were searched in the InterPro database with InterProScan <xref rid="pone.0040397-Mulder1" ref-type="bibr">[43]</xref>. PSORT <xref rid="pone.0040397-Nakai1" ref-type="bibr">[44]</xref> and NetNES <xref rid="pone.0040397-LaCour1" ref-type="bibr">[45]</xref> tools were used to predict the nuclear localization and nuclear export signals, respectively.</p></sec></sec><sec id="s2b"><title>Construction of Plant Expression Vectors and Plant Transformation</title><sec id="s2b1"><title>Constructs</title><p>Coding region of <italic>EcNAC1</italic> was amplified using cDNA synthesized from finger millet leaf tissue, undergoing water-deficit stress, with specific primers (<xref ref-type="supplementary-material" rid="pone.0040397.s010">Table S1A</xref>). The expression cassettes, <italic>CaMV35S:EcNAC1:NOS</italic> and <italic>4xABRE:EcNAC1:NOS</italic> (<italic>4xABRE</italic> is a synthetic promoter with <italic>CaMV35S</italic> minimal promoter), were inserted into binary vector <italic>pGreen0179</italic>
+<xref rid="pone.0040397-Hellens1" ref-type="bibr">[46]</xref> containing a hygromycin resistance selectable marker. The binary vector <italic>pGreen0179</italic> with <italic>EcNAC1</italic> expression cassettes and <italic>pSoup</italic> plasmids were co-mobilized into <italic>Agrobacterium tumefaciens</italic> strain LBA4404.</p></sec><sec id="s2b2"><title>Transformation</title><p>
+<italic>In-vitro</italic> regeneration approach was followed to generate transgenic tobacco plants <xref rid="pone.0040397-Horsch1" ref-type="bibr">[47]</xref>. Leaf discs from healthy tobacco plants (var. KST 19) were co-cultivated for 15 min with <italic>A. tumefaciens</italic> harbouring the recombinant binary vectors and cultured on Murashige and Skoog (MS) <xref rid="pone.0040397-Murashige1" ref-type="bibr">[48]</xref> agar medium supplemented with 6-benzylaminopurine (2.25 mg/l), naphthalene acetic acid (0.1 mg/l), cefotaxime (400 mg/l), and hygromycin (30 mg/l). The regenerated shoots were rooted on MS basal medium containing hygromycin (30 mg/l). Profusely rooted plantlets were transferred into pots and maintained in greenhouse following acclimatization for two weeks.</p></sec></sec><sec id="s2c"><title>Molecular Analysis of Tobacco Transgenic Plants</title><sec id="s2c1"><title>Gene expression by RT-PCR and quantitative RT-PCR</title><p>First-strand cDNA was synthesized from total RNA (2 &#x000b5;g) primed by oligo (dT)<sub>15</sub> using Moloney Murine Leukemia Virus Reverse Transcriptase (MMLV-RT; MBI Fermentas, Hanover, MD, USA) according to the manufacturer&#x02019;s instructions. For expression analysis, cDNA pool was used as a template. Thirty cycles of PCR (with 3 min of initial denaturation at 95&#x000b0;C, 94&#x000b0;C for 1 min, 50&#x02013;58&#x000b0;C for 1 min, 72&#x000b0;C for 1 min) amplification, with a final extension at 72&#x000b0;C for 5 min was performed. <italic>EcNAC1</italic> was amplified with the primers specific to the 284 bp 3&#x02032; terminal region of its open reading frame (ORF) (<xref ref-type="supplementary-material" rid="pone.0040397.s010">Table S1B</xref>). To study the expression of target genes of <italic>EcNAC1</italic>, RT-PCR was performed with 14 closest tobacco homologs of known <italic>SNAC1</italic> target genes <xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref> (<xref ref-type="supplementary-material" rid="pone.0040397.s010">Table S1C</xref> &#x00026; <xref ref-type="supplementary-material" rid="pone.0040397.s011">Table S2</xref>). House-keeping gene, either <italic>Actin</italic> or <italic>Elongation factor 1&#x003b1;,</italic> was used in all expression studies and treated as control. The RT-PCR products were loaded on a 1&#x00025; agarose gel and bands were analysed using ImageJ software version 1.34 s (National Institutes of Health) to calculate the changes in relative density of bands keeping wild-type as one. To study the expression pattern of <italic>EcNAC1</italic> under water-deficit stress and salinity, quantitative RT-PCR (qRT-PCR; Opticon 2, MJ research, USA) was performed using the fluorescent dye SYBR-Green (DyNAmo SYBR-Green qRT-PCR kit, Finnzymes, Finland) for 30 cycles following the manufacturer&#x02019;s protocol. The relative expression levels under a given stress condition compared to its corresponding control condition was calculated using Relative Expression Software Tool (REST) <xref rid="pone.0040397-Pfaffl1" ref-type="bibr">[49]</xref>. The data was normalized to expression levels of <italic>Actin</italic>. Similarly, the expression pattern of <italic>NtNAC</italic> was studied under dehydration and salinity using specific primers (<xref ref-type="supplementary-material" rid="pone.0040397.s010">Table S1D</xref>) and the data was normalized to expression levels of <italic>Elongation factor 1&#x003b1;</italic>.</p></sec></sec><sec id="s2d"><title>Abiotic Stress-tolerance of <italic>EcNAC1</italic> Transgenic Tobacco Plants</title><sec id="s2d1"><title>Abiotic stress treatment at seedling stage</title><p>Transgenic tobacco (T<sub>1</sub>) plants expressing <italic>EcNAC1</italic> (constitutive transgenic lines - S1, S3, S4, S7 and S8; and stress-inducible transgenic lines - A1, A2, A4, A5 and A6) were evaluated under various stress conditions. For growth analysis, 15-day-old seedlings selected on 30 mg/l hygromycin were transferred to Petri-plates (9 cm diameter) containing MS medium supplemented with 5&#x00025; PEG-10000 (w/v), and 5 &#x000b5;M MV, separately, and fresh weight was recorded. For examining root growth, 15-day-old seedlings were grown in Petri-plates (12 cm diameter) containing MS &#x0002b;200 mM NaCl. For long-term stress treatment, 15-day-old seedlings were transferred to culture bottles containing MS medium supplemented with various concentrations of mannitol (100, 200 and 300 mM), and NaCl (100, 200 and 300 mM) and performance was measured after 30-days.</p></sec><sec id="s2d2"><title>Imposition of water-deficit</title><p>For water-deficit stress treatment under greenhouse conditions, 15-day-old seedlings were transferred to pots filled with potting mixture of known weight. After seedling establishment, soil water status was monitored by gravimetric approach <xref rid="pone.0040397-Impa1" ref-type="bibr">[37]</xref>, <xref rid="pone.0040397-Kathuria1" ref-type="bibr">[38]</xref> and soil FC was gradually brought down to 35&#x00025; and maintained for 10-days. Relative humidity in the greenhouse ranged from 75&#x02013;80&#x00025; and temperature was maintained around 29&#x02013;30&#x000b0;C during day time and 24&#x02013;26&#x000b0;C during the night period. Stress effect was assessed at the end of stress period by quantifying ROS and malondialdehyde (MDA) content in leaf tissue. After re-watering the recovery response was studied after 15-days by measuring total biomass accumulated.</p></sec><sec id="s2d3"><title>Determination of superoxide radical (O.<sub>2</sub>
+<sup>&#x02212;</sup>)</title><p>Leaf discs were incubated in 1 ml of K-phosphate buffer (20 mM, pH 6.0) containing 500 &#x000b5;M XTT (Polysciences Europe, Eppelheim, Germany) in darkness at 25&#x000b0;C on a shaker. The increase in absorbance (A<sub>470</sub>) in the incubation medium was measured using spectrophotometer <xref rid="pone.0040397-Sutherland1" ref-type="bibr">[50]</xref>.</p></sec><sec id="s2d4"><title>Determination of hydrogen peroxide (H<sub>2</sub>O<sub>2</sub>)</title><p>Leaf discs were pre-incubated for 30 min in 3 ml of K-phosphate buffer (20 mM, pH 6.0) to remove pre-formed H<sub>2</sub>O<sub>2</sub> and were then incubated in 3 ml of the same buffer containing 5 &#x000b5;M scopoletin [7- hydroxy-6-methoxy-2H-1-benzopyran-2-one (Sigma Aldrich, St. Louis, MO USA)] <xref rid="pone.0040397-Schopfer1" ref-type="bibr">[51]</xref> and 3 &#x000b5;g/ml horseradish peroxidase in darkness at 25&#x000b0;C on a shaker. The decrease in fluorescence (excitation: 346 nm, emission: 455 nm) in the incubation medium was measured using reagent blanks as reference.</p></sec><sec id="s2d5"><title>Determination of hydroxyl radical (.OH)</title><p>Leaf discs were incubated in 1.5 ml of buffer containing 20 mM 2-deoxy-D-ribose (Sigma Aldrich, St. Louis, MO USA). The formation of the breakdown product MDA was determined by mixing 0.5 ml of centrifuged incubation medium with 0.5 ml of 2-thiobarbituric acid (10 g/l in 50 mM NaOH) and 0.5 ml of trichloroacetic acid (28 g/l). After heating in boiling water for exactly 10 min, cooling in tap water, and clarifying by centrifugation, the reaction product was measured fluorometrically (excitation: 532 nm, emission: 553 nm) against reagent blanks <xref rid="pone.0040397-Halliwell1" ref-type="bibr">[52]</xref>.</p></sec><sec id="s2d6"><title>Estimation of MDA content</title><p>MDA content was quantified by thiobarbituric acid reactive substances assay <xref rid="pone.0040397-Heath1" ref-type="bibr">[53]</xref> (Heath and Packer 1968). About 0.5&#x02013;1 g of tissue was homogenized in 5 ml of 5&#x00025; (w/v) trichloroacetic acid and the homogenate was centrifuged at 12000 g for 15 min at room temperature. The supernatant was mixed with an equal volume of thiobarbituric acid [0.5&#x00025; in 20&#x00025; (w/v) trichloroacetic acid], and the mixture was boiled for 25 min at 100&#x000b0;C, followed by centrifugation for 5 min at 7500 g to clarify the solution. Absorbance of the supernatant was measured at 532 nm and corrected for non-specific turbidity by subtracting the A<sub>600</sub>. MDA equivalents were calculated by the extinction coefficient of 155 M<sup>&#x02212;1 </sup>cm<sup>&#x02212;1</sup>. Values of MDA contents were taken from measurements of three independent samples.</p></sec></sec></sec><sec id="s3"><title>Results</title><sec id="s3a"><title>Isolation of Water-deficit Induced Finger Millet <italic>NAC</italic> gene, <italic>EcNAC1</italic>
+</title><p>To monitor the changes in expression profiles of transcripts in response to dehydration, finger millet plants were exposed to different levels of gradual water-deficit stress and maintained at different FC viz., 100&#x00025;, 80&#x00025;, 60&#x00025; and 35&#x00025; (<xref ref-type="supplementary-material" rid="pone.0040397.s001">Figure S1</xref>). cDNA library was constructed from the leaf tissue following subtraction between the stress-exposed pooled samples and control-samples. The mRNA populations from stress-exposed seedlings were mixed with approximately five-fold excess of complimentary first-strand cDNA from corresponding control seedlings. Double-stranded cDNA synthesized from the subtracted poly(A&#x0002b;) RNA was used in generating the library. The cDNA inserts of selected recombinant plaques were successfully amplified by PCR using universal M13 primers and used for sequencing. One of the cDNA clones showed maximum homology to a gene encoding a putative NAC domain containing protein. The identified cDNA was approximately 1 kb with an ORF that could encode a protein of 246 amino acids without the starting methionine suggesting that the <italic>EcNAC1</italic> cDNA clone was truncated in the 5&#x02032; region. The 3&#x02032; end seemed to be intact with 215 bp 3&#x02032; un-translated region followed by a poly(A&#x0002b;) tail. In order to identify and isolate the missing 5&#x02032; end of <italic>EcNAC1</italic> cDNA, we performed 5&#x02032; RACE-PCR with gene specific primer (<named-content content-type="gene">CAGTCATCCAACCTTAGCGATC</named-content>) in the antisense orientation using RLM-RACE kit and amplified a fragment of 690 bp, which was cloned and sequenced. The RACE product shared an expected 145 bp homology with the partial <italic>EcNAC1</italic> cDNA clone as the gene specific primer used in the 5&#x02032; RACE was designed to amplify a 145 bp overlap at the 5&#x02032; end of the partial cDNA clone. This observation confirmed that the fragment of 690 bp was indeed a part of <italic>EcNAC1</italic> cDNA. As revealed, total size of <italic>EcNAC1</italic> cDNA clone was 1547 bp (GenBank accession EU439937) with an ORF of 1110 bp, encoding 369 amino acid polypeptide flanked by 186 and 215 bp 5&#x02032; and 3&#x02032; un-translated regions, respectively.</p></sec><sec id="s3b"><title>Bioinformatic Analysis of <italic>EcNAC1</italic>
+</title><p>Sequence homology search performed using the deduced amino acid sequence of <italic>EcNAC1</italic> against translated non-redundant nucleotide database using tBLASTN and protein database using BLASTP showed an overall 57&#x02013;59&#x00025; sequence identity to sorghum (GenBank ID: XP002466217), maize (GenBank ID: ACL52720) and rice (Os03g60080) genes as well as many other plant genes encoding NAC proteins. The NAC domain containing proteins are highly conserved across all plants and encoded by multi-gene family. The gene duplications and their subsequent divergence were central to multiplicity of the NAC family. It was very difficult to establish the evolutionary relationship of <italic>EcNAC1</italic> isolated in this study with other plant orthologs based on its NAC domain mediated trans-activation of several downstream genes. The availability of complete genome sequence of rice has provided a reference platform to identify the complete list of genes that encode NAC proteins in rice plants and allowed us to conduct phylogenetic analysis and establish the EcNAC1 relationship with other rice orthologs. A phylogenetic study was conducted using known 140 genes of NAC family full-length protein sequences from rice and also closest accessions from sorghum (GenBank ID: XP002466217) and maize (GenBank ID: ACL52720) along with EcNAC1 sequence by ClustalW program. The EcNAC1 was phylogenetically aligned to a cluster of 14 rice and also sorghum and maize NAC proteins and, particularly, evolutionarily very close to rice NAC ortholog Os03g60080 (SNAC1) (<xref ref-type="fig" rid="pone-0040397-g001">Figure 1A</xref>). In addition to the amino acid sequence homology, several structural motifs predicted based on the MEME program in EcNAC1 polypeptide are well conserved with the same order as in rice (Os03g60080) as well as sorghum and maize NAC proteins except for the motif 6 which is absent in EcNAC1, signifying the unique C-terminal region of the gene and also suggesting that these NAC proteins are evolutionarily evolved from a common ancestor (<xref ref-type="fig" rid="pone-0040397-g001">Figure 1B</xref> &#x00026; <xref ref-type="supplementary-material" rid="pone.0040397.s012">Table S3</xref>). Amino acid sequence similarity of EcNAC1 with known stress-responsive NAC family genes suggests the plausible involvement of this gene in stress adaptation. When translated amino acid sequence was analyzed by PSORT for nuclear localization and nuclear export signals, EcNAC1 showed four residue pattern composed of three basic amino acids (RRR) and H (one residue at 190 and another at 122) with nuclear targeting certainty score of 0.98 for 1. Apart from that, the sequence also showed 7 residue pattern of nuclear targeting at position 176 with two basic residues, ten residues spacer and another basic region consisting of three basic residues out of five residues (KK NEWEKMQMKK GYRRR). In addition, NetNES tool predicted the residue &#x0201c;LAL&#x0201d; at 213 amino acid with calculated nuclear export signal score exceeding the threshold score suggesting the particular residue is expected to participate in a nuclear export signal. A comprehensive analysis of NAC family genes in rice and <italic>Arabidopsis</italic> (75 and 105 predicted NAC proteins, respectively) predicted conserved DNA binding domain at the N-terminal region and a variable C-terminal region which is known to be involved in transcriptional activation <xref rid="pone.0040397-Ooka1" ref-type="bibr">[11]</xref>. Analysis of EcNAC1 amino acid sequence using InterProScan predicted a NAC DNA binding domain from 24&#x02013;176 amino acid. A conserved motif detected in the C-terminal region using the MEME program was also found in the SNAC1 <xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref>. It has been clearly shown that this C-terminal activation domain in SNAC1 had transactivation activity suggesting that EcNAC1 is also capable of transactivation.</p><fig id="pone-0040397-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040397.g001</object-id><label>Figure 1</label><caption><title>Bioinformatic analysis of NAC protein sequences.</title><p>(A) Phylogram was derived for rice, sorghum and maize NAC protein sequences which clustered with EcNAC1 using the program ClustalW. (B) Prediction of putative motifs shared among these protein sequences using MEME program. Numbered boxes represent different putative motifs (annotations of these motifs in EcNAC1 are listed in <xref ref-type="supplementary-material" rid="pone.0040397.s012">Table S3</xref>).</p></caption><graphic xlink:href="pone.0040397.g001"/></fig></sec><sec id="s3c"><title>Expression Pattern of <italic>EcNAC1</italic> gene in Response to Abiotic Stress</title><p>In plants, a multi-gene family encodes NAC domain containing proteins, with a very high sequence homology among the family members. Each of these genes responds differentially to environmental and/or developmental cues. Therefore, it is very difficult to monitor the expression of these genes individually by northern blot analysis due to cross hybridization. Therefore the relative expression of <italic>EcNAC1</italic> gene was monitored in finger millet in response to various stresses in comparison to non-stressed control seedlings by quantitative RT-PCR analysis using gene-specific primers. The mRNA purified from the stress exposed finger millet seedlings and their corresponding control seedlings was reverse transcribed separately into first-strand cDNA and used as a template. The <italic>EcNAC1</italic> transcript was detectable in both stress exposed and control seedlings. The up-regulation of <italic>EcNAC1</italic> gene in response to different environmental stresses is shown in <xref ref-type="fig" rid="pone-0040397-g002">Figure 2</xref>. In an attempt to capture both rapid and long-term changes in <italic>EcNAC1</italic> gene expression, we sampled the finger millet seedlings 12 and 24 h after exposure to NaCl. Under water-deficit stress the expression was seen at mild (60&#x00025; FC) as well as severe stress (35&#x00025; FC). The relative up-regulation of <italic>EcNAC1</italic> was &#x0223c;40 folds higher in response to mild water-deficit stress and down-regulated at severe water-deficit stress (<xref ref-type="fig" rid="pone-0040397-g002">Figure 2A</xref>). The relative up-regulation of <italic>EcNAC1</italic> gene was observed not only in response to mild water-deficit stress but also in response to salinity (200 mM NaCl at 12 h) stress with &#x0223c;110 fold increase (<xref ref-type="fig" rid="pone-0040397-g002">Figure 2B</xref>).</p><fig id="pone-0040397-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040397.g002</object-id><label>Figure 2</label><caption><title>Quantitative expression of <italic>EcNAC1</italic> gene in response to water-deficit and salt stress.</title><p>(A) Adapting a gradual stress imposition protocol, 25-day-old finger millet seedlings were subjected to water-deficit stress following gravimetric approach. (B) NaCl treatment was given to seedlings 3-days after germination. Accumulation of <italic>EcNAC1</italic> transcripts was determined by qRT-PCR with 2 &#x000b5;g of total RNA. The <italic>Actin</italic> gene was used as normalizer.</p></caption><graphic xlink:href="pone.0040397.g002"/></fig></sec><sec id="s3d"><title>Molecular Analysis of Transgenic Tobacco</title><p>The NAC transcription factor-mediated transcriptional activation of stress-responsive genes and their associated signaling networks regulate dynamic co-expression of several stress-responsive genes together to alleviate stress-induced cellular damage. To evaluate whether the ectopic transgenic overexpression of <italic>EcNAC1</italic> confers any stress-tolerance, we expressed the full-length <italic>EcNAC1</italic> cDNA cloned under the control of <italic>CaMV35S</italic> promoter as well as <italic>4xABRE</italic> stress-inducible promoter in a heterologous plant system, tobacco a relatively susceptible species. <italic>4xABRE</italic> is a synthetic promoter containing four copies of ABRE elements and is known to be induced by dehydration, high salinity, low temperature and ABA <xref rid="pone.0040397-Ganguly1" ref-type="bibr">[54]</xref>. Both constitutive and stress-inducible constructs were transformed to tobacco following <italic>A. tumefaciens</italic>-mediated transformation. The putative transgenic tobacco plants were regenerated and selected on hygromycin containing medium. These plants were further screened for transgene integration by PCR (<xref ref-type="supplementary-material" rid="pone.0040397.s002">Figure S2</xref>, <xref ref-type="supplementary-material" rid="pone.0040397.s003">S3</xref> &#x00026; <xref ref-type="supplementary-material" rid="pone.0040397.s010">Table S1E</xref>). The PCR positive ten independent T<sub>0</sub> plants (five each from constitutively expressing <italic>EcNAC1</italic> transgenic lines - S1, S3, S4, S7 and S8; and stress-inducible <italic>EcNAC1</italic> transgenic lines - A1, A2, A4, A5 and A6) were selfed individually and seeds were harvested for further analysis. Approximately 70&#x02013;80&#x00025; of seeds from these selected putative T<sub>0</sub> transgenic lines germinated and developed into T<sub>1</sub> seedlings on MS medium supplemented with hygromycin (30 mg/l) suggesting a 3&#x02236;1 ratio of Mendelian segregation. The RT-PCR analysis of stressed leaf tissue from transgenic plants confirmed the transgene expression (<xref ref-type="supplementary-material" rid="pone.0040397.s004">Figure S4A</xref>). Expression of the gene was not observed in wild-type tobacco plants, as there was no homology found in tobacco for the selected primers used for RT-PCR analysis. The relative density of the bands was determined to show the increase in transcript levels over wild-type (<xref ref-type="supplementary-material" rid="pone.0040397.s004">Figure S4B</xref>). Transgenic overexpression of <italic>EcNAC1</italic> under the constitutive <italic>CaMV35S</italic> promoter as well as <italic>4xABRE</italic> promoter did not show any phenotypic abnormities either during stress or non-stress growth conditions.</p></sec><sec id="s3e"><title>Tolerance of <italic>EcNAC1</italic> Transgenic Tobacco to Osmotic Stress</title><p>In all the selected transgenic lines short-term stress response was studied by exposing to stress for seven days. Whereas long-term stress experiments by exposing to stress up to 30 days was carried out only in a few lines, S4, S7, A4 and A7, which showed superior stress-tolerance in short-term experiments. During short-term osmotic stress response studies, all the transgenic seedlings exposed to 5&#x00025; PEG maintained better growth than wild-type as indicated by significantly lower growth inhibition (<xref ref-type="fig" rid="pone-0040397-g003">Figure 3A &#x00026; B</xref>). Transgenic lines showed 1.5&#x02013;3 fold less reduction in fresh weight compared to wild-type plants. The root growth was also better in transgenic plants under stress (<xref ref-type="fig" rid="pone-0040397-g003">Figure 3C</xref>). Under long-term stress created by exposure to mannitol, transgenic plants showed less reduction in fresh weight at higher concentration (300 mM) when compared to wild-type plants (<xref ref-type="supplementary-material" rid="pone.0040397.s005">Figure S5A</xref> &#x00026; S5B). In addition, a densely developed root system was observed in transgenic plants. The root mass was 2&#x02013;3 folds more in transgenic plants when compared to wild-type roots (<xref ref-type="supplementary-material" rid="pone.0040397.s005">Figure S5C</xref>). Wild-type plants were dwarf and the leaves were pale green, however transgenic plants maintained the greenness. Thus, these results clearly demonstrate that <italic>EcNAC1</italic> transgenic tobacco plants exhibit a significant level of tolerance to PEG and mannitol-induced osmotic stress.</p><fig id="pone-0040397-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040397.g003</object-id><label>Figure 3</label><caption><title>Short-term osmotic stress response of <italic>EcNAC1</italic> transgenic tobacco plants.</title><p>15-day-old T<sub>1</sub> transgenic seedlings selected on hygromycin were inter-planted with wild-type seedlings on MS medium supplemented with 5&#x00025; PEG and observations were taken after seven days of stress treatment. (A) Phenotype, (B) Reduction in fresh weights over control, and (C) Root elongation of transgenic tobacco plants under stress. Each bar value represents the mean &#x000b1; sd (n&#x0200a;=&#x0200a;12) of triplicate experiments (student&#x02019;s t test; &#x0002a;P&#x0003c;0.05 versus wild-type).</p></caption><graphic xlink:href="pone.0040397.g003"/></fig></sec><sec id="s3f"><title>
+<italic>EcNAC1</italic> Transgenic Tobacco Plants Showed Rapid Root Elongation and Improved Growth Rate during Salt Stress</title><p>Under short-term salt stress, the transgenic seedlings maintained better growth and showed significantly less reduction in fresh weight than wild-type (<xref ref-type="fig" rid="pone-0040397-g004">Figure 4A &#x00026; B</xref>). Root elongation was also significantly more in all the transgenic seedlings compared to that of wild-type even under high salt stress (<xref ref-type="fig" rid="pone-0040397-g004">Figure 4C</xref>). Similarly, under long-term exposure to different NaCl concentrations the reduction in growth was less in transgenic plants and they maintained better leaf growth and chlorophyll content than the wild-type plants even at 200 mM NaCl (<xref ref-type="supplementary-material" rid="pone.0040397.s006">Figure S6A</xref> &#x00026; B), suggesting that the overexpression of <italic>EcNAC1</italic> in tobacco confers a high degree of tolerance to salinity stress.</p><fig id="pone-0040397-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040397.g004</object-id><label>Figure 4</label><caption><title>Short-term salt stress response of <italic>EcNAC1</italic> transgenic tobacco plants.</title><p>15-day-old T<sub>1</sub> seedlings selected on hygromycin were inter-planted with wild-type seedlings on MS medium supplemented with 200 mM NaCl, and the observations were taken after seven days. (A) Phenotype, (B) Reduction in fresh weights over control and (C) Root elongation of transgenic tobacco plants under salt stress. Each bar value represents the mean &#x000b1; sd (n&#x0200a;=&#x0200a;6) of triplicate experiments (student&#x02019;s t test; &#x0002a;P&#x0003c;0.05 versus wild-type).</p></caption><graphic xlink:href="pone.0040397.g004"/></fig></sec><sec id="s3g"><title>
+<italic>EcNAC1</italic> Tobacco Plants Show Improved Tolerance to MV-induced Oxidative Stress</title><p>Under short-term stress, transgenic plants survived and maintained growth at 5 &#x000b5;M MV for seven days when all the wild-type plants were completely bleached (<xref ref-type="supplementary-material" rid="pone.0040397.s007">Figure S7A</xref>). Transgenic plants accumulated distinctly higher fresh weight (<xref ref-type="supplementary-material" rid="pone.0040397.s007">Figure S7B</xref>) and showed significantly better root growth under stress compared to wild-type (<xref ref-type="supplementary-material" rid="pone.0040397.s007">Figure S7C</xref>). Even under long-term exposure transgenic plants expressing <italic>EcNAC1</italic> constitutively, survived whereas the wild-type plants were not able to grow and died within 10 days (data not shown). However, none of the plants survived at higher concentration of MV (10 &#x000b5;M).</p></sec><sec id="s3h"><title>
+<italic>EcNAC1</italic> Transgenic Plants Show Better Water-deficit Stress Tolerance and Recovery</title><p>Gradual water-deficit stress was imposed till the soil FC reaches to 35&#x00025; and subsequently the plants were maintained at same FC for 10 days. To test the free radical scavenging activity of <italic>EcNAC1</italic> overexpressed plants under water-deficit stress, the ROS (O<sub>2</sub>.<sup>&#x02212;</sup>, H<sub>2</sub>O<sub>2</sub>, and OH radical) levels were quantified. Transgenic plants showed 5&#x02013;7 fold lower O<sub>2</sub>.<sup>&#x02212;</sup> content over wild-type plants (<xref ref-type="fig" rid="pone-0040397-g005">Figure 5A</xref>). The H<sub>2</sub>O<sub>2</sub> content was 12.5&#x02013;14.5&#x00025; lower in transgenic plants compared to wild-type plants (<xref ref-type="fig" rid="pone-0040397-g005">Figure 5B</xref>). Even the levels of OH radicals were significantly lower in transgenic plants suggesting higher free radical scavenging activity under water-deficit conditions (<xref ref-type="fig" rid="pone-0040397-g005">Figure 5C</xref>). The level of lipid peroxidation in both transgenic and wild-type plants was estimated in terms of amount of MDA accumulated. All transgenic lines tested, except line S7, showed significantly lower MDA than the wild-type under water-deficit stress (<xref ref-type="fig" rid="pone-0040397-g006">Figure 6</xref>). The lower MDA levels in transgenic plants suggest that the <italic>EcNAC1</italic> tobacco plants have less lipid peroxidation.</p><fig id="pone-0040397-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040397.g005</object-id><label>Figure 5</label><caption><title>ROS scavenging activity of transgenic plants under water-deficit stress.</title><p>15-day-old T<sub>1</sub> seedlings were transferred to pots and allowed to establish for 20 days. Water-deficit stress was imposed by gravimetric approach and plants were maintained at 35&#x00025; FC for 10 days. (A) O<sub>2</sub>.<sup>&#x02212;</sup>, (B) H<sub>2</sub>O<sub>2</sub>, and (C).OH radical content were quantified by XTT, scopoletin, and 2-deoxy-D-ribose assay, respectively. Each bar value represents the mean &#x000b1; sd of triplicate experiments (student&#x02019;s t test; &#x0002a;P&#x0003c;0.05 versus wild-type).</p></caption><graphic xlink:href="pone.0040397.g005"/></fig><fig id="pone-0040397-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040397.g006</object-id><label>Figure 6</label><caption><title>Lipid peroxidation in wild-type and transgenic plants under water-deficit stress.</title><p>In water-deficit stressed plants MDA accumulation was measured in terms of &#x003bc;M/g fresh weight (FW). Each bar value represents the mean &#x000b1; sd of triplicate experiments (student&#x02019;s t test; &#x0002a;P&#x0003c;0.05 versus wild-type).</p></caption><graphic xlink:href="pone.0040397.g006"/></fig><p>The recovery response of the stressed transgenic and wild-type plants was studied 15-days after re-watering. All the transgenic plants tested, except line S7, recovered faster and accumulated significantly higher fresh weight when compared to wild-type (<xref ref-type="fig" rid="pone-0040397-g007">Figure 7A</xref>). Representative recovery phenotype of S4 and wild-type plants is shown in <xref ref-type="fig" rid="pone-0040397-g007">Figure 7B</xref>. These results showed relevance of <italic>EcNAC1</italic> gene under water-deficit stress.</p><fig id="pone-0040397-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040397.g007</object-id><label>Figure 7</label><caption><title>Recovery response of transgenic plants subjected to water-deficit stress.</title><p>At the end of water-deficit stress period plants were re-watered and observations were taken after 15-days. (A) Recovery growth and (B) Phenotype of wild-type and transgenic plants. Each bar value represents the mean &#x000b1; sd of triplicate experiments (student&#x02019;s t test; &#x0002a;P&#x0003c;0.05 versus wild-type).</p></caption><graphic xlink:href="pone.0040397.g007"/></fig></sec><sec id="s3i"><title>Overexpression of <italic>EcNAC1</italic> Activates a Few Known NAC Target genes in Tobacco</title><p>To further understand whether the stress-tolerance observed in <italic>EcNAC1</italic> overexpressing tobacco plants was due to transcriptional up-regulation of downstream stress-responsive genes, we analysed the relative transcript levels of several stress-responsive genes. The transgenic line S4 was chosen to study the possible regulation of selected genes by <italic>EcNAC1,</italic> as this line showed less growth inhibition even at 300 mM NaCl, better root growth under 300 mM mannitol, superior ROS scavenging activity and also lower MDA under water-deficit stress. Apart from that, this line also survived under long-term exposure to MV-induced oxidative stress. Expression of 14 target genes of <italic>SNAC1,</italic>
+<xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref>, was analyzed by RT-PCR. The transcripts of genes under study were observed in both transgenic and wild-type tobacco plants and the levels of <italic>WUSCHEL-related homeobox 13 (HB-13), MYB-CC type transcription factor (MYB), protein phosphatase 2C (PP2C), serine-threonine protein kinase (STPK), NADPH-cytP450 oxidoreductase (CytOR), Rop subfamily GTPase (ROP)</italic>, and <italic>ATP-binding subunit, ERD1</italic> were more in the transgenic line when compared to wild-type as shown by the increase in relative density of the RT-PCR products (<xref ref-type="supplementary-material" rid="pone.0040397.s008">Figure S8</xref>). Based on these results we suggest that <italic>EcNAC1</italic> can induce a few stress associated genes there by bringing in improved stress-tolerance in transgenic tobacco plants.</p></sec></sec><sec id="s4"><title>Discussion</title><p>Stress-responsive transcription factors that might regulate unique signaling pathways are relevant in bringing the desired levels of tolerance to plants. NAC family transcription factors, specific to plants, have been implicated in plant developmental programs <xref rid="pone.0040397-Vroemen1" ref-type="bibr">[55]</xref>, <xref rid="pone.0040397-Weir1" ref-type="bibr">[56]</xref>, defense <xref rid="pone.0040397-Hegedus1" ref-type="bibr">[16]</xref>, <xref rid="pone.0040397-Collinge1" ref-type="bibr">[57]</xref> and abiotic stress responses <xref rid="pone.0040397-Yokotani1" ref-type="bibr">[19]</xref>, <xref rid="pone.0040397-Jeong1" ref-type="bibr">[20]</xref>, <xref rid="pone.0040397-Takasaki1" ref-type="bibr">[58]</xref>. Only a few stress-responsive NAC proteins have been characterized <xref rid="pone.0040397-Nakashima2" ref-type="bibr">[59]</xref> for their relevance in imparting tolerance to abiotic stresses. From this context, characterizing other <italic>NAC</italic> family genes or the stress-responsive homologs from stress adapted species provides greater insight about this unique group of transcription factors.</p><p>Several studies have shown that stress adapted species have structurally efficient genes and regulatory pathways which impart stress-tolerance. For example, overexpression of Na<sup>&#x0002b;</sup>/H<sup>&#x0002b;</sup> antiporter gene, <italic>ApNhaP</italic>, from a halo-tolerant Cyanobacterium has drastically improved the salt-tolerance of freshwater Cyanobacterium <xref rid="pone.0040397-Waditte1" ref-type="bibr">[34]</xref>. To identify stress-responsive transcription factors from a stress adapted plant species, finger millet, subtracted stress cDNA library was constructed and a gene encoding NAC protein was identified. Sequence analysis of <italic>EcNAC1</italic> gene isolated from the library suggested that <italic>EcNAC1</italic> is closely related to a few known stress-responsive rice genes that encode NAC proteins. Previously, Fang et al. <xref rid="pone.0040397-Fang1" ref-type="bibr">[12]</xref> have systematically analyzed protein sequences of 140 putative <italic>NAC</italic> or <italic>NAC</italic>-like genes in rice and classified them into five groups (I&#x02013;V). Based on trait specificity, stress-related <italic>NAC</italic> genes fell into the group III stress-responsive <italic>NAC</italic> genes. Phylogenetic analysis of deduced amino acid sequence of EcNAC1 along with rice NAC proteins and also the closest accessions of maize and sorghum showed that this gene actually represents the group III, suggesting its stress-responsive nature. MEME-based prediction of putative motifs among this cluster showed that N-terminal regions were conserved in parallel with NAC domain structure and EcNAC1 appear to have unique motif 6 in the C-terminal region. In a recent study, it was shown that overexpression of <italic>PINO1,</italic> from a halophytic wild rice <italic>Porteresia coarctata</italic>, in rice and tobacco has substantially improved salt tolerance compared to its domesticated rice homolog <italic>RINO1</italic> which lacks a unique stretch of 37 amino acids <xref rid="pone.0040397-Majee1" ref-type="bibr">[35]</xref>. The same group also identified <italic>PcIMT1</italic> gene, from <italic>Porteresia coarctata</italic>, which is absent in domesticated rice and overexpression of this gene has resulted in accumulation of pinitol under salt stress in rice <xref rid="pone.0040397-Sengupta1" ref-type="bibr">[60]</xref> suggesting stress adapted species might have novel candidate genes or unique mechanisms which could help genetic engineering of susceptible species for improved stress-tolerance. Expression analysis of <italic>EcNAC1</italic> in our studies also confirms its stress-responsiveness. <italic>EcNAC1</italic> was induced in finger millet seedlings/plants exposed to water-deficit and salinity stress. Among several <italic>NAC</italic> genes identified in <italic>Arabidopsis</italic> and rice, only a few were shown to be stress-responsive <xref rid="pone.0040397-Fujita1" ref-type="bibr">[15]</xref>, <xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref>&#x02013;<xref rid="pone.0040397-Jeong1" ref-type="bibr">[20]</xref>, <xref rid="pone.0040397-Nakashima1" ref-type="bibr">[22]</xref>, <xref rid="pone.0040397-Takasaki1" ref-type="bibr">[58]</xref>, <xref rid="pone.0040397-Nogueira1" ref-type="bibr">[61]</xref>, <xref rid="pone.0040397-Tran1" ref-type="bibr">[62]</xref> and are grouped under stress-responsive <italic>NAC</italic> genes. The promoter regions of some of these genes have DRE and ABRE sequences <xref rid="pone.0040397-Takasaki1" ref-type="bibr">[58]</xref>, <xref rid="pone.0040397-Sakuma1" ref-type="bibr">[63]</xref>. The promoter characterization of <italic>EcNAC1</italic> which has highest homology with rice <italic>SNAC1</italic> could help in understanding the pathway through which the gene is regulated.</p><p>The major focus in this study was to identify genes from drought adapted crop, finger millet, and study whether genes from tolerant species can impart better stress-tolerance in a susceptible species. We used tobacco as susceptible species and tested the relevance of <italic>EcNAC1</italic> for stress-tolerance. As tobacco was used as system to transform <italic>EcNAC1</italic>, the stress-responsive nature of endogenous <italic>NAC</italic> gene was also analysed to understand the regulation of related NAC genes in tobacco. The closest homolog of a partial fragment was identified from TIGR database (TIGR index# TC5942) and designated as <italic>NtNAC</italic>. qRT-PCR analysis showed more than 10 and 5 fold higher expression of the EST over control under dehydration and salinity, respectively, suggesting the stress induction of related <italic>NAC</italic> genes in tobacco (<xref ref-type="supplementary-material" rid="pone.0040397.s009">Figure S9</xref>). There are contrasting reports on the effect of constitutive overproduction of regulatory molecules, such as transcription factors, on growth under normal condition <xref rid="pone.0040397-Dubouzet1" ref-type="bibr">[24]</xref>, <xref rid="pone.0040397-Hsieh1" ref-type="bibr">[64]</xref>&#x02013;<xref rid="pone.0040397-Cong1" ref-type="bibr">[67]</xref>. However, overexpression of <italic>EcNAC1</italic> in tobacco plants did not affect growth under normal condition. Similar results were observed in overexpression studies of other transcription factors. Oh et al. <xref rid="pone.0040397-Oh1" ref-type="bibr">[68]</xref> reported that the transgenic plants expressing <italic>CBF3</italic> (<italic>C-repeat binding factor 3</italic>) under <italic>Ubiquitin1</italic> promoter exhibited no visible phenotypic alterations in rice. These reports and our present result suggest that the growth abnormalities observed in many transgenic plants constitutively expressing the regulatory genes is not a universal phenomenon.</p><p>Most of the <italic>EcNAC1</italic> overexpressing transgenic lines showed increased tolerance to osmotic and salinity stress. The growth rates of transgenic lines on simulated osmotic stress by PEG were remarkably higher than wild-type plants under short-term stress. Such a response was also observed under long-term stress experiments. Transgenic plants expressing NAC transcription factors including <italic>SNAC1</italic>
+<xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref>, <italic>ONAC063</italic>
+<xref rid="pone.0040397-Yokotani1" ref-type="bibr">[19]</xref>, and <italic>OsNAC5</italic>
+<xref rid="pone.0040397-Takasaki1" ref-type="bibr">[58]</xref> have shown osmotic stress-tolerance at various stages. Overexpression of <italic>SNAC1</italic> not only improved drought resistance at vegetative stage in transgenic rice but also improved yield under field stress <xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref>. Overexpression of <italic>SNAC2</italic> also effectively improved PEG-induced osmotic stress-tolerance in rice seedlings <xref rid="pone.0040397-Hu2" ref-type="bibr">[18]</xref>. <italic>Arabidopsis</italic> seedlings overexpressing <italic>ONAC063</italic> showed higher germination rates under mannitol-induced osmotic stress <xref rid="pone.0040397-Yokotani1" ref-type="bibr">[19]</xref>. Conversely, overexpression of seven other <italic>NAC</italic> genes, whose expression is induced by exogenous ABA treatment, drought or high salinity <xref rid="pone.0040397-Seki1" ref-type="bibr">[69]</xref>, did not impart salt tolerance in <italic>Arabidopsis</italic>
+<xref rid="pone.0040397-Fujita2" ref-type="bibr">[23]</xref>, suggesting all stress-induced genes may not give tolerant phenotype. In our study, <italic>EcNAC1</italic> was induced by salinity and we also observed superior salt tolerance of many <italic>EcNAC1</italic> transgenics.</p><p>Other notable observation is that substantial superior root growth of <italic>EcNAC1</italic> transgenic lines compared to the improved shoot growth. Recently a few studies have shown the role of NAC proteins in root growth thereby improving salt stress-tolerance. He et al. <xref rid="pone.0040397-He1" ref-type="bibr">[70]</xref> have suggested the involvement of <italic>NAC</italic> genes in improving <italic>Arabidopsis</italic> root growth under salinity stress. Overexpression of <italic>AtNAC1</italic> and <italic>AtNAC2</italic> resulted in altered lateral root development. In addition, the auxin responsive genes <italic>AIR3</italic> (<italic>Auxin Induced in Root cultures 3</italic>) and <italic>DBP</italic> (<italic>DNA-Binding Protein</italic>) were identified in a screen for downstream targets of <italic>NAC1</italic>
+<xref rid="pone.0040397-Olsen1" ref-type="bibr">[14]</xref>. Overexpression of <italic>GmNAC20</italic> has promoted lateral root formation in <italic>Arabidopsis</italic> under salt stress <xref rid="pone.0040397-Hao1" ref-type="bibr">[71]</xref>. However, there is no direct evidence to support the involvement of NAC transcription factors in root growth under osmotic/dehydration and oxidative stress. We observed that under PEG and mannitol-induced osmotic stress, high salinity as well as oxidative stress there was significant increase in the root growth of <italic>EcNAC1</italic> transgenic plants when compared to wild-type tobacco plants. Transgenic plants showed not only improved root growth but also better lateral root formation. Understanding the phytohormone signaling pathway in <italic>NAC</italic> overexpressing plants may provide further insight in this direction.</p><p>By <italic>in-vitro</italic> studies using transgenic <italic>EcNAC1</italic> seedlings, we provided evidences that <italic>EcNAC1</italic> imparts tolerance to MV-induced oxidative stress. One of the major factors when plants are exposed to stress under high light is the generation of cytotoxic compounds like ROS <xref rid="pone.0040397-Allen1" ref-type="bibr">[72]</xref>. The levels of these cytotoxic compounds in pot grown transgenic plants subjected to gradual water-deficit stress under natural high light condition was relatively less. These results are further substantiated by lower lipid peroxidation in transgenic plants as shown by lower levels of MDA. Thus, it is conceivable that the ROS-scavenging and membrane-protecting properties of <italic>EcNAC1</italic> accounts, at least partially, for the enhanced tolerance to oxidative stress in transgenic tobacco plants. In rice <italic>OsNAC6</italic> overexpression plants, several biotic and abiotic responsive genes were up-regulated. A transient trans-activation assay also demonstrated the expression of peroxidase in <italic>OsNAC6</italic> transformants. Further, in a recent study by Balazadeh et al. <xref rid="pone.0040397-Balazadeh1" ref-type="bibr">[73]</xref>, it was demonstrated that the up-regulation of several downstream stress-responsive genes having consensus <italic>cis</italic>-elements [RCGTR(4&#x02013;5n)RYACGCAA; R&#x0200a;=&#x0200a;A or G; Y&#x0200a;=&#x0200a;C or T] is regulated by NAC transcription factors. Among them, many are oxidative stress associated genes. This signifies the roles of a few NAC transcription factors in regulation of oxidative stress-tolerance.</p><p>We observed the expression pattern of closest tobacco homologs of a few <italic>SNAC1</italic> target genes <xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref>; presuming <italic>EcNAC1</italic> might also have common target genes to regulate because of its 57&#x00025; identity at protein level with <italic>SNAC1</italic>. There was up-regulation of a few stress-responsive genes such as <italic>HB-13, MYB, PP2C</italic>, <italic>STPK</italic>, <italic>CytOR</italic>, <italic>ROP</italic> and <italic>ERD1.</italic> The involvement of some of these genes in stress-tolerance is well studied (HD proteins <xref rid="pone.0040397-Dezar1" ref-type="bibr">[74]</xref>; MYB related transcription factors <xref rid="pone.0040397-Kasuga2" ref-type="bibr">[66]</xref>; <italic>PP2C</italic>
+<xref rid="pone.0040397-Miyazaki1" ref-type="bibr">[75]</xref>; serine-threonine protein kinase <xref rid="pone.0040397-Rentel1" ref-type="bibr">[76]</xref>; Rop subfamily GTPase <xref rid="pone.0040397-Fujiwara1" ref-type="bibr">[77]</xref>; <italic>ERD1</italic>
+<xref rid="pone.0040397-Tran1" ref-type="bibr">[62]</xref>). NAC transcription factor has been shown previously to activate several downstream functional genes involved in stress adaptation <xref rid="pone.0040397-Hu1" ref-type="bibr">[17]</xref>, <xref rid="pone.0040397-Jeong1" ref-type="bibr">[20]</xref>, <xref rid="pone.0040397-Takasaki1" ref-type="bibr">[58]</xref>. Even though different NAC transcription factors interact with core <italic>cis</italic>-acting sequences in the promoters of target genes but the actual set of target genes for each paralog vary in different plants. Both <italic>cis</italic>-acting DNA sequences and transacting transcription factor amino acid sequences have co-evolved to regulate the coordinated expression of several stress adaptive genes. Similarly, the architecture of promoter sequences within these stress-related genes are not simply collinear, they are multifunctional and modular, and interact with multiple independently regulated transcription factors and display a transcriptional complexity to cope up with the cross-talk in response to various environmental stresses. Taken together these results indicate that transgenic overexpression of <italic>EcNAC1</italic> in tobacco positively correlates with stress-tolerance.</p><p>In conclusion, this study shows that <italic>EcNAC1</italic> is stress-inducible and several known stress-responsive genes are up-regulated in tobacco transgenic plants expressing <italic>EcNAC1</italic> thus conferring tolerance to various abiotic stresses including dehydration, salinity and oxidative stress. Our work suggests the possibility of engineering abiotic stress-tolerance in a crop plant by overexpressing <italic>EcNAC1</italic> gene from a heterologous plant species.</p></sec><sec sec-type="supplementary-material" id="s5"><title>Supporting Information</title><supplementary-material content-type="local-data" id="pone.0040397.s001"><label>Figure S1</label><caption><p>
+<bold>Phenotype of finger millet plants grown at different levels of water-deficit stress.</bold> Gradual stress was imposed on 25-day-old pot grown plants following gravimetric approach. Stress was applied for a set of plants over a period of 5 days to reach 80&#x00025; FC, likewise 8 days to reach 60&#x00025; and 10 days to reach 35&#x00025; FC. Samples were collected on the same day. Rain-out shelter was used to protect the plants from adverse weather; otherwise plants were exposed to natural vapor pressure deficit. Photographs were taken at the end of stress period.</p><p>(TIF)</p></caption><media xlink:href="pone.0040397.s001.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s002"><label>Figure S2</label><caption><p>
+<bold>PCR analysis of putative T<sub>0</sub> tobacco transformants expressing </bold>
+<bold><italic>EcNAC1</italic></bold>
+<bold> under </bold>
+<bold><italic>4xABRE</italic></bold>
+<bold> stress-inducible promoter.</bold> Genomic DNA was isolated from tobacco plants transformed with <italic>4xABRE::EcNAC1:NOS</italic> and PCR reactions were performed with (A) <italic>HPTII</italic> forward and reverse, (B) Gene-specific forward and NOS terminator reverse, (C) Gene-specific forward and reverse and (D) Promoter forward and gene-specific reverse primers to confirm the integration. M - marker; P - plasmid.</p><p>(TIF)</p></caption><media xlink:href="pone.0040397.s002.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s003"><label>Figure S3</label><caption><p>
+<bold>PCR analysis of putative T<sub>0</sub> tobacco transformants expressing </bold>
+<bold><italic>EcNAC1</italic></bold>
+<bold> under </bold>
+<bold><italic>CaMV35S</italic></bold>
+<bold> constitutive promoter.</bold> Genomic DNA was isolated from tobacco plants transformed with <italic>CaMV35S::EcNAC1:NOS</italic> and PCR reactions were performed with (A) <italic>HPTII</italic> forward and reverse, (B) Gene-specific forward and NOS terminator reverse, (C) Gene specific forward and reverse and (D) Promoter forward and gene-specific reverse primers to confirm the integration. M - marker; P - plasmid.</p><p>(TIF)</p></caption><media xlink:href="pone.0040397.s003.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s004"><label>Figure S4</label><caption><p>
+<bold>RT-PCR analysis of wild-type and </bold>
+<bold><italic>EcNAC1</italic></bold>
+<bold> expressing tobacco plants.</bold> A. Expression of the transgene analyzed by RT-PCR. B. The corresponding increase in the relative density of bands over wild-type. M - marker; P - plasmid.</p><p>(TIF)</p></caption><media xlink:href="pone.0040397.s004.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s005"><label>Figure S5</label><caption><p>
+<bold>Long-term osmotic stress response of transgenic tobacco plants expressing </bold>
+<bold><italic>EcNAC1</italic></bold>
+<bold>.</bold> 15-day-old T<sub>1</sub> transgenic seedlings selected on hygromycin were transferred to MS medium supplemented with 100, 200 and 300 mM mannitol and observations were taken after 30-days. (A) Phenotype, (B) Root fresh weight of wild-type and transgenic plants. Each bar value represents the mean &#x000b1; sd (n&#x0200a;=&#x0200a;6) of triplicate experiments (student&#x02019;s t test; &#x0002a;P&#x0003c;0.05 versus wild-type).</p><p>(TIF)</p></caption><media xlink:href="pone.0040397.s005.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s006"><label>Figure S6</label><caption><p>
+<bold>Long-term salt stress response of transgenic tobacco plants expressing </bold>
+<bold><italic>EcNAC1</italic></bold>
+<bold>.</bold> 15-day-old T<sub>1</sub> seedlings selected on hygromycin were transferred to MS medium supplemented with 100, 200 and 300 mM of NaCl and observations were taken after 30-days. (A) Phenotype, (B) Growth inhibition of wild-type and transgenic plants. Each bar value represents the mean &#x000b1; sd (n&#x0200a;=&#x0200a;6) of triplicate experiments (student&#x02019;s t test; &#x0002a; P&#x0003c;0.05 versus wild-type).</p><p>(TIF)</p></caption><media xlink:href="pone.0040397.s006.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s007"><label>Figure S7</label><caption><p>
+<bold>MV-induced short-term oxidative stress response of </bold>
+<bold><italic>EcNAC1</italic></bold>
+<bold> transgenic tobacco plants.</bold> 15-day-old T<sub>1</sub> seedlings selected on hygromycin were inter-planted with wild-type seedlings on MS medium amended with 5 &#x003bc;M MV and the observations were taken after seven days. (A) Phenotype, (B) Fresh weights and, (C) Root elongation of transgenic tobacco plants. Each bar value represents the mean &#x000b1; sd (n&#x0200a;=&#x0200a;12) of triplicate experiments (student&#x02019;s t test; &#x0002a;P&#x0003c;0.05 versus wild-type).</p><p>(TIF)</p></caption><media xlink:href="pone.0040397.s007.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s008"><label>Figure S8</label><caption><p>
+<bold>Expression pattern of known NAC target genes in wild-type and S4 transgenic tobacco plants.</bold> Transcript levels of various target genes of <italic>SNAC1</italic> were determined by RT-PCR analysis. The <italic>EF1&#x003b1;</italic> gene was amplified as control. Bars in the right panel show the change in relative density of RT-PCR products when compared to wild-type. <italic>HB13-WUSCHEL-related homeobox 13; MYB-MYB-CC type transcription factor; NAM10-NAM-like protein 10; PP2C-protein phosphatase 2C; STPK-serine-threonine protein kinase; CytOR-NADPH-cytP450 oxidoreductase; ROP-Rop subfamily GTPase; ERD1-ATP-binding subunit-early responsive to dehydration; NHT-sodium/dicarboxylate co-transporter like; Chap21-chaperonin 21 precursor; NT-nitrate transporter; HVA22-similar to AtHVA22 like protein; GT-similar to probable glycosyltransferase; and PO<sub>4</sub>R-phosphate-responsive 1 family protein.</italic>
+</p><p>(TIF)</p></caption><media xlink:href="pone.0040397.s008.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s009"><label>Figure S9</label><caption><p>
+<bold>qRT-PCR analysis of </bold>
+<bold><italic>NtNAC</italic></bold>
+<bold> induction during dehydration and salt stress in tobacco.</bold> qRT-PCR was performed with the total RNA isolated from leaf tissue as described in material methods. The <italic>Elongation factor 1&#x003b1;</italic> gene was used as normaliser.</p><p>(TIF)</p></caption><media xlink:href="pone.0040397.s009.tif"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s010"><label>Table S1</label><caption><p>
+<bold>Primers used in the study.</bold>
+</p><p>(DOCX)</p></caption><media xlink:href="pone.0040397.s010.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s011"><label>Table S2</label><caption><p>
+<bold>Tobacco homologs of rice </bold>
+<bold><italic>SNAC1</italic></bold>
+<bold> target genes used in the expression analysis.</bold>
+</p><p>(DOCX)</p></caption><media xlink:href="pone.0040397.s011.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040397.s012"><label>Table S3</label><caption><p>
+<bold>Motifs identified in EcNAC1 deduced amino acid sequence.</bold>
+</p><p>(DOCX)</p></caption><media xlink:href="pone.0040397.s012.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack><p>VR is thankful to The Samuel Roberts Noble Foundation USA; The Wood Whelan Research Fellowships of International Union of Biochemistry and Molecular Biology (WWF-IUBMB) and The Kirkhouse Trust, UK for travel and research support at KSM lab. Authors thank Dr. Lalitha Anand for critical reading of the manuscript.</p></ack><fn-group><fn fn-type="COI-statement"><p><bold>Competing Interests: </bold>The authors have declared that no competing interests exist.</p></fn><fn fn-type="financial-disclosure"><p><bold>Funding: </bold>This work has been supported by grants from the Department of Biotechnology (Transcription factor project grant number F.No.BT/PR/4946/Agr/16/421/2004, Centre of excellence grant number F.No. BT/01/COE/05/03), Government of India and Indian Council of Agricultural Research (Niche area of excellence grant number F.No.10-(6)/2005 EP&#x00026;D), India. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></fn></fn-group><ref-list><title>References</title><ref id="pone.0040397-Bray1"><label>1</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bray</surname><given-names>EA</given-names></name></person-group>
+<year>1993</year>
+<article-title>Molecular responses to water-deficit.</article-title>
+<source>Plant Physiol</source>
+<volume>103</volume>
+<fpage>1035</fpage>
+<lpage>1040</lpage>
+<pub-id pub-id-type="pmid">12231998</pub-id></element-citation></ref><ref id="pone.0040397-Thomashow1"><label>2</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Thomashow</surname><given-names>MF</given-names></name></person-group>
+<year>1999</year>
+<article-title>Plant cold acclimation: freezing tolerance genes and regulatory mechanisms.</article-title>
+<source>Ann Rev Plant Physiol Plant Mol Biol</source>
+<volume>50</volume>
+<fpage>571</fpage>
+<lpage>599</lpage>
+<pub-id pub-id-type="pmid">15012220</pub-id></element-citation></ref><ref id="pone.0040397-Shinozaki1"><label>3</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shinozaki</surname><given-names>K</given-names></name><name><surname>Yamaguchi-Shinozaki</surname><given-names>K</given-names></name><name><surname>Seki</surname><given-names>M</given-names></name></person-group>
+<year>2003</year>
+<article-title>Regulatory network of gene expression in the drought and cold stress responses.</article-title>
+<source>Curr Opin Plant Biol</source>
+<volume>6</volume>
+<fpage>410</fpage>
+<lpage>417</lpage>
+<pub-id pub-id-type="pmid">12972040</pub-id></element-citation></ref><ref id="pone.0040397-Jin1"><label>4</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jin</surname><given-names>H</given-names></name><name><surname>Martin</surname><given-names>C</given-names></name></person-group>
+<year>1999</year>
+<article-title>Multifunctionality and diversity within the plant <italic>MYB</italic>-gene family.</article-title>
+<source>Plant Mol Biol</source>
+<volume>41</volume>
+<fpage>577</fpage>
+<lpage>585</lpage>
+<pub-id pub-id-type="pmid">10645718</pub-id></element-citation></ref><ref id="pone.0040397-Singh1"><label>5</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Singh</surname><given-names>K</given-names></name><name><surname>Foley</surname><given-names>RC</given-names></name><name><surname>Onate-Sanchez</surname><given-names>L</given-names></name></person-group>
+<year>2002</year>
+<article-title>Transcription factors in plant defense and stress responses.</article-title>
+<source>Curr Opin Plant Biol</source>
+<volume>5</volume>
+<fpage>430</fpage>
+<lpage>436</lpage>
+<pub-id pub-id-type="pmid">12183182</pub-id></element-citation></ref><ref id="pone.0040397-YamaguchiShinozaki1"><label>6</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yamaguchi-Shinozaki</surname><given-names>K</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name></person-group>
+<year>1994</year>
+<article-title>A novel <italic>cis</italic>-acting element in an <italic>Arabidopsis</italic> gene is involved in responsiveness to drought, low-temperature, or high-salt stress.</article-title>
+<source>Plant Cell</source>
+<volume>6</volume>
+<fpage>251</fpage>
+<lpage>264</lpage>
+<pub-id pub-id-type="pmid">8148648</pub-id></element-citation></ref><ref id="pone.0040397-Liu1"><label>7</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Liu</surname><given-names>Q</given-names></name><name><surname>Kasuga</surname><given-names>M</given-names></name><name><surname>Sakuma</surname><given-names>Y</given-names></name><name><surname>Abe</surname><given-names>H</given-names></name><name><surname>Miura</surname><given-names>S</given-names></name><etal/></person-group>
+<year>1998</year>
+<article-title>Two transcription factors, DREB1 and DREB2, with an EREBP/AP2 DNA binding domain separate two cellular signal transduction pathways in drought- and low-temperature-responsive gene expression, respectively, in <italic>Arabidopsis</italic>.</article-title>
+<source>Plant Cell</source>
+<volume>10</volume>
+<fpage>1391</fpage>
+<lpage>1406</lpage>
+<pub-id pub-id-type="pmid">9707537</pub-id></element-citation></ref><ref id="pone.0040397-Kasuga1"><label>8</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kasuga</surname><given-names>M</given-names></name><name><surname>Liu</surname><given-names>Q</given-names></name><name><surname>Miura</surname><given-names>S</given-names></name><name><surname>Yamaguchi-Shinozaki</surname><given-names>K</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name></person-group>
+<year>1999</year>
+<article-title>Improving plant drought, salt, and freezing tolerance by gene transfer of a single stress-inducible transcription factor.</article-title>
+<source>Nat Biotechnol</source>
+<volume>17</volume>
+<fpage>287</fpage>
+<lpage>291</lpage>
+<pub-id pub-id-type="pmid">10096298</pub-id></element-citation></ref><ref id="pone.0040397-Vinocur1"><label>9</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vinocur</surname><given-names>B</given-names></name><name><surname>Altman</surname><given-names>A</given-names></name></person-group>
+<year>2005</year>
+<article-title>Recent advances in engineering plant tolerance to abiotic stress: achievements and limitations.</article-title>
+<source>Curr Opin Biotechnol</source>
+<volume>16</volume>
+<fpage>123</fpage>
+<lpage>32</lpage>
+<pub-id pub-id-type="pmid">15831376</pub-id></element-citation></ref><ref id="pone.0040397-YamaguchiShinozaki2"><label>10</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yamaguchi-Shinozaki</surname><given-names>K</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name></person-group>
+<year>2006</year>
+<article-title>Transcriptional regulatory networks in cellular responses and tolerance to dehydration and cold stresses.</article-title>
+<source>Annu Rev Plant Biol</source>
+<volume>57</volume>
+<fpage>781</fpage>
+<lpage>803</lpage>
+<pub-id pub-id-type="pmid">16669782</pub-id></element-citation></ref><ref id="pone.0040397-Ooka1"><label>11</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ooka</surname><given-names>H</given-names></name><name><surname>Satoh</surname><given-names>K</given-names></name><name><surname>Doi</surname><given-names>K</given-names></name><name><surname>Nagata</surname><given-names>T</given-names></name><name><surname>Otomo</surname><given-names>Y</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>Comprehensive analysis of <italic>NAC</italic> family genes in <italic>Oryza sativa</italic> and <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>DNA Res</source>
+<volume>10</volume>
+<fpage>239</fpage>
+<lpage>247</lpage>
+<pub-id pub-id-type="pmid">15029955</pub-id></element-citation></ref><ref id="pone.0040397-Fang1"><label>12</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fang</surname><given-names>Y</given-names></name><name><surname>You</surname><given-names>J</given-names></name><name><surname>Xie</surname><given-names>K</given-names></name><name><surname>Xie</surname><given-names>W</given-names></name><name><surname>Xiong</surname><given-names>L</given-names></name></person-group>
+<year>2008</year>
+<article-title>Systematic sequence analysis and identification of tissue-specific or stress-responsive genes of NAC transcription factor family in rice.</article-title>
+<source>Mol Genet Genomics</source>
+<volume>280</volume>
+<fpage>547</fpage>
+<lpage>563</lpage>
+<pub-id pub-id-type="pmid">18813954</pub-id></element-citation></ref><ref id="pone.0040397-Xiong1"><label>13</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Xiong</surname><given-names>Y</given-names></name><name><surname>Liu</surname><given-names>T</given-names></name><name><surname>Tian</surname><given-names>C</given-names></name><name><surname>Sun</surname><given-names>S</given-names></name><name><surname>Li</surname><given-names>J</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Transcription factors in rice: a genome-wide comparative analysis between monocots and eudicots.</article-title>
+<source><italic>Plant Mol Biol</italic></source>
+<volume>59</volume>
+<fpage>191</fpage>
+<lpage>203</lpage>
+<pub-id pub-id-type="pmid">16217612</pub-id></element-citation></ref><ref id="pone.0040397-Olsen1"><label>14</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Olsen</surname><given-names>AN</given-names></name><name><surname>Ernst</surname><given-names>HA</given-names></name><name><surname>Leggio</surname><given-names>LL</given-names></name><name><surname>Skriver</surname><given-names>K</given-names></name></person-group>
+<year>2005</year>
+<article-title>DNA-binding specificity and molecular functions of NAC transcription factor.</article-title>
+<source>Plant Sci</source>
+<volume>169</volume>
+<fpage>785</fpage>
+<lpage>797</lpage>
+</element-citation></ref><ref id="pone.0040397-Fujita1"><label>15</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fujita</surname><given-names>M</given-names></name><name><surname>Fujita</surname><given-names>Y</given-names></name><name><surname>Maruyama</surname><given-names>K</given-names></name><name><surname>Seki</surname><given-names>M</given-names></name><name><surname>Hiratsu</surname><given-names>K</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>A dehydration-induced NAC protein, <italic>RD26</italic>, is involved in a novel ABA dependent stress-signaling pathway.</article-title>
+<source>Plant J</source>
+<volume>39</volume>
+<fpage>863</fpage>
+<lpage>876</lpage>
+<pub-id pub-id-type="pmid">15341629</pub-id></element-citation></ref><ref id="pone.0040397-Hegedus1"><label>16</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hegedus</surname><given-names>D</given-names></name><name><surname>Yu</surname><given-names>M</given-names></name><name><surname>Baldwin</surname><given-names>D</given-names></name><name><surname>Gruber</surname><given-names>M</given-names></name><name><surname>Sharpe</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>Molecular characterization of <italic>Brassica napus</italic> NAC domain transcriptional activators induced in response to biotic and abiotic stress.</article-title>
+<source>Plant Mol Biol</source>
+<volume>53</volume>
+<fpage>383</fpage>
+<lpage>397</lpage>
+<pub-id pub-id-type="pmid">14750526</pub-id></element-citation></ref><ref id="pone.0040397-Hu1"><label>17</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hu</surname><given-names>H</given-names></name><name><surname>Dai</surname><given-names>M</given-names></name><name><surname>Yao</surname><given-names>J</given-names></name><name><surname>Xiao</surname><given-names>B</given-names></name><name><surname>Li</surname><given-names>X</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>Overexpressing a NAM, ATAF, and CUC (NAC) transcription factor enhances drought resistance and salt tolerance in rice.</article-title>
+<source>Proc Natl Acad Sci USA</source>
+<volume>35</volume>
+<fpage>12987</fpage>
+<lpage>12992</lpage>
+</element-citation></ref><ref id="pone.0040397-Hu2"><label>18</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hu</surname><given-names>H</given-names></name><name><surname>You</surname><given-names>J</given-names></name><name><surname>Fang</surname><given-names>Y</given-names></name><name><surname>Zhu</surname><given-names>X</given-names></name><name><surname>Qi</surname><given-names>Z</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Characterization of transcription factor gene <italic>SNAC2</italic> conferring cold and salt tolerance in rice.</article-title>
+<source>Plant Mol Biol</source>
+<volume>67</volume>
+<fpage>169</fpage>
+<lpage>181</lpage>
+<pub-id pub-id-type="pmid">18273684</pub-id></element-citation></ref><ref id="pone.0040397-Yokotani1"><label>19</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yokotani</surname><given-names>N</given-names></name><name><surname>Ichikawa</surname><given-names>T</given-names></name><name><surname>Kondou</surname><given-names>Y</given-names></name><name><surname>Matsui</surname><given-names>M</given-names></name><name><surname>Hirochika</surname><given-names>H</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Tolerance to various environmental stresses conferred by the salt-responsive rice gene <italic>ONAC063</italic> in transgenic <italic>Arabidopsis</italic>.</article-title>
+<source>Planta</source>
+<volume>229</volume>
+<fpage>1065</fpage>
+<lpage>1075</lpage>
+<pub-id pub-id-type="pmid">19225807</pub-id></element-citation></ref><ref id="pone.0040397-Jeong1"><label>20</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jeong</surname><given-names>JS</given-names></name><name><surname>Kim</surname><given-names>YS</given-names></name><name><surname>Baek</surname><given-names>KH</given-names></name><name><surname>Jung</surname><given-names>H</given-names></name><name><surname>Ha</surname><given-names>SH</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>Root-specific expression of <italic>OsNAC10</italic> improves drought tolerance and grain yield in rice under field drought conditions.</article-title>
+<source>Plant Physiol</source>
+<volume>153</volume>
+<fpage>185</fpage>
+<lpage>197</lpage>
+<pub-id pub-id-type="pmid">20335401</pub-id></element-citation></ref><ref id="pone.0040397-Wu1"><label>21</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wu</surname><given-names>Y</given-names></name><name><surname>Deng</surname><given-names>Z</given-names></name><name><surname>Lai</surname><given-names>J</given-names></name><name><surname>Zhang</surname><given-names>Y</given-names></name><name><surname>Yang</surname><given-names>C</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Dual function of <italic>Arabidopsis ATAF1</italic> in abiotic and biotic stress responses.</article-title>
+<source>Cell Res</source>
+<volume>19</volume>
+<fpage>1279</fpage>
+<lpage>1290</lpage>
+<pub-id pub-id-type="pmid">19752887</pub-id></element-citation></ref><ref id="pone.0040397-Nakashima1"><label>22</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nakashima</surname><given-names>K</given-names></name><name><surname>Tran</surname><given-names>LS</given-names></name><name><surname>Van Nguyen</surname><given-names>D</given-names></name><name><surname>Fujita</surname><given-names>M</given-names></name><name><surname>Maruyama</surname><given-names>K</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Functional analysis of a NAC-type transcription factor <italic>OsNAC6</italic> involved in abiotic and biotic stress-responsive gene expression in rice.</article-title>
+<source>Plant J</source>
+<volume>51</volume>
+<fpage>617</fpage>
+<lpage>630</lpage>
+<pub-id pub-id-type="pmid">17587305</pub-id></element-citation></ref><ref id="pone.0040397-Fujita2"><label>23</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fujita</surname><given-names>M</given-names></name><name><surname>Mizukado</surname><given-names>S</given-names></name><name><surname>Fujita</surname><given-names>Y</given-names></name><name><surname>Ichikawa</surname><given-names>T</given-names></name><name><surname>Nakazawa</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Identification of stress-tolerance-related transcription-factor genes via mini-scale Full-length cDNA Over-eXpressor (FOX) gene hunting system.</article-title>
+<source>Biochem Biophys Res Commun</source>
+<volume>364</volume>
+<fpage>250</fpage>
+<lpage>257</lpage>
+<pub-id pub-id-type="pmid">17937930</pub-id></element-citation></ref><ref id="pone.0040397-Dubouzet1"><label>24</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dubouzet</surname><given-names>JG</given-names></name><name><surname>Sakuma</surname><given-names>Y</given-names></name><name><surname>Ito</surname><given-names>Y</given-names></name><name><surname>Kasuga</surname><given-names>M</given-names></name><name><surname>Dubouzet</surname><given-names>EG</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>
+<italic>OsDREB</italic> genes in rice, <italic>Oryza sativa</italic> L., encode transcription activators that function in drought, high salt and cold-responsive gene expression.</article-title>
+<source>Plant J</source>
+<volume>33</volume>
+<fpage>751</fpage>
+<lpage>763</lpage>
+<pub-id pub-id-type="pmid">12609047</pub-id></element-citation></ref><ref id="pone.0040397-Bartels1"><label>25</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bartels</surname><given-names>D</given-names></name><name><surname>Salamini</surname><given-names>F</given-names></name></person-group>
+<year>2001</year>
+<article-title>Desiccation tolerance in the resurrection plant <italic>Craterostigma plantagineum.</italic> A contribution to the study of drought tolerance at the molecular level.</article-title>
+<source>Plant Physiol</source>
+<volume>127</volume>
+<fpage>1346</fpage>
+<lpage>1353</lpage>
+<pub-id pub-id-type="pmid">11743072</pub-id></element-citation></ref><ref id="pone.0040397-Whittaker1"><label>26</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Whittaker</surname><given-names>A</given-names></name><name><surname>Adriana</surname><given-names>B</given-names></name><name><surname>Jill</surname><given-names>F</given-names></name></person-group>
+<year>2001</year>
+<article-title>Changes in leaf hexokinase activity and metabolite levels in response to drying in the desiccation tolerant species, <italic>Sporobolus stapfianus</italic> and <italic>Xerophyta viscosa</italic>.</article-title>
+<source>J Exp Bot</source>
+<volume>52(358)</volume>
+<fpage>961</fpage>
+<lpage>969</lpage>
+<pub-id pub-id-type="pmid">11432913</pub-id></element-citation></ref><ref id="pone.0040397-Mundree1"><label>27</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mundree, Sagadevan</surname><given-names>G</given-names></name><name><surname>Bienyameen</surname><given-names>B</given-names></name><name><surname>Shaheen</surname><given-names>M</given-names></name><name><surname>Shaun</surname><given-names>P</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>Physiological and molecular insights into drought tolerance.</article-title>
+<source>Afr J Biotechnol</source>
+<volume>1(2)</volume>
+<fpage>28</fpage>
+<lpage>38</lpage>
+</element-citation></ref><ref id="pone.0040397-Amtmann1"><label>28</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Amtmann</surname><given-names>A</given-names></name><name><surname>Bohnert</surname><given-names>HJ</given-names></name><name><surname>Bressan</surname><given-names>RA</given-names></name></person-group>
+<year>2005</year>
+<article-title>Abiotic stress and plant genome evolution. Search for new models.</article-title>
+<source>Plant Physiol</source>
+<volume>138</volume>
+<fpage>127</fpage>
+<lpage>130</lpage>
+<pub-id pub-id-type="pmid">15888685</pub-id></element-citation></ref><ref id="pone.0040397-VeraEstrella1"><label>29</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vera-Estrella</surname><given-names>R</given-names></name><name><surname>Barkla</surname><given-names>BJ</given-names></name><name><surname>Garcia-Ramirez</surname><given-names>L</given-names></name><name><surname>Pantoja</surname><given-names>O</given-names></name></person-group>
+<year>2005</year>
+<article-title>Salt stress in <italic>Thellungiella halophila</italic> activates Na<sup>&#x0002b;</sup> transport mechanisms required for salinity tolerance.</article-title>
+<source>Plant Physiol</source>
+<volume>139</volume>
+<fpage>1507</fpage>
+<lpage>1517</lpage>
+<pub-id pub-id-type="pmid">16244148</pub-id></element-citation></ref><ref id="pone.0040397-Cosio1"><label>30</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cosio</surname><given-names>C</given-names></name><name><surname>Martinoia</surname><given-names>E</given-names></name><name><surname>Keller</surname><given-names>C</given-names></name></person-group>
+<year>2004</year>
+<article-title>Hyper accumulation of cadmium and Zinc in <italic>Thlaspi caerulescens</italic> and <italic>Arabidopsis halleri</italic> at the leaf cellular level.</article-title>
+<source>Plant Physiol</source>
+<volume>134</volume>
+<fpage>1</fpage>
+<lpage>10</lpage>
+</element-citation></ref><ref id="pone.0040397-Sarret1"><label>31</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sarret</surname><given-names>G</given-names></name><name><surname>Saumitou-Laprade</surname><given-names>P</given-names></name><name><surname>Bert</surname><given-names>V</given-names></name><name><surname>Proux</surname><given-names>O</given-names></name><name><surname>Hazemann</surname><given-names>JL</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>Forms of zinc accumulated in the hyperaccumulator <italic>Arabidopsis halleri</italic>.</article-title>
+<source>Plant Physiol</source>
+<volume>130</volume>
+<fpage>1</fpage>
+<lpage>12</lpage>
+</element-citation></ref><ref id="pone.0040397-Gopalakrishna1"><label>32</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gopalakrishna</surname><given-names>R</given-names></name><name><surname>Ganeshkumar, Krishnaprasad</surname><given-names>BT</given-names></name><name><surname>Mathew</surname><given-names>MK</given-names></name><name><surname>Udayakumar</surname><given-names>M</given-names></name></person-group>
+<year>2001</year>
+<article-title>A stress-responsive gene from groundnut, Gdi15, is homologous to flavonol 3-O-glucosyl transferase involved in anthocyanin biosynthesis.</article-title>
+<source>Biochem Biophys Res Commun</source>
+<volume>284</volume>
+<fpage>574</fpage>
+<lpage>579</lpage>
+<pub-id pub-id-type="pmid">11396938</pub-id></element-citation></ref><ref id="pone.0040397-Govind1"><label>33</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Govind</surname><given-names>G</given-names></name><name><surname>Harshavardhan</surname><given-names>V</given-names></name><name><surname>Patricia</surname><given-names>JK</given-names></name><name><surname>Dhanalakshmi</surname><given-names>R</given-names></name><name><surname>Senthil Kumar</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Identification and functional validation of a unique set of drought induced genes preferentially expressed in response to gradual water stress in peanut.</article-title>
+<source>Mol Genet Genomics</source>
+<volume>281(6)</volume>
+<fpage>591</fpage>
+<lpage>605</lpage>
+<pub-id pub-id-type="pmid">19224247</pub-id></element-citation></ref><ref id="pone.0040397-Waditte1"><label>34</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Waditte</surname><given-names>R</given-names></name><name><surname>Hibino</surname><given-names>T</given-names></name><name><surname>Nakomura</surname><given-names>T</given-names></name><name><surname>Incharoensakdi</surname><given-names>A</given-names></name><name><surname>Takabe</surname><given-names>T</given-names></name></person-group>
+<year>2002</year>
+<article-title>Overexpression of Na<sup>&#x0002b;</sup>/H<sup>&#x0002b;</sup> antiporter confers salt tolerance on fresh water Cyanobacterium, making it capable of growth in sea water.</article-title>
+<source>Proc Natl Acad Sci USA</source>
+<volume>99(6)</volume>
+<fpage>4109</fpage>
+<lpage>4114</lpage>
+<pub-id pub-id-type="pmid">11891307</pub-id></element-citation></ref><ref id="pone.0040397-Majee1"><label>35</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Majee</surname><given-names>M</given-names></name><name><surname>Maitra</surname><given-names>S</given-names></name><name><surname>Dastidar</surname><given-names>KG</given-names></name><name><surname>Pattnaik</surname><given-names>S</given-names></name><name><surname>Chatterjee</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>A novel salt-tolerant L-myo-inositol-1-phosphate synthase from <italic>Porteresia coarctata</italic> (Roxb.) Tateoka, a halophytic wild rice: molecular cloning, bacterial overexpression, characterization, and functional introgression into tobacco-conferring salt tolerance phenotype.</article-title>
+<source>J Biol Chem</source>
+<volume>279(27)</volume>
+<fpage>28539</fpage>
+<lpage>52</lpage>
+<pub-id pub-id-type="pmid">15016817</pub-id></element-citation></ref><ref id="pone.0040397-Uma1"><label>36</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Uma</surname><given-names>S</given-names></name><name><surname>Prasad</surname><given-names>TG</given-names></name><name><surname>Udayakumar</surname><given-names>M</given-names></name></person-group>
+<year>1995</year>
+<article-title>Genetic variability in recovery growth and synthesis of stress proteins in Response to polyethylene glycol and salt stress in finger millet.</article-title>
+<source>Ann Bot 76</source>
+<volume>(1)</volume>
+<fpage>43</fpage>
+<lpage>49</lpage>
+</element-citation></ref><ref id="pone.0040397-Impa1"><label>37</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Impa</surname><given-names>SM</given-names></name><name><surname>Nadaradjan</surname><given-names>S</given-names></name><name><surname>Boominathan</surname><given-names>P</given-names></name><name><surname>Shashidhara</surname><given-names>G</given-names></name><name><surname>Bindumadhava</surname><given-names>H</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Carbon isotope discrimination accurately reflects variability in WUE measured at a whole plant level in rice (<italic>Oryza sativa</italic> L.).</article-title>
+<source>Crop Sci</source>
+<volume>45</volume>
+<fpage>2517</fpage>
+<lpage>2522</lpage>
+</element-citation></ref><ref id="pone.0040397-Kathuria1"><label>38</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kathuria</surname><given-names>H</given-names></name><name><surname>Giri</surname><given-names>J</given-names></name><name><surname>Nataraja</surname><given-names>KN</given-names></name><name><surname>Murata</surname><given-names>N</given-names></name><name><surname>Udayakumar</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Glycinebetaine induced water-stress-tolerance in codA-expressing transgenic indica rice is associated with up-regulation of several stress responsive genes.</article-title>
+<source>Plant Biotechnol J</source>
+<volume>7</volume>
+<fpage>512</fpage>
+<lpage>526</lpage>
+<pub-id pub-id-type="pmid">19490479</pub-id></element-citation></ref><ref id="pone.0040397-Datta1"><label>39</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Datta</surname><given-names>K</given-names></name><name><surname>Schimidt</surname><given-names>A</given-names></name><name><surname>Marcus</surname><given-names>A</given-names></name></person-group>
+<year>1989</year>
+<article-title>Characterization of two soybean repetitive proline rich proteins and a cognate cDNA from germinated axes.</article-title>
+<source>Plant Cell</source>
+<volume>1</volume>
+<fpage>945</fpage>
+<lpage>952</lpage>
+<pub-id pub-id-type="pmid">2535534</pub-id></element-citation></ref><ref id="pone.0040397-Mishra1"><label>40</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mishra</surname><given-names>RN</given-names></name><name><surname>Ramesha</surname><given-names>A</given-names></name><name><surname>Kaul</surname><given-names>T</given-names></name><name><surname>Nair</surname><given-names>S</given-names></name><name><surname>Sopory</surname><given-names>SK</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>A modified cDNA subtraction to identify full-length differentially expressed genes from any given system: an alternate to DNA chip technology.</article-title>
+<source>Ann Biochem</source>
+<volume>345</volume>
+<fpage>149</fpage>
+<lpage>157</lpage>
+</element-citation></ref><ref id="pone.0040397-Chenna1"><label>41</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chenna</surname><given-names>R</given-names></name><name><surname>Sugawara</surname><given-names>H</given-names></name><name><surname>Koike</surname><given-names>T</given-names></name><name><surname>Lopez</surname><given-names>R</given-names></name><name><surname>Gibson</surname><given-names>TJ</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>Multiple sequence alignment with the Clustal series of programs.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>31</volume>
+<fpage>3497</fpage>
+<lpage>3500</lpage>
+<pub-id pub-id-type="pmid">12824352</pub-id></element-citation></ref><ref id="pone.0040397-Bailey1"><label>42</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bailey</surname><given-names>TL</given-names></name><name><surname>Elkan</surname><given-names>C</given-names></name></person-group>
+<year>1994</year>
+<article-title>Fitting a mixture model by expectation maximization to discover motifs in biopolymers.</article-title>
+<source>Proc Int Conf Intell Syst Mol Biol</source>
+<volume>2</volume>
+<fpage>28</fpage>
+<lpage>36</lpage>
+<pub-id pub-id-type="pmid">7584402</pub-id></element-citation></ref><ref id="pone.0040397-Mulder1"><label>43</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mulder</surname><given-names>NJ</given-names></name><name><surname>Apweiler</surname><given-names>R</given-names></name><name><surname>Attwood</surname><given-names>TK</given-names></name><name><surname>Bairoch</surname><given-names>A</given-names></name><name><surname>Bateman</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>InterPro, progress and status in 2005.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>33</volume>
+<fpage>D201</fpage>
+<lpage>D205</lpage>
+<pub-id pub-id-type="pmid">15608177</pub-id></element-citation></ref><ref id="pone.0040397-Nakai1"><label>44</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nakai</surname><given-names>K</given-names></name><name><surname>Kanehisa</surname><given-names>M</given-names></name></person-group>
+<year>1992</year>
+<article-title>A knowledge base for predicting protein localization sites in eukaryotic cells.</article-title>
+<source>Genomics</source>
+<volume>14</volume>
+<fpage>897</fpage>
+<lpage>911</lpage>
+<pub-id pub-id-type="pmid">1478671</pub-id></element-citation></ref><ref id="pone.0040397-LaCour1"><label>45</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>La Cour</surname><given-names>T</given-names></name><name><surname>Kiemer</surname><given-names>L</given-names></name><name><surname>M&#x000f8;lgaard</surname><given-names>A</given-names></name><name><surname>Gupta</surname><given-names>R</given-names></name><name><surname>Skriver</surname><given-names>K</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>Analysis and prediction of leucine-rich nuclear export signals.</article-title>
+<source>Protein Eng Des Sel</source>
+<volume>17</volume>
+<fpage>527</fpage>
+<lpage>536</lpage>
+<pub-id pub-id-type="pmid">15314210</pub-id></element-citation></ref><ref id="pone.0040397-Hellens1"><label>46</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hellens</surname><given-names>RP</given-names></name><name><surname>Edwards</surname><given-names>EA</given-names></name><name><surname>Leyland</surname><given-names>NR</given-names></name><name><surname>Bean</surname><given-names>S</given-names></name><name><surname>Mullineaux</surname><given-names>PM</given-names></name></person-group>
+<year>2000</year>
+<article-title>&#x0201c;pGreen: a versatile and flexible binary Ti vector for <italic>Agrobacterium</italic>-mediated plant transformation&#x0201d;</article-title>
+<source>Plant Mol Biol</source>
+<volume>42</volume>
+<fpage>819</fpage>
+<lpage>832</lpage>
+<pub-id pub-id-type="pmid">10890530</pub-id></element-citation></ref><ref id="pone.0040397-Horsch1"><label>47</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Horsch</surname><given-names>RB</given-names></name><name><surname>Fry</surname><given-names>JE</given-names></name><name><surname>Hoffmann</surname><given-names>N</given-names></name><name><surname>Eichholtz</surname><given-names>D</given-names></name><name><surname>Rogers</surname><given-names>SG</given-names></name><etal/></person-group>
+<year>1985</year>
+<article-title>A simple and general method for transferring genes into plants.</article-title>
+<source>Science</source>
+<volume>227</volume>
+<fpage>1229</fpage>
+<lpage>1231</lpage>
+<pub-id pub-id-type="pmid">17757866</pub-id></element-citation></ref><ref id="pone.0040397-Murashige1"><label>48</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Murashige</surname><given-names>T</given-names></name><name><surname>Skoog</surname><given-names>F</given-names></name></person-group>
+<year>1962</year>
+<article-title>A revised medium for rapid growth and bioassays with tobacco tissue cultures.</article-title>
+<source>Physiol Plant</source>
+<volume>15</volume>
+<fpage>473</fpage>
+<lpage>497</lpage>
+</element-citation></ref><ref id="pone.0040397-Pfaffl1"><label>49</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pfaffl</surname><given-names>MW</given-names></name><name><surname>Horgan</surname><given-names>GW</given-names></name><name><surname>Dempfle</surname><given-names>L</given-names></name></person-group>
+<year>2002</year>
+<article-title>Relative expression software tool (REST) for group-wise comparison and statistical analysis of relative expression results in real-time PCR.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>30(9)</volume>
+<fpage>e36</fpage>
+<pub-id pub-id-type="pmid">11972351</pub-id></element-citation></ref><ref id="pone.0040397-Sutherland1"><label>50</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sutherland</surname><given-names>MW</given-names></name><name><surname>Learmonth</surname><given-names>BA</given-names></name></person-group>
+<year>1997</year>
+<article-title>The tetrazolium dyes MST and XTT provide new quantitative assays for superoxide and superoxide dismutase.</article-title>
+<source>Free Rad Res</source>
+<volume>27</volume>
+<fpage>283</fpage>
+<lpage>289</lpage>
+</element-citation></ref><ref id="pone.0040397-Schopfer1"><label>51</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schopfer</surname><given-names>P</given-names></name><name><surname>Plachy</surname><given-names>C</given-names></name><name><surname>Frahry</surname><given-names>G</given-names></name></person-group>
+<year>2001</year>
+<article-title>Release of reactive oxygen intermediates (superoxide radicals, hydrogen peroxide, and hydroxyl radicals) and peroxidase in germinating radish seeds controlled by light, gibberellin, and abscisic acid.</article-title>
+<source><italic>Plant Physiol</italic></source>
+<volume>125</volume>
+<fpage>1591</fpage>
+<lpage>1602</lpage>
+<pub-id pub-id-type="pmid">11299341</pub-id></element-citation></ref><ref id="pone.0040397-Halliwell1"><label>52</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Halliwell</surname><given-names>B</given-names></name><name><surname>Grootveld</surname><given-names>M</given-names></name><name><surname>Gutteridge</surname><given-names>JMC</given-names></name></person-group>
+<year>1988</year>
+<article-title>Methods for the measurement of hydroxyl radicals in biochemical systems: deoxyribose degradation and aromatic hydroxylation.</article-title>
+<source>Methods Biochem Anal</source>
+<volume>33</volume>
+<fpage>59</fpage>
+<lpage>90</lpage>
+<pub-id pub-id-type="pmid">2833681</pub-id></element-citation></ref><ref id="pone.0040397-Heath1"><label>53</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Heath</surname><given-names>RL</given-names></name><name><surname>Packer</surname><given-names>L</given-names></name></person-group>
+<year>1968</year>
+<article-title>Photoperoxidation in isolated chloroplasts. Kinetics and stoichiometry of fatty acid peroxidation.</article-title>
+<source>Arch Biochem Biophys</source>
+<volume>125</volume>
+<fpage>189</fpage>
+<lpage>198</lpage>
+<pub-id pub-id-type="pmid">5655425</pub-id></element-citation></ref><ref id="pone.0040397-Ganguly1"><label>54</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ganguly</surname><given-names>M</given-names></name><name><surname>Roychoudhury</surname><given-names>A</given-names></name><name><surname>Sarkar</surname><given-names>SN</given-names></name><name><surname>Sengupta</surname><given-names>DN</given-names></name><name><surname>Datta</surname><given-names>SK</given-names></name><etal/></person-group>
+<year>2011</year>
+<article-title>Inducibility of three salinity/abscisic acid-regulated promoters in transgenic rice with <italic>gusA</italic> reporter gene.</article-title>
+<source>Plant Cell Rep</source>
+<volume>30(9)</volume>
+<fpage>1617</fpage>
+<lpage>1625</lpage>
+<pub-id pub-id-type="pmid">21538101</pub-id></element-citation></ref><ref id="pone.0040397-Vroemen1"><label>55</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vroemen</surname><given-names>CW</given-names></name><name><surname>Mordhorst</surname><given-names>AP</given-names></name><name><surname>Albrecht</surname><given-names>C</given-names></name><name><surname>Kwaaitaal</surname><given-names>MACJ</given-names></name><name><surname>de Vries</surname><given-names>SC</given-names></name></person-group>
+<year>2003</year>
+<article-title>The <italic>CUP-SHAPED COTYLEDON3</italic> gene is required for boundary and shoot meristem formation in <italic>Arabidopsis</italic>.</article-title>
+<source>Plant Cell</source>
+<volume>15</volume>
+<fpage>1563</fpage>
+<lpage>1577</lpage>
+<pub-id pub-id-type="pmid">12837947</pub-id></element-citation></ref><ref id="pone.0040397-Weir1"><label>56</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Weir</surname><given-names>I</given-names></name><name><surname>Lu</surname><given-names>J</given-names></name><name><surname>Cook</surname><given-names>H</given-names></name><name><surname>Causier</surname><given-names>B</given-names></name><name><surname>Schwarz-Sommer</surname><given-names>Z</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>CUPULIFORMIS establishes lateral organ boundaries in Antirrhinum.</article-title>
+<source>Development</source>
+<volume>131</volume>
+<fpage>915</fpage>
+<lpage>922</lpage>
+<pub-id pub-id-type="pmid">14757643</pub-id></element-citation></ref><ref id="pone.0040397-Collinge1"><label>57</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Collinge</surname><given-names>M</given-names></name><name><surname>Boller</surname><given-names>T</given-names></name></person-group>
+<year>2001</year>
+<article-title>Differential induction of two potato genes, <italic>Stprx2</italic> and <italic>StNAC</italic>, in response to infection by <italic>Phytophthora infestans</italic> and to wounding.</article-title>
+<source>Plant Mol Biol</source>
+<volume>46</volume>
+<fpage>521</fpage>
+<lpage>529</lpage>
+<pub-id pub-id-type="pmid">11516145</pub-id></element-citation></ref><ref id="pone.0040397-Takasaki1"><label>58</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Takasaki</surname><given-names>H</given-names></name><name><surname>Maruyama</surname><given-names>K</given-names></name><name><surname>Kidokoro</surname><given-names>S</given-names></name><name><surname>Ito</surname><given-names>Y</given-names></name><name><surname>Fujita</surname><given-names>Y</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>The abiotic stress-responsive NAC-type transcription factor <italic>OsNAC5</italic> regulates stress-inducible genes and stress-tolerance in rice.</article-title>
+<source>Mol Genet Genomics</source>
+<volume>284</volume>
+<fpage>173</fpage>
+<lpage>183</lpage>
+<pub-id pub-id-type="pmid">20632034</pub-id></element-citation></ref><ref id="pone.0040397-Nakashima2"><label>59</label><element-citation publication-type="other">
+<person-group person-group-type="author"><name><surname>Nakashima</surname><given-names>K</given-names></name><name><surname>Takasaki</surname><given-names>H</given-names></name><name><surname>Mizoi</surname><given-names>J</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name><name><surname>Yamaguchi-Shinozaki</surname><given-names>K</given-names></name></person-group>
+<year>2011</year>
+<article-title>NAC transcription factors in plant abiotic stress responses. Biochim Biophys Acta.</article-title>
+<source>In press</source>
+</element-citation></ref><ref id="pone.0040397-Sengupta1"><label>60</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sengupta</surname><given-names>S</given-names></name><name><surname>Patra</surname><given-names>B</given-names></name><name><surname>Ray</surname><given-names>R</given-names></name><name><surname>Majumder</surname><given-names>AL</given-names></name></person-group>
+<year>2008</year>
+<article-title>Inositol methyl transferase from a wild halophytic rice, <italic>Porteresia coarctata</italic> Roxb. (Tateoka):regulation of pinitol synthesis under abiotic stress.</article-title>
+<source>Plant Cell and Environ</source>
+<volume>31</volume>
+<fpage>1442</fpage>
+<lpage>1459</lpage>
+</element-citation></ref><ref id="pone.0040397-Nogueira1"><label>61</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nogueira</surname><given-names>FTS</given-names></name><name><surname>Schlogl</surname><given-names>PS</given-names></name><name><surname>Camargo</surname><given-names>SR</given-names></name><name><surname>Fernandez</surname><given-names>JH</given-names></name><name><surname>De Rosa Jr</surname><given-names>VE</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>
+<italic>SsNAC23</italic>, a member of the NAC domain protein family, is associated with cold, herbivory and water stress in sugarcane.</article-title>
+<source>Plant Sci</source>
+<volume>169</volume>
+<fpage>93</fpage>
+<lpage>106</lpage>
+</element-citation></ref><ref id="pone.0040397-Tran1"><label>62</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tran</surname><given-names>LS</given-names></name><name><surname>Nakashima</surname><given-names>K</given-names></name><name><surname>Sakuma</surname><given-names>Y</given-names></name><name><surname>Simpson</surname><given-names>SD</given-names></name><name><surname>Fujita</surname><given-names>Y</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>Isolation and functional analysis of <italic>Arabidopsis</italic> stress-inducible NAC transcription factors that bind to a drought-responsive <italic>cis</italic>-element in the <italic>early responsive to dehydration stress 1</italic> promoter.</article-title>
+<source>Plant Cell</source>
+<volume>16</volume>
+<fpage>2481</fpage>
+<lpage>2498</lpage>
+<pub-id pub-id-type="pmid">15319476</pub-id></element-citation></ref><ref id="pone.0040397-Sakuma1"><label>63</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sakuma</surname><given-names>Y</given-names></name><name><surname>Liu</surname><given-names>Q</given-names></name><name><surname>Dubouzet</surname><given-names>JG</given-names></name><name><surname>Abe</surname><given-names>H</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>DNA-binding specificity of the ERE/AP2 domain of <italic>Arabidopsis</italic> DREBs, transcription factors involved in dehydration- and cold inducible gene expression.</article-title>
+<source>Biochem Biophys Res Commun</source>
+<volume>290</volume>
+<fpage>998</fpage>
+<lpage>1009</lpage>
+<pub-id pub-id-type="pmid">11798174</pub-id></element-citation></ref><ref id="pone.0040397-Hsieh1"><label>64</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hsieh</surname><given-names>TH</given-names></name><name><surname>Lee</surname><given-names>JT</given-names></name><name><surname>Yang</surname><given-names>PT</given-names></name><name><surname>Chiu</surname><given-names>LH</given-names></name><name><surname>Charng</surname><given-names>YY</given-names></name><etal/></person-group>
+<year>2002a</year>
+<article-title>Heterology expression of the <italic>Arabidopsis C-repeat/dehydration response element binding factor 1</italic> gene confers elevated tolerance to chilling and oxidative stresses in transgenic tomato.</article-title>
+<source>Plant Physiol</source>
+<volume>129</volume>
+<fpage>1086</fpage>
+<lpage>1094</lpage>
+<pub-id pub-id-type="pmid">12114563</pub-id></element-citation></ref><ref id="pone.0040397-Haake1"><label>65</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Haake</surname><given-names>V</given-names></name><name><surname>Cook</surname><given-names>D</given-names></name><name><surname>Riechmann</surname><given-names>JL</given-names></name><name><surname>Pineda</surname><given-names>O</given-names></name><name><surname>Thomashow</surname><given-names>MF</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>Transcription factor <italic>CBF4</italic> is a regulator of drought adaptation in <italic>Arabidopsis</italic>.</article-title>
+<source>Plant Physiol</source>
+<volume>130</volume>
+<fpage>639</fpage>
+<lpage>648</lpage>
+<pub-id pub-id-type="pmid">12376631</pub-id></element-citation></ref><ref id="pone.0040397-Kasuga2"><label>66</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kasuga</surname><given-names>M</given-names></name><name><surname>Miura</surname><given-names>S</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name><name><surname>Yamaguchi-Shinozaki</surname><given-names>K</given-names></name></person-group>
+<year>2004</year>
+<article-title>A combination of the <italic>Arabidopsis DREB1A</italic> gene and stress-inducible rd29A promoter improved drought and low-temperature stress-tolerance in tobacco by gene transfer.</article-title>
+<source>Plant Cell Physiol</source>
+<volume>45</volume>
+<fpage>346</fpage>
+<lpage>350</lpage>
+<pub-id pub-id-type="pmid">15047884</pub-id></element-citation></ref><ref id="pone.0040397-Cong1"><label>67</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cong</surname><given-names>L</given-names></name><name><surname>Chai</surname><given-names>TY</given-names></name><name><surname>Zhang</surname><given-names>YX</given-names></name></person-group>
+<year>2008</year>
+<article-title>Characterization of the novel gene <italic>BjDREB1B</italic> encoding a DRE-binding transcription factor from <italic>Brassica juncea</italic> L. Biochem Biophys Res Commun</article-title>
+<volume>371</volume>
+<fpage>702</fpage>
+<lpage>706</lpage>
+</element-citation></ref><ref id="pone.0040397-Oh1"><label>68</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Oh</surname><given-names>SJ</given-names></name><name><surname>Song</surname><given-names>SI</given-names></name><name><surname>Kim</surname><given-names>YS</given-names></name><name><surname>Jang</surname><given-names>HJ</given-names></name><name><surname>Kim</surname><given-names>SY</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>
+<italic>Arabidopsis CBF3/DREB1A</italic> and <italic>ABF3</italic> in transgenic rice increased tolerance to abiotic stress without stunting growth.</article-title>
+<source>Plant Physiol</source>
+<volume>138</volume>
+<fpage>341</fpage>
+<lpage>351</lpage>
+<pub-id pub-id-type="pmid">15834008</pub-id></element-citation></ref><ref id="pone.0040397-Seki1"><label>69</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Seki</surname><given-names>M</given-names></name><name><surname>Narusaka</surname><given-names>M</given-names></name><name><surname>Ishida</surname><given-names>J</given-names></name><name><surname>Nanjo</surname><given-names>T</given-names></name><name><surname>Fujita</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>Monitoring the expression profiles of 7000 <italic>Arabidopsis</italic> genes under drought, cold, and high-salinity stresses using a full-length cDNA microarray.</article-title>
+<source>Plant J</source>
+<volume>31</volume>
+<fpage>279</fpage>
+<lpage>292</lpage>
+<pub-id pub-id-type="pmid">12164808</pub-id></element-citation></ref><ref id="pone.0040397-He1"><label>70</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>He</surname><given-names>XJ</given-names></name><name><surname>Mu</surname><given-names>RL</given-names></name><name><surname>Cao</surname><given-names>WH</given-names></name><name><surname>Zhang</surname><given-names>ZG</given-names></name><name><surname>Zhang</surname><given-names>JS</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>
+<italic>AtNAC2</italic>, a transcription factor downstream of ethylene and auxin signaling pathways, is involved in salt stress response and lateral root development.</article-title>
+<source>Plant J</source>
+<volume>44</volume>
+<fpage>903</fpage>
+<lpage>916</lpage>
+<pub-id pub-id-type="pmid">16359384</pub-id></element-citation></ref><ref id="pone.0040397-Hao1"><label>71</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hao</surname><given-names>Y</given-names></name><name><surname>Wei</surname><given-names>W</given-names></name><name><surname>Song</surname><given-names>Q</given-names></name><name><surname>Chen</surname><given-names>H</given-names></name><name><surname>Zhang</surname><given-names>Y</given-names></name><etal/></person-group>
+<year>2011</year>
+<article-title>Soybean NAC transcription factors promote abiotic stress-tolerance and lateral root formation in transgenic plants.</article-title>
+<source>Plant J</source>
+<volume>68(2)</volume>
+<fpage>302</fpage>
+<lpage>313</lpage>
+<pub-id pub-id-type="pmid">21707801</pub-id></element-citation></ref><ref id="pone.0040397-Allen1"><label>72</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Allen</surname><given-names>RD</given-names></name></person-group>
+<year>1995</year>
+<article-title>Dissection of oxidative stress-tolerance using transgenic plants.</article-title>
+<source>Plant Physiol</source>
+<volume>107</volume>
+<fpage>1049</fpage>
+<lpage>1054</lpage>
+<pub-id pub-id-type="pmid">12228418</pub-id></element-citation></ref><ref id="pone.0040397-Balazadeh1"><label>73</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Balazadeh</surname><given-names>S</given-names></name><name><surname>Kwasniewski</surname><given-names>M</given-names></name><name><surname>Caldana</surname><given-names>C</given-names></name><name><surname>Mehrnia</surname><given-names>M</given-names></name><name><surname>Zanor</surname><given-names>MI</given-names></name><etal/></person-group>
+<year>2011</year>
+<article-title>
+<italic>ORS1</italic>, an H<sub>2</sub>O<sub>2</sub>-responsive NAC transcription factor, controls senescence in <italic>Arabidopsis thaliana</italic>.</article-title>
+<source>Molecular Plant</source>
+<volume>4(2)</volume>
+<fpage>346</fpage>
+<lpage>360</lpage>
+<pub-id pub-id-type="pmid">21303842</pub-id></element-citation></ref><ref id="pone.0040397-Dezar1"><label>74</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dezar</surname><given-names>CA</given-names></name><name><surname>Gago</surname><given-names>GM</given-names></name><name><surname>Gonzalez</surname><given-names>DH</given-names></name><name><surname>Chan</surname><given-names>RL</given-names></name></person-group>
+<year>2005</year>
+<article-title>
+<italic>Hahb-4</italic>, a sunflower homeobox-leucine zipper gene, is a developmental regulator and confers drought tolerance to <italic>Arabidopsis thaliana</italic> plants.</article-title>
+<source>Transgenic Res</source>
+<volume>14(4)</volume>
+<fpage>429</fpage>
+<lpage>40</lpage>
+<pub-id pub-id-type="pmid">16201409</pub-id></element-citation></ref><ref id="pone.0040397-Miyazaki1"><label>75</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miyazaki</surname><given-names>S</given-names></name><name><surname>Koga</surname><given-names>R</given-names></name><name><surname>Bohnert</surname><given-names>HJ</given-names></name><name><surname>Eukuhara</surname><given-names>T</given-names></name></person-group>
+<year>1999</year>
+<article-title>Tissue- and environmental response-specific expression of 10 <italic>PP2C</italic> transcripts in Mesembryanthemum crystallinum.</article-title>
+<source>Mol Gen Genet</source>
+<volume>261</volume>
+<fpage>307</fpage>
+<lpage>316</lpage>
+<pub-id pub-id-type="pmid">10102366</pub-id></element-citation></ref><ref id="pone.0040397-Rentel1"><label>76</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rentel</surname><given-names>MC</given-names></name><name><surname>Lecourieux</surname><given-names>D</given-names></name><name><surname>Ouaked</surname><given-names>F</given-names></name><name><surname>Usher</surname><given-names>SL</given-names></name><name><surname>Petersen</surname><given-names>L</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>
+<italic>OXIl</italic> kinase is necessary for oxidative burst-mediated signaling in Arabidopsis.</article-title>
+<source>Nature</source>
+<volume>427</volume>
+<fpage>858</fpage>
+<lpage>861</lpage>
+<pub-id pub-id-type="pmid">14985766</pub-id></element-citation></ref><ref id="pone.0040397-Fujiwara1"><label>77</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fujiwara</surname><given-names>M</given-names></name><name><surname>Umemura</surname><given-names>K</given-names></name><name><surname>Kawasaki</surname><given-names>T</given-names></name><name><surname>Shimamoto</surname><given-names>K</given-names></name></person-group>
+<year>2006</year>
+<article-title>Proteomics of Rac GTPase signaling reveals its predominant role in elicitor-induced defense response of cultured rice cells.</article-title>
+<source>Plant Physiol</source>
+<volume>140</volume>
+<fpage>734</fpage>
+<lpage>745</lpage>
+<pub-id pub-id-type="pmid">16384895</pub-id></element-citation></ref></ref-list></back></article>

@@ -1,0 +1,776 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1d1 20130915//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.0 20040830//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Mol Syst Biol</journal-id><journal-id journal-id-type="iso-abbrev">Mol. Syst. Biol</journal-id><journal-id journal-id-type="publisher-id">msb</journal-id><journal-title-group><journal-title>Molecular Systems Biology</journal-title></journal-title-group><issn pub-type="ppub">1744-4292</issn><issn pub-type="epub">1744-4292</issn><publisher><publisher-name>BlackWell Publishing Ltd</publisher-name><publisher-loc>Oxford, UK</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4299377</article-id><article-id pub-id-type="doi">10.15252/msb.20145470</article-id><article-categories><subj-group subj-group-type="heading"><subject>Articles</subject></subj-group></article-categories><title-group><article-title>An organ boundary-enriched gene regulatory network uncovers regulatory hierarchiesunderlying axillary meristem initiation</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Tian</surname><given-names>Caihuan</given-names></name><xref ref-type="aff" rid="au1">1</xref></contrib><contrib contrib-type="author"><name><surname>Zhang</surname><given-names>Xiaoni</given-names></name><xref ref-type="aff" rid="au1">1</xref><xref ref-type="aff" rid="au2">2</xref></contrib><contrib contrib-type="author"><name><surname>He</surname><given-names>Jun</given-names></name><xref ref-type="aff" rid="au1">1</xref></contrib><contrib contrib-type="author"><name><surname>Yu</surname><given-names>Haopeng</given-names></name><xref ref-type="aff" rid="au1">1</xref><xref ref-type="aff" rid="au3">3</xref></contrib><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Ying</given-names></name><xref ref-type="aff" rid="au1">1</xref></contrib><contrib contrib-type="author"><name><surname>Shi</surname><given-names>Bihai</given-names></name><xref ref-type="aff" rid="au1">1</xref><xref ref-type="aff" rid="au3">3</xref></contrib><contrib contrib-type="author"><name><surname>Han</surname><given-names>Yingying</given-names></name><xref ref-type="aff" rid="au1">1</xref><xref ref-type="aff" rid="au3">3</xref></contrib><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Guoxun</given-names></name><xref ref-type="aff" rid="au1">1</xref><xref ref-type="aff" rid="au3">3</xref></contrib><contrib contrib-type="author"><name><surname>Feng</surname><given-names>Xiaoming</given-names></name><xref ref-type="aff" rid="au1">1</xref></contrib><contrib contrib-type="author"><name><surname>Zhang</surname><given-names>Cui</given-names></name><xref ref-type="aff" rid="au1">1</xref></contrib><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Jin</given-names></name><xref ref-type="aff" rid="au1">1</xref><xref ref-type="aff" rid="au3">3</xref></contrib><contrib contrib-type="author"><name><surname>Qi</surname><given-names>Jiyan</given-names></name><xref ref-type="aff" rid="au1">1</xref><xref ref-type="aff" rid="au3">3</xref></contrib><contrib contrib-type="author"><name><surname>Yu</surname><given-names>Rong</given-names></name><xref ref-type="aff" rid="au2">2</xref></contrib><contrib contrib-type="author"><name><surname>Jiao</surname><given-names>Yuling</given-names></name><xref ref-type="aff" rid="au1">1</xref><xref ref-type="corresp" rid="cor1">*</xref></contrib><aff id="au1"><label>1</label><institution>State Key Laboratory of Plant Genomics, Institute of
+Genetics and Developmental Biology, Chinese Academy of Sciences, and National Center for Plant Gene
+Research</institution><addr-line>Beijing, China</addr-line></aff><aff id="au2"><label>2</label><institution>College of Life Sciences, Capital Normal
+University</institution><addr-line>Beijing, China</addr-line></aff><aff id="au3"><label>3</label><institution>University of Chinese Academy of Sciences</institution><addr-line>Beijing, China</addr-line></aff></contrib-group><author-notes><corresp id="cor1"> Corresponding author. Tel: +86 10 64807656; Fax: +86 10 64806595;
+E-mail: <email>yljiao@genetics.ac.cn</email></corresp><fn><p><bold>Subject Categories</bold> Genome-Scale &#x00026; Integrative Biology; Plant Biology</p></fn></author-notes><pub-date pub-type="collection"><day>01</day><month>10</month><year>2014</year></pub-date><pub-date pub-type="epub"><day>30</day><month>10</month><year>2014</year></pub-date><volume>10</volume><issue>10</issue><fpage seq="c">1</fpage><lpage>2</lpage><history><date date-type="received"><day>03</day><month>6</month><year>2014</year></date><date date-type="rev-recd"><day>14</day><month>8</month><year>2014</year></date><date date-type="accepted"><day>24</day><month>9</month><year>2014</year></date></history><permissions><copyright-statement>&#x000a9; 2014 The Authors. Published under the terms of the CC BY 4.0
+license</copyright-statement><copyright-year>2014</copyright-year><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open access article under the terms of the Creative Commons Attribution 4.0 License,
+which permits use, distribution and reproduction in any medium, provided the original work is
+properly cited.</license-p></license></permissions><abstract><p>Gene regulatory networks (GRNs) control development via cell type-specific gene expression and
+interactions between transcription factors (TFs) and regulatory promoter regions. Plant organ
+boundaries separate lateral organs from the apical meristem and harbor axillary meristems (AMs).
+AMs, as stem cell niches, make the shoot a ramifying system. Although AMs have important functions
+in plant development, our knowledge of organ boundary and AM formation remains rudimentary. Here, we
+generated a cellular-resolution genomewide gene expression map for low-abundance <italic>Arabidopsis
+thaliana</italic> organ boundary cells and constructed a genomewide protein&#x02013;DNA interaction
+map focusing on genes affecting boundary and AM formation. The resulting GRN uncovers
+transcriptional signatures, predicts cellular functions, and identifies promoter hub regions that
+are bound by many TFs. Importantly, further experimental studies determined the regulatory effects
+of many TFs on their targets, identifying regulators and regulatory relationships in AM initiation.
+This systems biology approach thus enhances our understanding of a key developmental process.</p></abstract><kwd-group><kwd>axillary meristem</kwd><kwd>gene regulatory network</kwd><kwd>organ boundary</kwd></kwd-group></article-meta></front><body><sec><title>Introduction</title><p>Systems biology aims to explain development, physiology, and pathology based on modular networks
+of expression, interaction, regulation, and metabolism (Long <italic>et&#x000a0;al</italic>, <xref rid="b44" ref-type="bibr">2008</xref>; Wellmer &#x00026; Riechmann, <xref rid="b76" ref-type="bibr">2010</xref>). A major challenge in systems biology is to infer gene regulatory networks (GRNs).
+Gene expression is regulated in part by regulatory transcription factors (TFs) that bind to specific
+genomic regions. Emerging evidence from genome sequencing indicates that a significant portion of
+all eukaryote genomes encodes TFs; for example, &#x0223c;2,000 <italic>Arabidopsis thaliana</italic>
+genes encode TFs, more than many metazoan genomes (Riechmann <italic>et&#x000a0;al</italic>, <xref rid="b59" ref-type="bibr">2000</xref>). Each gene is likely regulated by multiple TFs, and each TF
+likely binds regulatory regions of multiple genes to activate or repress transcription. Furthermore,
+the majority of genes, including TF-encoding genes, show differential expression in various tissues
+and cell types in multicellular eukaryotes, including higher plants (Wang &#x00026; Jiao, <xref rid="b72" ref-type="bibr">2011</xref>). The combinatorial effect of tissue- and cell type-specific
+TF gene expression and the interaction between TFs and regulatory genomic regions of downstream
+genes results in qualitatively and quantitatively fine-tuned spatial and temporal gene expression.
+By integrating genomewide cellular-resolution expression and protein&#x02013;DNA interaction (PDI)
+data, researchers can formulate hypotheses in biologically meaningful ways with higher
+confidence.</p><p>A first step in deciphering GRNs is the genomewide profiling of gene expression at cellular
+resolution. Several recently developed technologies, including laser microdissection,
+fluorescence-activated cell/nuclei sorting, and translating ribosome affinity purification, have
+extended transcriptome analysis in higher plants to the cellular resolution (Brady
+<italic>et&#x000a0;al</italic>, <xref rid="b8" ref-type="bibr">2007</xref>; Zhang
+<italic>et&#x000a0;al</italic>, <xref rid="b84" ref-type="bibr">2008</xref>; Jiao
+<italic>et&#x000a0;al</italic>, <xref rid="b31" ref-type="bibr">2009</xref>; Mustroph
+<italic>et&#x000a0;al</italic>, <xref rid="b49" ref-type="bibr">2009</xref>; Yadav
+<italic>et&#x000a0;al</italic>, <xref rid="b79" ref-type="bibr">2009</xref>, <xref rid="b80" ref-type="bibr">2014</xref>; Deal &#x00026; Henikoff, <xref rid="b13" ref-type="bibr">2010</xref>; Jiao
+&#x00026; Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>). Although the number of
+transcriptome profiles at cellular resolution remains far from comprehensive, an early glimpse of
+the cellular transcriptional landscape seems to be information-rich for properties of both the genes
+from which the transcripts are derived, and of the cell types.</p><p>Further deciphering of GRNs requires large-scale mapping of TFs and the regulatory genomic
+regions of their target genes. Recent advances in TF-centered genomewide assays of PDI, such as
+chromatin immunoprecipitation followed by sequencing (ChIP-seq), have broadly expanded our ability
+to delineate GRNs (Kaufmann <italic>et&#x000a0;al</italic>, <xref rid="b33" ref-type="bibr">2010</xref>; Ferrier <italic>et&#x000a0;al</italic>, <xref rid="b18" ref-type="bibr">2011</xref>).
+Although ChIP provides a very powerful method to identify PDIs <italic>in vivo</italic>, it is
+mostly limited to highly and/or broadly expressed TFs. In addition, ChIP-seq usually requires
+high-quality antibodies. These requirements make ChIP-seq less suitable for identifying PDIs
+specific to cell types that are difficult to enrich. By contrast, gene-centered yeast one-hybrid
+(Y1H) assays provide an alternative high-throughput approach for the systematic identification of
+PDIs (Vermeirssen <italic>et&#x000a0;al</italic>, <xref rid="b67" ref-type="bibr">2007a</xref>,<xref rid="b68" ref-type="bibr">b</xref>; Reece-Hoyes <italic>et&#x000a0;al</italic>, <xref rid="b58" ref-type="bibr">2011</xref>). Recent genomewide studies allowed large-scale detection of PDIs in
+<italic>Arabidopsis</italic> and created resources for genomewide Y1H assays (Mitsuda
+<italic>et&#x000a0;al</italic>, <xref rid="b47" ref-type="bibr">2010</xref>; Brady
+<italic>et&#x000a0;al</italic>, <xref rid="b9" ref-type="bibr">2011</xref>; Gaudinier
+<italic>et&#x000a0;al</italic>, <xref rid="b19" ref-type="bibr">2011</xref>; Ou
+<italic>et&#x000a0;al</italic>, <xref rid="b52" ref-type="bibr">2011</xref>).</p><p>The shoot apical meristem (SAM) contains a population of self-renewing stem cells located at the
+tip of the shoot apex. The SAM produces leaves and flowers from its peripheral zone and replenishes
+itself in the central zone. Cells between the meristem and the organ primordium undergo growth
+arrest, forming a discrete boundary domain that separates the forming organ from the SAM (Shuai
+<italic>et&#x000a0;al</italic>, <xref rid="b63" ref-type="bibr">2002</xref>; Aida &#x00026; Tasaka,
+<xref rid="b2" ref-type="bibr">2006</xref>; Rast &#x00026; Simon, <xref rid="b57" ref-type="bibr">2008</xref>).</p><p>Axillary meristems (AMs) form in the boundary region in seed plants (Hagemann, <xref rid="b24" ref-type="bibr">1990</xref>; Schmitz &#x00026; Theres, <xref rid="b62" ref-type="bibr">2005</xref>; Domagalska &#x00026; Leyser, <xref rid="b15" ref-type="bibr">2011</xref>). AMs share
+the same developmental potential as the SAM, making the whole shoot a ramifying system. Our
+understanding of the fundamental developmental process of how the boundary establishes and how AMs
+initiate remains rudimentary. Because related mutants are often difficult to identify and these
+cells are very low in abundance, there is a clear demand for deciphering the underlying GRN as an
+alternative to genetic screens.</p><p>In this study, we combined cell type-specific genome expression analysis with genome-scale Y1H
+assays to initiate an experimental dissection of the GRN that acts in organ boundary cells. Our
+initial GRN allowed us to identify dominant signatures associated with boundary cells, system-level
+principles of gene regulation, and novel regulators and regulations controlling AM initiation and
+other boundary functions.</p></sec><sec sec-type="results"><title>Results</title><sec><title>Profiling boundary-specific gene expression using TRAP-seq</title><p>To study cell type-specific gene expression in the leaf boundary region in the genome scale, we
+employed the TRAP-seq approach recently implemented by us and others (Mustroph
+<italic>et&#x000a0;al</italic>, <xref rid="b49" ref-type="bibr">2009</xref>; Jiao &#x00026;
+Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>). In brief, we introduced a reporter line
+carrying the fusion of the large subunit ribosomal protein L18 with N-terminal His and FLAG epitope
+tags (<italic>HF-RPL18</italic>) under the control of the <italic>pOp</italic> promoter (Jiao
+&#x00026; Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>) into driver lines expressing the
+chimeric TF LhG4 under the control of the <italic>LATERAL SUPPRESSOR</italic> (<italic>LAS</italic>)
+promoter, and under the control of the <italic>ASYMMETRIC LEAVES1</italic> (<italic>AS1</italic>)
+promoter. These driver lines were chosen because <italic>pLAS::LhG4</italic> has boundary
+region-specific activity (Goldshmidt <italic>et&#x000a0;al</italic>, <xref rid="b20" ref-type="bibr">2008</xref>), and <italic>pAS1::LhG4</italic> drives pOp reporter expression throughout emerging
+leaf primordia, but not in the SAM (Eshed <italic>et&#x000a0;al</italic>, <xref rid="b17" ref-type="bibr">2001</xref>) (Supplementary Fig S1). Cell type-specific expression of HF-RPL18 can
+efficiently incorporate epitope tags into polysomes for immunopurification of all translating
+cellular mRNAs. We immunopurified polysomes from seedlings at 7&#x000a0;days after germination (DAG),
+to isolate translating mRNA in the <italic>LAS</italic>-expressing organ boundary cells and
+<italic>AS1</italic>-expressing leaf primordia and cotyledon cells. Then, we used deep sequencing to
+map and quantify these mRNA samples. For each replicate, we obtained at least &#x0223c;20 million
+mapped 50-bp reads from each library and assayed three independent libraries for each cell type
+sample (Fig<xref ref-type="fig" rid="fig01">1A</xref> and Supplementary Table S1). Our previous
+study indicated that a sequence depth of &#x0003e;&#x000a0;10 million mapped reads is sufficient to
+reliably detect and measure rare, yet biologically relevant, mRNA species for the
+<italic>Arabidopsis</italic> genome (Jiao &#x00026; Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>). The isolated cell type-specific transcripts from polysomes are likely translating and
+are collectively termed the translatome (Mustroph <italic>et&#x000a0;al</italic>, <xref rid="b49" ref-type="bibr">2009</xref>; Jiao &#x00026; Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>).</p><fig id="fig01" position="float"><label>Figure 1</label><caption><title>Quantification of boundary enrichment of gene expression by cell type-specific translatome
+analysis</title><p><list list-type="alpha-upper"><list-item><p>Pearson's correlation coefficients of translatome data from biological replicates for the
+<italic>LAS</italic> domain and the <italic>AS1</italic> domain.</p></list-item><list-item><p>Translated mRNAs for boundary and leaf domains for a 1.9-kb region of chromosome 1 containing
+<italic>CUC3</italic> (<italic>AT1G76420</italic>) and a 1.7-kb region of chromosome 5 containing
+<italic>HIGH-MOBILITY GROUP BOX 6</italic> (<italic>AT5G23420</italic>). TAIR-annotated transcripts
+are shown as blue boxes at the bottom with ORFs highlighted as thick boxes. Selected reads covering
+exon&#x02013;exon junctions are highlighted by short lines.</p></list-item><list-item><p>Diagrams showing the boundary enrichment scores of previously characterized boundary-specific and
+leaf-specific genes. More examples are shown in the right with each row representing one gene. Genes
+were identified manually by searching PubMed abstracts followed by manual summarization of
+<italic>in situ</italic> and other types of data from each publication. Relative boundary enrichment
+scores were calculated by comparing boundary domain expression with leaf expression.</p></list-item><list-item><p>Expression profiles of known boundary-enriched (red) and boundary-depleted (blue) genes.</p></list-item><list-item><p>Venn diagram of cell domain-enriched genes that exhibited significant (&#x02265;&#x000a0;twofold
+with <italic>P&#x000a0;</italic>&#x0003c;<italic>&#x000a0;</italic>0.001) up-regulation. The number in
+the middle area indicates expressed genes without domain specificity.</p></list-item></list></p></caption><graphic xlink:href="msb0010-0755-f1"/></fig><p>Translatome sequencing resulted in a single-base resolution of transcript structures, as
+illustrated in Fig<xref ref-type="fig" rid="fig01">1</xref>B. The <italic>CUP-SHAPED
+COTYLEDON3</italic> (<italic>CUC3</italic>) TF gene is specifically expressed in the boundary domain
+(Vroemen <italic>et&#x000a0;al</italic>, <xref rid="b69" ref-type="bibr">2003</xref>; Hibara
+<italic>et&#x000a0;al</italic>, <xref rid="b27" ref-type="bibr">2006</xref>; Raman
+<italic>et&#x000a0;al</italic>, <xref rid="b56" ref-type="bibr">2008</xref>). Consistent with this,
+we identified 4,147 reads for <italic>CUC3</italic> in the boundary domain, in contrast to only 34
+reads in the leaves. Translatome sequencing can also detect alternative splicing isoforms. Two
+annotated spliced isoforms of <italic>AT5G23420</italic> were both detected with low or modest
+expression levels in leaves or in the boundary domain, respectively, supported by reads that cross
+splice junctions (Fig<xref ref-type="fig" rid="fig01">1</xref>B).</p><p>As an additional step to ensure the quality and reliability of our data, we compared our
+translatome data set with published data, such as <italic>in situ</italic> hybridization results. We
+selected 26 genes with previously reported boundary-enriched expression or leaf-enriched expression
+and analyzed their enrichment levels based on our translatome data set. As shown in Fig<xref ref-type="fig" rid="fig01">1</xref>C and D, we detected the expected boundary enrichment or
+depletion for most genes and the comparisons validate the translatome profiling.</p><p>Cell type-specific translatomes showed qualitative and quantitative differences consistent with
+functional specialization. Using a transcript detection threshold of above 0.5 reads per kb of the
+transcript per million mapped reads of the transcriptome (RPKM), we identified 18,216 genes
+(66.44% of the genome) expressed in the boundary domain and 17,616 genes (64.25% of
+the genome) expressed in the developing leaves. We detected a small portion of the genome
+differentially expressed between the boundary domain and leaves (&#x02265;&#x000a0;twofold with
+adjusted <italic>P&#x000a0;</italic>&#x02264;<italic>&#x000a0;</italic>0.001), with 466 genes
+(1.70% of the genome) up-regulated and 868 genes (3.16% of the genome) down-regulated
+in the boundary domain (Fig<xref ref-type="fig" rid="fig01">1E</xref>). The domain-specific genes
+are listed in Supplementary Tables S2 and S3. The boundary-enriched genes included proteins with
+different functions, as listed in Supplementary Table S4.</p><p>We also compared our seedling boundary-enriched gene list with floral meristem boundary-enriched
+genes identified by a recent fluorescence-activated cell sorting study (Yadav
+<italic>et&#x000a0;al</italic>, <xref rid="b80" ref-type="bibr">2014</xref>). Among the 144 genes
+significantly enriched in the <italic>LAS</italic> domain, but not in the <italic>CLVATA3</italic>
+or the <italic>KANADI1</italic> domain in floral meristems (Yadav <italic>et&#x000a0;al</italic>,
+<xref rid="b80" ref-type="bibr">2014</xref>), we recovered 38 genes in our above-mentioned seedling
+<italic>LAS</italic>-domain-enriched genes (Supplementary Table S5), suggesting enrichment between
+these two gene lists. This enrichment is highly significant with a
+<italic>P&#x000a0;</italic>&#x0003c;<italic>&#x000a0;</italic>7.98E-36 using the hypergeometric test.
+Whereas several previously identified boundary-specific genes, such as <italic>CUC3</italic>,
+<italic>LAS,</italic> and <italic>LIGHT-DEPENDENT SHORT HYPOCOTYLS4</italic>, are among overlapping
+genes, our seedling data set includes adding boundary marker genes (Fig<xref ref-type="fig" rid="fig01">1</xref>C).</p></sec><sec><title>Boundary cell properties uncovered through cell type-specific gene expression
+analysis</title><p>A comparison between the enriched and depleted translatomes for the boundary domain provided a
+wealth of genes with candidate developmental roles. Many gene ontology (GO) categories were enriched
+for the boundary domain, suggesting localized physiological functions (Fig<xref ref-type="fig" rid="fig02">2A</xref> and Supplementary Fig S2). First, we observed that the annotation of genes
+expressed preferentially in the boundary domain often corresponded to related physiological
+functions (Fig<xref ref-type="fig" rid="fig02">2A</xref>). For instance, we observed that
+&#x02018;Meristem Initiation&#x02019; and &#x02018;Organ Development&#x02019; were significantly
+enriched in organ boundary cells. In addition, many other GO terms, such as &#x02018;DNA
+Binding&#x02019;, &#x02018;Hormone Stimulus&#x02019;, &#x02018;Histone Modification&#x02019;, and
+&#x02018;Cell Cycle&#x02019;, were enriched, suggesting that these biological processes are associated
+with boundary domain cells. A detailed inspection indicated that it was mainly negative cell cycle
+regulators that were boundary-enriched. By contrast, the terms &#x02018;Photosynthesis&#x02019;,
+&#x02018;Defense response&#x02019;, and &#x02018;Metabolism&#x02019; were depleted from boundary cells
+(Supplementary Fig S2), and also coincide with leaf functions. Genes localized to
+&#x02018;Photosystem&#x02019; and &#x02018;Chloroplast&#x02019; were also enriched in developing leaf
+cells, consistent with photosynthetic functions of leaves (Supplementary Fig S2).</p><fig id="fig02" position="float"><label>Figure 2</label><caption><title>The spatially regulated translatome for boundary and axillary meristem (AM) formation</title><p><list list-type="alpha-upper"><list-item><p>Gene ontology (GO) analysis identified significantly over-represented (FDR adjusted
+<italic>P&#x000a0;</italic>&#x0003c;<italic>&#x000a0;</italic>0.01) gene categories for the boundary
+cell-specific transcripts. Color bar: significance levels for categories by hypergeometric test with
+FDR correction.</p></list-item><list-item><p>Domain-specific and Y1H-enriched transcription factor (TF) families. Only significantly
+over-represented (<italic>P&#x000a0;</italic>&#x0003c;<italic>&#x000a0;</italic>0.05) families by
+hypergeometric test with FDR correction are colored.</p></list-item><list-item><p>Domain-specific enriched known <italic>cis</italic>-elements in boundary and leaf domains. Only
+significantly over-represented (<italic>E&#x000a0;</italic>&#x0003c;&#x000a0;10<sup>&#x02212;4</sup>)
+classes are colored.</p></list-item><list-item><p>Domain-specific enrichment (FDR adjusted
+<italic>P&#x000a0;</italic>&#x0003c;<italic>&#x000a0;</italic>0.05) of hormone-responsive genes in
+boundary and leaf domains. Red indicates enrichment and blue indicates depletion.</p></list-item></list></p></caption><graphic xlink:href="msb0010-0755-f2"/></fig><p>Among other GO terms, we found that &#x02018;Transcription&#x02019; was enriched in boundary domain
+cells. In addition, previous studies identified several TFs controlling boundary and AM formation.
+We therefore focused on TF-encoding genes (Supplementary Table S6) and identified TF families
+enriched in or depleted from organ boundary cells. We identified ZF-HD, GRF, and HB families
+enriched in organ boundary cells, and six other families, including the TCP family, depleted from
+organ boundary cells (Fig<xref ref-type="fig" rid="fig02">2</xref>B). Recent studies have shown that
+members of the TCP family are critical for leaf development (Koyama <italic>et&#x000a0;al</italic>,
+<xref rid="b36" ref-type="bibr">2010</xref>; Sarojam <italic>et&#x000a0;al</italic>, <xref rid="b61" ref-type="bibr">2010</xref>).</p><p>Through genes either co-expressed in or depleted from the boundary domain, we attempted to
+identify promoter DNA motifs associated with the boundary domain. We compared
+<italic>cis</italic>-element enrichment in the promoters of domain-specific genes and identified
+enrichment of a few <italic>cis</italic>-elements upstream of genes enriched in either category
+(Fig<xref ref-type="fig" rid="fig02">2</xref>C), suggesting that transcriptional activation and
+repression are equally important for boundary development. Among the <italic>cis</italic>-elements,
+ABRE-binding site, GATA box,&#x000a0;and G-box were enriched in both categories, implying that their
+corresponding TF families occur in both boundary-enriched and boundary-depleted genes.</p><p>Hormones are key regulators of organogenesis. We also found that translating transcripts for
+hormone-responsive genes were enriched in organ boundary cells. We examined the sets of genes that
+respond to the phytohormones abscisic acid, auxin, brassinosteroid, cytokinin, ethylene,
+gibberellins, and jasmonic acid. The sources and lists of phytohormone-responsive genes are provided
+in Supplementary Table S7. Genes in these classes showed cell type-specific patterns of enrichment
+(Fig<xref ref-type="fig" rid="fig02">2D</xref>). In particular, we found genes responsive to
+brassinosteroid, ethylene, abscisic acid, and cytokinin were highly enriched in organ boundary
+cells, suggesting novel phytohormone activity centers. By contrast, genes responsive to auxin and
+jasmonic acid were enriched in leaf cells but depleted from boundary cells. This genomewide
+observation supports recently reported hormone signaling activities of the boundary domain. We, and
+others, identified the existence of an auxin minimum and a subsequent cytokinin pulse in the
+boundary domain, which are required for AM initiation (Wang <italic>et&#x000a0;al</italic>, <xref rid="b71" ref-type="bibr">2014a</xref>,b).</p></sec><sec><title>Genomewide mapping of TF&#x02013;DNA interactions by Y1H assays</title><p>To dissect the GRN that regulates the boundary domain, we empirically mapped direct interactions
+between TFs and regulatory genomic regions by genomewide Y1H assays. We used a recently developed TF
+library (Ou <italic>et&#x000a0;al</italic>, <xref rid="b52" ref-type="bibr">2011</xref>), and added
+additional clones for boundary domain expressing TFs. This combined TF library containing 1,184
+clones (listed in Supplementary Table S8) was subsequently used as protein prey in Y1H matrix
+assays. This library contains boundary-enriched TFs, as well as TFs with low expression in the
+boundary domain, to identify PDIs corresponding to both transcriptional activation and suppression.
+We next selected and cloned 34 regulatory genomic regions from promoters of TF genes that regulate
+boundary and AM formation, including <italic>CUC2</italic> (Hibara <italic>et&#x000a0;al</italic>,
+<xref rid="b27" ref-type="bibr">2006</xref>; Raman <italic>et&#x000a0;al</italic>, <xref rid="b56" ref-type="bibr">2008</xref>), <italic>LAS</italic> (Greb <italic>et&#x000a0;al</italic>,
+<xref rid="b22" ref-type="bibr">2003</xref>), and <italic>SHOOT MERISTEMLESS</italic>
+(<italic>STM</italic>) (Grbic &#x00026; Bleecker, <xref rid="b21" ref-type="bibr">2000</xref>; Long
+&#x00026; Barton, <xref rid="b43" ref-type="bibr">2000</xref>), and <italic>MiR164c</italic>, a miRNA
+targeting <italic>CUC1</italic> and <italic>CUC2</italic> with boundary-specific expression (Raman
+<italic>et&#x000a0;al</italic>, <xref rid="b56" ref-type="bibr">2008</xref>). Each fragment was
+180&#x02013;320&#x000a0;bp in length to ensure full transcriptional activation in yeast, because the
+majority of yeast promoters act within approximately 150&#x02013;400&#x000a0;bp (Dobi &#x00026;
+Winston, <xref rid="b14" ref-type="bibr">2007</xref>). These fragments cover the 1,010-bp region
+upstream of <italic>CUC2</italic>, the 3,010-bp region upstream of <italic>LAS</italic>, the
+3,000-bp region upstream of <italic>STM</italic>, the 1,010-bp region upstream of
+<italic>MiR164c</italic>, and two regions downstream of <italic>LAS</italic> (Fig<xref ref-type="fig" rid="fig03">3A</xref> and Supplementary Table S9).</p><fig id="fig03" position="float"><label>Figure 3</label><caption><title>A boundary-enriched protein&#x02013;DNA interaction (PDI) network</title><p><list list-type="alpha-upper"><list-item><p>Schematic of the genomic region subject to Y1H assay. TAIR-annotated ORFs are shown as blue
+boxes.</p></list-item><list-item><p>PDI enrichment among tested genomic regions. Color bar: significance levels for genomic regions
+by hypergeometric test. Fragments with high background were excluded for this analysis.</p></list-item><list-item><p>PDI network. Circle, transcription factor (TF), diamond; promoter fragment; edge, PDI.
+Boundary-enriched TFs are shown in red, and boundary-depleted TFs are shown in blue. Circles of the
+same color represent promoter fragments of the same gene.</p></list-item></list></p><p>Source data are available online for this figure.</p></caption><graphic xlink:href="msb0010-0755-f3"/></fig><p>We carried out pilot experiments by transforming TF plasmids DNA into haploid yeast bait strains,
+and mating each bait strain with TF-transformed yeast strains. Consistent with a previous study
+(Vermeirssen <italic>et&#x000a0;al</italic>, <xref rid="b68" ref-type="bibr">2007b</xref>), we found
+that the transformation strategy had both high coverage and high confidence, albeit at the cost of
+labor and expense. To ensure coverage and reliability of the resulting GRN, we chose the
+transformation strategy. We further tested a pooling strategy and found that limited pooling, with
+four TFs in each pool, gave results most similar to those obtained without pooling. We therefore
+performed all subsequent Y1H assays using the transformation strategy with limited pooling
+(Supplementary Fig S3).</p><p>From a total of 40,256 (fragment&#x000a0;&#x000d7;&#x000a0;TF) potential PDIs screened, we
+identified 180 PDIs between 103 TFs and 23 genomic regulatory regions (Fig<xref ref-type="fig" rid="fig03">3C</xref> and Supplementary Table S10). At least one interacting TF was identified for
+67.7% of the regulatory genomic regions, and the majority of these regulatory genomic regions
+bound more than one TF (Fig<xref ref-type="fig" rid="fig03">3</xref>C). Also, 8.7% of TFs
+bound at least one regulatory genomic region. The majority (63.1%) of these identified TFs
+bound only once to a regulatory genomic region.</p><p>Further confirmation of our identified PDIs came from independent electrophoretic mobility shift
+assays (EMSAs). B-type ARABIDOPSIS RESPONSE REGULATOR1 (ARR1), CUC2, and SQUAMOSA PROMOTER-BINDING
+PROTEIN-LIKE (SPL) family members were retrieved in the Y1H screen. Using recombinant glutathione
+S-transferase (GST)-ARR1, maltose-binding protein (MBP)-CUC2, GST-SPL9 and GST-SPL15, and regulatory
+genomic region fragments of <italic>LAS</italic> and <italic>MiR164c</italic> identified by Y1H
+(Figs<xref ref-type="fig" rid="fig03">3</xref>A and <xref ref-type="fig" rid="fig04">4</xref>A), we
+found that the recombinant TF proteins were able to bind to the DNA fragment and cause mobility
+shifts (Fig<xref ref-type="fig" rid="fig04">4</xref>B). Addition of unlabeled DNA of identical
+sequence competed with the binding; also, the mobility shift was not observed when DNA fragments
+were incubated with GST or MBP alone, indicating that these PDIs were specific (Fig<xref ref-type="fig" rid="fig04">4</xref>B). Both CUC2 and ARR1, which activate <italic>LAS</italic>
+expression, and SPL9 and SPL15, which suppress <italic>LAS</italic> expression, interact with the
+overlapping pLAS-12 and pLAS-13 genomic fragments in Y1H assays. However, more careful dissection of
+this region using &#x0223c;90-bp tiling fragments identified a 480-bp region bound by CUC2 and a
+230-bp region bound by ARR1 with a 230-bp overlap (Fig<xref ref-type="fig" rid="fig04">4</xref>D and
+E). By contrast, both SPL9 and SPL15 interact with a 50-bp region that contains an SPL-binding motif
+and is also bound by ARR1 and CUC2 (Fig<xref ref-type="fig" rid="fig04">4</xref>D and E),</p><fig id="fig04" position="float"><label>Figure 4</label><caption><title>Validation of protein&#x02013;DNA interactions (PDIs)</title><p><list list-type="alpha-upper"><list-item><p>Schematic of the <italic>LAS</italic> genomic region. Colored vertical lines indicate sites
+containing the consensus binding sequence: red, NAC binding box; blue, ARR binding box; yellow, SPL
+binding box. TAIR-annotated ORFs are shown as a thick gray box.</p></list-item><list-item><p>Electrophoretic mobility shift assay (EMSA) validation of PDIs. The biotinylated DNA
+oligonucleotide probes are shown below each EMSA experiments. Recombined proteins that were used in
+EMSAs are indicated on top. Each lane represents no protein, protein tag, recombined protein, or
+recombined protein and unlabeled competitor DNA oligonucleotide probes, as individually labeled.
+Note, the weak interaction between maltose-binding protein (MBP)-CUC2 and fragment
+<italic>pLAS-13</italic> was further verified by dissecting <italic>pLAS-13</italic> into three
+fragments as shown in (E).</p></list-item><list-item><p><italic>In planta</italic> validation of PDIs using chromatin immunoprecipitation (ChIP) PCR.
+Five PCR fragments were designed for ChIP analysis. ChIP enrichment test by PCR shows binding of
+CUC2-GR-HA to the region near fragments pLAS-13, pLAS-RB, and pLAS-RC1. Error bars indicate s.d.,
+and a double asterisk (**) represents
+<italic>P</italic>-value&#x000a0;&#x0003c;&#x000a0;0.01.</p></list-item><list-item><p>Schematic of the <italic>LAS-12</italic> and <italic>LAS-13</italic> genomic region in more
+detail. Binding boxes are indicated as above.</p></list-item><list-item><p>Detailed dissection of transcription factor (TF) and DNA-binding regions using EMSA. Gels were
+labeled as in (B).</p></list-item></list></p><p>Source data are available online for this figure.</p></caption><graphic xlink:href="msb0010-0755-f4"/></fig><p>To further determine whether the PDIs that we identified occur <italic>in planta</italic>, we
+used ChIP coupled with PCR to examine the interactions of CUC2 with the <italic>LAS</italic> gene.
+Using ChIP-PCR, we verified the CUC2 interaction with the pLAS-13 region (Fig<xref ref-type="fig" rid="fig04">4</xref>C), although the overlapping pLAS-12 region with weaker Y1H assay score was not
+enriched by ChIP. A recent study demonstrated the importance of two 3&#x02032; genomic regions,
+termed regions B and C, which are sufficient to guide boundary-specific expression (Raatz
+<italic>et&#x000a0;al</italic>, <xref rid="b55" ref-type="bibr">2011</xref>). Although we were not
+able to include region B in our Y1H assay due to its high auto-activation activity, we found direct
+binding of CUC2 with the region B in ChIP assays (Fig<xref ref-type="fig" rid="fig04">4</xref>C). We
+also detected interaction of CUC2 with the region C (Fig<xref ref-type="fig" rid="fig04">4</xref>C),
+which was not recovered using Y1H assays.</p></sec><sec><title>Properties of TFs involved in PDIs</title><p>For the TFs associated with one or more PDIs identified in this work, many GO categories were
+enriched (Fig<xref ref-type="fig" rid="fig05">5</xref>). When compared to the TFs included in our
+Y1H library, we observed that the annotation of TFs with identified PDIs corresponds, in many cases,
+to related physiological functions. For instance, we observed &#x02018;Meristem Initiation&#x02019;,
+&#x02018;Primary SAM Specification&#x02019;, &#x02018;Leaf Development&#x02019;, and &#x02018;Polarity
+Specification of Adaxial/Abaxial Axis&#x02019; were significantly enriched in the TFs involved in
+PDIs. Notably, the enriched GO categories in these TFs associated with PDIs were quite similar to
+the GO categories enriched in the boundary domain (Fig<xref ref-type="fig" rid="fig02">2</xref>A).</p><fig id="fig05" position="float"><label>Figure 5</label><caption><title>Properties of the boundary-enriched protein&#x02013;DNA interaction (PDI) network</title><p><list list-type="alpha-upper"><list-item><p>Gene ontology (GO) analysis identified significantly over-represented (FDR adjusted
+<italic>P&#x000a0;</italic>&#x0003c;<italic>&#x000a0;</italic>0.05) gene categories for the
+transcription factors (TFs) involved in the PDI network. Color bar: significance levels for
+categories by hypergeometric test with FDR correction.</p></list-item><list-item><p>A boundary enrichment/depletion level distribution of all expressed genes, TF-encoding genes
+covered by our Y1H library, and TF-encoding genes associated with PDIs. Gray vertical lines show
+boundary/leaf ratios of 0.5 and 2, which were used as cutoffs for boundary domain depletion and
+enrichment, respectively.</p></list-item></list></p></caption><graphic xlink:href="msb0010-0755-f5"/></fig><p>We also analyzed enrichment of members of each TF family in PDI-associated TFs identified in this
+study. We found that HB and ZF-HD families of TFs, which were enriched in the boundary domain based
+on expression, were also enriched in PDI-associated TFs (Fig<xref ref-type="fig" rid="fig02">2</xref>B). In addition, the boundary domain depleted C2C2-DOF family was enriched in
+PDI-associated TFs. Additionally, the SBP, ARID, EIL, and NAC families were also enriched in
+PDI-associated TFs.</p><p>In fact, we found that the PDI-associated TFs are enriched in transcripts enriched or depleted
+from the boundary domain. Only 8.7% of the TFs are associated with at least one PDI, but
+13.6% of boundary region-enriched TFs and 13.6% of boundary region-depleted TFs bound
+to the regulatory genomic regions we tested. To better illustrate the enrichment of PDI-associated
+TFs in organ boundary-enriched and boundary-depleted genes, we carried out Kernel density estimate
+analysis with translatome data as the background and found that PDI-associated TFs have obvious
+differential expression patterns, as seen from shoulders on both sides of the density curve
+(Fig<xref ref-type="fig" rid="fig05">5</xref>B).</p></sec><sec><title>Genomic regions that serve as regulatory hubs</title><p>Biological networks are characterized by a scale-free connectivity distribution containing hubs
+with many connections and a large number of nodes with one or a few connections (Barabasi &#x00026;
+Oltvai, <xref rid="b5" ref-type="bibr">2004</xref>; Albert, <xref rid="b3" ref-type="bibr">2007</xref>). In the organ boundary domain GRN, we observed that one genomic region (covering
+fragments pLAS-12 and pLAS-13) upstream of <italic>LAS</italic> and one genomic region (pCUC2-6)
+upstream of <italic>CUC2</italic> connected to a large number of TFs (Fig<xref ref-type="fig" rid="fig03">3</xref>B and C). These regulatory genomic regions may serve as hubs and be subject to
+more complex regulation (Nelson <italic>et&#x000a0;al</italic>, <xref rid="b51" ref-type="bibr">2004</xref>). Notably, these putative regulatory hubs are bound by TFs positively regulating
+expression and TFs negatively regulating expression (Fig<xref ref-type="fig" rid="fig03">3</xref>C).
+In addition, these regulatory genomic hubs can be distant from the start codon (Fig<xref ref-type="fig" rid="fig03">3</xref>A). Finally, these hubs control important downstream organ
+boundary regulators, which are likely also hubs within the GRN (Aida <italic>et&#x000a0;al</italic>,
+<xref rid="b1" ref-type="bibr">1997</xref>; Greb <italic>et&#x000a0;al</italic>, <xref rid="b22" ref-type="bibr">2003</xref>).</p></sec><sec><title>Inferring GRN by data integration</title><p>To assess the regulatory potential of our inferred GRN, we used an independent modeling approach
+to predict the regulatory potential of randomly selected PDIs. To this end, we employed
+qRT&#x02013;PCR to analyze the effects of mutations and over-expression of TFs on the expression of
+their putative target genes. As shown in Fig<xref ref-type="fig" rid="fig06">6A</xref>, examination
+of the over-expressing allele <italic>cuc2-1D</italic>, which contains a single point mutation in
+the miRNA target site (Larue <italic>et&#x000a0;al</italic>, <xref rid="b39" ref-type="bibr">2009</xref>), and the loss-of-function allele <italic>cuc2-3</italic> indicated that CUC2 activates
+the expression of <italic>LAS</italic>, which is consistent with our predicted regulatory network
+based on our translatome data and published <italic>in situ</italic> hybridization results (Hibara
+<italic>et&#x000a0;al</italic>, <xref rid="b27" ref-type="bibr">2006</xref>; Raman
+<italic>et&#x000a0;al</italic>, <xref rid="b56" ref-type="bibr">2008</xref>). Analysis of a T-DNA
+insertion mutant of a novel HIGH-MOBILITY GROUP (HMG) family TF-encoding gene
+(<italic>At1&#x000a0;g76110</italic>, <italic>HMG1</italic>) indicated that HMG1 negatively regulates
+<italic>LAS</italic> expression (Fig<xref ref-type="fig" rid="fig06">6</xref>A). In total, we
+examined 30 putative regulatory interactions in 19 TF mutant alleles and seven TF over-expression
+alleles using inflorescence tissue, which is enriched in boundary domain cells. Among these 30
+regulatory interactions, 15 (50.0%) involved activation, 7 (23.3%) involved
+repression, and the remaining 8 (26.8%) did not show clear <italic>in planta</italic>
+regulation of putative target expression (Fig<xref ref-type="fig" rid="fig06">6</xref>B and
+Supplementary Fig S4). After plotting expression values of a TF and its target gene in the wild-type
+and in a TF mutant/over-expression allele, we estimated the degree of activation or repression by
+fitting a line using weighted least squares regression across replicates (Supplementary Figs S4 and
+S5), where the slope of the line predicts the degree of activation or repression and the
+<italic>P</italic>-value represents the confidence level for the regulation (Brady
+<italic>et&#x000a0;al</italic>, <xref rid="b9" ref-type="bibr">2011</xref>). As shown in
+Supplementary Fig S5, CRF5 and CUC2 strongly activate their targets (<italic>CUC2</italic> and
+<italic>LAS</italic>, respectively).</p><fig id="fig06" position="float"><label>Figure 6</label><caption><title>Regulatory relationships of a protein&#x02013;DNA interaction (PDI) sub-network</title><p><list list-type="alpha-upper"><list-item><p>Real-time RT&#x02013;PCR analysis of target gene expression in wild-type and in transcription
+factor (TF) mutant or over-expression lines. Error bars indicate s.d., a double asterisk
+(**) represents <italic>P</italic>-value&#x000a0;&#x0003c;&#x000a0;0.01, and an asterisk
+(*) represents <italic>P</italic>-value&#x000a0;&#x0003c;&#x000a0;0.05 between wild-type and a
+mutant or over-expression line.</p></list-item><list-item><p>PDIs that result in activating (red line), repressive (blue line), and no effect (black line) in
+target expression were determined using qPCR of the TF and its target as shown in (A) and in
+Supplementary Fig S5. Dotted lines represent referred interaction from homologous TFs.
+Boundary-enriched TFs are shown in red, and boundary-depleted TFs are shown in blue.</p></list-item><list-item><p>Real-time qRT&#x02013;PCR analysis of <italic>CUC2</italic> using the
+<italic>p35S::DRN-GR</italic> inflorescences and analysis of <italic>CUC2</italic> in
+<italic>pRPS5A::RAX1-GR-HA</italic> seedlings before and after Dex treatment or simultaneous Dex and
+cycloheximide treatment. Vertical axis indicates relative mRNA amount compared with the amount
+before Dex treatment, or in cycloheximide treatment only. Error bars indicate s.d., a double
+asterisk (**) represents <italic>P</italic>-value&#x000a0;&#x0003c;&#x000a0;0.01, and an
+asterisk (*) represents <italic>P</italic>-value&#x000a0;&#x0003c;&#x000a0;0.05.</p></list-item></list></p></caption><graphic xlink:href="msb0010-0755-f6"/></fig><p>We further used a chemically inducible line to independently test the inferred regulatory
+interactions. DORNROSCHEN (DRN, also known as ENHANCER OF SHOOT REGENERATION1) bound a
+<italic>CUC2</italic> promoter region in the Y1H assay; therefore, we explored the ability of DRN to
+elicit <italic>CUC2</italic> expression <italic>in vivo</italic>. To this end, we generated a line
+in which a DRN&#x02013;glucocorticoid receptor (GR) fusion protein is expressed from the constitutive
+35S promoter. Nuclear translocation of the DRN-GR fusion protein can be specifically triggered by
+treatment with the steroid hormone dexamethasone (Dex). DRN activation in
+<italic>p35S::DRN-GR</italic> plants mimics the <italic>DRN</italic> over-expression phenotype
+(Banno <italic>et&#x000a0;al</italic>, <xref rid="b4" ref-type="bibr">2001</xref>; Kirch
+<italic>et&#x000a0;al</italic>, <xref rid="b35" ref-type="bibr">2003</xref>). We measured the effect
+of DRN activation in <italic>p35S::DRN-GR</italic> plants on the expression of <italic>CUC2</italic>
+by qRT&#x02013;PCR. DRN activation resulted in rapid elevation of <italic>CUC2</italic> mRNA levels,
+within 4&#x000a0;h of DRN induction, even in the presence of the protein synthesis inhibitor
+cycloheximide (Fig<xref ref-type="fig" rid="fig06">6</xref>C). Our results not only support
+induction of <italic>CUC2</italic> expression by DRN, but also strongly suggest that induction of
+<italic>CUC2</italic> does not require <italic>de novo</italic> protein synthesis and that
+<italic>CUC2</italic> is likely a direct target of DRN, which is consistent with the Y1H assay.
+Using the same strategy, we also generated an inducible <italic>REGULATOR OF AXILLARY
+MERISTEMS1</italic> (<italic>RAX1</italic>) over-expression line under the ubiquitous
+<italic>RIBOSOME PROTEIN 5A</italic> (<italic>RPS5A</italic>) promoter. After Dex induction in
+<italic>pRPS5A::RAX1-GR-HA</italic> plants, we found that <italic>CUC2</italic> gene expression
+increased within 2&#x000a0;h, and this induction was unaffected when cycloheximide was added. The
+results show that RAX1 can directly activate <italic>CUC2</italic> expression <italic>in
+vivo</italic>, which supports and extends the PDI identified by Y1H.</p><p>We next asked whether boundary-enriched TFs tend to activate target genes in the same domain. All
+the regulatory genomic regions tested in this study by the weighted least squares regression
+approach correspond to genes with enriched expression in the boundary domain (<italic>CUC2</italic>,
+<italic>LAS,</italic> and <italic>STM</italic>). We considered a regulation as regenerative if a TF
+is enriched in the boundary domain and it is within a transcriptional activation PDI. A regulation
+was also considered regenerative if a TF is depleted from the boundary domain and it is within a
+transcriptional suppression PDI. We consider a regulation as degenerative if a TF is enriched in the
+boundary domain but it is within a transcriptional suppression PDI, or a TF is depleted from the
+boundary domain but it is within a transcriptional activation PDI. Using such criteria, we found
+eight regenerative and three degenerative regulatory interactions (Fig<xref ref-type="fig" rid="fig06">6</xref>B). These regenerative regulation interactions include both transcriptional
+activation (6) and transcriptional suppression (2). There were six additional PDIs resulting in
+target activation and five PDIs resulting in target suppression without significant TF gene
+enrichment in the boundary domain.</p></sec><sec><title>Regulators of GRN hubs control AM initiation and other boundary domain functions</title><p>We reasoned that the regulatory genomic region hubs integrate regulation from multiple upstream
+TFs, and therefore, manipulation of upstream TF expression should partially mimic mutation in, or
+over-expression of, the downstream hub gene, depending on regulatory interaction. To test this, we
+analyzed morphological phenotypes using mutants and over-expression lines and searched the
+literature. In total, 25 mutants and transgenic plants, corresponding to 22 TF genes that bound
+regulatory genomic region hubs, were analyzed for AM and leaf morphological phenotypes
+(Supplementary Table S11). Boundary domain phenotypes, including AM initiation, boundary fusion,
+cotyledon number variation, and leaf serration, were associated with 7 (31.8%) TF genes.</p><p>Based on our inferred regulatory network, DRN activates <italic>CUC2</italic> expression through
+direct PDI. We found clear AM initiation defects in the <italic>drn-1</italic> mutants (Fig<xref ref-type="fig" rid="fig07">7</xref>A and B), in which AMs could no longer initiate in the first
+&#x0223c;10 rosette leaves, a phenotype similar to the loss-of-function <italic>cuc2-3</italic>
+mutants (Hibara <italic>et&#x000a0;al</italic>, <xref rid="b27" ref-type="bibr">2006</xref>; Raman
+<italic>et&#x000a0;al</italic>, <xref rid="b56" ref-type="bibr">2008</xref>). In addition, it was
+previously reported that the cup-shaped cotyledon phenotype and other cotyledon number variations
+were observed at low penetrance in <italic>drn</italic> and <italic>cuc2</italic> mutants (Aida
+<italic>et&#x000a0;al</italic>, <xref rid="b1" ref-type="bibr">1997</xref>; Chandler
+<italic>et&#x000a0;al</italic>, <xref rid="b11" ref-type="bibr">2007</xref>). Taken together, these
+results indicate that DRN regulation of <italic>CUC2</italic> expression is likely biologically
+meaningful for AM initiation and cotyledon formation.</p><fig id="fig07" position="float"><label>Figure 7</label><caption><title>Phenotypic characterization of new mutants affecting axillary meristem (AM)
+initiation</title><p><list list-type="alpha-upper"><list-item><p>Close-up of rosette leaf axils in Col-0 wild-type and <italic>drn-1</italic> showing the presence
+(arrow) and absence (arrow) of an axillary bud, respectively. Scale bars, 5&#x000a0;mm.</p></list-item><list-item><p>Schematic representation of axillary bud formation in leaf axils of Col-0 wild-type plants and
+the <italic>drn-1</italic> mutant plants. The thick black horizontal line represents the border
+between the youngest rosette leaf and the oldest cauline leaf. Each column represents a single
+plant, and each square within a column represents an individual leaf axil. The bottom row represents
+the oldest rosette leaf axils, with progressively younger leaves above. Green indicates the presence
+of an axillary bud, and yellow indicates the absence of an axillary bud in any particular leaf
+axil.</p></list-item><list-item><p>Comparisons of cauline leaf axils of Col-0 wild-type, <italic>cuc2-1D</italic>,
+<italic>pSPL9::rSPL9</italic>, and <italic>spl9-4 spl15-1</italic>. Arrows point to accessory buds.
+Scale bars, 2.5&#x000a0;mm.</p></list-item><list-item><p>Schematic representation of accessory bud formation in leaf axils of Col-0 wild-type, the
+<italic>las-101</italic> mutant, a <italic>p35S::BnLAS</italic> over-expression line, the
+<italic>cuc2-1D</italic> over-expression mutant, a <italic>pSPL9::rSPL9</italic> over-expression
+line, and the <italic>spl9-4 spl15-1</italic> mutant. Only cauline leaf axils are shown. Green
+indicates the presence of an axillary branch but lack of an accessory bud, and red indicates the
+presence of an accessory bud.</p></list-item></list></p></caption><graphic xlink:href="msb0010-0755-f7"/></fig><p>In addition, we identified <italic>PTL</italic> as a putative negative regulator of
+<italic>CUC2</italic> expression. Because <italic>PTL</italic> is enriched in the boundary domain in
+addition to its expression in leaves, <italic>ptl</italic> mutations should cause qualitative and
+quantitative expansion of <italic>CUC2</italic> expression. Indeed, we observed a serrated leaf
+margin phenotype in the <italic>ptl-1</italic> mutants (Supplementary Fig S6A), a phenotype very
+similar to that of <italic>cuc2-1D</italic>, in which the <italic>CUC2</italic> expression domain is
+enlarged (Larue <italic>et&#x000a0;al</italic>, <xref rid="b39" ref-type="bibr">2009</xref>). The
+antagonistic actions of <italic>PTL</italic> and <italic>CUC2</italic> support a recent genetic
+analysis (Lampugnani <italic>et&#x000a0;al</italic>, <xref rid="b37" ref-type="bibr">2012</xref>;
+Nahar <italic>et&#x000a0;al</italic>, <xref rid="b50" ref-type="bibr">2012</xref>). However, we did
+not find a clear change in <italic>CUC2</italic> expression in the inflorescence of
+<italic>ptl</italic> mutants (Fig<xref ref-type="fig" rid="fig06">6C</xref>), which may reflect the
+limitations of using the inflorescence to represent boundary domain cells. Similar to
+<italic>ptl-1</italic>, an <italic>hmg1</italic> mutant line also showed a leaf margin phenotype
+(Supplementary Fig S6A). HMG1 directly suppresses <italic>LAS</italic> expression (Fig<xref ref-type="fig" rid="fig06">6</xref>B), so this phenotype supports the view that <italic>LAS</italic>
+regulates leaf margin development (Busch <italic>et&#x000a0;al</italic>, <xref rid="b10" ref-type="bibr">2011</xref>).</p><p>The boundary domain GRN identifies CUC2 and SPL as positive and negative regulators of
+<italic>LAS</italic> expression. <italic>LAS</italic> functions as a central regulator of AM
+initiation (Greb <italic>et&#x000a0;al</italic>, <xref rid="b22" ref-type="bibr">2003</xref>).
+Consistent with the identification of CUC2 as a positive regulator of <italic>LAS</italic>, previous
+studies reported reduced <italic>LAS</italic> expression and AM initiation defects in
+<italic>cuc2</italic> mutants (Hibara <italic>et&#x000a0;al</italic>, <xref rid="b27" ref-type="bibr">2006</xref>; Raman <italic>et&#x000a0;al</italic>, <xref rid="b56" ref-type="bibr">2008</xref>). In
+addition to enhanced <italic>LAS</italic> expression in the <italic>CUC2</italic> over-expressing
+<italic>cuc2-1D</italic> mutants (Fig<xref ref-type="fig" rid="fig06">6</xref>A), we observed
+enhanced production of accessory meristems, which are additional AMs occasionally formed in
+wild-type plants (Fig<xref ref-type="fig" rid="fig07">7</xref>D), in cauline leaf axils in
+<italic>cuc2-1D</italic> (Fig<xref ref-type="fig" rid="fig07">7</xref>C and D).
+<italic>Arabidopsis</italic> plants weakly over-expressing <italic>Brassica napus LAS</italic>
+(<italic>BnLAS</italic>) (Yang <italic>et&#x000a0;al</italic>, <xref rid="b81" ref-type="bibr">2011</xref>), also showed similar over-production of accessory meristems (Fig<xref ref-type="fig" rid="fig07">7</xref>D), confirming that this phenotype is associated with ectopic activation of
+<italic>LAS</italic>.</p><p><italic>SPL</italic> genes represent a plant-specific TF family. Recent studies have shown that
+<italic>SPL</italic> genes in rice and maize are responsible for panicle complexity and the
+establishment of boundaries (Chuck <italic>et&#x000a0;al</italic>, <xref rid="b12" ref-type="bibr">2010</xref>; Jiao <italic>et&#x000a0;al</italic>, <xref rid="b32" ref-type="bibr">2010</xref>; Miura
+<italic>et&#x000a0;al</italic>, <xref rid="b48" ref-type="bibr">2010</xref>). The orthologous genes
+of these two SPLs in <italic>Arabidopsis</italic> are <italic>SPL9</italic> and
+<italic>SPL15</italic> (Xie <italic>et&#x000a0;al</italic>, <xref rid="b78" ref-type="bibr">2006</xref>). Studies on these genes indicated that SPL activity inhibits initiation of new leaves
+at the SAM and affects organ size (Wang <italic>et&#x000a0;al</italic>, <xref rid="b70" ref-type="bibr">2008</xref>). To test whether SPL suppression of <italic>LAS</italic> expression has
+biological relevance to AM initiation, we analyzed AM initiation in the <italic>spl9-4
+spl15-1</italic> mutant and in a <italic>pSPL9::rSPL9</italic> line containing mutations in the
+target sites for miR156 and miR157 (Wu &#x00026; Poethig, <xref rid="b77" ref-type="bibr">2006</xref>; Wang <italic>et&#x000a0;al</italic>, <xref rid="b70" ref-type="bibr">2008</xref>; Li
+<italic>et&#x000a0;al</italic>, <xref rid="b41" ref-type="bibr">2012</xref>). We observed more
+accessory meristems in cauline leaf axils in <italic>spl9-4 spl15-1</italic> mutants, similar to
+<italic>p35S::BnLAS</italic> and <italic>cuc2-1D</italic> (Fig<xref ref-type="fig" rid="fig07">7</xref>C and D). In contrast, plants containing a <italic>pSPL9::rSPL9</italic> transgene, as well
+as <italic>las-101</italic> mutants, lack accessory shoots (Fig<xref ref-type="fig" rid="fig07">7</xref>D). Taken together, these data support the idea that <italic>SPL</italic> suppression of
+<italic>LAS</italic> expression controls AM initiation in cauline leaf axils.</p><p>Another PDI we identified pointed to HDG12 as a positive regulator of <italic>LAS</italic>
+expression. In <italic>hdg12</italic> mutants, we found reduced <italic>LAS</italic> expression, as
+well as defective cotyledon development with incomplete penetrance, including tricots and partially
+fused cotyledons (Supplementary Fig S6B and D). Inappropriate cotyledon development in
+<italic>hdg12</italic> mutants also resulted in alterations of leaf phyllotaxy and sometimes leaf
+fusion (Supplementary Fig S6C). Such phenotypes have been previously found in several boundary
+defective mutants (Aida <italic>et&#x000a0;al</italic>, <xref rid="b1" ref-type="bibr">1997</xref>;
+Chandler <italic>et&#x000a0;al</italic>, <xref rid="b11" ref-type="bibr">2007</xref>), implying that
+<italic>HDG12</italic> may affect cotyledon development by regulating the boundary GRN, including
+<italic>LAS</italic>.</p></sec></sec><sec sec-type="discussion"><title>Discussion</title><sec><title>Systems developmental biology for understanding organ boundary and AM formation</title><p>Unlike most animals, plants can initiate new organs during post-embryonic development. Organ
+boundaries separate lateral organs from the stem cell-containing meristems. In addition, AMs, as
+branch meristems, initiate from leaf boundaries to give rise to a new cycle of growth and
+development and thus make the shoot a ramifying system. This key characteristic of plant development
+leads to a major distinction between animal and plant development and is a central mechanism that
+allows plants to adapt to their changing local environments. Unfortunately, our understanding in
+this field of great importance remains rudimentary, largely due to difficulties in genetic screening
+for mutants deficient in boundary or AM formation in model plants, such as
+<italic>Arabidopsis</italic> (Rast &#x00026; Simon, <xref rid="b57" ref-type="bibr">2008</xref>).
+Nevertheless, forward and reverse genetic studies over the past two decades have identified several
+key TFs affecting boundary specification and AM initiation, implying that a complex GRN underlies
+boundary specification and AM initiation.</p><p>Using a systems biology approach, we integrated cell type-specific gene expression and PDIs on a
+genomewide scale to examine organ boundary and AM formation. Because boundary cells have very low
+abundance, we chose a Y1H-based assay instead of a ChIP-based assay to reliably detect PDIs.
+Complementary to reductionist studies, systems biology offers the potential to provide a
+comprehensive understanding of the causal relationships underlying boundary and AM formation. To
+this end, developmental biology networks derived from system-wide studies promise to link isolated
+genes and regulatory mechanisms identified by reductionist studies into a framework containing
+causal relationships and to allow formulation of new predictions (Long
+<italic>et&#x000a0;al</italic>, <xref rid="b44" ref-type="bibr">2008</xref>; Lander, <xref rid="b38" ref-type="bibr">2011</xref>). Indeed, our derived GRN links most previously isolated key
+regulators into a network of direct interactions and regulation (Fig<xref ref-type="fig" rid="fig08">8</xref>). For example, the direct activation of <italic>CUC2</italic> by RAX1 and RAX3 and the
+direct activation of <italic>LAS</italic> by CUC2 extend and support previous genetic analysis
+(Hibara <italic>et&#x000a0;al</italic>, <xref rid="b27" ref-type="bibr">2006</xref>; Raman
+<italic>et&#x000a0;al</italic>, <xref rid="b56" ref-type="bibr">2008</xref>). The direct binding of
+CUC2 to the <italic>MiR164c</italic> promoter identifies an additional reciprocal regulation between
+<italic>CUC</italic> genes and <italic>MiR164</italic> miRNAs (Laufs <italic>et&#x000a0;al</italic>,
+<xref rid="b40" ref-type="bibr">2004</xref>; Mallory <italic>et&#x000a0;al</italic>, <xref rid="b46" ref-type="bibr">2004</xref>). The direct activation of <italic>LAS</italic> by ARR1
+provides a molecular link between AM initiation and cytokinin signaling and extends our recently
+reported requirement for cytokinin in AM initiation (Han <italic>et&#x000a0;al</italic>, <xref rid="b25" ref-type="bibr">2014</xref>; Wang <italic>et&#x000a0;al</italic>, <xref rid="b74" ref-type="bibr">2014b</xref>).</p><fig id="fig08" position="float"><label>Figure 8</label><caption><title>Summary of known and newly identified regulators and regulatory relationships controlling AM
+initiation</title><p>Gray solid line, known direct interaction between miRNA and targeting mRNA; gray dotted line,
+known genetic interaction; red arrow, activating PDI identified in this study, blue bar, repressive
+PDI identified in this study; black line, PDI identified in this study, unknown regulatory
+relationship. New regulators of AM initiation are shown in green.</p></caption><graphic xlink:href="msb0010-0755-f8"/></fig><p>In addition, we identified new players regulating AM initiation and boundary formation. Our
+detailed analysis of mutants and over-expression lines confirmed that AM initiation was compromised
+in <italic>drn-1</italic> mutants (Fig<xref ref-type="fig" rid="fig07">7</xref>A and B), likely due
+to DRN activation of <italic>CUC2</italic> (Fig<xref ref-type="fig" rid="fig06">6</xref>D). We also
+showed that AM initiation was ectopically activated in the <italic>spl9-4 spl15-1</italic> line and
+that boundary formation was affected in a <italic>SPL9</italic> over-expressing line (Fig<xref ref-type="fig" rid="fig07">7</xref>C and D). Taking our results together, our work shows that
+employing a top-down systems approach greatly speeds our understanding of AM initiation and boundary
+specification by identifying meaningful new components and new network interactions.</p></sec><sec><title>New views of boundary and AM development</title><p>By combining cell type-specific transcription and genomewide PDIs, we were able to recapitulate
+and extend previously identified work on AM and boundary formation. First, we confirmed boundary
+enrichment or depletion of a large number of genes (Fig<xref ref-type="fig" rid="fig01">1C</xref>).
+Furthermore, independent GO analysis of genes enriched in the boundary domain and GO analysis of TFs
+bound to promoters of key regulators of boundary specification and AM initiation separately
+identified meristem-related GO functions (Figs<xref ref-type="fig" rid="fig02">2</xref>A and <xref ref-type="fig" rid="fig05">5</xref>A). Additionally, we provided genome-scale support for the recent
+finding that a low auxin niche is required for AM initiation (Wang <italic>et&#x000a0;al</italic>,
+<xref rid="b71" ref-type="bibr">2014a</xref>,b), which is followed by a cytokinin signaling pulse
+(Han <italic>et&#x000a0;al</italic>, <xref rid="b25" ref-type="bibr">2014</xref>; Wang
+<italic>et&#x000a0;al</italic>, <xref rid="b74" ref-type="bibr">2014b</xref>).</p><p>More importantly, our systems analysis identified numerous examples from boundary and AM
+formation in which a GRN makes possible new views of the properties of cell types and their
+development not evident from previous, reductionist approaches. Our results showed that cell cycle
+regulation, transcriptional regulation, epigenetic regulation, and cell wall homeostasis all likely
+affect boundary and AM formation (Figs<xref ref-type="fig" rid="fig02">2</xref>A and <xref ref-type="fig" rid="fig05">5</xref>A). In addition to auxin and cytokinin, we found another five
+major phytohormones positively or negatively associated with this developmental process (Fig<xref ref-type="fig" rid="fig02">2</xref>D), indicating new directions in the study of boundary and AM
+formation. Our studies also identified a few TF families enriched in the boundary domain and/or
+enriched with TFs participating in PDIs (Fig<xref ref-type="fig" rid="fig02">2</xref>B). TFs are
+often key regulators, and several TF families have been associated with distinct developmental and
+physiological processes (Riechmann <italic>et&#x000a0;al</italic>, <xref rid="b59" ref-type="bibr">2000</xref>). These enriched TF families may deserve further reverse genetic analysis, with a focus
+on boundary and AM formation. Lastly, we identified 180 gene-centered PDIs, between 103 TFs and 23
+promoter regions, within a GRN for boundary and AM formation. Most of the PDIs are novel, and most
+TFs retrieved were heretofore uncharacterized. Further independent experimental analysis identified
+molecular phenotypes for 73.3% of the tested PDIs, suggesting that many of them are
+biologically relevant.</p></sec><sec><title>Network architecture and regulatory genomic region hubs</title><p>Gene regulatory networks, like many other cellular networks, contain a small number of highly
+connected hubs, or nodes, and are characterized by a scale-free connectivity distribution (Barabasi
+&#x00026; Oltvai, <xref rid="b5" ref-type="bibr">2004</xref>). A previous gene-centered network
+analysis in worms identified TF interactor hubs (Barabasi &#x00026; Oltvai, <xref rid="b5" ref-type="bibr">2004</xref>); these TF interactor hubs connect to genes expressed in many cell types and
+are likely global regulators (Vermeirssen <italic>et&#x000a0;al</italic>, <xref rid="b67" ref-type="bibr">2007a</xref>). Although our study did not identify striking TF interactor hubs, we found
+clear, uneven distribution of PDIs associated with the tested promoter regions (Figs<xref ref-type="fig" rid="fig03">3</xref>B, C and 5B). In fact, the majority (53.9%) of PDIs were
+associated with one promoter region of each of two key regulators, <italic>CUC2</italic> and
+<italic>LAS</italic>. Our detailed analysis by independent experimental approaches showed that many
+of these PDIs are real (Figs<xref ref-type="fig" rid="fig04">4</xref> and <xref ref-type="fig" rid="fig06">6</xref>) and that mutation or over-expression of their upstream TF affects expression
+of their downstream target (Fig<xref ref-type="fig" rid="fig06">6</xref>) or even leads to AM and
+boundary phenotypes (Fig<xref ref-type="fig" rid="fig07">7</xref>). Our finding also reconciled the
+discrepancy that a conserved 3&#x02032; region is sufficient to direct <italic>LAS</italic>
+expression (Raatz <italic>et&#x000a0;al</italic>, <xref rid="b55" ref-type="bibr">2011</xref>),
+whereas an extended 5&#x02032; region is also able to define boundary-specific <italic>LAS</italic>
+expression (Goldshmidt <italic>et&#x000a0;al</italic>, <xref rid="b20" ref-type="bibr">2008</xref>).
+We found that CUC2, as a key regulator, can bind both the 5&#x02032; pLAS-12/13 and the 3&#x02032;
+regions B and C (Fig<xref ref-type="fig" rid="fig04">4</xref>B). Unfortunately, due to the high
+background introduced by region B, we were not able to test its PDIs by Y1H.</p><p>Previous GRN studies in yeast identified highly connected promoters (Yu
+<italic>et&#x000a0;al</italic>, <xref rid="b82" ref-type="bibr">2004a</xref>; Borneman
+<italic>et&#x000a0;al</italic>, <xref rid="b7" ref-type="bibr">2006</xref>), although no clear
+promoter hubs were identified in worms or <italic>Arabidopsis</italic> (Vermeirssen
+<italic>et&#x000a0;al</italic>, <xref rid="b67" ref-type="bibr">2007a</xref>; Brady
+<italic>et&#x000a0;al</italic>, <xref rid="b9" ref-type="bibr">2011</xref>). Also, a recent
+co-expression network analysis in <italic>Arabidopsis</italic> identified novel expression modules
+centered on <italic>cis</italic>-motifs (Ma <italic>et&#x000a0;al</italic>, <xref rid="b45" ref-type="bibr">2013</xref>), supporting the existence of promoter hubs. A notable feature of our Y1H
+analysis was the dissection of extended (up to 3.1&#x000a0;kb) promoter regions into short
+(180&#x02013;320&#x000a0;bp) fragments, which not only provided better coverage of potential
+regulatory regions, but also ensured full transcriptional activation in yeast (Dobi &#x00026;
+Winston, <xref rid="b14" ref-type="bibr">2007</xref>). In fact, both putative promoter hubs were
+identified as more distant from the start codon, suggesting the need to study extended promoter
+regions. Nevertheless, the promoter dissection approach limited our study to a relatively small
+number of gene promoters. Further, larger-scale experiments would better evaluate the frequency and
+characteristics of promoter hubs.</p><p>By combining cell type-specific gene expression profiles and PDIs, we asked whether TFs and their
+targets are co-expressed and whether the regulations are regenerative or degenerative interactions.
+We found limited, but significant overlap in expression enrichment in boundary cells between TFs and
+their targets (Figs<xref ref-type="fig" rid="fig03">3</xref>B and <xref ref-type="fig" rid="fig05">5</xref>B). A previous GRN analysis of the root stele reported similar observations (Brady
+<italic>et&#x000a0;al</italic>, <xref rid="b9" ref-type="bibr">2011</xref>), suggesting that TFs and
+their targets are not strictly co-expressed. By addition of inferred regulatory potential, we found
+that regenerative regulation involving either transcriptional activation or transcriptional
+repression represents the majority of PDIs from the small number of PDIs we studied in detail
+(Fig<xref ref-type="fig" rid="fig06">6</xref>C).</p><p>Our network analysis also highlighted high genetic redundancy of TFs. Although we were able to
+identify expression phenotypes at the molecular level for 73.3% of TFs tested (Fig<xref ref-type="fig" rid="fig06">6C</xref> and Supplementary Fig S4), we found morphological phenotypes
+for 31.8% of TFs tested. Because our selection of <italic>Arabidopsis</italic> lines for
+morphological phenotype characterization was influenced by availability of mutants and transgenic
+lines, as well as the literature, we expect the average percentage of observed phenotype to be lower
+than that. This observation is strikingly similar to the recent GRN study of root stele (Brady
+<italic>et&#x000a0;al</italic>, <xref rid="b9" ref-type="bibr">2011</xref>), implying high robustness
+of GRN.</p></sec></sec><sec sec-type="materials|methods"><title>Materials and Methods</title><sec><title>Plant materials and generation of transgenic plants</title><p>The <italic>Arabidopsis thaliana</italic> accession Columbia (Col-0) was used as the wild-type
+unless otherwise specified. TRAP-seq lines were in the Landsberg <italic>erecta</italic>
+(L<italic>er</italic>) background. Information on the detailed genetic background of mutants and
+transgenic lines used in this study is provided in Supplementary Table S11. Plants were grown in the
+greenhouse on soil at 22&#x000b0;C. Plants used for TRAP-seq experiments were grown under constant
+illumination, plants used for AM phenotypic characterization were grown under short-day conditions
+(8&#x000a0;h light/16&#x000a0;h dark) for 28 days before moving to long-day conditions (16&#x000a0;h
+light/8&#x000a0;h dark), and all other plants were grown under long-day conditions.</p><p>To obtain <italic>pLAS&#x0003e;&#x0003e;HF:RPL18</italic> and
+<italic>pAS1&#x0003e;&#x0003e;HF:RPL18</italic> lines, cell type-specific <italic>pLAS::LhG4</italic>
+(Goldshmidt <italic>et&#x000a0;al</italic>, <xref rid="b20" ref-type="bibr">2008</xref>) and
+<italic>pAS1::LhG4</italic> (Eshed <italic>et&#x000a0;al</italic>, <xref rid="b17" ref-type="bibr">2001</xref>) drivers were crossed into a <italic>pOp::HF-RPL18</italic> driver line that also
+contains a linked <italic>pOp::GUS</italic> (Jiao &#x00026; Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>), all in the L<italic>er</italic> background.</p><p>The <italic>p35S::DRN-GR</italic> was made by inserting the <italic>DRN</italic> coding sequence
+amplified from cDNA in-frame upstream of the GR coding sequence in the pGREEN0229-35S::GR vector (Yu
+<italic>et&#x000a0;al</italic>, <xref rid="b83" ref-type="bibr">2004b</xref>). For constructing
+<italic>pRPS5A::CUC2-GR-HA</italic> and <italic>pRPS5A::RAX1-GR-HA</italic>, a 1.7-kb fragment
+upstream of the ubiquitously expressed <italic>RPS5A</italic> coding region (Weijers
+<italic>et&#x000a0;al</italic>, <xref rid="b75" ref-type="bibr">2001</xref>) was amplified and
+inserted into BJ36. The <italic>Arabidopsis CUC2</italic> or <italic>RAX1</italic> cDNA was cloned
+downstream of the <italic>RPS5A</italic> promoter with GR and HA sequences. The construct was then
+transferred into the binary vector pMOA34. All binary constructs were transformed into Col-0.
+Transgenic lines with a reproducible phenotype after Dex treatment were selected and used for
+subsequent analysis. Dex and cycloheximide treatments were performed as previously described (Han
+<italic>et&#x000a0;al</italic>, <xref rid="b25" ref-type="bibr">2014</xref>).</p></sec><sec><title>TRAP-seq</title><p>Seedlings grown on 1/2 MS agar plates containing 1% sucrose were used at 7 DAG. Shoots
+were frozen in liquid nitrogen, and isolation of polysomes and affinity purification of
+HF-RPL18-containing polysomes using anti-FLAG beads were carried out as previously described (Jiao
+&#x00026; Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>; Wang &#x00026; Jiao, <xref rid="b73" ref-type="bibr">2014</xref>). Total RNA and subsequent poly(A)<sup>+</sup> RNA were
+isolated from each replicate and subjected to RNA-seq library preparation as described (Jiao
+&#x00026; Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>; He &#x00026; Jiao, <xref rid="b26" ref-type="bibr">2014</xref>). Libraries were sequenced as 50-mers using HiSeq2000
+(Illumina, San Diego, CA, USA) with standard settings. Three independent biological replicates were
+included for each cell type.</p></sec><sec><title>Read mapping and quantification of expression</title><p>Reads were mapped to the <italic>Arabidopsis</italic> Information Resource TAIR10 reference
+genome build with TopHat2 (version 2.0.9) and BOWTIE (version 2.1.0) allowing up to two mismatches
+(Kim <italic>et&#x000a0;al</italic>, <xref rid="b34" ref-type="bibr">2013</xref>) after filtering the
+low-quality reads (PHRED quality score&#x000a0;&#x0003c;&#x000a0;20). The gene locus expression levels
+were calculated based on mapping outputs after removing reads mapped to rRNAs and tRNAs using
+Cuffdiff2 (version 2.1.1) (Trapnell <italic>et&#x000a0;al</italic>, <xref rid="b66" ref-type="bibr">2013</xref>), and expression levels were normalized to the RPKM unit using edgeR (Robinson
+<italic>et&#x000a0;al</italic>, <xref rid="b60" ref-type="bibr">2010</xref>) with significant
+expression cutoff value set to RPKM&#x000a0;&#x0003e;&#x000a0;0.5 (Jiao &#x00026; Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>). Differential expression was assessed with edgeR, and the
+cutoff value was &#x0003e;&#x000a0;twofold change in expression with Benjamini&#x02013;Hochberg
+adjusted <italic>P&#x000a0;</italic>&#x0003c;<italic>&#x000a0;</italic>0.001.</p></sec><sec><title>Gene ontology, enrichment, and promoter motif analysis</title><p>Gene ontology term enrichment analysis was performed using agriGO with the singular enrichment
+analysis method (Du <italic>et&#x000a0;al</italic>, <xref rid="b16" ref-type="bibr">2010</xref>).
+Lists of the phytohormone-responsive genes were obtained from Jiao and Meyerowitz (<xref rid="b30" ref-type="bibr">2010</xref>). The cytokinin-responsive gene list was updated to include
+more comprehensive results from a recent study (Bhargava <italic>et&#x000a0;al</italic>, <xref rid="b6" ref-type="bibr">2013</xref>). TF classification was based on databases of AGRIS, PlantTFDB,
+and RARTF (Iida <italic>et&#x000a0;al</italic>, <xref rid="b28" ref-type="bibr">2005</xref>;
+Palaniswamy <italic>et&#x000a0;al</italic>, <xref rid="b53" ref-type="bibr">2006</xref>; Guo
+<italic>et&#x000a0;al</italic>, <xref rid="b23" ref-type="bibr">2008</xref>). Lists of TFs and
+hormone-responsive genes are available in Supplementary Tables S6 and S7. The gene enrichment
+analysis was quantified by log odds ratio (LR) as previously described (Jiao &#x00026; Meyerowitz,
+<xref rid="b30" ref-type="bibr">2010</xref>). Hypergeometric distribution was used to assess the
+statistical significance (<italic>P</italic>-value) of the enrichment of promoter hubs. Kernel
+density curves were employed to examine gene abundance according to their log<sub>2</sub>FC value in
+the translatomes. The TFs for Y1H screening and TFs in PDIs are listed in Supplementary Tables S8
+and S10.</p><p>Promoter motif enrichment was analyzed as previously described (Jiao
+<italic>et&#x000a0;al</italic>, <xref rid="b29" ref-type="bibr">2005</xref>; Jiao &#x00026;
+Meyerowitz, <xref rid="b30" ref-type="bibr">2010</xref>). The genome sequences 2&#x000a0;kb upstream
+from annotated translation start sites for boundary-specific or leaf-specific genes were retrieved
+from the TAIR10 genome build to identify over-represented known sequence motifs using an enumerative
+approach with Elefinder (<ext-link ext-link-type="uri" xlink:href="http://stan.cropsci.uiuc.edu/tools.php">http://stan.cropsci.uiuc.edu/tools.php</ext-link>). Those elements meeting an expected
+(<italic>E</italic>) value smaller than 10<sup>&#x02212;4</sup> were selected for further
+comparison.</p></sec><sec><title>Construction of Y1H bait strains</title><p>Yeast (<italic>Saccharomyces cerevisiae</italic>) strain Y1HGOLD (MAT &#x003b1;) was used as the
+donor strain to express the TF library containing fusion proteins of GAL4-AD-TF. The components of
+yeast complete medium and different synthetic drop-out (SD) media were obtained from Clontech and
+prepared according to the manufacturer's instructions.</p><p>Promoter fragments of <italic>CUC2</italic>, <italic>LAS</italic>, <italic>MiR164c,</italic> and
+<italic>STM</italic> were amplified from genomic DNA using specific primers (Supplementary Table
+S12). The fragments were verified by sequencing and cloned into pAbAi (Clontech, Mountain View, CA,
+USA). All the bait plasmids were linearized by <italic>Bst</italic>BI and were integrated into yeast
+strain Y1HGOLD using PEG-mediated transformation according to the user manual (<italic>Yeast Hand
+Book</italic>; Clontech, PT3024-1). Transformants were selected on media lacking uracil, verified by
+PCR using a promoter-specific primer and a yeast chromosome primer (Supplementary Table S12), and
+tested for auto-activation according to the manufacturer's instructions.</p></sec><sec><title>Construction of AD-TF prey clones</title><p>All AD-TF prey clones are derived from pDEST22 (Life Technologies, Carlsbad, CA, USA; Ou
+<italic>et&#x000a0;al</italic>, <xref rid="b52" ref-type="bibr">2011</xref>), and Gateway cloning was
+used to generate additional AD-TF clones. The cDNA clones were either from ABRC or cloned in this
+work, both using the pENTR/D-TOPO vector (Life Technologies). To generate Gal4-AD-TF constructs,
+Gateway LR recombination reactions were performed between pENTR/D-TOPO-TFs and pDEST22 to obtain
+pDEST22-TF.</p></sec><sec><title>Transformation-based Y1H screening</title><p>A direct, transformation-based assay was used following published protocols, unless otherwise
+specified (Mitsuda <italic>et&#x000a0;al</italic>, <xref rid="b47" ref-type="bibr">2010</xref>; Brady
+<italic>et&#x000a0;al</italic>, <xref rid="b9" ref-type="bibr">2011</xref>). Briefly, AD-TF plasmids
+from the TF prey library were directly transformed into Y1HGOLD bait strains harboring genomic
+promoter-reporters, and transformants were selected on media lacking uracil and tryptophan but
+containing 800&#x000a0;ng/ml aureobasidin A (AbA). An equal amount of transformed yeast culture was
+plated on medium lacking uracil and tryptophan without addition of AbA to control for transformation
+efficiency. We used a limited pooling strategy by mixing equal amounts of four AD-TF plasmids for
+each transformation. Positive interactions were identified based on growth ability after
+transformation, on AbA-containing medium for 3&#x000a0;days, according to the manufacturer's
+manual. For each pool containing a positive interaction, the four AD-TFs of this pool were
+individually transformed and screened to identify the AD-TF(s) involved in the positive interaction.
+All interactions were validated by retesting using the same procedure.</p></sec><sec><title>RT-PCR and quantitative real-time PCR</title><p>Total RNA from inflorescences of four plants at 8&#x000a0;days after bolting was extracted using
+the AxyPrep Multisource RNA MiniPrep kit (Axygen, Tewksbury, MA, USA). First-strand cDNA was
+synthesized with 2&#x000a0;&#x003bc;g total RNA by TransScript One-step gDNA Removal and cDNA
+synthesis SuperMix (TransGen, Beijing, China) using anchored oligo-dT primers according to the
+manufacturer's instructions. Quantitative real-time PCR (qRT&#x02013;PCR) was performed on a
+Bio-Rad CFX96 real-time PCR detection system using KAPA SYBR FAST qPCR kit (KAPA Biosystems,
+Beijing, China). <italic>TUB6</italic> (AT5G12250) was chosen to normalize the relative expression
+as it has been shown to be a superior reference gene for qRT&#x02013;PCR analysis (Han
+<italic>et&#x000a0;al</italic>, <xref rid="b25" ref-type="bibr">2014</xref>). Gene-specific primers
+(Supplementary Table S12) were used to amplify each gene, and two independent biological
+experiments, each run in triplicate, were applied for each mutant or transgenic plant.</p></sec><sec><title>Modeling</title><p>For each putative PDI, we used weighted least squares regression to model the relationship
+between the expression of the TF and its target gene in both wild-type and mutant plants, as
+described before (Brady <italic>et&#x000a0;al</italic>, <xref rid="b9" ref-type="bibr">2011</xref>).
+The slope of the line can suggest the activation or repression activity of a TF. Its steepness can
+also provide an estimate of the strength of the TF acting on its target. The
+<italic>P</italic>-value of the line represents the probability of whether the expression of the two
+TFs can result in a regression line.</p></sec><sec><title>Electrophoretic mobility shift assay</title><p>Fusion proteins were produced in prokaryotic expression systems. The DNA-binding domain of ARR1,
+ARRM (236aa&#x02013;299aa) (Taniguchi <italic>et&#x000a0;al</italic>, <xref rid="b64" ref-type="bibr">2007</xref>), SPL9-binding domain (64aa&#x02013;153aa) (Liang <italic>et&#x000a0;al</italic>, <xref rid="b42" ref-type="bibr">2008</xref>), and SPL15-binding domain (49aa&#x02013;138aa) (Liang
+<italic>et&#x000a0;al</italic>, <xref rid="b42" ref-type="bibr">2008</xref>) were amplified by
+gene-specific primers (Supplementary Table S12). The coding sequences were ligated to the vector
+pGEX-6P-1, and proteins were successfully expressed with the GST tag. GST-fused proteins were
+purified using glutathione-Sepharose 4B, as described before (Tian <italic>et&#x000a0;al</italic>,
+<xref rid="b65" ref-type="bibr">2008</xref>). Amplified full-length protein coding sequence of CUC2
+was cloned into the pETMALc vector to fuse with the MBP tag (Pryor &#x00026; Leiting, <xref rid="b54" ref-type="bibr">1997</xref>). Expressed MBP-CUC2 protein was purified by amylase resin
+(NEB, Ipswich, MA, USA) according to the manufacturer's instructions. Protein concentration
+was measured by Bradford protein assay kit (GenStar, Beijing, China).</p><p>Biotin-labeled primers (sequences in Supplementary Table S12) were synthesized by Sangon Biotech
+(Shanghai, China). Probes were amplified using labeled primers, and corresponding competitors were
+amplified using primers of the same sequences without labeling. Binding reactions were performed in
+a 15-&#x003bc;l volume containing 50&#x000a0;ng protein and 20 fmol labeled DNA fragment using the
+Pierce LightShift Chemiluminescent EMSA Kit (Thermo Fisher, Rockford, IL, USA). Competition
+experiments were performed by adding 100- to 200-fold unlabeled DNA. The incubated mixture was
+separated in a 5% native polyacrylamide gel in 0.5&#x000d7; TBE at room temperature and then
+transferred to positively charged nylon membrane. After cross-linking under UV light, binding
+reactions were detected following the manufacturer's instructions.</p></sec><sec><title>Chromatin immunoprecipitation</title><p>Ten-day-old seedlings or inflorescences of approximately 4&#x000a0;week old in
+<italic>pRPS5A::CUC2-GR-HA</italic> were induced with Dex as described above. Seedlings or
+inflorescence material (&#x0223c;800&#x000a0;mg) from Dex-treated and mock-treated plants were
+harvested 2&#x000a0;h after treatment and fixed with 1% (v/v) formaldehyde under vacuum for
+10&#x000a0;min (Han <italic>et&#x000a0;al</italic>, <xref rid="b25" ref-type="bibr">2014</xref>).
+Chromatin was sheared to an average size of 1,000&#x000a0;bp by sonication after nuclei were isolated
+and lysed. Immunoprecipitations were performed with or without anti-HA (Beyotime, Nantong, China).
+The precipitated DNA was isolated and purified to use as a template for amplification of promoter
+sequences with primers described in Supplementary Table S12. Two independent sets of biological
+samples were used.</p></sec><sec><title>Accession number</title><p>NCBI Short Read Archive SRP042272.</p></sec></sec></body><back><ack><p>We are indebted to Dr Li-Jia Qu for his sharing of the Y1H library and advice on the Y1H assay.
+We thank Drs Mitsuhiro Aida, Yuval Eshed, Yuke He, Toshiro Ito, Tom Jack, Masao Tasaka, Klaus
+Theres, Jia-Wei Wang, Frank Wellmer, Wolfgang Werr, Shuhua Yang, Jian-Min Zhou, Yongming Zhou,
+Jianru Zuo, and ABRC for seeds and plasmids; and Yihua Zhou, Debao Huang, Xiaohua Bian, and Yuanze
+Liu for assistance with Y1H assays. We also thank Dr Yonghong Wang for comments. This work was
+supported by the Ministry of Agriculture of China (2011ZX08010-002), National Basic Research Program
+of China (973 Program) Grants 2012CB910902 and 2014CB943500, National Natural Science Foundation of
+China Grants 31171159, 31222033, 31300298 and 31430010, and the Hundred Talents Program of CAS.</p></ack><sec><title>Author contributions</title><p>YJ conceived and designed the research. CT, XZ, JH, YW, BS, YH, GW, XF, CZ, JW, JQ, and RY
+acquired the data. CT, YW, YH, JW, and YJ analyzed and interpreted the data. CT and HY performed the
+computational analysis and the statistical computations. CT and YJ wrote the paper.</p></sec><sec><title>Conflict of interest</title><p>The authors declare that they have no conflict of interest.</p></sec><ref-list><title>References</title><ref id="b1"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Aida</surname><given-names>M</given-names></name><name><surname>Ishida</surname><given-names>T</given-names></name><name><surname>Fukaki</surname><given-names>H</given-names></name><name><surname>Fujisawa</surname><given-names>H</given-names></name><name><surname>Tasaka</surname><given-names>M</given-names></name></person-group><article-title>Genes involved in organ separation in <italic>Arabidopsis</italic>: an analysis of
+the <italic>cup-shaped cotyledon</italic> mutant</article-title><source>Plant Cell</source><year>1997</year><volume>9</volume><fpage>841</fpage><lpage>857</lpage><pub-id pub-id-type="pmid">9212461</pub-id></element-citation></ref><ref id="b2"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Aida</surname><given-names>M</given-names></name><name><surname>Tasaka</surname><given-names>M</given-names></name></person-group><article-title>Genetic control of shoot organ boundaries</article-title><source>Curr Opin Plant Biol</source><year>2006</year><volume>9</volume><fpage>72</fpage><lpage>77</lpage><pub-id pub-id-type="pmid">16337829</pub-id></element-citation></ref><ref id="b3"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Albert</surname><given-names>R</given-names></name></person-group><article-title>Network inference, analysis, and modeling in systems biology</article-title><source>Plant Cell</source><year>2007</year><volume>19</volume><fpage>3327</fpage><lpage>3338</lpage><pub-id pub-id-type="pmid">18055607</pub-id></element-citation></ref><ref id="b4"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Banno</surname><given-names>H</given-names></name><name><surname>Ikeda</surname><given-names>Y</given-names></name><name><surname>Niu</surname><given-names>QW</given-names></name><name><surname>Chua</surname><given-names>NH</given-names></name></person-group><article-title>Overexpression of <italic>Arabidopsis ESR1</italic> induces initiation of shoot
+regeneration</article-title><source>Plant Cell</source><year>2001</year><volume>13</volume><fpage>2609</fpage><lpage>2618</lpage><pub-id pub-id-type="pmid">11752375</pub-id></element-citation></ref><ref id="b5"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Barabasi</surname><given-names>AL</given-names></name><name><surname>Oltvai</surname><given-names>ZN</given-names></name></person-group><article-title>Network biology: understanding the cell's functional
+organization</article-title><source>Nat Rev Genet</source><year>2004</year><volume>5</volume><fpage>101</fpage><lpage>113</lpage><pub-id pub-id-type="pmid">14735121</pub-id></element-citation></ref><ref id="b6"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bhargava</surname><given-names>A</given-names></name><name><surname>Clabaugh</surname><given-names>I</given-names></name><name><surname>To</surname><given-names>JP</given-names></name><name><surname>Maxwell</surname><given-names>BB</given-names></name><name><surname>Chiang</surname><given-names>YH</given-names></name><name><surname>Schaller</surname><given-names>GE</given-names></name><name><surname>Loraine</surname><given-names>A</given-names></name><name><surname>Kieber</surname><given-names>JJ</given-names></name></person-group><article-title>Identification of cytokinin-responsive genes using microarray meta-analysis and
+RNA-Seq in <italic>Arabidopsis</italic></article-title><source>Plant Physiol</source><year>2013</year><volume>162</volume><fpage>272</fpage><lpage>294</lpage><pub-id pub-id-type="pmid">23524861</pub-id></element-citation></ref><ref id="b7"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Borneman</surname><given-names>AR</given-names></name><name><surname>Leigh-Bell</surname><given-names>JA</given-names></name><name><surname>Yu</surname><given-names>H</given-names></name><name><surname>Bertone</surname><given-names>P</given-names></name><name><surname>Gerstein</surname><given-names>M</given-names></name><name><surname>Snyder</surname><given-names>M</given-names></name></person-group><article-title>Target hub proteins serve as master regulators of development in
+yeast</article-title><source>Genes Dev</source><year>2006</year><volume>20</volume><fpage>435</fpage><lpage>448</lpage><pub-id pub-id-type="pmid">16449570</pub-id></element-citation></ref><ref id="b8"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Brady</surname><given-names>SM</given-names></name><name><surname>Orlando</surname><given-names>DA</given-names></name><name><surname>Lee</surname><given-names>JY</given-names></name><name><surname>Wang</surname><given-names>JY</given-names></name><name><surname>Koch</surname><given-names>J</given-names></name><name><surname>Dinneny</surname><given-names>JR</given-names></name><name><surname>Mace</surname><given-names>D</given-names></name><name><surname>Ohler</surname><given-names>U</given-names></name><name><surname>Benfey</surname><given-names>PN</given-names></name></person-group><article-title>A high-resolution root spatiotemporal map reveals dominant expression
+patterns</article-title><source>Science</source><year>2007</year><volume>318</volume><fpage>801</fpage><lpage>806</lpage><pub-id pub-id-type="pmid">17975066</pub-id></element-citation></ref><ref id="b9"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Brady</surname><given-names>SM</given-names></name><name><surname>Zhang</surname><given-names>L</given-names></name><name><surname>Megraw</surname><given-names>M</given-names></name><name><surname>Martinez</surname><given-names>NJ</given-names></name><name><surname>Jiang</surname><given-names>E</given-names></name><name><surname>Yi</surname><given-names>CS</given-names></name><name><surname>Liu</surname><given-names>W</given-names></name><name><surname>Zeng</surname><given-names>A</given-names></name><name><surname>Taylor-Teeples</surname><given-names>M</given-names></name><name><surname>Kim</surname><given-names>D</given-names></name><name><surname>Ahnert</surname><given-names>S</given-names></name><name><surname>Ohler</surname><given-names>U</given-names></name><name><surname>Ware</surname><given-names>D</given-names></name><name><surname>Walhout</surname><given-names>AJ</given-names></name><name><surname>Benfey</surname><given-names>PN</given-names></name></person-group><article-title>A stele-enriched gene regulatory network in the <italic>Arabidopsis</italic>
+root</article-title><source>Mol Syst Biol</source><year>2011</year><volume>7</volume><fpage>459</fpage><pub-id pub-id-type="pmid">21245844</pub-id></element-citation></ref><ref id="b10"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Busch</surname><given-names>BL</given-names></name><name><surname>Schmitz</surname><given-names>G</given-names></name><name><surname>Rossmann</surname><given-names>S</given-names></name><name><surname>Piron</surname><given-names>F</given-names></name><name><surname>Ding</surname><given-names>J</given-names></name><name><surname>Bendahmane</surname><given-names>A</given-names></name><name><surname>Theres</surname><given-names>K</given-names></name></person-group><article-title>Shoot branching and leaf dissection in tomato are regulated by homologous gene
+modules</article-title><source>Plant Cell</source><year>2011</year><volume>23</volume><fpage>3595</fpage><lpage>3609</lpage><pub-id pub-id-type="pmid">22039213</pub-id></element-citation></ref><ref id="b11"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Chandler</surname><given-names>JW</given-names></name><name><surname>Cole</surname><given-names>M</given-names></name><name><surname>Flier</surname><given-names>A</given-names></name><name><surname>Grewe</surname><given-names>B</given-names></name><name><surname>Werr</surname><given-names>W</given-names></name></person-group><article-title>The AP2 transcription factors DORNROSCHEN and DORNROSCHEN-LIKE redundantly control
+<italic>Arabidopsis</italic> embryo patterning via interaction with PHAVOLUTA</article-title><source>Development</source><year>2007</year><volume>134</volume><fpage>1653</fpage><lpage>1662</lpage><pub-id pub-id-type="pmid">17376809</pub-id></element-citation></ref><ref id="b12"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Chuck</surname><given-names>G</given-names></name><name><surname>Whipple</surname><given-names>C</given-names></name><name><surname>Jackson</surname><given-names>D</given-names></name><name><surname>Hake</surname><given-names>S</given-names></name></person-group><article-title>The maize SBP-box transcription factor encoded by <italic>tasselsheath4</italic>
+regulates bract development and the establishment of meristem boundaries</article-title><source>Development</source><year>2010</year><volume>137</volume><fpage>1243</fpage><lpage>1250</lpage><pub-id pub-id-type="pmid">20223762</pub-id></element-citation></ref><ref id="b13"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Deal</surname><given-names>RB</given-names></name><name><surname>Henikoff</surname><given-names>S</given-names></name></person-group><article-title>A simple method for gene expression and chromatin profiling of individual cell types
+within a tissue</article-title><source>Dev Cell</source><year>2010</year><volume>18</volume><fpage>1030</fpage><lpage>1040</lpage><pub-id pub-id-type="pmid">20627084</pub-id></element-citation></ref><ref id="b14"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Dobi</surname><given-names>KC</given-names></name><name><surname>Winston</surname><given-names>F</given-names></name></person-group><article-title>Analysis of transcriptional activation at a distance in <italic>Saccharomyces
+cerevisiae</italic></article-title><source>Mol Cell Biol</source><year>2007</year><volume>27</volume><fpage>5575</fpage><lpage>5586</lpage><pub-id pub-id-type="pmid">17526727</pub-id></element-citation></ref><ref id="b15"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Domagalska</surname><given-names>MA</given-names></name><name><surname>Leyser</surname><given-names>O</given-names></name></person-group><article-title>Signal integration in the control of shoot branching</article-title><source>Nat Rev Mol Cell Biol</source><year>2011</year><volume>12</volume><fpage>211</fpage><lpage>221</lpage><pub-id pub-id-type="pmid">21427763</pub-id></element-citation></ref><ref id="b16"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Du</surname><given-names>Z</given-names></name><name><surname>Zhou</surname><given-names>X</given-names></name><name><surname>Ling</surname><given-names>Y</given-names></name><name><surname>Zhang</surname><given-names>Z</given-names></name><name><surname>Su</surname><given-names>Z</given-names></name></person-group><article-title>agriGO: a GO analysis toolkit for the agricultural community</article-title><source>Nucleic Acids Res</source><year>2010</year><volume>38</volume><fpage>W64</fpage><lpage>W70</lpage><pub-id pub-id-type="pmid">20435677</pub-id></element-citation></ref><ref id="b17"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Eshed</surname><given-names>Y</given-names></name><name><surname>Baum</surname><given-names>SF</given-names></name><name><surname>Perea</surname><given-names>JV</given-names></name><name><surname>Bowman</surname><given-names>JL</given-names></name></person-group><article-title>Establishment of polarity in lateral organs of plants</article-title><source>Curr Biol</source><year>2001</year><volume>11</volume><fpage>1251</fpage><lpage>1260</lpage><pub-id pub-id-type="pmid">11525739</pub-id></element-citation></ref><ref id="b18"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ferrier</surname><given-names>T</given-names></name><name><surname>Matus</surname><given-names>JT</given-names></name><name><surname>Jin</surname><given-names>J</given-names></name><name><surname>Riechmann</surname><given-names>JL</given-names></name></person-group><article-title><italic>Arabidopsis</italic> paves the way: genomic and network analyses in
+crops</article-title><source>Curr Opin Biotechnol</source><year>2011</year><volume>22</volume><fpage>260</fpage><lpage>270</lpage><pub-id pub-id-type="pmid">21167706</pub-id></element-citation></ref><ref id="b19"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Gaudinier</surname><given-names>A</given-names></name><name><surname>Zhang</surname><given-names>L</given-names></name><name><surname>Reece-Hoyes</surname><given-names>JS</given-names></name><name><surname>Taylor-Teeples</surname><given-names>M</given-names></name><name><surname>Pu</surname><given-names>L</given-names></name><name><surname>Liu</surname><given-names>Z</given-names></name><name><surname>Breton</surname><given-names>G</given-names></name><name><surname>Pruneda-Paz</surname><given-names>JL</given-names></name><name><surname>Kim</surname><given-names>D</given-names></name><name><surname>Kay</surname><given-names>SA</given-names></name><name><surname>Walhout</surname><given-names>AJ</given-names></name><name><surname>Ware</surname><given-names>D</given-names></name><name><surname>Brady</surname><given-names>SM</given-names></name></person-group><article-title>Enhanced Y1H assays for <italic>Arabidopsis</italic></article-title><source>Nat Methods</source><year>2011</year><volume>8</volume><fpage>1053</fpage><lpage>1055</lpage><pub-id pub-id-type="pmid">22037706</pub-id></element-citation></ref><ref id="b20"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Goldshmidt</surname><given-names>A</given-names></name><name><surname>Alvarez</surname><given-names>JP</given-names></name><name><surname>Bowman</surname><given-names>JL</given-names></name><name><surname>Eshed</surname><given-names>Y</given-names></name></person-group><article-title>Signals derived from <italic>YABBY</italic> gene activities in organ primordia
+regulate growth and partitioning of <italic>Arabidopsis</italic> shoot apical
+meristems</article-title><source>Plant Cell</source><year>2008</year><volume>20</volume><fpage>1217</fpage><lpage>1230</lpage><pub-id pub-id-type="pmid">18469164</pub-id></element-citation></ref><ref id="b21"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Grbic</surname><given-names>V</given-names></name><name><surname>Bleecker</surname><given-names>AB</given-names></name></person-group><article-title>Axillary meristem development in <italic>Arabidopsis
+thaliana</italic></article-title><source>Plant J</source><year>2000</year><volume>21</volume><fpage>215</fpage><lpage>223</lpage><pub-id pub-id-type="pmid">10743661</pub-id></element-citation></ref><ref id="b22"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Greb</surname><given-names>T</given-names></name><name><surname>Clarenz</surname><given-names>O</given-names></name><name><surname>Schafer</surname><given-names>E</given-names></name><name><surname>Muller</surname><given-names>D</given-names></name><name><surname>Herrero</surname><given-names>R</given-names></name><name><surname>Schmitz</surname><given-names>G</given-names></name><name><surname>Theres</surname><given-names>K</given-names></name></person-group><article-title>Molecular analysis of the <italic>LATERAL SUPPRESSOR</italic> gene in
+<italic>Arabidopsis</italic> reveals a conserved control mechanism for axillary meristem
+formation</article-title><source>Genes Dev</source><year>2003</year><volume>17</volume><fpage>1175</fpage><lpage>1187</lpage><pub-id pub-id-type="pmid">12730136</pub-id></element-citation></ref><ref id="b23"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Guo</surname><given-names>A-Y</given-names></name><name><surname>Chen</surname><given-names>X</given-names></name><name><surname>Gao</surname><given-names>G</given-names></name><name><surname>Zhang</surname><given-names>H</given-names></name><name><surname>Zhu</surname><given-names>Q-H</given-names></name><name><surname>Liu</surname><given-names>XC</given-names></name><name><surname>Zhong</surname><given-names>Y-F</given-names></name><name><surname>Gu</surname><given-names>X</given-names></name><name><surname>He</surname><given-names>K</given-names></name><name><surname>Luo</surname><given-names>J</given-names></name></person-group><article-title>PlantTFDB: a comprehensive plant transcription factor database</article-title><source>Nucleic Acids Res</source><year>2008</year><volume>36</volume><fpage>D966</fpage><lpage>D969</lpage><pub-id pub-id-type="pmid">17933783</pub-id></element-citation></ref><ref id="b24"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Hagemann</surname><given-names>W</given-names></name></person-group><article-title>Comparative morphology of acrogenous branch systems and phylogenetic considerations.
+II. Angiosperms</article-title><source>Acta Biotheor</source><year>1990</year><volume>38</volume><fpage>207</fpage><lpage>242</lpage></element-citation></ref><ref id="b25"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Han</surname><given-names>Y</given-names></name><name><surname>Zhang</surname><given-names>C</given-names></name><name><surname>Yang</surname><given-names>H</given-names></name><name><surname>Jiao</surname><given-names>Y</given-names></name></person-group><article-title>Cytokinin pathway mediates <italic>APETALA1</italic> function in the establishment of
+determinate floral meristems in <italic>Arabidopsis</italic></article-title><source>Proc Natl Acad Sci USA</source><year>2014</year><volume>111</volume><fpage>6840</fpage><lpage>6845</lpage><pub-id pub-id-type="pmid">24753595</pub-id></element-citation></ref><ref id="b26"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>He</surname><given-names>J</given-names></name><name><surname>Jiao</surname><given-names>Y</given-names></name></person-group><article-title>Next-generation sequencing applied to flower development: RNA-seq</article-title><source>Methods Mol Biol</source><year>2014</year><volume>1110</volume><fpage>401</fpage><lpage>411</lpage><pub-id pub-id-type="pmid">24395272</pub-id></element-citation></ref><ref id="b27"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Hibara</surname><given-names>K</given-names></name><name><surname>Karim</surname><given-names>MR</given-names></name><name><surname>Takada</surname><given-names>S</given-names></name><name><surname>Taoka</surname><given-names>K</given-names></name><name><surname>Furutani</surname><given-names>M</given-names></name><name><surname>Aida</surname><given-names>M</given-names></name><name><surname>Tasaka</surname><given-names>M</given-names></name></person-group><article-title><italic>Arabidopsis CUP-SHAPED COTYLEDON3</italic> regulates postembryonic shoot
+meristem and organ boundary formation</article-title><source>Plant Cell</source><year>2006</year><volume>18</volume><fpage>2946</fpage><lpage>2957</lpage><pub-id pub-id-type="pmid">17122068</pub-id></element-citation></ref><ref id="b28"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Iida</surname><given-names>K</given-names></name><name><surname>Seki</surname><given-names>M</given-names></name><name><surname>Sakurai</surname><given-names>T</given-names></name><name><surname>Satou</surname><given-names>M</given-names></name><name><surname>Akiyama</surname><given-names>K</given-names></name><name><surname>Toyoda</surname><given-names>T</given-names></name><name><surname>Konagaya</surname><given-names>A</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name></person-group><article-title>RARTF: database and tools for complete sets of <italic>Arabidopsis</italic>
+transcription factors</article-title><source>DNA Res</source><year>2005</year><volume>12</volume><fpage>247</fpage><lpage>256</lpage><pub-id pub-id-type="pmid">16769687</pub-id></element-citation></ref><ref id="b29"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Jiao</surname><given-names>Y</given-names></name><name><surname>Ma</surname><given-names>L</given-names></name><name><surname>Strickland</surname><given-names>E</given-names></name><name><surname>Deng</surname><given-names>XW</given-names></name></person-group><article-title>Conservation and divergence of light-regulated genome expression patterns during
+seedling development in rice and <italic>Arabidopsis</italic></article-title><source>Plant Cell</source><year>2005</year><volume>17</volume><fpage>3239</fpage><lpage>3256</lpage><pub-id pub-id-type="pmid">16284311</pub-id></element-citation></ref><ref id="b30"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Jiao</surname><given-names>Y</given-names></name><name><surname>Meyerowitz</surname><given-names>EM</given-names></name></person-group><article-title>Cell-type specific analysis of translating RNAs in developing flowers reveals new
+levels of control</article-title><source>Mol Syst Biol</source><year>2010</year><volume>6</volume><fpage>419</fpage><pub-id pub-id-type="pmid">20924354</pub-id></element-citation></ref><ref id="b31"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Jiao</surname><given-names>Y</given-names></name><name><surname>Tausta</surname><given-names>SL</given-names></name><name><surname>Gandotra</surname><given-names>N</given-names></name><name><surname>Sun</surname><given-names>N</given-names></name><name><surname>Liu</surname><given-names>T</given-names></name><name><surname>Clay</surname><given-names>NK</given-names></name><name><surname>Ceserani</surname><given-names>T</given-names></name><name><surname>Chen</surname><given-names>M</given-names></name><name><surname>Ma</surname><given-names>L</given-names></name><name><surname>Holford</surname><given-names>M</given-names></name><name><surname>Zhang</surname><given-names>HY</given-names></name><name><surname>Zhao</surname><given-names>H</given-names></name><name><surname>Deng</surname><given-names>XW</given-names></name><name><surname>Nelson</surname><given-names>T</given-names></name></person-group><article-title>A transcriptome atlas of rice cell types uncovers cellular, functional and
+developmental hierarchies</article-title><source>Nat Genet</source><year>2009</year><volume>41</volume><fpage>258</fpage><lpage>263</lpage><pub-id pub-id-type="pmid">19122662</pub-id></element-citation></ref><ref id="b32"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Jiao</surname><given-names>Y</given-names></name><name><surname>Wang</surname><given-names>Y</given-names></name><name><surname>Xue</surname><given-names>D</given-names></name><name><surname>Wang</surname><given-names>J</given-names></name><name><surname>Yan</surname><given-names>M</given-names></name><name><surname>Liu</surname><given-names>G</given-names></name><name><surname>Dong</surname><given-names>G</given-names></name><name><surname>Zeng</surname><given-names>D</given-names></name><name><surname>Lu</surname><given-names>Z</given-names></name><name><surname>Zhu</surname><given-names>X</given-names></name><name><surname>Qian</surname><given-names>Q</given-names></name><name><surname>Li</surname><given-names>J</given-names></name></person-group><article-title>Regulation of OsSPL14 by OsmiR156 defines ideal plant architecture in
+rice</article-title><source>Nat Genet</source><year>2010</year><volume>42</volume><fpage>541</fpage><lpage>544</lpage><pub-id pub-id-type="pmid">20495565</pub-id></element-citation></ref><ref id="b33"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kaufmann</surname><given-names>K</given-names></name><name><surname>Pajoro</surname><given-names>A</given-names></name><name><surname>Angenent</surname><given-names>GC</given-names></name></person-group><article-title>Regulation of transcription in plants: mechanisms controlling developmental
+switches</article-title><source>Nat Rev Genet</source><year>2010</year><volume>11</volume><fpage>830</fpage><lpage>842</lpage><pub-id pub-id-type="pmid">21063441</pub-id></element-citation></ref><ref id="b34"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kim</surname><given-names>D</given-names></name><name><surname>Pertea</surname><given-names>G</given-names></name><name><surname>Trapnell</surname><given-names>C</given-names></name><name><surname>Pimentel</surname><given-names>H</given-names></name><name><surname>Kelley</surname><given-names>R</given-names></name><name><surname>Salzberg</surname><given-names>SL</given-names></name></person-group><article-title>TopHat2: accurate alignment of transcriptomes in the presence of insertions,
+deletions and gene fusions</article-title><source>Genome Biol</source><year>2013</year><volume>14</volume><fpage>R36</fpage><pub-id pub-id-type="pmid">23618408</pub-id></element-citation></ref><ref id="b35"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kirch</surname><given-names>T</given-names></name><name><surname>Simon</surname><given-names>R</given-names></name><name><surname>Grunewald</surname><given-names>M</given-names></name><name><surname>Werr</surname><given-names>W</given-names></name></person-group><article-title>The <italic>DORNROSCHEN</italic><italic>ENHANCER OF SHOOT REGENERATION1</italic> gene
+of <italic>Arabidopsis</italic> acts in the control of meristem ccll fate and lateral organ
+development</article-title><source>Plant Cell</source><year>2003</year><volume>15</volume><fpage>694</fpage><lpage>705</lpage><pub-id pub-id-type="pmid">12615942</pub-id></element-citation></ref><ref id="b36"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Koyama</surname><given-names>T</given-names></name><name><surname>Mitsuda</surname><given-names>N</given-names></name><name><surname>Seki</surname><given-names>M</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name><name><surname>Ohme-Takagi</surname><given-names>M</given-names></name></person-group><article-title>TCP transcription factors regulate the activities of ASYMMETRIC LEAVES1 and miR164,
+as well as the auxin response, during differentiation of leaves in
+<italic>Arabidopsis</italic></article-title><source>Plant Cell</source><year>2010</year><volume>22</volume><fpage>3574</fpage><lpage>3588</lpage><pub-id pub-id-type="pmid">21119060</pub-id></element-citation></ref><ref id="b37"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Lampugnani</surname><given-names>ER</given-names></name><name><surname>Kilinc</surname><given-names>A</given-names></name><name><surname>Smyth</surname><given-names>DR</given-names></name></person-group><article-title><italic>PETAL LOSS</italic> is a boundary gene that inhibits growth between
+developing sepals in <italic>Arabidopsis thaliana</italic></article-title><source>Plant J</source><year>2012</year><volume>71</volume><fpage>724</fpage><lpage>735</lpage><pub-id pub-id-type="pmid">22507233</pub-id></element-citation></ref><ref id="b38"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Lander</surname><given-names>AD</given-names></name></person-group><article-title>Pattern, growth, and control</article-title><source>Cell</source><year>2011</year><volume>144</volume><fpage>955</fpage><lpage>969</lpage><pub-id pub-id-type="pmid">21414486</pub-id></element-citation></ref><ref id="b39"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Larue</surname><given-names>CT</given-names></name><name><surname>Wen</surname><given-names>J</given-names></name><name><surname>Walker</surname><given-names>JC</given-names></name></person-group><article-title>A microRNA-transcription factor module regulates lateral organ size and patterning in
+<italic>Arabidopsis</italic></article-title><source>Plant J</source><year>2009</year><volume>58</volume><fpage>450</fpage><lpage>463</lpage><pub-id pub-id-type="pmid">19154203</pub-id></element-citation></ref><ref id="b40"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Laufs</surname><given-names>P</given-names></name><name><surname>Peaucelle</surname><given-names>A</given-names></name><name><surname>Morin</surname><given-names>H</given-names></name><name><surname>Traas</surname><given-names>J</given-names></name></person-group><article-title>MicroRNA regulation of the <italic>CUC</italic> genes is required for boundary size
+control in <italic>Arabidopsis</italic> meristems</article-title><source>Development</source><year>2004</year><volume>131</volume><fpage>4311</fpage><lpage>4322</lpage><pub-id pub-id-type="pmid">15294871</pub-id></element-citation></ref><ref id="b41"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Li</surname><given-names>S</given-names></name><name><surname>Yang</surname><given-names>X</given-names></name><name><surname>Wu</surname><given-names>F</given-names></name><name><surname>He</surname><given-names>Y</given-names></name></person-group><article-title>HYL1 controls the miR156-mediated juvenile phase of vegetative growth</article-title><source>J Exp Bot</source><year>2012</year><volume>63</volume><fpage>2787</fpage><lpage>2798</lpage><pub-id pub-id-type="pmid">22268150</pub-id></element-citation></ref><ref id="b42"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Liang</surname><given-names>X</given-names></name><name><surname>Nazarenus</surname><given-names>TJ</given-names></name><name><surname>Stone</surname><given-names>JM</given-names></name></person-group><article-title>Identification of a consensus DNA-binding site for the <italic>Arabidopsis
+thaliana</italic> SBP domain transcription factor, AtSPL14, and binding kinetics by surface plasmon
+resonance</article-title><source>Biochemistry</source><year>2008</year><volume>47</volume><fpage>3645</fpage><lpage>3653</lpage><pub-id pub-id-type="pmid">18302343</pub-id></element-citation></ref><ref id="b43"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Long</surname><given-names>J</given-names></name><name><surname>Barton</surname><given-names>MK</given-names></name></person-group><article-title>Initiation of axillary and floral meristems in
+<italic>Arabidopsis</italic></article-title><source>Dev Biol</source><year>2000</year><volume>218</volume><fpage>341</fpage><lpage>353</lpage><pub-id pub-id-type="pmid">10656774</pub-id></element-citation></ref><ref id="b44"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Long</surname><given-names>TA</given-names></name><name><surname>Brady</surname><given-names>SM</given-names></name><name><surname>Benfey</surname><given-names>PN</given-names></name></person-group><article-title>Systems approaches to identifying gene regulatory networks in plants</article-title><source>Annu Rev Cell Dev Biol</source><year>2008</year><volume>24</volume><fpage>81</fpage><lpage>103</lpage><pub-id pub-id-type="pmid">18616425</pub-id></element-citation></ref><ref id="b45"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ma</surname><given-names>S</given-names></name><name><surname>Shah</surname><given-names>S</given-names></name><name><surname>Bohnert</surname><given-names>HJ</given-names></name><name><surname>Snyder</surname><given-names>M</given-names></name><name><surname>Dinesh-Kumar</surname><given-names>SP</given-names></name></person-group><article-title>Incorporating motif analysis into gene co-expression networks reveals novel modular
+expression pattern and new signaling pathways</article-title><source>PLoS Genet</source><year>2013</year><volume>9</volume><fpage>e1003840</fpage><pub-id pub-id-type="pmid">24098147</pub-id></element-citation></ref><ref id="b46"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Mallory</surname><given-names>AC</given-names></name><name><surname>Dugas</surname><given-names>DV</given-names></name><name><surname>Bartel</surname><given-names>DP</given-names></name><name><surname>Bartel</surname><given-names>B</given-names></name></person-group><article-title>MicroRNA regulation of NAC-domain targets is required for proper formation and
+separation of adjacent embryonic, vegetative, and floral organs</article-title><source>Curr Biol</source><year>2004</year><volume>14</volume><fpage>1035</fpage><lpage>1046</lpage><pub-id pub-id-type="pmid">15202996</pub-id></element-citation></ref><ref id="b47"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Mitsuda</surname><given-names>N</given-names></name><name><surname>Ikeda</surname><given-names>M</given-names></name><name><surname>Takada</surname><given-names>S</given-names></name><name><surname>Takiguchi</surname><given-names>Y</given-names></name><name><surname>Kondou</surname><given-names>Y</given-names></name><name><surname>Yoshizumi</surname><given-names>T</given-names></name><name><surname>Fujita</surname><given-names>M</given-names></name><name><surname>Shinozaki</surname><given-names>K</given-names></name><name><surname>Matsui</surname><given-names>M</given-names></name><name><surname>Ohme-Takagi</surname><given-names>M</given-names></name></person-group><article-title>Efficient yeast one-/two-hybrid screening using a library composed only of
+transcription factors in <italic>Arabidopsis thaliana</italic></article-title><source>Plant Cell Physiol</source><year>2010</year><volume>51</volume><fpage>2145</fpage><lpage>2151</lpage><pub-id pub-id-type="pmid">20980269</pub-id></element-citation></ref><ref id="b48"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Miura</surname><given-names>K</given-names></name><name><surname>Ikeda</surname><given-names>M</given-names></name><name><surname>Matsubara</surname><given-names>A</given-names></name><name><surname>Song</surname><given-names>XJ</given-names></name><name><surname>Ito</surname><given-names>M</given-names></name><name><surname>Asano</surname><given-names>K</given-names></name><name><surname>Matsuoka</surname><given-names>M</given-names></name><name><surname>Kitano</surname><given-names>H</given-names></name><name><surname>Ashikari</surname><given-names>M</given-names></name></person-group><article-title><italic>OsSPL14</italic> promotes panicle branching and higher grain productivity in
+rice</article-title><source>Nat Genet</source><year>2010</year><volume>42</volume><fpage>545</fpage><lpage>549</lpage><pub-id pub-id-type="pmid">20495564</pub-id></element-citation></ref><ref id="b49"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Mustroph</surname><given-names>A</given-names></name><name><surname>Zanetti</surname><given-names>ME</given-names></name><name><surname>Jang</surname><given-names>CJ</given-names></name><name><surname>Holtan</surname><given-names>HE</given-names></name><name><surname>Repetti</surname><given-names>PP</given-names></name><name><surname>Galbraith</surname><given-names>DW</given-names></name><name><surname>Girke</surname><given-names>T</given-names></name><name><surname>Bailey-Serres</surname><given-names>J</given-names></name></person-group><article-title>Profiling translatomes of discrete cell populations resolves altered cellular
+priorities during hypoxia in <italic>Arabidopsis</italic></article-title><source>Proc Natl Acad Sci USA</source><year>2009</year><volume>106</volume><fpage>18843</fpage><lpage>18848</lpage><pub-id pub-id-type="pmid">19843695</pub-id></element-citation></ref><ref id="b50"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Nahar</surname><given-names>MA</given-names></name><name><surname>Ishida</surname><given-names>T</given-names></name><name><surname>Smyth</surname><given-names>DR</given-names></name><name><surname>Tasaka</surname><given-names>M</given-names></name><name><surname>Aida</surname><given-names>M</given-names></name></person-group><article-title>Interactions of <italic>CUP-SHAPED COTYLEDON</italic> and <italic>SPATULA</italic>
+genes control carpel margin development in <italic>Arabidopsis thaliana</italic></article-title><source>Plant Cell Physiol</source><year>2012</year><volume>53</volume><fpage>1134</fpage><lpage>1143</lpage><pub-id pub-id-type="pmid">22514090</pub-id></element-citation></ref><ref id="b51"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Nelson</surname><given-names>CE</given-names></name><name><surname>Hersh</surname><given-names>BM</given-names></name><name><surname>Carroll</surname><given-names>SB</given-names></name></person-group><article-title>The regulatory content of intergenic DNA shapes genome architecture</article-title><source>Genome Biol</source><year>2004</year><volume>5</volume><fpage>R25</fpage><pub-id pub-id-type="pmid">15059258</pub-id></element-citation></ref><ref id="b52"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ou</surname><given-names>B</given-names></name><name><surname>Yin</surname><given-names>KQ</given-names></name><name><surname>Liu</surname><given-names>SN</given-names></name><name><surname>Yang</surname><given-names>Y</given-names></name><name><surname>Gu</surname><given-names>T</given-names></name><name><surname>Wing</surname><given-names>HJ</given-names></name><name><surname>Zhang</surname><given-names>L</given-names></name><name><surname>Miao</surname><given-names>J</given-names></name><name><surname>Kondou</surname><given-names>Y</given-names></name><name><surname>Matsui</surname><given-names>M</given-names></name><name><surname>Gu</surname><given-names>HY</given-names></name><name><surname>Qu</surname><given-names>LJ</given-names></name></person-group><article-title>A high-throughput screening system for <italic>Arabidopsis</italic> transcription
+factors and its application to Med25-dependent transcriptional regulation</article-title><source>Mol Plant</source><year>2011</year><volume>4</volume><fpage>546</fpage><lpage>555</lpage><pub-id pub-id-type="pmid">21343311</pub-id></element-citation></ref><ref id="b53"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Palaniswamy</surname><given-names>SK</given-names></name><name><surname>James</surname><given-names>S</given-names></name><name><surname>Sun</surname><given-names>H</given-names></name><name><surname>Lamb</surname><given-names>RS</given-names></name><name><surname>Davuluri</surname><given-names>RV</given-names></name><name><surname>Grotewold</surname><given-names>E</given-names></name></person-group><article-title>AGRIS and AtRegNet. a platform to link cis-regulatory elements and transcription
+factors into regulatory networks</article-title><source>Plant Physiol</source><year>2006</year><volume>140</volume><fpage>818</fpage><lpage>829</lpage><pub-id pub-id-type="pmid">16524982</pub-id></element-citation></ref><ref id="b54"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Pryor</surname><given-names>KD</given-names></name><name><surname>Leiting</surname><given-names>B</given-names></name></person-group><article-title>High-level expression of soluble protein in <italic>Escherichia coli</italic> using a
+His6-tag and maltose-binding-protein double-affinity fusion system</article-title><source>Protein Expr Purif</source><year>1997</year><volume>10</volume><fpage>309</fpage><lpage>319</lpage><pub-id pub-id-type="pmid">9268677</pub-id></element-citation></ref><ref id="b55"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Raatz</surname><given-names>B</given-names></name><name><surname>Eicker</surname><given-names>A</given-names></name><name><surname>Schmitz</surname><given-names>G</given-names></name><name><surname>Fuss</surname><given-names>E</given-names></name><name><surname>Muller</surname><given-names>D</given-names></name><name><surname>Rossmann</surname><given-names>S</given-names></name><name><surname>Theres</surname><given-names>K</given-names></name></person-group><article-title>Specific expression of <italic>LATERAL SUPPRESSOR</italic> is controlled by an
+evolutionarily conserved 3&#x02032; enhancer</article-title><source>Plant J</source><year>2011</year><volume>68</volume><fpage>400</fpage><lpage>412</lpage><pub-id pub-id-type="pmid">21722220</pub-id></element-citation></ref><ref id="b56"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Raman</surname><given-names>S</given-names></name><name><surname>Greb</surname><given-names>T</given-names></name><name><surname>Peaucelle</surname><given-names>A</given-names></name><name><surname>Blein</surname><given-names>T</given-names></name><name><surname>Laufs</surname><given-names>P</given-names></name><name><surname>Theres</surname><given-names>K</given-names></name></person-group><article-title>Interplay of <italic>miR164</italic>
+<italic>CUP-SHAPED COTYLEDON</italic> genes and <italic>LATERAL SUPPRESSOR</italic> controls
+axillary meristem formation in <italic>Arabidopsis thaliana</italic></article-title><source>Plant J</source><year>2008</year><volume>55</volume><fpage>65</fpage><lpage>76</lpage><pub-id pub-id-type="pmid">18346190</pub-id></element-citation></ref><ref id="b57"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Rast</surname><given-names>MI</given-names></name><name><surname>Simon</surname><given-names>R</given-names></name></person-group><article-title>The meristem-to-organ boundary: more than an extremity of anything</article-title><source>Curr Opin Genet Dev</source><year>2008</year><volume>18</volume><fpage>287</fpage><lpage>294</lpage><pub-id pub-id-type="pmid">18590819</pub-id></element-citation></ref><ref id="b58"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Reece-Hoyes</surname><given-names>JS</given-names></name><name><surname>Diallo</surname><given-names>A</given-names></name><name><surname>Lajoie</surname><given-names>B</given-names></name><name><surname>Kent</surname><given-names>A</given-names></name><name><surname>Shrestha</surname><given-names>S</given-names></name><name><surname>Kadreppa</surname><given-names>S</given-names></name><name><surname>Pesyna</surname><given-names>C</given-names></name><name><surname>Dekker</surname><given-names>J</given-names></name><name><surname>Myers</surname><given-names>CL</given-names></name><name><surname>Walhout</surname><given-names>AJ</given-names></name></person-group><article-title>Enhanced yeast one-hybrid assays for high-throughput gene-centered regulatory network
+mapping</article-title><source>Nat Methods</source><year>2011</year><volume>8</volume><fpage>1059</fpage><lpage>1064</lpage><pub-id pub-id-type="pmid">22037705</pub-id></element-citation></ref><ref id="b59"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Riechmann</surname><given-names>JL</given-names></name><name><surname>Heard</surname><given-names>J</given-names></name><name><surname>Martin</surname><given-names>G</given-names></name><name><surname>Reuber</surname><given-names>L</given-names></name><name><surname>Jiang</surname><given-names>C</given-names></name><name><surname>Keddie</surname><given-names>J</given-names></name><name><surname>Adam</surname><given-names>L</given-names></name><name><surname>Pineda</surname><given-names>O</given-names></name><name><surname>Ratcliffe</surname><given-names>OJ</given-names></name><name><surname>Samaha</surname><given-names>RR</given-names></name><name><surname>Creelman</surname><given-names>R</given-names></name><name><surname>Pilgrim</surname><given-names>M</given-names></name><name><surname>Broun</surname><given-names>P</given-names></name><name><surname>Zhang</surname><given-names>JZ</given-names></name><name><surname>Ghandehari</surname><given-names>D</given-names></name><name><surname>Sherman</surname><given-names>BK</given-names></name><name><surname>Yu</surname><given-names>G</given-names></name></person-group><article-title><italic>Arabidopsis</italic> transcription factors: genome-wide comparative analysis
+among eukaryotes</article-title><source>Science</source><year>2000</year><volume>290</volume><fpage>2105</fpage><lpage>2110</lpage><pub-id pub-id-type="pmid">11118137</pub-id></element-citation></ref><ref id="b60"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Robinson</surname><given-names>MD</given-names></name><name><surname>McCarthy</surname><given-names>DJ</given-names></name><name><surname>Smyth</surname><given-names>GK</given-names></name></person-group><article-title>edgeR: a Bioconductor package for differential expression analysis of digital gene
+expression data</article-title><source>Bioinformatics</source><year>2010</year><volume>26</volume><fpage>139</fpage><lpage>140</lpage><pub-id pub-id-type="pmid">19910308</pub-id></element-citation></ref><ref id="b61"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Sarojam</surname><given-names>R</given-names></name><name><surname>Sappl</surname><given-names>PG</given-names></name><name><surname>Goldshmidt</surname><given-names>A</given-names></name><name><surname>Efroni</surname><given-names>I</given-names></name><name><surname>Floyd</surname><given-names>SK</given-names></name><name><surname>Eshed</surname><given-names>Y</given-names></name><name><surname>Bowman</surname><given-names>JL</given-names></name></person-group><article-title>Differentiating <italic>Arabidopsis</italic> shoots from leaves by combined YABBY
+activities</article-title><source>Plant Cell</source><year>2010</year><volume>22</volume><fpage>2113</fpage><lpage>2130</lpage><pub-id pub-id-type="pmid">20628155</pub-id></element-citation></ref><ref id="b62"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Schmitz</surname><given-names>G</given-names></name><name><surname>Theres</surname><given-names>K</given-names></name></person-group><article-title>Shoot and inflorescence branching</article-title><source>Curr Opin Plant Biol</source><year>2005</year><volume>8</volume><fpage>506</fpage><lpage>511</lpage><pub-id pub-id-type="pmid">16054429</pub-id></element-citation></ref><ref id="b63"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Shuai</surname><given-names>B</given-names></name><name><surname>Reynaga-Pena</surname><given-names>CG</given-names></name><name><surname>Springer</surname><given-names>PS</given-names></name></person-group><article-title>The <italic>Lateral Organ Boundaries</italic> gene defines a novel, plant-specific
+gene family</article-title><source>Plant Physiol</source><year>2002</year><volume>129</volume><fpage>747</fpage><lpage>761</lpage><pub-id pub-id-type="pmid">12068116</pub-id></element-citation></ref><ref id="b64"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Taniguchi</surname><given-names>M</given-names></name><name><surname>Sasaki</surname><given-names>N</given-names></name><name><surname>Tsuge</surname><given-names>T</given-names></name><name><surname>Aoyama</surname><given-names>T</given-names></name><name><surname>Oka</surname><given-names>A</given-names></name></person-group><article-title>ARR1 directly activates cytokinin response genes that encode proteins with diverse
+regulatory functions</article-title><source>Plant Cell Physiol</source><year>2007</year><volume>48</volume><fpage>263</fpage><lpage>277</lpage><pub-id pub-id-type="pmid">17202182</pub-id></element-citation></ref><ref id="b65"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Tian</surname><given-names>C</given-names></name><name><surname>Gao</surname><given-names>B</given-names></name><name><surname>Rodriguez Mdel</surname><given-names>C</given-names></name><name><surname>Lanz-Mendoza</surname><given-names>H</given-names></name><name><surname>Ma</surname><given-names>B</given-names></name><name><surname>Zhu</surname><given-names>S</given-names></name></person-group><article-title>Gene expression, antiparasitic activity, and functional evolution of the drosomycin
+family</article-title><source>Mol Immunol</source><year>2008</year><volume>45</volume><fpage>3909</fpage><lpage>3916</lpage><pub-id pub-id-type="pmid">18657321</pub-id></element-citation></ref><ref id="b66"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Trapnell</surname><given-names>C</given-names></name><name><surname>Hendrickson</surname><given-names>DG</given-names></name><name><surname>Sauvageau</surname><given-names>M</given-names></name><name><surname>Goff</surname><given-names>L</given-names></name><name><surname>Rinn</surname><given-names>JL</given-names></name><name><surname>Pachter</surname><given-names>L</given-names></name></person-group><article-title>Differential analysis of gene regulation at transcript resolution with
+RNA-seq</article-title><source>Nat Biotechnol</source><year>2013</year><volume>31</volume><fpage>46</fpage><lpage>53</lpage><pub-id pub-id-type="pmid">23222703</pub-id></element-citation></ref><ref id="b67"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Vermeirssen</surname><given-names>V</given-names></name><name><surname>Barrasa</surname><given-names>MI</given-names></name><name><surname>Hidalgo</surname><given-names>CA</given-names></name><name><surname>Babon</surname><given-names>JA</given-names></name><name><surname>Sequerra</surname><given-names>R</given-names></name><name><surname>Doucette-Stamm</surname><given-names>L</given-names></name><name><surname>Barabasi</surname><given-names>AL</given-names></name><name><surname>Walhout</surname><given-names>AJ</given-names></name></person-group><article-title>Transcription factor modularity in a gene-centered <italic>C. elegans</italic> core
+neuronal protein-DNA interaction network</article-title><source>Genome Res</source><year>2007a</year><volume>17</volume><fpage>1061</fpage><lpage>1071</lpage><pub-id pub-id-type="pmid">17513831</pub-id></element-citation></ref><ref id="b68"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Vermeirssen</surname><given-names>V</given-names></name><name><surname>Deplancke</surname><given-names>B</given-names></name><name><surname>Barrasa</surname><given-names>MI</given-names></name><name><surname>Reece-Hoyes</surname><given-names>JS</given-names></name><name><surname>Arda</surname><given-names>HE</given-names></name><name><surname>Grove</surname><given-names>CA</given-names></name><name><surname>Martinez</surname><given-names>NJ</given-names></name><name><surname>Sequerra</surname><given-names>R</given-names></name><name><surname>Doucette-Stamm</surname><given-names>L</given-names></name><name><surname>Brent</surname><given-names>MR</given-names></name><name><surname>Walhout</surname><given-names>AJ</given-names></name></person-group><article-title>Matrix and Steiner-triple-system smart pooling assays for high-performance
+transcription regulatory network mapping</article-title><source>Nat Methods</source><year>2007b</year><volume>4</volume><fpage>659</fpage><lpage>664</lpage><pub-id pub-id-type="pmid">17589517</pub-id></element-citation></ref><ref id="b69"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Vroemen</surname><given-names>CW</given-names></name><name><surname>Mordhorst</surname><given-names>AP</given-names></name><name><surname>Albrecht</surname><given-names>C</given-names></name><name><surname>Kwaaitaal</surname><given-names>MA</given-names></name><name><surname>de Vries</surname><given-names>SC</given-names></name></person-group><article-title>The <italic>CUP-SHAPED COTYLEDON3</italic> gene is required for boundary and shoot
+meristem formation in <italic>Arabidopsis</italic></article-title><source>Plant Cell</source><year>2003</year><volume>15</volume><fpage>1563</fpage><lpage>1577</lpage><pub-id pub-id-type="pmid">12837947</pub-id></element-citation></ref><ref id="b70"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wang</surname><given-names>JW</given-names></name><name><surname>Schwab</surname><given-names>R</given-names></name><name><surname>Czech</surname><given-names>B</given-names></name><name><surname>Mica</surname><given-names>E</given-names></name><name><surname>Weigel</surname><given-names>D</given-names></name></person-group><article-title>Dual effects of miR156-targeted <italic>SPL</italic> genes and
+<italic>CYP78A5</italic><italic>KLUH</italic> on plastochron length and organ size in
+<italic>Arabidopsis thaliana</italic></article-title><source>Plant Cell</source><year>2008</year><volume>20</volume><fpage>1231</fpage><lpage>1243</lpage><pub-id pub-id-type="pmid">18492871</pub-id></element-citation></ref><ref id="b71"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wang</surname><given-names>Q</given-names></name><name><surname>Kohlen</surname><given-names>W</given-names></name><name><surname>Rossmann</surname><given-names>S</given-names></name><name><surname>Vernoux</surname><given-names>T</given-names></name><name><surname>Theres</surname><given-names>K</given-names></name></person-group><article-title>Auxin depletion from the leaf axil conditions competence for axillary meristem
+formation in <italic>Arabidopsis</italic> and tomato</article-title><source>Plant Cell</source><year>2014a</year><volume>26</volume><fpage>2068</fpage><lpage>2079</lpage><pub-id pub-id-type="pmid">24850851</pub-id></element-citation></ref><ref id="b72"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wang</surname><given-names>Y</given-names></name><name><surname>Jiao</surname><given-names>Y</given-names></name></person-group><article-title>Advances in plant cell type-specific genome-wide studies of gene
+expression</article-title><source>Front Biol</source><year>2011</year><volume>6</volume><fpage>384</fpage><lpage>389</lpage></element-citation></ref><ref id="b73"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wang</surname><given-names>Y</given-names></name><name><surname>Jiao</surname><given-names>Y</given-names></name></person-group><article-title>Translating ribosome affinity purification (TRAP) for cell-specific translation
+profiling in developing flowers</article-title><source>Methods Mol Biol</source><year>2014</year><volume>1110</volume><fpage>323</fpage><lpage>328</lpage><pub-id pub-id-type="pmid">24395267</pub-id></element-citation></ref><ref id="b74"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wang</surname><given-names>Y</given-names></name><name><surname>Wang</surname><given-names>J</given-names></name><name><surname>Shi</surname><given-names>B</given-names></name><name><surname>Yu</surname><given-names>T</given-names></name><name><surname>Qi</surname><given-names>J</given-names></name><name><surname>Meyerowitz</surname><given-names>EM</given-names></name><name><surname>Jiao</surname><given-names>Y</given-names></name></person-group><article-title>The stem cell niche in leaf axils is established by auxin and cytokinin in
+<italic>Arabidopsis</italic></article-title><source>Plant Cell</source><year>2014b</year><volume>26</volume><fpage>2055</fpage><lpage>2067</lpage><pub-id pub-id-type="pmid">24850849</pub-id></element-citation></ref><ref id="b75"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Weijers</surname><given-names>D</given-names></name><name><surname>Franke-van Dijk</surname><given-names>M</given-names></name><name><surname>Vencken</surname><given-names>RJ</given-names></name><name><surname>Quint</surname><given-names>A</given-names></name><name><surname>Hooykaas</surname><given-names>P</given-names></name><name><surname>Offringa</surname><given-names>R</given-names></name></person-group><article-title>An <italic>Arabidopsis Minute</italic>-like phenotype caused by a semi-dominant
+mutation in a <italic>RIBOSOMAL PROTEIN S5</italic> gene</article-title><source>Development</source><year>2001</year><volume>128</volume><fpage>4289</fpage><lpage>4299</lpage><pub-id pub-id-type="pmid">11684664</pub-id></element-citation></ref><ref id="b76"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wellmer</surname><given-names>F</given-names></name><name><surname>Riechmann</surname><given-names>JL</given-names></name></person-group><article-title>Gene networks controlling the initiation of flower development</article-title><source>Trends Genet</source><year>2010</year><volume>26</volume><fpage>519</fpage><lpage>527</lpage><pub-id pub-id-type="pmid">20947199</pub-id></element-citation></ref><ref id="b77"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wu</surname><given-names>G</given-names></name><name><surname>Poethig</surname><given-names>RS</given-names></name></person-group><article-title>Temporal regulation of shoot development in <italic>Arabidopsis thaliana</italic> by
+<italic>miR156</italic> and its target <italic>SPL3</italic></article-title><source>Development</source><year>2006</year><volume>133</volume><fpage>3539</fpage><lpage>3547</lpage><pub-id pub-id-type="pmid">16914499</pub-id></element-citation></ref><ref id="b78"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Xie</surname><given-names>K</given-names></name><name><surname>Wu</surname><given-names>C</given-names></name><name><surname>Xiong</surname><given-names>L</given-names></name></person-group><article-title>Genomic organization, differential expression, and interaction of SQUAMOSA
+promoter-binding-like transcription factors and microRNA156 in rice</article-title><source>Plant Physiol</source><year>2006</year><volume>142</volume><fpage>280</fpage><lpage>293</lpage><pub-id pub-id-type="pmid">16861571</pub-id></element-citation></ref><ref id="b79"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Yadav</surname><given-names>RK</given-names></name><name><surname>Girke</surname><given-names>T</given-names></name><name><surname>Pasala</surname><given-names>S</given-names></name><name><surname>Xie</surname><given-names>M</given-names></name><name><surname>Reddy</surname><given-names>GV</given-names></name></person-group><article-title>Gene expression map of the <italic>Arabidopsis</italic> shoot apical meristem stem
+cell niche</article-title><source>Proc Natl Acad Sci USA</source><year>2009</year><volume>106</volume><fpage>4941</fpage><lpage>4946</lpage><pub-id pub-id-type="pmid">19258454</pub-id></element-citation></ref><ref id="b80"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Yadav</surname><given-names>RK</given-names></name><name><surname>Tavakkoli</surname><given-names>M</given-names></name><name><surname>Xie</surname><given-names>M</given-names></name><name><surname>Girke</surname><given-names>T</given-names></name><name><surname>Reddy</surname><given-names>GV</given-names></name></person-group><article-title>A high-resolution gene expression map of the Arabidopsis shoot meristem stem cell
+niche</article-title><source>Development</source><year>2014</year><volume>141</volume><fpage>2735</fpage><lpage>2744</lpage><pub-id pub-id-type="pmid">24961803</pub-id></element-citation></ref><ref id="b81"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Yang</surname><given-names>M</given-names></name><name><surname>Yang</surname><given-names>Q</given-names></name><name><surname>Fu</surname><given-names>T</given-names></name><name><surname>Zhou</surname><given-names>Y</given-names></name></person-group><article-title>Overexpression of the <italic>Brassica napus BnLAS</italic> gene in
+<italic>Arabidopsis</italic> affects plant development and increases drought
+tolerance</article-title><source>Plant Cell Rep</source><year>2011</year><volume>30</volume><fpage>373</fpage><lpage>388</lpage><pub-id pub-id-type="pmid">20976458</pub-id></element-citation></ref><ref id="b82"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Yu</surname><given-names>H</given-names></name><name><surname>Greenbaum</surname><given-names>D</given-names></name><name><surname>Xin</surname><given-names>L</given-names></name><name><surname>Zhu</surname><given-names>X</given-names></name><name><surname>Gerstein</surname><given-names>M</given-names></name></person-group><article-title>Genomic analysis of essentiality within protein networks</article-title><source>Trends Genet</source><year>2004a</year><volume>20</volume><fpage>227</fpage><lpage>231</lpage><pub-id pub-id-type="pmid">15145574</pub-id></element-citation></ref><ref id="b83"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Yu</surname><given-names>H</given-names></name><name><surname>Ito</surname><given-names>T</given-names></name><name><surname>Wellmer</surname><given-names>F</given-names></name><name><surname>Meyerowitz</surname><given-names>EM</given-names></name></person-group><article-title>Repression of AGAMOUS-LIKE 24 is a crucial step in promoting flower
+development</article-title><source>Nat Genet</source><year>2004b</year><volume>36</volume><fpage>157</fpage><lpage>161</lpage><pub-id pub-id-type="pmid">14716314</pub-id></element-citation></ref><ref id="b84"><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Zhang</surname><given-names>C</given-names></name><name><surname>Barthelson</surname><given-names>RA</given-names></name><name><surname>Lambert</surname><given-names>GM</given-names></name><name><surname>Galbraith</surname><given-names>DW</given-names></name></person-group><article-title>Global characterization of cell-specific gene expression through
+fluorescence-activated sorting of nuclei</article-title><source>Plant Physiol</source><year>2008</year><volume>147</volume><fpage>30</fpage><lpage>40</lpage><pub-id pub-id-type="pmid">18354040</pub-id></element-citation></ref></ref-list><sec sec-type="supplementary-material"><title>Supporting Information</title><p>Supplementary information for this article is available online: <ext-link ext-link-type="uri" xlink:href="http://msb.embopress.org">http://msb.embopress.org</ext-link></p><supplementary-material content-type="local-data" id="sd1"><p>Supplementary Figures</p><media mimetype="pdf" mime-subtype="pdf" xlink:href="msb0010-0755-sd1.pdf" xlink:type="simple" id="d35e6027" position="anchor"/></supplementary-material><supplementary-material content-type="local-data" id="sd2"><p>Supplementary Tables</p><media mimetype="xlsx" mime-subtype="xlsx" xlink:href="msb0010-0755-sd2.xlsx" xlink:type="simple" id="d35e6031" position="anchor"/></supplementary-material><supplementary-material content-type="local-data" id="sd3"><p>Review Process File</p><media mimetype="pdf" mime-subtype="pdf" xlink:href="msb0010-0755-sd3.pdf" xlink:type="simple" id="d35e6035" position="anchor"/></supplementary-material><supplementary-material content-type="local-data" id="sd4"><p>Source Data for Figure 3C</p><media mimetype="zip" mime-subtype="zip" xlink:href="msb0010-0755-sd4.zip" xlink:type="simple" id="d35e6039" position="anchor"/></supplementary-material><supplementary-material content-type="local-data" id="sd5"><p>Source Data for Figure 4B</p><media mimetype="zip" mime-subtype="zip" xlink:href="msb0010-0755-sd5.zip" xlink:type="simple" id="d35e6043" position="anchor"/></supplementary-material><supplementary-material content-type="local-data" id="sd6"><p>Source Data for Figure 4E</p><media mimetype="zip" mime-subtype="zip" xlink:href="msb0010-0755-sd6.zip" xlink:type="simple" id="d35e6047" position="anchor"/></supplementary-material></sec></back></article>

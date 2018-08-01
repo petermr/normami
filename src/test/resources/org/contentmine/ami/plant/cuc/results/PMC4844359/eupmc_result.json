@@ -1,0 +1,301 @@
+{
+  "id": [
+    "27137374"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27137374"
+  ],
+  "pmcid": [
+    "PMC4844359"
+  ],
+  "doi": [
+    "10.3390/plants2020230"
+  ],
+  "title": [
+    "Combinations of Mutations Sufficient to Alter Arabidopsis Leaf Dissection."
+  ],
+  "authorString": [
+    "Blein T, Pautot V, Laufs P."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Blein T"
+          ],
+          "firstName": [
+            "Thomas"
+          ],
+          "lastName": [
+            "Blein"
+          ],
+          "initials": [
+            "T"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-9788-5201",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "AgroParisTech, Institut Jean-Pierre Bourgin, RD10, F-78000 Versailles, France. Thomas.Blein@versailles.inra.fr."
+          ]
+        },
+        {
+          "fullName": [
+            "Pautot V"
+          ],
+          "firstName": [
+            "Véronique"
+          ],
+          "lastName": [
+            "Pautot"
+          ],
+          "initials": [
+            "V"
+          ],
+          "affiliation": [
+            "AgroParisTech, Institut Jean-Pierre Bourgin, RD10, F-78000 Versailles, France. Veronique.Pautot@versailles.inra.fr."
+          ]
+        },
+        {
+          "fullName": [
+            "Laufs P"
+          ],
+          "firstName": [
+            "Patrick"
+          ],
+          "lastName": [
+            "Laufs"
+          ],
+          "initials": [
+            "P"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0003-4459-3445",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "AgroParisTech, Institut Jean-Pierre Bourgin, RD10, F-78000 Versailles, France. Patrick.Laufs@versailles.inra.fr."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-9788-5201",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0003-4459-3445",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "2"
+      ],
+      "volume": [
+        "2"
+      ],
+      "journalIssueId": [
+        "2403663"
+      ],
+      "dateOfPublication": [
+        "2013"
+      ],
+      "monthOfPublication": [
+        "0"
+      ],
+      "yearOfPublication": [
+        "2013"
+      ],
+      "printPublicationDate": [
+        "2013-01-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Plants (Basel, Switzerland)"
+          ],
+          "ISOAbbreviation": [
+            "Plants (Basel)"
+          ],
+          "medlineAbbreviation": [
+            "Plants (Basel)"
+          ],
+          "NLMid": [
+            "101596181"
+          ],
+          "ISSN": [
+            "2223-7747"
+          ],
+          "ESSN": [
+            "2223-7747"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2013"
+  ],
+  "pageInfo": [
+    "230-247"
+  ],
+  "abstractText": [
+    "Leaves show a wide range of shapes that results from the combinatory variations of two main parameters: the relative duration of the morphogenetic phase and the pattern of dissection of the leaf margin. To further understand the mechanisms controlling leaf shape, we have studied the interactions between several loci leading to increased dissection of the Arabidopsis leaf margins. Thus, we have used (i) mutants in which miR164 regulation of the CUC2 gene is impaired, (ii) plants overexpressing miR319/miRJAW that down-regulates multiple TCP genes and (iii) plants overexpressing the STIMPY/WOX9 gene. Through the analysis of their effects on leaf shape and KNOX I gene expression, we show that these loci act in different pathways. We show, in particular, that they have synergetic effects and that plants combining two or three of these loci show dramatic modifications of their leaf shapes. Finally, we present a working model for the role of these loci during leaf development."
+  ],
+  "affiliation": [
+    "AgroParisTech, Institut Jean-Pierre Bourgin, RD10, F-78000 Versailles, France. Thomas.Blein@versailles.inra.fr."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Growth",
+        "Leaf",
+        "Differentiation",
+        "Morphogenesis",
+        "Patterning"
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4844359"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.3390/plants2020230"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "N"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "1"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "N"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-05-04"
+  ],
+  "dateOfCreation": [
+    "2016-05-04"
+  ],
+  "dateOfRevision": [
+    "2016-05-06"
+  ],
+  "electronicPublicationDate": [
+    "2013-04-08"
+  ],
+  "firstPublicationDate": [
+    "2013-04-08"
+  ]
+}

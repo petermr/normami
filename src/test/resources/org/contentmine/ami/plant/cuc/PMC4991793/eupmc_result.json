@@ -1,0 +1,775 @@
+{
+  "id": [
+    "27541584"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27541584"
+  ],
+  "pmcid": [
+    "PMC4991793"
+  ],
+  "doi": [
+    "10.1371/journal.pgen.1006263"
+  ],
+  "title": [
+    "Developmental Functions of miR156-Regulated SQUAMOSA PROMOTER BINDING PROTEIN-LIKE (SPL) Genes in Arabidopsis thaliana."
+  ],
+  "authorString": [
+    "Xu M, Hu T, Zhao J, Park MY, Earley KW, Wu G, Yang L, Poethig RS."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Xu M"
+          ],
+          "firstName": [
+            "Mingli"
+          ],
+          "lastName": [
+            "Xu"
+          ],
+          "initials": [
+            "M"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-7997-573X",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Hu T"
+          ],
+          "firstName": [
+            "Tieqiang"
+          ],
+          "lastName": [
+            "Hu"
+          ],
+          "initials": [
+            "T"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Zhao J"
+          ],
+          "firstName": [
+            "Jianfei"
+          ],
+          "lastName": [
+            "Zhao"
+          ],
+          "initials": [
+            "J"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0002-7684-9575",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Park MY"
+          ],
+          "firstName": [
+            "Mee-Yeon"
+          ],
+          "lastName": [
+            "Park"
+          ],
+          "initials": [
+            "MY"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Earley KW"
+          ],
+          "firstName": [
+            "Keith W"
+          ],
+          "lastName": [
+            "Earley"
+          ],
+          "initials": [
+            "KW"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Wu G"
+          ],
+          "firstName": [
+            "Gang"
+          ],
+          "lastName": [
+            "Wu"
+          ],
+          "initials": [
+            "G"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Yang L"
+          ],
+          "firstName": [
+            "Li"
+          ],
+          "lastName": [
+            "Yang"
+          ],
+          "initials": [
+            "L"
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America."
+          ]
+        },
+        {
+          "fullName": [
+            "Poethig RS"
+          ],
+          "firstName": [
+            "R Scott"
+          ],
+          "lastName": [
+            "Poethig"
+          ],
+          "initials": [
+            "RS"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-6592-5862",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "Department of Biology, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0002-7684-9575",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-7997-573X",
+          "$": {
+            "type": "ORCID"
+          }
+        },
+        {
+          "_": "0000-0001-6592-5862",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "issue": [
+        "8"
+      ],
+      "volume": [
+        "12"
+      ],
+      "journalIssueId": [
+        "2435537"
+      ],
+      "dateOfPublication": [
+        "2016 Aug"
+      ],
+      "monthOfPublication": [
+        "8"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-08-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "PLoS genetics"
+          ],
+          "ISOAbbreviation": [
+            "PLoS Genet."
+          ],
+          "medlineAbbreviation": [
+            "PLoS Genet"
+          ],
+          "NLMid": [
+            "101239074"
+          ],
+          "ISSN": [
+            "1553-7390"
+          ],
+          "ESSN": [
+            "1553-7404"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "e1006263"
+  ],
+  "abstractText": [
+    "Correct developmental timing is essential for plant fitness and reproductive success. Two important transitions in shoot development-the juvenile-to-adult vegetative transition and the vegetative-to-reproductive transition-are mediated by a group of genes targeted by miR156, SQUAMOSA PROMOTER BINDING PROTEIN (SBP) genes. To determine the developmental functions of these genes in Arabidopsis thaliana, we characterized their expression patterns, and their gain-of-function and loss-of-function phenotypes. Our results reveal that SBP-LIKE (SPL) genes in Arabidopsis can be divided into three functionally distinct groups: 1) SPL2, SPL9, SPL10, SPL11, SPL13 and SPL15 contribute to both the juvenile-to-adult vegetative transition and the vegetative-to-reproductive transition, with SPL9, SP13 and SPL15 being more important for these processes than SPL2, SPL10 and SPL11; 2) SPL3, SPL4 and SPL5 do not play a major role in vegetative phase change or floral induction, but promote the floral meristem identity transition; 3) SPL6 does not have a major function in shoot morphogenesis, but may be important for certain physiological processes. We also found that miR156-regulated SPL genes repress adventitious root development, providing an explanation for the observation that the capacity for adventitious root production declines as the shoot ages. miR156 is expressed at very high levels in young seedlings, and declines in abundance as the shoot develops. It completely blocks the expression of its SPL targets in the first two leaves of the rosette, and represses these genes to different degrees at later stages of development, primarily by promoting their translational repression. These results provide a framework for future studies of this multifunctional family of transcription factors, and offer new insights into the role of miR156 in Arabidopsis development."
+  ],
+  "affiliation": [
+    "Department of Biology, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic-eCollection"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "research-article",
+        "Journal Article",
+        "Research Support, N.I.H., Extramural"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "R01 GM051893"
+          ],
+          "agency": [
+            "NIGMS NIH HHS"
+          ],
+          "acronym": [
+            "GM"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plants, Genetically Modified"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Arabidopsis"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Flowers"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Roots"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GD"
+                  ],
+                  "qualifierName": [
+                    "growth & development"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Proteins"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "ME"
+                  ],
+                  "qualifierName": [
+                    "metabolism"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "MicroRNAs"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "BI"
+                  ],
+                  "qualifierName": [
+                    "biosynthesis"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Developmental"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Gene Expression Regulation, Plant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Multigene Family"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Promoter Regions, Genetic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Plant Development"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "GE"
+                  ],
+                  "qualifierName": [
+                    "genetics"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chemicalList": [
+    {
+      "chemical": [
+        {
+          "name": [
+            "spore photoproduct lyase"
+          ],
+          "registryNumber": [
+            "EC 4.1.99.-"
+          ]
+        },
+        {
+          "name": [
+            "Proteins"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "MicroRNAs"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        },
+        {
+          "name": [
+            "Mirn156 microRNA, Arabidopsis"
+          ],
+          "registryNumber": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4991793?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4991793"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1371/journal.pgen.1006263"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "Y"
+  ],
+  "citedByCount": [
+    "27"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2017-05-23"
+  ],
+  "dateOfCreation": [
+    "2016-08-20"
+  ],
+  "dateOfRevision": [
+    "2018-07-19"
+  ],
+  "electronicPublicationDate": [
+    "2016-08-19"
+  ],
+  "firstPublicationDate": [
+    "2016-08-19"
+  ]
+}
