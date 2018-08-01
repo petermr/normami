@@ -30,6 +30,7 @@ public class AMIFixtures {
 	}
 	
 	public final static File TEST_RESOURCES_DIR    = new File(CHESConstants.SRC_TEST_RESOURCES);
+	public final static File TARGET_DIR    = new File("target");
 	
 	public final static File TEST_BMC_DIR          = new File(NAConstants.TEST_AMI_DIR, "bmc");
 	public final static File TEST_BMC_15_1_511_CMDIR = new File(AMIFixtures.TEST_BMC_DIR, "15_1_511");
@@ -55,6 +56,10 @@ public class AMIFixtures {
 	public final static File TEST_IJSEM_MALARIA_0119475  = new File(AMIFixtures.TEST_IJSEM_DIR, "journal.pone.0119475");
 
 	public final static File TEST_PHYLO_DIR          = new File(NAConstants.TEST_AMI_DIR, "phylo");
+	
+	public final static File TEST_PLANT_DIR          = new File(NAConstants.TEST_AMI_DIR, "plant");
+	public final static File TARGET_PLANT_DIR        = new File(AMIFixtures.TARGET_DIR, "plant");
+	
 	public final static File TEST_RESULTS_DIR        = new File(NAConstants.TEST_AMI_DIR, "results/");
 	public final static File TEST_RRID_DIR           = new File(NAConstants.TEST_AMI_DIR, "rrid/");
 
@@ -69,7 +74,10 @@ public class AMIFixtures {
 	public static final File TEST_WORKBENCH_MOSQUITO_PDF_SVG =
 			new File(TEST_WORKBENCH_DIR, "mosquitosPDFSVG");
 	public static final File TEST_WORKBENCH_MOSQUITO = new File(TEST_WORKBENCH_DIR, "mosquitos");
-	
+
+	public final static File TEST_PROJECTS_DIR       = new File("/Users/pm286/workspace/projects/");
+	public final static File TARGET_PROJECTS_DIR         = new File(AMIFixtures.TARGET_DIR, "projects/");
+
 	public static final File TARGET_EXAMPLES_TEMP_16_1_1  = new File("target/examples_16_1_1");
 
 	public static final String RESULTS_XML = "results.xml";

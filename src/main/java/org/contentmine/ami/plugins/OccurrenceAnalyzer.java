@@ -1,13 +1,18 @@
 package org.contentmine.ami.plugins;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.cproject.util.CMineUtil;
+import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.eucl.xml.XMLUtil;
 
 import com.google.common.collect.HashMultiset;
@@ -25,60 +30,78 @@ import nu.xom.Node;
 // FIXME put this into CorpusCache
 
 public class OccurrenceAnalyzer {
+	private static final Logger LOG = Logger.getLogger(OccurrenceAnalyzer.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
 
 	public enum OccurrenceType {
 		BINOMIAL("binomial", "match"),
 		STRING(null, "exact"), 
-		GENE(null, "exact"), 
+		GENE("gene", "exact"), 
 		;
 		
-		private String name;
-		private String matchMethod;
-		private GeneType geneType;
+		private final String name;
+		private final String matchMethod;
 		
 		private OccurrenceType(String name, String matchMethod) {
 			this.name = name;
 			this.matchMethod = matchMethod;
-			this.geneType = null;
+		}
+		public String getName() {
+			return name;
 		}
 		public String getMatchMethod() {
 			return matchMethod;
 		}
-		public void setSubType(GeneType subType) {
-			this.geneType = subType;
+		@Override
+		public String toString() {
+			return "{type: " + name + " / " + matchMethod + "}";
 		}
 	}
 
-	public enum GeneType {
+	/** this is messy until we get a wider idea of what problems we are tackling.
+	 * 
+	 * @author pm286
+	 *
+	 */
+	public enum SubType {
 		HUMAN("human"),
 		MOUSE("mouse"),
 		DROSOPHILA("drosophila"),
 		ARABIDOPSIS("arabidopsis"),
 		;
 		
-		private String type;
-		private GeneType(String type) {
-			this.type = type;
+		private final String name;
+		private SubType(String name) {
+			this.name = name;
 		}
 		
-		public String getType() {
-			return type;
+		public String getName() {
+			return name;
+		}
+		@Override
+		public String toString() {
+			return "{subtype: " + name +"}";
 		}
 	}
+
+	public static final String HISTOGRAM = "histogram";
 
 	private List<Multiset.Entry<String>> resultsByImportance;
 	private Map<String, Integer> serialByTermImportance;
 	private Map<File, List<Multiset.Entry<String>>> entryListByFile;
 
+	private String name;
 	private OccurrenceType type = OccurrenceType.STRING;
+	private SubType subType;
 	private String resultsDirRegex;
-	private String code;
 	private int maxCount;
-	private List<File> resultsFiles;
-	private List<File> cTreeFiles;
+	private List<File> resultsFiles; // descendants of cTree
+	private List<File> cTreeFiles;   // ancestor of results (?1:1 map)
 	private EntityAnalyzer entityAnalyzer;
 	
-	public OccurrenceAnalyzer() {
+	OccurrenceAnalyzer() {
 		setDefaults();
 	}
 	
@@ -87,24 +110,26 @@ public class OccurrenceAnalyzer {
 		maxCount = 20;
 	}
 
-	public OccurrenceAnalyzer setSearch(OccurrenceType type) {
-		this.type = type;
-		return this;
-	}
-
 	public OccurrenceAnalyzer setResultsDirRegex(String resultsDirRegex) {
 		this.resultsDirRegex = resultsDirRegex;
 		return this;
 	}
 
-	public String getAttName() {
+	public String getMatchMethod() {
 		return type.getMatchMethod();
+	}
+
+	public String getName() {
+		return OccurrenceType.STRING.equals(type) ? name : type.getName();
 	}
 
 	private List<Multiset.Entry<String>> getAllMatchedSpeciesInFileSortedByCount(File binomialFile) {
 		Element element = XMLUtil.parseQuietlyToDocument(binomialFile).getRootElement();
-		String attName = getAttName();
-		List<Node> matches = XMLUtil.getQueryNodes(element, ".//*[local-name()='result']/@" + attName); // match expands species
+		String method = getMatchMethod();
+		String xpath = ".//*[local-name()='result']/@" + method;
+		LOG.trace("xp "+xpath);
+		List<Node> matches = XMLUtil.getQueryNodes(element, xpath); // match expands species
+		LOG.trace(">>match: "+method+">"+matches);
 		Multiset<String> multiSet = HashMultiset.create();
 		for (Node match : matches) {
 			multiSet.add(match.getValue());
@@ -117,8 +142,10 @@ public class OccurrenceAnalyzer {
 		if (entryListByFile == null) {
 			entryListByFile = new HashMap<File, List<Multiset.Entry<String>>>();
 			resultsFiles = getOrCreateResultsFiles();
+			LOG.trace("entryList "+resultsFiles);
 			for (File resultsFile : resultsFiles) {
 				List<Multiset.Entry<String>> resultsEntries = getAllMatchedSpeciesInFileSortedByCount(resultsFile);
+				LOG.trace("match "+resultsEntries);
 				File cTreeFile = getCTreeFileAncestorFromResultsFile(resultsFile);
 				entryListByFile.put(cTreeFile, resultsEntries);
 			}
@@ -140,6 +167,7 @@ public class OccurrenceAnalyzer {
 	public List<Multiset.Entry<String>> getEntriesSortedByImportance() {
 		getOrCreateEntryListByCTreeFile();
 		Multiset<String> resultsMedianSet = getMedianMultiSet(entryListByFile);
+		LOG.trace(">med> "+resultsMedianSet);
 		resultsByImportance = CMineUtil.getEntryListSortedByCount(resultsMedianSet);
 		return resultsByImportance;
 	}
@@ -151,6 +179,7 @@ public class OccurrenceAnalyzer {
 	 * @return
 	 */
 	private Multiset<String> getMedianMultiSet(Map<File, List<Entry<String>>> resultsSetListByFile) {
+		LOG.trace("occ "+resultsSetListByFile);
 		Multiset<String> resultsSet = HashMultiset.create();
 		for (List<Entry<String>> entryList : resultsSetListByFile.values()) {
 			for (Entry<String> entry : entryList) {
@@ -159,11 +188,6 @@ public class OccurrenceAnalyzer {
 			}
 		}
 		return  resultsSet;
-	}
-
-	public OccurrenceAnalyzer setCode(String code) {
-		this.code = code;
-		return this;
 	}
 
 	public OccurrenceAnalyzer setMaxCount(int maxCount) {
@@ -180,10 +204,12 @@ public class OccurrenceAnalyzer {
 	public Map<String, Integer> getOrCreateSerialByTermImportance() {
 		if (serialByTermImportance == null) {
 			serialByTermImportance = new HashMap<String, Integer>();
-			for (Integer serial = 0; serial < resultsByImportance.size(); serial++) {
-				Entry<String> termEntry = resultsByImportance.get(serial);
-				String term = termEntry.getElement();
-				serialByTermImportance.put(term, serial);
+			if (resultsByImportance != null) {
+				for (Integer serial = 0; serial < resultsByImportance.size(); serial++) {
+					Entry<String> termEntry = resultsByImportance.get(serial);
+					String term = termEntry.getElement();
+					serialByTermImportance.put(term, serial);
+				}
 			}
 		}
 		return serialByTermImportance;
@@ -209,11 +235,13 @@ public class OccurrenceAnalyzer {
 	public List<Integer> getSerialList(List<Entry<String>> termEntryList) {
 		getOrCreateSerialByTermImportance();
 		List<Integer> serialList = new ArrayList<Integer>();
-		for (Entry<String> termEntry : termEntryList) {
-			if (termEntry != null) {
-				Integer serial = serialByTermImportance.get(termEntry.getElement());
-				if (serial != null) {
-					serialList.add(serial);
+		if (termEntryList != null) {
+			for (Entry<String> termEntry : termEntryList) {
+				if (termEntry != null) {
+					Integer serial = serialByTermImportance.get(termEntry.getElement());
+					if (serial != null) {
+						serialList.add(serial);
+					}
 				}
 			}
 		}
@@ -228,8 +256,18 @@ public class OccurrenceAnalyzer {
 		return type;
 	}
 
-	public void setType(OccurrenceType type) {
+	public OccurrenceAnalyzer setType(OccurrenceType type) {
 		this.type = type;
+		return this;
+	}
+
+	public SubType getSubType() {
+		return subType;
+	}
+
+	public OccurrenceAnalyzer setSubType(SubType type) {
+		this.subType = type;
+		return this;
 	}
 
 	public OccurrenceAnalyzer setEntityAnalyzer(EntityAnalyzer entityAnalyzer) {
@@ -237,5 +275,65 @@ public class OccurrenceAnalyzer {
 		return this;
 	}
 
+	/** gets sorted entries */
+	public List<Entry<String>> debug() {
+		List<Entry<String>> cellsByImportance = this.getEntriesSortedByImportance();
+		String message = getFullName();
+		LOG.debug("analyze: " + message + "\n" + cellsByImportance);
+		return cellsByImportance;
+	}
 
+	public String getFullName() {
+		String fullName = this.name;
+		if (fullName == null) {
+			fullName = type.name + (subType == null ? "" : "|"+subType.name);
+		}
+		return fullName;
+	}
+
+	public OccurrenceAnalyzer setName(String name) {
+		this.name = name;
+		return this;
+	}
+
+	/** writes to cProject directory: 
+	 * 
+	 * creates <fullName>.csv in format 
+	 * name,count
+	 * where fullName is generated from type and subType (getFullName())
+	 * 
+	 * @throws IOException 
+	 * 
+	 */
+	public void writeCSV() throws IOException {
+		getEntriesSortedByImportance();
+		File csvFile = getCSVFileName();
+		MultisetUtil.writeCSV(csvFile, resultsByImportance, getName());
+	}
+
+	public File getCSVFileName() {
+		File csvTop = new File(entityAnalyzer.getProjectDir(), "csv");
+		File typeTop = new File(csvTop, OccurrenceType.STRING.equals(type) ? name : type.name);
+		File csvDir = subType == null ? typeTop : new File(typeTop, subType.getName());
+		return new File(csvDir, HISTOGRAM + ".csv");
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(type.toString()+" // "+name+" / "+resultsDirRegex+" / "+maxCount);
+		return sb.toString();
+	}
+	
+	/** number fo cTree Files
+	 * 
+	 * @return
+	 */
+	public int getSize() {
+		return cTreeFiles == null ? 0 : cTreeFiles.size();
+	}
+
+	int getTermCount() {
+		return getOrCreateSerialByTermImportance().size();
+	}
 }
