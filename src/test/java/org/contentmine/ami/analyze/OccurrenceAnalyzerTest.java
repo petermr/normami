@@ -2,6 +2,7 @@ package org.contentmine.ami.analyze;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -25,6 +26,9 @@ public class OccurrenceAnalyzerTest {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+
+	List<String> OBESITY_DICTIONARIES = Arrays.asList(
+			"word", "gene", "country", "disease", "funders", "inn", "obesity", "poverty");
 
 	@Test
 	public void  testMarchantiaEPMC() throws IOException {
@@ -157,8 +161,9 @@ public class OccurrenceAnalyzerTest {
 		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(outputDir);
 		entityAnalyzer.setWriteCSV(true);
 		entityAnalyzer.setForceRun(forceRun);
-		entityAnalyzer.analyzeObesityCoocurrences();
+		entityAnalyzer.analyzeCoocurrences(OBESITY_DICTIONARIES);
 	}
+	
 	@Test
 	public void  testObesityLarge() throws IOException {
 		String fileroot = "obesityLarge";
@@ -174,8 +179,62 @@ public class OccurrenceAnalyzerTest {
 		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(outputDir);
 		entityAnalyzer.setWriteCSV(true);
 		entityAnalyzer.setForceRun(forceRun);
-		entityAnalyzer.analyzeObesityCoocurrences();
+		entityAnalyzer.analyzeCoocurrences(OBESITY_DICTIONARIES);
 	}
+	@Test
+	public void  testObesityPoverty() throws IOException {
+		String fileroot = "obesityPoverty";
+		boolean copyToTarget = true;
+		boolean forceRun = true;
+		File inputDir = new File(new File(AMIFixtures.TEST_PROJECTS_DIR, "obesity"), fileroot); // nested
+		File outputDir =  new File(AMIFixtures.TARGET_PROJECTS_DIR, fileroot);
+		if (copyToTarget) {
+			CMineTestFixtures.cleanAndCopyDir(inputDir, outputDir);
+			LOG.debug("copied raw");
+		}
+
+		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(outputDir);
+		entityAnalyzer.setWriteCSV(true);
+		entityAnalyzer.setForceRun(forceRun);
+		entityAnalyzer.analyzeCoocurrences(OBESITY_DICTIONARIES);
+
+	}
+	@Test
+	public void  testObesityEcuador() throws IOException {
+		String fileroot = "ecuador";
+		boolean copyToTarget = true;
+		boolean forceRun = true;
+		File inputDir = new File(new File(AMIFixtures.TEST_PROJECTS_DIR, "obesity"), fileroot); // nested
+		File outputDir =  new File(AMIFixtures.TARGET_PROJECTS_DIR, fileroot);
+		if (copyToTarget) {
+			CMineTestFixtures.cleanAndCopyDir(inputDir, outputDir);
+			LOG.debug("copied raw");
+		}
+
+		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(outputDir);
+		entityAnalyzer.setWriteCSV(true);
+		entityAnalyzer.setForceRun(forceRun);
+		entityAnalyzer.analyzeCoocurrences(OBESITY_DICTIONARIES);
+
+	}
+	@Test
+	public void  testObesityRefugee() throws IOException {
+		String fileroot = "obesityRefugee";
+		boolean copyToTarget = true;
+		boolean forceRun = true;
+		File inputDir = new File(new File(AMIFixtures.TEST_PROJECTS_DIR, "obesity"), fileroot); // nested
+		File outputDir =  new File(AMIFixtures.TARGET_PROJECTS_DIR, fileroot);
+		if (copyToTarget) {
+			CMineTestFixtures.cleanAndCopyDir(inputDir, outputDir);
+			LOG.debug("copied raw");
+		}
+
+		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(outputDir);
+		entityAnalyzer.setWriteCSV(true);
+		entityAnalyzer.setForceRun(forceRun);
+		entityAnalyzer.analyzeCoocurrences(OBESITY_DICTIONARIES);
+	}
+
 	@Test
 	public void  testZika() throws IOException {
 		String fileroot = "zika2018";

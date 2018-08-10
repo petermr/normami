@@ -3,6 +3,7 @@ package org.contentmine.ami.plugins;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Level;
@@ -279,34 +280,45 @@ public class EntityAnalyzer {
 		createAllCooccurrences();
 	}
 
-	public void analyzeObesityCoocurrences() throws IOException {
+	public void analyzeCoocurrences(List<String> searchList) throws IOException {
 		if (forceRun ) {
 			runNormaNLM();
 		}
-		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
-		+ " gene(human) "
-		+ " search(disease)"
-		+ " search(country)"
-		+ " search(funders)"
-		+ " search(inn)"
-		+ " search(niddk)"
-		+ " search(cochrane)"
+		String cmd = createSearchStringAndCooccurrenceAnalyzers(searchList);
 	
-	    ;
 		if (forceRun) {
 			CommandProcessor.main((getProjectDir()+" "+cmd).split("\\s+"));
 		}
 		
-		createAndAddOccurrenceAnalyzer(OccurrenceType.GENE, SubType.HUMAN).setMaxCount(30);
-//		createAndAddOccurrenceAnalyzer(OccurrenceType.BINOMIAL).setMaxCount(25);
-		createAndAddOccurrenceAnalyzer("disease").setMaxCount(20);
-		createAndAddOccurrenceAnalyzer("country").setMaxCount(20);
-		createAndAddOccurrenceAnalyzer("funders").setMaxCount(20);
-		createAndAddOccurrenceAnalyzer("inn").setMaxCount(20);
-		createAndAddOccurrenceAnalyzer("niddk").setMaxCount(20);
-		createAndAddOccurrenceAnalyzer("cochrane").setMaxCount(20);
+//		createAndAddOccurrenceAnalyzer("country").setMaxCount(20);
+//		createAndAddOccurrenceAnalyzer("funders").setMaxCount(20);
+//		createAndAddOccurrenceAnalyzer("inn").setMaxCount(20);
+//		createAndAddOccurrenceAnalyzer("obesity").setMaxCount(20);
+//		createAndAddOccurrenceAnalyzer("cochrane").setMaxCount(20);
 		
 		createAllCooccurrences();
+	}
+
+	private String createSearchStringAndCooccurrenceAnalyzers(List<String> searchList) {
+		String cmd = "";
+		for (String search : searchList) {
+			search = search.toLowerCase();
+			if (search.equals("word")) {
+				cmd += "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt";
+			} else if (search.equals("species")) {
+				cmd += " species(binomial) ";
+				createAndAddOccurrenceAnalyzer(OccurrenceType.BINOMIAL).setMaxCount(30);
+			} else if (search.equals("gene")) {
+				cmd += " gene(human) ";
+				createAndAddOccurrenceAnalyzer(OccurrenceType.GENE, SubType.HUMAN).setMaxCount(30);
+			} else {
+				cmd += " search("+search+")";
+				createAndAddOccurrenceAnalyzer(search).setMaxCount(20);
+			}
+		}
+		LOG.debug("cmd:"+cmd);
+		LOG.debug("cooccurrence analyzers: "+cooccurrenceAnalyzerList);
+		return cmd;
 	}
 
 
