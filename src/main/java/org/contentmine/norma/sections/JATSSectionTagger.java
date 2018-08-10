@@ -23,9 +23,14 @@ import org.contentmine.norma.NormaArgProcessor;
 
 import nu.xom.Element;
 
-public class JASTSectionTagger {
+/** used to be called JAST but surely a misprint
+ * 
+ * @author pm286
+ *
+ */
+public class JATSSectionTagger {
 
-	private static final Logger LOG = Logger.getLogger(JASTSectionTagger.class);
+	private static final Logger LOG = Logger.getLogger(JATSSectionTagger.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -147,7 +152,7 @@ public class JASTSectionTagger {
 
 
 	
-	public JASTSectionTagger() {
+	public JATSSectionTagger() {
 		
 	}
 
@@ -392,7 +397,7 @@ public class JASTSectionTagger {
 		for (int i = 0; i < root.getChildElements().size(); i++) {
 			Element child = root.getChildElements().get(i);
 			String localName = child.getLocalName();
-			if (localName.equals(JASTSectionTagger.HELP)) {
+			if (localName.equals(JATSSectionTagger.HELP)) {
 				continue;
 			} else if (!localName.equals("tag")) {
 				LOG.error("Bad tag: "+localName);
