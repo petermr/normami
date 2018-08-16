@@ -36,7 +36,7 @@ public class JATSElement extends Element {
 		// no-op override
 	}
 
-	public void recurse(Element element, JATSFactory jatsFactory) {
+	public void recurseThroughDescendants(Element element, JATSFactory jatsFactory) {
 		XMLUtil.copyAttributes(element, this);
 		this.setClassAttribute(element.getLocalName());
 		for (int i = 0; i < element.getChildCount(); i++) {

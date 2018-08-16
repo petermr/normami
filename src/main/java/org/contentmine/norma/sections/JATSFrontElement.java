@@ -43,4 +43,12 @@ public class JATSFrontElement extends JATSElement {
 	public String getPMCID() {
 		return articleMeta == null ? null : articleMeta.getPMCID();
 	}
+
+	public JATSJournalMetaElement getJournalMeta() {
+		return journalMeta;
+	}
+
+	public JATSArticleMetaElement getArticleMeta() {
+		return articleMeta;
+	}
 }

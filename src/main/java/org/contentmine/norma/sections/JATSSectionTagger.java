@@ -156,22 +156,13 @@ public class JATSSectionTagger {
 		
 	}
 
-	public void readScholarlyHtml(File scholarlyHtmlFile) {
+	public HtmlElement readScholarlyHtml(File scholarlyHtmlFile) {
 		testNotNullAndExists(scholarlyHtmlFile);
 		HtmlFactory htmlFactory = new HtmlFactory();
 		htmlElement = htmlFactory.parse(XMLUtil.parseQuietlyToDocument(scholarlyHtmlFile).getRootElement());
+		return htmlElement;
 	}
 
-	private void testNotNullAndExists(File scholarlyHtmlFile) {
-		if (scholarlyHtmlFile == null) {
-			throw new RuntimeException("null scholarlyHtml");
-		} else if (!scholarlyHtmlFile.exists()) {
-			throw new RuntimeException(scholarlyHtmlFile+" is not an existing file");
-		} else if (scholarlyHtmlFile.isDirectory()) {
-			throw new RuntimeException(scholarlyHtmlFile+" is a directory");
-		}
-	}
-	
 	public HtmlElement getHtmlElement() {
 		return htmlElement;
 	}
@@ -442,5 +433,19 @@ public class JATSSectionTagger {
 		}
 		return sections;
 	}
+	
+	// ================================
+	
+	private void testNotNullAndExists(File scholarlyHtmlFile) {
+		if (scholarlyHtmlFile == null) {
+			throw new RuntimeException("null scholarlyHtml");
+		} else if (!scholarlyHtmlFile.exists()) {
+			throw new RuntimeException(scholarlyHtmlFile+" is not an existing file");
+		} else if (scholarlyHtmlFile.isDirectory()) {
+			throw new RuntimeException(scholarlyHtmlFile+" is a directory");
+		}
+	}
+	
+
 
 }

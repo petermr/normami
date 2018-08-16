@@ -1,11 +1,13 @@
 package org.contentmine.norma.sections;
 
+import java.io.File;
+import java.io.InputStream;
 import java.util.Arrays;
-
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.cproject.util.XMLUtils;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlA;
 import org.contentmine.graphics.html.HtmlB;
@@ -27,6 +29,7 @@ import org.contentmine.graphics.html.HtmlTh;
 import org.contentmine.graphics.html.HtmlThead;
 import org.contentmine.graphics.html.HtmlTr;
 
+import nu.xom.Document;
 import nu.xom.Element;
 import nu.xom.Node;
 
@@ -111,7 +114,7 @@ public class JATSFactory {
 	}
 
 	/** creates subclassed elements.
-	 * 
+	 * normally returns 
 	 * 
 	 * @param element
 	 * @return
@@ -122,97 +125,105 @@ public class JATSFactory {
 		String namespaceURI = element.getNamespaceURI();
 		if (false) {
 			
+		} else if(JATSArticleCategoriesElement.TAG.equals(tag)) {
+			sectionElement = new JATSArticleCategoriesElement(element);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
+			
 		} else if(JATSArticleElement.TAG.equals(tag)) {
 			sectionElement = new JATSArticleElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSJournalTitleGroupElement.TAG.equals(tag)) {
 			sectionElement = new JATSJournalTitleGroupElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
+			
+		} else if(JATSArticleTitleGroupElement.TAG.equals(tag)) {
+			sectionElement = new JATSJournalTitleGroupElement(element);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSArticleMetaElement.TAG.equals(tag)) {
 			sectionElement = new JATSArticleMetaElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSJournalMetaElement.TAG.equals(tag)) {
 			sectionElement = new JATSJournalMetaElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSFnGroupElement.TAG.equals(tag)) {
 			sectionElement = new JATSFnGroupElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSFnElement.TAG.equals(tag)) {
 			sectionElement = new JATSFnElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSSecElement.TAG.equals(tag)) {
 			sectionElement = new JATSSecElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSFrontElement.TAG.equals(tag)) {
 			sectionElement = new JATSFrontElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSBodyElement.TAG.equals(tag)) {
 			sectionElement = new JATSBodyElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSBackElement.TAG.equals(tag)) {
 			sectionElement = new JATSBackElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSContribGroupElement.TAG.equals(tag)) {
 			sectionElement = new JATSContribGroupElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSContribElement.TAG.equals(tag)) {
 			sectionElement = new JATSContribElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSPubDateElement.TAG.equals(tag)) {
 			sectionElement = new JATSPubDateElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSDateElement.TAG.equals(tag)) {
 			sectionElement = new JATSDateElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSHistoryElement.TAG.equals(tag)) {
 			sectionElement = new JATSHistoryElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSPersonGroupElement.TAG.equals(tag)) {
 			sectionElement = new JATSPersonGroupElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSElementCitationElement.TAG.equals(tag)) {
 			sectionElement = new JATSElementCitationElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSReflistElement.TAG.equals(tag)) {
 			sectionElement = new JATSReflistElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSArticleIdElement.TAG.equals(tag)) {
 			sectionElement = new JATSArticleIdElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSArticleMetaElement.TAG.equals(tag)) {
 			sectionElement = new JATSArticleMetaElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSAffElement.TAG.equals(tag)) {
 			sectionElement = new JATSAffElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSNameElement.TAG.equals(tag)) {
 			sectionElement = new JATSNameElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			
 		} else if(JATSRefElement.TAG.equals(tag)) {
 			sectionElement = new JATSRefElement(element);
-			((JATSElement)sectionElement).recurse(element, this);
+			((JATSElement)sectionElement).recurseThroughDescendants(element, this);
 			LOG.trace(((JATSRefElement)sectionElement).getPMID());
 			
 		} else if(JATSSpanFactory.isSpan(tag)) {
@@ -399,6 +410,29 @@ public class JATSFactory {
 				}
 			}
 		}
+	}
+
+	private Element readElement(InputStream is) {
+		Document doc = XMLUtils.parseWithoutDTD(is);
+		Element element = doc == null ? null : doc.getRootElement();
+		return element;
+	}
+
+	public JATSArticleElement createJATSArticleElememt(InputStream is) {
+		Element inputElement = readElement(is);
+		return createJATSArticleElement(inputElement);
+	}
+
+	public JATSArticleElement createJATSArticleElement(Element inputElement) {
+		Element jatsElement = this.create(inputElement);
+		return (jatsElement == null || !(jatsElement instanceof JATSArticleElement)) ? null 
+				: (JATSArticleElement) jatsElement;
+	}
+
+	public JATSArticleElement readArticle(File inputFile) {
+		Element inputElement = XMLUtils.parseWithoutDTD(inputFile).getRootElement();
+		JATSArticleElement articleElement = createJATSArticleElement(inputElement);
+		return articleElement;
 	}
 
 }

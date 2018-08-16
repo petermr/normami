@@ -160,42 +160,45 @@ public class JATSArticleMetaElement extends JATSElement {
 	public final static List<String> ALLOWED_CHILD_NAMES = Arrays.asList(new String[] {
 		JATSDivFactory.ABSTRACT,
 		JATSDivFactory.AFF,
-		JATSDivFactory.AUTHOR_NOTES,
 		JATSDivFactory.ARTICLE_CATEGORIES,
+		JATSDivFactory.AUTHOR_NOTES,
+		JATSDivFactory.CONFERENCE,
 		JATSDivFactory.CONTRIB,
 		JATSDivFactory.CONTRIB_GROUP,
 		JATSDivFactory.COUNTS,
 		JATSDivFactory.CUSTOM_META_GROUP,
+		JATSDivFactory.CUSTOM_META_WRAP,
 		JATSDivFactory.FUNDING_GROUP,
 		JATSDivFactory.HISTORY,
 		JATSDivFactory.KWD_GROUP,
+		JATSDivFactory.LICENSE,
 		JATSDivFactory.PERMISSIONS,
 		JATSDivFactory.PUB_DATE,
-		JATSDivFactory.TITLE_GROUP,
-		JATSSpanFactory.EXT_LINK,
-		JATSSpanFactory.SELF_URI,
 		JATSDivFactory.RELATED_ARTICLE,
+		JATSDivFactory.SUPPLEMENT,
+		JATSDivFactory.TITLE_GROUP,
+		JATSDivFactory.TRANS_ABSTRACT,
 			
 		JATSSpanFactory.ARTICLE_ID,
-		JATSSpanFactory.VOLUME,
-		JATSSpanFactory.FPAGE,
-		JATSSpanFactory.LPAGE,
-		JATSSpanFactory.ISSUE,
-		JATSSpanFactory.ISSUE_TITLE,
-		JATSSpanFactory.ELOCATION_ID,
-		JATSSpanFactory.COPYRIGHT_YEAR,
 		JATSSpanFactory.COPYRIGHT_STATEMENT,
+		JATSSpanFactory.COPYRIGHT_YEAR,
+		JATSSpanFactory.ELOCATION_ID,
+		JATSSpanFactory.EXT_LINK,
+		JATSSpanFactory.FPAGE,
+		JATSSpanFactory.ISSUE,
 		JATSSpanFactory.ISSUE_ID,
-		JATSDivFactory.LICENSE,
-		JATSDivFactory.TRANS_ABSTRACT,
-		JATSDivFactory.CUSTOM_META_WRAP,
-		JATSDivFactory.SUPPLEMENT,
-		JATSDivFactory.CONFERENCE,
+		JATSSpanFactory.ISSUE_TITLE,
+		JATSSpanFactory.LPAGE,
+		JATSSpanFactory.SELF_URI,
+		JATSSpanFactory.VOLUME,
 	});
 
 	private List<JATSAffElement> affList;
 
+	private JATSAbstractElement abstractx;
 	private JATSHistoryElement history;
+	private JATSArticleTitleGroupElement titleGroup;
+	private JATSContribGroupElement contribGroup;
 	
 	public JATSArticleMetaElement(Element element) {
 		super(element);
@@ -205,11 +208,34 @@ public class JATSArticleMetaElement extends JATSElement {
 		return ALLOWED_CHILD_NAMES;
 	}
 
+	/**
+	    <article-id pub-id-type="pmcid">3289602</article-id>
+	 * @return
+	 */
 	public String getPMCID() {
-		String xpath = "*[local-name()='"+JATSArticleIdElement.TAG+"' and @"+JATSArticleIdElement.PUB_ID_TYPE+"='"+JATSArticleIdElement.PMCID+"']";
+		String xpath = "*[local-name()='"+JATSArticleIdElement.TAG+"' "
+				+ "and @"+JATSArticleIdElement.PUB_ID_TYPE+"='"+JATSArticleIdElement.PMCID+"']";
 		String val = XMLUtil.getSingleValue(this, xpath);
 		return val;
 	}
+
+	/**
+    <article-id pub-id-type="pmcid">3289602</article-id>
+ * @return
+ */
+public String getPublisherID() {
+	String xpath = "*[local-name()='"+JATSArticleIdElement.TAG+"' "
+			+ "and @"+JATSArticleIdElement.PUB_ID_TYPE+"='"+JATSArticleIdElement.PMCID+"']";
+	String val = XMLUtil.getSingleValue(this, xpath);
+	return val;
+}
+
+/**
+	<article-id pub-id-type="publisher-id">PNTD-D-11-00811</article-id>
+	<article-id pub-id-type="doi">10.1371/journal.pntd.0001477</article-id>
+	*/
+
+	
 	protected void applyNonXMLSemantics() {
 		makeAffListAndResolve();
 		history = (JATSHistoryElement) this.getSingleChild(JATSHistoryElement.TAG);
@@ -223,5 +249,9 @@ public class JATSArticleMetaElement extends JATSElement {
 			affList.add((JATSAffElement)element);
 		}
 		
+	}
+
+	public JATSAbstractElement getAbstract() {
+		return abstractx;
 	}
 }

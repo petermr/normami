@@ -21,6 +21,7 @@ public class JATSSpanFactory {
 	public final static String ALT_TEXT = "alt-text";
 	public final static String ANNOTATION = "annotation";
 	public final static String ARTICLE_ID = "article-id";
+	public final static String ARTICLE_TITLE = "article-title"; // NOTE this may be irregular
 	public final static String ATTRIB = "attrib";
 	public final static String AWARD_ID = "award-id";
 	public final static String BOLD = "bold";
