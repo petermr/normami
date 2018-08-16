@@ -116,14 +116,25 @@ public class SectionTest {
 	@Test
 	public void testArticleMetaDivChildren() {
 		assertDivChildren(
-				"article-meta",
-				PMC3289602HTML,  
-				new String[] {"article-categories", "title-group", "contrib-group", "contrib-group", "author-notes", "permissions", "abstract", "abstract", "counts"}, 
-				new String[] {"pmcid", "publisher-id", "doi", "citation_author_institution", "citation_author_institution", "citation_author_institution", "citation_author_institution", "pub-date-collection", "pub-date-epub", "volume", "issue", "elocation-id", "history"},
-				0);
+			"article-meta",
+			PMC3289602HTML,  
+			new String[] {"article-categories", "title-group", "contrib-group", "contrib-group",
+					"author-notes", "permissions", "abstract", "abstract", "counts"}, 
+			new String[] {
+				"pmcid", "publisher-id", "doi", 
+				"citation_author_institution", "citation_author_institution", "citation_author_institution",
+				"citation_author_institution", 
+				"pub-date-collection", "pub-date-epub", "volume", "issue", "elocation-id", "history"},
+			0);
 	}
 	
-
+	/** extract journal-meta divs.
+	 */
+	@Test
+	public void testFrontNonAbstract() {
+		HtmlElement htmlElement = readJATSHtmlElement(PMC3289602HTML);
+	}
+	
 	
 	/** extract body divs.
 	 */
@@ -202,29 +213,8 @@ public class SectionTest {
 		Assert.assertEquals("li "+liElements.size(), 57, liElements.size());
 	}
 	
-
 	
-	/** extract top divs.
-	 * 
-	 */
-	@Test
-	public void testDivsWithDivAncestorOrDivParent() {
-		JATSSectionTagger tagger = new JATSSectionTagger();
-		tagger.readScholarlyHtml(PMC3289602HTML);
-		HtmlElement htmlElement = tagger.getHtmlElement();
-		String xpath = ".//*[local-name()='div']/*[local-name()='div']";
-		List<HtmlElement> divs = HtmlUtil.getQueryHtmlElements(htmlElement, xpath);
-		Assert.assertEquals("divs "+divs.size(), 109, divs.size());
-		xpath = ".//*[local-name()='div' and *[local-name()='div']]";
-		divs = HtmlUtil.getQueryHtmlElements(htmlElement, xpath);
-		Assert.assertEquals("divs "+divs.size(), 44, divs.size());
-		xpath = ".//*[local-name()='div' and *[local-name()='div' and *[local-name()='div']]]";
-		divs = HtmlUtil.getQueryHtmlElements(htmlElement, xpath);
-		Assert.assertEquals("divs "+divs.size(), 17, divs.size());
-		
-	}
-	
-	/** extract the (many) divs.
+	/** extract the spans.
 	 * They may be nested
 	 * 
 	 */
@@ -235,6 +225,7 @@ public class SectionTest {
 		List<HtmlSpan> spans = tagger.getSpans();
 		Assert.assertEquals("spans "+spans.size(), 1222, spans.size());
 	}
+	
 	
 	// ===================================
 
@@ -411,16 +402,7 @@ public class SectionTest {
 //		List<HtmlDiv> methods = tagger.getKeywords();
 //		Assert.assertEquals("divs "+methods.size(), 1, methods.size()); 
 //	}
-//
-//	@Test
-//	public void testMethods() {
-//		SectionTagger tagger = new SectionTagger();
-//		tagger.readScholarlyHtml(PMC3289602HTML);
-//		List<HtmlDiv> methods = tagger.getMethods();
-//		// FIXME
-////		Assert.assertEquals("divs "+methods.size(), 1, methods.size()); 
-//	}
-//
+
 //	@Test
 //	public void testOther() {
 //		SectionTagger tagger = new SectionTagger();
@@ -469,12 +451,17 @@ public class SectionTest {
 		JATSSectionTagger tagger = new JATSSectionTagger();
 		tagger.readJATS(PMC3289602XML);
 		Element jatsElement = tagger.getJATSHtmlElement();
-//		LOG.debug(jatsElement.toXML().length());
-		XMLUtil.debug(jatsElement, new File("target/jats/PMC3289602.html"), 1);
+		File file = new File("target/jats/PMC3289602.html");
+		XMLUtil.debug(jatsElement, file, 1);
+		Assert.assertTrue("jats exists", file.exists());
 	}
 
 	@Test
-	public void testCreateArticle() throws IOException {
+	/** reads article and makes RefList.
+	 * 
+	 * @throws IOException
+	 */
+	public void testCreateArticleAndReflist() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
 		tagger.readJATS(PMC3289602XML);
 		JATSArticleElement jatsArticleElement = tagger.getJATSArticleElement();

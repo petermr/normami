@@ -59,9 +59,22 @@ public class AMIFixtures {
 	
 	public final static File TEST_PLANT_DIR          = new File(NAConstants.TEST_AMI_DIR, "plant");
 	public final static File TARGET_PLANT_DIR        = new File(AMIFixtures.TARGET_DIR, "plant");
-	
+
+	public final static File TEST_PLOT_DIR    = new File(NAConstants.TEST_NORMA_DIR, "plot");
+
 	public final static File TEST_RESULTS_DIR        = new File(NAConstants.TEST_AMI_DIR, "results/");
 	public final static File TEST_RRID_DIR           = new File(NAConstants.TEST_AMI_DIR, "rrid/");
+
+	public final static File TEST_SET_DIR            = new File(NAConstants.TEST_NORMA_DIR, "testSets");
+	public final static File TEST_SET_MARCHANTIA_DIR = new File(AMIFixtures.TEST_SET_DIR, "marchantia");
+	public final static File TEST_SET_MARCHANTIA20_DIR = new File(AMIFixtures.TEST_SET_DIR, "marchantia20");
+	public final static File TARGET_SET_DIR          = new File(AMIFixtures.TARGET_DIR, "testSets");
+	public final static File TARGET_SET_MARCHANTIA_DIR = new File(AMIFixtures.TARGET_SET_DIR, "marchantia");
+	public final static File TARGET_SET_MARCHANTIA20_DIR = new File(AMIFixtures.TARGET_SET_DIR, "marchantia20");
+
+	public static final String SPECTRA = "spectra";
+	public static final File SPECTRA_PLOT_DIR = new File(TEST_PLOT_DIR, SPECTRA);
+	public static final File SPECTRA_PLOT_TARGET_DIR = new File(TARGET_DIR, SPECTRA);
 
 	public final static File TEST_TUTORIAL_DIR       = new File(NAConstants.TEST_AMI_DIR, "tutorial/");
 

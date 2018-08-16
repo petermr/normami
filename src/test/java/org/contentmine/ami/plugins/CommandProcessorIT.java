@@ -2,23 +2,15 @@ package org.contentmine.ami.plugins;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.CHESConstants;
-import org.contentmine.ami.plugins.OccurrenceAnalyzer.SubType;
-import org.contentmine.ami.AMIFixtures;
-import org.contentmine.ami.plugins.OccurrenceAnalyzer.OccurrenceType;
 import org.contentmine.cproject.testutil.DataTablesToolAnalyzer;
 import org.contentmine.cproject.util.CMineTestFixtures;
-import org.contentmine.eucl.euclid.IntMatrix;
 import org.contentmine.norma.NAConstants;
-import org.contentmine.norma.Norma;
+import org.junit.Ignore;
 import org.junit.Test;
-
-import com.google.common.collect.Multiset.Entry;
 
 import junit.framework.Assert;
 
@@ -196,6 +188,7 @@ public class CommandProcessorIT {
 	}
 	
 	@Test
+	@Ignore
 	public void  testMarchantiaEPMCOld() throws IOException {
 		File JUPYTER_DIR = new File("/Users/pm286/workspace/jupyter/demos/");
 		LOG.debug(JUPYTER_DIR);
