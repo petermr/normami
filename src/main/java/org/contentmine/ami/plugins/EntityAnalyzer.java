@@ -23,6 +23,9 @@ public class EntityAnalyzer {
 	private static final String ANCESTORS = ".*/";
 	private static final String RESULTS_XML = "results\\.xml";
 	private static final Logger LOG = Logger.getLogger(EntityAnalyzer.class);
+	private static final Object MOSQUITO = "mosquito";
+	private static final String PLANT = "plant";
+	
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -225,7 +228,7 @@ public class EntityAnalyzer {
 		}
 	}
 
-	public void analyzePlantCoocurrences() throws IOException {
+	public boolean analyzePlantCoocurrences() {
 		if (forceRun ) {
 			runNormaNLM();
 		}
@@ -241,7 +244,7 @@ public class EntityAnalyzer {
 	
 	    ;
 		if (forceRun) {
-			CommandProcessor.main((getProjectDir()+" "+cmd).split("\\s+"));
+			if (!runCommand(cmd)) return false;
 		}
 		
 		createAndAddOccurrenceAnalyzer(OccurrenceType.BINOMIAL).setMaxCount(25);
@@ -249,9 +252,10 @@ public class EntityAnalyzer {
 		createAndAddOccurrenceAnalyzer("auxin").setMaxCount(20);
 		
 		createAllCooccurrences();
+		return true;
 	}
 
-	public void analyzeMosquitoCoocurrences() throws IOException {
+	public boolean analyzeMosquitoCoocurrences() {
 		if (forceRun ) {
 			runNormaNLM();
 		}
@@ -266,7 +270,7 @@ public class EntityAnalyzer {
 	
 	    ;
 		if (forceRun) {
-			CommandProcessor.main((getProjectDir()+" "+cmd).split("\\s+"));
+			if (!runCommand(cmd)) return false;
 		}
 		
 		createAndAddOccurrenceAnalyzer(OccurrenceType.GENE, SubType.HUMAN).setMaxCount(30);
@@ -278,16 +282,27 @@ public class EntityAnalyzer {
 		createAndAddOccurrenceAnalyzer("insecticide").setMaxCount(20);
 		
 		createAllCooccurrences();
+		return true;
 	}
 
-	public void analyzeCoocurrences(List<String> searchList) throws IOException {
+	private boolean runCommand(String cmd) {
+		try {
+			CommandProcessor.main((getProjectDir()+" "+cmd).split("\\s+"));
+		} catch (IOException ioe) {
+			LOG.error("cannot run command: "+ioe);
+				return false;
+		}
+		return true;
+	}
+
+	public boolean analyzeCoocurrences(List<String> searchList) throws IOException {
 		if (forceRun ) {
 			runNormaNLM();
 		}
 		String cmd = createSearchStringAndCooccurrenceAnalyzers(searchList);
 	
 		if (forceRun) {
-			CommandProcessor.main((getProjectDir()+" "+cmd).split("\\s+"));
+			if (!runCommand(cmd)) return false;
 		}
 		
 //		createAndAddOccurrenceAnalyzer("country").setMaxCount(20);
@@ -297,6 +312,7 @@ public class EntityAnalyzer {
 //		createAndAddOccurrenceAnalyzer("cochrane").setMaxCount(20);
 		
 		createAllCooccurrences();
+		return true;
 	}
 
 	private String createSearchStringAndCooccurrenceAnalyzers(List<String> searchList) {
@@ -352,6 +368,73 @@ public class EntityAnalyzer {
 		return writeCsv;
 	}
 
+	public static void main(String[] args) {
+		if (args.length == 0) {
+			help();
+			return;
+		} 
+		List<String> argList = new ArrayList<String>(Arrays.asList(args));
+		File inputDir = makeInputFile(argList.get(0));
+		if (inputDir == null) return;
+		argList.remove(0);
+		
+		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(inputDir);
+//		entityAnalyzer.setWriteCSV(true);
+		entityAnalyzer.setForceRun(true);
+
+		if (argList.size() == 0) {
+			entityAnalyzer.runDefaults();
+		} else if (PLANT.equals(argList.get(0))) {
+			entityAnalyzer.analyzePlantCoocurrences();
+		} else if (MOSQUITO.equals(argList.get(0))) {
+			entityAnalyzer.analyzeMosquitoCoocurrences();
+		} else {
+			LOG.warn("NYI "+argList);
+		}
+	}
+
+	private void runDefaults() {
+		LOG.error("runDefaults NYI");
+	}
+
+	private static File makeInputFile(String fileroot) {
+		File inputDir = null;
+		if (fileroot.startsWith("/")) {
+			// absolute
+			inputDir = new File(fileroot);
+		} else {
+			// relative to current directory
+			inputDir = new File(".", fileroot);
+		}
+		if (!inputDir.exists() || !inputDir.isDirectory()) {
+			try {
+				LOG.error("File does not exist or is not a directory: "+inputDir.getCanonicalPath());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			inputDir = null;
+		}
+		return inputDir;
+	}
+
+	private static void help() {
+		LOG.error("ami-frequency cproject [args] (//is comments)");
+		
+		LOG.error("                            // default dictionaries [disease][country]");
+		LOG.error("OR    plant                 // default dictionaries");
+		LOG.error("OR  mosquito                // default dictionaries");
+		LOG.error("OR  <list of dictionaries>  // from gene species country disease ...");
+		LOG.error("");
+		LOG.error("qualifiers (? means optional)");
+		LOG.error(" --cooccur                  // optional coocurrence plots");
+		LOG.error(" --csv csvfile              // write csv file");
+		LOG.error(" --limit limit             // limit output or display to <limit> default 25");
+		LOG.error("EXAMPLE: " + "ami-frequency //  searches for disease and country");
+		LOG.error("EXAMPLE: " + "ami-frequency plant // searches for gene species auxin plantparts");
+		LOG.error("EXAMPLE: " + "ami-frequency mosquito --limit 100 // searches by mosquito dicts and increases output");
+		LOG.error("EXAMPLE: " + "ami-frequency disease poverty country  // uses 3 dictionaries");
+		LOG.error("EXAMPLE: " + "ami-frequency disease poverty  --cooccur --csv foo/disease-poverty.csv  ");
+	}
 	
 	
 }

@@ -51,13 +51,33 @@
 		        </executions>
                  <configuration>
                     <programs>
+                      <!-- general -->
+                         <program>
+                            <mainClass>org.contentmine.ContentMine</mainClass>
+                            <id>contentMine</id>
+                        </program>
+                      <!--  from Cephis -->
+                         <program>
+                            <mainClass>org.contentmine.cproject.files.CProject</mainClass>
+                            <id>cproject</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.cproject.files.MakeProject</mainClass>
+                            <id>makeProject</id>
+                        </program>
+                      <!-- norma -->  
                          <program>
                             <mainClass>org.contentmine.norma.Norma</mainClass>
                             <id>norma</id>
                         </program>
+                      <!-- ami -->  
                          <program>
                             <mainClass>org.contentmine.ami.plugins.CommandProcessor</mainClass>
                             <id>cmine</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.plugins.EntityAnalyzer</mainClass>
+                            <id>ami-frequencies</id>
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.plugins.gene.GenePlugin</mainClass>
@@ -67,13 +87,19 @@
                             <mainClass>org.contentmine.ami.plugins.identifier.IdentifierPlugin</mainClass>
                             <id>ami-identifier</id>
                         </program>
+                        <!-- 
                          <program>
                             <mainClass>org.contentmine.ami.plugins.phylotree.PhyloTreePlugin</mainClass>
                             <id>ami-phylotree</id>
                         </program>
+                        -->
                          <program>
                             <mainClass>org.contentmine.ami.plugins.regex.RegexPlugin</mainClass>
                             <id>ami-regex</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.plugins.search.SearchPlugin</mainClass>
+                            <id>ami-search</id>
                         </program>
                         <program>
                             <mainClass>org.contentmine.ami.plugins.sequence.SequencePlugin</mainClass>

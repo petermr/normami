@@ -19,8 +19,8 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 //@Ignore
-public class LargeTests {
-	private static final Logger LOG = Logger.getLogger(LargeTests.class);
+public class LargeTestsIT {
+	private static final Logger LOG = Logger.getLogger(LargeTestsIT.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}

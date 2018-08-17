@@ -182,7 +182,7 @@ public class AMIFixtures {
 		}
 	}
 
-	public static CommandProcessor createDefaultDirectoriesAndProcessor(String projectName) {
+	public static CommandProcessor createDefaultDirectoriesAndProcessor(String projectName) throws IOException {
 		File rawDir = new File(NAConstants.TEST_AMI_DIR, projectName);
 		File projectDir = new File(AMIFixtures.TARGET_TEST, projectName);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);

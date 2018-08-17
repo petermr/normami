@@ -14,7 +14,6 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-//@Ignore("long")
 public class CommandProcessorIT {
 
 	public static final Logger LOG = Logger.getLogger(CommandProcessorIT.class);
@@ -53,7 +52,7 @@ public class CommandProcessorIT {
 
 	@Test
 	public void testCommandLineShort() throws IOException {
-		String project = "zika10";
+		String project = "zika2";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(NAConstants.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -68,7 +67,7 @@ public class CommandProcessorIT {
 
 	@Test
 	public void testCommandLineShort1() throws IOException {
-		String project = "zika10";
+		String project = "zika2";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(NAConstants.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -85,7 +84,7 @@ public class CommandProcessorIT {
 
 	@Test
 	public void testCommandLineShort2() throws IOException {
-		String project = "zika10";
+		String project = "zika2";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(NAConstants.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -104,7 +103,7 @@ public class CommandProcessorIT {
 	 */
 	@Test
 	public void testCommandLinePreprocessor() throws IOException {
-		String project = "zika10";
+		String project = "zika2";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(NAConstants.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -122,10 +121,9 @@ public class CommandProcessorIT {
 	}
 
 	@Test
-	//@Ignore
 	// runs defaults
 	public void testCommandLineShortEmpty() throws IOException {
-		String project = "zika10";
+		String project = "zika2";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(NAConstants.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -133,9 +131,8 @@ public class CommandProcessorIT {
 	}
 
 	@Test
-//	@Ignore // LONG
 	public void testCommandLine() throws IOException {
-		String project = "zika10";
+		String project = "zika2";
 		File projectDir = new File("target/tutorial/"+project);
 		File rawDir = new File(NAConstants.TEST_AMI_DIR, project);
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
@@ -149,7 +146,6 @@ public class CommandProcessorIT {
 	}
 
 	@Test
-	// FIXME TEST
 	public void  testHindawiSampleMini() throws IOException {
 		File rawDir = new File(NAConstants.TEST_AMI_DIR, "hindawiepmc");
 		File projectDir = new File("target/tutorial/hindawi/samplemini");
@@ -167,7 +163,6 @@ public class CommandProcessorIT {
 	 * 
 	 * @throws IOException
 	 */
-	// FIXME TEST
 	public void  testHindawiEPMC() throws IOException {
 		
 		File rawDir = new File(NAConstants.TEST_AMI_DIR, "hindawiepmc");

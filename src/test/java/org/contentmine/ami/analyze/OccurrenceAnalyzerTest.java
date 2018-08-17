@@ -15,6 +15,7 @@ import org.contentmine.ami.plugins.OccurrenceAnalyzer;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.OccurrenceType;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.SubType;
 import org.contentmine.cproject.util.CMineTestFixtures;
+import org.contentmine.eucl.euclid.test.TestUtil;
 import org.contentmine.norma.Norma;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -180,18 +181,21 @@ public class OccurrenceAnalyzerTest {
 		entityAnalyzer.setForceRun(false);
 		entityAnalyzer.analyzeMosquitoCoocurrences();
 	}
+	
 	@Test
+	@Ignore // too long
 	public void  testZikaSmall() throws IOException {
 		String fileroot = "zikaSmall";
 		boolean copyToTarget = true;
-		File inputDir = new File(AMIFixtures.TEST_PROJECTS_DIR, fileroot);
-		File outputDir =  new File(AMIFixtures.TARGET_PROJECTS_DIR, fileroot);
+		File sourceDir = new File(AMIFixtures.TEST_PROJECTS_DIR, fileroot);
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir =  new File(AMIFixtures.TARGET_PROJECTS_DIR, fileroot);
 		if (copyToTarget) {
-			CMineTestFixtures.cleanAndCopyDir(inputDir, outputDir);
+			CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
 			LOG.debug("copied raw");
 		}
 
-		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(outputDir);
+		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(targetDir);
 		entityAnalyzer.setWriteCSV(true);
 		entityAnalyzer.setForceRun(true);
 		entityAnalyzer.analyzeMosquitoCoocurrences();

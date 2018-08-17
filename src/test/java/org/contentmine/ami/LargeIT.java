@@ -12,7 +12,7 @@ public class LargeIT {
 
 	@Test
 		public void testZika10() throws IOException {
-			LargeTests.runBioscienceDefault("zika10", new File(NAConstants.TEST_AMI_DIR+"/zika10/"));
+			LargeTestsIT.runBioscienceDefault("zika10", new File(NAConstants.TEST_AMI_DIR+"/zika10/"));
 		}
 
 }
