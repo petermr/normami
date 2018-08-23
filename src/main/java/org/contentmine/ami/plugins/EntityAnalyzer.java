@@ -391,6 +391,7 @@ public class EntityAnalyzer {
 		} else {
 			LOG.warn("NYI "+argList);
 		}
+		
 	}
 
 	private void runDefaults() {

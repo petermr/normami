@@ -46,6 +46,7 @@ public class HindawiTaggerTest {
 	
 	@Test
 	// not quite sure what this does
+	@Ignore // for the present
 	public void testGrouping() throws Exception {
 		File outfile = new File("target/hindawi/507405.grouped.xml");
 		TransformerWrapper transformerWrapper = new TransformerWrapper();
