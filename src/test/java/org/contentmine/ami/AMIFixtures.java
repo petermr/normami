@@ -57,8 +57,13 @@ public class AMIFixtures {
 
 	public final static File TEST_PHYLO_DIR          = new File(NAConstants.TEST_AMI_DIR, "phylo");
 	
-	public final static File TEST_PLANT_DIR          = new File(NAConstants.TEST_AMI_DIR, "plant");
-	public final static File TARGET_PLANT_DIR        = new File(AMIFixtures.TARGET_DIR, "plant");
+	public static final String PLANT = "plant";
+	public final static File TEST_PLANT_DIR          = new File(NAConstants.TEST_AMI_DIR, PLANT);
+	public final static File TARGET_PLANT_DIR        = new File(AMIFixtures.TARGET_DIR, PLANT);
+
+	public static final String TOTAL_INT = "totalIntegration";
+	public final static File TEST_TOTAL_INT_DIR          = new File(NAConstants.TEST_AMI_DIR, TOTAL_INT);
+	public final static File TARGET_TOTAL_INT_DIR        = new File(AMIFixtures.TARGET_DIR, TOTAL_INT);
 
 	public final static File TEST_PLOT_DIR    = new File(NAConstants.TEST_NORMA_DIR, "plot");
 

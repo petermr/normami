@@ -16,8 +16,7 @@ public class PDFIT {
 	public void testPDF2SVGLarge() throws IOException {
 		File sourceDir = new File("../../projects/unesco");
 		Assert.assertTrue(""+sourceDir.getCanonicalPath(), sourceDir.exists());
-		String cmd = "--project "+sourceDir+" --makeProject (\\1)/fulltext.pdf --fileFilter .*/(.*)\\.pdf";
-		new CProject().run(cmd);
+		new CProject().run("--project "+sourceDir+" --makeProject (\\1)/fulltext.pdf --fileFilter .*/(.*)\\.pdf");
 		new Norma().run("--project " + sourceDir + " --input fulltext.pdf "+ " --outputDir " + sourceDir + " --transform pdf2svg ");
 	}
 

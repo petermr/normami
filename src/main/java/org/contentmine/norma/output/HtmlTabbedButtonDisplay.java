@@ -81,6 +81,14 @@ public class HtmlTabbedButtonDisplay extends HtmlHtml {
 	private static final String TAB = "tab";
 	private static final String TABCONTENTDIV = "tabcontentdiv";
 	
+	
+	private String title;
+	private File parentFile;
+	
+	public HtmlTabbedButtonDisplay() {
+		
+	}
+
 	private static HtmlStyle readButtonStyle(String resource) {
 		HtmlStyle htmlStyle = null;
 		String buttonStyleContent = readStringContent(resource);
@@ -130,15 +138,9 @@ public class HtmlTabbedButtonDisplay extends HtmlHtml {
 		return xmlContent;
 	}
 	
-	private String title;
-	private File parentFile;
-	
-	public HtmlTabbedButtonDisplay() {
-		
-	}
-
-	public void setTitle(String title) {
+	public HtmlElement setTitle(String title) {
 		this.title = title;
+		return this;
 	}
 	
 	/** add files to be displayed.
@@ -146,7 +148,7 @@ public class HtmlTabbedButtonDisplay extends HtmlHtml {
 	 * @param htmlFiles
 	 */
 	public HtmlTabbedButtonDisplay(String title, List<File> htmlFiles, File parentFile) {
-		this.title = title;
+		setTitle(title);
 		this.parentFile = parentFile;
 		createButtonsFromHtmlFiles(htmlFiles);
 	}
