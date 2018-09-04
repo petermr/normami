@@ -2,6 +2,7 @@ package org.contentmine.ami;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -22,14 +23,15 @@ import org.contentmine.norma.Norma;
  *
  */
 public class AMIProcessor {
+
 	private static final Logger LOG = Logger.getLogger(AMIProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	public static final String SEARCH = "search";
+	private static final String HELP = "help";
 
 	private CProject cProject;
-
 	private boolean skipConvertPDFs;
 	
 	private AMIProcessor() {
@@ -154,46 +156,33 @@ public class AMIProcessor {
 
 
 	public static void main(String[] args) {
-		List<String> argList = Arrays.asList(args);
-		if (argList.size() == 0) {
-			help();
-			return;
+		List<String> argList = new ArrayList<String>(Arrays.asList(args));
+		if (argList.size() == 0 || HELP.equals(argList.get(0))) {
+			if (argList.size() > 0) argList.remove(0);
+			help(argList);
 		} else {
 			String projectName = argList.get(0);
-			List<String> facetList = argList.subList(1, argList.size());
-			LOG.info("facets "+facetList);
-			AMIProcessor amiProcessor = AMIProcessor.createProcessor(projectName);
-			if ("abc".length() == 2) amiProcessor.convertJATSXMLandWriteHtml();
-			amiProcessor.runSearchesAndCooccurrence(facetList);
-		}
-	}
-
-	private static void help() {
-		System.err.println("amiProcessor <projectDirectory> [dictionary [dictionary]]");
-		System.err.println("    projectDirectory can be full name or relative to currentDir");
-		System.err.println("\nlist of dictionaries taken from AMI dictionary list:");
-		listDictionaries();
-		
-	}
-
-	private static void listDictionaries() {
-		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
-		List<File> files = Arrays.asList(dictionaryHead.listFiles());
-		Collections.sort(files);
-		int count = 0;
-		int perLine = 5;
-		System.err.print("\n    ");
-		for (File file : files) {
-			String filename = file.toString();
-			if ("xml".equals(FilenameUtils.getExtension(filename))) {
-				String name = FilenameUtils.getBaseName(file.toString());
-				System.err.print((name + "                     ").substring(0, 20));
-				if (count++ %perLine == perLine - 1) System.err.print("\n    ");
+			argList.remove(0);
+			if (argList.size() == 0) {
+				System.err.println("No default action for project: "+projectName+" (yet)");
+			} else {
+				AMIProcessor amiProcessor = AMIProcessor.createProcessor(projectName);
+				// FIX THIS
+				if ("abc".length() == 2) amiProcessor.convertJATSXMLandWriteHtml();
+				amiProcessor.runSearchesAndCooccurrence(argList);
 			}
 		}
-		System.err.println("\nalso:");
-		System.err.println("    gene     ");
-		System.err.println("    species     ");
 	}
+
+	private static void help(List<String> argList) {
+		System.err.println("amiProcessor <projectDirectory> [dictionary [dictionary]]");
+		System.err.println("    projectDirectory can be full name or relative to currentDir");
+		if (argList.size() == 0) {
+			System.err.println("\nlist of dictionaries taken from AMI dictionary list:");
+		}
+		SimpleDictionaries simpleDictionaries = new SimpleDictionaries();
+		simpleDictionaries.listDictionaries(argList);
+	}
+
 
 }

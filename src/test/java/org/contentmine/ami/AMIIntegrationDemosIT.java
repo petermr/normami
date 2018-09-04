@@ -213,15 +213,13 @@ public class AMIIntegrationDemosIT {
 	@Test 
 	public void testCommandLine() {
 		
-		String projectName = "marchantia";
-//		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
-//		LOG.debug("dir "+sourceDir);
-		AMIProcessor.main(new String[]{});
-//		String argString = sourceDir.toString();
-		String argString = projectName;
-//		AMIProcessor.main(argString.split("\\s+"));
-		argString = projectName+" "+"country"+" "+"plantParts";
-		AMIProcessor.main(argString.split("\\s+"));
+//		AMIProcessor.main(new String[]{});
+//		AMIProcessor.main(new String[]{"help"});
+//		AMIProcessor.main(new String[]{"help", "insecticide", "auxin", "grot", "inn"});
+		AMIProcessor.main(new String[]{"help", "dictionaries"});
+		
+//		AMIProcessor.main(new String[]{"marchantia"});
+//		AMIProcessor.main(new String[]{"marchantia", "country", "plantParts"});
 	}
 
 }
