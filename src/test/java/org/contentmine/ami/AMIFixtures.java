@@ -102,6 +102,12 @@ public class AMIFixtures {
 	private static final String RESULTS_DIR = "results/";
 	private static final String EXPECTED_DIR = "expected/";
 	private static final String TARGET_TEST = "target/test/";
+	
+	public static final File PMR_TOP = new File(System.getProperty("user.home"));
+	public static final File PMR_PROJECT_DIR = new File(PMR_TOP, "workspace/projects");
+	public static final File PMR_STEFAN_DIR = new File(PMR_PROJECT_DIR, "stefan");
+	
+	public static final File PMR_MARCHANTIA_DIR = new File(PMR_PROJECT_DIR, "marchantia");
 
 
 

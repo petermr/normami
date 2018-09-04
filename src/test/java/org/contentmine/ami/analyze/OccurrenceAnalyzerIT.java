@@ -8,15 +8,18 @@ import java.util.List;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
+import org.contentmine.ami.AMIProcessor;
 import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.ami.plugins.EntityAnalyzer;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.OccurrenceType;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.SubType;
+import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.util.CMineTestFixtures;
+import org.contentmine.eucl.euclid.test.TestUtil;
 import org.junit.Ignore;
 import org.junit.Test;
 
-@Ignore // uncomment for development
+// @Ignore // uncomment for development
 public class OccurrenceAnalyzerIT {
 	private static final Logger LOG = Logger.getLogger(OccurrenceAnalyzerIT.class);
 	static {
@@ -160,4 +163,16 @@ public class OccurrenceAnalyzerIT {
 		entityAnalyzer.analyzeCoocurrences(OBESITY_DICTIONARIES);
 	}
 
+	@Test
+	public void testWAFlavivirus() {
+		String projectName = "waFlavi";
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR,  "zikawa/flaviviruswa");
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		CProject cProject = new CProject(targetDir);
+		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(cProject);
+		List<String> facetList = Arrays.asList(new String[]{"species", "insecticide", "country", "funders", "drugs", "tropicalVirus"});
+		integrationProcessor.runSearchesAndCooccurrence(facetList);
+	}
 }

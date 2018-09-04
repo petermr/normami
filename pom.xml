@@ -77,6 +77,10 @@
                         </program>
                       <!-- norma -->  
                          <program>
+                            <mainClass>org.contentmine.ami.AMIProcessor</mainClass>
+                            <id>ami-all</id>
+                        </program>
+                         <program>
                             <mainClass>org.contentmine.norma.Norma</mainClass>
                             <id>norma</id>
                         </program>

@@ -1,9 +1,9 @@
 package org.contentmine.ami;
 
-import java.util.List;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -21,8 +21,8 @@ import org.junit.Test;
  * @author pm286
  *
  */
-public class TotalIntegrationDemosIT {
-	public static final Logger LOG = Logger.getLogger(TotalIntegrationDemosIT.class);
+public class AMIIntegrationDemosIT {
+	public static final Logger LOG = Logger.getLogger(AMIIntegrationDemosIT.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -133,26 +133,15 @@ public class TotalIntegrationDemosIT {
 
 		
 	}
+	
 	@Test
-	public void testMakeCrystalSuppData() {
-
-		List<String> urlSList = Arrays.asList(new String[] {
-		"https://pubs.acs.org/doi/suppl/10.1021/om049188b/suppl_file/om049188bsi20041020_053156.pdf",
-//			-- born-digital, contains crystal info w/o coordinates.
-		"https://pubs.acs.org/doi/suppl/10.1021/om049188b/suppl_file/om049188bsi20050104_114539.pdf",
-//			-- born-digital, contains crystal info, including selectable CIF.
-		"https://pubs.acs.org/doi/suppl/10.1021/om040132r/suppl_file/om040132r_s.pdf",
-//			-- scanned, contains crystal info, including coordinates.
-		"https://pubs.acs.org/doi/suppl/10.1021/om0489711/suppl_file/om0489711si20041230_042826.pdf",
-//			-- born-digital, contains crystal info, including selectable coordinates.
-		"https://pubs.acs.org/doi/suppl/10.1021/om040128f/suppl_file/om040128f_s.pdf",
-//			-- scanned, poor quality, contains crystal info, including coordinates.
-		});
+	public void testMakeCrystalSuppDataACS() {
 
 		File sourceDir = new File(AMIFixtures.TEST_TOTAL_INT_DIR, "acsSupp");
 		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, "acsSupp");
 		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
 		CProject cProject = new CProject(targetDir);
+		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(cProject);
 		new CProject().run("--project "+targetDir+" --makeProject (\\1)/fulltext.pdf --fileFilter .*/(.*)\\.pdf");
 		cProject.convertPDFOutputSVGFilesImageFiles();
 		cProject.convertPDFSVGandWriteHtml();
@@ -160,25 +149,79 @@ public class TotalIntegrationDemosIT {
 		+ " search(crystal)"
 		+ " search(country)"
 		+ " search(funders)"
+		;
 
-	    ;
-		File projectDir = targetDir;
+	    
 		try {
-			CommandProcessor.main((projectDir+" "+cmd).split("\\s+"));
+			CommandProcessor.main((cProject.getDirectory()+" "+cmd).split("\\s+"));
 		} catch (IOException e) {
 			throw new RuntimeException("Cannot run command: "+cmd, e);
 		}
-		
-		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(projectDir);
-		
-		entityAnalyzer.createAndAddOccurrenceAnalyzer("crystal").setMaxCount(25);
-		entityAnalyzer.createAndAddOccurrenceAnalyzer("country").setMaxCount(30);
-		entityAnalyzer.createAndAddOccurrenceAnalyzer("funders");
-		entityAnalyzer.writeCSVFiles();
-		
-		entityAnalyzer.setWriteCSV(true);
-		entityAnalyzer.createAllCooccurrences();
+		List<String> facetList = Arrays.asList(new String[]{"crystal", "country", "funders"});
+		integrationProcessor.defaultAnalyzeCooccurrence(facetList);
 
 		
 	}
+	
+	@Test
+	// LONG
+	public void testMakeCrystalSuppDataRSC() {
+
+		String projectName = "rscSupp";
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR,  "stefan/journals2");
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		CProject cProject = new CProject(targetDir);
+		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(cProject);
+		List<String> facetList = Arrays.asList(new String[]{"crystal", "country", "funders"});
+		integrationProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+
+	@Test
+	public void testRSCMain() {
+
+		String projectName = "rscMain";
+		File sourceDir = new File(AMIFixtures.TEST_TOTAL_INT_DIR, projectName);
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		CProject cProject = new CProject(targetDir);
+		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(cProject);
+		integrationProcessor.setIncludeCTrees("c7ob02709e");
+		List<String> facetList = Arrays.asList(new String[]{"crystal", "country", "funders", "elements", "magnetism", "compchem"});
+		integrationProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+
+
+	@Test
+	// LONG
+	public void testArxivFerroelectric() {
+
+		String projectName = "ferroelectric";
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR,  "ferroelectric/arxiv20180902");
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+//		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+//		CProject cProject = new CProject(targetDir);
+		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(sourceDir);
+//        integrationProcessor.setSkipConvertPDFs(true);		
+		List<String> facetList = Arrays.asList(new String[]{"elements", "crystal", "country", "magnetism", "compchem", "funders"});
+		integrationProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+	
+	@Test 
+	public void testCommandLine() {
+		
+		String projectName = "marchantia";
+//		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
+//		LOG.debug("dir "+sourceDir);
+		AMIProcessor.main(new String[]{});
+//		String argString = sourceDir.toString();
+		String argString = projectName;
+//		AMIProcessor.main(argString.split("\\s+"));
+		argString = projectName+" "+"country"+" "+"plantParts";
+		AMIProcessor.main(argString.split("\\s+"));
+	}
+
 }
