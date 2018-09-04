@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="747.096" width="538.3472" xmlns="http://www.w3.org/2000/svg">
+ <g style="fill:none;">
+  <text x="301.49,306.05,310.61" y="737.096" svg_rhmargin="312.644" style="fill:#000000;font-family:BCDEEE+Calibri;font-size:9.0px;font-style:NORMAL;font-weight:normal;">37 </text>
+  <text y="748.136" style="fill:#000000;font-family:BCDEEE+Calibri;font-size:9.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="92.058" x=""/>
+  <text x="90.024,99.384,107.186,114.987,122.789,130.59,138.392,141.504,148.351,155.535,163.336,167.178,174.362,184.438,192.24,196.91,200.023,207.038,214.84,218.738,221.85,229.652,237.355,244.539,252.34,260.142,267.817,275.001,284.361,292.163,295.275,302.964,306.905,310.017,317.818,325.508,332.579,339.651,347.452,351.294,358.478,362.32,370.122,377.924,385.107,395.183,402.985,414.62,422.421,430.223,437.898,445.573,453.375,461.176,468.978,475.937,483.121,490.922,494.035,501.836,509.638,517.439,521.885" y="100.65999999999997" svg_rhmargin="525.788" style="fill:#000000;font-family:ArialMT;font-size:14.04px;font-style:NORMAL;font-weight:normal;">Appendix 8: Derivation and Solutions of the Homogeneous Linear </text>
+  <text x="90.024,99.389,107.195,115.001,122.807,126.711,129.827,137.634,145.342,152.305,156.251,160.196,168.002,172.551" y="132.22000000000003" svg_rhmargin="176.454" style="fill:#000000;font-family:ArialMT;font-size:14.04px;font-style:NORMAL;font-weight:normal;">Equations for </text>
+  <text x="179.54" y="132.22000000000003" svg_rhmargin="186.476" style="fill:#000000;font-family:SymbolMT;font-size:14.04px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="186.38,192.86" y="135.70000000000005" svg_rhmargin="198.886" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:9.96px;font-style:NORMAL;font-weight:normal;">𝑛𝑘</text>
+  <text x="186.74" y="125.01999999999998" svg_rhmargin="193.314" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:9.96px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text y="132.22000000000003" style="fill:#000000;font-family:ArialMT;font-size:14.04px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="203.753" x=""/>
+  <text x="111.02,114.86,120.968,124.436,127.772,133.772,137.144,141.812,145.292,150.572,156.572,162.572,167.852,173.852,179.852,183.188,189.32,192.32,195.788,201.068,206.348,211.628,217.736,221.732,227.732,231.068,237.068,242.936,246.404,249.74,255.74,259.232,266.564,272.564,275.66,284.324,290.324,293.324,299.324,302.324,305.768,314.432,319.796,323.264,329.264,334.544,338.54,341.876,347.972,353.36,356.828,361.496,367.496,371.228,375.224,378.56,383.828,387.164,392.492,398.492,401.828,405.296,409.964,419.3,424.628,427.964,431.3" y="154.77999999999997" svg_rhmargin="434.3" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">In this appendix, according to Eq.A6.7, we derive sufficient small </text>
+  <text x="437.71" y="154.77999999999997" svg_rhmargin="443.638" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="443.47,448.99" y="157.77999999999997" svg_rhmargin="454.145" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑛𝑘</text>
+  <text x="443.83" y="148.65999999999997" svg_rhmargin="449.453" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text y="154.77999999999997" svg_rhmargin="464.986" x="460.99" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">(</text>
+  <text x="464.98,475.3,487.66,494.26,498.7,511.06" y="154.77999999999997" svg_rhmargin="517.948" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑘=1,⋯𝑛</text>
+  <text x="518.02,522.1" y="154.77999999999997" svg_rhmargin="525.1" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">) </text>
+  <text x="90.024,93.36,99.36,104.412,109.692,115.692,121.692,125.028,131.028,136.356,141.36,150.024,153.36,156.696,162.696" y="170.26" svg_rhmargin="165.696" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">to evolve with </text>
+  <text x="169.34" y="170.26" svg_rhmargin="174.08" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑡</text>
+  <text y="170.26" svg_rhmargin="525.052" x="175.1,178.1,183.128,191.792,197.792,201.128,206.408,212.408,217.436,222.104,227.396,230.732,234.104,238.772,242.852,248.612,253.64,259.64,265.64,274.976,281.108,286.988,292.268,298.268,303.548,309.548,315.548,320.216,325.256,328.592,331.964,338.072,343.352,348.632,352.628,357.62,362.9,368.9,375.008,380.288,383.624,386.996,392.996,398.996,403.664,406.664,411.704,416.984,422.984,428.984,434.012,439.892,443.228,449.228,454.556,459.68,463.016,469.3,474.58,477.916,481.912,486.928,492.808,498.088,504.196,509.476,513.472,518.716,522.052" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, which satisfy homogeneous linear equations, and give their general </text>
+  <text x="90.024,94.692,100.692,104.028,110.028,113.412,116.748,122.748,128.748,133.416,136.416" y="185.74" svg_rhmargin="139.416" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">solutions. </text>
+  <text y="185.74" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="145.34" x=""/>
+  <text y="205.17999999999995" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="114.02" x=""/>
+  <text x="90.024,98.052,104.76,111.468,118.068,124.776,131.484,134.148,140.004,144.552,151.34,154.7,161.3,164.636,169.208,177.872,184.544,188.54,191.168,197.048,203.756,207.092,209.756,216.464,223.172,227.6,234.308,241.016,247.616,252.164,260.192,266.9,269.42,276.128,279.464,282.128,288.836,295.436,299.984,306.584,309.92,314.492,317.828,324.452,331.052,335.6,344.264,350.936,360.932,367.604,374.24,380.948,387.656,394.256,400.964,407.672,413.672,418.1,424.808,427.472,434.144,440.768,447.476,451.472,455.984,464.012,470.612,477.32,484.028,487.364,490.028,496.628,503.336,507.764,511.1,517.832,521.672" y="228.70000000000005" svg_rhmargin="525.008" style="fill:#000000;font-family:ArialMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">Appendix 8.1: Derivation and Solution of the Homogeneous Linear Equation for </text>
+  <text x="90.024" y="256.9" svg_rhmargin="95.952" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="95.544" y="259.78" svg_rhmargin="100.477" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="96.144,101.78" y="250.77999999999997" svg_rhmargin="106.713" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔1</text>
+  <text y="256.9" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="110.3" x=""/>
+  <text x="111.02,117.728,123.728,129.728,134.396,137.756,141.092,144.464,150.464,153.704,157.04,163.04,168.944" y="286.21000000000004" svg_rhmargin="171.944" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">Substituting </text>
+  <text x="175.22" y="286.21000000000004" svg_rhmargin="182.456" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="182.18,187.1" y="290.65" svg_rhmargin="191.718" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">1𝑒</text>
+  <text x="182.78" y="281.77" svg_rhmargin="188.403" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="195.86,208.13" y="286.21000000000004" svg_rhmargin="213.674" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=𝑠</text>
+  <text x="212.93,217.85" y="289.69" svg_rhmargin="222.783" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="214.61,220.25" y="280.09000000000003" svg_rhmargin="224.868" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <text y="286.21000000000004" svg_rhmargin="231.65" x="225.65,228.65" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text x="234.89" y="286.21000000000004" svg_rhmargin="240.434" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑠</text>
+  <text x="239.69" y="289.69" svg_rhmargin="244.623" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="241.37,247.01" y="280.09000000000003" svg_rhmargin="251.943" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔1</text>
+  <text x="255.65,267.89" y="286.21000000000004" svg_rhmargin="273.434" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=𝑠</text>
+  <text x="272.69,277.61" y="289.69" svg_rhmargin="282.543" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="274.37,280.01" y="280.09000000000003" svg_rhmargin="284.628" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <text x="288.05" y="286.21000000000004" svg_rhmargin="297.014" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">+</text>
+  <text x="299.69" y="286.21000000000004" svg_rhmargin="305.618" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="305.21,310.13" y="289.09" svg_rhmargin="315.063" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="305.81" y="280.09000000000003" svg_rhmargin="311.433" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text y="286.21000000000004" svg_rhmargin="321.77" x="315.77,318.77" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text x="325.01" y="286.21000000000004" svg_rhmargin="330.554" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑠</text>
+  <text x="329.81,334.73" y="289.69" svg_rhmargin="339.663" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="331.49,337.13" y="280.09000000000003" svg_rhmargin="341.748" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <text x="345.79" y="286.21000000000004" svg_rhmargin="354.754" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="358.15" y="286.21000000000004" svg_rhmargin="363.082" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="363.07" y="290.77" svg_rhmargin="367.773" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text y="286.21000000000004" svg_rhmargin="374.35" x="368.35,371.35" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text x="377.59" y="286.21000000000004" svg_rhmargin="382.522" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="385.87" y="286.21000000000004" svg_rhmargin="394.834" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="398.11" y="286.21000000000004" svg_rhmargin="403.042" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="403.03" y="290.77" svg_rhmargin="407.733" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="410.95,422.59" y="286.21000000000004" svg_rhmargin="429.274" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">+𝑎</text>
+  <text x="429.07" y="289.69" svg_rhmargin="434.003" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="429.91" y="280.09000000000003" svg_rhmargin="435.533" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="436.15" y="286.21000000000004" svg_rhmargin="442.078" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="441.67,446.59" y="289.09" svg_rhmargin="451.523" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="442.27" y="280.09000000000003" svg_rhmargin="447.893" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text y="286.21000000000004" svg_rhmargin="458.23" x="452.23,455.23" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text x="461.47" y="286.21000000000004" svg_rhmargin="468.154" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑎</text>
+  <text x="467.98" y="289.69" svg_rhmargin="472.913" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="468.82" y="280.09000000000003" svg_rhmargin="474.443" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="478.42" y="286.21000000000004" svg_rhmargin="487.384" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">≡</text>
+  <text x="493.42" y="278.40999999999997" svg_rhmargin="498.685" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="498.94" y="278.40999999999997" svg_rhmargin="502.442" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="502.42" y="281.53" svg_rhmargin="506.603" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="490.66,496.18" y="292.21" svg_rhmargin="500.304" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕𝑠</text>
+  <text x="500.02,504.22" y="295.33" svg_rhmargin="508.361" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="500.5,505.3" y="287.40999999999997" svg_rhmargin="509.295" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="513.1" y="286.21000000000004" svg_rhmargin="522.064" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="90.384" y="310.45" svg_rhmargin="95.649" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="95.904" y="310.45" svg_rhmargin="99.406" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="99.384" y="313.57" svg_rhmargin="103.567" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="90.024" y="324.25" svg_rhmargin="95.289" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="95.544" y="324.25" svg_rhmargin="99.983" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="99.984" y="325.93" svg_rhmargin="104.167" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="108.74" y="311.17" svg_rhmargin="114.005" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="114.26" y="311.17" svg_rhmargin="118.699" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="118.7" y="312.85" svg_rhmargin="122.883" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="106.46" y="324.25" svg_rhmargin="111.725" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="111.98" y="324.25" svg_rhmargin="117.118" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="117.14,121.34" y="328.09" svg_rhmargin="125.335" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">1𝑒</text>
+  <text x="117.14" y="319.45" svg_rhmargin="121.956" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="127.58" y="310.09" svg_rhmargin="132.845" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="133.1" y="310.09" svg_rhmargin="138.238" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="138.26,142.46" y="313.57" svg_rhmargin="146.455" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">1𝑒</text>
+  <text x="138.26" y="305.29" svg_rhmargin="143.076" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="127.58,133.1" y="324.25" svg_rhmargin="137.224" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕𝑠</text>
+  <text x="136.94,141.14" y="327.37" svg_rhmargin="145.281" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="137.42,142.22" y="319.45" svg_rhmargin="146.215" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text y="318.25" svg_rhmargin="153.5" x="147.5,150.5" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text x="157.7" y="310.45" svg_rhmargin="162.965" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="163.22" y="310.45" svg_rhmargin="166.722" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="166.7" y="313.57" svg_rhmargin="170.883" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="157.34" y="324.25" svg_rhmargin="162.605" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="162.74" y="324.25" svg_rhmargin="167.179" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="167.18" y="325.93" svg_rhmargin="171.363" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="175.1,187.34,196.7" y="318.25" svg_rhmargin="205.664" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=1−</text>
+  <text x="208.37" y="318.25" svg_rhmargin="213.302" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="213.29" y="322.81" svg_rhmargin="217.993" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="218.45" y="313.81" svg_rhmargin="223.383" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text y="318.25" svg_rhmargin="230.69" x="224.69,227.69" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text x="236.81" y="311.17" svg_rhmargin="242.075" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="242.33" y="311.17" svg_rhmargin="246.769" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="246.77" y="312.85" svg_rhmargin="250.953" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="234.53" y="324.25" svg_rhmargin="239.795" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="240.05" y="324.25" svg_rhmargin="245.188" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="245.21,249.41" y="328.09" svg_rhmargin="253.405" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">1𝑒</text>
+  <text x="245.21" y="319.45" svg_rhmargin="250.026" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="257.09" y="318.25" svg_rhmargin="266.054" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="269.33" y="310.93" svg_rhmargin="274.97" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝐴</text>
+  <text x="274.97" y="313.69" svg_rhmargin="279.111" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="274.97" y="306.13" svg_rhmargin="279.786" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="271.97" y="324.25" svg_rhmargin="277.201" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑇</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text y="318.25" svg_rhmargin="309.17" x="280.85,283.85,288.89,294.17,300.17,306.17" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, and </text>
+  <text x="313.01" y="318.25" svg_rhmargin="320.606" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝐴</text>
+  <text x="320.33" y="321.73" svg_rhmargin="325.263" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="320.81" y="312.13" svg_rhmargin="326.433" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="330.41,342.67,348.55,357.91" y="318.25" svg_rhmargin="366.874" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">≡(1−</text>
+  <text x="369.91" y="311.17" svg_rhmargin="374.843" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="369.55" y="324.25" svg_rhmargin="375.079" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑛</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="375.19" y="318.25" svg_rhmargin="381.07" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">)</text>
+  <text x="383.11" y="318.25" svg_rhmargin="392.002" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="391.75" y="321.25" svg_rhmargin="396.683" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="392.35" y="312.13" svg_rhmargin="397.973" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="401.95,414.19" y="318.25" svg_rhmargin="420.838" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=0</text>
+  <text y="318.25" svg_rhmargin="525.1" x="427.63,430.966,436.966,440.338,446.338,451.39,458.71,464.74,467.74,476.404,482.404,485.488,491.488,500.152,503.14,508.18,516.844,522.1" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">into Eq.A6.7A, we </text>
+  <text x="90.024,96.024,102.024,105.36,110.688,114.024,120.024" y="345.61" svg_rhmargin="123.024" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">obtain,</text>
+  <text y="345.61" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="126.02" x=""/>
+  <text x="120.74" y="366.13" svg_rhmargin="127.388" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="120.86" y="383.29" svg_rhmargin="127.112" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="129.38" y="366.13" svg_rhmargin="136.34" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑑</text>
+  <text x="136.7" y="366.13" svg_rhmargin="142.628" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="142.34,147.26" y="369.01" svg_rhmargin="152.193" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="142.94" y="360.01" svg_rhmargin="148.563" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="135.02,141.98" y="383.29" svg_rhmargin="146.72" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑑𝑡</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="156.02,168.38" y="375.25" svg_rhmargin="177.344" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=−</text>
+  <text x="177.38" y="375.25" svg_rhmargin="183.308" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="182.9,187.82" y="378.13" svg_rhmargin="192.753" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="183.5" y="369.13" svg_rhmargin="189.123" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text y="375.25" svg_rhmargin="522.04" x="481.42,486.46,493.9,500.5,503.02,509.62,517.06" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">(A8.1A)</text>
+  <text y="375.25" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="525.1" x=""/>
+  <text x="111.02,118.352,124.352,129.62,132.62,138.62,143.9,149.9,155.288,159.284,164.528,167.864,170.864,175.532,181.532,184.916,190.916,194.252,197.624,203.624,209.624,212.624,218.624,222.584,225.584,228.92,235.01,238.37,243.05,246.05,249.386,252.758,258.758,264.038,269.318,273.314,276.314,282.314,288.314,297.65,303.65,309.65,314.918,320.918,326.198,332.198,338.198,342.866,345.986,351.986,355.322,359.066,363.062,368.306,372.374,377.654,383.654,386.99,390.362,395.642,398.978,401.978,407.306,413.306,419.306,424.562,427.898,431.27,437.27,443.27,446.27,449.606,454.274" y="400.21" svg_rhmargin="457.274" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">The general solution of this linear homogeneous differential equation is,</text>
+  <text y="400.21" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="460.39" x=""/>
+  <text x="124.82" y="435.01" svg_rhmargin="130.748" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="130.46,135.38" y="437.89" svg_rhmargin="140.313" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="131.06" y="428.89" svg_rhmargin="136.683" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="144.26" y="435.01" svg_rhmargin="153.224" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="156.5" y="435.01" svg_rhmargin="162.428" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="162.02,166.94" y="437.89" svg_rhmargin="171.873" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="162.62" y="428.89" svg_rhmargin="168.243" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="172.46,177.5,184.1,189.14,194.9,200.66,209.33,216.17" y="435.01" svg_rhmargin="225.134" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">(0)exp(−</text>
+  <text x="232.49" y="425.89" svg_rhmargin="237.23" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑡</text>
+  <text x="227.21" y="444.03" svg_rhmargin="232.718" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝜏</text>
+  <text x="232.49,237.41" y="447.87" svg_rhmargin="242.343" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="233.69" y="437.89" svg_rhmargin="239.313" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="242.81,250.61,253.25,255.89,258.53,261.17,263.81,266.45,269.09,271.73,274.37,277.01,279.65,282.29,284.93,287.57,290.21,292.85,295.49,298.13,300.89,303.53,306.17,308.81,311.45,314.09,316.73,319.37,322.01,324.65,327.29,329.93,332.59,335.23,337.87,340.51,343.15,345.79,348.43,351.07,353.71,356.35,358.99,361.63,364.27,366.91,369.55,372.19,374.83,377.47,380.11,382.75,385.39,388.03,390.67,393.31,395.95,398.59,401.23,403.87,406.51,409.15,411.79,414.43,417.07,419.71,422.35,425.11,427.75,430.39,433.03,435.67,438.31,440.95,443.59,446.23,448.87,451.51,454.15,456.79,459.43,462.07,464.74,467.38,470.02,472.66,475.3,477.94,481.54,486.58,494.02,500.62,503.14,509.74,517.06" y="435.01" svg_rhmargin="522.04" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">) (A8.1B)</text>
+  <text y="435.01" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="525.1" x=""/>
+  <text x="90.024,98.664,104.664,109.944,113.9" y="466.95" svg_rhmargin="119.228" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">where</text>
+  <text y="466.95" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="121.94" x=""/>
+  <text x="121.94" y="466.95" svg_rhmargin="127.868" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="127.58,132.5" y="469.83" svg_rhmargin="137.433" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="128.18" y="460.83" svg_rhmargin="133.803" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="138.02,143.06,149.66" y="466.95" svg_rhmargin="154.64" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">(0)</text>
+  <text y="466.95" svg_rhmargin="231.128" x="160.58,163.916,168.584,171.584,174.968,180.968,186.248,189.248,195.248,200.528,203.864,209.864,215.192,218.192,224.192,228.128" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">is the value of </text>
+  <text x="234.29" y="466.95" svg_rhmargin="240.218" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="239.81,244.73" y="469.83" svg_rhmargin="249.663" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="240.41" y="460.83" svg_rhmargin="246.033" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text y="466.95" svg_rhmargin="267.866" x="256.25,261.53,264.866" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">at </text>
+  <text x="270.89,279.29,291.53" y="466.95" svg_rhmargin="298.178" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑡=0</text>
+  <text x="298.25,301.25,304.25,309.53,315.53" y="466.95" svg_rhmargin="321.53" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, and</text>
+  <text y="466.95" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="324.53" x=""/>
+  <text x="125.18" y="491.07" svg_rhmargin="130.688" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝜏</text>
+  <text x="130.46,135.38" y="494.55" svg_rhmargin="140.313" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">11</text>
+  <text x="131.66" y="484.95" svg_rhmargin="137.283" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="144.02" y="491.07" svg_rhmargin="152.984" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="156.38" y="481.95" svg_rhmargin="163.028" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="156.5" y="499.11" svg_rhmargin="162.752" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text y="491.07" svg_rhmargin="522.04" x="482.14,487.18,494.62,501.22,503.74,510.34,517.06" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">(A8.1C)</text>
+  <text y="491.07" style="fill:#000000;font-family:BCDEEE+Calibri;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="524.812" x=""/>
+  <text y="512.6700000000001" style="fill:#000000;font-family:BCDEEE+Calibri;font-size:10.56px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="92.411" x=""/>
+  <text x="90.024,98.052,104.76,111.468,118.068,124.776,131.484,134.148,140.004,143.34,150.14,153.5,160.1,163.436,166.808,175.472,182.144,186.14,188.768,194.648,201.356,204.692,207.356,214.064,220.772,224.012,230.72,237.428,244.028,247.364,255.416,262.124,264.644,271.352,274.688,277.352,284.06,290.93,296.81,300.17,306.77,310.106,313.478,316.814,323.438,330.038,333.374,342.038,348.746,358.706,365.414,372.014,378.722,385.43,392.03,398.738,405.446,411.446,414.686,421.394,424.058,430.73,437.354,444.062,448.058,451.262,459.29,465.89,472.598,479.306,482.642,485.306,492.014,498.722,504.602,507.842,511.31,518.018,522.1" y="532.95" svg_rhmargin="525.436" style="fill:#000000;font-family:ArialMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">Appendix 8.2: Derivation and Solutions of the Homogeneous Linear Equations for </text>
+  <text x="90.024" y="561.27" svg_rhmargin="95.952" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="95.784" y="564.15" svg_rhmargin="100.717" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text x="96.144,101.784" y="555.15" svg_rhmargin="106.939" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔𝑘</text>
+  <text y="561.27" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="110.78" x=""/>
+  <text x="111.02,117.728,123.728,129.728,134.396,137.756,141.092,144.464,150.464,153.704,157.04,163.04,168.98" y="591.27" svg_rhmargin="171.98" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">Substituting </text>
+  <text x="177.14" y="591.27" svg_rhmargin="182.684" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑠</text>
+  <text x="182.18,187.1" y="594.87" svg_rhmargin="192.255" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2𝑘</text>
+  <text x="183.62" y="585.15" svg_rhmargin="189.243" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="196.34,208.73" y="591.27" svg_rhmargin="214.274" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=𝑠</text>
+  <text x="213.77,218.69" y="594.87" svg_rhmargin="223.845" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2𝑘</text>
+  <text x="215.21,220.85" y="585.15" svg_rhmargin="225.468" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <text x="228.77" y="591.27" svg_rhmargin="237.734" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">+</text>
+  <text x="240.41" y="591.27" svg_rhmargin="246.338" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="246.17,251.09" y="594.27" svg_rhmargin="256.245" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2𝑘</text>
+  <text x="246.53" y="585.15" svg_rhmargin="252.153" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text y="591.27" svg_rhmargin="262.586" x="259.25" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">;</text>
+  <text x="264.77" y="591.27" svg_rhmargin="269.702" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="273.05" y="591.27" svg_rhmargin="282.014" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="285.41" y="591.27" svg_rhmargin="290.342" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="290.33" y="595.83" svg_rhmargin="295.033" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="298.13,309.77" y="591.27" svg_rhmargin="316.454" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">+𝑎</text>
+  <text x="316.49" y="594.75" svg_rhmargin="321.423" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text x="317.09" y="585.15" svg_rhmargin="322.713" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="323.33" y="591.27" svg_rhmargin="328.718" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">(</text>
+  <text x="328.73" y="591.27" svg_rhmargin="334.658" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="334.51" y="594.15" svg_rhmargin="339.443" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text x="334.87,340.51" y="585.15" svg_rhmargin="345.443" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔1</text>
+  <text x="348.67" y="591.27" svg_rhmargin="357.634" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">+</text>
+  <text x="360.31" y="591.27" svg_rhmargin="366.238" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="366.19" y="594.15" svg_rhmargin="371.123" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text x="366.55,372.19" y="585.15" svg_rhmargin="377.123" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔2</text>
+  <text x="377.59" y="591.27" svg_rhmargin="382.978" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">)</text>
+  <text y="591.27" svg_rhmargin="391.15" x="385.15,388.15" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text x="396.31" y="591.27" svg_rhmargin="402.994" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑎</text>
+  <text x="403.03" y="594.75" svg_rhmargin="407.963" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text x="403.63" y="585.15" svg_rhmargin="409.253" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="413.23" y="591.27" svg_rhmargin="422.194" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">≡</text>
+  <text x="428.35" y="583.47" svg_rhmargin="433.615" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="433.75" y="583.47" svg_rhmargin="437.252" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="437.23" y="586.59" svg_rhmargin="441.413" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="425.59,430.99" y="597.27" svg_rhmargin="435.114" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕𝑠</text>
+  <text x="434.83,439.03" y="600.75" svg_rhmargin="443.505" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">2𝑘</text>
+  <text x="435.31,440.11" y="592.47" svg_rhmargin="444.105" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="447.91" y="591.27" svg_rhmargin="456.874" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="460.63" y="583.47" svg_rhmargin="465.895" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="466.18" y="583.47" svg_rhmargin="469.682" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="469.66" y="586.59" svg_rhmargin="473.843" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="460.27" y="597.27" svg_rhmargin="465.535" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="465.82" y="597.27" svg_rhmargin="470.259" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="470.26" y="598.95" svg_rhmargin="474.443" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="479.02" y="584.19" svg_rhmargin="484.285" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="484.54" y="584.19" svg_rhmargin="488.979" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="488.98" y="585.87" svg_rhmargin="493.163" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text x="476.74" y="597.27" svg_rhmargin="482.005" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="482.26" y="597.27" svg_rhmargin="487.398" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="487.42,491.62" y="601.11" svg_rhmargin="495.615" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">2𝑒</text>
+  <text x="487.42" y="592.47" svg_rhmargin="492.236" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="497.86" y="583.11" svg_rhmargin="503.125" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="503.38" y="583.11" svg_rhmargin="508.518" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="508.54,512.74" y="586.59" svg_rhmargin="516.735" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">2𝑒</text>
+  <text x="508.54" y="578.31" svg_rhmargin="513.356" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="497.86,503.38" y="597.27" svg_rhmargin="507.504" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕𝑠</text>
+  <text x="507.22,511.42" y="600.75" svg_rhmargin="515.895" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">2𝑘</text>
+  <text x="507.7,512.5" y="592.47" svg_rhmargin="516.495" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text y="591.27" svg_rhmargin="525.1" x="519.1,522.1" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text x="90.024" y="622.26" svg_rhmargin="97.62" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝐴</text>
+  <text x="97.584" y="625.74" svg_rhmargin="102.517" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text x="97.824" y="616.14" svg_rhmargin="103.447" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="107.42" y="622.26" svg_rhmargin="116.384" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">≡</text>
+  <text x="119.78" y="615.1800000000001" svg_rhmargin="124.713" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="119.78" y="628.26" svg_rhmargin="124.713" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="126.62" y="622.26" svg_rhmargin="135.512" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="135.5" y="625.26" svg_rhmargin="140.433" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text x="135.86" y="616.14" svg_rhmargin="141.483" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text y="622.26" svg_rhmargin="151.82" x="145.82,148.82" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text x="158.42" y="622.26" svg_rhmargin="167.312" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="167.3" y="625.26" svg_rhmargin="172.233" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text x="167.66" y="616.14" svg_rhmargin="173.283" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="177.26" y="622.26" svg_rhmargin="186.224" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="189.5" y="615.1800000000001" svg_rhmargin="195.123" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="189.86" y="628.26" svg_rhmargin="194.793" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="197.3" y="622.26" svg_rhmargin="206.192" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="205.61" y="624.66" svg_rhmargin="209.717" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝐽</text>
+  <text y="622.26" svg_rhmargin="220.49" x="214.13,217.49" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">; </text>
+  <text y="622.26" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="229.85" x=""/>
+  <text x="229.85" y="622.26" svg_rhmargin="235.778" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="235.85,240.77" y="626.8199999999999" svg_rhmargin="245.703" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="236.21" y="616.62" svg_rhmargin="241.833" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="249.41" y="622.26" svg_rhmargin="258.374" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="261.77" y="622.26" svg_rhmargin="267.698" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="267.77,272.69" y="626.8199999999999" svg_rhmargin="277.623" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="268.13,273.77" y="616.62" svg_rhmargin="278.388" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <text x="281.69,293.33" y="622.26" svg_rhmargin="299.798" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">+𝑏</text>
+  <text x="299.45,304.37" y="625.74" svg_rhmargin="309.303" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="300.53" y="616.14" svg_rhmargin="306.153" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="309.77" y="622.26" svg_rhmargin="316.454" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑎</text>
+  <text x="316.49" y="625.74" svg_rhmargin="321.423" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">2</text>
+  <text x="317.09" y="616.14" svg_rhmargin="322.713" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="323.33" y="622.26" svg_rhmargin="328.718" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">(</text>
+  <text x="328.73" y="622.26" svg_rhmargin="334.658" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="334.51,339.43" y="625.14" svg_rhmargin="344.363" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="334.87" y="616.14" svg_rhmargin="340.493" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="347.59" y="622.26" svg_rhmargin="356.554" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">+</text>
+  <text x="359.23" y="622.26" svg_rhmargin="365.158" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="365.11,370.03" y="625.14" svg_rhmargin="374.963" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">22</text>
+  <text x="365.47" y="616.14" svg_rhmargin="371.093" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="375.55" y="622.26" svg_rhmargin="380.938" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">)</text>
+  <text y="622.26" svg_rhmargin="390.67" x="384.67,387.67" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, </text>
+  <text y="622.26" svg_rhmargin="406.378" x="399.91" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑏</text>
+  <text x="406.03,410.95" y="625.74" svg_rhmargin="415.883" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="407.11" y="616.14" svg_rhmargin="412.733" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="419.59" y="622.26" svg_rhmargin="428.554" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">≡</text>
+  <text x="431.95" y="614.46" svg_rhmargin="437.215" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="437.35" y="614.46" svg_rhmargin="441.559" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="441.67,445.87" y="617.58" svg_rhmargin="450.011" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="441.67,446.47" y="610.47" svg_rhmargin="450.465" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <text x="434.59" y="628.26" svg_rhmargin="439.855" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝜕</text>
+  <text x="440.11" y="628.26" svg_rhmargin="443.612" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="443.59" y="631.38" svg_rhmargin="447.773" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text y="622.26" svg_rhmargin="485.86" x="454.51,457.51,465.58,470.86,476.86,482.86" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">, and </text>
+  <text x="492.58" y="622.26" svg_rhmargin="498.508" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="498.7,503.62" y="626.8199999999999" svg_rhmargin="508.553" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="499.06,504.58" y="616.62" svg_rhmargin="509.198" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔𝑒</text>
+  <text x="513.22" y="622.26" svg_rhmargin="522.184" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="90.024" y="650.94" svg_rhmargin="95.952" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="96.024,100.944" y="655.5" svg_rhmargin="105.877" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="96.384" y="645.3" svg_rhmargin="102.007" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="106.34" y="650.94" svg_rhmargin="110.132" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">|</text>
+  <text x="110.18" y="657.42" svg_rhmargin="113.682" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="113.66" y="657.42" svg_rhmargin="119.863" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">=</text>
+  <text x="119.9" y="657.42" svg_rhmargin="123.402" style="fill:#000000;font-family:SymbolMT;font-size:8.52px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="123.38" y="660.54" svg_rhmargin="127.563" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:6.96px;font-style:NORMAL;font-weight:normal;">e</text>
+  <text y="650.94" svg_rhmargin="244.574" x="134.3,137.636,143.636,147.008,153.008,156.008,163.34,169.34,172.34,181.004,187.004,189.98,195.98,203.93,206.93,209.93,218.594,223.85,226.958,232.958,238.238,241.574" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;">into Eq.A6.7B, we get,</text>
+  <text y="650.94" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="247.61" x=""/>
+  <text x="122.66" y="683.7" svg_rhmargin="129.308" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">1</text>
+  <text x="122.78" y="700.856" svg_rhmargin="129.032" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="133.58" y="683.7" svg_rhmargin="140.54" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑑</text>
+  <text x="131.3,138.26" y="700.856" svg_rhmargin="143.0" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑑𝑡</text>
+  <path d="" style="fill:#000000;stroke:#000000;stroke-width:1.0;"/>
+  <text x="145.34" y="692.8199999999999" svg_rhmargin="149.948" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">[</text>
+  <text x="149.9" y="684.66" svg_rhmargin="155.828" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="155.78,160.7" y="687.54" svg_rhmargin="165.633" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="156.14" y="678.54" svg_rhmargin="161.763" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="149.9" y="701.696" svg_rhmargin="155.828" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="155.78,160.7" y="704.576" svg_rhmargin="165.633" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">22</text>
+  <text x="156.14" y="695.58" svg_rhmargin="161.763" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="166.22,174.14,186.38" y="692.8199999999999" svg_rhmargin="195.344" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">]=−</text>
+  <text x="195.38" y="692.34" svg_rhmargin="199.58" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">[</text>
+  <text x="199.61" y="692.8199999999999" svg_rhmargin="209.822" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">𝑀</text>
+  <text x="210.05" y="692.34" svg_rhmargin="214.25" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">]</text>
+  <text x="214.37,219.29" y="695.22" svg_rhmargin="224.223" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">22</text>
+  <text x="226.61" y="692.8199999999999" svg_rhmargin="231.218" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">[</text>
+  <text x="231.29" y="684.66" svg_rhmargin="237.218" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="237.05,241.97" y="687.54" svg_rhmargin="246.903" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">21</text>
+  <text x="237.41" y="678.54" svg_rhmargin="243.033" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="231.29" y="701.696" svg_rhmargin="237.218" style="fill:#000000;font-family:SymbolMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;"></text>
+  <text x="237.05,241.97" y="704.576" svg_rhmargin="246.903" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">22</text>
+  <text x="237.41" y="695.58" svg_rhmargin="243.033" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:8.52px;font-style:NORMAL;font-weight:normal;">𝑔</text>
+  <text x="247.49,253.13,255.77,258.41,261.05,263.69,266.33,268.97,271.61,274.25,276.89,279.53,282.17,284.81,287.45,290.09,292.73,295.37,298.01,300.65,303.29,305.93,308.57,311.21,313.85,316.49,319.13,321.89,324.53,327.17,329.81,332.47,335.11,337.75,340.39,343.03,345.67,348.31,350.95,353.59,356.23,358.87,361.51,364.15,366.79,369.43,372.07,374.71,377.35,379.99,382.63,385.27,387.91,390.55,393.19,395.83,398.47,401.11,403.75,406.39,409.03,411.67,414.31,416.95,419.59,422.23,424.87,427.51,430.15,432.79,435.43,438.07,440.71,443.35,446.11,448.75,451.39,454.03,456.67,459.31,461.95,464.62,467.26,469.9,472.54,475.18,477.82,481.42,486.46,493.9,500.5,503.02,509.62,517.06" y="692.8199999999999" svg_rhmargin="522.04" style="fill:#000000;font-family:BCDIEE+CambriaMath;font-size:12.0px;font-style:NORMAL;font-weight:normal;">] (A8.2A)</text>
+  <text y="692.8199999999999" style="fill:#000000;font-family:TimesNewRomanPSMT;font-size:12.0px;font-style:NORMAL;font-weight:normal;" svg_rhmargin="525.1" x=""/>
+ </g>
+</svg>
