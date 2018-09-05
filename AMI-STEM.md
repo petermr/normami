@@ -91,3 +91,11 @@ also:
 ```
 ami-all marchantia
 ```
+and will give project statistics (RSN).
+
+
+```
+ami-all marchantia plantparts
+```
+will run the AMI software on the `marchantia` project with the `plantparts` dictionary.
+
