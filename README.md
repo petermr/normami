@@ -5,7 +5,7 @@ appropriate). The initial emphasis is on scholarly publications but much of the 
 
 ## Universal Search Tool (Citizen STEM Search; AMI-STEM)
 
-This is a bundle of all `norma` and `ami` functionality to transform PDFs and XML into structured semantic HTML. It's alpha (2018-09) and we have 4-6 testers each with different projects.
+This is a bundle of all `norma` and `ami` functionality to transform PDFs and XML into structured semantic HTML. It's alpha (2018-09) and we have 4-6 testers each with different projects. This runs on a simple commandline ; see AMI-STEM page for more details.
 
 ## Installation
 
