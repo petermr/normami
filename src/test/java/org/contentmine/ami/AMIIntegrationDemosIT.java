@@ -168,13 +168,15 @@ public class AMIIntegrationDemosIT {
 	public void testMakeCrystalSuppDataRSC() {
 
 		String projectName = "rscSupp";
-		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR,  "stefan/journals2");
+//		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR,  "stefan/journals2");
+		File sourceDir = new File(AMIFixtures.TEST_TOTAL_INT_DIR,  "rscSupp");
 		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
 		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
 		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
 		CProject cProject = new CProject(targetDir);
 		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(cProject);
-		List<String> facetList = Arrays.asList(new String[]{"crystal", "country", "funders"});
+		List<String> facetList = Arrays.asList(new String[]{
+				"crystal", "country", "funders", "nmrspectroscopy", "compchem", "nmrspectroscopy"});
 		integrationProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
 	}
 
@@ -187,10 +189,11 @@ public class AMIIntegrationDemosIT {
 		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
 		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
 		CProject cProject = new CProject(targetDir);
-		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(cProject);
-		integrationProcessor.setIncludeCTrees("c7ob02709e");
-		List<String> facetList = Arrays.asList(new String[]{"crystal", "country", "funders", "elements", "magnetism", "compchem"});
-		integrationProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(cProject);
+//		amiProcessor.setIncludeCTrees("c7ob02709e");
+		List<String> facetList = Arrays.asList(new String[]{
+				"crystal", "country", "funders", "elements", "magnetism", "compchem", "nmrspectroscopy"});
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
 	}
 
 
