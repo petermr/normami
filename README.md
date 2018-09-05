@@ -3,9 +3,15 @@
 A tool to convert a variety of inputs into normalized, tagged, XHTML (with embedded/linked SVG and PNG where
 appropriate). The initial emphasis is on scholarly publications but much of the technology is general.
 
+## Universal Search Tool (Citizen STEM Search; AMI-STEM)
+
+This is a bundle of all `norma` and `ami` functionality to transform PDFs and XML into structured semantic HTML. It's alpha (2018-09) and we have 4-6 testers each with different projects.
+
 ## Installation
 
 For a simple introduction and a description of how to install binaries of the software please see: [here](http://contentmine.github.io)
+
+
 
 ## Input
 
@@ -21,7 +27,7 @@ To convert a CTree full of NLM xml files such as those you might have downloaded
 
 # Building from source
 
-Norma can be built with maven3 and requires java 1.7 or greater.
+Norma can be built with maven3 and requires java 1.7 (sometimes 1.8) or greater.
 
 ## Contributing to development
 If you're interested in contributing please take a look at: [CONTRIBUTING.md](CONTRIBUTING.md)
