@@ -1,4 +1,6 @@
-#AMI-STEM 
+# AMI-STEM 
+
+A universal scientific search engine based on semantic documents and dictionaries
 
 ## Installation
 
