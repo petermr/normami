@@ -66,3 +66,28 @@ ami20180904
 ## appassembler
 
 ## getting started
+
+`ami-all` displays the help screen and a list of directories on the system.
+```
+amiProcessor <projectDirectory> [dictionary [dictionary]]
+    projectDirectory can be full name or relative to currentDir
+
+list of dictionaries taken from AMI dictionary list:
+
+    auxin               cochrane            compchem            country             crystal             
+    disease             distributions       drugs               elements            epidemic            
+    funders             illegaldrugs        inn                 insecticide         invasive            
+    magnetism           nal                 obesity             organization        pectin              
+    phytochemicals-old  phytochemicals1     phytochemicals2     plantDevelopment    plantparts          
+    poverty             refugeeUNHCR        statistics          statistics2         synbio              
+    tropicalVirus       
+also:
+    gene     
+    species     
+
+```
+
+`ami-all` takes the project name as first arg. `cd` to the directory **containing** the project top ("the CProject")
+```
+ami-all marchantia
+```
