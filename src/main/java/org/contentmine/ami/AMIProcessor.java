@@ -13,6 +13,8 @@ import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.ami.plugins.EntityAnalyzer;
 import org.contentmine.cproject.files.CProject;
+import org.contentmine.cproject.files.CTree;
+import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.Norma;
 
@@ -38,13 +40,13 @@ public class AMIProcessor {
 		
 	}
 	
-	public static AMIProcessor createProcessor(CProject cProject) {
-		AMIProcessor integrationProcessor = null;
+	private static AMIProcessor createProcessor(CProject cProject) {
+		AMIProcessor amiProcessor = null;
 		if (cProject != null) {
-			integrationProcessor = new AMIProcessor();
-			integrationProcessor.cProject = cProject;
+			amiProcessor = new AMIProcessor();
+			amiProcessor.cProject = cProject;
 		}
-		return integrationProcessor;
+		return amiProcessor;
 	}
 	
 	public static AMIProcessor createProcessor(String projectName) {
@@ -62,12 +64,12 @@ public class AMIProcessor {
 	public static AMIProcessor createProcessor(File projectDir) {
 		CProject cProject = new CProject(projectDir);
 
-		AMIProcessor integrationProcessor = null;
+		AMIProcessor amiProcessor = null;
 		if (cProject != null) {
-			integrationProcessor = new AMIProcessor();
-			integrationProcessor.cProject = cProject;
+			amiProcessor = new AMIProcessor();
+			amiProcessor.cProject = cProject;
 		}
-		return integrationProcessor;
+		return amiProcessor;
 	}
 	
 	public void defaultAnalyzeCooccurrence(List<String> facets) {
@@ -112,11 +114,21 @@ public class AMIProcessor {
 	}
 
 	public void makeProject() {
-		cProject.makeProject();
+		if (cProject.hasScholarlyHTML(0.6)) {
+			LOG.debug("ScholarlyHTML exists, skipping makeProject");
+			return;
+		}
+		cProject.makeProject(CTree.PDF);
+		cProject.makeProject(CTree.XML);
+		cProject.makeProject(CTree.HTML);
+// flush old CProject as CTreeList needs to be reset		
+		cProject = new CProject(cProject.getDirectory());
 	}
 
 	public void convertPDFOutputSVGFilesImageFiles() {
+		cProject.setCTreelist(null);
 		cProject.convertPDFOutputSVGFilesImageFiles();
+		return;
 	}
 
 	public void convertPDFSVGandWriteHtml() {
@@ -126,6 +138,18 @@ public class AMIProcessor {
 	public void convertJATSXMLandWriteHtml() {
 		Norma norma = new Norma();
 		String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+cProject.getDirectory();
+		norma.run(args);
+	}
+
+	public void convertHTMLsToProjectAndRunCooccurrence(List<String> facetList) {
+		makeProject(/*CTree.HTML*/);
+		convertRawHTMLToScholarly();
+		runSearchesAndCooccurrence(facetList);
+	}
+
+	private void convertRawHTMLToScholarly() {
+		Norma norma = new Norma();
+		String args = " -i fulltext.html -o scholarly.html --html jsoup --project "+cProject.getDirectory();
 		norma.run(args);
 	}
 
@@ -151,7 +175,7 @@ public class AMIProcessor {
 		if (cProject != null) {
 			cProject.setIncludeTreeList(Arrays.asList(treeNames));
 		}
-//		LOG.debug(cTreeList);
+		LOG.debug("CP "+cProject);
 	}
 
 
@@ -182,6 +206,14 @@ public class AMIProcessor {
 		}
 		SimpleDictionaries simpleDictionaries = new SimpleDictionaries();
 		simpleDictionaries.listDictionaries(argList);
+	}
+
+	public void run(String cmd) {
+		try {
+			CommandProcessor.main((cProject.getDirectory()+" "+cmd).split("\\s+"));
+		} catch (IOException e) {
+			throw new RuntimeException("Cannot run command: "+cmd, e);
+		}
 	}
 
 

@@ -140,25 +140,18 @@ public class AMIIntegrationDemosIT {
 		File sourceDir = new File(AMIFixtures.TEST_TOTAL_INT_DIR, "acsSupp");
 		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, "acsSupp");
 		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
-		CProject cProject = new CProject(targetDir);
-		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(cProject);
-		new CProject().run("--project "+targetDir+" --makeProject (\\1)/fulltext.pdf --fileFilter .*/(.*)\\.pdf");
-		cProject.convertPDFOutputSVGFilesImageFiles();
-		cProject.convertPDFSVGandWriteHtml();
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
+		amiProcessor.convertPDFOutputSVGFilesImageFiles();
+		amiProcessor.convertPDFSVGandWriteHtml();
 		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 		+ " search(crystal)"
 		+ " search(country)"
 		+ " search(funders)"
 		;
-
-	    
-		try {
-			CommandProcessor.main((cProject.getDirectory()+" "+cmd).split("\\s+"));
-		} catch (IOException e) {
-			throw new RuntimeException("Cannot run command: "+cmd, e);
-		}
+		amiProcessor.run(cmd);
 		List<String> facetList = Arrays.asList(new String[]{"crystal", "country", "funders"});
-		integrationProcessor.defaultAnalyzeCooccurrence(facetList);
+		amiProcessor.defaultAnalyzeCooccurrence(facetList);
 
 		
 	}
@@ -173,11 +166,11 @@ public class AMIIntegrationDemosIT {
 		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
 		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
 		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
-		CProject cProject = new CProject(targetDir);
-		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(cProject);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
 		List<String> facetList = Arrays.asList(new String[]{
-				"crystal", "country", "funders", "nmrspectroscopy", "compchem", "nmrspectroscopy"});
-		integrationProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+				"crystal", "country", "funders", "nmrspectroscopy", "compchem", "nmrspectroscopy", "solvents"});
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
 	}
 
 	@Test
@@ -188,8 +181,8 @@ public class AMIIntegrationDemosIT {
 		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
 		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
 		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
-		CProject cProject = new CProject(targetDir);
-		AMIProcessor amiProcessor = AMIProcessor.createProcessor(cProject);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
 //		amiProcessor.setIncludeCTrees("c7ob02709e");
 		List<String> facetList = Arrays.asList(new String[]{
 				"crystal", "country", "funders", "elements", "magnetism", "compchem", "nmrspectroscopy"});
@@ -207,10 +200,10 @@ public class AMIIntegrationDemosIT {
 		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
 //		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
 //		CProject cProject = new CProject(targetDir);
-		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(sourceDir);
-//        integrationProcessor.setSkipConvertPDFs(true);		
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(sourceDir);
+//        amiProcessor.setSkipConvertPDFs(true);		
 		List<String> facetList = Arrays.asList(new String[]{"elements", "crystal", "country", "magnetism", "compchem", "funders"});
-		integrationProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
 	}
 	
 	@Test 
@@ -224,5 +217,81 @@ public class AMIIntegrationDemosIT {
 //		AMIProcessor.main(new String[]{"marchantia"});
 //		AMIProcessor.main(new String[]{"marchantia", "country", "plantParts"});
 	}
+
+	@Test
+	// not sure these are full papers
+	public void testScieloBotBras() {
+
+		String projectName = "actabotbras";
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, "actabotbras/html");
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
+		List<String> facetList = Arrays.asList(new String[]{
+				"species", "country", "funders", "gene", "plantparts", "insecticide"});
+		amiProcessor.convertHTMLsToProjectAndRunCooccurrence(facetList);
+	}
+
+	@Test
+	public void testACSOpen() {
+
+		String projectName = "acsopen";
+		File sourceDir = new File(AMIFixtures.TEST_TOTAL_INT_DIR, projectName);
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
+		List<String> facetList = Arrays.asList(new String[]{
+				"crystal", "country", "magnetism", "compchem", "nmrspectroscopy", "funders", "solvents"});
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+	
+	@Test
+	public void testACSOpenMain() {
+		String projectName = "acsopenmain";
+		File sourceDir = new File(AMIFixtures.TEST_TOTAL_INT_DIR, projectName);
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
+		List<String> facetList = Arrays.asList(new String[]{
+				"crystal", "country", "magnetism", "compchem", "nmrspectroscopy", "funders", "solvents"});
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+
+	@Test
+	public void testACSOpenSmall() {
+
+		String projectName = "acsopensmall";
+		File sourceDir = new File(AMIFixtures.TEST_TOTAL_INT_DIR, projectName);
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
+		List<String> facetList = Arrays.asList(new String[]{
+				"crystal", "country", "magnetism", "compchem", "nmrspectroscopy", "funders", "solvents"});
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+
+	@Test
+	public void testACSOpenProblems() {
+
+		String projectName = "acsopenproblems";
+		File sourceDir = new File(AMIFixtures.TEST_TOTAL_INT_DIR, projectName);
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
+		List<String> facetList = Arrays.asList(new String[]{
+				"crystal", "country", "magnetism", "compchem", "nmrspectroscopy", "funders", "solvents"});
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+
 
 }

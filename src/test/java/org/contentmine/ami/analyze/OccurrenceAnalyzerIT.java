@@ -170,9 +170,9 @@ public class OccurrenceAnalyzerIT {
 		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
 		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
 		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
-		CProject cProject = new CProject(targetDir);
-		AMIProcessor integrationProcessor = AMIProcessor.createProcessor(cProject);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
 		List<String> facetList = Arrays.asList(new String[]{"species", "insecticide", "country", "funders", "drugs", "tropicalVirus"});
-		integrationProcessor.runSearchesAndCooccurrence(facetList);
+		amiProcessor.runSearchesAndCooccurrence(facetList);
 	}
 }

@@ -81,7 +81,7 @@ public class CommandProcessor {
 			if (i % 4 == 0) helpString += "\n";
 			symbolMap.put(abbrev, replace);
 		}
-		LOG.debug("symbols:\n"+helpString);
+//		LOG.debug("symbols:\n"+helpString);
 	}
 
 	private void setProjectDir(File projectDir) {
