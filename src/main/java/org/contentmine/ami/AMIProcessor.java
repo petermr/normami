@@ -131,8 +131,8 @@ public class AMIProcessor {
 		return;
 	}
 
-	public void convertPDFSVGandWriteHtml() {
-		cProject.convertPDFSVGandWriteHtml();
+	public void convertPSVGandWriteHtml() {
+		cProject.convertPSVGandWriteHtml();
 	}
 
 	public void convertJATSXMLandWriteHtml() {
@@ -158,7 +158,7 @@ public class AMIProcessor {
 		if (!skipConvertPDFs) {
 			convertPDFOutputSVGFilesImageFiles();
 		}
-		convertPDFSVGandWriteHtml();
+		convertPSVGandWriteHtml();
 		runSearchesAndCooccurrence(facetList);
 	}
 

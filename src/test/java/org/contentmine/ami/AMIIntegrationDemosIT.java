@@ -14,6 +14,7 @@ import org.contentmine.ami.plugins.OccurrenceAnalyzer.SubType;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.eucl.euclid.test.TestUtil;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /** these run to complete stack from PDF to co-occurrence and other tasks.
@@ -21,6 +22,7 @@ import org.junit.Test;
  * @author pm286
  *
  */
+@Ignore // FOR TESTS, REMOVE LATER
 public class AMIIntegrationDemosIT {
 	public static final Logger LOG = Logger.getLogger(AMIIntegrationDemosIT.class);
 	static {
@@ -46,7 +48,7 @@ public class AMIIntegrationDemosIT {
 		}
 		if (!skipHtml) {
 			CProject cProject = new CProject(targetDir);
-			cProject.convertPDFSVGandWriteHtml();
+			cProject.convertPSVGandWriteHtml();
 		}
 		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 		+ " species(binomial)"
@@ -107,7 +109,7 @@ public class AMIIntegrationDemosIT {
 				CProject.HTTP_ACS_SUPPDATA);
 		if (1==1)return;
 		cProject.convertPDFOutputSVGFilesImageFiles();
-		cProject.convertPDFSVGandWriteHtml();
+		cProject.convertPSVGandWriteHtml();
 		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 		+ " search(crystal)"
 		+ " search(country)"
@@ -143,7 +145,7 @@ public class AMIIntegrationDemosIT {
 		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
 		amiProcessor.makeProject();
 		amiProcessor.convertPDFOutputSVGFilesImageFiles();
-		amiProcessor.convertPDFSVGandWriteHtml();
+		amiProcessor.convertPSVGandWriteHtml();
 		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 		+ " search(crystal)"
 		+ " search(country)"
@@ -290,6 +292,39 @@ public class AMIIntegrationDemosIT {
 		amiProcessor.makeProject();
 		List<String> facetList = Arrays.asList(new String[]{
 				"crystal", "country", "magnetism", "compchem", "nmrspectroscopy", "funders", "solvents"});
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+
+	@Test
+	public void testThesis() {
+
+		String projectName = "oatd";
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, "thesis/oatd/pdf/");
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
+		List<String> facetList = Arrays.asList(new String[]{
+				"species", "gene", "plantparts", "country", "auxin", "plantDevelopment", "insecticide", "elements",
+				"funders", "invasive", "phytochemicals2"});
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+
+	@Test
+	public void testThesisMake() {
+
+		// Assumes target left from previous!
+		String projectName = "oatd";
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, "thesis/"+projectName);
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+//		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.makeProject();
+		List<String> facetList = Arrays.asList(new String[]{
+				"species", "gene", "plantparts", "country", "auxin", "plantDevelopment", "insecticides", "elements",
+				"funders", "invasive", "phytochemicals2"});
 		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
 	}
 
