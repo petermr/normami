@@ -19,8 +19,11 @@ import java.util.regex.Pattern;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.lookups.WikipediaLookup;
+import org.contentmine.ami.lookups.WikipediaLookupTest;
 import org.contentmine.cproject.lookup.DefaultStringDictionary;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.norma.NAConstants;
 
 import com.google.common.hash.BloomFilter;
@@ -76,13 +79,13 @@ import nu.xom.Elements;
  */
 public class DefaultAMIDictionary extends DefaultStringDictionary {
 
-	private static final Logger LOG = Logger.getLogger(DefaultAMIDictionary.class);
+	public static final Logger LOG = Logger.getLogger(DefaultAMIDictionary.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 
 	public static final String ID = "id";
-	private static final String DICTIONARY = "dictionary";
+	public static final String DICTIONARY = "dictionary";
 	public static final String ENTRY = "entry";
 	public static final String NAME = "name";
 	private static final String REGEX = "regex";
@@ -102,6 +105,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	public static final File SYNBIO_DIR     = new File(AMI_DIR, "synbio");
 	protected static final String UTF_8        = "UTF-8";
 	
+	private String dictionaryName;
 	protected Map<DictionaryTerm, String> namesByTerm;
 	protected InputStream inputStream;
 	protected Element dictionaryElement;
@@ -111,7 +115,9 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	private List<DictionaryTerm> dictionaryTermList; 
 	private List<DictionaryTerm> stemmedTermList;
 	private Set<String> rawTermSet;
-	private JsonElement jsonElement; 
+	private JsonElement jsonElement;
+	private File outputDir;
+	private File inputDir; 
 	
 	public DefaultAMIDictionary() {
 		init();
@@ -352,5 +358,48 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	public Element getDictionaryElement() {
 		return dictionaryElement;
 	}
+
+	public void setDictionaryName(String name) {
+		this.dictionaryName = name;
+	}
+
+	public void setOutputDir(File dictionaryDir) {
+		this.outputDir = dictionaryDir;
+	}
+
+	public void setInputDir(File dictionaryDir) {
+		this.inputDir = dictionaryDir;
+	}
+
+	/**
+	 * defaults to infinite range
+	 * @throws IOException
+	 */
+	public void annotateDictionaryWithWikidata() throws IOException {
+		this.annotateDictionaryWithWikidata(0,  Integer.MAX_VALUE);
+	}
+
+	public void annotateDictionaryWithWikidata(int start, int end) throws IOException {
+		if (inputDir == null) {
+			throw new RuntimeException("no input dictionaryDir");
+		}
+		File inputDictionary = new File(inputDir, getDictionaryName()+".xml");
+		if (!inputDictionary.exists() || inputDictionary.isDirectory()) {
+			throw new RuntimeException("input dictionaryDir " + inputDictionary + " does not exist");
+		}
+		Element inputHtml = XMLUtil.parseQuietlyToDocument(inputDictionary).getRootElement();
+		WikipediaLookup wikipediaLookup = new WikipediaLookup(this);
+		wikipediaLookup.setRange(start, end);
+		wikipediaLookup.lookupEntriesAndAnnotate(inputHtml);
+	}
+
+	public File getOutputDir() {
+		return outputDir;
+	}
+
+	public String getDictionaryName() {
+		return dictionaryName;
+	}
+
 
 }

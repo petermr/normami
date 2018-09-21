@@ -1,5 +1,6 @@
 package org.contentmine.ami.lookups;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -10,15 +11,27 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.dictionary.DefaultAMIDictionary;
 import org.contentmine.cproject.lookup.AbstractLookup;
 import org.contentmine.cproject.util.CMineUtil;
 import org.contentmine.eucl.euclid.IntArray;
+import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.AbstractCMElement;
+import org.contentmine.graphics.html.HtmlA;
+import org.contentmine.graphics.html.HtmlBody;
+import org.contentmine.graphics.html.HtmlElement;
+import org.contentmine.graphics.html.HtmlFactory;
+import org.contentmine.graphics.html.HtmlHtml;
+import org.contentmine.graphics.html.HtmlLi;
+import org.contentmine.graphics.html.HtmlUl;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 
 import net.minidev.json.JSONArray;
+import nu.xom.Attribute;
+import nu.xom.Element;
 
 public class WikipediaLookup extends AbstractLookup {
 
@@ -31,6 +44,14 @@ public class WikipediaLookup extends AbstractLookup {
 	private static final String FORMAT_XML = "&format=xml";
 	private static final String WIKIDATA_GET_ENTITIES = "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=";
 	public static final String WIKIDATA_SPECIES = "225";
+// 
+	public static final String DESCRIPTION = "description";
+	public static final String ITEM = "wikidataItem";
+	public static final String LABEL = "label";
+	public static final String PROPERTY = "wikidataProperty";
+	private static final String WIKIDATA = "wikidata";
+
+
 	/**
 Magnus Manske
 	
@@ -85,12 +106,65 @@ Mar 14 (9 days ago)
 	 * }
 	 */
 	
+	/*
+<?xml version="1.0"?>
+<api batchcomplete="">
+<continue sroffset="10" continue="-||" />
+<query>
+<searchinfo totalhits="87915" />
+<search>
+<p ns="0" title="Q83310" pageid="85709" wordcount="0" snippet="species of mammal" timestamp="2018-09-14T10:08:19Z" />
+<p ns="0" title="Q15305579" pageid="16952952" wordcount="0" snippet="Mus musculus chromosome" timestamp="2018-09-14T10:08:19Z" />
+<p ns="0" title="Q15305624" pageid="16952997" wordcount="0" snippet="Mus musculus chromosome" timestamp="2018-09-14T10:08:19Z" />
+<p ns="0" title="Q15305594" pageid="16952966" wordcount="0" snippet="Mus musculus chromosome" timestamp="2018-09-14T10:08:19Z" />
+<p ns="0" title="Q15304656" pageid="16952129" wordcount="0" snippet="Mus musculus chromosome" timestamp="2018-09-14T10:08:19Z" />
+<p ns="0" title="Q15305590" pageid="16952963" wordcount="0" snippet="Mus musculus chromosome" timestamp="2018-09-14T10:08:19Z" />
+<p ns="0" title="Q15305599" pageid="16952972" wordcount="0" snippet="Mus musculus chromosome" timestamp="2018-09-14T10:08:19Z" />
+<p ns="0" title="Q15305608" pageid="16952981" wordcount="0" snippet="Mus musculus chromosome" timestamp="2018-09-14T10:08:19Z" />
+<p ns="0" title="Q15305576" pageid="16952949" wordcount="0" snippet="Mus musculus chromosome" timestamp="2018-09-14T10:08:19Z" />
+<p ns="0" title="Q15305616" pageid="16952989" wordcount="0" snippet="Mus musculus chromosome" timestamp="2018-09-14T10:08:19Z" />
+</search>
+</query>
+</api>
+
+<?xml version="1.0"?>
+<api batchcomplete="">
+<continue sroffset="10" continue="-||" />
+<query>
+<searchinfo totalhits="17" />
+<search>
+<p ns="0" title="Cryptogenic species" pageid="5603283" size="1673" wordcount="163" snippet="A &lt;span class=&quot;searchmatch&quot;&gt;cryptogenic&lt;/span&gt; &lt;span class=&quot;searchmatch&quot;&gt;species&lt;/span&gt; (&amp;quot;&lt;span class=&quot;searchmatch&quot;&gt;cryptogenic&lt;/span&gt;&amp;quot; being derived from Greek &amp;quot;κρυπτός&amp;quot;, meaning hidden, and &amp;quot;γένεσις&amp;quot;, meaning origin) is a &lt;span class=&quot;searchmatch&quot;&gt;species&lt;/span&gt; whose origins are" timestamp="2017-10-06T17:30:03Z" />
+<p ns="0" title="Cryptogenic" pageid="24844911" size="499" wordcount="20" snippet="&lt;span class=&quot;searchmatch&quot;&gt;Cryptogenic&lt;/span&gt; refers to something of obscure or unknown origin. It is commonly used to refer to: &lt;span class=&quot;searchmatch&quot;&gt;Cryptogenic&lt;/span&gt; disease &lt;span class=&quot;searchmatch&quot;&gt;Cryptogenic&lt;/span&gt; &lt;span class=&quot;searchmatch&quot;&gt;species&lt;/span&gt;" timestamp="2016-04-28T08:03:54Z" />
+<p ns="0" title="List of invasive plant species in Florida" pageid="42200242" size="27351" wordcount="1167" snippet="matrella  The &lt;span class=&quot;searchmatch&quot;&gt;species&lt;/span&gt; below are &lt;span class=&quot;searchmatch&quot;&gt;cryptogenic&lt;/span&gt;, of indeterminate native or non-native origin in Florida:   Pistia stratiotes  Invasive &lt;span class=&quot;searchmatch&quot;&gt;species&lt;/span&gt; in the United" timestamp="2018-09-14T02:28:01Z" />
+<p ns="0" title="Aurelia aurita" pageid="373206" size="15393" wordcount="1741" snippet="and molecular genetic analyses identify multiple introductions of &lt;span class=&quot;searchmatch&quot;&gt;cryptogenic&lt;/span&gt; &lt;span class=&quot;searchmatch&quot;&gt;species&lt;/span&gt;&amp;quot;. Proc. Natl. Acad. Sci. USA. 102 (34): 11968–11973. doi:10.1073/pnas" timestamp="2018-08-16T09:22:11Z" />
+<p ns="0" title="Glossary of invasion biology terms" pageid="3353280" size="30720" wordcount="4138" snippet="that live together in a particular environment (Allaby 1998).   &lt;span class=&quot;searchmatch&quot;&gt;Cryptogenic&lt;/span&gt; &lt;span class=&quot;searchmatch&quot;&gt;species&lt;/span&gt; &lt;span class=&quot;searchmatch&quot;&gt;Species&lt;/span&gt; that are neither clearly native nor exotic (Cohen and Carlton" timestamp="2018-04-04T13:00:12Z" />
+<p ns="0" title="Ecology of the San Francisco Estuary" pageid="14999741" size="56203" wordcount="7638" snippet="Series. 66:81-94. Carlton, J. (1996). &amp;quot;Biological Invasions and &lt;span class=&quot;searchmatch&quot;&gt;Cryptogenic&lt;/span&gt; &lt;span class=&quot;searchmatch&quot;&gt;Species&lt;/span&gt;. &amp;quot; Ecology 77(6). Cole, B. E., and J. E. Cloern. 1987. An empirical" timestamp="2018-01-23T15:12:29Z" />
+<p ns="0" title="Pollicipes pollicipes" pageid="21580073" size="8723" wordcount="713" snippet="2557: 29–38.    Dan Minchin (2007). &amp;quot;A checklist of alien and &lt;span class=&quot;searchmatch&quot;&gt;cryptogenic&lt;/span&gt; aquatic &lt;span class=&quot;searchmatch&quot;&gt;species&lt;/span&gt; in Ireland&amp;quot; (PDF). Aquatic Invasions. 2 (4): 341–366. doi:10" timestamp="2018-03-27T20:43:41Z" />
+<p ns="0" title="Cryptic bat rabies" pageid="40096409" size="4451" wordcount="558" snippet="mucosa of naturally infected bats. Science 175, 1255–1256.   Gibbons RV. &lt;span class=&quot;searchmatch&quot;&gt;Cryptogenic&lt;/span&gt; rabies, bats, and the question of aerosol transmission. Ann Emerg Med" timestamp="2018-02-18T18:47:48Z" />
+<p ns="0" title="Keratin 18" pageid="916383" size="9758" wordcount="1112" snippet="epithelial tissues of the body. Mutations in this gene have been linked to &lt;span class=&quot;searchmatch&quot;&gt;cryptogenic&lt;/span&gt; cirrhosis. Two transcript variants encoding the same protein have been" timestamp="2017-10-27T00:50:06Z" />
+<p ns="0" title="Hypersensitivity pneumonitis" pageid="2303500" size="17406" wordcount="1274" snippet="usual interstitial pneumonia, non-specific interstitial pneumonia and &lt;span class=&quot;searchmatch&quot;&gt;cryptogenic&lt;/span&gt; organizing pneumonia, among others.The prognosis of some idiopathic interstitial" timestamp="2018-09-13T04:38:14Z" />
+</search>
+</query>
+</api>
+
+view-source:https://www.wikidata.org/w/api.php?action=query&list=search&srsearch=Cryptogenic%20species&format=xml	 */
+	
 	private static final Logger LOG = Logger.getLogger(WikipediaLookup.class);
+	private DefaultAMIDictionary dictionary;
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+	private int start = 0;
+	private int end = Integer.MAX_VALUE;
+	private int maxAlternative = 3;
+	
 	public WikipediaLookup() {
+	}
+
+	public WikipediaLookup(DefaultAMIDictionary dictionary) {
+		this();
+		this.dictionary = dictionary;
 	}
 
 	@Override
@@ -113,6 +187,13 @@ Mar 14 (9 days ago)
 		return getIdentifierArray(jsonElement, ITEMS);
 	}
 	
+	public URL createWikidataLookupURL(String query) {
+		String urlString = 
+		"https://www.wikidata.org/w/index.php?search=&search="+query+"&title=Special:Search&go=Go&searchToken=1gq68j12xhd4disfwojgu2si4";
+		URL url = createUrl(urlString);
+		return url;
+	}
+		
 	public IntArray getWikidataIDsAsIntArray(List<String> speciesNames) throws IOException {
 		JsonElement jsonElement = this.getWikidataSpeciesJSONElement(speciesNames);
 		return getIdentifierArray(jsonElement, ITEMS);
@@ -155,11 +236,55 @@ Mar 14 (9 days ago)
     
 	private JsonElement getWikidataSpeciesJSONElement(String speciesName) throws IOException {
 		URL url = createWikidataSpeciesLookupURL(speciesName);
+		LOG.debug(url);
+		return getJsonFromUrl(url);
+	}
+
+	/**
+	 * Search results
+
+Jump to navigation Jump to search
+To search for Wikidata items by their title on a given site, use Special:ItemByTitle. To search by label in a given language, use Special:ItemDisambiguation.
+
+
+Search
+Results 1 – 21 of 547
+Content pages
+Multimedia
+Translations
+Everything
+Advanced
+Larus (Q1887740)
+genus of birds
+26 statements, 46 sitelinks - 21:40, 11 September 2018
+European Herring Gull (Q28236) : Larus argentatus
+species of bird
+71 statements, 70 sitelinks - 21:40, 11 September 2018
+	 * 
+	 * @param query
+	 * @return
+	 * @throws IOException
+	 */
+	public HtmlBody getWikidataHtmlBody(String query) throws IOException {
+		URL url = createWikidataLookupURL(query);
+		HtmlBody body = getHtmlBodyFromUrl(url);
+		return body;
+	}
+
+	private JsonElement getJsonFromUrl(URL url) throws IOException {
 		String json = this.getResponse(url);
+		LOG.debug("Json "+json);
 	    JsonParser parser = new JsonParser();
 	    return parser.parse(json);
 	}
-    
+	private HtmlBody getHtmlBodyFromUrl(URL url) throws IOException {
+		String htmlS = this.getResponse(url);
+		HtmlHtml htmlElement = (HtmlHtml) new HtmlFactory().parse(XMLUtil.parseXML(htmlS));
+		return htmlElement.getBody();
+	}
+
+//	<ul class='mw-search-results'>
+
 	private JsonElement getWikidataSpeciesJSONElement(List<String> names) throws IOException {
 		URL url = createWikidataSpeciesLookupURL(names);
 		String json = this.getResponse(url);
@@ -171,6 +296,120 @@ Mar 14 (9 days ago)
 	    	// expected for empty returns (bug in Json)
 	    }
 	    return element;
+	}
+
+	public List<HtmlElement> getQ(String query) throws IOException {
+		HtmlBody htmlBody = getWikidataHtmlBody(query);
+		/**
+	  <div class="searchresults">
+		  <p class="mw-search-createlink"> </p>
+		  <ul class="mw-search-results">
+		 */
+		List<Element> elements = XMLUtil.getQueryElements(htmlBody, 
+				".//*[local-name()='div' and @class='searchresults']/*[local-name()='ul' and @class='mw-search-results']");
+		HtmlUl searchResultsUl = elements.size() == 0 ? null : (HtmlUl) elements.get(0);
+		/**
+	<ul class="mw-search-results" xmlns="http://www.w3.org/1999/xhtml">
+	<li>
+	<div class="mw-search-result-heading">
+	 <a href="/wiki/Q1887740" title="‎Larus‎ | ‎genus of birds‎" data-serp-pos="0">
+		<span class="wb-itemlink">
+		  <span class="wb-itemlink-label" lang="en" dir="ltr">
+		    <span class="searchmatch">Larus</span>
+		  </span>
+		  <span class="wb-itemlink-id">(Q1887740)</span>
+		</span>
+	 </a>
+	</div>
+	<div class="searchresult">
+	 <span class="wb-itemlink-description">genus of birds</span>
+	</div>
+	<div class="mw-search-result-data">26 statements, 46 sitelinks - 22:29, 11 September 2018</div>
+	</li>
+		 */
+		List<HtmlElement> liList = new ArrayList<HtmlElement>();
+		if (searchResultsUl != null) {
+			liList = AbstractCMElement.getChildElements(searchResultsUl, HtmlLi.TAG); 
+//			LOG.debug("** "+liList.size());
+			for (HtmlElement li : liList) {
+				HtmlA a = (HtmlA)li.getChild(0).getChild(0);
+//				LOG.debug(a.getHref() + ": " + a.getTitle());
+			}
+		} else {
+//			LOG.debug("NULLLLLLLLLLLLLLLLLL");
+		}
+		return liList;
+	}
+
+	public void lookupEntriesAndAnnotate(Element wikipediaLookupHtml) throws IOException {
+		Element outputDictionary = new Element(DefaultAMIDictionary.DICTIONARY);
+		int size = wikipediaLookupHtml.getChildElements().size();
+		for (int i = start; i < Math.min(size, end); i++) {
+			Element dictionaryElement = wikipediaLookupHtml.getChildElements().get(i);
+			String query = dictionaryElement.getAttributeValue(DefaultAMIDictionary.TERM);
+			if (query == null) {
+				LOG.debug("missing term: " + dictionaryElement.toXML());
+				continue;
+			}
+			String item = dictionaryElement.getAttributeValue(ITEM);
+			String property = dictionaryElement.getAttributeValue(PROPERTY);
+			if (item != null && !item.equals("")) {
+				LOG.debug("skipped existing item: "+item);
+				outputDictionary.appendChild(dictionaryElement);
+			} else if (property != null && !property.equals("")) {
+				LOG.debug("skipped exisiting property: "+property);
+				outputDictionary.appendChild(dictionaryElement);
+			} else {
+				query = query.replaceAll(" ",  "_");
+				LOG.debug(query);
+				List<HtmlElement> liList = getQ(query);
+				addToOutput(outputDictionary, liList, dictionaryElement, maxAlternative);
+			}
+		}
+		XMLUtil.debug(outputDictionary, new File(dictionary.getOutputDir(), dictionary.getDictionaryName()+".xml"), 1);
+	}
+
+	/**
+	<li>
+	<div class="mw-search-result-heading">
+	 <a href="/wiki/Q1887740" title="‎Larus‎ | ‎genus of birds‎" data-serp-pos="0">
+		<span class="wb-itemlink">
+		  <span class="wb-itemlink-label" lang="en" dir="ltr">
+		    <span class="searchmatch">Larus</span>
+		  </span>
+		  <span class="wb-itemlink-id">(Q1887740)</span>
+		</span>
+	 </a>
+	</div>
+	<div class="searchresult">
+	 <span class="wb-itemlink-description">genus of birds</span>
+	</div>
+	</li>
+	 * 
+	 * @param outputDictionary
+	 * @param liList
+	 * @param dictionaryElement
+	 */
+	public void addToOutput(Element outputDictionary, List<HtmlElement> liList, Element dictionaryElement, int maxAlternative) {
+		Element newDictionaryElement = (Element) dictionaryElement.copy();
+		if (liList.size() == 0) {
+			// remove existing attribute
+			newDictionaryElement.removeAttribute(newDictionaryElement.getAttribute(WikipediaLookup.WIKIDATA));
+		} else if (liList.size() == 1) {
+			WikiResult wikiResult = WikiResult.extractWikiResult((HtmlLi) liList.get(0));
+			newDictionaryElement.addAttribute(new Attribute(WikipediaLookup.WIKIDATA, wikiResult.getQString()));
+			LOG.debug("added single match: " + wikiResult.getQString());
+		} else {
+			List<WikiResult> wikiResultList = WikiResult.extractWikiResultList((List<HtmlElement>) liList);
+			// only output the first few
+			if (wikiResultList.size() > maxAlternative) {
+				wikiResultList = wikiResultList.subList(0, maxAlternative);
+			}
+			for (WikiResult wikiResult : wikiResultList) {
+				newDictionaryElement.appendChild(wikiResult.toXML());
+			}
+		}
+		outputDictionary.appendChild(newDictionaryElement);
 	}
 
 	/** create URL to lookup a species.
@@ -205,6 +444,11 @@ Mar 14 (9 days ago)
 	public static URL createWikidataLookupURL(String property, String name) {
 		name = name.replaceAll(" ", ESC_SPACE);
 		String urlString = WIKIDATA_GETIDS+property+":"+ESC_QUOTE+name+ESC_QUOTE+"]";
+		URL url = createUrl(urlString);
+		return url;
+	}
+
+	private static URL createUrl(String urlString) {
 		URL url = null;
 		try {
 			url = new URL(urlString);
@@ -231,17 +475,41 @@ Mar 14 (9 days ago)
 		}
 		urlString += "]&props="+property;
 		LOG.trace("URL: "+urlString);
-		URL url = null;
-		try {
-			url = new URL(urlString);
-		} catch (MalformedURLException e) {
-			throw new RuntimeException("Bad url for wikidata: +url", e);
-		}
+		URL url = createUrl(urlString);
 		return url;
+	}
+
+	public void setRange(int start, int end) {
+		this.start = start;
+		this.end = end;
+	}
+
+	public int getStart() {
+		return start;
+	}
+
+	public void setStart(int start) {
+		this.start = start;
+	}
+
+	public int getEnd() {
+		return end;
+	}
+
+	public void setEnd(int end) {
+		this.end = end;
+	}
+
+	public int getMaxAlternative() {
+		return maxAlternative;
+	}
+
+	public void setMaxAlternative(int maxAlternative) {
+		this.maxAlternative = maxAlternative;
 	}
 	
     /**
-     * These attempted to retrieve multiple species to avoid badwidth but the id<->species map is lost.
+     * These attempted to retrieve multiple species to avoid bandwidth but the id<->species map is lost.
      * 
      */
 //	private IntArray getWikidataIDsAsIntArray(List<String> names) throws MalformedURLException, IOException {
