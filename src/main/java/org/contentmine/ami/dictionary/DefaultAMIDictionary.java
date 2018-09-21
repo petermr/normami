@@ -1,6 +1,7 @@
 package org.contentmine.ami.dictionary;
 
 import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -20,7 +21,6 @@ import java.util.regex.Pattern;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.lookups.WikipediaLookup;
-import org.contentmine.ami.lookups.WikipediaLookupTest;
 import org.contentmine.cproject.lookup.DefaultStringDictionary;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlElement;
