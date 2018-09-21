@@ -22,7 +22,7 @@ import org.junit.Test;
  * @author pm286
  *
  */
-@Ignore // FOR TESTS, REMOVE LATER
+// @Ignore // FOR TESTS, REMOVE LATER
 public class AMIIntegrationDemosIT {
 	public static final Logger LOG = Logger.getLogger(AMIIntegrationDemosIT.class);
 	static {
@@ -296,19 +296,54 @@ public class AMIIntegrationDemosIT {
 	}
 
 	@Test
+	public void testSutherland() {
+
+		String projectName = "sutherland";
+		List<String> facetList = Arrays.asList(new String[]{
+				"species", "country", "funders"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, "sutherland/group");
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		completeAnalysisPDF(facetList, sourceDir, targetDir);
+	}
+
+	@Test
+	public void testSutherlandBirds() {
+
+		String projectName = "sutherland/birdConservationSmall";
+		List<String> facetList = Arrays.asList(new String[]{
+				"species",
+				"country",
+				"funders",
+				"wildlife",
+//				"wetlands"
+				});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		completeAnalysisXML(facetList, sourceDir, targetDir);
+	}
+
+	@Test
 	public void testThesis() {
 
 		String projectName = "oatd";
-		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, "thesis/oatd/pdf/");
-		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
-		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
-		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
-		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
-		amiProcessor.makeProject();
 		List<String> facetList = Arrays.asList(new String[]{
 				"species", "gene", "plantparts", "country", "auxin", "plantDevelopment", "insecticide", "elements",
 				"funders", "invasive", "phytochemicals2"});
-		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, "thesis/oatd/pdf/");
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		completeAnalysisPDF(facetList, sourceDir, targetDir);
+	}
+
+	@Test
+	// horrible - think it has characters as images
+	public void testThesis1() {
+
+		String projectName = "andrius";
+		List<String> facetList = Arrays.asList(new String[]{
+				"crystal", "elements", "compchem", "country", "distributions", "funders"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, "thesis/andrius/");
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		completeAnalysisPDF(facetList, sourceDir, targetDir);
 	}
 
 	@Test
@@ -327,6 +362,94 @@ public class AMIIntegrationDemosIT {
 				"funders", "invasive", "phytochemicals2"});
 		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
 	}
+	
+	@Test
+	public void testInstruments() {
+		String projectName = "instruments";
+		List<String> facetList = Arrays.asList(new String[]{
+				"elements", "drugs", "country", "instrumentManufacturer"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, "instruments/all/");
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		completeAnalysisXML(facetList, sourceDir, targetDir);
+
+	}
+
+	@Test
+	public void testVilniusWorkshop() {
+
+		String projectName = "vilnius/smallmolecule";
+		List<String> facetList = Arrays.asList(new String[]{
+				"crystal", "elements", "compchem", "country", "nmrspectroscopy", "inn", "solvents", "funders"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+//        File targetDir = sourceDir;
+		completeAnalysisXML(facetList, sourceDir, targetDir);
+	}
+
+	@Test
+	public void testVilnius200() {
+
+		String projectName = "vilnius/materials200COD";
+		List<String> facetList = Arrays.asList(new String[]{
+				"crystal", "elements", "compchem", "country", "nmrspectroscopy", "inn", "solvents", "funders"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+//        File targetDir = sourceDir;
+		completeAnalysisPDF(facetList, sourceDir, targetDir);
+	}
+
+	@Test
+	public void testLantana() {
+
+		String projectName = "gita/lantana";
+		List<String> facetList = Arrays.asList(new String[]{
+				"species", "gene", "invasive", "country", "funders", "phytochemicals2", "plantparts", "monoterpene"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName+"/india");
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName+"/india1");
+		completeAnalysisXML(facetList, sourceDir, targetDir);
+	}
+
+	@Test
+	public void testCrispr() {
+
+		String projectName = "vilnius/crispr";
+		List<String> facetList = Arrays.asList(new String[]{
+				"species", "gene", "disease", "country", "funders", "crispr", "inn", });
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName+"1");
+		completeAnalysisXML(facetList, sourceDir, targetDir);
+	}
+
+	@Test
+	public void testCrisprPDF() {
+
+//		String projectName = "vilnius/crisprpdf/CRISPR-papers/";
+		String projectName = "vilnius/crisprpdf/small/";
+		List<String> facetList = Arrays.asList(new String[]{
+				"species", "gene", "disease", "funders", "crispr" });
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		completeAnalysisPDF(facetList, sourceDir, targetDir);
+	}
+
+
+	// ==================================================================
+	
+	private void completeAnalysisPDF(List<String> facetList, File sourceDir, File targetDir) {
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.convertPDFsToProjectAndRunCooccurrence(facetList);
+	}
+
+	private void completeAnalysisXML(List<String> facetList, File sourceDir, File targetDir) {
+		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
+		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
+		amiProcessor.convertJATSXMLandWriteHtml();
+		amiProcessor.convertHTMLsToProjectAndRunCooccurrence(facetList);
+	}
+
 
 
 }

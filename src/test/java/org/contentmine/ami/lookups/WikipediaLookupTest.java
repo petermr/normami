@@ -9,28 +9,28 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
-import org.contentmine.ami.lookups.WikipediaLookup;
+import org.contentmine.ami.dictionary.DefaultAMIDictionary;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.species.SpeciesArgProcessor;
 import org.contentmine.eucl.euclid.IntArray;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.norma.NAConstants;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import nu.xom.Element;
 
-@Ignore // unless testing Lookup
+// @Ignore // unless testing Lookup
 public class WikipediaLookupTest {
 
 	
-	private static final Logger LOG = Logger.getLogger(WikipediaLookupTest.class);
+	public static final Logger LOG = Logger.getLogger(WikipediaLookupTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
 	@Test
-	@Ignore // LOOKUP 
+//	@Ignore // LOOKUP 
 	public void getWikidataIdForSpecies() throws Exception {
 		WikipediaLookup wikipediaLookup = new WikipediaLookup();
 		IntArray intArray = wikipediaLookup.getWikidataIDsAsIntArray("Mus musculus");
@@ -39,10 +39,40 @@ public class WikipediaLookupTest {
 	
 	@Test
 //	@Ignore // LOOKUP 
+	public void testGetWikidataHtmlElement() throws Exception {
+		WikipediaLookup wikipediaLookup = new WikipediaLookup();
+		String[] queryStrings = {"Hydrogen", "larus", "Peter_Murray-Rust", "Chesterton"};
+		for (String query : queryStrings) {
+			wikipediaLookup.getQ(query);
+		}
+	}
+
+	@Test
+//	@Ignore // LOOKUP 
+	public void testGetWikidataForDictionariesAndUpdate() throws Exception {
+		// /normami/src/main/resources/org/contentmine/ami/plugins/dictionary/invasive.xml
+		DefaultAMIDictionary dictionary = new DefaultAMIDictionary();
+		dictionary.setDictionaryName("invasive");
+		dictionary.setInputDir(NAConstants.PLUGINS_DICTIONARY_DIR);
+		dictionary.setOutputDir(NAConstants.LOCAL_DICTIONARIES);
+		dictionary.annotateDictionaryWithWikidata(0, 100000);
+	}
+
+	@Test
+//	@Ignore // LOOKUP 
+	public void testGetWikidataForDictionariesAndUpdate1() throws Exception {
+		DefaultAMIDictionary dictionary = new DefaultAMIDictionary();
+		dictionary.setDictionaryName("funders");
+		dictionary.setOutputDir(NAConstants.LOCAL_DICTIONARIES);
+		dictionary.annotateDictionaryWithWikidata();
+	}
+
+	@Test
+//	@Ignore // LOOKUP 
 	public void getWikidataXMLForID() throws Exception {
-		WikipediaLookup defaultLookup = new WikipediaLookup();
-		URL url = defaultLookup.createWikidataXMLURL("Q83310");
-		Element element = defaultLookup.getResponseXML(url);
+		WikipediaLookup wikipediaLookup = new WikipediaLookup();
+		URL url = WikipediaLookup.createWikidataXMLURL("Q83310");
+		Element element = wikipediaLookup.getResponseXML(url);
 		String property = "P225";
 		/**
         <property id="P225">
