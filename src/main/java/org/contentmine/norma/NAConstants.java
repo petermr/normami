@@ -53,6 +53,15 @@ public class NAConstants {
 	public final static String PLUGINS_SYNBIO     = NAConstants.PLUGINS_RESOURCE+"/synbio";
 	public final static String PLUGINS_WORD       = NAConstants.PLUGINS_RESOURCE+"/word";
 	
+	public final static File PLUGINS_DIR   =      new File(NAConstants.MAIN_AMI_DIR, "plugins");
+	public final static File PLUGINS_DICTIONARY_DIR = new File(NAConstants.PLUGINS_DIR, "dictionary");
+//	public final static File PLUGINS_GENE       = NAConstants.PLUGINS_DIR+"/gene";
+//	public final static File PLUGINS_PLACES     = NAConstants.PLUGINS_DIR+"/places";
+//	public final static File PLUGINS_SPECIES    = NAConstants.PLUGINS_DIR+"/species";
+//	public final static File PLUGINS_STATISTICS = NAConstants.PLUGINS_DIR+"/statistics";
+//	public final static File PLUGINS_SYNBIO     = NAConstants.PLUGINS_DIR+"/synbio";
+//	public final static File PLUGINS_WORD       = NAConstants.PLUGINS_DIR+"/word";
+	
 	public static final String GENE_HGNC          = NAConstants.PLUGINS_GENE+"/hgnc";
 
 	public static final File LOCAL_DIR = new File("local/");
