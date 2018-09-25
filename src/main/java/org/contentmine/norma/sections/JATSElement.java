@@ -47,7 +47,7 @@ public class JATSElement extends Element {
 				List<String> allowedChildNames = getAllowedChildNames();
 				if (allowedChildNames.size() > 0 && !allowedChildNames.contains(tag)) {
 					String xml = childElement.toXML();
-					LOG.debug(this.getClass().getName()+" unprocessed child: "+tag+" "+xml.substring(0, Math.min(80, xml.length())));
+//					LOG.debug(this.getClass().getName()+" unprocessed child: "+tag+" "+xml.substring(0, Math.min(80, xml.length())));
 				}
 				this.appendChild(jatsFactory.create(childElement));
 			} else {
