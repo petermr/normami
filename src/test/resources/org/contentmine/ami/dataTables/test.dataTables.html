@@ -1,0 +1,3024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head charset="UTF-8">
+  <title>acsopenmain</title>
+  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"/>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js" charset="UTF-8" type="text/javascript"> </script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js" charset="UTF-8" type="text/javascript"> </script>
+  <script>
+      $(".cell-which-triggers-popup").click(function(event){
+          var cell_value = $(event.target).text();
+          showPopup(cell_value)    
+      });
+
+      function showPopup(your_variable){
+          $("#popup").dialog({
+              width: 500,
+              height: 300,
+              open: function(){
+                  $(this).find("p").html("Hello " + your_variable)
+              }
+          });
+      }
+	 </script>
+  <script charset="UTF-8" type="text/javascript">$(function() { $("#results").dataTable(); }) </script>
+  <style tpye="text/css">
+  nav ul{height:50px; width:100%;}
+  nav ul{overflow:hidden; overflow-y:scroll;}
+  </style>
+  <!--
+  <style tpye="text/css">
+  #popup{
+      display: none;
+      border: 1px solid black;
+  }
+
+  .cell-which-triggers-popup{
+      cursor: pointer;    
+  }
+
+  .cell-which-triggers-popup:hover{
+      background-color: yellow;    
+  }
+   </style>
+	  -->
+  
+ </head>
+ <body>
+	 <div id="popup" data-name="name" class="dialog">
+	     <a href="#close"><img src="../close.png" alt="..." width="166" height="104" align="left"/></a>
+	     <p></p>            
+	 </div>
+	 
+  <div class="bs-example table-responsive">
+   <table class="table table-striped table-bordered table-hover" id="results">
+    <thead>
+     <tr>
+      <th>articles</th>
+      <th>dic:compchem</th>
+      <th>dic:country</th>
+      <th>dic:crystal</th>
+      <th>dic:funders</th>
+      <th>dic:magnetism</th>
+      <th>dic:nmrspectroscopy</th>
+      <th>dic:solvents</th>
+      <th>word:frequencies</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.5b00205" target="separate">acs.joc.5b00205</a>
+       <a href="acs.joc.5b00205/scholarly.html" target="separate">local</a>
+      </td>
+      <td class="cell-which-triggers-popup>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/DFT" target="separate">DFT</a> x 5
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="9">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 4
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+		  <nav>
+		  <ul>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/Imperial" target="separate">Imperial College London,</a> x 2
+        </li>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Heart and Lung Institute,</a>
+        </li>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/Research" target="separate">Research Executive Agency</a>
+        </li>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/Cancer" target="separate">Cancer Research UK</a>
+        </li>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </li>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/Imperial" target="separate">Imperial College London,</a> x 2
+        </li>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Heart and Lung Institute,</a>
+        </li>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/Research" target="separate">Research Executive Agency</a>
+        </li>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/Cancer" target="separate">Cancer Research UK</a>
+        </li>
+        <li>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </li>
+	</nav>
+   </ul>
+      </td>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Curie" target="separate">Curie</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="93">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 67
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NOE" target="separate">NOE</a> x 16
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NOESY" target="separate">NOESY</a> x 7
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift</a> x 3
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="10">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/cyclohexane" target="separate">cyclohexane</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/xylene" target="separate">xylene</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/acetone" target="separate">acetone</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/triethylamine" target="separate">triethylamine</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="24">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/mmol," target="separate">mmol, x 77</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/calcd" target="separate">calcd x 22</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HRMS" target="separate">HRMS x 22</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/CDCl" target="separate">CDCl x 52</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/procedure" target="separate">procedure x 21</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.5b00403" target="separate">acs.joc.5b00403</a>
+       <a href="acs.joc.5b00403/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Poland" target="separate">Poland</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="12">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 11
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/acetone" target="separate">acetone</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="10">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(m," target="separate">(m, x 48</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(%)" target="separate">(%) x 72</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/receptors" target="separate">receptors x 24</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/DMSO-" target="separate">DMSO- x 32</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Hz," target="separate">Hz, x 63</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.5b00470" target="separate">acs.joc.5b00470</a>
+       <a href="acs.joc.5b00470/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Quantum" target="separate">Quantum</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pressure" target="separate">pressure</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Johns" target="separate">Johns Hopkins University,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Cornell" target="separate">Cornell University</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/amorphous" target="separate">amorphous</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="18">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 18
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="22">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate</a> x 9
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/carbon" target="separate">carbon tetrachloride,</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate.</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="6">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/solution" target="separate">solution x 21</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/interaction" target="separate">interaction x 21</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(m," target="separate">(m, x 23</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Chem." target="separate">Chem. x 31</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/···" target="separate">··· x 21</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.5b01292" target="separate">acs.joc.5b01292</a>
+       <a href="acs.joc.5b01292/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/China" target="separate">China</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Spain" target="separate">Spain</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Japan" target="separate">Japan</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Research" target="separate">Research and Development</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Natural Science Foundation of China</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Chinese" target="separate">Chinese Academy of Sciences,</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="85">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 85
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="26">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a> x 10
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 9
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/acetone" target="separate">acetone</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/acetic" target="separate">acetic acid</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate</a> x 2
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="45">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/nm," target="separate">nm, x 40</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Hz," target="separate">Hz, x 522</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Org." target="separate">Org. x 31</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/reaction" target="separate">reaction x 30</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/red" target="separate">red x 39</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.5b01585" target="separate">acs.joc.5b01585</a>
+       <a href="acs.joc.5b01585/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Sweden" target="separate">Sweden</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/China" target="separate">China</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="33">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 33
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/China" target="separate">China Scholarship Council</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="32">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 24
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NOE" target="separate">NOE</a> x 8
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="6">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/triethylamine" target="separate">triethylamine</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pyridine" target="separate">pyridine</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(H," target="separate">(H, x 25</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR x 24</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound x 33</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.5b01804" target="separate">acs.joc.5b01804</a>
+       <a href="acs.joc.5b01804/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/DFT" target="separate">DFT</a> x 5
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="9">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 7
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pressure" target="separate">pressure</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Novartis" target="separate">Novartis</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="55">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 52
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NOE" target="separate">NOE</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NOESY" target="separate">NOESY</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HSQC" target="separate">HSQC</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="9">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/2-propanol" target="separate">2-propanol</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ether" target="separate">ether</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="19">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(m," target="separate">(m, x 59</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/azetidine" target="separate">azetidine x 31</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/mmol)" target="separate">mmol) x 24</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(s," target="separate">(s, x 29</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(CH" target="separate">(CH x 27</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.6b00647" target="separate">acs.joc.6b00647</a>
+       <a href="acs.joc.6b00647/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/DFT" target="separate">DFT</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States.</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="45">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 25
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 16
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pressure" target="separate">pressure</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society,</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="32">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 30
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="13">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/acetone" target="separate">acetone</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethanol" target="separate">ethanol</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="7">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Chem." target="separate">Chem. x 38</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/reaction" target="separate">reaction x 32</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR x 30</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/yield" target="separate">yield x 23</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ozonolysis" target="separate">ozonolysis x 26</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.6b01784" target="separate">acs.joc.6b01784</a>
+       <a href="acs.joc.6b01784/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/DFT" target="separate">DFT</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Gaussian" target="separate">Gaussian</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Italy" target="separate">Italy</a> x 3
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="17">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 13
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/symmetry" target="separate">symmetry</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Royal" target="separate">Royal Society</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="38">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 27
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NOESY" target="separate">NOESY</a> x 6
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/COSY" target="separate">COSY</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HSQC" target="separate">HSQC</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="7">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chloroform" target="separate">chloroform</a> x 3
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/thioureido" target="separate">thioureido x 22</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR x 27</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/groups" target="separate">groups x 22</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(s," target="separate">(s, x 21</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.6b02593" target="separate">acs.joc.6b02593</a>
+       <a href="acs.joc.6b02593/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="13">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HF" target="separate">HF</a> x 12
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Assembly" target="separate">Assembly</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Netherlands" target="separate">Netherlands</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="35">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 19
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 15
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Universiteit" target="separate">Universiteit Leiden,</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/amorphous" target="separate">amorphous</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="173">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 170
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift.</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HSQC" target="separate">HSQC</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/COSY" target="separate">COSY</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="30">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pyridine" target="separate">pyridine</a> x 8
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 7
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ether" target="separate">ether</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/acetone" target="separate">acetone</a> x 2
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="85">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/reactive" target="separate">reactive x 33</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(C-" target="separate">(C- x 400</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(:)" target="separate">(:) x 42</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chromatography" target="separate">chromatography x 75</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/v/v)" target="separate">v/v) x 70</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.7b00852" target="separate">acs.joc.7b00852</a>
+       <a href="acs.joc.7b00852/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Gaussian" target="separate">Gaussian</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Netherlands" target="separate">Netherlands</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/European" target="separate">European Research Council</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Ministry" target="separate">Ministry of Education,</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="26">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 26
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="9">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/heptane" target="separate">heptane</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/acetic" target="separate">acetic acid,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethanol" target="separate">ethanol</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="12">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/H)," target="separate">H), x 102</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Hz," target="separate">Hz, x 75</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(m," target="separate">(m, x 37</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/motors" target="separate">motors x 23</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/mixture" target="separate">mixture x 21</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.7b01128" target="separate">acs.joc.7b01128</a>
+       <a href="acs.joc.7b01128/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Dalton" target="separate">Dalton</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/China" target="separate">China</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United Kingdom</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="19">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/symmetry" target="separate">symmetry</a> x 8
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 6
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/unit" target="separate">unit cell</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Swansea" target="separate">Swansea University</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/European" target="separate">European Research Council</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="105">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 93
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NOE" target="separate">NOE</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ROESY" target="separate">ROESY</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/COSY" target="separate">COSY</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NOESY" target="separate">NOESY</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="89">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pyridine" target="separate">pyridine</a> x 53
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 10
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/triethylamine" target="separate">triethylamine</a> x 8
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chloroform" target="separate">chloroform</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a> x 4
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="54">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/dissolved" target="separate">dissolved x 28</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/mg," target="separate">mg, x 110</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR x 93</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ppm." target="separate">ppm. x 30</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/porphyrins" target="separate">porphyrins x 24</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.8b00028" target="separate">acs.joc.8b00028</a>
+       <a href="acs.joc.8b00028/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="18">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/China" target="separate">China</a> x 6
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Samoa</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Samoa" target="separate">Samoa</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Samoa,</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="30">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 25
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 5
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="12">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of California</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Creighton" target="separate">Creighton University</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Skaggs" target="separate">Skaggs School of Pharmacy and Pharmaceutical Sciences,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of California,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="9">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/amorphous" target="separate">amorphous</a> x 9
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="85">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 52
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ROESY" target="separate">ROESY</a> x 10
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HMBC" target="separate">HMBC</a> x 10
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/COSY" target="separate">COSY</a> x 6
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/TOCSY" target="separate">TOCSY</a> x 3
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/2-propanol" target="separate">2-propanol</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="18">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/acid" target="separate">acid x 25</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/CDCl" target="separate">CDCl x 22</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/samholide" target="separate">samholide x 31</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/J.;" target="separate">J.; x 25</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/-Me" target="separate">-Me x 22</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/acs.joc.8b00654" target="separate">acs.joc.8b00654</a>
+       <a href="acs.joc.8b00654/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Assembly" target="separate">Assembly</a> x 4
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Netherlands" target="separate">Netherlands</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="7">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Merck" target="separate">Merck</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Ministry" target="separate">Ministry of Education,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Core" target="separate">Core</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/anisotropy" target="separate">anisotropy</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="33">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 33
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="15">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 6
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/1,4-dioxane" target="separate">1,4-dioxane</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="18">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/motor" target="separate">motor x 71</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Molecular" target="separate">Molecular x 34</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/mg," target="separate">mg, x 31</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/rotary" target="separate">rotary x 34</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/PBI" target="separate">PBI x 31</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo1013564" target="separate">jo1013564</a>
+       <a href="jo1013564/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States,</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="11">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 8
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="6">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Florida,</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Florida</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Institutes of Health,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Science Foundation</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/amorphous" target="separate">amorphous</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/annealing" target="separate">annealing</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="39">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 14
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ROESY" target="separate">ROESY</a> x 12
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HMBC" target="separate">HMBC</a> x 7
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HSQC" target="separate">HSQC</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift.</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pyridine" target="separate">pyridine</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="8">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Chem." target="separate">Chem. x 25</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/MeOH" target="separate">MeOH x 24</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Figure" target="separate">Figure x 21</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(.)" target="separate">(.) x 23</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(.)," target="separate">(.), x 22</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo3027774" target="separate">jo3027774</a>
+       <a href="jo3027774/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td/>
+      <td>
+       <div title="23">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 11
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pressure" target="separate">pressure</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 3
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Bath,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Wellcome" target="separate">Wellcome Trust</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="116">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 116
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="47">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 20
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a> x 7
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate</a> x 7
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/dichloromethane" target="separate">dichloromethane</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethanol" target="separate">ethanol</a> x 3
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="50">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(s," target="separate">(s, x 47</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/para" target="separate">para x 33</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/C--H" target="separate">C--H x 39</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/intermediate" target="separate">intermediate x 25</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/C--H," target="separate">C--H, x 22</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo402690j" target="separate">jo402690j</a>
+       <a href="jo402690j/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Switzerland" target="separate">Switzerland</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="18">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 15
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Science Foundation</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="53">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 53
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="9">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pyridine" target="separate">pyridine</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/hexane" target="separate">hexane</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="19">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/mmol)" target="separate">mmol) x 30</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/OCH" target="separate">OCH x 21</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(s," target="separate">(s, x 83</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/MHz)" target="separate">MHz) x 40</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/C())," target="separate">C()), x 119</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo5002559" target="separate">jo5002559</a>
+       <a href="jo5002559/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Dalton" target="separate">Dalton</a> x 3
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Italy" target="separate">Italy</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="13">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pressure" target="separate">pressure</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/symmetry" target="separate">symmetry</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/trigonal" target="separate">trigonal</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Merck" target="separate">Merck</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="75">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 74
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HMBC" target="separate">HMBC</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="59">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 18
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate</a> x 15
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 9
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a> x 7
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pyridine" target="separate">pyridine</a> x 4
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="18">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/reaction" target="separate">reaction x 65</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/silver" target="separate">silver x 21</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/presence" target="separate">presence x 22</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(s," target="separate">(s, x 54</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/MHz," target="separate">MHz, x 46</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo500452b" target="separate">jo500452b</a>
+       <a href="jo500452b/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="10">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 6
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 4
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Southern California,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Southern California</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Institutes of Health</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Science Foundation</a>
+        </span>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="54">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 54
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ether" target="separate">ether</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR x 54</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Chem." target="separate">Chem. x 26</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/spectra" target="separate">spectra x 25</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo500599h" target="separate">jo500599h</a>
+       <a href="jo500599h/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="6">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/DFT" target="separate">DFT</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Gaussian" target="separate">Gaussian</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Dalton" target="separate">Dalton</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="9">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Brandeis" target="separate">Brandeis University,</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Science Foundation</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of California,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/National" target="separate">National Institute of General Medical Sciences,</a>
+        </span>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="44">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 43
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="7">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pentane" target="separate">pentane</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ether" target="separate">ether</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="15">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/%);" target="separate">%); x 24</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/CDCl" target="separate">CDCl x 32</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/mg," target="separate">mg, x 30</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Hz," target="separate">Hz, x 35</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/MHz," target="separate">MHz, x 27</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo5008674" target="separate">jo5008674</a>
+       <a href="jo5008674/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="18">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 14
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/symmetry" target="separate">symmetry</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pressure" target="separate">pressure</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Delaware,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Delaware</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="51">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 48
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/TOCSY" target="separate">TOCSY</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="29">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate</a> x 10
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/1,4-dioxane" target="separate">1,4-dioxane</a> x 7
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/methanol" target="separate">methanol</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 2
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="20">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/H)," target="separate">H), x 38</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(m," target="separate">(m, x 28</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/cis" target="separate">cis x 23</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/crude" target="separate">crude x 25</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Am." target="separate">Am. x 21</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo5012027" target="separate">jo5012027</a>
+       <a href="jo5012027/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United Kingdom</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Malaysia" target="separate">Malaysia</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="151">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 62
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 44
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 36
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pressure" target="separate">pressure</a> x 8
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/symmetry" target="separate">symmetry</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Universiti" target="separate">Universiti Teknologi Malaysia,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Pittsburgh,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Engineering" target="separate">Engineering and Physical Sciences Research Council</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="42">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 30
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift</a> x 12
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="56">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ether" target="separate">ether</a> x 18
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 10
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 8
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/hexane" target="separate">hexane</a> x 7
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/dichloromethane" target="separate">dichloromethane</a> x 7
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="65">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical x 48</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/oil," target="separate">oil, x 26</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/residue" target="separate">residue x 26</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/subtraction" target="separate">subtraction x 27</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/concentrated" target="separate">concentrated x 30</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo501486p" target="separate">jo501486p</a>
+       <a href="jo501486p/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Canada" target="separate">Canada</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="12">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pressure" target="separate">pressure</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of California,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Ottawa,</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="40">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 31
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HMBC" target="separate">HMBC</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HSQC" target="separate">HSQC</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/COSY" target="separate">COSY</a> x 2
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="9">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/water" target="separate">water</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ether" target="separate">ether</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/hexane" target="separate">hexane</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/triethylamine" target="separate">triethylamine</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/diethyl" target="separate">diethyl ether</a>
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Chem." target="separate">Chem. x 27</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR x 31</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo501501z" target="separate">jo501501z</a>
+       <a href="jo501501z/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Australia" target="separate">Australia</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/sample" target="separate">sample</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/University" target="separate">University of Queensland,</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Australian" target="separate">Australian Research Council</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="41">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 36
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ROESY" target="separate">ROESY</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/HMBC" target="separate">HMBC</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/COSY" target="separate">COSY</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/hexane" target="separate">hexane</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(C-)," target="separate">(C-), x 41</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(dd," target="separate">(dd, x 31</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR x 36</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Hz," target="separate">Hz, x 57</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(C-" target="separate">(C- x 58</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo502325w" target="separate">jo502325w</a>
+       <a href="jo502325w/scholarly.html" target="separate">local</a>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Gaussian" target="separate">Gaussian</a> x 3
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="1">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="4">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Core" target="separate">Core</a> x 2
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Oregon" target="separate">Oregon State University</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="36">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 34
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/chemical" target="separate">chemical shift</a> x 2
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="11">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/pyridine" target="separate">pyridine</a> x 6
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/triethylamine" target="separate">triethylamine</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/benzene" target="separate">benzene</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="7">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/CDCl" target="separate">CDCl x 23</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR x 34</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/H)," target="separate">H), x 75</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(d," target="separate">(d, x 30</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/binding" target="separate">binding x 25</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/jo5024443" target="separate">jo5024443</a>
+       <a href="jo5024443/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/China" target="separate">China</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Texas" target="separate">Texas Tech University,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Welch" target="separate">Welch Foundation</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="48">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 48
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="34">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ether" target="separate">ether</a> x 14
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/diethyl" target="separate">diethyl ether</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/diethyl" target="separate">diethyl ether,</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate.</a> x 2
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="11">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/CDCl" target="separate">CDCl x 34</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Hz," target="separate">Hz, x 67</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(d," target="separate">(d, x 146</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/GAP" target="separate">GAP x 23</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(m," target="separate">(m, x 110</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/pdf" target="separate">pdf</a>
+       <a href="pdf/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/China" target="separate">China</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Texas" target="separate">Texas Tech University,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Welch" target="separate">Welch Foundation</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="48">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 48
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="34">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ether" target="separate">ether</a> x 14
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/diethyl" target="separate">diethyl ether</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/diethyl" target="separate">diethyl ether,</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate.</a> x 2
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="11">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/CDCl" target="separate">CDCl x 34</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Hz," target="separate">Hz, x 67</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(d," target="separate">(d, x 146</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/GAP" target="separate">GAP x 23</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(m," target="separate">(m, x 110</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td title="foo">
+       <a href="http://europepmc.org/articles/problems" target="separate">problems</a>
+       <a href="problems/scholarly.html" target="separate">local</a>
+      </td>
+      <td/>
+      <td>
+       <div title="2">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/United" target="separate">United States</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/China" target="separate">China</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="5">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/compound" target="separate">compound</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/temperature" target="separate">temperature</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="3">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Texas" target="separate">Texas Tech University,</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/American" target="separate">American Chemical Society</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Welch" target="separate">Welch Foundation</a>
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td/>
+      <td>
+       <div title="48">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/NMR" target="separate">NMR</a> x 48
+        </span>
+        <br/>
+       </div>
+      </td>
+      <td>
+       <div title="34">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ether" target="separate">ether</a> x 14
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/toluene" target="separate">toluene</a> x 5
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/diethyl" target="separate">diethyl ether</a> x 4
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/diethyl" target="separate">diethyl ether,</a> x 3
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/ethyl" target="separate">ethyl acetate.</a> x 2
+        </span>
+       </div>
+      </td>
+      <td>
+       <div title="11">
+        <span>
+         <a href="http://en.wikipedia.org/wiki/CDCl" target="separate">CDCl x 34</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/Hz," target="separate">Hz, x 67</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(d," target="separate">(d, x 146</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/GAP" target="separate">GAP x 23</a>
+        </span>
+        <br/>
+        <span>
+         <a href="http://en.wikipedia.org/wiki/(m," target="separate">(m, x 110</a>
+        </span>
+       </div>
+      </td>
+     </tr>
+    </tbody>
+    <tfoot/>
+   </table>
+  </div>
+ </body>
+</html>
