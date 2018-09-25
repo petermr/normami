@@ -12,6 +12,7 @@ import java.util.Map;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.dictionary.DefaultAMIDictionary;
+import org.contentmine.ami.dictionary.DictionaryTerm;
 import org.contentmine.cproject.lookup.AbstractLookup;
 import org.contentmine.cproject.util.CMineUtil;
 import org.contentmine.eucl.euclid.IntArray;
@@ -193,12 +194,14 @@ view-source:https://www.wikidata.org/w/api.php?action=query&list=search&srsearch
 		URL url = createUrl(urlString);
 		return url;
 	}
-		
+	
+	/** don't think this works anymore ; check REST API */
 	public IntArray getWikidataIDsAsIntArray(List<String> speciesNames) throws IOException {
 		JsonElement jsonElement = this.getWikidataSpeciesJSONElement(speciesNames);
 		return getIdentifierArray(jsonElement, ITEMS);
 	}
 
+	/** this doesn't work any more, check API*/
 	public List<Integer> getWikidataIDsAsIntegerList(List<String> names, String property) throws IOException {
 		List<Integer> idList = new ArrayList<Integer>();
 		JsonElement jsonElement = this.getWikidataSpeciesJSONElement(names);
@@ -217,6 +220,8 @@ view-source:https://www.wikidata.org/w/api.php?action=query&list=search&srsearch
 			for (String name : names) {
 				idList.add(namesToIdMap.get(name));
 			}
+		} else {
+			LOG.error("Null response from Wikidata; check REST API"+names);
 		}
 		return idList;
 	}
@@ -285,8 +290,10 @@ species of bird
 
 //	<ul class='mw-search-results'>
 
+	/** this doesn't work any more */
 	private JsonElement getWikidataSpeciesJSONElement(List<String> names) throws IOException {
 		URL url = createWikidataSpeciesLookupURL(names);
+		// http://wdq.wmflabs.org/api?q=string[225:%22Mus%20musculus%22,225:%22Gorilla%20gorilla%22,225:%22Panthera%20leo%22]&props=225
 		String json = this.getResponse(url);
 	    JsonParser parser = new JsonParser();
 	    JsonElement element = null;
@@ -298,7 +305,7 @@ species of bird
 	    return element;
 	}
 
-	public List<HtmlElement> getQ(String query) throws IOException {
+	public List<HtmlElement> queryWikidata(String query) throws IOException {
 		HtmlBody htmlBody = getWikidataHtmlBody(query);
 		/**
 	  <div class="searchresults">
@@ -341,12 +348,17 @@ species of bird
 		return liList;
 	}
 
-	public void lookupEntriesAndAnnotate(Element wikipediaLookupHtml) throws IOException {
+	public void lookupEntriesAndAnnotate(Element toBeLookedUpInWikidata) throws IOException {
 		Element outputDictionary = new Element(DefaultAMIDictionary.DICTIONARY);
+		addEntriesToDictionaryAccordingToWikipediaLookup(toBeLookedUpInWikidata, outputDictionary);
+		XMLUtil.debug(outputDictionary, new File(dictionary.getOutputDir(), dictionary.getDictionaryName()+".xml"), 1);
+	}
+
+	private void addEntriesToDictionaryAccordingToWikipediaLookup(Element wikipediaLookupHtml, Element outputDictionary) throws IOException {
 		int size = wikipediaLookupHtml.getChildElements().size();
 		for (int i = start; i < Math.min(size, end); i++) {
 			Element dictionaryElement = wikipediaLookupHtml.getChildElements().get(i);
-			String query = dictionaryElement.getAttributeValue(DefaultAMIDictionary.TERM);
+			String query = dictionaryElement.getAttributeValue(DictionaryTerm.TERM);
 			if (query == null) {
 				LOG.debug("missing term: " + dictionaryElement.toXML());
 				continue;
@@ -362,11 +374,10 @@ species of bird
 			} else {
 				query = query.replaceAll(" ",  "_");
 				LOG.debug(query);
-				List<HtmlElement> liList = getQ(query);
+				List<HtmlElement> liList = queryWikidata(query);
 				addToOutput(outputDictionary, liList, dictionaryElement, maxAlternative);
 			}
 		}
-		XMLUtil.debug(outputDictionary, new File(dictionary.getOutputDir(), dictionary.getDictionaryName()+".xml"), 1);
 	}
 
 	/**
@@ -394,7 +405,10 @@ species of bird
 		Element newDictionaryElement = (Element) dictionaryElement.copy();
 		if (liList.size() == 0) {
 			// remove existing attribute
-			newDictionaryElement.removeAttribute(newDictionaryElement.getAttribute(WikipediaLookup.WIKIDATA));
+			Attribute wikidata = newDictionaryElement.getAttribute(WikipediaLookup.WIKIDATA);
+			if (wikidata != null) {
+				newDictionaryElement.removeAttribute(wikidata);
+			}
 		} else if (liList.size() == 1) {
 			WikiResult wikiResult = WikiResult.extractWikiResult((HtmlLi) liList.get(0));
 			newDictionaryElement.addAttribute(new Attribute(WikipediaLookup.WIKIDATA, wikiResult.getQString()));
