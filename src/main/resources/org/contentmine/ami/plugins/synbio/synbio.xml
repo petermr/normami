@@ -1,6 +1,6 @@
 <dictionary name="synbio" title="synbioPhrases">
 <!-- <entry term="present invention"/> -->
-<entry term="riboswitch"/>
+<entry term="riboswitch" name="riboswitch"/>
 <entry term="synthetic biology" name="synthetic biology"/>
 <entry term="synthetic amino acid" name="synthetic amino acid"/>
 <entry term="synthetic base pair" name="synthetic base pair"/>
@@ -51,7 +51,7 @@
 <entry term="synthetic shRNA" name="synthetic shRNA"/>
 <entry term="artificial shRNA" name="artificial shRNA"/>
 <entry term="heterologous nucleic acid" name="heterologous nucleic acid"/>
-<entry term="biological circuit "/>
+<entry term="biological circuit" name="biological circuit "/>
 <entry term="molecular machine" name="molecular machine"/>
 <entry term="computational design" name="computational design"/>
 <entry term="microfluidics" name="microfluidics"/>
@@ -65,7 +65,7 @@
 <entry term="multiplex ligation" name="multiplex ligation"/>
 <entry term="multiple amplification" name="multiple amplification"/>
 <entry term="dna synthesis" name="dna synthesis"/>
-<entry term="gene synthesis"/>
+<entry term="gene synthesis" name="gene synthesis"/>
 <entry term="multiplex gene" name="multiplex gene"/>
 <entry term="photosynthesis " name="photosynthesis "/>
 <entry term="photosynthetic " name="photosynthetic "/>

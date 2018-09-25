@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dictionary title="hgnc" regex="(T|[A-Z][A-Z0-9](@|#)?|[A-Z][A-Z0-9-]+(orf)?[A-Z0-9-]+(@|#|_(B|2))?)">
+	<desc>Human gene names from HGNC ca. 2016</desc>
   <entry term="A12M1" name="entry withdrawn"/>
   <entry term="A12M2" name="entry withdrawn"/>
   <entry term="A12M3" name="entry withdrawn"/>
