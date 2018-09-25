@@ -27,4 +27,6 @@ public class CommandProcessorTest {
 		String args = "fooDir bar(plugh)";
 		CommandProcessor.main(args.split("\\s+"));
 	}
+	
+	
 }

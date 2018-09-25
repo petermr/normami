@@ -410,6 +410,17 @@ public class AMIIntegrationDemosIT {
 	}
 
 	@Test
+	public void testLantanaSmall() {
+
+		String projectName = "gita/lantana";
+		List<String> facetList = Arrays.asList(new String[]{
+				"species", "gene", "invasive", "country", "funders", "phytochemicals2", "plantparts", "monoterpene"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName+"/indiasmall");
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName+"/indiasmall1");
+		completeAnalysisXML(facetList, sourceDir, targetDir);
+	}
+
+	@Test
 	public void testCrispr() {
 
 		String projectName = "vilnius/crispr";

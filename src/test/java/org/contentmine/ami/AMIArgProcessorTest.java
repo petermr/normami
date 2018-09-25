@@ -2,9 +2,8 @@ package org.contentmine.ami;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.junit.Test;
 import org.contentmine.ami.plugins.AMIArgProcessor;
-import org.contentmine.ami.plugins.regex.RegexPluginTest;
+import org.junit.Test;
 
 public class AMIArgProcessorTest {
 
