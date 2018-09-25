@@ -180,8 +180,8 @@ public class CMJsonDictionary {
 				for (Element entryElement : elements) {
 					CMJsonTerm term = new CMJsonTerm(cmJsonDictionary);
 					term.addCMIdentifier(entryElement.getAttributeValue(DefaultAMIDictionary.ID));
-					term.addName(entryElement.getAttributeValue(DefaultAMIDictionary.NAME));
-					term.addTerm(entryElement.getAttributeValue(DefaultAMIDictionary.TERM));
+					term.addName(entryElement.getAttributeValue(DictionaryTerm.NAME));
+					term.addTerm(entryElement.getAttributeValue(DictionaryTerm.TERM));
 					cmJsonDictionary.addTerm(term);
 				}
 			}
@@ -223,13 +223,13 @@ public class CMJsonDictionary {
 				entry.addAttribute(new Attribute(DefaultAMIDictionary.ID, jsonId));
 				String termName = jsonTerm.getName();
 				if (termName != null) {
-					entry.addAttribute(new Attribute(DefaultAMIDictionary.NAME, termName));
+					entry.addAttribute(new Attribute(DictionaryTerm.NAME, termName));
 				}
 				String termTerm = jsonTerm.getTerm();
 				if (termTerm == null) {
 					throw new RuntimeException("Json dictionary must have term");
 				}
-				entry.addAttribute(new Attribute(DefaultAMIDictionary.TERM, termTerm));
+				entry.addAttribute(new Attribute(DictionaryTerm.TERM, termTerm));
 			}
 		}
 		return amiDictionary;

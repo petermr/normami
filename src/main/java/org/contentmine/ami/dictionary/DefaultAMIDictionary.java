@@ -1,7 +1,6 @@
 package org.contentmine.ami.dictionary;
 
 import java.io.File;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -23,7 +22,11 @@ import org.apache.log4j.Logger;
 import org.contentmine.ami.lookups.WikipediaLookup;
 import org.contentmine.cproject.lookup.DefaultStringDictionary;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.html.HtmlCaption;
+import org.contentmine.graphics.html.HtmlDiv;
 import org.contentmine.graphics.html.HtmlElement;
+import org.contentmine.graphics.html.HtmlP;
+import org.contentmine.graphics.html.HtmlTitle;
 import org.contentmine.norma.NAConstants;
 
 import com.google.common.hash.BloomFilter;
@@ -86,13 +89,11 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 
 	public static final String ID = "id";
 	public static final String DICTIONARY = "dictionary";
+	private static final String DESC = "desc";
 	public static final String ENTRY = "entry";
-	public static final String NAME = "name";
 	private static final String REGEX = "regex";
-	public static final String TERM = "term";
 	public static final String TITLE = "title";
-	private static final String URL = "url";
-	private static final String WIKIDATA = "wikidata";
+	private static final String WIKIPEDIA = "wikipedia";
 
 	/** later these should be read in from args.xml ...
 	 * 
@@ -174,8 +175,8 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		for (DictionaryTerm dictionaryTerm : dictionaryTerms) {
 			Element entry = new Element(ENTRY);
 			String term = dictionaryTerm.getTermPhrase().getString();
-			entry.addAttribute(new Attribute(TERM, term));
-			entry.addAttribute(new Attribute(NAME, namesByTerm.get(dictionaryTerm)));
+			entry.addAttribute(new Attribute(DictionaryTerm.TERM, term));
+			entry.addAttribute(new Attribute(DictionaryTerm.NAME, namesByTerm.get(dictionaryTerm)));
 			dictionaryElement.appendChild(entry);
 		}
 		return dictionaryElement;
@@ -231,20 +232,26 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		bloomFilter = BloomFilter.create(stringFunnel, elements.size());
 		for (int i = 0; i < elements.size(); i++) {
 			Element element = elements.get(i);
-			String term = element.getAttributeValue(TERM);
-			DictionaryTerm dictionaryTerm = new DictionaryTerm(term);
-			String name = element.getAttributeValue(NAME);
-			dictionaryTerm.setName(name);
-			String url = element.getAttributeValue(URL);
-			dictionaryTerm.setURL(url);
-			String wikidata = element.getAttributeValue(WIKIDATA);
-			dictionaryTerm.setWikidata(wikidata);
-			dictionaryTermList.add(dictionaryTerm);
-			namesByTerm.put(dictionaryTerm, name);
-			bloomFilter.put(term);
-			rawTermSet.add(term);
+			if (ENTRY.equals(element.getLocalName())) {
+				DictionaryTerm dictionaryTerm = DictionaryTerm.createDictionaryTerm(element);
+				dictionaryTermList.add(dictionaryTerm);
+				String name = dictionaryTerm.getName();
+				if (name == null) {
+					throw new RuntimeException("Null name: "+element.toXML());
+				}
+				namesByTerm.put(dictionaryTerm, name);
+				String term = dictionaryTerm.getTerm();
+				if (term == null) {
+					throw new RuntimeException("Null term: "+element.toXML());
+				}
+				bloomFilter.put(term);
+				rawTermSet.add(term);
+			} else if (DESC.equals(element.getLocalName())) {
+				// add desc here
+			}
 		}
 	}
+
 
 	public List<DictionaryTerm> getDictionaryTermList() {
 		return dictionaryTermList;
@@ -322,7 +329,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	}
 	
 	public String getURL() {
-		return dictionaryElement == null ? null : dictionaryElement.getAttributeValue(DefaultAMIDictionary.URL);
+		return dictionaryElement == null ? null : dictionaryElement.getAttributeValue(DictionaryTerm.URL);
 		
 	}
 	
@@ -401,5 +408,27 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		return dictionaryName;
 	}
 
+	public HtmlDiv createHtmlElement() {
+		HtmlDiv div = null;
+		if (dictionaryElement != null) {
+			div = new HtmlDiv();
+			String titleString = dictionaryElement.getAttributeValue(TITLE);
+			if (titleString != null) {
+				HtmlTitle title = new HtmlTitle(titleString);
+				div.appendChild(title);
+			}
+			List<Element> descList = XMLUtil.getQueryElements(dictionaryElement, DESC);
+			if (descList.size() > 0) {
+				HtmlCaption caption = new HtmlCaption();
+				for (Element desc : descList) {
+					String descString = desc.getValue();
+					HtmlP para = new HtmlP(descString);
+					caption.appendChild(para);
+				}
+			}
+		}
+		return div;
+		
+	}
 
 }

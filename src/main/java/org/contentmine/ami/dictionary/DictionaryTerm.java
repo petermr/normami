@@ -2,8 +2,13 @@ package org.contentmine.ami.dictionary;
 
 import java.util.List;
 
+import javax.management.RuntimeErrorException;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.dictionary.places.WikidataPlacesDictionary;
+
+import nu.xom.Element;
 
 /** class to support multiword and stemmed terms.
  * 
@@ -22,13 +27,48 @@ public class DictionaryTerm implements Comparable<DictionaryTerm> {
 	private TermPhrase stemmedTermPhrase;
 	private TermPhrase lowerCaseStemmedTermPhrase;
 	private String name;
+	private String term;
 	private String url;
 	private String wikidata;
 	
-	public DictionaryTerm(String termString) {
-		termPhrase = TermPhrase.createTermPhrase(termString);
-		createStemmedAndCaseVariants(termString);
+	public static final String NAME = "name";
+	public static final String TERM = "term";
+	public static final String URL = "url";
+	public static final String WIKIDATA = "wikidata";
+	public static final String WIKIPEDIA = "wikipeedia";
+	
+	DictionaryTerm() {
 	}
+	
+	public DictionaryTerm(String termString) {
+		setTerm(termString);
+	}
+
+	private void setTerm(String termString) {
+		if (termString != null) {
+			term = termString;
+			termPhrase = TermPhrase.createTermPhrase(termString);
+			createStemmedAndCaseVariants(termString);
+		}
+	}
+	
+	public static DictionaryTerm createDictionaryTerm(Element element) {
+		DictionaryTerm dictionaryTerm = new DictionaryTerm();
+		String term = element.getAttributeValue(TERM);
+		if (term == null) {
+			throw new RuntimeException("Null term "+element.toXML());
+		}
+		dictionaryTerm.setTerm(term);
+		String name = element.getAttributeValue(NAME);
+		if (name == null) {
+			throw new RuntimeException("Null name "+element.toXML());
+		}
+		dictionaryTerm.setName(name);
+		dictionaryTerm.setURL(element.getAttributeValue(URL));
+		dictionaryTerm.setWikidata(element.getAttributeValue(WIKIDATA));
+		return dictionaryTerm;
+	}
+
 
 	private void createStemmedAndCaseVariants(String termString) {
 		stemmedTermPhrase = TermPhrase.createTermPhrase(termString);
@@ -79,6 +119,11 @@ public class DictionaryTerm implements Comparable<DictionaryTerm> {
 
 	public void setWikidata(String value) {
 		this.wikidata = getNonNullValue(value);
+		if (wikidata == null) {
+//			WikidataLookup lookup = new Wikidata();
+//			lookupWikidata();
+//			LOG.error("WikidataLookup NYI: "+value);
+		}
 	}
 
 	public String toString() {
@@ -112,5 +157,15 @@ public class DictionaryTerm implements Comparable<DictionaryTerm> {
 	private String getNonNullValue(String value) {
 		return (value == null || value.trim().length() == 0) ? null : value;
 	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public String getTerm() {
+		return term;
+	}
+	
+	
 	
 }
