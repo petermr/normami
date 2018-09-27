@@ -22,6 +22,7 @@ public class CooccurrenceAnalyzerTest {
 	}
 
 	@Test
+	@Ignore
 	public void testColorMatrix() throws IOException {
 		String matrixS = "{25,18}\n" 
         + "(23,8,8,11,6,4,2,5,1,1,2,3,3,2,2,0,2,1)\n"
