@@ -89,14 +89,22 @@
                         </program>
                       <!-- norma -->  
                          <program>
-                            <mainClass>org.contentmine.ami.AMIProcessor</mainClass>
-                            <id>ami-all</id>
-                        </program>
-                         <program>
                             <mainClass>org.contentmine.norma.Norma</mainClass>
                             <id>norma</id>
                         </program>
                       <!-- ami -->  
+                         <program>
+                            <mainClass>org.contentmine.ami.AMIProcessor</mainClass>
+                            <id>ami-all</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.AMIProcessorPDF</mainClass>
+                            <id>ami-pdf</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.AMIProcessorXML</mainClass>
+                            <id>ami-xml</id>
+                        </program>
                          <program>
                             <mainClass>org.contentmine.ami.plugins.CommandProcessor</mainClass>
                             <id>cmine</id>
@@ -236,15 +244,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5</version>
-                <configuration>
-                    <source>${java.source.version}</source>
-                    <target>${java.target.version}</target>
-                </configuration>
-            </plugin>
             <!-- giant jar -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
