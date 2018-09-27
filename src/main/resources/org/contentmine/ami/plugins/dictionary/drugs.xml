@@ -1,4 +1,5 @@
 <dictionary title="drugs">
+	<desc>Drugs. origin unknown. Partially Multilingual. Some common chemicals removed to avoid ambiguities</desc>
 <entry term="(r)-fenfluramine" name="(r)-fenfluramine"/>
 <entry term="abacavir" name="abacavir"/>
 <entry term="abafungin" name="abafungin"/>
@@ -467,7 +468,6 @@
 <entry term="arbutaminum" name="arbutaminum"/>
 <entry term="arcitumomab" name="arcitumomab"/>
 <entry term="arformoterol" name="arformoterol"/>
-<entry term="arginine" name="arginine"/>
 <entry term="argipresina" name="argipresina"/>
 <entry term="argipressin" name="argipressin"/>
 <entry term="argipressine" name="argipressine"/>
@@ -739,10 +739,6 @@
 <entry term="bifonazolum" name="bifonazolum"/>
 <entry term="bimatoprost" name="bimatoprost"/>
 <entry term="bimatoprostum" name="bimatoprostum"/>
-<entry term="biotin" name="biotin"/>
-<entry term="biotina" name="biotina"/>
-<entry term="biotine" name="biotine"/>
-<entry term="biotinum" name="biotinum"/>
 <entry term="biperiden" name="biperiden"/>
 <entry term="biperidene" name="biperidene"/>
 <entry term="biperideno" name="biperideno"/>
@@ -2397,15 +2393,11 @@
 <entry term="glucoheptonate de calcium" name="glucoheptonate de calcium"/>
 <entry term="glucoheptonato calcico" name="glucoheptonato calcico"/>
 <entry term="glucuronamide" name="glucuronamide"/>
-<entry term="glutamic acid" name="glutamic acid"/>
 <entry term="glutaral" name="glutaral"/>
 <entry term="glutaralum" name="glutaralum"/>
 <entry term="glutethimide" name="glutethimide"/>
 <entry term="glyburide" name="glyburide"/>
-<entry term="glycerol" name="glycerol"/>
 <entry term="glycerol phenylbutyrate" name="glycerol phenylbutyrate"/>
-<entry term="glycerolum" name="glycerolum"/>
-<entry term="glycine" name="glycine"/>
 <entry term="glycopyrronii bromidum" name="glycopyrronii bromidum"/>
 <entry term="glycopyrronium bromide" name="glycopyrronium bromide"/>
 <entry term="golimumab" name="golimumab"/>
@@ -2926,9 +2918,6 @@
 <entry term="lymecycline" name="lymecycline"/>
 <entry term="lymecyclinum" name="lymecyclinum"/>
 <entry term="lysergic acid diethylamide" name="lysergic acid diethylamide"/>
-<entry term="lysina" name="lysina"/>
-<entry term="lysine" name="lysine"/>
-<entry term="lysinum" name="lysinum"/>
 <entry term="macitentan" name="macitentan"/>
 <entry term="macitentanum" name="macitentanum"/>
 <entry term="mafenide" name="mafenide"/>
@@ -3911,7 +3900,6 @@
 <entry term="proglumidum" name="proglumidum"/>
 <entry term="proguanil" name="proguanil"/>
 <entry term="proguanilum" name="proguanilum"/>
-<entry term="proline" name="proline"/>
 <entry term="promazina" name="promazina"/>
 <entry term="promazine" name="promazine"/>
 <entry term="promazinum" name="promazinum"/>
@@ -4241,7 +4229,6 @@
 <entry term="sitogluside" name="sitogluside"/>
 <entry term="sitoglusidum" name="sitoglusidum"/>
 <entry term="sodium amidotrizoate" name="sodium amidotrizoate"/>
-<entry term="sodium chloride" name="sodium chloride"/>
 <entry term="sodium feredetate" name="sodium feredetate"/>
 <entry term="sodium nitrite" name="sodium nitrite"/>
 <entry term="sodium picosulfate" name="sodium picosulfate"/>
