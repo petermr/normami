@@ -2,18 +2,14 @@ package org.contentmine.ami.plugins;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.eucl.euclid.IntMatrix;
-import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.svg.SVGSVG;
+import org.junit.Ignore;
 import org.junit.Test;
-
-import com.google.common.collect.HashMultiset;
-import com.google.common.collect.Multiset;
 
 public class CooccurrenceAnalyzerTest {
 	private static final Logger LOG = Logger.getLogger(CooccurrenceAnalyzerTest.class);
