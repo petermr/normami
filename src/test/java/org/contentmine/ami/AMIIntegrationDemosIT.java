@@ -434,7 +434,6 @@ public class AMIIntegrationDemosIT {
 	@Test
 	public void testCrisprPDF() {
 
-//		String projectName = "vilnius/crisprpdf/CRISPR-papers/";
 		String projectName = "vilnius/crisprpdf/small/";
 		List<String> facetList = Arrays.asList(new String[]{
 				"species", "gene", "disease", "funders", "crispr" });
@@ -443,6 +442,30 @@ public class AMIIntegrationDemosIT {
 		completeAnalysisPDF(facetList, sourceDir, targetDir);
 	}
 
+	@Test
+	public void testTPS() {
+
+		String projectName = "gita/terpenesynthase/";
+//		String projectName = "gita/lantana/indiasmall/";
+		List<String> facetList = Arrays.asList(new String[]{
+				 "phytochemicals2", "tps", "country", "monoterpene", "sesquiterpene", "diterpene", "triterpene", "species", "gene"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		completeAnalysisXML(facetList, sourceDir, targetDir);
+	}
+	
+	@Test
+	public void testChlamy() {
+
+		String projectName = "gita/chlamy/";
+//		String projectName = "gita/lantana/indiasmall/";
+		List<String> facetList = Arrays.asList(new String[]{
+				 "country", "photosynth", "plantparts", "species", "gene"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		completeAnalysisXML(facetList, sourceDir, targetDir);
+	}
+	
 
 	// ==================================================================
 	

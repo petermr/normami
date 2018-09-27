@@ -27,7 +27,9 @@ import nu.xom.Element;
  * @author pm286
  *
  */
+// ALL TRANSFERRED TO IT
 // @Ignore // unless testing Lookup
+@Ignore
 public class WikipediaLookupTest {
 
 	

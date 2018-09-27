@@ -14,6 +14,7 @@ import org.contentmine.ami.plugins.EntityAnalyzer;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.OccurrenceType;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.SubType;
+import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.eucl.euclid.test.TestUtil;
 import org.contentmine.norma.Norma;
@@ -62,20 +63,20 @@ public class OccurrenceAnalyzerTest {
 				
 		OccurrenceAnalyzer speciesAnalyzer = entityAnalyzer.createAndAddOccurrenceAnalyzer(OccurrenceType.BINOMIAL)
 				.setMaxCount(20);
-		File binomialCsvFile = speciesAnalyzer.getCSVFileName();
+		File binomialCsvFile = speciesAnalyzer.createFileByType(CTree.CSV);
 		FileUtils.deleteQuietly(binomialCsvFile);
 		speciesAnalyzer.writeCSV();
 		Assert.assertTrue(binomialCsvFile+" exists", binomialCsvFile.exists());
 
 		OccurrenceAnalyzer geneAnalyzer = entityAnalyzer.createAndAddOccurrenceAnalyzer(OccurrenceType.GENE, SubType.HUMAN)
 				.setMaxCount(12);
-		File geneCsvFile = geneAnalyzer.getCSVFileName();
+		File geneCsvFile = geneAnalyzer.createFileByType(CTree.CSV);
 		FileUtils.deleteQuietly(geneCsvFile);
 		geneAnalyzer.writeCSV();
 		Assert.assertTrue(geneCsvFile+" exists", geneCsvFile.exists());
 
 		OccurrenceAnalyzer auxinAnalyzer = entityAnalyzer.createAndAddOccurrenceAnalyzer("auxin").setMaxCount(6);
-		File auxinCsvFile = auxinAnalyzer.getCSVFileName();
+		File auxinCsvFile = auxinAnalyzer.createFileByType(CTree.CSV);
 		FileUtils.deleteQuietly(auxinCsvFile);
 		auxinAnalyzer.writeCSV();
 		Assert.assertTrue(auxinCsvFile+" exists", auxinCsvFile.exists());
