@@ -36,6 +36,7 @@ public class EntityAnalyzer {
 	private String code;
 	private boolean forceRun = true;
 	private boolean writeCsv = false;
+	private boolean writeSVG = false;
 
 	public EntityAnalyzer() {
 		
@@ -197,6 +198,13 @@ public class EntityAnalyzer {
 					throw new RuntimeException("Cannot write row: "+rowAnalyzer, e);
 				}
 			}
+			if (writeSVG) {
+				try {
+					rowAnalyzer.writeSVG();
+				} catch (IOException e) {
+					throw new RuntimeException("Cannot write row: "+rowAnalyzer, e);
+				}
+			}
 			// allow diagonal entries
 			for (int jcol = irow; jcol < occurrenceAnalyzerList.size(); jcol++) {
 				OccurrenceAnalyzer colAnalyzer = occurrenceAnalyzerList.get(jcol);
@@ -207,6 +215,13 @@ public class EntityAnalyzer {
 						rowColCoocAnalyzer.writeCSV();
 					} catch (IOException e) {
 						throw new RuntimeException("Cannot write CSV", e);
+					}
+				}
+				if (writeSVG) {
+					try {
+						rowColCoocAnalyzer.writeSVG();
+					} catch (IOException e) {
+						throw new RuntimeException("Cannot write SVG", e);
 					}
 				}
 			}
@@ -366,6 +381,15 @@ public class EntityAnalyzer {
 
 	public boolean isWriteCsv() {
 		return writeCsv;
+	}
+
+	public EntityAnalyzer setWriteSVG(boolean writeSVG) {
+		this.writeSVG = writeSVG;
+		return this;
+	}
+
+	public boolean isWriteSVG() {
+		return writeSVG;
 	}
 
 	public static void main(String[] args) {

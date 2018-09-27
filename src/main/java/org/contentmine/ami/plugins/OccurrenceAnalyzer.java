@@ -10,6 +10,7 @@ import java.util.Map;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.cproject.util.CMineUtil;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
@@ -86,6 +87,7 @@ public class OccurrenceAnalyzer {
 		}
 	}
 
+	public final static String COOCCURRENCE = "cooccurrence";
 	public static final String HISTOGRAM = "histogram";
 
 	private List<Multiset.Entry<String>> resultsByImportance;
@@ -100,6 +102,7 @@ public class OccurrenceAnalyzer {
 	private List<File> resultsFiles; // descendants of cTree
 	private List<File> cTreeFiles;   // ancestor of results (?1:1 map)
 	private EntityAnalyzer entityAnalyzer;
+
 	
 	OccurrenceAnalyzer() {
 		setDefaults();
@@ -164,11 +167,13 @@ public class OccurrenceAnalyzer {
 		return entityAnalyzer == null ? null : entityAnalyzer.getProjectDir();
 	}
 
-	public List<Multiset.Entry<String>> getEntriesSortedByImportance() {
-		getOrCreateEntryListByCTreeFile();
-		Multiset<String> resultsMedianSet = getMedianMultiSet(entryListByFile);
-		LOG.trace(">med> "+resultsMedianSet);
-		resultsByImportance = CMineUtil.getEntryListSortedByCount(resultsMedianSet);
+	public List<Multiset.Entry<String>> getOrCreateEntriesSortedByImportance() {
+		if (resultsByImportance == null) {
+			getOrCreateEntryListByCTreeFile();
+			Multiset<String> resultsMedianSet = getMedianMultiSet(entryListByFile);
+			LOG.trace(">med> "+resultsMedianSet);
+			resultsByImportance = CMineUtil.getEntryListSortedByCount(resultsMedianSet);
+		}
 		return resultsByImportance;
 	}
 
@@ -277,7 +282,7 @@ public class OccurrenceAnalyzer {
 
 	/** gets sorted entries */
 	public List<Entry<String>> debug() {
-		List<Entry<String>> cellsByImportance = this.getEntriesSortedByImportance();
+		List<Entry<String>> cellsByImportance = this.getOrCreateEntriesSortedByImportance();
 		String message = getFullName();
 		LOG.debug("analyze: " + message + "\n" + cellsByImportance);
 		return cellsByImportance;
@@ -306,17 +311,26 @@ public class OccurrenceAnalyzer {
 	 * 
 	 */
 	public void writeCSV() throws IOException {
-		getEntriesSortedByImportance();
-		File csvFile = getCSVFileName();
+		getOrCreateEntriesSortedByImportance();
+		File csvFile = createFileByType(CTree.CSV);
 		MultisetUtil.writeCSV(csvFile, resultsByImportance, getName());
 	}
 
-	public File getCSVFileName() {
-		File csvTop = new File(entityAnalyzer.getProjectDir(), "csv");
-		File typeTop = new File(csvTop, OccurrenceType.STRING.equals(type) ? name : type.name);
-		File csvDir = subType == null ? typeTop : new File(typeTop, subType.getName());
-		return new File(csvDir, HISTOGRAM + ".csv");
+	public File createFileByType(String suffix) {
+		File cooccurrenceTop = new File(entityAnalyzer.getProjectDir(), COOCCURRENCE);
+		File typeTop = new File(cooccurrenceTop, OccurrenceType.STRING.equals(type) ? name : type.name);
+		File dir = subType == null ? typeTop : new File(typeTop, subType.getName());
+		return new File(dir, HISTOGRAM + "." + suffix);
 	}
+	
+	public void writeSVG() throws IOException {
+		getOrCreateEntriesSortedByImportance();
+		File file = createFileByType(CTree.SVG);
+		LOG.error("writeSVG NYI");
+//		MultisetUtil.writeCSV(file, resultsByImportance, getName());
+	}
+
+
 
 	@Override
 	public String toString() {
@@ -335,5 +349,24 @@ public class OccurrenceAnalyzer {
 
 	int getTermCount() {
 		return getOrCreateSerialByTermImportance().size();
+	}
+
+	public List<Multiset.Entry<String>> getResultsByImportance() {
+		return resultsByImportance;
+	}
+
+	/** only use this for debugging.
+	 * 
+	 * @param resultsByImportance
+	 */
+	public void setResultsByImportance(List<Multiset.Entry<String>> resultsByImportance) {
+		this.resultsByImportance = resultsByImportance;
+	}
+
+	public void createFromStrings(String rowName, String rowMultisetString) {
+		Multiset<String> rowMultiset = MultisetUtil.createMultiset(rowMultisetString);
+		List<Multiset.Entry<String>> rowEntries = MultisetUtil.createListSortedByCount(rowMultiset);
+		setResultsByImportance(rowEntries);
+		setName(rowName);
 	}
 }

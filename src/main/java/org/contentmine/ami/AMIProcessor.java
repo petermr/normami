@@ -31,7 +31,7 @@ public class AMIProcessor {
 		LOG.setLevel(Level.DEBUG);
 	}
 	public static final String SEARCH = "search";
-	private static final String HELP = "help";
+	public static final String HELP = "help";
 
 	private CProject cProject;
 	private boolean skipConvertPDFs;
@@ -81,6 +81,7 @@ public class AMIProcessor {
 		
 		entityAnalyzer.writeCSVFiles();
 		entityAnalyzer.setWriteCSV(true);
+		entityAnalyzer.setWriteSVG(true);
 		entityAnalyzer.createAllCooccurrences();
 	}
 
@@ -198,7 +199,7 @@ public class AMIProcessor {
 		}
 	}
 
-	private static void help(List<String> argList) {
+	public static void help(List<String> argList) {
 		System.err.println("amiProcessor <projectDirectory> [dictionary [dictionary]]");
 		System.err.println("    projectDirectory can be full name or relative to currentDir");
 		if (argList.size() == 0) {
@@ -215,6 +216,29 @@ public class AMIProcessor {
 			throw new RuntimeException("Cannot run command: "+cmd, e);
 		}
 	}
+
+	/** creates directory ffrom first argument; if not exists, return null
+	 * 
+	 * @param argList
+	 * @return
+	 */
+	public static File createProjectDirAndTrimArgs(List<String> argList) {
+		File projectDir = null;
+		if (argList != null && argList.size() > 0) {
+			String pathname = argList.get(0);
+			argList.remove(0);
+			projectDir = new File(pathname);
+			if (!projectDir.exists() || !projectDir.isDirectory()) {
+				projectDir = new File(System.getProperty("user.dir"), pathname);
+			}
+			if (!projectDir.exists() || !projectDir.isDirectory()) {
+				LOG.error("cannot find directory: "+projectDir);
+				projectDir = null;
+			}
+		}
+		return projectDir;
+	}
+	
 
 
 }

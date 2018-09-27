@@ -141,7 +141,12 @@ public class CommandProcessor {
 		runNormaIfNecessary();
 		for (AMIPluginOption pluginOption : pluginOptions) {
 			System.out.println("running: "+pluginOption);
-			pluginOption.run();
+			try {
+				pluginOption.run();
+			} catch (Exception e) {
+				LOG.error("cannot run command: "+pluginOption +"; " + e.getMessage());
+				continue;
+			}
 			System.out.println("filter: "+pluginOption);
 			pluginOption.runFilterResultsXMLOptions();
 			System.out.println("summary: "+pluginOption);
