@@ -16,12 +16,17 @@ public class NAConstants {
 	public static final String DOT_XML = ".xml";
 	public static final String HTML_TAGGER_XML = "htmlTagger.xml";
 
+	// === local ===
+	public final static File   HOME_DIR = new File(System.getProperty("user.home"));
+	public final static File   CONTENTMINE_DIR = new File(HOME_DIR, "ContentMine");
+	
+	public final static File   LIB_DIR = new File("/usr/local/");
+	public final static File   CONTENTMINE_LIB = new File(LIB_DIR, "contentmine");
+	
 	// === norma ===
 	public final static String ORG_CM_NORMA = CHESConstants.ORG_CM + "/" + NORMA;
 	
 	public static final String NORMA_RESOURCE = "/" + ORG_CM_NORMA;
-
-//	private static final String NORMAMI = "normami";
 
 	public final static String IMAGES   = "images";
 	public static final String PUBSTYLE = "pubstyle";
@@ -54,6 +59,7 @@ public class NAConstants {
 	public final static String PLUGINS_WORD       = NAConstants.PLUGINS_RESOURCE+"/word";
 	
 	public final static File PLUGINS_DIR   =      new File(NAConstants.MAIN_AMI_DIR, "plugins");
+//	public final static File DICTIONARY_DIR = new File(NAConstants.CONTENTMINE_DIR, "dictionary");
 	public final static File DICTIONARY_DIR = new File(NAConstants.PLUGINS_DIR, "dictionary");
 //	public final static File PLUGINS_GENE       = NAConstants.PLUGINS_DIR+"/gene";
 //	public final static File PLUGINS_PLACES     = NAConstants.PLUGINS_DIR+"/places";

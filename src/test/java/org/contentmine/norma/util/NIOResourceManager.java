@@ -40,6 +40,7 @@ public class NIOResourceManager {
 	    void accept(T t) throws IOException;
 	}
 	
+	/**
 	public static List<Path> listChildPaths(String resourceName) {
     	final List<Path> pathList = new ArrayList<Path>();
     	try {
@@ -58,7 +59,9 @@ public class NIOResourceManager {
 		Collections.sort(pathList);
 		return pathList;
 	}
+	*/
 
+	/**
 	private static void processResource(URI uri, IOConsumer<Path> action) throws IOException {
 	    try {
 	        Path p=Paths.get(uri);
@@ -72,6 +75,7 @@ public class NIOResourceManager {
 	        }
 	    }
 	}
+	*/
 
 
 }

@@ -26,7 +26,7 @@ public class SimpleDictionariesTest {
 	public void testResources() {
 		SimpleDictionaries dictionaries = new SimpleDictionaries();
 		List<File> childPaths = dictionaries.getDictionaries();
-		Assert.assertTrue("dictionaries "+childPaths.size(), childPaths.size() > 50);
+		Assert.assertTrue("dictionaries "+childPaths.size(), childPaths.size() > 40);
 		Assert.assertTrue("dictionaries", childPaths.toString().contains("country.xml"));
 	}
 	

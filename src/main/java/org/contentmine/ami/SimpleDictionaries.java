@@ -40,9 +40,15 @@ public class SimpleDictionaries {
 
 	private List<File> files;
 	private List<Path> paths;
+
+	private File dictionaryDir;
 	
 	public SimpleDictionaries() {
-		
+		init();
+	}
+	
+	private void init() {
+		dictionaryDir = NAConstants.DICTIONARY_DIR;
 	}
 	
 	public void listDictionaries(List<String> argList) {
@@ -95,15 +101,17 @@ public class SimpleDictionaries {
 //		listAllDictionariesBrieflyPaths();
 	}
 
+	/**
 	@Deprecated // will continue to use Files
 	private List<Path> getDictionaryPaths() {
 		String resourceName = NAConstants.DICTIONARY_RESOURCE;
 		paths = NIOResourceManager.listChildPaths(resourceName);
 		return paths;
 	}
+	*/
 
 	public List<File> getDictionaries() {
-		File dictionaryDir = NAConstants.DICTIONARY_DIR;
+		LOG.debug("dictionaries from: "+dictionaryDir);
 		File[] fileArray = dictionaryDir.listFiles(new FilenameFilter() {
 			@Override
 			public boolean accept(File dir, String name) {
@@ -227,6 +235,14 @@ public class SimpleDictionaries {
 			Collections.sort(newFiles);
 		}
 		return newFiles;
+	}
+
+	public File getDictionaryDir() {
+		return dictionaryDir;
+	}
+
+	public void setDictionaryDir(File dictionaryDir) {
+		this.dictionaryDir = dictionaryDir;
 	}
 
 }

@@ -796,7 +796,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 			ensureDictionaryList();
 			for (String dictionarySource : dictionarySources) {
 				InputStream is = null;
-				LOG.trace("DS "+dictionarySource);
+				LOG.trace("DictionarySource "+dictionarySource);
 				String dictionaryResource = dictionarySource;
 				// add /classpath prefix for resource
 				if (dictionarySource.startsWith("src")) {
@@ -804,7 +804,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 				} else if (dictionarySource.startsWith("org")) {
 						dictionaryResource = "/"+dictionarySource;
 				} else if (!dictionarySource.startsWith("/")) {
-					dictionaryResource = NAConstants.DICTIONARY_DIR+"/"+dictionarySource;
+					dictionaryResource = NAConstants.DICTIONARY_RESOURCE+"/"+dictionarySource;
 				}
 				if (!dictionaryResource.endsWith(NAConstants.DOT_XML)) {
 					dictionaryResource = dictionaryResource+NAConstants.DOT_XML;
