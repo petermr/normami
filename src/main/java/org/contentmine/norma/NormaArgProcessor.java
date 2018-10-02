@@ -804,7 +804,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 				} else if (dictionarySource.startsWith("org")) {
 						dictionaryResource = "/"+dictionarySource;
 				} else if (!dictionarySource.startsWith("/")) {
-					dictionaryResource = NAConstants.PLUGINS_DICTIONARY+"/"+dictionarySource;
+					dictionaryResource = NAConstants.DICTIONARY_DIR+"/"+dictionarySource;
 				}
 				if (!dictionaryResource.endsWith(NAConstants.DOT_XML)) {
 					dictionaryResource = dictionaryResource+NAConstants.DOT_XML;

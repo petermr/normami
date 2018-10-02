@@ -66,6 +66,13 @@ here are some links related to Wikipedia and Wikidata search.
 To find a Wikidata item by the Latin species name (here ���Mus musculus���):
 http://wdq.wmflabs.org/api?q=string[225:%22Mus%20musculus%22]
 
+Web interface:
+https://query.wikidata.org/#SELECT%20%3Fq%20%7B%20%3Fq%20wdt%3AP225%20%22Mus%20musculus%22%20%7D
+REST API:
+https://query.wikidata.org/sparql?query=SELECT%20%3Fq%20%7B%20%3Fq%20wdt%3AP225%20%22Mus%20Musculus%22%20%7D
+SPARQL:
+SELECT ?q { ?q wdt:P225 "Mus musculus" }
+
 This returns a JSON structure with an item list, containing one item:
 {"status":{"error":"OK","items":1,"querytime":"226ms","parsed_query":"STRING[225:'Mus musculus']"},"items":[83310]}
 
@@ -105,6 +112,18 @@ Mar 14 (9 days ago)
 	 *     "parsed_query":"STRING[225:'Mus musculus']"},
 	 *   "items":[83310]
 	 * }
+	 */
+	
+	/** 20180928 Magnus
+	 * 
+	 * https://tools.wmflabs.org/mix-n-match/#/
+	 * https://tools.wmflabs.org/mix-n-match/import.php
+	 * 
+	 * cann moderate through Q or P (Q5 == human, P31 instanceof)
+	 * 
+	 * see also https://tools.wmflabs.org/openrefine-wikidata/
+	 * 
+	 * 
 	 */
 	
 	/*

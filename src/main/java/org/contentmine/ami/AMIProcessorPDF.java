@@ -18,7 +18,7 @@ public class AMIProcessorPDF {
 		List<String> argList = new ArrayList<String>(Arrays.asList(args));
 		if (argList.size() == 0 || AMIProcessor.HELP.equals(argList.get(0))) {
 			if (argList.size() > 0) argList.remove(0);
-			AMIProcessor.help(argList);
+			AMIProcessor.runHelp(argList);
 		} else {
 			File projectDir = null;
 			String projectName = argList.get(0);

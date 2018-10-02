@@ -183,30 +183,27 @@ public class AMIProcessor {
 	public static void main(String[] args) {
 		List<String> argList = new ArrayList<String>(Arrays.asList(args));
 		if (argList.size() == 0 || HELP.equals(argList.get(0))) {
-			if (argList.size() > 0) argList.remove(0);
-			help(argList);
+			runHelp(argList);
 		} else {
-			String projectName = argList.get(0);
-			argList.remove(0);
-			if (argList.size() == 0) {
-				System.err.println("No default action for project: "+projectName+" (yet)");
-			} else {
-				AMIProcessor amiProcessor = AMIProcessor.createProcessor(projectName);
-				// FIX THIS
-				if ("abc".length() == 2) amiProcessor.convertJATSXMLandWriteHtml();
-				amiProcessor.runSearchesAndCooccurrence(argList);
-			}
+			runAMI(argList);
 		}
 	}
 
-	public static void help(List<String> argList) {
-		System.err.println("amiProcessor <projectDirectory> [dictionary [dictionary]]");
-		System.err.println("    projectDirectory can be full name or relative to currentDir");
+	public static void runHelp(List<String> argList) {
+		if (argList.size() > 0) argList.remove(0);
+		SimpleDictionaries dictionaries = new SimpleDictionaries();
+		dictionaries.help(argList);
+	}
+
+	private static void runAMI(List<String> argList) {
+		String projectName = argList.get(0);
+		argList.remove(0);
 		if (argList.size() == 0) {
-			System.err.println("\nlist of dictionaries taken from AMI dictionary list:");
+			System.err.println("No default action for project: "+projectName+" (yet)");
+		} else {
+			AMIProcessor amiProcessor = AMIProcessor.createProcessor(projectName);
+			amiProcessor.runSearchesAndCooccurrence(argList);
 		}
-		SimpleDictionaries simpleDictionaries = new SimpleDictionaries();
-		simpleDictionaries.listDictionaries(argList);
 	}
 
 	public void run(String cmd) {
