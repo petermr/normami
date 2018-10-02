@@ -43,7 +43,7 @@ public class WikipediaLookupIT {
 		// /normami/src/main/resources/org/contentmine/ami/plugins/dictionary/invasive.xml
 		DefaultAMIDictionary dictionary = new DefaultAMIDictionary();
 		dictionary.setDictionaryName("invasive");
-		dictionary.setInputDir(NAConstants.PLUGINS_DICTIONARY_DIR);
+		dictionary.setInputDir(NAConstants.DICTIONARY_DIR);
 		dictionary.setOutputDir(NAConstants.LOCAL_DICTIONARIES);
 		dictionary.annotateDictionaryWithWikidata(0, 100000);
 	}
@@ -53,7 +53,7 @@ public class WikipediaLookupIT {
 	public void testGetWikidataForDictionariesAndUpdate1() throws Exception {
 		DefaultAMIDictionary dictionary = new DefaultAMIDictionary();
 		dictionary.setDictionaryName("funders");
-		dictionary.setInputDir(NAConstants.PLUGINS_DICTIONARY_DIR);
+		dictionary.setInputDir(NAConstants.DICTIONARY_DIR);
 		dictionary.setOutputDir(NAConstants.LOCAL_DICTIONARIES);
 		dictionary.annotateDictionaryWithWikidata();
 	}

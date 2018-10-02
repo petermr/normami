@@ -466,6 +466,17 @@ public class AMIIntegrationDemosIT {
 		completeAnalysisXML(facetList, sourceDir, targetDir);
 	}
 	
+	@Test
+	public void testDirectoryFormation() {
+
+		String projectName = "gita/lantana/indiaverysmall/";
+		List<String> facetList = Arrays.asList(new String[]{
+				 "country", "photosynth", "plantparts", "species", "gene"});
+		File sourceDir = new File(AMIFixtures.PMR_PROJECT_DIR, projectName);
+		File targetDir = new File(AMIFixtures.TARGET_TOTAL_INT_DIR, projectName);
+		completeAnalysisXML(facetList, sourceDir, sourceDir);
+	}
+	
 
 	// ==================================================================
 	
@@ -478,7 +489,9 @@ public class AMIIntegrationDemosIT {
 
 	private void completeAnalysisXML(List<String> facetList, File sourceDir, File targetDir) {
 		if (!TestUtil.checkForeignDirExists(sourceDir)) return;
-		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		if (!sourceDir.equals(targetDir)) {
+			CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
+		}
 		AMIProcessor amiProcessor = AMIProcessor.createProcessor(targetDir);
 		amiProcessor.convertJATSXMLandWriteHtml();
 		amiProcessor.convertHTMLsToProjectAndRunCooccurrence(facetList);

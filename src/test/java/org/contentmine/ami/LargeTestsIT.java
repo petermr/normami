@@ -136,11 +136,11 @@ public class LargeTestsIT {
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
 		commandProcessor.processCommands(""
 //				+ "species(binomial,genus) "
-//				+ " word(search)w.search:NAConstants.PLUGINS_DICTIONARY+"/inn.xml_NAConstants.PLUGINS_DICTIONARY+"/cochrane.xml"
-+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/funders.xml"
-+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/disease.xml"
-+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/inn.xml"
-+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/cochrane.xml"
+//				+ " word(search)w.search:NAConstants.DICTIONARY_DIR+"/inn.xml_NAConstants.DICTIONARY_DIR+"/cochrane.xml"
++ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/funders.xml"
++ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/disease.xml"
++ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/inn.xml"
++ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/cochrane.xml"
 //+ " word(search)w.search:funders"
 //+ " word(search)w.search:disease"
 //+ " word(search)w.search:inn"
@@ -161,11 +161,11 @@ public class LargeTestsIT {
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
 		commandProcessor.processCommands(""
 //				+ "species(binomial,genus) "
-//				+ " word(search)w.search:NAConstants.PLUGINS_DICTIONARY+"/inn.xml_NAConstants.PLUGINS_DICTIONARY+"/cochrane.xml"
-+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/funders.xml"
-+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/disease.xml"
-+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/inn.xml"
-+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/cochrane.xml"
+//				+ " word(search)w.search:NAConstants.DICTIONARY_DIR+"/inn.xml_NAConstants.DICTIONARY_DIR+"/cochrane.xml"
++ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/funders.xml"
++ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/disease.xml"
++ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/inn.xml"
++ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/cochrane.xml"
 + " gene(human)"
 				+ "");
 		commandProcessor.createDataTables();
@@ -188,9 +188,9 @@ public class LargeTestsIT {
 		CMineTestFixtures.cleanAndCopyDir(rawDir, projectDir);
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
 		commandProcessor.processCommands("species(binomial,genus)  word(search)w.search:"+
-		NAConstants.PLUGINS_DICTIONARY+"/disease.xml word(search)w.search:"+
-		NAConstants.PLUGINS_DICTIONARY+"/inn.xml word(search)w.search:"+
-		NAConstants.PLUGINS_DICTIONARY+"/cochrane.xml");
+		NAConstants.DICTIONARY_DIR+"/disease.xml word(search)w.search:"+
+		NAConstants.DICTIONARY_DIR+"/inn.xml word(search)w.search:"+
+		NAConstants.DICTIONARY_DIR+"/cochrane.xml");
 		commandProcessor.createDataTables();
 		
 	}
@@ -201,7 +201,7 @@ public class LargeTestsIT {
 		CMineTestFixtures.cleanAndCopyDir(new File(NAConstants.TEST_AMI_DIR+"/zika10"), projectDir);
 		Assert.assertTrue("exists "+projectDir, projectDir.exists());
 		CommandProcessor commandProcessor = new CommandProcessor(projectDir);
-		String inn = NAConstants.PLUGINS_DICTIONARY+"/inn.xml";
+		String inn = NAConstants.DICTIONARY_DIR+"/inn.xml";
 		LOG.debug("inn "+inn);
 		commandProcessor.processCommands(""
 				+ "word(search)w.search:"+inn+"");

@@ -48,7 +48,7 @@ public class TutorialIT {
 				+ "species(binomial,genus) "
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
-				+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/tropicalVirus.xml"
+				+ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/tropicalVirus.xml"
 				+ " word(search)w.search:"+NAConstants.PLUGINS_PLACES+"/wikiplaces.xml"
 				+ " sequence(dnaprimer) ");
 	}
@@ -84,7 +84,7 @@ public class TutorialIT {
 				+ "species(binomial,genus) "
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
-				+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/tropicalVirus.xml"
+				+ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/tropicalVirus.xml"
 				+ " word(search)w.search:"+NAConstants.PLUGINS_PLACES+"/wikiplaces.xml"
 				+ " sequence(dnaprimer) ");
 	}
@@ -102,13 +102,13 @@ public class TutorialIT {
 	//		String cmd = "gene(human)";
 			
 			String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"; 
-	//		String cmd = "word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/tropicalVirus.xml"; //
+	//		String cmd = "word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/tropicalVirus.xml"; //
 	//		String cmd = "word(search)w.search:"+NAConstants.PLUGINS_PLACES+"/wikiplaces.xml"; //
 	//		String cmd = "sequence(dnaprimer) ";
-	//				+ "word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/tropicalVirus.xml";
+	//				+ "word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/tropicalVirus.xml";
 					
 					
-	//		String cmd = "species(binomial,genus) gene(human) sequence(dnaprimer) word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY+"/tropicalVirus.xml word(frequencies)xpath:@count>20~stopwords:pmcstop.txt_stopwords.txt"; 
+	//		String cmd = "species(binomial,genus) gene(human) sequence(dnaprimer) word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/tropicalVirus.xml word(frequencies)xpath:@count>20~stopwords:pmcstop.txt_stopwords.txt"; 
 			CommandProcessor commandProcessor = new CommandProcessor(projectDir);
 			commandProcessor.processCommands(cmd);
 	
