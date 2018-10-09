@@ -48,6 +48,9 @@ public class WellIT {
 	@Test
 	public void testWell() throws Exception {
 		File sourceDir = new File("/Users/pm286/ContentMine/well/testfiles");
+		if (!sourceDir.exists()) {
+			LOG.info("skipped pmr only test");			return;
+		}
 		File targetDir = new File("target/well/");
 		boolean skipSVG = false;
 		CProject cProject = null;

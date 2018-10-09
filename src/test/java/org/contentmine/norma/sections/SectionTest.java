@@ -9,7 +9,6 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.cproject.util.Utils;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlDiv;
 import org.contentmine.graphics.html.HtmlElement;
@@ -17,13 +16,6 @@ import org.contentmine.graphics.html.HtmlSpan;
 import org.contentmine.graphics.html.HtmlTable;
 import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.norma.NormaFixtures;
-import org.contentmine.norma.sections.JATSSectionTagger;
-import org.contentmine.norma.sections.JATSArticleElement;
-import org.contentmine.norma.sections.JATSPMCitation;
-import org.contentmine.norma.sections.JATSPMCitations;
-import org.contentmine.norma.sections.JATSRefElement;
-import org.contentmine.norma.sections.JATSReflistElement;
-import org.contentmine.norma.sections.TagElementX;
 import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
 import org.contentmine.norma.util.DottyPlotter;
 import org.junit.Assert;
@@ -633,12 +625,49 @@ public class SectionTest {
 		
 	}
 
-	
-
-	
-	
-
-
+	@Test
+	public void testGetUnknownSections() throws IOException {
+		JATSSectionTagger tagger = new JATSSectionTagger();
+		tagger.readJATS(PMC3289602XML);
+		new File("target/jats/").mkdirs();
+		XMLUtil.debug(tagger.getJATSHtmlElement(),new FileOutputStream("target/jats/PMC3289602a.html"), 1);
+		LOG.trace(PMC3113902XML);
+		String xml = FileUtils.readFileToString(PMC3113902XML);
+		List<Element> sections;
+		sections = tagger.getSections(SectionTag.SUBTITLE);
+		Assert.assertEquals("intro", 25, sections.size()); 
+		sections = tagger.getSections(SectionTag.ARTICLE_TITLE);
+		Assert.assertEquals("articleTitle", 1, sections.size());
+		String title = sections.get(0).getValue().replaceAll("\\s+", " ");
+		Assert.assertEquals("title", "Genetic Characterization of Zika Virus Strains: Geographic Expansion of the Asian Lineage", title);
+		sections = tagger.getSections(SectionTag.ARTICLE_META);
+		Assert.assertEquals("articleMeta", 1, sections.size()); 
+		sections = tagger.getSections(SectionTag.JOURNAL_META);
+		Assert.assertEquals("journalMeta", 1, sections.size()); 
+		sections = tagger.getSections(SectionTag.JOURNAL_TITLE);
+		Assert.assertEquals("journalTitle", 1, sections.size());
+		title = sections.get(0).getValue().replaceAll("\\s+", " ");
+		Assert.assertEquals("title", "PLoS Neglected Tropical Diseases", title);
+		sections = tagger.getSections(SectionTag.PMCID);
+		Assert.assertEquals("pmcid", 1, sections.size());
+//		Assert.assertEquals("pmcid", "3289602", sections.get(0).getValue());
+		sections = tagger.getSections(SectionTag.CONTRIB);
+		// this includes an editor
+		Assert.assertEquals("contrib", 10, sections.size());
+		sections = tagger.getSections(SectionTag.TABLE);
+		Assert.assertEquals("table", 3, sections.size());
+		sections = tagger.getSections(SectionTag.FIG);
+		Assert.assertEquals("fig", 2, sections.size());
+		sections = tagger.getSections(SectionTag.METHODS);
+		Assert.assertEquals("methods", 1, sections.size());
+		sections = tagger.getSections(SectionTag.RESULTS);
+		Assert.assertEquals("results", 1, sections.size());
+		sections = tagger.getSections(SectionTag.ACK_FUND);
+		Assert.assertEquals("fig", 1, sections.size());
+		sections = tagger.getSections(SectionTag.REF);
+		Assert.assertEquals("ref", 57, sections.size());
+		
+	}
 
 	// ===========================================
 	
@@ -646,7 +675,7 @@ public class SectionTest {
 	public void testTables() {
 		JATSSectionTagger tagger = new JATSSectionTagger();
 		tagger.readScholarlyHtml(PMC3289602HTML);
-		List<HtmlTable> tables = tagger.getTablesX();
+		List<HtmlTable> tables = tagger.getHtmlTables();
 		Assert.assertEquals("tables "+tables.size(), 3, tables.size());
 	}
 
