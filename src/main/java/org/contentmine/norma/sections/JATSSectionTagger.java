@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,7 @@ import org.contentmine.graphics.html.HtmlSpan;
 import org.contentmine.graphics.html.HtmlTable;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.NormaArgProcessor;
+import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
 
 import nu.xom.Element;
 
@@ -144,7 +146,7 @@ public class JATSSectionTagger {
 	
 	private HtmlElement htmlElement;
 	private Element jatsHtmlElement;
-	public static final String DEFAULT_SECTION_TAGGER_FILE = NAConstants.NORMA_RESOURCE+"/pubstyle/sectionTagger.xml";
+	public static final String DEFAULT_SECTION_TAGGER_RESOURCE = NAConstants.NORMA_RESOURCE+"/pubstyle/sectionTagger.xml";
 	private Element tagsElement;
 	private Map<SectionTag, TagElementX> tagElementsByTag;
 
@@ -167,7 +169,7 @@ public class JATSSectionTagger {
 		return htmlElement;
 	}
 
-	public List<HtmlTable> getTablesX() {
+	public List<HtmlTable> getHtmlTables() {
 		HtmlElement htmlElement = getHtmlElement();
 		return HtmlTable.extractSelfAndDescendantTables(htmlElement);
 	}
@@ -379,7 +381,7 @@ public class JATSSectionTagger {
 	}
 
 	public Element readSectionTags() {
-		return readSectionTags(DEFAULT_SECTION_TAGGER_FILE);
+		return readSectionTags(DEFAULT_SECTION_TAGGER_RESOURCE);
 	}
 
 	public Map<SectionTag, TagElementX> getOrCreateMap() {
@@ -421,17 +423,23 @@ public class JATSSectionTagger {
 		List<Element> sections = new ArrayList<Element>();
 		if (tag != null) {
 			String xpath = getXPath(tag);
-			LOG.trace(xpath);
+			LOG.trace("xpath for tag: "+xpath);
 			if (xpath != null) {
 				Element jatsElement = getJATSHtmlElement();
 				sections = XMLUtil.getQueryElements(jatsElement, xpath);
-				for (Element section : sections) {
-					String sectionS = section.toXML();
-//					System.out.println("CLASS "+section.getAttributeValue("class")+" || "+sectionS.substring(0, Math.min(100, sectionS.length())));
-				}
+//				for (Element section : sections) {
+//					String sectionS = section.toXML();
+////					System.out.println("CLASS "+section.getAttributeValue("class")+" || "+sectionS.substring(0, Math.min(100, sectionS.length())));
+//				}
 			}
 		}
 		return sections;
+	}
+	
+	public List<SectionTag> getSortedTags() {
+		List<JATSSectionTagger.SectionTag> keys = new ArrayList<JATSSectionTagger.SectionTag> (tagElementsByTag.keySet());
+		Collections.sort(keys);
+		return keys;
 	}
 	
 	// ================================
@@ -445,7 +453,7 @@ public class JATSSectionTagger {
 			throw new RuntimeException(scholarlyHtmlFile+" is a directory");
 		}
 	}
-	
+
 
 
 }

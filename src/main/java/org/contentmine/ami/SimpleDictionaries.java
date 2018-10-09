@@ -17,10 +17,8 @@ import java.util.List;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.NAConstants;
-import org.contentmine.norma.util.NIOResourceManager;
 
 import com.google.common.collect.Lists;
 
@@ -113,12 +111,12 @@ public class SimpleDictionaries {
 	public List<File> getDictionaries() {
 		LOG.debug("dictionaries from: "+dictionaryDir);
 		File[] fileArray = dictionaryDir.listFiles(new FilenameFilter() {
-			@Override
 			public boolean accept(File dir, String name) {
 				return name != null && name.endsWith(".xml");
 			}
 		});
 		files = fileArray == null ? new ArrayList<File>() : Arrays.asList(fileArray);
+		Collections.sort(files);
 		return files;
 	}
 
