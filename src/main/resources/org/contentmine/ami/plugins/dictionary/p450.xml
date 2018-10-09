@@ -1,0 +1,52 @@
+<dictionary title="p450" name="P450 names">
+	<desc>From Wikipedia PMR 20181005</desc>
+<entry term="17,20-lyase activities" name="17,20-lyase activities"/>
+<entry term="20,22-desmolase" name="20,22-desmolase"/>
+<entry term="21-hydroxylase." name="21-hydroxylase."/>
+<entry term="aromatase" name="aromatase"/>
+<entry term="cholesterol side-chain scission" name="cholesterol side-chain scission"/>
+<entry term="CYP11A1" name="CYP11A1"/>
+<entry term="CYP11B1" name="CYP11B1"/>
+<entry term="CYP11B2" name="CYP11B2"/>
+<entry term="CYP17A1" name="CYP17A1"/>
+<entry term="CYP19A" name="CYP19A"/>
+<entry term="CYP1A1" name="CYP1A1"/>
+<entry term="CYP1A2" name="CYP1A2"/>
+<entry term="CYP21A1" name="CYP21A1"/>
+<entry term="CYP2C18" name="CYP2C18"/>
+<entry term="CYP2C19" name="CYP2C19"/>
+<entry term="CYP2C8" name="CYP2C8"/>
+<entry term="CYP2C9" name="CYP2C9"/>
+<entry term="CYP2E1" name="CYP2E1"/>
+<entry term="CYP2J2" name="CYP2J2"/>
+<entry term="CYP2S1" name="CYP2S1"/>
+<entry term="CYP3A4" name="CYP3A4"/>
+<entry term="CYP4A11" name="CYP4A11"/>
+<entry term="CYP4F11" name="CYP4F11"/>
+<entry term="CYP4F2" name="CYP4F2"/>
+<entry term="CYP4F22" name="CYP4F22"/>
+<entry term="CYP4F3A" name="CYP4F3A"/>
+<entry term="CYP4F3B" name="CYP4F3B"/>
+<entry term="cytochrome P450 epoxygenase" name="cytochrome P450 epoxygenase"/>
+<entry term="cytochrome P450 omega hydroxylase" name="cytochrome P450 omega hydroxylase"/>
+<entry term="P450arom" name="P450arom"/>
+<entry term="P450c11a1" name="P450c11a1"/>
+<entry term="P450c11AS" name="P450c11AS"/>
+<entry term="P450c11β" name="P450c11β"/>
+<entry term="P450c21" name="P450c21"/>
+<entry term="P450scc" name="P450scc"/>
+<entry term="steroid 11β-hydroxylase" name="steroid 11β-hydroxylase"/>
+<entry term="steroid 11β-hydroxylase" name="steroid 11β-hydroxylase"/>
+<entry term="steroid 17α-hydroxylase" name="steroid 17α-hydroxylase"/>
+<entry term="steroid 18-hydroxylase" name="steroid 18-hydroxylase"/>
+<entry term="steroid 18-hydroxylase" name="steroid 18-hydroxylase"/>
+<entry term="steroid 18-methyloxidase" name="steroid 18-methyloxidase"/>
+<entry term="steroid 18-methyloxidase" name="steroid 18-methyloxidase"/>
+<entry term="steroid 20α-hydroxylase" name="steroid 20α-hydroxylase"/>
+<entry term="steroid 22-hydroxylase" name="steroid 22-hydroxylase"/>
+
+<query>
+((17,20-lyase activities) OR (20,22-desmolase) OR (21-hydroxylase.) OR (aromatase) OR (cholesterol side-chain scission) OR (CYP11A1) OR (CYP11B1) OR (CYP11B2) OR (CYP17A1) OR (CYP19A) OR (CYP1A1) OR (CYP1A2) OR (CYP21A1) OR (CYP2C18) OR (CYP2C19) OR (CYP2C8) OR (CYP2C9) OR (CYP2E1) OR (CYP2J2) OR (CYP2S1) OR (CYP3A4) OR (CYP4A11) OR (CYP4F11) OR (CYP4F2) OR (CYP4F22) OR (CYP4F3A) OR (CYP4F3B) OR (cytochrome P450 epoxygenase) OR (cytochrome P450 omega hydroxylase) OR (P450arom) OR (P450c11a1) OR (P450c11AS) OR (P450c11β) OR (P450c21) OR (P450scc) OR (steroid 11β-hydroxylase) OR (steroid 11β-hydroxylase) OR (steroid 17α-hydroxylase) OR (steroid 18-hydroxylase) OR (steroid 18-hydroxylase) OR (steroid 18-methyloxidase) OR (steroid 18-methyloxidase) OR (steroid 20α-hydroxylase) OR (steroid 22-hydroxylase))
+</query>
+
+</dictionary>
