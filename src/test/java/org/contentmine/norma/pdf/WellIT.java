@@ -42,6 +42,8 @@ import org.contentmine.image.pixel.PixelEdgeList;
 import org.contentmine.image.pixel.PixelGraph;
 import org.contentmine.image.pixel.PixelIsland;
 import org.contentmine.image.pixel.PixelIslandList;
+import org.contentmine.image.pixel.PixelList;
+import org.contentmine.image.pixel.PixelRing;
 import org.contentmine.image.pixel.PixelRingList;
 import org.contentmine.pdf2svg2.PDFDocumentProcessor;
 import org.junit.Ignore;
@@ -146,10 +148,7 @@ public class WellIT {
 		pixelIslandList.removeIslandsWithBBoxesLessThan(new Real2Range(new RealRange(0, 10), new RealRange(0, 10)));
 		Assert.assertEquals(20, pixelIslandList.size());
 		SVGSVG.wrapAndWriteAsSVG(pixelIslandList.getOrCreateSVGG(), new File("target/well/" + project + "/" + root + ".svg"));
-
 	}
-
-
 	
 	@Test
 	public void testTracePixelRings() throws IOException {
@@ -286,7 +285,7 @@ public class WellIT {
 
 		
 		BufferedImage newImage = diagramAnalyzer.getImage();
-		ImageUtil.clearImage(newImage);
+		ImageUtil.setImageWhite(newImage);
 		IntArray xFrequencies2 = axialPixelFrequencies.getXFrequencies();
 		xFrequencies2.subtractMean();
 		xFrequencies = xFrequencies.trim(Trim.BELOW, 0);
@@ -305,7 +304,7 @@ public class WellIT {
 	}
 
 	@Test
-	public void testClearGrid() throws IOException {
+	public void testEraseGridLines() throws IOException {
 		String root = "1.1.c.clip";
 		String root1 = "1.1.c.clip.clear";
 		String ctree = "nusco_002";
@@ -317,7 +316,8 @@ public class WellIT {
 		int width = image.getWidth();
 		int height = image.getHeight();
 		int y0 = 1;
-		int dy = 3;
+//		int dy = 3;
+		int dy = 2;
 		double ystep = 39.7;
 		int nystep = 25;
 		for (int i = 0; i < nystep; i++) {
@@ -328,7 +328,8 @@ public class WellIT {
 			ImageUtil.setImageColor(image, box, 0xffffff);
 		}
 		int x0 = 34;
-		int dx = 2;
+//		int dx = 2;
+		int dx = 1;
 		double xstep = 109.3 / 2;
 		int nxstep = 9;
 		for (int i = 0; i < nxstep; i++) {
@@ -343,10 +344,64 @@ public class WellIT {
 		ImageIOUtil.writeImageQuietly(image, outFile);
 
 	}
-	
-	// y 3, 39.7, 25 , 995 
-	// x 34, 107.5, 8, 933
-	
+
+	@Test
+	public void testPixelRingsN() throws IOException {
+		String root = "1.1.c.clip";
+		String root1 = "1.1.c.clip.rings";
+		String ctree = "nusco_002";
+
+		String testFilesRoot = "/Users/pm286/ContentMine/well/testfiles/";
+		File imageFile = new File(testFilesRoot+ctree+"/images/page."+root+".png");
+		File outfileSvg = new File(testFilesRoot + ctree + "/" +"svg/" + root1 + ".svg");
+		File outfilePng = new File(testFilesRoot + ctree + "/" +"png/" + root1 + ".png");
+		File outfilePngA = new File(testFilesRoot + ctree + "/" +"png/" + root1 + ".a.png");
+		File outfilePng1 = new File(testFilesRoot + ctree + "/" +"png/" + root1 + ".missing.png");
+		File outfileSvg1 = new File(testFilesRoot + ctree + "/" +"svg/" + root1 + ".1.svg");
+		Assert.assertTrue(""+imageFile, imageFile.exists());
+		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
+		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
+		Assert.assertNotNull(pixelRingList);
+		Assert.assertEquals(4, pixelRingList.size());
+		BufferedImage image = diagramAnalyzer.getImage();
+		int width = image.getWidth();
+		int height = image.getHeight();
+		Assert.assertEquals("w",  620, width);
+		Assert.assertEquals("h",  1015, height);
+		SVGSVG.wrapAndWriteAsSVG(pixelRingList.plotPixels(), outfileSvg);
+		PixelRing pixelRingBase = pixelRingList.get(1);
+		LOG.debug("writing SVG1 to "+outfileSvg1);
+		SVGSVG.wrapAndWriteAsSVG(pixelRingBase.plotPixels("blue"), outfileSvg1);
+		// clip LH axial line
+		width = 520;
+		DiagramAnalyzer diagramAnalyzerBase = DiagramAnalyzer.createDiagramAnalyzer(width, height, pixelRingBase);
+		BufferedImage imagexx = diagramAnalyzerBase.getImage();
+		LOG.debug("pixelRing base "+ImageUtil.createString(imagexx));
+		LOG.debug("writing PNG to "+outfilePng);
+		ImageIOUtil.writeImageQuietly(imagexx, outfilePngA);
+		diagramAnalyzerBase.writeImage(outfilePng);
+		
+		diagramAnalyzerBase.createAxialPixelFrequencies();
+		AxialPixelFrequencies axialPixelFrequencies = diagramAnalyzerBase.getAxialPixelFrequencies();
+		IntArray yFrequencies = axialPixelFrequencies.getYFrequencies();
+		LOG.debug(yFrequencies);
+		PixelList missing = new PixelList();
+		PixelRing ring0 = pixelRingList.get(0); // lowest ring
+		for (int y = 0; y < yFrequencies.size(); y++) {
+			if (yFrequencies.elementAt(y) <= 1) {
+//				LOG.debug(y);
+				PixelList pixelList = ring0.getPixelListByYCoordinate(y);
+				missing.addAll(pixelList);
+			}
+		}
+		missing.addAll(pixelRingBase);
+		DiagramAnalyzer missingAnalyzer = DiagramAnalyzer.createDiagramAnalyzer(width, height, missing);
+		LOG.debug("writing PNG1 to "+outfilePng1);
+		missingAnalyzer.writeImage(outfilePng1);
+	}
+
+
+	// ================================
 	
 	private void writeYProjection(BufferedImage newImage, IntArray yFrequencies) {
 		int ysize = yFrequencies.size();

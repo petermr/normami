@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import org.contentmine.image.ImageUtil;
 import org.contentmine.norma.NormaFixtures;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class HOCRNeuroImageTest {
 		BufferedImage image = ImageIO.read(image21);
 		int w = image.getWidth();
 		int h = image.getHeight();
-		BufferedImage image1 = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
+		BufferedImage image1 = ImageUtil.createARGBBufferedImage(w, h);
 		for (int i = 0; i < w; i++) {
 			for (int j = 0; j < h; j++) {
 				int col = image.getRGB(i,  j);

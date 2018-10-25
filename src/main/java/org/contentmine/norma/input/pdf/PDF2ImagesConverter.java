@@ -52,8 +52,7 @@ public class PDF2ImagesConverter {
 	                BufferedImage bufferedImage = objectImage.getRGBImage();
 	                int width = bufferedImage.getWidth();
 	                int height = bufferedImage.getHeight();
-	                BufferedImage bufferedImage1 = new BufferedImage(
-	                		width, height, BufferedImage.TYPE_INT_RGB);
+	                BufferedImage bufferedImage1 = ImageUtil.createBufferedImage(width, height);
 	                for (int i = 0; i < width; i++) {
 		                for (int j = 0; j < height; j++) {
 		                	bufferedImage1.setRGB(i,  j,  bufferedImage.getRGB(i, j));
