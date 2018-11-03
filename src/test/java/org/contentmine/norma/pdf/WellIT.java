@@ -18,7 +18,10 @@ import org.contentmine.eucl.euclid.ArrayBase.Trim;
 import org.contentmine.eucl.euclid.Int2Range;
 import org.contentmine.eucl.euclid.IntArray;
 import org.contentmine.eucl.euclid.IntRange;
+import org.contentmine.eucl.euclid.IntRangeArray;
 import org.contentmine.eucl.euclid.Real;
+import org.contentmine.eucl.euclid.Real2;
+import org.contentmine.eucl.euclid.Real2Array;
 import org.contentmine.eucl.euclid.Real2Range;
 import org.contentmine.eucl.euclid.RealArray;
 import org.contentmine.eucl.euclid.RealRange;
@@ -31,6 +34,7 @@ import org.contentmine.graphics.html.HtmlTr;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGG;
 import org.contentmine.graphics.svg.SVGLine;
+import org.contentmine.graphics.svg.SVGPolyline;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.graphics.svg.SVGText;
 import org.contentmine.graphics.svg.util.ImageIOUtil;
@@ -45,7 +49,7 @@ import org.contentmine.image.pixel.PixelIslandList;
 import org.contentmine.image.pixel.PixelList;
 import org.contentmine.image.pixel.PixelRing;
 import org.contentmine.image.pixel.PixelRingList;
-import org.contentmine.pdf2svg2.PDFDocumentProcessor;
+import org.contentmine.pdf2svg2.CustomPageDrawer;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -53,57 +57,47 @@ import junit.framework.Assert;
 
 
 public class WellIT {
-	private static final Logger LOG = Logger.getLogger(WellIT.class);
+	private static final File WELL_DIR = new File("/Users/pm286/ContentMine/well/testfiles");
+	public static final Logger LOG = Logger.getLogger(WellIT.class);
+	private static String TEST_FILES_ROOT;
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	
+
 
 	@Test
 	public void testWell() throws Exception {
-		File sourceDir = new File("/Users/pm286/ContentMine/well/testfiles");
+		File sourceDir = WELL_DIR;
 		if (!sourceDir.exists()) {
 			LOG.info("skipped pmr only test");			return;
 		}
-		File targetDir = new File("target/well/");
-		boolean skipSVG = false;
-		CProject cProject = null;
+		File targetDir = sourceDir;
 		CTreeList cTreeList = null;
 		CMineTestFixtures.cleanAndCopyDir(sourceDir, targetDir);
-		cProject = new CProject(targetDir);
+		CProject cProject = new CProject(targetDir);
 		cTreeList = cProject.getOrCreateCTreeList();
 		for (CTree cTree : cTreeList) {
 			LOG.debug("******* "+cTree+" **********");
-			List<File> svgFiles = cTree.getExistingSVGFileList();
-		    PDFDocumentProcessor documentProcessor = new PDFDocumentProcessor();
-		    documentProcessor.setMinimumImageBox(100, 100);
-		    documentProcessor.readAndProcess(cTree.getExistingFulltextPDF());
-		    File outputDir = new File(targetDir, cTree.getName());
-			documentProcessor.writeSVGPages(outputDir);
-	    	documentProcessor.writeRawImages(outputDir);
+		    cTree.extractSVGAndRawImages();
 		}
 	}
-	
+
 	@Test
 	public void testWellTable() throws Exception {
-		File sourceDir = new File("/Users/pm286/ContentMine/well/testfiles");
+		File sourceDir = WELL_DIR;
 		File targetDir = sourceDir;
 		CProject cProject = new CProject(targetDir);
 		CTreeList cTreeList = cProject.getOrCreateCTreeList();
 		for (CTree cTree : cTreeList) {
 			LOG.debug("******* "+cTree+" **********");
-			List<File> svgFiles = cTree.getExistingSVGFileList();
-		    PDFDocumentProcessor documentProcessor = new PDFDocumentProcessor();
-		    documentProcessor.setMinimumImageBox(100, 100);
-		    documentProcessor.readAndProcess(cTree.getExistingFulltextPDF());
-		    File outputDir = new File(targetDir, cTree.getName());
-			documentProcessor.writeSVGPages(outputDir);
-	    	documentProcessor.writeRawImages(outputDir);
+		    cTree.extractSVGAndRawImages();
 		}
 	}
 
 	@Test
 	public void test3brP1() throws Exception {
-		File page2svg = new File("/Users/pm286/ContentMine/well/testfiles/3br/svg/fulltext-page.1.svg");
+		File page2svg = new File(WELL_DIR, "3br/svg/fulltext-page.1.svg");
 		SVGElement svgElement = SVGElement.readAndCreateSVG(
 				XMLUtil.parseQuietlyToRootElement(new FileInputStream(page2svg)));
 		SVGG g = new SVGG();
@@ -141,7 +135,7 @@ public class WellIT {
 	public void testTraceIslands() throws IOException {
 		String root = "1.1.clip";
 		String project = "s.croce_001";
-		File imageFile = new File("/Users/pm286/ContentMine/well/testfiles/" + project + "/images/page."+root+".png");
+		File imageFile = new File(WELL_DIR, project + "/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		PixelIslandList pixelIslandList = diagramAnalyzer.createDefaultPixelIslandList(imageFile);
@@ -154,7 +148,7 @@ public class WellIT {
 	public void testTracePixelRings() throws IOException {
 		String root = "1.1.clip";
 		String project = "s.croce_001";
-		File imageFile = new File("/Users/pm286/ContentMine/well/testfiles/" + project + "/images/page."+root+".png");
+		File imageFile = new File(WELL_DIR, project + "/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
@@ -166,7 +160,7 @@ public class WellIT {
 	public void testGridIslands() throws IOException {
 		String root = "1.1";
 		String ctree = "nusco_002";
-		File imageFile = new File("/Users/pm286/ContentMine/well/testfiles/"+ctree+"/images/page."+root+".png");
+		File imageFile = new File(WELL_DIR, ctree+"/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		PixelIslandList pixelIslandList = diagramAnalyzer.createDefaultPixelIslandList(imageFile);
@@ -181,7 +175,7 @@ public class WellIT {
 	public void testGridPixelRings() throws IOException {
 		String root = "1.1";
 		String project = "nusco_002";
-		File imageFile = new File("/Users/pm286/ContentMine/well/testfiles/" + project + "/images/page."+root+".png");
+		File imageFile = new File(WELL_DIR, project + "/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
@@ -194,7 +188,7 @@ public class WellIT {
 	public void testGridClipThinMinBoxMinSize() throws IOException {
 		String root = "1.1.clip";
 		String ctree = "nusco_002";
-		File imageFile = new File("/Users/pm286/ContentMine/well/testfiles/"+ctree+"/images/page."+root+".png");
+		File imageFile = new File(WELL_DIR, ctree+"/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		PixelIslandList pixelIslandList = diagramAnalyzer.createDefaultPixelIslandList(imageFile);
@@ -228,8 +222,8 @@ public class WellIT {
 		String root = "1.1.a.clip";
 		String root1 = "1.1.c.clip";
 		String ctree = "nusco_002";
-		String testFilesRoot = "/Users/pm286/ContentMine/well/testfiles/";
-		File imageFile = new File(testFilesRoot+ctree+"/images/page."+root+".png");
+		File testFile = WELL_DIR;
+		File imageFile = new File(testFile, ctree+"/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		diagramAnalyzer.setThinning(null);
@@ -240,7 +234,7 @@ public class WellIT {
 		int newHeight = 1015;
 		int newWidth = oldImage.getWidth();
 		BufferedImage image = ImageUtil.createClippedImage(oldImage, xoff, yoff, newWidth, newHeight);
-		File imageFileNew = new File(testFilesRoot+ctree+"/images/page."+root1+".png");
+		File imageFileNew = new File(testFile, ctree+"/images/page."+root1+".png");
 		ImageIOUtil.writeImageQuietly(image, imageFileNew);
 	}
 
@@ -249,8 +243,8 @@ public class WellIT {
 	public void testFindGrid() throws IOException {
 		String root = "1.1.c.clip";
 		String ctree = "nusco_002";
-		String testFilesRoot = "/Users/pm286/ContentMine/well/testfiles/";
-		File imageFile = new File(testFilesRoot+ctree+"/images/page."+root+".png");
+		File testFile = WELL_DIR;
+		File imageFile = new File(testFile, ctree+"/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		diagramAnalyzer.setThinning(null);
@@ -299,7 +293,7 @@ public class WellIT {
 		LOG.debug(newImage.getWidth()+"/"+ysize);
 		writeYProjection(newImage, yFrequencies2);
 		writeXProjection(newImage, xFrequencies2);
-		ImageIOUtil.writeImageQuietly(newImage, new File(testFilesRoot+ctree+"/images/page."+root+".new.png"));
+		ImageIOUtil.writeImageQuietly(newImage, new File(testFile, ctree+"/images/page."+root+".new.png"));
 
 	}
 
@@ -308,9 +302,9 @@ public class WellIT {
 		String root = "1.1.c.clip";
 		String root1 = "1.1.c.clip.clear";
 		String ctree = "nusco_002";
-		String testFilesRoot = "/Users/pm286/ContentMine/well/testfiles/";
-		File imageFile = new File(testFilesRoot+ctree+"/images/page."+root+".png");
-		File outFile = new File(testFilesRoot+ctree+"/images/page."+root1+".png");
+		File testFile = WELL_DIR;
+		File imageFile = new File(testFile, ctree+"/images/page."+root+".png");
+		File outFile = new File(testFile, ctree+"/images/page."+root1+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		BufferedImage image = ImageIO.read(imageFile);
 		int width = image.getWidth();
@@ -351,13 +345,13 @@ public class WellIT {
 		String root1 = "1.1.c.clip.rings";
 		String ctree = "nusco_002";
 
-		String testFilesRoot = "/Users/pm286/ContentMine/well/testfiles/";
-		File imageFile = new File(testFilesRoot+ctree+"/images/page."+root+".png");
-		File outfileSvg = new File(testFilesRoot + ctree + "/" +"svg/" + root1 + ".svg");
-		File outfilePng = new File(testFilesRoot + ctree + "/" +"png/" + root1 + ".png");
-		File outfilePngA = new File(testFilesRoot + ctree + "/" +"png/" + root1 + ".a.png");
-		File outfilePng1 = new File(testFilesRoot + ctree + "/" +"png/" + root1 + ".missing.png");
-		File outfileSvg1 = new File(testFilesRoot + ctree + "/" +"svg/" + root1 + ".1.svg");
+		
+		File imageFile = new File(WELL_DIR, ctree+"/images/page."+root+".png");
+		File outfileSvg = new File(WELL_DIR,  ctree + "/" +"svg/" + root1 + ".svg");
+		File outfilePng = new File(WELL_DIR,  ctree + "/" +"png/" + root1 + ".png");
+		File outfilePngA = new File(WELL_DIR,  ctree + "/" +"png/" + root1 + ".a.png");
+		File outfilePng1 = new File(WELL_DIR,  ctree + "/" +"png/" + root1 + ".missing.png");
+		File outfileSvg1 = new File(WELL_DIR,  ctree + "/" +"svg/" + root1 + ".1.svg");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
@@ -400,6 +394,86 @@ public class WellIT {
 		missingAnalyzer.writeImage(outfilePng1);
 	}
 
+	@Test
+	public void Ia() throws IOException {
+		String root = "1.1.clip";
+		String ctree = "s_croce_img_log";
+
+		File imageFile = new File(WELL_DIR,  ctree+"/images/page."+root+".png");
+		File outfileSvg = new File(WELL_DIR,  ctree + "/" +"svg/" + root + ".svg");
+		File outfilePng = new File(WELL_DIR,  ctree + "/" +"png/" + root + ".png");
+		File outfilePngA = new File(WELL_DIR,  ctree + "/" +"png/" + root + ".a.png");
+		File outfilePng1 = new File(WELL_DIR,  ctree + "/" +"png/" + root + ".missing.png");
+		File outfileSvg1 = new File(WELL_DIR,  ctree + "/" +"svg/" + root + ".1.svg");
+		Assert.assertTrue(""+imageFile, imageFile.exists());
+		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
+		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
+		Assert.assertNotNull(pixelRingList);
+		Assert.assertEquals(5, pixelRingList.size());
+		BufferedImage image = diagramAnalyzer.getImage();
+		int width = image.getWidth();
+		int height = image.getHeight();
+		Assert.assertEquals("w",  270, width);
+		Assert.assertEquals("h",  17576, height);
+		PixelRing pixelRingBase = pixelRingList.get(1);
+		SVGG pixelsG = pixelRingBase.plotPixels("blue");
+		// clip LH axial line
+		width = 520;
+		int ymin = pixelRingBase.getIntBoundingBox().getYRange().getMin();
+		DiagramAnalyzer diagramAnalyzerBase = DiagramAnalyzer.createDiagramAnalyzer(width, height, pixelRingBase);
+		IntRangeArray yslices = diagramAnalyzerBase.getYslices();
+		Assert.assertNotNull(yslices);
+		Assert.assertEquals(11012, yslices.size());
+		Real2Array points = yslices.generateYMidpointArray();
+		points.plusEquals(new Real2(0.0, ymin));
+		SVGPolyline polyline = new SVGPolyline(points);
+		polyline.setStroke("red");
+		polyline.setFill("none");
+		polyline.setStrokeWidth(2.0);
+		pixelsG.appendChild(polyline);
+		LOG.debug("writing SVG1 to "+outfileSvg1);
+		SVGSVG.wrapAndWriteAsSVG(pixelsG, outfileSvg1);
+		SVGSVG.wrapAndWriteAsSVG(pixelRingList.plotPixels(), outfileSvg);
+
+	}
+
+	@Test
+	public void testLargeRenderer() {
+        String[] ctrees = {
+//        		"3br_tab",
+//        		"benevento_002",
+//        		"brsa",
+//
+        	"composto_vec_log",
+//        		"nusco_002",
+//        		"s.croce_001"
+        };
+    	CustomPageDrawer customPageDrawer = new CustomPageDrawer();
+        for (String ctree : ctrees) {
+        	File inDir = new File(WELL_DIR, ctree);
+        	File outDir = new File(inDir, "render");
+    	    try {
+    	    	customPageDrawer.renderFile(inDir, outDir);
+    	    } catch (Exception e) {
+    	    	throw new RuntimeException("exception", e);
+    	    }
+        }
+	}
+	
+	@Test
+	public void testClipNuscoHandriting() {
+		String root = "1.1";
+		String ctree = "nusco_img_log";
+		File inDir = new File(WELL_DIR, ctree);
+
+		File imageFile = new File(inDir,  "images/page."+root+".png");
+		Assert.assertTrue(imageFile.exists());
+		BufferedImage rawImage = ImageUtil.readImage(imageFile);
+		BufferedImage writingImg = ImageUtil.clipSubImage(rawImage, 
+				new Int2Range(new IntRange(3358, 3765), new IntRange(2267, 2400)));
+		ImageIOUtil.writeImageQuietly(writingImg, new File(inDir, "png/page" + root + ".clip" + ".png"));
+		
+	}
 
 	// ================================
 	
