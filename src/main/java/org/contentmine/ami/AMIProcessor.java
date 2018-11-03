@@ -91,7 +91,6 @@ public class AMIProcessor {
 		try {
 			
 			String argString = /*cProject.getDirectory()+" "+*/cmd;
-//			CommandProcessor.main(args);
 			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
 			commandProcessor.processCommands(argString);
 			commandProcessor.createDataTables();
