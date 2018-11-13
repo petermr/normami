@@ -28,6 +28,7 @@ import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.ResourceLocation;
 import org.contentmine.cproject.util.RectangularTable;
 import org.contentmine.cproject.util.Utils;
+import org.contentmine.eucl.euclid.util.CMFileUtil;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.HtmlFactory;
@@ -241,7 +242,14 @@ public class NormaTransformer {
 	private void transformSingleInputFile() {
 		if (inputFile != null && inputFile.exists()) {
 			try {
-				transformSingleInput(inputFile);
+				boolean debug = /*true*/ false;
+				if (CMFileUtil.shouldMake( outputFile , debug, inputFile)) { 
+					transformSingleInput(inputFile);
+				} else {
+					if (debug) {
+						LOG.debug("skipped: " + inputFile);
+					}
+				}
 			} catch (RuntimeException e) {
 				if (Level.ERROR.equals(normaArgProcessor.getExceptionLevel())) {
 					throw e;
@@ -328,8 +336,9 @@ public class NormaTransformer {
 				LOG.warn("Cannot parse file: "+currentCTree.getDirectory()+"; "+e);
 			}
 		} 
-		LOG.debug("inputFile: "+inputFile+"; outputFile: "+outputFile + "; fileFilter: " + ioFileFilter + "; inputDir: "+inputDirName+
+		LOG.trace("inputFile: "+inputFile+"; outputFile: "+outputFile + "; fileFilter: " + ioFileFilter + "; inputDir: "+inputDirName+
 				"; ctree: "+this.currentCTree.getDirectory()+"; outputDir: "+outputDirName);
+		System.err.print(inputFile.getParentFile().getName()+" ");
 		return;
 	}
 
@@ -473,6 +482,7 @@ public class NormaTransformer {
 //				Type.XMLSECTION.equals(type) ||
 				Type.XML2TXT.equals(type) ||
 				Type.XML2XML.equals(type)) {
+			
 			transformXMLWithStylesheet();
 		} else {
 			LOG.warn("Cannot interpret transform: "+type);

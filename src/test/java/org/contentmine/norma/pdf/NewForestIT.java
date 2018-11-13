@@ -82,10 +82,10 @@ public class NewForestIT {
 		diagramAnalyzer.readAndProcessInputFile(imageFile);
 		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
 		Assert.assertEquals("pixelRings", 13, pixelRingList.size());
-		PixelRing pixelRing1 = pixelRingList.get(1);
-		SVGSVG.wrapAndWriteAsSVG(pixelRing1.getOrCreateSVG(), new File("target/forest/test.svg"));
-		
-		
+		int pixelRingID = 1;
+		PixelRing pixelRing1 = pixelRingList.get(pixelRingID);
+		SVGSVG.wrapAndWriteAsSVG(pixelRing1.getOrCreateSVG(), 
+				new File(cTree.getOrCreateDerivedImagesDir(), "ring." + pixelRingID + "." + CTree.SVG));
 
 		/**
  raw width: 2126; height: 557; white: 1048804; black: 21541

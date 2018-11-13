@@ -19,13 +19,25 @@ public class NAConstants {
 	// === local ===
 	public final static File   HOME_DIR = new File(System.getProperty("user.home"));
 	public final static File   CONTENTMINE_DIR = new File(HOME_DIR, "ContentMine");
+	public final static File   WORKSPACE_DIR = new File(HOME_DIR, "workspace/");
 	
 	public final static File   LIB_DIR = new File("/usr/local/");
 	public final static File   CONTENTMINE_LIB = new File(LIB_DIR, "contentmine");
+
+	// === code ===
+	public final static File   CMDEV_DIR = new File(WORKSPACE_DIR, "cmdev/");
+	public final static File   NORMAMI_DIR = new File(CMDEV_DIR, "normami/");
+
+	public static final File   NORMAMI_MAIN_RESOURCE_DIR = new File(NAConstants.NORMAMI_DIR, CHESConstants.SRC_MAIN_RESOURCES);
 	
 	// === norma ===
 	public final static String ORG_CM_NORMA = CHESConstants.ORG_CM + "/" + NORMA;
-	
+
+	public static final String POM_XML = "pom.xml";
+	public static final File   ORIGINAL_POM_XML = new File(NAConstants.NORMAMI_DIR, NAConstants.POM_XML);
+	public static final File   SRC_MAIN_RESOURCES_POM_XML = new File(NORMAMI_MAIN_RESOURCE_DIR, NAConstants.POM_XML);
+
+	public static final String POM_XML_RESOURCE = "/" + POM_XML;
 	public static final String NORMA_RESOURCE = "/" + ORG_CM_NORMA;
 
 	public final static String IMAGES   = "images";
@@ -74,7 +86,5 @@ public class NAConstants {
 	public static final File LOCAL_DOCUMENTS = new File(NAConstants.LOCAL_DIR, "doc/");
 	public static final File LOCAL_DICTIONARIES = new File(NAConstants.LOCAL_DIR, "dict/");
 	public static final File LOCAL_COMMANDS = new File(NAConstants.LOCAL_DIR, "cmd/");
-
-
 
 } 
