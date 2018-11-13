@@ -29,19 +29,39 @@ import nu.xom.Element;
  * @author pm286
  *
  */
-public class SimpleDictionaries {
-	private static final Logger LOG = Logger.getLogger(SimpleDictionaries.class);
+public class AMIDictionary {
+	private static final Logger LOG = Logger.getLogger(AMIDictionary.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	private static final String XML = "xml";
+	public static final String SEARCH = "search";
+	public static final String HELP = "help";
 
 	private List<File> files;
 	private List<Path> paths;
 
 	private File dictionaryDir;
 	
-	public SimpleDictionaries() {
+
+
+	public static void main(String[] args) {
+		List<String> argList = new ArrayList<String>(Arrays.asList(args));
+		AMIDictionary amiDictionary = new AMIDictionary();
+		if (argList.size() == 0 || HELP.equals(argList.get(0))) {
+			amiDictionary.runHelp(argList);
+		} else {
+			amiDictionary.listDictionaries(argList);
+		}
+	}
+
+	public void runHelp(List<String> argList) {
+		if (argList.size() > 0) argList.remove(0);
+		this.help(argList);
+	}
+
+
+	public AMIDictionary() {
 		init();
 	}
 	
@@ -49,6 +69,7 @@ public class SimpleDictionaries {
 		dictionaryDir = NAConstants.DICTIONARY_DIR;
 	}
 	
+	/** this uses FILES */
 	public void listDictionaries(List<String> argList) {
 		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
 		files = listDictionaryFiles(dictionaryHead);
@@ -92,7 +113,7 @@ public class SimpleDictionaries {
 		if (argList.size() == 0) {
 			System.err.println("\nlist of dictionaries taken from AMI dictionary list:");
 		}
-		SimpleDictionaries dictionaries = new SimpleDictionaries();
+		AMIDictionary dictionaries = new AMIDictionary();
 		files = dictionaries.getDictionaries();
 //		paths = dictionaries.getDictionaryPaths();
 		listAllDictionariesBriefly();
@@ -119,8 +140,6 @@ public class SimpleDictionaries {
 		Collections.sort(files);
 		return files;
 	}
-
-
 
 	/** uses directories */
 	private void listDictionaryInfo(String dictionaryName) {

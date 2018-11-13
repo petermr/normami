@@ -2,21 +2,25 @@ package org.contentmine.ami;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.ami.plugins.EntityAnalyzer;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
-import org.contentmine.cproject.util.CMineGlobber;
+import org.contentmine.eucl.euclid.util.CMFileUtil;
+import org.contentmine.eucl.euclid.util.CMStringUtil;
+import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.Norma;
+
+import nu.xom.Element;
 
 /** runs operations on CProject , mainly transformations. 
  * Might evolve to a set of default operations as an alternative to commandline
@@ -26,16 +30,27 @@ import org.contentmine.norma.Norma;
  */
 public class AMIProcessor {
 
+	private static final String PROGRAM2 = "program";
+	private static final String PROGRAMS = "programs";
+	private static final String CONFIGURATION = "configuration";
+	private static final String ARTIFACT_ID = "artifactId";
+	private static final String PLUGIN = "plugin";
+	private static final String LOCAL_NAME_BR = "local-name()";
 	private static final Logger LOG = Logger.getLogger(AMIProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	// move to AMISearch...
 	public static final String SEARCH = "search";
 	public static final String HELP = "help";
+	private static final String MAIN_CLASS = "mainClass";
+	private static final String ID = "id";
+	private static final String DESCRIPTION = "description:";
 
 	private CProject cProject;
 	private boolean skipConvertPDFs;
-	
+	private Level debugLevel;
+
 	private AMIProcessor() {
 		
 	}
@@ -62,13 +77,8 @@ public class AMIProcessor {
 	}
 
 	public static AMIProcessor createProcessor(File projectDir) {
-		CProject cProject = new CProject(projectDir);
-
-		AMIProcessor amiProcessor = null;
-		if (cProject != null) {
-			amiProcessor = new AMIProcessor();
-			amiProcessor.cProject = cProject;
-		}
+		AMIProcessor amiProcessor = new AMIProcessor();
+		amiProcessor.cProject = new CProject(projectDir);
 		return amiProcessor;
 	}
 	
@@ -114,15 +124,18 @@ public class AMIProcessor {
 	}
 
 	public void makeProject() {
-		if (cProject.hasScholarlyHTML(0.6)) {
-			LOG.debug("ScholarlyHTML exists, skipping makeProject");
-			return;
-		}
+//		
+//		if (cProject.hasScholarlyHTML(0.6)) {
+//			LOG.debug("ScholarlyHTML exists, skipping makeProject");
+//			return;
+//		}
 		cProject.makeProject(CTree.PDF);
 		cProject.makeProject(CTree.XML);
 		cProject.makeProject(CTree.HTML);
 // flush old CProject as CTreeList needs to be reset		
 		cProject = new CProject(cProject.getDirectory());
+		cProject.setDebugLevel(debugLevel);
+
 	}
 
 	public void convertPDFOutputSVGFilesImageFiles() {
@@ -154,17 +167,26 @@ public class AMIProcessor {
 	}
 
 	public void convertPDFsToProjectAndRunCooccurrence(List<String> facetList) {
+		convertPDFsToProject();
+		
+		runSearchesAndCooccurrence(facetList);
+	}
+
+	public void convertPDFsToProject() {
 		makeProject();
 		if (!skipConvertPDFs) {
 			convertPDFOutputSVGFilesImageFiles();
 		}
 		convertPSVGandWriteHtml();
-		runSearchesAndCooccurrence(facetList);
 	}
 
 	public void runSearchesAndCooccurrence(List<String> facetList) {
-		runSearches(facetList);
-		defaultAnalyzeCooccurrence(facetList);
+		if (facetList.size() == 0) {
+			LOG.debug("no facets/searches/dictionaries given");
+		} else {
+			runSearches(facetList);
+			defaultAnalyzeCooccurrence(facetList);
+		}
 	}
 
 	public void setSkipConvertPDFs(boolean skip) {
@@ -182,27 +204,58 @@ public class AMIProcessor {
 	public static void main(String[] args) {
 		List<String> argList = new ArrayList<String>(Arrays.asList(args));
 		if (argList.size() == 0 || HELP.equals(argList.get(0))) {
-			runHelp(argList);
+//			runHelp(argList);
+			listCommands();
 		} else {
-			runAMI(argList);
+//			runAMISearches(argList);
 		}
+	}
+
+	public static void listCommands() {
+		String xpath = ""
+			+ "//*[" + LOCAL_NAME_BR + "='" + PLUGIN + "' and *[" + LOCAL_NAME_BR + "='" + ARTIFACT_ID + "' and .= 'appassembler-maven-plugin']]"
+			+ "/*[" + LOCAL_NAME_BR + "='" + CONFIGURATION + "']"
+			+ "/*[" + LOCAL_NAME_BR + "='" + PROGRAMS + "']"
+			+ "/*[" + LOCAL_NAME_BR + "='" + PROGRAM2 + "']"
+			;
+		URL pomUrl = AMIProcessor.class.getResource("/"+NAConstants.POM_XML);
+		List<AMICommandLineComponent> commandList = createCommandList(xpath, pomUrl);
+		for (AMICommandLineComponent component : commandList) {
+			System.err.println(component.toString());
+		}
+	}
+
+	private static List<AMICommandLineComponent> createCommandList(String xpath, URL pomUrl) {
+		List<AMICommandLineComponent> commandList = new ArrayList<AMICommandLineComponent>();
+		List<Element> programList;
+		try {
+			programList = XMLUtil.getQueryElements(XMLUtil.parseQuietlyToDocument(pomUrl.openStream()).getRootElement(), xpath);
+			if (programList != null) {
+				for (Element program : programList) {
+					String id = XMLUtil.getSingleValue(program, "./*[" + LOCAL_NAME_BR + "='" + ID + "']");
+					String description = XMLUtil.getSingleValue(program, "./comment()[contains(.,'" + DESCRIPTION + "')]");
+					if (description != null) {
+						int idx = description.indexOf(DESCRIPTION);
+						if (idx != -1) {
+							description = description.substring(idx + DESCRIPTION.length()).trim();
+						}
+					}
+					String mainClass = XMLUtil.getSingleValue(program, "./*[" + LOCAL_NAME_BR + "='" + MAIN_CLASS + "']");
+					AMICommandLineComponent commandLineComponent = new AMICommandLineComponent(id, mainClass, description);
+					commandList.add(commandLineComponent);
+//					System.err.println(CMStringUtil.addPaddedSpaces(id, 20) + " " + description + " (" + mainClass + ")");
+				}
+			}
+		} catch (IOException ioe) {
+			throw new RuntimeException("cannot read POM", ioe);
+		}
+		return commandList;
 	}
 
 	public static void runHelp(List<String> argList) {
 		if (argList.size() > 0) argList.remove(0);
-		SimpleDictionaries dictionaries = new SimpleDictionaries();
+		AMIDictionary dictionaries = new AMIDictionary();
 		dictionaries.help(argList);
-	}
-
-	private static void runAMI(List<String> argList) {
-		String projectName = argList.get(0);
-		argList.remove(0);
-		if (argList.size() == 0) {
-			System.err.println("No default action for project: "+projectName+" (yet)");
-		} else {
-			AMIProcessor amiProcessor = AMIProcessor.createProcessor(projectName);
-			amiProcessor.runSearchesAndCooccurrence(argList);
-		}
 	}
 
 	public void run(String cmd) {
@@ -233,6 +286,30 @@ public class AMIProcessor {
 			}
 		}
 		return projectDir;
+	}
+
+	/** copies POM into top of resources
+	 * 
+	 */
+	public static void updatePOMinMainResources() {
+		if (NAConstants.NORMAMI_DIR.exists()) {
+			LOG.debug(NAConstants.SRC_MAIN_RESOURCES_POM_XML+"; "+NAConstants.SRC_MAIN_RESOURCES_POM_XML.exists());
+			if (CMFileUtil.shouldMake(
+					NAConstants.SRC_MAIN_RESOURCES_POM_XML,
+					NAConstants.ORIGINAL_POM_XML
+					)) {
+				try {
+					FileUtils.copyFile(NAConstants.ORIGINAL_POM_XML, NAConstants.SRC_MAIN_RESOURCES_POM_XML);
+				} catch (IOException e) {
+					throw new RuntimeException("cannot copy POM", e);
+				}
+				LOG.debug("updated POM");
+			}
+		}
+	}
+
+	public void setDebugLevel(Level debug) {
+		this.debugLevel = debug;
 	}
 	
 

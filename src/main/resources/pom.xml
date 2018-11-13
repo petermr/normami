@@ -104,11 +104,6 @@
                             <id>ami-all</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.AMIClean</mainClass>
-							<!-- description: cleans some/all of project -->
-                            <id>ami-clean</id>
-                        </program>
-                         <program>
                             <mainClass>org.contentmine.ami.AMIDictionary</mainClass>
 							<!-- description: edit/create AMI dictionaries -->
                             <id>ami-dictionaries</id>
@@ -125,7 +120,7 @@
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.AMIProcessorXML</mainClass>
-							<!-- description: converts XML to HTML -->
+							<!-- description: ??? -->
                             <id>ami-xml</id>
                         </program>
                          <program>

@@ -136,6 +136,9 @@ UNKNOWN nlm: license_ref:
 UNKNOWN nlm: statement: 
 UNKNOWN nlm: state: 
 UNKNOWN nlm: def-head: 
+issue-sponsor
+author-comment
+
 	 -->
 	    <div>
 	        <xsl:message>UNKNOWN: <xsl:value-of select="local-name()"/></xsl:message>

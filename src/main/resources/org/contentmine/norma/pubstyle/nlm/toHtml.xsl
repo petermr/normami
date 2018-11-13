@@ -31,7 +31,7 @@
 <!--  unmatched tags -->
 	<xsl:template match="*" >
 	    <div class="unknown" title="{local-name()}">
-	    <xsl:message>UNKNOWN nlm: <xsl:value-of select="local-name()"/>: 
+	    <xsl:message>UNKNOWN nlm tag: <xsl:value-of select="local-name()"/></xsl:message>
 		<!-- unknowns:
 UNKNOWN nlm: data-title: 
 UNKNOWN nlm: license_ref: 
@@ -41,13 +41,22 @@ UNKNOWN nlm: term-head:
 UNKNOWN nlm: def-head:
 UNKNOWN nlm: alt-text: 
   	    -->
-	    
-	    <!-- <xsl:value-of select="."/> -->
-	    </xsl:message>
-	        <xsl:attribute name="tagxxx"><xsl:value-of select="local-name()"/></xsl:attribute>
+	        <xsl:attribute name="tag"><xsl:value-of select="local-name()"/></xsl:attribute>
 			<xsl:apply-templates />
 	    </div>
 	</xsl:template>
+	
+<!-- unmatched, ignore -->
+	<xsl:template match="
+		*[local-name()='data-title'] | 
+		*[local-name()='data-title'] | 
+		*[local-name()='license_ref'] | 
+		*[local-name()='sans-serif'] |
+		*[local-name()='chem-struct'] |
+		*[local-name()='term-head'] | 
+		*[local-name()='def-head'] |
+		*[local-name()='alt-text']
+	" >[<xsl:value-of select='local-name()'/>] <xsl:apply-templates/></xsl:template> 
 
 <!--  HTML5 -->
 	<xsl:template match="
