@@ -37,9 +37,8 @@ public class AMIArgProcessorTest {
 		LOG.debug(cmd);
 		
 		AMIProcessor amiProcessor = AMIProcessor.createProcessor(indir.getPath());
+		amiProcessor.setDebugLevel(Level.DEBUG);
 		amiProcessor.run(cmd);
-		
-//		public Process exec(String[] cmdarray,String[] envp, File dir) throws IOException		
 	}
 
 }
