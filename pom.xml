@@ -104,7 +104,7 @@
                             <id>ami-all</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.AMIClean</mainClass>
+                            <mainClass>org.contentmine.ami.AMICleaner</mainClass>
 							<!-- description: cleans some/all of project -->
                             <id>ami-clean</id>
                         </program>
