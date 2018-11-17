@@ -17,6 +17,7 @@ import java.util.List;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.NAConstants;
 
@@ -34,22 +35,28 @@ public class AMIDictionary {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	private static final String XML = "xml";
+	public static final String ALL = "ALL";
+	public static final String FULL = "FULL";
+	public static final String HELP = "HELP";
+	public static final String LIST = "LIST";
 	public static final String SEARCH = "search";
-	public static final String HELP = "help";
+	private static final String XML = "xml";
+	private static final int DEFAULT_MAX_ENTRIES = 20;
 
 	private List<File> files;
 	private List<Path> paths;
-
 	private File dictionaryDir;
+	private int maxEntries = 0;
 	
 
 
 	public static void main(String[] args) {
 		List<String> argList = new ArrayList<String>(Arrays.asList(args));
 		AMIDictionary amiDictionary = new AMIDictionary();
-		if (argList.size() == 0 || HELP.equals(argList.get(0))) {
+		if (argList.size() == 0 || HELP.equals(argList.get(0).toUpperCase())) {
 			amiDictionary.runHelp(argList);
+		} else if (argList.size() == 1 && LIST.equals(argList.get(0).toUpperCase())) {
+			amiDictionary.listDictionaries(argList);
 		} else {
 			amiDictionary.listDictionaries(argList);
 		}
@@ -74,10 +81,28 @@ public class AMIDictionary {
 		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
 		files = listDictionaryFiles(dictionaryHead);
 		
-		if (argList.size() == 1 && argList.get(0).equals("dictionaries")) {
+		if (argList.size() == 1 && argList.get(0).toUpperCase().equals(LIST)) {
 			for (File file : files) {
 				listDictionaryInfo(FilenameUtils.getBaseName(file.getName()));
 			}
+		} else if (argList.size() >= 1 && argList.get(0).toUpperCase().equals(FULL)) {
+			argList.remove(0);
+			setMaxEntries(DEFAULT_MAX_ENTRIES);
+			if (argList.size() >= 1) {
+				String arg = argList.get(0);
+				try {
+					setMaxEntries(Integer.parseInt(arg));
+					argList.remove(0);
+				} catch (NumberFormatException nfe) {
+//					DebugPrint.debugPrintln(Level.ERROR, "Requires maxEntries, found: "+arg);
+				}
+			}
+			for (String arg : argList) {
+				listDictionaryInfo(arg);
+			}
+//			for (File file : files) {
+//				listDictionaryInfo(FilenameUtils.getBaseName(file.getName()));
+//			}
 		} else {
 			listAllDictionariesBriefly();
 			for (String arg : argList) {
@@ -108,10 +133,10 @@ public class AMIDictionary {
 	}
 	
 	public void help(List<String> argList) {
-		System.err.println("amiProcessor <projectDirectory> [dictionary [dictionary]]");
-		System.err.println("    projectDirectory can be full name or relative to currentDir");
+		System.err.println("Dictionary processor");
+		System.err.println("    dictionaries are normally added as arguments to search (e.g. ami-search-cooccur [dictionary [dictionary ...]]");
 		if (argList.size() == 0) {
-			System.err.println("\nlist of dictionaries taken from AMI dictionary list:");
+			DebugPrint.debugPrint("\nlist of dictionaries taken from AMI dictionary list:");
 		}
 		AMIDictionary dictionaries = new AMIDictionary();
 		files = dictionaries.getDictionaries();
@@ -130,7 +155,7 @@ public class AMIDictionary {
 	*/
 
 	public List<File> getDictionaries() {
-		LOG.debug("dictionaries from: "+dictionaryDir);
+//		LOG.debug("dictionaries from: "+dictionaryDir);
 		File[] fileArray = dictionaryDir.listFiles(new FilenameFilter() {
 			public boolean accept(File dir, String name) {
 				return name != null && name.endsWith(".xml");
@@ -186,14 +211,14 @@ public class AMIDictionary {
 		}
 	}
 
-	private void listDictionaryInfo(File file, String dictionary) {
+	private void listDictionaryInfo(File file, String dictionaryName) {
 		Element dictionaryElement = null;
 		try {
 			dictionaryElement = XMLUtil.parseQuietlyToRootElement(new FileInputStream(file));
 		} catch (FileNotFoundException e) {
 			throw new RuntimeException("Cannot find "+file);
 		}
-		listDictionaryInfo(dictionary, dictionaryElement);
+		listDictionaryInfo(dictionaryName, dictionaryElement);
 		
 	}
 
@@ -201,9 +226,22 @@ public class AMIDictionary {
 		System.err.println("\nDictionary: "+dictionary);
 		List<Element> entries = XMLUtil.getQueryElements(dictionaryElement, "./*[local-name()='entry']");
 		System.err.println("entries: "+entries.size());
+		printDescs(dictionaryElement);
+		printEntries(dictionaryElement);
+	}
+
+	private void printDescs(Element dictionaryElement) {
 		List<Element> descList = XMLUtil.getQueryElements(dictionaryElement, "./*[local-name()='desc']");
 		for (Element desc : descList) {
 			System.err.println(desc.getValue());
+		}
+	}
+
+	private void printEntries(Element dictionaryElement) {
+		List<Element> entryList = XMLUtil.getQueryElements(dictionaryElement, "./*[local-name()='entry']");
+		for (int i = 0; i < Math.min(entryList.size(), maxEntries); i++) {
+			Element entry =  entryList.get(i);
+			System.err.println(entry.getAttributeValue("term"));
 		}
 	}
 
@@ -217,9 +255,7 @@ public class AMIDictionary {
 			System.err.print((name + "                     ").substring(0, 20));
 			if (count++ %perLine == perLine - 1) System.err.print("\n    ");
 		}
-		System.err.println("\nalso:");
-		System.err.println("    gene     ");
-		System.err.println("    species     ");
+		listHardcoded();
 	}
 
 	public void listAllDictionariesBriefly() {
@@ -231,9 +267,13 @@ public class AMIDictionary {
 			System.err.print((name + "                     ").substring(0, 20));
 			if (count++ %perLine == perLine - 1) System.err.print("\n    ");
 		}
-		System.err.println("\nalso:");
-		System.err.println("    gene     ");
-		System.err.println("    species     ");
+		listHardcoded();
+	}
+
+	private void listHardcoded() {
+		System.err.println("\n\nalso hardcoded functions (which resolve abbreviations):\n");
+		System.err.println("    gene    (relies on font/style) ");
+		System.err.println("    species (resolves abbreviations) ");
 	}
 
 	public List<File> listDictionaryFiles(File dictionaryHead) {
@@ -260,6 +300,14 @@ public class AMIDictionary {
 
 	public void setDictionaryDir(File dictionaryDir) {
 		this.dictionaryDir = dictionaryDir;
+	}
+
+	public int getMaxEntries() {
+		return maxEntries;
+	}
+
+	public void setMaxEntries(int maxEntries) {
+		this.maxEntries = maxEntries;
 	}
 
 }
