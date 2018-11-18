@@ -3,6 +3,7 @@ package org.contentmine.norma.applic;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -271,7 +272,7 @@ public class PlantCollection {
 	 */
 	void readPlantSynonyms(File file) throws IOException {
 		boolean useHeader = true;
-		String s = FileUtils.readFileToString(file);
+		String s = FileUtils.readFileToString(file, Charset.forName("UTF-8"));
 		// strings are interleaved with <NUL> - Aargh - manually corrected now
 //		s = s.replaceAll(""+(char)0, "");
 //		FileUtils.write(new File("trns.txt"), s);

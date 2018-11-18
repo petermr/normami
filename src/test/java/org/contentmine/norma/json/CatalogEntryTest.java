@@ -2,6 +2,7 @@ package org.contentmine.norma.json;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -213,7 +214,7 @@ public class CatalogEntryTest {
 	public void testCompleteCatalog() throws IOException {
 		
 	    JsonParser parser = new JsonParser();
-		String RSU_JSON = FileUtils.readFileToString(RSU_JSON_FILE);
+		String RSU_JSON = FileUtils.readFileToString(RSU_JSON_FILE, Charset.forName("UTF-8"));
 	    JsonElement jsonElement = parser.parse(RSU_JSON);
 	    JsonObject jsonObject = jsonElement.getAsJsonObject();
 	    CatalogEntry catalogEntry = CatalogEntry.createCatalogEntry(jsonObject);

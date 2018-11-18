@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -742,7 +743,7 @@ public class NormaTransformer {
 	private HtmlElement applyTXT2HTMLToInputFile(File inputFile) {
 		HtmlElement htmlElement = null;
 		try {
-			inputTxt = FileUtils.readFileToString(inputFile);
+			inputTxt = FileUtils.readFileToString(inputFile, Charset.forName("UTF-8"));
 			htmlElement = convertToHTML(inputFile);
 		} catch (IOException e) {
 			throw new RuntimeException("Cannot transform TXT "+inputFile, e);

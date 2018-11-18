@@ -3,6 +3,7 @@ package org.contentmine.norma.sections;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -15,6 +16,7 @@ import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.HtmlSpan;
 import org.contentmine.graphics.html.HtmlTable;
 import org.contentmine.graphics.html.util.HtmlUtil;
+import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.NormaFixtures;
 import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
 import org.contentmine.norma.util.DottyPlotter;
@@ -33,17 +35,17 @@ public class SectionTest {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	private final static File PMC3113902 = new File(NormaFixtures.TEST_SECTIONS_DIR, "zika10/PMC3113902");
-	private final static File PMC3289602 = new File(NormaFixtures.TEST_SECTIONS_DIR, "zika10/PMC3289602");
-	private final static File PMC3310194 = new File(NormaFixtures.TEST_SECTIONS_DIR, "zika10/PMC3310194");
+	public final static File PMC3113902 = new File(NormaFixtures.TEST_SECTIONS_DIR, "zika10/PMC3113902");
+	public final static File PMC3289602 = new File(NormaFixtures.TEST_SECTIONS_DIR, "zika10/PMC3289602");
+	public final static File PMC3310194 = new File(NormaFixtures.TEST_SECTIONS_DIR, "zika10/PMC3310194");
 	
-	private final static File PMC3113902HTML = new File(PMC3113902, "scholarly.html");
-	private final static File PMC3289602HTML = new File(PMC3289602, "scholarly.html");
-	private final static File PMC3310194HTML = new File(PMC3310194, "scholarly.html");
+	public final static File PMC3113902HTML = new File(PMC3113902, "scholarly.html");
+	public final static File PMC3289602HTML = new File(PMC3289602, "scholarly.html");
+	public final static File PMC3310194HTML = new File(PMC3310194, "scholarly.html");
 	
-	private final static File PMC3113902XML = new File(PMC3113902, "fulltext.xml");
-	private final static File PMC3289602XML = new File(PMC3289602, "fulltext.xml");
-	private final static File PMC3310194XML = new File(PMC3310194, "fulltext.xml");
+	public final static File PMC3113902XML = new File(PMC3113902, "fulltext.xml");
+	public final static File PMC3289602XML = new File(PMC3289602, "fulltext.xml");
+	public final static File PMC3310194XML = new File(PMC3310194, "fulltext.xml");
 
 	@Test
 	public void testReadFile() {
@@ -570,7 +572,7 @@ public class SectionTest {
 		JATSSectionTagger tagger = new JATSSectionTagger();
 		tagger.readJATS(PMC3289602XML);
 		LOG.trace(PMC3113902XML);
-		TagElementX tagElement = tagger.getTagElement(SectionTag.ABSTRACT);
+		TagElement tagElement = tagger.getTagElement(SectionTag.ABSTRACT);
 		List<String> regexList = tagElement.getRegexList();
 		String xpath = tagElement.getXpath();
 		LOG.trace(xpath);
@@ -583,12 +585,13 @@ public class SectionTest {
 
 	@Test
 	public void testGetSections() throws IOException {
+		// will read all the tags in NAConstants.NORMA_RESOURCE+"/pubstyle/sectionTagger.xml
 		JATSSectionTagger tagger = new JATSSectionTagger();
 		tagger.readJATS(PMC3289602XML);
 		new File("target/jats/").mkdirs();
 		XMLUtil.debug(tagger.getJATSHtmlElement(),new FileOutputStream("target/jats/PMC3289602a.html"), 1);
 		LOG.trace(PMC3113902XML);
-		String xml = FileUtils.readFileToString(PMC3113902XML);
+		String xml = FileUtils.readFileToString(PMC3113902XML, Charset.forName("UTF-8"));
 		List<Element> sections;
 		sections = tagger.getSections(SectionTag.SUBTITLE);
 		Assert.assertEquals("intro", 25, sections.size()); 
@@ -632,7 +635,7 @@ public class SectionTest {
 		new File("target/jats/").mkdirs();
 		XMLUtil.debug(tagger.getJATSHtmlElement(),new FileOutputStream("target/jats/PMC3289602a.html"), 1);
 		LOG.trace(PMC3113902XML);
-		String xml = FileUtils.readFileToString(PMC3113902XML);
+		String xml = FileUtils.readFileToString(PMC3113902XML, Charset.forName("UTF-8"));
 		List<Element> sections;
 		sections = tagger.getSections(SectionTag.SUBTITLE);
 		Assert.assertEquals("intro", 25, sections.size()); 

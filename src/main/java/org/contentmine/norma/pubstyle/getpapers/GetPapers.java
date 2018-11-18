@@ -36,7 +36,7 @@ public class GetPapers {
 
 	public void mapJsonArrayToFiles(File getPapersDir, File resultsJsonFile) throws IOException {
 		JsonParser parser = new JsonParser();
-	    String jsonString = FileUtils.readFileToString(resultsJsonFile);
+	    String jsonString = FileUtils.readFileToString(resultsJsonFile, Charset.forName("UTF-8"));
 	    JsonElement jsonElement = parser.parse(jsonString);
 	    JsonArray resultsArray = jsonElement.getAsJsonArray();
 	    

@@ -8,9 +8,9 @@ import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
 
 import nu.xom.Element;
 
-public class TagElementX {
+public class TagElement {
 
-	private static final Logger LOG = Logger.getLogger(TagElementX.class);
+	private static final Logger LOG = Logger.getLogger(TagElement.class);
 
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -28,7 +28,11 @@ public class TagElementX {
 	private SectionTag sectionTag;
 	private String title;
 	
-	public TagElementX(Element rawElement) {
+	/** reads definition from XML
+	 * 
+	 * @param rawElement
+	 */
+	public TagElement(Element rawElement) {
 		this.regexList = new ArrayList<String>();
 		this.title = rawElement.getAttributeValue(TITLE);
 		this.id = rawElement.getAttributeValue(ID);

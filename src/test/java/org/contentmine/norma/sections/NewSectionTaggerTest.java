@@ -42,26 +42,26 @@ public class NewSectionTaggerTest {
 		Assert.assertNotNull(element);
 		List<Element> tags = XMLUtil.getQueryElements(element, "./tag");
 		LOG.debug(element.toXML());
-		Assert.assertTrue("tags "+tags.size(), tags.size() > 25);
+		Assert.assertTrue("tags "+tags.size(), tags.size() > 22);
 	}
 
 	@Test
 	public void testMakeTagMap() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		Map<SectionTag, TagElementX> tagElementByTag = tagger.getOrCreateMap();
+		Map<SectionTag, TagElement> tagElementByTag = tagger.getOrCreateMap();
 		Assert.assertTrue("tag set", tagElementByTag.keySet().contains(SectionTag.ABSTRACT));
-		TagElementX tagElement = tagElementByTag.get(SectionTag.ABSTRACT);
+		TagElement tagElement = tagElementByTag.get(SectionTag.ABSTRACT);
 		Assert.assertNotNull(tagElement);
 		Assert.assertEquals("id", "cm:ABSTRACT", tagElement.getId());
 		tagElement = tagger.get(SectionTag.ABSTRACT);
 		List<JATSSectionTagger.SectionTag> tags = tagger.getSortedTags();
-		Assert.assertTrue("tags "+tags.size(), tags.size() > 25);
+		Assert.assertTrue("tags "+tags.size(), tags.size() > 22);
 	}
 	
 	@Test
 	public void testSearchTagMap() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		TagElementX tagElement = tagger.getTagElement(SectionTag.ABSTRACT);
+		TagElement tagElement = tagger.getTagElement(SectionTag.ABSTRACT);
 		Assert.assertNotNull(tagElement);
 		Assert.assertEquals("id", "cm:ABSTRACT", tagElement.getId());
 	}
@@ -69,7 +69,7 @@ public class NewSectionTaggerTest {
 	@Test
 	public void testGetRegexListXpath() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		TagElementX tagElement = tagger.getTagElement(SectionTag.ABSTRACT);
+		TagElement tagElement = tagger.getTagElement(SectionTag.ABSTRACT);
 		List<String> regexList = tagElement.getRegexList();
 //		Assert.assertEquals("[(abstract)]", regexList.toString());
 		String xpath = tagElement.getXpath();
@@ -79,7 +79,7 @@ public class NewSectionTaggerTest {
 	@Test
 	public void testGetMajorSections() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		TagElementX tagElement = tagger.getTagElement(SectionTag.ABSTRACT);
+		TagElement tagElement = tagger.getTagElement(SectionTag.ABSTRACT);
 		String xpath = tagElement.getXpath();
 		Assert.assertEquals("//*[@class='abstract' and not(*[@abstract-type='summary'])]", xpath);
 	}

@@ -55,7 +55,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-
+@Ignore // no longer working on this
 public class WellIT {
 	private static final File WELL_DIR = new File("/Users/pm286/ContentMine/well/testfiles");
 	public static final Logger LOG = Logger.getLogger(WellIT.class);

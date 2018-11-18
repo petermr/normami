@@ -2,6 +2,7 @@ package org.contentmine.ami.dictionary.places;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -48,7 +49,7 @@ public class WikidataPlacesDictionary extends DefaultAMIDictionary {
 
 	private void readWikiplacesRaw() {
 		try {
-//			raw = FileUtils.readFileToString(WIKIPLACES_RAW_FILE);
+//			raw = FileUtils.readFileToString(WIKIPLACES_RAW_FILE, Charset.forName("UTF-8"));
 //			String[] lines = raw.split("<");
 //			String xmlString = StringUtils.join(Arrays.asList(lines), "\n<");
 //			File xmlFile = new File("target/wikiplaces/raw.txt.xml");

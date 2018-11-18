@@ -2,6 +2,7 @@ package org.contentmine.ami.plugins.phylotree.nexml;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
@@ -56,7 +57,7 @@ public class NewickFactory {
 		public NWKTree readNewick(File nwkFile) throws IOException {
 			nwkTree  = null;
 			if (nwkFile != null) {
-				String nwkString = FileUtils.readFileToString(nwkFile);
+				String nwkString = FileUtils.readFileToString(nwkFile, Charset.forName("UTF-8"));
 				nwkTree = readNewick(nwkString);
 			}
 			return nwkTree;

@@ -2,6 +2,7 @@ package org.contentmine.norma.json;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -59,7 +60,7 @@ public class ManifestJson {
 		ManifestJson manifestJson = null;
 		if (file != null && file.exists()) {
 			try {
-				String resultsJsonString = FileUtils.readFileToString(file);
+				String resultsJsonString = FileUtils.readFileToString(file, Charset.forName("UTF-8"));
 			    JsonParser parser = new JsonParser();
 			    JsonElement jsonElement = parser.parse(resultsJsonString);
 			    manifestJson = new ManifestJson(jsonElement);

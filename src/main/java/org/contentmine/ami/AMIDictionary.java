@@ -30,7 +30,7 @@ import nu.xom.Element;
  * @author pm286
  *
  */
-public class AMIDictionary {
+public class AMIDictionary implements HasAMICLI {
 	private static final Logger LOG = Logger.getLogger(AMIDictionary.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -47,6 +47,7 @@ public class AMIDictionary {
 	private List<Path> paths;
 	private File dictionaryDir;
 	private int maxEntries = 0;
+	private AMICLI cli;
 	
 
 
@@ -74,6 +75,8 @@ public class AMIDictionary {
 	
 	private void init() {
 		dictionaryDir = NAConstants.DICTIONARY_DIR;
+		cli = new DictionaryCLI();
+		
 	}
 	
 	/** this uses FILES */

@@ -2,6 +2,7 @@ package org.contentmine.norma.json;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.Map;
 import java.util.Set;
 
@@ -48,7 +49,7 @@ public class ManifestTest {
 	
 	@Test
 	public void testReadFirstManifestFromArray() throws IOException {
-		String resultsJsonString = FileUtils.readFileToString(new File(NormaFixtures.TEST_JSON_DIR, "all_results.json"));
+		String resultsJsonString = FileUtils.readFileToString(new File(NormaFixtures.TEST_JSON_DIR, "all_results.json"), Charset.forName("UTF-8"));
 	    JsonParser parser = new JsonParser();
 	    JsonElement jsonElement = parser.parse(resultsJsonString);
 	    JsonArray jsonArray = jsonElement.getAsJsonArray();
@@ -61,7 +62,7 @@ public class ManifestTest {
 	
 	@Test
 	public void testReadFirstManifestFromFile() throws IOException {
-		String resultsJsonString = FileUtils.readFileToString(new File(NormaFixtures.TEST_JSON_DIR, "results0.json"));
+		String resultsJsonString = FileUtils.readFileToString(new File(NormaFixtures.TEST_JSON_DIR, "results0.json"), Charset.forName("UTF-8"));
 	    JsonParser parser = new JsonParser();
 	    JsonElement jsonElement = parser.parse(resultsJsonString);
 	    JsonObject jsonObject = jsonElement.getAsJsonObject();
@@ -177,7 +178,7 @@ public class ManifestTest {
 	 * @throws IOException
 	 */
 	public void testJSONPath() throws IOException {
-		String json = FileUtils.readFileToString(new File(NormaFixtures.TEST_JSON_DIR, "results0.json"));
+		String json = FileUtils.readFileToString(new File(NormaFixtures.TEST_JSON_DIR, "results0.json"), Charset.forName("UTF-8"));
 		ReadContext ctx = JsonPath.parse(json);
 		net.minidev.json.JSONArray authorList = ctx.read("$.authorList[0].author");
 		for (int i = 0; i < authorList.size(); i++) { 

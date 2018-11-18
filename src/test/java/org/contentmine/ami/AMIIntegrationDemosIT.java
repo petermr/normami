@@ -237,6 +237,7 @@ public class AMIIntegrationDemosIT {
 	}
 
 	@Test
+	@Ignore // too long
 	public void testACSOpen() {
 
 		String projectName = "acsopen";
@@ -252,6 +253,7 @@ public class AMIIntegrationDemosIT {
 	}
 	
 	@Test
+	@Ignore
 	public void testACSOpenMain() {
 		String projectName = "acsopenmain";
 		File sourceDir = new File(AMIFixtures.TEST_TOTAL_INT_DIR, projectName);
@@ -266,6 +268,7 @@ public class AMIIntegrationDemosIT {
 	}
 
 	@Test
+	@Ignore
 	public void testACSOpenSmall() {
 
 		String projectName = "acsopensmall";

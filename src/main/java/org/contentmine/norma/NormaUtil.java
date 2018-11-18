@@ -1,6 +1,7 @@
 package org.contentmine.norma;
 
 import java.io.File;
+import java.nio.charset.Charset;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
@@ -19,7 +20,7 @@ public class NormaUtil {
 	public static String getStringFromInputFile(File file) {
 		String s = null;
 		try {
-			s = FileUtils.readFileToString(file);
+			s = FileUtils.readFileToString(file, Charset.forName("UTF-8"));
 		} catch (Exception e) {
 			// consume exception
 		}

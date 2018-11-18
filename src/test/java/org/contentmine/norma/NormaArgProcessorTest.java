@@ -2,6 +2,7 @@ package org.contentmine.norma;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -210,7 +211,7 @@ public class NormaArgProcessorTest {
 		Assert.assertNotNull(cTree);
 		File pdfTxt = cTree.getExistingFulltextPDFTXT();
 		Assert.assertNotNull(pdfTxt);
-		String txt = FileUtils.readFileToString(pdfTxt);
+		String txt = FileUtils.readFileToString(pdfTxt, Charset.forName("UTF-8"));
 		Assert.assertTrue(""+txt.length(), txt.length() > 36000);
 	}
 	

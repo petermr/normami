@@ -2,6 +2,7 @@ package org.contentmine.ami.dictionary;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -278,7 +279,7 @@ public class CMJsonDictionary {
 		for (File dictionary : dictionaries) {
 			CMJsonDictionary cmJsonDictionary;
 			try {
-				cmJsonDictionary = CMJsonDictionary.readJsonDictionary(FileUtils.readFileToString(dictionary));
+				cmJsonDictionary = CMJsonDictionary.readJsonDictionary(FileUtils.readFileToString(dictionary, Charset.forName("UTF-8")));
 			} catch (IOException e) {
 				throw new RuntimeException("Cannot read dictionary "+dictionary, e);
 			}
@@ -297,7 +298,7 @@ public class CMJsonDictionary {
 		File[] dictionaries = jsonDir.listFiles();
 		RectangularTable mapping = RectangularTable.readCSVTable(new File(dictionaryDir, "mixnmatch/2016-09-09.tsv"), true);
 		for (File dictionary : dictionaries) {
-			CMJsonDictionary cmJsonDictionary = CMJsonDictionary.readJsonDictionary(FileUtils.readFileToString(dictionary));
+			CMJsonDictionary cmJsonDictionary = CMJsonDictionary.readJsonDictionary(FileUtils.readFileToString(dictionary, Charset.forName("UTF-8")));
 			cmJsonDictionary.addMixMatchIds(mapping);
 			File newDictionaryFile = new File(new File(dictionaryDir, "test"), dictionary.getName());
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();

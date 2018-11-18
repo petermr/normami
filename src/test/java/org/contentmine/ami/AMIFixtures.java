@@ -2,6 +2,7 @@ package org.contentmine.ami;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,6 +70,7 @@ public class AMIFixtures {
 
 	public final static File TEST_RESULTS_DIR        = new File(NAConstants.TEST_AMI_DIR, "results/");
 	public final static File TEST_RRID_DIR           = new File(NAConstants.TEST_AMI_DIR, "rrid/");
+	public final static File TEST_ZIKA10_DIR           = new File(NAConstants.TEST_AMI_DIR, "zika10/");
 
 	public final static File TEST_SET_DIR            = new File(NAConstants.TEST_NORMA_DIR, "testSets");
 	public final static File TEST_SET_MARCHANTIA_DIR = new File(AMIFixtures.TEST_SET_DIR, "marchantia");
@@ -159,8 +161,8 @@ public class AMIFixtures {
 	    		resultsFile,
 	    		true);
 		if (msg != null) {
-			LOG.debug("bad compare: "+expectedFile+"; "+ FileUtils.readFileToString(expectedFile) +"\n"+
-					""+resultsFile+"; "+FileUtils.readFileToString(resultsFile));
+			LOG.debug("bad compare: "+expectedFile+"; "+ FileUtils.readFileToString(expectedFile, Charset.forName("UTF-8")) +"\n"+
+					""+resultsFile+"; "+FileUtils.readFileToString(resultsFile, Charset.forName("UTF-8")));
 		}
 	    Assert.assertNull("message: "+msg, msg);
 	}

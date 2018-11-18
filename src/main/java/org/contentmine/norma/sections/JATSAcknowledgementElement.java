@@ -4,6 +4,8 @@ import nu.xom.Element;
 
 public class JATSAcknowledgementElement extends JATSElement {
 
+	static String TAG = "acknowledgements";
+
 	public JATSAcknowledgementElement(Element element) {
 		super(element);
 	}

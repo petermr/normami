@@ -1,7 +1,5 @@
 package org.contentmine.norma;
 
-import java.io.File;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
