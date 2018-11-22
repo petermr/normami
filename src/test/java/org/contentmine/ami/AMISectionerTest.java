@@ -7,9 +7,12 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.cproject.CMineFixtures;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.cproject.util.CMineTestFixtures;
+import org.contentmine.cproject.util.CMineUtil;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlDiv;
@@ -33,7 +36,7 @@ import org.contentmine.norma.sections.JATSSectionTagger;
 import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
 import org.contentmine.norma.sections.JournalMetaExtractor;
 import org.contentmine.norma.sections.KeywordsExtractor;
-import org.contentmine.norma.sections.MethodsExtractor;
+import org.contentmine.norma.sections.MethodExtractor;
 import org.contentmine.norma.sections.RefListExtractor;
 import org.contentmine.norma.sections.ResultsExtractor;
 import org.contentmine.norma.sections.SectionTest;
@@ -75,7 +78,7 @@ public class AMISectionerTest {
 	@Test
 	public void testArticleSections() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		tagger.readJATS(SectionTest.PMC3289602XML);
+		tagger.getOrCreateJatsHtml(SectionTest.PMC3289602XML);
 		new File("target/jats/").mkdirs();
 		XMLUtil.debug(tagger.getJATSHtmlElement(),new FileOutputStream("target/jats/PMC3289602a.html"), 1);
 //
@@ -246,7 +249,7 @@ public class AMISectionerTest {
 		CProject cProject = new CProject(AMIFixtures.TEST_ZIKA10_DIR);
 		CTree cTree = cProject.getCTreeByName("PMC3310660");
 		Assert.assertNotNull(cTree);
-		JATSSectionTagger tagger = new JATSSectionTagger(cTree);
+		JATSSectionTagger tagger = JATSSectionTagger.createAndPopulateTagger(cTree);
 
 		List<HtmlDiv> abstractList = tagger.getDivList(new ArticleAbstractExtractor());
 		Assert.assertEquals(1,  abstractList.size());
@@ -284,7 +287,7 @@ public class AMISectionerTest {
 		Assert.assertEquals(0,  journalMetaList.size());
         List<HtmlDiv> keywordList = tagger.getDivList(new KeywordsExtractor());
 		Assert.assertEquals(0,  keywordList.size());
-        List<HtmlDiv> methodList = tagger.getDivList(new MethodsExtractor());
+        List<HtmlDiv> methodList = tagger.getDivList(new MethodExtractor());
 		Assert.assertEquals(0,  methodList.size());
 //        List<HtmlDiv> otherList = tagger.getDivList(new OtherExtractor());
 //		Assert.assertEquals(0,  otherList.size());
@@ -300,6 +303,57 @@ public class AMISectionerTest {
 		Assert.assertEquals(0,  tableList.size());
         List<HtmlDiv> titleList = tagger.getDivList(new TitlesExtractor());        
 		Assert.assertEquals(25,  titleList.size());
+	}
+	
+	@Test
+	public void testAddAbstracts() {
+		File targetDir = new File("target/sections/");
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);
+		CProject cProject = new CProject(targetDir);
+		CTree cTree = cProject.getCTreeByName("PMC3310660");
+		Assert.assertNotNull(cTree);
+		JATSSectionTagger treeTagger = JATSSectionTagger.createAndPopulateTagger(cTree);
+		treeTagger.addAbstractAsFile();
+		File abstractFile = cTree.getAbstractFile();
+		Assert.assertTrue("abstract should exist", CTree.isExistingFile(abstractFile));
+		JATSSectionTagger projectTagger = new JATSSectionTagger(cProject);
+		projectTagger.addProjectAbstractsAsFiles();
+		
+	}
+	
+	@Test
+	public void testAddFronts() {
+		File targetDir = new File("target/sections/");
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);
+		CProject cProject = new CProject(targetDir);
+		CTree cTree = cProject.getCTreeByName("PMC3310660");
+		Assert.assertNotNull(cTree);
+		JATSSectionTagger treeTagger = JATSSectionTagger.createAndPopulateTagger(cTree);
+		treeTagger.addFrontAsFile();
+		File frontDir = cTree.getFrontDir();
+		Assert.assertTrue("front should exist", CTree.isExistingDirectory(frontDir));
+		JATSSectionTagger projectTagger = new JATSSectionTagger(cProject);
+		projectTagger.addProjectFrontsAsFiles();
+	}
+	
+	@Test
+	public void testAddAll() {
+		File targetDir = new File("target/sections/");
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);
+		CProject cProject = new CProject(targetDir);
+		CTree cTree = cProject.getCTreeByName("PMC3310660");
+		JATSSectionTagger treeTagger = JATSSectionTagger.createAndPopulateTagger(cTree);
+		treeTagger.addAbstractAsFile();
+		treeTagger.addBackAsFile();
+		treeTagger.addBodyAsFile();
+		treeTagger.addFrontAsFile();
+		File frontDir = cTree.getFrontDir();
+		Assert.assertTrue("front should exist", CTree.isExistingDirectory(frontDir));
+		JATSSectionTagger projectTagger = new JATSSectionTagger(cProject);
+		projectTagger.addProjectAbstractsAsFiles();
+		projectTagger.addProjectBacksAsFiles();
+		projectTagger.addProjectBodysAsFiles();
+		projectTagger.addProjectFrontsAsFiles();
 	}
 }
 		

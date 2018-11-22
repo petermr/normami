@@ -9,6 +9,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.util.XMLUtils;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.AbstractCMElement;
 import org.contentmine.graphics.html.HtmlA;
 import org.contentmine.graphics.html.HtmlB;
 import org.contentmine.graphics.html.HtmlCol;
@@ -19,6 +20,7 @@ import org.contentmine.graphics.html.HtmlHead;
 import org.contentmine.graphics.html.HtmlHtml;
 import org.contentmine.graphics.html.HtmlI;
 import org.contentmine.graphics.html.HtmlP;
+import org.contentmine.graphics.html.HtmlSpan;
 import org.contentmine.graphics.html.HtmlStyle;
 import org.contentmine.graphics.html.HtmlSub;
 import org.contentmine.graphics.html.HtmlSup;
@@ -78,8 +80,29 @@ public class JATSFactory {
 		Element bodyContent = create(element);
 		htmlElement.getOrCreateBody().appendChild(bodyContent);
 		return htmlElement;
-		
-		
+	}
+
+	public HtmlElement createScholarlyHtml(Element element) {
+		createHtml(element);
+		HtmlElement scholarlyHtmlElement = convertToHtml(htmlElement);
+		return scholarlyHtmlElement;
+	}
+
+	/**converts the non-html to html
+	 * 
+	 * @param htmlElement
+	 * @return 
+	 */
+	private HtmlElement convertToHtml(HtmlElement htmlElement) {
+		if (htmlElement instanceof HtmlElement) {
+			return HtmlElement.create(htmlElement);
+		} else {
+			HtmlElement newElement = (htmlElement.getChildElements().size() == 0) ? new HtmlSpan() : new HtmlDiv();
+			newElement.copyAttributesFrom(htmlElement);
+			newElement.copyChildrenFrom(htmlElement);
+			newElement.setClassAttribute(htmlElement.getLocalName());
+			return newElement;
+		}
 	}
 
 	private HtmlHead createHead() {
@@ -122,7 +145,7 @@ public class JATSFactory {
 	public Element create(Element element) {
 		Element sectionElement = null;
 		String tag = element.getLocalName();
-		String namespaceURI = element.getNamespaceURI();
+//		String namespaceURI = element.getNamespaceURI();
 		if (false) {
 			
 		} else if(JATSArticleCategoriesElement.TAG.equals(tag)) {
@@ -262,11 +285,22 @@ public class JATSFactory {
 		}
 		if (sectionElement == null) {
 			LOG.warn("NULL SECTION");
+//		} else if (sectionElement instanceof HtmlElement) {
+//			// do nothing
+//			LOG.debug("HTML");
+//		} else {
+//			// turn JatsElements into Html
+//			HtmlElement newElement = sectionElement.getChildElements().size() == 0 ? new HtmlSpan() : new HtmlDiv();
+//			newElement.copyAttributesFrom(sectionElement);
+//			newElement.copyChildrenFrom(sectionElement);
+//			sectionElement = newElement;
 		}
 
 		return sectionElement;
 		
 	}
+	
+	
 
 	/**
 	 * 
@@ -295,7 +329,7 @@ public class JATSFactory {
 	}
 	
 
-	private Element createHtml(String tag, Element element) {
+	public Element createHtml(String tag, Element element) {
 		Element htmlElement = null;
 		
 		if (BOLD.equals(tag)) {
@@ -308,15 +342,22 @@ public class JATSFactory {
 			htmlElement = new HtmlSub();
 		} else  if (HtmlSup.TAG.equals(tag)) {
 			htmlElement = new HtmlSup();
-			
 		} else  if (SEC.equals(tag)) {
 			htmlElement = new HtmlDiv();
 		} else  if (P.equals(tag)) {
 			htmlElement = new HtmlP();
+		} else {
+			if (element.getChildElements().size() == 0) {
+				htmlElement = new HtmlSpan();
+			} else {
+				htmlElement = new HtmlDiv();
+			}
+			AbstractCMElement.setClassAttributeValue(htmlElement, element.getLocalName());
 		}
 		if (htmlElement == null) {
 			LOG.warn("NULL HTML: "+element);
 		}
+		
 		processAttributesAndChildren(element, htmlElement);
 		return htmlElement;
 	}

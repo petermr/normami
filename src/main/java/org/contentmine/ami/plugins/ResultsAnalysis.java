@@ -96,6 +96,10 @@ public class ResultsAnalysis implements CellCalculator {
 		Element element = null;
 		try {
 			element = XMLUtil.parseQuietlyToDocument(new FileInputStream(xmlFile)).getRootElement();
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+			LOG.error("bad snippets file:"+xmlFile);
+			return;
 		} catch (FileNotFoundException e) {
 			LOG.error("Non-existent XML file: "+xmlFile);
 			return;

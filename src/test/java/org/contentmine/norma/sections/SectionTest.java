@@ -443,7 +443,7 @@ public class SectionTest {
 	@Test
 	public void testCreateJATSElement() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		tagger.readJATS(PMC3289602XML);
+		tagger.getOrCreateJatsHtml(PMC3289602XML);
 		Element jatsElement = tagger.getJATSHtmlElement();
 		File file = new File("target/jats/PMC3289602.html");
 		XMLUtil.debug(jatsElement, file, 1);
@@ -457,7 +457,7 @@ public class SectionTest {
 	 */
 	public void testCreateArticleAndReflist() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		tagger.readJATS(PMC3289602XML);
+		tagger.getOrCreateJatsHtml(PMC3289602XML);
 		JATSArticleElement jatsArticleElement = tagger.getJATSArticleElement();
 		JATSReflistElement reflist = jatsArticleElement.getReflistElement();
 		Assert.assertNotNull("reflist not null", reflist);
@@ -500,7 +500,7 @@ public class SectionTest {
 			for (File file1 : file.listFiles()) {
 				if (file1.toString().endsWith("fulltext.xml")) {
 					try {
-						tagger.readJATS(file1);
+						tagger.getOrCreateJatsHtml(file1);
 					} catch (Exception e) {
 						LOG.debug("skipped "+file1+"  ||  "+e);
 						continue;
@@ -552,7 +552,7 @@ public class SectionTest {
 			for (File file1 : file.listFiles()) {
 				if (file1.toString().endsWith("fulltext.xml")) {
 					try {
-						tagger.readJATS(file1);
+						tagger.getOrCreateJatsHtml(file1);
 					} catch (Exception e) {
 						LOG.debug("skipped "+file1+"  ||  "+e);
 						continue;
@@ -570,7 +570,7 @@ public class SectionTest {
 	@Test
 	public void testSectionJATS() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		tagger.readJATS(PMC3289602XML);
+		tagger.getOrCreateJatsHtml(PMC3289602XML);
 		LOG.trace(PMC3113902XML);
 		TagElement tagElement = tagger.getTagElement(SectionTag.ABSTRACT);
 		List<String> regexList = tagElement.getRegexList();
@@ -587,7 +587,7 @@ public class SectionTest {
 	public void testGetSections() throws IOException {
 		// will read all the tags in NAConstants.NORMA_RESOURCE+"/pubstyle/sectionTagger.xml
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		tagger.readJATS(PMC3289602XML);
+		tagger.getOrCreateJatsHtml(PMC3289602XML);
 		new File("target/jats/").mkdirs();
 		XMLUtil.debug(tagger.getJATSHtmlElement(),new FileOutputStream("target/jats/PMC3289602a.html"), 1);
 		LOG.trace(PMC3113902XML);
@@ -631,7 +631,7 @@ public class SectionTest {
 	@Test
 	public void testGetUnknownSections() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
-		tagger.readJATS(PMC3289602XML);
+		tagger.getOrCreateJatsHtml(PMC3289602XML);
 		new File("target/jats/").mkdirs();
 		XMLUtil.debug(tagger.getJATSHtmlElement(),new FileOutputStream("target/jats/PMC3289602a.html"), 1);
 		LOG.trace(PMC3113902XML);

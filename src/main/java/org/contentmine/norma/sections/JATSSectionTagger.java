@@ -1,9 +1,11 @@
 package org.contentmine.norma.sections;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -15,6 +17,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
+import org.contentmine.cproject.files.HtmlTagger;
 import org.contentmine.cproject.files.ResourceLocation;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlDiv;
@@ -24,22 +27,34 @@ import org.contentmine.graphics.html.HtmlHead;
 import org.contentmine.graphics.html.HtmlHtml;
 import org.contentmine.graphics.html.HtmlSpan;
 import org.contentmine.graphics.html.HtmlTable;
+import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.norma.NAConstants;
 
+import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
 
 import nu.xom.Element;
 
 /** sections in JATS and similar documents
  * 
+ * note: some sections are hardcoded in JATS (have reserved vocabulary tags).
+ * examples are abstract
+ * Otehrs such as "materials and methods" are free text which require community agreement
+ * (is an introduction the same as background??)
+ * 
+ * Note that some apparently simple tags ("title) are deeply nested - hopefully consistently
  * @author pm286
  *
  */
-public class JATSSectionTagger {
+public class JATSSectionTagger implements HtmlTagger {
+
+	public class createTagger extends JATSSectionTagger {
+
+	}
 
 	private static final String TAG = "tag";
-
 	private static final Logger LOG = Logger.getLogger(JATSSectionTagger.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -72,47 +87,113 @@ public class JATSSectionTagger {
 	 */
 
 	/** these are JATS reserved names
-	 * 
+	 *   
+	abstract x 2, addr-line x 3, aff x 4, alt-title, alternatives x 3, article, article-categories, article-id x 3, 
+	    article-meta, article-title x 56, author-notes,
+	back, body, bold x 21,
+	caption x 5, collab, comment x 5, contrib x 10, contrib-group x 2, copyright-statement, copyright-year, corresp, counts, 
+	date x 2, day x 3,
+	element-citation x 57, elocation-id, email, etal x 15, "
+	fig x 2, fn x 13, fn-group, fpage x 54, front,
+	given-names x 197, graphic x 5,
+	history,
+	issn x 2, issue x 2, italic x 25, "
+	journal-id x 3, journal-meta, journal-title, journal-title-group, 
+	label x 69, lpage x 54, 
+	month x 4, 
+	name x 199, 
+	object-id x 5, "
+	page-count, permissions, person-group x 56, pub-date x 2, pub-id x 45, publisher, publisher-loc x 4, publisher-name x 4, 
+	ref x 57, ref-list, role, 
+	sec x 18, size, source x 56, subj-group x 5, subject x 5, suffix, sup x 11, surname x 199, 
+	table-wrap x 3, table-wrap-foot x 3, title x 25, title-group, 
+	volume x 51, 
+	year x 60"
+
+// the JATS taglist
+<abbrev> <abbrev-journal-title> <abstract> <access-date> <ack> <addr-line> <address> <aff> <aff-alternatives> <alt-text> <alt-title> 
+   <alternatives> <annotation> <anonymous> <app> <app-group> <array> <article> <article-categories> <article-id> <article-meta> 
+   <article-title> <attrib> <author-comment> <author-notes> <award-group> <award-id> <back>
+<bio> <body> <bold> <boxed-text> <break> <caption>
+<chapter-title> <chem-struct> <chem-struct-wrap> <citation-alternatives> <code> <colgroup> <collab> <collab-alternatives> <comment> 
+   <compound-kwd> <compound-kwd-part> <compound-subject> <compound-subject-part> <conf-acronym> <conf-date> <conf-loc> <conf-name> 
+   <conf-num> <conf-sponsor> <conf-theme> <conference> <contrib> <contrib-group> <contrib-id> <copyright-holder> <copyright-statement> 
+   <copyright-year> <corresp> <country> <count> <counts> <custom-meta> <custom-meta-group> <date>
+<date-in-citation> <day> <def> <def-head> <def-item> <def-list> <degrees> <disp-formula> <disp-formula-group> <disp-quote> 
+<edition> <element-citation> <elocation-id> <email> <equation-count> <era> <etal> <ext-link>
+<fax> <fig> <fig-count> <fig-group> <fixed-case> <floats-group> <fn> <fn-group> <fpage> <front> <front-stub> <funding-group> 
+  <funding-source> <funding-statement> <given-names>
+<glossary> <glyph-data> <glyph-ref> <gov> <graphic>
+<history> <hr>
+<inline-formula> <inline-graphic> <inline-supplementary-material> <institution> <institution-id> <institution-wrap> <isbn> 
+  <issn-l> <issn> <issue> <issue-id> <issue-part> <issue-sponsor> <issue-title> <italic> <journal-id>
+<journal-meta> <journal-subtitle> <journal-title> <journal-title-group>
+<kwd> <kwd-group>
+<label> <license> <license-p> <list> <list-item> <long-desc> <lpage>
+<media> <meta-name> <meta-value> <milestone-end> <milestone-start> <mixed-citation> <mml:math> <monospace> <month>
+<name> <name-alternatives><named-content><nested-kwd> <nlm-citation> <note> <notes>
+<object-id> <on-behalf-of> <open-access> <overline>
+<p> <page-count> <page-range> <part-title> <patent> <permissions> <person-group> <phone> <prefix> <preformat> <price> 
+  <principal-award-recipient> <principal-investigator> <private-char> <product> <pub-date> <pub-id> <publisher> <publisher-loc> 
+  <publisher-name> <rb>
+<ref> <ref-count> <ref-list> <related-article> <related-object> <response> <role> <roman> <rt> <ruby>
+<sans-serif> <sc> <season> <sec> <sec-meta> <self-uri> <series> <series-text> <series-title> <sig> <sig-block> <size> <source> 
+  <speaker> <speech> <statement> <std> <std-organization> <strike> <string-date> <string-name> <styled-content> <sub> <sub-article> 
+  <subj-group> <subject> <subtitle> <suffix> <sup> <supplement> <supplementary-material> <surname> <table>
+<table-count> <table-wrap> <table-wrap-foot> <table-wrap-group> <target> <tbody> <td> <term> <term-head> <tex-math> <textual-form> 
+  <tfoot> <th> <thead> <time-stamp> <title> <title-group> <tr> <trans-abstract> <trans-source> <trans-subtitle> <trans-title> 
+  <trans-title-group> <underline>
+<uri>
+<verse-group> <verse-line> <volume> <volume-id> <volume-series>
+<word-count>
+<xref>
+<year>
 	 * @author pm286
 	 *
 	 */
+	// mainly hardcoded. May change
 	public enum SectionTag {
-		ABBREVIATION("Authors abbreviations", "abbreviations?"),
-		ABSTRACT("Abstract", "abstract"),
-		ACK_FUND("Acknowledgements including funders", "(Acknowledge?ments?|Fund(ers)?|ing)"),
-		APPENDIX("Appendix", "Appendix"),
-		ARTICLE_META("Html meta", ""),
-		   ARTICLE_TITLE("Article title", "title"),
-		   CONTRIB("Contributors", "Contributors"),
-		AUTH_CONT("Author contributions", "Author contributions"),
-		BACK("Backmatter", "Back"),
-		CASE("Case study", "Case stud(y|ies)"),
-		CONCL("Conclusions", "Conclusions"),
-		COMP_INT("Conflict of interests", "(Conflicts of interest|Competing interests)"),
-		DISCUSS("Discussion", "Discussion"),
-		FINANCIAL("Financial?", "Financial"),
-		FIG("Figure (often caption)", "Fig(ure)?"),
-		FRONT("Frontmatter", "front"),
-		INTRO("Introduction", "Introduction|Babkground"),
-		JOURNAL_META("", ""),
-      		JOURNAL_TITLE("Journal title", "title"),
-      		PUBLISHER_NAME("Publisher name", "publisher"),
-		KEYWORD("Author keywords", "keywords"),
-		METHODS("Methods and materials", "methods|methods(and|&)materials|experimental"),
-		OTHER("Sections not in list", ""),
-		PMCID("PMCID", "pmcid"),
-		REF("References/citations", "references|citations"),
-		RESULTS("Results", "results"),
-		SUPPL("Supplementary material/supporting information", "(Supplementary|supporting)(material|information)"),
-		TABLE("Table", ""),
-		SUBTITLE("Subtitle of article", "subtitle"),
-		TITLE("Title of article", "title"),
+		ABBREVIATION(new String[]{"abbrev"}, "Authors abbreviations", "abbreviations?"),
+		ABSTRACT(new String[]{"abstract"}, "Abstract or summary", "abstract"),
+		ACK_FUND(new String[]{"ack"}, "Acknowledgements including funders", "(Acknowledge?ments?|Fund(ers)?|ing)"),
+		APPENDIX(new String[]{"app"}, "Appendix", "Appendix"),
+		ARTICLE_META(new String[]{"article-meta"}, "Html meta", ""),
+		   ARTICLE_TITLE(new String[]{""}, "Article title", "title"),
+		   CONTRIB(new String[]{""}, "Contributors", "Contributors"),
+		AUTH_CONT(new String[]{""}, "Author contributions", "Author contributions"),
+		BACK(new String[]{"back"}, "Backmatter", "Back"),
+		BODY(new String[]{"body"}, "Body", ""),
+		CASE(new String[]{""}, "Case study", "Case stud(y|ies)"),
+		CONCL(new String[]{""}, "Conclusions", "Conclusions"),
+		COMP_INT(new String[]{""}, "Conflict of interests", "(Conflicts of interest|Competing interests)"),
+		DISCUSS(new String[]{""}, "Discussion", "Discussion"),
+		FINANCIAL(new String[]{""}, "Financial?", "Financial"),
+		FIG(new String[]{""}, "Figure (often caption)", "Fig(ure)?"),
+		FRONT(new String[]{"front"}, "Frontmatter", "front"),
+		INTRO(new String[]{""}, "Introduction", "Introduction|Babkground"),
+		JOURNAL_META(new String[]{""}, "", ""),
+      		JOURNAL_TITLE(new String[]{""}, "Journal title", "title"),
+      		PUBLISHER_NAME(new String[]{""}, "Publisher name", "publisher"),
+		KEYWORD(new String[]{"kwd"}, "Author keywords", "keywords"),
+		METHODS(new String[]{""}, "Methods and materials", "methods|methods(and|&)materials|experimental"),
+		OTHER(new String[]{""}, "Sections not in list", ""),
+		PMCID(new String[]{""}, "PMCID", "pmcid"),
+		REF(new String[]{""}, "References/citations", "references|citations"),
+		RESULTS(new String[]{""}, "Results", "results"),
+		SUPPL(new String[]{""}, "Supplementary material/supporting information", "(Supplementary|supporting)(material|information)"),
+		TABLE(new String[]{""}, "Table", ""),
+		SUBTITLE(new String[]{""}, "Subtitle of article", "subtitle"),
+		TITLE(new String[]{""}, "Title of article", "title"),
 		
 		;
 		private String description;
 		private Pattern pattern;
+		private String[] tags;
+		private String singleTag;
 		
-		private SectionTag(String description, String regex) {
+		private SectionTag(String[] tags, String description, String regex) {
+			this.tags = tags;
+			this.singleTag = tags.length == 1 ?  tags[0] : null;
 			this.description = description;
 			this.pattern = Pattern.compile(regex);
 		}
@@ -138,6 +219,14 @@ public class JATSSectionTagger {
 			String[] names = new String[]{this.toString().toLowerCase()};
 //			LOG.debug("N "+names[0]);
 			return names;
+		}
+
+		public String[] getTags() {
+			return tags;
+		}
+
+		public String getSingleTag() {
+			return singleTag;
 		}
 		
 	};
@@ -275,13 +364,57 @@ public class JATSSectionTagger {
 			SectionTag.SUBTITLE,
 		};
 	
+	
+	public static Multimap<String, String> BODY_SECTIONS_MAP = ArrayListMultimap.create();
+	public static  Map<String, String> SECTION_BY_SYNONYM = new HashMap<String, String>();
+	private static MapEntry[] mapEntries = {
+	    new MapEntry("contributions", "Contributions", "Authors' contributions"),
+	    new MapEntry("introduction", "Background", "Introduction"),
+	    new MapEntry("conflict",  "Conflict of interest", "Conflicts of interest", 
+	    		                  "Conflict of Interest Statement", "Competing interests"),
+	    new MapEntry("conclusion","Conclusion",	"Conclusions"),
+	    new MapEntry("discussion", "Discussion"),
+	    new MapEntry("methods", "Materials and Methods", "Methods and Materials", "Materials", "Methods"),
+	    new MapEntry("results",	"Results",	"Results and Discussion"),
+	    new MapEntry("supplementary", "Supplementary Material",	"Supporting Information"),
+	};
+	
+	static {
+		for (MapEntry entry : mapEntries) {
+			BODY_SECTIONS_MAP.putAll(entry.key, entry.valueList);
+		}
+		for (String key : BODY_SECTIONS_MAP.keys()) {
+			Collection<String> values = BODY_SECTIONS_MAP.get(key);
+			for (String value : values) {
+				SECTION_BY_SYNONYM.put(value.toLowerCase(),  key);
+			}
+		}
+	};
+/**
+	CIITA Transactivation and Epigenetic Activities
+	Clinical Manifestations
+	Diagnosis
+	Dynamics of Transmission
+	Epigenetic Regulation of MHC2TA Transcription
+	Extinction of MHC-II Expression in Cancer
+	Long-Range Promoter Interactions
+	Public Health Implications
+	Taxonomy
+	The Study
+	Transcriptional Regulation of MHC Genes
+	Virology and Pathogenesis
+	*/
+	
+	
 	public static final List<SectionTag> MAJOR_SECTIONS = Arrays.asList(MAJOR_SECTIONS_ARRAY);
 	public static final String PUB_ID = "pub-id";
 	public static final String HELP = "help";
 	
 	private HtmlElement htmlElement;
 	private Element jatsHtmlElement;
+	private Element scholarlyHtmlElement;
 	public static final String DEFAULT_SECTION_TAGGER_RESOURCE = NAConstants.NORMA_RESOURCE+"/pubstyle/sectionTagger.xml";
+	private static final String SECTION = "section.";
 	private Element tagsElement;
 	private Map<SectionTag, TagElement> tagElementsByTag;
 	private JATSArticleElement jatsArticleElement;
@@ -290,15 +423,22 @@ public class JATSSectionTagger {
 
 	private CTree cTree;
 
+	private CProject cProject;
+	private Element rawXmlElement;
+
 
 	
 	public JATSSectionTagger() {
 		
 	}
 
-	public JATSSectionTagger(CTree cTree) {
-		this.cTree = cTree;
-		this.readJATS(cTree);
+//	public JATSSectionTagger(CTree cTree) {
+//		this.cTree = cTree;
+//		this.readJATS(cTree);
+//	}
+
+	public JATSSectionTagger(CProject cProject) {
+		this.cProject = cProject;
 	}
 
 	public HtmlElement readScholarlyHtml(File scholarlyHtmlFile) {
@@ -373,7 +513,15 @@ public class JATSSectionTagger {
 	public List<HtmlDiv> getBackMatter() {
 		return getDivsForCSSClass(SectionTag.BACK);
 	}
-	
+
+	public HtmlDiv getBack() {
+		return getSingleDivForCSSClass(SectionTag.BACK.getSingleTag());
+	}
+
+	public HtmlDiv getBody() {
+		return getSingleDivForCSSClass(SectionTag.BODY.getSingleTag());
+	}
+
 	public List<HtmlDiv> getCaseStudies() {
 		return getDivsForCSSClass(SectionTag.CASE);
 	}
@@ -414,9 +562,14 @@ public class JATSSectionTagger {
 		return getDivsForCSSClass(SectionTag.FINANCIAL);
 	}
 
+	@Deprecated
 	public HtmlHead getFrontMatter() {
 		HtmlHead head = (HtmlHead) HtmlElement.getSingleChildElement(htmlElement, HtmlHead.TAG);
 		return head;
+	}
+
+	public HtmlDiv getFront() {
+		return getSingleDivForCSSClass(SectionTag.FRONT.getSingleTag());
 	}
 
 	public List<HtmlDiv> getIntroductions() {
@@ -467,19 +620,23 @@ public class JATSSectionTagger {
 		return getDivsForCSSClass(sectionTag.getNames());
 	}
 	
+	public HtmlDiv getSingleDivForCSSClass(String name) {
+		String xpath = createXPath("div", name);
+		HtmlElement htmlElement = (HtmlElement) scholarlyHtmlElement;
+		List<HtmlDiv> divs = HtmlDiv.extractDivs(htmlElement, xpath);
+		if (divs.size() > 1) {
+			throw new RuntimeException("more than one: name " + name + "; expected 0/1");
+		}
+		return (divs.size() == 0) ? null : divs.get(0);
+	}
+	
 	public List<HtmlDiv> getDivsForCSSClass(String ... names) {
 		String xpath = createXPath("div", names);
-//		HtmlElement htmlElement = getHtmlElement();
 		HtmlElement htmlElement = (HtmlElement) jatsHtmlElement;
-//		LOG.debug(htmlElement.toXML());
 		List<HtmlDiv> divs = HtmlDiv.extractDivs(htmlElement, xpath);
 		return divs;
 	}
 
-//	public List<HtmlSpan> getSpansForCSSClass(SectionTag sectionTag) {
-//		return getSpansForCSSClass(sectionTag.getNames());
-//	}
-	
 	public List<HtmlSpan> getSpansForCSSClass(String ... names) {
 		String xpath = createXPath("span", names);
 		List<HtmlSpan> spans = HtmlSpan.extractSpans(htmlElement, xpath);
@@ -502,23 +659,36 @@ public class JATSSectionTagger {
 		return xpath;
 	}
 
-	public void readJATS(File jatsXml) {
-		Element rawElement = XMLUtil.parseQuietlyToDocumentWithoutDTD(jatsXml).getRootElement();
-		readJATS(rawElement);
+	/**
+	 * 
+	 * @param jatsXml
+	 * @throws RuntimeException // null JATS 
+	 */
+	public void getOrCreateJatsHtml(File jatsXml) throws RuntimeException {
+		if (jatsXml == null) {
+			throw new RuntimeException("Null JATS XML");
+		}
+		rawXmlElement = XMLUtil.parseQuietlyToDocumentWithoutDTD(jatsXml).getRootElement();
+		getOrCreateHtml();
 	}
 
-	private void readJATS(Element rawElement) {
-		JATSFactory jatsFactory = new JATSFactory();
-		jatsHtmlElement = jatsFactory.createHtml(rawElement);
-		HtmlElement bodyHtmlElement = (HtmlElement) ((HtmlHtml)jatsHtmlElement).getBody();
-		jatsArticleElement = (JATSArticleElement) bodyHtmlElement.getChild(0);
+	
+	public void getOrCreateHtml() {
+		if (jatsHtmlElement == null) {
+			JATSFactory jatsFactory = new JATSFactory();
+			jatsHtmlElement = jatsFactory.createHtml(rawXmlElement);
+			scholarlyHtmlElement = jatsFactory.createScholarlyHtml(rawXmlElement);
+			
+			HtmlElement bodyHtmlElement = ((HtmlHtml)jatsHtmlElement).getBody();
+			jatsArticleElement = (JATSArticleElement) bodyHtmlElement.getChild(0);
+		}
 	}
 
 	public Element getJATSHtmlElement() {
 		return jatsHtmlElement;
 	}
 
-	public JATSArticleElement getJATSArticleElement() {
+	public JATSArticleElement /*HtmlDiv*/ getJATSArticleElement() {
 		return jatsArticleElement;
 	}
 
@@ -660,8 +830,12 @@ public class JATSSectionTagger {
 	}
 
 	public void readJATS(CTree cTree) {
-		this.readJATS(cTree.getExistingFulltextXML());
-		this.getOrCreateTagClassMultiset();
+		this.setCTree(cTree);
+		File existingFulltextXML = cTree.getExistingFulltextXML();
+		if (existingFulltextXML != null) {
+			this.getOrCreateJatsHtml(existingFulltextXML);
+			this.getOrCreateTagClassMultiset();
+		}
 	}
 
 	/** at present this is just to create a Multiset from the project.
@@ -673,7 +847,7 @@ public class JATSSectionTagger {
 		CTreeList cTreeList = cProject.getOrCreateCTreeList();
 		for (CTree cTree : cTreeList) {
 			JATSSectionTagger treeSectionTagger = new JATSSectionTagger();
-			treeSectionTagger.readJATS(cTree.getExistingFulltextXML());
+			treeSectionTagger.getOrCreateJatsHtml(cTree.getExistingFulltextXML());
 			List<HtmlDiv> divList = getAbbreviations();
 			divListList.add(divList);
 		}
@@ -689,7 +863,7 @@ public class JATSSectionTagger {
 		CTreeList cTreeList = cProject.getOrCreateCTreeList();
 		for (CTree cTree : cTreeList) {
 			JATSSectionTagger treeSectionTagger = new JATSSectionTagger();
-			treeSectionTagger.readJATS(cTree.getExistingFulltextXML());
+			treeSectionTagger.getOrCreateJatsHtml(cTree.getExistingFulltextXML());
 			List<HtmlDiv> divList1 = new ArrayList<HtmlDiv>();
 			divList1 = treeSectionTagger.getAbstracts();
 			List<HtmlDiv> divList = divList1;
@@ -705,7 +879,7 @@ public class JATSSectionTagger {
 		List<List<HtmlDiv>> divListList = new ArrayList<List<HtmlDiv>>();
 		CTreeList cTreeList = cProject.getOrCreateCTreeList();
 		for (CTree cTree : cTreeList) {
-			JATSSectionTagger tagger = new JATSSectionTagger(cTree);
+			JATSSectionTagger tagger = JATSSectionTagger.createAndPopulateTagger(cTree);
 			List<HtmlDiv> divList = tagger.getDivList(extractor);
 			divListList.add(divList);
 		}
@@ -720,12 +894,35 @@ public class JATSSectionTagger {
 	public List<HtmlDiv> getDivList(DivListExtractor extractor) {
 		List<HtmlDiv> divList = null;
 		if (cTree != null) {
-			JATSSectionTagger tagger = new JATSSectionTagger();
-			tagger.readJATS(cTree.getExistingFulltextXML());
-			divList = extractor.getDivList(tagger);
+			File existingFulltextXML = cTree.getExistingFulltextXML();
+			if (existingFulltextXML != null) {
+				JATSSectionTagger tagger = new JATSSectionTagger();
+				tagger.getOrCreateJatsHtml(existingFulltextXML);
+				divList = extractor.getDivList(tagger);
+			}
 		}
 		return divList;
 	}
+
+
+	/** get a single Div of given type.
+	 * assume we have read a cTree
+	 * @param extractor
+	 * @return null if no cTree or dov.size() != 1 else list of divs of extractor type
+	 */
+	public HtmlDiv getSingleDiv(SingleDivExtractor extractor) {
+		HtmlDiv div = null;
+		if (cTree != null) {
+			File existingFulltextXML = cTree.getExistingFulltextXML();
+			if (existingFulltextXML != null) {
+				JATSSectionTagger tagger = new JATSSectionTagger();
+				tagger.getOrCreateJatsHtml(existingFulltextXML);
+				div = extractor.getSingleDiv(tagger);
+			}
+		}
+		return div;
+	}
+
 
 	/** get a single HtmlElement.
 	 * assume we have read a cTree
@@ -735,34 +932,128 @@ public class JATSSectionTagger {
 	public HtmlElement getHtmlElement(HtmlElementExtractor extractor) {
 		HtmlElement htmlElement = null;
 		if (cTree != null) {
-			JATSSectionTagger tagger = new JATSSectionTagger();
-			tagger.readJATS(cTree.getExistingFulltextXML());
+			JATSSectionTagger tagger = JATSSectionTagger.createAndPopulateTagger(cTree);
+			tagger.getOrCreateHtml();
 			htmlElement = extractor.getHtmlElement(tagger);
 		}
 		return htmlElement;
 	}
 
-//	public List<List<HtmlDiv>> getAbstracts1(CProject cProject) {
-//		DivListExtractor abstr = new DivListExtractor() {
-//			public List<HtmlDiv> getDivList(JATSSectionTagger treeSectionTagger, CTree cTree) { 
-//				return treeSectionTagger.getAbstracts(cTree); }
-//		};
-//		return getListOfDivs(cProject, abstr);
-//	}
-	
-//	public static class AbstractExtractor implements DivListExtractor {
-//		public List<HtmlDiv> getDivList(JATSSectionTagger treeSectionTagger, CTree cTree) { 
-//			return treeSectionTagger.getAbstracts(cTree); }
-//	}
-	
-//	public List<List<HtmlDiv>> getAbstracts2(CProject cProject) {
-//		return getListOfDivs(cProject, new AbstractExtractor());
-//	}
+	public static JATSSectionTagger createAndPopulateTagger(CTree cTree) {
+		JATSSectionTagger tagger = null;
+		if (cTree != null) {
+			tagger = new JATSSectionTagger();
+			tagger.readJATS(cTree);
+		}
+		return tagger;
+	}
 
-//	public List<HtmlDiv> getAbstracts2(CTree cTree) {
-//		return getListOfDivs(cTree, new AbstractExtractor());
-//	}
+	public void setCTree(CTree cTree) {
+		this.cTree = cTree;
+	}
+
+	public void addAbstractAsFile() {
+		List<HtmlDiv> divList = this.getDivList(new ArticleAbstractExtractor());
+		if (divList != null && divList.size() > 0) {
+			if (divList.size() > 1) {
+				LOG.debug(this.cTree.getName() + ": more than 1 abstract: "+divList.size());
+			}
+			cTree.writeFulltextHtmlToChildDirectory(divList.get(0), CTree.ABSTRACT);
+		}
+	}
+
+	public void addProjectAbstractsAsFiles() {
+		if (cProject != null) {
+			for (CTree cTree : cProject.getOrCreateCTreeList()) {
+				JATSSectionTagger treeTagger = JATSSectionTagger.createAndPopulateTagger(cTree);
+				treeTagger.addAbstractAsFile();
+			}
+		}
+	}
+
+	public void addFrontAsFile() {
+		HtmlDiv front = getSingleDivAndAddAsFile(new FrontExtractor(), CTree.FRONT);
+		addSections(front, new FrontSectionExtractor());
+	}
+
+	private void addSections(HtmlDiv front, FrontSectionExtractor frontSectionExtractor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void addProjectFrontsAsFiles() {
+		if (cProject != null) {
+			for (CTree cTree : cProject.getOrCreateCTreeList()) {
+				JATSSectionTagger treeTagger = JATSSectionTagger.createAndPopulateTagger(cTree);
+				treeTagger.addFrontAsFile();
+			}
+		}
+	}
+
+	public void addBackAsFile() {
+		getSingleDivAndAddAsFile(new BackExtractor(), CTree.BACK);
+	}
+
+	public void addProjectBacksAsFiles() {
+		if (cProject != null) {
+			for (CTree cTree : cProject.getOrCreateCTreeList()) {
+				JATSSectionTagger treeTagger = JATSSectionTagger.createAndPopulateTagger(cTree);
+				treeTagger.addBackAsFile();
+			}
+		}
+	}
+
+	public void addBodyAsFile() {
+		HtmlDiv body = getSingleDivAndAddAsFile(new BodyExtractor(), CTree.BODY);
+		
+		addSections(body, new BodySectionExtractor());
+	}
+
+	private void addSections(HtmlDiv body, BodySectionExtractor bodySectionExtractor) {
+		List<HtmlElement> childSections = HtmlUtil.getQueryHtmlElements(body, "./*[local-name()='div' and @class='sec']");
+		int nonControlled = 0;
+		File bodyDir = new File(cTree.getDirectory(), CTree.BODY_DIR); 
+		for (HtmlElement childSection : childSections) {
+			String title = XMLUtil.getSingleValue(childSection, "./*[local-name()='div' and @class='title']");
+			String controlledTitle = SECTION_BY_SYNONYM.get(title.toLowerCase());
+			String filename = controlledTitle == null ? SECTION + (++nonControlled) : controlledTitle;
+			filename += ".html";
+			File file = new File(bodyDir, filename);
+			try {
+				XMLUtil.debug(childSection, file, 1);
+			} catch (IOException e) {
+				throw new RuntimeException("Cannot write section: " + file, e);
+			}
+   		}
+	}
+
+
+	public void addProjectBodysAsFiles() {
+		if (cProject != null) {
+			for (CTree cTree : cProject.getOrCreateCTreeList()) {
+				JATSSectionTagger treeTagger = JATSSectionTagger.createAndPopulateTagger(cTree);
+				treeTagger.addBodyAsFile();
+			}
+		}
+	}
+
+	private HtmlDiv getSingleDivAndAddAsFile(SingleDivExtractor extractor, String sectionName) {
+		HtmlDiv div = this.getSingleDiv(extractor);
+		if (div != null) {
+			cTree.writeFulltextHtmlToChildDirectory(div, sectionName);
+		}
+		return div;
+	}
 
 
 
+
+}
+class MapEntry {
+	String key;
+	List<String> valueList;
+	public MapEntry(String key, String ... values) {
+		this.key = key;
+		this.valueList = Arrays.asList(values);
+	}
 }

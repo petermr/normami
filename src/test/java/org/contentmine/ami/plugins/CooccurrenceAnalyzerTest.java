@@ -18,7 +18,7 @@ public class CooccurrenceAnalyzerTest {
 	}
 
 	@Test
-	@Ignore
+//	@Ignore
 	public void testColorMatrix() throws IOException {
 		String matrixS = "{25,18}\n" 
         + "(23,8,8,11,6,4,2,5,1,1,2,3,3,2,2,0,2,1)\n"
@@ -47,11 +47,13 @@ public class CooccurrenceAnalyzerTest {
         + "(2,0,1,2,0,0,0,0,0,0,0,1,0,0,0,0,1,0)\n"
         + "(1,2,2,1,0,2,0,0,0,1,0,0,0,0,0,0,0,0)\n"
         ;
+		File projectDir = new File("target/cooccurrence/");
 		IntMatrix cooccurrenceMatrix = IntMatrix.readMatrix(matrixS);
-		OccurrenceAnalyzer rowAnalyzer = new OccurrenceAnalyzer();
-		OccurrenceAnalyzer colAnalyzer = new OccurrenceAnalyzer();
-		SVGSVG svg = CooccurrenceAnalyzer.createSVG(cooccurrenceMatrix, rowAnalyzer, colAnalyzer);
-		XMLUtil.debug(svg, new File("target/debug/svgColorMatrix.svg"), 1);
+		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(projectDir);
+		CooccurrenceAnalyzer cooccurrenceAnalyzer = new CooccurrenceAnalyzer(entityAnalyzer);
+		cooccurrenceAnalyzer.setCooccurrenceMatrix(cooccurrenceMatrix);
+		SVGSVG svg = cooccurrenceAnalyzer.createSVG();
+		XMLUtil.debug(svg, new File(projectDir, "svgColorMatrix.svg"), 1);
 	}
 	
 	@Test
@@ -113,5 +115,7 @@ public class CooccurrenceAnalyzerTest {
 		XMLUtil.debug(svg, new File("target/debug/svgColorMatrix1.svg"), 1);
 
 	}
+	
+	
 
 }

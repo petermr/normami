@@ -1,6 +1,7 @@
 package org.contentmine.ami.plugins;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -13,6 +14,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.eucl.euclid.Angle;
 import org.contentmine.eucl.euclid.Angle.Units;
+import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.eucl.euclid.IntMatrix;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Transform2;
@@ -28,6 +30,8 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset.Entry;
 
 public class CooccurrenceAnalyzer {
+	private static final String COOCCUR_CSV = "cooccur.csv";
+
 	private static final Logger LOG = Logger.getLogger(CooccurrenceAnalyzer.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -109,11 +113,13 @@ public class CooccurrenceAnalyzer {
 				cooccurrenceMatrix.setElementAt(irow, jcol, colFileSet.size());
 			}
 		}
+		/**
 		System.out.println(""+
 				rowAnalyzer.getOrCreateEntriesSortedByImportance()+"\n"
 				+colAnalyzer.getOrCreateEntriesSortedByImportance()+"\n"
 				+rowAnalyzer.getName()+"-"+colAnalyzer.getName()+"\n"
 				+cooccurrenceMatrix);
+				*/
 		return cooccurrenceMatrix;
 	}
 
@@ -191,7 +197,7 @@ public class CooccurrenceAnalyzer {
 
 	public void writeCSV() throws IOException {
 		File cooccurrenceFile = createCooccurrenceDir();
-		cooccurrenceMatrix.writeCSV(cooccurrenceFile /*, rowAnalyzer.getName(), colAnalyzer.getName()*/);
+		cooccurrenceMatrix.writeCSV(new File(cooccurrenceFile, COOCCUR_CSV));
 	}
 
 	private File createCooccurrenceDir() {
@@ -201,11 +207,32 @@ public class CooccurrenceAnalyzer {
 	}
 
 	public void writeSVG() throws IOException {
-		File cooccurrenceFile = createCooccurrenceDir();
-		SVGSVG svg = createSVG(cooccurrenceMatrix, rowAnalyzer, colAnalyzer);
+		File cooccurrenceFile = new File(createCooccurrenceDir(), "cooccur.svg");
+		SVGSVG svg = createSVG(/*cooccurrenceMatrix, rowAnalyzer, colAnalyzer*/);
+		XMLUtil.debug(svg, cooccurrenceFile, 1);
+		
 	}
 
 	/** really for debugging */
+	public SVGSVG createSVG() {
+		return createSVG(cooccurrenceMatrix, getOrCreateRowAnalyzer(), getOrCreateColAnalyzer());
+	}
+
+	private OccurrenceAnalyzer getOrCreateColAnalyzer() {
+		if (colAnalyzer == null) {
+			colAnalyzer = new OccurrenceAnalyzer();
+		}
+		return colAnalyzer;
+	}
+
+	private OccurrenceAnalyzer getOrCreateRowAnalyzer() {
+		if (rowAnalyzer == null) {
+			rowAnalyzer = new OccurrenceAnalyzer();
+		}
+		return rowAnalyzer;
+	}
+
+		/** really for debugging, rewrire with member variables */
 	public static SVGSVG createSVG(IntMatrix cooccurrenceMatrix, OccurrenceAnalyzer rowAnalyzer, OccurrenceAnalyzer colAnalyzer) {
 
 		double x0 = 10.;
@@ -229,16 +256,20 @@ public class CooccurrenceAnalyzer {
 		for (int irow = 0; irow < cooccurrenceMatrix.getRows(); irow++) {
 			y = (irow * dy) + yoff;
 			if (rowAnalyzer != null) {
-				String rowTitle = rowEntries.get(irow).getElement();
-				SVGText text = createRowText(x0, y + dy, fontSizeFactor * dy, rowTitle);
-				grid.appendChild(text);
+				if (irow < rowEntries.size()) {
+					String rowTitle = rowEntries.get(irow).getElement();
+					SVGText text = createRowText(x0, y + dy, fontSizeFactor * dy, rowTitle);
+					grid.appendChild(text);
+				}
 			}
 			for (int jcol = 0; jcol < cooccurrenceMatrix.getCols(); jcol++) {
 				x = (jcol * dx) + xoff;
 				if (colAnalyzer != null && irow == 0) {
-					String colTitle = colEntries.get(jcol).getElement();
-					SVGText text = createColText(x + dx / 2, yoff - dy / 2, fontSizeFactor * dy, colTitle);
-					grid.appendChild(text);
+					if (jcol < colEntries.size()) {
+						String colTitle = colEntries.get(jcol).getElement();
+						SVGText text = createColText(x + dx / 2, yoff - dy / 2, fontSizeFactor * dy, colTitle);
+						grid.appendChild(text);
+					}
 				}
 				int count = cooccurrenceMatrix.elementAt(irow, jcol);
 				SVGG cell = createCell(dx, dy, x, y, fontSizeFactor * dy, strokeWidth, largestElement, count);
@@ -263,10 +294,7 @@ public class CooccurrenceAnalyzer {
 	private static SVGText createRowText(double x, double y, double fontSize,
 			String title) {
 		SVGText text = new SVGText(new Real2(x, y), title.substring(0,  Math.min(15,  title.length())));
-		text.setTitle(title);
-		text.setFontSize(fontSize);
-		text.setFontWeight(FontWeight.BOLD);
-		text.setFill("black");
+		setStyle(fontSize, title, text);
 		return text;
 	}
 
@@ -276,11 +304,16 @@ public class CooccurrenceAnalyzer {
 		SVGText text = new SVGText(xy, title.substring(0,  Math.min(15,  title.length())));
 		Transform2 t2 = Transform2.getRotationAboutPoint(new Angle(Math.PI / 2.,Units.RADIANS), xy);
 		text.applyTransform(t2, RotateText.FALSE);
+		setStyle(fontSize, title, text);
+		return text;
+	}
+
+	private static void setStyle(double fontSize, String title, SVGText text) {
 		text.setFontSize(fontSize);
 		text.setTitle(title);
 		text.setFontWeight(FontWeight.BOLD);
 		text.setFill("black");
-		return text;
+		text.setFontFamily("Helvetica");
 	}
 
 	private static SVGText createCellText(double x, double y, double fontSize,
@@ -290,6 +323,7 @@ public class CooccurrenceAnalyzer {
 		cellText.setFill("black");
 		cellText.setStroke("yellow");
 		cellText.setStrokeWidth(strokeWidth);
+		cellText.setFontFamily("Helvetica");
 		return cellText;
 	}
 
@@ -303,9 +337,9 @@ public class CooccurrenceAnalyzer {
 
 	private File createFileName(String suffix) {
 		File top = new File(entityAnalyzer.getProjectDir(), suffix);
-		String name = rowAnalyzer.getName() + "-" + colAnalyzer.getName();
+		String name = rowAnalyzer.getName() + "-" + colAnalyzer.getName() + "/";
 		File dir = new File(top, name);
-		return new File(dir, COOCCURRENCE + "." + suffix);
+		return dir;
 	}
 
 	public IntMatrix getCooccurrenceMatrix() {

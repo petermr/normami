@@ -11,6 +11,6 @@ import org.contentmine.graphics.html.HtmlDiv;
  *
  */
 public interface DivListExtractor {
-	public List<HtmlDiv> getDivList(JATSSectionTagger tagger/*, CTree cTree*/);
+	public List<HtmlDiv> getDivList(JATSSectionTagger tagger);
 }
 	
