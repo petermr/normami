@@ -19,6 +19,9 @@ public class AMIProcessorPDFTest {
 	}
 	
 	@Test
+	/** reads UCL corpus as PDFs and creates first pass SVG , images and scholarly html
+	 * 
+	 */
 	public void testForestPlots() {
 		String[] args = {"/Users/pm286/workspace/uclforest/forestplots"};
 		Assert.assertTrue(new File(args[0]).exists());

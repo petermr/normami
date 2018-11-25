@@ -114,6 +114,11 @@
                             <id>ami-dictionaries</id>
                         </program>
                          <program>
+                            <mainClass>org.contentmine.ami.AMIImage</mainClass>
+							<!-- description: process images )-->
+                            <id>ami-image</id>
+                        </program>
+                         <program>
                             <mainClass>org.contentmine.ami.AMISearch</mainClass>
 							<!-- description: run AMI searches and co-occurrence -->
                             <id>ami-search-cooccur</id>

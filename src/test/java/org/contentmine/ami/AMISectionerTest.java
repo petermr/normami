@@ -337,6 +337,21 @@ public class AMISectionerTest {
 	}
 	
 	@Test
+	public void testAddBacks() {
+		File targetDir = new File("target/sections/");
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);
+		CProject cProject = new CProject(targetDir);
+		CTree cTree = cProject.getCTreeByName("PMC3310660");
+		Assert.assertNotNull(cTree);
+		JATSSectionTagger treeTagger = JATSSectionTagger.createAndPopulateTagger(cTree);
+		treeTagger.addBackAsFile();
+		File backDir = cTree.getBackDir();
+		Assert.assertTrue("back should exist", CTree.isExistingDirectory(backDir));
+		JATSSectionTagger projectTagger = new JATSSectionTagger(cProject);
+		projectTagger.addProjectBacksAsFiles();
+	}
+	
+	@Test
 	public void testAddAll() {
 		File targetDir = new File("target/sections/");
 		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);

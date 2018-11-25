@@ -1,7 +1,6 @@
 package org.contentmine.norma.sections;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +26,6 @@ import org.contentmine.graphics.html.HtmlHead;
 import org.contentmine.graphics.html.HtmlHtml;
 import org.contentmine.graphics.html.HtmlSpan;
 import org.contentmine.graphics.html.HtmlTable;
-import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.norma.NAConstants;
 
 import com.google.common.collect.ArrayListMultimap;
@@ -166,9 +164,9 @@ public class JATSSectionTagger implements HtmlTagger {
 		CASE(new String[]{""}, "Case study", "Case stud(y|ies)"),
 		CONCL(new String[]{""}, "Conclusions", "Conclusions"),
 		COMP_INT(new String[]{""}, "Conflict of interests", "(Conflicts of interest|Competing interests)"),
-		DISCUSS(new String[]{""}, "Discussion", "Discussion"),
+		DISCUSS(new String[]{"discussion"}, "Discussion", "Discussion"),
 		FINANCIAL(new String[]{""}, "Financial?", "Financial"),
-		FIG(new String[]{""}, "Figure (often caption)", "Fig(ure)?"),
+		FIG(new String[]{"figure"}, "Figure (often caption)", "Fig(ure)?"),
 		FRONT(new String[]{"front"}, "Frontmatter", "front"),
 		INTRO(new String[]{""}, "Introduction", "Introduction|Babkground"),
 		JOURNAL_META(new String[]{""}, "", ""),
@@ -368,7 +366,8 @@ public class JATSSectionTagger implements HtmlTagger {
 	public static Multimap<String, String> BODY_SECTIONS_MAP = ArrayListMultimap.create();
 	public static  Map<String, String> SECTION_BY_SYNONYM = new HashMap<String, String>();
 	private static MapEntry[] mapEntries = {
-	    new MapEntry("contributions", "Contributions", "Authors' contributions"),
+		    new MapEntry("ack", "Acknowledgements", "Authors' contributions"),
+		    new MapEntry("contributions", "Contributions", "Authors' contributions"),
 	    new MapEntry("introduction", "Background", "Introduction"),
 	    new MapEntry("conflict",  "Conflict of interest", "Conflicts of interest", 
 	    		                  "Conflict of Interest Statement", "Competing interests"),
@@ -414,15 +413,13 @@ public class JATSSectionTagger implements HtmlTagger {
 	private Element jatsHtmlElement;
 	private Element scholarlyHtmlElement;
 	public static final String DEFAULT_SECTION_TAGGER_RESOURCE = NAConstants.NORMA_RESOURCE+"/pubstyle/sectionTagger.xml";
-	private static final String SECTION = "section.";
+	static final String SECTION = "section.";
 	private Element tagsElement;
 	private Map<SectionTag, TagElement> tagElementsByTag;
 	private JATSArticleElement jatsArticleElement;
 	private Multiset<String> tagClassMultiset;
 	private List<List<HtmlDiv>> divListList;
-
 	private CTree cTree;
-
 	private CProject cProject;
 	private Element rawXmlElement;
 
@@ -431,11 +428,6 @@ public class JATSSectionTagger implements HtmlTagger {
 	public JATSSectionTagger() {
 		
 	}
-
-//	public JATSSectionTagger(CTree cTree) {
-//		this.cTree = cTree;
-//		this.readJATS(cTree);
-//	}
 
 	public JATSSectionTagger(CProject cProject) {
 		this.cProject = cProject;
@@ -910,7 +902,7 @@ public class JATSSectionTagger implements HtmlTagger {
 	 * @param extractor
 	 * @return null if no cTree or dov.size() != 1 else list of divs of extractor type
 	 */
-	public HtmlDiv getSingleDiv(SingleDivExtractor extractor) {
+	public HtmlDiv getSingleDiv(SectionExtractor extractor) {
 		HtmlDiv div = null;
 		if (cTree != null) {
 			File existingFulltextXML = cTree.getExistingFulltextXML();
@@ -972,13 +964,8 @@ public class JATSSectionTagger implements HtmlTagger {
 	}
 
 	public void addFrontAsFile() {
-		HtmlDiv front = getSingleDivAndAddAsFile(new FrontExtractor(), CTree.FRONT);
-		addSections(front, new FrontSectionExtractor());
-	}
-
-	private void addSections(HtmlDiv front, FrontSectionExtractor frontSectionExtractor) {
-		// TODO Auto-generated method stub
-		
+		FrontExtractor frontExtractor = new FrontExtractor(cTree);
+		extractAndOutputSections(frontExtractor);
 	}
 
 	public void addProjectFrontsAsFiles() {
@@ -991,7 +978,8 @@ public class JATSSectionTagger implements HtmlTagger {
 	}
 
 	public void addBackAsFile() {
-		getSingleDivAndAddAsFile(new BackExtractor(), CTree.BACK);
+		BackExtractor backExtractor = new BackExtractor(cTree);
+		extractAndOutputSections(backExtractor);
 	}
 
 	public void addProjectBacksAsFiles() {
@@ -1004,29 +992,18 @@ public class JATSSectionTagger implements HtmlTagger {
 	}
 
 	public void addBodyAsFile() {
-		HtmlDiv body = getSingleDivAndAddAsFile(new BodyExtractor(), CTree.BODY);
-		
-		addSections(body, new BodySectionExtractor());
+		BodyExtractor bodyExtractor = new BodyExtractor(cTree);
+		extractAndOutputSections(bodyExtractor);
 	}
 
-	private void addSections(HtmlDiv body, BodySectionExtractor bodySectionExtractor) {
-		List<HtmlElement> childSections = HtmlUtil.getQueryHtmlElements(body, "./*[local-name()='div' and @class='sec']");
-		int nonControlled = 0;
-		File bodyDir = new File(cTree.getDirectory(), CTree.BODY_DIR); 
-		for (HtmlElement childSection : childSections) {
-			String title = XMLUtil.getSingleValue(childSection, "./*[local-name()='div' and @class='title']");
-			String controlledTitle = SECTION_BY_SYNONYM.get(title.toLowerCase());
-			String filename = controlledTitle == null ? SECTION + (++nonControlled) : controlledTitle;
-			filename += ".html";
-			File file = new File(bodyDir, filename);
-			try {
-				XMLUtil.debug(childSection, file, 1);
-			} catch (IOException e) {
-				throw new RuntimeException("Cannot write section: " + file, e);
-			}
-   		}
+	private void extractAndOutputSections(SectionExtractor extractor) {
+		HtmlDiv div = extractor.getSingleDivAndAddAsFile(this, extractor.getSection());
+		extractor.extractAndOutputSections(div, extractor.getDirectoryName());
 	}
 
+	public HtmlDiv getSingleDivAndAddAsFile(SectionExtractor extractor, String sectionName) {
+		return extractor.getSingleDivAndAddAsFile(this, sectionName);
+	}
 
 	public void addProjectBodysAsFiles() {
 		if (cProject != null) {
@@ -1037,13 +1014,6 @@ public class JATSSectionTagger implements HtmlTagger {
 		}
 	}
 
-	private HtmlDiv getSingleDivAndAddAsFile(SingleDivExtractor extractor, String sectionName) {
-		HtmlDiv div = this.getSingleDiv(extractor);
-		if (div != null) {
-			cTree.writeFulltextHtmlToChildDirectory(div, sectionName);
-		}
-		return div;
-	}
 
 
 
