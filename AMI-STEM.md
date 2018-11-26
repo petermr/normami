@@ -1,6 +1,9 @@
 # AMI-STEM 
 
-A universal scientific search engine based on semantic documents and dictionaries
+A universal scientific search engine based on semantic documents and dictionaries.
+
+**NOTE: the commands are being updated to use conventional argument flags (`-` and `--`) so this document will be superseded.**
+
 
 ## Installation
 
@@ -62,40 +65,117 @@ ami20180904
         ├── commons-codec-1.10.jar
         [... and 100 more]
 ```
+(The commands are being constantly updated, so there may be more)
 
 ## appassembler
 
 ## getting started
 
-`ami-all` displays the help screen and a list of directories on the system.
+### ami-all 
 ```
-amiProcessor <projectDirectory> [dictionary [dictionary]]
-    projectDirectory can be full name or relative to currentDir
+ami-all
+```
+lists all the `ami-*` commands:
+```
+$ ami-all
+contentMine          exist???
+cproject             runs "cproject [args]
+makeProject          runs - -makeProject (\\1)/fulltext.pdf - -fileFilter .*/(.*)\\.pdf"
+norma                norma [args]
+                            but also runs makeProject (FIX this)
+ami-all              lists AMI commands (ami-*)
+ami-dictionaries     edit/create AMI dictionaries
+ami-search-cooccur   run AMI searches and co-occurrence
+ami-pdf              convert PDF into SVG and extract images
+ami-xml              ???
+cmine                
+ami-frequencies      
+ami-gene             
+ami-identifier       
+ami-regex            
+ami-search           
+ami-sequence         
+ami-species          
+ami-word    
+```
+This list reflects the `pom.xml` file on your machine so is up-to-date for you.
+
+### ami-dictionaries
+
+`ami-dictionaries` displays the help screen and a list of directories on the system.
+```
+$ ami-dictionaries 
+Dictionary processor
+    dictionaries are normally added as arguments to search (e.g. ami-search-cooccur project [dictionary [dictionary ...]]
 
 list of dictionaries taken from AMI dictionary list:
+    animaltest          auxin               bioactivity         braincognition      brainparts          
+    cochrane            compchem            country             crispr              crystal             
+    dinogenera          disease             distributions       diterpene           drugs               
+    edge.amphibian      edge                edgebirds           elements            epidemic            
+    eurofunders         funders             geologicalage       illegaldrugs        indianresearch      
+    inn                 insecticide         instrumentManufacturinvasive            magnetism           
+    monoterpene         nal                 neurotransmitter    nmrspectroscopy     noncommunicable     
+    obesity             organization        p450                pectin              photosynth          
+    phytochemicals      plantDevelopment    plantparts          poverty             refugeeUNHCR        
+    sesquiterpene       socialmedia         solvents            statistics          synbio              
+    taylor_social       terpenesynthase     tf                  transgender         triterpene          
+    tropicalVirus       wetlands            wildlife            
 
-    auxin               cochrane            compchem            country             crystal             
-    disease             distributions       drugs               elements            epidemic            
-    funders             illegaldrugs        inn                 insecticide         invasive            
-    magnetism           nal                 obesity             organization        pectin              
-    phytochemicals-old  phytochemicals1     phytochemicals2     plantDevelopment    plantparts          
-    poverty             refugeeUNHCR        statistics          statistics2         synbio              
-    tropicalVirus       
-also:
-    gene     
-    species     
+also hardcoded functions (which resolve abbreviations):
 
+    gene    (relies on font/style) 
+    species (resolves abbreviations) 
+```
+(The dictionaries are being constantly updated)
+
+for indivdidual dictionaries and their content (first 20 lines) use 
+```ami-dictionaries FULL [dictionaryname]
+```
+```
+$ ami-dictionaries full plantparts
+
+Dictionary: plantparts
+entries: 50
+aerial parts
+balsam
+bark
+berries
+branch
+calyx
+capitula
+cone
+corolla
+dry leaf
+female flower
+floral bud
+flower
+fresh leaf
+fruit
+gall
+gum
+herb
+husk
+inflorescence
 ```
 
-`ami-all` takes the project name as first arg. `cd` to the directory **containing** the project top ("the CProject")
-```
-ami-all marchantia
-```
-and will give project statistics (RSN).
+## "make" functionality
+
+`AMI` has an evolving dependency system like `make`, so that if a resource has been created it should not be necessary to rerun the command creating it. Thus for a co-occurrence analysis the prequisites are:
+
+* form a `CProject` from raw files (PDF or other downloaded material) (`makeProject`)
+* convert to semantic form (e.g. HTML from PDF) (`ami-pdf`)
+* search (`ami-search`)
+* co-occurrence
+
+Since the intermediate result are held permanently on disk we only have to run those where files are missing or out-of-date.
+Thus:
+`ami-search-cooccur` makes `ami-search` which makes `ami-pdf` which makes `makeProject`
 
 
+## search
 ```
-ami-all marchantia plantparts
+ami-search-cooccur marchantia plantparts
 ```
 will run the AMI software on the `marchantia` project with the `plantparts` dictionary.
 
