@@ -18,6 +18,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.NAConstants;
 
@@ -42,16 +43,18 @@ public class AMIDictionary implements HasAMICLI {
 	public static final String SEARCH = "search";
 	private static final String XML = "xml";
 	private static final int DEFAULT_MAX_ENTRIES = 20;
+	private static final File DICTIONARY_TOP = NAConstants.DICTIONARY_DIR;
 
 	private List<File> files;
 	private List<Path> paths;
-	private File dictionaryDir;
+	private File dictionaryDir = DICTIONARY_TOP;
 	private int maxEntries = 0;
 	private AMICLI cli;
 	
 
 
 	public static void main(String[] args) {
+		LOG.debug("dictionaries under: "+DICTIONARY_TOP);
 		List<String> argList = new ArrayList<String>(Arrays.asList(args));
 		AMIDictionary amiDictionary = new AMIDictionary();
 		if (argList.size() == 0 || HELP.equals(argList.get(0).toUpperCase())) {
@@ -81,10 +84,12 @@ public class AMIDictionary implements HasAMICLI {
 	
 	/** this uses FILES */
 	public void listDictionaries(List<String> argList) {
-		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
+//		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
+		File dictionaryHead = getDictionaryHead();
 		files = listDictionaryFiles(dictionaryHead);
 		
 		if (argList.size() == 1 && argList.get(0).toUpperCase().equals(LIST)) {
+			DebugPrint.debugPrint("list all FILE dictionaries "+files.size());
 			for (File file : files) {
 				listDictionaryInfo(FilenameUtils.getBaseName(file.getName()));
 			}
@@ -114,6 +119,10 @@ public class AMIDictionary implements HasAMICLI {
 		}
 	}
 	
+	public File getDictionaryHead() {
+		return dictionaryDir;
+	}
+	
 	public void listDictionaryPaths(List<String> argList) {
 //		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
 		try {
@@ -139,7 +148,10 @@ public class AMIDictionary implements HasAMICLI {
 		System.err.println("Dictionary processor");
 		System.err.println("    dictionaries are normally added as arguments to search (e.g. ami-search-cooccur [dictionary [dictionary ...]]");
 		if (argList.size() == 0) {
-			DebugPrint.debugPrint("\nlist of dictionaries taken from AMI dictionary list:");
+			File parentFile = files == null || files.size() == 0 ? null : files.get(0).getParentFile();
+			DebugPrint.debugPrint("\nlist of dictionaries taken from AMI dictionary list (" + parentFile + "):\n");
+		} else {
+			DebugPrint.debugPrint("\nlist of dictionaries taken from : "+argList+"\n");
 		}
 		AMIDictionary dictionaries = new AMIDictionary();
 		files = dictionaries.getDictionaries();
@@ -158,15 +170,22 @@ public class AMIDictionary implements HasAMICLI {
 	*/
 
 	public List<File> getDictionaries() {
-//		LOG.debug("dictionaries from: "+dictionaryDir);
-		File[] fileArray = dictionaryDir.listFiles(new FilenameFilter() {
-			public boolean accept(File dir, String name) {
-				return name != null && name.endsWith(".xml");
-			}
-		});
-		files = fileArray == null ? new ArrayList<File>() : Arrays.asList(fileArray);
+		DebugPrint.debugPrint(" * dictionaries from: "+dictionaryDir);
+		File xmlDictionaryDir = getXMLDictionaryDir(dictionaryDir);
+		files = new CMineGlobber().setRegex(".*\\.xml").setLocation(xmlDictionaryDir).setRecurse(true).listFiles();
+//		File[] fileArray = xmlDictionaryDir.listFiles(new FilenameFilter() {
+//			public boolean accept(File dir, String name) {
+////				LOG.debug("d"+dir+"/"+name);
+//				return name != null && name.endsWith(".xml");
+//			}
+//		});
+//		files = fileArray == null ? new ArrayList<File>() : Arrays.asList(fileArray);
 		Collections.sort(files);
 		return files;
+	}
+
+	private File getXMLDictionaryDir(File dictionaryDir) {
+		return new File(dictionaryDir, "xml/");
 	}
 
 	/** uses directories */
@@ -280,6 +299,7 @@ public class AMIDictionary implements HasAMICLI {
 	}
 
 	public List<File> listDictionaryFiles(File dictionaryHead) {
+		DebugPrint.debugPrint("dictionaries from "+dictionaryHead);
 		List<File> newFiles = new ArrayList<File>();
 		File[] listFiles = dictionaryHead.listFiles();
 		if (listFiles == null) {

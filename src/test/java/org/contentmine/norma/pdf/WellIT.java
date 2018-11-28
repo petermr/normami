@@ -79,7 +79,7 @@ public class WellIT {
 		cTreeList = cProject.getOrCreateCTreeList();
 		for (CTree cTree : cTreeList) {
 			LOG.debug("******* "+cTree+" **********");
-		    cTree.extractSVGAndRawImages();
+		    cTree.extractSVGAndPDFImages();
 		}
 	}
 
@@ -91,7 +91,7 @@ public class WellIT {
 		CTreeList cTreeList = cProject.getOrCreateCTreeList();
 		for (CTree cTree : cTreeList) {
 			LOG.debug("******* "+cTree+" **********");
-		    cTree.extractSVGAndRawImages();
+		    cTree.extractSVGAndPDFImages();
 		}
 	}
 

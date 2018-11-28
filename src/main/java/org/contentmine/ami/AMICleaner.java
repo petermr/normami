@@ -26,7 +26,8 @@ public class AMICleaner {
 		FULLTEXT_HTML("fulltext.html", "remove fulltext.html (probably not recoverable without redownload)"),
 		FULLTEXT_PDF("fulltext.pdf", "remove fulltext.pdf (probably not recoverable without redownload)"),
 		FULLTEXT_XML("fulltext.xml", "remove fulltext.xml (probably not recoverable without redownload)"),
-		IMAGES("images/", "remove images/ directory and contents (created by parsing fulltext.pdf)"),
+		PDFIMAGES("pdfimages/", "remove pdfimages/ directory and contents (created by parsing fulltext.pdf)"),
+		RAWIMAGES("rawimages/", "remove rawimages/ directory and contents (probably directly downloaded)"),
 		SCHOLARLY_HTML("scholarly.html", "remove scholarly.html (created by parsing)"),
 		SVGDIR("svg/", "remove svg/ directory and contents (created by parsing fulltext.pdf)"),
 		;
@@ -73,14 +74,28 @@ public class AMICleaner {
 
 	public void clean(List<String> argList) {
 		for (String arg : argList) {
-			clean(arg);
+			cleanReserved(arg);
 		}
 	}
 
-	public void clean(String arg) {
+	public void cleanReserved(String arg) {
 		for (Cleaner cleaner : Cleaner.values()) {
 			if (cleaner.matches(arg)) {
 				cProject.clean(arg);
+				return;
+			}
+		}
+		DebugPrint.debugPrint("failed to delete: "+arg);
+	}
+
+	public void clean(String arg) {
+		cProject.clean(arg);
+	}
+
+	public void cleanRegex(String arg) {
+		for (Cleaner cleaner : Cleaner.values()) {
+			if (cleaner.matches(arg)) {
+				cProject.cleanRegex(arg);
 				return;
 			}
 		}

@@ -10,6 +10,7 @@ import java.util.List;
 
 import javax.imageio.ImageIO;
 
+import org.apache.commons.io.FileExistsException;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
@@ -19,7 +20,6 @@ import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
-import org.contentmine.image.ImageProcessor;
 import org.contentmine.image.ImageUtil;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
 
@@ -106,26 +106,27 @@ public class AMIImageProcessor {
 	}
 
 	public void runImages(CTree cTree) {
-		File imagesDir = cTree.getExistingPDFImagesDir();
-		if (imagesDir == null || !imagesDir.exists()) {
+		File pdfImagesDir = cTree.getExistingPDFImagesDir();
+		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
 			LOG.warn("no images dir");
 		} else {
 			duplicateSet = HashMultiset.create();
-			List<File> imageFiles = new CMineGlobber().setRegex(".*.png").setLocation(imagesDir).listFiles();
+			List<File> imageFiles = new CMineGlobber("**/*.png", pdfImagesDir).listFiles();
 			Collections.sort(imageFiles);
 			for (File imageFile : imageFiles) {
 				BufferedImage image = null;
 				try {
 					image = ImageIO.read(imageFile);
-					if (moveSmallImageTo(image, imageFile, new File(imagesDir, SMALL))) {
+					if (moveSmallImageTo(image, imageFile, new File(pdfImagesDir, SMALL))) {
 						
-					} else if (discardMonochrome && moveMonochromeImagesTo(image, imageFile, new File(imagesDir, MONOCHROME))) {
+					} else if (discardMonochrome && moveMonochromeImagesTo(image, imageFile, new File(pdfImagesDir, MONOCHROME))) {
 						
-					} else if (discardDuplicates && moveDuplicateImagesTo(image, imageFile, new File(imagesDir, DUPLICATES))) {
+					} else if (discardDuplicates && moveDuplicateImagesTo(image, imageFile, new File(pdfImagesDir, DUPLICATES))) {
 						
 					};
 				} catch(IOException e) {
-					LOG.debug("failed to read file " + imageFile);
+					e.printStackTrace();
+					LOG.debug("failed to read file " + imageFile + "; "+ e);
 				}
 			}
 		}
@@ -187,11 +188,22 @@ public class AMIImageProcessor {
 		boolean createDestDir = true;
 		String hash = ""+image.getWidth()+"-"+image.getHeight()+"-"+ImageUtil.createSimpleHash(image);
 		duplicateSet.add(hash);
+		boolean moved = false;
 		if (duplicateSet.count(hash) > 1) {
-			FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
-			return true;
+			if (srcImageFile != null && srcImageFile.exists() && !srcImageFile.isDirectory()) {
+				try {
+					File destFile = new File(destDir, srcImageFile.getName());
+					if (destFile != null && destFile.exists()) {
+						FileUtils.forceDelete(destFile);
+					}
+					FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
+					moved = true;
+				} catch (FileExistsException fee) {
+					throw new IOException("BUG: file should have been deleted"+srcImageFile, fee);
+				}
+			}
 		}
-		return false;
+		return moved;
 	}
 
 	public int getMinWidth() {

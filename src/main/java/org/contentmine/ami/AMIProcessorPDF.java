@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.DebugPrint;
 
 public class AMIProcessorPDF {
@@ -26,6 +27,10 @@ public class AMIProcessorPDF {
 			argList.remove(0);
 			runPDF(projectDir, argList);
 		}
+	}
+
+	public static void runPDF(CProject cProject) {
+		runPDF(cProject.getDirectory(), new ArrayList<String>());
 	}
 
 	private static void runPDF(File projectDir, List<String> facetList) {

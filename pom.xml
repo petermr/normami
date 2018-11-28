@@ -114,7 +114,7 @@
                             <id>ami-dictionaries</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.AMIImage</mainClass>
+                            <mainClass>org.contentmine.ami.AMIImageProcessor</mainClass>
 							<!-- description: process images )-->
                             <id>ami-image</id>
                         </program>

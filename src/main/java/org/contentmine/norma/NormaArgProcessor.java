@@ -513,7 +513,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 	}
 
 	void writeImages() {
-		File imageDir = currentCTree.getOrCreateExistingImageDir();
+		File imageDir = currentCTree.getExistingPDFImagesDir();
 		Set<String> imageSerialSet = new HashSet<String>();
 		StringBuilder sb = new StringBuilder();
 		for (NamedImage serialImage : normaTransformer.serialImageList) {

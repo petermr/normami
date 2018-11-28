@@ -18,8 +18,9 @@ public class NAConstants {
 
 	// === local ===
 	public final static File   HOME_DIR = new File(System.getProperty("user.home"));
-	public final static File   CONTENTMINE_DIR = new File(HOME_DIR, "ContentMine");
+	public final static File   CONTENTMINE_DIR = new File(HOME_DIR, "ContentMine/");
 	public final static File   WORKSPACE_DIR = new File(HOME_DIR, "workspace/");
+	public final static File   DICTIONARY_DIR = new File(CONTENTMINE_DIR, "dictionary/");
 	
 	public final static File   LIB_DIR = new File("/usr/local/");
 	public final static File   CONTENTMINE_LIB = new File(LIB_DIR, "contentmine");
@@ -72,7 +73,8 @@ public class NAConstants {
 	
 	public final static File PLUGINS_DIR   =      new File(NAConstants.MAIN_AMI_DIR, "plugins");
 //	public final static File DICTIONARY_DIR = new File(NAConstants.CONTENTMINE_DIR, "dictionary");
-	public final static File DICTIONARY_DIR = new File(NAConstants.PLUGINS_DIR, "dictionary");
+	// will be phased out
+	public final static File PLUGINS_DICTIONARY_DIR = new File(NAConstants.PLUGINS_DIR, "dictionary");
 //	public final static File PLUGINS_GENE       = NAConstants.PLUGINS_DIR+"/gene";
 //	public final static File PLUGINS_PLACES     = NAConstants.PLUGINS_DIR+"/places";
 //	public final static File PLUGINS_SPECIES    = NAConstants.PLUGINS_DIR+"/species";

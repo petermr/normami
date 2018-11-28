@@ -37,7 +37,7 @@ public class NewForestIT {
 		Assert.assertTrue(cProject+" cTreeList "+cTreeList.size(), cTreeList.size() > 90);
 		for (CTree cTree : cTreeList) {
 			System.err.print("["+cTree.getName()+">");
-		    cTree.extractSVGAndRawImages();
+		    cTree.extractSVGAndPDFImages();
 		}
 	}
 

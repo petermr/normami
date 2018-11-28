@@ -48,7 +48,7 @@ public class TutorialIT {
 				+ "species(binomial,genus) "
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
-				+ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/tropicalVirus.xml"
+				+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY_DIR+"/tropicalVirus.xml"
 				+ " word(search)w.search:"+NAConstants.PLUGINS_PLACES+"/wikiplaces.xml"
 				+ " sequence(dnaprimer) ");
 	}
@@ -84,7 +84,7 @@ public class TutorialIT {
 				+ "species(binomial,genus) "
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
-				+ " word(search)w.search:"+NAConstants.DICTIONARY_DIR+"/tropicalVirus.xml"
+				+ " word(search)w.search:"+NAConstants.PLUGINS_DICTIONARY_DIR+"/tropicalVirus.xml"
 				+ " word(search)w.search:"+NAConstants.PLUGINS_PLACES+"/wikiplaces.xml"
 				+ " sequence(dnaprimer) ");
 	}
