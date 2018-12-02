@@ -48,7 +48,6 @@ public class AMIProcessor {
 	private static final String DESCRIPTION = "description:";
 
 	private CProject cProject;
-	private boolean skipConvertPDFs;
 	private Level debugLevel;
 
 	private AMIProcessor() {
@@ -174,9 +173,7 @@ public class AMIProcessor {
 
 	public void convertPDFsToProject() {
 		makeProject();
-		if (!skipConvertPDFs) {
-			convertPDFOutputSVGFilesImageFiles();
-		}
+		convertPDFOutputSVGFilesImageFiles();
 		convertPSVGandWriteHtml();
 	}
 
@@ -187,10 +184,6 @@ public class AMIProcessor {
 			runSearches(facetList);
 			defaultAnalyzeCooccurrence(facetList);
 		}
-	}
-
-	public void setSkipConvertPDFs(boolean skip) {
-		this.skipConvertPDFs = skip;
 	}
 
 	public void setIncludeCTrees(String... treeNames) {

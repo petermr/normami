@@ -9,14 +9,17 @@ import java.nio.file.FileSystem;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.misc.PicocliTest;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.eucl.xml.XMLUtil;
@@ -25,13 +28,49 @@ import org.contentmine.norma.NAConstants;
 import com.google.common.collect.Lists;
 
 import nu.xom.Element;
+import picocli.CommandLine;
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Option;
+import picocli.CommandLine.Parameters;
 
 /** mainly to manage help and parse dictionaries.
  * 
  * @author pm286
  *
  */
-public class AMIDictionary implements HasAMICLI {
+
+/**
+@Command(description = "Prints the checksum (MD5 by default) of a file to STDOUT.",
+         name = "checksum", mixinStandardHelpOptions = true, version = "checksum 3.0")
+public class PicocliTest implements Callable<Void> {
+
+    @Parameters(index = "0", description = "The file whose checksum to calculate.")
+    private File file;
+
+    @Option(names = {"-a", "--algorithm"}, description = "MD5, SHA-1, SHA-256, ...")
+    private String algorithm = "SHA-1";
+
+    public static void main(String[] args) throws Exception {
+    	args = new String[]{"-a", "MD5", "README.md"}; 
+        CommandLine.call(new PicocliTest(), args);
+    	args = new String[]{}; 
+        CommandLine.call(new PicocliTest(), args);
+    }
+
+//    @Override
+    public Void call() throws Exception {
+    	System.out.println("called on "+file+" with "+algorithm);
+        byte[] fileContents = Files.readAllBytes(file.toPath());
+        byte[] digest = MessageDigest.getInstance(algorithm).digest(fileContents);
+        System.out.println(javax.xml.bind.DatatypeConverter.printHexBinary(digest));
+        return null;
+    }
+ */
+
+@Command(description = "Manages AMI dictionaries",
+name = "ami-dictionary", mixinStandardHelpOptions = true, version = "ami 0.1")
+
+public class AMIDictionary implements HasAMICLI, Callable<Void> {
 	private static final Logger LOG = Logger.getLogger(AMIDictionary.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -51,20 +90,24 @@ public class AMIDictionary implements HasAMICLI {
 	private int maxEntries = 0;
 	private AMICLI cli;
 	
+    @Parameters(index = "0", description = "The file whose checksum to calculate.")
+    private File dictionaryTop;
 
+    @Option(names = {"-d", "--dictionanries"}, description = "list of dictionaries")
+    private String dictionaries = "dicts";
 
 	public static void main(String[] args) {
 		LOG.debug("dictionaries under: "+DICTIONARY_TOP);
-		List<String> argList = new ArrayList<String>(Arrays.asList(args));
-		AMIDictionary amiDictionary = new AMIDictionary();
-		if (argList.size() == 0 || HELP.equals(argList.get(0).toUpperCase())) {
-			amiDictionary.runHelp(argList);
-		} else if (argList.size() == 1 && LIST.equals(argList.get(0).toUpperCase())) {
-			amiDictionary.listDictionaries(argList);
-		} else {
-			amiDictionary.listDictionaries(argList);
-		}
+        CommandLine.call(new AMIDictionary(), args);
 	}
+
+    public Void call() throws Exception {
+    	System.out.println("called on "+dictionaryTop+" with "+dictionaries);
+//        byte[] fileContents = Files.readAllBytes(file.toPath());
+//        byte[] digest = MessageDigest.getInstance(algorithm).digest(fileContents);
+//        System.out.println(javax.xml.bind.DatatypeConverter.printHexBinary(digest));
+        return null;
+    }
 
 	public void runHelp(List<String> argList) {
 		if (argList.size() > 0) argList.remove(0);

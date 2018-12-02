@@ -2,6 +2,7 @@ package org.contentmine.ami;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,7 +21,12 @@ import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
+import org.contentmine.graphics.svg.SVGSVG;
+import org.contentmine.graphics.svg.util.ImageIOUtil;
 import org.contentmine.image.ImageUtil;
+import org.contentmine.image.diagram.DiagramAnalyzer;
+import org.contentmine.image.pixel.PixelIsland;
+import org.contentmine.image.pixel.PixelIslandList;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
 
 import com.google.common.collect.HashMultiset;
@@ -46,6 +52,8 @@ public class AMIImageProcessor {
 	private boolean extractPixelRings;
 	private File cProjectOutputDir;
 	private File cTreeOutputDir;
+	private int maxPixelIslandCount = 6;
+	private int maxPixelIslandSize = 100000;
 	
 
 	public static void main(String[] args) {
@@ -117,12 +125,13 @@ public class AMIImageProcessor {
 				BufferedImage image = null;
 				try {
 					image = ImageIO.read(imageFile);
-					if (moveSmallImageTo(image, imageFile, new File(pdfImagesDir, SMALL))) {
-						
+					if (false) {
+					} else if (moveSmallImageTo(image, imageFile, new File(pdfImagesDir, SMALL))) {
+//						LOG.debug("small");
 					} else if (discardMonochrome && moveMonochromeImagesTo(image, imageFile, new File(pdfImagesDir, MONOCHROME))) {
-						
+//						LOG.debug("monochrome");
 					} else if (discardDuplicates && moveDuplicateImagesTo(image, imageFile, new File(pdfImagesDir, DUPLICATES))) {
-						
+//						LOG.debug("duplicates");
 					};
 				} catch(IOException e) {
 					e.printStackTrace();
@@ -150,12 +159,20 @@ public class AMIImageProcessor {
 		if (cProject != null) {
 			CTreeList cTreeList = cProject.getOrCreateCTreeList();
 			for (CTree cTree : cTreeList) {
-				LOG.debug("tree "+cTree);
+				LOG.debug("tree: "+cTree.getName());
 				runImages(cTree);
 			}
 		} else {
 			LOG.warn(" no CProject");
 		}
+	}
+
+	/** runs over cProject
+	 * 
+	 */
+	public void runImages(CProject cProject) {
+		this.setCProject(cProject);
+		runImages();
 	}
 
 
@@ -167,8 +184,14 @@ public class AMIImageProcessor {
 
 	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, File destDir) throws IOException {
 		boolean createDestDir = true;
-		if (image.getWidth() < minWidth || image.getHeight() < minHeight) {
-			FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
+		int width = image.getWidth();
+		int height = image.getHeight();
+		if (width < minWidth || height < minHeight) {
+			try {
+				FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
+			} catch (FileExistsException fee) {
+				LOG.warn("file exists, BUG?"+srcImageFile);
+			}
 			return true;
 		}
 		return false;
@@ -196,7 +219,11 @@ public class AMIImageProcessor {
 					if (destFile != null && destFile.exists()) {
 						FileUtils.forceDelete(destFile);
 					}
-					FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
+					try {
+						FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
+					} catch (FileNotFoundException fnfe) {
+						LOG.warn("BUG? (FileNotFound) for "+srcImageFile);
+					}
 					moved = true;
 				} catch (FileExistsException fee) {
 					throw new IOException("BUG: file should have been deleted"+srcImageFile, fee);
@@ -273,6 +300,64 @@ public class AMIImageProcessor {
 
 	public File getCTreeOutputDir() {
 		return cTreeOutputDir;
+	}
+
+	public int getMaxPixelIslandCount() {
+		return maxPixelIslandCount ;
+	}
+
+	public AMIImageProcessor setMaxPixelIslandCount(int maxPixelIslandCount) {
+		this.maxPixelIslandCount = maxPixelIslandCount;
+		return this;
+	}
+
+	public int getMaxPixelIslandSize() {
+		return maxPixelIslandSize ;
+	}
+
+	public AMIImageProcessor setMaxPixelIslandSize(int maxPixelIslandSize) {
+		this.maxPixelIslandSize = maxPixelIslandSize;
+		return this;
+	}
+
+	public void writeImageFilesForTree(File derivedImagesDir, List<File> imageFiles) {
+	
+		int maxPixelIslandCount = getMaxPixelIslandCount();
+		int maxPixelIslandSize = getMaxPixelIslandSize();
+		
+	
+		for (File imageFile : imageFiles) {
+			String imageRoot = FilenameUtils.getBaseName(imageFile.toString());
+			AMIImageProcessorTest.LOG.debug("root "+imageRoot);
+			File derivedImageDir = new File(derivedImagesDir, imageRoot+"/");
+			
+			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
+			diagramAnalyzer.setThinning(null);
+			diagramAnalyzer.readAndProcessInputFile(imageFile);
+			BufferedImage bufferedImage = diagramAnalyzer.getImageProcessor().getBinarizedImage();
+			ImageIOUtil.writeImageQuietly(bufferedImage, new File(derivedImageDir, "binarized.png"));
+			PixelIslandList pixelIslandList = diagramAnalyzer.getOrCreateSortedPixelIslandList();
+			for (int i = 0; i < Math.min(maxPixelIslandCount, pixelIslandList.size()); i++) {
+				PixelIsland pixelIsland = pixelIslandList.get(i);
+				if (pixelIsland.size() > maxPixelIslandSize) {
+					AMIImageProcessorTest.LOG.debug("Skipped island: "+i+" ("+pixelIsland.size()+")");
+					continue;
+				}
+				File pixelRingFile = new File(derivedImageDir, "pixelIsland"+i+"."+CTree.SVG);
+				AMIImageProcessorTest.LOG.debug("wrote "+pixelRingFile);
+				SVGSVG.wrapAndWriteAsSVG(pixelIsland.getOrCreateSVGG(), pixelRingFile);
+			}
+			AMIImageProcessorTest.LOG.debug("end of pixels");
+		}
+	}
+
+	public void writeImageFilesForProject(CProject cProject) {
+		for (CTree cTree : cProject.getOrCreateCTreeList()) {
+			File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
+			List<File> imageFiles = CMineGlobber.listSortedChildFiles(cTree.getExistingPDFImagesDir(), CTree.PNG);
+			Collections.reverse(imageFiles);
+			writeImageFilesForTree(derivedImagesDir, imageFiles);
+		}
 	}
 
 

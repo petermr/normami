@@ -2,9 +2,9 @@ package org.contentmine.ami;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -13,10 +13,12 @@ import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.cproject.util.CMineTestFixtures;
-import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.svg.SVGG;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.graphics.svg.util.ImageIOUtil;
+import org.contentmine.image.ImageProcessor;
 import org.contentmine.image.diagram.DiagramAnalyzer;
+import org.contentmine.image.pixel.PixelIslandList;
 import org.contentmine.image.pixel.PixelRing;
 import org.contentmine.image.pixel.PixelRingList;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
@@ -33,11 +35,13 @@ public class AMIImageProcessorTest {
 	private static final String TARGET_HOCR = "target/hocr";
 	public static final File FORESTPLOT_DIR = new File(UCLFOREST_DIR, "forestplots/");
 	public static final File FORESTPLOT_CONVERTED_DIR = new File(UCLFOREST_DIR, "forestplotsConverted/");
+	public static final File FORESTPLOT_IMAGES_DIR = new File(UCLFOREST_DIR, "forestplotsImages/");
 	private static final String TARGET_UCLFOREST = "target/uclforest/";
 	public static final Logger  LOG = Logger.getLogger(AMIImageProcessorTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+
 	
 	@Test
 	/** reads images in UCL corpus and excludes small/narroe
@@ -46,14 +50,13 @@ public class AMIImageProcessorTest {
 	public void testMinWidthHeight() {
 		File targetDir = new File(TARGET_UCLFOREST);
 		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_CONVERTED_DIR, targetDir);
-		// need to implement make
 		CProject cProject = new CProject(targetDir);
 		AMIProcessorPDF.runPDF(cProject);
+		// restrict to single tree
 		CTree cTree = cProject.getCTreeByName("case");
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
 		Assert.assertTrue(pdfImagesDir.exists());
 		File smallDir = new File(pdfImagesDir, AMIImageProcessor.SMALL);
-//		LOG.debug("small "+smallDir);
 		Assert.assertFalse(smallDir.exists());
 		File monochromeDir = new File(pdfImagesDir, AMIImageProcessor.MONOCHROME);
 		Assert.assertFalse(monochromeDir.exists());
@@ -62,7 +65,11 @@ public class AMIImageProcessorTest {
 		amiImageProcessor.runImages(cTree);
 		Assert.assertTrue(""+smallDir + "should exists", smallDir.exists());
 		Assert.assertEquals(59,  smallDir.listFiles().length);
-		amiImageProcessor.runImages();
+		// run on whole lot
+		LOG.debug("all");
+		amiImageProcessor = new AMIImageProcessor()
+				.setMinHeight(100).setMinWidth(100).setDiscardDuplicates(true).setDiscardMonochrome(true);
+		amiImageProcessor.runImages(cProject);
 	}
 
 	@Test
@@ -153,39 +160,102 @@ public class AMIImageProcessorTest {
 	
 	@Test
 	public void testExtractSingleImagePixelRings() {
-		/** recreates clean target*/
 		
-		/** in production mode
-		File targetDir = new File(TARGET_UCLFOREST);
-		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
-		String[] args = {targetDir.toString()};
-		AMIProcessorPDF.main(args);
-//		args = new String[] {targetDir.toString(), "help"};
-		CProject cProject = new CProject(targetDir);
-		CTree cTree = cProject.getCTreeByName("campbell");
-		File imagesDir = cTree.getExistingPDFImagesDir();
-		Assert.assertTrue(imagesDir.exists());
-		File imageFile = new File(imagesDir, "page.41.2.png");
-		*/
-		CTree cTree = new CTree(new File(FORESTPLOT_DIR, "campbell"));
-		File imageFile = new File(cTree.getExistingPDFImagesDir(), "page.41.2.png");
+		CTree cTree = new CTree(new File(FORESTPLOT_IMAGES_DIR, "campbell"));
+		File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
+		String pngFilename = "page.41.2.png";
+		File imageFile = new File(cTree.getExistingPDFImagesDir(), pngFilename);
 		Assert.assertTrue("exists "+imageFile, imageFile.exists());
 		
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		diagramAnalyzer.setThinning(null);
 		diagramAnalyzer.readAndProcessInputFile(imageFile);
+		
+		String imageRoot = FilenameUtils.getBaseName(pngFilename);
+		File ringDir = new File(derivedImagesDir, imageRoot+"/");
+
 		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
 		Assert.assertEquals("pixelRings", 6, pixelRingList.size());
-		int pixelRingID = 1;
-		PixelRing pixelRing1 = pixelRingList.get(pixelRingID);
-		SVGSVG.wrapAndWriteAsSVG(pixelRing1.getOrCreateSVG(), 
-				new File(cTree.getOrCreateDerivedImagesDir(), "ring." + pixelRingID + "." + CTree.SVG));
 		for (int i = 0; i < pixelRingList.size(); i++) {
 			SVGSVG.wrapAndWriteAsSVG(pixelRingList.get(i).getOrCreateSVG(), 
-					new File(cTree.getOrCreateDerivedImagesDir(), "ring." + i + "." + CTree.SVG));
+					new File(ringDir, "ring." + i + "." + CTree.SVG));
 			
 		}
 		
+	}
+
+	@Test
+	public void testExtractMultipleImagePixelRings() {
+		
+		CTree cTree = new CTree(new File(FORESTPLOT_IMAGES_DIR, "campbell"));
+		File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
+		List<File> imageFiles = CMineGlobber.listSortedChildFiles(cTree.getExistingPDFImagesDir(), CTree.PNG);
+		Collections.reverse(imageFiles);
+		for (File imageFile : imageFiles) {
+			String imageRoot = FilenameUtils.getBaseName(imageFile.toString());
+			LOG.debug("root "+imageRoot);
+			File derivedImageDir = new File(derivedImagesDir, imageRoot+"/");
+			
+			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
+			diagramAnalyzer.setThinning(null);
+			diagramAnalyzer.readAndProcessInputFile(imageFile);
+			BufferedImage bufferedImage = diagramAnalyzer.getImageProcessor().getBinarizedImage();
+			ImageIOUtil.writeImageQuietly(bufferedImage, new File(derivedImageDir, "binarized.png"));
+			
+	
+			PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
+//			Assert.assertEquals("pixelRings", 6, pixelRingList.size());
+			for (int i = 0; i < Math.min(6,  pixelRingList.size()); i++) {
+				SVGSVG.wrapAndWriteAsSVG(pixelRingList.get(i).getOrCreateSVG(), 
+						new File(derivedImageDir, "ring." + i + "." + CTree.SVG));
+			}
+			LOG.debug("end of pixels");
+		}
+		
+	}
+
+	@Test
+	public void testExtractMultiplePixelIslands() {
+		
+		CTree cTree = new CTree(new File(FORESTPLOT_IMAGES_DIR, "campbell"));
+		File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
+		List<File> imageFiles = CMineGlobber.listSortedChildFiles(cTree.getExistingPDFImagesDir(), CTree.PNG);
+		Collections.reverse(imageFiles);
+		AMIImageProcessor amiImageProcessor = new AMIImageProcessor().setMaxPixelIslandSize(250000);
+		amiImageProcessor.writeImageFilesForTree(derivedImagesDir, imageFiles);
+	}
+
+	@Test
+	public void testAllPixelIslands() {
+		CProject cProject = new CProject(FORESTPLOT_IMAGES_DIR);
+		AMIImageProcessor amiImageProcessor = new AMIImageProcessor().setMaxPixelIslandSize(50000);
+		amiImageProcessor.writeImageFilesForProject(cProject);
+	}
+
+	@Test
+	public void testPixelIslandListAndRings() {
+		CTree cTree = new CTree(new File(FORESTPLOT_IMAGES_DIR, "campbell"));
+		File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
+		File pngDir = new File(derivedImagesDir, "page.41.2");
+		File pngFile = new File(pngDir, "binarized.png");
+		Assert.assertTrue(pngFile.exists());
+		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
+		diagramAnalyzer.setThinning(null);
+		diagramAnalyzer.readAndProcessInputFile(pngFile);
+		ImageProcessor imageProcessor = diagramAnalyzer.getImageProcessor();
+		PixelIslandList pixelIslandList = imageProcessor.getOrCreatePixelIslandList();
+		Assert.assertEquals("pil", 29, pixelIslandList.size());
+		SVGSVG.wrapAndWriteAsSVG(pixelIslandList.getOrCreateSVGG(), 
+				new File(pngDir, "pixelIslands"+"." + CTree.SVG));
+		
+		List<PixelRing> pixelRingList = pixelIslandList.getOrCreatePixelRings();
+		SVGG g = new SVGG();
+		for (PixelRing pixelRing : pixelRingList) {
+			g.appendChild(pixelRing.getOrCreateSVG());
+		}
+		SVGSVG.wrapAndWriteAsSVG(g, new File(pngDir, "outerRings"+"." + CTree.SVG));
+		
+		Assert.assertEquals(29, pixelRingList.size());
 	}
 
 	@Test
