@@ -30,14 +30,14 @@ import org.junit.Test;
  * @author pm286
  *
  */
-public class AMIImageProcessorTest {
+public class AMIImageProcessorIT {
 	private static final File UCLFOREST_DIR = new File("/Users/pm286/workspace/uclforest/");
 	private static final String TARGET_HOCR = "target/hocr";
 	public static final File FORESTPLOT_DIR = new File(UCLFOREST_DIR, "forestplots/");
 	public static final File FORESTPLOT_CONVERTED_DIR = new File(UCLFOREST_DIR, "forestplotsConverted/");
 	public static final File FORESTPLOT_IMAGES_DIR = new File(UCLFOREST_DIR, "forestplotsImages/");
 	private static final String TARGET_UCLFOREST = "target/uclforest/";
-	public static final Logger  LOG = Logger.getLogger(AMIImageProcessorTest.class);
+	public static final Logger  LOG = Logger.getLogger(AMIImageProcessorIT.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}

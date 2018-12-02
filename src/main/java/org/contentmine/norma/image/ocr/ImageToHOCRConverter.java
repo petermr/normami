@@ -2,16 +2,10 @@ package org.contentmine.norma.image.ocr;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.AMIImageProcessorTest;
-import org.contentmine.cproject.args.DefaultArgProcessor;
-import org.contentmine.cproject.files.CTree;
-import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.cproject.util.CMineUtil;
 
 public class ImageToHOCRConverter {

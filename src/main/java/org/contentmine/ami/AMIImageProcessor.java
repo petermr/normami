@@ -328,7 +328,7 @@ public class AMIImageProcessor {
 	
 		for (File imageFile : imageFiles) {
 			String imageRoot = FilenameUtils.getBaseName(imageFile.toString());
-			AMIImageProcessorTest.LOG.debug("root "+imageRoot);
+			AMIImageProcessorIT.LOG.debug("root "+imageRoot);
 			File derivedImageDir = new File(derivedImagesDir, imageRoot+"/");
 			
 			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
@@ -340,14 +340,14 @@ public class AMIImageProcessor {
 			for (int i = 0; i < Math.min(maxPixelIslandCount, pixelIslandList.size()); i++) {
 				PixelIsland pixelIsland = pixelIslandList.get(i);
 				if (pixelIsland.size() > maxPixelIslandSize) {
-					AMIImageProcessorTest.LOG.debug("Skipped island: "+i+" ("+pixelIsland.size()+")");
+					AMIImageProcessorIT.LOG.debug("Skipped island: "+i+" ("+pixelIsland.size()+")");
 					continue;
 				}
 				File pixelRingFile = new File(derivedImageDir, "pixelIsland"+i+"."+CTree.SVG);
-				AMIImageProcessorTest.LOG.debug("wrote "+pixelRingFile);
+				AMIImageProcessorIT.LOG.debug("wrote "+pixelRingFile);
 				SVGSVG.wrapAndWriteAsSVG(pixelIsland.getOrCreateSVGG(), pixelRingFile);
 			}
-			AMIImageProcessorTest.LOG.debug("end of pixels");
+			AMIImageProcessorIT.LOG.debug("end of pixels");
 		}
 	}
 
