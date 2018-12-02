@@ -481,7 +481,7 @@ public class SectionTest {
 	
 	
 	@Test
-//	@Ignore // uses PMR files
+	@Ignore // uses PMR files // fails on citations
 	public void testCreateManyIDs() throws IOException {
 		JATSSectionTagger tagger = new JATSSectionTagger();
 		File root;
