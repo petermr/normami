@@ -3,10 +3,12 @@ package org.contentmine.ami.misc;
 import java.io.File;
 import java.nio.file.Files;
 import java.security.MessageDigest;
+import java.util.ArrayList;
 import java.util.concurrent.Callable;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
+import picocli.CommandLine.Help;
 //import picocli.CommandLine.NoCompletionCandidates;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
@@ -17,29 +19,158 @@ import picocli.CommandLine.Parameters;
  *
  */
 
-@Command(description = "Prints the checksum (MD5 by default) of a file to STDOUT.",
-         name = "checksum", mixinStandardHelpOptions = true, version = "checksum 3.0")
-public class PicocliTest implements Callable<Void> {
+@Command(
+				//String name() default "<main class>";
+		name = "calculator", 
+				//String[] aliases() default {};
+		aliases = "sums",
+				//Class<?>[] subcommands() default {};
+//		subcommands = Double.class,
+				//boolean addMethodSubcommands() default true;
+		addMethodSubcommands = false,
+				//String separator() default "=";
+		separator = "=",
+				//String[] version() default {};
+		version = "calc 0.111",
+				//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
+//		versionProvider = Class<? extends IVersionProvider>.class,
+				//boolean mixinStandardHelpOptions() default false;
+		mixinStandardHelpOptions = true,
+				//boolean helpCommand() default false;
+		helpCommand = true,
+				//String headerHeading() default "";
+		headerHeading = "Header\n======\n",
+				//String[] header() default {};
+		header = "I am a header\n",
+				//String synopsisHeading() default "Usage: ";
+		synopsisHeading = "Synopis\n=======\n",
+				//boolean abbreviateSynopsis() default false;
+		abbreviateSynopsis = true,
+				//String[] customSynopsis() default {};
+		customSynopsis = "@|bg(red) text with red background.I am a synopsis|@.\n",
+				//String descriptionHeading() default "";
+		descriptionHeading = "Description\n===========\n",
+				//String[] description() default {};
+		description = "Custom @|bold,underline styles|@ and @|fg(red) colors|@. Calculates powers and writes to STDOUT.\n",
+				//String parameterListHeading() default "";
+		parameterListHeading  = "Parameters\n=========\n",
+				//String optionListHeading() default "";
+		optionListHeading  = "Options\n=======\n",
+				//boolean sortOptions() default true;
+		sortOptions = true,
+				//char requiredOptionMarker() default ' ';
+		requiredOptionMarker = 'X',
+				//Class<? extends IDefaultValueProvider> defaultValueProvider() default NoDefaultProvider.class;
+//		defaultValueProvider = new Class<? extends IDefaultValueProvider>(),
+				//boolean showDefaultValues() default false;
+		showDefaultValues = true,
+				//String commandListHeading() default "Commands:%n";
+		commandListHeading = "Commandzz:%n",
+				//String footerHeading() default "";
+		footerHeading = "Footer\n======\n",
+				//String[] footer() default {};
+		footer = "I am a footer",
+				//boolean hidden() default false;
+		hidden = false,
+				//String resourceBundle() default "";
+//		resourceBundle = "theResourceBundle",
+				//int usageHelpWidth() default 80;
+		usageHelpWidth = 60
+		)
 
-    @Parameters(index = "0", description = "The file whose checksum to calculate.")
-    private File file;
 
-    @Option(names = {"-a", "--algorithm"}, description = "MD5, SHA-1, SHA-256, ...")
-    private String algorithm = "SHA-1";
+public class PicocliTest2 implements Callable<Void> {
 
+//    @Parameters(index = "0", description = "The file whose checksum to calculate.")
+//    private File file;
+
+//  String index() default ""; // Parameters only
+//  String[] description() default {};
+//  String arity() default "";
+//  String paramLabel() default "";
+//  boolean hideParamSyntax() default false;
+//  Class<?>[] type() default {};
+//  Class<? extends ITypeConverter<?>>[] converter() default {};
+//  String split() default "";
+//  boolean hidden() default false;
+//  String defaultValue() default "__no_default_value__";
+//  Help.Visibility showDefaultValue() default Help.Visibility.ON_DEMAND;
+//  Class<? extends Iterable<String>> completionCandidates() default NoCompletionCandidates.class;
+//  boolean interactive() default false; // only arity 1
+//  String descriptionKey() default "";
+    @Parameters(index = "0", 
+    		description = "An integer",
+    		arity="1",
+    		paramLabel="arg for algorithm",
+    		hideParamSyntax=false,
+    		type=Integer.class,
+//    		converter=MyConverter.class, // doesn't yet exist
+    		split="#",
+    		hidden=false,
+    		defaultValue="-99",
+    		showDefaultValue=Help.Visibility.ALWAYS,
+//    		completionCandidates=NoCompletionCandidates.class,
+    		interactive=true,
+    		descriptionKey="bar"
+    		
+    		)
+    private Integer intArg;
+
+    
+    @Option(names = {"-a", "--algorithm"}, description = "square, cube")
+    private String algorithm = "square";
+
+
+	private int result;
+	private String[] args;
+
+    public PicocliTest2(String[] args) {
+    	this.args = args;
+	}
+
+//  boolean required() default false;    // Option only
+//  boolean usageHelp() default false;   //  Option only
+//  boolean versionHelp() default false; //  Option only
+//  String[] description() default {};
+//  String arity() default "";
+//  String paramLabel() default "";
+//  boolean hideParamSyntax() default false;
+//  Class<?>[] type() default {};
+//  Class<? extends ITypeConverter<?>>[] converter() default {};
+//  String split() default "";
+//  boolean hidden() default false;
+//  String defaultValue() default "__no_default_value__";
+//  Help.Visibility showDefaultValue() default Help.Visibility.ON_DEMAND;
+//  Class<? extends Iterable<String>> completionCandidates() default NoCompletionCandidates.class;
+//  boolean interactive() default false;
+//  String descriptionKey() default "";
+
+
+    
     public static void main(String[] args) throws Exception {
-    	args = new String[]{"-a", "MD5", "README.md"}; 
-        CommandLine.call(new PicocliTest(), args);
-    	args = new String[]{}; 
-        CommandLine.call(new PicocliTest(), args);
+    	int count = 3;
+    	while (count-- > 0) {
+        	PicocliTest2 test2 = new PicocliTest2(args);
+        	test2.runAlgorithm();
+    	}
     }
 
-    @Override
+    private void runAlgorithm() {
+        CommandLine.call(this, args);
+    }
+
+//    @Override
     public Void call() throws Exception {
-    	System.out.println("called on "+file+" with "+algorithm);
-        byte[] fileContents = Files.readAllBytes(file.toPath());
-        byte[] digest = MessageDigest.getInstance(algorithm).digest(fileContents);
-        System.out.println(javax.xml.bind.DatatypeConverter.printHexBinary(digest));
+    	System.out.println("called on " + intArg + " with "+algorithm);
+        result = Integer.MIN_VALUE;
+        if ("square".equals(algorithm)) {
+        	result = intArg * intArg;
+        } else if ("cube".equals(algorithm)) {
+        	result = intArg * intArg * intArg;
+        } else {
+        	throw new RuntimeException("bad algorithm");
+        }
+        System.err.println(algorithm + "("+intArg+") = " + result);
         return null;
     }
     

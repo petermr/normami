@@ -22,7 +22,7 @@ public class AMIProcessorPDFTest {
 	/** reads UCL corpus as PDFs and creates first pass SVG , images and scholarly html
 	 * 
 	 */
-	public void testForestPlots() {
+	public void testForestPlots() throws Exception {
 		String[] args = {"/Users/pm286/workspace/uclforest/forestplots"};
 		Assert.assertTrue(new File(args[0]).exists());
 		AMIProcessorPDF.main(args);

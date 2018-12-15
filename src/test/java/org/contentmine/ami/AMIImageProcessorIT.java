@@ -22,6 +22,7 @@ import org.contentmine.image.pixel.PixelIslandList;
 import org.contentmine.image.pixel.PixelRing;
 import org.contentmine.image.pixel.PixelRingList;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
+import org.contentmine.norma.picocli.AbstractAMIProcessor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -60,14 +61,14 @@ public class AMIImageProcessorIT {
 		Assert.assertFalse(smallDir.exists());
 		File monochromeDir = new File(pdfImagesDir, AMIImageProcessor.MONOCHROME);
 		Assert.assertFalse(monochromeDir.exists());
-		AMIImageProcessor amiImageProcessor = new AMIImageProcessor()
+		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree)
 				.setMinHeight(100).setMinWidth(100).setDiscardDuplicates(true).setDiscardMonochrome(true);
 		amiImageProcessor.runImages(cTree);
 		Assert.assertTrue(""+smallDir + "should exists", smallDir.exists());
 		Assert.assertEquals(59,  smallDir.listFiles().length);
 		// run on whole lot
 		LOG.debug("all");
-		amiImageProcessor = new AMIImageProcessor()
+		amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree)
 				.setMinHeight(100).setMinWidth(100).setDiscardDuplicates(true).setDiscardMonochrome(true);
 		amiImageProcessor.runImages(cProject);
 	}
@@ -76,7 +77,7 @@ public class AMIImageProcessorIT {
 	/** reads images in UCL corpus and excludes monochrome images
 	 * 
 	 */
-	public void testMonochrome() {
+	public void testMonochrome() throws Exception {
 		File targetDir = new File(TARGET_UCLFOREST);
 		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
 		// need to implement make
@@ -90,7 +91,7 @@ public class AMIImageProcessorIT {
 		Assert.assertFalse(smallDir.exists());
 		File monochromeDir = new File(imagesDir, AMIImageProcessor.MONOCHROME);
 		Assert.assertFalse(monochromeDir.exists());
-		AMIImageProcessor amiImageProcessor = new AMIImageProcessor().setMinHeight(0).setMinWidth(0).setDiscardMonochrome(true);
+		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree).setMinHeight(0).setMinWidth(0).setDiscardMonochrome(true);
 		amiImageProcessor.runImages(cTree);
 		Assert.assertFalse(smallDir.exists());
 		Assert.assertTrue(monochromeDir.exists());
@@ -101,7 +102,7 @@ public class AMIImageProcessorIT {
 	/** reads images in UCL corpus and outputs summary
 	 * 
 	 */
-	public void testAll() {
+	public void testAll() throws Exception {
 		File targetDir = new File(TARGET_UCLFOREST);
 		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
 		String[] args = {targetDir.toString()};
@@ -115,7 +116,7 @@ public class AMIImageProcessorIT {
 	/** reads images in UCL corpus and discards duplicate images
 	 * 
 	 */
-	public void testSingleDuplicate() {
+	public void testSingleDuplicate() throws Exception {
 		File targetDir = new File(TARGET_UCLFOREST);
 		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
 		String[] args = {targetDir.toString()};
@@ -131,7 +132,7 @@ public class AMIImageProcessorIT {
 		LOG.debug("duplicates " + duplicatesDir);
 //		Assert.assertFalse(duplicatesDir.exists());
 
-		AMIImageProcessor amiImageProcessor = new AMIImageProcessor().setMinHeight(0).setMinWidth(0).setDiscardDuplicates(true);
+		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree).setMinHeight(0).setMinWidth(0).setDiscardDuplicates(true);
 		amiImageProcessor.runImages(cTree);
 		Assert.assertFalse(smallDir.exists());
 		Assert.assertTrue(duplicatesDir.exists());
@@ -144,7 +145,7 @@ public class AMIImageProcessorIT {
 	/** reads images in UCL corpus and discards duplicate images
 	 * 
 	 */
-	public void testAllDuplicate() {
+	public void testAllDuplicate() throws Exception {
 		File targetDir = new File(TARGET_UCLFOREST);
 		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
 		String[] args = {targetDir.toString()};
@@ -221,14 +222,14 @@ public class AMIImageProcessorIT {
 		File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
 		List<File> imageFiles = CMineGlobber.listSortedChildFiles(cTree.getExistingPDFImagesDir(), CTree.PNG);
 		Collections.reverse(imageFiles);
-		AMIImageProcessor amiImageProcessor = new AMIImageProcessor().setMaxPixelIslandSize(250000);
+		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree).setMaxPixelIslandSize(250000);
 		amiImageProcessor.writeImageFilesForTree(derivedImagesDir, imageFiles);
 	}
 
 	@Test
 	public void testAllPixelIslands() {
 		CProject cProject = new CProject(FORESTPLOT_IMAGES_DIR);
-		AMIImageProcessor amiImageProcessor = new AMIImageProcessor().setMaxPixelIslandSize(50000);
+		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cProject).setMaxPixelIslandSize(50000);
 		amiImageProcessor.writeImageFilesForProject(cProject);
 	}
 
@@ -370,7 +371,7 @@ public class AMIImageProcessorIT {
 		/** Tesseract adds the suffix ".hocr" automatically */
 		File outputBase = new File(outputDir, base);
 		Assert.assertTrue(imageFile+" should exist", imageFile.exists());
-		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree);
+		AbstractAMIProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree);
 		amiImageProcessor.setCTreeOutputDir(outputDir);
 		ImageToHOCRConverter imageToHOCRConverter = new ImageToHOCRConverter();
 		File hocrHtmlFile = imageToHOCRConverter.writeHOCRFile(imageFile, outputBase);

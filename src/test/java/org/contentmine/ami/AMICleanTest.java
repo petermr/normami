@@ -53,25 +53,6 @@ public class AMICleanTest {
 	 */
 	public void testCleanUCLForest() throws IOException {
 		
-//		File destDir = new File(AMIFixtures.TARGET_DIR, "uclforest/");
-//		FileUtils.copyDirectory(AMIImageProcessorTest.FOREST_PLOT_DIR, destDir);
-//		CProject cProject = new CProject(destDir);
-//		CTree cTree = cProject.getCTreeByName("buzick");
-////		CMineGlobber globber = new CMineGlobber().setGlob("glob:**/svgold").setLocation(cTree.getDirectory());
-////		CMineGlobber globber = new CMineGlobber().setGlob("glob:**/svgold/").setLocation(cTree.getDirectory());
-//		CMineGlobber globber = new CMineGlobber().setGlob("**/svgold/*").setLocation(cTree.getDirectory());
-//		List<File> fileList = globber.listFiles();
-//		Assert.assertEquals("files: "+fileList, 14,  fileList.size());
-//		globber = new CMineGlobber().setGlob("**/svgold/").setLocation(cTree.getDirectory());
-//		fileList = globber.listFiles();
-//		Assert.assertEquals("files: "+fileList, 0,  fileList.size());
-//
-//		AMICleaner cleaner = new AMICleaner(cProject);
-//		cleaner.clean("svgold");
-//		globber = new CMineGlobber().setGlob("**/svgold/*").setLocation(cTree.getDirectory());
-//		fileList = globber.listFiles();
-//		Assert.assertEquals("files: "+fileList, 0,  fileList.size());
-
 		CProject forestProject = new CProject(AMIImageProcessorIT.FORESTPLOT_DIR);
 		AMICleaner forestCleaner = new AMICleaner(forestProject);
 		forestCleaner.clean("image");
