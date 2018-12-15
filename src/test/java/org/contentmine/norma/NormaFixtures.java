@@ -102,6 +102,10 @@ public class NormaFixtures {
 	
 	public final static File TEST_GETPAPERS_DIR = new File(NormaFixtures.TEST_PUBSTYLE_DIR, "getpapers");
 
+	public static final String MAKEPROJECT       = "makeproject/";
+	public static final File TEST_MAKEPROJECT_DIR = new File(NAConstants.TEST_NORMA_DIR, MAKEPROJECT);
+	public static final File TARGET_MAKEPROJECT_DIR = new File(TARGET_DIR, MAKEPROJECT);
+
 	public final static File TEST_MDPI_DIR = new File(NormaFixtures.TEST_PUBSTYLE_DIR, "mdpi");
 	public final static File TEST_MDPI_CTREE0 = new File(NormaFixtures.TEST_MDPI_DIR, "04-00932");
 	
@@ -116,13 +120,15 @@ public class NormaFixtures {
 	public final static File TEST_PDFTABLE00_DIR = new File(NormaFixtures.TEST_TABLE_DIR, "pdftable00/");
 	public final static File TEST_PDFTABLE0_DIR = new File(NormaFixtures.TEST_TABLE_DIR, "pdftable0/");
 	public final static File TEST_PDFTABLE_DIR = new File(NormaFixtures.TEST_TABLE_DIR, "pdftable/");
-	
+
+
 
 	private static final File DEMO_DIR = new File("./demo");
 	public static final File MOSQUITOS_DIR = new File(NormaFixtures.DEMO_DIR, "mosquitos1/");
 
 	public static final File QUICKSCRAPE_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "quickscrapeDirs");
 	public static final File REGRESSION_DIR = new File(NormaFixtures.TEST_NORMA_DIR, "regressiondemos");
+
 
 	public static void copyToTargetRunHtmlTidy(File from, File to) {
 		CMineTestFixtures.cleanAndCopyDir(from, to);
