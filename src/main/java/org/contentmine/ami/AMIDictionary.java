@@ -350,7 +350,7 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 	}
 
 	private List<String> addCells(int colIndex, LinkField field, String base) {
-		List<String> valueList = new ArrayList<>();
+		List<String> valueList = new ArrayList<String>();
 		if (colIndex >= 0) {
 			tBody.getOrCreateChildTrs();
 			int ncols = -1;
