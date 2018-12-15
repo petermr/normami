@@ -128,9 +128,9 @@ public class AMIProcessor {
 //			LOG.debug("ScholarlyHTML exists, skipping makeProject");
 //			return;
 //		}
-		cProject.makeProject(CTree.PDF);
-		cProject.makeProject(CTree.XML);
-		cProject.makeProject(CTree.HTML);
+		cProject.makeProject(CTree.PDF, 0);
+		cProject.makeProject(CTree.XML, 0);
+		cProject.makeProject(CTree.HTML, 0);
 // flush old CProject as CTreeList needs to be reset		
 		cProject = new CProject(cProject.getDirectory());
 		cProject.setDebugLevel(debugLevel);

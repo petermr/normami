@@ -167,20 +167,44 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	}
 
 	protected Element createDictionaryElementFromHashMap(String title) {
-		dictionaryElement = new Element(DICTIONARY);
-		dictionaryElement.addAttribute(new Attribute(TITLE, title));
+		createDictionaryElement(title);
 		
 		List<DictionaryTerm> dictionaryTerms = Arrays.asList(namesByTerm.keySet().toArray(new DictionaryTerm[0]));
 		Collections.sort(dictionaryTerms);
 		for (DictionaryTerm dictionaryTerm : dictionaryTerms) {
-			Element entry = new Element(ENTRY);
 			String term = dictionaryTerm.getTermPhrase().getString();
-			entry.addAttribute(new Attribute(DictionaryTerm.TERM, term));
-			entry.addAttribute(new Attribute(DictionaryTerm.NAME, namesByTerm.get(dictionaryTerm)));
+			String name = namesByTerm.get(dictionaryTerm);
+			Element entry = createEntryElementFromTerm(term);
+			entry.addAttribute(new Attribute(DictionaryTerm.NAME, name));
 			dictionaryElement.appendChild(entry);
 		}
 		return dictionaryElement;
 	}
+
+//	public Element createEntryElementWithName(String term, String name) {
+//		Element entry = createEntryElementFromTerm(term);
+//		if (entry != null) {
+//			entry.addAttribute(new Attribute(DictionaryTerm.NAME, name));
+//		}
+//		return entry;
+//	}
+
+	public Element createEntryElementFromTerm(String term) {
+		if (term == null) return null;
+		Element entry = new Element(ENTRY);
+		entry.addAttribute(new Attribute(DictionaryTerm.TERM, term));
+		return entry;
+	}
+
+	public Element createDictionaryElement(String title) {
+		dictionaryElement = new Element(DICTIONARY);
+		if (title != null) {
+			dictionaryElement.addAttribute(new Attribute(TITLE, title));
+		}
+		return dictionaryElement;
+	}
+	
+	
 
 	protected void writeXMLFile(File file) {
 		try {

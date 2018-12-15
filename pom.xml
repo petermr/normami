@@ -118,13 +118,13 @@
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.AMIImageProcessor</mainClass>
-							<!-- description: process images )-->
+							<!-- description: process images -->
                             <id>ami-image</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.AMISearch</mainClass>
-							<!-- description: run AMI searches and co-occurrence -->
-                            <id>ami-search-cooccur</id>
+                            <mainClass>org.contentmine.ami.AMIMakeProject</mainClass>
+							<!-- description: make project from a directory-->
+                            <id>ami-makeproject</id>
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.AMIProcessorPDF</mainClass>
@@ -136,6 +136,12 @@
 							<!-- description: converts XML to HTML -->
                             <id>ami-xml</id>
                         </program>
+                        <program>
+                            <mainClass>org.contentmine.ami.AMISearch</mainClass>
+							<!-- description: run AMI searches and co-occurrence -->
+                            <id>ami-search-cooccur</id>
+                        </program>
+                        
                          <program>
                             <mainClass>org.contentmine.ami.plugins.CommandProcessor</mainClass>
                             <!--  description:  -->

@@ -10,31 +10,52 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.norma.picocli.AbstractAMIProcessor;
+
+import picocli.CommandLine;
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Option;
 
 /** cleans some of all of the project.
  * 
  * @author pm286
  *
  */
-public class AMICleaner {
+@Command(
+		//String name() default "<main class>";
+name = "ami-clean", 
+		//String[] aliases() default {};
+aliases = "clean",
+		//Class<?>[] subcommands() default {};
+version = "ami-clean 0.1",
+		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
+description = "cleans specific files of directories in project"
+)
+
+public class AMICleaner extends AbstractAMIProcessor {
 	private static final Logger LOG = Logger.getLogger(AMICleaner.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+
+	
 	public enum Cleaner {
-		FULLTEXT_HTML("fulltext.html", "remove fulltext.html (probably not recoverable without redownload)"),
-		FULLTEXT_PDF("fulltext.pdf", "remove fulltext.pdf (probably not recoverable without redownload)"),
-		FULLTEXT_XML("fulltext.xml", "remove fulltext.xml (probably not recoverable without redownload)"),
-		PDFIMAGES("pdfimages/", "remove pdfimages/ directory and contents (created by parsing fulltext.pdf)"),
-		RAWIMAGES("rawimages/", "remove rawimages/ directory and contents (probably directly downloaded)"),
-		SCHOLARLY_HTML("scholarly.html", "remove scholarly.html (created by parsing)"),
-		SVGDIR("svg/", "remove svg/ directory and contents (created by parsing fulltext.pdf)"),
+		FULLTEXT_HTML("fulltext.html", "f", "remove fulltext.html (probably not recoverable without redownload)"),
+		FULLTEXT_PDF("fulltext.pdf", "f", "remove fulltext.pdf (probably not recoverable without redownload)"),
+		FULLTEXT_XML("fulltext.xml", "f", "remove fulltext.xml (probably not recoverable without redownload)"),
+		PDFIMAGES("pdfimages", "d", "remove pdfimages/ directory and contents (created by parsing fulltext.pdf)"),
+		RAWIMAGES("rawimages", "d", "remove rawimages/ directory and contents (probably directly downloaded)"),
+		SCHOLARLY_HTML("scholarly.html", "f", "remove scholarly.html (created by parsing)"),
+		SVGDIR("svg", "d", "remove svg/ directory and contents (created by parsing fulltext.pdf)"),
 		;
 		public String file;
+		public String type;
 		public String message;
-		private Cleaner(String file, String message) {
+		
+		private Cleaner(String file, String type, String message) {
 			this.file = file;
+			this.type = type;
 			this.message = message;
 		}
 		
@@ -43,7 +64,6 @@ public class AMICleaner {
 		}
 
 		public void clean(CTree cTree, String arg) {
-			
 		}
 
 		public boolean matches(String arg) {
@@ -52,27 +72,60 @@ public class AMICleaner {
 
 	}
 
-	private CProject cProject;
-	
+    @Option(names = {"-f", "--file"},
+		arity = "0..*",
+        description = "files to delete by name")
+    private String[] files;
+
+    @Option(names = {"-fg", "--fileglob"},
+		arity = "0..*",
+        description = "files to delete by glob")
+    private String[] fileGlobs;
+
+    @Option(names = {"-d", "--dir"},
+		arity = "0..*",
+        description = "directories to delete by name")
+    private String[] dirs;
+
+    @Option(names = {"-dg", "--dirglob"},
+		arity = "0..*",
+        description = "directories to delete by glob")
+    private String[] dirGlobs;
+
+    /** used by some non-picocli calls
+     * 
+     * @param cProject
+     */
 	public AMICleaner(CProject cProject) {
 		this.cProject = cProject;
 	}
-
-	public static void main(String[] args) {
-		List<String> argList = new ArrayList<String>(Arrays.asList(args));
-		if (argList.size() == 0 || AMIProcessor.HELP.equals(argList.get(0))) {
-			if (argList.size() > 0) argList.remove(0);
-			AMICleaner.runHelp(argList);
-		} else {
-			CProject cProject = new CProject(new File(argList.get(0)));
-			AMICleaner cleaner = new AMICleaner(cProject);
-			argList.remove(0);
-			cleaner.clean(argList);
-		}
-		
+	
+	public AMICleaner() {
 	}
+	
+    public static void main(String[] args) throws Exception {
+    	AMICleaner amiCleaner = new AMICleaner();
+    	amiCleaner.runCommands(args);
+    }
 
-	public void clean(List<String> argList) {
+    public void runCommands(String[] args) {
+    	super.runCommands(args);
+        runClean();
+    }
+
+    @Override
+    public Void call() throws Exception {
+    	super.call();
+        return null;
+    }
+
+    private void runClean() {
+
+    	if (files != null) cleanFiles(Arrays.asList(files));
+    	if (dirs != null) cleanFiles(Arrays.asList(dirs));
+    }
+
+	public void cleanFiles(List<String> argList) {
 		for (String arg : argList) {
 			cleanReserved(arg);
 		}
@@ -88,26 +141,8 @@ public class AMICleaner {
 		DebugPrint.debugPrint("failed to delete: "+arg);
 	}
 
-	public void clean(String arg) {
-		cProject.clean(arg);
-	}
-
-	public void cleanRegex(String arg) {
-		for (Cleaner cleaner : Cleaner.values()) {
-			if (cleaner.matches(arg)) {
-				cProject.cleanRegex(arg);
-				return;
-			}
-		}
-		DebugPrint.debugPrint("failed to delete: "+arg);
-	}
-
-	private static void runHelp(List<String> argList) {
-		DebugPrint.debugPrintln("ami-clean <project> [args]");
-		DebugPrint.debugPrintln("    no args will delete whole project (be careful)");
-		for (Cleaner cleaner : Cleaner.values()) {
-			cleaner.help();
-		}
+	public void clean(String filename) {
+		cProject.clean(filename);
 	}
 
 }
