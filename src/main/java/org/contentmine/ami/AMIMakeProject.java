@@ -2,14 +2,12 @@ package org.contentmine.ami;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
-import org.contentmine.cproject.files.CTree;
-import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.eucl.euclid.Util;
 import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
 import picocli.CommandLine;
@@ -74,97 +72,75 @@ description = "Processes a directory (CProject) containing files (e.g.*.pdf, *.h
 		+ "(a) are lowercased, %n"
 		+ "(b) have punctuation set to '_' %n"
 		+ "(c) are truncated to --length characters.%n"
-		+ " If any of these creates ambiguity, then numeric suffixes are added (NYI). "
+		+ " If any of these creates ambiguity, then numeric suffixes are added. "
+		+ ""
+		+ "By default a logfile of the conversions is created in make_project.json. "
+		+ "The name can be cahnged "
 )
 
 public class AMIMakeProject extends AbstractAMIProcessor {
-	private static final Logger LOG = Logger.getLogger(AMIMakeProject.class);
+	public static final Logger LOG = Logger.getLogger(AMIMakeProject.class);
+
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-
-    @Option(names = {"-f", "--filetype"},
-		arity = "0..*",
-		split=",",
-        description = "suffixes of included files: any of html, pdf, xml%n"
-        		+ "can be concatenated with commas (e.g. html,pdf "
-        		+ "(NO '.' or '*')%n"
-        )
-    private String[] filetypes;
-
-    @Option(names = {"-c", "--compress"},
+    @Option(names = {"--compress"},
     		arity="0..1",
-    		defaultValue = "15",
     		description = "compress and lowercase names. "
     		)
-    private int compress;
-    
+    private int compress = 25;
 
-    /** used by some non-picocli calls
-     * 
-     * @param cProject
-     */
-	public AMIMakeProject(CProject cProject) {
-		this.cProject = cProject;
-	}
-	
+    @Option(names = {"--logfile"},
+    		arity="0..1",
+    		description = "logfile name (usually created by default - see particular command)."
+    				+ " To omit logfile use argument NONE. Note"
+    				+ "that default logfile names are reserved and it is normally a bad idea to use different ones"
+    		)
+    private String logfile;
+
 	public AMIMakeProject() {
 	}
 	
+    public static void main(String args) throws Exception {
+    	new AMIMakeProject().runCommands(args);
+    }
+
     public static void main(String[] args) throws Exception {
-    	AMIMakeProject makeProject = new AMIMakeProject();
-    	makeProject.runCommands(args);
+    	new AMIMakeProject().runCommands(args);
     }
 
-    public void runCommands(String[] args) {
-    	args = args.length == 0 ? new String[] {"--help"} : args;
-        CommandLine.call(this, args);
-        runMake();
+    protected void parseSpecifics() {
+    	argument(Level.INFO, "compress            "+compress);
     }
 
-    @Override
-    public Void call() throws Exception {
-    	super.call();
-        return null;
+	protected void runSpecifics() {
+        cProject.makeProject(Util.toStringList(rawFileFormats), compress);
+        addMakeProjectLogfile();
     }
+
+	private void addMakeProjectLogfile() {
+		if (logfile == null) {
+        	cProject.getMakeProjectLogfile();
+        } else if (NONE.equalsIgnoreCase(logfile.toString())) {
+        	LOG.warn("omitting logfile");
+        } else {
+        	cProject.getMakeProjectLogfile(logfile);
+        }
+	}
     
-	protected boolean parseCProjectAndCTrees() {
-		cTree = null;
-		if (cProjectDirectory != null) {
-			File cProjectDir = new File(cProjectDirectory);
-			if (!cProjectDir.exists() || !cProjectDir.isDirectory()) {
-				throw new RuntimeException("cProject must be existing directory: "+cProjectDirectory);
-			}
-			cProject = new CProject(cProjectDir);
-    	} else if (cTreeDirectory != null) {
-    		System.err.println("must not have --ctree: " + cTreeDirectory);
-    		return false;
+    @Override
+	protected void validateCTree() {
+		if (cTreeDirectory != null) {
+			argument(Level.WARN, "must not have --ctree: " + cTreeDirectory+"; IGNORED");
     	}
-    	if (cProject == null) {
-    		System.err.println("must give cProject");
-    		return false;
-    	}
-    	if (filetypes == null || filetypes.length == 0) {
-    		System.err.println("must give at least one filetype (e.g. html)");
-    		return false;
-    	}
-    	printValues();
-        cProject.makeProject(filetypes, compress);
-        return true;
-
 	}
-
-	private void printValues() {
-		System.out.println("values\n======");
-        System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
-        System.out.println("file types          " + Arrays.asList(filetypes));
-        System.out.println("compress            " + compress);
-	}
-
-    private void runMake() {
-    	LOG.debug("CProject "+cProject);
+	
+    @Override
+    protected void validateRawFormats() {
+		if (args.length > 0 && (rawFileFormats == null || rawFileFormats.length == 0)) {
+			argument(Level.ERROR, "must give at least one filetype (e.g. html); NO ACTION");
+		}
     }
-
 
 }

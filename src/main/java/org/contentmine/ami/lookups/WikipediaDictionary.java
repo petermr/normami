@@ -11,10 +11,12 @@ import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlA;
 import org.contentmine.graphics.html.HtmlDiv;
 import org.contentmine.graphics.html.HtmlElement;
+import org.contentmine.graphics.html.HtmlH2;
 import org.contentmine.graphics.html.HtmlHead;
 import org.contentmine.graphics.html.HtmlScript;
+import org.contentmine.graphics.html.HtmlSpan;
+import org.contentmine.graphics.html.HtmlSup;
 import org.contentmine.graphics.html.HtmlTable;
-import org.contentmine.graphics.html.HtmlUl;
 import org.contentmine.norma.input.html.HtmlCleaner;
 import org.contentmine.norma.input.html.HtmlCleaner.HtmlClass;
 import org.contentmine.norma.input.html.HtmlCleaner.TagPosition;
@@ -27,11 +29,32 @@ import nu.xom.Element;
  *
  */
 public class WikipediaDictionary {
-	private static final Logger LOG = Logger.getLogger(WikipediaDictionary.class);
+	public static final Logger LOG = Logger.getLogger(WikipediaDictionary.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 
+	public static final String AMBOX_REFIMPROVE = "ambox-Refimprove";
+	public static final String CATLINKS = "catlinks";
+	public static final String CITE_REF = "cite_ref";
+	public static final String EDIT_SECTION = "Edit section: ";
+	public static final String EXTERNAL_LINKS = "External_links";
+	public static final String FOOTER = "footer";
+	public static final String FURTHER_READING = "Further_reading";
+	public static final String ID = "id";
+	public static final String MW_HIDDEN_CATLINKS = "mw-hidden-catlinks";
+	public static final String MW_JUMP_LINK = "mw-jump-link";
+	public static final String MW_NAVIGATION = "mw-navigation";
+	public static final String NAVBOX = "navbox";
+	public static final String PRINTFOOTER = "printfooter";
+	public static final String READER_HEADER = "reader-header";
+	public static final String REFERENCES = "References";
+	public static final String SEE_ALSO = "See_also";
+	public static final String SITE_SUB = "siteSub";
+	public static final String TOC = "toc";
+	public final static String WIKIPEDIA = "wikipedia";
+	public final static String WIKITABLE = "wikitable";
+	
 	public AMIDictionary amiDictionary;
 	private HtmlElement htmlElement;
 
@@ -75,7 +98,7 @@ public class WikipediaDictionary {
 	
 	private void omitToc() {
 		new HtmlCleaner(htmlElement).setTag(HtmlDiv.TAG, TagPosition.DESCENDANT)
-		.setEqualsAttribute(HtmlClass.ID, "toc").clean();;	
+		.setEqualsAttribute(HtmlClass.ID, TOC).clean();;	
 		
 	}
 	/**
@@ -83,7 +106,7 @@ public class WikipediaDictionary {
 */
 	private void omitCatlinks() {
 		new HtmlCleaner(htmlElement).setTag(HtmlDiv.TAG, TagPosition.DESCENDANT)
-		.setEqualsAttribute(HtmlClass.ID, "catlinks").clean();;	
+		.setEqualsAttribute(HtmlClass.ID, CATLINKS).clean();;	
 	}
 	
 	/**
@@ -92,7 +115,7 @@ public class WikipediaDictionary {
     </div>	 */
 	private void omitPrintFooter() {
 		new HtmlCleaner(htmlElement).setTag(HtmlDiv.TAG, TagPosition.DESCENDANT)
-		.setEqualsAttribute(HtmlClass.CLASS, "printfooter").clean();;	
+		.setEqualsAttribute(HtmlClass.CLASS, PRINTFOOTER).clean();;	
 	}
 	
 	/**
@@ -106,7 +129,7 @@ public class WikipediaDictionary {
      </div>	 */
 	private void omitHiddenCategories() {
 		new HtmlCleaner(htmlElement).setTag(HtmlDiv.TAG, TagPosition.DESCENDANT)
-		.setEqualsAttribute(HtmlClass.ID, "mw-hidden-catlinks").clean();;
+		.setEqualsAttribute(HtmlClass.ID, MW_HIDDEN_CATLINKS).clean();;
 	}
 	
 	/**
@@ -122,9 +145,12 @@ public class WikipediaDictionary {
      <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.
     </li>
    </ul>	 */
+	/** does this work???
+	 * 
+	 */
 	private void omitFooter() {
 		new HtmlCleaner(htmlElement).setTag(HtmlDiv.TAG, TagPosition.DESCENDANT)
-		.setEqualsAttribute(HtmlClass.ID, "footer").clean();;
+		.setEqualsAttribute(HtmlClass.ID, FOOTER).clean();;
 	}
 
 
@@ -135,7 +161,7 @@ public class WikipediaDictionary {
   </div>	 */
 	private void omitNavigation() {
 		new HtmlCleaner(htmlElement).setTag(HtmlDiv.TAG, TagPosition.DESCENDANT)
-		.setEqualsAttribute(HtmlClass.ID, "mw-navigation").clean();;
+		.setEqualsAttribute(HtmlClass.ID, MW_NAVIGATION).clean();;
 	}
 
 
@@ -146,7 +172,7 @@ public class WikipediaDictionary {
     */
 	public void omitTop() {
 		new HtmlCleaner(htmlElement).setTag(HtmlDiv.TAG, TagPosition.DESCENDANT)
-		.setContainsAttribute(HtmlClass.ID, "siteSub").clean();
+		.setContainsAttribute(HtmlClass.ID, SITE_SUB).clean();
 	}
 	
 	/**
@@ -161,7 +187,7 @@ public class WikipediaDictionary {
 </div></div>	 */
 	private void omitJumpToNav() {
 		new HtmlCleaner(htmlElement).setTag(HtmlA.TAG, TagPosition.DESCENDANT)
-		.setEqualsAttribute(HtmlClass.CLASS, "mw-jump-link").clean();;
+		.setEqualsAttribute(HtmlClass.CLASS, MW_JUMP_LINK).clean();;
 	}
     
 	private void omitHead() {
@@ -175,15 +201,13 @@ public class WikipediaDictionary {
 /**	<table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"> ...*/
 	
 	public void omitImprove() {
-		HtmlCleaner cleaner = new HtmlCleaner(htmlElement);
-		cleaner.setTag(HtmlTable.TAG, TagPosition.DESCENDANT);
-		cleaner.setContainsAttribute(HtmlClass.CLASS, "ambox-Refimprove");
-		cleaner.clean();
+		new HtmlCleaner(htmlElement)
+  		    .setTag(HtmlTable.TAG, TagPosition.DESCENDANT)
+		    .setContainsAttribute(HtmlClass.CLASS, AMBOX_REFIMPROVE).clean();
 	}
 	
 	private void omitAllElementsWithTag(String tag) {
-		HtmlCleaner cleaner = new HtmlCleaner(htmlElement);
-		cleaner.setTag(tag, TagPosition.DESCENDANT).clean();
+		new HtmlCleaner(htmlElement).setTag(tag, TagPosition.DESCENDANT).clean();
 	}
 	
 
@@ -202,7 +226,7 @@ public class WikipediaDictionary {
 
 	private void omitHeader() {
 		HtmlElement element = (HtmlElement) XMLUtil.getSingleElement(
-				htmlElement, ".//*[local-name()='div' and contains(@class,'reader-header')]");
+				htmlElement, ".//*[local-name()='" + HtmlDiv.TAG + "' and contains(@class,'" + READER_HEADER + "')]");
 		if (element != null) {
 			element.detach();
 		} else {
@@ -219,7 +243,7 @@ public class WikipediaDictionary {
 
 	private void omitSeeAlso() {
 		HtmlElement element = (HtmlElement) XMLUtil.getSingleElement(
-				htmlElement, ".//*[local-name()='h2' and *[local-name()='span' and @id='See_also']]");
+				htmlElement, ".//*[local-name()='" + HtmlH2.TAG + "' and *[local-name()='" + HtmlSpan.TAG + "' and @id='" + SEE_ALSO + "']]");
 		HtmlElement ul = (HtmlElement) XMLUtil.getFollowingSiblingElement(element);
 		if (ul != null) ul.detach();
 	}
@@ -229,7 +253,7 @@ public class WikipediaDictionary {
 	   */
 	private void omitCitationRefs() {
 		List<Element> citeRefList = XMLUtil.getQueryElements(
-				htmlElement, ".//*[local-name()='sup' and starts-with(@id, 'cite_ref')]");
+				htmlElement, ".//*[local-name()='" + HtmlSup.TAG + "' and starts-with(@id, '" + CITE_REF + "')]");
 		for (Element citeRef : citeRefList) {
 			LOG.debug("deleted citation ref");
 			citeRef.detach();
@@ -242,7 +266,7 @@ public class WikipediaDictionary {
  <a href="https://en.wikipedia.org/w/index.php?title=Neglected_tropical_diseases&amp;action=edit&amp;section=3" title="Edit section: Chagas disease">edit source</a><span>]</span></span>	 */
 	private void omitEditSource() {
 		List<Element> editList = XMLUtil.getQueryElements(
-				htmlElement, ".//*[local-name()='span' and *[local-name()='a' and starts-with(@title, 'Edit section: ')]]");
+				htmlElement, ".//*[local-name()='" + HtmlSpan.TAG + "' and *[local-name()='" + HtmlA.TAG + "' and starts-with(@title, '" + EDIT_SECTION + "')]]");
 		for (Element edit : editList) {
 			LOG.debug("deleted edit source");
 			edit.detach();
@@ -264,7 +288,7 @@ public class WikipediaDictionary {
 	 */
  	private void omitCitations() {
 		Element h2Refs = XMLUtil.getSingleElement(
-				htmlElement, ".//*[local-name()='h2' and *[local-name()='span' and contains(.,'References')]]");
+			htmlElement, ".//*[local-name()='" + HtmlH2.TAG + "' and *[local-name()='" + HtmlSpan.TAG + "' and contains(.,'" + REFERENCES + "')]]");
 		HtmlElement div = (HtmlElement) XMLUtil.getFollowingSiblingElement(h2Refs);
 		if (div != null) {
 			h2Refs.detach();
@@ -286,15 +310,7 @@ public class WikipediaDictionary {
       </ul>
    */
 	 public void omitExternalLinks() {
-		omitHeaderAndFollowingSibling("h2", "span", "id", "External_links");
-//		Element h2Refs = XMLUtil.getSingleElement(
-//				htmlElement, ".//*[local-name()='h2' and *[local-name()='span' and contains(@id,'External_links')]]");
-//		HtmlElement ul = (HtmlElement) XMLUtil.getFollowingSiblingElement(h2Refs);
-//		if (ul != null) {
-//			LOG.debug("deleted external links");
-//			h2Refs.detach();
-//			ul.detach();
-//		}
+		omitHeaderAndFollowingSibling(HtmlH2.TAG, HtmlSpan.TAG, ID, EXTERNAL_LINKS);
 	 }
 
 	 	/*
@@ -311,7 +327,7 @@ public class WikipediaDictionary {
 	      </ul>
 	   */
 		 public void omitFurtherReading() {
-			omitHeaderAndFollowingSibling("h2", "span", "id", "Further_reading");
+			omitHeaderAndFollowingSibling(HtmlH2.TAG, HtmlSpan.TAG, ID, FURTHER_READING);
 		 }
 
 
@@ -343,7 +359,7 @@ public class WikipediaDictionary {
 	 public void omitNavboxes() {
 		 new HtmlCleaner(htmlElement)
 		 .setTag(HtmlDiv.TAG, TagPosition.DESCENDANT)
-		 .setEqualsAttribute(HtmlClass.CLASS, "navbox").clean();
+		 .setEqualsAttribute(HtmlClass.CLASS, NAVBOX).clean();
 	 }
 
 }

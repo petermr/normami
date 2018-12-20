@@ -3,7 +3,9 @@ package org.contentmine.ami;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.FileStore;
 import java.nio.file.FileSystem;
@@ -14,17 +16,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.dictionary.CMJsonDictionary;
 import org.contentmine.ami.dictionary.DefaultAMIDictionary;
 import org.contentmine.ami.dictionary.DictionaryTerm;
 import org.contentmine.ami.lookups.WikipediaDictionary;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
+import org.contentmine.cproject.util.RectangularTable;
+import org.contentmine.eucl.euclid.Util;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlA;
+import org.contentmine.graphics.html.HtmlDiv;
 import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.HtmlLi;
 import org.contentmine.graphics.html.HtmlTable;
@@ -36,11 +44,16 @@ import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
 import com.google.common.collect.Lists;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import nu.xom.Attribute;
 import nu.xom.Element;
+import picocli.CommandLine;
 import picocli.CommandLine.Command;
+import picocli.CommandLine.Mixin;
 import picocli.CommandLine.Option;
+import picocli.CommandLine.Parameters;
 
 /** mainly to manage help and parse dictionaries.
  * 
@@ -48,38 +61,14 @@ import picocli.CommandLine.Option;
  *
  */
 
-/**
-@Command(description = "Prints the checksum (MD5 by default) of a file to STDOUT.",
-         name = "checksum", mixinStandardHelpOptions = true, version = "checksum 3.0")
-public class PicocliTest implements Callable<Void> {
+@Command(
+		description = "Manages AMI dictionaries",
+		name = "ami-dictionary",
+		mixinStandardHelpOptions = true,
+		version = "ami 0.1"
+		)
 
-    @Parameters(index = "0", description = "The file whose checksum to calculate.")
-    private File file;
-
-    @Option(names = {"-a", "--algorithm"}, description = "MD5, SHA-1, SHA-256, ...")
-    private String algorithm = "SHA-1";
-
-    public static void main(String[] args) throws Exception {
-    	args = new String[]{"-a", "MD5", "README.md"}; 
-        CommandLine.call(new PicocliTest(), args);
-    	args = new String[]{}; 
-        CommandLine.call(new PicocliTest(), args);
-    }
-
-//    @Override
-    public Void call() throws Exception {
-    	System.out.println("called on "+file+" with "+algorithm);
-        byte[] fileContents = Files.readAllBytes(file.toPath());
-        byte[] digest = MessageDigest.getInstance(algorithm).digest(fileContents);
-        System.out.println(javax.xml.bind.DatatypeConverter.printHexBinary(digest));
-        return null;
-    }
- */
-
-@Command(description = "Manages AMI dictionaries",
-name = "ami-dictionary", mixinStandardHelpOptions = true, version = "ami 0.1")
-
-public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, Callable<Void> */{
+public class AMIDictionary extends AbstractAMIProcessor {
 	public static final Logger LOG = Logger.getLogger(AMIDictionary.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -98,12 +87,6 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 	public final static String WIKIPEDIA_BASE = HTTPS_EN_WIKIPEDIA_ORG + "/wiki/";
 	private static final String WIKITABLE = "wikitable";
 
-	private List<File> files;
-	private List<Path> paths;
-	private File dictionaryDir = DICTIONARY_TOP;
-	private int maxEntries = 0;
-	private AMICLI cli;
-
 	private static final String HTTP = "http";
 
 	public enum LinkField {
@@ -111,132 +94,486 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 		VALUE,
 	}
 
-//    @Parameters(index = "0", description = "The file whose checksum to calculate.")
-//    private File dictionaryTop;
+	public enum Operation {
+		create,
+		display,;
+		public static Operation getOperation(String operationS) {
+			for (int i = 0; i < values().length; i++) {
+				Operation operation = values()[i];
+				if (operation.toString().equalsIgnoreCase(operationS)) {
+					return operation;
+				}
+			}
+			return null;
+		}
+		
+	}
+	
+	/** ugly lowercase, but I don't yet know how to use
+	 * 		CommandLine::setCaseInsensitiveEnumValuesAllowed=true
+	 * @author pm286
+	 *
+	 */
+	enum DictionaryFileFormat {
+		 xml,
+		 html,
+		 json,
+		 }
+	
+	/** ugly lowercase, but I don't yet know how to use
+	 * 		CommandLine::setCaseInsensitiveEnumValuesAllowed=true
+	 * @author pm286
+	 *
+	 */
+	public enum RawFileFormat {
+		 html,
+		 pdf,
+		 xml,
+		 }
+	
+	enum InputFormat {
+		csv,
+		wikipage,
+		wikitable
+	}
 
+    @Parameters(index = "0",
+    		arity="0..*",
+    		split=",",
+    		description = "Operation to apply (${COMPLETION-CANDIDATES}); absence runs help"
+    		)
+    private Operation operation;
+
+    @Option(names = {"--booleanquery"}, 
+    		arity="0..1",
+   		    description = "generate query as series of chained OR phrases"
+    		)
+    private boolean booleanQuery;
+    
+    @Option(names = {"--datacols"}, 
+    		split=",",
+    		arity="1..*",
+    	    paramLabel = "datacol",
+   		description = "data column/s from table; not hyperlinked"
+    		)
+    private String[] dataCols;
+    
     @Option(names = {"-d", "--dictionary"}, 
     		arity="1",
+//    	    paramLabel = "THE DICT",
     		description = "input or output dictionary")
     private String dictionary;
 
-    @Option(names = {"-b", "--directory"}, 
+    @Option(names = {"--directory"}, 
     		arity="1",
+//   	    	paramLabel = "directory",
     		description = "directory containing dictionary")
     private String directory;
 
-    @Option(names = {"-fo", "--format"}, 
+    @Option(names = {"--hrefcols"}, 
+    		split=",",
     		arity="1..*",
-    		description = "directory containing dictionary")
-    private String formatList;
+    	 	paramLabel = "hrefcol",
+   		description = "external hyperlink column from table; might be Wikidata or remote site(s)"
+    		)
+    private String[] hrefCols;
+        
+    @Option(names = {"--hreftext"}, 
+    		arity="0",
+    		description = "hyperlinks from text (maybe excludes tables);"
+    				+ " requires wikipedia or wikitable input at present; still under test"
+    		)
+	public String href;
+    
+    @Option(names = {"--informat"}, 
+    		arity="1",
+    		paramLabel = "input format",
+    		description = "input format (${COMPLETION-CANDIDATES})"
+    		)
+    private InputFormat informat;
+    
+    @Option(names = {"-i", "--input"}, 
+    		arity="1",
+    		description = "input stream; URL if starts with 'http' else file"
+    		)
+    private String input;
+    
+    @Option(names = {"--linkcol"}, 
+    		arity="1",
+    		description = "column to extract link to internal pages. main use Wikipedia. Defaults to the 'name' column"
+    		)
+	public String linkCol;
 
-    @Option(names = {"-e", "--terms"}, 
+    @Option(names = {"--namecol"}, 
+    		split=",",
+    		arity="1..*",
+    		description = "column(s) to extract name; use exact case (e.g. Common name)"
+    		)
+	public String nameCol;
+    
+    @Option(names = {"--outformats"}, 
+    		arity="1..*",
+    		split=",",
+    	    paramLabel = "output format",
+    		description = "output format (${COMPLETION-CANDIDATES})"
+    		)
+    private DictionaryFileFormat[] outformats = new DictionaryFileFormat[] {DictionaryFileFormat.xml};
+        
+    @Option(names = {"--splitcol"}, 
+    		arity="1",
+    		paramLabel="input separator",
+    		description = "character to split input values; (default: ${DEFAULT-VALUE})"
+    		)
+    private String splitCol=",";
+        
+    @Option(names = {"--termcol"}, 
+    		arity="1",
+    		description = "column(s) to extract term; use exact case (e.g. Term). Could be same as namecol"
+    		)
+	public String termCol;
+    
+    @Option(names = {"--terms"}, 
     		arity="1..*",
     		split=",",
     		description = "list of terms (entries), comma-separated")
     private String[] terms;
 
-    @Option(names = {"-l", "--linkcol"}, 
-    		arity="1",
-    		description = "column to extract link to wikipedia pages. Often the 'name' column"
-    		)
-	public String linkCol;
-
-    @Option(names = {"-n", "--namecol"}, 
-    		arity="1",
-    		description = "column(s) to extract name (from Wikipedia); use exact case (e.g. Name)"
-    		)
-	public String nameCol;
+    @Mixin CProjectTreeMixin proTree;
     
-    @Option(names = {"-u", "--urlcol"}, 
-    		arity="1",
-   		description = "hyperlink column from wikipedia table"
-    		)
-    private String hrefCol;
-    
-    @Option(names = {"-ur", "--urlref"}, 
-    		arity="0",
-    		description = "hyperlinks from wikipedia text (maybe excludes tables); still under test"
-    		)
-	public String href;
-    
-    @Option(names = {"-w", "--wikipedia"}, 
-    		description = "wikipedia page or URL. If does not start with 'http' prepend WP-en base"
-    		)
-    private String wikipediaUrl;
+    DictionaryData dictionaryData;
     
 // converted from args    
 	private List<String> termList;
 	private List<String> nameList;
-	private List<String> hrefList;
+	private List<String> linkList;
+	private List<List<String>> hrefColList;
+	private List<List<String>> dataColList;
+//	private List<String> outformatList;
+	
 	private HtmlTable simpleTable;
 	public HtmlUl simpleList;
 	private Element dictionaryElement;
 	private HtmlTbody tBody;
 	private WikipediaDictionary wikipediaDictionary;
+	private InputStream inputStream;
+	private RectangularTable rectangularTable;
+
+	private List<File> files;
+	private List<Path> paths;
+	private File dictionaryDir = DICTIONARY_TOP;
+	private int maxEntries = 0;
+	private AMICLI cli;
+
+
 
 	public static void main(String[] args) {
-        AbstractAMIProcessor amiDictionary = new AMIDictionary();
-		amiDictionary.runCommands(args);
+        AMIDictionary amiDictionary = new AMIDictionary();
+        amiDictionary.initDictionaryData();
+        
+        testing(args, amiDictionary);
+//		amiDictionary.runCommands(args);
+	}
+
+	private static void testing(String[] args, AMIDictionary amiDictionary) {
+		CommandLine commandLine = new CommandLine(amiDictionary);
+        commandLine.addMixin("xyzMixin ", new CProjectTreeMixin());
+        commandLine.parse(new String[]{"--help", "--wombatx", "176"});
+//        LOG.debug("MIX "+commandLine.xyzMixin.getWombatx());
+//        if (1 ==1) return;
+        commandLine.parse(args);
+        Map<String, Object> map = commandLine.getMixins();
+        for (String k : map.keySet()) {
+        	Object o = map.get(k);
+        	if (o instanceof CProjectTreeMixin) {
+        		CProjectTreeMixin mixin = (CProjectTreeMixin) o;
+        		LOG.debug("wombx "+mixin.getWombatx());
+        	}
+        	LOG.debug("O: "+o.getClass());
+        }
 	}
 	
-    @Override
-    public void runCommands(String[] args) {
-    	super.runCommands(args);
-        runDictionary();
-    }
+	private void initDictionaryData() {
+		dictionaryData = new DictionaryData();
+		
+        dictionaryData.dataCols    = dataCols;
+        dictionaryData.dictionary  = dictionary;
+        dictionaryData.directory   = directory;
+        dictionaryData.href        = href;
+        dictionaryData.hrefCols    = hrefCols;
+        dictionaryData.informat    = informat;
+        dictionaryData.input       = input;
+        dictionaryData.linkCol     = linkCol;
+        dictionaryData.log4j       = log4j;
+        dictionaryData.nameCol     = nameCol;
+        dictionaryData.operation   = operation;
+        dictionaryData.outformats  = outformats;
+        dictionaryData.termCol     = termCol;
+        dictionaryData.terms       = terms;
+
+	}
 	
-//	public Void call() throws Exception {
-//    	super.call();
-//    	runDictionary();
-//        return null;
-//    }
+	@Override
+	protected void parseSpecifics() {
+		printDebug();
+	}
+
+	@Override
+	protected void runSpecifics() {
+        runDictionary();
+	}
+
 
 	private void runDictionary() {
-		LOG.debug("runDictionary");
-		wikipediaUrl = (wikipediaUrl == null) ? null : (wikipediaUrl.startsWith("http") ? wikipediaUrl : WIKIPEDIA_BASE);
-    	if (wikipediaUrl != null) {
-    		wikipediaDictionary = new WikipediaDictionary();
-    		readWikipediaPage(wikipediaDictionary, wikipediaUrl);
+		if (Operation.display.equals(operation)) {
+			displayDictionaries();
+		} else if (Operation.create.equals(operation)) {
+			createDictionary();
+		} else {
+			LOG.debug("no operation given: "+operation);
+		}
+	}
+
+//	private void createDictionaryData() {
+//	    String[] dataCols;
+//	    String   dictionary;
+//	    String   directory;
+//		String   href;
+//	    String[] hrefCols;
+//	    String   informat;
+//	    String   input;
+//		String   linkCol;
+//		String   nameCol;
+//	    String   operation;
+//	    String[] outformats;
+//	    String   splitCol=",";
+//		String   termCol;
+//	    String[] terms;
+//
+//	}
+
+	private void displayDictionaries() {
+		LOG.debug("display NYI");
+	}
+
+	private void createDictionary() {
+		openInputStream();
+    	if (inputStream != null) {
+    		if (informat == null) {
+    			throw new RuntimeException("no input format given ");
+    		} else if (InputFormat.wikipage.equals(informat)) {
+	    		wikipediaDictionary = new WikipediaDictionary();
+	    		readWikipediaPage(wikipediaDictionary, inputStream);
+    		} else if (InputFormat.wikitable.equals(informat)) {
+	    		wikipediaDictionary = new WikipediaDictionary();
+	    		readWikipediaPage(wikipediaDictionary, inputStream);
+    		} else if (InputFormat.csv.equals(informat)) {
+    			readCSV(inputStream);
+    		} else {
+    			throw new RuntimeException("unknown inputformat: "+informat);
+    		}
     	} else {
     		termList = terms == null ? null : Arrays.asList(terms);
     	}
-    	if (nameList == null && termList != null) {
+    	synchroniseTermsAndNames();
+//    	printDebug();
+    	dictionaryElement = DefaultAMIDictionary.createDictionaryWithTitle(dictionary);
+    	writeNamesAndLinks();
+		
+	}
+
+	private void openInputStream() {
+		try {
+			inputStream = input.startsWith("http") ? new URL(input).openStream() : new FileInputStream(new File(input));
+		} catch (IOException e) {
+			throw new RuntimeException("cannot read/open stream", e);
+		}
+	}
+
+	private RectangularTable readCSV(InputStream inputStream) {
+		boolean useHeader = true;
+		rectangularTable = null;
+		try {
+			rectangularTable = RectangularTable.readCSVTable(inputStream, useHeader);
+		} catch (IOException e) {
+			throw new RuntimeException("cannot read table", e);
+		}
+		if (termCol == null) {
+			throw new RuntimeException("must give termCol");
+		}
+		termList = rectangularTable.getColumn(termCol);
+		if (termList == null) {
+			throw new RuntimeException("Cannot find term column");
+		}
+		nameList = rectangularTable.getColumn(nameCol);
+		if (dataCols != null) {
+			dataColList = rectangularTable.getColumnList(dataCols);
+			checkColumnsNotNull(dataColList, dataCols);
+		}
+		if (hrefCols != null) {
+			hrefColList = rectangularTable.getColumnList(hrefCols);
+			checkColumnsNotNull(hrefColList, hrefCols);
+		}
+		return rectangularTable;
+	}
+
+	private void checkColumnsNotNull(List<List<String>> colList, String[] colNames) {
+		for (int i = 0; i < colList.size(); i++) {
+			if (colList.get(i) == null) {
+				LOG.warn("Cannot find column: "+colNames[i]);
+			}
+		}
+	}
+
+	private List<Integer> getColIndexList(List<String> headers, String[] colNamesArray) {
+		List<Integer> hrefIndexList = new ArrayList<Integer>();
+		for (String colName : colNamesArray) {
+			int colIndex = headers.indexOf(colName);
+			if (colIndex == -1) {
+				LOG.error("Unknown column heading: " + colName);
+			}
+			hrefIndexList.add(new Integer(colIndex));
+		}
+		return hrefIndexList;
+	}
+
+	private void synchroniseTermsAndNames() {
+		if (nameList == null && termList != null) {
     		nameList = termList;
     	} else if (termList == null && nameList != null) {
     		termList = nameList;
-    	} else if (termList == null && nameList == null) {
-    		throw new RuntimeException("must give either/both names and terms");
     	}
-    	printDebug();
-		DefaultAMIDictionary amiDictionary = new DefaultAMIDictionary();
-    	dictionaryElement = amiDictionary.createDictionaryElement(dictionary);
-    	writeNamesAndHrefs(amiDictionary);
 	}
 
-	private void writeNamesAndHrefs(DefaultAMIDictionary amiDictionary) {
-		if (nameList == null) return;
+	private void writeNamesAndLinks() {
+		if (nameList == null) {
+			LOG.debug("no names to create ditionary");
+			return;
+		}
+		addEntriesToDictionaryElement();
+		createAndAddQueryElement();
+		writeDictionaries();
+		return;
+	}
+
+	private void createAndAddQueryElement() {
+		Element query = new Element("query");
+		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < nameList.size(); i++) {
-			Element entry = amiDictionary.createEntryElementFromTerm(termList.get(i));
+			String name = nameList.get(i);
+			if (i > 0) {
+				sb.append(" OR ");
+			}
+			sb.append("('" + name + "')");
+		}
+		query.appendChild(sb.toString());
+		dictionaryElement.appendChild(query);
+	}
+
+	private void addEntriesToDictionaryElement() {
+		for (int i = 0; i < nameList.size(); i++) {
+			Element entry = DefaultAMIDictionary.createEntryElementFromTerm(termList.get(i));
+			entry.addAttribute(new Attribute(DictionaryTerm.ID, "CM."+dictionary+"."+i));
 			entry.addAttribute(new Attribute(DictionaryTerm.NAME, nameList.get(i)));
-			String url = hrefList == null ? null : hrefList.get(i);
-			if (url != null && !url.equals("")) {
-				entry.addAttribute(new Attribute(DictionaryTerm.URL, url));
+			String link = linkList == null ? null : linkList.get(i);
+			if (link != null && !link.equals("")) {
+				entry.addAttribute(new Attribute(DictionaryTerm.URL, link));
 			}
 			dictionaryElement.appendChild(entry);
 		}
+		return;
+	}
+
+	private void writeDictionaries() {
+		if (directory == null) {
+			throw new RuntimeException("must give directory for dictionaries");
+		}
+		if (outformats != null) {
+			List<DictionaryFileFormat> outformatList = Arrays.asList(outformats);
+			for (DictionaryFileFormat outformat : outformatList) {
+				File outfile = new File(new File(directory), dictionary+"."+outformat);
+				LOG.debug("writing to "+outfile);
+				try {
+					outputDictionary(outfile, outformat);
+				} catch (IOException e) {
+					throw new RuntimeException("cannot write file "+outfile, e);
+				}
+			}
+		}
 	}
 	
+	private void outputDictionary(File outfile, DictionaryFileFormat outformat) throws IOException {
+		LOG.debug("writing dictionary to "+outfile.getAbsolutePath());
+		FileOutputStream fos = new FileOutputStream(outfile);
+		if (outformat.equals(DictionaryFileFormat.xml)) {
+			XMLUtil.debug(dictionaryElement, fos, 1);
+		} else if (outformat.equals(DictionaryFileFormat.json)) {
+			String jsonS = createJson(dictionaryElement);
+			IOUtils.write(jsonS, fos, "UTF-8");
+		} else if (outformat.equals(DictionaryFileFormat.html)) {
+			HtmlDiv div = createHtml();
+			if (div != null) {
+				String xmlS = div.toXML();
+				IOUtils.write(xmlS, fos, "UTF-8");
+			}
+		}
+		try {
+			fos.close();
+		} catch (Exception e) {
+			throw new RuntimeException("cannot close ", e);
+		}
+		return;
+	}
+
+	/** 
+	 // FIXME messy to use DefaultAMIDictionary
+	 * 
+	 * @return
+	 */
+	private HtmlDiv createHtml() {
+		DefaultAMIDictionary dictionary = new DefaultAMIDictionary();
+		dictionary.readDictionaryElement(dictionaryElement);
+		HtmlDiv div = dictionary.createHtmlElement();
+		return div;
+	}
+
+	/** prettyPrinting is done here.
+	 * 
+	 * @param dictionaryElement
+	 * @return
+	 */
+	private String createJson(Element dictionaryElement) {
+		CMJsonDictionary cmJsonDictionary = CMJsonDictionary.createCMJsonDictionary(dictionaryElement);
+		// this may be overkill
+		JsonObject json = new JsonParser().parse(cmJsonDictionary.toString()).getAsJsonObject();
+	    return Util.prettyPrintJson(json);
+	}
+
 	public Element getDictionaryElement() {
 		return dictionaryElement;
 	}
     
 	private void printDebug() {
+		System.out.println("dataCols      "+dataCols);
 		System.out.println("dictionary    "+dictionary);
+		System.out.println("directory     "+directory);
+		System.out.println("href          "+href);
+		System.out.println("hrefCols      "+hrefCols);
+		System.out.println("input         "+input);
+		System.out.println("informat      "+informat);
 		System.out.println("linkCol       "+linkCol);
+		System.out.println("log4j         "+makeArrayList(log4j));
 		System.out.println("nameCol       "+nameCol);
-		System.out.println("terms  ("+termList.size()+")    "+termList);
-		System.out.println("wikipedia     "+wikipediaUrl);
+		System.out.println("operation     "+operation);
+		System.out.println("outformats    "+makeArrayList(outformats));
+		System.out.println("splitCol      "+splitCol);
+		System.out.println("termCol       "+termCol);
+		System.out.println("terms         "+(termList == null ? null : "("+termList.size()+") "+termList));
 	}
+
+	private List<?> makeArrayList(Object[] list) {
+		return list == null ? null : Arrays.asList(list);
+	}
+	
 
 	public HtmlUl getSimpleList() {
 		return simpleList;
@@ -251,12 +588,12 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 	 */
 	public HtmlUl createListOfHyperlinks(HtmlElement htmlElement) {
 		nameList = new ArrayList<String>();
-		hrefList = new ArrayList<String>();
+		linkList = new ArrayList<String>();
 		List<HtmlA> aList = HtmlA.extractSelfAndDescendantAs(htmlElement);
 		HtmlUl ul = new HtmlUl();
 		for (HtmlA a : aList) {
 			nameList.add(a.getValue());
-			hrefList.add(a.getHref());
+			linkList.add(a.getHref());
 			HtmlLi li = new HtmlLi();
 			li.appendChild(a.copy());
 			ul.appendChild(li);
@@ -268,7 +605,7 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 		List<HtmlTable> tableList = HtmlTable.extractSelfAndDescendantTables(htmlElement);
 
 		nameList = new ArrayList<String>();
-		hrefList = new ArrayList<String>();
+		linkList = new ArrayList<String>();
 		for (HtmlTable table : tableList) {
 			if (table.getClassAttribute().contains(WIKITABLE)) {
 				addTableNamesAndHrefs(table);
@@ -284,7 +621,7 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 	private void createSingleRowTableFromNamesHref() {
 		for (int i = 0; i < nameList.size(); i++) {
 			String name = nameList.get(i);
-			String href = hrefList.get(i);
+			String href = linkList.get(i);
 			HtmlTr row = new HtmlTr();
 			HtmlTd td = new HtmlTd();
 			if (href == null || href.equals("")) {
@@ -300,10 +637,10 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 		}
 	}
 
-	public HtmlElement readHtmlElement(String wikipediaUrl) {
+	public HtmlElement readHtmlElement(InputStream inputStream) {
 		HtmlElement htmlElement = null;
 		try {
-			Element rootElement = XMLUtil.parseQuietlyToRootElement(new URL(wikipediaUrl).openStream());
+			Element rootElement = XMLUtil.parseQuietlyToRootElement(inputStream);
 			boolean ignoreNamespaces = true;
 			htmlElement = HtmlElement.create(rootElement, false, ignoreNamespaces);
 		} catch (Exception e) {
@@ -388,7 +725,7 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 	 */
 	private List<String> addValueFromContentOrHref(HtmlElement child, LinkField field, String base) {
 		List<HtmlA> aList = HtmlA.extractSelfAndDescendantAs(child);
-		List<String> resultList = new ArrayList<>();
+		List<String> resultList = new ArrayList<String>();
 		for (HtmlA a : aList) {
 			String value = null;
 			if (LinkField.VALUE.equals(field)) {
@@ -435,7 +772,7 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 				continue;
 			}
 			nameList.add(names.get(i));
-			hrefList.add(hrefs.get(i));
+			linkList.add(hrefs.get(i));
 		}
 	}
 
@@ -446,18 +783,16 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 
 
 	public AMIDictionary() {
-		init();
+		initDict();
 	}
 	
-	private void init() {
+	private void initDict() {
 		dictionaryDir = NAConstants.DICTIONARY_DIR;
 		cli = new DictionaryCLI();
-		
 	}
 	
 	/** this uses FILES */
 	public void listDictionaries(List<String> argList) {
-//		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
 		File dictionaryHead = getDictionaryHead();
 		files = listDictionaryFiles(dictionaryHead);
 		
@@ -481,9 +816,6 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 			for (String arg : argList) {
 				listDictionaryInfo(arg);
 			}
-//			for (File file : files) {
-//				listDictionaryInfo(FilenameUtils.getBaseName(file.getName()));
-//			}
 		} else {
 			listAllDictionariesBriefly();
 			for (String arg : argList) {
@@ -518,8 +850,10 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 	}
 	
 	public void help(List<String> argList) {
+		LOG.error("shouldn't use this help?");
 		System.err.println("Dictionary processor");
-		System.err.println("    dictionaries are normally added as arguments to search (e.g. ami-search-cooccur [dictionary [dictionary ...]]");
+		System.err.println("    dictionaries are normally added as arguments to search "
+				+ "(e.g. ami-search-cooccur [dictionary [dictionary ...]]");
 		if (argList.size() == 0) {
 			File parentFile = files == null || files.size() == 0 ? null : files.get(0).getParentFile();
 			DebugPrint.debugPrint("\nlist of dictionaries taken from AMI dictionary list (" + parentFile + "):\n");
@@ -532,15 +866,6 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 		listAllDictionariesBriefly();
 //		listAllDictionariesBrieflyPaths();
 	}
-
-	/**
-	@Deprecated // will continue to use Files
-	private List<Path> getDictionaryPaths() {
-		String resourceName = NAConstants.DICTIONARY_RESOURCE;
-		paths = NIOResourceManager.listChildPaths(resourceName);
-		return paths;
-	}
-	*/
 
 	public List<File> getDictionaries() {
 		DebugPrint.debugPrint(" * dictionaries from: "+dictionaryDir);
@@ -714,21 +1039,8 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 		this.directory = directory;
 	}
 
-	public void createAndSaveDictionary(String dict, String[] args) {
-		runCommands(args);
-		Element dictionaryElement = getDictionaryElement();
-		try {
-			File htmlFile = new File(AMIDictionaryTest.DICTIONARY_DIR, dict + ".html");
-			XMLUtil.debug(getSimpleDictionary(), htmlFile, 1);
-			File xmlFile = new File(getDirectory(), dict + ".xml");
-			XMLUtil.debug(dictionaryElement, xmlFile, 1);
-		} catch (IOException e) {
-			throw new RuntimeException("cannot write: "+dict, e);
-		}
-	}
-
-	public void readWikipediaPage(WikipediaDictionary wikipediaDictionary, String wikipediaUrl) {
-		HtmlElement htmlElement = readHtmlElement(wikipediaUrl);
+	public void readWikipediaPage(WikipediaDictionary wikipediaDictionary, InputStream inputStream) {
+		HtmlElement htmlElement = readHtmlElement(inputStream);
 		wikipediaDictionary.clean(htmlElement);
 		if (this.nameCol != null && linkCol != null) {
 			createFromEmbeddedWikipediaTable(htmlElement);
@@ -740,4 +1052,7 @@ public class AMIDictionary extends AbstractAMIProcessor /*implements HasAMICLI, 
 	}
 
 
+}
+class Data {
+    String ss;	
 }

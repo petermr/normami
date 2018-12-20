@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.eucl.euclid.Util;
 import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
 import picocli.CommandLine;
@@ -37,8 +38,6 @@ public class AMICleaner extends AbstractAMIProcessor {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	
-
 	
 	public enum Cleaner {
 		FULLTEXT_HTML("fulltext.html", "f", "remove fulltext.html (probably not recoverable without redownload)"),
@@ -69,31 +68,30 @@ public class AMICleaner extends AbstractAMIProcessor {
 		public boolean matches(String arg) {
 			return this.file.equals(arg);
 		}
-
 	}
 
-    @Option(names = {"-f", "--file"},
+    @Option(names = {"--file"},
 		arity = "0..*",
         description = "files to delete by name")
     private String[] files;
 
-    @Option(names = {"-fg", "--fileglob"},
+    @Option(names = {"--fileglob"},
 		arity = "0..*",
         description = "files to delete by glob")
     private String[] fileGlobs;
 
-    @Option(names = {"-d", "--dir"},
+    @Option(names = {"--dir"},
 		arity = "0..*",
         description = "directories to delete by name")
     private String[] dirs;
 
-    @Option(names = {"-dg", "--dirglob"},
+    @Option(names = {"--dirglob"},
 		arity = "0..*",
         description = "directories to delete by glob")
     private String[] dirGlobs;
 
     /** used by some non-picocli calls
-     * 
+     * obsolete it
      * @param cProject
      */
 	public AMICleaner(CProject cProject) {
@@ -108,19 +106,20 @@ public class AMICleaner extends AbstractAMIProcessor {
     	amiCleaner.runCommands(args);
     }
 
-    public void runCommands(String[] args) {
-    	super.runCommands(args);
+    @Override
+	protected void parseSpecifics() {
+    	System.out.println("files         "+Util.toStringList(files));
+    	System.out.println("fileGlobs     "+Util.toStringList(fileGlobs));
+    	System.out.println("dirs          "+Util.toStringList(dirs));
+    	System.out.println("dirGlobs      "+Util.toStringList(dirGlobs));
+	}
+
+    @Override
+    protected void runSpecifics() {
         runClean();
     }
 
-    @Override
-    public Void call() throws Exception {
-    	super.call();
-        return null;
-    }
-
     private void runClean() {
-
     	if (files != null) cleanFiles(Arrays.asList(files));
     	if (dirs != null) cleanFiles(Arrays.asList(dirs));
     }

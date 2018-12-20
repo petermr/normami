@@ -65,8 +65,10 @@ public class CMJsonTerm {
 	}
 	
 	public void addIdentifier(String name, String value) {
-		JsonObject identifiers = ensureIdentifiers();
-		identifiers.add(name, new JsonPrimitive(value));
+		if (name != null && value != null) {
+			JsonObject identifiers = ensureIdentifiers();
+			identifiers.add(name, new JsonPrimitive(value));
+		}
 	}
 
 	private JsonObject ensureIdentifiers() {

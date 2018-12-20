@@ -1,6 +1,7 @@
 package org.contentmine.ami;
 
 import java.awt.image.BufferedImage;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -34,136 +35,134 @@ import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
-	/** simple example of picocli that runs.
-	 * 
-	 * @author pm286
-	 *
-	 */
+/** simple example of picocli that runs.
+ * 
+ * @author pm286
+ *
+ */
 
-	@Command(
-			//String name() default "<main class>";
-	name = "ami-image", 
-			//String[] aliases() default {};
-	aliases = "image",
-			//Class<?>[] subcommands() default {};
-	version = "ami-image 0.1",
-			//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
-	description = "Requires a CProject containing fulltext.pdf. (see makeProject). Then uses PDFConverter to parses the PDFs into %n"
-			+ "(a) text/characters (in svg/) %n"
-			+ "(b) graphics (in SVG) %n"
-			+ "(c) images (in pdfimages/)%n%n"
-			+ "then%n"
-			+ "(A)image processes the images to binarized (black/white)%n"
-			+ "(B)optionally separates the umnwanted images (small and monochrome)"
-	)
+@Command(
+		//String name() default "<main class>";
+name = "ami-image", 
+		//String[] aliases() default {};
+aliases = "image",
+		//Class<?>[] subcommands() default {};
+version = "ami-image 0.1",
+		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
+description = "Requires a CProject containing fulltext.pdf. (see makeProject). Then uses PDFConverter to parses the PDFs into %n"
+		+ "(a) text/characters (in svg/) %n"
+		+ "(b) graphics (in SVG) %n"
+		+ "(c) images (in pdfimages/)%n%n"
+		+ "then%n"
+		+ "(A)image processes the images to binarized (black/white)%n"
+		+ "(B)optionally separates the umnwanted images (small and monochrome)"
+)
 
-	public class AMIImageProcessor  extends AbstractAMIProcessor {
-		private static final Logger LOG = Logger.getLogger(AMIImageProcessor.class);
-		static {
-			LOG.setLevel(Level.DEBUG);
-		}
+public class AMIImageProcessor  extends AbstractAMIProcessor {
+	private static final Logger LOG = Logger.getLogger(AMIImageProcessor.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
 
-	    @Option(names = {"-mh", "--minheight"},
-	    		arity = "0..1",
-	    		defaultValue = "100",
+    @Option(names = {"-mh", "--minheight"},
+    		arity = "0..1",
+    		defaultValue = "100",
 //	    		type = Integer.class,
-                description = "minimum height (pixels) to accept")
-	    private int minHeight;
+            description = "minimum height (pixels) to accept")
+    private int minHeight;
 
-	    @Option(names = {"-mw", "--minwidth"},
-	    		arity = "0..1",
-	    		defaultValue = "100",
-                description = "minimum width (pixels) to accept")
-	    private int minWidth;
+    @Option(names = {"-mw", "--minwidth"},
+    		arity = "0..1",
+    		defaultValue = "100",
+            description = "minimum width (pixels) to accept")
+    private int minWidth;
 
-	    @Option(names = {"-th", "--threshold"},
-	    		arity = "0..1",
-	    		defaultValue = "180",
-                description = "threshold for binarization")
-	    private int threshold;
+    @Option(names = {"-th", "--threshold"},
+    		arity = "0..1",
+    		defaultValue = "180",
+            description = "threshold for binarization")
+    private int threshold;
 
-	    @Option(names = {"-mo", "--monochrome"},
-	    		arity = "0..1",
-	    		defaultValue = "true",
-	    		description = "discard monochrome images (i.r. only one color)")
-		private boolean discardMonochrome;
-	    
-	    @Option(names = {"-du", "--duplicates"},
-	    		arity = "0..1",
-	    		defaultValue = "true",
-                description = "discard duplicate images ")
-		private boolean discardDuplicates;
-	    
-	    @Option(names = {"-mi", "--maxislands"},
-	    		arity = "0..1",
-	    		defaultValue = "6",
-                description = "maximum number of pixel islands output ")
-		private int maxPixelIslandCount;
-	    
-	    @Option(names = {"-mp", "--maxpixels"},
-	    		arity = "0..1",
-	    		defaultValue = "100000",
-                description = "maximum number of pixels in any island ")
-		private int maxPixelIslandSize;
+    @Option(names = {"-mo", "--monochrome"},
+    		arity = "0..1",
+    		defaultValue = "true",
+    		description = "discard monochrome images (i.r. only one color)")
+	private boolean discardMonochrome;
+    
+    @Option(names = {"-du", "--duplicates"},
+    		arity = "0..1",
+    		defaultValue = "true",
+            description = "discard duplicate images ")
+	private boolean discardDuplicates;
+    
+    @Option(names = {"-mi", "--maxislands"},
+    		arity = "0..1",
+    		defaultValue = "6",
+            description = "maximum number of pixel islands output ")
+	private int maxPixelIslandCount;
+    
+    @Option(names = {"-mp", "--maxpixels"},
+    		arity = "0..1",
+    		defaultValue = "100000",
+            description = "maximum number of pixels in any island ")
+	private int maxPixelIslandSize;
 
-	    @Option(names = {"-ri", "--rings"},
-	    		arity = "0..1",
-	    		defaultValue = "false",
-                description = "extract pixel rings")
-		private boolean extractPixelRings;
+    @Option(names = {"-ri", "--rings"},
+    		arity = "0..1",
+    		defaultValue = "false",
+            description = "extract pixel rings")
+	private boolean extractPixelRings;
 
-		public static final String DUPLICATES = "duplicates/";
-		public static final String MONOCHROME = "monochrome/";
-		public static final String SMALL = "small/";
+	public static final String DUPLICATES = "duplicates/";
+	public static final String MONOCHROME = "monochrome/";
+	public static final String SMALL = "small/";
 
-		private Multiset<String> duplicateSet;
-		
-	    public AMIImageProcessor(String[] args) {
-	    	this.args = args;
-		}
-
-	    
-	    public static void main(String[] args) throws Exception {
-	    	// debugging only
-//	    	String[] args1 = new String[] {"--help"};
-//	    	String[] args1 = new String[] {};
-//	    	String[] args1 = new String[] {"-p", "cprojx", "-th", "30"};
-	    	// supplied by caller?
-//	    	if (args.length > 0) {
-//	    		args1 = args;
-//	    	}
-        	AMIImageProcessor amiImageProcessor = new AMIImageProcessor(args);
-        	amiImageProcessor.runCommands();
-	    }
-
-	    private void runCommands() {
-	    	args = args.length == 0 ? new String[] {"--help"} : args;
-	        CommandLine.call(this, args);
-	        runImages();
-	    }
-
-	    @Override
-	    public Void call() throws Exception {
-	    	super.call();
-	    	
-//	        System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
-//	        System.out.println("cTree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
-		    System.out.println("minHeight           " + minHeight);
-		    System.out.println("minWidth            " + minWidth);
-		    System.out.println("threshold           " + threshold);
-		    System.out.println("discardMonochrome   " + discardMonochrome);
-		    System.out.println("discardDuplicates   " + discardDuplicates);
-		    System.out.println("maxPixelIslandCount " + maxPixelIslandCount);
-		    System.out.println("maxPixelIslandSize  " + maxPixelIslandSize);
-		    System.out.println("extractPixelRings   " + extractPixelRings);
-
-	        return null;
-	    }
- 
+	private Multiset<String> duplicateSet;
+	
     private AMIImageProcessor() {
     	
     }
+
+    public static void main(String[] args) throws Exception {
+    	new AMIImageProcessor().runCommands(args);
+    }
+
+    @Override
+	protected void parseSpecifics() {
+		System.out.println("minHeight           " + minHeight);
+		System.out.println("minWidth            " + minWidth);
+		System.out.println("threshold           " + threshold);
+		System.out.println("discardMonochrome   " + discardMonochrome);
+		System.out.println("discardDuplicates   " + discardDuplicates);
+		System.out.println("maxPixelIslandCount " + maxPixelIslandCount);
+		System.out.println("maxPixelIslandSize  " + maxPixelIslandSize);
+		System.out.println("extractPixelRings   " + extractPixelRings);
+	}
+
+    @Override
+    protected void runSpecifics() {
+    	runImages();
+    	
+    }
     
+	/** runs over cProject
+	 * 
+	 */
+	public void runImages() {
+		if (cProject != null) {
+			CTreeList cTreeList = cProject.getOrCreateCTreeList();
+			for (CTree cTree : cTreeList) {
+				LOG.debug("tree: "+cTree.getName());
+				runImages(cTree);
+			}
+		} else if (cTree != null) {
+			runImages(cTree);
+		} else {
+			LOG.warn(" no CProject");
+		}
+	}
+
+
 	public void runImages(CTree cTree) {
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
 		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
@@ -211,24 +210,7 @@ import picocli.CommandLine.Option;
 	}
 
 	/** runs over cProject
-	 * 
-	 */
-	public void runImages() {
-		if (cProject != null) {
-			CTreeList cTreeList = cProject.getOrCreateCTreeList();
-			for (CTree cTree : cTreeList) {
-				LOG.debug("tree: "+cTree.getName());
-				runImages(cTree);
-			}
-		} else if (cTree != null) {
-			runImages(cTree);
-		} else {
-			LOG.warn(" no CProject");
-		}
-	}
-
-	/** runs over cProject
-	 * 
+	 * not used by picocli
 	 */
 	public void runImages(CProject cProject) {
 		this.setCProject(cProject);
@@ -360,7 +342,7 @@ import picocli.CommandLine.Option;
 	
 		for (File imageFile : imageFiles) {
 			String imageRoot = FilenameUtils.getBaseName(imageFile.toString());
-			AMIImageProcessorIT.LOG.debug("root "+imageRoot);
+			LOG.debug("root "+imageRoot);
 			File derivedImageDir = new File(derivedImagesDir, imageRoot+"/");
 			
 			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
@@ -372,11 +354,11 @@ import picocli.CommandLine.Option;
 			for (int i = 0; i < Math.min(maxPixelIslandCount, pixelIslandList.size()); i++) {
 				PixelIsland pixelIsland = pixelIslandList.get(i);
 				if (pixelIsland.size() > maxPixelIslandSize) {
-					AMIImageProcessorIT.LOG.debug("Skipped island: "+i+" ("+pixelIsland.size()+")");
+					LOG.debug("Skipped island: "+i+" ("+pixelIsland.size()+")");
 					continue;
 				}
 				File pixelRingFile = new File(derivedImageDir, "pixelIsland"+i+"."+CTree.SVG);
-				AMIImageProcessorIT.LOG.debug("wrote "+pixelRingFile);
+				LOG.debug("wrote "+pixelRingFile);
 				SVGSVG.wrapAndWriteAsSVG(pixelIsland.getOrCreateSVGG(), pixelRingFile);
 			}
 			LOG.debug("end of pixels");

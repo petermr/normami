@@ -171,20 +171,22 @@ public class CMJsonDictionary {
 	}
 
 	public static CMJsonDictionary convertXMLToJson(DefaultAMIDictionary xmlDictionary) {
+		return (xmlDictionary == null) ? null :
+			createCMJsonDictionary( xmlDictionary.getDictionaryElement());
+	}
+
+	public static CMJsonDictionary createCMJsonDictionary(Element dictionaryElement) {
 		CMJsonDictionary cmJsonDictionary = null;
-		if (xmlDictionary != null) {
-			Element dictionaryElement = xmlDictionary.getDictionaryElement();
-			if (dictionaryElement != null) {
-				cmJsonDictionary = new CMJsonDictionary();
-				cmJsonDictionary.setId(dictionaryElement.getAttributeValue(ID));
-				List<Element> elements = XMLUtil.getQueryElements(dictionaryElement, DefaultAMIDictionary.ENTRY);
-				for (Element entryElement : elements) {
-					CMJsonTerm term = new CMJsonTerm(cmJsonDictionary);
-					term.addCMIdentifier(entryElement.getAttributeValue(DefaultAMIDictionary.ID));
-					term.addName(entryElement.getAttributeValue(DictionaryTerm.NAME));
-					term.addTerm(entryElement.getAttributeValue(DictionaryTerm.TERM));
-					cmJsonDictionary.addTerm(term);
-				}
+		if (dictionaryElement != null) {
+			cmJsonDictionary = new CMJsonDictionary();
+			cmJsonDictionary.setId(dictionaryElement.getAttributeValue(ID));
+			List<Element> elements = XMLUtil.getQueryElements(dictionaryElement, DefaultAMIDictionary.ENTRY);
+			for (Element entryElement : elements) {
+				CMJsonTerm term = new CMJsonTerm(cmJsonDictionary);
+				term.addCMIdentifier(entryElement.getAttributeValue(DefaultAMIDictionary.ID));
+				term.addName(entryElement.getAttributeValue(DictionaryTerm.NAME));
+				term.addTerm(entryElement.getAttributeValue(DictionaryTerm.TERM));
+				cmJsonDictionary.addTerm(term);
 			}
 		}
 		return cmJsonDictionary;

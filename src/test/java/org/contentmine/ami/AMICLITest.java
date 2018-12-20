@@ -3,12 +3,8 @@ package org.contentmine.ami;
 import static org.junit.Assert.assertEquals;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.security.MessageDigest;
 import java.util.Arrays;
-import java.util.concurrent.Callable;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -21,7 +17,6 @@ import org.apache.commons.cli.ParseException;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.Test;
-import org.junit.runners.Parameterized.Parameters;
 
 import junit.framework.Assert;
 //import picocli.CommandLine.Command;

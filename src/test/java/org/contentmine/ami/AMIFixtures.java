@@ -33,6 +33,10 @@ public class AMIFixtures {
 	public final static File TEST_RESOURCES_DIR    = new File(CHESConstants.SRC_TEST_RESOURCES);
 	public final static File TARGET_DIR    = new File("target");
 	
+	public static final String AMISTACK       = "amistack/";
+	public static final File TEST_AMISTACK_DIR = new File(NAConstants.TEST_AMI_DIR, AMISTACK);
+	public static final File TARGET_AMISTACK_DIR = new File(TARGET_DIR, AMISTACK);
+
 	public final static File TEST_BMC_DIR          = new File(NAConstants.TEST_AMI_DIR, "bmc");
 	public final static File TEST_BMC_15_1_511_CMDIR = new File(AMIFixtures.TEST_BMC_DIR, "15_1_511");
 	public final static File TEST_TRIALS_16_1_1 = new File(AMIFixtures.TEST_BMC_DIR, "http_www.trialsjournal.com_content_16_1_1");
@@ -84,6 +88,8 @@ public class AMIFixtures {
 	public static final File SPECTRA_PLOT_TARGET_DIR = new File(TARGET_DIR, SPECTRA);
 
 	public final static File TEST_TUTORIAL_DIR       = new File(NAConstants.TEST_AMI_DIR, "tutorial/");
+	
+
 
 	public static final File TEST_WORD_DIR           = new File(NAConstants.TEST_AMI_DIR, "word");
 	public static final File TEST_WORD_EXAMPLES      = new File(TEST_WORD_DIR, "examples");

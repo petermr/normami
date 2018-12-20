@@ -17,7 +17,6 @@ import org.contentmine.ami.plugins.word.WordCollectionFactory;
 import org.contentmine.ami.wordutil.WordSetWrapper;
 import org.contentmine.cproject.args.ArgIterator;
 import org.contentmine.cproject.args.ArgumentOption;
-import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.cproject.args.ValueElement;
 import org.contentmine.cproject.args.VersionManager;
 import org.contentmine.cproject.files.CTree;
@@ -29,7 +28,6 @@ import org.contentmine.cproject.lookup.DefaultStringDictionary;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.NormaArgProcessor;
-import org.eclipse.jetty.util.log.Log;
 
 import nu.xom.Builder;
 import nu.xom.Document;

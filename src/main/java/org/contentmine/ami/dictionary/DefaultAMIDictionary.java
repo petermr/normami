@@ -22,11 +22,15 @@ import org.apache.log4j.Logger;
 import org.contentmine.ami.lookups.WikipediaLookup;
 import org.contentmine.cproject.lookup.DefaultStringDictionary;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.html.HtmlB;
 import org.contentmine.graphics.html.HtmlCaption;
 import org.contentmine.graphics.html.HtmlDiv;
-import org.contentmine.graphics.html.HtmlElement;
+import org.contentmine.graphics.html.HtmlI;
+import org.contentmine.graphics.html.HtmlLi;
 import org.contentmine.graphics.html.HtmlP;
+import org.contentmine.graphics.html.HtmlSpan;
 import org.contentmine.graphics.html.HtmlTitle;
+import org.contentmine.graphics.html.HtmlUl;
 import org.contentmine.norma.NAConstants;
 
 import com.google.common.hash.BloomFilter;
@@ -181,15 +185,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		return dictionaryElement;
 	}
 
-//	public Element createEntryElementWithName(String term, String name) {
-//		Element entry = createEntryElementFromTerm(term);
-//		if (entry != null) {
-//			entry.addAttribute(new Attribute(DictionaryTerm.NAME, name));
-//		}
-//		return entry;
-//	}
-
-	public Element createEntryElementFromTerm(String term) {
+	public static Element createEntryElementFromTerm(String term) {
 		if (term == null) return null;
 		Element entry = new Element(ENTRY);
 		entry.addAttribute(new Attribute(DictionaryTerm.TERM, term));
@@ -197,7 +193,12 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	}
 
 	public Element createDictionaryElement(String title) {
-		dictionaryElement = new Element(DICTIONARY);
+		dictionaryElement = createDictionaryWithTitle(title);
+		return dictionaryElement;
+	}
+
+	public static Element createDictionaryWithTitle(String title) {
+		Element dictionaryElement = new Element(DICTIONARY);
 		if (title != null) {
 			dictionaryElement.addAttribute(new Attribute(TITLE, title));
 		}
@@ -249,6 +250,11 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 
 	protected void readDictionary(InputStream is) {
 		dictionaryElement = XMLUtil.parseQuietlyToDocument(is).getRootElement();
+		readDictionaryElement(dictionaryElement);
+	}
+
+	public void readDictionaryElement(Element dictionaryElement) {
+		this.dictionaryElement = dictionaryElement;
 		namesByTerm = new HashMap<DictionaryTerm, String>();
 		rawTermSet = new HashSet<String>();
 		dictionaryTermList = new ArrayList<DictionaryTerm>();
@@ -274,6 +280,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 				// add desc here
 			}
 		}
+		return;
 	}
 
 
@@ -432,6 +439,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		return dictionaryName;
 	}
 
+	/** Not yet finished */
 	public HtmlDiv createHtmlElement() {
 		HtmlDiv div = null;
 		if (dictionaryElement != null) {
@@ -450,9 +458,31 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 					caption.appendChild(para);
 				}
 			}
+			List<Element> entryList = XMLUtil.getQueryElements(dictionaryElement, ENTRY);
+			if (entryList.size() > 0) {
+				HtmlUl ul = new HtmlUl();
+				div.appendChild(ul);
+				for (Element entry : entryList) {
+					HtmlLi li = new HtmlLi();
+					ul.appendChild(li);
+					for (int i = 0; i < entry.getAttributeCount(); i++) {
+						Attribute att = entry.getAttribute(i);
+						HtmlSpan span = new HtmlSpan();
+						HtmlI it = new HtmlI();
+						it.appendChild(att.getLocalName());
+						span.appendChild(it);
+						span.appendChild(": ");
+						HtmlB b = new HtmlB();
+						b.appendChild(att.getValue());
+						span.appendChild(b);
+						li.appendChild(span);
+					}
+				}
+			}
 		}
+//		LOG.debug("div "+div.toXML());
 		return div;
 		
 	}
-
+	
 }

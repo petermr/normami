@@ -32,35 +32,24 @@ public class AMIProcessorPDF extends AbstractAMIProcessor {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-    /** used by some non-picocli calls
-     * 
-     * @param cProject
-     */
-	public AMIProcessorPDF(CProject cProject) {
-		this.cProject = cProject;
-	}
-	
 	public AMIProcessorPDF() {
 	}
 	
     public static void main(String[] args) throws Exception {
-    	// debug
-    	args = args.length == 0 ? new String[] {"--help"} : args;
     	AMIProcessorPDF amiProcessorPDF = new AMIProcessorPDF();
     	amiProcessorPDF.runCommands(args);
     }
 
-    @Override
-    public void runCommands(String[] args) {
-    	super.runCommands(args);
-        runPDF();
-    }
+	@Override
+	protected void parseSpecifics() {
+		// no local variables
+	}
 
-    @Override
-    public Void call() throws Exception {
-    	super.call();
-        return null;
-    }
+	@Override
+	protected void runSpecifics() {
+        runPDF();
+	}
+
 
     private void runPDF() {
     	if (cProject != null) {
@@ -68,18 +57,6 @@ public class AMIProcessorPDF extends AbstractAMIProcessor {
     	}
     }
 
-//	public static void main1(String[] args) {
-//		List<String> argList = new ArrayList<String>(Arrays.asList(args));
-//		if (argList.size() == 0 || AMIProcessor.HELP.equals(argList.get(0))) {
-//			if (argList.size() > 0) argList.remove(0);
-//			AMIProcessor.runHelp(argList);
-//		} else {
-//			String projectName = argList.get(0);
-//			File projectDir = new File(projectName);
-//			argList.remove(0);
-//			runPDF(projectDir, argList);
-//		}
-//	}
     public static void runPDF(CProject cProject) {
     	runPDF(cProject == null ? null : cProject.getDirectory());
     }
