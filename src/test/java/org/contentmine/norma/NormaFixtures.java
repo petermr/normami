@@ -122,7 +122,6 @@ public class NormaFixtures {
 	public final static File TEST_PDFTABLE_DIR = new File(NormaFixtures.TEST_TABLE_DIR, "pdftable/");
 
 
-
 	private static final File DEMO_DIR = new File("./demo");
 	public static final File MOSQUITOS_DIR = new File(NormaFixtures.DEMO_DIR, "mosquitos1/");
 
