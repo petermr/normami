@@ -131,7 +131,7 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 		
     	printSpecificHeader();
 		parseSpecifics();
-		if (!Level.WARN.isGreaterOrEqual(level)) {
+		if (level != null && !Level.WARN.isGreaterOrEqual(level)) {
 			System.err.println("processing halted due to argument errors");
 		} else {
 			runGenerics();

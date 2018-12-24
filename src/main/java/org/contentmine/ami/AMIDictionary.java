@@ -40,6 +40,7 @@ import org.contentmine.graphics.html.HtmlTbody;
 import org.contentmine.graphics.html.HtmlTd;
 import org.contentmine.graphics.html.HtmlTr;
 import org.contentmine.graphics.html.HtmlUl;
+import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
@@ -133,6 +134,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	
 	enum InputFormat {
 		csv,
+		wikicategory,
 		wikipage,
 		wikitable
 	}
@@ -159,16 +161,15 @@ public class AMIDictionary extends AbstractAMIProcessor {
     private String[] dataCols;
     
     @Option(names = {"-d", "--dictionary"}, 
-    		arity="1",
-//    	    paramLabel = "THE DICT",
-    		description = "input or output dictionary")
-    private String dictionary;
+    		arity="1..*",
+    		description = "input or output dictionary/s. When creating, singular; when displaying, any number")
+    private String[] dictionary = null;
 
     @Option(names = {"--directory"}, 
     		arity="1",
 //   	    	paramLabel = "directory",
     		description = "directory containing dictionary")
-    private String directory;
+    private String directory = NAConstants.DICTIONARY_DIR.toString();
 
     @Option(names = {"--hrefcols"}, 
     		split=",",
@@ -238,6 +239,12 @@ public class AMIDictionary extends AbstractAMIProcessor {
     		description = "list of terms (entries), comma-separated")
     private String[] terms;
 
+    @Option(names = {"--urlref"}, 
+    		arity="1..*",
+    		split=",",
+    		description = "for non-structured pages I think")
+    private String[] urlref;
+
     @Mixin CProjectTreeMixin proTree;
     
     DictionaryData dictionaryData;
@@ -248,50 +255,31 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	private List<String> linkList;
 	private List<List<String>> hrefColList;
 	private List<List<String>> dataColList;
-//	private List<String> outformatList;
-	
-	private HtmlTable simpleTable;
-	public HtmlUl simpleList;
 	private Element dictionaryElement;
 	private HtmlTbody tBody;
 	private WikipediaDictionary wikipediaDictionary;
-	private InputStream inputStream;
-	private RectangularTable rectangularTable;
+//	private InputStream inputStream;
+//	private RectangularTable rectangularTable;
 
 	private List<File> files;
 	private List<Path> paths;
-	private File dictionaryDir = DICTIONARY_TOP;
+	private File dictionaryDir;
 	private int maxEntries = 0;
-	private AMICLI cli;
 
 
-
+	public AMIDictionary() {
+		initDict();
+	}
+	
+	private void initDict() {
+	}
+	
 	public static void main(String[] args) {
         AMIDictionary amiDictionary = new AMIDictionary();
         amiDictionary.initDictionaryData();
-        
-        testing(args, amiDictionary);
-//		amiDictionary.runCommands(args);
+		amiDictionary.runCommands(args);
 	}
 
-	private static void testing(String[] args, AMIDictionary amiDictionary) {
-		CommandLine commandLine = new CommandLine(amiDictionary);
-        commandLine.addMixin("xyzMixin ", new CProjectTreeMixin());
-        commandLine.parse(new String[]{"--help", "--wombatx", "176"});
-//        LOG.debug("MIX "+commandLine.xyzMixin.getWombatx());
-//        if (1 ==1) return;
-        commandLine.parse(args);
-        Map<String, Object> map = commandLine.getMixins();
-        for (String k : map.keySet()) {
-        	Object o = map.get(k);
-        	if (o instanceof CProjectTreeMixin) {
-        		CProjectTreeMixin mixin = (CProjectTreeMixin) o;
-        		LOG.debug("wombx "+mixin.getWombatx());
-        	}
-        	LOG.debug("O: "+o.getClass());
-        }
-	}
-	
 	private void initDictionaryData() {
 		dictionaryData = new DictionaryData();
 		
@@ -324,8 +312,13 @@ public class AMIDictionary extends AbstractAMIProcessor {
 
 
 	private void runDictionary() {
+		dictionaryDir = directory == null ? null : new File(directory);
 		if (Operation.display.equals(operation)) {
-			displayDictionaries();
+			if (dictionaryDir == null || !dictionaryDir.exists() || !dictionaryDir.isDirectory()) {
+				LOG.warn("no existing dictionaryDir "+directory);
+			} else {
+				displayDictionaries();
+			}
 		} else if (Operation.create.equals(operation)) {
 			createDictionary();
 		} else {
@@ -351,15 +344,14 @@ public class AMIDictionary extends AbstractAMIProcessor {
 //
 //	}
 
-	private void displayDictionaries() {
-		LOG.debug("display NYI");
-	}
-
 	private void createDictionary() {
-		openInputStream();
+		InputStream inputStream = openInputStream();
     	if (inputStream != null) {
     		if (informat == null) {
     			throw new RuntimeException("no input format given ");
+    		} else if (InputFormat.wikicategory.equals(informat)) {
+	    		wikipediaDictionary = new WikipediaDictionary();
+	    		readWikipediaPage(wikipediaDictionary, inputStream);
     		} else if (InputFormat.wikipage.equals(informat)) {
 	    		wikipediaDictionary = new WikipediaDictionary();
 	    		readWikipediaPage(wikipediaDictionary, inputStream);
@@ -375,23 +367,24 @@ public class AMIDictionary extends AbstractAMIProcessor {
     		termList = terms == null ? null : Arrays.asList(terms);
     	}
     	synchroniseTermsAndNames();
-//    	printDebug();
-    	dictionaryElement = DefaultAMIDictionary.createDictionaryWithTitle(dictionary);
+    	dictionaryElement = DefaultAMIDictionary.createDictionaryWithTitle(dictionary[0]);
     	writeNamesAndLinks();
 		
 	}
 
-	private void openInputStream() {
+	private InputStream openInputStream() {
+		InputStream inputStream = null;
 		try {
 			inputStream = input.startsWith("http") ? new URL(input).openStream() : new FileInputStream(new File(input));
 		} catch (IOException e) {
 			throw new RuntimeException("cannot read/open stream", e);
 		}
+		return inputStream;
 	}
 
 	private RectangularTable readCSV(InputStream inputStream) {
 		boolean useHeader = true;
-		rectangularTable = null;
+		RectangularTable rectangularTable = null;
 		try {
 			rectangularTable = RectangularTable.readCSVTable(inputStream, useHeader);
 		} catch (IOException e) {
@@ -491,7 +484,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 			List<DictionaryFileFormat> outformatList = Arrays.asList(outformats);
 			for (DictionaryFileFormat outformat : outformatList) {
 				File outfile = new File(new File(directory), dictionary+"."+outformat);
-				LOG.debug("writing to "+outfile);
+//				LOG.debug("writing to "+outfile);
 				try {
 					outputDictionary(outfile, outformat);
 				} catch (IOException e) {
@@ -554,7 +547,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
     
 	private void printDebug() {
 		System.out.println("dataCols      "+dataCols);
-		System.out.println("dictionary    "+dictionary);
+		System.out.println("dictionary    "+(dictionary == null ? "null" : Arrays.asList(dictionary)));
 		System.out.println("directory     "+directory);
 		System.out.println("href          "+href);
 		System.out.println("hrefCols      "+hrefCols);
@@ -575,18 +568,13 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	}
 	
 
-	public HtmlUl getSimpleList() {
-		return simpleList;
-	}
-	
-
 	/** create from page with hyperlinks
 	 * recommended to trim rubbish from HtmlElement first
 	 * 
 	 * @param htmlElement
 	 * @return
 	 */
-	public HtmlUl createListOfHyperlinks(HtmlElement htmlElement) {
+	private HtmlUl createListOfHyperlinks(HtmlElement htmlElement) {
 		nameList = new ArrayList<String>();
 		linkList = new ArrayList<String>();
 		List<HtmlA> aList = HtmlA.extractSelfAndDescendantAs(htmlElement);
@@ -601,7 +589,48 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		return ul;
 	}
 
-	public void createFromEmbeddedWikipediaTable(HtmlElement htmlElement) {
+	/** create from category 
+	 * Not sure how standard this is
+	 * recommended to trim rubbish from HtmlElement first
+	 * <div class="mw-category-generated" lang="en" dir="ltr">
+	 *   <div id="mw-pages">
+	 *     <h2><span id="Pages_in_category"></span>Pages in category "Insect vectors of human pathogens"</h2>
+	 *     <p>The following 57 pages are in this category, out of  57 total. This list may not reflect recent changes 
+	 *        (<a href="/wiki/Wikipedia:FAQ/Categorization#Why_might_a_category_list_not_be_up_to_date?"
+	 *         title="Wikipedia:FAQ/Categorization">learn more</a>).</p>
+	 *     <div lang="en" dir="ltr" class="mw-content-ltr">
+	 *       <div class="mw-category">
+	 *         <div class="mw-category-group">
+	 *           <h3>A</h3>
+                 <ul>
+                   <li><a href="/wiki/Aedes_aegypti" title="Aedes aegypti">Aedes aegypti</a></li>
+                   <li><a href="/wiki/Aedes_albopictus" title="Aedes albopictus">Aedes albopictus</a></li>
+                   <li><a href="/wiki/Aedes_japonicus" title="Aedes japonicus">Aedes japonicus</a></li>
+	 * 
+	 * @param htmlElement
+	 * @return
+	 */
+	private void createCategory(HtmlElement htmlElement) {
+		nameList = new ArrayList<String>();
+		termList = new ArrayList<String>();
+		linkList = new ArrayList<String>();
+		List<HtmlElement> categoryList = HtmlUtil.getQueryHtmlElements(htmlElement, 
+				".//*[local-name()='div' and @class='mw-category-generated']//*[local-name()='div' and @class='mw-category']");
+		for (HtmlElement category : categoryList) {
+			LOG.debug("CAT");
+			List<HtmlA> aList = HtmlA.extractSelfAndDescendantAs(category);
+			HtmlUl ul = new HtmlUl();
+			for (HtmlA a : aList) {
+				termList.add(a.getValue());
+				nameList.add(a.getTitle());
+				linkList.add(a.getHref());
+			}
+		}
+		LOG.debug("TERMS "+termList);
+		return;
+	}
+
+	private void createFromEmbeddedWikipediaTable(HtmlElement htmlElement) {
 		List<HtmlTable> tableList = HtmlTable.extractSelfAndDescendantTables(htmlElement);
 
 		nameList = new ArrayList<String>();
@@ -611,37 +640,13 @@ public class AMIDictionary extends AbstractAMIProcessor {
 				addTableNamesAndHrefs(table);
 			}
 		}
-		simpleTable = new HtmlTable();
-		createSingleRowTableFromNamesHref();
 	}
 
-	/** probably superfluous now
-	 * 
-	 */
-	private void createSingleRowTableFromNamesHref() {
-		for (int i = 0; i < nameList.size(); i++) {
-			String name = nameList.get(i);
-			String href = linkList.get(i);
-			HtmlTr row = new HtmlTr();
-			HtmlTd td = new HtmlTd();
-			if (href == null || href.equals("")) {
-				td.setValue(name);
-			} else {
-				HtmlA a = new HtmlA();
-				a.setHref(href);
-				a.setValue(name);
-				td.appendChild(a);
-			}
-			row.appendChild(td);
-			simpleTable.appendChild(row);
-		}
-	}
-
-	public HtmlElement readHtmlElement(InputStream inputStream) {
+	private HtmlElement readHtmlElement(InputStream inputStream) {
 		HtmlElement htmlElement = null;
 		try {
 			Element rootElement = XMLUtil.parseQuietlyToRootElement(inputStream);
-			boolean ignoreNamespaces = true;
+			boolean ignoreNamespaces = false;
 			htmlElement = HtmlElement.create(rootElement, false, ignoreNamespaces);
 		} catch (Exception e) {
 			throw new RuntimeException("cannot find/parse URL ", e);
@@ -649,10 +654,6 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		return htmlElement;
 	}
 	
-	public HtmlElement getSimpleDictionary() {
-		return simpleTable != null ? simpleTable : simpleList;
-	}
-
 	private void addTableNamesAndHrefs(HtmlTable table) {
 		tBody = table.getTbody();
 		String colName = nameCol.trim();
@@ -682,7 +683,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
      * @param colIndex
      * @return list of values
      */
-	public List<String> getColumnValues(int colIndex) {
+	private List<String> getColumnValues(int colIndex) {
 		return addCells(colIndex, LinkField.VALUE, (String) null);
 	}
 
@@ -748,7 +749,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
      * @param colIndex
      * @return list of values
      */
-	public List<String> getColumnHrefs(LinkField field, int colIndex, String base) {
+	private List<String> getColumnHrefs(LinkField field, int colIndex, String base) {
 		List<String> valueList = addCells(colIndex, field, base);
 		return valueList;
 	}
@@ -776,25 +777,35 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		}
 	}
 
-	public void runHelp(List<String> argList) {
-		if (argList.size() > 0) argList.remove(0);
-		this.help(argList);
+	public void readWikipediaPage(WikipediaDictionary wikipediaDictionary, InputStream inputStream) {
+		HtmlElement htmlElement = readHtmlElement(inputStream);
+		wikipediaDictionary.clean(htmlElement);
+		if (false) {
+		} else if (InputFormat.wikicategory.equals(this.informat)) {
+			createCategory(htmlElement);
+		} else if (this.nameCol != null && linkCol != null) {
+			createFromEmbeddedWikipediaTable(htmlElement);
+		} else if (this.href != null) {
+			createListOfHyperlinks(htmlElement);
+		} else {
+			AMIDictionary.LOG.error("must give either table(name, link) or list(href)");
+		}
 	}
 
 
-	public AMIDictionary() {
-		initDict();
-	}
-	
-	private void initDict() {
-		dictionaryDir = NAConstants.DICTIONARY_DIR;
-		cli = new DictionaryCLI();
-	}
-	
-	/** this uses FILES */
-	public void listDictionaries(List<String> argList) {
+//	private void runHelp(List<String> argList) {
+//		if (argList.size() > 0) argList.remove(0);
+//		this.help(argList);
+//	}
+
+	// ================== LIST ===================
+
+	// FILES
+	private void displayDictionaries() {
+		List<String> argList = Arrays.asList(LIST);
 		File dictionaryHead = getDictionaryHead();
 		files = listDictionaryFiles(dictionaryHead);
+		Collections.sort(files);
 		
 		if (argList.size() == 1 && argList.get(0).toUpperCase().equals(LIST)) {
 			DebugPrint.debugPrint("list all FILE dictionaries "+files.size());
@@ -824,32 +835,11 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		}
 	}
 	
-	public File getDictionaryHead() {
+	private File getDictionaryHead() {
 		return dictionaryDir;
 	}
 	
-	public void listDictionaryPaths(List<String> argList) {
-//		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
-		try {
-			String pathname = NAConstants.DICTIONARY_RESOURCE;
-			LOG.debug("PATHNAME "+pathname);
-			pathname = "/"+"org/contentmine/ami/plugins/dictionary";
-			final Path path = Paths.get(String.class.getResource(pathname).toURI());
-			LOG.debug("PATH "+path);
-			FileSystem fileSystem = path.getFileSystem();
-			List<FileStore> fileStores = Lists.newArrayList(fileSystem.getFileStores());
-			LOG.debug(fileStores.size());
-			for (FileStore fileStore : fileStores) {
-				LOG.debug("F"+fileStore);
-			}
-			final byte[] bytes = Files.readAllBytes(path);
-			String fileContent = new String(bytes/*, CHARSET_ASCII*/);
-		} catch (Exception e) {
-			LOG.error(e);
-		}
-	}
-	
-	public void help(List<String> argList) {
+	private void help(List<String> argList) {
 		LOG.error("shouldn't use this help?");
 		System.err.println("Dictionary processor");
 		System.err.println("    dictionaries are normally added as arguments to search "
@@ -867,7 +857,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 //		listAllDictionariesBrieflyPaths();
 	}
 
-	public List<File> getDictionaries() {
+	private List<File> getDictionaries() {
 		DebugPrint.debugPrint(" * dictionaries from: "+dictionaryDir);
 		File xmlDictionaryDir = getXMLDictionaryDir(dictionaryDir);
 		files = new CMineGlobber().setRegex(".*\\.xml").setLocation(xmlDictionaryDir).setRecurse(true).listFiles();
@@ -903,7 +893,31 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		}
 	}
 
+	// PATH
+	private void listDictionaryPaths(List<String> argList) {
+//		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
+		try {
+			String pathname = NAConstants.DICTIONARY_RESOURCE;
+			LOG.debug("PATHNAME "+pathname);
+			pathname = "/"+"org/contentmine/ami/plugins/dictionary";
+			final Path path = Paths.get(String.class.getResource(pathname).toURI());
+			LOG.debug("PATH "+path);
+			FileSystem fileSystem = path.getFileSystem();
+			List<FileStore> fileStores = Lists.newArrayList(fileSystem.getFileStores());
+			LOG.debug(fileStores.size());
+			for (FileStore fileStore : fileStores) {
+				LOG.debug("F"+fileStore);
+			}
+			final byte[] bytes = Files.readAllBytes(path);
+			String fileContent = new String(bytes/*, CHARSET_ASCII*/);
+		} catch (Exception e) {
+			LOG.error(e);
+		}
+	}
+	
+
 	/** not yet used */
+	// PATH VERSION
 	private void listDictionaryInfoPath(File file, String dictionary) {
 		Element dictionaryElement = null;
 		try {
@@ -915,6 +929,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		
 	}
 
+	// PATH VERSION
 	private void listDictionaryInfoPath(String dictionaryName) {
 		File dictionaryFile = null;
 		for (File file : files) {
@@ -965,7 +980,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		}
 	}
 
-	public void listAllDictionariesBrieflyPaths() {
+	private void listAllDictionariesBrieflyPaths() {
 		int count = 0;
 		int perLine = 5;
 		System.err.print("\n    ");
@@ -978,7 +993,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		listHardcoded();
 	}
 
-	public void listAllDictionariesBriefly() {
+	private void listAllDictionariesBriefly() {
 		int count = 0;
 		int perLine = 5;
 		System.err.print("\n    ");
@@ -996,7 +1011,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		System.err.println("    species (resolves abbreviations) ");
 	}
 
-	public List<File> listDictionaryFiles(File dictionaryHead) {
+	private List<File> listDictionaryFiles(File dictionaryHead) {
 		DebugPrint.debugPrint("dictionaries from "+dictionaryHead);
 		List<File> newFiles = new ArrayList<File>();
 		File[] listFiles = dictionaryHead.listFiles();
@@ -1015,14 +1030,6 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		return newFiles;
 	}
 
-	public File getDictionaryDir() {
-		return dictionaryDir;
-	}
-
-	public void setDictionaryDir(File dictionaryDir) {
-		this.dictionaryDir = dictionaryDir;
-	}
-
 	public int getMaxEntries() {
 		return maxEntries;
 	}
@@ -1037,18 +1044,6 @@ public class AMIDictionary extends AbstractAMIProcessor {
 
 	public void setDirectory(String directory) {
 		this.directory = directory;
-	}
-
-	public void readWikipediaPage(WikipediaDictionary wikipediaDictionary, InputStream inputStream) {
-		HtmlElement htmlElement = readHtmlElement(inputStream);
-		wikipediaDictionary.clean(htmlElement);
-		if (this.nameCol != null && linkCol != null) {
-			createFromEmbeddedWikipediaTable(htmlElement);
-		} else if (this.href != null) {
-			simpleList = createListOfHyperlinks(htmlElement);
-		} else {
-			AMIDictionary.LOG.error("must give either table(name, link) or list(href)");
-		}
 	}
 
 

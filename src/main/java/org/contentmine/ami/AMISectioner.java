@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.norma.picocli.AbstractAMIProcessor;
 import org.contentmine.norma.sections.JATSSectionTagger;
 import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
 
@@ -14,7 +15,7 @@ import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
  * @author pm286
  *
  */
-public class AMISectioner {
+public class AMISectioner extends AbstractAMIProcessor {
 	private static final Logger LOG = Logger.getLogger(AMISectioner.class);
 	private List<SectionTag> sectionTagList;
 	static {
@@ -29,15 +30,23 @@ public class AMISectioner {
 		if (args.length == 0) {
 			runHelp();
 		} else {
-			parseOptions(args);
+//			parseOptions(args);
 		}
 		
 	}
 	
-	private static void parseOptions(String[] args) {
-		AMICLI parser = new AMICLI().readCL(args);
+	@Override
+	protected void parseSpecifics() {
+		throw new RuntimeException("NYI");
 	}
 
+	@Override
+	protected void runSpecifics() {
+		throw new RuntimeException("NYI");
+	}
+	
+
+	
 	private static void runHelp() {
 		DebugPrint.debugPrint("sections recognized in documents");
 		for (SectionTag tag : JATSSectionTagger.SectionTag.values()) {
@@ -56,6 +65,6 @@ public class AMISectioner {
 		}
 		return sectionTagList;
 	}
-	
+
 	
 }

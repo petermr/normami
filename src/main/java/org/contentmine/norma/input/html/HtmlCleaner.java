@@ -181,10 +181,9 @@ public class HtmlCleaner {
 			throw new RuntimeException("no clean tag given");
 		}
 		createXPath();
-		LOG.debug("X "+xpath);
 		List<Element> elementList = XMLUtil.getQueryElements(htmlElement, xpath);
 		for (Element tagElement : elementList) {
-			LOG.debug("deleted " + tagElement.getLocalName());
+//			LOG.debug("deleted " + tagElement.getLocalName());
 			tagElement.detach();
 		}
 	}

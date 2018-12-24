@@ -1,10 +1,12 @@
 package org.contentmine.ami.dictionary;
 
 import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -20,17 +22,26 @@ import java.util.regex.Pattern;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.lookups.WikipediaLookup;
+import org.contentmine.ami.lookups.WikipediaPageInfo;
 import org.contentmine.cproject.lookup.DefaultStringDictionary;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.html.HtmlA;
 import org.contentmine.graphics.html.HtmlB;
 import org.contentmine.graphics.html.HtmlCaption;
 import org.contentmine.graphics.html.HtmlDiv;
+import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.HtmlI;
-import org.contentmine.graphics.html.HtmlLi;
+import org.contentmine.graphics.html.HtmlImg;
 import org.contentmine.graphics.html.HtmlP;
 import org.contentmine.graphics.html.HtmlSpan;
+import org.contentmine.graphics.html.HtmlTable;
+import org.contentmine.graphics.html.HtmlTbody;
+import org.contentmine.graphics.html.HtmlTd;
+import org.contentmine.graphics.html.HtmlTh;
+import org.contentmine.graphics.html.HtmlThead;
 import org.contentmine.graphics.html.HtmlTitle;
-import org.contentmine.graphics.html.HtmlUl;
+import org.contentmine.graphics.html.HtmlTr;
+import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.norma.NAConstants;
 
 import com.google.common.hash.BloomFilter;
@@ -91,6 +102,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		LOG.setLevel(Level.DEBUG);
 	}
 
+	public static final String WIKIPEDIA_BASE = "https://en.wikipedia.org";
 	public static final String ID = "id";
 	public static final String DICTIONARY = "dictionary";
 	private static final String DESC = "desc";
@@ -110,6 +122,10 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	public static final File SYNBIO_DIR     = new File(AMI_DIR, "synbio");
 	protected static final String UTF_8        = "UTF-8";
 	
+	private static final String WIKIDATA = "wikidata";
+	private static final String PAGE_CONTENT = "content";
+	private static final String IMAGE = "image";
+	
 	private String dictionaryName;
 	protected Map<DictionaryTerm, String> namesByTerm;
 	protected InputStream inputStream;
@@ -123,6 +139,7 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 	private JsonElement jsonElement;
 	private File outputDir;
 	private File inputDir; 
+	private String baseUrl = "https://en.wikipedia.org";
 	
 	public DefaultAMIDictionary() {
 		init();
@@ -267,7 +284,10 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 				dictionaryTermList.add(dictionaryTerm);
 				String name = dictionaryTerm.getName();
 				if (name == null) {
-					throw new RuntimeException("Null name: "+element.toXML());
+//					throw new RuntimeException("Null name: "+element.toXML());
+					System.err.print(" !0! ");
+					LOG.trace("Null name: "+element.toXML());
+					continue;
 				}
 				namesByTerm.put(dictionaryTerm, name);
 				String term = dictionaryTerm.getTerm();
@@ -444,45 +464,187 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		HtmlDiv div = null;
 		if (dictionaryElement != null) {
 			div = new HtmlDiv();
-			String titleString = dictionaryElement.getAttributeValue(TITLE);
-			if (titleString != null) {
-				HtmlTitle title = new HtmlTitle(titleString);
-				div.appendChild(title);
-			}
-			List<Element> descList = XMLUtil.getQueryElements(dictionaryElement, DESC);
-			if (descList.size() > 0) {
-				HtmlCaption caption = new HtmlCaption();
-				for (Element desc : descList) {
-					String descString = desc.getValue();
-					HtmlP para = new HtmlP(descString);
-					caption.appendChild(para);
-				}
-			}
-			List<Element> entryList = XMLUtil.getQueryElements(dictionaryElement, ENTRY);
-			if (entryList.size() > 0) {
-				HtmlUl ul = new HtmlUl();
-				div.appendChild(ul);
-				for (Element entry : entryList) {
-					HtmlLi li = new HtmlLi();
-					ul.appendChild(li);
-					for (int i = 0; i < entry.getAttributeCount(); i++) {
-						Attribute att = entry.getAttribute(i);
-						HtmlSpan span = new HtmlSpan();
-						HtmlI it = new HtmlI();
-						it.appendChild(att.getLocalName());
-						span.appendChild(it);
-						span.appendChild(": ");
-						HtmlB b = new HtmlB();
-						b.appendChild(att.getValue());
-						span.appendChild(b);
-						li.appendChild(span);
-					}
-				}
-			}
+			addTitle(div);
+			addDescriptionsToHtml(div);
+			div.appendChild(addEntryListToHtml());
 		}
 //		LOG.debug("div "+div.toXML());
 		return div;
 		
+	}
+
+	private HtmlTable addEntryListToHtml() {
+		HtmlTable table = new HtmlTable();
+		List<String> reservedAttNames = Arrays.asList(
+				DictionaryTerm.ID,
+				DictionaryTerm.TERM,
+				DictionaryTerm.NAME,
+				DictionaryTerm.URL,
+				WIKIDATA,
+				PAGE_CONTENT,
+				IMAGE
+				);
+		List<Element> entryList = XMLUtil.getQueryElements(dictionaryElement, ENTRY);
+		if (entryList.size() > 0) {
+			table = new HtmlTable();
+			List<String> nonReservedAttNames = getSortedNonReservedAttNames(reservedAttNames, entryList);
+			createAndAddThead(table, reservedAttNames, nonReservedAttNames);
+			createAndAddTbody(table, reservedAttNames, entryList, nonReservedAttNames);
+		}
+		return table;
+	}
+
+	private void createAndAddTbody(HtmlTable table, List<String> reservedAttNames, List<Element> entryList,
+			List<String> nonReservedAttNames) {
+		HtmlTbody tBody = table.getOrCreateTbody();
+		for (Element entry : entryList) {
+			System.out.print("+");
+			HtmlTr tr = new HtmlTr();
+			tBody.appendChild(tr);
+			List<HtmlTd> tdList = addEmptyHeader(reservedAttNames, nonReservedAttNames, tr);
+			addReservedFields(entry, tdList);
+			addNonReservedFields(nonReservedAttNames, entry, tdList);
+		}
+	}
+
+	private void createAndAddThead(HtmlTable table, List<String> reservedAttNames, List<String> nonReservedAttNames) {
+		HtmlThead thead = table.getOrCreateThead();
+		HtmlTr headTr = thead.getOrCreateChildTr();
+		for (String reserved : reservedAttNames) {
+			headTr.appendChild(HtmlTh.createAndWrapText(reserved));
+		}
+		for (String nonReserved : nonReservedAttNames) {
+			headTr.appendChild(HtmlTh.createAndWrapText(nonReserved));
+		}
+	}
+
+	private void addNonReservedFields(List<String> nonReservedAttNames, Element entry, List<HtmlTd> tdList) {
+		for (int i = 0; i < entry.getAttributeCount(); i++) {
+			Attribute att = entry.getAttribute(i);
+			String attName = att.getLocalName();
+			if (nonReservedAttNames.contains(attName)) {
+				int idx = nonReservedAttNames.indexOf(attName);
+				if (idx != -1) {
+					tdList.get(idx).setValue(att.getValue());
+				}
+			}
+		}
+	}
+
+	private void addReservedFields(Element entry, List<HtmlTd> tdList) {
+		String id = entry.getAttributeValue(DictionaryTerm.ID);
+		String term = entry.getAttributeValue(DictionaryTerm.TERM);
+		String name = entry.getAttributeValue(DictionaryTerm.NAME);
+		String urlS = entry.getAttributeValue(DictionaryTerm.URL);
+		if (id != null) tdList.get(0).setValue(id);
+		if (name != null) tdList.get(2).setValue(name);
+		if (term != null) {
+			if (urlS == null) {
+				tdList.get(1).setValue(term);
+			} else {
+				HtmlA a = new HtmlA();
+				a.setHref(getBaseUrl()+urlS);
+				a.setValue(term);
+				tdList.get(1).appendChild(a);
+			}
+		}
+		if (urlS != null) {
+			urlS = WIKIPEDIA_BASE + urlS;
+			tdList.get(3).setValue(urlS);
+			HtmlElement pageElement = null;
+			try {
+				pageElement = HtmlUtil.readAndCreateElement(urlS);
+				String s = pageElement.toXML();
+				WikipediaPageInfo pageInfo = WikipediaPageInfo.createPageInfo(pageElement);
+				if (pageInfo == null) {
+					LOG.error("Cannot read pageInfo");
+					return;
+				}
+				HtmlA wikiData = pageInfo.getWikidataItem();
+				if (wikiData != null) {
+					tdList.get(4).appendChild(wikiData);
+				}
+				String centraLdescription = pageInfo.getCentralDescription();
+				if (centraLdescription != null) {
+					tdList.get(5).appendChild(centraLdescription);
+				}
+				HtmlImg pageImage = pageInfo.getPageImage();
+				if (pageImage != null) {
+					tdList.get(6).appendChild(pageImage.copy());
+				}
+//				<tr id="mw-wikibase-pageinfo-entity-id"><td style="vertical-align: top;">Wikidata item ID</td><td><a class="extiw wb-entity-link external" href="https://www.wikidata.org/wiki/Special:EntityPage/Q720467">Q720467</a></td></tr>
+//				<tr id="mw-wikibase-pageinfo-description-central"><td style="vertical-align: top;">Central description</td><td>family of insects</td></tr>
+//				<tr id="mw-pageimages-info-label"><td style="vertical-align: top;">Page image</td><td><a href="/wiki/File:Simulium_trifasciatum_adult_(British_Entomology_by_John_Curtis-_765).png" class="image">
+//				    <img alt="Simulium trifasciatum adult (British Entomology by John Curtis- 765).png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/76/Simulium_trifasciatum_adult_%28British_Entomology_by_John_Curtis-_765%29.png/220px-Simulium_trifasciatum_adult_%28British_Entomology_by_John_Curtis-_765%29.png" width="220" height="178" data-file-width="333" data-file-height="270" /></a></td></tr>
+				
+			} catch (Exception e) {
+				System.err.print(" !! ");
+				LOG.trace("Cannot create page: "+urlS+" "+e.getMessage());
+			}
+		}
+		return;
+		
+	}
+
+	private List<HtmlTd> addEmptyHeader(List<String> reservedAttNames, List<String> nonReservedAttNames, HtmlTr tr) {
+		List<HtmlTd> tdList = new ArrayList<HtmlTd>();
+		for (int i = 0; i < reservedAttNames.size() + nonReservedAttNames.size(); i++) {
+			HtmlTd td = new HtmlTd();
+			tr.appendChild(td);
+			tdList.add(td);
+		}
+		return tdList;
+	}
+
+	private String getBaseUrl() {
+		return baseUrl;
+	}
+
+	private List<String> getSortedNonReservedAttNames(List<String> reservedAttNames, List<Element> entryList) {
+		Set<String> attNameSet = new HashSet<String>();
+		for (Element entry : entryList) {
+			for (int i = 0; i < entry.getAttributeCount(); i++) {
+				attNameSet.add(entry.getAttribute(i).getLocalName());
+			}
+		}
+		attNameSet.removeAll(reservedAttNames);
+		List<String> attNames = new ArrayList<String>(attNameSet);
+		Collections.sort(attNames);
+		return attNames;
+	}
+
+	private HtmlSpan createNonReservedSpan(Attribute att, String attName) {
+		HtmlSpan span = new HtmlSpan();
+		HtmlI it = new HtmlI();
+		it.appendChild(attName);
+		span.appendChild(it);
+		span.appendChild(": ");
+		HtmlB b = new HtmlB();
+		b.appendChild(att.getValue());
+		span.appendChild(b);
+		return span;
+	}
+
+	private void addTitle(HtmlDiv div) {
+		String titleString = dictionaryElement.getAttributeValue(TITLE);
+		if (titleString != null) {
+			HtmlTitle title = new HtmlTitle(titleString);
+			div.appendChild(title);
+		}
+	}
+
+	private void addDescriptionsToHtml(HtmlDiv div) {
+		List<Element> descList = XMLUtil.getQueryElements(dictionaryElement, DESC);
+		if (descList.size() > 0) {
+			HtmlCaption caption = new HtmlCaption();
+			for (Element desc : descList) {
+				String descString = desc.getValue();
+				HtmlP para = new HtmlP(descString);
+				caption.appendChild(para);
+			}
+			div.appendChild(caption);
+
+		}
 	}
 	
 }

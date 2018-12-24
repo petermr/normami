@@ -6,14 +6,13 @@ import java.io.FileOutputStream;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.html.HtmlBody;
 import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.HtmlFooter;
 import org.contentmine.graphics.html.HtmlHeader;
 import org.contentmine.graphics.html.HtmlTitle;
 import org.contentmine.graphics.svg.text.structure.TextStructurer;
 import org.contentmine.svg2xml.table.TableContentCreator;
-
-import com.gargoylesoftware.htmlunit.html.HtmlBody;
 
 public class SVGTable2HTMLConverter {
 	private static final Logger LOG = Logger.getLogger(SVGTable2HTMLConverter.class);

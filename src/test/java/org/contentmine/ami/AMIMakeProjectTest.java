@@ -234,16 +234,6 @@ public class AMIMakeProjectTest {
 		Assert.assertEquals(37, lines.size());
 	}
 
-	@Test 
-	public void testUCLForest() {
-		String project = "uclforestopen";
-		File targetDir = new File(AMIFixtures.TARGET_AMISTACK_DIR, project);
-		CMineTestFixtures.cleanAndCopyDir(
-				new File(AMIFixtures.TEST_AMISTACK_DIR, project),
-				targetDir);
-		
-	}
-	
 
 //	public static final File TEST_FORESTOPEN_DIR = new File(NAConstants.TEST_NORMA_DIR, FORESTOPEN);
 //	public static final File TARGET_MAKEPROJECT_DIR = new File(TARGET_DIR, MAKEPROJECT);

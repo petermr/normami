@@ -255,7 +255,7 @@ public class WikipediaDictionary {
 		List<Element> citeRefList = XMLUtil.getQueryElements(
 				htmlElement, ".//*[local-name()='" + HtmlSup.TAG + "' and starts-with(@id, '" + CITE_REF + "')]");
 		for (Element citeRef : citeRefList) {
-			LOG.debug("deleted citation ref");
+			LOG.trace("deleted citation ref");
 			citeRef.detach();
 		}
 	}
@@ -268,7 +268,7 @@ public class WikipediaDictionary {
 		List<Element> editList = XMLUtil.getQueryElements(
 				htmlElement, ".//*[local-name()='" + HtmlSpan.TAG + "' and *[local-name()='" + HtmlA.TAG + "' and starts-with(@title, '" + EDIT_SECTION + "')]]");
 		for (Element edit : editList) {
-			LOG.debug("deleted edit source");
+			LOG.trace("deleted edit source");
 			edit.detach();
 		}
 	}

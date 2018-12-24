@@ -22,13 +22,13 @@ public class SimpleDictionariesTest {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-	@Test
-	public void testResources() {
-		AMIDictionary dictionaries = new AMIDictionary();
-		List<File> childPaths = dictionaries.getDictionaries();
-		Assert.assertTrue("dictionaries "+childPaths.size(), childPaths.size() > 40);
-		Assert.assertTrue("dictionaries", childPaths.toString().contains("country.xml"));
-	}
+//	@Test
+//	public void testResources() {
+//		AMIDictionary dictionaries = new AMIDictionary();
+//		List<File> childPaths = dictionaries.getDictionaries();
+//		Assert.assertTrue("dictionaries "+childPaths.size(), childPaths.size() > 40);
+//		Assert.assertTrue("dictionaries", childPaths.toString().contains("country.xml"));
+//	}
 	
 	@Test
 	public void testAMI() {

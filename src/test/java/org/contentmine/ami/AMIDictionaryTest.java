@@ -34,52 +34,12 @@ public class AMIDictionaryTest {
 	}
 	
 	@Test
-	@Ignore // old style
 	public void testListSome() {
-		String[] args = {"country", "crispr", "disease"};
-		AMIDictionary.main(args);
-	}
-	
-	@Test
-	@Ignore // old style
-	public void testListAll() {
-		String[] args = {"LIST"};
-		AMIDictionary.main(args);
-	}
-	
-	@Test
-	@Ignore // old style
-	public void testListFull() {
-		String[] args = {"FULL", "country"};
-		AMIDictionary.main(args);
-	}
-	
-	@Test
-	@Ignore // old style
-	public void testListFull2() {
-		String[] args = {"FULL", "socialmedia", "noncommunicable"};
-		AMIDictionary.main(args);
-	}
-	
-	@Test
-	/** argument tester only
-	 * outputs help strings to console
-	 */
-	public void testPicocliEmpty() {
-		String[] args = {"--wombx 123"};
-		AMIDictionary.main(args);
-	}
-	
-	@Test
-	/** argument tester only
-	 * 
-	 */
-	public void testPicocli() {
 		String[] args = {
-			"-d", "socialmedia",
-			"-t", "junk",
-			"--wombatx", "129"
-			};
+				"display", 
+				"--directory", "src/main/resources/org/contentmine/ami/plugins/dictionary",
+				"--dictionary",  "country", "crispr", "disease"
+				};
 		AMIDictionary.main(args);
 	}
 	
@@ -87,6 +47,7 @@ public class AMIDictionaryTest {
 	public void testWikipediaTables() throws IOException {
 		String dict = "protpredict";
 		String[] args = {
+			"create",
 			"--input", "https://en.wikipedia.org/wiki/List_of_protein_structure_prediction_software",
 			"--informat", "wikitable",
 			"--namecol", "Name", 
@@ -96,7 +57,7 @@ public class AMIDictionaryTest {
 			};
 		AMIDictionary amiDictionary = new AMIDictionary();
 		amiDictionary.runCommands(args);
-		XMLUtil.debug(amiDictionary.getSimpleDictionary(), new File(DICTIONARY_DIR, dict+".html"), 1);
+//		XMLUtil.debug(amiDictionary.getSimpleDictionary(), new File(DICTIONARY_DIR, dict+".html"), 1);
 		
 	}
 	
@@ -104,6 +65,7 @@ public class AMIDictionaryTest {
 	public void testWikipediaTables2() throws IOException {
 		String dict = "socialnetwork";
 		String[] args = {
+			"create",
 			"--input", "https://en.wikipedia.org/wiki/List_of_social_networking_websites",
 			"--informat", "wikitable",
 			"--namecol", "Name", 
@@ -117,10 +79,56 @@ public class AMIDictionaryTest {
 	public void testWikipediaPage() throws IOException {
 		String dict = "proteinStructure";
 		String[] args = {
+			"create",
 			"--input", "https://en.wikipedia.org/wiki/Protein_structure",
-			"--informat", "wikitable",
-			"--urlref",
+			"--informat", "wikipage",
+//			"--urlref",
 			"--dictionary", dict};
+		new AMIDictionary().runCommands(args);
+	}
+
+	@Test
+	public void testWikipediaPageAedes() throws IOException {
+		String dict = "aedes";
+		String[] args = {
+			"create",
+			"--input", "https://en.wikipedia.org/wiki/Aedes_aegypti",
+			"--informat", "wikipage",
+			"--hreftext",  // currently needed to enforce use of names
+			"--dictionary", dict,
+			"--outformats", "html,xml",
+			"--directory", DICTIONARY_DIR.toString()
+			};
+		// ami-dictionaries create -i https://en.wikipedia.org/wiki/Aedes_aegypti --informat wikipage --hreftext --dictionary aedes0 --outformats xml --directory ~/ContentMine/dictionary/
+		new AMIDictionary().runCommands(args);
+	}
+
+	@Test
+	public void testWikipediaPageReindeer() throws IOException {
+		String dict = "reindeer";
+		String[] args = {
+			"create",
+			"--input", "https://en.wikipedia.org/wiki/Category:Reindeer", 
+			"--informat", "wikipage",
+			"--hreftext",  // currently needed to enforce use of names
+			"--outformats", "html",
+			"--dictionary", dict,
+			"--directory", DICTIONARY_DIR.toString()
+			};
+		new AMIDictionary().runCommands(args);
+	}
+	@Test
+	public void testWikipediaPageMonoterpenes() throws IOException {
+		String dict = "monoterpenes";
+		String[] args = {
+			"create",
+			"--input", "https://en.wikipedia.org/wiki/Category:Monoterpenes", 
+			"--informat", "wikipage",
+			"--hreftext",  // currently needed to enforce use of names
+			"--outformats", "html",
+			"--dictionary", dict,
+			"--directory", DICTIONARY_DIR.toString()
+			};
 		new AMIDictionary().runCommands(args);
 	}
 
@@ -129,6 +137,7 @@ public class AMIDictionaryTest {
 		String dict = "ntd";
 		String whoCol = ".*WHO.*CDC.*";
 		String[] args = {
+			"create",
 			"--input", "https://en.wikipedia.org/wiki/Neglected_tropical_diseases",
 			"--informat", "wikitable",
 			"--namecol", whoCol,
@@ -146,6 +155,7 @@ public class AMIDictionaryTest {
 		String dict = "ntd1";
 		String searchCol = "PLOS.*";
 		String[] args = {
+			"create",
 			"--input", "https://en.wikipedia.org/wiki/Neglected_tropical_diseases",
 			"--informat", "wikitable",
 			"--namecol", searchCol,
@@ -158,9 +168,24 @@ public class AMIDictionaryTest {
 	}
 	
 	@Test
+	public void testWikipediaOrthobunyavirus() throws IOException {
+		String dict = "insectvectorshuman";
+		String[] args = {
+			"create",
+			"--input", "https://en.wikipedia.org/wiki/Category:Insect_vectors_of_human_pathogens",
+			"--informat", "wikicategory",
+			"--dictionary", dict,
+			"--outformats", "xml,json,html",
+			"--directory", DICTIONARY_DIR.toString()
+			};
+		new AMIDictionary().runCommands(args);
+	}
+	
+	@Test
 	public void testCreateFromTerms() {
 		String dict = "crystalsystem";
 		String[] args = {
+			"create",
 			"--terms", "cubic,tetragonal,hexagonal,trigonal,orthorhombic,monoclinic,triclinic",
 			"--dictionary", dict,
 			"--directory", DICTIONARY_DIR.toString()};

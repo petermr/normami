@@ -30,8 +30,8 @@ public class AMISearch {
 
 	public static void runHelp(List<String> argList) {
 		if (argList.size() > 0) argList.remove(0);
-		AMIDictionary dictionaries = new AMIDictionary();
-		dictionaries.help(argList);
+//		AMIDictionary dictionaries = new AMIDictionary();
+//		dictionaries.help(argList);
 	}
 
 	private static void runAMISearches(List<String> argList) {

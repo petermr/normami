@@ -123,14 +123,7 @@ public class AMIProcessor {
 	}
 
 	public void makeProject() {
-//		
-//		if (cProject.hasScholarlyHTML(0.6)) {
-//			LOG.debug("ScholarlyHTML exists, skipping makeProject");
-//			return;
-//		}
-		cProject.makeProject(CTree.PDF, 0);
-		cProject.makeProject(CTree.XML, 0);
-		cProject.makeProject(CTree.HTML, 0);
+		cProject.makeProject(Arrays.asList(CTree.PDF, CTree.XML, CTree.HTML), 99);
 // flush old CProject as CTreeList needs to be reset		
 		cProject = new CProject(cProject.getDirectory());
 		cProject.setDebugLevel(debugLevel);
@@ -247,8 +240,8 @@ public class AMIProcessor {
 
 	public static void runHelp(List<String> argList) {
 		if (argList.size() > 0) argList.remove(0);
-		AMIDictionary dictionaries = new AMIDictionary();
-		dictionaries.help(argList);
+//		AMIDictionary dictionaries = new AMIDictionary();
+//		dictionaries.help(argList);
 	}
 
 	public void run(String cmd) {
@@ -304,7 +297,4 @@ public class AMIProcessor {
 	public void setDebugLevel(Level debug) {
 		this.debugLevel = debug;
 	}
-	
-
-
 }

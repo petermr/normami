@@ -13,7 +13,7 @@ class DictionaryData {
 	}
 
     String[]      dataCols;
-    String        dictionary;
+    String[]      dictionary;
     String        directory;
 	String        href;
     String[]      hrefCols;
