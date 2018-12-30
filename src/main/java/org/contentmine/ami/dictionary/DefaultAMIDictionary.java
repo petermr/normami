@@ -97,6 +97,9 @@ import nu.xom.Elements;
  */
 public class DefaultAMIDictionary extends DefaultStringDictionary {
 
+	private static final int PAGE_IMAGE_LINK_COLUMN = 6;
+	private static final int CENTRAL_DESCRIPTION_COLUMN = 5;
+	private static final int WIKIDATA_LINK_COLUMN = 4;
 	public static final Logger LOG = Logger.getLogger(DefaultAMIDictionary.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -560,17 +563,17 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 					LOG.error("Cannot read pageInfo");
 					return;
 				}
-				HtmlA wikiData = pageInfo.getWikidataItem();
-				if (wikiData != null) {
-					tdList.get(4).appendChild(wikiData);
+				HtmlA wikiDataLink = pageInfo.getLinkToWikidataItem();
+				if (wikiDataLink != null) {
+					tdList.get(WIKIDATA_LINK_COLUMN).appendChild(wikiDataLink);
 				}
 				String centraLdescription = pageInfo.getCentralDescription();
 				if (centraLdescription != null) {
-					tdList.get(5).appendChild(centraLdescription);
+					tdList.get(CENTRAL_DESCRIPTION_COLUMN).appendChild(centraLdescription);
 				}
 				HtmlImg pageImage = pageInfo.getPageImage();
 				if (pageImage != null) {
-					tdList.get(6).appendChild(pageImage.copy());
+					tdList.get(PAGE_IMAGE_LINK_COLUMN).appendChild(pageImage.copy());
 				}
 //				<tr id="mw-wikibase-pageinfo-entity-id"><td style="vertical-align: top;">Wikidata item ID</td><td><a class="extiw wb-entity-link external" href="https://www.wikidata.org/wiki/Special:EntityPage/Q720467">Q720467</a></td></tr>
 //				<tr id="mw-wikibase-pageinfo-description-central"><td style="vertical-align: top;">Central description</td><td>family of insects</td></tr>

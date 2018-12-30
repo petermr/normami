@@ -49,7 +49,8 @@ aliases = "image",
 		//Class<?>[] subcommands() default {};
 version = "ami-image 0.1",
 		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
-description = "Requires a CProject containing fulltext.pdf. (see makeProject). Then uses PDFConverter to parses the PDFs into %n"
+description = "Requires a CProject containing fulltext.pdf. (see makeProject). and initial PDF processing (ami-pdf) "
+		+ "The input (reseved name directories) is therefore"
 		+ "(a) text/characters (in svg/) %n"
 		+ "(b) graphics (in SVG) %n"
 		+ "(c) images (in pdfimages/)%n%n"

@@ -121,12 +121,18 @@ public class AMICleaner extends AbstractAMIProcessor {
 
     private void runClean() {
     	if (files != null) cleanFiles(Arrays.asList(files));
-    	if (dirs != null) cleanFiles(Arrays.asList(dirs));
+    	if (dirs != null) cleanDirs(Arrays.asList(dirs));
     }
 
 	public void cleanFiles(List<String> argList) {
 		for (String arg : argList) {
 			cleanReserved(arg);
+		}
+	}
+
+	public void cleanDirs(List<String> argList) {
+		for (String arg : argList) {
+			cProject.clean(arg);
 		}
 	}
 
@@ -137,7 +143,7 @@ public class AMICleaner extends AbstractAMIProcessor {
 				return;
 			}
 		}
-		DebugPrint.debugPrint("failed to delete: "+arg);
+//		DebugPrint.debugPrint("failed to delete: "+arg);
 	}
 
 	public void clean(String filename) {

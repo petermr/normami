@@ -14,7 +14,7 @@ class DictionaryData {
 
     String[]      dataCols;
     String[]      dictionary;
-    String        directory;
+    String        dictionaryTopname;
 	String        href;
     String[]      hrefCols;
     InputFormat   informat;

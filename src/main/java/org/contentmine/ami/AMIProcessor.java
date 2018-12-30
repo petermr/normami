@@ -25,6 +25,8 @@ import nu.xom.Element;
 /** runs operations on CProject , mainly transformations. 
  * Might evolve to a set of default operations as an alternative to commandline
  * 
+ * probably obsolete
+ * 
  * @author pm286
  *
  */
@@ -159,15 +161,18 @@ public class AMIProcessor {
 	}
 
 	public void convertPDFsToProjectAndRunCooccurrence(List<String> facetList) {
-		convertPDFsToProject();
-		
+		convertPDFstoProjectAndMakeHtml();
 		runSearchesAndCooccurrence(facetList);
 	}
 
-	public void convertPDFsToProject() {
+	public void convertPDFstoProjectAndMakeHtml() {
+		convertPDFsToProjectAndMakeSVG();
+		convertPSVGandWriteHtml();
+	}
+
+	public void convertPDFsToProjectAndMakeSVG() {
 		makeProject();
 		convertPDFOutputSVGFilesImageFiles();
-		convertPSVGandWriteHtml();
 	}
 
 	public void runSearchesAndCooccurrence(List<String> facetList) {

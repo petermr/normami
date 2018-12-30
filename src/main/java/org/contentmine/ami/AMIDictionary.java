@@ -16,7 +16,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
@@ -37,12 +38,12 @@ import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.HtmlLi;
 import org.contentmine.graphics.html.HtmlTable;
 import org.contentmine.graphics.html.HtmlTbody;
-import org.contentmine.graphics.html.HtmlTd;
 import org.contentmine.graphics.html.HtmlTr;
 import org.contentmine.graphics.html.HtmlUl;
 import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.picocli.AbstractAMIProcessor;
+import org.jboss.resteasy.plugins.delegates.NewCookieHeaderDelegate;
 
 import com.google.common.collect.Lists;
 import com.google.gson.JsonObject;
@@ -50,7 +51,6 @@ import com.google.gson.JsonParser;
 
 import nu.xom.Attribute;
 import nu.xom.Element;
-import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Mixin;
 import picocli.CommandLine.Option;
@@ -83,7 +83,11 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	private static final String XML = "xml";
 	private static final int DEFAULT_MAX_ENTRIES = 20;
 	
-	private static final File DICTIONARY_TOP = NAConstants.DICTIONARY_DIR;
+	private static final String DICTIONARY_TOP_NAME = "dictionary/";
+	private static final String DICTIONARIES_NAME = DICTIONARY_TOP_NAME + "dictionaries";
+	private static final String DOT = ".";
+	private static final String SLASH = "/";
+
 	private static final String HTTPS_EN_WIKIPEDIA_ORG = "https://en.wikipedia.org";
 	public final static String WIKIPEDIA_BASE = HTTPS_EN_WIKIPEDIA_ORG + "/wiki/";
 	private static final String WIKITABLE = "wikitable";
@@ -97,7 +101,9 @@ public class AMIDictionary extends AbstractAMIProcessor {
 
 	public enum Operation {
 		create,
-		display,;
+		display,
+		help,
+		;
 		public static Operation getOperation(String operationS) {
 			for (int i = 0; i < values().length; i++) {
 				Operation operation = values()[i];
@@ -142,34 +148,38 @@ public class AMIDictionary extends AbstractAMIProcessor {
     @Parameters(index = "0",
     		arity="0..*",
     		split=",",
-    		description = "Operation to apply (${COMPLETION-CANDIDATES}); absence runs help"
+    		description = "primary operation: (${COMPLETION-CANDIDATES}); if no operation, runs help"
     		)
-    private Operation operation;
+    private Operation operation = Operation.help;
 
     @Option(names = {"--booleanquery"}, 
     		arity="0..1",
    		    description = "generate query as series of chained OR phrases"
     		)
-    private boolean booleanQuery;
+    private boolean booleanQuery = false;
     
     @Option(names = {"--datacols"}, 
     		split=",",
     		arity="1..*",
     	    paramLabel = "datacol",
-   		description = "data column/s from table; not hyperlinked"
+   		description = "use these columns (by name) as additional data fields in dictionary. datacols='foo,bar' creates "
+   				+ "foo='fooval1' bar='barval1' if present. No controlled use or vocabulary and no hyperlinks."
     		)
     private String[] dataCols;
     
     @Option(names = {"-d", "--dictionary"}, 
     		arity="1..*",
-    		description = "input or output dictionary/s. When creating, singular; when displaying, any number")
+    		description = "input or output dictionary name/s. for 'create' must be singular; when 'display', any number. "
+    				+ "Names should be lowercase, unique. [a-z][a-z0-9._]. Dots can be used to structure dictionaries into"
+    				+ "directories")
     private String[] dictionary = null;
 
     @Option(names = {"--directory"}, 
     		arity="1",
-//   	    	paramLabel = "directory",
-    		description = "directory containing dictionary")
-    private String directory = NAConstants.DICTIONARY_DIR.toString();
+    		description = "top directory containing dictionary/s. Subdirectories will use structured names (NYI). Thus "
+    				+ "dictionary 'animals' is found in '<directory>/animals.xml', while 'plants.parts' is found in "
+    				+ "<directory>/plants/parts.xml")
+    private String dictionaryTopname = null;
 
     @Option(names = {"--hrefcols"}, 
     		split=",",
@@ -258,12 +268,10 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	private Element dictionaryElement;
 	private HtmlTbody tBody;
 	private WikipediaDictionary wikipediaDictionary;
-//	private InputStream inputStream;
-//	private RectangularTable rectangularTable;
 
 	private List<File> files;
 	private List<Path> paths;
-	private File dictionaryDir;
+	private File dictionaryTop;
 	private int maxEntries = 0;
 
 
@@ -285,7 +293,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		
         dictionaryData.dataCols    = dataCols;
         dictionaryData.dictionary  = dictionary;
-        dictionaryData.directory   = directory;
+        dictionaryData.dictionaryTopname   = dictionaryTopname;
         dictionaryData.href        = href;
         dictionaryData.hrefCols    = hrefCols;
         dictionaryData.informat    = informat;
@@ -312,19 +320,62 @@ public class AMIDictionary extends AbstractAMIProcessor {
 
 
 	private void runDictionary() {
-		dictionaryDir = directory == null ? null : new File(directory);
+		if (getOrCreateExistingDictionaryTop() == null) {
+			return;
+		}
 		if (Operation.display.equals(operation)) {
-			if (dictionaryDir == null || !dictionaryDir.exists() || !dictionaryDir.isDirectory()) {
-				LOG.warn("no existing dictionaryDir "+directory);
-			} else {
-				displayDictionaries();
-			}
+			displayDictionaries();
 		} else if (Operation.create.equals(operation)) {
 			createDictionary();
 		} else {
 			LOG.debug("no operation given: "+operation);
 		}
 	}
+
+    protected File getOrCreateExistingDictionaryTop() {
+    	if (dictionaryTop == null) {
+    		getOrCreateExistingContentMineDir();
+    		if (contentMineDir != null) {
+    			dictionaryTop = new File(contentMineDir, DICTIONARIES_NAME);
+    		}
+    	}
+	   	if (dictionaryTop != null) {
+	    	if (!dictionaryTop.exists()) {
+	    		dictionaryTop.mkdirs();
+	    	} else if (!dictionaryTop.isDirectory()) {
+	    		LOG.error(dictionaryTop + " must be a directory");
+	    	}
+    	}
+	   	return dictionaryTop;
+	}
+
+    /** creates subdirectories from filenames with dots.
+     *  foo.bar.plugh creates <directoryTop/foo/bar/
+     * @return
+     */
+    protected File getOrCreateExistingSubdirectory(String dictionaryName) {
+    	File newDictionaryDir = null;
+    	Pattern pattern = Pattern.compile("(.*)\\.[^\\.]*");
+    	if (dictionaryName == null) {
+    		throw new RuntimeException("null dictionaryName");
+    	}
+    	getOrCreateExistingDictionaryTop();
+    	if (dictionaryTop != null) {
+    		Matcher matcher = pattern.matcher(dictionaryName);
+    		if (!matcher.matches()) {
+    			return dictionaryTop;
+    		}
+    		String newDictionaryName  = matcher.group(1).replace(DOT, SLASH);
+    		newDictionaryDir = new File(dictionaryTop, newDictionaryName);
+    		if (!newDictionaryDir.exists()) {
+    			newDictionaryDir.mkdirs();
+    		} else if (!newDictionaryDir.isDirectory()) {
+    			throw new RuntimeException(newDictionaryDir + " must not be directory" );
+    		}
+    	}
+    	return newDictionaryDir;
+    	
+    }
 
 //	private void createDictionaryData() {
 //	    String[] dataCols;
@@ -444,7 +495,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		}
 		addEntriesToDictionaryElement();
 		createAndAddQueryElement();
-		writeDictionaries();
+		writeDictionary();
 		return;
 	}
 
@@ -465,7 +516,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	private void addEntriesToDictionaryElement() {
 		for (int i = 0; i < nameList.size(); i++) {
 			Element entry = DefaultAMIDictionary.createEntryElementFromTerm(termList.get(i));
-			entry.addAttribute(new Attribute(DictionaryTerm.ID, "CM."+dictionary+"."+i));
+			entry.addAttribute(new Attribute(DictionaryTerm.ID, "CM."+dictionary+DOT+i));
 			entry.addAttribute(new Attribute(DictionaryTerm.NAME, nameList.get(i)));
 			String link = linkList == null ? null : linkList.get(i);
 			if (link != null && !link.equals("")) {
@@ -476,24 +527,42 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		return;
 	}
 
-	private void writeDictionaries() {
-		if (directory == null) {
+	/** writes the formatted versions of a single dictionary.
+	 *  
+	 */
+	private void writeDictionary() {
+		getOrCreateExistingDictionaryTop();
+		if (dictionaryTop == null) {
 			throw new RuntimeException("must give directory for dictionaries");
 		}
-		if (outformats != null) {
-			List<DictionaryFileFormat> outformatList = Arrays.asList(outformats);
-			for (DictionaryFileFormat outformat : outformatList) {
-				File outfile = new File(new File(directory), dictionary+"."+outformat);
-//				LOG.debug("writing to "+outfile);
-				try {
-					outputDictionary(outfile, outformat);
-				} catch (IOException e) {
-					throw new RuntimeException("cannot write file "+outfile, e);
+		if (outformats != null && dictionary != null && dictionary.length == 1) {
+			File subDirectory = getOrCreateExistingSubdirectory(dictionary[0]);
+			if (subDirectory != null) {
+				List<DictionaryFileFormat> outformatList = Arrays.asList(outformats);
+				for (DictionaryFileFormat outformat : outformatList) {
+					File outfile = getOrCreateDictionary(subDirectory, dictionary[0], outformat);
+	//				File outfile = new File(new File(subDirectory), dictionary+"."+outformat);
+	//				LOG.debug("writing to "+outfile);
+					try {
+						outputDictionary(outfile, outformat);
+					} catch (IOException e) {
+						throw new RuntimeException("cannot write file "+outfile, e);
+					}
 				}
 			}
 		}
 	}
 	
+	private File getOrCreateDictionary(File subDirectory, String dictionaryname, DictionaryFileFormat outformat) {
+		File dictionaryFile = null;
+		if (subDirectory != null && subDirectory.exists() && subDirectory.isDirectory() ) {
+			int idx = dictionaryname.indexOf(DOT);
+			dictionaryname = idx == -1 ? dictionaryname : dictionaryname.substring(idx + 1);
+			dictionaryFile = new File(subDirectory, dictionaryname + DOT + outformat);
+		}
+		return dictionaryFile;
+	}
+
 	private void outputDictionary(File outfile, DictionaryFileFormat outformat) throws IOException {
 		LOG.debug("writing dictionary to "+outfile.getAbsolutePath());
 		FileOutputStream fos = new FileOutputStream(outfile);
@@ -548,7 +617,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	private void printDebug() {
 		System.out.println("dataCols      "+dataCols);
 		System.out.println("dictionary    "+(dictionary == null ? "null" : Arrays.asList(dictionary)));
-		System.out.println("directory     "+directory);
+		System.out.println("dictionaryTop     "+dictionaryTopname);
 		System.out.println("href          "+href);
 		System.out.println("hrefCols      "+hrefCols);
 		System.out.println("input         "+input);
@@ -646,7 +715,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		HtmlElement htmlElement = null;
 		try {
 			Element rootElement = XMLUtil.parseQuietlyToRootElement(inputStream);
-			boolean ignoreNamespaces = false;
+			boolean ignoreNamespaces = true;
 			htmlElement = HtmlElement.create(rootElement, false, ignoreNamespaces);
 		} catch (Exception e) {
 			throw new RuntimeException("cannot find/parse URL ", e);
@@ -792,19 +861,12 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		}
 	}
 
-
-//	private void runHelp(List<String> argList) {
-//		if (argList.size() > 0) argList.remove(0);
-//		this.help(argList);
-//	}
-
 	// ================== LIST ===================
 
 	// FILES
 	private void displayDictionaries() {
 		List<String> argList = Arrays.asList(LIST);
-		File dictionaryHead = getDictionaryHead();
-		files = listDictionaryFiles(dictionaryHead);
+		files = listDictionaryFiles(dictionaryTop);
 		Collections.sort(files);
 		
 		if (argList.size() == 1 && argList.get(0).toUpperCase().equals(LIST)) {
@@ -835,9 +897,9 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		}
 	}
 	
-	private File getDictionaryHead() {
-		return dictionaryDir;
-	}
+//	private File getDictionaryDir() {
+//		return dictionaryDir;
+//	}
 	
 	private void help(List<String> argList) {
 		LOG.error("shouldn't use this help?");
@@ -858,8 +920,10 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	}
 
 	private List<File> getDictionaries() {
-		DebugPrint.debugPrint(" * dictionaries from: "+dictionaryDir);
-		File xmlDictionaryDir = getXMLDictionaryDir(dictionaryDir);
+		DebugPrint.debugPrint(" * dictionaries from: "+getOrCreateExistingDictionaryTop());
+		// not sure we use this
+//		File xmlDictionaryDir = getXMLDictionaryDir(dictionaryDir);
+		File xmlDictionaryDir = dictionaryTop;
 		files = new CMineGlobber().setRegex(".*\\.xml").setLocation(xmlDictionaryDir).setRecurse(true).listFiles();
 //		File[] fileArray = xmlDictionaryDir.listFiles(new FilenameFilter() {
 //			public boolean accept(File dir, String name) {
@@ -1038,13 +1102,13 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		this.maxEntries = maxEntries;
 	}
 
-	public String getDirectory() {
-		return directory;
-	}
-
-	public void setDirectory(String directory) {
-		this.directory = directory;
-	}
+//	public String getDirectory() {
+//		return directory;
+//	}
+//
+//	public void setDirectory(String directory) {
+//		this.directory = directory;
+//	}
 
 
 }

@@ -75,7 +75,7 @@ public class WikipediaPageInfo {
 	public final static String WIKIDATA_BASE = "https://www.wikidata.org";
 	public final static String WIKIPEDIA_BASE = "https://en.wikipedia.org";
 	
-	public final static String WIKIDATA_ITEM =	"mw-wikibase-pageinfo-entity-id";
+	public final static String WIKIDATA_ITEM_ID_FIELD =	"mw-wikibase-pageinfo-entity-id";
 	public final static String CENTRAL_DESCRIPTION = "mw-wikibase-pageinfo-description-central";
 	public final static String PAGE_IMAGE = "mw-pageimages-info-label";
 	
@@ -109,9 +109,9 @@ public class WikipediaPageInfo {
 		this.pageElement = pageElement;
 	}
 	
-	public HtmlA getWikidataItem() {
-		String value = getValue(WIKIDATA_ITEM);
-		String href = getHref(WIKIDATA_ITEM);
+	public HtmlA getLinkToWikidataItem() {
+		String value = getValue(WIKIDATA_ITEM_ID_FIELD);
+		String href = getHref(WIKIDATA_ITEM_ID_FIELD);
 		HtmlA aElement = null;
 		if (value != null && href != null) {
 			aElement = HtmlA.createFromHrefAndContent(href, value);
