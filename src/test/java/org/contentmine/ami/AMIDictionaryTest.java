@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIDictionary.DictionaryFileFormat;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.NAConstants;
+import org.contentmine.norma.picocli.AbstractAMIProcessor;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -55,7 +56,7 @@ public class AMIDictionaryTest {
 			"--urlcol", "Link",
 			"--dictionary", dict
 			};
-		AMIDictionary amiDictionary = new AMIDictionary();
+		AbstractAMIProcessor amiDictionary = new AMIDictionary();
 		amiDictionary.runCommands(args);
 //		XMLUtil.debug(amiDictionary.getSimpleDictionary(), new File(DICTIONARY_DIR, dict+".html"), 1);
 		
@@ -71,7 +72,7 @@ public class AMIDictionaryTest {
 			"--namecol", "Name", 
 			"--linkcol", "Name",
 			"--dictionary", "socialnetwork"};
-		AMIDictionary amiDictionary = new AMIDictionary();
+		AbstractAMIProcessor amiDictionary = new AMIDictionary();
 		amiDictionary.runCommands(args);
 	}
 	
@@ -214,9 +215,26 @@ public class AMIDictionaryTest {
 		
 	}
 
+//	@Test
+//	public void testWikipediaConservation() throws IOException {
+//		String dict = "conservationbio";
+//		String[] args = {
+//			"create",
+//			"--hreftext",  // currently needed to enforce use of names
+//			"--input", "https://en.wikipedia.org/wiki/Conservation_biology",
+//			"--informat", "wikipage",
+//			"--dictionary", dict,
+//			"--directory", "target/dictionary",
+//			"--outformats", DictionaryFileFormat.xml.toString(),
+//			"--log4j", "org.contentmine.ami.lookups.WikipediaDictionary", "INFO",
+//			"--log4j", "org.contentmine.norma.input.html.HtmlCleaner", "INFO",
+//			};
+//		new AMIDictionary().runCommands(args);
+//	}
+	
 	@Test
-	public void testWikipediaConservation() throws IOException {
-		String dict = "conservationbio";
+	public void testWikipediaConservation1() throws IOException {
+		String dict = "bio.conservation";
 		String[] args = {
 			"create",
 			"--hreftext",  // currently needed to enforce use of names
@@ -230,6 +248,8 @@ public class AMIDictionaryTest {
 			};
 		new AMIDictionary().runCommands(args);
 	}
+
+
 
 	@Test
 	public void testCommandMixin() {

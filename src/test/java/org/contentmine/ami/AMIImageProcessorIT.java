@@ -52,7 +52,8 @@ public class AMIImageProcessorIT {
 		File targetDir = new File(TARGET_UCLFOREST);
 		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_CONVERTED_DIR, targetDir);
 		CProject cProject = new CProject(targetDir);
-		AMIProcessorPDF.runPDF(cProject);
+		AMIProcessorPDF amiProcessorPDF = new AMIProcessorPDF(cProject);
+		amiProcessorPDF.runPDF();
 		// restrict to single tree
 		CTree cTree = cProject.getCTreeByName("case");
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();

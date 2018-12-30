@@ -45,6 +45,7 @@ public class NewForestIT {
 	public void testTraceIslands() throws IOException {
 		Int2 pageImage = new Int2(4, 1);
 		CTree cTree = PLOTS_PROJECT.getCTreeByName("PMC5619784");
+		Assert.assertNotNull("not null CTree", cTree);
 		File imageFile = cTree.getPDFImageFile(pageImage);
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();

@@ -97,7 +97,10 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
         + "We map ERROR or WARN -> 0 (i.e. always print), INFO -> 1(-v), DEBUG->2 (-vv)" })
     protected boolean[] verbosity = new boolean[0];
     
-
+	protected static File HOME_DIR = new File(System.getProperty("user.home"));
+	protected static String CONTENT_MINE_HOME = "ContentMine";
+	protected static File DEFAULT_CONTENT_MINE_DIR = new File(HOME_DIR, CONTENT_MINE_HOME);
+	
 	protected CProject cProject;
 	protected CTree cTree;
 	// needed for testing I think
@@ -106,6 +109,7 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 	
 	protected String[] args;
 	private Level level;
+	protected File contentMineDir = DEFAULT_CONTENT_MINE_DIR;
 
 	public void init() {
 	}
@@ -131,8 +135,9 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 		
     	printSpecificHeader();
 		parseSpecifics();
+		
 		if (level != null && !Level.WARN.isGreaterOrEqual(level)) {
-			System.err.println("processing halted due to argument errors");
+			System.err.println("processing halted due to argument errors, level:"+level);
 		} else {
 			runGenerics();
 			runSpecifics();
@@ -143,11 +148,11 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 	protected abstract void runSpecifics();
 
 	protected boolean parseGenerics() {
+    	setLogging();
+    	printGenericValues();
 		validateCProject();
 		validateCTree();
 		validateRawFormats();
-    	setLogging();
-    	printGenericValues();
         return true;
 	}
 
@@ -260,19 +265,21 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 
 	protected void printGenericHeader() {
 		System.out.println();
-		System.out.println("Generic values");
-		System.out.println("==============");
+		System.out.println("Generic values ("+this.getClass().getSimpleName()+")");
+		System.out.println("================================");
 	}
 
 	protected void printSpecificHeader() {
 		System.out.println();
-		System.out.println("Specific values");
-		System.out.println("===============");
+		System.out.println("Specific values ("+this.getClass().getSimpleName()+")");
+		System.out.println("================================");
 	}
 
 	protected void argument(Level level, String message) {
 		combineLevel(level);
-		System.out.println(message);
+		if (level.isGreaterOrEqual(Level.WARN)) {
+			System.err.println(this.getClass().getSimpleName()+": "+level + ": "+message);
+		}
 	}
 
 	private void combineLevel(Level level) {
@@ -298,6 +305,32 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 		}
 		return Level.ERROR;
 		
+	}
+
+	/** creates toplevel ContentMine directory in which all dictionaries and other tools
+	 * will be stored. By default this is "ContentMine" under the users home directory.
+	 * It is probably not a good idea to store actual projects here, but we will eveolve the usage.
+	 * 
+	 * @return null if cannot create directory
+	 */
+	protected File getOrCreateExistingContentMineDir() {
+		if (contentMineDir == null) {
+			// null means cannot be created
+		} else if (contentMineDir.exists()) {
+			if (!contentMineDir.isDirectory()) {
+				LOG.error(contentMineDir + " must be a directory");
+				contentMineDir = null;
+			}
+		} else {
+			LOG.info("Creating "+CONTENT_MINE_HOME+" directory: "+contentMineDir);
+			try {
+				contentMineDir.mkdirs();
+			} catch (Exception e) {
+				LOG.error("Cannot create "+contentMineDir);
+				contentMineDir = null;
+			}
+		}
+		return contentMineDir;
 	}
 
 }

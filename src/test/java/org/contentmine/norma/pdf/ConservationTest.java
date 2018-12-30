@@ -16,10 +16,12 @@ public class ConservationTest {
 	}
 
 	@Test
+	// may fail test
 	public void testConservation() throws Exception {
 		File sourceDir = new File("/Users/pm286/workspace/projects/sutherland/testCopy");
 		if (!sourceDir.exists()) return;
-		CProject cProject = CProject.createProjectFromPDFsAndMakeCTrees(sourceDir);
+		CProject cProject = new CProject(sourceDir);
+		cProject.convertPDF2SVG();
 		Assert.assertNotNull(cProject);
 		cProject.tidyImages();
 	}
