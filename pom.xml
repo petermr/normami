@@ -12,6 +12,8 @@
 	    <ches.version>0.1-SNAPSHOT</ches.version>
 	    <cli.version>1.4</cli.version>
 	    <java.version>1.8</java.version>
+	    <java.source.version>1.8</java.source.version>
+	    <java.target.version>1.8</java.target.version>
 	    <javax.ws.rs.version>2.1</javax.ws.rs.version>
 	    <lucene.version>4.10.3</lucene.version>
  	    <picocli.version>3.8.0</picocli.version>
