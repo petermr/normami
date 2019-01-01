@@ -68,7 +68,7 @@ public class AMIProcessorPDFTest {
 	public void testForestPlotsSmallPDFImages() throws Exception {
 		String projectDir = "/Users/pm286/workspace/uclforest/forestplotssmall";
 		// delete the existing pdfimagesdirectories
-		new AMICleaner().runCommands("-p " + projectDir + " --dir pdfimages/");
+//		new AMICleaner().runCommands("-p " + projectDir + " --dir pdfimages/");
 		// and then recreate them
 		String[] args = {
 				"-p", projectDir,

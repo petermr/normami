@@ -115,7 +115,7 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 	}
 
 	public void runCommands(String cmd) {
-		String[] args = cmd == null ? new String[]{} : cmd.split("\\s+");
+		String[] args = cmd == null ? new String[]{} : cmd.trim().split("\\s+");
 		runCommands(args);
 	}
 	
@@ -148,11 +148,11 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 	protected abstract void runSpecifics();
 
 	protected boolean parseGenerics() {
-    	setLogging();
-    	printGenericValues();
 		validateCProject();
 		validateCTree();
 		validateRawFormats();
+    	setLogging();
+    	printGenericValues();
         return true;
 	}
 
@@ -183,25 +183,27 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 
 	@Override
     public Void call() throws Exception {
-//		LOG.debug("call(); called");
         return null;
     }
 
-//    @Override
     /** subclass this if you want to process CTree and CProject differently
      * 
      */
 	protected boolean runGenerics() {
-//		if (Level.WARN.isGreaterOrEqual(level)) {
-//			LOG.error("errors in parameters, processing aborted");
-//			return false;
-//		}
         return true;
 	}
 
+	/** validates the infput formats.
+	 * Currently NOOP
+	 * 
+	 */
 	protected void validateRawFormats() {
 	}
 
+	/** creates cProject from cProjectDirectory.
+	 * checks it exists
+	 * 
+	 */
 	protected void validateCProject() {
 		if (cProjectDirectory != null) {
 			File cProjectDir = new File(cProjectDirectory);
@@ -212,6 +214,10 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
     	}
 	}
 
+	/** creates cTree from cTreeDirectory.
+	 * checks it exists
+	 * 
+	 */
 	protected void validateCTree() {
 		if (cTreeDirectory != null) {
 			File cTreeDir = new File(cTreeDirectory);
@@ -222,13 +228,15 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
     	}
 	}
 
+	/** prints generic values from abstract superclass.
+	 * at present cproject, ctree and filetypes
+	 * 
+	 */
 	private void printGenericValues() {
         System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
         System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
         System.out.println("file types          " + Util.toStringList(rawFileFormats));
 	}
-	
-
 
 	public void setCProject(CProject cProject) {
 		this.cProject = cProject;

@@ -65,18 +65,17 @@ public class AMIImageProcessor  extends AbstractAMIProcessor {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-    @Option(names = {"-mh", "--minheight"},
-    		arity = "0..1",
-    		defaultValue = "100",
-//	    		type = Integer.class,
-            description = "minimum height (pixels) to accept")
-    private int minHeight;
-
-    @Option(names = {"-mw", "--minwidth"},
-    		arity = "0..1",
-    		defaultValue = "100",
-            description = "minimum width (pixels) to accept")
-    private int minWidth;
+//    @Option(names = {"-mh", "--minheight"},
+//    		arity = "0..1",
+//    		defaultValue = "100",
+//            description = "minimum height (pixels) to accept")
+//    private int minHeight;
+//
+//    @Option(names = {"-mw", "--minwidth"},
+//    		arity = "0..1",
+//    		defaultValue = "100",
+//            description = "minimum width (pixels) to accept")
+//    private int minWidth;
 
     @Option(names = {"-th", "--threshold"},
     		arity = "0..1",
@@ -84,17 +83,17 @@ public class AMIImageProcessor  extends AbstractAMIProcessor {
             description = "threshold for binarization")
     private int threshold;
 
-    @Option(names = {"-mo", "--monochrome"},
-    		arity = "0..1",
-    		defaultValue = "true",
-    		description = "discard monochrome images (i.r. only one color)")
-	private boolean discardMonochrome;
+//    @Option(names = {"-mo", "--monochrome"},
+//    		arity = "0..1",
+//    		defaultValue = "true",
+//    		description = "discard monochrome images (i.r. only one color)")
+//	private boolean discardMonochrome;
     
-    @Option(names = {"-du", "--duplicates"},
-    		arity = "0..1",
-    		defaultValue = "true",
-            description = "discard duplicate images ")
-	private boolean discardDuplicates;
+//    @Option(names = {"-du", "--duplicates"},
+//    		arity = "0..1",
+//    		defaultValue = "true",
+//            description = "discard duplicate images ")
+//	private boolean discardDuplicates;
     
     @Option(names = {"-mi", "--maxislands"},
     		arity = "0..1",
@@ -114,11 +113,11 @@ public class AMIImageProcessor  extends AbstractAMIProcessor {
             description = "extract pixel rings")
 	private boolean extractPixelRings;
 
-	public static final String DUPLICATES = "duplicates/";
-	public static final String MONOCHROME = "monochrome/";
-	public static final String SMALL = "small/";
+//	public static final String DUPLICATES = "duplicates/";
+//	public static final String MONOCHROME = "monochrome/";
+//	public static final String SMALL = "small/";
 
-	private Multiset<String> duplicateSet;
+//	private Multiset<String> duplicateSet;
 	
     private AMIImageProcessor() {
     	
@@ -130,11 +129,11 @@ public class AMIImageProcessor  extends AbstractAMIProcessor {
 
     @Override
 	protected void parseSpecifics() {
-		System.out.println("minHeight           " + minHeight);
-		System.out.println("minWidth            " + minWidth);
+//		System.out.println("minHeight           " + minHeight);
+//		System.out.println("minWidth            " + minWidth);
 		System.out.println("threshold           " + threshold);
-		System.out.println("discardMonochrome   " + discardMonochrome);
-		System.out.println("discardDuplicates   " + discardDuplicates);
+//		System.out.println("discardMonochrome   " + discardMonochrome);
+//		System.out.println("discardDuplicates   " + discardDuplicates);
 		System.out.println("maxPixelIslandCount " + maxPixelIslandCount);
 		System.out.println("maxPixelIslandSize  " + maxPixelIslandSize);
 		System.out.println("extractPixelRings   " + extractPixelRings);
@@ -165,31 +164,31 @@ public class AMIImageProcessor  extends AbstractAMIProcessor {
 
 
 	public void runImages(CTree cTree) {
-		File pdfImagesDir = cTree.getExistingPDFImagesDir();
-		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
-			LOG.warn("no pdfImages/ dir");
-		} else {
-			duplicateSet = HashMultiset.create();
-			List<File> imageFiles = new CMineGlobber("**/*.png", pdfImagesDir).listFiles();
-			Collections.sort(imageFiles);
-			for (File imageFile : imageFiles) {
-				BufferedImage image = null;
-				try {
-					image = ImageIO.read(imageFile);
-					if (false) {
-					} else if (moveSmallImageTo(image, imageFile, new File(pdfImagesDir, SMALL))) {
-//						LOG.debug("small");
-					} else if (discardMonochrome && moveMonochromeImagesTo(image, imageFile, new File(pdfImagesDir, MONOCHROME))) {
-//						LOG.debug("monochrome");
-					} else if (discardDuplicates && moveDuplicateImagesTo(image, imageFile, new File(pdfImagesDir, DUPLICATES))) {
-//						LOG.debug("duplicates");
-					};
-				} catch(IOException e) {
-					e.printStackTrace();
-					LOG.debug("failed to read file " + imageFile + "; "+ e);
-				}
-			}
-		}
+//		File pdfImagesDir = cTree.getExistingPDFImagesDir();
+//		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
+//			LOG.warn("no pdfImages/ dir");
+//		} else {
+//			duplicateSet = HashMultiset.create();
+//			List<File> imageFiles = new CMineGlobber("**/*.png", pdfImagesDir).listFiles();
+//			Collections.sort(imageFiles);
+//			for (File imageFile : imageFiles) {
+//				BufferedImage image = null;
+//				try {
+//					image = ImageIO.read(imageFile);
+//					if (false) {
+////					} else if (moveSmallImageTo(image, imageFile, new File(pdfImagesDir, SMALL))) {
+////						LOG.debug("small");
+////					} else if (discardMonochrome && moveMonochromeImagesTo(image, imageFile, new File(pdfImagesDir, MONOCHROME))) {
+////						LOG.debug("monochrome");
+////					} else if (discardDuplicates && moveDuplicateImagesTo(image, imageFile, new File(pdfImagesDir, DUPLICATES))) {
+////						LOG.debug("duplicates");
+//					};
+//				} catch(IOException e) {
+//					e.printStackTrace();
+//					LOG.debug("failed to read file " + imageFile + "; "+ e);
+//				}
+//			}
+//		}
 	}
 	
     public static AMIImageProcessor createAIProcessor(CProject cProject) {
@@ -218,92 +217,92 @@ public class AMIImageProcessor  extends AbstractAMIProcessor {
 		runImages();
 	}
 
-	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, File destDir) throws IOException {
-		boolean createDestDir = true;
-		int width = image.getWidth();
-		int height = image.getHeight();
-		if (width < minWidth || height < minHeight) {
-			try {
-				FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
-			} catch (FileExistsException fee) {
-				LOG.warn("file exists, BUG?"+srcImageFile);
-			}
-			return true;
-		}
-		return false;
-	}
+//	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, File destDir) throws IOException {
+//		boolean createDestDir = true;
+//		int width = image.getWidth();
+//		int height = image.getHeight();
+//		if (width < minWidth || height < minHeight) {
+//			try {
+//				FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
+//			} catch (FileExistsException fee) {
+//				LOG.warn("file exists, BUG?"+srcImageFile);
+//			}
+//			return true;
+//		}
+//		return false;
+//	}
+//
+//	private boolean moveMonochromeImagesTo(BufferedImage image, File srcImageFile, File destDir) throws IOException {
+//		boolean createDestDir = true;
+//		Integer singleColor = ImageUtil.getSingleColor(image);
+//		if (singleColor != null) {
+//			FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
+//			return true;
+//		}
+//		return false;
+//	}
+//
+//	private boolean moveDuplicateImagesTo(BufferedImage image, File srcImageFile, File destDir) throws IOException {
+//		boolean createDestDir = true;
+//		String hash = ""+image.getWidth()+"-"+image.getHeight()+"-"+ImageUtil.createSimpleHash(image);
+//		duplicateSet.add(hash);
+//		boolean moved = false;
+//		if (duplicateSet.count(hash) > 1) {
+//			if (srcImageFile != null && srcImageFile.exists() && !srcImageFile.isDirectory()) {
+//				try {
+//					File destFile = new File(destDir, srcImageFile.getName());
+//					if (destFile != null && destFile.exists()) {
+//						FileUtils.forceDelete(destFile);
+//					}
+//					try {
+//						FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
+//					} catch (FileNotFoundException fnfe) {
+//						LOG.warn("BUG? (FileNotFound) for "+srcImageFile);
+//					}
+//					moved = true;
+//				} catch (FileExistsException fee) {
+//					throw new IOException("BUG: file should have been deleted"+srcImageFile, fee);
+//				}
+//			}
+//		}
+//		return moved;
+//	}
 
-	private boolean moveMonochromeImagesTo(BufferedImage image, File srcImageFile, File destDir) throws IOException {
-		boolean createDestDir = true;
-		Integer singleColor = ImageUtil.getSingleColor(image);
-		if (singleColor != null) {
-			FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
-			return true;
-		}
-		return false;
-	}
+//	public int getMinWidth() {
+//		return minWidth;
+//	}
+//
+//	public AMIImageProcessor setMinWidth(int minWidth) {
+//		this.minWidth = minWidth;
+//		return this;
+//	}
+//
+//	public int getMinHeight() {
+//		return minHeight;
+//	}
+//
+//	public AMIImageProcessor setMinHeight(int minHeight) {
+//		this.minHeight = minHeight;
+//		return this;
+//	}
 
-	private boolean moveDuplicateImagesTo(BufferedImage image, File srcImageFile, File destDir) throws IOException {
-		boolean createDestDir = true;
-		String hash = ""+image.getWidth()+"-"+image.getHeight()+"-"+ImageUtil.createSimpleHash(image);
-		duplicateSet.add(hash);
-		boolean moved = false;
-		if (duplicateSet.count(hash) > 1) {
-			if (srcImageFile != null && srcImageFile.exists() && !srcImageFile.isDirectory()) {
-				try {
-					File destFile = new File(destDir, srcImageFile.getName());
-					if (destFile != null && destFile.exists()) {
-						FileUtils.forceDelete(destFile);
-					}
-					try {
-						FileUtils.moveFileToDirectory(srcImageFile, destDir, createDestDir);
-					} catch (FileNotFoundException fnfe) {
-						LOG.warn("BUG? (FileNotFound) for "+srcImageFile);
-					}
-					moved = true;
-				} catch (FileExistsException fee) {
-					throw new IOException("BUG: file should have been deleted"+srcImageFile, fee);
-				}
-			}
-		}
-		return moved;
-	}
-
-	public int getMinWidth() {
-		return minWidth;
-	}
-
-	public AMIImageProcessor setMinWidth(int minWidth) {
-		this.minWidth = minWidth;
-		return this;
-	}
-
-	public int getMinHeight() {
-		return minHeight;
-	}
-
-	public AMIImageProcessor setMinHeight(int minHeight) {
-		this.minHeight = minHeight;
-		return this;
-	}
-
-	public boolean isDiscardDuplicates() {
-		return discardDuplicates;
-	}
-
-	public AMIImageProcessor setDiscardDuplicates(boolean discardDuplicates) {
-		this.discardDuplicates = discardDuplicates;
-		return this;
-	}
-
-	public boolean isDiscardMonochrome() {
-		return discardMonochrome;
-	}
-
-	public AMIImageProcessor setDiscardMonochrome(boolean discardMonochrome) {
-		this.discardMonochrome = discardMonochrome;
-		return this;
-	}
+//	public boolean isDiscardDuplicates() {
+//		return discardDuplicates;
+//	}
+//
+//	public AMIImageProcessor setDiscardDuplicates(boolean discardDuplicates) {
+//		this.discardDuplicates = discardDuplicates;
+//		return this;
+//	}
+//
+//	public boolean isDiscardMonochrome() {
+//		return discardMonochrome;
+//	}
+//
+//	public AMIImageProcessor setDiscardMonochrome(boolean discardMonochrome) {
+//		this.discardMonochrome = discardMonochrome;
+//		return this;
+//	}
 
 	public void convertImageAndWriteHOCRFiles(CTree cTree, File outputDir) {
 		File imageDir = new File(cTree.getExistingPDFImagesDir(), CTree.DERIVED); 

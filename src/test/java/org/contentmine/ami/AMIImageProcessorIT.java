@@ -44,60 +44,60 @@ public class AMIImageProcessorIT {
 	}
 
 	
-	@Test
-	/** reads images in UCL corpus and excludes small/narroe
-	 * 
-	 */
-	public void testMinWidthHeight() {
-		File targetDir = new File(TARGET_UCLFOREST);
-		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_CONVERTED_DIR, targetDir);
-		CProject cProject = new CProject(targetDir);
-		AMIProcessorPDF amiProcessorPDF = new AMIProcessorPDF(cProject);
-		amiProcessorPDF.runPDF();
-		// restrict to single tree
-		CTree cTree = cProject.getCTreeByName("case");
-		File pdfImagesDir = cTree.getExistingPDFImagesDir();
-		Assert.assertTrue(pdfImagesDir.exists());
-		File smallDir = new File(pdfImagesDir, AMIImageProcessor.SMALL);
-		Assert.assertFalse(smallDir.exists());
-		File monochromeDir = new File(pdfImagesDir, AMIImageProcessor.MONOCHROME);
-		Assert.assertFalse(monochromeDir.exists());
-		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree)
-				.setMinHeight(100).setMinWidth(100).setDiscardDuplicates(true).setDiscardMonochrome(true);
-		amiImageProcessor.runImages(cTree);
-		Assert.assertTrue(""+smallDir + "should exists", smallDir.exists());
-		Assert.assertEquals(59,  smallDir.listFiles().length);
-		// run on whole lot
-		LOG.debug("all");
-		amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree)
-				.setMinHeight(100).setMinWidth(100).setDiscardDuplicates(true).setDiscardMonochrome(true);
-		amiImageProcessor.runImages(cProject);
-	}
+//	@Test
+//	/** reads images in UCL corpus and excludes small/narroe
+//	 * 
+//	 */
+//	public void testMinWidthHeight() {
+//		File targetDir = new File(TARGET_UCLFOREST);
+//		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_CONVERTED_DIR, targetDir);
+//		CProject cProject = new CProject(targetDir);
+//		AMIProcessorPDF amiProcessorPDF = new AMIProcessorPDF(cProject);
+//		amiProcessorPDF.runPDF();
+//		// restrict to single tree
+//		CTree cTree = cProject.getCTreeByName("case");
+//		File pdfImagesDir = cTree.getExistingPDFImagesDir();
+//		Assert.assertTrue(pdfImagesDir.exists());
+//		File smallDir = new File(pdfImagesDir, AMIImageProcessor.SMALL);
+//		Assert.assertFalse(smallDir.exists());
+//		File monochromeDir = new File(pdfImagesDir, AMIImageProcessor.MONOCHROME);
+//		Assert.assertFalse(monochromeDir.exists());
+//		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree)
+//				.setMinHeight(100).setMinWidth(100).setDiscardDuplicates(true).setDiscardMonochrome(true);
+//		amiImageProcessor.runImages(cTree);
+//		Assert.assertTrue(""+smallDir + "should exists", smallDir.exists());
+//		Assert.assertEquals(59,  smallDir.listFiles().length);
+//		// run on whole lot
+//		LOG.debug("all");
+//		amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree)
+//				.setMinHeight(100).setMinWidth(100).setDiscardDuplicates(true).setDiscardMonochrome(true);
+//		amiImageProcessor.runImages(cProject);
+//	}
 
-	@Test
-	/** reads images in UCL corpus and excludes monochrome images
-	 * 
-	 */
-	public void testMonochrome() throws Exception {
-		File targetDir = new File(TARGET_UCLFOREST);
-		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
-		// need to implement make
-		String[] args = {targetDir.toString()};
-		AMIProcessorPDF.main(args);
-		CProject cProject = new CProject(targetDir);
-		CTree cTree = cProject.getCTreeByName("goldberg");
-		File imagesDir = cTree.getExistingPDFImagesDir();
-		Assert.assertTrue(imagesDir.exists());
-		File smallDir = new File(imagesDir, AMIImageProcessor.SMALL);
-		Assert.assertFalse(smallDir.exists());
-		File monochromeDir = new File(imagesDir, AMIImageProcessor.MONOCHROME);
-		Assert.assertFalse(monochromeDir.exists());
-		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree).setMinHeight(0).setMinWidth(0).setDiscardMonochrome(true);
-		amiImageProcessor.runImages(cTree);
-		Assert.assertFalse(smallDir.exists());
-		Assert.assertTrue(monochromeDir.exists());
-		Assert.assertEquals(159,  monochromeDir.listFiles().length);
-	}
+//	@Test
+//	/** reads images in UCL corpus and excludes monochrome images
+//	 * 
+//	 */
+//	public void testMonochrome() throws Exception {
+//		File targetDir = new File(TARGET_UCLFOREST);
+//		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
+//		// need to implement make
+//		String[] args = {targetDir.toString()};
+//		AMIProcessorPDF.main(args);
+//		CProject cProject = new CProject(targetDir);
+//		CTree cTree = cProject.getCTreeByName("goldberg");
+//		File imagesDir = cTree.getExistingPDFImagesDir();
+//		Assert.assertTrue(imagesDir.exists());
+//		File smallDir = new File(imagesDir, AMIImageProcessor.SMALL);
+//		Assert.assertFalse(smallDir.exists());
+//		File monochromeDir = new File(imagesDir, AMIImageProcessor.MONOCHROME);
+//		Assert.assertFalse(monochromeDir.exists());
+//		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree).setMinHeight(0).setMinWidth(0).setDiscardMonochrome(true);
+//		amiImageProcessor.runImages(cTree);
+//		Assert.assertFalse(smallDir.exists());
+//		Assert.assertTrue(monochromeDir.exists());
+//		Assert.assertEquals(159,  monochromeDir.listFiles().length);
+//	}
 
 	@Test
 	/** reads images in UCL corpus and outputs summary
@@ -113,50 +113,50 @@ public class AMIImageProcessorIT {
 		AMIImageProcessor.main(args);
 	}
 
-	@Test
-	/** reads images in UCL corpus and discards duplicate images
-	 * 
-	 */
-	public void testSingleDuplicate() throws Exception {
-		File targetDir = new File(TARGET_UCLFOREST);
-		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
-		String[] args = {targetDir.toString()};
-		AMIProcessorPDF.main(args);
-		args = new String[] {targetDir.toString(), "help"};
-		CProject cProject = new CProject(targetDir);
-		CTree cTree = cProject.getCTreeByName("goldberg");
-		File imagesDir = cTree.getExistingPDFImagesDir();
-		Assert.assertTrue(imagesDir.exists());
-		File smallDir = new File(imagesDir, AMIImageProcessor.SMALL);
-		Assert.assertFalse(smallDir.exists());
-		File duplicatesDir = new File(imagesDir, AMIImageProcessor.DUPLICATES);
-		LOG.debug("duplicates " + duplicatesDir);
-//		Assert.assertFalse(duplicatesDir.exists());
-
-		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree).setMinHeight(0).setMinWidth(0).setDiscardDuplicates(true);
-		amiImageProcessor.runImages(cTree);
-		Assert.assertFalse(smallDir.exists());
-		Assert.assertTrue(duplicatesDir.exists());
-		int length = duplicatesDir.listFiles().length;
-		Assert.assertTrue("duplicates "+length, length > 150); // too flaky
-
-	}
+//	@Test
+//	/** reads images in UCL corpus and discards duplicate images
+//	 * 
+//	 */
+//	public void testSingleDuplicate() throws Exception {
+//		File targetDir = new File(TARGET_UCLFOREST);
+//		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
+//		String[] args = {targetDir.toString()};
+//		AMIProcessorPDF.main(args);
+//		args = new String[] {targetDir.toString(), "help"};
+//		CProject cProject = new CProject(targetDir);
+//		CTree cTree = cProject.getCTreeByName("goldberg");
+//		File imagesDir = cTree.getExistingPDFImagesDir();
+//		Assert.assertTrue(imagesDir.exists());
+//		File smallDir = new File(imagesDir, AMIImageProcessor.SMALL);
+//		Assert.assertFalse(smallDir.exists());
+//		File duplicatesDir = new File(imagesDir, AMIImageProcessor.DUPLICATES);
+//		LOG.debug("duplicates " + duplicatesDir);
+////		Assert.assertFalse(duplicatesDir.exists());
+//
+//		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree).setMinHeight(0).setMinWidth(0).setDiscardDuplicates(true);
+//		amiImageProcessor.runImages(cTree);
+//		Assert.assertFalse(smallDir.exists());
+//		Assert.assertTrue(duplicatesDir.exists());
+//		int length = duplicatesDir.listFiles().length;
+//		Assert.assertTrue("duplicates "+length, length > 150); // too flaky
+//
+//	}
 	
-	@Test
-	/** reads images in UCL corpus and discards duplicate images
-	 * 
-	 */
-	public void testAllDuplicate() throws Exception {
-		File targetDir = new File(TARGET_UCLFOREST);
-		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
-		String[] args = {targetDir.toString()};
-		AMIProcessorPDF.main(args);
-		CProject cProject = new CProject(targetDir);
-		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cProject);
-		amiImageProcessor.setMinHeight(100).setMinWidth(100).setDiscardMonochrome(true).setDiscardDuplicates(true);
-		amiImageProcessor.runImages();
-
-	}
+//	@Test
+//	/** reads images in UCL corpus and discards duplicate images
+//	 * 
+//	 */
+//	public void testAllDuplicate() throws Exception {
+//		File targetDir = new File(TARGET_UCLFOREST);
+//		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
+//		String[] args = {targetDir.toString()};
+//		AMIProcessorPDF.main(args);
+//		CProject cProject = new CProject(targetDir);
+//		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cProject);
+//		amiImageProcessor.setMinHeight(100).setMinWidth(100).setDiscardMonochrome(true).setDiscardDuplicates(true);
+//		amiImageProcessor.runImages();
+//
+//	}
 	
 	
 	

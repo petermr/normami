@@ -48,10 +48,10 @@ public class AMIProcessorPDF extends AbstractAMIProcessor {
 	@Option(names = {"--maxpages"}, 
     		arity="0..1",
    		    description = "maximum PDF pages. If less than actual pages, will repeat untill all pages processed. "
-   		    		+ "(The normal reason is that lists get full (pseudo-memory leak, this is a bug). If you encounter"
+   		    		+ "(The normal reason is that lists get full (pseudo-memory leak, this is a bug). If you encounter "
    		    		+ "out of memory errors, try setting this lower."
     		)
-    private int maxpages = 100;
+    private int maxpages = 25;
     
     @Option(names = {"--svgdir"}, 
     		arity="0..1",
