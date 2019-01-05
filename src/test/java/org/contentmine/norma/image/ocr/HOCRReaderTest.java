@@ -18,10 +18,10 @@ import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.HtmlMeta;
 import org.contentmine.graphics.html.HtmlSpan;
 import org.contentmine.graphics.svg.SVGSVG;
+import org.contentmine.image.ocr.HOCRReader;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.Norma;
 import org.contentmine.norma.NormaFixtures;
-import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -59,15 +59,15 @@ public class HOCRReaderTest {
 	@Test
 	@Ignore // fix expected file
 	public void testReadHOCR2SVG() throws IOException {
-		HOCRReaderOLD hocrReader = new HOCRReaderOLD();
+		HOCRReader hocrReader = new HOCRReader();
 		hocrReader.readHOCR(this.getClass().getResourceAsStream(NAConstants.OCR_RESOURCE+"ijs.0.003566-0-000.pbm.png.hocr"));
 		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
 		Assert.assertNotNull("SVG not null", svgSvg);
 		HtmlBody htmlBody = hocrReader.getOrCreateHtmlBody();
 		new File("target/hocr/").mkdirs();
 		XMLUtil.debug(htmlBody, new FileOutputStream("target/hocr/ijs.0.003566-0-000.pbm.png.hocr.html"),1);
-		List<HtmlSpan> lines = hocrReader.getNonEmptyLines();
-		matchSpecies(hocrReader, IJSEM);
+//		List<HtmlSpan> lines = hocrReader.getNonEmptyLines();
+//		matchSpecies(hocrReader, IJSEM);
 		new File("target/hocr/").mkdirs();
 		File resultsFile = new File("target/hocr/ijs.0.003566-0-000.pbm.png.hocr.svg");
 		File expectedFile = new File(OCR_DIR, "ijs.0.003566-0-000.pbm.png.hocr.svg");
@@ -83,14 +83,14 @@ public class HOCRReaderTest {
 	    Assert.assertNull("message: "+msg, msg);
 	}
 
-	private void matchSpecies(HOCRReaderOLD hocrReader, Pattern IJSEM) {
-		List<HtmlSpan> lines = hocrReader.getNonEmptyLines();
-		for (HtmlSpan line : lines) {
-			List<String> matchList = HOCRReaderOLD.matchPattern(line, IJSEM);
-			LOG.trace((matchList.size() == 0 ? "?? "+HOCRReaderOLD.getSpacedValue(line).toString() : matchList));
-		}
-//		System.out.println();
-	}
+//	private void matchSpecies(HOCRReader hocrReader, Pattern IJSEM) {
+//		List<HtmlSpan> lines = hocrReader.getNonEmptyLines();
+//		for (HtmlSpan line : lines) {
+//			List<String> matchList = HOCRReader.matchPattern(line, IJSEM);
+//			LOG.trace((matchList.size() == 0 ? "?? "+HOCRReader.getSpacedValue(line).toString() : matchList));
+//		}
+////		System.out.println();
+//	}
 	
 	@Test
 	public void testReadHOCR2SVGFiles() throws IOException {
@@ -110,14 +110,14 @@ public class HOCRReaderTest {
 
 		for (String root : roots) {
 			LOG.trace(root);
-			HOCRReaderOLD hocrReader = new HOCRReaderOLD();
+			HOCRReader hocrReader = new HOCRReader();
 			String hocrResource = NAConstants.OCR_RESOURCE+"/"+root+".pbm.png.hocr";
 			InputStream resourceAsStream = this.getClass().getResourceAsStream(hocrResource);
 			Assert.assertNotNull("hocr not null "+hocrResource, resourceAsStream);
 			hocrReader.readHOCR(resourceAsStream);
 			SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
 			Assert.assertNotNull("SVG not null", svgSvg);
-			matchSpecies(hocrReader, IJSEM);
+//			matchSpecies(hocrReader, IJSEM);
 			new File("target/hocr/").mkdirs();
 			File resultsFile = new File("target/hocr/"+root+".pbm.png.hocr.svg");
 			File expectedFile = new File(OCR_DIR, root+".pbm.png.hocr.svg");

@@ -11,6 +11,8 @@ import org.contentmine.norma.NormaFixtures;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import junit.framework.Assert;
+
 public class HOCRNeuroImageTest {
 
 	/** have to use 
@@ -19,10 +21,11 @@ public class HOCRNeuroImageTest {
 	 * to generate
 	 * @throws IOException 
 	 */
-	@Ignore // closed access
+//	@Ignore // closed access
 	@Test
 	public void testReadImage() throws IOException {
 		File image21 = new File(NormaFixtures.TEST_PUBSTYLE_DIR, "neuro/image.2.1.Im0.png");
+		Assert.assertTrue("image21 exists", image21.exists());
 		BufferedImage image = ImageIO.read(image21);
 		int w = image.getWidth();
 		int h = image.getHeight();

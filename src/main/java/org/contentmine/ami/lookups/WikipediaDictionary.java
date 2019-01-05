@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlA;
 import org.contentmine.graphics.html.HtmlDiv;
@@ -19,7 +20,6 @@ import org.contentmine.graphics.html.HtmlTable;
 import org.contentmine.norma.input.html.HtmlCleaner;
 import org.contentmine.norma.input.html.HtmlCleaner.HtmlClass;
 import org.contentmine.norma.input.html.HtmlCleaner.TagPosition;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
 import nu.xom.Element;
 
@@ -55,7 +55,7 @@ public class WikipediaDictionary {
 	public final static String WIKIPEDIA = "wikipedia";
 	public final static String WIKITABLE = "wikitable";
 	
-	public AbstractAMIProcessor amiDictionary;
+	public AbstractAMITool amiDictionary;
 	private HtmlElement htmlElement;
 
 	public WikipediaDictionary() {

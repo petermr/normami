@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.util.CMineUtil;
 
 public class ImageToHOCRConverter {
@@ -21,10 +22,12 @@ public class ImageToHOCRConverter {
 	private static final String ENCODING = "UTF-8";
 	private static final int SLEEP_TIME = 1500;
 	private static final int NTRIES = 20;
+	public static final String RAW_HTML = "raw.html";
 	
 	private int tryCount;
 	private int sleepTimeMsec;
 	private String encoding = ENCODING;
+	private File outputFileRoot;
 	
 	public ImageToHOCRConverter() {
 		setDefaults();
@@ -54,14 +57,15 @@ public class ImageToHOCRConverter {
      * @throws IOException // if Tesseract not present
      * @throws InterruptedException ??
      */
-    public File convertImageToHOCR(File inputImageFile, File output) throws IOException, InterruptedException {
+    public File convertImageToHOCR(File inputImageFile, File outputHocrFile) throws IOException, InterruptedException {
 
+    	this.outputFileRoot = outputHocrFile;
         // tesseract performs the initial Image => HOCR conversion,
     	
-        output.getParentFile().mkdirs();
+    	outputHocrFile.getParentFile().mkdirs();
 		String tessConfig = "";
 		ProcessBuilder tesseractBuilder = new ProcessBuilder(
-		USR_LOCAL_BIN_TESSERACT, inputImageFile.getAbsolutePath(), output.getAbsolutePath(), tessConfig, HOCR, encoding );
+		USR_LOCAL_BIN_TESSERACT, inputImageFile.getAbsolutePath(), outputHocrFile.getAbsolutePath(), tessConfig, HOCR, encoding );
         tesseractBuilder.redirectError(ProcessBuilder.Redirect.INHERIT);
     	Process tesseractProc = startTesseractAndCloseOutputStream(tesseractBuilder);
         int exitValue = exitAfterTrying(tesseractProc);
@@ -70,7 +74,8 @@ public class ImageToHOCRConverter {
 			tesseractProc.destroy();
 			LOG.error("Process failed to terminate after :"+tryCount);
 		}
-    	File htmlFile = convertToHtmlFile(output);
+		LOG.trace("creating "+outputHocrFile);
+    	File htmlFile = convertToHtmlFile(outputHocrFile);
     	return htmlFile;
 
     }
@@ -87,7 +92,8 @@ public class ImageToHOCRConverter {
 		    		break;
 		    	}
 			} catch (IllegalThreadStateException e) {
-				LOG.debug("still not terminated after: " + itry * sleepTimeMsec + " msec; keep going");
+//				LOG.debug("still not terminated after: " + itry * sleepTimeMsec + " msec; keep going");
+				System.err.print(">"+itry * sleepTimeMsec + " ms ");
 			}
 		}
 		LOG.trace("tries: "+itry);
@@ -107,31 +113,25 @@ public class ImageToHOCRConverter {
 
 	private File convertToHtmlFile(File output) throws IOException {
 		File outputHtmlFile = createOutputHtmlFileDescriptorForHOCR_HTML(output);
-    	LOG.trace("creating output "+outputHtmlFile);
-		if (!outputHtmlFile.exists()) {
-			File outputHocr = createOutputHtmlFileDescriptorForHOCR_HOCR(output);
-			if (!outputHocr.exists()) {	
-				LOG.debug("failed to create: "+outputHtmlFile+" or "+outputHocr);
-				outputHtmlFile = null;
-			} else {
-				LOG.trace("copying "+outputHocr+" to "+outputHtmlFile);
-				FileUtils.copyFile(outputHocr, outputHtmlFile);
-			}
+    	LOG.trace("HTML creating output "+outputHtmlFile);
+		File outputHocr = createOutputHtmlFileDescriptorForHOCR_HOCR(output);
+		if (!outputHocr.exists()) {	
+			LOG.trace("failed to create HOCR: "+outputHtmlFile+" or "+outputHocr);
 		} else {
-			LOG.trace("created "+outputHtmlFile.getAbsolutePath()+"; size: "+ FileUtils.sizeOf(outputHtmlFile));
+			LOG.trace("copying "+outputHocr+" to "+outputHtmlFile);
+			FileUtils.copyFile(outputHocr, outputHtmlFile);
+			FileUtils.deleteQuietly(outputHocr);
 		}
 		return outputHtmlFile;
 	}
 
 	private File createOutputHtmlFileDescriptorForHOCR_HTML(File output) {
-		String filename = output.getAbsolutePath()+".html";
-		LOG.trace("creating HTML output: "+filename);
+		String filename = output.getAbsolutePath()+"."+CTree.HTML; // will be renamed later
 		return new File(filename);
 	}
 
 	private File createOutputHtmlFileDescriptorForHOCR_HOCR(File output) {
 		String filename = output.getAbsolutePath()+".hocr";
-		LOG.debug("creating hocr.hocr name: "+filename);
 		return new File(filename);
 	}
 	
@@ -145,7 +145,7 @@ public class ImageToHOCRConverter {
 		} catch (InterruptedException e) {
 			throw new RuntimeException("Tesseract threw InterruptedException", e);
 		}
-		LOG.debug("wrote to "+hocrHtmlFile);
+		LOG.trace("wrote to "+hocrHtmlFile);
 		return hocrHtmlFile;
 	}
 
@@ -165,6 +165,14 @@ public class ImageToHOCRConverter {
 
 	public void setEncoding(String encoding) {
 		this.encoding = encoding;
+	}
+
+	public File getOutputFileRoot() {
+		return outputFileRoot;
+	}
+
+	public void setOutputFileRoot(File outputFileRoot) {
+		this.outputFileRoot = outputFileRoot;
 	}
 
 
