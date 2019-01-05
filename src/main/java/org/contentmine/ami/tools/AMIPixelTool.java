@@ -1,4 +1,4 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tools;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -13,15 +13,20 @@ import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.eucl.euclid.Int2;
+import org.contentmine.eucl.euclid.Real2Range;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
+import org.contentmine.graphics.svg.SVGG;
+import org.contentmine.graphics.svg.SVGRect;
+import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.image.diagram.DiagramAnalyzer;
+import org.contentmine.image.pixel.IslandRingList;
 import org.contentmine.image.pixel.PixelIsland;
 import org.contentmine.image.pixel.PixelIslandList;
+import org.contentmine.image.pixel.PixelRing;
 import org.contentmine.image.pixel.PixelRingList;
 import org.contentmine.image.processing.HilditchThinning;
 import org.contentmine.image.processing.Thinning;
 import org.contentmine.image.processing.ZhangSuenThinning;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
@@ -47,8 +52,8 @@ version = "ami-pixel 0.1",
 description = "analyzes bitmaps - generally binary, but may be oligochrome. Creates pixelIslands "
 )
 
-public class AMIPixel extends AbstractAMIProcessor {
-	private static final Logger LOG = Logger.getLogger(AMIPixel.class);
+public class AMIPixelTool extends AbstractAMITool {
+	private static final Logger LOG = Logger.getLogger(AMIPixelTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -121,28 +126,39 @@ public class AMIPixel extends AbstractAMIProcessor {
             description = "Apply thinning (${COMPLETION-CANDIDATES}) (none, or absence -> no thinning)")
     private String thinningName;
     
+    @Option(names = {"--outputDirectory"},
+    		arity = "1",
+    		defaultValue = "pixels",
+            description = "subdirectory for output of pixel analysis and diagrams")
+    private String outputDirname;
+    
 	private File derivedImagesDir;
 	private DiagramAnalyzer diagramAnalyzer;
-
 	private PixelIslandList pixelIslandList;
+	private File outputDirectory;
+	private String basename;
+
+	private static String[] COLORS = new String[] {"red", "green", "blue", "pink", "yellow", "cyan", "magenta", "brown"};
+
 
     /** used by some non-picocli calls
      * obsolete it
      * @param cProject
      */
-	public AMIPixel(CProject cProject) {
+	public AMIPixelTool(CProject cProject) {
 		this.cProject = cProject;
 	}
 	
-	public AMIPixel() {
+	public AMIPixelTool() {
 	}
 	
     public static void main(String[] args) throws Exception {
-    	new AMIPixel().runCommands(args);
+    	new AMIPixelTool().runCommands(args);
     }
 
     @Override
 	protected void parseSpecifics() {
+    	outputDirname = outputDirname.endsWith("/") ? outputDirname : outputDirname + "/";
 		System.out.println("maxislands           " + maxislands);
 		System.out.println("imagefiles           " + imageFilenames);
 		System.out.println("minwidth             " + minwidth);
@@ -151,28 +167,23 @@ public class AMIPixel extends AbstractAMIProcessor {
 		System.out.println("thinning             " + thinningName);
 		System.out.println("maxIslandCount       " + maxIslandCount);
 		System.out.println("minRingCount         " + minRingCount);
+		System.out.println("outputDirname        " + outputDirname);
 		System.out.println();
 	}
 
     @Override
     protected void runSpecifics() {
-    	if (cProject != null) {
-    		for (CTree cTree : cProject.getOrCreateCTreeList()) {
-    			runPixel(cTree);
-    		}
-    	} else if (cTree != null) {
-   			runPixel(cTree);
+    	if (processTrees()) { 
     	} else if (imageFilenames != null) {
     		for (String imageFilename : imageFilenames) {
     			runPixel(new File(imageFilename));
     		}
-   		    		
     	} else {
 			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree ie imageFile");
 	    }
     }
 
-	private void runPixel(CTree cTree) {
+	public void processTree(CTree cTree) {
 		System.out.println("cTree: "+cTree.getName());
 		derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
 		if (derivedImagesDir == null || !derivedImagesDir.exists()) {
@@ -188,7 +199,9 @@ public class AMIPixel extends AbstractAMIProcessor {
 	}
 	
 	private void runPixel(File derivedImageFile) {
-		String basename = FilenameUtils.getBaseName(derivedImageFile.toString());
+		outputDirectory = new File(derivedImagesDir, outputDirname+"/");
+		outputDirectory.mkdirs();
+		basename = FilenameUtils.getBaseName(derivedImageFile.toString());
 		System.err.println("?"+basename+"?");
 		BufferedImage image = UtilImageIO.loadImage(derivedImageFile.toString());
 		diagramAnalyzer = new DiagramAnalyzer().setImage(image);
@@ -196,7 +209,7 @@ public class AMIPixel extends AbstractAMIProcessor {
 		Thinning thinning = thinningName == null ? null : ThinningMethod.getThinning(thinningName);
 		diagramAnalyzer.setThinning(thinning);
 		pixelIslandList = diagramAnalyzer.getOrCreateSortedPixelIslandList();
-		System.out.println("pixel islands "+pixelIslandList.size());
+		System.out.println("pixel island sizes "+pixelIslandList.size());
 		if (maxIslandCount > 0) {
 			analyzeIslandSizes();
 		}
@@ -206,7 +219,8 @@ public class AMIPixel extends AbstractAMIProcessor {
 		if (minwidth > 0 && minheight > 0) {
 			selectIslands();
 		}
-		
+		this.analyzeAndPlotIslands();
+
 	}
 
 	private void analyzeRings() {
@@ -247,8 +261,66 @@ public class AMIPixel extends AbstractAMIProcessor {
 
 	private void selectIslands() {
 		pixelIslandList.removeIslandsWithBBoxesLessThan(new Int2((int)minwidth, (int)minheight));
-		System.out.println("islands > "+new Int2(minwidth, minheight)+": "+pixelIslandList);
 	}
+
+	public PixelIslandList getPixelIslandList() {
+		return pixelIslandList;
+	}
+
+	public void setPixelIslandList(PixelIslandList pixelIslandList) {
+		this.pixelIslandList = pixelIslandList;
+	}
+
+	public void analyzeAndPlotIslands() {
+		pixelIslandList = getPixelIslandList();
+		// all the islands, includes the text (some are only 1 pixel)
+		// the largest pixel island (most of the plot, with horizontal, vertical lines squares and rhombus)
+		// analyze first island
+		SVGG g = new SVGG();
+		for (int islandx = 0; islandx < 20; islandx++) {
+			System.out.print("I");
+			SVGG gg = this.findBoxesAndPlotSubIslands(islandx);
+			g.appendChild(gg);
+		}
+		SVGSVG.wrapAndWriteAsSVG(g, new File(outputDirectory, basename+"." + CTree.SVG));
+	}
+	
+	public SVGG findBoxesAndPlotSubIslands(int island) {
+		SVGG g = new SVGG();
+		PixelIsland pixelIsland = pixelIslandList.get(island);
+		System.out.print(" "+pixelIsland.size()+" ");
+		if (pixelIsland != null) {
+			List<IslandRingList> islandRingListListx = pixelIsland.getOrCreateIslandRingListList();
+			SVGRect box = SVGRect.createFromReal2Range(Real2Range.createReal2Range(pixelIsland.getIntBoundingBox()));
+			String boxColor = COLORS[island % COLORS.length];
+			box.setStroke(boxColor);
+			box.setFill("none");
+			g.appendChild(box);
+			SVGG gg = pixelIsland.createSVG();
+			String fill = COLORS[island % COLORS.length];
+			gg.setFill(fill);
+			g.appendChild(gg);
+			int lvl = pixelIsland.getLevelForMaximumRingCount();
+			// FIXME
+			lvl = Math.min(islandRingListListx.size() - 1, lvl + 2); // kludge for single subisland islands
+			
+			plotBoxForLevel(islandRingListListx, boxColor, gg, lvl);
+		}
+		return g;
+	}
+
+	private void plotBoxForLevel(List<IslandRingList> islandRingListListx, String boxColor, SVGG gg, int lvl) {
+		IslandRingList ringListx = islandRingListListx.get(lvl);
+		for (PixelRing pixelRingx : ringListx) {
+			SVGRect box1 = SVGRect.createFromReal2Range(Real2Range.createReal2Range(pixelRingx.getIntBoundingBox()));
+			box1.setStroke("black");
+			box1.setFill(boxColor);
+			box1.setOpacity(0.3);
+			gg.appendChild(box1);
+		}
+	}
+
+
 
 	/** from ForestPlotIT
 			BufferedImage image1 = imageProcessor.getBinarizedImage();

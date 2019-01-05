@@ -1,4 +1,4 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tools;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -20,7 +20,6 @@ import org.contentmine.cproject.files.CTreeList;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.image.ImageUtil;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
@@ -41,32 +40,45 @@ aliases = "image",
 		//Class<?>[] subcommands() default {};
 version = "ami-image 0.1",
 		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
-description = "processes pdfimages - first pass. "
+description = "FILTERs images (initally from PDFimages), but does not transform the contents."
+		+ " Services include"
+		+ "<ul>  "
+		+ "<li>identification of duplicate images, and removal<.li>"
+		+ "<li>rejection of images less than gven size</li>"
+		+ "<li>rejection of monochrome images (e.g. all white or all black) (NB black and white is 'binary/ized'"
+		+ "</ul>"
+
 )
 
-public class AMIImage extends AbstractAMIProcessor {
-	private static final Logger LOG = Logger.getLogger(AMIImage.class);
+public class AMIImageTool extends AbstractAMITool {
+	private static final Logger LOG = Logger.getLogger(AMIImageTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
+    @Option(names = {"--duplicates"},
+    		arity = "1",
+    		defaultValue = "true",
+            description = "discard duplicate images ")
+	private boolean discardDuplicates;
+
+    @Option(names = {"--duplicatedir"},
+    		arity = "1",
+    		defaultValue = "duplicates",
+            description = "directory for duplicates.")
+	private File duplicateDirname;
+
     @Option(names = {"--minheight"},
-    		arity = "0..1",
+    		arity = "1",
     		defaultValue = "100",
             description = "minimum height (pixels) to accept")
     private int minHeight;
 
     @Option(names = {"--minwidth"},
-    		arity = "0..1",
+    		arity = "1",
     		defaultValue = "100",
             description = "minimum width (pixels) to accept")
     private int minWidth;
-    
-    @Option(names = {"--smalldir"},
-    		arity = "1",
-    		defaultValue = "small",
-            description = "directory for small images.")
-	private File smallDirname;
     
     @Option(names = {"--monochrome"},
     		arity = "1",
@@ -80,20 +92,15 @@ public class AMIImage extends AbstractAMIProcessor {
     		description = "directory for monochrome images")
 	private File monochromeDirname;
 
-    @Option(names = {"--duplicates"},
+    @Option(names = {"--smalldir"},
     		arity = "1",
-    		defaultValue = "true",
-            description = "discard duplicate images ")
-	private boolean discardDuplicates;
-
-    @Option(names = {"--duplicatedir"},
-    		arity = "1",
-    		defaultValue = "duplicates",
-            description = "directory for duplicates.")
-	private File duplicateDirname;
-
+    		defaultValue = "small",
+            description = "directory for small images.")
+	private File smallDirname;
+    
 	public static final String DUPLICATES = "duplicates/";
 	public static final String MONOCHROME = "monochrome/";
+	public static final String LARGE = "large/";
 	public static final String SMALL = "small/";
 
 	private Multiset<String> duplicateSet;
@@ -102,15 +109,15 @@ public class AMIImage extends AbstractAMIProcessor {
      * obsolete it
      * @param cProject
      */
-	public AMIImage(CProject cProject) {
+	public AMIImageTool(CProject cProject) {
 		this.cProject = cProject;
 	}
 	
-	public AMIImage() {
+	public AMIImageTool() {
 	}
 	
     public static void main(String[] args) throws Exception {
-    	AMIImage amiCleaner = new AMIImage();
+    	AMIImageTool amiCleaner = new AMIImageTool();
     	amiCleaner.runCommands(args);
     }
 
@@ -128,18 +135,10 @@ public class AMIImage extends AbstractAMIProcessor {
 
     @Override
     protected void runSpecifics() {
-    	if (cProject == null) {
-    		DebugPrint.debugPrint(Level.ERROR, "no CProject given");
-    	} else {
-    		CTreeList treeList = cProject.getOrCreateCTreeList();
-    		for (CTree cTree : treeList) {
-    			runImages(cTree);
-    		}
-    	}
-    	
+    	processTrees();
     }
 
-	private void runImages(CTree cTree) {
+	protected void processTree(CTree cTree) {
 		System.out.println("cTree: "+cTree.getName());
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
 		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
@@ -161,7 +160,7 @@ public class AMIImage extends AbstractAMIProcessor {
 						System.out.println("monochrome: "+basename);
 					} else if (discardDuplicates && moveDuplicateImagesTo(image, imageFile, new File(pdfImagesDir, DUPLICATES))) {
 						System.out.println("duplicate: "+basename);
-					};
+					}
 				} catch(IndexOutOfBoundsException e) {
 					LOG.error("BUG: failed to read: "+imageFile);
 				} catch(IOException e) {

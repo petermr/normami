@@ -1,4 +1,4 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tools;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -11,7 +11,6 @@ import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.euclid.Util;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
@@ -33,8 +32,8 @@ version = "ami-clean 0.1",
 description = "cleans specific files of directories in project"
 )
 
-public class AMICleaner extends AbstractAMIProcessor {
-	private static final Logger LOG = Logger.getLogger(AMICleaner.class);
+public class AMICleanTool extends AbstractAMITool {
+	private static final Logger LOG = Logger.getLogger(AMICleanTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -94,15 +93,15 @@ public class AMICleaner extends AbstractAMIProcessor {
      * obsolete it
      * @param cProject
      */
-	public AMICleaner(CProject cProject) {
+	public AMICleanTool(CProject cProject) {
 		this.cProject = cProject;
 	}
 	
-	public AMICleaner() {
+	public AMICleanTool() {
 	}
 	
     public static void main(String[] args) throws Exception {
-    	AMICleaner amiCleaner = new AMICleaner();
+    	AMICleanTool amiCleaner = new AMICleanTool();
     	amiCleaner.runCommands(args);
     }
 

@@ -15,6 +15,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
@@ -26,7 +27,6 @@ import org.contentmine.image.diagram.DiagramAnalyzer;
 import org.contentmine.image.pixel.PixelIsland;
 import org.contentmine.image.pixel.PixelIslandList;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
@@ -59,7 +59,8 @@ description = "Requires a CProject containing fulltext.pdf. (see makeProject). a
 		+ "(B)optionally separates the umnwanted images (small and monochrome)"
 )
 
-public class AMIImageProcessor  extends AbstractAMIProcessor {
+@Deprecated // use AMIImageTool 
+public class AMIImageProcessor  extends AbstractAMITool {
 	private static final Logger LOG = Logger.getLogger(AMIImageProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -320,7 +321,7 @@ public class AMIImageProcessor  extends AbstractAMIProcessor {
 		return maxPixelIslandCount ;
 	}
 
-	public AbstractAMIProcessor setMaxPixelIslandCount(int maxPixelIslandCount) {
+	public AbstractAMITool setMaxPixelIslandCount(int maxPixelIslandCount) {
 		this.maxPixelIslandCount = maxPixelIslandCount;
 		return this;
 	}
@@ -368,9 +369,11 @@ public class AMIImageProcessor  extends AbstractAMIProcessor {
 	public void writeImageFilesForProject(CProject cProject) {
 		for (CTree cTree : cProject.getOrCreateCTreeList()) {
 			File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
-			List<File> imageFiles = CMineGlobber.listSortedChildFiles(cTree.getExistingPDFImagesDir(), CTree.PNG);
-			Collections.reverse(imageFiles);
-			writeImageFilesForTree(derivedImagesDir, imageFiles);
+			if (derivedImagesDir != null) {
+				List<File> imageFiles = CMineGlobber.listSortedChildFiles(cTree.getExistingPDFImagesDir(), CTree.PNG);
+				Collections.reverse(imageFiles);
+				writeImageFilesForTree(derivedImagesDir, imageFiles);
+			}
 		}
 	}
 

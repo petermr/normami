@@ -1,4 +1,4 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tools;
 
 import java.io.File;
 
@@ -6,7 +6,6 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.eucl.euclid.Int2;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 import org.contentmine.pdf2svg2.PDFDocumentProcessor;
 
 import picocli.CommandLine.Command;
@@ -25,13 +24,13 @@ import picocli.CommandLine.Option;
 	)
 
 
-public class AMIProcessorPDF extends AbstractAMIProcessor {
-	private static final Logger LOG = Logger.getLogger(AMIProcessorPDF.class);
+public class AMIPDFTool extends AbstractAMITool {
+	private static final Logger LOG = Logger.getLogger(AMIPDFTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public AMIProcessorPDF() {
+	public AMIPDFTool() {
 	}
 	
 //    @Parameters(index = "0",
@@ -41,7 +40,7 @@ public class AMIProcessorPDF extends AbstractAMIProcessor {
 //    		)
 //    private Operation operation = Operation.help;
 
-    public AMIProcessorPDF(CProject cProject) {
+    public AMIPDFTool(CProject cProject) {
     	this.cProject = cProject;
 	}
 
@@ -81,7 +80,7 @@ public class AMIProcessorPDF extends AbstractAMIProcessor {
     private boolean outputPdfImages = true;
     
     public static void main(String[] args) throws Exception {
-    	AMIProcessorPDF amiProcessorPDF = new AMIProcessorPDF();
+    	AMIPDFTool amiProcessorPDF = new AMIPDFTool();
     	amiProcessorPDF.runCommands(args);
     }
 
@@ -122,7 +121,7 @@ public class AMIProcessorPDF extends AbstractAMIProcessor {
 		if (projectDir != null) {
 			String cmd = "-p " + projectDir + " --rawfiletypes pdf ";
 			try {
-				AMIMakeProject.main(cmd);
+				AMIMakeProjectTool.main(cmd);
 			} catch (Exception e) {
 				LOG.error("makeProject failed " + e.getMessage());
 				throw new RuntimeException("cannot makeProject ", e);

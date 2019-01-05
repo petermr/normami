@@ -8,6 +8,8 @@ import java.util.List;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMIPDFTool;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
@@ -22,7 +24,6 @@ import org.contentmine.image.pixel.PixelIslandList;
 import org.contentmine.image.pixel.PixelRing;
 import org.contentmine.image.pixel.PixelRingList;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -107,7 +108,7 @@ public class AMIImageProcessorIT {
 		File targetDir = new File(TARGET_UCLFOREST);
 		CMineTestFixtures.cleanAndCopyDir(FORESTPLOT_DIR, targetDir);
 		String[] args = {targetDir.toString()};
-		AMIProcessorPDF.main(args);
+		AMIPDFTool.main(args);
 		args = new String[] {targetDir.toString(), "help"};
 		Assert.assertTrue(new File(args[0]).exists());
 		AMIImageProcessor.main(args);
@@ -367,15 +368,16 @@ public class AMIImageProcessorIT {
 		CTree cTree = new CTree(new File(FORESTPLOT_DIR, ctreeName));
 		File outputDir = new File(TARGET_HOCR, ctreeName);
 		File imageDir = new File(cTree.getExistingPDFImagesDir(), CTree.DERIVED); 
-		String base = "page.11.1";
-		File imageFile = new File(imageDir, base + ".bin.png");
+		String base = "image.11.1.41_508.565_732";
+		File imageFile = new File(imageDir, base + ".png");
 		/** Tesseract adds the suffix ".hocr" automatically */
 		File outputBase = new File(outputDir, base);
 		Assert.assertTrue(imageFile+" should exist", imageFile.exists());
-		AbstractAMIProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree);
+		AbstractAMITool amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree);
 		amiImageProcessor.setCTreeOutputDir(outputDir);
 		ImageToHOCRConverter imageToHOCRConverter = new ImageToHOCRConverter();
 		File hocrHtmlFile = imageToHOCRConverter.writeHOCRFile(imageFile, outputBase);
+		LOG.debug(outputBase+" / "+hocrHtmlFile);
 		
 	}
 

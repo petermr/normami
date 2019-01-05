@@ -1,15 +1,19 @@
-package org.contentmine.norma.picocli;
+package org.contentmine.ami.tools;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.AMIDictionary.RawFileFormat;
+import org.contentmine.ami.tools.AMIDictionaryTool.RawFileFormat;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
+import org.contentmine.cproject.files.CTreeList;
 import org.contentmine.eucl.euclid.Util;
 
 import picocli.CommandLine;
@@ -53,8 +57,8 @@ import picocli.CommandLine.Option;
 	usageHelpWidth = 80
 	)
 
-public abstract class AbstractAMIProcessor implements Callable<Void> {
-	private static final Logger LOG = Logger.getLogger(AbstractAMIProcessor.class);
+public abstract class AbstractAMITool implements Callable<Void> {
+	private static final Logger LOG = Logger.getLogger(AbstractAMITool.class);
 
 	protected static final String NONE = "NONE";
 	static {
@@ -62,25 +66,11 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 	}
 
 
-    @Option(names = {"--log4j"}, 
-    		arity="2",
-    		description = "format: <classname> <level>; sets logging level of class, e.g. \n "
-    				+ "org.contentmine.ami.lookups.WikipediaDictionary INFO"
-    		)
-	public String[] log4j;
-
     @Option(names = {"-p", "--cproject"}, 
 		arity = "0..1",
 		paramLabel="CProject",
 		description = "CProject (directory) to process")
     protected String cProjectDirectory = null;
-
-	@Option(names = {"--rawfiletypes" }, 
-		arity = "1..*", 
-		split = ",", 
-		description = "suffixes of included files (${COMPLETION-CANDIDATES}): "
-				+ "can be concatenated with commas ")
-	protected RawFileFormat[] rawFileFormats;
 
     @Option(names = {"-t", "--ctree"}, 
 		arity = "0..1",
@@ -89,6 +79,42 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 		descriptionKey = "descriptionKey",
 		description = "single CTree (directory) to process")
     protected String cTreeDirectory = null;
+
+    @Option(names = {"--basename"}, 
+    		arity="1",
+    		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png. By default this is computed by AMI."
+    				+ " This allows users to create their own variants, but they won't be known by default to subsequent"
+    				+ "applications"
+    		)
+	protected String userBasename;
+
+    @Option(names = {"--excludetree"}, 
+    		arity="1..*",
+    		description = "exclude the CTrees in the list. (only works with --cproject). "
+    				+ "Currently must be explicit but we'll add globbing later."
+    		)
+	public String[] excludeTrees;
+
+    @Option(names = {"--includetree"}, 
+    		arity="1..*",
+    		description = "include only the CTrees in the list. (only works with --cproject). "
+    				+ "Currently must be explicit but we'll add globbing later."
+    		)
+	public String[] includeTrees;
+
+    @Option(names = {"--log4j"}, 
+    		arity="2",
+    		description = "format: <classname> <level>; sets logging level of class, e.g. \n "
+    				+ "org.contentmine.ami.lookups.WikipediaDictionary INFO"
+    		)
+	public String[] log4j;
+
+	@Option(names = {"--rawfiletypes" }, 
+			arity = "1..*", 
+			split = ",", 
+			description = "suffixes of included files (${COMPLETION-CANDIDATES}): "
+					+ "can be concatenated with commas ")
+	protected RawFileFormat[] rawFileFormats;
 
 	@Option(names = { "-v", "--verbose" }, 
     		description = {
@@ -103,6 +129,7 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 	
 	protected CProject cProject;
 	protected CTree cTree;
+	protected CTreeList cTreeList;
 	// needed for testing I think
 	protected File cProjectOutputDir;
 	protected File cTreeOutputDir;
@@ -110,6 +137,7 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 	protected String[] args;
 	private Level level;
 	protected File contentMineDir = DEFAULT_CONTENT_MINE_DIR;
+
 
 	public void init() {
 	}
@@ -211,7 +239,34 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 				throw new RuntimeException("cProject must be existing directory: "+cProjectDirectory);
 			}
 			cProject = new CProject(cProjectDir);
+			cTreeList = generateCTreeList();
     	}
+	}
+
+	private CTreeList generateCTreeList() {
+		cTreeList = new CTreeList();
+		if (cProject != null) {
+			List<String> includeTreeList = includeTrees == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(includeTrees));
+			List<String> excludeTreeList = excludeTrees == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(excludeTrees));
+			CTreeList pList = cProject == null ? new CTreeList() : cProject.getOrCreateCTreeList();
+			for (CTree ct : pList) {
+				String name = ct.getName();
+				if (includeTreeList.size() > 0) {
+					if (includeTreeList.contains(name)) {
+						cTreeList.add(ct);
+					}
+				} else if (excludeTreeList.size() > 0) {
+					if (!excludeTreeList.contains(name)) {
+						cTreeList.add(ct);
+					}
+				} else {
+					cTreeList.add(ct);
+				}
+			}
+		} else if (cTree != null) {
+			cTreeList.add(cTree);
+		}
+		return cTreeList;
 	}
 
 	/** creates cTree from cTreeDirectory.
@@ -225,6 +280,8 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 				throw new RuntimeException("cTree must be existing directory: "+cTreeDirectory);
 			}
 			cTree = new CTree(cTreeDir);
+			cTreeList = new CTreeList();
+			cTreeList.add(cTree);
     	}
 	}
 
@@ -236,6 +293,11 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
         System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
         System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
         System.out.println("file types          " + Util.toStringList(rawFileFormats));
+        System.out.println("cTreeList           " + cTreeList);
+        System.out.println("basename            " + userBasename);
+        System.out.println("include             " + includeTrees);
+        System.out.println("exclude             " + excludeTrees);
+        System.out.println("verbose             " + verbosity.length);
 	}
 
 	public void setCProject(CProject cProject) {
@@ -339,6 +401,20 @@ public abstract class AbstractAMIProcessor implements Callable<Void> {
 			}
 		}
 		return contentMineDir;
+	}
+
+	protected boolean processTrees() {
+		boolean processed = cTreeList != null && cTreeList.size() > 0;
+		if (cTreeList != null) {
+			for (CTree cTree : cTreeList) {
+				processTree(cTree);
+			}
+		}
+		return processed;
+	}
+	
+	protected void processTree(CTree cTree) {
+		LOG.warn("Overide this");
 	}
 
 }

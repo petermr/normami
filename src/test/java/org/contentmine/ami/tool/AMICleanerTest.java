@@ -1,9 +1,10 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tool;
 
 import java.io.File;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMICleanTool;
 import org.contentmine.cproject.files.CProject;
 import org.junit.Test;
 
@@ -31,7 +32,7 @@ public class AMICleanerTest {
 				"--file", "scholarly.html"
 				};
 		Assert.assertTrue(new File(args[1]).exists());
-		AMICleaner amiCleaner = new AMICleaner();
+		AMICleanTool amiCleaner = new AMICleanTool();
 		amiCleaner.runCommands(args);
 		CProject cProject = amiCleaner.getCProject();
 		Assert.assertNotNull("CProject not null", cProject);

@@ -1,4 +1,4 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tool;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,13 +8,14 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMIMakeProjectTool;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.NormaFixtures;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -38,7 +39,7 @@ public class AMIMakeProjectTest {
 				targetDir);
 		Assert.assertTrue(targetDir.exists());
 		String cmd = "-p " + targetDir +" --rawfiletypes html,pdf,xml";
-		AMIMakeProject.main(cmd);
+		AMIMakeProjectTool.main(cmd);
 		List<File> childDirectories = CMineGlobber.listSortedChildDirectories(targetDir);
 		Assert.assertEquals("ergen_canagli_17_", FilenameUtils.getBaseName(childDirectories.get(0).toString()));
 		Assert.assertEquals("["
@@ -62,7 +63,7 @@ public class AMIMakeProjectTest {
 				targetDir);
 		Assert.assertTrue(targetDir.exists());
 		String cmd = "-p " + targetDir +" --rawfiletypes html,pdf,xml --compress 12";
-		AMIMakeProject.main(cmd);
+		AMIMakeProjectTool.main(cmd);
 		List<File> childDirectories = CMineGlobber.listSortedChildDirectories(targetDir);
 		Assert.assertEquals(7, childDirectories.size());
 		Assert.assertEquals("ergen_canagl", FilenameUtils.getBaseName(childDirectories.get(0).toString()));
@@ -86,7 +87,7 @@ public class AMIMakeProjectTest {
 				targetDir);
 		Assert.assertTrue(targetDir.exists());
 		String cmd = "-p " + targetDir +" --rawfiletypes html,pdf,xml --compress 25";
-		AbstractAMIProcessor  amiMakeProject = new AMIMakeProject();
+		AbstractAMITool  amiMakeProject = new AMIMakeProjectTool();
 		amiMakeProject.runCommands(cmd);
 		checkOutputFiles(targetDir, amiMakeProject);
 	}
@@ -121,7 +122,7 @@ public class AMIMakeProjectTest {
 			"--rawfiletypes", "pdf",
 			"--log4j", "org.contentmine.ami.AMIMakeProject", "INFO"
 			};
-		new AMIMakeProject().runCommands(args);
+		new AMIMakeProjectTool().runCommands(args);
 		files =  new CMineGlobber("**/fulltext.pdf", targetDir).listFiles();
 		Assert.assertEquals(5, files.size());
 		files =  new CMineGlobber("**/fulltext.html", targetDir).listFiles();
@@ -170,7 +171,7 @@ public class AMIMakeProjectTest {
 			"--rawfiletypes", "pdf,html",
 			"--log4j", "org.contentmine.ami.AMIMakeProject", "INFO"
 			};
-		new AMIMakeProject().runCommands(args);
+		new AMIMakeProjectTool().runCommands(args);
 
 		// new directories
 		files = CMineGlobber.listSortedChildDirectories(targetDir);
@@ -227,7 +228,7 @@ public class AMIMakeProjectTest {
 			"--log4j", "org.contentmine.ami.AMIMakeProject", "INFO",
 			"-vv"
 			};
-		AMIMakeProject amiMakeProject = new AMIMakeProject();
+		AMIMakeProjectTool amiMakeProject = new AMIMakeProjectTool();
 		amiMakeProject.runCommands(args);
 		File makeProjectLog = amiMakeProject.getCProject().getMakeProjectLogfile();
 		List<String> lines = FileUtils.readLines(makeProjectLog);
@@ -246,7 +247,7 @@ public class AMIMakeProjectTest {
 	 * @param targetDir
 	 * @param amiMakeProject
 	 */
-	private void checkOutputFiles(File targetDir, AbstractAMIProcessor amiMakeProject) {
+	private void checkOutputFiles(File targetDir, AbstractAMITool amiMakeProject) {
 		List<File> childDirectories = CMineGlobber.listSortedChildDirectories(targetDir);
 		Assert.assertEquals(7, childDirectories.size());
 		Assert.assertEquals("ergen_canagli_17_", FilenameUtils.getBaseName(childDirectories.get(0).toString()));

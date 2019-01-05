@@ -1,4 +1,4 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tools;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -8,7 +8,6 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.eucl.euclid.Util;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
@@ -78,8 +77,8 @@ description = "Processes a directory (CProject) containing files (e.g.*.pdf, *.h
 		+ "The name can be cahnged "
 )
 
-public class AMIMakeProject extends AbstractAMIProcessor {
-	public static final Logger LOG = Logger.getLogger(AMIMakeProject.class);
+public class AMIMakeProjectTool extends AbstractAMITool {
+	public static final Logger LOG = Logger.getLogger(AMIMakeProjectTool.class);
 
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -99,15 +98,15 @@ public class AMIMakeProject extends AbstractAMIProcessor {
     		)
     private String logfile;
 
-	public AMIMakeProject() {
+	public AMIMakeProjectTool() {
 	}
 	
     public static void main(String args) throws Exception {
-    	new AMIMakeProject().runCommands(args);
+    	new AMIMakeProjectTool().runCommands(args);
     }
 
     public static void main(String[] args) throws Exception {
-    	new AMIMakeProject().runCommands(args);
+    	new AMIMakeProjectTool().runCommands(args);
     }
 
     protected void parseSpecifics() {
@@ -115,8 +114,10 @@ public class AMIMakeProject extends AbstractAMIProcessor {
     }
 
 	protected void runSpecifics() {
-        cProject.makeProject(Util.toStringList(rawFileFormats), compress);
-        addMakeProjectLogfile();
+		if (cProject != null) {
+	        cProject.makeProject(Util.toStringList(rawFileFormats), compress);
+	        addMakeProjectLogfile();
+		}
     }
 
 	private void addMakeProjectLogfile() {

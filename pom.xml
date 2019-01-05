@@ -102,46 +102,81 @@
                             but also runs makeProject (FIX this) -->
                             <id>norma</id>
                         </program>
-                      <!-- ami -->  
+                      <!-- ami -->
+                      <!--  TOOLS -->  
                          <program>
                             <mainClass>org.contentmine.ami.AMIProcessor</mainClass>
 							<!-- description: lists AMI commands (ami-*) -->
                             <id>ami-all</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.AMICleaner</mainClass>
+                            <mainClass>org.contentmine.ami.tools.AMIBitmapTool</mainClass>
+							<!-- description: process images -->
+                            <id>ami-bitmap</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.tools.AMICleanTool</mainClass>
 							<!-- description: cleans some/all of project -->
                             <id>ami-clean</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.AMIDictionary</mainClass>
-							<!-- description: edit/create AMI dictionaries -->
-                            <id>ami-dictionaries</id>
-                        </program>
-                         <program>
-                            <mainClass>org.contentmine.ami.AMIImageProcessor</mainClass>
+                            <mainClass>org.contentmine.ami.tools.AMIImageTool</mainClass>
 							<!-- description: process images -->
                             <id>ami-image</id>
                         </program>
                          <program>
+                            <mainClass>org.contentmine.ami.tools.AMIOCRTool</mainClass>
+							<!-- description: process images -->
+                            <id>ami-ocr</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.tools.AMIPDFTool</mainClass>
+							<!-- description: process images -->
+                            <id>ami-pdf</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.tools.AMIPixelTool</mainClass>
+							<!-- description: process images -->
+                            <id>ami-pixel</id>
+                        </program>
+                        
+
+                         <program>
+                         <!--  will become a tool -->
+                            <mainClass>org.contentmine.ami.AMIDictionary</mainClass>
+							<!-- description: edit/create AMI dictionaries -->
+                            <id>ami-dictionaries</id>
+                        </program>
+                        <program>
+                         <!--  will become a tool -->
+                            <mainClass>org.contentmine.ami.AMISearch</mainClass>
+							<!-- description: run AMI searches and co-occurrence -->
+                            <id>ami-search-cooccur</id>
+                        </program>
+                        
+                        <program>
+                        <!-- may need renaming -->
                             <mainClass>org.contentmine.ami.AMIMakeProject</mainClass>
 							<!-- description: make project from a directory-->
                             <id>ami-makeproject</id>
                         </program>
+                        
+                        
+                        <!--  older AMI -->
+                         <program>
+                            <mainClass>org.contentmine.ami.AMIImageProcessor</mainClass>
+							<!-- description: process images -->
+                            <id>ami-image-old</id>
+                        </program>
                          <program>
                             <mainClass>org.contentmine.ami.AMIProcessorPDF</mainClass>
 							<!-- description: convert PDF into SVG and extract images -->
-                            <id>ami-pdf</id>
+                            <id>ami-pdf-old</id>
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.AMIProcessorXML</mainClass>
 							<!-- description: converts XML to HTML -->
                             <id>ami-xml</id>
-                        </program>
-                        <program>
-                            <mainClass>org.contentmine.ami.AMISearch</mainClass>
-							<!-- description: run AMI searches and co-occurrence -->
-                            <id>ami-search-cooccur</id>
                         </program>
                         
                          <program>

@@ -1,4 +1,4 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,6 @@ import java.util.List;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.DebugPrint;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 import org.contentmine.norma.sections.JATSSectionTagger;
 import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
 
@@ -15,14 +14,14 @@ import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
  * @author pm286
  *
  */
-public class AMISectioner extends AbstractAMIProcessor {
-	private static final Logger LOG = Logger.getLogger(AMISectioner.class);
+public class AMISectionTool extends AbstractAMITool {
+	private static final Logger LOG = Logger.getLogger(AMISectionTool.class);
 	private List<SectionTag> sectionTagList;
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public AMISectioner() {
+	public AMISectionTool() {
 		
 	}
 
@@ -54,7 +53,7 @@ public class AMISectioner extends AbstractAMIProcessor {
 		}
 	}
 
-	public AMISectioner addSectionTag(SectionTag section) {
+	public AMISectionTool addSectionTag(SectionTag section) {
 		getOrCreateSectionTagList();
 		return this;
 	}

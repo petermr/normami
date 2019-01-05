@@ -1,4 +1,4 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tool;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.AMIFixtures;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;

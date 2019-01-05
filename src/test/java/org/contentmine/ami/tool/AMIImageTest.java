@@ -1,7 +1,8 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tool;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMIImageTool;
 import org.junit.Test;
 
 /** test cleaning.
@@ -30,7 +31,7 @@ public class AMIImageTest {
 				"--duplicates", "true", 
 				"--duplicatedir", "duplicates",
 				};
-		AMIImage amiImage = new AMIImage();
+		AMIImageTool amiImage = new AMIImageTool();
 		amiImage.runCommands(args);
 	}
 

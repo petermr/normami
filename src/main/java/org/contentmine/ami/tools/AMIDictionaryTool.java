@@ -1,4 +1,4 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tools;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,6 +23,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.CProjectTreeMixin;
 import org.contentmine.ami.dictionary.CMJsonDictionary;
 import org.contentmine.ami.dictionary.DefaultAMIDictionary;
 import org.contentmine.ami.dictionary.DictionaryTerm;
@@ -42,7 +43,6 @@ import org.contentmine.graphics.html.HtmlTr;
 import org.contentmine.graphics.html.HtmlUl;
 import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.norma.NAConstants;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
 import org.jboss.resteasy.plugins.delegates.NewCookieHeaderDelegate;
 
 import com.google.common.collect.Lists;
@@ -69,8 +69,8 @@ import picocli.CommandLine.Parameters;
 		version = "ami 0.1"
 		)
 
-public class AMIDictionary extends AbstractAMIProcessor {
-	public static final Logger LOG = Logger.getLogger(AMIDictionary.class);
+public class AMIDictionaryTool extends AbstractAMITool {
+	public static final Logger LOG = Logger.getLogger(AMIDictionaryTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -121,7 +121,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	 * @author pm286
 	 *
 	 */
-	enum DictionaryFileFormat {
+	public enum DictionaryFileFormat {
 		 xml,
 		 html,
 		 json,
@@ -138,7 +138,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		 xml,
 		 }
 	
-	enum InputFormat {
+	public enum InputFormat {
 		csv,
 		wikicategory,
 		wikipage,
@@ -275,7 +275,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	private int maxEntries = 0;
 
 
-	public AMIDictionary() {
+	public AMIDictionaryTool() {
 		initDict();
 	}
 	
@@ -283,7 +283,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 	}
 	
 	public static void main(String[] args) {
-        AMIDictionary amiDictionary = new AMIDictionary();
+        AMIDictionaryTool amiDictionary = new AMIDictionaryTool();
         amiDictionary.initDictionaryData();
 		amiDictionary.runCommands(args);
 	}
@@ -857,7 +857,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		} else if (this.href != null) {
 			createListOfHyperlinks(htmlElement);
 		} else {
-			AMIDictionary.LOG.error("must give either table(name, link) or list(href)");
+			AMIDictionaryTool.LOG.error("must give either table(name, link) or list(href)");
 		}
 	}
 
@@ -912,7 +912,7 @@ public class AMIDictionary extends AbstractAMIProcessor {
 		} else {
 			DebugPrint.debugPrint("\nlist of dictionaries taken from : "+argList+"\n");
 		}
-		AMIDictionary dictionaries = new AMIDictionary();
+		AMIDictionaryTool dictionaries = new AMIDictionaryTool();
 		files = dictionaries.getDictionaries();
 //		paths = dictionaries.getDictionaryPaths();
 		listAllDictionariesBriefly();

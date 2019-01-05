@@ -1,9 +1,11 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tool;
 
 import java.io.File;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMICleanTool;
+import org.contentmine.ami.tools.AMIPDFTool;
 import org.contentmine.cproject.files.CProject;
 import org.junit.Assert;
 import org.junit.Test;
@@ -32,7 +34,7 @@ public class AMIProcessorPDFTest {
 				"--svgpages", "true",
 				};
 		Assert.assertTrue(new File(args[1]).exists());
-		AMIProcessorPDF amiProcessorPDF = new AMIProcessorPDF();
+		AMIPDFTool amiProcessorPDF = new AMIPDFTool();
 		amiProcessorPDF.runCommands(args);
 		CProject cProject = amiProcessorPDF.getCProject();
 		Assert.assertNotNull("CProject not null", cProject);
@@ -45,7 +47,7 @@ public class AMIProcessorPDFTest {
 	public void testForestPlotsSmallSVG() throws Exception {
 		String projectDir = "/Users/pm286/workspace/uclforest/forestplotssmall";
 		// delete the existing svg/ directories
-		new AMICleaner().runCommands("-p " + projectDir + " --dir svg/");
+		new AMICleanTool().runCommands("-p " + projectDir + " --dir svg/");
 		// and then recreate them
 		String[] args = {
 				"-p", projectDir,
@@ -55,7 +57,7 @@ public class AMIProcessorPDFTest {
 				"--svgpages", "true",
 				};
 		Assert.assertTrue(new File(args[1]).exists());
-		AMIProcessorPDF amiProcessorPDF = new AMIProcessorPDF();
+		AMIPDFTool amiProcessorPDF = new AMIPDFTool();
 		amiProcessorPDF.runCommands(args);
 		CProject cProject = amiProcessorPDF.getCProject();
 		Assert.assertNotNull("CProject not null", cProject);
@@ -77,7 +79,7 @@ public class AMIProcessorPDFTest {
 				"--pdfimages", "true",
 				"--svgpages", "false",
 				};
-		AMIProcessorPDF amiProcessorPDF = new AMIProcessorPDF();
+		AMIPDFTool amiProcessorPDF = new AMIPDFTool();
 		amiProcessorPDF.runCommands(args);
 	}
 

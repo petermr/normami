@@ -1,18 +1,15 @@
-package org.contentmine.ami;
+package org.contentmine.ami.tool;
 
 import java.io.File;
 import java.io.IOException;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.AMIDictionary.DictionaryFileFormat;
-import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.ami.tools.AMIDictionaryTool;
+import org.contentmine.ami.tools.AMIDictionaryTool.DictionaryFileFormat;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.norma.NAConstants;
-import org.contentmine.norma.picocli.AbstractAMIProcessor;
-import org.junit.Ignore;
 import org.junit.Test;
-
-import picocli.CommandLine;
 
 /** tests AMIDictinary
  * 
@@ -31,7 +28,7 @@ public class AMIDictionaryTest {
 	@Test
 	public void testHelp() {
 		String[] args = {"--help"};
-		AMIDictionary.main(args);
+		AMIDictionaryTool.main(args);
 	}
 	
 	@Test
@@ -41,7 +38,7 @@ public class AMIDictionaryTest {
 				"--directory", "src/main/resources/org/contentmine/ami/plugins/dictionary",
 				"--dictionary",  "country", "crispr", "disease"
 				};
-		AMIDictionary.main(args);
+		AMIDictionaryTool.main(args);
 	}
 	
 	@Test
@@ -56,7 +53,7 @@ public class AMIDictionaryTest {
 			"--urlcol", "Link",
 			"--dictionary", dict
 			};
-		AbstractAMIProcessor amiDictionary = new AMIDictionary();
+		AbstractAMITool amiDictionary = new AMIDictionaryTool();
 		amiDictionary.runCommands(args);
 //		XMLUtil.debug(amiDictionary.getSimpleDictionary(), new File(DICTIONARY_DIR, dict+".html"), 1);
 		
@@ -72,7 +69,7 @@ public class AMIDictionaryTest {
 			"--namecol", "Name", 
 			"--linkcol", "Name",
 			"--dictionary", "socialnetwork"};
-		AbstractAMIProcessor amiDictionary = new AMIDictionary();
+		AbstractAMITool amiDictionary = new AMIDictionaryTool();
 		amiDictionary.runCommands(args);
 	}
 	
@@ -85,7 +82,7 @@ public class AMIDictionaryTest {
 			"--informat", "wikipage",
 //			"--urlref",
 			"--dictionary", dict};
-		new AMIDictionary().runCommands(args);
+		new AMIDictionaryTool().runCommands(args);
 	}
 
 	@Test
@@ -101,7 +98,7 @@ public class AMIDictionaryTest {
 			"--directory", DICTIONARY_DIR.toString()
 			};
 		// ami-dictionaries create -i https://en.wikipedia.org/wiki/Aedes_aegypti --informat wikipage --hreftext --dictionary aedes0 --outformats xml --directory ~/ContentMine/dictionary/
-		new AMIDictionary().runCommands(args);
+		new AMIDictionaryTool().runCommands(args);
 	}
 
 	@Test
@@ -116,7 +113,7 @@ public class AMIDictionaryTest {
 			"--dictionary", dict,
 			"--directory", DICTIONARY_DIR.toString()
 			};
-		new AMIDictionary().runCommands(args);
+		new AMIDictionaryTool().runCommands(args);
 	}
 	@Test
 	public void testWikipediaPageMonoterpenes() throws IOException {
@@ -130,7 +127,7 @@ public class AMIDictionaryTest {
 			"--dictionary", dict,
 			"--directory", DICTIONARY_DIR.toString()
 			};
-		new AMIDictionary().runCommands(args);
+		new AMIDictionaryTool().runCommands(args);
 	}
 
 	@Test
@@ -148,7 +145,7 @@ public class AMIDictionaryTest {
 			"--dictionary", dict,
 			"--directory", DICTIONARY_DIR.toString()
 			};
-		new AMIDictionary().runCommands(args);
+		new AMIDictionaryTool().runCommands(args);
 	}
 	
 	@Test
@@ -165,7 +162,7 @@ public class AMIDictionaryTest {
 			"--format", "xml,json,html",
 			"--directory", DICTIONARY_DIR.toString()
 			};
-		new AMIDictionary().runCommands(args);
+		new AMIDictionaryTool().runCommands(args);
 	}
 	
 	@Test
@@ -179,7 +176,7 @@ public class AMIDictionaryTest {
 			"--outformats", "xml,json,html",
 			"--directory", DICTIONARY_DIR.toString()
 			};
-		new AMIDictionary().runCommands(args);
+		new AMIDictionaryTool().runCommands(args);
 	}
 	
 	@Test
@@ -190,7 +187,7 @@ public class AMIDictionaryTest {
 			"--terms", "cubic,tetragonal,hexagonal,trigonal,orthorhombic,monoclinic,triclinic",
 			"--dictionary", dict,
 			"--directory", DICTIONARY_DIR.toString()};
-		new AMIDictionary().runCommands(args);
+		new AMIDictionaryTool().runCommands(args);
 	}
 	
 	@Test
@@ -211,7 +208,7 @@ public class AMIDictionaryTest {
 			"--directory", DICTIONARY_DIR.toString(),
 			"--booleanquery"
 			};
-		new AMIDictionary().runCommands(args);
+		new AMIDictionaryTool().runCommands(args);
 		
 	}
 
@@ -246,25 +243,7 @@ public class AMIDictionaryTest {
 			"--log4j", "org.contentmine.ami.lookups.WikipediaDictionary", "INFO",
 			"--log4j", "org.contentmine.norma.input.html.HtmlCleaner", "INFO",
 			};
-		new AMIDictionary().runCommands(args);
-	}
-
-
-
-	@Test
-	public void testCommandMixin() {
-		
-		MyCommand zip = new MyCommand();
-		CommandLine commandLine = new CommandLine(zip);
-		ReusableOptions mixin = new ReusableOptions();
-		commandLine.addMixin("myMixin", mixin);
-		commandLine.parse("-vv", "--wombat", "361");
-
-		// the options defined in ReusableOptions have been added to the zip command
-		assert zip.myMixin.verbosityx.length == 3;
-		System.err.println("VVV "+zip.myMixin.verbosityx.length);
-		System.out.println("WOM "+zip.myMixin.vombatus);
-
+		new AMIDictionaryTool().runCommands(args);
 	}
 
 }
