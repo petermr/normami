@@ -17,6 +17,8 @@ import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.graphics.svg.util.ImageIOUtil;
 import org.contentmine.image.ImageUtil;
+import org.contentmine.image.ImageUtil.SharpenMethod;
+import org.contentmine.image.ImageUtil.ThresholdMethod;
 import org.contentmine.image.diagram.DiagramAnalyzer;
 
 import boofcv.io.image.UtilImageIO;
@@ -49,9 +51,9 @@ public class AMIBitmapTool extends AbstractAMITool {
 	
     @Option(names = {"--binarize"},
     		arity = "1",
-    		defaultValue = "true",
-            description = "create binary (normally black and white); 'monochrome' is ambiguous")
-    private Boolean binarize;
+    		defaultValue = "local_mean",
+            description = "create binary (normally black and white); methods local_mean ...")
+    private String binarize;
 
     @Option(names = {"--maxheight"},
     		arity = "1",
@@ -84,9 +86,9 @@ public class AMIBitmapTool extends AbstractAMITool {
 
     @Option(names = {"--sharpen"},
     		arity = "1",
-    		defaultValue = "true",
-            description = "sharpen image using Gaussian kernel. Relatively simplistic at present.")
-    private Boolean sharpen;
+    		defaultValue = "laplacian",
+            description = "sharpen image using Laplacian kernel or sharpen4 or sharpen8 (BoofCV)..")
+    private String sharpen;
 
     @Option(names = {"--thinning"},
     		arity = "0..1",
@@ -100,7 +102,7 @@ public class AMIBitmapTool extends AbstractAMITool {
             description = "maximum value for black pixels (non-background)")
     private Integer threshold;
 
-	private File derivedImagesDir;
+	private File pdfImagesDir;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -124,7 +126,7 @@ public class AMIBitmapTool extends AbstractAMITool {
 		System.out.println("maxwidth            " + maxWidth);
 		System.out.println("posterize           " + posterize);
 		System.out.println("rotate              " + rotateAngle);
-		System.out.println("scalefactor         " + sharpen);
+		System.out.println("scalefactor         " + scalefactor);
 		System.out.println("sharpen             " + sharpen);
 		System.out.println("threshold           " + threshold);
 		System.out.println();
@@ -150,7 +152,11 @@ public class AMIBitmapTool extends AbstractAMITool {
 			if (!imageFile.exists()) {
 				LOG.debug("File does not exist: "+imageFile);
 			} else {
-				runBitmap(imageFile);
+				try {
+					runBitmap(imageFile);
+				} catch (Exception e) {
+					LOG.error("Bad read: "+imageFile+" ("+e.getMessage()+")");
+				}
 			}
 		}
 	}
@@ -158,37 +164,95 @@ public class AMIBitmapTool extends AbstractAMITool {
 	private void runBitmap(File imageFile) {
 		String inputBasename = FilenameUtils.getBaseName(imageFile.toString());
 		String outputBasename = userBasename != null ? userBasename : inputBasename;
-		derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
-		File inputBaseFile = new File(derivedImagesDir, inputBasename + "." + CTree.PNG);
-		File outputBaseFile = new File(derivedImagesDir, outputBasename + "." + CTree.PNG);
-		BufferedImage image = null;
-		try {
-			image = ImageIO.read(inputBaseFile);
-		} catch (IOException e) {
-			throw new RuntimeException("Cannot read image: "+inputBasename, e);
+		pdfImagesDir = cTree. getExistingPDFImagesDir();
+		File inputBaseFile = new File(pdfImagesDir, inputBasename + "." + CTree.PNG);
+		File outputDir = new File(pdfImagesDir, inputBasename);
+		outputDir.mkdirs();
+		File outputBaseFile = new File(outputDir, outputBasename + "." + CTree.PNG);
+
+		BufferedImage image = readImageQuietly(inputBaseFile);
+		if (image != null) {
+
+			image = rotate(image);  // works
+			image = applyScale(image);  // works
+//			image = sharpen(image);    // this and
+			image = threshold(image);   
+//			image = binarize(image);   // this lead to black image
+			image = posterize(image);  // currently a no-op
+			
+			LOG.debug(image.getWidth());
+			ImageIOUtil.writeImageQuietly(image, outputBaseFile);
 		}
-		Double scale = createScale(image);
-		if (false) {
-		} else if (scale != null) {
-			image = ImageUtil.scaleImage(scale, image);
-		} else if (sharpen != null) {
-			image = ImageUtil.laplacianSharpen(image);
-		} else if (rotateAngle != null) {
-			if (rotateAngle % 90 == 0) {
-				image = ImageUtil.getRotatedImage(image, rotateAngle);
-			}
-		} else if (binarize) {
-			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
-			if (threshold != null) diagramAnalyzer.setThreshold(threshold);
-			diagramAnalyzer.setBinarize(binarize);
-			// we do this in AMIPixel
-			diagramAnalyzer.setThinning(null);
-			diagramAnalyzer.readAndProcessImage(image);
-			image = diagramAnalyzer.getBinarizedImage();
-		} else if (posterize) {
+	}
+
+	private BufferedImage posterize(BufferedImage image) {
+		if (posterize) {
 			LOG.warn("posterize NYI");
 		}
-		ImageIOUtil.writeImageQuietly(image, outputBaseFile);
+		return image;
+	}
+
+	private BufferedImage threshold(BufferedImage image) {
+		// binarization follows sharpen
+		if (threshold != null) {
+			image = ImageUtil.boofCVBinarization(image, threshold);
+		}
+		return image;
+	}
+
+
+	private BufferedImage binarize(BufferedImage image) {
+		// binarization follows sharpen
+		if (binarize != null) {
+			ThresholdMethod method = ThresholdMethod.getMethod(binarize);
+			if (method == null) {
+				throw new RuntimeException("unknown method: "+binarize);
+			} else {
+				image = ImageUtil.boofCVBinarization(image, threshold);
+
+//				image = ImageUtil.boofCVThreshold(image, method);
+			}
+		}
+		return image;
+	}
+
+	private BufferedImage sharpen(BufferedImage image) {
+		if (SharpenMethod.LAPLACIAN.toString().equals(sharpen)) {
+			image = ImageUtil.laplacianSharpen(image);
+		} else if (SharpenMethod.SHARPEN4.toString().equals(sharpen)) {
+			image = ImageUtil.sharpen(image, SharpenMethod.SHARPEN4);
+		} else if (SharpenMethod.SHARPEN8.toString().equals(sharpen)) {
+			image = ImageUtil.sharpen(image, SharpenMethod.SHARPEN8);
+		} 
+		return image;
+	}
+
+	private BufferedImage rotate(BufferedImage image) {
+		if (rotateAngle != null && rotateAngle % 90 == 0) {
+			image = ImageUtil.getRotatedImage(image, rotateAngle);
+		}
+		return image;
+	}
+
+	private BufferedImage applyScale(BufferedImage image) {
+		Double scale = createScale(image);
+		if (scale != null) {
+			image = ImageUtil.scaleImage(scale, image);
+		}
+		return image;
+	}
+
+	private BufferedImage readImageQuietly(File inputBaseFile) {
+		BufferedImage image = null;
+		try {
+			if (!inputBaseFile.exists()) {
+				LOG.debug("File does not exist: "+inputBaseFile);
+			}
+			image = ImageIO.read(inputBaseFile);
+		} catch (IOException e) {
+			throw new RuntimeException("Cannot read image: "+inputBaseFile, e);
+		}
+		return image;
 	}
 	
 	private Double createScale(BufferedImage image) {
