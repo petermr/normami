@@ -2,7 +2,7 @@
 
 # Norma
 
-Note. The commandline syntax is being migrated. See [AMI-STEM](./AMI-STEM.md))
+Note. The commandline syntax is being migrated. See [AMI-STEM](./AMI-STEM.md)) and more recent docs [AMI-DOCS](./ami-docs/AMI.md)
 
 A tool to convert a variety of inputs into normalized, tagged, XHTML (with embedded/linked SVG and PNG where
 appropriate). The initial emphasis is on scholarly publications but much of the technology is general.
@@ -16,6 +16,14 @@ This is a bundle of all `norma` and `ami` functionality to transform PDFs and XM
 For a simple introduction and a description of how to install binaries of the software please see: [here](http://contentmine.github.io)
 
 
+## Building from source
+
+Norma can be built with maven3 and requires java 1.7 (sometimes 1.8) or greater.
+
+## Contributing to development
+If you're interested in contributing please take a look at: [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## *Everything after this is likely to be obsolete* 
 
 ## Input
 
@@ -29,9 +37,3 @@ To convert a CTree full of NLM xml files such as those you might have downloaded
   norma --project <CProject folder> --input fulltext.xml --output scholarly.html --transform nlm2html
   ```
 
-# Building from source
-
-Norma can be built with maven3 and requires java 1.7 (sometimes 1.8) or greater.
-
-## Contributing to development
-If you're interested in contributing please take a look at: [CONTRIBUTING.md](CONTRIBUTING.md)
