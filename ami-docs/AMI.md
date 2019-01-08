@@ -9,7 +9,8 @@ The core data are collections of documents and their components (often "assets")
 
 A `CProject` normally consists of a set of "child" `CTree`s - themselves directories. A command such as:
 
-```ami-pdf -p myCProject <parameters/options>
+```
+ami-pdf -p myCProject <parameters/options>
 ```
 
 is implemented as:
