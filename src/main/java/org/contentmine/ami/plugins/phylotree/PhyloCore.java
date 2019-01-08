@@ -30,6 +30,7 @@ import org.contentmine.graphics.svg.linestuff.LineMerger.MergeMethod;
 import org.contentmine.graphics.svg.text.SVGPhrase;
 import org.contentmine.norma.image.ocr.HOCRReaderOLD;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
+import org.contentmine.norma.util.CommandRunner;
 
 /** the main data and logic of phylo.
  * 
@@ -216,7 +217,7 @@ public class PhyloCore {
 		return joiningRadius;
 	}
 
-	public ImageToHOCRConverter getOrCreateImageToHOCRConverter() {
+	public CommandRunner getOrCreateImageToHOCRConverter() {
 		if (imageToHOCRConverter == null) {
 			imageToHOCRConverter = new ImageToHOCRConverter();
 			imageToHOCRConverter.setTryCount(DEFAULT_RETRIES_FOR_TESSERACT_EXIT);

@@ -1,4 +1,4 @@
-package org.contentmine.ami.tool;
+package org.contentmine.ami.tools;
 
 import java.io.File;
 import java.io.IOException;

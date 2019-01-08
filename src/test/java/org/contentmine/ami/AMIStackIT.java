@@ -83,6 +83,21 @@ public class AMIStackIT {
 		
 	}
 
+	@Test
+	public void testSingleTree() {
+		// re-make project - will include a new file (first pass only)
+		String cproject = "/Users/pm286/workspace/uclforest/forestplots";
+		new AMIMakeProjectTool().runCommands("--cproject " + cproject + " --rawfiletypes pdf ");
+		
+		String ctree = cproject + "/" + "higgins";
+		
+		new AMIPDFTool().runCommands(" --ctree " + ctree);
+		new AMIImageTool().runCommands(" --ctree " + ctree);
+		new AMIBitmapTool().runCommands(" --ctree " + ctree);
+		new AMIPixelTool().runCommands(" --ctree " + ctree + " --rings 3");
+		
+	}
+	
 	private void makeProject(File targetDir) {
 		new AMIMakeProjectTool().runCommands("--cproject "+ targetDir + " --rawfiletypes " + "pdf" + " -vv");
 	}

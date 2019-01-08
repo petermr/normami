@@ -143,20 +143,20 @@
 
                          <program>
                          <!--  will become a tool -->
-                            <mainClass>org.contentmine.ami.AMIDictionary</mainClass>
+                            <mainClass>org.contentmine.ami.tools.AMIDictionary</mainClass>
 							<!-- description: edit/create AMI dictionaries -->
                             <id>ami-dictionaries</id>
                         </program>
                         <program>
                          <!--  will become a tool -->
-                            <mainClass>org.contentmine.ami.AMISearch</mainClass>
+                            <mainClass>org.contentmine.ami.tools.AMISearch</mainClass>
 							<!-- description: run AMI searches and co-occurrence -->
                             <id>ami-search-cooccur</id>
                         </program>
                         
                         <program>
                         <!-- may need renaming -->
-                            <mainClass>org.contentmine.ami.AMIMakeProject</mainClass>
+                            <mainClass>org.contentmine.ami.tools.AMIMakeProjectTool</mainClass>
 							<!-- description: make project from a directory-->
                             <id>ami-makeproject</id>
                         </program>

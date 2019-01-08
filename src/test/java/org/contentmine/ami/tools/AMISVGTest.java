@@ -1,4 +1,4 @@
-package org.contentmine.ami.tool;
+package org.contentmine.ami.tools;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -22,8 +22,7 @@ public class AMISVGTest {
 	 */
 	public void testSVGTree() throws Exception {
 		String args = ""
-				+ "-t /Users/pm286/workspace/uclforest/forestplots/bowmann"
-				+ " --pages 1 9";
+				+ "-t /Users/pm286/workspace/uclforest/forestplots/bowmann --pages 1 9";
 		new AMISVGTool().runCommands(args);
 	}
 	
@@ -36,52 +35,59 @@ public class AMISVGTest {
 				+ "-t /Users/pm286/workspace/uclforest/forestplots/bowmann"
 				+ ""
 				+ " --regex"
-				+ " Hedge's\\s+g\\s+and\\s+95%\\s+CI"
-				+ " Hedge's(\\s+g)?"
-				+ " (control|treatment)\\s+group"
-				+ " sample(\\s+|\\-)size"
-				+ " statistics\\s+for\\s+each\\s+study"
-				+ " st(andar)?d\\s+diff\\s+in\\s+means"
-				+ " st(andar)d\\s+error"
-				+ " std\\.\\s+mean\\s+difference"
-				+ " correlation\\s+and\\s+95%\\s+CI"
-				+ " confidence\\sinterval"
-				+ " Forest\\s+plots?"
-				+ " favou?rs\\s+(control|intervention|experiment(al)?|treatment|A|B)"
-				+ " experimental"
-				+ " (lower|upper)\\s+limit"
-				+ " relative\\s+weight"
-				+ " study\\s+(name|size)s?"
-				+ " (weighted)?\\s+effect\\s+sizes?"
+				+ " 10 Hedge's\\s+g\\s+and\\s+95%\\s+CI"
+				+ " 10 Hedge's(\\s+g)?"
+				+ " 8  (control|treatment)\\s+group"
+				+ " 8  sample(\\s+|\\-)size"
+				+ " 10 statistics\\s+for\\s+each\\s+study"
+				+ " 5  st(andar)?d\\s+diff\\s+in\\s+means"
+				+ " 4  st(andar)d\\s+error"
+				+ " 5  std\\.\\s+mean\\s+difference"
+				+ " 8  correlation\\s+and\\s+95%\\s+CI"
+				+ " 5  confidence\\sinterval"
+				+ " 10 Forest\\s+plots?"
+				+ " 10 favou?rs\\s+(control|intervention|experiment(al)?|treatment|A|B)"
+				+ " 1  experimental"
+				+ " 3  (lower|upper)\\s+limit"
+				+ " 4  relative\\s+weight"
+				+ " 4  study\\s+(name|size)s?"
+				+ " 6  (weighted)?\\s+effect\\s+sizes?"
+				+ " 3  (z|p)\\-value"
+				+ " 1  control"
+				+ " 1  random"
+				+ " 1  variance"
+				+ " 1  correlations?"
+				+ " 1  measure"
+				+ " 1  stud(y|ies)"
+				+ " 6  LL"
+				+ " 6  ES"
+				+ " 6  UL"
+				+ " 6  CI"
+				+ " 1  effects?"
+				+ " 1  weights?"
+				+ " 1  sizes?"
+				+ " 1  subgroups?"
+				+ " 1  outcomes?"
+				+ " 1  interventions?"
+         ;
+		new AMISVGTool().runCommands(args);
+	}
+
+	@Test
+	/** 
+	 * convert single file
+	 */
+	public void testSVGProjectRegex() throws Exception {
+		String args = ""
+				+ "-p /Users/pm286/workspace/uclforest/forestplots"
 				+ ""
-				+ " (z|p)\\-value"
-				+ " control"
-				+ " random"
-				+ " variance"
-				+ " correlations?"
-				+ " measure"
-				+ ""
-				
-				+ " stud(y|ies)"
-				+ " LL"
-				+ " ES"
-				+ " UL"
-				+ " CI"
-				+ " effects?"
-				+ " weights?"
-				+ " sizes?"
-				+ " subgroups?"
-				+ " outcomes?"
-				+ " interventions?"
-				+ ""
-//				+ "Weighted effect sizes in randomized controlled trials of reading interventions "
-//				+ "    with outcomes measured at the end of interventions."
-//				+ "Weighted effect sizes in quasi-experimental studies of reading interventions "
-//				+ "    with outcomes measured at the end of interventions."
+//				+ " --regexfile ${CM_AMI}/forest_regex.json"
+				+ " --regexfile ${HOME}/ContentMine/ami/forest_regex.json"
          ;
 		new AMISVGTool().runCommands(args);
 	}
 	
+
 	@Test
 	/** 
 	 * convert s

@@ -1,4 +1,4 @@
-package org.contentmine.ami.tool;
+package org.contentmine.ami.tools;
 
 import org.contentmine.ami.MyCommand;
 import org.contentmine.ami.ReusableOptions;
