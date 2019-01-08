@@ -26,6 +26,7 @@ import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.image.ImageUtil;
 import org.contentmine.image.ocr.HOCRReader;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
+import org.contentmine.norma.util.CommandRunner;
 
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -153,6 +154,7 @@ public class AMIOCRTool extends AbstractAMITool {
 		String filename = outputHOCRFile.toString();
 		try {
 			InputStream inputStream = new FileInputStream(filename);
+			// analyze the HOCR
 			hocrReader.readHOCR(inputStream);
 		} catch (IOException e) {
 			throw new RuntimeException("cannot read "+filename, e);
@@ -169,7 +171,7 @@ public class AMIOCRTool extends AbstractAMITool {
 		// debug
 		try {
 			if (outputHOCRFile.exists()) {
-				File destFile = new File(parentFile, basename+"."+ImageToHOCRConverter.RAW_HTML);
+				File destFile = new File(parentFile, basename+"."+CommandRunner.RAW_HTML);
 				if (destFile.exists()) FileUtils.deleteQuietly(destFile);
 				FileUtils.moveFile(outputHOCRFile, destFile);
 			} else {
@@ -202,6 +204,7 @@ public class AMIOCRTool extends AbstractAMITool {
 			outputHOCRFile = new File(outputDir, basename);
 			imageToHOCRConverter = new ImageToHOCRConverter();
 			try {
+				// run the OCR and return HOCR
 				outputHOCRFile = imageToHOCRConverter.convertImageToHOCR(imageFile, outputHOCRFile);
 				if (!outputHOCRFile.exists()) {
 					throw new RuntimeException("HOCR HTML should exist: "+outputHOCRFile);

@@ -64,8 +64,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-
-
+	
     @Option(names = {"-p", "--cproject"}, 
 		arity = "0..1",
 		paramLabel="CProject",
@@ -108,6 +107,12 @@ public abstract class AbstractAMITool implements Callable<Void> {
     				+ "org.contentmine.ami.lookups.WikipediaDictionary INFO"
     		)
 	public String[] log4j;
+
+    @Option(names = {"--logfile"}, 
+    		arity="1",
+    		description = "log file for each tree/file/image analyzed. "
+    		)
+	public String logfile;
 
 	@Option(names = {"--rawfiletypes" }, 
 			arity = "1..*", 
@@ -290,13 +295,15 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	 * 
 	 */
 	private void printGenericValues() {
+        System.out.println("basename            " + userBasename);
         System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
         System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
-        System.out.println("file types          " + Util.toStringList(rawFileFormats));
         System.out.println("cTreeList           " + cTreeList);
-        System.out.println("basename            " + userBasename);
-        System.out.println("include             " + includeTrees);
-        System.out.println("exclude             " + excludeTrees);
+        System.out.println("excludeTrees        " + excludeTrees);
+        System.out.println("file types          " + Util.toStringList(rawFileFormats));
+        System.out.println("includeTrees        " + includeTrees);
+        System.out.println("log4j               " + (log4j == null ? "" : new ArrayList<String>(Arrays.asList(log4j))));
+        System.out.println("logfile             " + logfile);
         System.out.println("verbose             " + verbosity.length);
 	}
 

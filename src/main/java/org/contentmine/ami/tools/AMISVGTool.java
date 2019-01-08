@@ -9,6 +9,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.filefilter.RegexFileFilter;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
@@ -51,9 +53,15 @@ public class AMISVGTool extends AbstractAMITool {
 
     @Option(names = {"--regex"},
     		arity = "1..*",
-            description = "regexes to search for in svg pages. If regex starts with uppercase (e.g. Hedge's) forces"
+            description = "regexes to search for in svg pages. format (integerWeight space regex)."
+            		+ "If regex starts with uppercase (e.g. Hedge's) forces"
             		+ " case sensitivity , else case-insensitive")
     private List<String> regexList = null;
+
+    @Option(names = {"--regexfile"},
+    		arity = "1",
+            description = "file to read (weight-regex) pairs from. May contain ${CM_ANCILLARY} variable")
+    private String regexFilename = null;
 
     public static Pattern PAGE_EXTRACT = Pattern.compile(".*\\/fulltext\\-page\\.(\\d+)\\.svg");
 
@@ -78,6 +86,7 @@ public class AMISVGTool extends AbstractAMITool {
 	protected void parseSpecifics() {
 		System.out.println("pages                " + pages);
 		System.out.println("regexes              " + regexList);
+		System.out.println("regexfile            " + regexFilename);
 		System.out.println();
 	}
 
@@ -92,11 +101,37 @@ public class AMISVGTool extends AbstractAMITool {
     }
 
 	private void createPatterns() {
+		if (regexFilename != null) {
+			createPatternsFromFile();
+		} else if (regexList != null) {
+			createPatternsFromRegexes();
+		}
+	}
+
+	private void createPatternsFromFile() {
+		File jsonRegexFile = AMIUtil.getFileWithExpandedVariables(regexFilename);
+		if (!jsonRegexFile.exists()) {
+			throw new RuntimeException("File does not exist "+jsonRegexFile);
+		}
+	}
+
+	private void createPatternsFromRegexes() {
 		patternList = new ArrayList<Pattern>();
 		if (regexList != null) {
-			for (String regex : regexList) {
+			int i = 0;
+			String ws;
+			String regex = null;
+			while (i < regexList.size()) {
+				ws = regexList.get(i++);
+				if (i == regexList.size() || !Character.isDigit(ws.charAt(0))) {
+					System.err.println("badly formatted regexList at "+ws+" | "+regex);
+					break;
+				}
+				int weight = Integer.parseInt(ws);
+				regex = regexList.get(i++);
 				Pattern pattern = (Character.isUpperCase(regex.charAt(0))) ? 
 					Pattern.compile(regex) : Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+				WeightedPattern weightedPattern = new WeightedPattern(pattern, weight);
 				patternList.add(pattern);
 			}
 		}
@@ -148,4 +183,13 @@ public class AMISVGTool extends AbstractAMITool {
 		}
 	}
 
+}
+class WeightedPattern {
+	Pattern pattern;
+	Integer weight;
+	
+	public WeightedPattern(Pattern pattern, Integer weight) {
+		this.pattern = pattern;
+		this.weight = weight;
+	}
 }
