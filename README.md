@@ -2,7 +2,7 @@
 
 # Norma
 
-(See also later [AMI](./AMI.md))
+Note. The commandline syntax is being migrated. See [AMI-STEM](./AMI-STEM.md))
 
 A tool to convert a variety of inputs into normalized, tagged, XHTML (with embedded/linked SVG and PNG where
 appropriate). The initial emphasis is on scholarly publications but much of the technology is general.
