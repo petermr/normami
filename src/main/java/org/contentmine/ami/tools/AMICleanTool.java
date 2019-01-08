@@ -130,8 +130,22 @@ public class AMICleanTool extends AbstractAMITool {
 	}
 
 	public void cleanDirs(List<String> argList) {
-		for (String arg : argList) {
-			cProject.clean(arg);
+		if (argList == null) {
+			System.err.println("No argList given");
+			return;
+		}
+		if (cProject != null) {
+			for (String arg : argList) {
+				cProject.clean(arg);
+			}
+		} else if (cTree != null) {
+			if (dirs != null) {
+				for (String dir : dirs) {
+					cTree.clean(dir);
+				}
+			}
+		} else {
+			throw new RuntimeException("must give cProject or cTree");
 		}
 	}
 

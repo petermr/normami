@@ -110,6 +110,15 @@ public class AMIPDFTool extends AbstractAMITool {
 			pdfDocumentProcessor.setOutputPDFImages(outputPdfImages);
 			pdfDocumentProcessor.setMaxPages(maxpages);
     		runPDF(cProject.getDirectory());
+    	} else if (cTree != null) {
+    		PDFDocumentProcessor pdfDocumentProcessor = cTree.getOrCreatePDFDocumentProcessor();
+			pdfDocumentProcessor.setOutputSVG(outputSVG);
+			pdfDocumentProcessor.setOutputPDFImages(outputPdfImages);
+			pdfDocumentProcessor.setMaxPages(maxpages);
+	        cTree.setPDFDocumentProcessor(pdfDocumentProcessor);
+			cTree.processPDFTree();
+    	} else {
+    		System.err.println("NO CProject or CTree, no processing");
     	}
     }
 

@@ -38,6 +38,15 @@ public class AMICleanerTest {
 		Assert.assertNotNull("CProject not null", cProject);
 	}
 
+	@Test
+	/**
+	 * tests cleaning directories in a single CTree.
+	 */
+	public void testCleanSingleTree() {
+//		ami-clean -t /Users/pm286/workspace/uclforest/dev/higgins --dir pdfimages
+		String cmd = "-t /Users/pm286/workspace/uclforest/dev/higgins --dir pdfimages";
+		new AMICleanTool().runCommands(cmd);
+	}
 
 
 }

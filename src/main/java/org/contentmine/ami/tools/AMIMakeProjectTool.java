@@ -90,13 +90,13 @@ public class AMIMakeProjectTool extends AbstractAMITool {
     		)
     private int compress = 25;
 
-    @Option(names = {"--logfile"},
-    		arity="0..1",
-    		description = "logfile name (usually created by default - see particular command)."
-    				+ " To omit logfile use argument NONE. Note"
-    				+ "that default logfile names are reserved and it is normally a bad idea to use different ones"
-    		)
-    private String logfile;
+//    @Option(names = {"--logfile"},
+//    		arity="0..1",
+//    		description = "logfile name (usually created by default - see particular command)."
+//    				+ " To omit logfile use argument NONE. Note"
+//    				+ "that default logfile names are reserved and it is normally a bad idea to use different ones"
+//    		)
+//    private String logfile;
 
 	public AMIMakeProjectTool() {
 	}

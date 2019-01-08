@@ -86,7 +86,7 @@ public class AMIStackIT {
 	@Test
 	public void testSingleTree() {
 		// re-make project - will include a new file (first pass only)
-		String cproject = "/Users/pm286/workspace/uclforest/forestplots";
+		String cproject = "/Users/pm286/workspace/uclforest/dev";
 		new AMIMakeProjectTool().runCommands("--cproject " + cproject + " --rawfiletypes pdf ");
 		
 		String ctree = cproject + "/" + "higgins";

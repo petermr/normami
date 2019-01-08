@@ -87,6 +87,12 @@ public abstract class AbstractAMITool implements Callable<Void> {
     		)
 	protected String userBasename;
 
+    @Option(names = {"--dryrun"}, 
+    		arity="1",
+    		description = "for testing runs a single phase without output, deletion or transformation.(NYI)."
+    		)
+	protected Boolean dryrun = false;
+
     @Option(names = {"--excludetree"}, 
     		arity="1..*",
     		description = "exclude the CTrees in the list. (only works with --cproject). "
@@ -299,6 +305,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
         System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
         System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
         System.out.println("cTreeList           " + cTreeList);
+        System.out.println("dryrun              " + dryrun);
         System.out.println("excludeTrees        " + excludeTrees);
         System.out.println("file types          " + Util.toStringList(rawFileFormats));
         System.out.println("includeTrees        " + includeTrees);
