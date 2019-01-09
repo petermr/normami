@@ -2,10 +2,6 @@ package org.contentmine.ami.tools;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.tools.AMIBitmapTool;
-import org.contentmine.ami.tools.AMIImageTool;
-import org.contentmine.ami.tools.AMIPixelTool;
-import org.contentmine.ami.tools.AbstractAMITool;
 import org.junit.Test;
 
 /** test cleaning.
@@ -188,15 +184,27 @@ public class AMIBitmapTest {
 	@Test
 	/** 
 	 */
-	public void testSharpenThreshold() throws Exception {
+	public void testSharpenBoofcv() throws Exception {
 		String args =
-				"-p /Users/pm286/workspace/uclforest/forestplotssmall"
+				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --sharpen sharpen4"
 				+ " --basename sharpen4mean"
-				+ " --binarize local_mean"
+//				+ " --binarize local_mean"
 				;
 		new AMIBitmapTool().runCommands(args);
 		args =
+				"-p /Users/pm286/workspace/uclforest/forestplotssmall"
+				+ " --sharpen laplacian"
+				+ " --basename laplacian"
+				;
+		new AMIBitmapTool().runCommands(args);
+	}
+	
+	@Test
+	/** 
+	 */
+	public void testSharpenThreshold1() throws Exception {
+		String args =
 				"-p /Users/pm286/workspace/uclforest/forestplotssmall"
 				+ " --sharpen sharpen8"
 				+ " --basename sharpen8otsu"
