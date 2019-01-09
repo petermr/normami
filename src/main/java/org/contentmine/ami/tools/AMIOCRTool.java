@@ -226,7 +226,7 @@ public class AMIOCRTool extends AbstractAMITool {
 				double scaley = maxsize / width;
 				scalefactor = Math.max(scalex,  scaley);
 			}
-			image = ImageUtil.scaleImage(scalefactor, image);
+			image = ImageUtil.scaleImageScalr(scalefactor, image);
 			File parentFile = imageFile.getParentFile();
 			File scaledDir  = new File(parentFile, basename);
 			scaledDir.mkdirs();

@@ -48,12 +48,24 @@ public class AMIBitmapTool extends AbstractAMITool {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+
+	public enum ImageToolkit {
+		Boofcv,
+		Scalr,
+		Pmr,
+	}
 	
     @Option(names = {"--binarize"},
     		arity = "1",
     		defaultValue = "local_mean",
             description = "create binary (normally black and white); methods local_mean ...")
     private String binarize;
+
+    @Option(names = {"--erodedilate"},
+    		arity = "1",
+    		defaultValue = "false",
+            description = "erode 1-pixel layer and then dilate. Removes minor spikes")
+    private Boolean erodeDilate = false;
 
     @Option(names = {"--maxheight"},
     		arity = "1",
@@ -86,7 +98,7 @@ public class AMIBitmapTool extends AbstractAMITool {
 
     @Option(names = {"--sharpen"},
     		arity = "1",
-    		defaultValue = "laplacian",
+    		defaultValue = "sharpen4",
             description = "sharpen image using Laplacian kernel or sharpen4 or sharpen8 (BoofCV)..")
     private String sharpen;
 
@@ -102,7 +114,16 @@ public class AMIBitmapTool extends AbstractAMITool {
             description = "maximum value for black pixels (non-background)")
     private Integer threshold;
 
+    @Option(names = {"--toolkit"},
+    		arity = "1",
+    		defaultValue = "Boofcv",
+            description = "Image toolkit to use. Boofcv (probable longterm choice), "
+            		+ "Scalr (Imgscalr), simple but no longer deeveloped. Pmr (my own) when all else fails.")
+    private ImageToolkit toolkit = ImageToolkit.Boofcv;
+
 	private File pdfImagesDir;
+
+	private SharpenMethod sharpenMethod;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -135,11 +156,16 @@ public class AMIBitmapTool extends AbstractAMITool {
 
     @Override
     protected void runSpecifics() {
+    	getSharpenMethod();
     	if (processTrees()) { 
     	} else {
 			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
 	    }
     }
+
+	private void getSharpenMethod() {
+		sharpenMethod = SharpenMethod.getMethod(sharpen);
+	}
 
 	protected void processTree(CTree cTree) {
 		this.cTree = cTree;
@@ -166,19 +192,26 @@ public class AMIBitmapTool extends AbstractAMITool {
 		String outputBasename = userBasename != null ? userBasename : inputBasename;
 		pdfImagesDir = cTree. getExistingPDFImagesDir();
 		File inputBaseFile = new File(pdfImagesDir, inputBasename + "." + CTree.PNG);
+		LOG.debug("reading "+inputBaseFile);
 		File outputDir = new File(pdfImagesDir, inputBasename);
 		outputDir.mkdirs();
 		File outputBaseFile = new File(outputDir, outputBasename + "." + CTree.PNG);
 
 		BufferedImage image = readImageQuietly(inputBaseFile);
+		try {
+			new File("target/image").mkdirs();
+			ImageIO.write(image, "png", new File("target/image/original.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		if (image != null) {
 
 			image = rotate(image);  // works
 			image = applyScale(image);  // works
-//			image = sharpen(image);    // this and
-			image = threshold(image);   
+			image = sharpen(image);    // this and
+//			image = threshold(image);   // fails
 //			image = binarize(image);   // this lead to black image
-			image = posterize(image);  // currently a no-op
+//			image = posterize(image);  // currently a no-op
 			
 			LOG.debug(image.getWidth());
 			ImageIOUtil.writeImageQuietly(image, outputBaseFile);
@@ -193,51 +226,63 @@ public class AMIBitmapTool extends AbstractAMITool {
 	}
 
 	private BufferedImage threshold(BufferedImage image) {
-		// binarization follows sharpen
 		if (threshold != null) {
 			image = ImageUtil.boofCVBinarization(image, threshold);
 		}
 		return image;
 	}
 
-
+	/** binarize withotu explict threshold
+	 * 
+	 * @param image
+	 * @return
+	 */
 	private BufferedImage binarize(BufferedImage image) {
 		// binarization follows sharpen
 		if (binarize != null) {
 			ThresholdMethod method = ThresholdMethod.getMethod(binarize);
 			if (method == null) {
-				throw new RuntimeException("unknown method: "+binarize);
+				// use default 
+				image = ImageUtil.thresholdBoofcv(image, erodeDilate);
 			} else {
 				image = ImageUtil.boofCVBinarization(image, threshold);
-
-//				image = ImageUtil.boofCVThreshold(image, method);
 			}
 		}
 		return image;
 	}
 
 	private BufferedImage sharpen(BufferedImage image) {
-		if (SharpenMethod.LAPLACIAN.toString().equals(sharpen)) {
-			image = ImageUtil.laplacianSharpen(image);
+		BufferedImage resultImage = null;
+		if (ImageToolkit.Boofcv.equals(toolkit)) {
+			resultImage = ImageUtil.sharpenBoofcv(image, sharpenMethod);
+		} else if (SharpenMethod.LAPLACIAN.toString().equals(sharpen)) {
+			resultImage = ImageUtil.laplacianSharpen(image);
 		} else if (SharpenMethod.SHARPEN4.toString().equals(sharpen)) {
-			image = ImageUtil.sharpen(image, SharpenMethod.SHARPEN4);
+			resultImage = ImageUtil.sharpen(image, SharpenMethod.SHARPEN4);
 		} else if (SharpenMethod.SHARPEN8.toString().equals(sharpen)) {
-			image = ImageUtil.sharpen(image, SharpenMethod.SHARPEN8);
+			resultImage = ImageUtil.sharpen(image, SharpenMethod.SHARPEN8);
 		} 
-		return image;
+		return resultImage;
 	}
 
 	private BufferedImage rotate(BufferedImage image) {
 		if (rotateAngle != null && rotateAngle % 90 == 0) {
-			image = ImageUtil.getRotatedImage(image, rotateAngle);
+			if (false || ImageToolkit.Boofcv.equals(toolkit)) {
+//				image = ImageUtil.getRotatedImage(image, rotateAngle);
+			} else if (true || ImageToolkit.Scalr.equals(toolkit)) {
+				image = ImageUtil.getRotatedImageScalr(image, rotateAngle);
+			}
 		}
 		return image;
 	}
 
+	
 	private BufferedImage applyScale(BufferedImage image) {
 		Double scale = createScale(image);
 		if (scale != null) {
-			image = ImageUtil.scaleImage(scale, image);
+			if (ImageToolkit.Scalr.equals(toolkit)) {
+				image = ImageUtil.scaleImageScalr(scale, image);
+			}
 		}
 		return image;
 	}
