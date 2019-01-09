@@ -74,9 +74,61 @@ Most of our core work is on scientific/medical articles which has natural sectio
  * XML text (e.g. JATS) can be converted into HTML and moved to appropriate `CTree` subdirectories.
  * Vector graphics can be exported as SVG and used ot create semantic objects.
  * ancillary / supplemental files (e.g. of data) can be moved into the CTree.
- * and more. `CTree`s can contain anything, but are only gaurantted to recognize reserved files or syntax.
+ * and more. `CTree`s can contain anything, but are only guaranteed to recognize reserved files or syntax.
  
+## AMI commands
+(The commands are still evolving and it's better to ask `ami` herself what the current ones are). At present (20190109) these are separate comm but we'll move them into `picocli` subcommands as soon as we find how.
+
+For a typical command (e.g. `AMIPDFTool`):
+`ami-pdf` would run `AMIPDFTool` and provess the arguments with `picocli` commandline interpreter. If no arguments are given, then the system gives command-specific help.
+
+The `ami` stack currently (20190109) contains at least the following commands:
+
+### ami-makeproject
+See (./make-project.md)[make-project]
+Takes a set of PDF (HTML, XML) files and converts each into a subdirectory `CTree` with child `fulltext.pdf` (`xml`, `html`). The subdirectory name is normalised to remove whitespace and punctuation.
+### ami-pdf
+See (./ami-pdf.md)[ami-pdf]
+Processes `fulltext.pdf` (in `cTree` or `CProject`) to create:
+
+  * svg/ with page-%d.svg for each page in document
+  * pdfimages/ with image%d.png for every embedded image
  
+### ami-image 
+See (./ami-image.md)[ami-image]
+Filters (but does not edit) `pdfimages/image%d.png` above into various subdirectories (e.g. `monochrome`, `small`, etc).
+### ami-bitmap
+See (./ami-bitmap.md)[ami-bitmap]
+Performs image processing on the retained *.png such as 
+
+  * thresholding
+  * sharpening
+  * geometric scaling
+  * rotating
+  * dilating/eroding
+  
+### ami-pixel
+See (./ami-pixel.md)[ami-pixel]
+Extracts objects (lines, blocks, etc.) from processed bitmaps 
+
+### ami-ocr
+See (./ami-ocr.md)[ami-ocr]
+Extracts textfrom processed bitmaps 
+
+### ami-svg
+See (./ami-svg.md)[ami-svg]
+processes the from PDF into HTML and vertor graphics objects (NYI) 
+  
+### ami-forest (and similar)
+See (./ami-forest.md)[ami-forest]
+Analyzes bitmaps and vertor graphics as Forest plots (NYI)
+
+
+  
+  
+
+
+
  
  
 
