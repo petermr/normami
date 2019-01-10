@@ -5,6 +5,8 @@ import java.io.File;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
+import org.contentmine.cproject.files.CTree;
+import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.euclid.Int2;
 import org.contentmine.pdf2svg2.PDFDocumentProcessor;
 
@@ -91,8 +93,11 @@ public class AMIPDFTool extends AbstractAMITool {
 
 	@Override
 	protected void runSpecifics() {
-        runPDF();
-	}
+    	if (processTrees()) { 
+    	} else {
+			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
+	    }
+    }
 
 	private void printDebug() {
 		System.out.println("maxpages            "+maxpages);
@@ -103,45 +108,22 @@ public class AMIPDFTool extends AbstractAMITool {
 		return;
 	}
 
+	protected void processTree(CTree cTree) {
+		this.cTree = cTree;
+		System.out.println("cTree: "+cTree.getName());
+		File pdfImagesDir = cTree.getExistingPDFImagesDir();
+        runPDF();
+	}
+
+
     public void runPDF() {
-    	if (cProject != null) {
-    		PDFDocumentProcessor pdfDocumentProcessor = cProject.getOrCreatePDFDocumentProcessor();
-			pdfDocumentProcessor.setOutputSVG(outputSVG);
-			pdfDocumentProcessor.setOutputPDFImages(outputPdfImages);
-			pdfDocumentProcessor.setMaxPages(maxpages);
-    		runPDF(cProject.getDirectory());
-    	} else if (cTree != null) {
-    		PDFDocumentProcessor pdfDocumentProcessor = cTree.getOrCreatePDFDocumentProcessor();
-			pdfDocumentProcessor.setOutputSVG(outputSVG);
-			pdfDocumentProcessor.setOutputPDFImages(outputPdfImages);
-			pdfDocumentProcessor.setMaxPages(maxpages);
-	        cTree.setPDFDocumentProcessor(pdfDocumentProcessor);
-			cTree.processPDFTree();
-    	} else {
-    		System.err.println("NO CProject or CTree, no processing");
-    	}
+		PDFDocumentProcessor pdfDocumentProcessor = cTree.getOrCreatePDFDocumentProcessor();
+		pdfDocumentProcessor.setOutputSVG(outputSVG);
+		pdfDocumentProcessor.setOutputPDFImages(outputPdfImages);
+		pdfDocumentProcessor.setMaxPages(maxpages);
+        cTree.setPDFDocumentProcessor(pdfDocumentProcessor);
+		cTree.processPDFTree();
     }
 
-//    public static void runPDF(CProject cProject) {
-//    	runPDF(cProject == null ? null : cProject.getDirectory());
-//    }
-
-	private void runPDF(File projectDir) {
-		if (projectDir != null) {
-			String cmd = "-p " + projectDir + " --rawfiletypes pdf ";
-			try {
-				AMIMakeProjectTool.main(cmd);
-			} catch (Exception e) {
-				LOG.error("makeProject failed " + e.getMessage());
-				throw new RuntimeException("cannot makeProject ", e);
-			}
-			this.convertPDFOutputSVGFilesImageFiles();
-		}
-	}
-
-	private void convertPDFOutputSVGFilesImageFiles() {
-		cProject.setCTreelist(null);
-		cProject.convertPDFOutputSVGFilesImageFiles();
-	}
 
 }

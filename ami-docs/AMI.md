@@ -121,7 +121,7 @@ processes the from PDF into HTML and vertor graphics objects (NYI)
   
 ### ami-forest (and similar)
 See (./ami-forest.md)[ami-forest]
-Analyzes bitmaps and vertor graphics as Forest plots (NYI)
+Analyzes bitmaps and vector graphics as Forest plots (NYI)
 
 
   

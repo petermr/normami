@@ -1,28 +1,18 @@
 package org.contentmine.ami.tools;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.List;
 
-import javax.imageio.ImageIO;
-
-import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
-import org.contentmine.cproject.util.CMineGlobber;
-import org.contentmine.graphics.svg.util.ImageIOUtil;
-import org.contentmine.image.ImageUtil;
-import org.contentmine.image.ImageUtil.SharpenMethod;
-import org.contentmine.image.ImageUtil.ThresholdMethod;
-import org.contentmine.image.diagram.DiagramAnalyzer;
+import org.contentmine.eucl.euclid.util.CMFileUtil;
+import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.html.HtmlHtml;
 import org.contentmine.norma.pdf.GrobidRunner;
 
-import boofcv.io.image.UtilImageIO;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -51,6 +41,10 @@ description = "	Run grobid using:"
 )
 
 public class AMIGrobidTool extends AbstractAMITool {
+	private static final String FULLTEXT_TEI_HTML = "fulltext.tei.html";
+
+	private static final String FULLTEXT_TEI_XML = "fulltext.tei.xml";
+
 	private static final Logger LOG = Logger.getLogger(AMIGrobidTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -63,11 +57,16 @@ public class AMIGrobidTool extends AbstractAMITool {
         		+ "close,"
         		+ " processFullText, processHeader, processDate, processAuthorsHeader,"
         		+ " processAuthorsCitation, processAffiliation, processRawReference, processReferences,"
+        		+ ""
         		+ " createTraining, createTrainingMonograph, createTrainingBlank, createTrainingCitationPatent,"
-        		+ " processCitationPatentTEI, processCitationPatentST36, processCitationPatentTXT, processCitationPatentPDF, processPDFAnnotation")
+        		+ ""
+        		+ " processCitationPatentTEI, processCitationPatentST36, processCitationPatentTXT,"
+        		+ " processCitationPatentPDF, processPDFAnnotation")
     private String exeOption = null;
 
 	private File pdfImagesDir;
+
+	private File outputDir;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -101,9 +100,10 @@ public class AMIGrobidTool extends AbstractAMITool {
 
 	protected void processTree(CTree cTree) {
 		this.cTree = cTree;
-		System.out.println("cTree: "+cTree.getName());
+		System.out.println("\n" + "cTree: "+cTree.getName());
 		try {
 			runGrobid();
+			convertTEIToHtml();
 		} catch (Exception e) {
 			LOG.error("Bad read: "+cTree+" ("+e.getMessage()+")");
 		}
@@ -112,12 +112,33 @@ public class AMIGrobidTool extends AbstractAMITool {
 	private void runGrobid() {
 		
 		File inputDir = cTree.getDirectory();
-		File outputDir = new File(cTree.getDirectory(), "tei/");
+		File inputFile = new File(inputDir, CTree.FULLTEXT_PDF);
+		outputDir = new File(cTree.getDirectory(), "tei/");
 		outputDir.mkdirs();
-		GrobidRunner grobidRunner = new GrobidRunner();
-		grobidRunner.convertPDFToTEI(inputDir, outputDir, exeOption);
+		File outputFile = new File(outputDir, FULLTEXT_TEI_XML);
+		if (CMFileUtil.shouldMake(outputFile , false, inputFile)) { 
+			GrobidRunner grobidRunner = new GrobidRunner();
+			grobidRunner.setTryCount(200); // fix this later
+			grobidRunner.convertPDFToTEI(inputDir, outputDir, exeOption);
+		}
 	}
 	
+	private void convertTEIToHtml() {
+		File inputFile = new File(outputDir, FULLTEXT_TEI_XML);
+		File outputFile = new File(outputDir, FULLTEXT_TEI_HTML);
+		if (true || CMFileUtil.shouldMake(outputFile , false, inputFile)) { 
+			TEI2HtmlConverter converter = new TEI2HtmlConverter();
+			HtmlHtml html = converter.createHtmlElement(inputFile);
+			if (html != null) {
+				try {
+					XMLUtil.debug(html, outputFile, 1);
+				} catch (IOException e) {
+					System.err.println("Cannot write Html from TEI");
+				}
+			}
+		}
+	}
+
 	
 
 

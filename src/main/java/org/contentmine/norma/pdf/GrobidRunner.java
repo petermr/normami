@@ -65,16 +65,16 @@ java
 	public final static String USER_HOME = System.getProperty("user.home");
 	public static final String GROBID_VERSION = USER_HOME + "/" + "workspace/grobid/grobid-0.5.3";
 	public static final String GROBID_JAR = GROBID_VERSION  + "/" + "grobid-core/build/libs/grobid-core-0.5.3-onejar.jar";
-	public static final String JAVA = "/usr/bin/java ";
+	public static final String JAVA = "/usr/bin/java";
 	public static final String TEST_PROG = "/Users/pm286/workspace/cmdev/normami/target/appassembler/bin/ami-pdf";
-	public static final String JAR = " -jar ";
+	public static final String JAR = "-jar";
 //	public final static String JAVA_GROBID = JAVA_JAR + GROBID_JAR;
-	public final static String G_H = " -gH ";
+	public final static String G_H = "-gH";
 	public final static String GROBID_HOME = GROBID_VERSION + "/" + "grobid-home";
-	public final static String D_IN = " -dIn ";
-	public final static String D_OUT = " -dOut ";
-	public final static String TEI_COORDINATES = " -teiCoordinates ";
-	public final static String EXE = " -exe ";
+	public final static String D_IN = "-dIn";
+	public final static String D_OUT = "-dOut";
+	public final static String TEI_COORDINATES = "-teiCoordinates";
+	public final static String EXE = "-exe";
 	
 	/**
 	 exe options
@@ -129,17 +129,17 @@ java
     public void convertPDFToTEI(File inputDir, File outputDir, String option) {
 
     	outputDir.mkdirs();
-    	System.out.println(JAR);
-    	System.out.println(GROBID_JAR + " / " + new File(GROBID_JAR).exists());
-    	System.out.println(G_H);
-    	System.out.println(GROBID_HOME + " / " + new File(GROBID_HOME).exists());
-    	System.out.println(D_IN);
-    	System.out.println(inputDir.getAbsolutePath() + " / " + inputDir.exists());
-    	System.out.println(D_OUT);
-    	System.out.println(outputDir.getAbsolutePath() + " / " + outputDir.exists());
-    	System.out.println(TEI_COORDINATES);
-    	System.out.println(EXE);
-    	System.out.println(option);
+//    	System.out.println(JAR);
+//    	System.out.println(GROBID_JAR + " / " + new File(GROBID_JAR).exists());
+//    	System.out.println(G_H);
+//    	System.out.println(GROBID_HOME + " / " + new File(GROBID_HOME).exists());
+//    	System.out.println(D_IN);
+//    	System.out.println(inputDir.getAbsolutePath() + " / " + inputDir.exists());
+//    	System.out.println(D_OUT);
+//    	System.out.println(outputDir.getAbsolutePath() + " / " + outputDir.exists());
+//    	System.out.println(TEI_COORDINATES);
+//    	System.out.println(EXE);
+//    	System.out.println(option);
     	
 		builder = new ProcessBuilder(
 				getProgram(), 
@@ -160,9 +160,7 @@ java
     }
 
 	protected String getProgram() {
-//		return JAVA; 
-//		return TEST_PROG;
-		return "java";
+		return JAVA; 
 	}
 	
 }

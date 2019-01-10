@@ -2,10 +2,12 @@ package org.contentmine.ami.tools;
 
 import java.io.File;
 
+import org.apache.log4j.Appender;
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.Layout;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.tools.AMICleanTool;
-import org.contentmine.ami.tools.AMIPDFTool;
+import org.apache.log4j.PatternLayout;
 import org.contentmine.cproject.files.CProject;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,8 +17,8 @@ import org.junit.Test;
  * @author pm286
  *
  */
-public class AMIProcessorPDFTest {
-	private static final Logger LOG = Logger.getLogger(AMIProcessorPDFTest.class);
+public class AMIPDFTest {
+	private static final Logger LOG = Logger.getLogger(AMIPDFTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -26,14 +28,23 @@ public class AMIProcessorPDFTest {
 	 * 
 	 */
 	public void testForestPlotsSmall() throws Exception {
-		String[] args = {
-				"-p", "/Users/pm286/workspace/uclforest/forestplotssmall",
-				"--rawfiletypes", "pdf",
-				"--maxpages", "20",
-				"--pdfimages", "false",
-				"--svgpages", "true",
-				};
-		Assert.assertTrue(new File(args[1]).exists());
+
+//		log4j.appender.file=org.apache.log4j.DailyRollingFileAppender
+//				log4j.appender.file.File=${user.home}/logs/app.log
+//				log4j.appender.file.layout=org.apache.log4j.PatternLayout
+//				log4j.appender.file.layout.ConversionPattern=%d [%t] %c %p %m%n
+		String filename = "foo";
+		boolean append = true;
+		Layout layout = new PatternLayout();
+		Appender appender = new FileAppender(layout, filename, append);
+		String args = 
+				"-p /Users/pm286/workspace/uclforest/forestplotssmall"
+				+ " --rawfiletypes pdf"
+				+ " --maxpages 20"
+				+ " --pdfimages false"
+				+ " --svgpages true"
+				;
+//		Assert.assertTrue(new File(args[1]).exists());
 		AMIPDFTool amiProcessorPDF = new AMIPDFTool();
 		amiProcessorPDF.runCommands(args);
 		CProject cProject = amiProcessorPDF.getCProject();
