@@ -54,11 +54,14 @@ devtest
 └── zhengetal_2016
     ├── fulltext.pdf
 [snipped]
+
 ```
 
-## ami-pdf
+## ami-pdf
+
 
 Because our input is PDF, both routes below require the initial analyses by `ami-pdf`.
+
 
 
 This creates:
