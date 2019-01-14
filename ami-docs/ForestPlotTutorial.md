@@ -70,7 +70,7 @@ This creates:
  are numbered as: `image.<page>_<imagenumber>_<coordinates>`. 
 
 ### output
-There are zillions of files! One document creates over 1000 PNGs with 1-pixel in each (we'll remove those later). Here just the first few are shown.
+There are zillions of files! One document creates over 1000 PNGs with 1-pixel in each (we'll remove those later). Here just the first few are shown. `fulltext-page.0.svg` is the first page (though I think we'll change that to 1-indexing) and `image.10.8.322_326.545_552.png` is the 8th image on the 10th page. it's located at (x1=322,x2=326; y1=545,y2=552.png - inclusive), i.e. it's 5 * 8 pixels.
 
  ```
  .
