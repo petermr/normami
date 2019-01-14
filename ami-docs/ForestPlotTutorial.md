@@ -19,7 +19,7 @@ The name `devtest` will be referred to as the `CProject` name. It should have on
 its absolute filename (e.g. `/Users/pm286/workspace/uclforest/devtest`).
 
 ## makeproject
-See (./makeproject.md)[makeproject]
+See [makeproject](./makeproject.md)
 
 This is normally automatic and run **from the parent directory of the <cproject>** 
 ```
