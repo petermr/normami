@@ -5,7 +5,7 @@ Makes a project from raw files in a single (CProject) directory
 ## command
 ```
 ami-makeproject --project foo -rawfiletypes <type1>[,<type2>...]
-
+```
 
 ### commandline help
 Date: 201901134
