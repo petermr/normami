@@ -50,16 +50,19 @@ duplicateDir        duplicates
 ### output 
 Note `cTree` echo.
 
-**`cTree: bowmann-perrottetal_2013`** has a single "small" image
+**`cTree: bowmann-perrottetal_2013`** has many "small" images (decorations)
 ```
 .small: image.10.1.325_329.575_581
 ... 
-
 .small: image.10.9.322_327.547_550
+```
 
-cTree: buzick_stone_2014_readalo
+**`cTree: buzick_stone_2014_readalo`**
+```
 ..
-cTree: campbell_systematic_revie
+```
+**`cTree: campbell_systematic_revie`**
+```
 ......monochrome: image.19.1.63_185.120_313
 .monochrome: image.19.2.210_361.126_313
 .small: image.19.3.74_165.66_96
