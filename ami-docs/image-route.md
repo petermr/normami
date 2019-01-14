@@ -50,7 +50,7 @@ duplicateDir        duplicates
 ### output 
 Note `cTree` echo.
 
-**`cTree: bowmann-perrottetal_2013`** has many "small" images (decorations)
+**`cTree: bowmann-perrottetal_2013`** *has many "small" images (decorations)*
 ```
 .small: image.10.1.325_329.575_581
 ... 
@@ -59,7 +59,7 @@ Note `cTree` echo.
 
 **`cTree: buzick_stone_2014_readalo`**
 
-**`cTree: campbell_systematic_revie`** Not monochrome image/s 
+**`cTree: campbell_systematic_revie`** *Note monochrome image/s* 
 ```
 ......monochrome: image.19.1.63_185.120_313
 .monochrome: image.19.2.210_361.126_313
@@ -74,14 +74,16 @@ Note `cTree` echo.
 ...small: image.1.3.322_568.46_96
 .....small: image.2.1.484_558.90_129
 ..............
-cTree: case_systematic_review_ar
+```
+**`cTree: case_systematic_review_ar`**
 ...duplicate: image.1.3.59_567.1047_1134
 .duplicate: image.1.4.59_567.1047_1134
 [...]
 .small: image.7.8.90_99.651_664
 .small: image.7.9.90_99.669_682
-
-cTree: cole_2014
+```
+**`cTree: cole_2014`**
+```
 ...
 cTree: davis2010_dissertation
 .small: image.111.1.378_404.517_584
@@ -91,38 +93,7 @@ cTree: davis2010_dissertation
 
 cTree: dietrichsonb_gfilgesj_rge
 
-cTree: donkerdeboerkostons2014_l
-.small: image.1.1.446_467.223_243
-.......
-cTree: ergen_canagli_17_
-.....
-cTree: fanetal_2017_meta_science
-......
-cTree: fauzan03
-..................... [...] ..........duplicate: image.87.1.0_3105.-3791_800
-.............
-cTree: goldbergetal03
-.small: image.1.1.289_543.452_485
-[...]
-.small: image.9.2.0_576.47_78
-.small: image.9.3.17_71.733_760
 
-cTree: higginshallbaumfieldmosel
-.small: image.1.1.412_537.11_72
-.......small: image.37.2.125_539.199_230
-.small: image.37.3.125_539.230_261
-.small: image.37.4.125_539.261_291
-.
-cTree: kunkel_2015
-............small: image.190.1.709_727.710_745
-.small: image.191.1.721_739.722_757
-.small: image.192.1.704_723.717_752
-[...]
-.small: image.54.1.659_678.710_745
-...
-cTree: marulis_2010-300-35review
-.small: image.1.1.174_264.460_505
-.small: image.1.2.176_262.542_556
 .
 cTree: mcarthur_etal2012_cochran
 .small: image.1.1.76_538.702_703
