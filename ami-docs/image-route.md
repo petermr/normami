@@ -76,6 +76,7 @@ Note `cTree` echo.
 ..............
 ```
 **`cTree: case_systematic_review_ar`**
+```
 ...duplicate: image.1.3.59_567.1047_1134
 .duplicate: image.1.4.59_567.1047_1134
 [...]
