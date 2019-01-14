@@ -53,6 +53,7 @@ devtest
 │   ├── fulltext.pdf
 └── zhengetal_2016
     ├── fulltext.pdf
+[snipped]
 ```
 
 ## ami-pdf
