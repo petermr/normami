@@ -58,10 +58,7 @@ Note `cTree` echo.
 ```
 
 **`cTree: buzick_stone_2014_readalo`**
-```
-..
-```
-**`cTree: campbell_systematic_revie`**
+**`cTree: campbell_systematic_revie`** Not monochrome image/s 
 ```
 ......monochrome: image.19.1.63_185.120_313
 .monochrome: image.19.2.210_361.126_313
@@ -69,8 +66,10 @@ Note `cTree` echo.
 ...
 ..small: image.72.1.183_317.459_489
 .small: image.93.1.417_446.645_662
+```
 
-cTree: case-systematic-review-ju
+**`cTree: case-systematic-review-ju`**
+```
 ...small: image.1.3.322_568.46_96
 .....small: image.2.1.484_558.90_129
 ..............
