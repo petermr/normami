@@ -142,6 +142,8 @@ The scholarly literature uses both (sometimes on a per-journal basis). We can't 
   * [ami-plot](ami-plot.md)
   * [ami-forest](ami-forest.md)
   
+  The outputs are shown in [image-route](image-route.md)
+  
 ## vector route
 **Vector** processing requires a sequence like:
  
@@ -151,7 +153,8 @@ The scholarly literature uses both (sometimes on a per-journal basis). We can't 
   * [ami-plot](ami-plot.md)
   * [ami-forest](ami-forest.md)
   
-  
+    The outputs are shown in [vector-route](vector-route.md)
+
   
 
 
