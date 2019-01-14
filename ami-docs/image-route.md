@@ -1,12 +1,25 @@
 # Processing images in AMI
 
-This is a tutorial showing the basic steps during the Forest Plot analysis
+This is a tutorial showing the basic steps during the image processing of the Forest Plot corpus
 
 ## ami-image filtering images
 
-```
-MacBook-Pro-3:uclforest pm286$ ami-image -p devtest/
+[ami-image](ami-image.md) filters out these types of image:
 
+ * **duplicates** (often from publisher icons)
+ * **monochrome** (a single colour which is probably a background or cover rectangle)
+ * **small** (images smaller than a given limit. These may be decorations, rules, symbols, maths, etc.) in the worst cases 
+  they are used to create larger images.
+  
+  These are all moved to their own directories and not further processed. They can be inspected, deleted or restored.
+  
+## typical job and output  
+
+### command
+**$ ami-image -p devtest/**
+
+### echo input
+```
 Generic values (AMIImageTool)
 ================================
 basename            null
@@ -14,7 +27,7 @@ cproject            /Users/pm286/workspace/uclforest/devtest
 
 cTree               
 
-cTreeList           [devtest/bowmann-perrottetal_2013, devtest/buzick_stone_2014_readalo, devtest/campbell_systematic_revie, devtest/case-systematic-review-ju, devtest/case_systematic_review_ar, devtest/cole_2014, devtest/davis2010_dissertation, devtest/dietrichsonb_gfilgesj_rge, devtest/donkerdeboerkostons2014_l, devtest/ergen_canagli_17_, devtest/fanetal_2017_meta_science, devtest/fauzan03, devtest/goldbergetal03, devtest/higginshallbaumfieldmosel, devtest/kunkel_2015, devtest/marulis_2010-300-35review, devtest/mcarthur_etal2012_cochran, devtest/paietal_14_meta, devtest/pearson_al05, devtest/puziocolby2013_co-operati, devtest/rui2009_meta_detracking, devtest/shenderovichetal_2016_pub, devtest/steenbergen-hu09, devtest/tamim-2009-effectsoftechn, devtest/torgersonetal_2011dferepo, devtest/zhengetal_2016]
+cTreeList           [devtest/bowmann-perrottetal_2013, devtest/buzick_stone_2014_readalo, devtest/campbell_systematic_revie, devtest/case-systematic-review-ju, [...] devtest/steenbergen-hu09, devtest/tamim-2009-effectsoftechn, devtest/torgersonetal_2011dferepo, devtest/zhengetal_2016]
 dryrun              false
 excludeTrees        null
 file types          []
@@ -33,9 +46,12 @@ discardMonochrome   true
 monochromeDir       monochrome
 discardDuplicates   true
 duplicateDir        duplicates
+```
+### output 
+Note `cTree` echo.
 
-
-cTree: bowmann-perrottetal_2013
+**`cTree: bowmann-perrottetal_2013`** has a single "small" image
+```
 .small: image.10.1.325_329.575_581
 ... 
 
