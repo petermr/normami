@@ -35,20 +35,20 @@ NOTE: `makeproject` **RENAMES** the PDF files to `fulltext.pdf`. If you want to 
 After `makeproject` the CProject structure now looks like:
 
 ```
-.
+devtest
 ├── bowmann-perrottetal_2013
 │   ├── fulltext.pdf
 ├── buzick_stone_2014_readalo
 │   ├── fulltext.pdf
-... snipped
+[snipped]
 ├── kunkel_2015
 │   ├── fulltext.pdf
-├── make_project.json           // LOGFILE of all renamings
+├── make_project.json           
 ├── marulis_2010-300-35review   
 │   ├── fulltext.pdf
 ├── mcarthur_etal2012_cochran
 │   ├── fulltext.pdf
-... snipped
+[snipped]
 ├── torgersonetal_2011dferepo
 │   ├── fulltext.pdf
 └── zhengetal_2016
