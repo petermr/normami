@@ -40,30 +40,7 @@ After `makeproject` the CProject structure now looks like:
 │   ├── fulltext.pdf
 ├── buzick_stone_2014_readalo
 │   ├── fulltext.pdf
-├── campbell_systematic_revie
-│   ├── fulltext.pdf
-├── case-systematic-review-ju
-│   ├── fulltext.pdf
-├── case_systematic_review_ar
-│   ├── fulltext.pdf
-├── cole_2014
-│   ├── fulltext.pdf
-├── davis2010_dissertation
-│   ├── fulltext.pdf
-├── dietrichsonb_gfilgesj_rge
-│   ├── fulltext.pdf
-├── donkerdeboerkostons2014_l
-│   ├── fulltext.pdf
-├── ergen_canagli_17_
-│   ├── fulltext.pdf
-├── fanetal_2017_meta_science
-│   ├── fulltext.pdf
-├── fauzan03
-│   ├── fulltext.pdf
-├── goldbergetal03
-│   ├── fulltext.pdf
-├── higginshallbaumfieldmosel
-│   ├── fulltext.pdf
+... snipped
 ├── kunkel_2015
 │   ├── fulltext.pdf
 ├── make_project.json           // LOGFILE of all renamings
@@ -71,22 +48,7 @@ After `makeproject` the CProject structure now looks like:
 │   ├── fulltext.pdf
 ├── mcarthur_etal2012_cochran
 │   ├── fulltext.pdf
-├── paietal_14_meta
-│   ├── fulltext.pdf
-│   ├── pdfimages
-├── pearson_al05
-│   ├── fulltext.pdf
-│   ├── pdfimages
-├── puziocolby2013_co-operati
-│   ├── fulltext.pdf
-├── rui2009_meta_detracking
-│   ├── fulltext.pdf
-├── shenderovichetal_2016_pub
-│   ├── fulltext.pdf
-├── steenbergen-hu09
-│   ├── fulltext.pdf
-├── tamim-2009-effectsoftechn
-│   ├── fulltext.pdf
+... snipped
 ├── torgersonetal_2011dferepo
 │   ├── fulltext.pdf
 └── zhengetal_2016
@@ -94,11 +56,10 @@ After `makeproject` the CProject structure now looks like:
 ```
 
 ## ami-pdf
+
 Because our input is PDF, both routes below require the initial analyses by `ami-pdf`.
 
-``` 
-ami-pdf -p devtest
-```
+
 This creates:
  * a subdirectory `svg/` with one SVG file per page in the original document: (`fulltext-page-1.svg` ...). The SVG holds the text and the vectors.
  * a sudirectory `pdfimages` which contains all the bitnap images as PNG. Pages can have any nnumber of images (0...) and the image files
@@ -121,7 +82,7 @@ There are zillions of files! One document creates over 1000 PNGs with 1-pixel in
     ├── fulltext-page.0.svg
     ├── fulltext-page.1.svg
     ├── fulltext-page.10.svg
-... snipped
+... snipped - note files are lexically ordered in this display
     ├── fulltext-page.15.svg
     ├── fulltext-page.16.svg
     ├── fulltext-page.2.svg
@@ -137,11 +98,11 @@ There are zillions of files! One document creates over 1000 PNGs with 1-pixel in
 │   └── svg
 │       ├── fulltext-page.0.svg
 │       ├── fulltext-page.1.svg
-... snipped
+... snipped (note that files are lexically ordered and lots are snipped
 │       ├── fulltext-page.8.svg
 │       └── fulltext-page.9.svg
 ├── campbell_systematic_revie
-... articles snipped
+... 20 articles snipped
 └── zhengetal_2016
     ├── fulltext.pdf
     ├── pdfimages
@@ -154,9 +115,7 @@ There are zillions of files! One document creates over 1000 PNGs with 1-pixel in
 ... snipped
         ├── fulltext-page.8.svg
         └── fulltext-page.9.svg
-        ```
-
-
+```
 
 ## Images, text and vectors
 Diagrams are published in two forms:
@@ -167,7 +126,28 @@ Diagrams are published in two forms:
 The scholarly literature uses both (sometimes on a per-journal basis). We can't choose, so we have to support both. In this project we therefore show both routes
 
 ## image route
-Image processing requires a sequence like:
+**Image** processing requires a sequence like:
  
-  * ami-
+  * ami-makeproject
+  * ami-pdf
+  * ami-image
+  * ami-bimap
+  * ami-ocr (if we want to extract text)
+  * ami-pixel (creates lines, etc.)
+  * ami-svg (as we have created SVG from pixel analysis)
+  * ami-plot
+  * ami-forest
+  
+## vector route
+**Vector** processing requires a sequence like:
+ 
+  * ami-makeproject
+  * ami-pdf
+  * ami-svg (as we have created SVG)
+  * ami-plot
+  * ami-forest
+  
+  
+  
+
 
