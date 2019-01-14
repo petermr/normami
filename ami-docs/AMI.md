@@ -112,7 +112,7 @@ See (./ami-pixel.md)[ami-pixel]
 Extracts objects (lines, blocks, etc.) from processed bitmaps 
 
 ### ami-ocr
-See (./ami-ocr.md)[ami-ocr]
+See [ami-ocr](./ami-ocr.md)
 Extracts textfrom processed bitmaps 
 
 ### ami-svg
