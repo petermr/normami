@@ -1,71 +1,21 @@
-# makeproject
-
-Makes a project from raw files in a single (CProject) directory
+# ami-pixel
+Analyzes bitmap images (after image processing) 
 
 ## minimal default command
 ```
-ami-makeproject --project foo -rawfiletypes <type1>[,<type2>...]
+ami-pixel --project foo
 ```
 
 ### commandline help
 Date: 201901134
 
 ```
-Usage: ami-makeproject [OPTIONS]
+ami-pixel
+Usage: ami-pixel [OPTIONS]
 Description
 ===========
-Processes a directory (CProject) containing files (e.g.*.pdf, *.html, *.xml) to
-be made into CTrees.
-Assuming a directory foo/ with files
-
-  a.pdf
-  b.pdf
-  c.html
-  d.xml
-
-makeproject -p foo -f pdf,html,xml
-will create:
-foo/
-  a/
-    fulltext.pdf
-  b/
-    fulltext.pdf
-  c/
-    fulltext.html
-  d/
-    fulltext.xml
-
-The directories can contain multiple filetypes
-
-Assuming a directory foo/ with files
-
-  a.pdf
-  b.pdf
-  a.html
-  b.xml
-  c.pdf
-
-makeproject -p foo -f pdf,html,xml
-will create:
-foo/
-  a/
-    fulltext.pdf
-    fulltext.html
-  b/
-    fulltext.pdf
-    fulltext.xml
-  c/
-    fulltext.pdf
-
-raw filename changes occur in CProject.makeProject()Files with uppercase
-characters, spaces, punctuation, long names, etc. may give problems. By default
-they
-(a) are lowercased,
-(b) have punctuation set to '_'
-(c) are truncated to --length characters.
- If any of these creates ambiguity, then numeric suffixes are added. By default
-a logfile of the conversions is created in make_project.json. The name can be
-changed
+analyzes bitmaps - generally binary, but may be oligochrome. Creates
+pixelIslands
 Options
 =======
       --basename=<userBasename>
@@ -73,9 +23,6 @@ Options
                               png. By default this is computed by AMI. This allows
                               users to create their own variants, but they won't be
                               known by default to subsequentapplications
-      --compress[=<compress>]
-                            compress and lowercase names.
-                              Default: 25
       --dryrun=<dryrun>     for testing runs a single phase without output, deletion
                               or transformation.(NYI).
       --excludetree=<excludeTrees>...
@@ -83,18 +30,47 @@ Options
                               --cproject). Currently must be explicit but we'll add
                               globbing later.
       --forcemake           force 'make' regardless of file existence and dates.
+      --imagefiles=<imageFilenames>
+                            binarized file/s to be processed (I think)
       --includetree=<includeTrees>...
                             include only the CTrees in the list. (only works with
                               --cproject). Currently must be explicit but we'll add
                               globbing later.
+      --islands=<maxIslandCount>
+                            create pixelIslands and tabulate properties of first
+                              $maxIslandCount islands sorted by size.0 means no
+                              anaysis.
+                              Default: 10
       --log4j=<log4j> <log4j>
                             format: <classname> <level>; sets logging level of
                               class, e.g.
                              org.contentmine.ami.lookups.WikipediaDictionary INFO
       --logfile=<logfile>   log file for each tree/file/image analyzed.
+      --maxislands=<maxislands>
+                            maximum number of pixelIslands. Only use if the original
+                              is 'too spotty' and taking far too long. The output is
+                              truncated.
+                              Default: 500
+      --minheight=<minheight>
+                            minimum height range for islands
+                              Default: 30
+      --minwidth=<minwidth> minimum width for islands
+                              Default: 30
+      --outputDirectory=<outputDirname>
+                            subdirectory for output of pixel analysis and diagrams
+                              Default: pixels
       --rawfiletypes=<rawFileFormats>[,<rawFileFormats>...]...
                             suffixes of included files (html, pdf, xml): can be
                               concatenated with commas
+      --rings=<minRingCount>
+                            create pixelRings and tabulate properties. Islands are
+                              only analyzed if they have more than minRingCount.
+                              Default (negative) means analyze none. 0 means all
+                              islands. Only '--islands' count are analyzed
+                              Default: -1
+      --thinning=<thinningName>
+                            Apply thinning () (none, or absence -> no thinning)
+                              Default: none
   -h, --help                Show this help message and exit.
   -p, --cproject[=CProject] CProject (directory) to process
   -t, --ctree[=CTree]       single CTree (directory) to process
@@ -104,7 +80,7 @@ Options
                               Default: []
   -V, --version             Print version information and exit.
 
-Generic values (AMIMakeProjectTool)
+Generic values (AMIPixelTool)
 ================================
 basename            null
 cproject            
@@ -119,6 +95,15 @@ log4j
 logfile             null
 verbose             0
 
-Specific values (AMIMakeProjectTool)
+Specific values (AMIPixelTool)
 ================================
+maxislands           500
+imagefiles           null
+minwidth             30
+minheight            30
+thinning             none
+thinning             none
+maxIslandCount       10
+minRingCount         -1
+outputDirname        pixels/
 ```

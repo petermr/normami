@@ -1,71 +1,20 @@
-# makeproject
+# ami-pdf
 
-Makes a project from raw files in a single (CProject) directory
+converts `fulltext.pdf` files in `<cproject>` to `svg/` and `pdfimages/`directories.
 
-## minimal default command
+## command
 ```
-ami-makeproject --project foo -rawfiletypes <type1>[,<type2>...]
+ami-pdf --project foo 
 ```
 
 ### commandline help
 Date: 201901134
-
 ```
-Usage: ami-makeproject [OPTIONS]
+Usage: ami-pdf [OPTIONS]
 Description
 ===========
-Processes a directory (CProject) containing files (e.g.*.pdf, *.html, *.xml) to
-be made into CTrees.
-Assuming a directory foo/ with files
-
-  a.pdf
-  b.pdf
-  c.html
-  d.xml
-
-makeproject -p foo -f pdf,html,xml
-will create:
-foo/
-  a/
-    fulltext.pdf
-  b/
-    fulltext.pdf
-  c/
-    fulltext.html
-  d/
-    fulltext.xml
-
-The directories can contain multiple filetypes
-
-Assuming a directory foo/ with files
-
-  a.pdf
-  b.pdf
-  a.html
-  b.xml
-  c.pdf
-
-makeproject -p foo -f pdf,html,xml
-will create:
-foo/
-  a/
-    fulltext.pdf
-    fulltext.html
-  b/
-    fulltext.pdf
-    fulltext.xml
-  c/
-    fulltext.pdf
-
-raw filename changes occur in CProject.makeProject()Files with uppercase
-characters, spaces, punctuation, long names, etc. may give problems. By default
-they
-(a) are lowercased,
-(b) have punctuation set to '_'
-(c) are truncated to --length characters.
- If any of these creates ambiguity, then numeric suffixes are added. By default
-a logfile of the conversions is created in make_project.json. The name can be
-changed
+Convert PDFs to SVG-Text, SVG-graphics and Images. Does not process images,
+graphics or text.often followed by ami-image and ami-xml?
 Options
 =======
       --basename=<userBasename>
@@ -73,9 +22,6 @@ Options
                               png. By default this is computed by AMI. This allows
                               users to create their own variants, but they won't be
                               known by default to subsequentapplications
-      --compress[=<compress>]
-                            compress and lowercase names.
-                              Default: 25
       --dryrun=<dryrun>     for testing runs a single phase without output, deletion
                               or transformation.(NYI).
       --excludetree=<excludeTrees>...
@@ -83,6 +29,11 @@ Options
                               --cproject). Currently must be explicit but we'll add
                               globbing later.
       --forcemake           force 'make' regardless of file existence and dates.
+      --imagedir[=IMAGE_DIR]
+                            Directory for Image files created from PDF. Do not
+                              use/change this unless you are testing or developing
+                              AMI as other components rely on this.
+                              Default: pdfimages/
       --includetree=<includeTrees>...
                             include only the CTrees in the list. (only works with
                               --cproject). Currently must be explicit but we'll add
@@ -92,9 +43,26 @@ Options
                               class, e.g.
                              org.contentmine.ami.lookups.WikipediaDictionary INFO
       --logfile=<logfile>   log file for each tree/file/image analyzed.
+      --maxpages[=<maxpages>]
+                            maximum PDF pages. If less than actual pages, will
+                              repeat untill all pages processed. (The normal reason
+                              is that lists get full (pseudo-memory leak, this is a
+                              bug). If you encounter out of memory errors, try
+                              setting this lower.
+                              Default: 25
+      --pages=<pages>...    pages to extract
+      --pdfimages[=<outputPdfImages>]
+                            output PDFImages pages.
       --rawfiletypes=<rawFileFormats>[,<rawFileFormats>...]...
                             suffixes of included files (html, pdf, xml): can be
                               concatenated with commas
+      --svgdir[=<svgDirectoryName>]
+                            Directory for SVG files created from PDF. Do not
+                              use/change this unless you are testing or developing
+                              AMI as other components rely on this.
+                              Default: svg/
+      --svgpages[=<outputSVG>]
+                            output SVG pages.
   -h, --help                Show this help message and exit.
   -p, --cproject[=CProject] CProject (directory) to process
   -t, --ctree[=CTree]       single CTree (directory) to process
@@ -104,7 +72,7 @@ Options
                               Default: []
   -V, --version             Print version information and exit.
 
-Generic values (AMIMakeProjectTool)
+Generic values (AMIPDFTool)
 ================================
 basename            null
 cproject            
@@ -119,6 +87,12 @@ log4j
 logfile             null
 verbose             0
 
-Specific values (AMIMakeProjectTool)
+Specific values (AMIPDFTool)
 ================================
+maxpages            25
+svgDirectoryName    svg/
+outputSVG           true
+imgDirectoryName    pdfimages/
+outputPDFImages     true
+
 ```

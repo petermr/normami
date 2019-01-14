@@ -1,71 +1,22 @@
-# makeproject
+# ami-svg
 
-Makes a project from raw files in a single (CProject) directory
+Converts raw SVG (from PDFs) into HTML, graphics (vectors) etc.
 
 ## minimal default command
 ```
-ami-makeproject --project foo -rawfiletypes <type1>[,<type2>...]
+ami-svg --project foo
 ```
 
 ### commandline help
 Date: 201901134
 
 ```
-Usage: ami-makeproject [OPTIONS]
+ami-svg
+Usage: ami-svg [OPTIONS]
 Description
 ===========
-Processes a directory (CProject) containing files (e.g.*.pdf, *.html, *.xml) to
-be made into CTrees.
-Assuming a directory foo/ with files
-
-  a.pdf
-  b.pdf
-  c.html
-  d.xml
-
-makeproject -p foo -f pdf,html,xml
-will create:
-foo/
-  a/
-    fulltext.pdf
-  b/
-    fulltext.pdf
-  c/
-    fulltext.html
-  d/
-    fulltext.xml
-
-The directories can contain multiple filetypes
-
-Assuming a directory foo/ with files
-
-  a.pdf
-  b.pdf
-  a.html
-  b.xml
-  c.pdf
-
-makeproject -p foo -f pdf,html,xml
-will create:
-foo/
-  a/
-    fulltext.pdf
-    fulltext.html
-  b/
-    fulltext.pdf
-    fulltext.xml
-  c/
-    fulltext.pdf
-
-raw filename changes occur in CProject.makeProject()Files with uppercase
-characters, spaces, punctuation, long names, etc. may give problems. By default
-they
-(a) are lowercased,
-(b) have punctuation set to '_'
-(c) are truncated to --length characters.
- If any of these creates ambiguity, then numeric suffixes are added. By default
-a logfile of the conversions is created in make_project.json. The name can be
-changed
+Takes raw SVG from PDF2SVG and converts into structured HTML and higher
+graphics primitives.
 Options
 =======
       --basename=<userBasename>
@@ -73,9 +24,9 @@ Options
                               png. By default this is computed by AMI. This allows
                               users to create their own variants, but they won't be
                               known by default to subsequentapplications
-      --compress[=<compress>]
-                            compress and lowercase names.
-                              Default: 25
+      --caches=<cacheList>...
+                            caches to process/create; values: line, page, path,
+                              rect, text
       --dryrun=<dryrun>     for testing runs a single phase without output, deletion
                               or transformation.(NYI).
       --excludetree=<excludeTrees>...
@@ -92,9 +43,27 @@ Options
                               class, e.g.
                              org.contentmine.ami.lookups.WikipediaDictionary INFO
       --logfile=<logfile>   log file for each tree/file/image analyzed.
+      --pages=<pageList>... pages to extract
       --rawfiletypes=<rawFileFormats>[,<rawFileFormats>...]...
                             suffixes of included files (html, pdf, xml): can be
                               concatenated with commas
+      --regex=<regexList>...
+                            regexes to search for in svg pages. format
+                              (integerWeight space regex).If regex starts with
+                              uppercase (e.g. Hedge's) forces case sensitivity ,
+                              else case-insensitive
+      --regexfile=<regexFilename>
+                            file to read (weight-regex) pairs from. May contain
+                              ${CM_ANCILLARY} variable
+      --tidysvg=<tidyList>...
+                            tidy SVG (Valid values: emptypath, nomove, nullmove)
+      --vectordir=<vectorDirname>
+                            output pages with SVG vectors to <directory>
+                              Default: vectors/
+      --vectorlog=<vectorLog>
+                            file to contain statistics on vectors (probably diagrams
+                              or tables)
+                              Default: vectors.log
   -h, --help                Show this help message and exit.
   -p, --cproject[=CProject] CProject (directory) to process
   -t, --ctree[=CTree]       single CTree (directory) to process
@@ -104,7 +73,7 @@ Options
                               Default: []
   -V, --version             Print version information and exit.
 
-Generic values (AMIMakeProjectTool)
+Generic values (AMISVGTool)
 ================================
 basename            null
 cproject            
@@ -119,6 +88,13 @@ log4j
 logfile             null
 verbose             0
 
-Specific values (AMIMakeProjectTool)
+Specific values (AMISVGTool)
 ================================
+pages                null
+regexes              null
+regexfile            null
+tidyList             null
+vectorLogfilename    vectors.log
+vectorDir            vectors/
+
 ```

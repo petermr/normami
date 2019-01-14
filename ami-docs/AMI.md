@@ -85,7 +85,11 @@ For a typical command (e.g. `AMIPDFTool`):
 The `ami` stack currently (20190109) contains at least the following commands:
 
 ### ami-makeproject
+<<<<<<< HEAD
 See [makeproject](./makeproject.md)
+=======
+See [make-project](./make-project.md)
+>>>>>>> fda063b24934e5ad80002bcb67190ad6670ccc88
 Takes a set of PDF (HTML, XML) files and converts each into a subdirectory `CTree` with child `fulltext.pdf` (`xml`, `html`). The subdirectory name is normalised to remove whitespace and punctuation.
 ### ami-pdf
 See [ami-pdf](./ami-pdf.md)
@@ -117,7 +121,7 @@ Extracts textfrom processed bitmaps
 
 ### ami-svg
 See [ami-svg](./ami-svg.md)
-processes the from PDF into HTML and vector graphics objects.
+processes the SVG created from PDF into HTML and vercor graphics objects (NYI) 
   
 ### ami-forest (and similar)
 See [ami-forest](./ami-forest.md)

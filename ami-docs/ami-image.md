@@ -1,71 +1,22 @@
-# makeproject
+# ami-image
 
-Makes a project from raw files in a single (CProject) directory
+Filters unsuitable images (e.g. too small, monochrome, duplicates).
 
-## minimal default command
+## minimal command
 ```
-ami-makeproject --project foo -rawfiletypes <type1>[,<type2>...]
+ami-image --project foo 
 ```
 
 ### commandline help
 Date: 201901134
-
-```
-Usage: ami-makeproject [OPTIONS]
+ami-image
+Usage: ami-image [OPTIONS]
 Description
 ===========
-Processes a directory (CProject) containing files (e.g.*.pdf, *.html, *.xml) to
-be made into CTrees.
-Assuming a directory foo/ with files
-
-  a.pdf
-  b.pdf
-  c.html
-  d.xml
-
-makeproject -p foo -f pdf,html,xml
-will create:
-foo/
-  a/
-    fulltext.pdf
-  b/
-    fulltext.pdf
-  c/
-    fulltext.html
-  d/
-    fulltext.xml
-
-The directories can contain multiple filetypes
-
-Assuming a directory foo/ with files
-
-  a.pdf
-  b.pdf
-  a.html
-  b.xml
-  c.pdf
-
-makeproject -p foo -f pdf,html,xml
-will create:
-foo/
-  a/
-    fulltext.pdf
-    fulltext.html
-  b/
-    fulltext.pdf
-    fulltext.xml
-  c/
-    fulltext.pdf
-
-raw filename changes occur in CProject.makeProject()Files with uppercase
-characters, spaces, punctuation, long names, etc. may give problems. By default
-they
-(a) are lowercased,
-(b) have punctuation set to '_'
-(c) are truncated to --length characters.
- If any of these creates ambiguity, then numeric suffixes are added. By default
-a logfile of the conversions is created in make_project.json. The name can be
-changed
+FILTERs images (initally from PDFimages), but does not transform the contents.
+Services include<ul>  <li>identification of duplicate images, and removal<.
+li><li>rejection of images less than gven size</li><li>rejection of monochrome
+images (e.g. all white or all black) (NB black and white is 'binary/ized'</ul>
 Options
 =======
       --basename=<userBasename>
@@ -73,11 +24,13 @@ Options
                               png. By default this is computed by AMI. This allows
                               users to create their own variants, but they won't be
                               known by default to subsequentapplications
-      --compress[=<compress>]
-                            compress and lowercase names.
-                              Default: 25
       --dryrun=<dryrun>     for testing runs a single phase without output, deletion
                               or transformation.(NYI).
+      --duplicatedir=<duplicateDirname>
+                            directory for duplicates.
+                              Default: duplicates
+      --duplicates=<discardDuplicates>
+                            discard duplicate images
       --excludetree=<excludeTrees>...
                             exclude the CTrees in the list. (only works with
                               --cproject). Currently must be explicit but we'll add
@@ -92,9 +45,22 @@ Options
                               class, e.g.
                              org.contentmine.ami.lookups.WikipediaDictionary INFO
       --logfile=<logfile>   log file for each tree/file/image analyzed.
+      --minheight=<minHeight>
+                            minimum height (pixels) to accept
+                              Default: 100
+      --minwidth=<minWidth> minimum width (pixels) to accept
+                              Default: 100
+      --monochrome=<discardMonochrome>
+                            discard monochrome images (i.r. only one color)
+      --monochromedir=<monochromeDirname>
+                            directory for monochrome images
+                              Default: monochrome
       --rawfiletypes=<rawFileFormats>[,<rawFileFormats>...]...
                             suffixes of included files (html, pdf, xml): can be
                               concatenated with commas
+      --smalldir=<smallDirname>
+                            directory for small images.
+                              Default: small
   -h, --help                Show this help message and exit.
   -p, --cproject[=CProject] CProject (directory) to process
   -t, --ctree[=CTree]       single CTree (directory) to process
@@ -104,7 +70,7 @@ Options
                               Default: []
   -V, --version             Print version information and exit.
 
-Generic values (AMIMakeProjectTool)
+Generic values (AMIImageTool)
 ================================
 basename            null
 cproject            
@@ -119,6 +85,12 @@ log4j
 logfile             null
 verbose             0
 
-Specific values (AMIMakeProjectTool)
+Specific values (AMIImageTool)
 ================================
-```
+minHeight           100
+minWidth            100
+smalldir            small
+discardMonochrome   true
+monochromeDir       monochrome
+discardDuplicates   true
+duplicateDir        duplicates
