@@ -2,7 +2,7 @@
 
 Makes a project from raw files in a single (CProject) directory
 
-## command
+## minimal default command
 ```
 ami-makeproject --project foo -rawfiletypes <type1>[,<type2>...]
 ```
