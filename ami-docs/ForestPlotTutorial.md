@@ -21,14 +21,78 @@ its absolute filename (e.g. `ami-pdf -p /Users/pm286/workspace/uclforest/devtest
 ## makeproject
 See [makeproject](./makeproject.md)
 
-This is normally automatic and run **from the parent directory of the <cproject>** 
+This is normally automatic and run **from the parent directory of the cproject** 
+  
 ```
 cd devtest
 cd ..
 ami-makeproject -p devtest -rawfiletypes pdf
 ```
+  
 NOTE: `makeproject` **RENAMES** the PDF files to `fulltext.pdf`. If you want to kep the originals, copy the whole directory as a backup.
   
+### output
+After `makeproject` the CProject structure now looks like:
+
+```
+.
+├── bowmann-perrottetal_2013
+│   ├── fulltext.pdf
+├── buzick_stone_2014_readalo
+│   ├── fulltext.pdf
+├── campbell_systematic_revie
+│   ├── fulltext.pdf
+├── case-systematic-review-ju
+│   ├── fulltext.pdf
+├── case_systematic_review_ar
+│   ├── fulltext.pdf
+├── cole_2014
+│   ├── fulltext.pdf
+├── davis2010_dissertation
+│   ├── fulltext.pdf
+├── dietrichsonb_gfilgesj_rge
+│   ├── fulltext.pdf
+├── donkerdeboerkostons2014_l
+│   ├── fulltext.pdf
+├── ergen_canagli_17_
+│   ├── fulltext.pdf
+├── fanetal_2017_meta_science
+│   ├── fulltext.pdf
+├── fauzan03
+│   ├── fulltext.pdf
+├── goldbergetal03
+│   ├── fulltext.pdf
+├── higginshallbaumfieldmosel
+│   ├── fulltext.pdf
+├── kunkel_2015
+│   ├── fulltext.pdf
+├── make_project.json           // LOGFILE of all renamings
+├── marulis_2010-300-35review   
+│   ├── fulltext.pdf
+├── mcarthur_etal2012_cochran
+│   ├── fulltext.pdf
+├── paietal_14_meta
+│   ├── fulltext.pdf
+│   ├── pdfimages
+├── pearson_al05
+│   ├── fulltext.pdf
+│   ├── pdfimages
+├── puziocolby2013_co-operati
+│   ├── fulltext.pdf
+├── rui2009_meta_detracking
+│   ├── fulltext.pdf
+├── shenderovichetal_2016_pub
+│   ├── fulltext.pdf
+├── steenbergen-hu09
+│   ├── fulltext.pdf
+├── tamim-2009-effectsoftechn
+│   ├── fulltext.pdf
+├── torgersonetal_2011dferepo
+│   ├── fulltext.pdf
+└── zhengetal_2016
+    ├── fulltext.pdf
+```
+
 ## ami-pdf
 Because our input is PDF, both routes below require the initial analyses by `ami-pdf`.
 
@@ -39,7 +103,58 @@ This creates:
  * a subdirectory `svg/` with one SVG file per page in the original document: (`fulltext-page-1.svg` ...). The SVG holds the text and the vectors.
  * a sudirectory `pdfimages` which contains all the bitnap images as PNG. Pages can have any nnumber of images (0...) and the image files
  are numbered as: `image.<page>_<imagenumber>_<coordinates>`. 
- 
+
+### output
+There are zillions of files! One document creates over 1000 PNGs with 1-pixel in each (we'll remove those later). Here just the first few are shown.
+
+ ```
+ .
+├── bowmann-perrottetal_2013
+│   ├── fulltext.pdf
+│   ├── pdfimages
+│   │   ├── image.10.1.325_329.575_581.png
+│   │   ├── image.10.10.325_328.530_537.png
+... many files - ca 100 - omitted. They are simply page decorations and will be removed
+│   │   ├── image.10.8.322_326.545_552.png
+│   │   └── image.10.9.322_327.547_550.png
+│   └── svg
+    ├── fulltext-page.0.svg
+    ├── fulltext-page.1.svg
+    ├── fulltext-page.10.svg
+... snipped
+    ├── fulltext-page.15.svg
+    ├── fulltext-page.16.svg
+    ├── fulltext-page.2.svg
+    ├── fulltext-page.3.svg
+... snipped
+├── fulltext-page.8.svg
+    └── fulltext-page.9.svg
+├── buzick_stone_2014_readalo
+│   ├── fulltext.pdf
+│   ├── pdfimages
+│   │   ├── image.5.1.94_527.51_584.png
+│   │   └── image.6.1.91_512.50_408.png
+│   └── svg
+│       ├── fulltext-page.0.svg
+│       ├── fulltext-page.1.svg
+... snipped
+│       ├── fulltext-page.8.svg
+│       └── fulltext-page.9.svg
+├── campbell_systematic_revie
+... articles snipped
+└── zhengetal_2016
+    ├── fulltext.pdf
+    ├── pdfimages
+    │   ├── image.13.1.71_336.262_680.png
+    │   ├── image.14.1.64_356.227_445.png
+    │   └── image.9.1.76_368.225_560.png
+    └── svg
+        ├── fulltext-page.0.svg
+        ├── fulltext-page.1.svg
+... snipped
+        ├── fulltext-page.8.svg
+        └── fulltext-page.9.svg
+        ```
 
 
 
