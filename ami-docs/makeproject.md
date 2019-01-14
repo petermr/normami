@@ -57,7 +57,7 @@ foo/
   c/
     fulltext.pdf
 
- raw filename changes occur in CProject.makeProject()Files with uppercase
+raw filename changes occur in CProject.makeProject()Files with uppercase
 characters, spaces, punctuation, long names, etc. may give problems. By default
 they
 (a) are lowercased,
@@ -65,7 +65,7 @@ they
 (c) are truncated to --length characters.
  If any of these creates ambiguity, then numeric suffixes are added. By default
 a logfile of the conversions is created in make_project.json. The name can be
-cahnged
+changed
 Options
 =======
       --basename=<userBasename>
