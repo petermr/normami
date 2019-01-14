@@ -64,7 +64,15 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	
+
+    @Option(names = {"--basename"}, 
+    		arity="1",
+    		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png. By default this is computed by AMI."
+    				+ " This allows users to create their own variants, but they won't be known by default to subsequent"
+    				+ "applications"
+    		)
+	protected String userBasename;
+
     @Option(names = {"-p", "--cproject"}, 
 		arity = "0..1",
 		paramLabel="CProject",
@@ -79,19 +87,17 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		description = "single CTree (directory) to process")
     protected String cTreeDirectory = null;
 
-    @Option(names = {"--basename"}, 
-    		arity="1",
-    		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png. By default this is computed by AMI."
-    				+ " This allows users to create their own variants, but they won't be known by default to subsequent"
-    				+ "applications"
-    		)
-	protected String userBasename;
-
     @Option(names = {"--dryrun"}, 
     		arity="1",
     		description = "for testing runs a single phase without output, deletion or transformation.(NYI)."
     		)
 	protected Boolean dryrun = false;
+
+    @Option(names = {"--forcemake"}, 
+    		arity="0",
+    		description = "force 'make' regardless of file existence and dates."
+    		)
+	protected Boolean forceMake = false;
 
     @Option(names = {"--excludetree"}, 
     		arity="1..*",
@@ -308,6 +314,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
         System.out.println("dryrun              " + dryrun);
         System.out.println("excludeTrees        " + excludeTrees);
         System.out.println("file types          " + Util.toStringList(rawFileFormats));
+        System.out.println("forceMake           " + forceMake);
         System.out.println("includeTrees        " + includeTrees);
         System.out.println("log4j               " + (log4j == null ? "" : new ArrayList<String>(Arrays.asList(log4j))));
         System.out.println("logfile             " + logfile);

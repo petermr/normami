@@ -85,20 +85,20 @@ For a typical command (e.g. `AMIPDFTool`):
 The `ami` stack currently (20190109) contains at least the following commands:
 
 ### ami-makeproject
-See (./make-project.md)[make-project]
+See [makeproject](./makeproject.md)
 Takes a set of PDF (HTML, XML) files and converts each into a subdirectory `CTree` with child `fulltext.pdf` (`xml`, `html`). The subdirectory name is normalised to remove whitespace and punctuation.
 ### ami-pdf
-See (./ami-pdf.md)[ami-pdf]
+See [ami-pdf](./ami-pdf.md)
 Processes `fulltext.pdf` (in `cTree` or `CProject`) to create:
 
   * svg/ with page-%d.svg for each page in document
   * pdfimages/ with image%d.png for every embedded image
  
 ### ami-image 
-See (./ami-image.md)[ami-image]
+See [ami-image](./ami-image.md)
 Filters (but does not edit) `pdfimages/image%d.png` above into various subdirectories (e.g. `monochrome`, `small`, etc).
 ### ami-bitmap
-See (./ami-bitmap.md)[ami-bitmap]
+See [ami-bitmap](./ami-bitmap.md)
 Performs image processing on the retained *.png such as 
 
   * thresholding
@@ -108,19 +108,19 @@ Performs image processing on the retained *.png such as
   * dilating/eroding
   
 ### ami-pixel
-See (./ami-pixel.md)[ami-pixel]
+See [ami-pixel](./ami-pixel.md)
 Extracts objects (lines, blocks, etc.) from processed bitmaps 
 
 ### ami-ocr
-See (./ami-ocr.md)[ami-ocr]
+See [ami-ocr](./ami-ocr.md)
 Extracts textfrom processed bitmaps 
 
 ### ami-svg
-See (./ami-svg.md)[ami-svg]
-processes the from PDF into HTML and vertor graphics objects (NYI) 
+See [ami-svg](./ami-svg.md)
+processes the from PDF into HTML and vector graphics objects.
   
 ### ami-forest (and similar)
-See (./ami-forest.md)[ami-forest]
+See [ami-forest](./ami-forest.md)
 Analyzes bitmaps and vector graphics as Forest plots (NYI)
 
 

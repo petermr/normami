@@ -129,18 +129,6 @@ java
     public void convertPDFToTEI(File inputDir, File outputDir, String option) {
 
     	outputDir.mkdirs();
-//    	System.out.println(JAR);
-//    	System.out.println(GROBID_JAR + " / " + new File(GROBID_JAR).exists());
-//    	System.out.println(G_H);
-//    	System.out.println(GROBID_HOME + " / " + new File(GROBID_HOME).exists());
-//    	System.out.println(D_IN);
-//    	System.out.println(inputDir.getAbsolutePath() + " / " + inputDir.exists());
-//    	System.out.println(D_OUT);
-//    	System.out.println(outputDir.getAbsolutePath() + " / " + outputDir.exists());
-//    	System.out.println(TEI_COORDINATES);
-//    	System.out.println(EXE);
-//    	System.out.println(option);
-    	
 		builder = new ProcessBuilder(
 				getProgram(), 
 				JAR,
@@ -152,7 +140,6 @@ java
 				EXE, option
 				);
         try {
-//        	builder.start();
 			runBuilderAndCleanUp();
 		} catch (Exception e) {
 			throw new RuntimeException("Cannot run Grobid: ", e);

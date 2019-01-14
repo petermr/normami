@@ -1,6 +1,7 @@
 package org.contentmine.ami.tools;
 
 import java.io.File;
+import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -60,7 +61,15 @@ public class AMIPDFTool extends AbstractAMITool {
    		    		+ "or developing AMI as other components rely on this."
     		)
     private String svgDirectoryName = "svg/";
-    
+
+    /** this should be a Mixin, with SVGTool
+     * NYI
+     */
+    @Option(names = {"--pages"},
+    		arity = "1..*",
+            description = "pages to extract")
+    private List<Integer> pages = null;
+
     @Option(names = {"--svgpages"}, 
     		arity="0..1",
    		    description = "output SVG pages. "
@@ -122,6 +131,7 @@ public class AMIPDFTool extends AbstractAMITool {
 		pdfDocumentProcessor.setOutputPDFImages(outputPdfImages);
 		pdfDocumentProcessor.setMaxPages(maxpages);
         cTree.setPDFDocumentProcessor(pdfDocumentProcessor);
+        cTree.setForceMake(forceMake);
 		cTree.processPDFTree();
     }
 

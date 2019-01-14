@@ -94,4 +94,43 @@ public class AMIPDFTest {
 		amiProcessorPDF.runCommands(args);
 	}
 
+	@Test
+	/** 
+	 * convert whole project; 
+	 */
+	public void testDevProject() throws Exception {
+		String args = ""
+				+ "-p /Users/pm286/workspace/uclforest/dev/"
+				+ " --forcemake"
+				+ " --pdfimages true"
+			;
+		new AMIPDFTool().runCommands(args);
+	}
+
+
+	@Test
+	/** 
+	 * pearson did not emit vectors for page 18
+	 * FIXED kludged 
+	 */
+	public void testVectorBug() throws Exception {
+		String args = ""
+				+ "-t /Users/pm286/workspace/uclforest/dev/pearson"
+				+ " --forcemake"
+			;
+		new AMIPDFTool().runCommands(args);
+	}
+
+	@Test
+	/** 
+	 * campbell has implicit Move - not properly treated yet
+	 */
+	public void testVectorBugCampbell() throws Exception {
+		String args = ""
+				+ "-t /Users/pm286/workspace/uclforest/dev/campbell"
+				+ " --forcemake"
+			;
+		new AMIPDFTool().runCommands(args);
+	}
+
 }

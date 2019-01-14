@@ -15,8 +15,8 @@ import junit.framework.Assert;
  * @author pm286
  *
  */
-public class AMICleanerTest {
-	private static final Logger LOG = Logger.getLogger(AMICleanerTest.class);
+public class AMICleanTest {
+	private static final Logger LOG = Logger.getLogger(AMICleanTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}

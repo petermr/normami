@@ -1,7 +1,10 @@
 package org.contentmine.ami.tools;
 
+import java.io.InputStream;
+
 import org.contentmine.ami.MyCommand;
 import org.contentmine.ami.ReusableOptions;
+import org.contentmine.cproject.util.CMineUtil;
 import org.junit.Test;
 
 import picocli.CommandLine;
@@ -25,6 +28,23 @@ public class AbstractAMITest {
 //		System.err.println("VVV "+zip.myMixin.verbosityx.length);
 //		System.out.println("WOM "+zip.myMixin.vombatus);
 	
+	}
+	
+	@Test
+	public void testPython() throws Exception {
+//		ProcessBuilder builder = new ProcessBuilder("java", "-version");
+		String[] args = {"java", "-version"};
+		CMineUtil.runProcess(args, (InputStream) null);
+		
+		args = new String[]{"python", "--help"};
+		CMineUtil.runProcess(args, (InputStream) null);
+		
+//		args = new String[]{"node", "--help"};
+//		CMineUtil.runProcess(args, (InputStream) null);
+		
+		args = new String[]{"bashx", "-xx"};
+		CMineUtil.runProcess(args, (InputStream) null);
+		
 	}
 
 }

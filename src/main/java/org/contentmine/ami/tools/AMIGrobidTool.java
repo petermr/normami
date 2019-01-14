@@ -116,7 +116,7 @@ public class AMIGrobidTool extends AbstractAMITool {
 		outputDir = new File(cTree.getDirectory(), "tei/");
 		outputDir.mkdirs();
 		File outputFile = new File(outputDir, FULLTEXT_TEI_XML);
-		if (CMFileUtil.shouldMake(outputFile , false, inputFile)) { 
+		if (CMFileUtil.shouldMake(forceMake, outputFile , false, inputFile)) { 
 			GrobidRunner grobidRunner = new GrobidRunner();
 			grobidRunner.setTryCount(200); // fix this later
 			grobidRunner.convertPDFToTEI(inputDir, outputDir, exeOption);
@@ -126,7 +126,7 @@ public class AMIGrobidTool extends AbstractAMITool {
 	private void convertTEIToHtml() {
 		File inputFile = new File(outputDir, FULLTEXT_TEI_XML);
 		File outputFile = new File(outputDir, FULLTEXT_TEI_HTML);
-		if (true || CMFileUtil.shouldMake(outputFile , false, inputFile)) { 
+		if (true || CMFileUtil.shouldMake(forceMake, outputFile , false, inputFile)) { 
 			TEI2HtmlConverter converter = new TEI2HtmlConverter();
 			HtmlHtml html = converter.createHtmlElement(inputFile);
 			if (html != null) {

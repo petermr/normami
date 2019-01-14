@@ -244,7 +244,8 @@ public class NormaTransformer {
 		if (inputFile != null && inputFile.exists()) {
 			try {
 				boolean debug = /*true*/ false;
-				if (CMFileUtil.shouldMake( outputFile , debug, inputFile)) { 
+				boolean forceMake = false;
+				if (CMFileUtil.shouldMake(forceMake, outputFile , debug, inputFile)) { 
 					transformSingleInput(inputFile);
 				} else {
 					if (debug) {

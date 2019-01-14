@@ -16,7 +16,7 @@
 	    <java.target.version>1.8</java.target.version>
 	    <javax.ws.rs.version>2.1</javax.ws.rs.version>
 	    <lucene.version>4.10.3</lucene.version>
- 	    <picocli.version>3.8.0</picocli.version>
+ 	    <picocli.version>3.9.1</picocli.version>
  	    <resteasy.client>3.6.1.Final</resteasy.client>
 	    <Saxon-HE.version>9.6.0-3</Saxon-HE.version>
         <surefire.version>2.12.4</surefire.version>
@@ -125,6 +125,11 @@
                             <id>ami-image</id>
                         </program>
                          <program>
+                            <mainClass>org.contentmine.ami.tools.AMIGrobidTool</mainClass>
+							<!-- description: process PDF with Grobid -->
+                            <id>ami-grobid</id>
+                        </program>
+                         <program>
                             <mainClass>org.contentmine.ami.tools.AMIOCRTool</mainClass>
 							<!-- description: process images -->
                             <id>ami-ocr</id>
@@ -139,6 +144,12 @@
 							<!-- description: process images -->
                             <id>ami-pixel</id>
                         </program>
+                        <program>
+                            <mainClass>org.contentmine.ami.tools.AMISVGTool</mainClass>
+							<!-- description: processes SVG (e.g. created by ami-pdf -->
+                            <id>ami-svg</id>
+                        </program>
+                        
                         
 
                          <program>

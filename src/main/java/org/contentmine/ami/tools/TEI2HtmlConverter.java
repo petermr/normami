@@ -20,6 +20,21 @@ import nu.xom.Element;
 import nu.xom.Elements;
 
 public class TEI2HtmlConverter {
+	private static final String WHEN = "when";
+	private static final String KEY = "key";
+	private static final String ORG_NAME = "orgName";
+	private static final String SURNAME = "surname";
+	private static final String TYPE = "type";
+	private static final String FORENAME = "forename";
+	private static final String AFFILIATION = "affiliation";
+	private static final String FROM = "from";
+	private static final String TO = "to";
+	private static final String ISSUE = "issue";
+	private static final String PAGE = "page";
+	private static final String VOLUME = "volume";
+	private static final String UNIT = "unit";
+	private static final String PUB_PLACE = "pubPlace";
+	private static final String PERS_NAME = "persName";
 	private static final String BODY_BACK = "bodyBack";
 	private static final String BIBL_SCOPE = "biblScope";
 	private static final String IMPRINT = "imprint";
@@ -38,7 +53,6 @@ public class TEI2HtmlConverter {
 	private static final String BIBL_STRUCT = "biblStruct";
 	private static final String LIST_BIBL = "listBibl";
 	private static final String HEAD = "head";
-	private static final String TYPE = "type";
 	private static final Logger LOG = Logger.getLogger(TEI2HtmlConverter.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -77,7 +91,8 @@ public class TEI2HtmlConverter {
 		HtmlHtml htmlHtml = createHtmlHtml(teiElement);
 		htmlHead = htmlHtml.getOrCreateHead();
 		HtmlStyle htmlStyle = htmlHead.addCssStyle(""
-				+ "div {background : pink;"
+				+ "*   {font-family:helvetica;}"
+				+ "div {background : #ffffee;"
 				+ "     margin-top : 3px;"
 				+ "     margin-left : 2px;"
 				+ "     border : 1px solid black;}"
@@ -85,9 +100,11 @@ public class TEI2HtmlConverter {
 				+ "    font-weight:bold;"
 				+ "    background:white;}"
 				+ "li {background : yellow}"
-				+ ".titleStmt {background : cyan}"
-				+ ".sourceDesc {background : gray}"
-				+ ".profileDesc {background : lightblue;}"
+				+ ".titleStmt {background : #ffeeff;"
+				+ "    font-size:32px;"
+				+ "    font-weight:bold;}"
+				+ ".sourceDesc {background : #dddddd;}"
+				+ ".profileDesc {background : #eeeeff;}"
 				+ "    ref {background:#ddffdd;}"
 				);
 		htmlStyle.addCss("li {background : yellow}");
@@ -227,7 +244,7 @@ public class TEI2HtmlConverter {
 	 */
 	private HtmlDiv processEncodingDesc(Element element) {
 		Elements childElements = element.getChildElements();
-		HtmlDiv div = createDivWithValue(element);
+		HtmlDiv div = createEmptyDivWithClass(element);
 		for (int i = 0; i < childElements.size(); i++) {
 			HtmlElement subDiv;
 			Element childElement = childElements.get(i);
@@ -283,7 +300,7 @@ public class TEI2HtmlConverter {
 */
 	private HtmlDiv processFileDesc(Element element) {
 		Elements childElements = element.getChildElements();
-		HtmlDiv div = createDivWithValue(element);
+		HtmlDiv div = createEmptyDivWithClass(element);
 		for (int i = 0; i < childElements.size(); i++) {
 			Element childElement = childElements.get(i);
 			String tag = childElement.getLocalName();
@@ -317,7 +334,7 @@ public class TEI2HtmlConverter {
 //		System.out.println(">availability> "+getSingleChildValue(childElement, AVAILABILITY));
 //		System.out.println(">date> "+getSingleChildValue(childElement, DATE));
 		Elements childElements = element.getChildElements();
-		HtmlDiv div = createDivWithValue(element);
+		HtmlDiv div = createEmptyDivWithClass(element);
 		for (int i = 0; i < childElements.size(); i++) {
 			Element childElement = childElements.get(i);
 			String tag = childElement.getLocalName();
@@ -478,7 +495,7 @@ Elementary
 	</text>	 */
 
 	private HtmlElement processText(Element element) {
-		HtmlDiv bodyBack = createDivWithValue(element);
+		HtmlDiv bodyBack = createEmptyDivWithClass(element);
 		bodyBack.setClassAttribute(BODY_BACK);
 		Elements childElements = element.getChildElements();
 		for (int i = 0; i < childElements.size(); i++) {
@@ -572,7 +589,7 @@ Elementary
 	 */
 	private HtmlDiv processBody(Element element) {
 		Elements childElements = element.getChildElements();
-		HtmlDiv div = createDivWithValue(element);
+		HtmlDiv div = createEmptyDivWithClass(element);
 		for (int i = 0; i < childElements.size(); i++) {
 			Element childElement = childElements.get(i);
 			String tag = childElement.getLocalName();
@@ -635,11 +652,6 @@ Elementary
 	private HtmlElement processFigure(Element element) {
 		return createDivWithValue(element);
 	}
-
-//	private void processBodyNote(Element noteElement) {
-//		System.out.println("" + noteElement.toXML());
-//	}
-
 
 	/**
 		<back>
@@ -743,23 +755,6 @@ Elementary
 
 	 */
 
-//	private HtmlElement process(Element element) {
-//		Elements childElements = element.getChildElements();
-//		HtmlDiv div = new HtmlDiv();
-//		for (int i = 0; i < childElements.size(); i++) {
-//			Element childElement = childElements.get(i);
-//			String tag = childElement.getLocalName();
-//			HtmlElement divSpan = null;
-//			if (tag.equals(LIST_BIBL)) {
-//				divSpan = processListBibl(childElement);
-//			} else {
-//				divSpan = processUnknown(childElement, element.getLocalName())
-//			}
-//			div.appendChild(divSpan);
-//		}
-//		return div;
-//	}
-
 	private HtmlElement processListBibl(Element element) {
 		HtmlUl ul = new HtmlUl(); 
 		Elements childElements = element.getChildElements();
@@ -782,7 +777,6 @@ Elementary
 
 
 	private HtmlLi processBiblStruct(Element biblStructElement) {
-		System.err.println("BIBLSTRUCT");
 		HtmlLi li = new HtmlLi();
 		Elements childElements = biblStructElement.getChildElements();
 		for (int i = 0; i < childElements.size(); i++) {
@@ -804,8 +798,7 @@ Elementary
 	}
 
 	private HtmlDiv processAnalytic(Element element) {
-		HtmlDiv div = new HtmlDiv();
-		div.setClassAttribute(element.getLocalName());
+		HtmlDiv div = createEmptyDivWithClass(element);
 		Elements childElements = element.getChildElements();
 		for (int i = 0; i < childElements.size(); i++) {
 			Element childElement = childElements.get(i);
@@ -830,22 +823,83 @@ Elementary
 	 * @param childElement
 	 */
 	private HtmlElement processAuthor(Element authElement) {
-		HtmlSpan span = new HtmlSpan();
-		System.out.println("AUTH "+authElement.toXML());
+		HtmlDiv div = new HtmlDiv();
 		Elements childElements = authElement.getChildElements();
+		
 		for (int i = 0; i < childElements.size(); i++) {
 			Element childElement = childElements.get(i);
 			String tag = childElement.getLocalName();
-			HtmlSpan subSpan = new HtmlSpan();
-			if (tag.equals("persName")) {
-				subSpan = processPersName(childElement);
+			HtmlElement divSpan;
+			if (tag.equals(PERS_NAME)) {
+				divSpan = processPersName(childElement);
+			} else if (tag.equals(AFFILIATION)) {
+				divSpan = processAffiliation(childElement);
 			} else {
-				subSpan = processUnknownTag(tag, AUTHOR);
+				divSpan = processUnknownTag(tag, AUTHOR);
 			}
-			span.appendChild(subSpan);
+			div.appendChild(divSpan);
+		}
+		return div;
+	}
+
+
+	/**
+	<affiliation key="aff0">
+		<orgName type="institution" key="instit1">Texas A&amp;M University</orgName>
+		<orgName type="institution" key="instit2">University of Kansas</orgName>
+		<orgName type="institution" key="instit3">Texas A&amp;M University</orgName>
+	</affiliation>
+	 * @param childElement
+	 * @return
+	 */
+	private HtmlDiv processAffiliation(Element element) {
+		HtmlDiv div = new HtmlDiv();
+		Elements childElements = element.getChildElements();
+		
+		for (int i = 0; i < childElements.size(); i++) {
+			Element childElement = childElements.get(i);
+			String tag = childElement.getLocalName();
+			HtmlElement divSpan;
+			if (tag.equals(ORG_NAME)) {
+				divSpan = processOrgName(childElement);
+			} else {
+				divSpan = processUnknownTag(tag, AUTHOR);
+			}
+			div.appendChild(divSpan);
+		}
+		return div;
+	}
+	
+/**
+	<orgName type="institution" key="instit2">University of Kansas</orgName>
+*/
+
+	private HtmlSpan processOrgName(Element element) {
+		HtmlSpan span = createSpan(element);
+		Elements childElements = element.getChildElements();
+		if (childElements.size() > 0) {
+			System.err.println("unexepected orgName children");
+		} else {
+			for (int i = 0; i < element.getAttributeCount(); i++) {
+				Attribute att = element.getAttribute(i);
+				String attname = att.getLocalName();
+				String attval = att.getValue();
+				HtmlSpan subSpan = new HtmlSpan();
+				if (attname.equals(TYPE)) {
+					subSpan.setClassAttribute(attname);
+					subSpan.setValue(attname+":"+attval);
+				} else if (attname.equals(KEY)) {
+					subSpan.setClassAttribute(KEY);
+					subSpan.setValue(attname+":"+attval);
+				} else {
+					subSpan = processUnknownAttribute(attname, element);
+				}
+				span.appendChild(subSpan);
+			}
 		}
 		return span;
 	}
+
 
 
 	/**
@@ -862,14 +916,14 @@ Elementary
 			Element childElement = childElements.get(i);
 			String tag = childElement.getLocalName();
 			HtmlSpan subSpan = new HtmlSpan();
-			if (tag.equals("forename")) {
-				subSpan.setClassAttribute("forename"+":"+childElement.getAttributeValue("type"));
+			if (tag.equals(FORENAME)) {
+				subSpan.setClassAttribute(FORENAME+":"+childElement.getAttributeValue(TYPE));
 				subSpan.setValue(childElement.getValue()+".");
-			} else if (tag.equals("surname")) {
-				subSpan.setClassAttribute("surname");
+			} else if (tag.equals(SURNAME)) {
+				subSpan.setClassAttribute(SURNAME);
 				subSpan.setValue(childElement.getValue());
 			} else {
-				subSpan = processUnknownTag(tag, "persName");
+				subSpan = processUnknownTag(tag, PERS_NAME);
 			}
 			span.appendChild(subSpan);
 		}
@@ -928,16 +982,20 @@ Elementary
 		HtmlSpan span = new HtmlSpan();
 		Elements childElements = element.getChildElements();
 		for (int i = 0; i < childElements.size(); i++) {
+			HtmlSpan subSpan;
 			Element childElement = childElements.get(i);
 			String tag = childElement.getLocalName();
 			if (tag.equals(BIBL_SCOPE)) {
-				HtmlSpan subSpan = processBiblScope(childElement);
-				span.appendChild(subSpan);
+				subSpan = processBiblScope(childElement);
 			} else if (tag.equals(DATE)) {
-				HtmlSpan subSpan = processDate(childElement);
-				span.appendChild(subSpan);
+				subSpan = processDate(childElement);
+			} else if (tag.equals(PUBLISHER)) {
+				subSpan = createSpan(childElement);
+			} else if (tag.equals(PUB_PLACE)) {
+				subSpan = createSpan(childElement);
 			} else {
-				System.err.println("unknown tagin Imprint: "+tag);
+				subSpan = createSpan(childElement);
+				System.err.println("unknown tag in Imprint: "+tag);
 			}
 		}
 		return span;
@@ -951,7 +1009,7 @@ Elementary
 		</imprint>	 * @param imprintElement
 	 */
 	private HtmlElement processReferences(Element element) {
-		HtmlDiv div = createDivWithValue(element);
+		HtmlDiv div = createEmptyDivWithClass(element);
 		Elements childElements = element.getChildElements();
 		for (int i = 0; i < childElements.size(); i++) {
 			Element childElement = childElements.get(i);
@@ -980,8 +1038,8 @@ Elementary
 			String attval = att.getValue();
 			String value = attval;
 			HtmlSpan subSpan = new HtmlSpan();
-			if (attName.equals("unit")) {
-			} else if (attName.equals("type") || attName.equals("when")) {
+			if (attName.equals(UNIT)) {
+			} else if (attName.equals(TYPE) || attName.equals(WHEN)) {
 				subSpan.setClassAttribute(attval);
 				subSpan.setValue(attval+": "+value);
 			} else {
@@ -1003,24 +1061,28 @@ Elementary
 	 * @return
 	 */
 
-	private HtmlSpan processBiblScope(Element childElement) {
+	private HtmlSpan processBiblScope(Element element) {
 		HtmlSpan span = new HtmlSpan();
-		String childVal = childElement.getValue();
-		for (int i = 0; i < childElement.getAttributeCount(); i++) {
-			Attribute att = childElement.getAttribute(i);
+		String childVal = element.getValue();
+		for (int i = 0; i < element.getAttributeCount(); i++) {
+			Attribute att = element.getAttribute(i);
 			String attName = att.getLocalName();
 			String attval = att.getValue();
 			String value = attval;
 			HtmlSpan subSpan = new HtmlSpan();
-			if (attName.equals("unit")) {
-				if (attval.equals("volume")) {
+			if (attName.equals(UNIT)) {
+				if (attval.equals(VOLUME)) {
 					value = childVal;
-				} else if(attval.equals("page")) {
-					
+				} else if(attval.equals(PAGE)) {
+					// values are in "from" and "to" attributes
+				} else if(attval.equals(ISSUE)) {
+					value = childVal;
 				} else {
 					System.err.println("unknown biblScope@Unit value: "+attval);
 				}
-			} else if (attName.equals("to") || attName.equals("from")) {
+				subSpan.setClassAttribute(attval);
+				subSpan.setValue(attval+": "+value);
+			} else if (attName.equals(TO) || attName.equals(FROM)) {
 				subSpan.setClassAttribute(attval);
 				subSpan.setValue(attval+": "+value);
 			} else {
@@ -1053,9 +1115,15 @@ Elementary
 	}
 
 	private HtmlDiv createDivWithValue(Element element) {
+		HtmlDiv div = createEmptyDivWithClass(element);
+		div.setValue(element.getValue());
+		return div;
+	}
+
+
+	private HtmlDiv createEmptyDivWithClass(Element element) {
 		HtmlDiv div = new HtmlDiv();
 		div.setClassAttribute(element.getLocalName());
-		div.setValue(element.getValue());
 		return div;
 	}
 	
@@ -1073,6 +1141,14 @@ Elementary
 		XMLUtil.transferChildren(element, div);
 		return div;
 	}
+
+
+	private HtmlSpan processUnknownAttribute(String attname, Element element) {
+		HtmlSpan span = new HtmlSpan();
+		span.setValue(attname + " in : " + element.toXML());
+		return span;
+	}
+
 
 
 
