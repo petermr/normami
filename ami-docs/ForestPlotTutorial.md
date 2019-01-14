@@ -127,29 +127,29 @@ Diagrams are published in two forms:
  * **Images**: where the diagram is held as pixels (often black on white, but sometimes oligo-coloured) in `bitmaps`. These can be detected by magnifying e.g. in a PDF viewer, when the jaggy edges can be seen.
  * **Vectors**: where the diagram is held as `paths` (lines, curves, etc.). If this is magnified the objects retain clean edges.
  
-The scholarly literature uses both (sometimes on a per-journal basis). We can't choose, so we have to support both. In this project we therefore show both routes
+The scholarly literature uses both (sometimes on a per-journal basis). We can't choose, so we have to support both. In this project we therefore show both routes (the details may change). The default approach will run both.
 
 ## image route
 **Image** processing requires a sequence like:
  
-  * ami-makeproject
-  * ami-pdf
-  * ami-image
-  * ami-bimap
-  * ami-ocr (if we want to extract text)
-  * ami-pixel (creates lines, etc.)
-  * ami-svg (as we have created SVG from pixel analysis)
-  * ami-plot
-  * ami-forest
+  * [ami-makeproject](./makeproject.md)
+  * [ami-pdf](ami-pdf.md)
+  * [ami-image](ami-image.md)
+  * [ami-bitmap](ami-bitmap.md)
+  * [ami-ocr](ami-ocr.md) (if we want to extract text)
+  * [ami-pixel](ami-pixel.md) (creates lines, etc.)
+  * [ami-svg](ami-svg.md) (as we have created SVG from pixel analysis)
+  * [ami-plot](ami-plot.md)
+  * [ami-forest](ami-forest.md)
   
 ## vector route
 **Vector** processing requires a sequence like:
  
-  * ami-makeproject
-  * ami-pdf
-  * ami-svg (as we have created SVG)
-  * ami-plot
-  * ami-forest
+  * [ami-makeproject](./makeproject.md)
+  * [ami-pdf](ami-pdf.md)
+  * [ami-svg](ami-svg.md) (from `ami-pdf`)
+  * [ami-plot](ami-plot.md)
+  * [ami-forest](ami-forest.md)
   
   
   
