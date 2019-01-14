@@ -91,38 +91,53 @@ cTree: davis2010_dissertation
 .small: image.125.1.263_346.356_391
 [...]
 .small: image.216.8.0_8.792_800
-
-cTree: dietrichsonb_gfilgesj_rge
-
-
-.
-cTree: mcarthur_etal2012_cochran
+```
+**`cTree: dietrichsonb_gfilgesj_rge`**
+```
+```
+**`cTree: mcarthur_etal2012_cochran`**
+```
 .small: image.1.1.76_538.702_703
 .small: image.10.1.76_538.702_703
 [...ZILLIONS of ultra-small images ..]
 .small: image.98.1.76_538.702_703
 .small: image.99.1.76_538.702_703
 
-cTree: paietal_14_meta
+```
+**`cTree: paietal_14_meta`**
+```
 .
-cTree: pearson_al05
+```
+**`cTree: pearson_al05`**
+```
 .small: image.1.1.72_287.448_473
 .small: image.1.2.72_287.473_497
 
-cTree: puziocolby2013_co-operati
+```
+**`cTree: puziocolby2013_co-operati`**
+```
 ....
-cTree: rui2009_meta_detracking
+```
+**`cTree: rui2009_meta_detracking`**
+```
 .......
-cTree: shenderovichetal_2016_pub
+```
+**`cTree: shenderovichetal_2016_pub`**
+```
 ...small: image.1.3.451_472.223_245
 .
-cTree: steenbergen-hu09
+```
+**`cTree: steenbergen-hu09`**
+```
 ..
-cTree: tamim-2009-effectsoftechn
+```
+**`cTree: tamim-2009-effectsoftechn`**
+```
 ............................[...]..............
-cTree: torgersonetal_2011dferepo
+```
+**`cTree: torgersonetal_2011dferepo`**
+```
 ......
-cTree: zhengetal_2016
-...MacBook-Pro-3:uclforest pm286$ 
-
+```
+**`cTree: zhengetal_2016`**
 ```
