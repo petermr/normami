@@ -4,7 +4,7 @@
 see [building](INSTALL.md)
 
 ## downloading
-AMI has two main approaches for downloading/running (`jar-with-dependencies` and `repo`/`bin`. Both are contained in the [AMI JAR repository](http://github.com/petermr/ami-jars). We shall describe the second.
+AMI has two main approaches for downloading/running (`jar-with-dependencies` and `repo`/`bin`. Both are contained in the [AMI JAR repository](http://github.com/petermr/ami-jars) as `ami<date>` directories (e.g. `ami20190115/`). We shall describe the `repo`/`bin` approach.
 
 ## git
  * You require `git` installed on your machine and should know how to `clone` a repository. 
