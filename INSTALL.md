@@ -47,7 +47,8 @@ The actual names (based on dates) will changed as we add more releases.
    - Unix (https://kb.iu.edu/d/acar).
    If you haven't done this before, find a friend who has...
    My path looks like a bit like: 
-   ```
+
+```
   /Users/pm286/workspace/cmdev/normami/appassembler/bin:/usr/local/n/versions/node/6.2.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin/node:/opt/X11/bin:/bin:/usr/local/scala/bin:/usr/local/spark/bin
   ```
   Only the first chunk is relevant to `ami`. Note that on Windows you need `;` instead of `:` and the slashes go the other way:
