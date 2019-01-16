@@ -16,7 +16,7 @@ This is a tutorial showing the basic steps during the image processing of the Fo
 ## typical job and output  
 
 ### command
-**$ ami-image -p devtest/**
+**$ ami-image -p <cproject>/** 
 
 ### echo input
 ```
