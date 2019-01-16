@@ -50,8 +50,8 @@ description = "FILTERs images (initally from PDFimages), but does not transform 
 
 )
 
-public class AMIImageTool extends AbstractAMITool {
-	private static final Logger LOG = Logger.getLogger(AMIImageTool.class);
+public class AMIImageFilterTool extends AbstractAMITool {
+	private static final Logger LOG = Logger.getLogger(AMIImageFilterTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -109,15 +109,15 @@ public class AMIImageTool extends AbstractAMITool {
      * obsolete it
      * @param cProject
      */
-	public AMIImageTool(CProject cProject) {
+	public AMIImageFilterTool(CProject cProject) {
 		this.cProject = cProject;
 	}
 	
-	public AMIImageTool() {
+	public AMIImageFilterTool() {
 	}
 	
     public static void main(String[] args) throws Exception {
-    	AMIImageTool amiCleaner = new AMIImageTool();
+    	AMIImageFilterTool amiCleaner = new AMIImageFilterTool();
     	amiCleaner.runCommands(args);
     }
 

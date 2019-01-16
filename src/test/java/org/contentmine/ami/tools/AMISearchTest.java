@@ -29,5 +29,5 @@ public class AMISearchTest {
 		String[] args = {targetDir.toString(), "country", "disease", "funders"}; 
 		AMISearch.main(args);
 	}
-	
+
 }

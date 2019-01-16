@@ -194,6 +194,13 @@ public abstract class AMIPluginOption extends PluginOption {
 				;
 		DefaultArgProcessor.CM_LOG.debug("runMatchSummaryAndCount: "+cmd);
 		System.out.print("C: "+option);
+//		System.out.println(" CMD: "+cmd+"\n");
+	String cmd0 ="	--project /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10"
+			+ " -i word.frequencies.snippets.xml"
+			+ " --xpath //result/@exact"
+			+ " --summaryfile word.frequencies.count.xml"
+			+ " --dffile word.frequencies.documents.xml";
+
 		new DefaultArgProcessor(cmd).runAndOutput();
 	}
 	

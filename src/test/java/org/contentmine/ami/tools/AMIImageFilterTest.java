@@ -2,7 +2,7 @@ package org.contentmine.ami.tools;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.tools.AMIImageTool;
+import org.contentmine.ami.tools.AMIImageFilterTool;
 import org.junit.Test;
 
 /** test cleaning.
@@ -10,8 +10,8 @@ import org.junit.Test;
  * @author pm286
  *
  */
-public class AMIImageTest {
-	private static final Logger LOG = Logger.getLogger(AMIImageTest.class);
+public class AMIImageFilterTest {
+	private static final Logger LOG = Logger.getLogger(AMIImageFilterTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -31,7 +31,7 @@ public class AMIImageTest {
 				"--duplicates", "true", 
 				"--duplicatedir", "duplicates",
 				};
-		AMIImageTool amiImage = new AMIImageTool();
+		AMIImageFilterTool amiImage = new AMIImageFilterTool();
 		amiImage.runCommands(args);
 	}
 

@@ -110,9 +110,9 @@
                             <id>ami-all</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.tools.AMIBitmapTool</mainClass>
+                            <mainClass>org.contentmine.ami.tools.AMIImageTool</mainClass>
 							<!-- description: process images -->
-                            <id>ami-bitmap</id>
+                            <id>ami-image</id>
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.tools.AMICleanTool</mainClass>
@@ -120,9 +120,9 @@
                             <id>ami-clean</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.tools.AMIImageTool</mainClass>
-							<!-- description: process images -->
-                            <id>ami-image</id>
+                            <mainClass>org.contentmine.ami.tools.AMIImageFilterTool</mainClass>
+							<!-- description: filters images -->
+                            <id>ami-imagefilter</id>
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.tools.AMIGrobidTool</mainClass>
@@ -157,6 +157,12 @@
                             <mainClass>org.contentmine.ami.tools.AMIDictionary</mainClass>
 							<!-- description: edit/create AMI dictionaries -->
                             <id>ami-dictionaries</id>
+                        </program>
+                        <program>
+                         <!--  now a tool -->
+                            <mainClass>org.contentmine.ami.tools.AMISearchTool</mainClass>
+							<!-- description: run AMI searches -->
+                            <id>ami-search-new</id>
                         </program>
                         <program>
                          <!--  will become a tool -->

@@ -28,7 +28,7 @@ public class AMIBitmapTest {
 				+ " --maxheight 100"
 						
 				+ " --basename scale0_5";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 	}
 
 	@Test
@@ -40,22 +40,22 @@ public class AMIBitmapTest {
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --rotate 90"
 				+ " --basename rot90";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --rotate 180"
 				+ " --basename rot180";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --rotate 270"
 				+ " --basename rot270";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --rotate 0"
 				+ " --basename rot0";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 	}
 
 	@Test
@@ -67,36 +67,36 @@ public class AMIBitmapTest {
 		String args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --basename noop";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --threshold 160"
 				+ " --basename thresh160";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --threshold 20"
 				+ " --basename thresh20"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --threshold 30"
 				+ " --basename thresh30"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --threshold 35"
 				+ " --basename thresh35"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --threshold 40"
 				+ " --basename thresh40"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --threshold 200"
@@ -109,28 +109,28 @@ public class AMIBitmapTest {
 //				+ " --thinning none"
 //				+ " --binarize min_max"
 				+ " --basename threshold220";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --threshold 225"
 //				+ " --thinning none"
 //				+ " --binarize min_max"
 				+ " --basename threshold225";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --threshold 230"
 //				+ " --thinning none"
 //				+ " --binarize min_max"
 				+ " --basename threshold230";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args = 
 				"-t /Users/pm286/workspace/uclforest/forestplotssmall/cole"
 				+ " --threshold 240"
 //				+ " --thinning none"
 //				+ " --binarize min_max"
 				+ " --basename threshold240";
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 	}
 	
 	@Test
@@ -143,7 +143,7 @@ public class AMIBitmapTest {
 //				+ " --thinning none"
 				+ " --binarize entropy"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 	}
 	
 //	@Test
@@ -166,19 +166,19 @@ public class AMIBitmapTest {
 				+ " --sharpen sharpen4"
 				+ " --basename sharpen4"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args =
 				"-p /Users/pm286/workspace/uclforest/forestplotssmall"
 				+ " --sharpen sharpen8"
 				+ " --basename sharpen8"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args =
 				"-p /Users/pm286/workspace/uclforest/forestplotssmall"
 				+ " --sharpen laplacian"
 				+ " --basename laplacian"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 	}
 
 	@Test
@@ -191,13 +191,13 @@ public class AMIBitmapTest {
 				+ " --basename sharpen4mean"
 //				+ " --binarize local_mean"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args =
 				"-p /Users/pm286/workspace/uclforest/forestplotssmall"
 				+ " --sharpen laplacian"
 				+ " --basename laplacian"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 	}
 	
 	@Test
@@ -211,14 +211,14 @@ public class AMIBitmapTest {
 				+ " --binarize block_otsu"
 
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 		args =
 				"-p /Users/pm286/workspace/uclforest/forestplotssmall"
 				+ " --sharpen laplacian"
 				+ " --basename laplacian180"
 				+ " --threshold 180"
 				;
-		new AMIBitmapTool().runCommands(args);
+		new AMIImageTool().runCommands(args);
 	}
 	
 

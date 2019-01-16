@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.tools.AMIBitmapTool;
 import org.contentmine.ami.tools.AMIImageTool;
+import org.contentmine.ami.tools.AMIImageFilterTool;
 import org.contentmine.ami.tools.AMIPixelTool;
 import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.image.pixel.IslandRingList;
@@ -57,8 +57,8 @@ public class AMIPixelTest {
 	 */
 	public void testCampbell() throws Exception {
 		String ctree = "/Users/pm286/workspace/uclforest/dev/campbell";
+		new AMIImageFilterTool().runCommands(" --ctree " + ctree);
 		new AMIImageTool().runCommands(" --ctree " + ctree);
-		new AMIBitmapTool().runCommands(" --ctree " + ctree);
 		AMIPixelTool amiPixel = new AMIPixelTool();
 		amiPixel.runCommands(" --ctree " + ctree
 				+ " --minwidth 0"
@@ -135,13 +135,13 @@ islands > (10,10): islands: 6
 //		IslandRingList ringList;
 		String cproject = "/Users/pm286/workspace/uclforest/dev";
 		String ctree = cproject+"/"+"shenderovich";
-		new AMIImageTool().runCommands(""
+		new AMIImageFilterTool().runCommands(""
 				+ " -t " + ctree
 				+ " --maxwidth 1000"
 				+ " --maxheight 1000"
 //				+ " --includetree shenderovich "
 				);
-		new AMIBitmapTool().runCommands(""
+		new AMIImageTool().runCommands(""
 				+ " -t " + ctree
 //				+ " --includetree shenderovich "
 				);
@@ -164,8 +164,8 @@ islands > (10,10): islands: 6
 	public void testBuzick() throws Exception {
 //		IslandRingList ringList;
 		String ctree = "/Users/pm286/workspace/uclforest/dev/buzick";
+		new AMIImageFilterTool().runCommands(" --ctree " + ctree);
 		new AMIImageTool().runCommands(" --ctree " + ctree);
-		new AMIBitmapTool().runCommands(" --ctree " + ctree);
 		AbstractAMITool amiPixelTool = new AMIPixelTool();
 		amiPixelTool.runCommands(" --ctree " + ctree
 			// these are not working well yet 

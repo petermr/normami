@@ -38,6 +38,7 @@ public class AMISearch {
 	private static void runAMISearches(List<String> argList) {
 		String projectName = argList.get(0);
 		argList.remove(0);
+//		LOG.debug("ARGS "+argList); // dictionaries/searches
 		if (argList.size() == 0) {
 			System.err.println("No default action for project: "+projectName+" (yet)");
 		} else {

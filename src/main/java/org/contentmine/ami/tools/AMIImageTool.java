@@ -43,8 +43,8 @@ description = "		MOVE scaling to bitmap"
 		+ "decreasing scale on large pixel maps can help performance."
 )
 
-public class AMIBitmapTool extends AbstractAMITool {
-	private static final Logger LOG = Logger.getLogger(AMIBitmapTool.class);
+public class AMIImageTool extends AbstractAMITool {
+	private static final Logger LOG = Logger.getLogger(AMIImageTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -129,15 +129,15 @@ public class AMIBitmapTool extends AbstractAMITool {
      * obsolete it
      * @param cProject
      */
-	public AMIBitmapTool(CProject cProject) {
+	public AMIImageTool(CProject cProject) {
 		this.cProject = cProject;
 	}
 	
-	public AMIBitmapTool() {
+	public AMIImageTool() {
 	}
 	
     public static void main(String[] args) throws Exception {
-    	new AMIBitmapTool().runCommands(args);
+    	new AMIImageTool().runCommands(args);
     }
 
     @Override
