@@ -557,7 +557,7 @@ public class AMIArgProcessor extends NormaArgProcessor {
 	}
 
 	public boolean getStemming() {
-		return stemming;
+		return stemming == null ? false : stemming;
 	}
 
 	public List<WordSetWrapper> getStopwordSetList() {

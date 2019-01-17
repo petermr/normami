@@ -690,6 +690,10 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 	public boolean isStandalone() {
 		return removeDTD;
 	}
+	
+	public void setStandalone(boolean standalone) {
+		this.removeDTD = standalone;
+	}
 
 	public List<SectionTaggerX> getSectionTaggers() {
 		return sectionTaggerNameList;

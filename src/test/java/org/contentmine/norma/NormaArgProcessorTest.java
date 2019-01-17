@@ -138,7 +138,7 @@ public class NormaArgProcessorTest {
 		FileUtils.copyDirectory(NormaFixtures.F0115884_DIR, container0115884);
 		String[] args = {
 			"-q", container0115884.toString(), // output from quickscrape
-			"--transform", "nlm2html",                  // stylesheet to use (code)
+			"--transform", NormaTransformer.NLM2HTML,                  // stylesheet to use (code)
 			"--standalone", "false",           // force use of DTD. May fail
 			"-e", "xml"                       // type of file to transform
 		};

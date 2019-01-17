@@ -203,7 +203,7 @@ public class TutorialTest {
 	}
 
 	private void transformNLM(String sourceName, String destName) throws IOException {
-		String dtdName = "nlm2html";
+		String dtdName = NormaTransformer.NLM2HTML;
 		transformXML2ScholarlyHTML(sourceName, destName, "fulltext.xml", "scholarly.html", dtdName);
 	}
 

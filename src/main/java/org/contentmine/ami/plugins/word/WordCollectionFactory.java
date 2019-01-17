@@ -99,7 +99,7 @@ public class WordCollectionFactory {
 	void extractWords() {
 		List<String> words = createWordList();
 		if (words == null) {
-			LOG.trace("no words found to extract");
+			LOG.debug("no words found to extract");
 			return;
 		}
 		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
@@ -127,6 +127,7 @@ public class WordCollectionFactory {
 				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
 				LOG.trace(msg);
 			}
+			LOG.debug("raw words "+rawWords.size());
 		}
 		return createTransformedWords(rawWords);
 	}

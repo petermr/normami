@@ -150,6 +150,7 @@ public class NormaTransformer {
 		LOG.setLevel(Level.DEBUG);
 	}
 	private static final String STYLESHEET_BY_NAME_XML = NAConstants.PUBSTYLE_RESOURCE+ "/" + "stylesheetByName.xml";
+	public static final String NLM2HTML = "nlm2html";
 	private static final String NAME = "name";
 
 	private NormaArgProcessor normaArgProcessor;
@@ -491,6 +492,12 @@ public class NormaTransformer {
 		}
 	}
 
+	public void defaultTransformXML2HTML() {
+		this.type = Type.XML2HTML;
+		this.inputFile = inputFile;
+		transformXMLWithStylesheet();
+	}
+	
 	private void transformXMLWithStylesheet() {
 		/** this is a generic XML transformation for XML input */
 		String xmlString = createAndApplyXSLDocument();
@@ -503,6 +510,11 @@ public class NormaTransformer {
 		} else if (Type.XML2XML.equals(type)) {
 			xmlElement = XMLUtil.parseXML(xmlString);
 		}
+	}
+
+	public String createAndApplyXSLDocument(String transformTypeString) {
+		this.transformTypeString = transformTypeString;
+		return createAndApplyXSLDocument();
 	}
 
 	private String createAndApplyXSLDocument() {
@@ -792,6 +804,7 @@ public class NormaTransformer {
 		String xmlString = null;
 		if (inputFile != null) { 
 			TransformerWrapper transformerWrapper = getOrCreateTransformerWrapperForStylesheet(xslDocument);
+//			transformerWrapper.
 			try {
 				xmlString = transformerWrapper.transformToXML(inputFile);
 			} catch (NullPointerException npe) {

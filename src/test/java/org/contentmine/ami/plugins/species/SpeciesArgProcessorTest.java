@@ -11,6 +11,7 @@ import org.contentmine.ami.plugins.species.SpeciesArgProcessor;
 import org.contentmine.ami.plugins.species.SpeciesPlugin;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.norma.NAConstants;
+import org.contentmine.norma.NormaTransformer;
 import org.contentmine.norma.util.NormaTestFixtures;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -78,7 +79,7 @@ public class SpeciesArgProcessorTest {
 	public void testSpeciesArgProcessor() throws Exception {
 		File newDir = new File("target/plosone/species/0121780/");
 		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_PLOSONE_SEQUENCE_0121780, newDir);
-		NormaTestFixtures.runNorma(newDir, "ctree", "nlm2html");
+		NormaTestFixtures.runNorma(newDir, "ctree", NormaTransformer.NLM2HTML);
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
 		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
@@ -125,7 +126,7 @@ public class SpeciesArgProcessorTest {
 	public void testMalariaArgProcessor() throws Exception {
 		File newDir = new File("target/plosone/species/malaria");
 		FileUtils.copyDirectory(AMIFixtures.TEST_PLOSONE_MALARIA_0119475, newDir);
-		NormaTestFixtures.runNorma(newDir, "ctree", "nlm2html");
+		NormaTestFixtures.runNorma(newDir, "ctree", NormaTransformer.NLM2HTML);
 		String args = "--sp.species --context 35 50 --sp.type binomial genus genussp -q "+newDir+" -i scholarly.html"; 
 		AMIArgProcessor argProcessor = new SpeciesArgProcessor(args);
 		argProcessor.runAndOutput();
