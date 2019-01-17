@@ -428,6 +428,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		boolean processed = cTreeList != null && cTreeList.size() > 0;
 		if (cTreeList != null) {
 			for (CTree cTree : cTreeList) {
+				this.cTree = cTree;
 				processTree(cTree);
 			}
 		}

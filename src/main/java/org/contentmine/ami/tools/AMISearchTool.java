@@ -56,20 +56,20 @@ public class AMISearchTool extends AbstractAMITool {
 
     @Override
     protected void runSpecifics() {
-    	if (processTrees()) { 
+    	if (cProject == null) {
+    		DebugPrint.errorPrintln(Level.ERROR, "requires cProject");
     	} else {
-			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
-	    }
+    		processProject();
+    	}
     }
 
-	public void processTree(CTree cTree) {
-		this.cTree = cTree;
-		System.out.println("cTree: "+cTree.getName());
+	public void processProject() {
+		System.out.println("cProject: "+cProject.getName());
 		runSearch();
 	}
 
 	private void runSearch() {
-		AMIProcessor amiProcessor = AMIProcessor.createProcessor(cTree.getDirectory());
+		AMIProcessor amiProcessor = AMIProcessor.createProcessor(cProjectDirectory);
 		amiProcessor.runSearchesAndCooccurrence(dictionaryList);
 	}
 
