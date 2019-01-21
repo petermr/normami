@@ -220,7 +220,9 @@ public class SearchArgProcessor extends AMIArgProcessor {
 		ContentProcessor currentContentProcessor = currentCTree.getOrCreateContentProcessor();
 		currentContentProcessor.clearResultsElementList();
 
+		LOG.debug("outputResultsElements "+name);
 		for (String title : resultsByDictionary.keySet()) {
+			LOG.debug("    title "+title);
 			ResultsElement resultsElement = resultsByDictionary.get(title);
 			resultsElement.setTitle(title);
 			currentContentProcessor.addResultsElement(resultsElement);

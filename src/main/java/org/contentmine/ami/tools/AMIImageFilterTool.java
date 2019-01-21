@@ -138,7 +138,7 @@ public class AMIImageFilterTool extends AbstractAMITool {
     	processTrees();
     }
 
-	protected void processTree(CTree cTree) {
+	protected void processTree() {
 		System.out.println("cTree: "+cTree.getName());
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
 		if (pdfImagesDir == null || !pdfImagesDir.exists()) {

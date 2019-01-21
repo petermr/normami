@@ -220,7 +220,7 @@ public class AMISVGTool extends AbstractAMITool {
 		}
 	}
 
-	protected void processTree(CTree cTree) {
+	protected void processTree() {
 		System.out.println("cTree: "+cTree.getName());
 		svgDir = cTree.getExistingSVGDir();
 		if (svgDir == null || !svgDir.exists()) {

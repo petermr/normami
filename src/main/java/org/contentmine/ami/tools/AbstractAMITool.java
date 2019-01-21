@@ -74,9 +74,11 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	protected String userBasename;
 
     @Option(names = {"-p", "--cproject"}, 
-		arity = "0..1",
+		arity = "1",
 		paramLabel="CProject",
-		description = "CProject (directory) to process")
+		description = "CProject (directory) to process. This can be (a) a child directory of cwd (current working directory (b) cwd itself (use -p .) or (c) an absolute filename."
+				+ " No defaults. The cProject name is the basename of the file."
+				)
     protected String cProjectDirectory = null;
 
     @Option(names = {"-t", "--ctree"}, 
@@ -84,7 +86,9 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		paramLabel = "CTree",
 		interactive = false,
 		descriptionKey = "descriptionKey",
-		description = "single CTree (directory) to process")
+		description = "CTree (directory) to process. This can be (a) a child directory of cwd (current working directory, usually cProject) (b) cwd itself, usually cTree (use -t .) or (c) an absolute filename."
+				+ " No defaults. The cTree name is the basename of the file."
+				)
     protected String cTreeDirectory = null;
 
     @Option(names = {"--dryrun"}, 
@@ -252,12 +256,25 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	protected void validateCProject() {
 		if (cProjectDirectory != null) {
 			File cProjectDir = new File(cProjectDirectory);
-			if (!cProjectDir.exists() || !cProjectDir.isDirectory()) {
-				throw new RuntimeException("cProject must be existing directory: "+cProjectDirectory);
-			}
+			cProjectDirectory = checkDirExistenceAndGetAbsoluteName(cProjectDir, "cProject");
 			cProject = new CProject(cProjectDir);
 			cTreeList = generateCTreeList();
     	}
+	}
+
+	private String checkDirExistenceAndGetAbsoluteName(File dir, String type) {
+		String cProjectDirectory = null;
+		if (!dir.exists() || !dir.isDirectory()) {
+			File parentFile = dir.getParentFile();
+			if (parentFile != null && (parentFile.exists() || parentFile.isDirectory())) {
+				cProjectDirectory = parentFile.getAbsolutePath();
+				dir = parentFile;
+			} else {
+				LOG.info("** using parentFile as " + type + ": "+cProjectDirectory);
+			}
+ 			throw new RuntimeException(type + " must be existing directory: " + cProjectDirectory + "("+dir.getAbsolutePath());
+		}
+		return cProjectDirectory;
 	}
 
 	private CTreeList generateCTreeList() {
@@ -293,9 +310,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	protected void validateCTree() {
 		if (cTreeDirectory != null) {
 			File cTreeDir = new File(cTreeDirectory);
-			if (!cTreeDir.exists() || !cTreeDir.isDirectory()) {
-				throw new RuntimeException("cTree must be existing directory: "+cTreeDirectory);
-			}
+			cTreeDirectory = checkDirExistenceAndGetAbsoluteName(cTreeDir, "cTree");
 			cTree = new CTree(cTreeDir);
 			cTreeList = new CTreeList();
 			cTreeList.add(cTree);
@@ -429,13 +444,13 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		if (cTreeList != null) {
 			for (CTree cTree : cTreeList) {
 				this.cTree = cTree;
-				processTree(cTree);
+				processTree();
 			}
 		}
 		return processed;
 	}
 	
-	protected void processTree(CTree cTree) {
+	protected void processTree() {
 		LOG.warn("Overide this");
 	}
 

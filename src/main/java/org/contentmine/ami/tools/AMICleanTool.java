@@ -1,7 +1,5 @@
 package org.contentmine.ami.tools;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,7 +10,6 @@ import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.euclid.Util;
 
-import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -29,7 +26,7 @@ aliases = "clean",
 		//Class<?>[] subcommands() default {};
 version = "ami-clean 0.1",
 		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
-description = "cleans specific files of directories in project"
+description = "cleans specific files or directories in project, explicitly or by regex"
 )
 
 public class AMICleanTool extends AbstractAMITool {
@@ -71,22 +68,23 @@ public class AMICleanTool extends AbstractAMITool {
 
     @Option(names = {"--file"},
 		arity = "0..*",
-        description = "files to delete by name")
+        description = "files to delete by name; e.g. --file scholarly.html deletes child files <ctree>/scholarly.html")
     private String[] files;
 
     @Option(names = {"--fileglob"},
 		arity = "0..*",
-        description = "files to delete by glob")
+        description = "files to delete by glob; use with care (I am still working this out")
     private String[] fileGlobs;
 
     @Option(names = {"--dir"},
 		arity = "0..*",
-        description = "directories to delete by name")
+        description = "directories to delete by name, e.g. --dir svg deletes hild directories <ctree>/svg"
+        )
     private String[] dirs;
 
     @Option(names = {"--dirglob"},
 		arity = "0..*",
-        description = "directories to delete by glob")
+        description = "directories to delete by glob; use with care (I am still working this out)")
     private String[] dirGlobs;
 
     /** used by some non-picocli calls

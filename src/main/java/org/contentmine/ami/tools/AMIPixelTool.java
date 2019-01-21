@@ -183,7 +183,7 @@ public class AMIPixelTool extends AbstractAMITool {
 	    }
     }
 
-	public void processTree(CTree cTree) {
+	public void processTree() {
 		System.out.println("cTree: "+cTree.getName());
 		derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
 		if (derivedImagesDir == null || !derivedImagesDir.exists()) {

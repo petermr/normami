@@ -123,7 +123,7 @@ public class AMIWordsTool extends AbstractAMITool {
 	    }
     }
 
-	public void processTree(CTree cTree) {
+	public void processTree() {
 		System.out.println("cTree: "+cTree.getName());
 		WordArgProcessor argProcessor = new WordArgProcessor();
 		argProcessor.setCTree(cTree);

@@ -48,6 +48,9 @@ description = "Extracts text from OCR and (NYI) postprocesses HOCR output to cre
 )
 
 public class AMIOCRTool extends AbstractAMITool {
+	private static final String RAW = "raw";
+
+
 	private static final String IMAGE_DOT = "image.";
 
 
@@ -127,16 +130,20 @@ public class AMIOCRTool extends AbstractAMITool {
 	    }
     }
 
-	protected void processTree(CTree cTree) {
+	protected void processTree() {
 		System.out.println("cTree: "+cTree.getName());
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
 		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
 			LOG.warn("no pdfimages/ dir");
 		} else {
-			derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
-			List<File> imageFiles = CMineGlobber.listSortedChildFiles(derivedImagesDir, CTree.PNG);
-			Collections.sort(imageFiles);
-			for (File imageFile : imageFiles) {
+//			derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
+//			List<File> imageFiles = CMineGlobber.listSortedChildFiles(derivedImagesDir, CTree.PNG);
+			List<File> imageDirs = cTree.getPDFImagesImageDirectories();
+			LOG.debug("imageDirs: "+imageDirs);
+			Collections.sort(imageDirs);
+			for (File imageDir : imageDirs) {
+				LOG.debug("imageDir: "+imageDir.getName());
+				File imageFile = new File(imageDir, RAW + "." + CTree.PNG);
 				System.err.print(".");
 				runOCR(imageFile);
 				if (outputHtml) {
@@ -199,7 +206,7 @@ public class AMIOCRTool extends AbstractAMITool {
 				imageFile = scaleAndWriteFile(imageFile, basename);
 			}
 			System.out.println("?"+basename+"?");
-			File outputDir = new File(derivedImagesDir, HOCR_DIR);
+			File outputDir = new File(imageFile.getParentFile(), HOCR_DIR);
 			// messy: tesseract filenames don't have html extension
 			outputHOCRFile = new File(outputDir, basename);
 			imageToHOCRConverter = new ImageToHOCRConverter();

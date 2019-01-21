@@ -212,6 +212,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 	}
 
 	private void outputResultsElements(String name) {
+		LOG.debug("resultsElement option "+name);
 		ContentProcessor currentContentProcessor = currentCTree.getOrCreateContentProcessor();
 		currentContentProcessor.clearResultsElementList();
 

@@ -117,8 +117,7 @@ public class AMIPDFTool extends AbstractAMITool {
 		return;
 	}
 
-	protected void processTree(CTree cTree) {
-		this.cTree = cTree;
+	protected void processTree() {
 		System.out.println("cTree: "+cTree.getName());
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
         runPDF();

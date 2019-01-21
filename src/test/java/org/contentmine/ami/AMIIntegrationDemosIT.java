@@ -11,6 +11,8 @@ import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.ami.plugins.EntityAnalyzer;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.OccurrenceType;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.SubType;
+import org.contentmine.ami.tools.AMIImageTool;
+import org.contentmine.ami.tools.AMIOCRTool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.eucl.euclid.test.TestUtil;
@@ -155,6 +157,27 @@ public class AMIIntegrationDemosIT {
 		List<String> facetList = Arrays.asList(new String[]{"crystal", "country", "funders"});
 		amiProcessor.defaultAnalyzeCooccurrence(facetList);
 
+		
+	}
+	
+	@Test
+	/** over an hour
+	 * 
+	 */
+	public void testPicocliStefan() {
+		File sourceDir = new File(AMIFixtures.PMR_STEFAN_DIR,  "journals2a");
+		LOG.debug(sourceDir.getAbsolutePath());
+//		new AMIMakeProjectTool().runCommands(" -p " + sourceDir + " --rawfiletypes pdf ");
+//		new AMIPDFTool().runCommands(" -p " + sourceDir);
+//		new AMIGrobidTool().runCommands(" -p " + sourceDir);
+		int threshold = 180;
+//		String treename = "c8ob00452h1";
+        String treename = "c8ob01231h1"/*, "c8ob01328d"*/; 
+		String cmd0 = " -p  "+ sourceDir;
+//		cmd0 = " -t "+ sourceDir+"/"+treename;
+//		new AMIImageTool().runCommands(cmd0 +" --monochrome monochrome --small small --duplicate duplicate --sharpen sharpen4 --threshold "+threshold);
+		treename = "c8ob00755a1";
+		new AMIOCRTool().runCommands(" -t " + sourceDir + "/" + treename + " --html true ");
 		
 	}
 	

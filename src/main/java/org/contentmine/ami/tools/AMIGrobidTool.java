@@ -98,8 +98,8 @@ public class AMIGrobidTool extends AbstractAMITool {
 	    }
     }
 
-	protected void processTree(CTree cTree) {
-		this.cTree = cTree;
+	protected void processTree() {
+//		this.cTree = cTree;
 		System.out.println("\n" + "cTree: "+cTree.getName());
 		try {
 			runGrobid();

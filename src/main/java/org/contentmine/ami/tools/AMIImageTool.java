@@ -2,12 +2,15 @@ package org.contentmine.ami.tools;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 
+import org.apache.commons.io.FileExistsException;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -15,13 +18,16 @@ import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
+import org.contentmine.eucl.euclid.Real;
+import org.contentmine.eucl.euclid.util.CMFileUtil;
 import org.contentmine.graphics.svg.util.ImageIOUtil;
 import org.contentmine.image.ImageUtil;
 import org.contentmine.image.ImageUtil.SharpenMethod;
 import org.contentmine.image.ImageUtil.ThresholdMethod;
-import org.contentmine.image.diagram.DiagramAnalyzer;
 
-import boofcv.io.image.UtilImageIO;
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multiset;
+
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -30,20 +36,36 @@ import picocli.CommandLine.Option;
  * @author pm286
  *
  */
+
+
+
 @Command(
 		//String name() default "<main class>";
-name = "ami-bitmap", 
+name = "ami-image", 
 		//String[] aliases() default {};
-aliases = "bitmap",
+aliases = "image",
 		//Class<?>[] subcommands() default {};
-version = "ami-bitmap 0.1",
+version = "ami-image 0.1",
 		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
-description = "		MOVE scaling to bitmap"
-		+ "<li>geometric scaling of images using Imgscalr, with interpolation. Increasing scale on small fonts can help OCR, "
+description = "	first FILTERs images (initally from PDFimages), but does not transform the contents."
+		+ " Services includen%"
+		+ ""
+		+ "n%identification of duplicate images, and removal<.li>"
+		+ "n%rejection of images less than gven size</li>"
+		+ "n%rejection of monochrome images (e.g. all white or all black) (NB black and white is 'binary/ized'"
+		+ "n%"
+
+		+ "Then TRANSFORMS contents"
+		+ "n%geometric scaling of images using Imgscalr, with interpolation. Increasing scale on small fonts can help OCR, "
 		+ "decreasing scale on large pixel maps can help performance."
+		+ "n%"
+		+ "NOTE: a missing option means it is not applied (value null). Generally no defaults"
+		
 )
 
 public class AMIImageTool extends AbstractAMITool {
+	private static final String IMAGE = "image";
+
 	private static final Logger LOG = Logger.getLogger(AMIImageTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -55,41 +77,173 @@ public class AMIImageTool extends AbstractAMITool {
 		Pmr,
 	}
 	
+	interface AbstractDest {}
+	
+	
+	public enum DuplicateDest implements AbstractDest {
+		_delete,
+		duplicate,
+		;
+	}
+	
+	public enum MonochromeDest implements AbstractDest {
+		_delete,
+		monochrome,
+		;
+	}
+	
+	public enum SmallDest implements AbstractDest {
+		_delete,
+		small,
+		;
+	}
+	
+	public enum AMIImageType {
+		NONE("none", 0, new AMIImageType[]{}),
+		RAW("raw", NONE.priority + 1, new AMIImageType[]{}),
+		SCALE("scale", RAW.priority + 1, AMIImageType.RAW),
+		ROTATE("rotate", SCALE.priority + 1, AMIImageType.SCALE, AMIImageType.RAW),
+		SHARPEN("sharpen", ROTATE.priority + 1, AMIImageType.ROTATE, AMIImageType.SCALE, AMIImageType.RAW),
+		POSTERIZE("posterize", SHARPEN.priority + 1, AMIImageType.SHARPEN, AMIImageType.ROTATE, AMIImageType.SCALE, AMIImageType.RAW),
+		BINARIZE("binarize", POSTERIZE.priority + 1, AMIImageType.SHARPEN,AMIImageType.ROTATE, AMIImageType.SCALE, AMIImageType.RAW),
+		ERODE_DILATE("erodeDilate", BINARIZE.priority + 1, AMIImageType.BINARIZE, AMIImageType.SHARPEN, AMIImageType.ROTATE, AMIImageType.SCALE, AMIImageType.RAW),
+		;
+		private AMIImageType[] imageTypes;
+		private String name;
+		private int priority;
+
+		/** imageTypes are ordered list of files to be processed in decreasingly level of processing.
+		 * They may be of the form rotate_180,.
+		 * the tool searches back till it finds the first existing lower level
+		 * thus binarize would act on sharpen_1.png rather than raw.png
+		 * @param name
+		 * @param imageTypes
+		 */
+		private AMIImageType(String name, int priority, AMIImageType ...imageTypes) {
+			this.name = name;
+			this.priority = priority;
+			this.imageTypes = imageTypes;
+		}
+		/** image type is determined by leading string in filename.
+		 * 
+		 * @param filename
+		 * @return
+		 */
+		public final static AMIImageType getImageType(String filename) {
+			for (AMIImageType imageType : values()) {
+				if (filename != null && filename.startsWith(imageType.name)) {
+					LOG.debug("type "+imageType);
+					return imageType;
+				}
+			}
+			return (AMIImageType) null;
+		}
+		
+		/**
+		 * find File in files that has the highest priority.
+		 * iterates over all files to find the one with highest AMIImageType priority,
+		 * if priorityLimitType is set, excludes files with priorities above this value.
+		 * if priorityLimitType is set to RAW, forces the use of RAW files.
+		 * 
+		 * @param files
+		 * @param priorityLimitType
+		 * @return
+		 */
+		public static File getHighestLevelFile(List<File> files, AMIImageType priorityLimitType) {
+			// crude
+			int highestPriority = -1;
+			int priorityLimit = priorityLimitType == null ? Integer.MAX_VALUE : priorityLimitType.priority;
+			File highestFile = null;
+			for (File file : files) {
+				AMIImageType imageType = getImageType(FilenameUtils.getBaseName(file.getName()));
+				int priority = imageType == null ? -1 : imageType.priority;
+				if (priority > highestPriority && priority <= priorityLimit) {
+					highestPriority = priority;
+					highestFile = file;
+				}
+			}
+			return highestFile;
+		}
+	}
+	
+	private static final String _DELETE = "_delete";
+
+    // FILTER OPTIONS
+
+    @Option(names = {"--duplicate"},
+    		arity = "0..1",
+    		defaultValue = "duplicate",
+            description = "FILTER: move duplicate images to <duplicate>; default = ${DEFAULT-VALUE}; "+_DELETE+" means delete")
+	private DuplicateDest duplicateDirname;
+
+    @Option(names = {"--minheight"},
+    		arity = "0..1",
+    		defaultValue = "100",
+            description = "minimum height (pixels) to accept")
+    private int minHeight;
+
+    @Option(names = {"--minwidth"},
+    		arity = "0..1",
+    		defaultValue = "100",
+            description = "minimum width (pixels) to accept")
+    private int minWidth;
+    
+    @Option(names = {"--monochrome"},
+    		arity = "0..1",
+    		defaultValue = "monochrome",
+            description = "FILTER: move monochrome images to <monochrome>; default ${DEFAULT-VALUE}; "+_DELETE+" means delete"
+            )
+	private MonochromeDest monochromeDirname;
+
+    @Option(names = {"--small"},
+    		arity = "1",
+    		defaultValue = "small",
+            description = "FILTER: move small images to <monochrome>; default ${DEFAULT-VALUE}; "+_DELETE+" means delete"
+            )
+	private SmallDest smallDirname;
+    
+    // TRANSFORM OPTIONS
+    
     @Option(names = {"--binarize"},
     		arity = "1",
-    		defaultValue = "local_mean",
-            description = "create binary (normally black and white); methods local_mean ...")
-    private String binarize;
+//    		defaultValue = "LOCAL_MEAN",
+            description = "TRANSFORM: create binary (normally black and white); methods local_mean ... (default: ${DEFAULT-VALUE})")
+    private ThresholdMethod binarize = null;
 
     @Option(names = {"--erodedilate"},
-    		arity = "1",
+    		arity = "0..1",
     		defaultValue = "false",
-            description = "erode 1-pixel layer and then dilate. Removes minor spikes")
-    private Boolean erodeDilate = false;
+            description = "TRANSFORM: erode 1-pixel layer and then dilate. Removes minor spikes (default: ${DEFAULT-VALUE})")
+    private Boolean erodeDilate;
 
     @Option(names = {"--maxheight"},
-    		arity = "1",
+    		arity = "0..1",
     		defaultValue = "1000",
-            description = "maximum height (pixels) to accept. If larger, scales the image")
+            description = "maximum height (pixels) to accept. If larger, scales the image (default: ${DEFAULT-VALUE})")
     private Integer maxHeight;
 
     @Option(names = {"--maxwidth"},
     		arity = "1",
     		defaultValue = "1000",
-            description = "maximum width (pixels) to accept. If larger, scales the image")
+            description = "maximum width (pixels) to accept. If larger, scales the image (default: ${DEFAULT-VALUE})")
     private Integer maxWidth;
     
     @Option(names = {"--posterize"},
     		arity = "0",
-    		defaultValue = "true",
+//    		defaultValue = "true",
             description = "create a map of colors including posterization. NYI")
-    private boolean posterize = true;
+    private boolean posterize = false;
+
+    @Option(names = {"--priority"},
+    		arity = "0..1",
+    		defaultValue = "RAW",
+            description = "force transformations starting with the lowest priority (usually 'raw')")
+    private AMIImageType priorityImage = AMIImageType.RAW;
 
     @Option(names = {"--rotate"},
     		arity = "1",
-    		defaultValue = "0",
-            description = "rotates image anticlockwise by <value> degrees. Currently 90, 180, 270")
-    private Integer rotateAngle;
+            description = "rotates image anticlockwise by <value> degrees. Currently 90, 180, 270 (default: ${DEFAULT-VALUE})")
+    private Integer rotateAngle = null;
     
     @Option(names = {"--scalefactor"},
     		arity = "1",
@@ -97,31 +251,42 @@ public class AMIImageTool extends AbstractAMITool {
 	private Double scalefactor = null;
 
     @Option(names = {"--sharpen"},
-    		arity = "1",
+    		arity = "0..1",
     		defaultValue = "sharpen4",
-            description = "sharpen image using Laplacian kernel or sharpen4 or sharpen8 (BoofCV)..")
+            description = "sharpen image using Laplacian kernel or sharpen4 or sharpen8 (BoofCV)..(default: ${DEFAULT-VALUE})")
     private String sharpen;
 
     @Option(names = {"--thinning"},
     		arity = "0..1",
     		defaultValue = "null",
-            description = "thinning algorithm. Currently under development. ")
+            description = "thinning algorithm. Currently under development. (default: ${DEFAULT-VALUE})")
     private String thinning = null;
 
     @Option(names = {"--threshold"},
     		arity = "1",
     		defaultValue = "180",
-            description = "maximum value for black pixels (non-background)")
+            description = "maximum value for black pixels (non-background) (default: ${DEFAULT-VALUE})")
     private Integer threshold;
 
     @Option(names = {"--toolkit"},
     		arity = "1",
     		defaultValue = "Boofcv",
-            description = "Image toolkit to use. Boofcv (probable longterm choice), "
-            		+ "Scalr (Imgscalr), simple but no longer deeveloped. Pmr (my own) when all else fails.")
+            description = "Image toolkit to use., "
+            		+ "Scalr (Imgscalr), simple but no longer developed. Pmr (my own) when all else fails.(default: ${DEFAULT-VALUE}) (not yet fully worked out)")
     private ImageToolkit toolkit = ImageToolkit.Boofcv;
 
-	private File pdfImagesDir;
+	public static final String DUPLICATES = "duplicates/";
+	public static final String MONOCHROME = "monochrome/";
+	public static final String LARGE = "large/";
+	public static final String SMALL = "small/";
+	private static final String ROT = "rot";
+	private static final String RAW = "raw";
+
+	private static final String SCALE = "scale";
+
+	private Multiset<String> duplicateSet;
+
+
 
 	private SharpenMethod sharpenMethod;
 
@@ -142,10 +307,19 @@ public class AMIImageTool extends AbstractAMITool {
 
     @Override
 	protected void parseSpecifics() {
+		System.out.println("minHeight           " + minHeight);
+		System.out.println("minWidth            " + minWidth);
+		System.out.println("smalldir            " + smallDirname);
+		System.out.println("monochromeDir       " + monochromeDirname);
+		System.out.println("duplicateDir        " + duplicateDirname);
+
+    	
 		System.out.println("binarize            " + binarize);
+		System.out.println("erodeDilate         " + erodeDilate);
 		System.out.println("maxheight           " + maxHeight);
 		System.out.println("maxwidth            " + maxWidth);
 		System.out.println("posterize           " + posterize);
+		System.out.println("priority            " + priorityImage);
 		System.out.println("rotate              " + rotateAngle);
 		System.out.println("scalefactor         " + scalefactor);
 		System.out.println("sharpen             " + sharpen);
@@ -167,68 +341,172 @@ public class AMIImageTool extends AbstractAMITool {
 		sharpenMethod = SharpenMethod.getMethod(sharpen);
 	}
 
-	protected void processTree(CTree cTree) {
-		this.cTree = cTree;
-		System.out.println("cTree: "+cTree.getName());
+	protected void processTree() {
+		processTreeFilter();
+		processTreeTransform();
+	}
+
+	protected void processTreeFilter() {
+		System.out.println("filterImages cTree: "+cTree.getName());
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
-		List<File> imageFiles = CMineGlobber.listSortedChildFiles(pdfImagesDir, CTree.PNG);
-		Collections.sort(imageFiles);
-		for (File imageFile : imageFiles) {
-			System.err.print(".");
-			if (!imageFile.exists()) {
-				LOG.debug("File does not exist: "+imageFile);
-			} else {
+		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
+			LOG.warn("no pdfimages/ dir");
+		} else {
+			duplicateSet = HashMultiset.create();
+			List<File> imageFiles = CMineGlobber.listSortedChildFiles(pdfImagesDir, CTree.PNG);
+			Collections.sort(imageFiles);
+			for (File imageFile : imageFiles) {
+				System.err.print(".");
+				String basename = FilenameUtils.getBaseName(imageFile.toString());
+				BufferedImage image = null;
 				try {
-					runBitmap(imageFile);
-				} catch (Exception e) {
-					LOG.error("Bad read: "+imageFile+" ("+e.getMessage()+")");
+					image = ImageIO.read(imageFile);
+					// this has to cascade in order; they can be reordered if required
+					if (false) {
+					} else if (moveSmallImageTo(image, imageFile, smallDirname, pdfImagesDir)) {
+						System.out.println("small: "+basename);
+					} else if (moveMonochromeImagesTo(image, imageFile, monochromeDirname, pdfImagesDir)) {
+						System.out.println("monochrome: "+basename);
+					} else if (moveDuplicateImagesTo(image, imageFile, duplicateDirname, pdfImagesDir)) {
+						System.out.println("duplicate: "+basename);
+					} else {
+						// move file to <pdfImagesDir>/<basename>/raw.png
+						File imgDir = new File(pdfImagesDir, basename);
+						File newImgFile = new File(imgDir, RAW + "." + CTree.PNG);
+						try {
+							CMFileUtil.forceMove(imageFile, newImgFile);
+						} catch (Exception ioe) {
+							throw new RuntimeException("cannot rename "+imageFile+" to "+newImgFile, ioe); 
+						}
+					}
+				} catch(IndexOutOfBoundsException e) {
+					LOG.error("BUG: failed to read: "+imageFile);
+				} catch(IOException e) {
+					e.printStackTrace();
+					LOG.debug("failed to read file " + imageFile + "; "+ e);
+				}
+			}
+		}
+		return;
+	}
+
+
+	protected void processTreeTransform() {
+		System.out.println("transformImages cTree: "+cTree.getName());
+		File pdfImagesDir = cTree.getExistingPDFImagesDir();
+		List<File> imageDirs = CMineGlobber.listSortedChildDirectories(pdfImagesDir);
+		Collections.sort(imageDirs);
+		for (File imageDir : imageDirs) {
+			if (imageDir.getName().startsWith(IMAGE)) {
+				System.err.print(".");
+				if (!imageDir.exists()) {
+					LOG.debug("Dir does not exist: "+imageDir);
+				} else {
+					try {
+						runTransform(imageDir);
+					} catch (Exception e) {
+						LOG.error("Bad read: "+imageDir+" ("+e.getMessage()+")");
+					}
 				}
 			}
 		}
 	}
 	
-	private void runBitmap(File imageFile) {
-		String inputBasename = FilenameUtils.getBaseName(imageFile.toString());
-		String outputBasename = userBasename != null ? userBasename : inputBasename;
-		pdfImagesDir = cTree. getExistingPDFImagesDir();
-		File inputBaseFile = new File(pdfImagesDir, inputBasename + "." + CTree.PNG);
-		LOG.debug("reading "+inputBaseFile);
-		File outputDir = new File(pdfImagesDir, inputBasename);
-		outputDir.mkdirs();
-		File outputBaseFile = new File(outputDir, outputBasename + "." + CTree.PNG);
-
-		BufferedImage image = readImageQuietly(inputBaseFile);
-		try {
-			new File("target/image").mkdirs();
-			ImageIO.write(image, "png", new File("target/image/original.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
+	// ================= filter ============
+	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
+		if (destDirname != null) {
+			int width = image.getWidth();
+			int height = image.getHeight();
+			if (width < minWidth || height < minHeight) {
+				copyOrDelete(srcImageFile, destDirname, destDir);
+				return true;
+			}
 		}
-		if (image != null) {
+		return false;
+	}
 
-			image = rotate(image);  // works
-			image = applyScale(image);  // works
-			image = sharpen(image);    // this and
-//			image = threshold(image);   // fails
-//			image = binarize(image);   // this lead to black image
-//			image = posterize(image);  // currently a no-op
-			
-			LOG.debug(image.getWidth());
-			ImageIOUtil.writeImageQuietly(image, outputBaseFile);
+	private boolean moveMonochromeImagesTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
+		if (destDirname != null) {
+			Integer singleColor = ImageUtil.getSingleColor(image);
+			if (singleColor != null && srcImageFile.exists()) {
+				copyOrDelete(srcImageFile, destDirname, destDir);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private boolean moveDuplicateImagesTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
+		if (destDirname != null) {
+			String hash = ""+image.getWidth()+"-"+image.getHeight()+"-"+ImageUtil.createSimpleHash(image);
+			duplicateSet.add(hash);
+			if (duplicateSet.count(hash) > 1) {
+				copyOrDelete(srcImageFile, destDirname, destDir);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private void copyOrDelete(File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
+		if (_DELETE.equals(destDirname.toString())) {
+			CMFileUtil.forceDelete(srcImageFile);
+		} else {
+			File fullDestDir = new File(destDir, destDirname.toString());
+			fullDestDir.mkdirs();
+			CMFileUtil.forceMoveFileToDirectory(srcImageFile, fullDestDir);
 		}
 	}
 
-	private BufferedImage posterize(BufferedImage image) {
+	// ================= transform ===============
+	
+	private void runTransform(File imageDir) {
+		List<File> imageFiles = CMineGlobber.listSortedChildFiles(imageDir, CTree.PNG);
+		File highestImageFile = AMIImageType.getHighestLevelFile(imageFiles, priorityImage);
+		LOG.debug("transforming: "+highestImageFile);
+		BufferedImage image = ImageUtil.readImageQuietly(highestImageFile);
+		String basename = FilenameUtils.getBaseName(highestImageFile.toString());
+		if (image != null) {
+			if (rotateAngle != null) {
+				image = rotateAndSave(image, imageDir);
+			}
+			if (scalefactor != null) {
+				image = scaleAndSave(image, imageDir);
+			}
+			if (sharpen != null) {
+				image = sharpenAndSave(image, imageDir);
+				basename += "_s4";
+			}
+			if (erodeDilate) {
+				image = erodeDilateAndSave(image, imageDir);
+			}
+			if (binarize != null || threshold != null) {
+				image = binarizeAndSave(image, imageDir);
+				if (binarize != null) {
+					basename += binarize.name();
+				}
+				if (threshold != null) {
+					basename += "_thr_"+threshold.toString();
+				}
+			}
+			if (posterize) {
+				image = posterizeAndSave(image, imageDir);
+			}
+			File outfile = new File(imageDir, basename+"."+CTree.PNG);
+			ImageIOUtil.writeImageQuietly(image, outfile);
+		}
+	}
+
+	private BufferedImage posterizeAndSave(BufferedImage image, File imageDir) {
 		if (posterize) {
 			LOG.warn("posterize NYI");
 		}
 		return image;
 	}
 
-	private BufferedImage threshold(BufferedImage image) {
-		if (threshold != null) {
-			image = ImageUtil.boofCVBinarization(image, threshold);
-		}
+	private BufferedImage erodeDilateAndSave(BufferedImage image, File imageDir) {
+		image = ImageUtil.thresholdBoofcv(image, erodeDilate);
+		ImageUtil.writeImageQuietly(image, new File(imageDir, erodeDilate+"."+CTree.PNG));
 		return image;
 	}
 
@@ -237,21 +515,24 @@ public class AMIImageTool extends AbstractAMITool {
 	 * @param image
 	 * @return
 	 */
-	private BufferedImage binarize(BufferedImage image) {
+	private BufferedImage binarizeAndSave(BufferedImage image, File imageDir) {
 		// binarization follows sharpen
+		String type = null;
 		if (binarize != null) {
-			ThresholdMethod method = ThresholdMethod.getMethod(binarize);
-			if (method == null) {
-				// use default 
-				image = ImageUtil.thresholdBoofcv(image, erodeDilate);
-			} else {
-				image = ImageUtil.boofCVBinarization(image, threshold);
-			}
+			image = ImageUtil.boofCVThreshold(image, binarize);
+			type = binarize.toString().toLowerCase();
+			// debug
+		} else if (threshold != null) {
+			image = ImageUtil.boofCVBinarization(image, threshold);
+			type = "threshold"+"_"+threshold;
+		}
+		if (image != null) {
+			ImageUtil.writeImageQuietly(image, new File(imageDir, type+"."+CTree.PNG));
 		}
 		return image;
 	}
 
-	private BufferedImage sharpen(BufferedImage image) {
+	private BufferedImage sharpenAndSave(BufferedImage image, File imageDir) {
 		BufferedImage resultImage = null;
 		if (ImageToolkit.Boofcv.equals(toolkit)) {
 			resultImage = ImageUtil.sharpenBoofcv(image, sharpenMethod);
@@ -262,59 +543,44 @@ public class AMIImageTool extends AbstractAMITool {
 		} else if (SharpenMethod.SHARPEN8.toString().equals(sharpen)) {
 			resultImage = ImageUtil.sharpen(image, SharpenMethod.SHARPEN8);
 		} 
+		if (resultImage != null) {
+			ImageUtil.writeImageQuietly(resultImage, new File(imageDir, sharpenMethod+"."+CTree.PNG));
+		}
 		return resultImage;
 	}
 
-	private BufferedImage rotate(BufferedImage image) {
+	private BufferedImage rotateAndSave(BufferedImage image, File imageDir) {
 		if (rotateAngle != null && rotateAngle % 90 == 0) {
-			if (false || ImageToolkit.Boofcv.equals(toolkit)) {
+			// can't find a boofcv rotate
+			if (false && ImageToolkit.Boofcv.equals(toolkit)) {
 //				image = ImageUtil.getRotatedImage(image, rotateAngle);
 			} else if (true || ImageToolkit.Scalr.equals(toolkit)) {
 				image = ImageUtil.getRotatedImageScalr(image, rotateAngle);
 			}
+			ImageUtil.writeImageQuietly(image, new File(imageDir, ROT + "_"+rotateAngle+"."+CTree.PNG));
 		}
 		return image;
 	}
 
-	
-	private BufferedImage applyScale(BufferedImage image) {
-		Double scale = createScale(image);
-		if (scale != null) {
+	private BufferedImage scaleAndSave(BufferedImage image, File imageDir) {
+		Double scale = scalefactor != null ? scalefactor :
+			ImageUtil.getScaleToFitImageToLimits(image, maxWidth, maxHeight);
+		if (!Real.isEqual(scale,  1.0,  0.0000001)) {
 			if (ImageToolkit.Scalr.equals(toolkit)) {
 				image = ImageUtil.scaleImageScalr(scale, image);
 			}
-		}
-		return image;
-	}
-
-	private BufferedImage readImageQuietly(File inputBaseFile) {
-		BufferedImage image = null;
-		try {
-			if (!inputBaseFile.exists()) {
-				LOG.debug("File does not exist: "+inputBaseFile);
-			}
-			image = ImageIO.read(inputBaseFile);
-		} catch (IOException e) {
-			throw new RuntimeException("Cannot read image: "+inputBaseFile, e);
+			String scaleValue = String.valueOf(scalefactor).replace(".",  "_");
+			ImageUtil.writeImageQuietly(image, new File(imageDir, SCALE + " _ " + scaleValue + "." + CTree.PNG));
 		}
 		return image;
 	}
 	
-	private Double createScale(BufferedImage image) {
-		Double scale = null;
-		if (maxWidth != null || maxHeight != null) {
-			int width = image.getWidth();
-			int height = image.getHeight();
-			if (maxWidth != null && width > maxWidth || maxHeight != null && height > maxHeight) {
-				double scalex = ((double) maxWidth / (double) width);
-				double scaley = ((double) maxHeight / (double) height);
-				scale = Math.max(scalex,  scaley);
-			}
-		} else if (scalefactor != null) {
-			scale = scalefactor;
-		}
-		return scale;
+	// ============== misc ============
+	private String truncateToLastDot(String basename) {
+		return basename.substring(0, basename.lastIndexOf("."));
 	}
+
+
 
 
 

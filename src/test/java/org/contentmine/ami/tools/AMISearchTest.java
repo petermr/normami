@@ -29,5 +29,15 @@ public class AMISearchTest {
 		String[] args = {targetDir.toString(), "country", "disease", "funders"}; 
 		AMISearch.main(args);
 	}
+	
+	@Test
+	public void testFile() {
+		File foo = new File("foo/");
+		File bar = new File(foo, "bar");
+		File fb = bar.getParentFile();
+		LOG.debug("fb "+fb);
+		File q = new File("aa/bb/cc");
+		LOG.debug("p "+q.getParent());
+	}
 
 }
