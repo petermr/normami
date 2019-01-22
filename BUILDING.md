@@ -59,7 +59,7 @@ Currently all versions are `SNAPSHOTS` and treated a such by Maven.
 
 ## full build
 
-Make sure `cephis` is sync'ed with the git repo, rebuiltb and reinstalled.
+Make sure `cephis` is sync'ed with the git repo, rebuilt and reinstalled.
 
 This will clean, build, test and install `normami` in your personal `.m2` repository.
 ```
@@ -70,6 +70,10 @@ It does not run the Integration tests. For that we have
 
 ```
 mvn clean install -DskipITs=false
+```
+if you wish to skip the tests run:
+```
+mvn install -Dmaven.test.skip=true
 ```
 
 
