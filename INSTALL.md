@@ -1,7 +1,7 @@
-# Installing AMI
+# Installing/ruuning AMI
 
 ## building from code
-see [building](INSTALL.md)
+see [building](BUILDING.md). The rest of this document relates to running the prebuilt downloaded jars ("ami-jars").
 
 ## downloading
 AMI has two main approaches for downloading/running (`jar-with-dependencies` and `repo`/`bin`. Both are contained in the [AMI JAR repository](http://github.com/petermr/ami-jars) as `ami<date>` directories (e.g. `ami20190115/`). We shall describe the `repo`/`bin` approach.
@@ -68,7 +68,7 @@ which ami-pdf
 ```
 which should reply something like:
 ```
-/Users/pm286/workspace/cmdev/normami/target/appassembler/bin/ami-pdf
+/some/where/bin/ami-pdf
 ```
 If either of these gives an error or blank you have probaably got the path wrong.
 

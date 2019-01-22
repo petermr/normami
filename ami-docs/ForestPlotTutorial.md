@@ -26,7 +26,7 @@ This is normally automatic and run **from the parent directory of the cproject**
 ```
 cd devtest
 cd ..
-ami-makeproject -p devtest -rawfiletypes pdf
+ami-makeproject -p devtest --rawfiletypes pdf
 ```
   
 NOTE: `makeproject` **RENAMES** the PDF files to `fulltext.pdf`. If you want to kep the originals, copy the whole directory as a backup.
