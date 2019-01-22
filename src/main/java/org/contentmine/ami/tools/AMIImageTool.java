@@ -48,17 +48,17 @@ aliases = "image",
 version = "ami-image 0.1",
 		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "	first FILTERs images (initally from PDFimages), but does not transform the contents."
-		+ " Services includen%"
+		+ " Services include%n"
 		+ ""
-		+ "n%identification of duplicate images, and removal<.li>"
-		+ "n%rejection of images less than gven size</li>"
-		+ "n%rejection of monochrome images (e.g. all white or all black) (NB black and white is 'binary/ized'"
-		+ "n%"
+		+ "%nidentification of duplicate images, and removal<.li>"
+		+ "%nrejection of images less than gven size</li>"
+		+ "%nrejection of monochrome images (e.g. all white or all black) (NB black and white is 'binary/ized'"
+		+ "%n"
 
 		+ "Then TRANSFORMS contents"
-		+ "n%geometric scaling of images using Imgscalr, with interpolation. Increasing scale on small fonts can help OCR, "
+		+ "%ngeometric scaling of images using Imgscalr, with interpolation. Increasing scale on small fonts can help OCR, "
 		+ "decreasing scale on large pixel maps can help performance."
-		+ "n%"
+		+ "%n"
 		+ "NOTE: a missing option means it is not applied (value null). Generally no defaults"
 		
 )

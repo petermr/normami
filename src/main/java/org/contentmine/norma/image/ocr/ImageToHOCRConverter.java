@@ -19,6 +19,7 @@ public class ImageToHOCRConverter extends CommandRunner {
 	private static final String HOCR = "hocr";
 	private static final String USR_LOCAL_BIN_TESSERACT = "/usr/local/bin/tesseract";
 	private final static String TESS_CONFIG = "phylo";
+	private String tesseractPath = USR_LOCAL_BIN_TESSERACT;
 	
 	public ImageToHOCRConverter() {
 		setDefaults();
@@ -89,7 +90,8 @@ public class ImageToHOCRConverter extends CommandRunner {
 	}
 
     protected String getProgram() {
-    	return USR_LOCAL_BIN_TESSERACT;
+//    	return USR_LOCAL_BIN_TESSERACT;
+    	return tesseractPath ;
     }
 
 }

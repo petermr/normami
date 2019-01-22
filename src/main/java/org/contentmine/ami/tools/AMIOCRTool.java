@@ -88,6 +88,11 @@ public class AMIOCRTool extends AbstractAMITool {
             description = "apply - helps tesseract to have larger images")
     private Boolean applyScale;
 
+    @Option(names = {"--tesseract"},
+    		arity = "1",
+            description = "path for tesseract binary e.g. /usr/local/tesseract/")
+    private String tesseractPath = null;
+
 
 	private File derivedImagesDir;
 	private File outputHOCRFile;
@@ -173,7 +178,9 @@ public class AMIOCRTool extends AbstractAMITool {
 		File parentFile = outputHOCRFile.getParentFile();
 		File outputTop = new File(parentFile, basename);
 		outputTop.mkdirs();
-		SVGSVG.wrapAndWriteAsSVG(svgSvg, new File(outputTop, basename+"."+CTree.SVG));
+		File svgFile = new File(outputTop, basename+"."+CTree.SVG);
+  		LOG.debug("svg file "+svgFile);
+		SVGSVG.wrapAndWriteAsSVG(svgSvg, svgFile);
 		htmlBody = hocrReader.getOrCreateHtmlBody();
 		// debug
 		try {
@@ -210,6 +217,9 @@ public class AMIOCRTool extends AbstractAMITool {
 			// messy: tesseract filenames don't have html extension
 			outputHOCRFile = new File(outputDir, basename);
 			imageToHOCRConverter = new ImageToHOCRConverter();
+			if (tesseractPath != null) {
+				imageToHOCRConverter.setTesseractPath(tesseractPath);
+			}
 			try {
 				// run the OCR and return HOCR
 				outputHOCRFile = imageToHOCRConverter.convertImageToHOCR(imageFile, outputHOCRFile);
