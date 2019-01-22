@@ -36,7 +36,12 @@ If you have the corect classpath, then exceuting `ami-pdf` on the commandline wi
 
 ## Building from source
 
-Norma can be built with maven3 and requires java 1.8 or greater.
+Norma can be built with maven3 and requires java 1.8 or greater. If you are building for the first time, or if your mods are minor you can skip the integration tests. The normal tests take a minute or two. To avoid all tests (which takes 20 secs or so) :
+```
+mvn install -Dmaven.test.skip=true
+```
+will not run any tests.
+
 
 ## Contributing to development
 If you're interested in contributing please take a look at: [CONTRIBUTING.md](CONTRIBUTING.md)
