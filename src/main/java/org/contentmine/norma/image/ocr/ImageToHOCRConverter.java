@@ -94,4 +94,12 @@ public class ImageToHOCRConverter extends CommandRunner {
     	return tesseractPath ;
     }
 
+	public String getTesseractPath() {
+		return tesseractPath;
+	}
+
+	public void setTesseractPath(String tesseractPath) {
+		this.tesseractPath = tesseractPath;
+	}
+
 }
