@@ -123,6 +123,7 @@ public class AMIOCRTool extends AbstractAMITool {
 		System.out.println("scale               " + applyScale);
 		System.out.println("scalefactor         " + scalefactor);
 		System.out.println("scaledFilename      " + basename);
+		System.out.println("tesseractPath       " + tesseractPath);
 		System.out.println();
 	}
 
