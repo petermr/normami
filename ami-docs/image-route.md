@@ -143,6 +143,6 @@ cTree: davis2010_dissertation
 
 
 
-Next: [ami-bitmap](image-route2.md)
+Next: [ami-ocr](image-route2.md)
 
 
