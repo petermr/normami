@@ -12,13 +12,22 @@ The POM file depends on a parent.
     </parent>
 ```
 
-The components of the POM include:
+The instructions in the POM include:
 
 ### jar-with-dependencies
-The POM can generate a single Java JAR which contains all the upstream libraries so it is the only thing that has to be downloaded. There are deliberately many entry points
+The POM can generate a single Java JAR which contains all the upstream libraries so it is the only thing that has to be downloaded. There are deliberately many entry points. To run it:
+```
+java -jar <version>-jar-with-dependencies -cp <jar-location> <mainClass>
+```
+There are many main class entry points - the pom will show those mapped onto commands.
 
 ### appassembler
-This generates platform-independent scripts (UNIX, MACOSX, Windows) which run the different functions.
+This generates platform-independent scripts (UNIX, MACOSX, Windows) which run the different functions. The scripts are initially located in
+```
+some/where/normami/target/appassembler/bin
+```
+and you probably want to copy them to your library directories.
+
 Current entry points - these are being explanded
 ```
 contentMine          exist???
