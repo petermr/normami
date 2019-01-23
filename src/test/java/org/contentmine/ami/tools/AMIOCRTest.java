@@ -137,7 +137,7 @@ public class AMIOCRTest {
 	public void testScaleOCRProject() throws Exception {
 		String args = ""
 				+ "-p /Users/pm286/workspace/uclforest/devtest/"
-				+ " --includetrees"
+				+ " --includetree"
 				+ " buzick%"
 				+ " case_systematic_review_ar"
 				+ " case_systematic_review_ju"
