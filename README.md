@@ -17,7 +17,9 @@ This is a bundle of all `norma` and `ami` functionality to transform PDFs and XM
 For a simple introduction and a description of how to install binaries of the software please see: [here](http://contentmine.github.io)
 
 UPDATE 20190122)
-For simply running `AMI` (not building) use the repository [ami-jars](http://github.com/petermr/ami-jars). This repo will be updated frequently (at least till end 2019-02). There are two approaches:
+For simply running `AMI` (not building) use the repository [ami-jars](http://github.com/petermr/ami-jars). This repo will be updated frequently (at least till end 2019-02). If git is installed, a "git clone https://github.com/petermr/ami-jars.git" checks out the project.
+
+There are two approaches:
 
 ### running jars on commandline
 `ami-jars` provides an `uber-jar` ('jar-with-dependencies`) which can be run from the commandline:

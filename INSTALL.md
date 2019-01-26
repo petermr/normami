@@ -1,4 +1,4 @@
-# Installing/ruuning AMI
+# Installing/running AMI
 
 ## building from code
 see [building](BUILDING.md). The rest of this document relates to running the prebuilt downloaded jars ("ami-jars").

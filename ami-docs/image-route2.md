@@ -1,5 +1,5 @@
 # Forest plot images (2)
 
-## ami-image (was ami-bitmap)
+## ami-ocr
 
-This runs image processing on the plots to try to get better extraction of text and graphics
+This runs ocr on the images
