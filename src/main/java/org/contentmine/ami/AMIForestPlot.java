@@ -122,7 +122,6 @@ public class AMIForestPlot extends AbstractAMITool {
 //            description = "Apply thinning (${COMPLETION-CANDIDATES}) (none, or absence -> no thinning)")
 //    private String thinningName;
 //    
-//	private File derivedImagesDir;
 //	private DiagramAnalyzer diagramAnalyzer;
 //
 //	private PixelIslandList pixelIslandList;
@@ -176,10 +175,8 @@ public class AMIForestPlot extends AbstractAMITool {
 //	private void runPixel(CTree cTree) {
 //		System.out.println("cTree: "+cTree.getName());
 //		derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
-//		if (derivedImagesDir == null || !derivedImagesDir.exists()) {
-//			LOG.warn("no derivedimages/ dir");
-//		} else {
 //			List<File> derivedImageFiles = new CMineGlobber("**/*.png", derivedImagesDir).listFiles();
+//List<File> imageDirs = cTree.getPDFImagesImageDirectories();
 //			Collections.sort(derivedImageFiles);
 //			for (File derivedImageFile : derivedImageFiles) {
 //				System.err.print(".");

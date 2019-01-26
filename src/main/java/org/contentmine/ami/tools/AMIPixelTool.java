@@ -132,7 +132,6 @@ public class AMIPixelTool extends AbstractAMITool {
             description = "subdirectory for output of pixel analysis and diagrams")
     private String outputDirname;
     
-	private File derivedImagesDir;
 	private DiagramAnalyzer diagramAnalyzer;
 	private PixelIslandList pixelIslandList;
 	private File outputDirectory;
@@ -185,25 +184,23 @@ public class AMIPixelTool extends AbstractAMITool {
 
 	public void processTree() {
 		System.out.println("cTree: "+cTree.getName());
-		derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
-		if (derivedImagesDir == null || !derivedImagesDir.exists()) {
-			LOG.warn("no derivedimages/ dir");
-		} else {
-			List<File> derivedImageFiles = new CMineGlobber("**/*.png", derivedImagesDir).listFiles();
-			Collections.sort(derivedImageFiles);
-			for (File derivedImageFile : derivedImageFiles) {
-				System.err.print(".");
-				runPixel(derivedImageFile);
-			}
+		
+		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
+		Collections.sort(imageDirs);
+		for (File imageDir : imageDirs) {
+			File imageFile = getRawImageFile(imageDir);
+			System.err.print(".");
+			runPixel(imageFile);
 		}
 	}
 	
-	private void runPixel(File derivedImageFile) {
-		outputDirectory = new File(derivedImagesDir, outputDirname+"/");
+	private void runPixel(File imageFile) {
+		File imageDir = imageFile.getParentFile();
+		outputDirectory = new File(imageDir, outputDirname+"/");
 		outputDirectory.mkdirs();
-		basename = FilenameUtils.getBaseName(derivedImageFile.toString());
+		basename = FilenameUtils.getBaseName(imageFile.toString());
 		System.err.println("?"+basename+"?");
-		BufferedImage image = UtilImageIO.loadImage(derivedImageFile.toString());
+		BufferedImage image = UtilImageIO.loadImage(imageFile.toString());
 		diagramAnalyzer = new DiagramAnalyzer().setImage(image);
 		diagramAnalyzer.setMaxIsland(maxislands);
 		Thinning thinning = thinningName == null ? null : ThinningMethod.getThinning(thinningName);

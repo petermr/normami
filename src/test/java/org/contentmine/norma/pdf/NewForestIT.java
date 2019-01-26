@@ -86,7 +86,7 @@ public class NewForestIT {
 		int pixelRingID = 1;
 		PixelRing pixelRing1 = pixelRingList.get(pixelRingID);
 		SVGSVG.wrapAndWriteAsSVG(pixelRing1.getOrCreateSVG(), 
-				new File(cTree.getOrCreateDerivedImagesDir(), "ring." + pixelRingID + "." + CTree.SVG));
+				new File(cTree.getOrCreatePDFImageManager().getMakeOutputDirectory("derived"), "ring." + pixelRingID + "." + CTree.SVG));
 
 		/**
  raw width: 2126; height: 557; white: 1048804; black: 21541

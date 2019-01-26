@@ -344,6 +344,7 @@ public class AMIImageProcessor  extends AbstractAMITool {
 		for (File imageFile : imageFiles) {
 			String imageRoot = FilenameUtils.getBaseName(imageFile.toString());
 			LOG.debug("root "+imageRoot);
+			if (true) throw new RuntimeException("CHANGE derived ImageDir");
 			File derivedImageDir = new File(derivedImagesDir, imageRoot+"/");
 			
 			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
@@ -368,11 +369,14 @@ public class AMIImageProcessor  extends AbstractAMITool {
 
 	public void writeImageFilesForProject(CProject cProject) {
 		for (CTree cTree : cProject.getOrCreateCTreeList()) {
-			File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
-			if (derivedImagesDir != null) {
-				List<File> imageFiles = CMineGlobber.listSortedChildFiles(cTree.getExistingPDFImagesDir(), CTree.PNG);
-				Collections.reverse(imageFiles);
-				writeImageFilesForTree(derivedImagesDir, imageFiles);
+//			File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
+			if (true) throw new RuntimeException ("Mend this - new imagedir structure");
+			List<File> imageDirs = cTree.getPDFImagesImageDirectories();
+			for (File imageDir : imageDirs) {
+				File imageFile = AbstractAMITool.getRawImageFile(imageDir);
+//				Collections.reverse(imageFiles);
+				
+//				writeImageFilesForTree(imagesDir, imageFiles);
 			}
 		}
 	}

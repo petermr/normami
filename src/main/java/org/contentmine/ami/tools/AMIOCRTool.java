@@ -48,7 +48,7 @@ description = "Extracts text from OCR and (NYI) postprocesses HOCR output to cre
 )
 
 public class AMIOCRTool extends AbstractAMITool {
-	private static final String RAW = "raw";
+	static final String RAW = "raw";
 
 
 	private static final String IMAGE_DOT = "image.";
@@ -94,7 +94,6 @@ public class AMIOCRTool extends AbstractAMITool {
     private String tesseractPath = null;
 
 
-	private File derivedImagesDir;
 	private File outputHOCRFile;
 	private HtmlBody htmlBody;
 
@@ -142,14 +141,12 @@ public class AMIOCRTool extends AbstractAMITool {
 		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
 			LOG.warn("no pdfimages/ dir");
 		} else {
-//			derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
-//			List<File> imageFiles = CMineGlobber.listSortedChildFiles(derivedImagesDir, CTree.PNG);
 			List<File> imageDirs = cTree.getPDFImagesImageDirectories();
 			LOG.debug("imageDirs: "+imageDirs);
 			Collections.sort(imageDirs);
 			for (File imageDir : imageDirs) {
-				LOG.debug("imageDir: "+imageDir.getName());
-				File imageFile = new File(imageDir, RAW + "." + CTree.PNG);
+//				LOG.debug("imageDir: "+imageDir.getName());
+				File imageFile = getRawImageFile(imageDir);
 				System.err.print(".");
 				runOCR(imageFile);
 				if (outputHtml) {
@@ -158,7 +155,7 @@ public class AMIOCRTool extends AbstractAMITool {
 			}
 		}
 	}
-	
+
 	private void createStructuredHtml() {
 		HOCRReader hocrReader = new HOCRReader();
 		if (!outputHOCRFile.exists()) {

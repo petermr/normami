@@ -54,18 +54,21 @@ import picocli.CommandLine.Option;
 			//String footerHeading() default "";
 	hidden = false,
 			//String resourceBundle() default "";
-	usageHelpWidth = 80
+	usageHelpWidth = 80,
+	
+	version = "ami20190123"
 	)
 
 public abstract class AbstractAMITool implements Callable<Void> {
 	private static final Logger LOG = Logger.getLogger(AbstractAMITool.class);
 
 	protected static final String NONE = "NONE";
+
+	private static final String RAW = "raw";
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-
-    @Option(names = {"--basename"}, 
+	@Option(names = {"--basename"}, 
     		arity="1",
     		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png. By default this is computed by AMI."
     				+ " This allows users to create their own variants, but they won't be known by default to subsequent"
@@ -453,5 +456,11 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	protected void processTree() {
 		LOG.warn("Overide this");
 	}
+	
+    protected static File getRawImageFile(File imageDir) {
+		return new File(imageDir, RAW + "." + CTree.PNG);
+	}
+
+
 
 }

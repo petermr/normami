@@ -13,19 +13,30 @@ import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
-import org.contentmine.cproject.util.CMineGlobber;
+import org.contentmine.cproject.files.TreeImageManager;
+import org.contentmine.cproject.files.TreeImageManager.TreeImageType;
 import org.contentmine.cproject.util.CMineTestFixtures;
+import org.contentmine.eucl.euclid.Axis.Axis2;
+import org.contentmine.eucl.euclid.Int2;
+import org.contentmine.eucl.euclid.IntArray;
+import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGG;
 import org.contentmine.graphics.svg.SVGSVG;
+import org.contentmine.graphics.svg.cache.ComponentCache;
+import org.contentmine.graphics.svg.cache.LineCache;
 import org.contentmine.graphics.svg.util.ImageIOUtil;
 import org.contentmine.image.ImageProcessor;
 import org.contentmine.image.diagram.DiagramAnalyzer;
+import org.contentmine.image.pixel.PixelGraphList;
 import org.contentmine.image.pixel.PixelIslandList;
 import org.contentmine.image.pixel.PixelRing;
 import org.contentmine.image.pixel.PixelRingList;
+import org.contentmine.image.processing.ZhangSuenThinning;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
 import org.junit.Assert;
 import org.junit.Test;
+
+import nu.xom.Attribute;
 
 /** test AMIProcessorPDF
  * 
@@ -165,17 +176,19 @@ public class AMIImageProcessorIT {
 	public void testExtractSingleImagePixelRings() {
 		
 		CTree cTree = new CTree(new File(FORESTPLOT_IMAGES_DIR, "campbell"));
-		File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
+		TreeImageManager treeImageManager = TreeImageManager.createTreeImageManager(cTree, cTree.getExistingPDFImagesDir());
+		treeImageManager.setImageType(TreeImageType.RAW).setBasename("page.41.2");
 		String pngFilename = "page.41.2.png";
-		File imageFile = new File(cTree.getExistingPDFImagesDir(), pngFilename);
+		String imageRoot = FilenameUtils.getBaseName(pngFilename);
+		File imageFile = treeImageManager.getImageFileDerived(pngFilename);
+//		File imageFile = new File(cTree.getExistingPDFImagesDir(), pngFilename);
 		Assert.assertTrue("exists "+imageFile, imageFile.exists());
 		
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		diagramAnalyzer.setThinning(null);
 		diagramAnalyzer.readAndProcessInputFile(imageFile);
 		
-		String imageRoot = FilenameUtils.getBaseName(pngFilename);
-		File ringDir = new File(derivedImagesDir, imageRoot+"/");
+		File ringDir = treeImageManager.getMakePixelDir();
 
 		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
 		Assert.assertEquals("pixelRings", 6, pixelRingList.size());
@@ -191,8 +204,8 @@ public class AMIImageProcessorIT {
 	public void testExtractMultipleImagePixelRings() {
 		
 		CTree cTree = new CTree(new File(FORESTPLOT_IMAGES_DIR, "campbell"));
-		File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
-		List<File> imageFiles = CMineGlobber.listSortedChildFiles(cTree.getExistingPDFImagesDir(), CTree.PNG);
+		List<File> imageFiles = cTree.getOrCreatePDFImageManager().getRawImageFiles(CTree.PNG);
+		File derivedImagesDir = cTree.getOrCreatePDFImageManager().getMakeOutputDirectory("derived");
 		Collections.reverse(imageFiles);
 		for (File imageFile : imageFiles) {
 			String imageRoot = FilenameUtils.getBaseName(imageFile.toString());
@@ -221,8 +234,8 @@ public class AMIImageProcessorIT {
 	public void testExtractMultiplePixelIslands() {
 		
 		CTree cTree = new CTree(new File(FORESTPLOT_IMAGES_DIR, "campbell"));
-		File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
-		List<File> imageFiles = CMineGlobber.listSortedChildFiles(cTree.getExistingPDFImagesDir(), CTree.PNG);
+		File derivedImagesDir = cTree.getOrCreatePDFImageManager().getMakeOutputDirectory("derived");
+		List<File> imageFiles = cTree.getOrCreatePDFImageManager().getRawImageFiles(CTree.PNG);
 		Collections.reverse(imageFiles);
 		AMIImageProcessor amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree).setMaxPixelIslandSize(250000);
 		amiImageProcessor.writeImageFilesForTree(derivedImagesDir, imageFiles);
@@ -237,9 +250,11 @@ public class AMIImageProcessorIT {
 
 	@Test
 	public void testPixelIslandListAndRings() {
+		LOG.debug(">> "+FORESTPLOT_IMAGES_DIR);
 		CTree cTree = new CTree(new File(FORESTPLOT_IMAGES_DIR, "campbell"));
-		File derivedImagesDir = cTree.getOrCreateDerivedImagesDir();
+		File derivedImagesDir = cTree.getOrCreatePDFImageManager().getMakeOutputDirectory("derived");
 		File pngDir = new File(derivedImagesDir, "page.41.2");
+		LOG.debug(">> "+pngDir);
 		File pngFile = new File(pngDir, "binarized.png");
 		Assert.assertTrue(pngFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
@@ -262,10 +277,65 @@ public class AMIImageProcessorIT {
 	}
 
 	@Test
+	public void testPixelIslandThinned() {
+		LOG.debug(">> "+FORESTPLOT_IMAGES_DIR);
+		CTree cTree = new CTree(new File(FORESTPLOT_IMAGES_DIR, "campbell"));
+		File derivedImagesDir = cTree.getOrCreatePDFImageManager().getMakeOutputDirectory("derived");
+		File pngDir = new File(derivedImagesDir, "page.41.2");
+		LOG.debug(">> "+pngDir);
+		File pngFile = new File(pngDir, "binarized.png");
+		Assert.assertTrue(pngFile.exists());
+		
+		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
+		diagramAnalyzer.setThinning(new ZhangSuenThinning());
+		diagramAnalyzer.readAndProcessInputFile(pngFile);
+		ImageProcessor imageProcessor = diagramAnalyzer.getImageProcessor();
+		PixelIslandList pixelIslandList = imageProcessor.getOrCreatePixelIslandList();
+		
+		Assert.assertEquals("all islands", 29,  pixelIslandList.size());
+		pixelIslandList.removeIslandsWithBBoxesLessThan(new Int2(10,10));
+		Assert.assertEquals("large islands",6,  pixelIslandList.size());
+		SVGSVG.wrapAndWriteAsSVG(pixelIslandList.getOrCreateSVGG(), 
+				new File(pngDir, "pixelIslandsThin"+"." + CTree.SVG));
+		
+		PixelGraphList graphList = diagramAnalyzer.getOrCreateGraphList();
+		Assert.assertEquals(6, graphList.size());
+		graphList.drawGraphs(new File(pngDir, "rawgraphs.svg"));
+
+		graphList.mergeNodesCloserThan(3.0);
+		graphList.drawGraphs(new File(pngDir, "contracted.svg"));
+
+		ComponentCache componentCache = new ComponentCache(); 
+		LineCache lineCache = new LineCache(componentCache);
+		lineCache.setSegmentTolerance(1.0);
+		lineCache.addGraphList(graphList);
+		
+		IntArray xArray = lineCache.getGridXCoordinates();
+		graphList.snapNodesToArray(xArray, Axis2.X, 2);
+		IntArray yArray = lineCache.getGridYCoordinates();
+		graphList.snapNodesToArray(yArray, Axis2.Y, 1);
+		
+		graphList.drawGraphs(new File(pngDir, "snapped.svg"));
+		
+		/** recreate cache to clear old values */
+		lineCache = new LineCache(componentCache);
+		lineCache.setSegmentTolerance(1.0);
+		lineCache.addGraphList(graphList);
+		
+		SVGG gg = new SVGG();
+		gg.appendChildCopies(SVGElement.addAttributes(lineCache.getOrCreateHorizontalLineList(), 
+				new Attribute("stroke", "red"), new Attribute("stroke-width", "1.5")));
+		gg.appendChildCopies(SVGElement.addAttributes(lineCache.getOrCreateVerticalLineList(), 
+				new Attribute("stroke", "black"), new Attribute("stroke-width", "1.5")));
+		
+		SVGSVG.wrapAndWriteAsSVG(gg, new File(pngDir, "horizontalVertical.svg"));
+	}
+
+	@Test
 	public void testExtractSingleArticlePixelRings() {
 		CTree cTree = new CTree(new File(FORESTPLOT_DIR, "campbell"));
-		
-		for (File imageFile : cTree.getExistingPDFImagesDir().listFiles()) {
+		List<File> imageFiles = cTree.getOrCreatePDFImageManager().getRawImageFiles(CTree.PNG);
+		for (File imageFile : imageFiles) {
 			LOG.debug(imageFile);
 			String baseName = FilenameUtils.getBaseName(imageFile.toString());
 			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
@@ -278,7 +348,7 @@ public class AMIImageProcessorIT {
 				PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
 				for (int i = 0; i < pixelRingList.size(); i++) {
 					SVGSVG.wrapAndWriteAsSVG(pixelRingList.get(i).getOrCreateSVG(), 
-							new File(cTree.getOrCreateDerivedImagesDir(), baseName+"."+"ring." + i + "." + CTree.SVG));
+							new File(imageFile.getParentFile(), baseName+"."+"ring." + i + "." + CTree.SVG));
 				}
 			}
 		}		
@@ -326,7 +396,7 @@ public class AMIImageProcessorIT {
 						PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
 						for (int i = 0; i < pixelRingList.size(); i++) {
 							SVGSVG.wrapAndWriteAsSVG(pixelRingList.get(i).getOrCreateSVG(), 
-									new File(cTree.getOrCreateDerivedImagesDir(), baseName+"."+"ring." + i + "." + CTree.SVG));
+									new File(imageFile.getParentFile(), baseName+"."+"ring." + i + "." + CTree.SVG));
 						}
 					}
 				}
@@ -352,7 +422,7 @@ public class AMIImageProcessorIT {
 					if (image == null) {
 						LOG.debug("skipped null "+imageFile);
 					} else {
-						File binarizedFile = new File(cTree.getOrCreateDerivedImagesDir(), baseName+"."+"bin." + CTree.PNG);
+						File binarizedFile = new File(imageFile.getParentFile(), baseName+"."+"bin." + CTree.PNG);
 						ImageIOUtil.writeImageQuietly(image, binarizedFile);
 						LOG.debug("wrote "+binarizedFile);
 					}
