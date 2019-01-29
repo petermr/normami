@@ -81,7 +81,7 @@ public class NewForestIT {
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		diagramAnalyzer.setThinning(null);
 		diagramAnalyzer.readAndProcessInputFile(imageFile);
-		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
+		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings();
 		Assert.assertEquals("pixelRings", 13, pixelRingList.size());
 		int pixelRingID = 1;
 		PixelRing pixelRing1 = pixelRingList.get(pixelRingID);

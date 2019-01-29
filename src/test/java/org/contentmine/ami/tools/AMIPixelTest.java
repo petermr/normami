@@ -145,7 +145,7 @@ islands > (10,10): islands: 6
 				+ " -t " + ctree
 //				+ " --includetree shenderovich "
 				);
-		AMIPixelTool amiPixelTool = new AMIPixelTool();
+		AbstractAMITool amiPixelTool = new AMIPixelTool();
 		amiPixelTool.runCommands(" -p " + cproject
 				// these are not working well yet 
 				+ " --minwidth 350"

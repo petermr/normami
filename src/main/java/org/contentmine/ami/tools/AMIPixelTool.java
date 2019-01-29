@@ -189,8 +189,10 @@ public class AMIPixelTool extends AbstractAMITool {
 		Collections.sort(imageDirs);
 		for (File imageDir : imageDirs) {
 			File imageFile = getRawImageFile(imageDir);
-			System.err.print(".");
-			runPixel(imageFile);
+			if (includeExclude(FilenameUtils.getBaseName(imageFile.toString()))) {
+				System.err.print(".");
+				runPixel(imageFile);
+			}
 		}
 	}
 	
@@ -199,7 +201,9 @@ public class AMIPixelTool extends AbstractAMITool {
 		outputDirectory = new File(imageDir, outputDirname+"/");
 		outputDirectory.mkdirs();
 		basename = FilenameUtils.getBaseName(imageFile.toString());
-		System.err.println("?"+basename+"?");
+		if (includeExclude(basename)) {
+			LOG.debug("basename: "+basename);
+		}
 		BufferedImage image = UtilImageIO.loadImage(imageFile.toString());
 		diagramAnalyzer = new DiagramAnalyzer().setImage(image);
 		diagramAnalyzer.setMaxIsland(maxislands);

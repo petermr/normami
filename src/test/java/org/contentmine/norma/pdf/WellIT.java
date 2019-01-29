@@ -151,7 +151,8 @@ public class WellIT {
 		File imageFile = new File(WELL_DIR, project + "/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
-		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
+		diagramAnalyzer.readAndProcessInputFile(imageFile);
+		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings();
 		Assert.assertEquals("pixelRings", 5, pixelRingList.size());
 		SVGSVG.wrapAndWriteAsSVG(pixelRingList.plotPixels(), new File("target/well/" + project + "/" + root + ".rings.svg"));
 	}
@@ -163,7 +164,8 @@ public class WellIT {
 		File imageFile = new File(WELL_DIR, ctree+"/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
-		PixelIslandList pixelIslandList = diagramAnalyzer.createDefaultPixelIslandList(imageFile);
+		diagramAnalyzer.readAndProcessInputFile(imageFile);
+		PixelIslandList pixelIslandList = diagramAnalyzer.createDefaultPixelIslandList();
 		pixelIslandList.removeIslandsWithBBoxesLessThan(new Real2Range(new RealRange(0, 10), new RealRange(0, 10)));
 		Assert.assertEquals(20, pixelIslandList.size());
 		SVGSVG.wrapAndWriteAsSVG(pixelIslandList.getOrCreateSVGG(), new File("target/well/"+ctree+"/page."+root+".svg"));
@@ -178,7 +180,8 @@ public class WellIT {
 		File imageFile = new File(WELL_DIR, project + "/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
-		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
+		diagramAnalyzer.readAndProcessInputFile(imageFile);
+		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings();
 		Assert.assertEquals("pixelRings", 5, pixelRingList.size());
 		SVGSVG.wrapAndWriteAsSVG(pixelRingList.plotPixels(), new File("target/well/" + project + "/" + root + ".rings.svg"));
 	}
@@ -191,7 +194,8 @@ public class WellIT {
 		File imageFile = new File(WELL_DIR, ctree+"/images/page."+root+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
-		PixelIslandList pixelIslandList = diagramAnalyzer.createDefaultPixelIslandList(imageFile);
+		diagramAnalyzer.readAndProcessInputFile(imageFile);
+		PixelIslandList pixelIslandList = diagramAnalyzer.createDefaultPixelIslandList();
 		pixelIslandList.removeIslandsWithBBoxesLessThan(new Real2Range(new RealRange(0, 10), new RealRange(0, 10)));
 		pixelIslandList.removeIslandsWithLessThanPixelCount(50);
 		SVGSVG.wrapAndWriteAsSVG(pixelIslandList.getOrCreateSVGG(), new File("target/well/"+ctree+"/page."+root+".svg"));
@@ -354,7 +358,8 @@ public class WellIT {
 		File outfileSvg1 = new File(WELL_DIR,  ctree + "/" +"svg/" + root1 + ".1.svg");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
-		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
+		diagramAnalyzer.readAndProcessInputFile(imageFile);
+		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings();
 		Assert.assertNotNull(pixelRingList);
 		Assert.assertEquals(4, pixelRingList.size());
 		BufferedImage image = diagramAnalyzer.getImage();
@@ -407,7 +412,8 @@ public class WellIT {
 		File outfileSvg1 = new File(WELL_DIR,  ctree + "/" +"svg/" + root + ".1.svg");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
-		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings(imageFile);
+		diagramAnalyzer.readAndProcessInputFile(imageFile);
+		PixelRingList pixelRingList = diagramAnalyzer.createDefaultPixelRings();
 		Assert.assertNotNull(pixelRingList);
 		Assert.assertEquals(5, pixelRingList.size());
 		BufferedImage image = diagramAnalyzer.getImage();

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMIDictionaryTool.RawFileFormat;
@@ -61,13 +62,15 @@ import picocli.CommandLine.Option;
 
 public abstract class AbstractAMITool implements Callable<Void> {
 	private static final Logger LOG = Logger.getLogger(AbstractAMITool.class);
-
-	protected static final String NONE = "NONE";
-
-	private static final String RAW = "raw";
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+
+	public enum IncExc {
+		INCLUDE,
+		EXCLUDE
+	}
+	
 	@Option(names = {"--basename"}, 
     		arity="1",
     		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png. By default this is computed by AMI."
@@ -106,12 +109,26 @@ public abstract class AbstractAMITool implements Callable<Void> {
     		)
 	protected Boolean forceMake = false;
 
+    @Option(names = {"--excludebase"}, 
+    		arity="1..*",
+    		description = "exclude child files of cTree (only works with --ctree). "
+    				+ "Currently must be explicit or with trailing % for truncated glob."
+    		)
+	public String[] excludeBase;
+
     @Option(names = {"--excludetree"}, 
     		arity="1..*",
     		description = "exclude the CTrees in the list. (only works with --cproject). "
     				+ "Currently must be explicit but we'll add globbing later."
     		)
 	public String[] excludeTrees;
+
+    @Option(names = {"--includebase"}, 
+    		arity="1..*",
+    		description = "include child files of cTree (only works with --ctree). "
+    				+ "Currently must be explicit or with trailing % for truncated glob."
+    		)
+	public String[] includeBase;
 
     @Option(names = {"--includetree"}, 
     		arity="1..*",
@@ -147,6 +164,12 @@ public abstract class AbstractAMITool implements Callable<Void> {
         + "We map ERROR or WARN -> 0 (i.e. always print), INFO -> 1(-v), DEBUG->2 (-vv)" })
     protected boolean[] verbosity = new boolean[0];
     
+
+	
+	protected static final String NONE = "NONE";
+	private static final String RAW = "raw";
+
+	static final String TRUNCATE = "%";
 	protected static File HOME_DIR = new File(System.getProperty("user.home"));
 	protected static String CONTENT_MINE_HOME = "ContentMine";
 	protected static File DEFAULT_CONTENT_MINE_DIR = new File(HOME_DIR, CONTENT_MINE_HOME);
@@ -257,12 +280,22 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	 * 
 	 */
 	protected void validateCProject() {
+				
 		if (cProjectDirectory != null) {
 			File cProjectDir = new File(cProjectDirectory);
 			cProjectDirectory = checkDirExistenceAndGetAbsoluteName(cProjectDir, "cProject");
 			cProject = new CProject(cProjectDir);
 			cTreeList = generateCTreeList();
     	}
+	}
+
+	private void checkIncludeExclude(String[] exclude, String[] include) {
+		if (
+			(exclude != null /* && exclude.length > 0*/) &&
+			(include != null /* && include.length > 0*/)
+			) {
+			throw new IllegalArgumentException("Cannot have both include and exclude arguments: ");
+		}
 	}
 
 	private String checkDirExistenceAndGetAbsoluteName(File dir, String type) {
@@ -283,6 +316,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	private CTreeList generateCTreeList() {
 		cTreeList = new CTreeList();
 		if (cProject != null) {
+			checkIncludeExclude(excludeTrees, includeTrees);
 			List<String> includeTreeList = includeTrees == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(includeTrees));
 			List<String> excludeTreeList = excludeTrees == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(excludeTrees));
 			CTreeList pList = cProject == null ? new CTreeList() : cProject.getOrCreateCTreeList();
@@ -311,6 +345,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	 * 
 	 */
 	protected void validateCTree() {
+		checkIncludeExclude(excludeBase, includeBase); // check anyway
 		if (cTreeDirectory != null) {
 			File cTreeDir = new File(cTreeDirectory);
 			cTreeDirectory = checkDirExistenceAndGetAbsoluteName(cTreeDir, "cTree");
@@ -330,9 +365,11 @@ public abstract class AbstractAMITool implements Callable<Void> {
         System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
         System.out.println("cTreeList           " + cTreeList);
         System.out.println("dryrun              " + dryrun);
+        System.out.println("excludeBase         " + excludeBase);
         System.out.println("excludeTrees        " + excludeTrees);
         System.out.println("file types          " + Util.toStringList(rawFileFormats));
         System.out.println("forceMake           " + forceMake);
+        System.out.println("includeBase         " + includeBase);
         System.out.println("includeTrees        " + includeTrees);
         System.out.println("log4j               " + (log4j == null ? "" : new ArrayList<String>(Arrays.asList(log4j))));
         System.out.println("logfile             " + logfile);
@@ -457,7 +494,35 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		LOG.warn("Overide this");
 	}
 	
-    protected static File getRawImageFile(File imageDir) {
+    protected boolean includeExclude(String basename) {
+		boolean include = true;
+		if (includeBase != null) {
+			include = incExclude(includeBase, basename);
+		} else if (excludeBase != null) {
+			include = !incExclude(excludeBase, basename);
+		} else {
+			include = true;
+		}
+		return include;
+	}
+
+	private boolean incExclude(String[] incExcludeBaseList, String basename) {
+		for (String incExcludeBase : incExcludeBaseList) {
+			boolean truncate = false;
+			String ref = incExcludeBase;
+			int idx = ref.lastIndexOf(TRUNCATE);
+			if (idx == ref.length() - 1) {
+				ref = ref.substring(0, idx - 1);
+				truncate = true;
+			}
+			if (incExcludeBase.equals(basename) || (truncate && basename.startsWith(ref))) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	protected static File getRawImageFile(File imageDir) {
 		return new File(imageDir, RAW + "." + CTree.PNG);
 	}
 
