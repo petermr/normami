@@ -26,12 +26,10 @@ public class AMICleanTest {
 	 * 
 	 */
 	public void testCleanForestPlotsSmall() throws Exception {
-		String[] args = {
-				"-p", "/Users/pm286/workspace/uclforest/forestplotssmall",
-				"--dir", "svg/", "pdfimages/",
-				"--file", "scholarly.html"
-				};
-		Assert.assertTrue(new File(args[1]).exists());
+		String args = 
+				"-p /Users/pm286/workspace/uclforest/forestplotssmall"
+				+ " --dir svg/ pdfimages/ --file scholarly.html"
+				;
 		AMICleanTool amiCleaner = new AMICleanTool();
 		amiCleaner.runCommands(args);
 		CProject cProject = amiCleaner.getCProject();

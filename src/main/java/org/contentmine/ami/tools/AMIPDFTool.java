@@ -55,13 +55,6 @@ public class AMIPDFTool extends AbstractAMITool {
     		)
     private int maxpages = 5;
     
-    @Option(names = {"--svgdir"}, 
-    		arity="0..1",
-   		    description = "Directory for SVG files created from PDF. Do not use/change this unless you are testing "
-   		    		+ "or developing AMI as other components rely on this."
-    		)
-    private String svgDirectoryName = "svg/";
-
     /** this should be a Mixin, with SVGTool
      * NYI
      */
@@ -69,6 +62,13 @@ public class AMIPDFTool extends AbstractAMITool {
     		arity = "1..*",
             description = "pages to extract")
     private List<Integer> pages = null;
+
+    @Option(names = {"--svgdir"}, 
+    		arity="0..1",
+   		    description = "Directory for SVG files created from PDF. Do not use/change this unless you are testing "
+   		    		+ "or developing AMI as other components rely on this."
+    		)
+    private String svgDirectoryName = "svg/";
 
     @Option(names = {"--svgpages"}, 
     		arity="0..1",

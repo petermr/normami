@@ -112,7 +112,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
     @Option(names = {"--excludebase"}, 
     		arity="1..*",
     		description = "exclude child files of cTree (only works with --ctree). "
-    				+ "Currently must be explicit or with trailing % for truncated glob."
+    				+ "Currently must be explicit or with trailing percent for truncated glob."
     		)
 	public String[] excludeBase;
 
@@ -126,7 +126,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
     @Option(names = {"--includebase"}, 
     		arity="1..*",
     		description = "include child files of cTree (only works with --ctree). "
-    				+ "Currently must be explicit or with trailing % for truncated glob."
+    				+ "Currently must be explicit or with trailing percent for truncated glob."
     		)
 	public String[] includeBase;
 

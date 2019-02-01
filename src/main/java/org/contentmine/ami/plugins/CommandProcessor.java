@@ -100,7 +100,7 @@ public class CommandProcessor {
 		runCommands();
 	}
 
-	private void parseCommands(List<String> cmds0) {
+	public void parseCommands(List<String> cmds0) {
 		pluginOptions = new ArrayList<AMIPluginOption>();
 		if (cmds0.size() == 0) {
 			throw new RuntimeException("No commands given");
@@ -140,7 +140,7 @@ public class CommandProcessor {
 	public void runCommands() {
 		runNormaIfNecessary();
 		for (AMIPluginOption pluginOption : pluginOptions) {
-			System.out.println("running: "+pluginOption);
+			LOG.trace("running: "+pluginOption);
 			try {
 				pluginOption.run();
 			} catch (Exception e) {
@@ -272,6 +272,10 @@ public class CommandProcessor {
 	private static void help() {
 		System.err.println("Command processor: \n"
 				+ "   cproject projectDir [command [command]...]");
+	}
+
+	public List<AMIPluginOption> getPluginOptions() {
+		return pluginOptions;
 	}
 
 }

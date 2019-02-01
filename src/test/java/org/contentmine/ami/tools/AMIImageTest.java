@@ -33,14 +33,14 @@ public class AMIImageTest {
 //				"-t /Users/pm286/workspace/uclforest/devtest/bowmann-perrottetal_2013"
 //				"-t /Users/pm286/workspace/uclforest/devtest/buzick_stone_2014_readalo"
 //				"-t /Users/pm286/workspace/uclforest/devtest/campbell_systematic_revie"
-				"-t /Users/pm286/workspace/uclforest/devtest/case_systematic_review_ar"
-//				"-t /Users/pm286/workspace/uclforest/devtest/mcarthur_etal2012_cochran"
+//				"-t /Users/pm286/workspace/uclforest/devtest/case_systematic_review_ar"
+				"-t /Users/pm286/workspace/uclforest/devtest/mcarthur_etal2012_cochran"
 //				"-t /Users/pm286/workspace/uclforest/devtest/puziocolby2013_co-operati"
 //				"-t /Users/pm286/workspace/uclforest/devtest/torgersonetal_2011dferepo"
 //				"-t /Users/pm286/workspace/uclforest/devtest/zhengetal_2016"
-//				+ " --sharpen sharpen4"
+				+ " --sharpen sharpen4"
 				+ " --threshold 180"
-				+ " --binarize BLOCK_OTSU"
+				+ " --binarize GLOBAL_ENTROPY"
 //				+ " --rotate 270"
 				+ " --priority SCALE"
 				;
@@ -166,7 +166,9 @@ public class AMIImageTest {
 //				"-t /Users/pm286/workspace/uclforest/devtest/puziocolby2013_co-operati"
 //				"-t /Users/pm286/workspace/uclforest/devtest/torgersonetal_2011dferepo"
 //				"-t /Users/pm286/workspace/uclforest/devtest/zhengetal_2016"
-				+ " --binarize local_mean"
+//				+ " --binarize xLOCAL_MEAN"
+				+ " --threshold 180"
+				+ " --sharpen x"
 				;
 		new AMIImageTool().runCommands(args);
 	}

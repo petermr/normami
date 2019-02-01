@@ -20,6 +20,18 @@ public class AMIOCRTest {
 	/** 
 	 * convert single (good) file
 	 */
+	public void testHelp() throws Exception {
+		String args = 
+				"-t /Users/pm286/workspace/uclforest/dev/shenderovich"
+				+ " --html true"
+			;
+		new AMIOCRTool().runCommands(args);
+	}
+	
+	@Test
+	/** 
+	 * convert single (good) file
+	 */
 	public void testHOCR() throws Exception {
 		String[] args = {
 				"-t", "/Users/pm286/workspace/uclforest/dev/shenderovich",
@@ -33,10 +45,10 @@ public class AMIOCRTest {
 	 * convert single (moderate) tree
 	 */
 	public void testHOCR1() throws Exception {
-		String[] args = {
-				"-t", "/Users/pm286/workspace/uclforest/dev/buzick",
-				"--html", "true"
-			};
+		String args = 
+				"-t /Users/pm286/workspace/uclforest/dev/buzick"
+				+ " --html true"
+			;
 		new AMIOCRTool().runCommands(args);
 	}
 	

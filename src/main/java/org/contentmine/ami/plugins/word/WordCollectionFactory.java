@@ -127,7 +127,7 @@ public class WordCollectionFactory {
 				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
 				LOG.trace(msg);
 			}
-			LOG.debug("raw words "+rawWords.size());
+			LOG.trace("raw words "+rawWords.size());
 		}
 		return createTransformedWords(rawWords);
 	}
@@ -514,6 +514,7 @@ public class WordCollectionFactory {
 	WordResultsElement createTFIDFFrequencies(DefaultArgProcessor wordArgProcessor, WordResultsElementList frequenciesElementList) {
 //		WordResultsElement aggregatedFrequenciesElement = createAggregatedFrequenciesElement(frequenciesElementList);
 		WordResultsElement booleanFrequencyElement = new WordResultsElement(TFIDF_FREQUENCIES);
+		LOG.error("TFIDF NYI");
 //		for (ResultElement termElement : aggregatedFrequenciesElement) {
 //			String word = ((WordResultElement)termElement).getWord();
 //			int documentCount = frequenciesElementList.getSingleCountsOfWord(word);

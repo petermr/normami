@@ -125,9 +125,13 @@ public abstract class AMIPluginOption extends PluginOption {
 	}
 	
 	private void runFilterResultsXMLOptions(String option) {
+		// typical string:
+		// AMIPluginOption  - filter: --project /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10 
+		//    --filter file(**/word/frequencies/results.xml)xpath(//result[@count>70])
+		//    -o word.frequencies.snippets.xml  
+
 		String filterCommandString = createFilterCommandString(option);
-		DefaultArgProcessor.CM_LOG.debug("filter: "+filterCommandString);
-		LOG.trace(option);
+		LOG.debug("filter: "+filterCommandString);
 		new DefaultArgProcessor(filterCommandString).runAndOutput();
 	}
 

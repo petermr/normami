@@ -65,11 +65,20 @@ public class AMIProcessor {
 		return amiProcessor;
 	}
 	
+	/** creates project from name and user.dir
+	 * 
+	 * @param projectName
+	 * @return
+	 */
 	public static AMIProcessor createProcessor(String projectName) {
 		
 		File userDir = new File(System.getProperty("user.dir"));
 		LOG.debug("project name: "+projectName+" "+userDir);
 		File projectDir = new File(userDir, projectName);
+		return createProcessorFromDir(projectDir);
+	}
+
+	public static AMIProcessor createProcessorFromDir(File projectDir) {
 		if (!projectDir.exists() || !projectDir.isDirectory()) {
 			System.err.println("Project does not exist or is not directory:");
 			System.err.println("    "+projectDir);
@@ -111,7 +120,7 @@ public class AMIProcessor {
 		}
 	}
 
-	private String addSearches(List<String> facetList, String cmd) {
+	public String addSearches(List<String> facetList, String cmd) {
 		for (String facet : facetList) {
 			if (facet.equals("gene")) {
 				cmd += " gene(human)";

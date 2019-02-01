@@ -15,7 +15,7 @@ public class AMIWordsToolTest {
 	}
 
 	@Test
-	public void testZikaCooccurrence0() {
+	public void testZikaWords0() {
 		File targetDir = new File("target/cooccurrence/zika10");
 		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);
 		/** need HTML */
@@ -23,9 +23,12 @@ public class AMIWordsToolTest {
 				"-p /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10/"
 			;
 		new AMITransformTool().runCommands(args);
+		// transformed norma
 		args = 
 				"-p /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10/"
-				+ " --stopwords w.stopwords:pmcstop.txt stopwords.txt"
+				+ " --stopwords pmcstop.txt stopwords.txt"
+				+ " --targets frequencies"
+				+ " --mincount 70"
 			;
 		new AMIWordsTool().runCommands(args);
 	}

@@ -64,11 +64,24 @@ public class AMIForestPlotTest {
 	 * convert single tree
 	 */
 	public void testDonkerPlus() throws Exception {
-		String args = 
-				"-p /Users/pm286/workspace/uclforest/devtest/"
+		String args =
+		"-p /Users/pm286/workspace/uclforest/devtest/"
+		+ " --includetree"
+		+ " donkerdeboerkostons2014_l"
+		+ " ergen_canagli_17_"
+		+ " fanetal_2017_meta_science"
+		+ ""
+		+ " --sharpen sharpen4"
+		+ " --threshold 180"
+//		+ " --binarize GLOBAL_ENTROPY"
+		+ " --priority SCALE"
+		;
+//		new AMIImageTool().runCommands(args);
+
+		args = 	"-p /Users/pm286/workspace/uclforest/devtest/"
 				+ " --includetree"
-//				+ " donkerdeboerkostons2014_l"
-//				+ " ergen_canagli_17_"
+				+ " donkerdeboerkostons2014_l"
+				+ " ergen_canagli_17_"
 				+ " fanetal_2017_meta_science"
 			;
 		new AMIForestPlotTool().runCommands(args);

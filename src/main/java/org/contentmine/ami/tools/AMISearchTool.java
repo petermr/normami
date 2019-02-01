@@ -1,18 +1,16 @@
 package org.contentmine.ami.tools;
 
-import java.io.File;
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIProcessor;
+import org.contentmine.ami.plugins.AMIPluginOption;
+import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.cproject.files.CProject;
-import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
-import org.contentmine.cproject.util.CMineGlobber;
 
 import picocli.CommandLine.Option;
 /**
@@ -30,7 +28,7 @@ public class AMISearchTool extends AbstractAMITool {
     		arity = "1..*",
             description = "symbolic names of dictionaries (likely to be obsoleted). Good values are (country, disease, funders)")
     private List<String> dictionaryList;
-	
+
 
     /** used by some non-picocli calls
      * obsolete it
@@ -69,8 +67,56 @@ public class AMISearchTool extends AbstractAMITool {
 	}
 
 	private void runSearch() {
-		AMIProcessor amiProcessor = AMIProcessor.createProcessor(cProjectDirectory);
-		amiProcessor.runSearchesAndCooccurrence(dictionaryList);
+		AMIProcessor amiProcessor = AMIProcessor.createProcessorFromDir(cProject.getDirectory());
+		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt";
+		String cmd1 = cmd;
+		for (String facet : dictionaryList) {
+			if (facet.equals("gene")) {
+				cmd1 += " gene(human)";
+			} else if (facet.equals("species")) {
+				cmd1 += " species(binomial)";
+			} else {
+				cmd1 += " "+AMIProcessor.SEARCH + "("+facet+")";
+			}
+		}
+		cmd = cmd1;
+		try {
+			
+			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
+			List<String> cmdList = Arrays.asList(cmd.trim().split("\\s+"));
+			for (String cmd0 : cmdList) {
+				System.out.println("cmd> "+cmd0);
+			}
+			commandProcessor.parseCommands(cmdList);
+			List<AMIPluginOption> pluginOptions = commandProcessor.getPluginOptions();
+			for (AMIPluginOption option : pluginOptions) {
+				LOG.debug("plug>"+option);
+			}
+			commandProcessor.runCommands();
+/**
+			commandProcessor.runNormaIfNecessary();
+			for (AMIPluginOption pluginOption : commandProcessor.pluginOptions) {
+				System.out.println("running: "+pluginOption);
+				try {
+					pluginOption.run();
+				} catch (Exception e) {
+					CommandProcessor.LOG.error("cannot run command: "+pluginOption +"; " + e.getMessage());
+					continue;
+				}
+				System.out.println("filter: "+pluginOption);
+				pluginOption.runFilterResultsXMLOptions();
+				System.out.println("summary: "+pluginOption);
+				pluginOption.runSummaryAndCountOptions(); 
+			}
+			CommandProcessor.LOG.trace(commandProcessor.pluginOptions);	 */
+			
+			commandProcessor.createDataTables();
+		
+		} catch (IOException e) {
+			throw new RuntimeException("Cannot run command: "+cmd, e);
+		}
+		
+		amiProcessor.defaultAnalyzeCooccurrence(dictionaryList);
 	}
 
 

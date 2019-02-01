@@ -31,7 +31,7 @@ public class AMISearchToolTest {
 		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);
 		String args = 
 				"-p /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10"
-				+ " --dictionary country disease funders"
+				+ " --dictionary species gene country disease funders "
 			;
 		new AMISearchTool().runCommands(args);
 	}
