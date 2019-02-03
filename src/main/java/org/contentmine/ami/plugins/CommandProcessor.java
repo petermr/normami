@@ -14,6 +14,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.ResultsAnalysis.SummaryType;
 import org.contentmine.cproject.files.CProject;
+import org.contentmine.cproject.files.OptionFlag;
 import org.contentmine.cproject.files.ResourceLocation;
 import org.contentmine.cproject.util.CellRenderer;
 import org.contentmine.cproject.util.DataTablesTool;
@@ -88,20 +89,22 @@ public class CommandProcessor {
 		this.projectDir = projectDir;
 	}
 
+	
 	public void processCommands(String commandString) {
 		if (commandString == null) {
 			throw new RuntimeException("Null command");
 		}
 		processCommands(Arrays.asList(commandString.trim().split("\\s+")));
-	}
+	}	
 
 	public void processCommands(List<String> cmds) {
 		parseCommands(cmds);
 		runCommands();
 	}
 
+	
 	public void parseCommands(List<String> cmds0) {
-		pluginOptions = new ArrayList<AMIPluginOption>();
+		getOrCreatePluginOptions();
 		if (cmds0.size() == 0) {
 			throw new RuntimeException("No commands given");
 		}
@@ -112,6 +115,30 @@ public class CommandProcessor {
 		}
 	}
 
+	private void getOrCreatePluginOptions() {
+		if (pluginOptions == null) {
+			pluginOptions = new ArrayList<AMIPluginOption>();
+		}
+	}
+	
+	public void parseCommandsNew(String commandTag, List<String> subOptions, List<OptionFlag> optionFlags) {
+		createPluginOptionNew(/*String */commandTag, /*List<String>*/ subOptions, /*List<OptionFlag>*/ optionFlags);
+	}
+	
+	private void createPluginOptionNew(String commandTag, List<String> subOptions, List<OptionFlag> optionFlags) {
+		getOrCreatePluginOptions();
+		String cmd = commandTag;
+		LOG.trace("creating pluginOption: "+cmd);
+		AMIPluginOption pluginOption = AMIPluginOption.createPluginOption(commandTag, subOptions, optionFlags);
+		if (pluginOption == null) {
+			LOG.error("skipping unknown command: "+cmd);
+		} else {
+			LOG.trace(pluginOption);
+			pluginOption.setProject(projectDir);
+			pluginOptions.add(pluginOption);
+		}
+	}
+	
 	private void createPluginOption(String cmd) {
 		LOG.trace("creating pluginOption: "+cmd);
 		AMIPluginOption pluginOption = AMIPluginOption.createPluginOption(cmd);
@@ -140,7 +167,7 @@ public class CommandProcessor {
 	public void runCommands() {
 		runNormaIfNecessary();
 		for (AMIPluginOption pluginOption : pluginOptions) {
-			LOG.trace("running: "+pluginOption);
+			LOG.debug("running: "+pluginOption);
 			try {
 				pluginOption.run();
 			} catch (Exception e) {

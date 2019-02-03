@@ -36,7 +36,7 @@ public class DictionaryTerm implements Comparable<DictionaryTerm> {
 	public static final String TERM      =     "term";
 	public static final String URL       =      "url";
 	public static final String WIKIDATA  = "wikidata";
-	public static final String WIKIPEDIA = "wikipeedia";
+	public static final String WIKIPEDIA = "wikipedia";
 	
 	DictionaryTerm() {
 	}

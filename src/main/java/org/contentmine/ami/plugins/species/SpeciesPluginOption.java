@@ -20,12 +20,15 @@ public class SpeciesPluginOption extends AMIPluginOption {
 	public SpeciesPluginOption() {
 		super(TAG);
 	}
-	
 
-	public SpeciesPluginOption(List<String> options, List<String> flags) {
-		super(TAG, options, flags);
+	public SpeciesPluginOption(List<String> options) {
+		super(TAG, options);
 	}
 
+//	public SpeciesPluginOption(List<String> options, List<String> flags) {
+//		super(TAG, options, flags);
+//	}
+//
 	public void run() {
 		String cmd = "--project "+projectDir+" -i scholarly.html --sp.species --sp.type "+optionString;
 		DefaultArgProcessor.CM_LOG.debug(cmd);

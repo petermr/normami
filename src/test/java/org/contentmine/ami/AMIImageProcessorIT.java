@@ -2,10 +2,13 @@ package org.contentmine.ami;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -373,6 +376,71 @@ public class AMIImageProcessorIT {
 	/** complete process from pixels to normalized horizontal lines
 	 * SHOWCASE
 	 */
+	public void testPixelGraphGridExtractLinesAndRings() {
+		List<String> fpList = Arrays.asList(new String[]{
+"image.41.2.266_551.499_706",
+"image.42.1.57_367.204_386",
+"image.42.5.277_492.217_334",
+"image.43.1.261_520.104_342",
+"image.44.5.286_547.72_585",
+	});
+		CTree cTree = new CTree(new File(FORESTPLOT_DIR, "campbell"));
+		LOG.debug("images>"+FORESTPLOT_DIR);
+		List<File> imageFiles = cTree.getOrCreatePDFImageManager().getRawImageFiles(CTree.PNG);
+		int minNestedRings = 2;
+		for (File imageFile : imageFiles) {
+			LOG.debug(">> "+imageFile);
+			String basename = FilenameUtils.getBaseName(imageFile.toString());
+			if (!fpList.contains(basename)) continue; // not forest
+			File pngDir = new File(imageFile.getParentFile(), basename+"/");
+			pngDir.mkdirs();
+			
+			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
+			diagramAnalyzer.readAndProcessInputFile(imageFile);
+			SVGLineList horSVGLineList = diagramAnalyzer.extractHorizontalLines();
+			Real2Array centreArray = diagramAnalyzer.extractLocalSummitCoordinates(minNestedRings, 1);
+			
+			int size = horSVGLineList.size();
+			int size2 = centreArray.size();
+			if (size != size2) {
+				LOG.debug("bad sizes: "+size+" != "+size2);
+				continue;
+			}
+			List<String> rows = createCSV(horSVGLineList, centreArray);
+			try {
+				FileUtils.writeLines(new File(pngDir,  "rows.csv"), rows);
+			} catch (IOException e) {
+				LOG.debug("cannot write file", e);
+				continue;
+			}
+			
+			PixelRingList localSummits = diagramAnalyzer.extractLocalSummits(minNestedRings);
+			SVGSVG.wrapAndWriteAsSVG(localSummits.plotPixels(), new File(pngDir, "localSummits.svg"));
+			SVGSVG.wrapAndWriteAsSVG(horSVGLineList.createSVGElement(), new File(pngDir, "horizontalLines.svg"));
+		}
+
+	}
+
+	private List<String> createCSV(SVGLineList horSVGLineList, Real2Array centreArray) {
+		List<String> rows = new ArrayList<String>();
+		List<String> csvRowList = horSVGLineList.writeLineEndsAsCSVRow();
+		List<String> centreList = centreArray.createCSVRows("x", "y");
+		int size0 = csvRowList.size();
+		int size = centreList.size();
+		if (size != size0) {
+			throw new RuntimeException("bad sizes: "+size+" != "+size0);
+		}
+		for (int i = 0; i < size; i++) {
+			String row = csvRowList.get(i).trim()+","+centreList.get(i).trim()+","+"\n";
+			rows.add(row);
+		}
+		return rows;
+	}
+
+	@Test
+	/** complete process from pixels to normalized horizontal lines
+	 * SHOWCASE
+	 */
 	public void testPixelGraphGridExtractHorizLines11() {
 		List<String> fpList = Arrays.asList(new String[]{
 "image.41.2.266_551.499_706",
@@ -387,8 +455,7 @@ public class AMIImageProcessorIT {
 		for (File imageFile : imageFiles) {
 			
 			String basename = FilenameUtils.getBaseName(imageFile.toString());
-			LOG.debug(imageFile);
-			if (!fpList.contains(basename)) continue;
+			if (!fpList.contains(basename)) continue; // not forest
 			File pngDir = new File(imageFile.getParentFile(), basename+"/");
 			pngDir.mkdirs();
 			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer().setThinning(new ZhangSuenThinning());
@@ -398,7 +465,6 @@ public class AMIImageProcessorIT {
 			pixelIslandList.removeIslandsWithBBoxesLessThan(new Int2(10,10)); 
 			
 			PixelGraphList graphList = diagramAnalyzer.getOrCreateGraphList();
-			
 			graphList.mergeNodesCloserThan(3.0);                            
 	
 			LineCache lineCache = new LineCache().setSegmentTolerance(1.0).addGraphList(graphList);
@@ -413,7 +479,7 @@ public class AMIImageProcessorIT {
 			SVGLineList horSVGLineList = lineCache.getOrCreateHorizontalSVGLineList();
 			
 			horSVGLineList.mergeLines(1.0, MergeMethod.OVERLAP);
-			horSVGLineList.writeLineEndsAsCSV(new File(pngDir, "range.csv"));
+//			horSVGLineList.writeLineEndsAsCSV(new File(pngDir, "range.csv"));
 			File file = new File(pngDir, "horizontalLines.svg");
 			SVGSVG.wrapAndWriteAsSVG(horSVGLineList.createSVGElement(), file);
 		}
@@ -429,27 +495,13 @@ public class AMIImageProcessorIT {
 		int minNestedRings = 2;
 		Double radius = 5.0;
 		for (File imageFile : imageFiles) {
-			File parentFile = imageFile.getParentFile();
 			String baseName = FilenameUtils.getBaseName(imageFile.toString());
 			File pngDir = new File(imageFile.getParentFile(), baseName+"/");
 			pngDir.mkdirs();
 			DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
-			diagramAnalyzer.setThinning(null);
-			diagramAnalyzer.readAndProcessInputFile(imageFile);
-			BufferedImage image = diagramAnalyzer.getImage();
-			if (image != null && image.getWidth() * image.getHeight() < 1000000) {
-				PixelRingList localSummits = diagramAnalyzer.extractLocalSummits(minNestedRings);
-				Real2Array centreArray = diagramAnalyzer.getCentreArray(minNestedRings);
-				File meanCsv = new File(pngDir,"mean.csv");
-				centreArray.writeArrayToCSVAsNumberedRows("mean", "y", meanCsv);
-				SVGG g = localSummits.plotPixels();
-				File summitsFile = new File(pngDir, "localSummits.svg");
-				LOG.debug(summitsFile);
-				SVGSVG.wrapAndWriteAsSVG(g, summitsFile);
-			}
+			diagramAnalyzer.extractLocalSummits(minNestedRings, imageFile, pngDir);
 		}		
 	}
-
 	@Test
 	public void testExtractSeveralArticlePixelRings() {
 		CProject cProject = new CProject(FORESTPLOT_DIR);

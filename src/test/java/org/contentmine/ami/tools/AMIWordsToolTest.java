@@ -27,7 +27,7 @@ public class AMIWordsToolTest {
 		args = 
 				"-p /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10/"
 				+ " --stopwords pmcstop.txt stopwords.txt"
-				+ " --targets frequencies"
+				+ " --targets frequencies "  //wordLengths"
 				+ " --mincount 70"
 			;
 		new AMIWordsTool().runCommands(args);

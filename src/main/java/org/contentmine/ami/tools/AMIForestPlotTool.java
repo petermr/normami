@@ -130,7 +130,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	public void runForestPlot(File imageFile) {
 		diagramAnalyzer = new DiagramAnalyzer();
 		diagramAnalyzer.setInputFile(imageFile);
-		localSummitCoordinates = diagramAnalyzer.extractLocalSummitCoordinates(minNestedRings);
+		localSummitCoordinates = diagramAnalyzer.extractLocalSummitCoordinates(minNestedRings, 1);
 		horizontalLines = diagramAnalyzer.extractHorizontalLines();
 		displayPointsAndLines();
 	}

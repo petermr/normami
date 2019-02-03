@@ -36,12 +36,18 @@ public class OccurrenceAnalyzer {
 		LOG.setLevel(Level.DEBUG);
 	}
 
+	/** mess.
+	 * Species defaults to binomial
+	 * @author pm286
+	 *
+	 */
 	public enum OccurrenceType {
 		BINOMIAL("binomial", "match"),
 		STRING(null, "exact"), 
 		GENE("gene", "exact"), 
 		;
-		
+
+		public static String SPECIES = "species";
 		private final String name;
 		private final String matchMethod;
 		
@@ -58,6 +64,20 @@ public class OccurrenceAnalyzer {
 		@Override
 		public String toString() {
 			return "{type: " + name + " / " + matchMethod + "}";
+		}
+		/** get type by name.
+		 * defaults to STRING;
+		 * @param name
+		 * @return
+		 */
+		public static OccurrenceType getTypeByName(String name) {
+			for (OccurrenceType type : values()) {
+				if (name.equals(type.name)) {
+					return type;
+				}
+				if (name.equals(SPECIES)) return BINOMIAL;
+			}
+			return OccurrenceType.STRING;
 		}
 	}
 

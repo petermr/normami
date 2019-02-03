@@ -19,9 +19,13 @@ public class SequencePluginOption extends AMIPluginOption {
 		super(TAG);
 	}
 	
-	public SequencePluginOption(List<String> options, List<String> flags) {
-		super(TAG, options, flags);
+	public SequencePluginOption(List<String> options) {
+		super(TAG, options);
 	}
+	
+//	public SequencePluginOption(List<String> options, List<String> flags) {
+//		super(TAG, options, flags);
+//	}
 	
 	protected void run() {
 		String cmd = "--project "+projectDir+" -i scholarly.html --sq.sequence --sq.type "+optionString;

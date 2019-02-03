@@ -31,6 +31,14 @@ public class AMISearchTest {
 	}
 	
 	@Test
+	public void testZikaSpecies() {
+		File targetDir = new File("target/cooccurrence/zika10");
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);
+		String[] args = {targetDir.toString(), "country", "species"}; 
+		AMISearch.main(args);
+	}
+	
+	@Test
 	public void testFile() {
 		File foo = new File("foo/");
 		File bar = new File(foo, "bar");

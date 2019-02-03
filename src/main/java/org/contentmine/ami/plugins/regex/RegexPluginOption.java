@@ -26,12 +26,19 @@ public class RegexPluginOption extends AMIPluginOption {
 		super(TAG);
 	}
 	
-	public RegexPluginOption(List<String> options, List<String> flags) {
-		super(TAG, options, flags);
+	public RegexPluginOption(List<String> options) {
+		super(TAG, options);
 		if (options != null && options.size() != 0) {
 			readRegexFile(options.get(0));
 		}
 	}
+	
+//	public RegexPluginOption(List<String> options, List<String> flags) {
+//		super(TAG, options, flags);
+//		if (options != null && options.size() != 0) {
+//			readRegexFile(options.get(0));
+//		}
+//	}
 
 	private void readRegexFile(String regexFilename) {
 		ResourceLocation location = new ResourceLocation();

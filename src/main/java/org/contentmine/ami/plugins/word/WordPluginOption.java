@@ -22,9 +22,13 @@ public class WordPluginOption extends AMIPluginOption {
 		super(TAG);
 	}
 
-	public WordPluginOption(List<String> options, List<String> flags) {
-		super(TAG, options, flags);
+	public WordPluginOption(List<String> options) {
+		super(TAG, options);
 	}
+
+//	public WordPluginOption(List<String> options, List<String> flags) {
+//		super(TAG, options, flags);
+//	}
 
 	protected void run() {
 		StringBuilder commandString = createCoreCommandStringBuilder();

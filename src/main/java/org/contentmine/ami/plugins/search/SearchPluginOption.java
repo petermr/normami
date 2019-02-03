@@ -26,9 +26,13 @@ public class SearchPluginOption extends AMIPluginOption {
 		super(TAG);
 	}
 
-	public SearchPluginOption(List<String> options, List<String> flags) {
-		super(TAG, options, flags);
+	public SearchPluginOption(List<String> options) {
+		super(TAG, options);
 	}
+//
+//	public SearchPluginOption(List<String> options, List<String> flags) {
+//		super(TAG, options, flags);
+//	}
 
 	protected void run() {
 		StringBuilder commandString = createCoreCommandStringBuilder();

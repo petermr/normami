@@ -189,8 +189,26 @@ public class AMIProcessor {
 			LOG.debug("no facets/searches/dictionaries given");
 		} else {
 			runSearches(facetList);
+//			facetList = addSubFacets(facetList);
 			defaultAnalyzeCooccurrence(facetList);
 		}
+	}
+
+	/** this is a mess. add brackets for subfacets (species, gene) 
+	 * depends on the file structure.
+	 * 
+	 * @param facetList
+	 * @return
+	 */
+	private List<String> addSubFacets(List<String> facetList) {
+		List<String> facetList1 = new ArrayList<String>();
+		for (String facet : facetList) {
+			if ("species".equals(facet)) {
+				facet += "(binomial)";
+			}
+			facetList1.add(facet);
+		}
+		return facetList1;
 	}
 
 	public void setIncludeCTrees(String... treeNames) {

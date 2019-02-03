@@ -7,11 +7,10 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.AMIProcessor;
-import org.contentmine.ami.plugins.AMIPluginOption;
 import org.contentmine.ami.plugins.CommandProcessor;
-import org.contentmine.ami.plugins.word.WordArgProcessor;
+import org.contentmine.ami.plugins.word.WordPluginOption;
 import org.contentmine.cproject.files.CProject;
+import org.contentmine.cproject.files.OptionFlag;
 
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -82,7 +81,7 @@ public class AMIWordsTool extends AbstractAMITool {
 	public enum WordTarget {
 		frequencies,
 //		wordFrequencies,
-//		wordLengths,
+		wordLengths,
 //		search,
 //		wordSearch
 		;
@@ -110,7 +109,8 @@ public class AMIWordsTool extends AbstractAMITool {
 
     @Option(names = {"--targets"},
     		arity = "1..*",
-            description = "frequencies and other word targets (frequencies, wordFrequencies, wordLengths, search, wordSearch)")
+            description = "frequencies and other word targets (frequencies, wordFrequencies, wordLengths, search, wordSearch); "
+            		+ "201902 only frequencies implemented")
     private WordTarget[] targets = new WordTarget[]{WordTarget.frequencies};
 
     @Option(names = {"--stopworddir"},
@@ -158,10 +158,11 @@ public class AMIWordsTool extends AbstractAMITool {
 
     @Override
     protected void runSpecifics() {
-    	wordCmd = makeWordTargets() + makeWordOptions();
-//    	LOG.debug("WORD>>> "+wordCmd);
-    	if (processTrees()) { 
-	    }
+		String wordTargets = makeWordTargets();
+    	String wordOptions = makeWordOptions();
+		wordCmd = wordTargets + wordOptions;
+    	LOG.debug("WORD>>> "+wordCmd);
+    	processTrees();
     }
 
 	private String makeWordTargets() {
@@ -206,18 +207,38 @@ public class AMIWordsTool extends AbstractAMITool {
 	@Override
 	public boolean processTrees() {
 		System.out.println("cProject: "+cProject.getName());
+//		runWordsNew();
 		runWords();
 		return true;
 	}
 
 	public void processTree() {
 		System.out.println("cTree: "+cTree.getName());
+//		runWordsNew();
 		runWords();
 //		WordArgProcessor argProcessor = new WordArgProcessor();
 //		argProcessor.setCTree(cTree);
 //		argProcessor.runExtractWords((ArgumentOption) null);
 	}
 	
+	public void runWordsNew() {
+		
+		try {
+			
+			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
+//			private void createPluginOptionNew(String commandTag, List<String> subOptions, List<OptionFlag> optionFlags) {
+			List<String> subOptions = Arrays.asList(new String[]{"fff"});
+			List<OptionFlag> optionFlags = Arrays.asList(new OptionFlag[]{new OptionFlag("foo", "value")});
+			commandProcessor.parseCommandsNew(WordPluginOption.TAG, subOptions, optionFlags);
+			// this runs commands and filters results
+			LOG.debug("running command: "+wordCmd);
+			commandProcessor.runCommands();
+			commandProcessor.createDataTables();
+		} catch (IOException e) {
+			throw new RuntimeException("Cannot run command: "+wordCmd, e);
+		}
+	}
+		
 	public void runWords() {
 		
 		try {

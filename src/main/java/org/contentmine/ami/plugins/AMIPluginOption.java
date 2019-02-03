@@ -23,9 +23,13 @@ import org.contentmine.cproject.util.CellRenderer;
 
 public abstract class AMIPluginOption extends PluginOption {
 
-	private static final String WORD = "word";
-	private static final String SPECIES = "species";
-	private static final String SEQUENCE = "sequence";
+private static final String EXACT_XPATH_ATTRIBUTE = "@exact";
+
+private static final String RESULT_XPATH_ROOT = "//result";
+
+	//	private static final String WORD = "word";
+//	private static final String SPECIES = "species";
+//	private static final String SEQUENCE = "sequence";
 	private static final Logger LOG = Logger.getLogger(AMIPluginOption.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -49,52 +53,58 @@ public abstract class AMIPluginOption extends PluginOption {
 		this.plugin = tag;
 	}
 	
-	public AMIPluginOption(String plugin, List<String> options, List<String> flags) {
+	public AMIPluginOption(String plugin, List<String> options) {
 		this(plugin);
 		this.options = options;
-		this.flags = flags;
 		this.optionString = StringUtil.join(options, " ");
 		LOG.trace("optionString: "+optionString);
-		this.resultXPathBase = "//result";
-		this.resultXPathAttribute = "@exact";
+		this.resultXPathBase = RESULT_XPATH_ROOT;
+		this.resultXPathAttribute = EXACT_XPATH_ATTRIBUTE;
 
 	}
 
 	/** this is where the subclassing is created.
+	 * E.G. creates WordPluginOption, SequencePluginOption
 	 * 
 	 * */
 	public static AMIPluginOption createPluginOption(String cmd) {
 		Matcher matcher = COMMAND.matcher(cmd);
+		LOG.debug("cmd: "+cmd);
 		if (cmd == null || cmd.trim().equals("")) {
 			throw new RuntimeException("Null/empty command");
 		} else if (!matcher.matches()) {
 			throw new RuntimeException("Command found: "+cmd+" must fit: "+matcher+""
 					+ "...  plugin(option1[,option2...])[_flag1[_flag2...]]");
 		}
-		String command = matcher.group(1);
+		String optionTag = matcher.group(1);
 		List<String> options = Arrays.asList(matcher.group(2).split(","));
 		String flagString = matcher.group(3);
 		flagString = flagString.replaceAll("_",  " ");
 		List<String>flags = Arrays.asList(flagString.split("~"));
 		List<OptionFlag> optionFlags = OptionFlag.createOptionFlags(flags);
-		LOG.trace("option flags: "+optionFlags);
 		
+		AMIPluginOption pluginOption = createPluginOption(optionTag, options, optionFlags);
+		return pluginOption;
+	}
+
+	public static AMIPluginOption createPluginOption(String optionTag, List<String> subOptions, List<OptionFlag> optionFlags) {
+		LOG.debug("OPTION: "+optionTag+" ... " +" subOptions: "+subOptions+ "\n option flags: "+optionFlags);
 		AMIPluginOption pluginOption = null;
 		if (false) {
-		} else if (command.equals(GenePluginOption.TAG)) {
-			pluginOption = new GenePluginOption(options,flags);
-		} else if (command.equals(RegexPluginOption.TAG)) {
-			pluginOption = new RegexPluginOption(options,flags); 
-		} else if (command.equals(SearchPluginOption.TAG)) {
-			pluginOption = new SearchPluginOption(options,flags); 
-		} else if (command.equals(SequencePluginOption.TAG)) {
-			pluginOption = new SequencePluginOption(options,flags); 
-		} else if (command.equals(SpeciesPluginOption.TAG)) {
-			pluginOption = new SpeciesPluginOption(options,flags);
-		} else if (command.equals(WordPluginOption.TAG)) {
-			pluginOption = new WordPluginOption(options,flags);
+		} else if (optionTag.equals(GenePluginOption.TAG)) {
+			pluginOption = new GenePluginOption(subOptions);
+		} else if (optionTag.equals(RegexPluginOption.TAG)) {
+			pluginOption = new RegexPluginOption(subOptions); 
+		} else if (optionTag.equals(SearchPluginOption.TAG)) {
+			pluginOption = new SearchPluginOption(subOptions); 
+		} else if (optionTag.equals(SequencePluginOption.TAG)) {
+			pluginOption = new SequencePluginOption(subOptions); 
+		} else if (optionTag.equals(SpeciesPluginOption.TAG)) {
+			pluginOption = new SpeciesPluginOption(subOptions);
+		} else if (optionTag.equals(WordPluginOption.TAG)) {
+			pluginOption = new WordPluginOption(subOptions);
 		} else {
-			LOG.error("unknown command: "+command);
+			LOG.error("unknown command: "+optionTag);
 //			LOG.info("commands: "+COMMANDS);
 		}
 		if (pluginOption != null) {

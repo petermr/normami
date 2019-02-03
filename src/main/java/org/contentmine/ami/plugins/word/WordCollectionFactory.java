@@ -104,7 +104,7 @@ public class WordCollectionFactory {
 		}
 		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
 		List<String> chosenMethods = wordArgProcessor.getChosenWordAggregationMethods();
-//		LOG.debug("chosen methods: "+chosenMethods);
+		LOG.trace("chosen methods: "+chosenMethods);
 		if (chosenMethods.contains(WordArgProcessor.WORD_LENGTHS)) {
 			ResultsElement resultsElement = createWordLengthsResultsElement(words);
 			wordArgProcessor.addResultsElement(resultsElement);

@@ -49,7 +49,8 @@ public class EntityAnalyzer {
 	 * @return
 	 */
 	public OccurrenceAnalyzer createAndAddOccurrenceAnalyzer(String name) {
-		OccurrenceAnalyzer occurrenceAnalyzer = this.createOccurrenceAnalyzer(OccurrenceType.STRING, name);
+		OccurrenceType type = OccurrenceType.getTypeByName(name);
+		OccurrenceAnalyzer occurrenceAnalyzer = this.createOccurrenceAnalyzer(type, name);
 		occurrenceAnalyzer.setName(name);
 		return occurrenceAnalyzer;
 	}

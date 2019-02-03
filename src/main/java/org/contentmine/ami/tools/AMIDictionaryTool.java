@@ -15,6 +15,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -70,6 +71,9 @@ import picocli.CommandLine.Parameters;
 		)
 
 public class AMIDictionaryTool extends AbstractAMITool {
+	private static final String HTTPS_EN_WIKIPEDIA_ORG_WIKI = "https://en.wikipedia.org/wiki/";
+	private static final String SLASH_WIKI_SLASH = "/wiki/";
+	private static final String CM_PREFIX = "CM.";
 	public static final Logger LOG = Logger.getLogger(AMIDictionaryTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -89,7 +93,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	private static final String SLASH = "/";
 
 	private static final String HTTPS_EN_WIKIPEDIA_ORG = "https://en.wikipedia.org";
-	public final static String WIKIPEDIA_BASE = HTTPS_EN_WIKIPEDIA_ORG + "/wiki/";
+	public final static String WIKIPEDIA_BASE = HTTPS_EN_WIKIPEDIA_ORG + SLASH_WIKI_SLASH;
 	private static final String WIKITABLE = "wikitable";
 
 	private static final String HTTP = "http";
@@ -151,6 +155,12 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		description = "primary operation: (${COMPLETION-CANDIDATES}); if no operation, runs help"
     		)
     private Operation operation = Operation.help;
+
+    @Option(names = {"--baseurl"}, 
+    		arity="1",
+   		    description = "base URL for all wikipedia links "
+    		)
+    private String baseUrl = "https://en.wikipedia.org/wiki";
 
     @Option(names = {"--booleanquery"}, 
     		arity="0..1",
@@ -256,9 +266,13 @@ public class AMIDictionaryTool extends AbstractAMITool {
     private String[] urlref;
 
     @Mixin CProjectTreeMixin proTree;
-    
+
+    public final static List<String> WIKIPEDIA_STOP_WORDS = Arrays.asList(new String[]{
+        	"citation needed",
+        	"full citation needed"
+        });
+
     DictionaryData dictionaryData;
-    
 // converted from args    
 	private List<String> termList;
 	private List<String> nameList;
@@ -425,10 +439,12 @@ public class AMIDictionaryTool extends AbstractAMITool {
 
 	private InputStream openInputStream() {
 		InputStream inputStream = null;
-		try {
-			inputStream = input.startsWith("http") ? new URL(input).openStream() : new FileInputStream(new File(input));
-		} catch (IOException e) {
-			throw new RuntimeException("cannot read/open stream", e);
+		if (input != null) {
+			try {
+				inputStream = input.startsWith("http") ? new URL(input).openStream() : new FileInputStream(new File(input));
+			} catch (IOException e) {
+				throw new RuntimeException("cannot read/open stream", e);
+			}
 		}
 		return inputStream;
 	}
@@ -514,17 +530,79 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	}
 
 	private void addEntriesToDictionaryElement() {
+		List<Element> entryList = createDictionaryListInRandomOrder();
+		removeEntriesWithEmptyIdsSortRemoveDuplicates(entryList);
+		return;
+	}
+
+	private List<Element> createDictionaryListInRandomOrder() {
+		List<Element> entryList = new ArrayList<Element>();
 		for (int i = 0; i < nameList.size(); i++) {
-			Element entry = DefaultAMIDictionary.createEntryElementFromTerm(termList.get(i));
-			entry.addAttribute(new Attribute(DictionaryTerm.ID, "CM."+dictionary+DOT+i));
+			String term = termList.get(i);
+			Element entry = DefaultAMIDictionary.createEntryElementFromTerm(term);
 			entry.addAttribute(new Attribute(DictionaryTerm.NAME, nameList.get(i)));
 			String link = linkList == null ? null : linkList.get(i);
 			if (link != null && !link.equals("")) {
 				entry.addAttribute(new Attribute(DictionaryTerm.URL, link));
 			}
-			dictionaryElement.appendChild(entry);
+			entryList.add (entry);
 		}
-		return;
+		return entryList;
+	}
+
+	private void removeEntriesWithEmptyIdsSortRemoveDuplicates(List<Element> entryList) {
+		String dictionaryId = createDictionaryId(); 
+		Collections.sort(entryList, new EntryComparator());
+		int i = 0;
+		String lastTerm = null;
+		for (Element entry : entryList) {
+			String term = entry.getAttributeValue(DictionaryTerm.TERM);
+			// add entry if new meaningful term
+			if (term != null && !term.trim().equals("")  && !term.equals(lastTerm)) {
+				if (WIKIPEDIA_STOP_WORDS.contains(term)) {
+					LOG.debug("skipped wikipedia: "+term);
+					continue;
+				}
+				Attribute urlAtt = entry.getAttribute(DictionaryTerm.URL);
+				if (urlAtt != null) {
+					String urlValue = urlAtt.getValue();
+					if (!urlValue.equals("") && 
+							(urlValue.startsWith(SLASH_WIKI_SLASH) || urlValue.startsWith(HTTPS_EN_WIKIPEDIA_ORG_WIKI))) {
+						addEntry(dictionaryId, i, entry, urlValue);
+					} else {
+						LOG.debug("skipped non-wikipedia link: "+urlAtt);
+					}
+				} else {
+					LOG.debug("no links in: "+entry.toXML());
+					addEntry(dictionaryId, i, entry, null);
+				}
+				lastTerm = term;
+			}
+		}
+	}
+
+	private void addEntry(String dictionaryId, int serial, Element entry, String urlValue) {
+		String idValue = CM_PREFIX + dictionaryId + DOT + serial;
+		entry.addAttribute(new Attribute(DictionaryTerm.ID, idValue));
+		if (urlValue != null) {
+			urlValue = trimWikipediaUrlBase(urlValue);
+			entry.addAttribute(new Attribute(DictionaryTerm.WIKIPEDIA, urlValue));
+		}
+		dictionaryElement.appendChild(entry);
+	}
+
+	private String trimWikipediaUrlBase(String urlValue) {
+		if (urlValue.startsWith(SLASH_WIKI_SLASH)) {
+			urlValue = urlValue.substring(SLASH_WIKI_SLASH.length());
+		} 
+		if (urlValue.startsWith(HTTPS_EN_WIKIPEDIA_ORG_WIKI)) {
+			urlValue = urlValue.substring(HTTPS_EN_WIKIPEDIA_ORG_WIKI.length());
+		} 
+		return urlValue;
+	}
+
+	private String createDictionaryId() {
+		return dictionary == null || dictionary.length == 0 ? "null" : dictionary[0];
 	}
 
 	/** writes the formatted versions of a single dictionary.
@@ -541,8 +619,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 				List<DictionaryFileFormat> outformatList = Arrays.asList(outformats);
 				for (DictionaryFileFormat outformat : outformatList) {
 					File outfile = getOrCreateDictionary(subDirectory, dictionary[0], outformat);
-	//				File outfile = new File(new File(subDirectory), dictionary+"."+outformat);
-	//				LOG.debug("writing to "+outfile);
+					LOG.debug("writing to "+outfile);
 					try {
 						outputDictionary(outfile, outformat);
 					} catch (IOException e) {
@@ -1111,6 +1188,26 @@ public class AMIDictionaryTool extends AbstractAMITool {
 //	}
 
 
+}
+/** compare entries by their lower-case terms
+ * 
+ */
+class EntryComparator implements Comparator<Element> {
+
+	@Override
+	public int compare(Element o1, Element o2) {
+		if (o1 == null || o2 == null) {
+			return 0;
+		}
+		String term1 = o1.getAttributeValue("term");
+		String term2 = o2.getAttributeValue("term");
+		if (term1 == null) {
+			return (term2 == null) ? 0 : 1;
+		} else {
+			return term1.toLowerCase().compareTo(term2.toLowerCase());
+		}
+	}
+	
 }
 class Data {
     String ss;	

@@ -20,9 +20,13 @@ public class GenePluginOption extends AMIPluginOption {
 		super(TAG);
 	}
 
-	public GenePluginOption(List<String> options, List<String> flags) {
-		super(TAG, options, flags);
+	public GenePluginOption(List<String> options) {
+		super(TAG, options);
 	}
+
+//	public GenePluginOption(List<String> options, List<String> flags) {
+//		super(TAG, options, flags);
+//	}
 
 	protected void run() {
 		String cmd = "--project "+projectDir+" -i scholarly.html --g.gene --g.type "+optionString;
