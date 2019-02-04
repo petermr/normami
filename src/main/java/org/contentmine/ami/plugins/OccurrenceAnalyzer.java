@@ -346,7 +346,7 @@ public class OccurrenceAnalyzer {
 	public void writeSVG() throws IOException {
 		getOrCreateEntriesSortedByImportance();
 		File file = createFileByType(CTree.SVG);
-		LOG.error("writeSVG NYI");
+		LOG.debug("writeSVG NYI");
 //		MultisetUtil.writeCSV(file, resultsByImportance, getName());
 	}
 

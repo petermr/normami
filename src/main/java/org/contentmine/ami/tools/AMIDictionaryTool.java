@@ -568,13 +568,13 @@ public class AMIDictionaryTool extends AbstractAMITool {
 					String urlValue = urlAtt.getValue();
 					if (!urlValue.equals("") && 
 							(urlValue.startsWith(SLASH_WIKI_SLASH) || urlValue.startsWith(HTTPS_EN_WIKIPEDIA_ORG_WIKI))) {
-						addEntry(dictionaryId, i, entry, urlValue);
+						addEntry(dictionaryId, i++, entry, urlValue);
 					} else {
 						LOG.debug("skipped non-wikipedia link: "+urlAtt);
 					}
 				} else {
 					LOG.debug("no links in: "+entry.toXML());
-					addEntry(dictionaryId, i, entry, null);
+					addEntry(dictionaryId, i++, entry, null);
 				}
 				lastTerm = term;
 			}
@@ -583,6 +583,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 
 	private void addEntry(String dictionaryId, int serial, Element entry, String urlValue) {
 		String idValue = CM_PREFIX + dictionaryId + DOT + serial;
+		System.out.print(">"+idValue);
 		entry.addAttribute(new Attribute(DictionaryTerm.ID, idValue));
 		if (urlValue != null) {
 			urlValue = trimWikipediaUrlBase(urlValue);

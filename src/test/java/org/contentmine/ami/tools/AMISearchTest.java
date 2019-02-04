@@ -39,6 +39,22 @@ public class AMISearchTest {
 	}
 	
 	@Test
+	public void testZikaDictionary() {
+		File targetDir = new File("target/cooccurrence/zika10");
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);
+		String[] args = {targetDir.toString(), "country", "/Users/pm286/ContentMine/dictionary/dictionaries/animal/aedes.xml"}; 
+		AMISearch.main(args);
+	}
+	
+	@Test
+	public void testDictionaryFile() {
+		File targetDir = new File("target/tigr2ess/osanctum");
+		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum"), targetDir);
+		String[] args = {targetDir.toString(), "country", "/Users/pm286/ContentMine/dictionary/dictionaries/bio/plantparts.xml"}; 
+		AMISearch.main(args);
+	}
+	
+	@Test
 	public void testFile() {
 		File foo = new File("foo/");
 		File bar = new File(foo, "bar");

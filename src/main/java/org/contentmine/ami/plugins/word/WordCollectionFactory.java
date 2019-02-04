@@ -117,7 +117,7 @@ public class WordCollectionFactory {
 
 	public List<String> createWordList() {
 		CTree currentCTree = amiArgProcessor.getCurrentCTree();
-		List<String> rawWords = null;
+		List<String> rawWords = new ArrayList<String>();
 		if (currentCTree != null) {
 			if (currentCTree.hasScholarlyHTML()) {
 				rawWords = currentCTree.extractWordsFromScholarlyHtml();
@@ -127,7 +127,7 @@ public class WordCollectionFactory {
 				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
 				LOG.trace(msg);
 			}
-			LOG.trace("raw words "+rawWords.size());
+			LOG.trace("raw words " + rawWords.size());
 		}
 		return createTransformedWords(rawWords);
 	}

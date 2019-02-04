@@ -295,6 +295,9 @@ public class AMIDictionaryTest {
 		new AMIDictionaryTool().runCommands(args);
 	}
 	
-
+//	@Test
+//	public void testUseDictionaryFile() {
+//		
+//	}
 	
 }

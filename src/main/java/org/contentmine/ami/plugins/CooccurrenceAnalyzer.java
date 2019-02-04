@@ -232,7 +232,7 @@ public class CooccurrenceAnalyzer {
 		return rowAnalyzer;
 	}
 
-		/** really for debugging, rewrire with member variables */
+		/** really for debugging, rewrite with member variables */
 	public static SVGSVG createSVG(IntMatrix cooccurrenceMatrix, OccurrenceAnalyzer rowAnalyzer, OccurrenceAnalyzer colAnalyzer) {
 
 		double x0 = 10.;
@@ -242,7 +242,8 @@ public class CooccurrenceAnalyzer {
 		double yoff = 140;
 		double x;
 		double y;
-		double fontSizeFactor = 0.85;
+//		double fontSizeFactor = 0.85;
+		double fontSizeFactor = 0.60;
 		double strokeWidth = 0.8;
 		
 		SVGG grid = new SVGG();

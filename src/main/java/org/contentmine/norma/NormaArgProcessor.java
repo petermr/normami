@@ -498,7 +498,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 
 	// =============output=============
 	public void outputMethod(ArgumentOption option) {
-		LOG.debug("OutputSpecifiedFormat");
+		LOG.trace("DBG OutputSpecifiedFormat");
 		outputSpecifiedFormat();
 	}
 

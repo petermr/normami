@@ -154,7 +154,7 @@
 
                          <program>
                          <!--  will become a tool -->
-                            <mainClass>org.contentmine.ami.tools.AMIDictionary</mainClass>
+                            <mainClass>org.contentmine.ami.tools.AMIDictionaryTool</mainClass>
 							<!-- description: edit/create AMI dictionaries -->
                             <id>ami-dictionaries</id>
                         </program>

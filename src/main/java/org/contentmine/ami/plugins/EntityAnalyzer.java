@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.plugins.OccurrenceAnalyzer.SubType;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.OccurrenceType;
-import org.contentmine.eucl.euclid.IntMatrix;
+import org.contentmine.ami.plugins.OccurrenceAnalyzer.SubType;
 import org.contentmine.norma.Norma;
 
 /** analyzes chunks/caches for entities in context.
@@ -49,6 +49,8 @@ public class EntityAnalyzer {
 	 * @return
 	 */
 	public OccurrenceAnalyzer createAndAddOccurrenceAnalyzer(String name) {
+		// trim actual filenames
+		name = FilenameUtils.getBaseName(name);
 		OccurrenceType type = OccurrenceType.getTypeByName(name);
 		OccurrenceAnalyzer occurrenceAnalyzer = this.createOccurrenceAnalyzer(type, name);
 		occurrenceAnalyzer.setName(name);
