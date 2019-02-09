@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.FileStore;
 import java.nio.file.FileSystem;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Level;
@@ -29,6 +31,7 @@ import org.contentmine.ami.dictionary.CMJsonDictionary;
 import org.contentmine.ami.dictionary.DefaultAMIDictionary;
 import org.contentmine.ami.dictionary.DictionaryTerm;
 import org.contentmine.ami.lookups.WikipediaDictionary;
+import org.contentmine.ami.lookups.WikipediaLookup;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.cproject.util.RectangularTable;
@@ -44,7 +47,6 @@ import org.contentmine.graphics.html.HtmlTr;
 import org.contentmine.graphics.html.HtmlUl;
 import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.norma.NAConstants;
-import org.jboss.resteasy.plugins.delegates.NewCookieHeaderDelegate;
 
 import com.google.common.collect.Lists;
 import com.google.gson.JsonObject;
@@ -94,6 +96,8 @@ public class AMIDictionaryTool extends AbstractAMITool {
 
 	private static final String HTTPS_EN_WIKIPEDIA_ORG = "https://en.wikipedia.org";
 	public final static String WIKIPEDIA_BASE = HTTPS_EN_WIKIPEDIA_ORG + SLASH_WIKI_SLASH;
+	private static final String WIKIPEDIA = "wikipedia";
+	private static final String WIKIDATA = "wikidata";
 	private static final String WIKITABLE = "wikitable";
 
 	private static final String HTTP = "http";
@@ -107,6 +111,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		create,
 		display,
 		help,
+		translate,
 		;
 		public static Operation getOperation(String operationS) {
 			for (int i = 0; i < values().length; i++) {
@@ -129,7 +134,16 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		 xml,
 		 html,
 		 json,
-		 }
+		 ;
+		public static DictionaryFileFormat getFormat(String format) {
+			for (DictionaryFileFormat fileFormat : values()) {
+				if (fileFormat.toString().equals(format.toString())) {
+					return fileFormat;
+				}
+			}
+			return null;
+		}
+	}
 	
 	/** ugly lowercase, but I don't yet know how to use
 	 * 		CommandLine::setCaseInsensitiveEnumValuesAllowed=true
@@ -148,6 +162,12 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		wikipage,
 		wikitable
 	}
+	
+	public enum WikiLink {
+		wikidata,
+		wikipedia,
+	}
+
 
     @Parameters(index = "0",
     		arity="0..*",
@@ -179,7 +199,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
     
     @Option(names = {"-d", "--dictionary"}, 
     		arity="1..*",
-    		description = "input or output dictionary name/s. for 'create' must be singular; when 'display', any number. "
+    		description = "input or output dictionary name/s. for 'create' must be singular; when 'display' or 'translate', any number. "
     				+ "Names should be lowercase, unique. [a-z][a-z0-9._]. Dots can be used to structure dictionaries into"
     				+ "directories")
     private String[] dictionary = null;
@@ -239,6 +259,15 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		description = "output format (${COMPLETION-CANDIDATES})"
     		)
     private DictionaryFileFormat[] outformats = new DictionaryFileFormat[] {DictionaryFileFormat.xml};
+
+    @Option(names = {"--query"}, 
+    		arity="0..1",
+    	    defaultValue="10",
+    	    paramLabel = "query",
+    		description = "generate query for cut and paste into EPMC or similar. "
+    				+ "value sets size of chunks (too large crashes EPMC). If missing, no query generated."
+    		)
+    private Integer queryChunk = null;
         
     @Option(names = {"--splitcol"}, 
     		arity="1",
@@ -265,6 +294,11 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		description = "for non-structured pages I think")
     private String[] urlref;
 
+    @Option(names = {"--wikilinks"}, 
+    		arity="1..*",
+    		description = "try to add link to Wikidata page of same name.")
+    private WikiLink[] wikiLinks = new WikiLink[]{WikiLink.wikipedia, WikiLink.wikidata};
+
     @Mixin CProjectTreeMixin proTree;
 
     public final static List<String> WIKIPEDIA_STOP_WORDS = Arrays.asList(new String[]{
@@ -287,6 +321,10 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	private List<Path> paths;
 	private File dictionaryTop;
 	private int maxEntries = 0;
+	private DictionaryFileFormat dictInformat;
+	private DictionaryFileFormat dictOutformat;
+	private CMJsonDictionary cmJsonDictionary;
+	private DefaultAMIDictionary xmlDictionary;
 
 
 	public AMIDictionaryTool() {
@@ -319,11 +357,13 @@ public class AMIDictionaryTool extends AbstractAMITool {
         dictionaryData.outformats  = outformats;
         dictionaryData.termCol     = termCol;
         dictionaryData.terms       = terms;
+        dictionaryData.wikiLinks    = wikiLinks;
 
 	}
 	
 	@Override
 	protected void parseSpecifics() {
+		dictOutformat = (outformats == null || outformats.length != 1) ? null : outformats[0];
 		printDebug();
 	}
 
@@ -341,10 +381,19 @@ public class AMIDictionaryTool extends AbstractAMITool {
 			displayDictionaries();
 		} else if (Operation.create.equals(operation)) {
 			createDictionary();
+		} else if (Operation.translate.equals(operation)) {
+			translateDictionaries();
 		} else {
 			LOG.debug("no operation given: "+operation);
 		}
 	}
+
+    protected File getOrCreateExistingDictionaryTop(String dictionaryTopname) {
+    	if (dictionaryTopname != null) {
+    		dictionaryTop = new File(dictionaryTopname);
+    	}
+    	return getOrCreateExistingDictionaryTop();
+    }
 
     protected File getOrCreateExistingDictionaryTop() {
     	if (dictionaryTop == null) {
@@ -373,7 +422,8 @@ public class AMIDictionaryTool extends AbstractAMITool {
     	if (dictionaryName == null) {
     		throw new RuntimeException("null dictionaryName");
     	}
-    	getOrCreateExistingDictionaryTop();
+    	LOG.trace("dirTopname " +dictionaryTopname);
+    	getOrCreateExistingDictionaryTop(dictionaryTopname);
     	if (dictionaryTop != null) {
     		Matcher matcher = pattern.matcher(dictionaryName);
     		if (!matcher.matches()) {
@@ -390,24 +440,6 @@ public class AMIDictionaryTool extends AbstractAMITool {
     	return newDictionaryDir;
     	
     }
-
-//	private void createDictionaryData() {
-//	    String[] dataCols;
-//	    String   dictionary;
-//	    String   directory;
-//		String   href;
-//	    String[] hrefCols;
-//	    String   informat;
-//	    String   input;
-//		String   linkCol;
-//		String   nameCol;
-//	    String   operation;
-//	    String[] outformats;
-//	    String   splitCol=",";
-//		String   termCol;
-//	    String[] terms;
-//
-//	}
 
 	private void createDictionary() {
 		InputStream inputStream = openInputStream();
@@ -447,6 +479,56 @@ public class AMIDictionaryTool extends AbstractAMITool {
 			}
 		}
 		return inputStream;
+	}
+
+	private void translateDictionaries() {
+		File directory = new File(dictionaryTopname);
+		for (String dictionaryS : dictionary) {
+			String basename = FilenameUtils.getBaseName(dictionaryS);
+			File dictionaryFile = new File(directory, dictionaryS);
+			if (!dictionaryFile.exists()) {
+				LOG.error("File does not exist: "+dictionaryFile);
+				continue;
+			}
+			dictInformat = DictionaryFileFormat.getFormat(FilenameUtils.getExtension(dictionaryS));
+			if (dictInformat.equals(dictOutformat)) {
+				LOG.warn("dictionary input and output formats identical; no action");
+				continue;
+			}
+			File dictOutfile = new File(dictionaryFile.getParentFile(), basename + "." + dictOutformat);
+			LOG.debug("DF "+dictionaryFile+"; "+dictInformat+" => "+dictOutformat+"; "+dictOutfile);
+			convertDictionaries(dictionaryFile, dictInformat, dictOutfile, dictOutformat);
+		}
+		
+	}
+
+
+	private void convertDictionaries(
+			File infile, DictionaryFileFormat informat, File outfile, DictionaryFileFormat outformat) {
+		if (DictionaryFileFormat.json.equals(informat)) {
+			convertJsonDictionaryToXML(infile, outfile);
+		} else if (DictionaryFileFormat.xml.equals(informat)) {
+			xmlDictionary = DefaultAMIDictionary.createSortedDictionary(infile);
+			cmJsonDictionary = CMJsonDictionary.convertXMLToJson(xmlDictionary);
+		}
+	}
+
+	private void convertJsonDictionaryToXML(File infile, File outfile) {
+		String inString = null;
+		try {
+			inString = FileUtils.readFileToString(infile, "UTF-8");
+		} catch (IOException e) {
+			throw new RuntimeException("Cannot read Json: " + infile, e);
+		}
+		cmJsonDictionary = CMJsonDictionary.readJsonDictionary(inString);
+		xmlDictionary = CMJsonDictionary.convertJsonToXML(cmJsonDictionary);
+		if (xmlDictionary != null) {
+			try {
+				XMLUtil.debug(xmlDictionary.getDictionaryElement(), outfile, 1);
+			} catch (IOException e) {
+				throw new RuntimeException("Cannot write XML dictionary "+outfile, e);
+			}
+		}
 	}
 
 	private RectangularTable readCSV(InputStream inputStream) {
@@ -516,17 +598,28 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	}
 
 	private void createAndAddQueryElement() {
-		Element query = new Element("query");
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < nameList.size(); i++) {
-			String name = nameList.get(i);
-			if (i > 0) {
-				sb.append(" OR ");
+		if (queryChunk != null && nameList != null) {
+			Element query = null;
+			StringBuilder sb = null;
+			for (int i = 0; i <nameList.size(); i++) {
+				String name = nameList.get(i);
+				if (i % queryChunk == 0) {
+					query = new Element("query");
+					dictionaryElement.appendChild(query);
+					if (sb != null) {
+						query.appendChild(sb.toString());
+					}
+					sb = new StringBuilder();
+				} else {
+					sb.append(" OR ");
+				}
+				sb.append("('" + name + "')");
 			}
-			sb.append("('" + name + "')");
+			if (sb != null) {
+				query.appendChild(sb.toString());
+//				dictionaryElement.appendChild(query);
+			}
 		}
-		query.appendChild(sb.toString());
-		dictionaryElement.appendChild(query);
 	}
 
 	private void addEntriesToDictionaryElement() {
@@ -545,9 +638,59 @@ public class AMIDictionaryTool extends AbstractAMITool {
 			if (link != null && !link.equals("")) {
 				entry.addAttribute(new Attribute(DictionaryTerm.URL, link));
 			}
+			if (wikiLinks != null) {
+				addWikiLinks(entry, new ArrayList<WikiLink>(Arrays.asList(wikiLinks)));
+			}
 			entryList.add (entry);
 		}
 		return entryList;
+	}
+
+	private void addWikiLinks(Element entry, List<WikiLink> wikiLinks) {
+		WikipediaLookup wikipediaLookup = new WikipediaLookup();
+		HtmlElement wikipediaPage = null;
+		List<HtmlElement> wikidata = null;
+		String term = entry.getAttributeValue(DictionaryTerm.TERM);
+		wikipediaPage = addWikipediaPage(entry, wikiLinks, wikipediaPage, term);
+		if (wikiLinks.contains(WikiLink.wikidata)) {
+			if (term != null) {
+				wikidata = wikipediaLookup.queryWikidata(term);
+			} else {
+				wikidata = (wikidata != null) ? wikidata : wikipediaLookup.createWikidataFromTermLookup(wikipediaPage);
+				wikidata = (wikidata != null) ? wikidata : wikipediaLookup.queryWikidata(term);
+			}
+			String q = WikipediaLookup.getQNumberFromSearchResults(wikidata);
+			if (q != null) {
+				entry.addAttribute(new Attribute(WIKIDATA, q));
+			}
+		}
+	}
+
+	private HtmlElement addWikipediaPage(Element entry, List<WikiLink> wikiLinks, HtmlElement wikipediaPage, String term) {
+		if (wikiLinks.contains(WikiLink.wikipedia)) {
+			wikipediaPage = addWikipedia(entry);
+		}
+		if (wikipediaPage == null) {
+			LOG.warn("Cannot find Wikipedia for:"+term);
+		} else {
+			entry.addAttribute(new Attribute(WIKIPEDIA, term));
+		}
+		return wikipediaPage;
+	}
+
+	private HtmlElement addWikipedia(Element entry) {
+		HtmlElement wikipediaPage = null;
+		try {
+			URL wikipediaUrl = new URL(HTTPS_EN_WIKIPEDIA_ORG_WIKI + entry.getAttributeValue("name"));
+			InputStream is = wikipediaUrl.openStream();
+			Element element = XMLUtil.parseQuietlyToRootElement(is);
+			wikipediaPage = element == null ? null : HtmlElement.create(element);
+		} catch (MalformedURLException e) {
+			throw new RuntimeException("bad URL ", e);
+		} catch (IOException e) {
+			// maybe skip? cannot find page
+		}
+		return wikipediaPage;
 	}
 
 	private void removeEntriesWithEmptyIdsSortRemoveDuplicates(List<Element> entryList) {
@@ -573,7 +716,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 						LOG.debug("skipped non-wikipedia link: "+urlAtt);
 					}
 				} else {
-					LOG.debug("no links in: "+entry.toXML());
+//					LOG.debug("no links in: "+entry.toXML());
 					addEntry(dictionaryId, i++, entry, null);
 				}
 				lastTerm = term;
@@ -620,7 +763,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 				List<DictionaryFileFormat> outformatList = Arrays.asList(outformats);
 				for (DictionaryFileFormat outformat : outformatList) {
 					File outfile = getOrCreateDictionary(subDirectory, dictionary[0], outformat);
-					LOG.debug("writing to "+outfile);
+					LOG.trace("writing dictionary to "+outfile);
 					try {
 						outputDictionary(outfile, outformat);
 					} catch (IOException e) {
@@ -642,7 +785,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	}
 
 	private void outputDictionary(File outfile, DictionaryFileFormat outformat) throws IOException {
-		LOG.debug("writing dictionary to "+outfile.getAbsolutePath());
+		LOG.trace("writing dictionary to "+outfile.getAbsolutePath());
 		FileOutputStream fos = new FileOutputStream(outfile);
 		if (outformat.equals(DictionaryFileFormat.xml)) {
 			XMLUtil.debug(dictionaryElement, fos, 1);
@@ -700,6 +843,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		System.out.println("hrefCols      "+hrefCols);
 		System.out.println("input         "+input);
 		System.out.println("informat      "+informat);
+		System.out.println("dictInformat  "+dictInformat);
 		System.out.println("linkCol       "+linkCol);
 		System.out.println("log4j         "+makeArrayList(log4j));
 		System.out.println("nameCol       "+nameCol);
@@ -764,7 +908,6 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		List<HtmlElement> categoryList = HtmlUtil.getQueryHtmlElements(htmlElement, 
 				".//*[local-name()='div' and @class='mw-category-generated']//*[local-name()='div' and @class='mw-category']");
 		for (HtmlElement category : categoryList) {
-			LOG.debug("CAT");
 			List<HtmlA> aList = HtmlA.extractSelfAndDescendantAs(category);
 			HtmlUl ul = new HtmlUl();
 			for (HtmlA a : aList) {
@@ -773,7 +916,6 @@ public class AMIDictionaryTool extends AbstractAMITool {
 				linkList.add(a.getHref());
 			}
 		}
-		LOG.debug("TERMS "+termList);
 		return;
 	}
 
@@ -812,7 +954,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		int linkColIndex = tBody.getColumnIndex(linkCol.trim());
 		List<String> hrefs = this.getColumnHrefs(LinkField.HREF, linkColIndex, HTTPS_EN_WIKIPEDIA_ORG);
 		if (names.size() == 0) {
-			LOG.debug("no names found");
+			LOG.trace("no names found");
 			return;
 		}
 		//remove first element as it's the columnn heading
@@ -905,7 +1047,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	private void removeFirstElementsOfColumns(List<String> names, List<String> hrefs) {
 		names.remove(0);
 		if (hrefs.size() == 0) {
-			LOG.debug("no links found");
+			LOG.trace("no links found");
 			hrefs = new ArrayList<String>(names.size());
 		} else {
 			hrefs.remove(0);
@@ -916,7 +1058,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		for (int i = 0; i < names.size(); i++) {
 			String name = names.get(i);
 			if (nameList.contains(name)) {
-				LOG.debug("dup: " + name);
+				LOG.trace("dup: " + name);
 				continue;
 			}
 			nameList.add(names.get(i));
@@ -1040,15 +1182,15 @@ public class AMIDictionaryTool extends AbstractAMITool {
 //		File dictionaryHead = new File(NAConstants.MAIN_AMI_DIR, "plugins/dictionary");
 		try {
 			String pathname = NAConstants.DICTIONARY_RESOURCE;
-			LOG.debug("PATHNAME "+pathname);
+			LOG.trace("PATHNAME "+pathname);
 			pathname = "/"+"org/contentmine/ami/plugins/dictionary";
 			final Path path = Paths.get(String.class.getResource(pathname).toURI());
-			LOG.debug("PATH "+path);
+			LOG.trace("PATH "+path);
 			FileSystem fileSystem = path.getFileSystem();
 			List<FileStore> fileStores = Lists.newArrayList(fileSystem.getFileStores());
-			LOG.debug(fileStores.size());
+			LOG.trace(fileStores.size());
 			for (FileStore fileStore : fileStores) {
-				LOG.debug("F"+fileStore);
+				LOG.trace("F"+fileStore);
 			}
 			final byte[] bytes = Files.readAllBytes(path);
 			String fileContent = new String(bytes/*, CHARSET_ASCII*/);

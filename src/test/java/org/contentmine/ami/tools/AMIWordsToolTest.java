@@ -44,5 +44,4 @@ public class AMIWordsToolTest {
 		new AMIWordsTool().runCommands(args);
 	}
 
-	
 }

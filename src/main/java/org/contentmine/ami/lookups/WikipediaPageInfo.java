@@ -85,6 +85,12 @@ public class WikipediaPageInfo {
 		
 	}
 	
+	/** create pageInfo from Wikipedia page element
+	 * wikipediaPage typically retrieved by parsing a URL
+	 * 
+	 * @param wikipediaPage
+	 * @return
+	 */
 	public static WikipediaPageInfo createPageInfo(HtmlElement wikipediaPage) {
 		String xpath = ".//*[@" + HtmlElement.ID + "='" + T_INFO + "']/*[local-name()='"+HtmlA.TAG+"']";
 		List<HtmlElement> aList = HtmlUtil.getQueryHtmlElements(wikipediaPage, xpath);
@@ -109,6 +115,11 @@ public class WikipediaPageInfo {
 		this.pageElement = pageElement;
 	}
 	
+	/** get link wikidata item
+	 * 
+	 * @return a/href element (value will be WikidataId)
+	 * 
+	 */
 	public HtmlA getLinkToWikidataItem() {
 		String value = getValue(WIKIDATA_ITEM_ID_FIELD);
 		String href = getHref(WIKIDATA_ITEM_ID_FIELD);
@@ -124,6 +135,10 @@ public class WikipediaPageInfo {
 		return getValue(CENTRAL_DESCRIPTION);
 	}
 
+	/** gets the most prominent image on the page.
+	 * 
+	 * @return
+	 */
 	public HtmlImg getPageImage() {
 		HtmlElement htmlElement = getElement(PAGE_IMAGE);
 		HtmlImg img = null;

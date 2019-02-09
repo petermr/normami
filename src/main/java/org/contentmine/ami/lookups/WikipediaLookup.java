@@ -324,16 +324,25 @@ species of bird
 	    return element;
 	}
 
-	public List<HtmlElement> queryWikidata(String query) throws IOException {
-		HtmlBody htmlBody = getWikidataHtmlBody(query);
+	public List<HtmlElement> queryWikidata(String query) {
+		HtmlBody htmlBody = null;
+		List<HtmlElement> liList = new ArrayList<HtmlElement>();
+		try {
+			htmlBody = getWikidataHtmlBody(query);
+		} catch (IOException e) {
+			LOG.error("Cannot find wikidata for " + query + ": " + e.getMessage());
+			return liList;
+		}
 		/**
 	  <div class="searchresults">
 		  <p class="mw-search-createlink"> </p>
 		  <ul class="mw-search-results">
 		 */
+		
 		List<Element> elements = XMLUtil.getQueryElements(htmlBody, 
 				".//*[local-name()='div' and @class='searchresults']/*[local-name()='ul' and @class='mw-search-results']");
 		HtmlUl searchResultsUl = elements.size() == 0 ? null : (HtmlUl) elements.get(0);
+		
 		/**
 	<ul class="mw-search-results" xmlns="http://www.w3.org/1999/xhtml">
 	<li>
@@ -353,16 +362,12 @@ species of bird
 	<div class="mw-search-result-data">26 statements, 46 sitelinks - 22:29, 11 September 2018</div>
 	</li>
 		 */
-		List<HtmlElement> liList = new ArrayList<HtmlElement>();
 		if (searchResultsUl != null) {
 			liList = AbstractCMElement.getChildElements(searchResultsUl, HtmlLi.TAG); 
-//			LOG.debug("** "+liList.size());
 			for (HtmlElement li : liList) {
 				HtmlA a = (HtmlA)li.getChild(0).getChild(0);
-//				LOG.debug(a.getHref() + ": " + a.getTitle());
 			}
 		} else {
-//			LOG.debug("NULLLLLLLLLLLLLLLLLL");
 		}
 		return liList;
 	}
@@ -540,6 +545,40 @@ species of bird
 	public void setMaxAlternative(int maxAlternative) {
 		this.maxAlternative = maxAlternative;
 	}
+
+	/** extracts "Wikidata Item" from wikipedia page.
+	 * 
+	 * @param wikipediaPage
+	 * @return list of HTMLA containing URL and QNumber. Not sure why it's a list 
+	 */
+	public List<HtmlElement> createWikidataFromTermLookup(HtmlElement wikipediaPage) {
+		List<HtmlElement> wikidata = null;
+		if (wikipediaPage != null) {
+			WikipediaPageInfo wikipediaPageInfo = WikipediaPageInfo.createPageInfo(wikipediaPage);
+			
+			HtmlA a = wikipediaPageInfo == null ? null : wikipediaPageInfo.getLinkToWikidataItem();
+			wikidata = new ArrayList<HtmlElement>();
+			if (a != null) wikidata.add(a);
+		}
+		return wikidata;
+	}
+
+	/** gets single Q number from list of HTMLA elements from wikidata search.
+	 * 
+	 * @param wikidata
+	 * @return
+	 */
+	public static String getQNumberFromSearchResults(List<HtmlElement> wikidata) {
+		String q = null;
+		if (wikidata != null && wikidata.size() > 0) {
+			HtmlElement wikidata0 = wikidata.get(0);
+			String value = wikidata0.getValue();
+			String[] qq = value == null ? null : value.split("/");
+			q = qq == null ? "notFound" : qq[qq.length - 1];
+		}
+		return q;
+	}
+
 	
     /**
      * These attempted to retrieve multiple species to avoid bandwidth but the id<->species map is lost.

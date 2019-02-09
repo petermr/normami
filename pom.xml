@@ -252,6 +252,8 @@
 
                     <!-- Prevent long directories -->
                     <repositoryLayout>flat</repositoryLayout>
+					<!-- short names for Windows -->
+					<useWildcardClassPath>true</useWildcardClassPath>
 
                 </configuration>
 

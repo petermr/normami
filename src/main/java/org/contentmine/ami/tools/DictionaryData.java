@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMIDictionaryTool.DictionaryFileFormat;
 import org.contentmine.ami.tools.AMIDictionaryTool.InputFormat;
 import org.contentmine.ami.tools.AMIDictionaryTool.Operation;
+import org.contentmine.ami.tools.AMIDictionaryTool.WikiLink;
 
 class DictionaryData {
 	static final Logger LOG = Logger.getLogger(DictionaryData.class);
@@ -27,5 +28,6 @@ class DictionaryData {
     String                  splitCol=",";
 	String                  termCol;
     String[]                terms;
+	WikiLink[]              wikiLinks;
 
 }

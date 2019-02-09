@@ -20,6 +20,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
+import com.google.gson.JsonSyntaxException;
 
 import nu.xom.Attribute;
 import nu.xom.Element;
@@ -83,7 +84,16 @@ public class CMJsonDictionary {
 		CMJsonDictionary cmJsonDictionary =  null;
 		if (jsonString != null) {
 			cmJsonDictionary = new CMJsonDictionary();
-			JsonObject jsonObject = (JsonObject) new JsonParser().parse(jsonString);
+			JsonObject jsonObject = null;
+			try {
+				JsonParser jsonParser = new JsonParser();
+				jsonObject = (JsonObject) jsonParser.parse(jsonString);
+			} catch (JsonSyntaxException mje) {
+				// Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 5 path $
+				LOG.debug("Malformed JSON: " + jsonString.substring(0, Math.min(100, jsonString.length())));
+				LOG.debug(mje);
+				throw new RuntimeException("malformed JSON", mje);
+			}
 			JsonElement jsonId = jsonObject.get(ID);
 			if (jsonId == null) {
 				throw new RuntimeException("JsonDictionary must have ID");
@@ -233,6 +243,7 @@ public class CMJsonDictionary {
 					throw new RuntimeException("Json dictionary must have term");
 				}
 				entry.addAttribute(new Attribute(DictionaryTerm.TERM, termTerm));
+				LOG.debug(entry.toXML());
 			}
 		}
 		return amiDictionary;
