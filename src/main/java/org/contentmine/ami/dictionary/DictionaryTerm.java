@@ -31,12 +31,13 @@ public class DictionaryTerm implements Comparable<DictionaryTerm> {
 	private String url;
 	private String wikidata;
 	
-	public static final String ID        =        "id";
-	public static final String NAME      =     "name";
-	public static final String TERM      =     "term";
-	public static final String URL       =      "url";
-	public static final String WIKIDATA  = "wikidata";
-	public static final String WIKIPEDIA = "wikipedia";
+	public static final String ID          = "id";
+	public static final String NAME        = "name";
+	public static final String TERM        = "term";
+	public static final String URL         =  "url";
+	public static final String DESCRIPTION = "description";
+	public static final String WIKIDATA    = "wikidata";
+	public static final String WIKIPEDIA   = "wikipedia";
 	
 	DictionaryTerm() {
 	}

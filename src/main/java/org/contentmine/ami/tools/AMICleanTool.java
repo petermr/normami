@@ -26,7 +26,13 @@ aliases = "clean",
 		//Class<?>[] subcommands() default {};
 version = "ami-clean 0.1",
 		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
-description = "cleans specific files or directories in project, explicitly or by regex"
+description = "cleans specific files or directories in project, explicitly or by regex %n"
+		+ "	ami-clean -p /Users/pm286/workspace/tigr2ess --dir results cooccurrence%n"
+		+ "    deletes subdirectories results/ and cooccurrence/ in projcts tigr2ess%n"
+		+ " ami-clean -p /Users/pm286/workspace/tigr2ess --file commonest.dataTables.html\\%n"
+		+ "           count.dataTables.html entries.dataTables.html full.dataTables.html%n"
+		+ "    deletes 4 files by name%n"
+
 )
 
 public class AMICleanTool extends AbstractAMITool {
@@ -78,7 +84,7 @@ public class AMICleanTool extends AbstractAMITool {
 
     @Option(names = {"--dir"},
 		arity = "0..*",
-        description = "directories to delete by name, e.g. --dir svg deletes hild directories <ctree>/svg"
+        description = "directories to delete by name, e.g. --dir svg deletes child directories <ctree>/svg"
         )
     private String[] dirs;
 
@@ -117,29 +123,35 @@ public class AMICleanTool extends AbstractAMITool {
     }
 
     private void runClean() {
-    	if (files != null) cleanFiles(Arrays.asList(files));
-    	if (dirs != null) cleanDirs(Arrays.asList(dirs));
+ //   	if (files != null) cleanFiles(Arrays.asList(files));
+    	if (dirs != null) cleanFileOrDirs(Arrays.asList(dirs));
+    	if (files!= null) cleanFileOrDirs(Arrays.asList(files));
     }
 
-	public void cleanFiles(List<String> argList) {
-		for (String arg : argList) {
-			cleanReserved(arg);
+	public void cleanFiles(List<String> filenames) {
+		for (String file : filenames) {
+			cleanReserved(file);
 		}
 	}
 
-	public void cleanDirs(List<String> argList) {
-		if (argList == null) {
-			System.err.println("No argList given");
+	public void cleanFileOrDirs(List<String> filenameList) {
+		if (filenameList == null) {
+			System.err.println("No filenameList given");
 			return;
 		}
 		if (cProject != null) {
-			for (String arg : argList) {
-				cProject.clean(arg);
+			for (String filename : filenameList) {
+				cProject.cleanTrees(filename);
 			}
 		} else if (cTree != null) {
 			if (dirs != null) {
 				for (String dir : dirs) {
-					cTree.clean(dir);
+					cTree.cleanFileOrDirs(dir);
+				}
+			}
+			if (files != null) {
+				for (String file : files) {
+					cTree.cleanFileOrDirs(file);
 				}
 			}
 		} else {
@@ -147,18 +159,18 @@ public class AMICleanTool extends AbstractAMITool {
 		}
 	}
 
-	public void cleanReserved(String arg) {
+	public boolean cleanReserved(String arg) {
 		for (Cleaner cleaner : Cleaner.values()) {
 			if (cleaner.matches(arg)) {
-				cProject.clean(arg);
-				return;
+				cProject.cleanTrees(arg);
+				return true;
 			}
 		}
-//		DebugPrint.debugPrint("failed to delete: "+arg);
+		return false;
 	}
 
-	public void clean(String filename) {
-		cProject.clean(filename);
+	public void cleanTrees(String filename) {
+		cProject.cleanTrees(filename);
 	}
 
 }

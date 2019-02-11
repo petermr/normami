@@ -208,8 +208,11 @@ view-source:https://www.wikidata.org/w/api.php?action=query&list=search&srsearch
 	}
 	
 	public URL createWikidataLookupURL(String query) {
+		query = query.trim();
+		query = query.replace(" ", "%20");
 		String urlString = 
-		"https://www.wikidata.org/w/index.php?search=&search="+query+"&title=Special:Search&go=Go&searchToken=1gq68j12xhd4disfwojgu2si4";
+//				"https://www.wikidata.org/w/index.php?search=&search="+query+"&title=Special:Search&go=Go&searchToken=1gq68j12xhd4disfwojgu2si4";
+		"https://www.wikidata.org/w/index.php?search=&search="+query+"&title=Special:Search&go=Go";
 		URL url = createUrl(urlString);
 		return url;
 	}
@@ -330,7 +333,7 @@ species of bird
 		try {
 			htmlBody = getWikidataHtmlBody(query);
 		} catch (IOException e) {
-			LOG.error("Cannot find wikidata for " + query + ": " + e.getMessage());
+			LOG.debug("URL "+e);
 			return liList;
 		}
 		/**
@@ -565,18 +568,43 @@ species of bird
 
 	/** gets single Q number from list of HTMLA elements from wikidata search.
 	 * 
+	 * <li class="mw-search-result">
+	 *   <div class="mw-search-result-heading">
+	 *     <a href="/wiki/Q16916208" title="‎Alphacryptovirus‎ | ‎genus of viruses‎" data-serp-pos="0">
+	 *       <span class="wb-itemlink">
+	 *         <span class="wb-itemlink-label" lang="en" dir="ltr">
+	 *           <span class="searchmatch">Alphacryptovirus</span>
+	 *         </span> 
+	 *         <span class="wb-itemlink-id">(Q16916208)</span>
+	 *       </span>
+	 *     </a>
+	 *   </div>
+	 *   <div class="searchresult">
+	 *     <span class="wb-itemlink-description">genus of viruses</span>
+	 *   </div> 
+	 *   <div class="mw-search-result-data">7 statements, 0 sitelinks - 23:20, 9 February 2019</div>
+	 * </li>
+
 	 * @param wikidata
 	 * @return
 	 */
-	public static String getQNumberFromSearchResults(List<HtmlElement> wikidata) {
-		String q = null;
-		if (wikidata != null && wikidata.size() > 0) {
-			HtmlElement wikidata0 = wikidata.get(0);
-			String value = wikidata0.getValue();
-			String[] qq = value == null ? null : value.split("/");
-			q = qq == null ? "notFound" : qq[qq.length - 1];
+//	public static String getQNumberFromSearchResults(List<HtmlElement> orderedHits) {
+//		String q = null;
+//		if (orderedHits != null && orderedHits.size() > 0) {
+//			List<WikiResult> wikiResultList = WikiResult.extractWikiResultList((List<HtmlElement>) orderedHits);
+//			WikiResult wikiResult = wikiResultList.get(0);
+//			q = wikiResult.getQString();
+//		}
+//		return q;
+//	}
+
+	public static WikiResult getFirstWikiResultFromSearchResults(List<HtmlElement> orderedHits) {
+		WikiResult wikiResult = null;
+		if (orderedHits != null && orderedHits.size() > 0) {
+			List<WikiResult> wikiResultList = WikiResult.extractWikiResultList((List<HtmlElement>) orderedHits);
+			wikiResult = wikiResultList.get(0);
 		}
-		return q;
+		return wikiResult;
 	}
 
 	

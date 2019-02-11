@@ -650,4 +650,9 @@ public class DefaultAMIDictionary extends DefaultStringDictionary {
 		}
 	}
 	
+	public List<Element> getEntryList() {
+		List<Element> entryList = XMLUtil.getQueryElements(dictionaryElement, "./*[local-name()='" + ENTRY + "']");
+		return entryList;
+	}
+	
 }

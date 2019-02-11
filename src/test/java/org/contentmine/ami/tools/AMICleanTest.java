@@ -20,6 +20,11 @@ public class AMICleanTest {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	
+	@Test
+	public void testHelp() {
+		new AMICleanTool().runCommands(new String[]{});
+	}
 
 	@Test
 	/** 
@@ -41,8 +46,43 @@ public class AMICleanTest {
 	 * tests cleaning directories in a single CTree.
 	 */
 	public void testCleanSingleTree() {
-//		ami-clean -t /Users/pm286/workspace/uclforest/dev/higgins --dir pdfimages
 		String cmd = "-t /Users/pm286/workspace/uclforest/dev/higgins --dir pdfimages";
+		new AMICleanTool().runCommands(cmd);
+	}
+
+	@Test
+	/**
+	 * tests cleaning directories in a project for ami-search
+	 */
+	public void testCleanResults() {
+		String cmd = "-p /Users/pm286/workspace/tigr2ess/osanctum --dir results cooccurrence";
+		new AMICleanTool().runCommands(cmd);
+		// delete children of ctrees
+		cmd = "-p /Users/pm286/workspace/tigr2ess/osanctum"
+			+ " --file "
+			+ " gene.human.count.xml"
+		    + " gene.human.snippets.xml"
+		    + " scholarly.html"
+		    + " search.country.count.xml"
+		    + " search.country.snippets.xml"
+		    + " search.disease.count.xml"
+		    + " search.disease.snippets.xml"
+		    + " search.diterpene.count.xml"
+		    + " search.diterpene.snippets.xml"
+		    + " search.drugs.count.xml"
+		    + " search.drugs.snippets.xml"
+		    + " search.monoterpene.count.xml"
+		    + " search.monoterpene.snippets.xml"
+		    + " search.monoterpenes.count.xml"
+		    + " search.monoterpenes.snippets.xml"
+		    + " search.plantparts.count.xml"
+		    + " search.plantparts.snippets.xml"
+		    + " search.spices.count.xml"
+		    + " search.spices.snippets.xml"
+		    + " species.binomial.count.xml"
+		    + " species.binomial.snippets.xml"
+		    + " word.frequencies.count.xml"
+		    + " word.frequencies.snippets.xml";
 		new AMICleanTool().runCommands(cmd);
 	}
 

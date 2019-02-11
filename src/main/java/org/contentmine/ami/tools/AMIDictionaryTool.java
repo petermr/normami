@@ -17,7 +17,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,6 +32,7 @@ import org.contentmine.ami.CProjectTreeMixin;
 import org.contentmine.ami.dictionary.CMJsonDictionary;
 import org.contentmine.ami.dictionary.DefaultAMIDictionary;
 import org.contentmine.ami.dictionary.DictionaryTerm;
+import org.contentmine.ami.lookups.WikiResult;
 import org.contentmine.ami.lookups.WikipediaDictionary;
 import org.contentmine.ami.lookups.WikipediaLookup;
 import org.contentmine.cproject.files.DebugPrint;
@@ -201,14 +204,15 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		arity="1..*",
     		description = "input or output dictionary name/s. for 'create' must be singular; when 'display' or 'translate', any number. "
     				+ "Names should be lowercase, unique. [a-z][a-z0-9._]. Dots can be used to structure dictionaries into"
-    				+ "directories")
+    				+ "directories. Dictionary names are relative to 'directory'. If <directory> is absent then "
+    				+ "dictionary names are absolute.")
     private String[] dictionary = null;
 
     @Option(names = {"--directory"}, 
     		arity="1",
     		description = "top directory containing dictionary/s. Subdirectories will use structured names (NYI). Thus "
     				+ "dictionary 'animals' is found in '<directory>/animals.xml', while 'plants.parts' is found in "
-    				+ "<directory>/plants/parts.xml")
+    				+ "<directory>/plants/parts.xml. Required for relative dictionary names.")
     private String dictionaryTopname = null;
 
     @Option(names = {"--hrefcols"}, 
@@ -295,9 +299,11 @@ public class AMIDictionaryTool extends AbstractAMITool {
     private String[] urlref;
 
     @Option(names = {"--wikilinks"}, 
-    		arity="1..*",
-    		description = "try to add link to Wikidata page of same name.")
-    private WikiLink[] wikiLinks = new WikiLink[]{WikiLink.wikipedia, WikiLink.wikidata};
+    		arity="0..*",
+    		defaultValue = "wikipedia,wikidata",
+    		split = ",",
+    		description = "try to add link to Wikidata and/or Wikipedia page of same name. ")
+    private WikiLink[] wikiLinks = null;/* new WikiLink[]{WikiLink.wikipedia, WikiLink.wikidata}*/;
 
     @Mixin CProjectTreeMixin proTree;
 
@@ -325,6 +331,9 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	private DictionaryFileFormat dictOutformat;
 	private CMJsonDictionary cmJsonDictionary;
 	private DefaultAMIDictionary xmlDictionary;
+	private List<WikiLink> wikiLinkList;
+	private HashSet<String> missingWikipediaSet;
+	private HashSet<String> missingWikidataSet;
 
 
 	public AMIDictionaryTool() {
@@ -364,6 +373,8 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	@Override
 	protected void parseSpecifics() {
 		dictOutformat = (outformats == null || outformats.length != 1) ? null : outformats[0];
+		wikiLinkList = (wikiLinks == null) ? new ArrayList<WikiLink>() :
+			     new ArrayList<WikiLink>(Arrays.asList(wikiLinks));
 		printDebug();
 	}
 
@@ -374,6 +385,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 
 
 	private void runDictionary() {
+		resetMissingLinks();
 		if (getOrCreateExistingDictionaryTop() == null) {
 			return;
 		}
@@ -386,9 +398,35 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		} else {
 			LOG.debug("no operation given: "+operation);
 		}
+		printMissingLinks();
 	}
 
-    protected File getOrCreateExistingDictionaryTop(String dictionaryTopname) {
+    private void printMissingLinks() {
+       	printMissingLinks("Missing wikipedia: ", missingWikipediaSet);
+       	printMissingLinks("Missing wikidata: ", missingWikidataSet);
+	}
+
+	private void printMissingLinks(String title, Set<String> missingLinkSet) {
+		if (missingLinkSet.size() > 0) {
+			List<String> missingLinkList = new ArrayList<String>(missingLinkSet);
+			Collections.sort(missingLinkList);
+			int i = 0;
+			System.out.println("\n"+title + ":");
+			for (String missingLink : missingLinkList) {
+				if (i++ % 8 == 0) {
+					System.out.println();
+				}
+				System.out.print(missingLink + "; ");
+			}
+    	}
+	}
+
+	private void resetMissingLinks() {
+    	missingWikipediaSet = new HashSet<String>();
+    	missingWikidataSet = new HashSet<String>();
+	}
+
+	protected File getOrCreateExistingDictionaryTop(String dictionaryTopname) {
     	if (dictionaryTopname != null) {
     		dictionaryTop = new File(dictionaryTopname);
     	}
@@ -461,12 +499,24 @@ public class AMIDictionaryTool extends AbstractAMITool {
     			throw new RuntimeException("unknown inputformat: "+informat);
     		}
     	} else {
-    		termList = terms == null ? null : Arrays.asList(terms);
+    		if (terms != null) {
+    			createSortedTermList();
+    		}
     	}
     	synchroniseTermsAndNames();
     	dictionaryElement = DefaultAMIDictionary.createDictionaryWithTitle(dictionary[0]);
     	writeNamesAndLinks();
 		
+	}
+
+	private void createSortedTermList() {
+		termList = Arrays.asList(terms);
+		Set<String> termSet = new HashSet<>();
+		for (String term : terms) {
+			termSet.add(term.toLowerCase());
+		}
+		termList = new ArrayList<String>(termSet);
+		Collections.sort(termList);
 	}
 
 	private InputStream openInputStream() {
@@ -482,10 +532,20 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	}
 
 	private void translateDictionaries() {
-		File directory = new File(dictionaryTopname);
+		File directory = null;
+		boolean useAbsoluteNames = false;
+		if (dictionaryTopname != null) {
+			directory = new File(dictionaryTopname);
+		} else if (dictionary != null && dictionary.length > 0){
+			directory = new File(dictionary[0]).getParentFile();
+			useAbsoluteNames = true;
+		} else {
+			LOG.error("Must give either 'directory' or existing absolute filenames of dictionaries");
+			return;
+		}
 		for (String dictionaryS : dictionary) {
 			String basename = FilenameUtils.getBaseName(dictionaryS);
-			File dictionaryFile = new File(directory, dictionaryS);
+			File dictionaryFile = (useAbsoluteNames) ? new File(dictionaryS) : new File(directory, dictionaryS);
 			if (!dictionaryFile.exists()) {
 				LOG.error("File does not exist: "+dictionaryFile);
 				continue;
@@ -496,7 +556,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 				continue;
 			}
 			File dictOutfile = new File(dictionaryFile.getParentFile(), basename + "." + dictOutformat);
-			LOG.debug("DF "+dictionaryFile+"; "+dictInformat+" => "+dictOutformat+"; "+dictOutfile);
+//			LOG.debug("DF "+dictionaryFile+"; "+dictInformat+" => "+dictOutformat+"; "+dictOutfile);
 			convertDictionaries(dictionaryFile, dictInformat, dictOutfile, dictOutformat);
 		}
 		
@@ -507,6 +567,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 			File infile, DictionaryFileFormat informat, File outfile, DictionaryFileFormat outformat) {
 		if (DictionaryFileFormat.json.equals(informat)) {
 			convertJsonDictionaryToXML(infile, outfile);
+			
 		} else if (DictionaryFileFormat.xml.equals(informat)) {
 			xmlDictionary = DefaultAMIDictionary.createSortedDictionary(infile);
 			cmJsonDictionary = CMJsonDictionary.convertXMLToJson(xmlDictionary);
@@ -522,6 +583,20 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		}
 		cmJsonDictionary = CMJsonDictionary.readJsonDictionary(inString);
 		xmlDictionary = CMJsonDictionary.convertJsonToXML(cmJsonDictionary);
+		if (xmlDictionary != null) {
+			addWikiLinksToDictionary(xmlDictionary);
+		}
+		outputXMLDictionary(outfile);
+	}
+
+	private void addWikiLinksToDictionary(DefaultAMIDictionary xmlDictionary) {
+		List<Element> entryList = xmlDictionary.getEntryList();
+		for (Element entry : entryList) {
+			addWikiLinks(entry);
+		}
+	}
+
+	private void outputXMLDictionary(File outfile) {
 		if (xmlDictionary != null) {
 			try {
 				XMLUtil.debug(xmlDictionary.getDictionaryElement(), outfile, 1);
@@ -639,41 +714,47 @@ public class AMIDictionaryTool extends AbstractAMITool {
 				entry.addAttribute(new Attribute(DictionaryTerm.URL, link));
 			}
 			if (wikiLinks != null) {
-				addWikiLinks(entry, new ArrayList<WikiLink>(Arrays.asList(wikiLinks)));
+				addWikiLinks(entry);
 			}
 			entryList.add (entry);
 		}
 		return entryList;
 	}
 
-	private void addWikiLinks(Element entry, List<WikiLink> wikiLinks) {
+	private void addWikiLinks(Element entry) {
 		WikipediaLookup wikipediaLookup = new WikipediaLookup();
 		HtmlElement wikipediaPage = null;
 		List<HtmlElement> wikidata = null;
 		String term = entry.getAttributeValue(DictionaryTerm.TERM);
-		wikipediaPage = addWikipediaPage(entry, wikiLinks, wikipediaPage, term);
-		if (wikiLinks.contains(WikiLink.wikidata)) {
+		wikipediaPage = addWikipediaPage(entry, wikipediaPage, term);
+		if (wikiLinkList.contains(WikiLink.wikidata)) {
 			if (term != null) {
 				wikidata = wikipediaLookup.queryWikidata(term);
 			} else {
 				wikidata = (wikidata != null) ? wikidata : wikipediaLookup.createWikidataFromTermLookup(wikipediaPage);
 				wikidata = (wikidata != null) ? wikidata : wikipediaLookup.queryWikidata(term);
 			}
-			String q = WikipediaLookup.getQNumberFromSearchResults(wikidata);
-			if (q != null) {
-				entry.addAttribute(new Attribute(WIKIDATA, q));
+			WikiResult wikiResult = WikipediaLookup.getFirstWikiResultFromSearchResults(wikidata);
+			if (wikiResult != null) {
+				entry.addAttribute(new Attribute(WIKIDATA, wikiResult.getQString()));
+				entry.addAttribute(new Attribute(DictionaryTerm.NAME, wikiResult.getLabel()));
+				entry.addAttribute(new Attribute(DictionaryTerm.DESCRIPTION, wikiResult.getDescription()));
+			} else {
+				missingWikidataSet.add(term);
 			}
 		}
 	}
 
-	private HtmlElement addWikipediaPage(Element entry, List<WikiLink> wikiLinks, HtmlElement wikipediaPage, String term) {
-		if (wikiLinks.contains(WikiLink.wikipedia)) {
+	private HtmlElement addWikipediaPage(Element entry, HtmlElement wikipediaPage, String term) {
+		if (wikiLinkList.contains(WikiLink.wikipedia)) {
 			wikipediaPage = addWikipedia(entry);
 		}
 		if (wikipediaPage == null) {
-			LOG.warn("Cannot find Wikipedia for:"+term);
+			System.err.print("!");
+			missingWikipediaSet.add(term);
 		} else {
 			entry.addAttribute(new Attribute(WIKIPEDIA, term));
+			System.out.print(".");
 		}
 		return wikipediaPage;
 	}
@@ -681,10 +762,14 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	private HtmlElement addWikipedia(Element entry) {
 		HtmlElement wikipediaPage = null;
 		try {
-			URL wikipediaUrl = new URL(HTTPS_EN_WIKIPEDIA_ORG_WIKI + entry.getAttributeValue("name"));
-			InputStream is = wikipediaUrl.openStream();
-			Element element = XMLUtil.parseQuietlyToRootElement(is);
-			wikipediaPage = element == null ? null : HtmlElement.create(element);
+			String name = entry.getAttributeValue("name");
+			if (name != null) {
+				name = name.replace(" ", "_");
+				URL wikipediaUrl = new URL(HTTPS_EN_WIKIPEDIA_ORG_WIKI + name);
+				InputStream is = wikipediaUrl.openStream();
+				Element element = XMLUtil.parseQuietlyToRootElement(is);
+				wikipediaPage = element == null ? null : HtmlElement.create(element);
+			}
 		} catch (MalformedURLException e) {
 			throw new RuntimeException("bad URL ", e);
 		} catch (IOException e) {
@@ -852,6 +937,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		System.out.println("splitCol      "+splitCol);
 		System.out.println("termCol       "+termCol);
 		System.out.println("terms         "+(termList == null ? null : "("+termList.size()+") "+termList));
+		System.out.println("wikiLinks     "+wikiLinkList);
 	}
 
 	private List<?> makeArrayList(Object[] list) {

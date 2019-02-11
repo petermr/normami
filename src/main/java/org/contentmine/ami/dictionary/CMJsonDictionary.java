@@ -221,8 +221,9 @@ public class CMJsonDictionary {
 			if (entries == null || entries.size() == 0) {
 				throw new RuntimeException("Json dictionary has no entries");
 			}
+//			LOG.warn("should use DictionaryTerm");
 			for (int i = 0; i < entries.size(); i++) {
-				JsonElement element = entries.get(i);
+//				JsonElement element = entries.get(i);
 				CMJsonTerm jsonTerm = CMJsonTerm.createTerm(entries.get(i));
 				if (jsonTerm == null) {
 					throw new RuntimeException("Cannot read as CMJsonTerm");
@@ -243,7 +244,7 @@ public class CMJsonDictionary {
 					throw new RuntimeException("Json dictionary must have term");
 				}
 				entry.addAttribute(new Attribute(DictionaryTerm.TERM, termTerm));
-				LOG.debug(entry.toXML());
+//				LOG.debug(entry.toXML());
 			}
 		}
 		return amiDictionary;

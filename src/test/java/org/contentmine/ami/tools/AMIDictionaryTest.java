@@ -280,8 +280,7 @@ public class AMIDictionaryTest {
 			"--informat", "wikipage",
 			"--dictionary", dict,
 			"--outformats", "html,json,xml",
-			"--log4j", "org.contentmine.ami.lookups.WikipediaDictionary", "INFO",
-			"--log4j", "org.contentmine.norma.input.html.HtmlCleaner", "INFO",
+			"--wikilinks"
 			};
 		new AMIDictionaryTool().runCommands(args);
 	}
@@ -294,13 +293,13 @@ public class AMIDictionaryTest {
 			"--terms", "Cucumovirus,Tymovirus,Bromovirus,Potexvirus,Ilarvirus,Nepovirus,Carmovirus,Potyvirus,Potyvirus,"
 					+ "Badnavirus,Tymovirus,Tobravirus,Closterovirus,Necrovirus,TNsatV-like satellite,Nepovirus,Nepovirus,"
 					+ "Nepovirus,Ilarvirus,Comovirus,Dianthovirus,Carlavirus,Sobemovirus,Caulimovirus,Enamovirus,Cytorhabdovirus,"
-					+ "Potexvirus,Nepovirus,Comovirus,Trichovirus,Capillovirus,Luteoviridae,Closterovirus,Phytoreovirus,"
-					+ "Nucleorhabdovirus,Polerovirus,Potyvirus,Nepovirus,Tospovirus,Potyvirus,Potexvirus,Ilarvirus,Comovirus,"
-					+ "Ilarvirus,Potexvirus,Alfamovirus,Comovirus,Tritimovirus,Bromovirus,Potyvirus,Caulimovirus,Tymovirus,"
-					+ "Potyvirus,Potyvirus,Potyvirus,Potexvirus,Sobemovirus,Potexvirus,Potyvirus,Carlavirus,Carlavirus,"
-					+ "Nucleorhabdovirus,Potyvirus,Sobemovirus,Cucumovirus,Pospiviroid,Waikavirus - Rice tungro spherical virus,Hordeivirus,Tombusvirus,Potyvirus,Potyvirus,Fijivirus,Potyvirus,Comovirus,Carlavirus,Potyvirus,Furovirus,Potyvirus,Cucumovirus,Nepovirus,Fabavirus,Tombusvirus,Ilarvirus,Potyvirus,Cytorhabdovirus,Rymovirus,Carlavirus,Potyvirus,Polerovirus,Potexvirus,Potyvirus,Cucumovirus,Potyvirus,Nucleorhabdovirus,Potyvirus,Carlavirus,Potyvirus,Potexvirus,Cytorhabdovirus,Rhabdoviridae,Bromovirus,Phytoreovirus,Nepovirus,Potyvirus,Tymovirus,Ilarvirus,Sobemovirus,Comovirus,Carmovirus,Carlavirus,Potexvirus,Carlavirus,Tymovirus,Potexvirus,Nucleorhabdovirus,Potyvirus,Potyvirus,Rymovirus,Fijivirus,Tobravirus,Comovirus,Potyvirus,Marafivirus,Tymovirus,Sobemovirus,Sadwavirus,Tombusviridae,Tymovirus,Sequivirus,Carmovirus,Potyvirus,Nepovirus,Mastrevirus,Potyvirus,Fijivirus,Closterovirus,Umbravirus,Pomovirus,Ilarvirus,Carlavirus,Potyvirus,Nepovirus,Bymovirus,Benyvirus,Bymovirus,Potyvirus,Potyvirus,Carmovirus,Sobemovirus,Nepovirus,Tobamovirus,Tobamovirus,Tobamovirus,Tobamovirus,Tobamovirus,Tobamovirus,Closterovirus,Potyvirus,Cheravirus,Nepovirus,Potyvirus,Ipomovirus,Cytorhabdovirus,Ilarvirus,Idaeovirus,Carmovirus,Bymovirus,Tymovirus,Rymovirus,Macluravirus,Tymovirus,Bymovirus,Nepovirus,Nucleorhabdovirus,Fijivirus,Nepovirus,Panicovirus,Tombusvirus,Luteoviridae,Bromovirus,Dianthovirus,Caulimovirus,Rhabdoviridae,Tobamovirus genus,Nepovirus genus,Nepovirus,Betaflexiviridae,Unassigned virus,Unassigned virus,Potyvirus,Potyvirus,Begomovirus,Tymovirus,Waikavirus,Potexvirus,Tobamovirus,Comovirus,Nepovirus,Comovirus genus,Potexvirus genus,Ilarvirus,Capillovirus,Comovirus,Sobemovirus,Nucleorhabdovirus,Nepovirus,Closterovirus,Sadwavirus,Comovirus,Curtovirus,Carlavirus,Carmovirus,Cucumovirus,Tymovirus genus,Bromovirus genus,Nepovirus,Fijivirus,Potyvirus,Caulimovirus,Marafivirus,Mastrevirus,Tymovirus,Pomovirus,Sobemovirus,Nepovirus,Pospiviroid,Carmovirus,Trichovirus,Alfamovirus,Tymovirus,Carmovirus,Begomovirus,Nepovirus,Luteoviridae,Pecluvirus,Bromovirus,Carmovirus,Comovirus,Macluravirus,Potyvirus,Carlavirus,Potyvirus,Caulimovirus,Rhabdoviridae family,Potyvirus genus,Comovirus,Potexvirus,Oryzavirus,Luteoviridae,Carlavirus,Nucleorhabdovirus,Carmovirus,Potyvirus,Avsunviroid,Unassigned virus,Carmovirus,Enamovirus,Potyvirus,Carlavirus genus,Closterovirus genus,Carlavirus,Carlavirus,Carlavirus,Potexvirus,Carlavirus,Potexvirus,Nepovirus,Nucleorhabdovirus,Tenuivirus,Cheravirus,Nepovirus,Anulavirus,Furovirus,Sobemovirus,Ilarvirus genus,Potexvirus,Comovirus,Mastrevirus,Tymovirus,Ilarvirus,Ilarvirus,Potyvirus,Aureusvirus,Machlomovirus,Cheravirus,Luteoviridae,Cocadviroid,Ilarvirus,Carlavirus,Nepovirus,Polerovirus,Potyvirus,Potyvirus,Reoviridae family,Caulimovirus genus,Phytoreovirus,Begomovirus,Alphacryptovirus,Tenuivirus,Tenuivirus,Nepovirus,Carmovirus,Begomovirus,Potexvirus,Potyvirus,Nepovirus,Ilarvirus,Dianthovirus,Nepovirus,Potyvirus,Marafivirus,Cytorhabdovirus,Varicosavirus,Potyvirus,Alphacryptovirus,Potyvirus,Sobemovirus,Sobemovirus,Aureusvirus,Tenuivirus,Dianthovirus,Cytorhabdovirus,Begomovirus,Potyvirus,Potyvirus,Hostuviroid,Caulimovirus,Sobemovirus,Sobemovirus,Tobamovirus,SbCMV-like virus,Betacryptovirus,Sadwavirus,Bromovirus,Potexvirus,Potexvirus,Potyvirus,Potyvirus,Luteoviridae family,Potyvirus,Potyvirus,Potyvirus,Cytorhabdovirus,Hordeivirus,Luteoviridae,Tobravirus,Tobravirus,Mastrevirus,Apscaviroid,Potexvirus,Tobamovirus,Tombusvirus genus,Closterovirus,Potexvirus,Umbravirus,Bymovirus,Nepovirus,Begomovirus,Potyvirus,Idaeovirus,Unassigned,Avsunviroid,Tospovirus genus,Nepovirus,Apscaviroid,Potyviridae family,Potyvirus,Begomovirus,Crinivirus,Tobamovirus,Dianthovirus,Enamovirus, Umbravirus & B-type satellite,Begomovirus,Bymovirus,Tenuivirus,Capillovirus,Closterovirus,Comovirus,Coleviroid,Pospiviroid,Ilarvirus,Tombusvirus,Vitivirus,Oleavirus,Nepovirus,Trichovirus,Sobemovirus,Avenavirus,Pomovirus,Badnavirus,Benyvirus,Fabavirus,Tritimovirus,Sequivirus,Topocuvirus,Nanovirus,Allexivirus,Tobravirus,Potyvirus,Cucumovirus,Ophiovirus,Cocadviroid,Aureusvirus,Ilarvirus,Bromovirus,Tungrovirus,Waikavirus,Sobemovirus,Alphacryptovirus,Potyvirus,Potexvirus,Tospovirus,Cavemovirus,Potyvirus,Carlavirus,Mastrevirus,Petuvirus,Potexvirus,Carmovirus,Carmovirus,Nucleorhabdovirus,Ampelovirus",
+					+ "Ophiovirus,Cocadviroid,Aureusvirus,Ilarvirus,Bromovirus,Tungrovirus,Waikavirus,Sobemovirus,Alphacryptovirus,"
+					+ "Potyvirus,Potexvirus,Tospovirus,Cavemovirus,Potyvirus,Carlavirus,Mastrevirus,Petuvirus,Potexvirus,Carmovirus,"
+					+ "Carmovirus,Nucleorhabdovirus,Ampelovirus",
 			"--dictionary", dict,
-			"--directory", DICTIONARY_DIR.toString()};
+			"--directory", DICTIONARY_DIR.toString(),
+			"--wikilinks wikidata"
+};
 		new AMIDictionaryTool().runCommands(args);
 	}
 	
@@ -315,6 +314,43 @@ public class AMIDictionaryTest {
 		new AMIDictionaryTool().runCommands(args);
 	}
 	
+	@Test
+	public void testTranslateJSONtoXMLAbsolute() {
+		String[] args = {
+			"translate",
+//			"--directory", "src/test/resources/org/contentmine/ami/dictionary",
+			"--dictionary", "src/test/resources/org/contentmine/ami/dictionary/alliaceae.json", 
+			                "src/test/resources/org/contentmine/ami/dictionary/buxales.json",
+			"--outformats", "xml",
+		};
+		new AMIDictionaryTool().runCommands(args);
+	}
+	
+	@Test
+	public void testTranslateJSONtoXMLAbsoluteWikidata() {
+		String[] args = {
+			"translate",
+//			"--directory", "src/test/resources/org/contentmine/ami/dictionary",
+			"--dictionary", "src/test/resources/org/contentmine/ami/dictionary/alliaceae.json", 
+			                "src/test/resources/org/contentmine/ami/dictionary/buxales.json",
+			"--outformats", "xml",
+			"--wikilinks", "wikidata", "wikipedia",
+		};
+		new AMIDictionaryTool().runCommands(args);
+	}
+	
+	@Test
+	public void testWikidataLookup() {
+		String dict = "plants.misc";
+		String[] args = {
+			"create",
+			"--terms", "Buxus sempervirens",
+			"--dictionary", dict,
+			"--directory", DICTIONARY_DIR.toString(),
+			"--wikilinks wikidata"
+			};
+		new AMIDictionaryTool().runCommands(args);
+	}
 
 //	@Test
 //	public void testUseDictionaryFile() {

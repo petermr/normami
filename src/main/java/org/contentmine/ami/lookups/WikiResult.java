@@ -22,7 +22,7 @@ public class WikiResult {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-	public static final String ALTERNATIVE = "alternative";
+	public static final String WIKIDATA = "wikidata";
 	public static final String PROPERTY2 = "Property:";
 
 	private String href;
@@ -66,7 +66,7 @@ public class WikiResult {
 			resultList.add(wikiResult);
 		}
 		if (resultList.size() == 1) {
-			LOG.debug("singleton: "+resultList.get(0));
+//			LOG.debug("singleton: "+resultList.get(0));
 		}
 		return resultList;
 	}
@@ -75,8 +75,12 @@ public class WikiResult {
 		return qpString;
 	}
 
+	/**
+	 * <wikidata item="Q123" property="P456" label="foo" description="bar"/>
+	 * @return
+	 */
 	public Element toXML() {
-		Element element = new Element(ALTERNATIVE);
+		Element element = new Element(WIKIDATA);
 		if (item != null) {
 			element.addAttribute(new Attribute(WikipediaLookup.ITEM, item));
 		}
@@ -86,7 +90,9 @@ public class WikiResult {
 		if (label != null) {
 			element.addAttribute(new Attribute(WikipediaLookup.LABEL, label));
 		}
-		element.addAttribute(new Attribute(WikipediaLookup.DESCRIPTION, description));
+		if (description != null) {
+			element.addAttribute(new Attribute(WikipediaLookup.DESCRIPTION, description));
+		}
 		return element;
 	}
 
@@ -115,5 +121,13 @@ public class WikiResult {
 					"./" + HtmlUtil.elem(HtmlSpan.TAG));
 			description = (span == null) ? null : span.getValue();
 		}
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public String getLabel() {
+		return label;
 	}
 }
