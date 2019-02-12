@@ -230,7 +230,7 @@ public class WikipediaDictionary {
 		if (element != null) {
 			element.detach();
 		} else {
-			LOG.debug("failed to find header");
+			LOG.trace("failed to find header"); // I don't think it's universally present
 		}
 	}
 

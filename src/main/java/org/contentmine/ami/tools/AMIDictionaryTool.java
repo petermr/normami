@@ -200,6 +200,12 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		)
     private String[] dataCols;
     
+    @Option(names = {"--descriptions"}, 
+    		arity="1..*",
+   		description = "description fields (free form) such as source, author"
+    		)
+    private String[] description;
+    
     @Option(names = {"-d", "--dictionary"}, 
     		arity="1..*",
     		description = "input or output dictionary name/s. for 'create' must be singular; when 'display' or 'translate', any number. "
@@ -292,6 +298,11 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		description = "list of terms (entries), comma-separated")
     private String[] terms;
 
+    @Option(names = {"--title"}, 
+    		arity="1",
+    		description = "title for dictionary to be used if not already in source")
+    private String title;
+
     @Option(names = {"--urlref"}, 
     		arity="1..*",
     		split=",",
@@ -334,6 +345,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	private List<WikiLink> wikiLinkList;
 	private HashSet<String> missingWikipediaSet;
 	private HashSet<String> missingWikidataSet;
+	private List<String> descriptionList;
 
 
 	public AMIDictionaryTool() {
@@ -374,7 +386,9 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	protected void parseSpecifics() {
 		dictOutformat = (outformats == null || outformats.length != 1) ? null : outformats[0];
 		wikiLinkList = (wikiLinks == null) ? new ArrayList<WikiLink>() :
-			     new ArrayList<WikiLink>(Arrays.asList(wikiLinks));
+		     new ArrayList<WikiLink>(Arrays.asList(wikiLinks));
+		descriptionList = (description == null) ? new ArrayList<String>() :
+		     new ArrayList<String>(Arrays.asList(description));
 		printDebug();
 	}
 
@@ -382,7 +396,6 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	protected void runSpecifics() {
         runDictionary();
 	}
-
 
 	private void runDictionary() {
 		resetMissingLinks();
@@ -483,7 +496,8 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		InputStream inputStream = openInputStream();
     	if (inputStream != null) {
     		if (informat == null) {
-    			throw new RuntimeException("no input format given ");
+    			LOG.error("ERROR: no input format given ");
+    			return;
     		} else if (InputFormat.wikicategory.equals(informat)) {
 	    		wikipediaDictionary = new WikipediaDictionary();
 	    		readWikipediaPage(wikipediaDictionary, inputStream);
@@ -496,7 +510,8 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		} else if (InputFormat.csv.equals(informat)) {
     			readCSV(inputStream);
     		} else {
-    			throw new RuntimeException("unknown inputformat: "+informat);
+    			LOG.error("unknown inputformat: "+informat);
+    			return;
     		}
     	} else {
     		if (terms != null) {
@@ -505,6 +520,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
     	}
     	synchroniseTermsAndNames();
     	dictionaryElement = DefaultAMIDictionary.createDictionaryWithTitle(dictionary[0]);
+    	
     	writeNamesAndLinks();
 		
 	}
@@ -798,7 +814,8 @@ public class AMIDictionaryTool extends AbstractAMITool {
 							(urlValue.startsWith(SLASH_WIKI_SLASH) || urlValue.startsWith(HTTPS_EN_WIKIPEDIA_ORG_WIKI))) {
 						addEntry(dictionaryId, i++, entry, urlValue);
 					} else {
-						LOG.debug("skipped non-wikipedia link: "+urlAtt);
+						System.err.print(" !WP ");
+						LOG.trace("skipped non-wikipedia link: "+urlAtt);
 					}
 				} else {
 //					LOG.debug("no links in: "+entry.toXML());
@@ -811,7 +828,8 @@ public class AMIDictionaryTool extends AbstractAMITool {
 
 	private void addEntry(String dictionaryId, int serial, Element entry, String urlValue) {
 		String idValue = CM_PREFIX + dictionaryId + DOT + serial;
-		System.out.print(">"+idValue);
+//		System.out.print(">"+idValue);
+		System.out.print("+");
 		entry.addAttribute(new Attribute(DictionaryTerm.ID, idValue));
 		if (urlValue != null) {
 			urlValue = trimWikipediaUrlBase(urlValue);
@@ -848,7 +866,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 				List<DictionaryFileFormat> outformatList = Arrays.asList(outformats);
 				for (DictionaryFileFormat outformat : outformatList) {
 					File outfile = getOrCreateDictionary(subDirectory, dictionary[0], outformat);
-					LOG.trace("writing dictionary to "+outfile);
+					LOG.debug("writing dictionary to "+outfile);
 					try {
 						outputDictionary(outfile, outformat);
 					} catch (IOException e) {
@@ -1158,12 +1176,17 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		if (false) {
 		} else if (InputFormat.wikicategory.equals(this.informat)) {
 			createCategory(htmlElement);
-		} else if (this.nameCol != null && linkCol != null) {
-			createFromEmbeddedWikipediaTable(htmlElement);
+		} else if (InputFormat.wikitable.equals(this.informat)) {
+			if (this.nameCol == null) {
+				LOG.error("Must give 'nameCol' for wikitable");
+			} else {
+				linkCol = linkCol == null ? nameCol : linkCol;
+				createFromEmbeddedWikipediaTable(htmlElement);
+			}
 		} else if (this.href != null) {
 			createListOfHyperlinks(htmlElement);
 		} else {
-			AMIDictionaryTool.LOG.error("must give either table(name, link) or list(href)");
+			LOG.error("must give either table(name, link) or list(href)");
 		}
 	}
 

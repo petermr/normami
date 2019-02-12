@@ -84,6 +84,7 @@ public class AMIDictionaryTest {
 			"create",
 			"--input", "https://en.wikipedia.org/wiki/Protein_structure",
 			"--informat", "wikipage",
+			"--hreftext",
 //			"--urlref",
 			"--outformats", "xml,json,html",
 			"--dictionary", dict};
@@ -262,7 +263,7 @@ public class AMIDictionaryTest {
 			"--input", "https://en.wikipedia.org/wiki/List_of_Indian_spices",
 			"--informat", "wikitable",
 			"--namecol", searchCol,
-			"--linkcol", searchCol,
+//			"--linkcol", searchCol,
 			"--dictionary", dict,
 			"--outformats", "xml,json,html",
 			"--directory", DICTIONARY_DIR.toString()
@@ -330,7 +331,6 @@ public class AMIDictionaryTest {
 	public void testTranslateJSONtoXMLAbsoluteWikidata() {
 		String[] args = {
 			"translate",
-//			"--directory", "src/test/resources/org/contentmine/ami/dictionary",
 			"--dictionary", "src/test/resources/org/contentmine/ami/dictionary/alliaceae.json", 
 			                "src/test/resources/org/contentmine/ami/dictionary/buxales.json",
 			"--outformats", "xml",
@@ -352,9 +352,37 @@ public class AMIDictionaryTest {
 		new AMIDictionaryTool().runCommands(args);
 	}
 
-//	@Test
-//	public void testUseDictionaryFile() {
-//		
-//	}
+	@Test
+	public void testAmbarishBugWikipediaDictionaryCreation() {
+		String dict = "plants.misc";
+		String[] args = {
+			"create",
+			"--terms", "Buxus sempervirens",
+			"--dictionary", dict,
+			"--directory", DICTIONARY_DIR.toString(),
+			"--wikilinks wikidata"
+			};
+		new AMIDictionaryTool().runCommands(args);
+	}
+
+	@Test
+	public void testListOfRiceVarieties() {
+		String args = "create  --input https://en.wikipedia.org/wiki/List_of_rice_varieties --informat wikipage --hreftext --dictionary ricevarieties --outformats xml,json,html";
+		new AMIDictionaryTool().runCommands(args);
+	}
+	
+	@Test
+	public void testWikipediaPageOcimum() {
+		String args = "create"
+				+ " --informat wikipage"
+				+ " --hreftext"
+				+ " --input https://en.wikipedia.org/wiki/Ocimum_tenuiflorum"
+				+ " --dictionary otenuiflorum"
+				+ " --directory mydictionaries"
+				+ " --outformats xml,html";
+		new AMIDictionaryTool().runCommands(args);
+
+	}
+
 	
 }
