@@ -45,7 +45,7 @@ public class EPMCAuthor {
 
 	public static List<EPMCAuthor> createAuthorList(EPMCResultsJsonEntry entry) {
 		JsonArray array = entry.getArray(AUTHOR_LIST);
-		List<EPMCAuthor> authorList = null;
+		List<EPMCAuthor> authorList = new ArrayList<>();
 		if (array != null) {
 			JsonElement authorElement = array.get(0);
 			JsonObject jsonObject = authorElement.getAsJsonObject();

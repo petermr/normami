@@ -1085,7 +1085,10 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		if (colIndex >= 0) {
 			tBody.getOrCreateChildTrs();
 			int ncols = -1;
-			for (int i = 0; i < tBody.getRowList().size(); i++) {
+			int splitrow = 0;
+			int fusedrow = 0;
+			List<HtmlTr> rowList = tBody.getRowList();
+			for (int i = 0; i < rowList.size(); i++) {
 				HtmlTr row = tBody.getRowList().get(i);
 				// unfortunately Th is also found
 				List<HtmlElement> tdthChildren = row.getTdOrThChildren();
@@ -1097,15 +1100,21 @@ public class AMIDictionaryTool extends AbstractAMITool {
 				if (ncols == -1) {
 					ncols = size;
 				} else if (size > ncols) {
-					LOG.debug("probably split cells in row "+i);
+					System.err.print(" ?>"+i);
+					splitrow++;
 					continue;
 				} else if (size < ncols) {
-					LOG.debug("probably fused cells in row "+i);
+					System.err.print(" ?<"+i);
+					fusedrow++;
 					continue;
 				}
 				List<String> linkFields = addValueFromContentOrHref(tdthChildren.get(colIndex), field, base);
 				valueList.addAll(linkFields);
 			}
+			System.out.print("\nrows: "+rowList.size()+" ");
+			System.out.print((fusedrow > 0) ? "fused rows: "+fusedrow+" " : "");
+			System.out.print((splitrow > 0) ? "split rows: "+splitrow+" " : "");
+			System.out.println();
 		}
 		return valueList;
 	}
@@ -1183,10 +1192,9 @@ public class AMIDictionaryTool extends AbstractAMITool {
 				linkCol = linkCol == null ? nameCol : linkCol;
 				createFromEmbeddedWikipediaTable(htmlElement);
 			}
-		} else if (this.href != null) {
-			createListOfHyperlinks(htmlElement);
 		} else {
-			LOG.error("must give either table(name, link) or list(href)");
+			LOG.debug("extracting hyperlinks");
+			createListOfHyperlinks(htmlElement);
 		}
 	}
 

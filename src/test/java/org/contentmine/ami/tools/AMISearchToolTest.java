@@ -16,11 +16,13 @@ public class AMISearchToolTest {
 
 	@Test
 	public void testZikaCooccurrence0() {
-		File targetDir = new File("target/cooccurrence/zika10");
-		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10_DIR, targetDir);
+		File targetDir = new File("target/cooccurrence/zika10a");
+		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10A_DIR, targetDir);
 		String args = 
-				"-p /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10/"
-				+ " --dictionary country"
+//				"-p /* /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10a/"
+				"-p "+targetDir
+				+ " --dictionaryTop /Users/pm286/ContentMine/dictionary/dictionaries"
+				+ " --dictionary country bio/auxin"
 			;
 		new AMISearchTool().runCommands(args);
 	}

@@ -7,11 +7,11 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.plugins.ResultsAnalysis;
-import org.contentmine.ami.plugins.ResultsAnalysis.SummaryType;
+import org.contentmine.ami.plugins.ResultsAnalysisImpl;
 import org.contentmine.cproject.files.ProjectSnippetsTree;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.cproject.util.DataTablesTool;
+import org.contentmine.cproject.util.ResultsAnalysis.SummaryType;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlHtml;
 import org.contentmine.graphics.html.HtmlTable;
@@ -71,7 +71,7 @@ public class ResultsAnalysisTest {
 	
 	@Test
 	public void testResultsAnalysis() throws IOException {
-		ResultsAnalysis resultsAnalysis = new ResultsAnalysis();
+		ResultsAnalysisImpl resultsAnalysis = new ResultsAnalysisImpl();
 		resultsAnalysis.addDefaultSnippets(ZIKA_DIR);
 		Assert.assertTrue(resultsAnalysis.getProjectSnippetsTreeByPluginOption().size() > 3);
 		List<String> cTreeNameList = resultsAnalysis.getSortedCTreeNameList();
@@ -94,9 +94,9 @@ public class ResultsAnalysisTest {
 	
 	@Test
 	public void testMakeDataTable() throws IOException {
-		DataTablesTool dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
+		DataTablesTool dataTablesTool = DataTablesTool.createBiblioEnabledTable();
 		dataTablesTool.setTitle("Zika");
-		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
+		ResultsAnalysisImpl resultsAnalysis = new ResultsAnalysisImpl(dataTablesTool);
 		File inputFile = ZIKA_DIR;
 		dataTablesTool.setCellCalculator(resultsAnalysis);
 		resultsAnalysis.addDefaultSnippets(inputFile);
@@ -104,7 +104,7 @@ public class ResultsAnalysisTest {
 		resultsAnalysis.setRemoteLink0("../../"+NAConstants.TEST_AMI_DIR+"/zika/");
 		resultsAnalysis.setRemoteLink1("/scholarly.html");
 		resultsAnalysis.setRowHeadingName("EPMCID");
-		resultsAnalysis.setCellContentFlag(SummaryType.COMMONEST);
+		resultsAnalysis.setSummaryType(SummaryType.COMMONEST);
 		HtmlTable table = resultsAnalysis.makeHtmlDataTable();
 		HtmlHtml html = dataTablesTool.createHtmlWithDataTable(table);
 		XMLUtil.debug(html, new File("target/resultsAnalysis/datatable.html"), 1);
@@ -127,15 +127,15 @@ public class ResultsAnalysisTest {
 //	
 	private void analyzeResults(File projectDir, SummaryType cellType, File outfile) throws IOException {
 		List<SummaryType> cellTypes = Arrays.asList(new SummaryType[]{SummaryType.COMMONEST});
-		DataTablesTool dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
+		DataTablesTool dataTablesTool = DataTablesTool.createBiblioEnabledTable();
 		dataTablesTool.setTitle("Zika");
-		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
+		ResultsAnalysisImpl resultsAnalysis = new ResultsAnalysisImpl(dataTablesTool);
 		resultsAnalysis.addDefaultSnippets(projectDir);
 
 		resultsAnalysis.setRemoteLink0("../../"+NAConstants.TEST_AMI_DIR+"/zika/");
 		resultsAnalysis.setRemoteLink1("/scholarly.html");
 		resultsAnalysis.setRowHeadingName("EPMCID");
-		resultsAnalysis.setCellContentFlags(cellTypes);
+		resultsAnalysis.setSummaryTypes(cellTypes);
 		HtmlTable table = resultsAnalysis.makeHtmlDataTable();
 		HtmlHtml html = dataTablesTool.createHtmlWithDataTable(table);
 		XMLUtil.debug(html, outfile, 1);

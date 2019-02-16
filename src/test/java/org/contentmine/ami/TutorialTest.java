@@ -7,8 +7,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.CommandProcessor;
-import org.contentmine.ami.plugins.ResultsAnalysis;
-import org.contentmine.ami.plugins.ResultsAnalysis.SummaryType;
+import org.contentmine.ami.plugins.ResultsAnalysisImpl;
 import org.contentmine.ami.plugins.gene.GeneArgProcessor;
 import org.contentmine.ami.plugins.identifier.IdentifierArgProcessor;
 import org.contentmine.ami.plugins.regex.RegexArgProcessor;
@@ -18,6 +17,7 @@ import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.cproject.util.DataTablesTool;
+import org.contentmine.cproject.util.ResultsAnalysis.SummaryType;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlHtml;
 import org.contentmine.graphics.html.HtmlTable;
@@ -326,13 +326,13 @@ public class TutorialTest {
 				+ " gene(human)"
 				+ " word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt"
 				+ " sequence(dnaprimer) ");
-		DataTablesTool dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
+		DataTablesTool dataTablesTool = DataTablesTool.createBiblioEnabledTable();
 		dataTablesTool.setTitle(project);
-		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
+		ResultsAnalysisImpl resultsAnalysis = new ResultsAnalysisImpl(dataTablesTool);
 		resultsAnalysis.addDefaultSnippets(projectDir);
 		resultsAnalysis.setRowHeadingName("EPMCID");
-		for (SummaryType cellType : ResultsAnalysis.SUMMARY_TYPES) {
-			resultsAnalysis.setCellContentFlag(cellType);
+		for (SummaryType cellType : ResultsAnalysisImpl.SUMMARY_TYPES) {
+			resultsAnalysis.setSummaryType(cellType);
 			HtmlTable table = resultsAnalysis.makeHtmlDataTable();
 			HtmlHtml html = dataTablesTool.createHtmlWithDataTable(table);
 			File outfile = new File(projectDir, cellType.toString()+"."+CProject.DATA_TABLES_HTML);

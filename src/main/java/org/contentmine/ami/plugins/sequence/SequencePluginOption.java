@@ -27,7 +27,7 @@ public class SequencePluginOption extends AMIPluginOption {
 //		super(TAG, options, flags);
 //	}
 	
-	protected void run() {
+	public void run() {
 		String cmd = "--project "+projectDir+" -i scholarly.html --sq.sequence --sq.type "+optionString;
 		new SequenceArgProcessor(cmd).runAndOutput();
 	}

@@ -177,4 +177,24 @@ islands > (10,10): islands: 6
 		
 	}
 
+	@Test
+	/** 
+	 * 
+	 */
+	public void testRSCSpectra() throws Exception {
+		String ctree = "/Users/pm286/workspace/uclforest/dev/buzick";
+		new AMIImageFilterTool().runCommands(" --ctree " + ctree);
+		new AMIImageTool().runCommands(" --ctree " + ctree);
+		AbstractAMITool amiPixelTool = new AMIPixelTool();
+		amiPixelTool.runCommands(" --ctree " + ctree
+			// these are not working well yet 
+			+ " --minwidth 350"
+			+ " --minheight 10"
+			+ " --maxislands 2000"
+//				+ " --outputDirname pixels"
+			);
+		
+	}
+
+
 }

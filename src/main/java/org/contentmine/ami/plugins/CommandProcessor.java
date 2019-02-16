@@ -9,22 +9,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.plugins.ResultsAnalysis.SummaryType;
 import org.contentmine.cproject.files.CProject;
+import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.OptionFlag;
 import org.contentmine.cproject.files.ResourceLocation;
-import org.contentmine.cproject.util.CellRenderer;
+import org.contentmine.cproject.metadata.AbstractMetadata;
 import org.contentmine.cproject.util.DataTablesTool;
-import org.contentmine.graphics.html.HtmlHtml;
-import org.contentmine.graphics.html.HtmlTable;
-import org.contentmine.graphics.html.HtmlTd;
+import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.Norma;
 import org.contentmine.norma.biblio.json.EPMCConverter;
-import org.contentmine.eucl.xml.XMLUtil;
 
 import nu.xom.Element;
 
@@ -36,7 +32,7 @@ import nu.xom.Element;
 public class CommandProcessor {
 
 
-	private static final Logger LOG = Logger.getLogger(CommandProcessor.class);
+	public static final Logger LOG = Logger.getLogger(CommandProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -45,13 +41,15 @@ public class CommandProcessor {
 	private static final String EXPAND = "expand";
 	private static final String ABBREVIATION = "abbreviation";
 	private static final String ARTICLES = "articles";
+	private static final String BIBLIOGRAPHY = "bibliography";
 
 	private List<AMIPluginOption> pluginOptions;
-	private File projectDir = null;
+	public File projectDir = null;
 	private List<String> cmdList = new ArrayList<String>();
 
 	private Map<String, String> symbolMap;
 	private String helpString;
+	private Map<String, AbstractMetadata> metadataByCTreename;
 	
 	private CommandProcessor() {
 		init();
@@ -217,37 +215,23 @@ public class CommandProcessor {
 	}
 	
 	public void createDataTables() throws IOException {
+		LOG.debug("create data tables");
 		if (projectDir == null) {
 			throw new RuntimeException("projectDir must be set");
 		}
-		String project = FilenameUtils.getBaseName(projectDir.toString());
-		DataTablesTool dataTablesTool = new DataTablesTool(ARTICLES);
-		dataTablesTool.setTitle(project);
-		ResultsAnalysis resultsAnalysis = new ResultsAnalysis(dataTablesTool);
-		resultsAnalysis.addDefaultSnippets(projectDir);
+		DataTablesTool dataTablesTool = DataTablesTool.createBiblioEnabledTable();
+		dataTablesTool.setProjectDir(projectDir);
+		dataTablesTool.setMetadataByTreename(metadataByCTreename);
+		
+		ResultsAnalysisImpl resultsAnalysis = new ResultsAnalysisImpl(dataTablesTool);
+		resultsAnalysis.addDefaultSnippets(this.projectDir);
 		resultsAnalysis.setRemoteLink0(EPMCConverter.HTTP_EUROPEPMC_ORG_ARTICLES);
 		resultsAnalysis.setRemoteLink1("");
 		resultsAnalysis.setLocalLink0("");
-		resultsAnalysis.setLocalLink1(ResultsAnalysis.SCHOLARLY_HTML);
+		resultsAnalysis.setLocalLink1(ResultsAnalysisImpl.SCHOLARLY_HTML);
 		resultsAnalysis.setRowHeadingName("EPMCID");
-		for (SummaryType cellType : ResultsAnalysis.SUMMARY_TYPES) {
-			resultsAnalysis.setCellContentFlag(cellType);
-			HtmlTable table = resultsAnalysis.makeHtmlDataTable();
-			HtmlHtml html = dataTablesTool.createHtmlWithDataTable(table);
-			File outfile = new File(projectDir, cellType.toString()+"."+CProject.DATA_TABLES_HTML);
-			XMLUtil.debug(html, outfile, 1);
-		}
-		LOG.trace(dataTablesTool.cellRendererList);
-		List<HtmlTd> footerList = new ArrayList<HtmlTd>();
-		for (CellRenderer cellRenderer : dataTablesTool.cellRendererList) {
-			HtmlTd td = new HtmlTd();
-			td.appendChild(cellRenderer.getHeading());
-			footerList.add(td);
-		}
-		HtmlTd caption = new HtmlTd();
-		caption.appendChild("coun-ts");
-		dataTablesTool.setFooterCaption(caption);
-		dataTablesTool.setFooterCells(footerList);
+
+		dataTablesTool.createTableComponents(resultsAnalysis);
 	}
 
 	public static void main(String[] args) throws IOException {
@@ -304,5 +288,40 @@ public class CommandProcessor {
 	public List<AMIPluginOption> getPluginOptions() {
 		return pluginOptions;
 	}
+
+	public void runPluginOptions() {
+		List<AMIPluginOption> pluginOptions = this.getPluginOptions();
+		for (AMIPluginOption pluginOption : pluginOptions) {
+			System.out.println("running: "+pluginOption);
+			try {
+				pluginOption.run();
+			} catch (Exception e) {
+				LOG.error("cannot run command: "+pluginOption +"; " + e.getMessage());
+				continue;
+			}
+			System.out.println("filter: "+pluginOption);
+			pluginOption.runFilterResultsXMLOptions();
+			System.out.println("summary: "+pluginOption);
+			pluginOption.runSummaryAndCountOptions(); 
+		}
+		LOG.trace(pluginOptions);
+	}
+
+	public void runJsonBibliography() {
+		CProject cProject = new CProject(projectDir);
+		metadataByCTreename = new HashMap<>();
+		EPMCConverter epmcConverter = new EPMCConverter();
+		for (CTree cTree : cProject.getOrCreateCTreeList()) {
+			AbstractMetadata metadataEntry = cTree.readMetadata(epmcConverter, cTree.getAllowedChildFile(CTree.EUPMC_RESULT_JSON));
+			metadataByCTreename.put(cTree.getName(), metadataEntry);
+		}
+		LOG.debug("keys "+metadataByCTreename.keySet());
+	}
+
+	public Map<String, AbstractMetadata> getMetadataByCTreename() {
+		return metadataByCTreename;
+	}
+
+
 
 }

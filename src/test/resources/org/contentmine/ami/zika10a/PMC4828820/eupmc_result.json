@@ -1,0 +1,758 @@
+{
+  "id": [
+    "27068686"
+  ],
+  "source": [
+    "MED"
+  ],
+  "pmid": [
+    "27068686"
+  ],
+  "pmcid": [
+    "PMC4828820"
+  ],
+  "doi": [
+    "10.1186/s12936-016-1252-3"
+  ],
+  "title": [
+    "Key traveller groups of relevance to spatial malaria transmission: a survey of movement patterns in four sub-Saharan African countries."
+  ],
+  "authorString": [
+    "Marshall JM, Touré M, Ouédraogo AL, Ndhlovu M, Kiware SS, Rezai A, Nkhama E, Griffin JT, Hollingsworth TD, Doumbia S, Govella NJ, Ferguson NM, Ghani AC."
+  ],
+  "authorList": [
+    {
+      "author": [
+        {
+          "fullName": [
+            "Marshall JM"
+          ],
+          "firstName": [
+            "John M"
+          ],
+          "lastName": [
+            "Marshall"
+          ],
+          "initials": [
+            "JM"
+          ],
+          "affiliation": [
+            "Divisions of Biostatistics and Epidemiology, School of Public Health, University of California, Berkeley, CA, USA. john.marshall@berkeley.edu."
+          ]
+        },
+        {
+          "fullName": [
+            "Touré M"
+          ],
+          "firstName": [
+            "Mahamoudou"
+          ],
+          "lastName": [
+            "Touré"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Malaria Research and Training Center, University of Bamako, Bamako, Mali."
+          ]
+        },
+        {
+          "fullName": [
+            "Ouédraogo AL"
+          ],
+          "firstName": [
+            "André Lin"
+          ],
+          "lastName": [
+            "Ouédraogo"
+          ],
+          "initials": [
+            "AL"
+          ],
+          "affiliation": [
+            "Institute for Disease Modeling, Bellevue, WA, USA."
+          ]
+        },
+        {
+          "fullName": [
+            "Ndhlovu M"
+          ],
+          "firstName": [
+            "Micky"
+          ],
+          "lastName": [
+            "Ndhlovu"
+          ],
+          "initials": [
+            "M"
+          ],
+          "affiliation": [
+            "Chainama College of Health Sciences, Lusaka, Zambia."
+          ]
+        },
+        {
+          "fullName": [
+            "Kiware SS"
+          ],
+          "firstName": [
+            "Samson S"
+          ],
+          "lastName": [
+            "Kiware"
+          ],
+          "initials": [
+            "SS"
+          ],
+          "affiliation": [
+            "Environmental Health and Ecological Sciences Thematic Group, Ifakara Health Institute, Dar es Salaam, Tanzania."
+          ]
+        },
+        {
+          "fullName": [
+            "Rezai A"
+          ],
+          "firstName": [
+            "Ashley"
+          ],
+          "lastName": [
+            "Rezai"
+          ],
+          "initials": [
+            "A"
+          ],
+          "affiliation": [
+            "Department of Infectious Disease Epidemiology, MRC Center for Outbreak Analysis and Modelling, Imperial College London, London, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Nkhama E"
+          ],
+          "firstName": [
+            "Emmy"
+          ],
+          "lastName": [
+            "Nkhama"
+          ],
+          "initials": [
+            "E"
+          ],
+          "affiliation": [
+            "Chainama College of Health Sciences, Lusaka, Zambia."
+          ]
+        },
+        {
+          "fullName": [
+            "Griffin JT"
+          ],
+          "firstName": [
+            "Jamie T"
+          ],
+          "lastName": [
+            "Griffin"
+          ],
+          "initials": [
+            "JT"
+          ],
+          "affiliation": [
+            "Department of Infectious Disease Epidemiology, MRC Center for Outbreak Analysis and Modelling, Imperial College London, London, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Hollingsworth TD"
+          ],
+          "firstName": [
+            "T Deirdre"
+          ],
+          "lastName": [
+            "Hollingsworth"
+          ],
+          "initials": [
+            "TD"
+          ],
+          "authorId": [
+            {
+              "_": "0000-0001-5962-4238",
+              "$": {
+                "type": "ORCID"
+              }
+            }
+          ],
+          "affiliation": [
+            "School of Life Sciences, University of Warwick, Warwick, Coventry, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Doumbia S"
+          ],
+          "firstName": [
+            "Seydou"
+          ],
+          "lastName": [
+            "Doumbia"
+          ],
+          "initials": [
+            "S"
+          ],
+          "affiliation": [
+            "Malaria Research and Training Center, University of Bamako, Bamako, Mali."
+          ]
+        },
+        {
+          "fullName": [
+            "Govella NJ"
+          ],
+          "firstName": [
+            "Nicodem J"
+          ],
+          "lastName": [
+            "Govella"
+          ],
+          "initials": [
+            "NJ"
+          ],
+          "affiliation": [
+            "Environmental Health and Ecological Sciences Thematic Group, Ifakara Health Institute, Dar es Salaam, Tanzania."
+          ]
+        },
+        {
+          "fullName": [
+            "Ferguson NM"
+          ],
+          "firstName": [
+            "Neil M"
+          ],
+          "lastName": [
+            "Ferguson"
+          ],
+          "initials": [
+            "NM"
+          ],
+          "affiliation": [
+            "Department of Infectious Disease Epidemiology, MRC Center for Outbreak Analysis and Modelling, Imperial College London, London, UK."
+          ]
+        },
+        {
+          "fullName": [
+            "Ghani AC"
+          ],
+          "firstName": [
+            "Azra C"
+          ],
+          "lastName": [
+            "Ghani"
+          ],
+          "initials": [
+            "AC"
+          ],
+          "affiliation": [
+            "Department of Infectious Disease Epidemiology, MRC Center for Outbreak Analysis and Modelling, Imperial College London, London, UK."
+          ]
+        }
+      ]
+    }
+  ],
+  "authorIdList": [
+    {
+      "authorId": [
+        {
+          "_": "0000-0001-5962-4238",
+          "$": {
+            "type": "ORCID"
+          }
+        }
+      ]
+    }
+  ],
+  "journalInfo": [
+    {
+      "volume": [
+        "15"
+      ],
+      "journalIssueId": [
+        "2477469"
+      ],
+      "dateOfPublication": [
+        "2016 Apr"
+      ],
+      "monthOfPublication": [
+        "4"
+      ],
+      "yearOfPublication": [
+        "2016"
+      ],
+      "printPublicationDate": [
+        "2016-04-01"
+      ],
+      "journal": [
+        {
+          "title": [
+            "Malaria journal"
+          ],
+          "ISOAbbreviation": [
+            "Malar. J."
+          ],
+          "medlineAbbreviation": [
+            "Malar J"
+          ],
+          "NLMid": [
+            "101139802"
+          ],
+          "ISSN": [
+            "1475-2875"
+          ],
+          "ESSN": [
+            "1475-2875"
+          ]
+        }
+      ]
+    }
+  ],
+  "pubYear": [
+    "2016"
+  ],
+  "pageInfo": [
+    "200"
+  ],
+  "abstractText": [
+    "As malaria prevalence declines in many parts of the world due to widescale control efforts and as drug-resistant parasites begin to emerge, a quantitative understanding of human movement is becoming increasingly relevant to malaria control. However, despite its importance, significant knowledge gaps remain regarding human movement, particularly in sub-Saharan Africa.A quantitative survey of human movement patterns was conducted in four countries in sub-Saharan Africa: Mali, Burkina Faso, Zambia, and Tanzania, with three to five survey locations chosen in each country. Questions were included on demographic and trip details, malaria risk behaviour, children accompanying travellers, and mobile phone usage to enable phone signal data to be better correlated with movement. A total of 4352 individuals were interviewed and 6411 trips recorded.A cluster analysis of trips highlighted two distinct traveller groups of relevance to malaria transmission: women travelling with children (in all four countries) and youth workers (in Mali). Women travelling with children were more likely to travel to areas of relatively high malaria prevalence in Mali (OR = 4.46, 95% CI = 3.42-5.83), Burkina Faso (OR = 1.58, 95% CI = 1.23-1.58), Zambia (OR = 1.50, 95% CI = 1.20-1.89), and Tanzania (OR = 2.28, 95% CI = 1.71-3.05) compared to other travellers. They were also more likely to own bed nets in Burkina Faso (OR = 1.77, 95% CI = 1.25-2.53) and Zambia (OR = 1.74, 95% CI = 1.34 2.27), and less likely to own a mobile phone in Mali (OR = 0.50, 95% CI = 0.39-0.65), Burkina Faso (OR = 0.39, 95% CI = 0.30-0.52), and Zambia (OR = 0.60, 95% CI = 0.47-0.76). Malian youth workers were more likely to travel to areas of relatively high malaria prevalence (OR = 23, 95% CI = 17-31) and for longer durations (mean of 70 days cf 21 days, p < 0.001) compared to other travellers.Women travelling with children were a remarkably consistent traveller group across all four countries surveyed. They are expected to contribute greatly towards spatial malaria transmission because the children they travel with tend to have high parasite prevalence. Youth workers were a significant traveller group in Mali and are expected to contribute greatly to spatial malaria transmission because their movements correlate with seasonal rains and hence peak mosquito densities. Interventions aimed at interrupting spatial transmission of parasites should consider these traveller groups."
+  ],
+  "affiliation": [
+    "Divisions of Biostatistics and Epidemiology, School of Public Health, University of California, Berkeley, CA, USA. john.marshall@berkeley.edu."
+  ],
+  "language": [
+    "eng"
+  ],
+  "pubModel": [
+    "Electronic"
+  ],
+  "pubTypeList": [
+    {
+      "pubType": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Journal Article"
+      ]
+    }
+  ],
+  "grantsList": [
+    {
+      "grant": [
+        {
+          "grantId": [
+            "G1002284"
+          ],
+          "agency": [
+            "Medical Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "MR/J012254/1"
+          ],
+          "agency": [
+            "Medical Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "agency": [
+            "Medical Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "MR/K010174/1B"
+          ],
+          "agency": [
+            "Medical Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "U01 GM110721"
+          ],
+          "agency": [
+            "NIGMS NIH HHS"
+          ],
+          "acronym": [
+            "GM"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        },
+        {
+          "grantId": [
+            "MR/K010174/1"
+          ],
+          "agency": [
+            "Medical Research Council"
+          ],
+          "orderIn": [
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "meshHeadingList": [
+    {
+      "meshHeading": [
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Humans"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Malaria"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "EP"
+                  ],
+                  "qualifierName": [
+                    "epidemiology"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                },
+                {
+                  "abbreviation": [
+                    "TM"
+                  ],
+                  "qualifierName": [
+                    "transmission"
+                  ],
+                  "majorTopic_YN": [
+                    "Y"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Movement"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "Y"
+          ],
+          "descriptorName": [
+            "Travel"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Adolescent"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Adult"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Aged"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Aged, 80 and over"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Middle Aged"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Child"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Child, Preschool"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Infant"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Infant, Newborn"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Africa South of the Sahara"
+          ],
+          "meshQualifierList": [
+            {
+              "meshQualifier": [
+                {
+                  "abbreviation": [
+                    "EP"
+                  ],
+                  "qualifierName": [
+                    "epidemiology"
+                  ],
+                  "majorTopic_YN": [
+                    "N"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Female"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Male"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Interviews as Topic"
+          ]
+        },
+        {
+          "majorTopic_YN": [
+            "N"
+          ],
+          "descriptorName": [
+            "Young Adult"
+          ]
+        }
+      ]
+    }
+  ],
+  "keywordList": [
+    {
+      "keyword": [
+        "Cluster analysis",
+        "Plasmodium falciparum",
+        "Tanzania",
+        "Burkina Faso",
+        "Zambia",
+        "Mali",
+        "Spatial Transmission",
+        "Women With Children",
+        "Mobile Phones",
+        "Youth Workers"
+      ]
+    }
+  ],
+  "subsetList": [
+    {
+      "subset": [
+        {
+          "code": [
+            "IM"
+          ],
+          "name": [
+            "Index Medicus"
+          ]
+        }
+      ]
+    }
+  ],
+  "fullTextUrlList": [
+    {
+      "fullTextUrl": [
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "pdf"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4828820?pdf=render"
+          ]
+        },
+        {
+          "availability": [
+            "Open access"
+          ],
+          "availabilityCode": [
+            "OA"
+          ],
+          "documentStyle": [
+            "html"
+          ],
+          "site": [
+            "Europe_PMC"
+          ],
+          "url": [
+            "http://europepmc.org/articles/PMC4828820"
+          ]
+        },
+        {
+          "availability": [
+            "Subscription required"
+          ],
+          "availabilityCode": [
+            "S"
+          ],
+          "documentStyle": [
+            "doi"
+          ],
+          "site": [
+            "DOI"
+          ],
+          "url": [
+            "https://doi.org/10.1186/s12936-016-1252-3"
+          ]
+        }
+      ]
+    }
+  ],
+  "isOpenAccess": [
+    "Y"
+  ],
+  "inEPMC": [
+    "Y"
+  ],
+  "inPMC": [
+    "N"
+  ],
+  "hasPDF": [
+    "Y"
+  ],
+  "hasBook": [
+    "N"
+  ],
+  "hasSuppl": [
+    "N"
+  ],
+  "citedByCount": [
+    "9"
+  ],
+  "hasReferences": [
+    "Y"
+  ],
+  "hasTextMinedTerms": [
+    "Y"
+  ],
+  "hasDbCrossReferences": [
+    "N"
+  ],
+  "hasLabsLinks": [
+    "Y"
+  ],
+  "license": [
+    "cc by"
+  ],
+  "authMan": [
+    "N"
+  ],
+  "epmcAuthMan": [
+    "N"
+  ],
+  "nihAuthMan": [
+    "N"
+  ],
+  "hasTMAccessionNumbers": [
+    "N"
+  ],
+  "dateOfCompletion": [
+    "2016-12-13"
+  ],
+  "dateOfCreation": [
+    "2016-04-12"
+  ],
+  "dateOfRevision": [
+    "2017-09-22"
+  ],
+  "electronicPublicationDate": [
+    "2016-04-12"
+  ],
+  "firstPublicationDate": [
+    "2016-04-12"
+  ]
+}

@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/grobid/grobid-0.5.3/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.3" ident="GROBID" when="2019-01-20T18:14+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Organic &amp; Biomolecular Chemistry COMMUNICATION Methylene-linked bis-phenylbenzimidazoles -a new scaffold to target telomeric DNA/RNA hybrid duplex † Through screening 2307 molecules from the NCI&apos;s Diversity Set II, Natural Products Set II and Mechanistic Diversity Set</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2018">2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Rsc</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">/</forename><surname>Obc</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">K</forename><surname>Islam</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Pharmaceutical Chemistry</orgName>
+								<orgName type="institution">University of Dhaka</orgName>
+								<address>
+									<addrLine>Dhaka-1000</addrLine>
+									<country key="BD">Bangladesh</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><forename type="middle">J M</forename><surname>Jackson</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Institute of Pharmaceutical Science</orgName>
+								<orgName type="department" key="dep2">School of Cancer and Pharmaceutical Sciences</orgName>
+								<orgName type="institution">Presently at Femtogenix Ltd</orgName>
+								<address>
+									<addrLine>BioPark, Broadwater Road</addrLine>
+									<postCode>AL7 3AX</postCode>
+									<settlement>Welwyn Garden City</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">King&apos;s College London</orgName>
+								<address>
+									<postCode>SE1 9NH</postCode>
+									<settlement>London</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">E</forename><surname>Thurston</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><forename type="middle">M</forename><surname>Rahman</surname></persName>
+						</author>
+						<title level="a" type="main">Organic &amp; Biomolecular Chemistry COMMUNICATION Methylene-linked bis-phenylbenzimidazoles -a new scaffold to target telomeric DNA/RNA hybrid duplex † Through screening 2307 molecules from the NCI&apos;s Diversity Set II, Natural Products Set II and Mechanistic Diversity Set</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Org. Biomol. Chem</title>
+						<imprint>
+							<biblScope unit="volume">16</biblScope>
+							<biblScope unit="page">4424</biblScope>
+							<date type="published" when="2018">2018</date>
+						</imprint>
+					</monogr>
+					<idno type="DOI">10.1039/c7ob02709e</idno>
+					<note type="submission">Received 3rd November 2017, Accepted 12th January 2018</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<abstract>
+				<p>We report a series of novel methylene-linked bis-phenyl-benzimidazoles intercalators that stabilize telomeric DNA/RNA hybrid (tDRH) structures by up to 7.2 °C at a 1 µM ligand concentration while having negligible affinity for DNA/DNA duplexes, although with a low affinity for quadruplex DNA. We have used molecular modelling studies to rationalize this selectivity, concluding that the methylene spacer between the terminal benzimidazole and phenylene moieties plays a key role in facilitating the bis-inter-calating process. This scaffold may be used to develop chemical tools or new therapeutics to selectively target the telomeric DNA/ RNA duplex without affecting normal genomic DNA. The DNA/RNA hybrid (DRH) duplex structure (Fig. 1b) was first proposed six years after the double-helical structure of DNA (Fig. 1a) was reported by Watson and Crick. 1 The first DRH duplex was identified in 1961 by annealing a RNA strand with a complementary DNA strand, 2 and the first DRH duplex was synthesized in 1960 by reacting oligodeoxythymidylic acid with polyriboadenylic acid. 3 In 1967, X-ray diffraction and CD spec-troscopy studies confirmed the different conformation of the DNA/RNA hybrid structure compared to duplex DNA or quad-ruplex DNA (Fig. 1c) 4 In cells, DRH duplex formation is an important component of the mechanism for elongation of the telomeric DNA sequence at the ends of chromosomes. Telomeres exist as a protein-DNA composite with long repeats of a unique six base sequence (5′-TTAGGG). Upon activation of telomerase, the protein hTERT, which contains an RNA sequence (3′-CAAUCCCAAUC-5′) as part of its structure, forms an RNA-DNA duplex with one of the repeating telomeric 5′-TTAGGG sequences on the 3′-strand of a chromosome. 5 DNA polymeriz-ation then proceeds via reverse transcription of part of the RNA template to synthesize one telomeric repeat (TTAGGG) on the 3′-end of the DNA primer. The telomeric DRH duplex formed is thus a unique structure in cells, and is considered a high-value drug target in oncology. 6 One possible therapeutic approach is to identify small molecules capable of stabilizing the tDRH duplex, thus preventing telomere extension. Other approaches have attempted to modulate substrate/enzyme interaction, and/ or inhibit dissociation of the enzyme from the substrate. 7,8 A number of molecules have been reported to bind to non-telomeric DRH duplexes such as ethidium derivatives, ellipti-cine, paramomycin, ribostamycin and neomycin (S1, ESI †). 9-13 In 2010, Wheelhouse and co-workers reported a pyrimidine-containing bis-sulfane molecule (Fig. 2) with a 20-fold preference for binding to a poly(dA)-poly(rU) hybrid duplex compared to an equivalent RNA fragment, a 3-fold preference over duplex DNA, and 7-fold preference over the alternative poly(rA)-poly(dT) hybrid sequence, in a competition dialysis assay. 13 However, no chemical scaffold has been reported to have selective affinity for the telomeric DRH duplex.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Organic &amp; Biomolecular Chemistry Communication</head><p>The molecular modelling results also supported the data from the biophysical experiments in suggesting that these molecules are unlikely to bis-intercalate into the control duplex DNA in an effective manner. First, a significant difference in topologies exists between the minor grooves of the DNA and tDRH duplexes. The former has an enhanced curvature, whereas the tDRH minor groove is much flatter in its architecture. This difference in topology allows isohelical structures such as the polyamides (e.g., distamycin) to bind with high affinity in the duplex DNA minor groove, whereas NSC273829 and related molecules do not possess the appropriate curvature to interact with duplex DNA. Second, Library 1 molecules were designed to possess a chair-like shape to match the topology of tDRH, and should induce binding <ref type="table" coords="3,42.52,50.80,25.42,6.90">Table 1</ref> Comparison of FRET a and CD b data for selected molecules from Libraries 1, 2, 3 and 4</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Library</head><p>Compound   through a dual mechanism of action (i.e., minor groove binding and intercalation). Therefore, the designed molecules may be able to selectively interact with the tDRH duplex through both modes. Molecular models and free energy of binding calculations suggest that the binding of Library 1 molecules to RNA will most likely result in significant disorder of the nucleic acid structure, as the shape of compounds of this type is not consistent with RNA topology. In the case of compound 4, both benzimidazole moieties point away from the RNA groove and do not participate in binding <ref type="figure" coords="4,167.98,170.51,63.95,8.60" target="#fig_1">(Fig. S4.3, ESI †)</ref>. This binding conformation results in base-pair displacement and strand separation which is reflected in the calculated free energies (i.e., <ref type="table" coords="4,62.59,206.51,28.73,8.60" target="#tab_1">Table 2</ref>; RRH Free Energy less favourable than those for cDD and tDRH).</p><formula xml:id="formula_0" coords="3,42.52,71.95,508.24,41.89">tDRH F21T cDD ΔT m CD ΔT m CD ΔT m CD NCI</formula><p>Next, a circular dichroism (CD) study was carried out to evaluate interaction of the synthesized ligands with the tDRH structure (S5, ESI †). Little CD information is available in the literature relating to DNA/RNA hybrid duplexes, especially those originating in the telomeric region of DNA. The CD spectrum of the tDRH duplex in Tris-HCl (50 mM) was initially measured, and an intense positive CD signal was observed at ∼271 nm, along with a small negative CD signal at ∼237 nm ( <ref type="figure" coords="4,46.02,326.52,58.75,8.60" target="#fig_4">Fig. S5.1, ESI †)</ref>. The CD spectrum of the control DNA duplex (cDD) showed a strong positive CD signal at ∼269 nm and a negative signal at ∼241 nm <ref type="figure" coords="4,152.11,350.50,35.06,8.60" target="#fig_4">(Fig. S5.1</ref>, ESI †). Compounds 4 and 6 induced significant changes in the positive CD signal at 237 nM, but did not cause any notable changes to the negative CD signal <ref type="figure" coords="4,69.45,386.50,27.31,8.60" target="#fig_5">(Fig. 6)</ref>. A dose-dependent reduction in intensity of the positive CD signal (i.e., a hypochromic shift) correlated well with the FRET melting results. In addition, for 4 and 6 ( <ref type="figure" coords="4,266.16,410.54,25.80,8.60;4,42.52,422.50,24.78,8.60" target="#fig_5">Fig. 6a  and b</ref>), dose-dependent bathochromic (i.e., red) shifts of between 1.2 to 4 nM were observed after addition of up to 5 equivalents of the ligands. This is noteworthy, as red shifts are usually associated with enhancement of signal intensity (i.e., hyperchromic shifts). An isoelliptic point for the spectrum was observed for the different concentrations of the compounds, suggesting that the molecules are working through a similar but specific mode of action (i.e., bis-intercalation).</p><p>Compound 6 produced a very similar CD titration profile <ref type="figure" coords="4,42.52,530.50,28.32,8.60" target="#fig_5">(Fig. 6b</ref>) to 4, with dose-dependent red shifts and hypochromic effects. Addition of up to 5 equivalents of 4 and 6 to the cDD sequence did not produce any change in the CD signal ( <ref type="figure" coords="4,46.02,566.50,60.22,8.60" target="#fig_0">Fig. S5.2, ESI †)</ref>. Overall, the shifts and changes in intensity observed for the tDRH sequence and the lack of interaction observed for the cDD sequence supported both the FRETmelting data and the molecular modelling results.</p><p>The results from the FRET melting assay, molecular modelling and dynamics studies along with the CD titration data supported the hypothesis that Library 1 molecules stabilise the tDRH structure by bis-intercalation. The Library 1 molecules were also found to interact to a limited extent with telomeric quadruplex-forming DNA (e.g., F21T) <ref type="figure" coords="4,200.69,674.51,34.06,8.60">(Fig. 1c)</ref> in the FRET studies <ref type="table" coords="4,75.46,686.53,35.87,8.60">(Table 1)</ref>. Molecular modelling studies suggest that they may be able to bind on the periphery of tDNA quadruplex structures <ref type="figure" coords="4,84.81,710.51,35.51,8.60" target="#fig_2">(Fig. S4.4</ref>, ESI †) due to their curvature. If developed as telomerase inhibitors, their telomeric quadruplex-binding properties may also contribute to their biological potency, as molecules that stabilise telomeric quadruplex structures are known to inhibit the telomerase enzyme.</p><p>To provide further evidence for the proposed mechanism of action of binding to the tDRH duplex, and to generate structure-activity relationship (SAR) data, molecular modelling was used to guide the design of a number of molecules lacking the key features of Library 1 compounds <ref type="table" coords="4,460.12,578.47,36.21,8.60">(Table S6</ref>.1, ESI †). Key features were considered to be: (i) the flexibility afforded by the methylene spacer, (ii) the single methylene spacers between the benzimidazole and phenylene moieties, and (iii) the planar structure of the terminal benzimidazole moieties. Thus, in Library 2 the methylene linkers were partly replaced with phenylene groups to provide rigidity to the linker, and in Library 3 the flexible methylene linker of the molecules was retained, but the terminal single methylene groups were removed and the terminal benzimidazole moieties replaced with 6-fluoro-2-methylquinoline moieties. Finally, in Library 4, an additional cyclohexyl ring was introduced (via 7-fluoro- 1,2,3,4-tetrahydroacridine) to remove planarity and prevent intercalation <ref type="figure" coords="5,95.59,229.30,26.85,8.60">(Fig. 7)</ref>. For Library 3 and 4 molecules, an identical length of central methylene spacers was used to produce the bis-amide products <ref type="table" coords="5,139.64,253.28,35.53,8.60">(Table S6</ref>.2, S6.3 and S6.4, ESI †). The library members were synthesized using similar amide coupling procedures to those described earlier.</p><p>All molecules in Libraries 2, 3 and 4 were evaluated for their ability to stabilise tDRH based on FRET melting and CD. None produced any notable stabilisation (i.e., ≥1 °C) of the tDRH duplex at the highest concentration tested (i.e., 5 μM). All molecules were found to be CD inactive. This confirmed the importance of the key features of Library 1 molecules for interaction with the tDRH duplex. These results were consistent with the molecular modelling predictions, which suggested that the molecules lack the appropriate shape to intercalate into the tDRH structure, and should have only weak interactions in the minor groove of the A-form structure. The modelling also highlighted the importance of the flexibility of the central methylene spacers for bis-intercalation, as the rigid and planar phenylene (i.e., 7) and biphenylene (i.e., 8) compounds with identical terminal units to those used in Library 1, were unable to intercalate.</p><p>In summary, a novel chemical scaffold has been identified capable of bis-intercalating into the tDRH structure, but with negligible affinity for duplex DNA due to its 3-dimensional shape. This offers an opportunity to selectively target the telomeric DNA/RNA duplex for therapeutic purposes while not affecting normal genomic DNA. The ligands described here can be used as a starting point to generate more potent molecules while potentially retaining selectivity. In particular, there is the possibility of creating diversity in the terminal heterocyclic groups, which may also be modified to optimise druglike characteristics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of interest</head><p>There are no conflicts to declare.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="2,42.52,98.65,249.40,6.90;2,42.52,107.14,168.05,8.39"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Molecule reported by Wheelhouse and co-workers with an affinity for the poly(dA)-poly(rU) hybrid duplex. 13</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="2,70.87,608.94,195.12,92.30"><head>Fig. 3</head><label>3</label><figDesc>Fig. 3 Structural features of NSC273829.</figDesc><graphic url="image-8.png" coords="2,70.87,608.94,195.12,92.30" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="2,311.81,50.63,232.76,82.09"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 Structural features of Library 1 molecules.</figDesc><graphic url="image-9.png" coords="2,311.81,50.63,232.76,82.09" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="3,112.31,106.19,39.95,7.65;3,197.12,106.19,29.41,7.65;3,271.45,104.26,5.42,10.40;3,329.27,106.19,33.55,7.65;3,407.68,104.26,5.42,10.40;3,465.51,106.19,29.41,7.65;3,539.77,104.26,5.42,10.40;3,42.52,113.27,4.16,10.40;3,112.31,113.27,4.16,10.40;3,197.12,115.21,29.41,7.65;3,271.45,113.27,12.96,10.40;3,329.27,115.21,29.41,7.65;3,407.68,113.27,12.96,10.40;3,465.51,115.21,29.41,7.65;3,539.77,113.27,13.01,10.40;3,42.52,122.23,4.16,10.40;3,112.31,122.23,4.16,10.40;3,197.12,124.16,29.41,7.65;3,271.45,122.23,12.96,10.40;3,329.27,124.16,29.41,7.65;3,407.68,122.23,12.96,10.40;3,465.50,124.16,29.41,7.65;3,539.77,122.23,13.01,10.40;3,42.52,131.24,4.16,10.40;3,112.31,131.24,4.16,10.40;3,197.12,133.18,29.41,7.65;3,271.44,133.18,8.32,7.65;3,329.27,133.18,29.41,7.65;3,407.68,131.24,12.96,10.40;3,465.50,133.18,29.41,7.65;3,539.77,131.24,13.01,10.40;3,42.52,140.26,4.16,10.40;3,112.31,140.26,4.16,10.40;3,197.12,142.19,29.41,7.65;3,271.44,140.26,12.96,10.40;3,329.27,142.19,29.41,7.65;3,407.68,140.26,12.96,10.40;3,465.50,142.19,29.41,7.65;3,539.77,140.26,13.01,10.40;3,42.52,149.27,4.16,10.40;3,112.31,149.27,4.16,10.40;3,197.12,151.21,29.41,7.65;3,271.44,151.21,8.32,7.65;3,329.27,151.21,29.41,7.65;3,407.68,149.27,12.95,10.40;3,465.50,151.21,29.41,7.65;3,539.77,149.27,13.01,10.40;3,42.52,158.23,4.16,10.40;3,112.31,158.23,4.16,10.40;3,197.12,160.16,29.41,7.65;3,271.44,158.23,12.96,10.40;3,329.27,160.16,29.41,7.65;3,407.68,158.23,12.96,10.40;3,465.50,160.16,29.41,7.65;3,539.77,158.23,13.01,10.40;3,42.52,167.24,4.16,10.40;3,112.31,167.24,8.32,10.40;3,197.12,169.18,29.41,7.65;3,271.44,167.24,12.96,10.40;3,329.27,169.18,29.41,7.65;3,407.67,167.24,12.96,10.40;3,465.50,169.18,29.41,7.65;3,539.77,167.24,13.01,10.40;3,42.52,176.26,4.16,10.40;3,112.31,176.26,8.32,10.40;3,197.12,178.19,29.41,7.65;3,271.44,176.26,12.96,10.40;3,329.27,178.19,29.41,7.65;3,407.67,176.26,12.96,10.40;3,465.50,178.19,29.41,7.65;3,539.77,176.26,13.01,10.40;3,42.52,193.52,3.12,5.10;3,47.23,193.26,10.30,10.40;3,57.54,193.26,265.95,10.40;3,325.81,193.52,3.12,5.10;3,330.52,193.26,222.25,10.40;3,42.52,204.16,153.80,7.65"><head>a</head><label></label><figDesc>ΔT m are at 1 μM ligand concentration (data for 2 μM are provided in S3, ESI †). b '++' indicates CD shifts, '− −' indicates no shifts, and "−" indi- cates that the compound was not evaluated.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="3,48.19,409.38,235.42,221.90"><head>Fig. 5</head><label>5</label><figDesc>Fig. 5 (a) Snapshot of a 10 ns implicit solvent molecular dynamics simulation of 4 (blue spheres) interacting with the tDRH. Both benzimidazole moieties intercalate into the sequence, one between G11:C20 and G10:C21 (green) and the second between A23:T8 and A24:T7 (yellow). (b) Snapshot of a 10 ns explicit solvent molecular dynamics simulation of 4 (blue and yellow spheres) interacting with the DNA duplex sequence (cDD). In this case, both benzimidazole moieties orient away from the DNA groove.</figDesc><graphic url="image-10.png" coords="3,48.19,409.38,235.42,221.90" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5" coords="4,308.98,50.63,235.42,371.85"><head>Fig. 6</head><label>6</label><figDesc>Fig. 6 CD spectra of compounds 4 (a) and 6 (b) with tDRH (5 μM) in Tris buffer ( pH 7.4) at 0-5 equivalents ligand concentration.</figDesc><graphic url="image-11.png" coords="4,308.98,50.63,235.42,371.85" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" validated="true" coords="3,5.54,26.87,547.25,726.77"><head>Table 2 Free energy of binding calculations (kcal mol −1 )</head><label>2</label><figDesc coords="3,303.31,617.80,195.96,9.67"></figDesc><table coords="3,303.30,640.03,249.48,78.55">Compound 
+
+Free energy of binding (MM-PBSA a ) 
+
+tDRH 
+cDD 
+RRH 
+
+4 
+−51.49 
+−48.27 
+−36.49 
+6 
+−53.62 
+−49.44 
+−34.33 
+NSC273829 
+−29.76 
+−35.59 
+−32.76 
+
+a Molecular mechanics Poisson Boltzmann surface area. 
+
+</table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>The authors would like to thank Drs Sandra L. Arratta and Tam T. T. Bui for their assistance with the synthetic and CD studies, respectively. The UK Commonwealth Scholarship Commission is thanked for a Commonwealth <ref type="bibr" coords="5,487.96,110.53,64.79,8.60;5,303.31,122.55,128.67,8.60">Scholarship and Fellowship Award (BDCA-2011-8)</ref> to MKI.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="5,316.97,177.57,229.89,11.70" xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><forename type="middle">N</forename><surname>Shaw</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">P</forename><surname>Arya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochimie</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="1026" to="1039" />
+			<date type="published" when="2008" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,316.97,191.77,235.73,8.60;5,316.97,201.61,53.91,11.70" xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">L</forename><surname>Schildkraut</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Marmur</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Doty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mol. Biol</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="595" to="516" />
+			<date type="published" when="1961" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,316.97,213.57,228.76,11.70" xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Rich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U. S. A</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="1044" to="1053" />
+			<date type="published" when="1960" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,316.97,227.77,235.74,8.60;5,316.97,237.61,153.47,11.70" xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Milman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Langridge</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">J</forename><surname>Chamberlin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U. S. A</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="1804" to="1810" />
+			<date type="published" when="1967" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,316.97,251.75,235.76,8.60;5,316.97,261.59,124.11,11.70" xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Gavory</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Farrow</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Balasubramanian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="4470" to="4480" />
+			<date type="published" when="2002" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,316.97,275.79,235.79,8.60;5,316.97,287.75,235.76,8.60;5,316.97,297.59,161.26,11.70" xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><forename type="middle">H</forename><surname>Gmeiner</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">E</forename><surname>Konerding</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><forename type="middle">A</forename><surname>Keifer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">K</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">M</forename><surname>Soto</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><forename type="middle">A</forename><surname>Marky</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">W</forename><surname>Lown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biomol. Struct. Dyn</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="507" to="518" />
+			<date type="published" when="1999" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,316.97,311.79,235.78,8.60;5,316.97,321.57,72.65,11.70" xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Francis</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>West</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">H</forename><surname>Friedman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioorg. Chem</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="107" to="117" />
+			<date type="published" when="2001" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,316.97,335.77,235.79,8.60;5,316.97,345.61,103.70,11.70" xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>West</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Francis</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">H</forename><surname>Friedman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioorg. Med. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="2727" to="2730" />
+			<date type="published" when="2001" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,316.97,357.57,235.79,11.70;5,316.97,371.77,25.83,8.60" xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">B</forename><surname>Chaires</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochemistry</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="16067" to="16075" />
+			<date type="published" when="1999" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,383.78,235.52,8.60;5,317.20,395.75,235.53,8.60;5,317.20,405.59,158.12,11.70" xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">M</forename><surname>Barbieri</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><forename type="middle">K</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">J</forename><surname>Shallop</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><forename type="middle">L</forename><surname>Gaffney</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">A</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">S</forename><surname>Pilch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="6469" to="6477" />
+			<date type="published" when="2003" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,419.78,235.57,8.60;5,317.20,429.57,103.64,11.70" xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Rangarajan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">H</forename><surname>Friedman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioorg. Med. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="2267" to="2273" />
+			<date type="published" when="2007" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,443.76,235.55,8.60;5,317.20,453.60,81.98,11.70" xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><forename type="middle">N</forename><surname>Shaw</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Xi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">P</forename><surname>Arya</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioorg. Med. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="4142" to="4145" />
+			<date type="published" when="2008" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,467.74,235.55,8.60;5,317.20,477.59,225.64,11.70" xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">T</forename><surname>Wheelhouse</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><forename type="middle">C</forename><surname>Garbett</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><forename type="middle">J</forename><surname>Buurma</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">B</forename><surname>Chaires</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="3207" to="3210" />
+			<date type="published" when="2010" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,491.79,235.55,8.60;5,317.20,501.57,235.56,11.70;5,317.20,515.77,21.15,8.60" xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><forename type="middle">M</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Tizkova</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">P</forename><surname>Reszka</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Neidle</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">E</forename><surname>Thurston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioorg. Med. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="3006" to="3010" />
+			<date type="published" when="2012" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,527.79,235.56,8.60;5,317.20,537.57,111.01,11.70" xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><forename type="middle">K</forename><surname>Sinha</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">M</forename><surname>Philen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">L</forename><surname>Cysyk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Med. Chem</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1528" to="1531" />
+			<date type="published" when="1977" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,551.77,235.55,8.60;5,317.20,561.61,188.21,11.70" xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>St George</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">V</forename><surname>Bishop</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">G</forename><surname>Titus</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">P</forename><surname>Selitrennikoff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Antimicrob. Agents Chemother</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="474" to="479" />
+			<date type="published" when="2006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,575.75,235.58,8.60;5,317.20,585.59,166.54,11.70" xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><forename type="middle">M</forename><surname>Evans</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">M</forename><surname>Gardiner</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Mahmood</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Smis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioorg. Med. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="409" to="412" />
+			<date type="published" when="1997" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,599.79,235.55,8.60;5,317.20,609.57,72.65,11.70" xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">H</forename><surname>Nile</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">W</forename><surname>Park</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Biol. Drug Des</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="290" to="295" />
+			<date type="published" when="2013" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,317.20,623.77,235.56,8.60;5,317.20,635.79,235.56,8.60;5,317.20,647.75,235.57,8.60;5,317.20,657.59,103.64,11.70" xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">W</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><forename type="middle">J</forename><surname>Curtin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><forename type="middle">W</forename><surname>Eastman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><forename type="middle">T</forename><surname>Golding</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Hostomsky</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Kyle</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><forename type="middle">A</forename><surname>Maegley</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">J</forename><surname>Skalitzky</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">E</forename><surname>Webber</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><forename type="middle">H</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">J</forename><surname>Griffin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioorg. Med. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="2433" to="2437" />
+			<date type="published" when="2004" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

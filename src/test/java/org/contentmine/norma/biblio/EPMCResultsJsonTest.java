@@ -61,7 +61,7 @@ public class EPMCResultsJsonTest {
 		EPMCResultsJsonEntry epmcJsonEntry = new EPMCResultsJsonEntry(jsonElement1);
 		
 		
-		String abstractString = epmcJsonEntry.getAbstractText();
+		String abstractString = epmcJsonEntry.getAbstract();
         Assert.assertEquals("abs", 
         		"BACKGROUND: The genus Flaveria has been extensively used as a model to study the evolution "
         		+ "of C4 photosynthesis as it contains C3 and C4 species as well as a number of species that "
@@ -79,7 +79,7 @@ public class EPMCResultsJsonTest {
         		+ "construct robust trees in a larger number of taxa. The updated Flaveria phylogenetic tree "
         		+ "also supports a hypothesis of stepwise and parallel evolution of C4 photosynthesis in the "
         		+ "Flavaria clade.", abstractString);
-		String author = epmcJsonEntry.getAuthorStringText();
+		String author = epmcJsonEntry.getAuthorString();
         Assert.assertEquals("auth", "Lyu MJ, Gowik U, Kelly S, Covshoff S, Mallmann J, Westhoff P, Hibberd JM, Stata M, Sage RF, Lu H, Wei X, Wong GK, Zhu XG.", author);
 		List<EPMCAuthor> authorList = epmcJsonEntry.getAuthorList();
         Assert.assertEquals("authList", "[\"Lyu MJ\" | \"Ming-Ju Amy\" | \"MJ\" | \"Lyu\" | "
@@ -107,7 +107,7 @@ public class EPMCResultsJsonTest {
         Assert.assertEquals("pmcid", "PMC4472175", pmcid);
 	 	String source = epmcJsonEntry.getSource();
         Assert.assertEquals("source", "MED", source);
-		String title = epmcJsonEntry.getTitleText();
+		String title = epmcJsonEntry.getTitle();
         Assert.assertEquals("title", "RNA-Seq based phylogeny recapitulates previous phylogeny of the genus Flaveria (Asteraceae) with some modifications.", title);
         // some of the boolean values look wrong
 	    Boolean oa = epmcJsonEntry.isOpenAccess();
@@ -184,7 +184,7 @@ public class EPMCResultsJsonTest {
 		File resultsJson = new File(NormaFixtures.TEST_BIBLIO_DIR, "json/eupmc_results.json");
 		
 		EPMCConverter epmcConverter = new EPMCConverter();
-		epmcConverter.readInputStream(new FileInputStream(resultsJson));
+		epmcConverter.setJsonInputStream(new FileInputStream(resultsJson));
 		epmcConverter.createJsonEntryListAndPossiblyCProject();
 		epmcConverter.setColumnHeadingList(Arrays.asList(EPMCResultsJsonEntry.FLAGS));
 		HtmlHtml html = epmcConverter.createHtml();
@@ -198,7 +198,7 @@ public class EPMCResultsJsonTest {
 		File resultsJson = new File("../../hindawi/epmc/eupmc_results.json");
 		if (resultsJson.exists()) {
 			EPMCConverter epmcConverter = new EPMCConverter();
-			epmcConverter.readInputStream(new FileInputStream(resultsJson));
+			epmcConverter.setJsonInputStream(new FileInputStream(resultsJson));
 			epmcConverter.createJsonEntryListAndPossiblyCProject();
 			epmcConverter.setColumnHeadingList(Arrays.asList(EPMCResultsJsonEntry.FLAGS));
 			HtmlHtml html = epmcConverter.createHtml();
@@ -237,7 +237,7 @@ public class EPMCResultsJsonTest {
 		File cProjectDir = new File("target/json/cproject/ursus1/");
 		EPMCConverter epmcConverter = new EPMCConverter();
 		epmcConverter.setCProjectDir(cProjectDir);
-		epmcConverter.readInputStream(new FileInputStream(jsonFile));
+		epmcConverter.setJsonInputStream(new FileInputStream(jsonFile));
 		epmcConverter.createJsonEntryListAndPossiblyCProject();
 		Assert.assertEquals("entries: ", 3, epmcConverter.getOrCreateEntryArray().size());
 	}
@@ -251,7 +251,7 @@ public class EPMCResultsJsonTest {
 		File jsonFile = new File(NormaFixtures.TEST_BIBLIO_DIR, "json/6780_eupmc_results.json");
 		EPMCConverter epmcConverter = new EPMCConverter();
 		epmcConverter.setCProjectDir(new File("target/json/cproject/ursus1/temp/"));
-		epmcConverter.readInputStream(new FileInputStream(jsonFile));
+		epmcConverter.setJsonInputStream(new FileInputStream(jsonFile));
 		epmcConverter.createJsonEntryListAndPossiblyCProject();
 		// not an array
 		Assert.assertEquals("entries: ", 0, epmcConverter.getOrCreateEntryArray().size());
@@ -271,7 +271,7 @@ public class EPMCResultsJsonTest {
 		File jsonFile = new File(NormaFixtures.TEST_BIBLIO_DIR, "json/6780_eupmc_results.json");
 		File cProjectDir = new File("target/json/cproject/ursus1/");
 		EPMCConverter epmcConverter = new EPMCConverter(cProjectDir);
-		epmcConverter.readInputStream(new FileInputStream(jsonFile));
+		epmcConverter.setJsonInputStream(new FileInputStream(jsonFile));
 		epmcConverter.readAndProcessEntry();
 	}
 	

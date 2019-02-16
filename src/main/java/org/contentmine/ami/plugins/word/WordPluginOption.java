@@ -30,7 +30,7 @@ public class WordPluginOption extends AMIPluginOption {
 //		super(TAG, options, flags);
 //	}
 
-	protected void run() {
+	public void run() {
 		StringBuilder commandString = createCoreCommandStringBuilder();
 		commandString.append(" --w.words "+optionString);
 		String sw = getOptionFlagString("w.stopwords", " ");

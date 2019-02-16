@@ -16,6 +16,9 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.metadata.AbstractMetadata;
+import org.contentmine.cproject.metadata.MetadataEntryOLD;
+import org.contentmine.cproject.metadata.MetadataReader;
+import org.contentmine.cproject.metadata.epmc.EpmcMD;
 import org.contentmine.cproject.util.CellCalculator;
 import org.contentmine.cproject.util.CellRenderer;
 import org.contentmine.cproject.util.DataTablesTool;
@@ -34,7 +37,7 @@ import com.jayway.jsonpath.ReadContext;
 
 import net.minidev.json.JSONArray;
 
-public class EPMCConverter implements CellCalculator {
+public class EPMCConverter implements CellCalculator, MetadataReader {
 
 	private static final Logger LOG = Logger.getLogger(EPMCConverter.class);
 	static {
@@ -187,11 +190,8 @@ public class EPMCConverter implements CellCalculator {
 		}
 	}
 	
-	public void setJsonInputStream(InputStream jsonFile) {
-		this.jsonInputStream = jsonFile;
-	}
-	public void readInputStream(FileInputStream fileInputStream) {
-		jsonInputStream = fileInputStream;
+	public void setJsonInputStream(InputStream jsonInputStream) {
+		this.jsonInputStream = jsonInputStream;
 	}
 	
 	public JsonArray getOrCreateEntryArray() {
@@ -215,7 +215,7 @@ public class EPMCConverter implements CellCalculator {
 	
 	public DataTablesTool getOrCreateDataTablesTool() {
 		if (dataTablesTool == null) {
-			dataTablesTool = new DataTablesTool(DataTablesTool.ARTICLES);
+			dataTablesTool = DataTablesTool.createBiblioEnabledTable();
 		}
 		return dataTablesTool;
 	}
@@ -291,6 +291,29 @@ public class EPMCConverter implements CellCalculator {
 
 	public void setColumnHeadingList(List<CellRenderer> columnHeadingList) {
 		this.getOrCreateDataTablesTool().setCellRendererList(columnHeadingList);
+	}
+
+	@Override
+	public AbstractMetadata readEntry(File metadataFile) throws IOException {
+		if (metadataFile == null) {
+			throw new IllegalArgumentException("null file");
+		}
+		if (!metadataFile.exists() || metadataFile.isDirectory()) {
+			throw new IOException("file must exist and be readable: "+metadataFile);
+		}
+		InputStream inputStream = new FileInputStream(metadataFile);
+		AbstractMetadata entry = readEntry(inputStream);
+		return entry;
+	}
+
+	@Override
+	public AbstractMetadata readEntry(InputStream inputStream) throws IOException {
+		this.setJsonInputStream(inputStream);
+		rootJsonElement = readJsonElementFromStream();
+//		LOG.debug(rootJsonElement);
+		EPMCResultsJsonEntry metadataEntry = new EPMCResultsJsonEntry(rootJsonElement);
+		metadataEntry.setJsonElement(rootJsonElement);
+		return metadataEntry;
 	}
 	
 

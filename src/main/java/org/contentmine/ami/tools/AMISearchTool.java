@@ -1,5 +1,6 @@
 package org.contentmine.ami.tools;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +30,19 @@ public class AMISearchTool extends AbstractAMITool {
             description = "symbolic names of dictionaries (likely to be obsoleted). Good values are (country, disease, funders)")
     private List<String> dictionaryList;
 
+    @Option(names = {"--dictionarySuffix"},
+    		arity = "1",
+    		defaultValue = "xml",
+            description = "suffix for search dictionary")
+    private List<String> dictionarySuffix;
 
+    @Option(names = {"--dictionaryTop"},
+    		arity = "1*",
+            description = " local dictionary home directory")
+    private List<String> dictionaryTopList;
+
+
+    private File dictionaryFile;
     /** used by some non-picocli calls
      * obsolete it
      * @param cProject
@@ -49,6 +62,8 @@ public class AMISearchTool extends AbstractAMITool {
     @Override
 	protected void parseSpecifics() {
 		System.out.println("dictionaryList       " + dictionaryList);
+		System.out.println("dictionaryTop        " + dictionaryTopList);
+		System.out.println("dictionarySuffix     " + dictionarySuffix);
 		System.out.println();
 	}
 
@@ -68,6 +83,31 @@ public class AMISearchTool extends AbstractAMITool {
 
 	private void runSearch() {
 		AMIProcessor amiProcessor = AMIProcessor.createProcessorFromDir(cProject.getDirectory());
+		String cmd = buildCommandFromBuiltinsAndFacets();
+		runLegacyCommandProcessor(cmd);
+		amiProcessor.defaultAnalyzeCooccurrence(dictionaryList);
+	}
+
+	private void runLegacyCommandProcessor(String cmd) {
+		try {
+			
+			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
+			List<String> cmdList = Arrays.asList(cmd.trim().split("\\s+"));
+//			for (String cmd0 : cmdList) {
+//				System.out.println("cmd> "+cmd0);
+//			}
+			commandProcessor.parseCommands(cmdList);
+			commandProcessor.runNormaIfNecessary();
+			commandProcessor.runJsonBibliography();
+			commandProcessor.runPluginOptions();
+			commandProcessor.createDataTables();
+		
+		} catch (IOException e) {
+			throw new RuntimeException("Cannot run command: "+cmd, e);
+		}
+	}
+
+	private String buildCommandFromBuiltinsAndFacets() {
 		String cmd = "word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt";
 		String cmd1 = cmd;
 		for (String facet : dictionaryList) {
@@ -76,47 +116,46 @@ public class AMISearchTool extends AbstractAMITool {
 			} else if (facet.equals("species")) {
 				cmd1 += " species(binomial)";
 			} else {
+				checkDictionaryExists(facet);
 				cmd1 += " "+AMIProcessor.SEARCH + "("+facet+")";
 			}
 		}
-		cmd = cmd1;
-		try {
-			
-			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
-			List<String> cmdList = Arrays.asList(cmd.trim().split("\\s+"));
-			for (String cmd0 : cmdList) {
-				System.out.println("cmd> "+cmd0);
-			}
-			commandProcessor.parseCommands(cmdList);
-			List<AMIPluginOption> pluginOptions = commandProcessor.getPluginOptions();
-			for (AMIPluginOption option : pluginOptions) {
-				LOG.debug("plug>"+option);
-			}
-			commandProcessor.runCommands();
-/**
-			commandProcessor.runNormaIfNecessary();
-			for (AMIPluginOption pluginOption : commandProcessor.pluginOptions) {
-				System.out.println("running: "+pluginOption);
-				try {
-					pluginOption.run();
-				} catch (Exception e) {
-					CommandProcessor.LOG.error("cannot run command: "+pluginOption +"; " + e.getMessage());
-					continue;
-				}
-				System.out.println("filter: "+pluginOption);
-				pluginOption.runFilterResultsXMLOptions();
-				System.out.println("summary: "+pluginOption);
-				pluginOption.runSummaryAndCountOptions(); 
-			}
-			CommandProcessor.LOG.trace(commandProcessor.pluginOptions);	 */
-			
-			commandProcessor.createDataTables();
-		
-		} catch (IOException e) {
-			throw new RuntimeException("Cannot run command: "+cmd, e);
+		return cmd1;
+	}
+
+	private void checkDictionaryExists(String facet) {
+		/** builtin? */
+		if (false) {
+		} else if (checkLocal(facet)) {
+		} else if (checkBuiltin(facet)) {
+		} else {
+			LOG.error("cannot find dictionary: "+facet);
+//			throw new RuntimeException("cannot find dictionary: "+facet);
 		}
+	}
+
+	private boolean checkBuiltin(String facet) {
+		LOG.debug("check builtin dictionary NYI");
+		return false;
+	}
+
+	private boolean checkLocal(String facet) {
+		boolean check = false;
+		if (dictionaryTopList != null) {
+			for (String dictTop : dictionaryTopList) {
+				dictionaryFile = new File(dictTop, facet+"."+dictionarySuffix.get(0));
+				if (dictionaryFile.exists()) {
+					LOG.debug("exists: "+dictionaryFile);
+					check = true;
+					break;
+				} else {
+					LOG.debug("cannot find: "+dictionaryFile);
+				}
+			}
+		}
+		LOG.debug("check local dictionary NYI");
 		
-		amiProcessor.defaultAnalyzeCooccurrence(dictionaryList);
+		return check;
 	}
 
 

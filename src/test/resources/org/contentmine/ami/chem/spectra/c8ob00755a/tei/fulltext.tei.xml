@@ -1,0 +1,1529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /Users/pm286/workspace/grobid/grobid-0.5.3/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.3" ident="GROBID" when="2019-01-20T18:24+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Organic &amp; Biomolecular Chemistry Organic &amp; Biomolecular Chemistry AIE-active boron complexes based on benzothiazole-hydrazone chelates †</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date>27 21 July 2018. 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Rsc</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">/</forename><surname>Obc</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Rsc</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">/</forename><surname>Obc</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Wenzeng</forename><surname>Duan</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Qingsong</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Yanmin</forename><surname>Huo</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Jichun</forename><surname>Cui</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Shuwen</forename><surname>Gong</surname></persName>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Zhipeng</forename><surname>Liu</surname></persName>
+						</author>
+						<title level="a" type="main">Organic &amp; Biomolecular Chemistry Organic &amp; Biomolecular Chemistry AIE-active boron complexes based on benzothiazole-hydrazone chelates †</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Org. Biomol. Chem</title>
+						<imprint>
+							<biblScope unit="volume">16</biblScope>
+							<biblScope unit="page">4977</biblScope>
+							<date type="published">27 21 July 2018. 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="DOI">10.1039/c8ob00755a</idno>
+					<note type="submission">Received 30th March 2018, Accepted 4th May 2018</note>
+					<note>PAPER Shuwen Gong, Zhipeng Liu et al. AIE-active boron complexes based on benzothiazole-hydrazone chelates PAPER</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<abstract>
+				<p>A new family of aggregation-induced emission (AIE)-active monoboron and bisboron complexes based on benzothiazole-hydrazone chelates was synthesized. These complexes showed very weak fluo-rescence in fluid solution due to active intramolecular rotation and were emissive in high-viscosity solvents or in the aggregation state. Single crystal X-ray diffraction analyses and theoretical calculations were carried out to explain AIE behavior. The large Stokes shifts (3590-7400 cm −1) and relatively highly efficient solid-state emission make these complexes valuable AIE luminophores for further potential applications.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>The design and synthesis of luminescent boron complexes has attracted substantial interest because of their extensive use in diverse areas. <ref type="bibr" coords="2,96.04,372.02,3.42,5.74" target="#b9">[1]</ref><ref type="bibr" coords="2,99.46,372.02,3.42,5.74" target="#b10">[2]</ref><ref type="bibr" coords="2,102.88,372.02,3.42,5.74" target="#b11">[3]</ref> Various luminescent boron complexes including three-and four-coordinate boron complexes have been studied. <ref type="bibr" coords="2,74.44,396.01,3.44,5.74" target="#b12">[4]</ref><ref type="bibr" coords="2,77.88,396.01,3.44,5.74" target="#b13">[5]</ref><ref type="bibr" coords="2,81.31,396.01,3.44,5.74" target="#b14">[6]</ref> Among them, those with efficient luminescence in solution and/or in the solid state are of particular interest for their practical applications in fluorescent sensing and imaging, and optoelectronic devices. <ref type="bibr" coords="2,189.69,432.01,3.44,5.74" target="#b15">[7]</ref><ref type="bibr" coords="2,193.14,432.01,3.44,5.74" target="#b16">[8]</ref><ref type="bibr" coords="2,193.14,432.01,3.44,5.74" target="#b17">[9]</ref><ref type="bibr" coords="2,196.58,432.01,6.88,5.74" target="#b18">[10]</ref> However, many luminescent boron complexes, especially the famous boron dipyrromethene (BODIPY) dyes, show small Stokes shift and rarely show fluorescence in the solid state. <ref type="bibr" coords="2,188.11,468.01,5.89,5.74" target="#b9">1,</ref><ref type="bibr" coords="2,194.00,468.01,2.95,5.74" target="#b12">4</ref> Therefore, the development of new BODIPY dyes with high solid-state emission is being actively investigated.</p><p>Aggregation-induced emission (AIE) is an efficient strategy to create solid-state emissive luminophores. <ref type="bibr" coords="2,219.52,516.02,7.02,5.74" target="#b19">11</ref> In recent years, AIE has also been successfully employed for the development of solid-state emissive boron complexes. <ref type="bibr" coords="2,209.99,540.01,6.91,5.74" target="#b20">[12]</ref><ref type="bibr" coords="2,216.90,540.01,3.46,5.74" target="#b21">[13]</ref><ref type="bibr" coords="2,216.90,540.01,3.46,5.74" target="#b22">[14]</ref><ref type="bibr" coords="2,220.36,540.01,6.91,5.74" target="#b23">[15]</ref> Moreover, AIEactive boron complexes, especially those with low symmetry structures, exhibit both a large Stokes shift and intense fluorescence in the solid state. <ref type="bibr" coords="2,412.55,324.01,6.91,5.74" target="#b24">[16]</ref><ref type="bibr" coords="2,419.47,324.01,3.46,5.74" target="#b25">[17]</ref><ref type="bibr" coords="2,419.47,324.01,3.46,5.74" target="#b26">[18]</ref><ref type="bibr" coords="2,422.92,324.01,6.91,5.74" target="#b27">[19]</ref> On the other hand, in recent years, binuclear boron complexes have also gained much attention due to their interesting properties such as long-wavelength absorption and emission, nonlinear optical properties, and solid-state emission. <ref type="bibr" coords="2,405.64,372.02,6.94,5.74" target="#b28">[20]</ref><ref type="bibr" coords="2,412.57,372.02,3.47,5.74" target="#b29">[21]</ref><ref type="bibr" coords="2,412.57,372.02,3.47,5.74" target="#b30">[22]</ref><ref type="bibr" coords="2,412.57,372.02,3.47,5.74" target="#b31">[23]</ref><ref type="bibr" coords="2,412.57,372.02,3.47,5.74" target="#b32">[24]</ref><ref type="bibr" coords="2,416.04,372.02,6.94,5.74" target="#b33">[25]</ref> However, the study of the AIE properties of boron complexes, especially for binuclear boron complexes, is still limited. It is expected that the better understanding of the AIE phenomenon of both monoboron complexes and binuclear boron complexes is instructive to achieve novel AIE-active boron complexes and expand the scope of various applications.</p><p>Heterocyclic based hydrazones are useful building blocks for the generation of new luminescent complexes. <ref type="bibr" coords="2,511.43,468.01,7.02,5.74" target="#b34">26</ref> Indeed, some borondifluoride (BF 2 )-hydrazone complexes (BODIHYs) display a large Stokes shift, AIE and intense emission in the solid state <ref type="figure" coords="2,346.57,505.91,26.85,8.60">(Fig. 1)</ref>. <ref type="bibr" coords="2,376.72,504.01,7.02,5.74" target="#b24">16</ref> These reports suggest that the BF 2 -hydrazone complexes could be an important AIE-luminophore system. Nonetheless, the systems that efficiently emit in the solid-state are still under development, and the better under- <ref type="figure" coords="2,303.31,701.52,18.51,6.90">Fig. 1</ref> Chemical structures of hydrazine-based boron complexes (BODIHYs) and compounds 6-7. <ref type="bibr" coords="2,415.39,710.01,5.86,4.58" target="#b39">31</ref> standing of the AIE phenomenon in these complexes is still required. In the course of our studies on the development of aggregation-state emissive boron complexes, we are interested in the development of AIE-active boron complexes. <ref type="bibr" coords="3,274.62,84.65,6.94,5.74" target="#b35">[27]</ref><ref type="bibr" coords="3,281.56,84.65,3.47,5.74" target="#b36">[28]</ref><ref type="bibr" coords="3,281.56,84.65,3.47,5.74" target="#b37">[29]</ref><ref type="bibr" coords="3,285.02,84.65,6.94,5.74" target="#b38">[30]</ref> Herein, we report the synthesis and photoproperties of a new series of mono-and binuclear boron complexes (6 and 7, <ref type="figure" coords="3,42.52,122.55,24.27,8.60">Fig. 1</ref>) based on benzothiazole-hydrazone chelates, which display a large Stokes shift and AIE.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results and discussion</head><p>Synthesis of compounds 6-7</p><p>Compounds 6 and 7 were synthesized via a three-step procedure. The reaction of 2-(benzothiazol-2-yl)acetonitrile with diazonium salt gave the benzothiazole-hydrazone ligands 4. We envisioned that the benzothiazole-hydrazone ligands 4 might be applied in the reaction with boron trifluoride diethyl ether as well due to their structural similarity with quinolinehydrazone reported by Aprahamian et al. <ref type="figure" coords="3,221.73,276.53,33.32,8.60">(Fig. 1a)</ref>. <ref type="bibr" coords="3,258.69,274.63,9.52,5.74" target="#b20">12,</ref><ref type="bibr" coords="3,268.21,274.63,6.34,5.74" target="#b24">16</ref> We anticipated that the six-membered compounds 6 and the fivemembered compounds 8 would be formed via a similar process. <ref type="bibr" coords="3,74.55,310.63,7.02,5.74" target="#b39">31</ref> However, after the treatment of compounds 4 with boron trifluoride diethyl ether in dichloromethane in the presence of NEt 3 , except for monoboron complexes 6, none of the expected five-membered compounds 8 were obtained. We further explored the reaction in toluene under reflux conditions. Interestingly, besides the monoboron complexes 6, unexpected bisboron complexes 7 were also obtained. The formation of these bisboron complexes is likely due to the hydrolysis of the nitrile group during the reaction to give the intermediate 5 (Scheme 1). 32 These complexes were characterized by 1 H, 13 C NMR and ESI-MS spectroscopy and single crystal X-ray diffraction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Photophysical properties</head><p>The photophysical properties of compounds 6a, 6b, 7a and 7b were measured in different solvents and in the solid state. Full details can be found in <ref type="figure" coords="3,139.47,506.53,22.43,8.60" target="#fig_1">Fig. 2</ref> and <ref type="table" coords="3,183.18,506.53,28.33,8.60" target="#tab_0">Table 1</ref>. In tetrahydrofuran (THF), 6a showed absorption maxima (λ abs ) at 434 nm (ε = 47 000 M −1 cm −1 ), while 6b showed λ abs at 398 nm (ε = 57 000 M −1 cm −1 ). This blue-shift of the absorption band should be attributed to the inhibited molecular conjugation between naphthyl with the BF 2 centre induced by the steric hindrance effect of the bulky naphthyl substituent in compound 6b. Moreover, compounds 7a and 7b showed absorption bands with λ abs at 420 nm (ε = 76 000 M −1 cm −1 ) and 394 nm (ε = 41 000 M −1 cm −1 ), respectively <ref type="figure" coords="3,169.74,614.53,60.82,8.60" target="#fig_1">(Fig. 2, Fig. S1</ref> † and <ref type="table" coords="3,256.59,614.53,28.76,8.60" target="#tab_0">Table 1</ref>). The slightly blue-shifted λ abs of 7a and 7b suggests that the introducing of another boron atom probably has less electronic effect on the ground states compared with the monoboron complexes 6a and 6b.</p><p>Compounds 6a, 6b, 7a and 7b showed weak emission (Φ f &lt; 0.01) in THF. Due to the greater electron delocalization ability in the excited states and a larger π-conjugation plane of the naphthyl substituent, compounds 6b and 7b showed redshifted emission maxima (F max , 524 and 556 nm for 6b and 7b, respectively) compared to compounds 6a and 7a (F max , 514 and 506 nm for 6a and 7a, respectively). <ref type="bibr" coords="3,468.06,564.61,7.02,5.74" target="#b41">33</ref> Moreover, the redshifted emission of 7b compared to 6b may also indicate that the naphthyl substituent leads to the better conjugation of bisboron complexes than the monomer ones in the excited states ( <ref type="figure" coords="3,306.81,614.47,21.13,8.60" target="#fig_1">Fig. 2</ref> and <ref type="table" coords="3,347.98,614.47,27.46,8.60" target="#tab_0">Table 1</ref>).</p><p>The solvent effect on the absorption spectra of 6a, 6b, 7a and 7b was examined <ref type="figure" coords="3,394.87,638.45,36.76,8.60">(Fig. S1 †)</ref>. In different solvents, 6a, 6b, 7a and 7b showed similar absorption peaks, suggesting the absorption spectra were hardly affected by solvent polarity. As shown in <ref type="figure" coords="3,344.75,674.45,22.04,8.60" target="#fig_3">Fig. 3</ref>, 6a, 6b, 7a and 7b exhibited very weak fluorescence in low-viscosity solvents (Φ f &lt; 0.01), whereas in highviscosity solvents such as glycerol, the fluorescence intensity of these compounds showed significant enhancement, with Φ f of 0.05 for 6a, 0.06 for 6b, 0.02 for 7a, and 0.01 for 7b, respectively <ref type="table" coords="4,62.48,309.41,30.35,8.60" target="#tab_0">(Table 1</ref>). This result suggests that the non-radiative relaxation of the excited luminophore is impeded by the higher solvent viscosity via restricted intramolecular rotation of aromatic rings, which is typical AIE behavior. 11,27-30 Additionally, the Stokes shifts of 6a, 6b, 7a and 7b are in the range 3590-7400 cm −1 <ref type="table" coords="4,110.15,369.39,33.94,8.60" target="#tab_0">(Table 1)</ref>, which are larger than those of fluorescent boron complexes such as BODIPY (400-600 cm −1 ) and benzothiazole-enamide-based BF 2 complexes (2190-4070 cm −1 ). <ref type="bibr" coords="4,285.11,391.53,6.85,5.74" target="#b37">29</ref> The AIE properties of 6a, 6b, 7a and 7b were investigated in binary solvent systems of THF-water with different water fractions (  <ref type="table" coords="4,144.79,429.43,27.40,8.60" target="#tab_0">Table 1</ref>). The fluorescence intensities of 6a, 6b and 7a were very weak in pure THF. When water was added to the THF solution, the fluorescence intensities of 6a, 6b and 7a remained almost the same until the water fraction ( f w ) reached 90%. In contrast, the fluorescence intensity of 7b increased progressively with the increment of f w , and reached the maximum at f w of 90%. Importantly, the fluorescence intensities of 6a, 6b, 7a and 7b at f w of 99% increased by 8-fold, 9-fold, 8-fold and 2-fold, respectively, than those at f w of 0% ( <ref type="figure" coords="4,63.65,537.43,34.63,8.60" target="#fig_1">Fig. S2 †)</ref>. 6a, 7a, and 7b showed red-shifted emission    (35 nm, 17 nm and 6 nm) with the increase in f w , suggesting a weak CT enhancement induced by aggregation. As mentioned above, aggregation by adding water to the THF solutions of 6 and 7 resulted in enhanced intensity and red-shifted emission.</p><p>On the other hand, the AIE properties of 6-7 are mainly due to the aggregation formation that restricts free rotation of the aromatic ring. <ref type="bibr" coords="5,85.78,120.65,9.52,5.74" target="#b19">11,</ref><ref type="bibr" coords="5,95.29,120.65,6.34,5.74" target="#b35">27</ref> In the solid state, 6a, 6b, 7a and 7b showed λ abs at 426 nm, 398 nm, 418 nm and 394 nm, respectively <ref type="figure" coords="5,212.21,146.53,24.86,8.60" target="#fig_4">(Fig. 5</ref> and <ref type="table" coords="5,257.62,146.53,27.74,8.60" target="#tab_0">Table 1</ref>). The emission bands of 6a, 6b, 7a and 7b are narrow and the F max values are 573 nm, 543 nm, 541 nm and 560 nm, respectively ( <ref type="figure" coords="5,66.04,182.53,21.25,8.60" target="#fig_4">Fig. 5</ref> and <ref type="table" coords="5,107.66,182.53,27.57,8.60" target="#tab_0">Table 1</ref>). Compared with the emission in solution, 6b and 7b showed a red-shifted emission of 19 and 4 nm, while 6a and 7a showed a larger emission red-shift of 59 and 35 nm, respectively. These results are in line with the aggregation-induced emission red-shifts in THF/water mixtures <ref type="figure" coords="5,42.52,242.51,26.74,8.60" target="#fig_0">(Fig. 4)</ref>. Importantly, 6a, 6b, 7a and 7b showed moderate emission with Φ f of 0.02, 0.01, 0.10 and 0.01, respectively. This result suggests that the interactions of 6a, 6b, 7a and 7b should be weak in the solid state, which is in agreement with the results obtained from X-ray crystal structure analysis. Moreover, 6-7 showed larger Stokes shifts in the solid state (5440-7530 cm −1 ) than in solution. The narrow emission band and a large Stokes shift should be another reason for the intense emission of 6a, 6b, 7a and 7b in the solid state.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>X-Ray crystal structure analysis</head><p>Single crystal X-ray crystallographic analysis was performed to better understand the aggregation mechanism and solid-state emission properties of each compound. The ORTEP drawings and the packing structures of 6-7 are shown in <ref type="figure" coords="5,248.48,416.27,23.84,8.60" target="#fig_5">Fig. 6</ref> and <ref type="figure" coords="5,42.52,428.29,24.18,8.60" target="#fig_3">Fig. S3</ref>. † 6-7 belong to the same cell setting (monoclinic) and different space groups (P2(1)/c for 6a, 6b and 7a and P2(1)/n for 7b). All the boron atoms in the compounds 6-7 adopt a tetrahedral geometry to form N^N-chelate six-membered rings and N^O-chelate six-membered rings, which contribute to the construction of the three-ring-fused and four-ring-fused π-conjugated skeletons. 6a and 7a adopt tetrahedral conformations and the phenyl rings are almost coplanar, while the naphthyl rings in 6b and 7b are not coplanar, and the dihedral angles of N^N-chelate six-membered rings and the plane of naphthyl rings are 66.76° for 6b and 55.78° for 7b, respectively, indicating the larger steric effect of the naphthyl than the phenyl ring.</p><p>Clearly, weak intermolecular π-π interactions were observed in 6a, 7a and 7b with the distance 3.688 Å in 6a, 2.769 Å in 7a, and 3.772 Å in 7b <ref type="figure" coords="5,385.63,444.56,37.90,8.60" target="#fig_3">(Fig. S3 †)</ref>. Molecules in adjacent chains adopt a typical mode of head-to-head or head-to-tail packing arrangements. In essence, multiple short intermolecular contacts exist in the crystals: F1⋯H3-C3 (2.67 Å, 12.47°), F2⋯H14-C14 (2.42 Å, 177.68°), and N4⋯H17-C17 (2.62 Å, 142.40°) interactions in 6a, F1⋯H3-C3 (2.38 Å, 142.94°) and F1⋯H11-C11 (2.48 Å, 170.22°), F2⋯H12-C12 (3.13 Å, 110.54°), N4-C7 (3.20 Å) and N4-C8 (3.22 Å) interactions in 6b, F1⋯H4-C4 (2.60 Å, 144.16°), F2⋯H18-N2 (2.67 Å, 118.03°), O1⋯H3-C3 (2.59 Å, 150.57°) and F4⋯H18-N2 (2.39 Å, 132.95°) interactions in 7a, and F2⋯H41-N6 (2.24 Å, 144.32°), F3⋯H41-N6 (2.67 Å, 116.04°), F5⋯H40-N2 (2.45 Å, 147.01°), F8⋯H40-N2 (2.62 Å, 120.76°) and S1-S2 (3.55 Å) interactions in 7b. These weak intermolecular interactions could help to fix the molecular conformations of 6-7 in the solid state, thus inhibiting the internal rotations and blocking their non-radiative relaxation. The results agree with the optical properties that 6-7 show moderate emissions in the solid state.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Theoretical calculations</head><p>Time-dependent density functional theory (TD-DFT) calculations were also performed to give an in-depth insight into the photophysical properties of 6-7. <ref type="bibr" coords="5,452.58,708.67,7.02,5.74" target="#b44">36</ref> The calculations were  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Paper</head><p>Organic &amp; Biomolecular Chemistry performed in the gas phase with the crystal structures used as a model structure with geometry optimization. The energy level alignment and the pictorial drawings of HOMOs and LUMOs of 6-7 are shown in <ref type="figure" coords="6,154.43,86.55,21.80,8.60" target="#fig_6">Fig. 7</ref> and <ref type="table" coords="6,196.27,86.55,30.65,8.60" target="#tab_0">Table S1</ref>. † The calculated excited states have excitation energies of 3.01 eV (411 nm, f = 0.6862) for 6a, 3.50 eV (355 nm, f = 0.4950) for 6b, 3.06 eV (405 nm, f = 0.8369) for 7a and 3.51 eV (354 nm, f = 0.4844) for 7b, respectively. The results are almost in agreement with the experimental results <ref type="table" coords="6,216.86,146.53,33.88,8.60" target="#tab_0">(Table 1)</ref>. As for 6a and 7a, the maximum absorption bands can be assigned to the transitions from the HOMO to the LUMO. However, for 6b and 7b, the oscillator strengths of the transitions from the HOMO to the LUMO are lower (0.1922 for 6b and 0.2125 for 7b), indicating that their maximum absorption bands are mainly contributed by the transition from HOMO−1 to the LUMO. In 6a and 7a, the HOMOs and LUMOs are delocalized across the whole molecular backbone, owing to the conjugated molecular geometry. The (HOMO−1)s of 6b and 7b are localized on the whole molecular backbone, while their LUMOs are localized mainly on the benzothiazole group and the sixmembered ring containing a boron atom. For all the compounds, due to the high electron withdrawing ability of the BF 2 centre, the electron density in LUMOs has distribution in the context of the BF 2 group, which may result in the low LUMO level.</p><p>Compared with 7a, the energy of the HOMO of 6a is higher, which results in a decrement in the HOMO-LUMO gap, leading to a red shift of the absorption of 6a relative to that of 7a. The LUMOs of 6a and 7a are slightly lower in energy than those of 6b and 7b, which is due to the incorporation of the naphthyl group. The incorporation of the naphthyl group in 6b and 7b also greatly decreased the HOMO energy level by 0.45 eV and 0.42 eV. Thus, these results indicate that the aromatic unit in 6-7 could tune the main absorption bands efficiently, <ref type="bibr" coords="6,344.24,84.65,7.02,5.74" target="#b45">37</ref> and that the theoretical calculations can predict the extent of the shift of the absorption bands <ref type="figure" coords="6,488.41,98.51,35.80,8.60" target="#fig_0">(Fig. S4 †)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusions</head><p>In summary, a new family of benzothiazole-hydrazone-based boron complexes (6 and 7) were developed by the reaction of benzothiazole-hydrazone-based desymmetrized N,N-bidentate ligands with boron trifluoride etherate. Compounds 6 and 7 exhibited AIE characteristics and fluorescence efficiently in the aggregate state. The four complexes showed weak emission in low-viscosity organic solvents because of the intramolecular rotation that induces the non-radiative process. Their emission can be dramatically enhanced by the increase in solvent viscosity or by molecular aggregation in the solid state. X-ray crystallographic analysis showed that weak intermolecular interactions such as F⋯H-C and O⋯H-C fix the molecular conformations of 6 and 7, which are responsible for the intense fluorescence in the solid state. The theoretical calculation results indicate that the aromatic unit in 6-7 can tune the main absorption bands. Moreover, the large Stokes shifts and the strong solid-state emission of 6 and 7 render them valuable AIE luminophores for potential application in the fields of biological imaging and materials science.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>General information</head><p>All reactions and manipulations of air-sensitive compounds were carried out under an argon atmosphere using Schlenk techniques and/or vacuum line techniques. Solvents were dried prior to use by common methods in organometallic chemistry. Chemicals were commercially obtained and used as received. 1 H, 11 B and 13 C NMR spectra were recorded using a Varian Mercury-plus 400 M spectrometer instrument. Chemical shifts were reported in ppm relative to Si(CH 3 ) <ref type="bibr" coords="6,530.53,531.50,3.51,5.74" target="#b12">4</ref> ( 1 H, 13 C), and coupling constants ( J) are given in Hz. Mass spectra were obtained on an LCQ (ESI-MS, Thermo Finnigan) mass spectrometer. Thin layer chromatography (TLC) was performed on plates coated with thick silica gel GF254 (Qingdao Haiyang Chemical Co., Ltd). Column chromatography was performed using silica gel (200 mesh, Qingdao Haiyang Chemical Co., Ltd).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Synthesis</head><p>Synthesis of 4a and 4b. Aniline or naphthylamine (1.0 equiv., 10 mmol) and 4 mL of ice cold water were dissolved in a mixture of 6 mL HCl, and stirred at 0 °C for 30 min. A cold solution (3 mL water) of sodium nitrite (1.0 equiv., 0.69 g, 10 mmol) was then added drop-wise to the aniline solution at 0-5 °C. The resulting light yellow solution was continuously   stirred for 1.5 hours at −5 °C. The obtained diazonium salt solution was then added drop-wise to a suspension of 2-benzothiazoleacetonitrile (0.8 equiv., 1.39 g, 8 mmol) and sodium acetate (3.2 equiv., 2.62 g, 32 mmol) in a cold mixture of ethanol (60 mL) and water (30 mL). The resulting reaction mixture was stirred at room temperature overnight. The crude was obtained by filtration and recrystallization. Compound 4a. Yield: 89%. 1 H NMR (400 MHz, CDCl 3 ) δ/ppm = 14.35 (s, 1H), 8.05 (d, J = 8.2 Hz, 1H), 7.95 (d, J = 8.0 Hz, 1H), 7.58 (t, J = 7.7 Hz, 1H), 7.49 (t, J = 7.6 Hz, 1H), 7.46-7.37 (m, 4H), 7.18 (t, J = 6.4 Hz, 1H); <ref type="bibr" coords="7,212.03,168.67,7.02,5.74" target="#b21">13</ref>  Synthesis of 6a, 6b, 7a and 7b. Compound 4a or 4b (1 equiv.) was dissolved in dry toluene. Then DBU (3.0 equiv.) was added to the solution. After being stirred for 10 min at room temperature, BF 3 ·OEt 2 (5.0 equiv.) was slowly added to the mixture via a syringe. The resulting mixture was heated to reflux for 2 h. After cooling to room temperature, the solution was extracted with dichloromethane. The organic layer was washed with water and brine, and dried over anhydrous magnesium sulfate. Column chromatography of the residue on silica gel gave the desired product.</p><p>Compound 6a.</p><p>Yield: 65%, ( petroleum ether : dichloromethane = 1 : 3, R f = 0.6). 1 H NMR (400 MHz, CDCl 3 ) δ/ppm = 8.31 (d, J = 8.6 Hz, 1H), 7.98 (d, J = 7.9 Hz, 1H), 7.85</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Spectroscopic measurements</head><p>UV-vis absorption spectra were recorded on a Shimadzu UV-3600 spectrometer with a resolution of 1.0 nm. A solution of the sample (ca. 1 × 10 −5 M) in a 1 cm 2 quartz cell was used for the measurement. Fluorescence spectra were recorded on a Hitachi F-7000 spectrometer under the following conditions: excitation wavelength = 405 nm (6a), 400 nm (6b), 432 nm (7a) and 395 nm (7b), an excitation slit width of 15 nm and a PMT voltage of 775 V for 6a, 7a and 7b, an emission slit width of 10 nm and a PMT voltage of 775 V for 6b. Powder samples of 6a, 6b, 7a and 7b were used for the absorption and emission spectra recording. The fluorescence lifetimes and the absolute quantum yields (Φ f ) of the powder samples were determined with a Horiba JobinYvon Fluorolog-3 spectrofluorimeter. Fluorescence quantum yields of 6a, 6b, 7a and 7b in solution were determined using 4-methylamino-7-nitro-2,1,3-benzoxadiazole (Φ f = 0.38) in acetonitrile as the reference. <ref type="bibr" coords="7,499.52,384.67,7.02,5.74" target="#b46">38</ref> X-ray structure determination X-ray diffraction data were collected at 298 K on a Gemini A single crystal CCD X-ray diffractometer with MoK α radiation (l = 0.71073 Å) and graphite monochromator. The structure was solved by direct methods (SHELX-97) <ref type="bibr" coords="7,468.79,456.67,7.02,5.74" target="#b47">39</ref> and refined by the full-matrix least-squares on F 2 (SHELX-97). All the non-hydrogen atoms were refined anisotropically and all the hydrogen atoms were placed using AFIX instructions.</p><p>Compound 6a. C 15 H 9 BF 2 N 4 S; M = 326.13, monoclinic, space group P2(1)/c1, a = 11.0689 <ref type="formula" coords="7,410.45,518.55,12.24,8.60">(6)</ref>   ; M = 968.94, monoclinic, a = 10.6491(7) Å, b = 22.7467(13) Å, c = 17.0946 (10) Å, α = 90.00°, β = 104.248°, γ = 90.00°, V = 4013.5(4) Å 3 , T = 293(2) K, space group P2(1)/n, Z = 4, the final R = 0.0678 and wR = 0.1705 for 7079 observed reflections (I &gt; 2σ(I)). GOF = 1.035. CCDC 1470189. †</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational details</head><p>TD-DFT calculations were performed at the hybrid density functional theory level (B3LYP) with the 6-31G(d,p) basis set, using the Gaussian03 software package. The calculations were made in the gas phase.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of interest</head><p>There are no conflicts to declare.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="4,68.30,429.43,74.15,8.60"><head>Fig. 4 ,</head><label>4</label><figDesc>Fig. S2 † and</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="4,48.19,50.63,235.42,191.23"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Normalized absorption and luminescence spectra of compounds 6a, 6b, 7a and 7b (10 −5 M) in THF.</figDesc><graphic url="image-12.png" coords="4,48.19,50.63,235.42,191.23" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="4,308.98,335.79,235.42,182.21"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 Emission spectra of 6a (a), 6b (b), 7a (c), and 7b (d) in THF/water mixtures (10 μM) with varied volumetric fractions of water ( f w ).</figDesc><graphic url="image-13.png" coords="4,308.98,335.79,235.42,182.21" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="4,308.98,50.63,235.42,175.58"><head>Fig. 3</head><label>3</label><figDesc>Fig. 3 Normalized luminescence spectra of compounds 6a (a), 6b (b), 7a (c) and 7b (d) in various solvents (10 −5 M) such as hexane, toluene, dichloromethane (DCM), tetrahydrofuran (THF), acetonitrile (ACN), dimethylformamide (DMF), ethanol, ethylene glycol (glycol) and glycerol, respectively.</figDesc><graphic url="image-14.png" coords="4,308.98,50.63,235.42,175.58" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="5,51.02,524.64,235.43,166.56"><head>Fig. 5</head><label>5</label><figDesc>Fig. 5 The solid-state absorption and emission spectra of compounds 6a (a), 6b (b), 7a (c), and 7b (d).</figDesc><graphic url="image-15.png" coords="5,51.02,524.64,235.43,166.56" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5" coords="5,308.98,50.63,235.42,230.40"><head>Fig. 6</head><label>6</label><figDesc>Fig. 6 Crystal structures of 6a (a), 6b (b), 7a (c) and 7b (d) (50% probability for thermal ellipsoids).</figDesc><graphic url="image-16.png" coords="5,308.98,50.63,235.42,230.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6" coords="6,48.19,456.49,235.42,224.73"><head>Fig. 7</head><label>7</label><figDesc>Fig. 7 Molecular orbital amplitude plots and energy levels of the HOMOs and LUMOs of compounds 6-7, calculated using the B3LYP/6-31G(d,p) basis set with the G03 software package.</figDesc><graphic url="image-17.png" coords="6,48.19,456.49,235.42,224.73" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8" coords="7,219.12,170.51,72.85,8.60;7,42.52,180.35,249.39,11.70;7,42.52,192.37,235.97,11.70;7,278.48,191.20,4.57,7.80;7,287.26,194.55,4.68,8.60;7,42.52,204.33,85.96,11.70;7,128.47,203.22,4.57,7.80;7,135.50,206.51,30.67,8.60;7,51.53,218.53,116.15,9.52;7,173.25,216.63,3.51,5.74;7,176.77,218.53,115.17,9.33;7,42.52,228.37,249.44,11.70;7,42.52,242.51,249.45,8.60;7,42.52,254.53,128.92,8.60;7,175.81,252.63,7.02,5.74;7,182.84,254.53,109.11,9.33;7,42.52,264.37,249.39,11.70;7,42.52,278.51,249.46,8.60;7,42.52,288.35,56.76,11.70;7,99.27,287.18,4.57,7.80;7,106.30,288.35,93.04,11.70;7,199.33,287.18,4.57,7.80;7,206.36,290.53,30.67,8.60"><head></head><label></label><figDesc>C NMR (100 MHz, CDCl 3 ) δ/ppm = 160.1, 152.8, 141.7, 133.2, 129.8, 127.4, 126.8, 125.3, 123.0, 122.1, 116.9, 115.8; ESI-MS: calcd: [M − H] − = 277.3, found: [M − H] − = 277.1. Compound 4b. Yield: 31%. 1 H NMR (400 MHz, CDCl 3 ) δ/ppm = 15.18 (s, 1H), 8.22-8.06 (m, 2H), 7.98 (d, J = 7.6 Hz, 1H), 7.90 (d, J = 7.5 Hz, 2H), 7.64 (dd, J = 18.3, 7.7 Hz, 3H), 7.54 (dt, J = 15.0, 7.5 Hz, 3H); 13 C NMR (100 MHz, CDCl 3 ) δ/ppm = 160.3, 152.7, 136.9, 134.3, 133.4, 129.1, 127.5, 126.9, 126.5, 125.5, 123.1, 122.9, 122.2, 119.7, 116.8, 111.6; ESI-MS: calcd: [M − H] − = 327.4, found: [M − H] − = 327.2.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9" coords="7,425.88,518.55,126.83,8.60;7,303.31,528.33,243.51,11.70;7,546.80,528.67,3.51,5.74;7,550.32,530.51,2.43,8.60;7,303.31,542.53,249.44,8.60;7,303.31,554.55,249.47,8.60;7,303.31,566.51,39.71,8.60;7,312.32,578.53,240.41,9.52;7,303.31,588.37,249.43,11.70;7,303.31,600.33,162.66,11.70;7,465.96,600.67,3.51,5.74;7,469.47,602.51,83.27,8.60;7,303.31,614.53,249.44,8.60;7,303.31,626.55,249.47,8.60;7,303.31,638.51,39.71,8.60;7,312.32,650.53,240.44,9.52;7,303.31,660.37,249.42,11.70;7,303.31,672.33,188.06,11.70;7,491.36,672.67,3.51,5.74;7,494.87,674.51,57.89,8.60;7,303.31,686.53,249.43,8.60;7,303.31,698.55,157.03,8.60"><head></head><label></label><figDesc>Å, b = 10.5398(5) Å, c = 25.7733 (15) Å, α = 90.00°, β = 109.097°, γ = 90.00°, V = 2841.3 (3) Å 3 , T = 293(2) K, Z = 8, the final R = 0.0834 and wR = 0.2111 for 5092 observed reflections (I &gt; 2σ(I)). GOF = 1.038. CCDC 1470184. † Compound 6b. C 19 H 11 BF 2 N 4 S; M = 376.19, monoclinic, a = 13.7279(18) Å, b = 8.6809(13) Å, c = 14.7591(17) Å, α = 90.00°, β = 105.207°, γ = 90.00°, V = 1697.3(4) Å 3 , T = 293(2) K, space group P2(1)/c1, Z = 4, the final R = 0.0524 and wR = 0.0979 for 3000 observed reflections (I &gt; 2σ(I)). GOF = 1.046. CCDC 1470187. † Compound 7a. C 31 H 22 B 4 F 8 Cl 2 N 8 O 2 S 2 ; M = 868.83, monocli- nic, a = 9.0994(6) Å, b = 17.1180(10) Å, c = 11.3594(9) Å, α = 90.00°, β = 98.095°, γ = 90.00°, V = 1751.7(2) Å 3 , T = 293(2) K, space group P2(1)/c, Z = 2, the final R = 0.0831 and wR = 0.2370 for 3135 observed reflections (I &gt; 2σ(I)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" coords="3,317.48,50.63,222.91,435.23"><head></head><label></label><figDesc></figDesc><graphic url="image-11.png" coords="3,317.48,50.63,222.91,435.23" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" validated="false" coords="4,5.54,26.87,547.25,726.43"><head>Table 1 Photophysical data of compounds 6 and 7 in solution and in the solid state</head><label>1</label><figDesc coords="4,42.52,575.55,289.35,6.90"></figDesc><table coords="4,42.52,596.70,68.00,34.63">Cpd 
+
+In solution 
+</table></figure>
+
+			<note place="foot">This journal is © The Royal Society of Chemistry 2018 Published on 04 May 2018. Downloaded on 7/13/2018 4:20:47 PM.</note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>We thank the National Key R&amp;D Program of China (2017YFA0207201), the Natural Science Foundation of China (21501085), the Natural Science Foundation of Shandong Province (ZR2017MB052, ZR2017MB060), the Key University Science Research Project of Jiangsu Province (17KJA150004) and the Liaocheng University Funds for Young Scientists (31805) for financial support.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="7,46.01,458.51,245.94,8.60;7,42.52,470.53,209.87,8.60;7,255.57,468.63,7.02,5.74;7,262.60,470.53,29.34,8.60;7,42.52,480.37,249.39,11.70;7,42.52,494.51,132.60,8.60;7,178.81,492.67,7.02,5.74;7,185.84,494.51,106.10,9.39" xml:id="b0">
+	<monogr>
+				<title level="m">= 8.1 Hz, 2H), 7.74 (t, J = 7.8 Hz, 1H), 7.65 (t, J = 7.8 Hz, 1H), 7.47 (t, J = 7.9 Hz, 2H)</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+		</imprint>
+	</monogr>
+	<note>35 (t, J = 7.4 Hz, 1H); 13 C NMR (100 MHz, CDCl 3 ) δ/ppm = 157.9, 144.6, 142.8, 129.4, 128.2, 127.9, 122.8, 121.4, 120.2, 114.8; 11 B NMR (128 MHz. CDCl 3</note>
+</biblStruct>
+
+<biblStruct coords="7,42.52,504.35,195.38,11.70" xml:id="b1">
+	<monogr>
+		<title level="m" type="main">07 (s), 1.16 (d, J = 31</title>
+		<idno>0.79</idno>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="7,241.68,506.53,50.26,8.60;7,42.52,518.55,55.34,8.60;7,97.85,516.65,3.51,5.74;7,103.81,518.55,105.74,8.60;7,209.54,516.65,3.51,5.74;7,215.49,518.55,44.71,8.60;7,51.53,530.51,202.64,9.52;7,254.21,528.67,3.51,5.74;7,257.73,530.51,34.21,8.60;7,42.52,540.35,249.42,11.70" xml:id="b2">
+	<monogr>
+				<idno>= 327.0685</idno>
+		<title level="m">HRMS (ESI): calcd</title>
+		<imprint/>
+	</monogr>
+	<note>M + H] + = 327.0695. Compound 6b. Yield: 22%, (DCM, R f = 0.6). 1 H NMR (400 MHz, CDCl 3 ) δ/ppm = 8.27 (d, J = 8.3 Hz, 1H), 8.02 (d, J =</note>
+</biblStruct>
+
+<biblStruct coords="7,58.17,554.55,233.77,8.60;7,42.52,566.51,34.58,8.60;7,81.41,564.67,7.02,5.74;7,88.44,564.33,203.52,11.70;7,42.52,578.53,249.45,8.60;7,42.52,590.55,132.60,8.60;7,178.81,588.65,7.02,5.74;7,185.84,590.55,106.10,9.33" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">(m, 3H); 13 C NMR (100 MHz</title>
+		<idno>7.61-7.49</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Hz, 1H), 7.99-7.90 (m, 2H), 7.80-7.62 (m, 4H)</title>
+		<imprint/>
+	</monogr>
+	<note>CDCl 3 ) δ/ppm = 158.2, 142.9, 140.0, 134.8, 130.1, 130.1, 129.4, 128.4, 127.3, 126.7, 125.1, 123.9, 123.1, 122.8, 120.3, 114.6; 11 B NMR (128 MHz. CDCl 3</note>
+</biblStruct>
+
+<biblStruct coords="7,42.52,600.33,143.96,11.70" xml:id="b4">
+	<monogr>
+		<title level="m" type="main">87 (s), 0.65 (s), 0.42 (s)</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="7,190.61,602.51,101.34,8.60" xml:id="b5">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Hrms (</forename><surname>Esi</surname></persName>
+		</author>
+		<editor>calcd, [M +</editor>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="7,56.52,662.55,235.51,8.60;7,42.52,674.51,249.53,8.60;7,42.52,686.53,97.36,8.60;7,143.38,684.63,6.91,5.74;7,150.24,684.35,141.71,11.70;7,42.52,698.55,203.27,8.60;7,252.57,696.65,6.91,5.74;7,259.43,698.55,32.51,8.60;7,42.52,708.33,249.44,11.70;7,303.31,48.37,168.59,11.70;7,471.74,48.65,3.51,5.74;7,478.60,50.55,74.24,8.60;7,303.31,60.33,34.86,11.70;7,337.95,60.67,3.51,5.74;7,346.79,62.51,119.37,8.60;7,465.96,60.67,3.51,5.74;7,474.80,62.51,78.03,8.60;7,303.31,74.53,33.42,8.60;7,336.59,72.63,3.51,5.74;7,342.43,74.53,43.99,8.60;7,312.32,86.55,197.31,9.52;7,515.74,84.65,3.51,5.74;7,519.31,86.55,33.42,8.60;7,303.31,96.33,249.42,11.70;7,303.31,110.53,249.42,8.60" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">CDCl 3 ) δ/ppm = 0.66 (s), 0.32 (d</title>
+		<idno>found: [M + Na] + = 415.0623</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Hz, 2H), 7.68 (t, J = 7.9 Hz, 1H), 7.58 (t, J = 7.6 Hz, 1H), 7.48 (t, J = 7.6 Hz, 2H)</title>
+		<editor>Hz, 1H), 7.90 (d, J = 8.1 Hz, 1H), 7.85 (d, J = 8.1</editor>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+		</imprint>
+	</monogr>
+	<note>5 Hz), 0.26-0.20 (m). HRMS (ESI): calcd. M − F] + = 373.0714, found: [M − F] + = 373.0746; calcd, [M + Na] + = 415.0595. Compound 7b. Yield: 32%, (DCM, R f = 0.2). 1 H NMR (400 MHz, CDCl 3 ) δ/ppm = 8.19 (d, J = 8.3 Hz, 1H), 8.00-7.91 (m, 2H), 7.85-7.77 (m, 2H), 7.73 (d, J = 7.4 Hz, 1H), 7.67 (t, J =</note>
+</biblStruct>
+
+<biblStruct coords="7,319.63,122.55,111.51,8.60;7,435.69,120.65,7.02,5.74;7,442.72,122.55,110.01,9.33" xml:id="b7">
+	<monogr>
+				<title level="m">Hz, 1H), 7.6-7.51 (m, 4H); 13 C NMR (100 MHz</title>
+		<imprint/>
+	</monogr>
+	<note>CDCl 3</note>
+</biblStruct>
+
+<biblStruct coords="7,303.31,132.33,249.39,11.70;7,303.31,146.53,203.70,8.60;7,513.47,144.63,7.02,5.74;7,520.50,146.53,32.23,8.60;7,303.31,156.37,249.42,11.70;7,303.31,170.51,82.80,8.60;7,386.08,168.67,3.51,5.74;7,392.03,170.51,109.68,8.60;7,501.68,168.67,3.51,5.74;7,507.63,170.51,44.76,8.60;8,42.52,411.01,137.14,12.82" xml:id="b8">
+	<monogr>
+		<title level="m" type="main">CDCl 3 ) δ/ppm = 0.28 (s), 0.07 (s), −0.14 (s). HRMS (ESI): calcd</title>
+		<idno>= 465.0752</idno>
+		<imprint/>
+	</monogr>
+	<note>δ/ppm = 156.2, 143.0, 140.2, 134.7, 129.8, 129.5, 129.0, 128.4, 127.5, 126.6, 125.1, 123.4, 122.7, 122.4, 119.4; 11 B NMR (128 MHz. M + Na] + = 465.0738. Notes and references</note>
+</biblStruct>
+
+<biblStruct coords="8,56.18,434.53,235.73,8.60;8,56.18,446.55,35.38,9.52" xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Mack</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Shen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Soc. Rev</title>
+		<imprint>
+			<biblScope unit="page">4778</biblScope>
+			<date type="published" when="2014" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.18,458.51,144.29,9.52" xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Jäkle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="page">3985</biblScope>
+			<date type="published" when="2010" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.18,470.53,235.78,8.60;8,56.18,482.55,68.35,9.52" xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">A</forename><surname>Lalancette</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Jäkle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="page">18170</biblScope>
+			<date type="published" when="2017" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.18,494.51,235.78,8.60;8,56.18,506.53,91.79,9.52" xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Frath</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Massue</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Ulrich</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Ziessel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="page">2290</biblScope>
+			<date type="published" when="2014" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.18,518.55,235.73,8.60;8,56.18,530.51,35.41,9.52" xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><forename type="middle">L</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Amarne</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Coord. Chem. Rev</title>
+		<imprint>
+			<biblScope unit="page">759</biblScope>
+			<date type="published" when="2012" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.18,542.53,219.77,9.52" xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Chujo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NPG Asia Mater</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">223</biblScope>
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.18,554.55,235.78,9.52;8,56.18,566.51,21.15,8.60" xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Soc. Rev</title>
+		<imprint>
+			<biblScope unit="page">8416</biblScope>
+			<date type="published" when="2013" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.18,578.53,235.78,8.60;8,56.18,590.54,59.02,9.52" xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Kowada</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Maeda</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Kikuchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Soc. Rev</title>
+		<imprint>
+			<biblScope unit="page">4953</biblScope>
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.18,602.51,235.78,8.60;8,56.18,614.53,59.02,9.52" xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">T</forename><surname>Poon</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><forename type="middle">W</forename><surname>Yam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="page">3647</biblScope>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.41,626.54,235.56,8.60;8,56.41,638.51,110.38,9.52" xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Q</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Yao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="page">6376</biblScope>
+			<date type="published" when="2017" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.41,650.52,235.57,8.60;8,56.41,662.54,115.35,9.52" xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><forename type="middle">L</forename><surname>Leung</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">T</forename><surname>Kwok</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">W</forename><surname>Lam</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><forename type="middle">Z</forename><surname>Tang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="page">11718</biblScope>
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.41,674.50,235.53,8.60;8,56.41,686.52,223.65,9.52" xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">E</forename><surname>Cousins</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><forename type="middle">H</forename><surname>Horak</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Wakefield</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">D</forename><surname>Liptak</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Aprahamian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Chem</title>
+		<imprint>
+			<biblScope unit="page">83</biblScope>
+			<date type="published" when="2017" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,56.41,698.54,235.56,8.60;8,56.41,710.50,88.48,9.52" xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Yoshii</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Hirose</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Chujo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="page">18131</biblScope>
+			<date type="published" when="2014" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,50.54,235.55,8.60;8,317.20,62.50,218.33,9.52" xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Perumal</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">O</forename><surname>Blacque</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">A</forename><surname>Garg</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Saiganesh</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Kabilan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="page">6378</biblScope>
+			<date type="published" when="2014" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,74.52,235.55,8.60;8,317.20,84.36,125.32,11.70" xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Lu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. -Eur. J</title>
+		<imprint>
+			<date type="published" when="2013" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,98.50,235.55,8.60;8,317.20,110.52,49.58,9.52" xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">N</forename><surname>Carroll</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Aprahamian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Sci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">610</biblScope>
+			<date type="published" when="2012" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,122.54,235.55,8.60;8,317.20,134.50,210.82,9.53" xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">F</forename><surname>Araneda</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><forename type="middle">E</forename><surname>Piers</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Heyne</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Parvez</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Mcdonald</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<date type="published" when="2011" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,146.53,235.55,8.60;8,317.20,158.55,154.01,9.52" xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Neuhaus</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="page">13676</biblScope>
+			<date type="published" when="2013" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,168.33,235.53,11.70;8,317.20,182.53,69.17,9.52" xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Yoshii</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Hirose</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Chujo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. -Eur. J</title>
+		<imprint>
+			<biblScope unit="page">8320</biblScope>
+			<date type="published" when="2014" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,194.55,235.55,8.60;8,317.20,204.33,165.72,11.70" xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Kubota</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Kasatani</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Niwa</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Funabiki</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Matsui</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. -Eur. J</title>
+		<imprint>
+			<biblScope unit="page">1816</biblScope>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,218.53,235.57,8.60;8,317.20,230.55,80.56,9.52" xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Kubota</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Niwa</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Funabiki</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Matsui</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Org. Lett</title>
+		<imprint>
+			<biblScope unit="page">3174</biblScope>
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,242.51,235.55,8.60;8,317.20,254.53,127.59,9.52" xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Q</forename><surname>Zhu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<date type="published" when="2011" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,266.55,235.53,8.60;8,317.20,278.51,87.99,9.52" xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Bi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Tian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inorg. Chem</title>
+		<imprint>
+			<biblScope unit="page">4825</biblScope>
+			<date type="published" when="2011" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,290.53,235.55,8.60;8,317.20,302.54,58.96,9.52" xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Org. Lett</title>
+		<imprint>
+			<biblScope unit="page">4437</biblScope>
+			<date type="published" when="2008" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,314.51,235.54,8.60;8,317.20,326.53,149.33,9.52" xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><forename type="middle">M</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">P</forename><surname>Ehlers</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Zumbusch</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Daltrozzo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page">3750</biblScope>
+			<date type="published" when="2007" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,338.54,235.55,8.60;8,317.20,348.33,222.92,11.70" xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">M</forename><surname>Stadler</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Puntoriero</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Campagna</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Kyritsakas</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Welter</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">M</forename><surname>Lehn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. -Eur. J</title>
+		<imprint>
+			<biblScope unit="page">3997</biblScope>
+			<date type="published" when="2005" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,362.52,235.56,8.60;8,317.20,374.54,95.67,9.52" xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Ji</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Commun</title>
+		<imprint>
+			<biblScope unit="page">784</biblScope>
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,386.50,235.55,8.60;8,317.20,398.52,126.94,9.52" xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Commun</title>
+		<imprint>
+			<biblScope unit="page">7497</biblScope>
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,410.54,235.55,8.60;8,317.20,422.50,126.49,9.52" xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Gong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem. C</title>
+		<imprint>
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,434.52,235.55,8.60;8,317.20,446.54,87.54,9.52" xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Gong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dalton Trans</title>
+		<imprint>
+			<biblScope unit="page">7278</biblScope>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,458.50,235.57,8.60;8,317.20,470.52,88.48,9.52" xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">P</forename><surname>Hughes</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Aprahamian</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="page">13190</biblScope>
+			<date type="published" when="2014" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,482.55,235.55,8.60;8,317.20,494.51,168.69,9.52" xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><forename type="middle">T</forename><surname>Ashitha</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><forename type="middle">P</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">T F</forename><surname>Salfeena</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><forename type="middle">S</forename><surname>Sasidhar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Org. Chem</title>
+		<imprint>
+			<biblScope unit="page">113</biblScope>
+			<date type="published" when="2018" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,506.53,235.55,8.60;8,317.20,518.55,175.07,9.52" xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">J</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">K</forename><surname>Fung</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><forename type="middle">K</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><forename type="middle">H</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="page">4502</biblScope>
+			<date type="published" when="2012" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,530.51,235.55,8.60;8,317.20,542.53,166.28,9.52" xml:id="b42">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Guo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="page">1460</biblScope>
+			<date type="published" when="2009" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,554.55,235.57,8.60;8,317.20,566.51,109.99,9.52" xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Uchiyama</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Matsumura</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">P</forename><surname>Silva</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Iwai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Anal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page">5926</biblScope>
+			<date type="published" when="2003" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="8,317.20,578.53,235.56,8.60;8,317.20,590.55,235.52,8.60;8,317.20,602.51,235.55,8.60;8,317.20,614.53,235.53,8.60;8,317.20,626.54,235.55,8.60;8,317.20,638.51,235.58,8.60;8,317.20,650.53,235.59,8.60;8,317.20,662.54,235.53,8.60;8,317.20,674.51,235.55,8.60;8,317.20,686.52,235.53,8.60;8,317.20,698.54,235.54,8.60;8,317.20,710.50,235.55,8.60;9,56.41,50.55,235.56,8.60;9,56.41,62.51,235.56,8.60;9,56.41,74.53,235.53,8.60;9,56.41,86.55,235.55,8.60;9,56.41,98.51,235.55,8.60;9,56.41,110.53,235.58,8.60;9,56.41,122.55,235.55,8.60;9,56.41,134.51,235.56,8.60;9,56.41,146.53,199.74,8.60" xml:id="b44">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><forename type="middle">W</forename><surname>Trucks</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><forename type="middle">B</forename><surname>Schlegel</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><forename type="middle">E</forename><surname>Scuseria</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">A</forename><surname>Robb</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">R</forename><surname>Cheeseman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">A</forename><surname>Montgomery</surname><genName>Jr</genName></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Vreven</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><forename type="middle">N</forename><surname>Kudin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">C</forename><surname>Burant</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">M</forename><surname>Millam</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">S</forename><surname>Iyengar</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Tomasi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Mennucci</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Scalmani</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Rega</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><forename type="middle">A</forename><surname>Petersson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Nakatsuji</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Hada</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Ehara</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Toyota</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Fukuda</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Hasegawa</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Ishida</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Nakajima</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Honda</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">O</forename><surname>Kitao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Nakai</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Klene</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">E</forename><surname>Knox</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><forename type="middle">P</forename><surname>Hratchian</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">B</forename><surname>Cross</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><surname>Bakken</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Adamo</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Jaramillo</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Gomperts</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">E</forename><surname>Stratmann</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">O</forename><surname>Yazyev</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">J</forename><surname>Austin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Cammi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Pomelli</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">W</forename><surname>Ochterski</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><forename type="middle">Y</forename><surname>Ayala</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Morokuma</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><forename type="middle">A</forename><surname>Voth</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Salvador</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">J</forename><surname>Dannenberg</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><forename type="middle">G</forename><surname>Zakrzewski</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Dapprich</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">D</forename><surname>Daniels</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">C</forename><surname>Strain</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">O</forename><surname>Farkas</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">K</forename><surname>Malick</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">D</forename><surname>Rabuck</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">B</forename><surname>Foresman</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">V</forename><surname>Ortiz</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Q</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">G</forename><surname>Baboul</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Clifford</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Cioslowski</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><forename type="middle">B</forename><surname>Stefanov</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Liashenko</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Piskorz</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Komaromi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">L</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">J</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Keith</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">A</forename><surname>Al-Laham</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">Y</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Nanayakkara</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Challacombe</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><forename type="middle">M W</forename><surname>Gill</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">W</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003" />
+			<publisher>Gaussian, Inc</publisher>
+			<pubPlace>Pittsburgh, PA</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Gaussian 03, Revision B.05</note>
+</biblStruct>
+
+<biblStruct coords="9,317.20,50.55,235.53,8.60;9,317.20,62.51,235.56,8.60;9,317.20,74.53,114.67,9.52" xml:id="b45">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><forename type="middle">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><forename type="middle">J</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><forename type="middle">N</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><forename type="middle">M</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><forename type="middle">W</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Q</forename><forename type="middle">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">W</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><forename type="middle">J</forename><surname>Blanchard</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><surname>Fang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">25210</biblScope>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="9,317.20,86.54,235.57,8.60;9,317.20,98.51,235.55,8.60;9,317.20,110.53,58.96,9.52" xml:id="b46">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Y</forename><forename type="middle">P</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><forename type="middle">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Q</forename><forename type="middle">S</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">X</forename><forename type="middle">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">W</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><forename type="middle">P</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><forename type="middle">J</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Org. Biomol. Chem</title>
+		<imprint>
+			<biblScope unit="page">5775</biblScope>
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="9,317.20,122.54,235.54,8.60;9,317.20,134.51,235.55,8.60;9,317.20,146.52,61.74,8.60;9,42.52,26.86,21.22,7.36;9,423.67,26.86,129.12,7.36" xml:id="b47">
+	<analytic>
+		<title level="a" type="main">SHELX-97, Program for the Refinement of Crystal Structures</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><forename type="middle">M</forename><surname>Sheldrick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Paper Organic &amp; Biomolecular Chemistry</title>
+		<imprint>
+			<date type="published" when="1997" />
+		</imprint>
+		<respStmt>
+			<orgName>University of Göttingen</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="9,64.29,743.89,136.63,9.75;9,387.71,743.89,165.01,9.75" xml:id="b48">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">This journal is © The Royal Society of Chemistry</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="4977" to="4984" />
+			<date type="published" when="2018" />
+		</imprint>
+	</monogr>
+	<note>Org. Biomol. Chem.</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

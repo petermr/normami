@@ -50,7 +50,7 @@ public class RegexPluginOption extends AMIPluginOption {
 		LOG.debug("OPT "+options);
 	}
 
-	protected void run() {
+	public void run() {
 		StringBuilder commandString = createCoreCommandStringBuilder();
 		commandString.append(" --r.regex "+optionString);
 //		String sw = getOptionFlagString("w.stopwords", " ");

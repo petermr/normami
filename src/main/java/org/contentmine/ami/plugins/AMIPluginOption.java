@@ -125,7 +125,7 @@ private static final String RESULT_XPATH_ROOT = "//result";
 		this.projectDir = projectDir;
 	}
 	
-	protected abstract void run();
+	public abstract void run();
 
 	// create optionSnippets
 	public void runFilterResultsXMLOptions() {
@@ -143,6 +143,8 @@ private static final String RESULT_XPATH_ROOT = "//result";
 		String filterCommandString = createFilterCommandString(option);
 		LOG.debug("filter: "+filterCommandString);
 		new DefaultArgProcessor(filterCommandString).runAndOutput();
+		LOG.debug("end filter");
+		return;
 	}
 
 	protected String createFilterCommandString(String option) {
@@ -199,6 +201,15 @@ private static final String RESULT_XPATH_ROOT = "//result";
 		return keyedOptionFlags;
 	}
 
+	/**
+	 * what it actually runs
+	 * 
+String cmd0 ="	--project /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10"
+		+ " -i word.frequencies.snippets.xml"
+		+ " --xpath //result/@exact"
+		+ " --summaryfile word.frequencies.count.xml"
+		+ " --dffile word.frequencies.documents.xml";
+		*/
 	protected void runMatchSummaryAndCount(String option) {
 		String cmd = "--project "+projectDir
 				+ " -i "+createSnippetsFilename(option)
@@ -207,15 +218,10 @@ private static final String RESULT_XPATH_ROOT = "//result";
 				+ " --dffile "+createDocumentCountFilename(option)
 				;
 		DefaultArgProcessor.CM_LOG.debug("runMatchSummaryAndCount: "+cmd);
-		System.out.print("C: "+option);
-//		System.out.println(" CMD: "+cmd+"\n");
-	String cmd0 ="	--project /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10"
-			+ " -i word.frequencies.snippets.xml"
-			+ " --xpath //result/@exact"
-			+ " --summaryfile word.frequencies.count.xml"
-			+ " --dffile word.frequencies.documents.xml";
-
+		System.out.print("C: "+option+"; ");
 		new DefaultArgProcessor(cmd).runAndOutput();
+		LOG.debug("end summary "+option);
+		return;
 	}
 	
 

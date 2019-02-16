@@ -29,12 +29,8 @@ public class SearchPluginOption extends AMIPluginOption {
 	public SearchPluginOption(List<String> options) {
 		super(TAG, options);
 	}
-//
-//	public SearchPluginOption(List<String> options, List<String> flags) {
-//		super(TAG, options, flags);
-//	}
 
-	protected void run() {
+	public void run() {
 		StringBuilder commandString = createCoreCommandStringBuilder();
 		String sw = getOptionFlagString("w.stopwords", " ");
 		commandString.append(sw);

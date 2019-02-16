@@ -63,5 +63,16 @@ public class AMISearchTest {
 		File q = new File("aa/bb/cc");
 		LOG.debug("p "+q.getParent());
 	}
+	
+//	/** add current ami-search-cooccurrence under picocli
+//	 * 
+//	 */
+//	@Test 
+//	public void testSearchCooccurrencePicocli() {
+//		File targetDir = new File("target/tigr2ess/osanctum");
+//		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum"), targetDir);
+//		String args = targetDir.toString() +  " country " +  "/Users/pm286/ContentMine/dictionary/dictionaries/bio/plantparts.xml";
+//		
+//	}
 
 }

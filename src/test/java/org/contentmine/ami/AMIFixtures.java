@@ -75,6 +75,7 @@ public class AMIFixtures {
 	public final static File TEST_RESULTS_DIR        = new File(NAConstants.TEST_AMI_DIR, "results/");
 	public final static File TEST_RRID_DIR           = new File(NAConstants.TEST_AMI_DIR, "rrid/");
 	public final static File TEST_ZIKA10_DIR           = new File(NAConstants.TEST_AMI_DIR, "zika10/");
+	public final static File TEST_ZIKA10A_DIR           = new File(NAConstants.TEST_AMI_DIR, "zika10a/");
 
 	public final static File TEST_SET_DIR            = new File(NAConstants.TEST_NORMA_DIR, "testSets");
 	public final static File TEST_SET_MARCHANTIA_DIR = new File(AMIFixtures.TEST_SET_DIR, "marchantia");

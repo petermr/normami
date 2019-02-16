@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.cproject.metadata.AbstractMetadata;
+import org.contentmine.cproject.metadata.MetadataEntryOLD;
 import org.contentmine.cproject.util.CellRenderer;
 import org.contentmine.cproject.util.DataTablesTool;
 import org.contentmine.eucl.euclid.JodaDate;
@@ -16,7 +18,16 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
-public class EPMCResultsJsonEntry {
+/**
+ * not sure how this differs from EpmcMD 
+ * I think they need merging
+ * 
+ * 
+ * 
+ * @author pm286
+ *
+ */
+public class EPMCResultsJsonEntry extends AbstractMetadata {
 	
 	private static final Logger LOG = Logger.getLogger(EPMCResultsJsonEntry.class);
 	static {
@@ -114,6 +125,7 @@ public class EPMCResultsJsonEntry {
 	private DataTablesTool dataTablesTool;
 
 	public EPMCResultsJsonEntry() {
+		return;
 	}
 
 	public EPMCResultsJsonEntry(JsonElement entry) {
@@ -125,11 +137,17 @@ public class EPMCResultsJsonEntry {
 		return jsonEntry;
 	}
 
-	public String getAbstractText() {
-		return getText(ABSTRACT_TEXT);
+	@Override
+	public String getAbstract() {
+		String abstractText = getText(ABSTRACT);
+		if (abstractText == null) {
+			abstractText = getText(ABSTRACT_TEXT);
+		}
+		return abstractText;
 	}
 
-	public String getAuthorStringText() {
+	@Override
+	public String getAuthorString() {
 		return getText(AUTHOR_STRING);
 	}
 
@@ -153,31 +171,32 @@ public class EPMCResultsJsonEntry {
  	public String getSource() {
  		return getText(SOURCE);
  	}
-	public String getTitleText() {
+ 	@Override
+	public String getTitle() {
 		return getText(TITLE);
 	}
-    public boolean isOpenAccess() {
+    public Boolean isOpenAccess() {
         return getBoolean(IS_OPEN_ACCESS);
     }
-    public boolean inEPMC() {
+    public Boolean inEPMC() {
         return getBoolean(IN_EPMC);
     }
-    public boolean inPMC() {
+    public Boolean inPMC() {
         return getBoolean(IN_PMC);
     }
-    public int citedByCount() {
+    public Integer citedByCount() {
         return getInteger(CITED_BY_COUNT);
     }
-    public boolean hasReferences() {
+    public Boolean hasReferences() {
         return getBoolean(HAS_REFERENCES);
     }
-    public boolean hasTextMinedTerms() {
+    public Boolean hasTextMinedTerms() {
         return getBoolean(HAS_TEXT_MINED_TERMS);
     }
-    public boolean hasDbCrossReferences() {
+    public Boolean hasDbCrossReferences() {
         return getBoolean(HAS_DB_CROSS_REFERENCES);
     }
-    public boolean hasLabsLinks() {
+    public Boolean hasLabsLinks() {
         return getBoolean(HAS_LABS_LINKS);
     }
     public boolean hasTMAccessionNumbers() {
@@ -195,7 +214,7 @@ public class EPMCResultsJsonEntry {
     public DateTime getFirstPublicationDate() {
         return getDate(FIRST_PUBLICATION_DATE);
     }
-    public double getLuceneScore() {
+    public Double getLuceneScore() {
     	return getDouble(LUCENE_SCORE);
     }
     public Boolean hasBook() {
@@ -320,13 +339,13 @@ public class EPMCResultsJsonEntry {
 	}
 	
 	private void createEntry() {
-		abstractText = getAbstractText();
-		authorString = getAuthorStringText();
+		abstractText = getAbstract();
+		authorString = getAuthorString();
 		doi = getDoiText();
 		id = getIdText();
 		pmid = getPmidText();
 		pmcid = getPmcidText();
-		title = getTitleText();
+		title = getTitle();
 		authorList = getAuthorList();
 		hasBook = hasBook();
 		isOpenAccess = isOpenAccess();
@@ -362,6 +381,7 @@ public class EPMCResultsJsonEntry {
 	}
 	
 	public String toString() {
+//		createEntry();
 		StringBuilder sb = new StringBuilder();
 			sb.append(authorString+"\n"
 			+doi+" | "
@@ -369,8 +389,11 @@ public class EPMCResultsJsonEntry {
 			+pmid+" | "
 			+pmcid+"\n"
 			+title+"\n");
-		for (EPMCAuthor author : authorList) {
-			sb.append(author+"\n");
+			
+		if (authorList != null) {
+			for (EPMCAuthor author : authorList) {
+				sb.append(author+"\n");
+			}
 		}
 		sb.append(
 		    (abstractText == null) ? "" : abstractText.substring(0,  Math.min(abstractText.length(), 200))+"... \n"
@@ -419,6 +442,23 @@ public class EPMCResultsJsonEntry {
 			}
 		}
 		return htmlElements;
+	}
+
+//	@Override
+//	public String getID() {
+//		return getPmcidText();
+//	}
+
+	@Override
+	protected String getCTreeMetadataFilename() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String getCProjectMetadataFilename() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 
