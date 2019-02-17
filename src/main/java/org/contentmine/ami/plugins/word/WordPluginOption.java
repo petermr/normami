@@ -26,17 +26,13 @@ public class WordPluginOption extends AMIPluginOption {
 		super(TAG, options);
 	}
 
-//	public WordPluginOption(List<String> options, List<String> flags) {
-//		super(TAG, options, flags);
-//	}
-
 	public void run() {
 		StringBuilder commandString = createCoreCommandStringBuilder();
 		commandString.append(" --w.words "+optionString);
 		String sw = getOptionFlagString("w.stopwords", " ");
 		commandString.append(sw);
-		LOG.debug("WORD "+commandString);
-		System.out.print("WS: "+projectDir+"  ");
+		LOG.trace("WORD "+commandString);
+		//System.out.print("WS: "+projectDir+"  ");
 		new WordArgProcessor(commandString.toString()).runAndOutput();
 //		new SearchArgProcessor(commandString.toString()).runAndOutput();
 	}

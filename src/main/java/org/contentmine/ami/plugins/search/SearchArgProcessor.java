@@ -201,11 +201,13 @@ public class SearchArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runSearch(ArgumentOption option) {
+		LOG.trace("SEARCH running "+option);
 		ensureResultsByDictionary();
 		ensureSearcherList();
 		for (AMISearcher searcher : searcherList) {
 			SearchSearcher wordSearcher = (SearchSearcher)searcher;
 			String title = wordSearcher.getTitle();
+			/** this does the searching */
 			ResultsElement resultsElement = wordSearcher.searchWordList();
 			resultsElement.setTitle(title);
 			resultsByDictionary.put(title, resultsElement);

@@ -325,6 +325,7 @@ public class AMISearcher extends AbstractSearcher {
 	}
 
 	public ResultsElement searchWithDictionary(List<String> strings) {
+		LOG.trace("SEARCH with dictionary");
 		ResultsElement resultsElement = new ResultsElement();
 		if (strings != null) {
 			for (int pos = 0; pos < strings.size(); pos++) {

@@ -100,7 +100,7 @@ public class CommandProcessor {
 
 	public void processCommands(List<String> cmds) {
 		parseCommands(cmds);
-		runCommands();
+		runCommands(null);
 	}
 
 	
@@ -165,24 +165,6 @@ public class CommandProcessor {
 		return cmds;
 	}
 
-	public void runCommands() {
-		runNormaIfNecessary();
-		for (AMIPluginOption pluginOption : pluginOptions) {
-			System.out.println("plugin: "+pluginOption);
-			try {
-				pluginOption.run();
-			} catch (Exception e) {
-				LOG.error("cannot run command: "+pluginOption +"; " + e.getMessage());
-				continue;
-			}
-			System.out.println("filter: "+pluginOption);
-			pluginOption.runFilterResultsXMLOptions();
-			System.out.println("summary: "+pluginOption);
-			pluginOption.runSummaryAndCountOptions(); 
-		}
-		LOG.trace(pluginOptions);
-	}
-
 	public void runNormaIfNecessary() {
 		if (!new CProject(projectDir).hasScholarlyHTML(0.1)) {
 			String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+projectDir;
@@ -218,7 +200,7 @@ public class CommandProcessor {
 	}
 	
 	public void createDataTables() throws IOException {
-		LOG.debug("create data tables");
+		System.out.println("create data tables");
 		if (projectDir == null) {
 			throw new RuntimeException("projectDir must be set");
 		}
@@ -292,12 +274,13 @@ public class CommandProcessor {
 		return pluginOptions;
 	}
 
-	public void runPluginOptions(AMISearchTool amiSearchTool) {
+	public void runLegacyPluginOptions(AbstractAMITool amiTool) {
 		List<AMIPluginOption> pluginOptions = this.getPluginOptions();
+		AMISearchTool amiSearchTool = (amiTool != null && amiTool instanceof AMISearchTool) ? (AMISearchTool) amiTool : null;
 		for (AMIPluginOption pluginOption : pluginOptions) {
 			String plugin = pluginOption.getPlugin();
 			System.out.println("running: " + plugin + "; " + pluginOption);
-			if (amiSearchTool.getIgnorePluginList().contains(plugin)) {
+			if (amiSearchTool != null && amiSearchTool.getIgnorePluginList().contains(plugin)) {
 				System.out.println("ignored: " + plugin);
 				continue;
 			}
@@ -314,6 +297,13 @@ public class CommandProcessor {
 		}
 		LOG.trace(pluginOptions);
 	}
+	
+	public void runCommands(AbstractAMITool amiTool) {
+		runNormaIfNecessary();
+		runLegacyPluginOptions(amiTool);
+	}
+
+
 
 	public void runJsonBibliography() {
 		CProject cProject = new CProject(projectDir);

@@ -32,43 +32,44 @@ public class SearchPluginOption extends AMIPluginOption {
 
 	public void run() {
 		StringBuilder commandString = createCoreCommandStringBuilder();
-		String sw = getOptionFlagString("w.stopwords", " ");
-		commandString.append(sw);
 		searchDictionary = optionString;
 		if (searchDictionary == null) {
 			LOG.warn("no dictionary given); no search");
 			return;
 		}
-		commandString.append(" --sr.search");
-		
-		// just letters and numbers? expand to resourceString
-		if (searchDictionary.toLowerCase().replaceAll("[a-z0-9]", "").length() == 0) {
-			searchDictionary = AMIArgProcessor.DICTIONARY_RESOURCE+"/"+searchDictionary+".xml";
-		}
-		commandString.append(" "+searchDictionary);
+		commandString.append(" --sr.search");		
+		commandString.append(" "+createSearchDictionaryResourceString(searchDictionary));
 		plugin = "search";
-//		commandString.append(plugin);
-//		commandString.append(searchDictionary);
-//		dictionary = getOption(null);
-		optionString = dictionary;
 		LOG.trace("SEARCH "+commandString);
-//		System.out.println("SR: "+projectDir+"  ");
 		new SearchArgProcessor(commandString.toString()).runAndOutput();
+	}
+
+	/** just letters and numbers? expand to resourceString
+	 * org/contentmine/ami/plugins/dictionary/country.xml
+	 */
+	public static String createSearchDictionaryResourceString(String dictionary) {
+		if (dictionary != null && dictionary.toLowerCase().replaceAll("[a-z0-9]", "").length() == 0) {
+			dictionary = AMIArgProcessor.DICTIONARY_RESOURCE+"/"+dictionary+".xml";
+		}
+		return dictionary;
 	}
 
 	protected String getPlugin(String plugin) {
 		return plugin;
 	}
 
+	/** create option from search dictionary.
+	 * split at "/" , take last field and first name before "."
+	 * Maybe FilenameUtils would do this?
+	 */
+	@Override
 	protected String getOption(String option) {
-		String opt = option;
 		if (searchDictionary != null && !searchDictionary.trim().equals("")) {
 			String[] ss = searchDictionary.split("/");
 			String sss = ss[ss.length-1];
-			sss = sss.split("\\.")[0];
-			opt = sss;
+			option = sss.split("\\.")[0];
 		}
-		return opt;
+		return option;
 	}
 
 	protected void runMatchSummaryAndCount(String option) {

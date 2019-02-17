@@ -141,7 +141,7 @@ private static final String RESULT_XPATH_ROOT = "//result";
 		//    -o word.frequencies.snippets.xml  
 
 		String filterCommandString = createFilterCommandString(option);
-		LOG.trace("filter: "+filterCommandString);
+		LOG.trace("filter debug: "+filterCommandString);
 		new DefaultArgProcessor(filterCommandString).runAndOutput();
 		LOG.trace("end filter");
 		return;

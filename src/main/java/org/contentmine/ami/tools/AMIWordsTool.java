@@ -232,7 +232,7 @@ public class AMIWordsTool extends AbstractAMITool {
 			commandProcessor.parseCommandsNew(WordPluginOption.TAG, subOptions, optionFlags);
 			// this runs commands and filters results
 			LOG.debug("running command: "+wordCmd);
-			commandProcessor.runCommands();
+			commandProcessor.runCommands(this);
 			commandProcessor.createDataTables();
 		} catch (IOException e) {
 			throw new RuntimeException("Cannot run command: "+wordCmd, e);
@@ -248,7 +248,7 @@ public class AMIWordsTool extends AbstractAMITool {
 			commandProcessor.parseCommands(cmdList);
 			// this runs commands and filters results
 			LOG.debug("running command: "+wordCmd);
-			commandProcessor.runCommands();
+			commandProcessor.runLegacyPluginOptions(this);
 			// runs runExtractWords
 			// runs outputWords
 			//
