@@ -52,7 +52,7 @@ public class SearchPluginOption extends AMIPluginOption {
 //		dictionary = getOption(null);
 		optionString = dictionary;
 		LOG.trace("SEARCH "+commandString);
-		System.out.println("SR: "+projectDir+"  ");
+//		System.out.println("SR: "+projectDir+"  ");
 		new SearchArgProcessor(commandString.toString()).runAndOutput();
 	}
 

@@ -208,8 +208,10 @@ public class CooccurrenceAnalyzer {
 
 	public void writeSVG() throws IOException {
 		File cooccurrenceFile = new File(createCooccurrenceDir(), "cooccur.svg");
-		SVGSVG svg = createSVG(/*cooccurrenceMatrix, rowAnalyzer, colAnalyzer*/);
-		XMLUtil.debug(svg, cooccurrenceFile, 1);
+		SVGSVG svg = createSVG();
+		if (svg != null) {
+			XMLUtil.debug(svg, cooccurrenceFile, 1);
+		}
 		
 	}
 

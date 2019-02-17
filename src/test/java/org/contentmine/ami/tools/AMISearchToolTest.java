@@ -23,6 +23,7 @@ public class AMISearchToolTest {
 				"-p "+targetDir
 				+ " --dictionaryTop /Users/pm286/ContentMine/dictionary/dictionaries"
 				+ " --dictionary country bio/auxin"
+				+ " --ignorePlugins word"
 			;
 		new AMISearchTool().runCommands(args);
 	}

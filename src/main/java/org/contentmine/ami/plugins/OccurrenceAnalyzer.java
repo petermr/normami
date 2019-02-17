@@ -304,7 +304,7 @@ public class OccurrenceAnalyzer {
 	public List<Entry<String>> debug() {
 		List<Entry<String>> cellsByImportance = this.getOrCreateEntriesSortedByImportance();
 		String message = getFullName();
-		LOG.debug("analyze: " + message + "\n" + cellsByImportance);
+		LOG.trace("analyze: " + message + "\n" + cellsByImportance);
 		return cellsByImportance;
 	}
 
@@ -342,11 +342,15 @@ public class OccurrenceAnalyzer {
 		File dir = subType == null ? typeTop : new File(typeTop, subType.getName());
 		return new File(dir, HISTOGRAM + "." + suffix);
 	}
-	
+
+	/** currently no-op, have to write a simple histogram
+	 * 
+	 * @throws IOException
+	 */
 	public void writeSVG() throws IOException {
 		getOrCreateEntriesSortedByImportance();
 		File file = createFileByType(CTree.SVG);
-		LOG.debug("writeSVG NYI");
+		LOG.trace("writeSVG NYI");
 //		MultisetUtil.writeCSV(file, resultsByImportance, getName());
 	}
 

@@ -2,13 +2,13 @@ package org.contentmine.ami.tools;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIProcessor;
-import org.contentmine.ami.plugins.AMIPluginOption;
 import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.DebugPrint;
@@ -37,9 +37,14 @@ public class AMISearchTool extends AbstractAMITool {
     private List<String> dictionarySuffix;
 
     @Option(names = {"--dictionaryTop"},
-    		arity = "1*",
+    		arity = "1",
             description = " local dictionary home directory")
     private List<String> dictionaryTopList;
+
+    @Option(names = {"--ignorePlugins"},
+    		arity = "1..*",
+            description = " list of plugins to skip (mainly for debugging)")
+    private List<String> ignorePluginList = new ArrayList<>();
 
 
     private File dictionaryFile;
@@ -64,6 +69,7 @@ public class AMISearchTool extends AbstractAMITool {
 		System.out.println("dictionaryList       " + dictionaryList);
 		System.out.println("dictionaryTop        " + dictionaryTopList);
 		System.out.println("dictionarySuffix     " + dictionarySuffix);
+		System.out.println("ignorePlugins        " + ignorePluginList);
 		System.out.println();
 	}
 
@@ -99,7 +105,7 @@ public class AMISearchTool extends AbstractAMITool {
 			commandProcessor.parseCommands(cmdList);
 			commandProcessor.runNormaIfNecessary();
 			commandProcessor.runJsonBibliography();
-			commandProcessor.runPluginOptions();
+			commandProcessor.runPluginOptions(this);
 			commandProcessor.createDataTables();
 		
 		} catch (IOException e) {
@@ -158,6 +164,8 @@ public class AMISearchTool extends AbstractAMITool {
 		return check;
 	}
 
-
+	public List<String> getIgnorePluginList() {
+		return ignorePluginList;
+	}
 
 }

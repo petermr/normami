@@ -11,6 +11,8 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMISearchTool;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.OptionFlag;
@@ -50,6 +52,7 @@ public class CommandProcessor {
 	private Map<String, String> symbolMap;
 	private String helpString;
 	private Map<String, AbstractMetadata> metadataByCTreename;
+	private AbstractAMITool abstractAMITool;
 	
 	private CommandProcessor() {
 		init();
@@ -165,7 +168,7 @@ public class CommandProcessor {
 	public void runCommands() {
 		runNormaIfNecessary();
 		for (AMIPluginOption pluginOption : pluginOptions) {
-			LOG.debug("running: "+pluginOption);
+			System.out.println("plugin: "+pluginOption);
 			try {
 				pluginOption.run();
 			} catch (Exception e) {
@@ -289,14 +292,19 @@ public class CommandProcessor {
 		return pluginOptions;
 	}
 
-	public void runPluginOptions() {
+	public void runPluginOptions(AMISearchTool amiSearchTool) {
 		List<AMIPluginOption> pluginOptions = this.getPluginOptions();
 		for (AMIPluginOption pluginOption : pluginOptions) {
-			System.out.println("running: "+pluginOption);
+			String plugin = pluginOption.getPlugin();
+			System.out.println("running: " + plugin + "; " + pluginOption);
+			if (amiSearchTool.getIgnorePluginList().contains(plugin)) {
+				System.out.println("ignored: " + plugin);
+				continue;
+			}
 			try {
 				pluginOption.run();
 			} catch (Exception e) {
-				LOG.error("cannot run command: "+pluginOption +"; " + e.getMessage());
+				System.err.println("cannot run command: "+pluginOption +"; " + e.getMessage());
 				continue;
 			}
 			System.out.println("filter: "+pluginOption);
@@ -315,11 +323,15 @@ public class CommandProcessor {
 			AbstractMetadata metadataEntry = cTree.readMetadata(epmcConverter, cTree.getAllowedChildFile(CTree.EUPMC_RESULT_JSON));
 			metadataByCTreename.put(cTree.getName(), metadataEntry);
 		}
-		LOG.debug("keys "+metadataByCTreename.keySet());
+		LOG.trace("keys "+metadataByCTreename.keySet());
 	}
 
 	public Map<String, AbstractMetadata> getMetadataByCTreename() {
 		return metadataByCTreename;
+	}
+
+	public void setAbstractAMITool(AbstractAMITool abstractAMITool) {
+		this.abstractAMITool = abstractAMITool;
 	}
 
 

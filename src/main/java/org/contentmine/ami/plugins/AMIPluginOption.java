@@ -69,7 +69,7 @@ private static final String RESULT_XPATH_ROOT = "//result";
 	 * */
 	public static AMIPluginOption createPluginOption(String cmd) {
 		Matcher matcher = COMMAND.matcher(cmd);
-		LOG.debug("cmd: "+cmd);
+//		LOG.debug("cmd: "+cmd);
 		if (cmd == null || cmd.trim().equals("")) {
 			throw new RuntimeException("Null/empty command");
 		} else if (!matcher.matches()) {
@@ -88,7 +88,7 @@ private static final String RESULT_XPATH_ROOT = "//result";
 	}
 
 	public static AMIPluginOption createPluginOption(String optionTag, List<String> subOptions, List<OptionFlag> optionFlags) {
-		LOG.debug("OPTION: "+optionTag+" ... " +" subOptions: "+subOptions+ "\n option flags: "+optionFlags);
+		LOG.trace("OPTION: "+optionTag+" ... " +" subOptions: "+subOptions+ "\n option flags: "+optionFlags);
 		AMIPluginOption pluginOption = null;
 		if (false) {
 		} else if (optionTag.equals(GenePluginOption.TAG)) {
@@ -141,9 +141,9 @@ private static final String RESULT_XPATH_ROOT = "//result";
 		//    -o word.frequencies.snippets.xml  
 
 		String filterCommandString = createFilterCommandString(option);
-		LOG.debug("filter: "+filterCommandString);
+		LOG.trace("filter: "+filterCommandString);
 		new DefaultArgProcessor(filterCommandString).runAndOutput();
-		LOG.debug("end filter");
+		LOG.trace("end filter");
 		return;
 	}
 
@@ -218,9 +218,9 @@ String cmd0 ="	--project /Users/pm286/workspace/cmdev/normami/target/cooccurrenc
 				+ " --dffile "+createDocumentCountFilename(option)
 				;
 		DefaultArgProcessor.CM_LOG.debug("runMatchSummaryAndCount: "+cmd);
-		System.out.print("C: "+option+"; ");
+//		System.out.print("C: "+option+"; ");
 		new DefaultArgProcessor(cmd).runAndOutput();
-		LOG.debug("end summary "+option);
+//		LOG.debug("end summary "+option);
 		return;
 	}
 	
