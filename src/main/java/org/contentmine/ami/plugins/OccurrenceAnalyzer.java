@@ -107,7 +107,7 @@ public class OccurrenceAnalyzer {
 		}
 	}
 
-	public final static String COOCCURRENCE = "cooccurrence";
+//	public final static String COOCCURRENCE = "cooccurrence";
 	public static final String HISTOGRAM = "histogram";
 
 	private List<Multiset.Entry<String>> resultsByImportance;
@@ -337,7 +337,7 @@ public class OccurrenceAnalyzer {
 	}
 
 	public File createFileByType(String suffix) {
-		File cooccurrenceTop = new File(entityAnalyzer.getProjectDir(), COOCCURRENCE);
+		File cooccurrenceTop = new File(entityAnalyzer.getProjectDir(), CooccurrenceAnalyzer.COOCCURRENCE);
 		File typeTop = new File(cooccurrenceTop, OccurrenceType.STRING.equals(type) ? name : type.name);
 		File dir = subType == null ? typeTop : new File(typeTop, subType.getName());
 		return new File(dir, HISTOGRAM + "." + suffix);

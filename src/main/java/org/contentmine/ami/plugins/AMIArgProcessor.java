@@ -256,7 +256,27 @@ public class AMIArgProcessor extends NormaArgProcessor {
 		} else {
 			sectionElements = extractPSectionElements(currentCTree);
 		}
+		truncateLargeLists(getMaxSectionElements());
 		return sectionElements;
+	}
+
+	/** maximum number of sections. Currently arbitrary at 1000.
+	 * this should be settable, but it's quite a distamce between new and old tools
+	 * @return
+	 */
+	private int getMaxSectionElements() {
+		return 500;
+	}
+
+	private void truncateLargeLists(int maxsize) {
+		if (sectionElements.size() > maxsize) {
+			System.out.println("\nlarge document (" + sectionElements.size() + ") for " + currentCTree.getName() + " truncated to " + maxsize + " sections");
+			List<Element> newList = new ArrayList<Element>();
+			for (int i = 0; i < maxsize; i++) {
+				newList.add(sectionElements.get(i));
+			}
+			sectionElements = newList;
+		}
 	}
 
 	public String getPlugin() {

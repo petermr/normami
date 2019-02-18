@@ -54,6 +54,7 @@ public class SpeciesArgProcessor extends AMIArgProcessor {
 	}
 
 	public void runExtractSpecies(ArgumentOption option) {
+		LOG.trace("SEARCH SPECIES: extract");
 		searchSectionElements();
 	}
 

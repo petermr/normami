@@ -22,7 +22,9 @@ public class AMISearchToolTest {
 //				"-p /* /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika10a/"
 				"-p "+targetDir
 				+ " --dictionaryTop /Users/pm286/ContentMine/dictionary/dictionaries"
-				+ " --dictionary country bio/auxin"
+				+ " --dictionary "
+				+ ""
+				+ "country bio.auxin"
 				+ " --ignorePlugins word"
 			;
 		new AMISearchTool().runCommands(args);
@@ -39,5 +41,31 @@ public class AMISearchToolTest {
 		new AMISearchTool().runCommands(args);
 	}
 
+	@Test
+	public void testAMISearchNew() {
+		File targetDir = new File("target/cooccurrence/ocimum");
+		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum200"), targetDir);
+		String args = /*ami-search-new*/""
+				+ " -p "+targetDir 
+				+ " --ignorePlugins word"
+//				+ " --dictionaryTop /Users/pm286/workspace/tigr2ess/dictionaries/"
++ " --dictionary" + /*" country plantparts" +*/ " /Users/pm286/workspace/tigr2ess/dictionaries/monoterpenes"
+//+ " --dictionary" + /*" country plantparts" +*/ " /Users/pm286/workspace/tigr2ess/dictionaries/monoterpenes"
+				;
+		new AMISearchTool().runCommands(args);
+	}
+	
+	@Test
+	/** serious performance problems on PMC3390897 - */
+	public void testAMISearchNewSpecies() {
+		File targetDir = new File("target/cooccurrence/species");
+		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/scratch/centaurea"), targetDir);
+		String args = /*ami-search-new*/""
+				+ " -p "+targetDir 
+				+ " --ignorePlugins word"
+				+ " --dictionary species "
+				;
+		new AMISearchTool().runCommands(args);
+	}
 	
 }

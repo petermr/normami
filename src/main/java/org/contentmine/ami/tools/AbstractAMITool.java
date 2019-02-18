@@ -57,7 +57,7 @@ import picocli.CommandLine.Option;
 			//String resourceBundle() default "";
 	usageHelpWidth = 80,
 	
-	version = "ami20190123"
+	version = "ami20190218b"
 	)
 
 public abstract class AbstractAMITool implements Callable<Void> {
@@ -298,7 +298,13 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		}
 	}
 
-	private String checkDirExistenceAndGetAbsoluteName(File dir, String type) {
+	/** this looks awful
+	 * 
+	 * @param dir
+	 * @param type
+	 * @return
+	 */
+	private String checkDirExistenceAndGetAbsoluteNameOld(File dir, String type) {
 		String cProjectDirectory = null;
 		if (!dir.exists() || !dir.isDirectory()) {
 			File parentFile = dir.getParentFile();
@@ -312,6 +318,27 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		}
 		return cProjectDirectory;
 	}
+	
+	private String checkDirExistenceAndGetAbsoluteName(File dir, String type) {
+		String directory = null;
+		if (dir == null) {
+			throw new RuntimeException("null project");
+		} else if (!dir.exists() || !dir.isDirectory()) {
+			File parentFile = dir.getParentFile();
+			if (parentFile != null && (parentFile.exists() || parentFile.isDirectory())) {
+				dir = parentFile;
+				LOG.info("** using parentFile as " + type + ": "+directory);
+			} else {
+	 			System.err.println(type + " must be existing directory or have directory parent: " +
+			        cProjectDirectory + "("+dir.getAbsolutePath());
+	 			return null;
+			}
+			directory = dir.getAbsolutePath();
+		}
+		return directory;
+	}
+
+
 
 	private CTreeList generateCTreeList() {
 		cTreeList = new CTreeList();
@@ -374,6 +401,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
         System.out.println("log4j               " + (log4j == null ? "" : new ArrayList<String>(Arrays.asList(log4j))));
         System.out.println("logfile             " + logfile);
         System.out.println("verbose             " + verbosity.length);
+//        System.out.println("version             " + version);
 	}
 
 	public void setCProject(CProject cProject) {

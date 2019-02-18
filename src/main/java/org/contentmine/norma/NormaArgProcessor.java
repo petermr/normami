@@ -1,6 +1,8 @@
 package org.contentmine.norma;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -819,6 +821,9 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 					is = new ResourceLocation().getInputStreamHeuristically(dictionarySource);
 				}
 				if (is == null) {
+					is = readAsFile(dictionaryResource);
+				}
+				if (is == null) {
 					throw new RuntimeException("cannot read inputStream for dictionary: "+dictionaryResource);
 				}
 				DefaultStringDictionary dictionary = DefaultStringDictionary.createDictionary(dictionarySource, is);
@@ -828,6 +833,20 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 				dictionaryList.add(dictionary);
 			}
 		}
+
+		private InputStream readAsFile(String dictionaryResource) {
+			InputStream is = null;
+			File file = new File(dictionaryResource);
+			if (file.exists()) {
+				try {
+					is = new FileInputStream(file);
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
+			}
+			return is;
+		}
+	
 
 		protected void ensureDictionaryList() {
 			if (dictionaryList == null) {

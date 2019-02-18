@@ -105,6 +105,7 @@ public class AMISearchTool extends AbstractAMITool {
 	}
 
 	private void runLegacyCommandProcessor(String cmd) {
+		System.out.println("SEARCH running legacy processors");
 		try {
 			
 			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
@@ -163,7 +164,7 @@ public class AMISearchTool extends AbstractAMITool {
 			}
 		}
 		if (dictionaryInputStream == null) {
-			LOG.debug("cannot find builtin dictionary: " + dictionary);
+			LOG.trace("cannot find builtin dictionary: " + dictionary);
 		}
 		return dictionaryInputStream;
 	}
@@ -181,7 +182,7 @@ public class AMISearchTool extends AbstractAMITool {
 					}
 					break;
 				} else {
-					LOG.debug("cannot find: "+dictionaryFile);
+					LOG.trace("cannot find: "+dictionaryFile);
 				}
 			}
 		}

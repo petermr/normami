@@ -15,6 +15,7 @@ import org.contentmine.ami.tools.AMISearchTool;
 import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
+import org.contentmine.cproject.files.CTreeList;
 import org.contentmine.cproject.files.OptionFlag;
 import org.contentmine.cproject.files.ResourceLocation;
 import org.contentmine.cproject.metadata.AbstractMetadata;
@@ -200,7 +201,7 @@ public class CommandProcessor {
 	}
 	
 	public void createDataTables() throws IOException {
-		System.out.println("create data tables");
+		System.out.println("\ncreate data tables");
 		if (projectDir == null) {
 			throw new RuntimeException("projectDir must be set");
 		}
@@ -279,7 +280,7 @@ public class CommandProcessor {
 		AMISearchTool amiSearchTool = (amiTool != null && amiTool instanceof AMISearchTool) ? (AMISearchTool) amiTool : null;
 		for (AMIPluginOption pluginOption : pluginOptions) {
 			String plugin = pluginOption.getPlugin();
-			System.out.println("running: " + plugin + "; " + pluginOption);
+			System.out.print("\nrunning: " + plugin + "; " + pluginOption);
 			if (amiSearchTool != null && amiSearchTool.getIgnorePluginList().contains(plugin)) {
 				System.out.println("ignored: " + plugin);
 				continue;
@@ -290,9 +291,9 @@ public class CommandProcessor {
 				System.err.println("cannot run command: "+pluginOption +"; " + e.getMessage());
 				continue;
 			}
-			System.out.println("filter: "+pluginOption);
+//			System.out.println("filter: "+pluginOption);
 			pluginOption.runFilterResultsXMLOptions();
-			System.out.println("summary: "+pluginOption);
+//			System.out.println("summary: "+pluginOption);
 			pluginOption.runSummaryAndCountOptions(); 
 		}
 		LOG.trace(pluginOptions);
@@ -306,14 +307,29 @@ public class CommandProcessor {
 
 
 	public void runJsonBibliography() {
+		System.out.println("SEARCH running JSON bibliography");
 		CProject cProject = new CProject(projectDir);
-		metadataByCTreename = new HashMap<>();
+		getOrCreateMetadataByTreename();
 		EPMCConverter epmcConverter = new EPMCConverter();
-		for (CTree cTree : cProject.getOrCreateCTreeList()) {
+		CTreeList cTreeList = cProject.getOrCreateCTreeList();
+		LOG.trace(cProject + " CTree list: " + cTreeList.size());
+		for (CTree cTree : cTreeList) {
+			LOG.trace(cTree.getDirectory());
 			AbstractMetadata metadataEntry = cTree.readMetadata(epmcConverter, cTree.getAllowedChildFile(CTree.EUPMC_RESULT_JSON));
-			metadataByCTreename.put(cTree.getName(), metadataEntry);
+			if (metadataEntry != null) {
+				String cTreename = cTree.getName();
+				LOG.trace("CT "+cTreename);
+				metadataByCTreename.put(cTreename, metadataEntry);
+			}
 		}
 		LOG.trace("keys "+metadataByCTreename.keySet());
+	}
+
+	private Map<String, AbstractMetadata> getOrCreateMetadataByTreename() {
+		if (metadataByCTreename == null) {
+			metadataByCTreename = new HashMap<>();
+		}
+		return metadataByCTreename;
 	}
 
 	public Map<String, AbstractMetadata> getMetadataByCTreename() {

@@ -12,6 +12,7 @@ import java.util.Set;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CTree;
+import org.contentmine.cproject.files.CTreeList;
 import org.contentmine.eucl.euclid.Angle;
 import org.contentmine.eucl.euclid.Angle.Units;
 import org.contentmine.eucl.xml.XMLUtil;
@@ -37,7 +38,7 @@ public class CooccurrenceAnalyzer {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-	public static final String COOCCURRENCE = "cooccurrence";
+	public static final String COOCCURRENCE = CTreeList.FORBIDDEN_PREFIX + "cooccurrence";
 	
 	private OccurrenceAnalyzer rowAnalyzer;
 	private OccurrenceAnalyzer colAnalyzer;
