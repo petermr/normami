@@ -1,6 +1,7 @@
 package org.contentmine.ami.lookups;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +30,7 @@ import nu.xom.Element;
  */
 // ALL TRANSFERRED TO IT
 // @Ignore // unless testing Lookup
-@Ignore
+//@Ignore
 public class WikipediaLookupTest {
 
 	
@@ -151,5 +152,16 @@ public class WikipediaLookupTest {
 				);
 	}
 
-	
+	@Test
+	public void testCreateWikidataSparqlLookup() throws IOException {
+		String query =
+				"#DOI lookup.\n" +
+                "SELECT ?item " +
+                "WHERE {" +
+                "  ?item wdt:P356 \"10.1186/1472-6882-6-3\" ." +
+                "}";
+
+		Element element = WikipediaLookup.createWikidataSparqlLookup(query);
+		Assert.assertNotNull("non-null SPARQL", element);
+	}
 }

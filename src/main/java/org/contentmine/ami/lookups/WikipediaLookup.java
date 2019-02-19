@@ -2,8 +2,10 @@ package org.contentmine.ami.lookups;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,6 +28,7 @@ import org.contentmine.graphics.html.HtmlHtml;
 import org.contentmine.graphics.html.HtmlLi;
 import org.contentmine.graphics.html.HtmlUl;
 
+import com.google.common.collect.BiMap;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
@@ -52,7 +55,18 @@ public class WikipediaLookup extends AbstractLookup {
 	public static final String PROPERTY = "wikidataProperty";
 	private static final String WIKIDATA = "wikidata";
 
-
+	private static Map<String, String> propertyByPID = new HashMap<>();
+	private static Map<String, String> pidByProperty = new HashMap<>();
+	static {
+		addProperty("P356", "DOI");
+		addProperty("P698", "PMID");
+		addProperty("P932", "PMCID");
+		addProperty("P1476","title");
+	};
+	private static void addProperty(String pid, String propname) {
+		propertyByPID.put(propname, pid);
+		pidByProperty.put(pid, propname);
+	}
 	/**
 Magnus Manske
 	
@@ -216,6 +230,69 @@ view-source:https://www.wikidata.org/w/api.php?action=query&list=search&srsearch
 		URL url = createUrl(urlString);
 		return url;
 	}
+	
+	/** SPARQL lookup
+	 * e.g. 
+	 * "#DOI lookup.\n" +
+                "SELECT ?item " +
+                "WHERE {" +
+                "  ?item wdt:P356 \"10.1186/1472-6882-6-3\" ." +
+                "}";
+                
+                
+	 * 
+	 results in:
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+	<head>
+		<variable name="item" />
+	</head>
+	<results>
+		<result>
+			<binding name="item">
+				<uri>http://www.wikidata.org/entity/Q25257418</uri>
+			</binding>
+		</result>
+	</results>
+</sparql>
+	 
+	 * @param query un-encoded
+	 * @return XML 
+	 * @throws IOException 
+	 * @throws MalformedURLException 
+	 */
+	public static Element createWikidataSparqlLookup(String query) throws IOException {
+		Element element = null;
+		if (query != null) {
+			query = query.trim();
+			try {
+				query = URLEncoder.encode(query, "UTF-8");
+			} catch (UnsupportedEncodingException e) {
+				throw new RuntimeException("BUG", e);
+			}
+			String s = "https://query.wikidata.org/sparql?query=" + query;
+			try {
+				URL url = new URL(s);
+				element = XMLUtil.parseQuietlyToRootElement(url.openStream());
+			} catch (MalformedURLException e) {
+				throw new RuntimeException("BUG", e);
+			}
+		}
+		return element;
+	}
+	
+	public static String createTriple(String subj, String property, String obj) {
+		String triple = "";
+		if (subj == null || property == null || obj == null) {
+			LOG.error("null args");
+		}
+		String pid = property.startsWith("P") ? property : pidByProperty.get(property);
+		if (pid == null) {
+			LOG.error("unknown property: " + property);
+		} 
+		triple = subj + " " + property + " " + obj + " " + ".";
+		return triple;
+	}
+	
 	
 	/** don't think this works anymore ; check REST API */
 	public IntArray getWikidataIDsAsIntArray(List<String> speciesNames) throws IOException {
@@ -565,6 +642,8 @@ species of bird
 		}
 		return wikidata;
 	}
+	
+	
 
 	/** gets single Q number from list of HTMLA elements from wikidata search.
 	 * 

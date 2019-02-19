@@ -1,6 +1,6 @@
 #! /bin/sh
 
-VERSION=ami20190218c
+VERSION=ami20190219
 DIR=../ami-jars/${VERSION}/
 mkdir ${DIR}
 cp -R target/appassembler/bin ${DIR}/bin

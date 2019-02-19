@@ -67,5 +67,18 @@ public class AMISearchToolTest {
 				;
 		new AMISearchTool().runCommands(args);
 	}
+
+	@Test
+	public void testAMISearchBug() {
+		File targetDir = new File("target/cooccurrence/ocimum");
+		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum200"), targetDir);
+		String args = /*ami-search-new*/""
+				+ " -p "+targetDir 
+				+ " --ignorePlugins word"//				
+				+ " --dictionary /Users/pm286/workspace/tigr2ess/dictionaries/monoterpenes country " 
+				;
+		new AMISearchTool().runCommands(args);
+	}
 	
+
 }
