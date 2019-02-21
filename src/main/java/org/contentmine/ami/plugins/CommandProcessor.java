@@ -11,6 +11,7 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.lookups.WikipediaLookup;
 import org.contentmine.ami.tools.AMISearchTool;
 import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.cproject.files.CProject;
@@ -201,11 +202,22 @@ public class CommandProcessor {
 	}
 	
 	public void createDataTables() throws IOException {
+		createDataTables(false);
+	}
+	
+	/**create dataTables with wikidata lookup enabled.
+	 * 
+	 * @param wikidataBiblio
+	 * @throws IOException
+	 */
+	public void createDataTables(boolean wikidataBiblio) throws IOException {
 		System.out.println("\ncreate data tables");
 		if (projectDir == null) {
 			throw new RuntimeException("projectDir must be set");
 		}
 		DataTablesTool dataTablesTool = DataTablesTool.createBiblioEnabledTable();
+		dataTablesTool.setLookup(new WikipediaLookup());
+		dataTablesTool.setAddWikidataBiblio(wikidataBiblio);
 		dataTablesTool.setProjectDir(projectDir);
 		dataTablesTool.setMetadataByTreename(metadataByCTreename);
 		
@@ -307,7 +319,7 @@ public class CommandProcessor {
 
 
 	public void runJsonBibliography() {
-		System.out.println("SEARCH running JSON bibliography");
+//		System.out.println("SEARCH running JSON bibliography");
 		CProject cProject = new CProject(projectDir);
 		getOrCreateMetadataByTreename();
 		EPMCConverter epmcConverter = new EPMCConverter();

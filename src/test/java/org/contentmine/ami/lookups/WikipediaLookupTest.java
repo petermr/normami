@@ -160,8 +160,7 @@ public class WikipediaLookupTest {
                 "WHERE {" +
                 "  ?item wdt:P356 \"10.1186/1472-6882-6-3\" ." +
                 "}";
-
-		Element element = WikipediaLookup.createWikidataSparqlLookup(query);
+		Element element = new WikipediaLookup().createSparqlLookup(query);
 		Assert.assertNotNull("non-null SPARQL", element);
 	}
 }

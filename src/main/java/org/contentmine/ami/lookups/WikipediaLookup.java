@@ -16,6 +16,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.ami.dictionary.DefaultAMIDictionary;
 import org.contentmine.ami.dictionary.DictionaryTerm;
 import org.contentmine.cproject.lookup.AbstractLookup;
+import org.contentmine.cproject.metadata.DataTableLookup;
 import org.contentmine.cproject.util.CMineUtil;
 import org.contentmine.eucl.euclid.IntArray;
 import org.contentmine.eucl.xml.XMLUtil;
@@ -37,8 +38,9 @@ import net.minidev.json.JSONArray;
 import nu.xom.Attribute;
 import nu.xom.Element;
 
-public class WikipediaLookup extends AbstractLookup {
+public class WikipediaLookup extends AbstractLookup implements DataTableLookup {
 
+	private static final String WIKIDATA_SPARQL_QUERY = "https://query.wikidata.org/sparql?query=";
 	private static final String DOLLAR_PROPS = "$.props.";
 	private static final String STRING = "string";
 	private static final String ITEMS = "items";
@@ -260,18 +262,21 @@ view-source:https://www.wikidata.org/w/api.php?action=query&list=search&srsearch
 	 * @throws IOException 
 	 * @throws MalformedURLException 
 	 */
-	public static Element createWikidataSparqlLookup(String query) throws IOException {
+	public Element createSparqlLookup(String query) throws IOException {
 		Element element = null;
 		if (query != null) {
 			query = query.trim();
 			try {
+				// encode everything, spaces become "+"
 				query = URLEncoder.encode(query, "UTF-8");
+				// change + to %20
+				query = query.replaceAll("\\+", "%20");
 			} catch (UnsupportedEncodingException e) {
 				throw new RuntimeException("BUG", e);
 			}
-			String s = "https://query.wikidata.org/sparql?query=" + query;
+			String urlString = WIKIDATA_SPARQL_QUERY + query;
 			try {
-				URL url = new URL(s);
+				URL url = new URL(urlString);
 				element = XMLUtil.parseQuietlyToRootElement(url.openStream());
 			} catch (MalformedURLException e) {
 				throw new RuntimeException("BUG", e);
@@ -686,7 +691,6 @@ species of bird
 		return wikiResult;
 	}
 
-	
     /**
      * These attempted to retrieve multiple species to avoid bandwidth but the id<->species map is lost.
      * 
@@ -737,5 +741,6 @@ species of bird
 //		return new URL(urlString);
 //	}
     
+	
 		
 }

@@ -49,7 +49,7 @@ public class AMISearchToolTest {
 				+ " -p "+targetDir 
 				+ " --ignorePlugins word"
 //				+ " --dictionaryTop /Users/pm286/workspace/tigr2ess/dictionaries/"
-+ " --dictionary" + /*" country plantparts" +*/ " /Users/pm286/workspace/tigr2ess/dictionaries/monoterpenes"
++ " --dictionary" + /*" country plantparts" +*/ " /Users/pm286/workspace/tigr2ess/dictionaries/examples/monoterpenes"
 //+ " --dictionary" + /*" country plantparts" +*/ " /Users/pm286/workspace/tigr2ess/dictionaries/monoterpenes"
 				;
 		new AMISearchTool().runCommands(args);
@@ -75,7 +75,7 @@ public class AMISearchToolTest {
 		String args = /*ami-search-new*/""
 				+ " -p "+targetDir 
 				+ " --ignorePlugins word"//				
-				+ " --dictionary /Users/pm286/workspace/tigr2ess/dictionaries/monoterpenes country " 
+				+ " --dictionary /Users/pm286/workspace/tigr2ess/dictionaries/examples/monoterpenes country " 
 				;
 		new AMISearchTool().runCommands(args);
 	}

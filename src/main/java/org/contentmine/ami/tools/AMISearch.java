@@ -21,6 +21,10 @@ public class AMISearch {
 	public static final String HELP = "help";
 
 	public static void main(String[] args) {
+		System.err.println(""
+				+ "*******************************\n"
+				+ "WARNING: AMISearch is being replaced by AMISearchTool (ami-search-new)\n"
+				+ "*******************************\n");
 		List<String> argList = new ArrayList<String>(Arrays.asList(args));
 		if (argList.size() == 0 || HELP.equals(argList.get(0))) {
 			runHelp(argList);

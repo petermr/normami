@@ -84,10 +84,14 @@ public class AMISearchTool extends AbstractAMITool {
     protected void runSpecifics() {
     	if (cProject == null) {
     		DebugPrint.errorPrintln(Level.ERROR, "requires cProject");
-    	} else {
+    	} else if (projectExists(cProject)) {
     		processProject();
     	}
     }
+
+	private boolean projectExists(CProject cProject) {
+		return cProject == null || cProject.getDirectory() == null ? false : cProject.getDirectory().isDirectory();
+	}
 
 	public void processProject() {
 		System.out.println("cProject: "+cProject.getName());
@@ -105,7 +109,7 @@ public class AMISearchTool extends AbstractAMITool {
 	}
 
 	private void runLegacyCommandProcessor(String cmd) {
-		System.out.println("SEARCH running legacy processors");
+//		System.out.println("SEARCH running legacy processors");
 		try {
 			
 			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
@@ -148,7 +152,7 @@ public class AMISearchTool extends AbstractAMITool {
 		} else if (getLocalDictionaryInputStream(facet) != null) {
 		} else if (getBuiltinDictionaryInputStream(facet) != null) {
 		} else {
-			System.err.println("cannot find dictionary: "+facet);
+//			System.err.println("cannot find dictionary: "+facet);
 		}
 	}
 

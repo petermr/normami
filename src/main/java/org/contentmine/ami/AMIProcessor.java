@@ -14,6 +14,7 @@ import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.ami.plugins.EntityAnalyzer;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
+import org.contentmine.cproject.util.DataTablesTool;
 import org.contentmine.eucl.euclid.util.CMFileUtil;
 import org.contentmine.eucl.euclid.util.CMStringUtil;
 import org.contentmine.eucl.xml.XMLUtil;
@@ -113,6 +114,7 @@ public class AMIProcessor {
 			String argString = /*cProject.getDirectory()+" "+*/cmd;
 			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
 			commandProcessor.processCommands(argString);
+//			DataTablesTool dataTablesTool = DataTablesTool.createBiblioEnabledTable();
 			commandProcessor.createDataTables();
 
 		} catch (IOException e) {

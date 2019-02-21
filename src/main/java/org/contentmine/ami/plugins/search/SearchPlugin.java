@@ -33,6 +33,11 @@ public class SearchPlugin extends AMIPlugin {
 	}
 
 	public static void main(String[] args) {
-		new SearchArgProcessor(args).runAndOutput();		
+		System.err.println(""
+				+ "*******************************\n"
+				+ "WARNING: AMISearch has been replaced by AMISearchTool (ami-search-new)\n"
+				+ "*******************************\n");
+
+//		new SearchArgProcessor(args).runAndOutput();		
 	}
 }

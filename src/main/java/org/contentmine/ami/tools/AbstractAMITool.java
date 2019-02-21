@@ -57,7 +57,7 @@ import picocli.CommandLine.Option;
 			//String resourceBundle() default "";
 	usageHelpWidth = 80,
 	
-	version = "ami20190219"
+	version = "ami20190220"
 	)
 
 public abstract class AbstractAMITool implements Callable<Void> {
@@ -284,8 +284,15 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		if (cProjectDirectory != null) {
 			File cProjectDir = new File(cProjectDirectory);
 			cProjectDirectory = checkDirExistenceAndGetAbsoluteName(cProjectDir, "cProject");
-			cProject = new CProject(cProjectDir);
-			cTreeList = generateCTreeList();
+			if (cProjectDirectory != null) {
+				cProject = new CProject(cProjectDir);
+				cTreeList = generateCTreeList();
+			} else {
+				System.err.println(""
+						+ "************************\n"
+						+ "WARNING: CProject directory does not exist\n"
+						+ "************************\n");
+			}
     	}
 	}
 
@@ -323,17 +330,18 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		String directory = null;
 		if (dir == null) {
 			throw new RuntimeException("null project");
-		} else if (!dir.exists() || !dir.isDirectory()) {
+		}
+		directory = dir.getAbsolutePath();
+		if (!dir.exists() || !dir.isDirectory()) {
 			File parentFile = dir.getParentFile();
 			if (parentFile != null && (parentFile.exists() || parentFile.isDirectory())) {
 				dir = parentFile;
 				LOG.info("** using parentFile as " + type + ": "+directory);
 			} else {
 	 			System.err.println(type + " must be existing directory or have directory parent: " +
-			        cProjectDirectory + "("+dir.getAbsolutePath());
+			        cProjectDirectory + " ("+dir.getAbsolutePath());
 	 			return null;
 			}
-			directory = dir.getAbsolutePath();
 		}
 		return directory;
 	}
@@ -390,7 +398,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
         System.out.println("basename            " + userBasename);
         System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
         System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
-        System.out.println("cTreeList           " + cTreeList);
+        System.out.println("cTreeList           " + prettyPrint(cTreeList));
         System.out.println("dryrun              " + dryrun);
         System.out.println("excludeBase         " + excludeBase);
         System.out.println("excludeTrees        " + excludeTrees);
@@ -402,6 +410,16 @@ public abstract class AbstractAMITool implements Callable<Void> {
         System.out.println("logfile             " + logfile);
         System.out.println("verbose             " + verbosity.length);
 //        System.out.println("version             " + version);
+	}
+
+	private String prettyPrint(CTreeList cTreeList) {
+		String s = String.valueOf(cTreeList);
+		if (cTreeList == null) {
+		} else if (cTreeList.size() <= 5) {
+		} else {
+			s = "" + cTreeList.size() + " trees " + s.substring(0, Math.min(50, s.length()));
+		}
+		return s;
 	}
 
 	public void setCProject(CProject cProject) {
