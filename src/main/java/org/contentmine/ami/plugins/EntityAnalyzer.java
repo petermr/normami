@@ -323,12 +323,6 @@ public class EntityAnalyzer {
 			if (!runCommand(cmd)) return false;
 		}
 		
-//		createAndAddOccurrenceAnalyzer("country").setMaxCount(20);
-//		createAndAddOccurrenceAnalyzer("funders").setMaxCount(20);
-//		createAndAddOccurrenceAnalyzer("inn").setMaxCount(20);
-//		createAndAddOccurrenceAnalyzer("obesity").setMaxCount(20);
-//		createAndAddOccurrenceAnalyzer("cochrane").setMaxCount(20);
-		
 		createAllCooccurrences();
 		return true;
 	}

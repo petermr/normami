@@ -6,6 +6,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMICleanTool;
 import org.contentmine.cproject.files.CProject;
+import org.contentmine.cproject.util.CMineTestFixtures;
 import org.junit.Test;
 
 import junit.framework.Assert;
@@ -55,34 +56,57 @@ public class AMICleanTest {
 	 * tests cleaning directories in a project for ami-search
 	 */
 	public void testCleanResults() {
-		String cmd = "-p /Users/pm286/workspace/tigr2ess/osanctum --dir results cooccurrence";
+		File targetDir = new File("target/cooccurrence/osanctum200");
+		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum200"), targetDir);
+
+		String cmd = "-p " + targetDir + " --dir results cooccurrence";
 		new AMICleanTool().runCommands(cmd);
 		// delete children of ctrees
-		cmd = "-p /Users/pm286/workspace/tigr2ess/osanctum"
+		cmd = "-p " + targetDir + ""
 			+ " --file "
 			+ " gene.human.count.xml"
 		    + " gene.human.snippets.xml"
 		    + " scholarly.html"
-		    + " search.country.count.xml"
-		    + " search.country.snippets.xml"
-		    + " search.disease.count.xml"
-		    + " search.disease.snippets.xml"
-		    + " search.diterpene.count.xml"
-		    + " search.diterpene.snippets.xml"
-		    + " search.drugs.count.xml"
-		    + " search.drugs.snippets.xml"
-		    + " search.monoterpene.count.xml"
-		    + " search.monoterpene.snippets.xml"
-		    + " search.monoterpenes.count.xml"
-		    + " search.monoterpenes.snippets.xml"
-		    + " search.plantparts.count.xml"
-		    + " search.plantparts.snippets.xml"
-		    + " search.spices.count.xml"
-		    + " search.spices.snippets.xml"
+//		    + " search.country.count.xml"
+//		    + " search.country.snippets.xml"
+//		    + " search.disease.count.xml"
+//		    + " search.disease.snippets.xml"
+//		    + " search.diterpene.count.xml"
+//		    + " search.diterpene.snippets.xml"
+//		    + " search.drugs.count.xml"
+//		    + " search.drugs.snippets.xml"
+//		    + " search.monoterpene.count.xml"
+//		    + " search.monoterpene.snippets.xml"
+//		    + " search.monoterpenes.count.xml"
+//		    + " search.monoterpenes.snippets.xml"
+//		    + " search.plantparts.count.xml"
+//		    + " search.plantparts.snippets.xml"
+//		    + " search.spices.count.xml"
+//		    + " search.spices.snippets.xml"
 		    + " species.binomial.count.xml"
 		    + " species.binomial.snippets.xml"
 		    + " word.frequencies.count.xml"
 		    + " word.frequencies.snippets.xml";
+		new AMICleanTool().runCommands(cmd);
+	}
+
+	@Test
+	/**
+	 * tests cleaning directories in a project for ami-search
+	 */
+	public void testCleanResultsGlob() {
+		File targetDir = new File("target/cooccurrence/osanctum200");
+		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum200"), targetDir);
+		String cmd;
+//		String cmd = "-p " + targetDir + " --dir results cooccurrence";
+//		new AMICleanTool().runCommands(cmd);
+		// delete children of ctrees
+		cmd = "-p " + targetDir + ""
+			+ " --fileglob "
+			+ " gene.**.xml"
+		    + " **/species.*"
+		    + " search.*"
+		    + " xml";
 		new AMICleanTool().runCommands(cmd);
 	}
 

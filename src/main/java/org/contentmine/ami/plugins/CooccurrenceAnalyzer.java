@@ -302,8 +302,7 @@ public class CooccurrenceAnalyzer {
 		return text;
 	}
 
-	private static SVGText createColText(double x, double y, double fontSize,
-			String title) {
+	private static SVGText createColText(double x, double y, double fontSize, String title) {
 		Real2 xy = new Real2(x, y);
 		SVGText text = new SVGText(xy, title.substring(0,  Math.min(15,  title.length())));
 		Transform2 t2 = Transform2.getRotationAboutPoint(new Angle(Math.PI / 2.,Units.RADIANS), xy);
@@ -322,10 +321,12 @@ public class CooccurrenceAnalyzer {
 
 	private static SVGText createCellText(double x, double y, double fontSize,
 			double strokeWidth, int count) {
+		String fill = "orange";
+		String stroke = "orange";
 		SVGText cellText = new SVGText(new Real2(x, y), String.valueOf(count));
 		cellText.setFontSize(fontSize);
-		cellText.setFill("black");
-		cellText.setStroke("yellow");
+		cellText.setFill(fill);
+		cellText.setStroke(stroke);
 		cellText.setStrokeWidth(strokeWidth);
 		cellText.setFontFamily("Helvetica");
 		return cellText;

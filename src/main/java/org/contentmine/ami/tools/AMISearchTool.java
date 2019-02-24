@@ -51,6 +51,11 @@ public class AMISearchTool extends AbstractAMITool {
             description = " list of plugins to skip (mainly for debugging)")
     private List<String> ignorePluginList = new ArrayList<>();
 
+    @Option(names = {"--wikidataBiblio"},
+    		arity = "0",
+            description = " lookup wikidata biblographic object")
+    private Boolean wikidataBiblio = false;
+
 
     private File dictionaryFile;
 
@@ -121,7 +126,7 @@ public class AMISearchTool extends AbstractAMITool {
 			commandProcessor.runNormaIfNecessary();
 			commandProcessor.runJsonBibliography();
 			commandProcessor.runLegacyPluginOptions(this);
-			commandProcessor.createDataTables();
+			commandProcessor.createDataTables(wikidataBiblio);
 		
 		} catch (IOException e) {
 			throw new RuntimeException("Cannot run command: "+cmd, e);

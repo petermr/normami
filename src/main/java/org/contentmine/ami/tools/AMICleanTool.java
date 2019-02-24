@@ -1,5 +1,6 @@
 package org.contentmine.ami.tools;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.eucl.euclid.Util;
 
 import picocli.CommandLine.Command;
@@ -126,6 +128,14 @@ public class AMICleanTool extends AbstractAMITool {
  //   	if (files != null) cleanFiles(Arrays.asList(files));
     	if (dirs != null) cleanFileOrDirs(Arrays.asList(dirs));
     	if (files!= null) cleanFileOrDirs(Arrays.asList(files));
+    	if (fileGlobs != null && cProjectDirectory != null) {
+    		for (String fileGlob : fileGlobs) {
+	    		List<File> globList = CMineGlobber.listGlobbedFilesQuietly(cProject.getDirectory(), fileGlob);
+	    		LOG.debug("GLOB: " + fileGlob+" ==> "+globList);
+	    		globList = CMineGlobber.listSortedChildFiles(cProject.getDirectory(), fileGlob);
+	    		LOG.debug("CHILD GLOB: " + fileGlob+" ==> "+globList);
+    		}
+    	}
     }
 
 	public void cleanFiles(List<String> filenames) {

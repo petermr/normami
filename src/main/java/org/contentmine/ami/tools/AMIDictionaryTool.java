@@ -228,13 +228,14 @@ public class AMIDictionaryTool extends AbstractAMITool {
    		description = "external hyperlink column from table; might be Wikidata or remote site(s)"
     		)
     private String[] hrefCols;
-        
-    @Option(names = {"--hreftext"}, 
-    		arity="0",
-    		description = "hyperlinks from text (maybe excludes tables);"
-    				+ " requires wikipedia or wikitable input at present; still under test"
-    		)
-	public String href;
+
+    // obsoleted
+//    @Option(names = {"--hreftext"}, 
+//    		arity="0",
+//    		description = "hyperlinks from text (maybe excludes tables);"
+//    				+ " requires wikipedia or wikitable input at present; still under test"
+//    		)
+//	public String href;
     
     @Option(names = {"--informat"}, 
     		arity="1",
@@ -367,7 +368,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
         dictionaryData.dataCols    = dataCols;
         dictionaryData.dictionary  = dictionary;
         dictionaryData.dictionaryTopname   = dictionaryTopname;
-        dictionaryData.href        = href;
+//        dictionaryData.href        = href;
         dictionaryData.hrefCols    = hrefCols;
         dictionaryData.informat    = informat;
         dictionaryData.input       = input;
@@ -949,7 +950,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		System.out.println("dataCols      "+dataCols);
 		System.out.println("dictionary    "+(dictionary == null ? "null" : Arrays.asList(dictionary)));
 		System.out.println("dictionaryTop     "+dictionaryTopname);
-		System.out.println("href          "+href);
+//		System.out.println("href          "+href);
 		System.out.println("hrefCols      "+hrefCols);
 		System.out.println("input         "+input);
 		System.out.println("informat      "+informat);
@@ -1203,6 +1204,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 			LOG.debug("extracting hyperlinks");
 			createListOfHyperlinks(htmlElement);
 		}
+		
 	}
 
 	// ================== LIST ===================

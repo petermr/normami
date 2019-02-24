@@ -7,14 +7,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.cproject.util.CMineUtil;
+import org.contentmine.eucl.euclid.Angle;
+import org.contentmine.eucl.euclid.Angle.Units;
+import org.contentmine.eucl.euclid.Real2;
+import org.contentmine.eucl.euclid.Transform2;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.svg.SVGElement;
+import org.contentmine.graphics.svg.SVGG;
+import org.contentmine.graphics.svg.SVGRect;
+import org.contentmine.graphics.svg.SVGSVG;
+import org.contentmine.graphics.svg.SVGText;
+import org.contentmine.graphics.svg.SVGText.RotateText;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
@@ -348,13 +357,66 @@ public class OccurrenceAnalyzer {
 	 * @throws IOException
 	 */
 	public void writeSVG() throws IOException {
-		getOrCreateEntriesSortedByImportance();
 		File file = createFileByType(CTree.SVG);
-		LOG.trace("writeSVG NYI");
-//		MultisetUtil.writeCSV(file, resultsByImportance, getName());
+		SVGElement svgElement = createHistogram(500, 250);
+		SVGSVG.wrapAndWriteAsSVG(svgElement, file);
 	}
 
 
+
+	private SVGElement createHistogram(int width, int height) {
+		int max = -1;
+		double shrink = 0.9;
+		double x0 = 10;
+		for (Entry<String> entry : resultsByImportance) {
+			max = Math.max(max, entry.getCount());
+		}
+		double barWidth = ((double) width) / (double) resultsByImportance.size(); 
+		SVGG g = plotBars(resultsByImportance, width, height, max, shrink, x0, barWidth);
+		
+		return g;
+	}
+
+	private SVGG plotBars(List<Entry<String>> entriesSortedByImportance, int width, int height, int max, double shrink,
+			double x0, double barWidth) {
+		SVGG g = new SVGG();
+		double y = 10.;
+		for (int i = 0; i < entriesSortedByImportance.size(); i++) {
+			Entry<String> entry = entriesSortedByImportance.get(i);
+			int x = (int) ((double) i * barWidth + x0); 
+			Real2 xy = new Real2(x, y);
+			SVGRect rect = plotBar(height, max, shrink, barWidth, y, entry, x);
+			g.appendChild(rect);
+
+			double fontSize = 20.0;
+			SVGText text = plotText(entry, xy, fontSize);
+			g.appendChild(text);
+			
+
+//			text.rotateTextAboutPoint(xy, t2);
+			
+		}
+		return g;
+	}
+
+	private SVGText plotText(Entry<String> entry, Real2 xy, double fontSize) {
+		String name = entry.getElement();
+		name = name.substring(0,  Math.min(15, name.length()));
+		SVGText text = new SVGText(xy, name);
+		text.setFontSize(fontSize);
+		Transform2 t2 = Transform2.getRotationAboutPoint(new Angle(Math.PI / 2.,Units.RADIANS), xy);
+		text.applyTransform(t2, RotateText.FALSE);
+		return text;
+	}
+
+	private SVGRect plotBar(int height, int max, double shrink, double barWidth, double y, Entry<String> entry,
+			int x) {
+		int barHeight = (int) ( (double) (entry.getCount() * shrink * height)  / max); 
+		SVGRect rect = new SVGRect(x, y - barHeight, barWidth, barHeight);
+		rect.setOpacity(0.3);
+		rect.setFill("cyan");
+		return rect;
+	}
 
 	@Override
 	public String toString() {
