@@ -33,6 +33,9 @@ public class WordPluginOption extends AMIPluginOption {
 		commandString.append(sw);
 		LOG.trace("WORD "+commandString);
 		//System.out.print("WS: "+projectDir+"  ");
+		DefaultArgProcessor argProcessor = new WordArgProcessor(commandString.toString());
+		argProcessor.setDebug(true);
+		argProcessor.runAndOutput();
 		new WordArgProcessor(commandString.toString()).runAndOutput();
 //		new SearchArgProcessor(commandString.toString()).runAndOutput();
 	}

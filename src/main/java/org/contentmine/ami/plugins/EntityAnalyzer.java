@@ -11,6 +11,11 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.OccurrenceType;
 import org.contentmine.ami.plugins.OccurrenceAnalyzer.SubType;
+import org.contentmine.eucl.euclid.Real2;
+import org.contentmine.eucl.euclid.Transform2;
+import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.svg.SVGG;
+import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.norma.Norma;
 
 /** analyzes chunks/caches for entities in context.
@@ -192,7 +197,25 @@ public class EntityAnalyzer {
 	}
 
 	public void createAllCooccurrences() {
-		for (int irow = 0; irow < occurrenceAnalyzerList.size(); irow++) {
+		int deltax = 720;
+		int deltay = 720;
+		int size = occurrenceAnalyzerList.size();
+		int xwindow = size * deltax;
+		int ywindow = size * deltay;
+		SVGSVG totalSvg = new SVGSVG();
+		double scale = 1.2 / size;
+		totalSvg.setTransform(Transform2.applyScale(scale));
+		totalSvg.setWidth(xwindow);
+		totalSvg.setHeight(ywindow);
+		SVGSVG[][] svgMatrix = new SVGSVG[size][size];
+		for (int i = 0; i < size; i++) {
+			svgMatrix[i] = new SVGSVG[size];
+//			for (int j = 0; j < size; j++) {
+//				svgMatrix[i][j] = new SVGSVG[size];
+//			}
+		}
+		for (int irow = 0; irow < size; irow++) {
+			int xoffset = irow * deltax;
 			OccurrenceAnalyzer rowAnalyzer = occurrenceAnalyzerList.get(irow);
 			if (writeCsv) {
 				try {
@@ -210,6 +233,7 @@ public class EntityAnalyzer {
 			}
 			// allow diagonal entries
 			for (int jcol = irow; jcol < occurrenceAnalyzerList.size(); jcol++) {
+				int yoffset = jcol * deltay;
 				OccurrenceAnalyzer colAnalyzer = occurrenceAnalyzerList.get(jcol);
 				CooccurrenceAnalyzer rowColCoocAnalyzer = createCooccurrenceAnalyzer(rowAnalyzer, colAnalyzer);
 				rowColCoocAnalyzer.analyze();
@@ -222,12 +246,26 @@ public class EntityAnalyzer {
 				}
 				if (writeSVG) {
 					try {
-						rowColCoocAnalyzer.writeSVG();
+						SVGSVG svg = rowColCoocAnalyzer.writeSVG();
+						SVGSVG svgCopy = (SVGSVG) svg.copy();
+						Real2 translation = new Real2(xoffset, yoffset);
+						Transform2 t2 = Transform2.getTranslationTransform(translation);
+						SVGG g = new SVGG();
+						g.copyChildrenFrom(svgCopy);
+						g.setTransform(t2);
+						totalSvg.appendChild(g);
 					} catch (IOException e) {
 						throw new RuntimeException("Cannot write SVG", e);
 					}
 				}
 			}
+			File outputFile = new File("target/cooccurrence/multiSvg.svg");
+			try {
+				XMLUtil.debug(totalSvg, outputFile, 1);
+			} catch (IOException e) {
+				throw new RuntimeException("Cannot write SVG", e);
+			}
+			
 		}
 							
 	}

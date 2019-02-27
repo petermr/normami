@@ -207,12 +207,13 @@ public class CooccurrenceAnalyzer {
 		return cooccurrenceFile;
 	}
 
-	public void writeSVG() throws IOException {
+	public SVGSVG writeSVG() throws IOException {
 		File cooccurrenceFile = new File(createCooccurrenceDir(), "cooccur.svg");
 		SVGSVG svg = createSVG();
 		if (svg != null) {
 			XMLUtil.debug(svg, cooccurrenceFile, 1);
 		}
+		return svg;
 		
 	}
 

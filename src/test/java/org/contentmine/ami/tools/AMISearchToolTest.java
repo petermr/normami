@@ -5,6 +5,7 @@ import java.io.File;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
+import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.junit.Test;
 
@@ -13,6 +14,11 @@ public class AMISearchToolTest {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+
+	static File TIGR2ESS = new File("/Users/pm286/workspace/Tigr2essDistrib/tigr2ess");
+	private static final File DICTIONARY_EXAMPLES = new File(TIGR2ESS, "dictionaries/examples/");
+	static File OSANCTUM200 = new File(TIGR2ESS, "/osanctum200");
+	static File OSANCTUM2000 = new File(TIGR2ESS, "scratch/ocimum2019027");
 
 	@Test
 	public void testZikaCooccurrence0() {
@@ -44,13 +50,26 @@ public class AMISearchToolTest {
 	@Test
 	public void testAMISearchNew() {
 		File targetDir = new File("target/cooccurrence/ocimum");
-		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum200"), targetDir);
-		String args = /*ami-search-new*/""
+		CMineTestFixtures.cleanAndCopyDir(OSANCTUM200, targetDir);
+		String args = ""
 				+ " -p "+targetDir 
 				+ " --ignorePlugins word"
-//				+ " --dictionaryTop /Users/pm286/workspace/tigr2ess/dictionaries/"
-+ " --dictionary" + /*" country plantparts" +*/ " /Users/pm286/workspace/tigr2ess/dictionaries/examples/monoterpenes"
-//+ " --dictionary" + /*" country plantparts" +*/ " /Users/pm286/workspace/tigr2ess/dictionaries/monoterpenes"
+				+ " --dictionary "+TIGR2ESS.toString()+"/dictionaries/examples/monoterpenes"
+				;
+		new AMISearchTool().runCommands(args);
+	}
+	
+	@Test
+	public void testAMISearchLarge() {
+//		File targetDir = new File("target/cooccurrence/ocimum");
+//		CMineTestFixtures.cleanAndCopyDir(OSANCTUM2000, targetDir);
+		File targetDir = OSANCTUM2000;
+//		CMineTestFixtures.cleanAndCopyDir(OSANCTUM2000, targetDir);
+		LOG.debug(OSANCTUM2000 + "; "+new CProject(targetDir).getOrCreateCTreeList().size());
+		String args = ""
+				+ " -p "+targetDir 
+//				+ " --ignorePlugins word"
+				+ " --dictionary "+TIGR2ESS.toString()+"/dictionaries/examples/monoterpenes"
 				;
 		new AMISearchTool().runCommands(args);
 	}
@@ -70,12 +89,14 @@ public class AMISearchToolTest {
 
 	@Test
 	public void testAMISearchBug() {
-		File targetDir = new File("target/cooccurrence/ocimum");
-		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum200"), targetDir);
+//		File targetDir = new File("target/cooccurrence/ocimum");
+//		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum200"), targetDir);
+		File targetDir = OSANCTUM200;
+//		CMineTestFixtures.cleanAndCopyDir(new File("/Users/pm286/workspace/tigr2ess/osanctum200"), targetDir);
 		String args = /*ami-search-new*/""
 				+ " -p "+targetDir 
 				+ " --ignorePlugins word"//				
-				+ " --dictionary /Users/pm286/workspace/tigr2ess/dictionaries/examples/monoterpenes country " 
+				+ " --dictionary "+DICTIONARY_EXAMPLES+"/monoterpenes country species plantparts" 
 				;
 		new AMISearchTool().runCommands(args);
 	}
