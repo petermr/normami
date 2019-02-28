@@ -203,17 +203,12 @@ public class EntityAnalyzer {
 		int xwindow = size * deltax;
 		int ywindow = size * deltay;
 		SVGSVG totalSvg = new SVGSVG();
+		SVGG topG = new SVGG();
+		totalSvg.appendChild(topG);
 		double scale = 1.2 / size;
-		totalSvg.setTransform(Transform2.applyScale(scale));
-		totalSvg.setWidth(xwindow);
-		totalSvg.setHeight(ywindow);
-		SVGSVG[][] svgMatrix = new SVGSVG[size][size];
-		for (int i = 0; i < size; i++) {
-			svgMatrix[i] = new SVGSVG[size];
-//			for (int j = 0; j < size; j++) {
-//				svgMatrix[i][j] = new SVGSVG[size];
-//			}
-		}
+		topG.setTransform(Transform2.applyScale(scale));
+		totalSvg.setWidth(xwindow * scale);
+		totalSvg.setHeight(ywindow * scale);
 		for (int irow = 0; irow < size; irow++) {
 			int xoffset = irow * deltax;
 			OccurrenceAnalyzer rowAnalyzer = occurrenceAnalyzerList.get(irow);
@@ -245,21 +240,11 @@ public class EntityAnalyzer {
 					}
 				}
 				if (writeSVG) {
-					try {
-						SVGSVG svg = rowColCoocAnalyzer.writeSVG();
-						SVGSVG svgCopy = (SVGSVG) svg.copy();
-						Real2 translation = new Real2(xoffset, yoffset);
-						Transform2 t2 = Transform2.getTranslationTransform(translation);
-						SVGG g = new SVGG();
-						g.copyChildrenFrom(svgCopy);
-						g.setTransform(t2);
-						totalSvg.appendChild(g);
-					} catch (IOException e) {
-						throw new RuntimeException("Cannot write SVG", e);
-					}
+					SVGG g = writeCooccurrenceSVG(xoffset, yoffset, rowColCoocAnalyzer);
+					topG.appendChild(g);
 				}
 			}
-			File outputFile = new File("target/cooccurrence/multiSvg.svg");
+			File outputFile = new File(this.createCooccurenceTop(), "allPlots.svg");
 			try {
 				XMLUtil.debug(totalSvg, outputFile, 1);
 			} catch (IOException e) {
@@ -268,6 +253,23 @@ public class EntityAnalyzer {
 			
 		}
 							
+	}
+
+	private SVGG writeCooccurrenceSVG(int xoffset, int yoffset, CooccurrenceAnalyzer rowColCoocAnalyzer) {
+		SVGG g = new SVGG();
+		try {
+			SVGSVG svg = rowColCoocAnalyzer.writeSVG();
+			SVGSVG svgCopy = (SVGSVG) svg.copy();
+			Real2 translation = new Real2(xoffset, yoffset);
+			Transform2 t2 = Transform2.getTranslationTransform(translation);
+//			SVGG g = new SVGG();
+			g.copyChildrenFrom(svgCopy);
+			g.setTransform(t2);
+//			totalSvg.appendChild(g);
+		} catch (IOException e) {
+			throw new RuntimeException("Cannot write SVG", e);
+		}
+		return g;
 	}
 
 	/** writes CSV files for each occurrence analyzer.
@@ -455,6 +457,11 @@ public class EntityAnalyzer {
 
 	private void runDefaults() {
 		LOG.error("runDefaults NYI");
+	}
+
+	File createCooccurenceTop() {
+		File cooccurrenceTop = new File(getProjectDir(), CooccurrenceAnalyzer.COOCCURRENCE);
+		return cooccurrenceTop;
 	}
 
 	private static File makeInputFile(String fileroot) {

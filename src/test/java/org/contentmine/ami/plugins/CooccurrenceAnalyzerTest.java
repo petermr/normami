@@ -111,7 +111,7 @@ public class CooccurrenceAnalyzerTest {
 			+ "(3,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0)"
 			;
 		IntMatrix cooccurrenceMatrix = IntMatrix.readMatrix(matrixS);
-		SVGSVG svg = CooccurrenceAnalyzer.createSVG(cooccurrenceMatrix, rowAnalyzer, colAnalyzer);
+		SVGSVG svg = new CooccurrenceAnalyzer(null).createSVG(cooccurrenceMatrix, rowAnalyzer, colAnalyzer);
 		XMLUtil.debug(svg, new File("target/debug/svgColorMatrix1.svg"), 1);
 
 	}

@@ -346,7 +346,7 @@ public class OccurrenceAnalyzer {
 	}
 
 	public File createFileByType(String suffix) {
-		File cooccurrenceTop = new File(entityAnalyzer.getProjectDir(), CooccurrenceAnalyzer.COOCCURRENCE);
+		File cooccurrenceTop = entityAnalyzer.createCooccurenceTop();
 		File typeTop = new File(cooccurrenceTop, OccurrenceType.STRING.equals(type) ? name : type.name);
 		File dir = subType == null ? typeTop : new File(typeTop, subType.getName());
 		return new File(dir, HISTOGRAM + "." + suffix);

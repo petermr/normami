@@ -237,18 +237,22 @@ public class CooccurrenceAnalyzer {
 	}
 
 		/** really for debugging, rewrite with member variables */
-	public static SVGSVG createSVG(IntMatrix cooccurrenceMatrix, OccurrenceAnalyzer rowAnalyzer, OccurrenceAnalyzer colAnalyzer) {
+	public SVGSVG createSVG(IntMatrix cooccurrenceMatrix, OccurrenceAnalyzer rowAnalyzer, OccurrenceAnalyzer colAnalyzer) {
 
 		double x0 = 10.;
 		double dx = 22;
 		double xoff = 140;
 		double dy = 22;
 		double yoff = 140;
+		double xoff0 = 0.0;
 		double x;
 		double y;
 //		double fontSizeFactor = 0.85;
 		double fontSizeFactor = 0.60;
 		double strokeWidth = 0.8;
+		int axisFontSize = (int) dy;
+		String axisTextStroke = "red";
+		double labelOpacity = 1.0;
 		
 		SVGG grid = new SVGG();
 		if (cooccurrenceMatrix.getCols() <= 0 || cooccurrenceMatrix.getRows() <= 0) {
@@ -257,6 +261,11 @@ public class CooccurrenceAnalyzer {
 		int largestElement = cooccurrenceMatrix.largestElement();
 		List<Entry<String>> rowEntries = rowAnalyzer == null ? null : rowAnalyzer.getOrCreateEntriesSortedByImportance();
 		List<Entry<String>> colEntries = colAnalyzer == null ? null : colAnalyzer.getOrCreateEntriesSortedByImportance();
+
+		SVGText colSvgText = plotTitle(colAnalyzer.getName(), xoff0, yoff - dy, axisFontSize, axisTextStroke, labelOpacity, grid);
+		grid.appendChild(colSvgText);
+		SVGText rowSvgText = plotTitle(rowAnalyzer.getName(), xoff0, yoff, axisFontSize, axisTextStroke, labelOpacity, grid);
+		grid.appendChild(rowSvgText);
 
 		for (int irow = 0; irow < cooccurrenceMatrix.getRows(); irow++) {
 			y = (irow * dy) + yoff;
@@ -284,6 +293,13 @@ public class CooccurrenceAnalyzer {
 		SVGSVG svg = SVGSVG.wrapAsSVG(grid);
 		return svg;
 	}
+
+		private SVGText plotTitle(String rowName, double xoff, double yoff, int axisFontSize,
+				String axisTextStroke, double labelOpacity, SVGG grid) {
+			Real2 rowXy = new Real2(xoff, yoff);
+			SVGText rowSvgText = SVGText.createDefaultText(rowXy, rowName, axisFontSize, axisTextStroke);
+			return rowSvgText;
+		}
 
 	private static SVGG createCell(double dx, double dy, double x, double y, double fontSize, double strokeWidth,
 			int largestElement, int count) {
