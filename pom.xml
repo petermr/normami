@@ -170,6 +170,12 @@
 							<!-- description: run AMI searches and co-occurrence -->
                             <id>ami-search-cooccur</id>
                         </program>
+                        <program>
+                         <!--  now a tool -->
+                            <mainClass>org.contentmine.ami.tools.AMISummaryTool</mainClass>
+							<!-- description: run AMI summary -->
+                            <id>ami-summary</id>
+                        </program>
                         
                         <program>
                         <!-- may need renaming -->

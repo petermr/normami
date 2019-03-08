@@ -57,7 +57,7 @@ import picocli.CommandLine.Option;
 			//String resourceBundle() default "";
 	usageHelpWidth = 80,
 	
-	version = "ami20190227" // also edit ami-jars-sh
+	version = "ami20190228" // also edit ami-jars-sh
 	)
 
 public abstract class AbstractAMITool implements Callable<Void> {

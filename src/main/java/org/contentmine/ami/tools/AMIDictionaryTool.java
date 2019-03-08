@@ -882,6 +882,8 @@ public class AMIDictionaryTool extends AbstractAMITool {
 					}
 				}
 			}
+		} else {
+			LOG.warn("no dictionary written");
 		}
 	}
 	

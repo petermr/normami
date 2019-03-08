@@ -259,12 +259,14 @@ public class EntityAnalyzer {
 		SVGG g = new SVGG();
 		try {
 			SVGSVG svg = rowColCoocAnalyzer.writeSVG();
-			SVGSVG svgCopy = (SVGSVG) svg.copy();
-			Real2 translation = new Real2(xoffset, yoffset);
-			Transform2 t2 = Transform2.getTranslationTransform(translation);
-//			SVGG g = new SVGG();
-			g.copyChildrenFrom(svgCopy);
-			g.setTransform(t2);
+			if (svg != null) {
+				SVGSVG svgCopy = (SVGSVG) svg.copy();
+				Real2 translation = new Real2(xoffset, yoffset);
+				Transform2 t2 = Transform2.getTranslationTransform(translation);
+	//			SVGG g = new SVGG();
+				g.copyChildrenFrom(svgCopy);
+				g.setTransform(t2);
+			}
 //			totalSvg.appendChild(g);
 		} catch (IOException e) {
 			throw new RuntimeException("Cannot write SVG", e);
