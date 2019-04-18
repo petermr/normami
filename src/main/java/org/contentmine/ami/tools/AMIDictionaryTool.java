@@ -283,6 +283,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
     @Option(names = {"--splitcol"}, 
     		arity="1",
     		paramLabel="input separator",
+    		defaultValue=",",
     		description = "character to split input values; (default: ${DEFAULT-VALUE})"
     		)
     private String splitCol=",";
@@ -356,6 +357,9 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	private void initDict() {
 	}
 	
+	public static void main(String args) {
+		main(args.split("\\s+"));
+	}
 	public static void main(String[] args) {
         AMIDictionaryTool amiDictionary = new AMIDictionaryTool();
         amiDictionary.initDictionaryData();
@@ -1039,7 +1043,13 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		nameList = new ArrayList<String>();
 		linkList = new ArrayList<String>();
 		for (HtmlTable table : tableList) {
-			if (table.getClassAttribute().contains(WIKITABLE)) {
+			String classAttribute = table.getClassAttribute();
+			if (classAttribute == null) {
+				LOG.debug("table has no class attribute ");
+				continue;
+			}
+//			LOG.debug(">>"+table.toXML());
+			if (classAttribute.contains(WIKITABLE)) {
 				addTableNamesAndHrefs(table);
 			}
 		}

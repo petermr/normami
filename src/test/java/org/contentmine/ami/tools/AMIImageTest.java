@@ -399,6 +399,27 @@ public class AMIImageTest {
 		amiImage.runCommands(args);
 	}
 	
+	@Test
+	/** 
+	 * 
+	 */
+	public void testImagePanels() throws Exception {
+		// NYI
+		String targetDir = "xxx";
+		String args = 
+				"-p "+targetDir+
+				" --monochrome true"+
+				" --monochromedir monochrome"+
+				" --minwidth 100"+
+				" --minheight 100"+
+				" --smalldir small"+
+				" --duplicates true"+ 
+				" --duplicatedir duplicates"
+				;
+		AMIImageFilterTool amiImage = new AMIImageFilterTool();
+		amiImage.runCommands(args);
+	}
+	
 
 
 	

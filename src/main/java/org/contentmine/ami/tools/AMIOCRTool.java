@@ -90,7 +90,8 @@ public class AMIOCRTool extends AbstractAMITool {
 
     @Option(names = {"--tesseract"},
     		arity = "1",
-            description = "path for tesseract binary e.g. /usr/local/tesseract/")
+            description = "path for tesseract binary e.g. /usr/local/tesseract/",
+            defaultValue = "/usr/local/bin/tesseract")
     private String tesseractPath = null;
 
 
@@ -131,35 +132,62 @@ public class AMIOCRTool extends AbstractAMITool {
     protected void runSpecifics() {
     	if (processTrees()) { 
     	} else {
+    		
 			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
 	    }
     }
 
 	protected void processTree() {
 		System.out.println("cTree: "+cTree.getName());
+		List<File> imageDirs = null;
+		File rawImageDir = null;
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
-		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
-			LOG.warn("no pdfimages/ dir");
-		} else {
-			List<File> imageDirs = cTree.getPDFImagesImageDirectories();
-			LOG.debug("imageDirs: "+imageDirs);
+		if (pdfImagesDir != null && pdfImagesDir.exists()) {
+			imageDirs = cTree.getPDFImagesImageDirectories();
+		}
+		if (imageDirs == null) {
+			rawImageDir = cTree.getExistingImageDir();
+		}
+		if (imageDirs == null && rawImageDir == null) {
+			LOG.warn("no pdfimages/ dir and no image/ dir");
+			return;
+		}
+			
+		if (imageDirs != null) {
+			System.out.println("imageDirs: "+imageDirs.size());
 			Collections.sort(imageDirs);
 			for (File imageDir : imageDirs) {
-//				LOG.debug("imageDir: "+imageDir.getName());
-				File imageFile = getRawImageFile(imageDir);
-				System.err.print(".");
-				runOCR(imageFile);
-				if (outputHtml) {
-					createStructuredHtml();
-				}
+				processImageDir(imageDir);
 			}
+		} else {
+			processRawImageDir(rawImageDir);
+		}
+	}
+
+	private void processRawImageDir(File rawImageDir) {
+		if (rawImageDir == null || !rawImageDir.exists()) {
+			throw new RuntimeException("cannot find imageDir: "+rawImageDir);
+		}
+		List<File> imageDirs = CMineGlobber.listSortedChildDirectories(rawImageDir);
+		for (File imageDir : imageDirs) {
+			processImageDir(imageDir);
+		}
+	}
+
+	private void processImageDir(File imageDir) {
+		File imageFile = getRawImageFile(imageDir);
+//		LOG.debug(imageFile + ": " + imageFile.exists());
+//		System.err.print(".");
+		runOCR(imageFile);
+		if (outputHtml) {
+			createStructuredHtml();
 		}
 	}
 
 	private void createStructuredHtml() {
 		HOCRReader hocrReader = new HOCRReader();
-		if (!outputHOCRFile.exists()) {
-			throw new RuntimeException("Cannot find: "+outputHOCRFile);
+		if (outputHOCRFile == null || !outputHOCRFile.exists()) {
+			throw new RuntimeException("Cannot find outputHOCRFile: "+outputHOCRFile);
 		}
 		String filename = outputHOCRFile.toString();
 		try {
@@ -177,7 +205,7 @@ public class AMIOCRTool extends AbstractAMITool {
 		File outputTop = new File(parentFile, basename);
 		outputTop.mkdirs();
 		File svgFile = new File(outputTop, basename+"."+CTree.SVG);
-  		LOG.debug("svg file "+svgFile);
+//  		LOG.debug("svg file "+svgFile);
 		SVGSVG.wrapAndWriteAsSVG(svgSvg, svgFile);
 		htmlBody = hocrReader.getOrCreateHtmlBody();
 		// debug
@@ -203,14 +231,14 @@ public class AMIOCRTool extends AbstractAMITool {
 	}
 
 	private void runOCR(File imageFile) {
-		String basename = FilenameUtils.getBaseName(imageFile.toString());
+		String basename = FilenameUtils.getBaseName(imageFile.getParentFile().toString());
 		if (!imageFile.exists()) {
 			System.err.println("!not exist "+basename+"!");
 		} else {
 			if (scalefactor != null || Boolean.TRUE.equals(applyScale)) {
 				imageFile = scaleAndWriteFile(imageFile, basename);
 			}
-			System.out.println("?"+basename+"?");
+			System.out.println("["+basename+"]");
 			File outputDir = new File(imageFile.getParentFile(), HOCR_DIR);
 			// messy: tesseract filenames don't have html extension
 			outputHOCRFile = new File(outputDir, basename);

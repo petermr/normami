@@ -2,12 +2,13 @@ package org.contentmine.norma.image.ocr;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CTree;
-import org.contentmine.cproject.util.CMineUtil;
 import org.contentmine.norma.util.CommandRunner;
 
 public class ImageToHOCRConverter extends CommandRunner {
@@ -41,12 +42,18 @@ public class ImageToHOCRConverter extends CommandRunner {
         // tesseract performs the initial Image => HOCR conversion,
     	
     	outputHocrFile.getParentFile().mkdirs();
-    	// program-specific
-		String tessConfig = "";
 		String inputFilename = inputImageFile.getAbsolutePath();
 		String outputFilename = outputHocrFile.getAbsolutePath();
+		// Tesseract arguments are very fragile; I don't know how to vary this
+		List<String> tessConfig = new ArrayList<>();
+		tessConfig.add(getProgram());
+		tessConfig.add(inputFilename);
+		tessConfig.add(outputFilename);
+//		tessConfig.add(option); // there might be an option but I haven't got them to work
+		tessConfig.add(HOCR);
 		
-		builder = new ProcessBuilder(getProgram(), inputFilename, outputFilename, tessConfig, HOCR, encoding );
+		builder = new ProcessBuilder(/*getProgram(), inputFilename, outputFilename, */ tessConfig /*, HOCR, encoding */);
+//		LOG.debug("builder "+builder.command());
         runBuilderAndCleanUp();
         
     	File htmlFile = convertToHtmlFile(outputHocrFile);

@@ -289,8 +289,8 @@ public class AMIPixelTool extends AbstractAMITool {
 	public SVGG findBoxesAndPlotSubIslands(int island) {
 		SVGG g = new SVGG();
 		PixelIsland pixelIsland = pixelIslandList.get(island);
-		System.out.print(" "+pixelIsland.size()+" ");
 		if (pixelIsland != null) {
+			System.out.print(" "+pixelIsland.size()+" ");
 			List<IslandRingList> islandRingListListx = pixelIsland.getOrCreateIslandRingListList();
 			SVGRect box = SVGRect.createFromReal2Range(Real2Range.createReal2Range(pixelIsland.getIntBoundingBox()));
 			String boxColor = COLORS[island % COLORS.length];

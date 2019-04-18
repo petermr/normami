@@ -1,8 +1,12 @@
 package org.contentmine.ami.tools;
 
+import java.io.File;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.tools.AMIOCRTool;
+import org.contentmine.cproject.files.CProject;
+import org.contentmine.cproject.files.CTree;
+import org.contentmine.norma.NormaFixtures;
 import org.junit.Test;
 
 /** test OCR.
@@ -175,5 +179,33 @@ public class AMIOCRTest {
 		new AMIOCRTool().runCommands(args);
 	}
 	
+	@Test
+	public void testBatteryGraph() {
+		CTree cTree = new CTree(new File(NormaFixtures.TEST_IMAGES_DIR, "ocr/battery"));
+		LOG.debug("ctree "+cTree);
+//		File plotImageFile = new File(batteryDir, "panel0_0_128_true.png");
+//		Assert.assertTrue(plotImageFile.exists());
+		AMIOCRTool ocrTool = new AMIOCRTool();
+		String cmd = "--ctree "+cTree.getDirectory();
+		LOG.debug(cmd);
+		ocrTool.runCommands(cmd);
+		
+	
+	}
+
+	@Test
+	public void testSPSS() {
+		File projectDir = new File("/Users/pm286/projects/forestplots/spss");
+//		CTree cTree = new CTree(new File(projectDir, "PMC5502154"));
+		CProject cProject = new CProject(projectDir);
+		AMIOCRTool ocrTool = new AMIOCRTool();
+
+//		String cmd = "--ctree "+cTree.getDirectory();
+		String cmd = "--cproject "+cProject.getDirectory();
+//		LOG.debug(cmd);
+		ocrTool.runCommands(cmd);
+		
+	
+	}
 
 }

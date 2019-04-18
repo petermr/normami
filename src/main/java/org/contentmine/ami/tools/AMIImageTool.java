@@ -394,6 +394,9 @@ public class AMIImageTool extends AbstractAMITool {
 	protected void processTreeTransform() {
 		System.out.println("transformImages cTree: "+cTree.getName());
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
+		if (pdfImagesDir == null) {
+			throw new RuntimeException("Cannot find pdfImages for cTree "+cTree.getName());
+		}
 		List<File> imageDirs = CMineGlobber.listSortedChildDirectories(pdfImagesDir);
 		Collections.sort(imageDirs);
 		for (File imageDir : imageDirs) {

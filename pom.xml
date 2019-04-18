@@ -110,24 +110,29 @@
                             <id>ami-all</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.tools.AMIImageTool</mainClass>
-							<!-- description: process images -->
-                            <id>ami-image</id>
-                        </program>
-                         <program>
                             <mainClass>org.contentmine.ami.tools.AMICleanTool</mainClass>
 							<!-- description: cleans some/all of project -->
                             <id>ami-clean</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.tools.AMIImageFilterTool</mainClass>
-							<!-- description: filters images -->
-                            <id>ami-imagefilter</id>
+                            <mainClass>org.contentmine.ami.tools.AMIForestPlotTool</mainClass>
+							<!-- description: extract ForestPlots from images -->
+                            <id>ami-forestplot</id>
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.tools.AMIGrobidTool</mainClass>
 							<!-- description: process PDF with Grobid -->
                             <id>ami-grobid</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.tools.AMIImageTool</mainClass>
+							<!-- description: process images -->
+                            <id>ami-image</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.tools.AMIImageFilterTool</mainClass>
+							<!-- description: filters images -->
+                            <id>ami-imagefilter</id>
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.tools.AMIOCRTool</mainClass>
@@ -144,11 +149,6 @@
 							<!-- description: process images -->
                             <id>ami-pixel</id>
                         </program>
-                        <program>
-                            <mainClass>org.contentmine.ami.tools.AMISVGTool</mainClass>
-							<!-- description: processes SVG (e.g. created by ami-pdf -->
-                            <id>ami-svg</id>
-                        </program>
                         
                         
 
@@ -157,6 +157,12 @@
                             <mainClass>org.contentmine.ami.tools.AMIDictionaryTool</mainClass>
 							<!-- description: edit/create AMI dictionaries -->
                             <id>ami-dictionary</id>
+                        </program>
+                        <program>
+                        <!-- may need renaming -->
+                            <mainClass>org.contentmine.ami.tools.AMIMakeProjectTool</mainClass>
+							<!-- description: make project from a directory-->
+                            <id>ami-makeproject</id>
                         </program>
                         <program>
                          <!--  now a tool -->
@@ -176,13 +182,12 @@
 							<!-- description: run AMI summary -->
                             <id>ami-summary</id>
                         </program>
-                        
                         <program>
-                        <!-- may need renaming -->
-                            <mainClass>org.contentmine.ami.tools.AMIMakeProjectTool</mainClass>
-							<!-- description: make project from a directory-->
-                            <id>ami-makeproject</id>
+                            <mainClass>org.contentmine.ami.tools.AMISVGTool</mainClass>
+							<!-- description: processes SVG (e.g. created by ami-pdf -->
+                            <id>ami-svg</id>
                         </program>
+                        
                         
                         
                         <!--  older AMI -->

@@ -19,6 +19,7 @@ public class AMIForestPlotTest {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	public static final String DEVTEST = "/Users/pm286/projects/forestplots/spss/";
 
 	@Test
 	public void testHelp() {
@@ -30,14 +31,14 @@ public class AMIForestPlotTest {
 	 */
 	public void testFilterTrees() throws Exception {
 		String args = 
-//				"-t /Users/pm286/workspace/uclforest/devtest/bowmann-perrottetal_2013"
-//				"-t /Users/pm286/workspace/uclforest/devtest/buzick_stone_2014_readalo"
-//				"-t /Users/pm286/workspace/uclforest/devtest/campbell_systematic_revie"
-				"-t /Users/pm286/workspace/uclforest/devtest/case_systematic_review_ar"
-//				"-t /Users/pm286/workspace/uclforest/devtest/mcarthur_etal2012_cochran"
-//				"-t /Users/pm286/workspace/uclforest/devtest/puziocolby2013_co-operati"
-//				"-t /Users/pm286/workspace/uclforest/devtest/torgersonetal_2011dferepo"
-//				"-t /Users/pm286/workspace/uclforest/devtest/zhengetal_2016"
+//				"-t "+DEVTEST+"bowmann-perrottetal_2013"
+//				"-t "+DEVTEST+"buzick_stone_2014_readalo"
+//				"-t "+DEVTEST+"campbell_systematic_revie"
+				"-t "+DEVTEST+"PMC5502154"
+//				"-t "+DEVTEST+"mcarthur_etal2012_cochran"
+//				"-t "+DEVTEST+"puziocolby2013_co-operati"
+//				"-t "+DEVTEST+"torgersonetal_2011dferepo"
+//				"-t "+DEVTEST+"zhengetal_2016"
 //				+ " --sharpen sharpen4"
 				+ " --threshold 180"
 				+ " --binarize BLOCK_OTSU"
@@ -54,7 +55,7 @@ public class AMIForestPlotTest {
 	 */
 	public void testBuzick() throws Exception {
 		String[] args = {
-				"-t", "/Users/pm286/workspace/uclforest/devtest/buzick_stone_2014_readalo"
+				"-t", ""+DEVTEST+"PMC6417514"
 			};
 		new AMIForestPlotTool().runCommands(args);
 	}
@@ -65,7 +66,7 @@ public class AMIForestPlotTest {
 	 */
 	public void testDonkerPlus() throws Exception {
 		String args =
-		"-p /Users/pm286/workspace/uclforest/devtest/"
+		"-p "+DEVTEST+""
 		+ " --includetree"
 		+ " donkerdeboerkostons2014_l"
 		+ " ergen_canagli_17_"
@@ -78,7 +79,7 @@ public class AMIForestPlotTest {
 		;
 //		new AMIImageTool().runCommands(args);
 
-		args = 	"-p /Users/pm286/workspace/uclforest/devtest/"
+		args = 	"-p "+DEVTEST+""
 				+ " --includetree"
 				+ " donkerdeboerkostons2014_l"
 				+ " ergen_canagli_17_"
@@ -95,7 +96,7 @@ public class AMIForestPlotTest {
 	 */
 	public void testScaleOCRProject() throws Exception {
 		String args = ""
-				+ "-p /Users/pm286/workspace/uclforest/devtest/"
+				+ "-p "+DEVTEST+""
 				+ " --includetree"
 				+ " buzick%"
 				+ " case_systematic_review_ar"
