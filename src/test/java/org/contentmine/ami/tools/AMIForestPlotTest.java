@@ -1,13 +1,11 @@
 package org.contentmine.ami.tools;
 
+import java.io.File;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.image.ImageUtil.ThresholdMethod;
+import org.contentmine.cproject.files.CProject;
 import org.junit.Test;
-
-import boofcv.alg.filter.binary.GThresholdImageOps;
-import boofcv.alg.misc.ImageStatistics;
-import boofcv.struct.ConfigLength;
 
 /** test cleaning.
  * 
@@ -124,9 +122,46 @@ public class AMIForestPlotTest {
 	}
 	
 
+	@Test
+	public void testSPSSTable() {
+		File projectDir = new File("/Users/pm286/projects/forestplots/spss");
+//		CTree cTree = new CTree(new File(projectDir, "PMC5502154"));
+		CProject cProject = new CProject(projectDir);
+		AMIOCRTool ocrTool = new AMIOCRTool();
 
-	
+//		String cmd = "--ctree "+cTree.getDirectory();
+		String cmd = "--cproject "+cProject.getDirectory();
+		// create SVG
+		ocrTool.runCommands(cmd);
+		//
+		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
+		cmd = ""
+			+ "--cproject "+cProject.getDirectory()
+//			+ "--ctree "+cTree.getDirectory()
+		    + " --plottype spss"
+		    + " --hocr=true";
+		forestPlotTool.runCommands(cmd);
+		
+	}
 
+	@Test
+	public void testStataTable() {
+		File projectDir = new File("/Users/pm286/projects/forestplots/stata");
+		CProject cProject = new CProject(projectDir);
+		AMIOCRTool ocrTool = new AMIOCRTool();
 
+		String cmd = "--cproject "+cProject.getDirectory();
+		// create SVG
+		ocrTool.runCommands(cmd);
+		//
+		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
+		cmd = ""
+			+ "--cproject "+cProject.getDirectory()
+//			+ "--ctree "+cTree.getDirectory()
+		    + " --plottype stata"
+		    + " --hocr=true";
+		forestPlotTool.runCommands(cmd);
+		
+	}
 
 }

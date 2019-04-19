@@ -1,7 +1,9 @@
 package org.contentmine.ami.tools;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -9,36 +11,23 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
-import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
-import org.contentmine.cproject.util.CMineGlobber;
+import org.contentmine.eucl.euclid.IntArray;
+import org.contentmine.eucl.euclid.IntegerMultiset;
+import org.contentmine.eucl.euclid.IntegerMultisetList;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Array;
-import org.contentmine.eucl.euclid.Real2Range;
-import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.graphics.svg.SVGCircle;
-import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGG;
-import org.contentmine.graphics.svg.SVGLine;
 import org.contentmine.graphics.svg.SVGLineList;
-import org.contentmine.graphics.svg.SVGRect;
 import org.contentmine.graphics.svg.SVGSVG;
-import org.contentmine.image.ImageProcessor;
+import org.contentmine.graphics.svg.SVGText;
+import org.contentmine.graphics.svg.SVGUtil;
 import org.contentmine.image.diagram.DiagramAnalyzer;
-import org.contentmine.image.pixel.IslandRingList;
-import org.contentmine.image.pixel.PixelIsland;
-import org.contentmine.image.pixel.PixelRing;
-import org.contentmine.image.processing.HilditchThinning;
-import org.contentmine.image.processing.Thinning;
-import org.junit.Assert;
-import org.junit.Test;
 
-import com.google.common.collect.HashMultiset;
-import com.google.common.collect.Multiset;
-import com.google.common.collect.Multiset.Entry;
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
 
-import boofcv.io.image.UtilImageIO;
-import nu.xom.Attribute;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -60,8 +49,19 @@ description = "analyzes bitmaps - generally binary, but may be oligochrome. Crea
 
 public class AMIForestPlotTool extends AbstractAMITool {
 	private static final Logger LOG = Logger.getLogger(AMIForestPlotTool.class);
+
+	private static final Double DESCENDER_FUDGE = 0.15;
+
+	private static final int DELTA_Y = 3;
+
+	private static final double EDGE_FRACT = 0.3;
 	static {
 		LOG.setLevel(Level.DEBUG);
+	}
+	
+	public enum PlotType {
+		spss,
+		stata
 	}
 	
     @Option(names = {"--minnested"},
@@ -71,6 +71,18 @@ public class AMIForestPlotTool extends AbstractAMITool {
             		+ "Arcane and experiemental.")
     private Integer minNestedRings = 2;
 	
+    @Option(names = {"--plottype"},
+    		arity = "1",
+            description = "type of SPSS plot")
+    private PlotType plotType;
+
+    @Option(names = {"--hocr"},
+    		arity = "1",
+            description = "use HOCR output from Tesseract",
+            defaultValue = "true"
+            )
+    private boolean useHocr;
+
     @Option(names = {"--radius"},
     		arity = "1",
             description = "radius for drawing circle round centroid")
@@ -98,7 +110,13 @@ public class AMIForestPlotTool extends AbstractAMITool {
 
     @Override
 	protected void parseSpecifics() {
-//		System.out.println("imagefiles           " + imageFilenames);
+		System.out.println("min nested rings    " + minNestedRings);
+		System.out.println("radius of contonurs " + radius);
+		System.out.println("plot type           " + plotType);
+		System.out.println("use Hocr            " + useHocr);
+		System.out.println("scaledFilename      " + basename);
+		System.out.println();
+
 		System.out.println();
 	}
 
@@ -123,8 +141,72 @@ public class AMIForestPlotTool extends AbstractAMITool {
 			File imageFile = getRawImageFile(imageDir);
 			this.basename = FilenameUtils.getBaseName(imageDir.toString());
 			System.err.print(".");
-			runForestPlot(imageFile);
+			if (useHocr) {
+				System.out.println(">> "+basename);
+				try {
+					createTableFromSVG(imageDir);
+				} catch (FileNotFoundException fnfe) {
+					LOG.debug("SVG File not found: "+imageDir);
+				}
+			} else {
+				runForestPlot(imageFile);
+			}
 		}
+	}
+
+	private void createTableFromSVG(File imageDir) throws FileNotFoundException {
+		File hocrDir = new File(imageDir, "hocr");
+		File hocrRawDir = new File(hocrDir, "raw");
+		File rawSvgFile = new File(hocrRawDir, "raw.svg");
+		SVGSVG svg = (SVGSVG) SVGUtil.parseToSVGElement(new FileInputStream(rawSvgFile));
+//		LOG.debug("SVG: "+rawSvgFile+" "+rawSvgFile.exists());
+		List<SVGText> textList = SVGText.extractSelfAndDescendantTexts(svg);
+		createBins(textList);
+		
+	}
+
+	private List<IntegerMultiset> createBins(List<SVGText> textList) {
+		int deltaY = 10; // guess bin separation
+		Multimap<Integer, SVGText> textMap = createNonEmptyTextMultimap(textList);
+		IntArray yArray = createSortedYCoordinates(textMap);
+		IntegerMultisetList yBinList = new IntegerMultisetList();
+		List<IntegerMultiset> bins = yBinList.createBins(yArray, deltaY);
+		yBinList.mergeNeighbouringBins((int) (deltaY * EDGE_FRACT));
+		bins = yBinList.getBins();
+//		for (IntegerMultiset bin : bins) {
+//			if (bin.size() > 0) {
+//				LOG.debug("bin "+bin);
+//			}
+//		}
+		return bins;
+	}
+
+	private IntArray createSortedYCoordinates(Multimap<Integer, SVGText> textMap) {
+		List<Integer> keySet = new ArrayList<Integer>(textMap.keySet());
+		Collections.sort(keySet);
+		IntArray yArray = new IntArray();
+		for (Integer y : keySet) {
+			List<SVGText> entryTextList = new ArrayList<SVGText>(textMap.get(y));
+			for (int i = 0; i < entryTextList.size(); i++) {
+				yArray.addElement(y);
+			}
+		}
+		return yArray;
+	}
+
+	private Multimap<Integer, SVGText> createNonEmptyTextMultimap(List<SVGText> textList) {
+		Multimap<Integer, SVGText> textMap = ArrayListMultimap.create();
+		for (SVGText text : textList) {
+			String clazz =  text.getAttributeValue("class");
+			if (clazz != null) {
+				String txt = text.getText();
+				if (txt != null && !"".equals(txt.trim())) {
+					Integer y = new Integer((int)(double)text.getY());
+					textMap.put(y, text);
+				}
+			}
+		}
+		return textMap;
 	}
 
 	public void runForestPlot(File imageFile) {

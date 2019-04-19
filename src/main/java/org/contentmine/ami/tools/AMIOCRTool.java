@@ -211,9 +211,10 @@ public class AMIOCRTool extends AbstractAMITool {
 		// debug
 		try {
 			if (outputHOCRFile.exists()) {
-				File destFile = new File(parentFile, basename+"."+CommandRunner.RAW_HTML);
+				File destFile = new File(outputTop, basename+".hocr.html");
 				if (destFile.exists()) FileUtils.deleteQuietly(destFile);
 				FileUtils.moveFile(outputHOCRFile, destFile);
+//				LOG.debug("raw html "+destFile);
 			} else {
 				System.err.println("html file does not exist "+outputHOCRFile);
 			}
@@ -224,21 +225,23 @@ public class AMIOCRTool extends AbstractAMITool {
 			throw new RuntimeException("Cannot move file ", e);
 		}
 		try {
-			XMLUtil.debug(htmlBody, new FileOutputStream(outputHOCRFile),1);
+			XMLUtil.debug(htmlBody, new FileOutputStream(new File(outputTop, basename+".body.html")),1);
+//			LOG.debug("raw html 1"+outputHOCRFile);
 		} catch (IOException e) {
 			throw new RuntimeException("cannot write file: "+outputHOCRFile, e);
 		}
 	}
 
 	private void runOCR(File imageFile) {
-		String basename = FilenameUtils.getBaseName(imageFile.getParentFile().toString());
+		String basename = FilenameUtils.getBaseName(imageFile.toString());
+		String newbasename = FilenameUtils.getBaseName(imageFile.getParentFile().toString());
 		if (!imageFile.exists()) {
-			System.err.println("!not exist "+basename+"!");
+			System.err.println("!not exist "+newbasename+"!");
 		} else {
 			if (scalefactor != null || Boolean.TRUE.equals(applyScale)) {
-				imageFile = scaleAndWriteFile(imageFile, basename);
+				imageFile = scaleAndWriteFile(imageFile, newbasename);
 			}
-			System.out.println("["+basename+"]");
+			System.out.println("["+newbasename+"]");
 			File outputDir = new File(imageFile.getParentFile(), HOCR_DIR);
 			// messy: tesseract filenames don't have html extension
 			outputHOCRFile = new File(outputDir, basename);

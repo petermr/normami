@@ -204,8 +204,8 @@ public class AMIOCRTest {
 		String cmd = "--cproject "+cProject.getDirectory();
 //		LOG.debug(cmd);
 		ocrTool.runCommands(cmd);
-		
 	
 	}
+	
 
 }

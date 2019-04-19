@@ -53,7 +53,7 @@ public class ImageToHOCRConverter extends CommandRunner {
 		tessConfig.add(HOCR);
 		
 		builder = new ProcessBuilder(/*getProgram(), inputFilename, outputFilename, */ tessConfig /*, HOCR, encoding */);
-//		LOG.debug("builder "+builder.command());
+		LOG.debug("builder "+builder.command());
         runBuilderAndCleanUp();
         
     	File htmlFile = convertToHtmlFile(outputHocrFile);
