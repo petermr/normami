@@ -5,6 +5,7 @@ import java.io.File;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
+import org.contentmine.cproject.files.CTree;
 import org.junit.Test;
 
 /** test cleaning.
@@ -17,7 +18,12 @@ public class AMIForestPlotTest {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	public static final String DEVTEST = "/Users/pm286/projects/forestplots/spss/";
+	private static final File FOREST_PLOT_DIR = new File("/Users/pm286/projects/forestplots");
+	private final static String SPSS = "spss";
+	private static final File SPSS_DIR = new File(FOREST_PLOT_DIR, SPSS);
+	private final static String STATA = "stata";
+	private static final File STATA_DIR = new File(FOREST_PLOT_DIR, STATA);
+	public static final String DEVTEST = SPSS_DIR.toString();
 
 	@Test
 	public void testHelp() {
@@ -124,44 +130,46 @@ public class AMIForestPlotTest {
 
 	@Test
 	public void testSPSSTable() {
-		File projectDir = new File("/Users/pm286/projects/forestplots/spss");
-//		CTree cTree = new CTree(new File(projectDir, "PMC5502154"));
-		CProject cProject = new CProject(projectDir);
-		AMIOCRTool ocrTool = new AMIOCRTool();
-
-//		String cmd = "--ctree "+cTree.getDirectory();
-		String cmd = "--cproject "+cProject.getDirectory();
-		// create SVG
-		ocrTool.runCommands(cmd);
-		//
-		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
-		cmd = ""
-			+ "--cproject "+cProject.getDirectory()
-//			+ "--ctree "+cTree.getDirectory()
-		    + " --plottype spss"
-		    + " --hocr=true";
-		forestPlotTool.runCommands(cmd);
-		
+		String plotType = SPSS;
+		boolean useTree = true;
+		useTree = false;
+		String treename = "PMC5502154";
+		extractPlots(plotType, treename, useTree);		
 	}
 
 	@Test
 	public void testStataTable() {
-		File projectDir = new File("/Users/pm286/projects/forestplots/stata");
+		String plotType = STATA;
+		String treename = "PMC5502154";
+		boolean useTree = false;
+		extractPlots(plotType, treename, useTree);
+		
+	}
+
+	private void extractPlots(String plotType, String treename, boolean useTree) {
+		File projectDir = STATA.equals(plotType) ? STATA_DIR : SPSS_DIR;
+		
+		CTree cTree = new CTree(new File(projectDir, treename));
 		CProject cProject = new CProject(projectDir);
 		AMIOCRTool ocrTool = new AMIOCRTool();
 
-		String cmd = "--cproject "+cProject.getDirectory();
+		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
+		String cmd = ""
+			+ source 
+			+ " --extractlines horiz"
+			+ "";
 		// create SVG
+		
 		ocrTool.runCommands(cmd);
 		//
+		if (true) return;
 		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
 		cmd = ""
-			+ "--cproject "+cProject.getDirectory()
-//			+ "--ctree "+cTree.getDirectory()
-		    + " --plottype stata"
-		    + " --hocr=true";
+			+ source
+		    + " --plottype " + plotType
+		    + " --hocr=true"
+		    + "";
 		forestPlotTool.runCommands(cmd);
-		
 	}
 
 }

@@ -50,11 +50,6 @@ description = "analyzes bitmaps - generally binary, but may be oligochrome. Crea
 public class AMIForestPlotTool extends AbstractAMITool {
 	private static final Logger LOG = Logger.getLogger(AMIForestPlotTool.class);
 
-	private static final Double DESCENDER_FUDGE = 0.15;
-
-	private static final int DELTA_Y = 3;
-
-	private static final double EDGE_FRACT = 0.3;
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -92,7 +87,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	private DiagramAnalyzer diagramAnalyzer;
 	private SVGLineList horizontalLines;
 	private String basename;
-	
+
     /** used by some non-picocli calls
      * obsolete it
      * @param cProject
@@ -142,72 +137,14 @@ public class AMIForestPlotTool extends AbstractAMITool {
 			this.basename = FilenameUtils.getBaseName(imageDir.toString());
 			System.err.print(".");
 			if (useHocr) {
-				System.out.println(">> "+basename);
-				try {
-					createTableFromSVG(imageDir);
-				} catch (FileNotFoundException fnfe) {
-					LOG.debug("SVG File not found: "+imageDir);
-				}
+				System.out.println(">fp> "+basename);
+//					createTableFromSVGX(imageDir);
 			} else {
 				runForestPlot(imageFile);
 			}
 		}
 	}
 
-	private void createTableFromSVG(File imageDir) throws FileNotFoundException {
-		File hocrDir = new File(imageDir, "hocr");
-		File hocrRawDir = new File(hocrDir, "raw");
-		File rawSvgFile = new File(hocrRawDir, "raw.svg");
-		SVGSVG svg = (SVGSVG) SVGUtil.parseToSVGElement(new FileInputStream(rawSvgFile));
-//		LOG.debug("SVG: "+rawSvgFile+" "+rawSvgFile.exists());
-		List<SVGText> textList = SVGText.extractSelfAndDescendantTexts(svg);
-		createBins(textList);
-		
-	}
-
-	private List<IntegerMultiset> createBins(List<SVGText> textList) {
-		int deltaY = 10; // guess bin separation
-		Multimap<Integer, SVGText> textMap = createNonEmptyTextMultimap(textList);
-		IntArray yArray = createSortedYCoordinates(textMap);
-		IntegerMultisetList yBinList = new IntegerMultisetList();
-		List<IntegerMultiset> bins = yBinList.createBins(yArray, deltaY);
-		yBinList.mergeNeighbouringBins((int) (deltaY * EDGE_FRACT));
-		bins = yBinList.getBins();
-//		for (IntegerMultiset bin : bins) {
-//			if (bin.size() > 0) {
-//				LOG.debug("bin "+bin);
-//			}
-//		}
-		return bins;
-	}
-
-	private IntArray createSortedYCoordinates(Multimap<Integer, SVGText> textMap) {
-		List<Integer> keySet = new ArrayList<Integer>(textMap.keySet());
-		Collections.sort(keySet);
-		IntArray yArray = new IntArray();
-		for (Integer y : keySet) {
-			List<SVGText> entryTextList = new ArrayList<SVGText>(textMap.get(y));
-			for (int i = 0; i < entryTextList.size(); i++) {
-				yArray.addElement(y);
-			}
-		}
-		return yArray;
-	}
-
-	private Multimap<Integer, SVGText> createNonEmptyTextMultimap(List<SVGText> textList) {
-		Multimap<Integer, SVGText> textMap = ArrayListMultimap.create();
-		for (SVGText text : textList) {
-			String clazz =  text.getAttributeValue("class");
-			if (clazz != null) {
-				String txt = text.getText();
-				if (txt != null && !"".equals(txt.trim())) {
-					Integer y = new Integer((int)(double)text.getY());
-					textMap.put(y, text);
-				}
-			}
-		}
-		return textMap;
-	}
 
 	public void runForestPlot(File imageFile) {
 		diagramAnalyzer = new DiagramAnalyzer();
