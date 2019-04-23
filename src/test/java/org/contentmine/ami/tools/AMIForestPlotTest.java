@@ -132,9 +132,10 @@ public class AMIForestPlotTest {
 	public void testSPSSTable() {
 		String plotType = SPSS;
 		boolean useTree = true;
-		useTree = false;
+//		useTree = false;
 		String treename = "PMC5502154";
-		extractPlots(plotType, treename, useTree);		
+//		extractPlots(plotType, treename, useTree);		
+		analyzePlots(plotType, treename, useTree);		
 	}
 
 	@Test
@@ -161,13 +162,19 @@ public class AMIForestPlotTest {
 		// create SVG
 		
 		ocrTool.runCommands(cmd);
-		//
-		if (true) return;
+	}
+	
+	private void analyzePlots(String plotType, String treename, boolean useTree) {
+		File projectDir = STATA.equals(plotType) ? STATA_DIR : SPSS_DIR;
+		
+		CTree cTree = new CTree(new File(projectDir, treename));
+		CProject cProject = new CProject(projectDir);
 		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
-		cmd = ""
+		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
+		String cmd = ""
 			+ source
-		    + " --plottype " + plotType
-		    + " --hocr=true"
+//		    + " --plottype " + plotType
+//		    + " --hocr=true"
 		    + "";
 		forestPlotTool.runCommands(cmd);
 	}

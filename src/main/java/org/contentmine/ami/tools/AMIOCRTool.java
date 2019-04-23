@@ -21,7 +21,6 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
-import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.eucl.euclid.IntArray;
 import org.contentmine.eucl.euclid.IntegerMultiset;
 import org.contentmine.eucl.euclid.IntegerMultisetList;
@@ -60,16 +59,23 @@ description = "Extracts text from OCR and (NYI) postprocesses HOCR output to cre
 )
 
 public class AMIOCRTool extends AbstractAMITool {
-	static final String RAW = "raw";
+	public static final String RAW = "raw";
+	public static final String HOCR = "hocr";
+	// fraction of font that descender goes below baseline , approximate
 	private static final Double DESCENDER_FUDGE = 0.15;
-	private static final int DELTA_Y = 3;
-	private static final double EDGE_FRACT = 0.3;
-
-
-	private static final String IMAGE_DOT = "image.";
-	private static final Logger LOG = Logger.getLogger(AMIOCRTool.class);
 	
-	private enum LineDir {
+//	private static final int DELTA_Y = 3;
+	// amount of bin to consider for overlap
+	private static final double EDGE_FRACT = 0.3;
+	// minimum gap in bin to split into 2 bins
+	private static final double SPLIT_FRACT = 0.4;
+
+
+
+	static final String IMAGE_DOT = "image.";
+	static final Logger LOG = Logger.getLogger(AMIOCRTool.class);
+	
+	enum LineDir {
 		horiz,
 		vert,
 		both,
@@ -77,7 +83,7 @@ public class AMIOCRTool extends AbstractAMITool {
 	}
 
 
-	private static final String HOCR_DIR = "hocr";
+	private static final String HOCR_DIR = HOCR;
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -89,8 +95,7 @@ public class AMIOCRTool extends AbstractAMITool {
     
     @Option(names = {"--html"},
     		arity = "0..1",
-            description = "create structured html")
-    private boolean outputHtml = true;
+            description = "create structured html") boolean outputHtml = true;
 
     @Option(names = {"--maxsize"},
     		arity = "1",
@@ -118,12 +123,11 @@ public class AMIOCRTool extends AbstractAMITool {
     		arity = "1",
             description = "extracts textlines ",
             defaultValue = "none"
-            )
-    private LineDir extractLines = null; 
+            ) LineDir extractLines = null; 
 
 
-	private File outputHOCRFile;
-	private HtmlBody htmlBody;
+	File outputHOCRFile;
+	HtmlBody htmlBody;
 	private IntegerMultisetList yBinList;
 	private ImageToHOCRConverter imageToHOCRConverter;
 	private Multimap<Integer, SVGText> textByYMap;
@@ -169,112 +173,12 @@ public class AMIOCRTool extends AbstractAMITool {
 
 	protected void processTree() {
 		System.out.println("cTree: "+cTree.getName());
-		List<File> imageDirs = null;
-		File rawImageDir = null;
-		File pdfImagesDir = cTree.getExistingPDFImagesDir();
-		if (pdfImagesDir != null && pdfImagesDir.exists()) {
-			imageDirs = cTree.getPDFImagesImageDirectories();
-		}
-		if (imageDirs == null) {
-			rawImageDir = cTree.getExistingImageDir();
-		}
-		if (imageDirs == null && rawImageDir == null) {
-			LOG.warn("no pdfimages/ dir and no image/ dir");
-			return;
-		}
-			
-		if (imageDirs != null) {
-			System.out.println("imageDirs: "+imageDirs.size());
-			Collections.sort(imageDirs);
-			for (File imageDir : imageDirs) {
-				processImageDir(imageDir);
-			}
-		} else {
-			processRawImageDir(rawImageDir);
-		}
+		ImageDirProcessor imageDirProcessor = new ImageDirProcessor(this, cTree);
+		imageDirProcessor.processImageDirs();
 		
 	}
 
-	private void processRawImageDir(File rawImageDir) {
-		if (rawImageDir == null || !rawImageDir.exists()) {
-			throw new RuntimeException("cannot find imageDir: "+rawImageDir);
-		}
-		List<File> imageDirs = CMineGlobber.listSortedChildDirectories(rawImageDir);
-		for (File imageDir : imageDirs) {
-			processImageDir(imageDir);
-		}
-	}
-
-	private void processImageDir(File imageDir) {
-		File imageFile = getRawImageFile(imageDir);
-//		LOG.debug(imageFile + ": " + imageFile.exists());
-//		System.err.print(".");
-		runOCR(imageFile);
-		if (outputHtml) {
-			createStructuredHtml();
-			if (LineDir.horiz.equals(extractLines)) {
-				try {
-					File hocrDir = new File(imageDir, "hocr");
-					File hocrRawDir = new File(hocrDir, "raw");
-					File rawSvgFile = new File(hocrRawDir, "raw.svg");
-					SVGTextLineList textLineList = this.createTextLineList(rawSvgFile);
-					SVGSVG.wrapAndWriteAsSVG((SVGElement)textLineList.createSVGElement(), new File(hocrRawDir, "textLineList.svg"));
-				} catch (FileNotFoundException e) {
-					throw new RuntimeException("Cannot find file in ImageDir "+imageDir, e);
-				}
-			}
-		}
-	}
-
-	private void createStructuredHtml() {
-		HOCRReader hocrReader = new HOCRReader();
-		if (outputHOCRFile == null || !outputHOCRFile.exists()) {
-			throw new RuntimeException("Cannot find outputHOCRFile: "+outputHOCRFile);
-		}
-		String filename = outputHOCRFile.toString();
-		try {
-			InputStream inputStream = new FileInputStream(filename);
-			// analyze the HOCR
-			hocrReader.readHOCR(inputStream);
-		} catch (IOException e) {
-			throw new RuntimeException("cannot read "+filename, e);
-		}
-		String basename = FilenameUtils.getBaseName(filename);
-		//remove unnecessary "image."
-		if (basename.startsWith(IMAGE_DOT)) basename = basename.substring(IMAGE_DOT.length());
-		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
-		File parentFile = outputHOCRFile.getParentFile();
-		File outputTop = new File(parentFile, basename);
-		outputTop.mkdirs();
-		File svgFile = new File(outputTop, basename+"."+CTree.SVG);
-//  		LOG.debug("svg file "+svgFile);
-		SVGSVG.wrapAndWriteAsSVG(svgSvg, svgFile);
-		htmlBody = hocrReader.getOrCreateHtmlBody();
-		// debug
-		try {
-			if (outputHOCRFile.exists()) {
-				File destFile = new File(outputTop, basename+".hocr.html");
-				if (destFile.exists()) FileUtils.deleteQuietly(destFile);
-				FileUtils.moveFile(outputHOCRFile, destFile);
-//				LOG.debug("raw html "+destFile);
-			} else {
-				System.err.println("html file does not exist "+outputHOCRFile);
-			}
-		} catch (FileExistsException e) {
-			LOG.warn("dest file already exists: "+e.getMessage());
-		} catch (IOException e) {
-			e.printStackTrace();
-			throw new RuntimeException("Cannot move file ", e);
-		}
-		try {
-			XMLUtil.debug(htmlBody, new FileOutputStream(new File(outputTop, basename+".body.html")),1);
-//			LOG.debug("raw html 1"+outputHOCRFile);
-		} catch (IOException e) {
-			throw new RuntimeException("cannot write file: "+outputHOCRFile, e);
-		}
-	}
-
-	private void runOCR(File imageFile) {
+	void runOCR(File imageFile) {
 		String basename = FilenameUtils.getBaseName(imageFile.toString());
 		String newbasename = FilenameUtils.getBaseName(imageFile.getParentFile().toString());
 		if (!imageFile.exists()) {
@@ -327,11 +231,10 @@ public class AMIOCRTool extends AbstractAMITool {
 		return imageFile;
 	}
 	
-	private SVGTextLineList createTextLineList(File rawSvgFile) throws FileNotFoundException {
+	SVGTextLineList createTextLineList(File rawSvgFile) throws FileNotFoundException {
 		SVGSVG svg = (SVGSVG) SVGUtil.parseToSVGElement(new FileInputStream(rawSvgFile));
 		List<SVGText> textList = SVGText.extractSelfAndDescendantTexts(svg);
 		createSortedYBinList(textList); 
-//		LOG.debug(yBinList);
 		textLineList = new SVGTextLineList();
 		for (IntegerMultiset yBin : yBinList) {
 			for (Integer y : yBin.getSortedValues()) {
@@ -343,11 +246,8 @@ public class AMIOCRTool extends AbstractAMITool {
 			for (SVGText binText : binTextList) {
 				textLine.add(binText);
 			}
-//			System.out.println(">bl>"+SVGText.extractStrings(binTextList)) ;
-//			System.out.println(">t>"+textLine) ;
 			textLineList.add(textLine);
 		}
-//		System.out.println(">tll>"+textLineList.getText()) ;
 		return textLineList;
 	}
 
@@ -366,9 +266,10 @@ public class AMIOCRTool extends AbstractAMITool {
 		textByYMap = createNonEmptyTextMultimap(textList);
 		IntArray yArray = createSortedYCoordinates(textByYMap);
 		yBinList = new IntegerMultisetList();
-		yBinList.createBins(yArray, deltaY);
-		yBinList.mergeNeighbouringBins((int) (deltaY * EDGE_FRACT));
-		yBinList.removeEmptyBins();
+		yBinList.createMultisets(yArray, deltaY);
+		yBinList.splitMultisets((int) (deltaY * SPLIT_FRACT));
+		yBinList.mergeNeighbouringMultisets((int) (deltaY * EDGE_FRACT));
+		yBinList.removeEmptyMultisets();
 		Collections.sort(yBinList);
 		return yBinList;
 	}
@@ -410,4 +311,52 @@ public class AMIOCRTool extends AbstractAMITool {
     		SVGSVG.wrapAndWriteAsSVG((SVGElement) textLineList, file);
     	}
     }
+
+	void createStructuredHtml() {
+		HOCRReader hocrReader = new HOCRReader();
+		if (outputHOCRFile == null || !outputHOCRFile.exists()) {
+			throw new RuntimeException("Cannot find outputHOCRFile: "+outputHOCRFile);
+		}
+		String filename = outputHOCRFile.toString();
+		try {
+			InputStream inputStream = new FileInputStream(filename);
+			// analyze the HOCR
+			hocrReader.readHOCR(inputStream);
+		} catch (IOException e) {
+			throw new RuntimeException("cannot read "+filename, e);
+		}
+		String basename = FilenameUtils.getBaseName(filename);
+		//remove unnecessary "image."
+		if (basename.startsWith(AMIOCRTool.IMAGE_DOT)) basename = basename.substring(AMIOCRTool.IMAGE_DOT.length());
+		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
+		File parentFile = outputHOCRFile.getParentFile();
+		File outputTop = new File(parentFile, basename);
+		outputTop.mkdirs();
+		File svgFile = new File(outputTop, basename+"."+CTree.SVG);
+	//  		LOG.debug("svg file "+svgFile);
+		SVGSVG.wrapAndWriteAsSVG(svgSvg, svgFile);
+		htmlBody = hocrReader.getOrCreateHtmlBody();
+		// debug
+		try {
+			if (outputHOCRFile.exists()) {
+				File destFile = new File(outputTop, basename+".hocr.html");
+				if (destFile.exists()) FileUtils.deleteQuietly(destFile);
+				FileUtils.moveFile(outputHOCRFile, destFile);
+	//				LOG.debug("raw html "+destFile);
+			} else {
+				System.err.println("html file does not exist "+outputHOCRFile);
+			}
+		} catch (FileExistsException e) {
+			AMIOCRTool.LOG.warn("dest file already exists: "+e.getMessage());
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new RuntimeException("Cannot move file ", e);
+		}
+		try {
+			XMLUtil.debug(htmlBody, new FileOutputStream(new File(outputTop, basename+".body.html")),1);
+	//			LOG.debug("raw html 1"+outputHOCRFile);
+		} catch (IOException e) {
+			throw new RuntimeException("cannot write file: "+outputHOCRFile, e);
+		}
+	}
 }

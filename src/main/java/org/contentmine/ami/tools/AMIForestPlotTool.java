@@ -3,30 +3,31 @@ package org.contentmine.ami.tools;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.DebugPrint;
-import org.contentmine.eucl.euclid.IntArray;
-import org.contentmine.eucl.euclid.IntegerMultiset;
-import org.contentmine.eucl.euclid.IntegerMultisetList;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Array;
+import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.graphics.svg.SVGCircle;
+import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGG;
 import org.contentmine.graphics.svg.SVGLineList;
 import org.contentmine.graphics.svg.SVGSVG;
-import org.contentmine.graphics.svg.SVGText;
 import org.contentmine.graphics.svg.SVGUtil;
+import org.contentmine.graphics.svg.text.SVGTextLine;
+import org.contentmine.graphics.svg.text.SVGTextLineList;
 import org.contentmine.image.diagram.DiagramAnalyzer;
 
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.Multimap;
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multiset;
 
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -88,6 +89,10 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	private SVGLineList horizontalLines;
 	private String basename;
 
+	private Map<String, String> lineTypeByAbbrev;
+
+	private Multiset<String> abbrevSet;
+
     /** used by some non-picocli calls
      * obsolete it
      * @param cProject
@@ -97,6 +102,27 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	}
 	
 	public AMIForestPlotTool() {
+		init();
+	}
+	
+	public void init() {
+		lineTypeByAbbrev = new HashMap<>();
+		
+		lineTypeByAbbrev.put("AIIIIIII%FBFPFC", "1");
+		lineTypeByAbbrev.put("AIIIII%FBFPFCI", "2");
+		lineTypeByAbbrev.put("AAII", "3");
+		lineTypeByAbbrev.put("AB%ACII%FBFPFC", "4");
+		lineTypeByAbbrev.put("SIIII%FBFPFC", "5");
+		lineTypeByAbbrev.put("AAASAEFBAEFC", "6");
+		lineTypeByAbbrev.put("AB%ACII%FBFPFC", "7");
+		lineTypeByAbbrev.put("AIIIII%FBFPFC", "8");
+		lineTypeByAbbrev.put("AABICIIII%FBFPFC", "9");
+		lineTypeByAbbrev.put("AB%ACII%FBFPFC", "10");
+		lineTypeByAbbrev.put("ASSEFPAEIBAEFCPSE%", "11");
+		lineTypeByAbbrev.put("B%ACII%FBFPFCA", "12");
+		lineTypeByAbbrev.put("SABICIIII%FBFPFC", "13");
+		
+		abbrevSet = HashMultiset.create();
 	}
 	
     public static void main(String[] args) throws Exception {
@@ -133,20 +159,52 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
 		Collections.sort(imageDirs);
 		for (File imageDir : imageDirs) {
-			File imageFile = getRawImageFile(imageDir);
 			this.basename = FilenameUtils.getBaseName(imageDir.toString());
-			System.err.print(".");
+			System.out.println("======>"+basename);
+//			System.err.print(".");
 			if (useHocr) {
-				System.out.println(">fp> "+basename);
-//					createTableFromSVGX(imageDir);
+				File textLineListFile = ImageDirProcessor.getTextLineListFilename(imageDir);
+				createForestPlotFromImageText(textLineListFile);
 			} else {
-				runForestPlot(imageFile);
+				File imageFile = getRawImageFile(imageDir);
+				createForestPlotFromImage(imageFile);
 			}
 		}
+		LOG.debug(MultisetUtil.createListSortedByCount(abbrevSet));
+	}
+
+	private void createForestPlotFromImageText(File textLineListFile) {
+		SVGElement svgElement = null;
+		try {
+			svgElement = SVGUtil.parseToSVGElement(new FileInputStream(textLineListFile));
+		} catch (FileNotFoundException fnfe) {
+			throw new RuntimeException("Cannot find file: "+textLineListFile, fnfe);
+		}
+		SVGTextLineList textLineList = SVGTextLineList.createSVGTextLineList(svgElement);
+		textLineList.splitAtCharacters("[]{}(),<>");
+//		LOG.debug("tll"+textLineList);
+		for (SVGTextLine textLine : textLineList) {
+			String abb = textLine.getOrCreateTypeAnnotatedString();
+			System.out.println("tl: "+abb+";"+textLine);
+		}
+		List<String> textLineAbbs = textLineList.getOrCreateTypeAnnotations();
+//		System.out.println("typeLines");
+		for (String tl : textLineAbbs) {
+//			System.out.print(tl);
+			String lineType = lineTypeByAbbrev.get(tl);
+			if (lineType != null) {
+//				System.out.print(" "+lineType);
+				
+			} else {
+				abbrevSet.add(tl);
+			}
+//			System.out.println();
+		}
+		return;
 	}
 
 
-	public void runForestPlot(File imageFile) {
+	public void createForestPlotFromImage(File imageFile) {
 		diagramAnalyzer = new DiagramAnalyzer();
 		diagramAnalyzer.setInputFile(imageFile);
 		localSummitCoordinates = diagramAnalyzer.extractLocalSummitCoordinates(minNestedRings, 1);
