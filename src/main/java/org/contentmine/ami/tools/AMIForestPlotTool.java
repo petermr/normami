@@ -3,6 +3,8 @@ package org.contentmine.ami.tools;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -22,6 +24,7 @@ import org.contentmine.graphics.svg.SVGG;
 import org.contentmine.graphics.svg.SVGLineList;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.graphics.svg.SVGUtil;
+import org.contentmine.graphics.svg.text.SVGPhrase;
 import org.contentmine.graphics.svg.text.SVGTextLine;
 import org.contentmine.graphics.svg.text.SVGTextLineList;
 import org.contentmine.image.diagram.DiagramAnalyzer;
@@ -92,6 +95,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	private Map<String, String> lineTypeByAbbrev;
 
 	private Multiset<String> abbrevSet;
+	private List<List<String>> phraseListList;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -106,6 +110,149 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	}
 	
 	public void init() {
+		createLineTypeByAbbrev();
+		createPhraseSet();
+		abbrevSet = HashMultiset.create();
+	}
+
+	private void createPhraseSet() {
+		phraseListList = new ArrayList<>();
+		
+		List<String> phrases;
+		phrases = Arrays.asList(new String[] {
+				"Study or Subgroup", 
+				"Mean", "SD", "Total",
+				"Mean", "SD", "Total",
+				"Weight"
+				});
+		phraseListList.add(phrases);
+		phrases = Arrays.asList(new String[] {
+				"Study or Subgroup", 
+				"Events", "Total",
+				"Events", "Total",
+				"Weight"
+				});
+		phraseListList.add(phrases);
+		phrases = Arrays.asList(new String[] {
+				"Study",
+				"or",
+				"Subgroup", 
+				"log",
+				"\\[",
+				"Odds",
+				"Ratio",
+				"\\]",
+				"SE",
+				"Weight"
+				});
+		phraseListList.add(phrases);
+		phrases = Arrays.asList(new String[] {
+				"Total",
+				"\\(",
+				"95%",
+				"C(I|l)",
+				"\\)",
+				"%I",
+				"%I"
+				});
+		phraseListList.add(phrases);
+		phrases = Arrays.asList(new String[] {
+				"Total",
+				"events",
+				"%I",
+				"%I"
+				});
+		phraseListList.add(phrases);
+		phrases = Arrays.asList(new String[] {
+				"Heterogeneity:", 
+				"Tau.?",
+				"=",
+				"%F",
+				";",
+				"Chi.?",
+				"=",
+				"%F",
+				",",
+				"df",
+				"=",
+				"I",
+				"\\(",
+				"P",
+				"=", 
+				"%F",
+				"\\)",
+				";",
+				"I.?",
+				"=",
+				"%F"
+				});
+		phraseListList.add(phrases);
+		phrases = Arrays.asList(new String[] {
+				"Heterogeneity:", 
+				"Chi.?",
+				"=",
+				"%F",
+				",",
+				"df",
+				"=",
+				"%I",
+				"\\(",
+				"P",
+				"=",
+				"%F",
+				"\\)",
+				";",
+				"I.?",
+				"=",
+				"%%"
+				});
+		phraseListList.add(phrases);
+		phrases = Arrays.asList(new String[] {
+				"Test",
+				"for",
+				"overall",
+				"effect:", 
+				"Z",
+				"=",
+				"%F",
+				"\\(",
+				"P",
+				"<",
+				"%F",
+				"\\)",
+				"Favours",
+				"%A",
+				
+				});
+		phraseListList.add(phrases);
+		phrases = Arrays.asList(new String[] {
+				"[A-a].*",
+				"%D",
+				"%I",
+				"%I",
+				"%I",
+				"%I",
+				"%%", 
+				"%F", 
+				"[\\[\\(]",
+				"%F",
+				"\\,",
+				"%F",
+				"[\\]\\)]",
+				"%D"
+				});
+		phraseListList.add(phrases);
+		phrases = Arrays.asList(new String[] {
+				"\\-?\\d+",
+				"\\-?\\d+",
+				"\\-?\\d+",
+				"\\-?\\d+",
+				"\\-?\\d+"
+				});
+		phraseListList.add(phrases);
+	}
+
+	private void createLineTypeByAbbrev() {
 		lineTypeByAbbrev = new HashMap<>();
 		
 		lineTypeByAbbrev.put("AIIIIIII%FBFPFC", "1");
@@ -121,8 +268,6 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		lineTypeByAbbrev.put("ASSEFPAEIBAEFCPSE%", "11");
 		lineTypeByAbbrev.put("B%ACII%FBFPFCA", "12");
 		lineTypeByAbbrev.put("SABICIIII%FBFPFC", "13");
-		
-		abbrevSet = HashMultiset.create();
 	}
 	
     public static void main(String[] args) throws Exception {
@@ -132,7 +277,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
     @Override
 	protected void parseSpecifics() {
 		System.out.println("min nested rings    " + minNestedRings);
-		System.out.println("radius of contonurs " + radius);
+		System.out.println("radius of contours " + radius);
 		System.out.println("plot type           " + plotType);
 		System.out.println("use Hocr            " + useHocr);
 		System.out.println("scaledFilename      " + basename);
@@ -176,21 +321,28 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	private void createForestPlotFromImageText(File textLineListFile) {
 		SVGElement svgElement = null;
 		try {
+			if (!textLineListFile.exists()) {
+				LOG.error("Cannot find: "+textLineListFile+"\n"
+						+ "CHECK that 'hocr' subdirectory exists; you must have run 'ami-ocr' to generate this");
+				return;
+			}
 			svgElement = SVGUtil.parseToSVGElement(new FileInputStream(textLineListFile));
 		} catch (FileNotFoundException fnfe) {
 			throw new RuntimeException("Cannot find file: "+textLineListFile, fnfe);
 		}
 		SVGTextLineList textLineList = SVGTextLineList.createSVGTextLineList(svgElement);
 		textLineList.splitAtCharacters("[]{}(),<>");
-//		LOG.debug("tll"+textLineList);
 		for (SVGTextLine textLine : textLineList) {
 			String abb = textLine.getOrCreateTypeAnnotatedString();
 			System.out.println("tl: "+abb+";"+textLine);
+			List<SVGPhrase> phraseList = textLine.createPhraseList();
+			
+			textLine.annotateWith(phraseListList);
 		}
 		List<String> textLineAbbs = textLineList.getOrCreateTypeAnnotations();
 //		System.out.println("typeLines");
 		for (String tl : textLineAbbs) {
-//			System.out.print(tl);
+			System.out.print(tl);
 			String lineType = lineTypeByAbbrev.get(tl);
 			if (lineType != null) {
 //				System.out.print(" "+lineType);
