@@ -2,15 +2,14 @@ package org.contentmine.ami.tools;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 
-import org.apache.commons.io.FileExistsException;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -170,6 +169,12 @@ public class AMIImageTool extends AbstractAMITool {
 
     // FILTER OPTIONS
 
+    @Option(names = {"--borders"},
+    		arity = "1..4",
+//    		defaultValue = "10",
+            description = "add borders: 1 == a; edges, 4 vals = top, right bottpm, left; ")
+	private List<Integer> borders ;
+
     @Option(names = {"--duplicate"},
     		arity = "0..1",
     		defaultValue = "duplicate",
@@ -314,6 +319,7 @@ public class AMIImageTool extends AbstractAMITool {
 		System.out.println("duplicateDir        " + duplicateDirname);
 
     	
+		System.out.println("borders             " + borders);
 		System.out.println("binarize            " + binarize);
 		System.out.println("erodeDilate         " + erodeDilate);
 		System.out.println("maxheight           " + maxHeight);
@@ -408,6 +414,7 @@ public class AMIImageTool extends AbstractAMITool {
 					try {
 						runTransform(imageDir);
 					} catch (Exception e) {
+						e.printStackTrace();
 						LOG.error("Bad read: "+imageDir+" ("+e.getMessage()+")");
 					}
 				}
@@ -485,6 +492,7 @@ public class AMIImageTool extends AbstractAMITool {
 			}
 			if (binarize != null || threshold != null) {
 				image = binarizeAndSave(image, imageDir);
+				ImageUtil.writeImageQuietly(image, new File("target/binarize.png"));
 				if (binarize != null) {
 					basename += binarize.name();
 				}
@@ -519,14 +527,30 @@ public class AMIImageTool extends AbstractAMITool {
 	 * @return
 	 */
 	private BufferedImage binarizeAndSave(BufferedImage image, File imageDir) {
+		List<Integer> oldRGB = new ArrayList<Integer>();
+		oldRGB.add(new Integer(0x000d0d0d));
+		List<Integer> newRGB = new ArrayList<Integer>();
+		newRGB.add(new Integer(0x00ffffff));
+		
 		// binarization follows sharpen
 		String type = null;
 		if (binarize != null) {
-			image = ImageUtil.boofCVThreshold(image, binarize);
+			image = ImageUtil.boofCVThreshold(image, binarize); // this fails
+			image = ImageUtil.thresholdBoofcv(image, erodeDilate);
+			image = ImageUtil.removeAlpha(image);
+			image = ImageUtil.magnifyToWhite(image);
+			LOG.debug("colors0 "+ImageUtil.createHexMultiset(image));
+			image = ImageUtil.convertRGB(image, oldRGB, newRGB);
+			
+			Integer color = ImageUtil.getSingleColor(image);
+			LOG.debug("colors "+ImageUtil.createHexMultiset(image));
+			if (color != null) {
+				throw new RuntimeException("Single color: "+color+" Corrupt conversion?");
+			}
 			type = binarize.toString().toLowerCase();
 			// debug
 		} else if (threshold != null) {
-			image = ImageUtil.boofCVBinarization(image, threshold);
+			image = ImageUtil.boofCVBinarizationKludged(image, threshold);
 			type = "threshold"+"_"+threshold;
 		}
 		if (image != null) {
