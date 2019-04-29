@@ -100,7 +100,8 @@ public class AMIImageTool extends AbstractAMITool {
 	public enum AMIImageType {
 		NONE("none", 0, new AMIImageType[]{}),
 		RAW("raw", NONE.priority + 1, new AMIImageType[]{}),
-		SCALE("scale", RAW.priority + 1, AMIImageType.RAW),
+		BORDER("border", RAW.priority + 1, AMIImageType.RAW),
+		SCALE("scale", RAW.priority + 1, AMIImageType.BORDER, AMIImageType.RAW),
 		ROTATE("rotate", SCALE.priority + 1, AMIImageType.SCALE, AMIImageType.RAW),
 		SHARPEN("sharpen", ROTATE.priority + 1, AMIImageType.ROTATE, AMIImageType.SCALE, AMIImageType.RAW),
 		POSTERIZE("posterize", SHARPEN.priority + 1, AMIImageType.SHARPEN, AMIImageType.ROTATE, AMIImageType.SCALE, AMIImageType.RAW),
@@ -170,10 +171,11 @@ public class AMIImageTool extends AbstractAMITool {
     // FILTER OPTIONS
 
     @Option(names = {"--borders"},
-    		arity = "1..4",
+    		arity = "1..2",
 //    		defaultValue = "10",
-            description = "add borders: 1 == a; edges, 4 vals = top, right bottpm, left; ")
-	private List<Integer> borders ;
+            description = "add borders: 1 == all; 2 : top/bottom, edges, "
+            + "4 vals = top, right bottpm, left; ")
+	private List<Integer> borders = Arrays.asList(new Integer[] {10}) ;
 
     @Option(names = {"--duplicate"},
     		arity = "0..1",
@@ -217,9 +219,10 @@ public class AMIImageTool extends AbstractAMITool {
 
     @Option(names = {"--erodedilate"},
     		arity = "0..1",
-    		defaultValue = "false",
-            description = "TRANSFORM: erode 1-pixel layer and then dilate. Removes minor spikes (default: ${DEFAULT-VALUE})")
-    private Boolean erodeDilate;
+//    		defaultValue = "false",
+            description = "TRANSFORM: erode 1-pixel layer and then dilate. "
+            		+ "Removes minor spikes (default: ${DEFAULT-VALUE}); generally destroys fine details")
+    private Boolean erodeDilate = false;
 
     @Option(names = {"--maxheight"},
     		arity = "0..1",
@@ -259,7 +262,12 @@ public class AMIImageTool extends AbstractAMITool {
     		arity = "0..1",
     		defaultValue = "sharpen4",
             description = "sharpen image using Laplacian kernel or sharpen4 or sharpen8 (BoofCV)..(default: ${DEFAULT-VALUE})")
-    private String sharpen;
+    private String sharpen = "sharpen4";
+
+    @Option(names = {"--split"},
+    		arity = "1..*",
+            description = "split ")
+    private String split = "00";
 
     @Option(names = {"--thinning"},
     		arity = "0..1",
@@ -275,10 +283,11 @@ public class AMIImageTool extends AbstractAMITool {
 
     @Option(names = {"--toolkit"},
     		arity = "1",
-    		defaultValue = "Boofcv",
+//    		defaultValue = "Boofcv",
             description = "Image toolkit to use., "
             		+ "Scalr (Imgscalr), simple but no longer developed. Pmr (my own) when all else fails.(default: ${DEFAULT-VALUE}) (not yet fully worked out)")
-    private ImageToolkit toolkit = ImageToolkit.Boofcv;
+//    private ImageToolkit toolkit = ImageToolkit.Boofcv;
+    private ImageToolkit toolkit = null;
 
 	public static final String DUPLICATES = "duplicates/";
 	public static final String MONOCHROME = "monochrome/";
@@ -287,6 +296,7 @@ public class AMIImageTool extends AbstractAMITool {
 	private static final String ROT = "rot";
 	private static final String RAW = "raw";
 
+	private static final String BORDER = "border";
 	private static final String SCALE = "scale";
 
 	private Multiset<String> duplicateSet;
@@ -482,17 +492,22 @@ public class AMIImageTool extends AbstractAMITool {
 			}
 			if (scalefactor != null) {
 				image = scaleAndSave(image, imageDir);
+				basename += "_sc_"+(int)(double)scalefactor;
 			}
 			if (sharpen != null) {
 				image = sharpenAndSave(image, imageDir);
 				basename += "_s4";
 			}
+			if (borders != null) {
+				image = bordersAndSave(image, imageDir);
+				basename += "_b_"+borders.toString().replaceAll("(\\[|\\])", "");
+			}
 			if (erodeDilate) {
 				image = erodeDilateAndSave(image, imageDir);
+				basename += "_e";
 			}
 			if (binarize != null || threshold != null) {
 				image = binarizeAndSave(image, imageDir);
-				ImageUtil.writeImageQuietly(image, new File("target/binarize.png"));
 				if (binarize != null) {
 					basename += binarize.name();
 				}
@@ -517,7 +532,9 @@ public class AMIImageTool extends AbstractAMITool {
 
 	private BufferedImage erodeDilateAndSave(BufferedImage image, File imageDir) {
 		image = ImageUtil.thresholdBoofcv(image, erodeDilate);
-		ImageUtil.writeImageQuietly(image, new File(imageDir, erodeDilate+"."+CTree.PNG));
+		File outputPng = new File(imageDir, "erodeDilate"+"."+CTree.PNG);
+		LOG.debug("wrtiing "+outputPng);
+		ImageUtil.writeImageQuietly(image, outputPng);
 		return image;
 	}
 
@@ -527,10 +544,8 @@ public class AMIImageTool extends AbstractAMITool {
 	 * @return
 	 */
 	private BufferedImage binarizeAndSave(BufferedImage image, File imageDir) {
-		List<Integer> oldRGB = new ArrayList<Integer>();
-		oldRGB.add(new Integer(0x000d0d0d));
-		List<Integer> newRGB = new ArrayList<Integer>();
-		newRGB.add(new Integer(0x00ffffff));
+		int[] oldRGB = {0x000d0d0d};
+		int[] newRGB = {0x00ffffff};
 		
 		// binarization follows sharpen
 		String type = null;
@@ -595,10 +610,25 @@ public class AMIImageTool extends AbstractAMITool {
 		if (!Real.isEqual(scale,  1.0,  0.0000001)) {
 			if (ImageToolkit.Scalr.equals(toolkit)) {
 				image = ImageUtil.scaleImageScalr(scale, image);
+			} else if (ImageToolkit.Boofcv.equals(toolkit)) {
+				throw new RuntimeException("Boofcv scale NYI");
+			} else if (scale > 1.9){
+				int intScale = (int) Math.round(scale);
+				image = ImageUtil.scaleImage(image, intScale, intScale);
 			}
 			String scaleValue = String.valueOf(scalefactor).replace(".",  "_");
 			ImageUtil.writeImageQuietly(image, new File(imageDir, SCALE + " _ " + scaleValue + "." + CTree.PNG));
 		}
+		return image;
+	}
+	
+	private BufferedImage bordersAndSave(BufferedImage image, File imageDir) {
+		int color = 0x00FFFFFF;
+		int xBorder = borders.get(0);
+		int yBorder = borders.size() > 1 ? borders.get(1) : xBorder;
+		image = ImageUtil.addBorders(image, xBorder, yBorder, color);
+		String borderValue = String.valueOf(borders).replaceAll("(\\[|\\])",  "_");
+		ImageUtil.writeImageQuietly(image, new File(imageDir, BORDER + " _ " + borderValue + "." + CTree.PNG));
 		return image;
 	}
 	

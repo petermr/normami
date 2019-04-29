@@ -425,6 +425,8 @@ public class AMIImageTest {
 		File treeDir = new File(projectDir, "PMC5502154");
 		String args = 
 				"-t "+treeDir+
+				" --scalefactor 2.0"+
+				" --erodedilate" +
 				" --borders 10 "
 				;
 		AMIImageTool amiImage = new AMIImageTool();
