@@ -2,7 +2,7 @@
 
 # run from normami
 
-VERSION=ami20190425
+VERSION=ami20190429
 AMIJARS=ami-jars1
 DIR=../${AMIJARS}/${VERSION}/
 mkdir ${DIR}

@@ -1,5 +1,6 @@
 package org.contentmine.ami.tools;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,9 +16,13 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.eucl.euclid.Axis.Axis2;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Array;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
+import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.html.HtmlElement;
+import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.graphics.svg.SVGCircle;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGG;
@@ -27,11 +32,14 @@ import org.contentmine.graphics.svg.SVGUtil;
 import org.contentmine.graphics.svg.text.SVGPhrase;
 import org.contentmine.graphics.svg.text.SVGTextLine;
 import org.contentmine.graphics.svg.text.SVGTextLineList;
+import org.contentmine.image.ImageLineAnalyzer;
+import org.contentmine.image.ImageUtil;
 import org.contentmine.image.diagram.DiagramAnalyzer;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
+import nu.xom.Element;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -58,22 +66,21 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	public enum PlotType {
+	private enum PlotType {
 		spss,
 		stata
 	}
 	
-    @Option(names = {"--minnested"},
-    		arity = "1",
-            description = "minimum level for internal countours to be significant. "
-            		+ "Above this level we new expect isolated pixel islands to appear."
-            		+ "Arcane and experiemental.")
-    private Integer minNestedRings = 2;
+	private enum Axis {
+		x,
+		y
+	}
 	
-    @Option(names = {"--plottype"},
+
+    @Option(names = {"--color"},
     		arity = "1",
-            description = "type of SPSS plot")
-    private PlotType plotType;
+            description = "colors of lines on plot as hex string")
+    private Integer color = 0x0;
 
     @Option(names = {"--hocr"},
     		arity = "1",
@@ -82,10 +89,42 @@ public class AMIForestPlotTool extends AbstractAMITool {
             )
     private boolean useHocr;
 
+    @Option(names = {"--minline"},
+    		arity = "1",
+            description = "minimum line length")
+    private Integer minline = 300;
+
+    @Option(names = {"--minnested"},
+    		arity = "1",
+            description = "minimum level for internal countours to be significant. "
+            		+ "Above this level we new expect isolated pixel islands to appear."
+            		+ "Arcane and experiemental.")
+    private Integer minNestedRings = 2;
+	
+    @Option(names = {"--offset"},
+    		arity = "1..*",
+            description = "offsets from split position/s")
+    private List<Integer> offsets;
+
+    @Option(names = {"--plottype"},
+    		arity = "1",
+            description = "type of SPSS plot")
+    private PlotType plotType;
+
     @Option(names = {"--radius"},
     		arity = "1",
             description = "radius for drawing circle round centroid")
     private Double radius = 4.0;
+
+    @Option(names = {"--split"},
+    		arity = "1",
+            description = "split images along axis (x or y)")
+    private Axis splitAxis = null;
+
+    @Option(names = {"--table"},
+    		arity = "0..1",
+            description = "use bounding boxes to create a table")
+    private boolean table;
 
 	private Real2Array localSummitCoordinates;
 	private DiagramAnalyzer diagramAnalyzer;
@@ -96,6 +135,8 @@ public class AMIForestPlotTool extends AbstractAMITool {
 
 	private Multiset<String> abbrevSet;
 	private List<List<String>> phraseListList;
+
+	private HtmlElement hocrElement;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -276,11 +317,16 @@ public class AMIForestPlotTool extends AbstractAMITool {
 
     @Override
 	protected void parseSpecifics() {
+		System.out.println("color of lines      " + color);
+		System.out.println("min line length     " + minline);
 		System.out.println("min nested rings    " + minNestedRings);
-		System.out.println("radius of contours " + radius);
+		System.out.println("radius of contours  " + radius);
 		System.out.println("plot type           " + plotType);
 		System.out.println("use Hocr            " + useHocr);
+		System.out.println("offsets             " + offsets);
 		System.out.println("scaledFilename      " + basename);
+		System.out.println("split axis          " + splitAxis);
+		System.out.println("table               " + table);
 		System.out.println();
 
 		System.out.println();
@@ -307,6 +353,35 @@ public class AMIForestPlotTool extends AbstractAMITool {
 			this.basename = FilenameUtils.getBaseName(imageDir.toString());
 			System.out.println("======>"+basename);
 //			System.err.print(".");
+			if (splitAxis != null){
+				BufferedImage image = ImageUtil.readImageQuietly(new File(imageDir, "raw_s4_thr_150.png"));
+				Axis2 axis2 = (Axis.x.equals(splitAxis)) ? Axis2.X : Axis2.Y; 
+				ImageLineAnalyzer lineAnalyzer = new ImageLineAnalyzer(image);
+				List<BufferedImage> imageList = lineAnalyzer.splitAtLeftOfBottomLine(
+						color, minline, offsets.get(0), axis2);
+				ImageUtil.writeImageQuietly(imageList.get(0), new File(imageDir, "raw_s4_thr_150.table.png"));
+				ImageUtil.writeImageQuietly(imageList.get(1), new File(imageDir, "raw_s4_thr_150.plot.png"));
+				continue;
+			}
+			if (table) {
+				File hocrFile = new File(imageDir, "hocr/raw.raw.html");
+				LOG.debug(hocrFile.getAbsolutePath());
+				try {
+					
+					Element rootElement = XMLUtil.parseQuietlyToDocumentWithoutDTD(hocrFile).getRootElement();
+					LOG.debug("parsed");
+					hocrElement = HtmlElement.create(rootElement);
+					LOG.debug("root");
+//					System.out.println(">> "+hocrElement.toXML());
+					SPSSForestPlot spssForestPlot = SPSSForestPlot.createSPSSPlot(hocrElement);
+					LOG.debug("crteated spss");
+				} catch (Exception e) {
+					LOG.debug("Cannot read HOCR: "+hocrFile+"; "+e);
+				}
+				
+				continue;
+			}
+
 			if (useHocr) {
 				File textLineListFile = ImageDirProcessor.getTextLineListFilename(imageDir);
 				createForestPlotFromImageText(textLineListFile);

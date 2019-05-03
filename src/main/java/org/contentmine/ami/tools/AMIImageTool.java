@@ -565,7 +565,7 @@ public class AMIImageTool extends AbstractAMITool {
 			type = binarize.toString().toLowerCase();
 			// debug
 		} else if (threshold != null) {
-			image = ImageUtil.boofCVBinarizationKludged(image, threshold);
+			image = ImageUtil.boofCVBinarization(image, threshold);
 			type = "threshold"+"_"+threshold;
 		}
 		if (image != null) {

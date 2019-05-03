@@ -1,11 +1,15 @@
 package org.contentmine.ami.tools;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
+import org.contentmine.eucl.euclid.Axis.Axis2;
+import org.contentmine.image.ImageLineAnalyzer;
 import org.junit.Test;
 
 /** test cleaning.
@@ -146,7 +150,56 @@ public class AMIForestPlotTest {
 		extractPlots(plotType, treename, useTree);
 		
 	}
+	
+	@Test 
+	/** splits components of SPSS ForestPlots
+	 * 
+	 */
+	public void testSPSSSplit() {
+		
 
+		boolean useTree = true;
+		File projectDir = SPSS_DIR;
+		String treename = "PMC5502154";
+		CTree cTree = new CTree(new File(projectDir, treename));
+		CProject cProject = new CProject(projectDir);
+		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
+		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
+		String cmd = ""
+			+ source
+			+ " --split x"
+//			+ " --color 0x0"
+			+ " --offset -10"
+			+ " --minline 300"
+		    + "";
+		forestPlotTool.runCommands(cmd);
+
+	}
+
+	@Test 
+	/** creates columns for SPSS Tables
+	 * 
+	 */
+	public void testSPSSTableBBoxes() {
+		
+		boolean useTree = true;
+		File projectDir = SPSS_DIR;
+		String treename = "PMC5502154";
+		CTree cTree = new CTree(new File(projectDir, treename));
+		CProject cProject = new CProject(projectDir);
+		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
+		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
+		String cmd = ""
+			+ source
+			+ " --table"
+		    + "";
+		forestPlotTool.runCommands(cmd);
+
+	}
+
+
+	// ========================================
+	
 	private void extractPlots(String plotType, String treename, boolean useTree) {
 		File projectDir = STATA.equals(plotType) ? STATA_DIR : SPSS_DIR;
 		
@@ -178,5 +231,7 @@ public class AMIForestPlotTest {
 		    + "";
 		forestPlotTool.runCommands(cmd);
 	}
+	
+
 
 }
