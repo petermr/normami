@@ -202,6 +202,11 @@ public class AMIOCRTest {
 
 //		String cmd = "--ctree "+cTree.getDirectory();
 		String cmd = "--cproject "+cProject.getDirectory();
+//		cmd += " --inputname raw_sc_2_s4_b_10_thr_150";
+//		cmd += " --outputname raw_sc_2_s4_b_10_thr_150";
+		cmd += " --inputname raw_s4_b_10_thr_180";
+		cmd += " --outputname raw_s4_b_10_thr_180";
+				
 //		LOG.debug(cmd);
 		ocrTool.runCommands(cmd);
 	

@@ -359,4 +359,8 @@ public class AMIOCRTool extends AbstractAMITool {
 			throw new RuntimeException("cannot write file: "+outputHOCRFile, e);
 		}
 	}
+
+	public String getInputname() {
+		return inputBasename;
+	}
 }

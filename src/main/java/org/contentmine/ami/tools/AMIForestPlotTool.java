@@ -1,6 +1,7 @@
 package org.contentmine.ami.tools;
 
 import java.awt.image.BufferedImage;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,10 +18,11 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.euclid.Axis.Axis2;
+import org.contentmine.eucl.euclid.Int2Range;
+import org.contentmine.eucl.euclid.IntRange;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Array;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
-import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.graphics.svg.SVGCircle;
@@ -39,7 +41,6 @@ import org.contentmine.image.diagram.DiagramAnalyzer;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
-import nu.xom.Element;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -352,7 +353,6 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		for (File imageDir : imageDirs) {
 			this.basename = FilenameUtils.getBaseName(imageDir.toString());
 			System.out.println("======>"+basename);
-//			System.err.print(".");
 			if (splitAxis != null){
 				BufferedImage image = ImageUtil.readImageQuietly(new File(imageDir, "raw_s4_thr_150.png"));
 				Axis2 axis2 = (Axis.x.equals(splitAxis)) ? Axis2.X : Axis2.Y; 
@@ -365,17 +365,22 @@ public class AMIForestPlotTool extends AbstractAMITool {
 			}
 			if (table) {
 				File hocrFile = new File(imageDir, "hocr/raw.raw.html");
-				LOG.debug(hocrFile.getAbsolutePath());
+				if (!hocrFile.exists()) {
+					hocrFile = new File(imageDir, "hocr/raw/raw.hocr.html");
+				}
+				if (!hocrFile.exists()) {
+					LOG.debug("cannot find HOCR in "+imageDir);
+					continue;
+				} 
 				try {
 					
-					Element rootElement = XMLUtil.parseQuietlyToDocumentWithoutDTD(hocrFile).getRootElement();
-					LOG.debug("parsed");
-					hocrElement = HtmlElement.create(rootElement);
-					LOG.debug("root");
-//					System.out.println(">> "+hocrElement.toXML());
-					SPSSForestPlot spssForestPlot = SPSSForestPlot.createSPSSPlot(hocrElement);
-					LOG.debug("crteated spss");
+					hocrElement = HtmlUtil.parseQuietlyToHtmlElementWithoutDTD(hocrFile);
+					SPSSForestPlot spssForestPlot = new SPSSForestPlot();
+					// clip
+					spssForestPlot.setBoundingBox(new Int2Range(new IntRange(0,750), new IntRange(0,1000)));
+					spssForestPlot.readHOCR(hocrElement);
 				} catch (Exception e) {
+					e.printStackTrace();
 					LOG.debug("Cannot read HOCR: "+hocrFile+"; "+e);
 				}
 				

@@ -71,13 +71,20 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		EXCLUDE
 	}
 	
-	@Option(names = {"--basename"}, 
+	@Option(names = {"--outputname"}, 
     		arity="1",
-    		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png. By default this is computed by AMI."
-    				+ " This allows users to create their own variants, but they won't be known by default to subsequent"
+    		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png or directories. By default this is computed by AMI."
+    				+ " This allows users to create their own variants, but they won't always be known by default to subsequent"
     				+ "applications"
     		)
-	protected String userBasename;
+	protected String outputBasename;
+
+	@Option(names = {"--inputname"}, 
+    		arity="1",
+    		description = "User's basename for inputfiles (e.g. foo/bar/<basename>.png) or directories. By default this is often computed by AMI."
+    				+ " However some files will have variable names (e.g. output of AMIImage) or from foreign sources or applications"
+    		)
+	protected String inputBasename;
 
     @Option(names = {"-p", "--cproject"}, 
 		arity = "1",
@@ -395,7 +402,8 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	 * 
 	 */
 	private void printGenericValues() {
-        System.out.println("basename            " + userBasename);
+        System.out.println("output basename     " + outputBasename);
+        System.out.println("input basename      " + inputBasename);
         System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
         System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
         System.out.println("cTreeList           " + prettyPrint(cTreeList));
@@ -568,6 +576,11 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		return false;
 	}
 
+	/** this may not be the best place to define this.
+	 * 
+	 * @param imageDir
+	 * @return
+	 */
 	protected static File getRawImageFile(File imageDir) {
 		return new File(imageDir, RAW + "." + CTree.PNG);
 	}

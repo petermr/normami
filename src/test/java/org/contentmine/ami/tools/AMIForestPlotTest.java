@@ -182,7 +182,8 @@ public class AMIForestPlotTest {
 	 */
 	public void testSPSSTableBBoxes() {
 		
-		boolean useTree = true;
+//		boolean useTree = true;
+		boolean useTree = false;
 		File projectDir = SPSS_DIR;
 		String treename = "PMC5502154";
 		CTree cTree = new CTree(new File(projectDir, treename));
@@ -196,6 +197,31 @@ public class AMIForestPlotTest {
 		forestPlotTool.runCommands(cmd);
 
 	}
+
+	@Test
+	public void testSPSSImageProcessing() {
+		
+		boolean useTree = true;
+		File projectDir = SPSS_DIR;
+		String treename = "PMC5502154";
+		CTree cTree = new CTree(new File(projectDir, treename));
+		CProject cProject = new CProject(projectDir);
+		AMIImageTool imageTool = new AMIImageTool();
+		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
+		String cmd = ""
+			+ source
+			+ " --sharpen sharpen4"
+			+ " --threshold 150"
+			+ " --scalefactor 2.0";
+		imageTool.runCommands(cmd);
+		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
+		cmd = ""
+			+ source
+			+ " --table";
+		
+		forestPlotTool.runCommands(cmd);
+	}
+
 
 
 	// ========================================
