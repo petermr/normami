@@ -94,6 +94,9 @@ public class AMIProcessor {
 	}
 	
 	public void defaultAnalyzeCooccurrence(List<String> facets) {
+		if (facets == null) {
+			return;
+		}
 		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(cProject.getDirectory());
 	
 		for (String facet : facets) {

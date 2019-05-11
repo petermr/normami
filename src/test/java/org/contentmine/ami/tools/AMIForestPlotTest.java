@@ -25,6 +25,12 @@ public class AMIForestPlotTest {
 	private static final File FOREST_PLOT_DIR = new File("/Users/pm286/projects/forestplots");
 	private final static String SPSS = "spss";
 	private static final File SPSS_DIR = new File(FOREST_PLOT_DIR, SPSS);
+	private final static String SPSS_SIMPLE = "spssSimple";
+	private static final File SPSS_SIMPLE_DIR = new File(FOREST_PLOT_DIR, SPSS_SIMPLE);
+	private final static String SPSS_MULTIPLE = "spssMultiple";
+	private static final File SPSS_MULTIPLE_DIR = new File(FOREST_PLOT_DIR, SPSS_MULTIPLE);
+	private final static String SPSS_SUBPLOT = "spssSubplot";
+	private static final File SPSS_SUBPLOT_DIR = new File(FOREST_PLOT_DIR, SPSS_SUBPLOT);
 	private final static String STATA = "stata";
 	private static final File STATA_DIR = new File(FOREST_PLOT_DIR, STATA);
 	public static final String DEVTEST = SPSS_DIR.toString();
@@ -184,7 +190,10 @@ public class AMIForestPlotTest {
 		
 //		boolean useTree = true;
 		boolean useTree = false;
-		File projectDir = SPSS_DIR;
+//		File projectDir = SPSS_DIR;
+		File projectDir = SPSS_SIMPLE_DIR;
+//		File projectDir - SPSS_MULTIPLE_DIR;
+//		File projectDir - SPSS_SUBPLOT_DIR;
 		String treename = "PMC5502154";
 		CTree cTree = new CTree(new File(projectDir, treename));
 		CProject cProject = new CProject(projectDir);
@@ -194,6 +203,7 @@ public class AMIForestPlotTest {
 			+ source
 			+ " --table"
 		    + "";
+		System.out.println("ami-forest "+cmd);
 		forestPlotTool.runCommands(cmd);
 
 	}

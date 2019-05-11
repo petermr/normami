@@ -3,7 +3,6 @@ package org.contentmine.ami.tools;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -19,6 +18,7 @@ import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.eucl.euclid.Real;
 import org.contentmine.eucl.euclid.util.CMFileUtil;
+import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.svg.util.ImageIOUtil;
 import org.contentmine.image.ImageUtil;
 import org.contentmine.image.ImageUtil.SharpenMethod;
@@ -27,6 +27,7 @@ import org.contentmine.image.ImageUtil.ThresholdMethod;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
+import nu.xom.Element;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -264,10 +265,16 @@ public class AMIImageTool extends AbstractAMITool {
             description = "sharpen image using Laplacian kernel or sharpen4 or sharpen8 (BoofCV)..(default: ${DEFAULT-VALUE})")
     private String sharpen = "sharpen4";
 
-    @Option(names = {"--split"},
-    		arity = "1..*",
-            description = "split ")
-    private String split = "00";
+    // will this be per image?
+//    @Option(names = {"--split"},
+//    		arity = "1..*",
+//            description = "split ")
+//    private String split = "00";
+    @Option(names = {"--template"},
+    		arity = "0..1",
+    		defaultValue = "template.xml",
+            description = "use template (default: ${DEFAULT-VALUE}) in each image.*/ dir to process image")
+    private String template = "null";
 
     @Option(names = {"--thinning"},
     		arity = "0..1",
@@ -305,6 +312,8 @@ public class AMIImageTool extends AbstractAMITool {
 
 	private SharpenMethod sharpenMethod;
 
+	private Element templateElement;
+
     /** used by some non-picocli calls
      * obsolete it
      * @param cProject
@@ -339,6 +348,7 @@ public class AMIImageTool extends AbstractAMITool {
 		System.out.println("rotate              " + rotateAngle);
 		System.out.println("scalefactor         " + scalefactor);
 		System.out.println("sharpen             " + sharpen);
+		System.out.println("template            " + template);
 		System.out.println("threshold           " + threshold);
 		System.out.println();
 	}
@@ -421,6 +431,9 @@ public class AMIImageTool extends AbstractAMITool {
 				if (!imageDir.exists()) {
 					LOG.debug("Dir does not exist: "+imageDir);
 				} else {
+					if (template != null) {
+						readTemplate(imageDir);
+					}
 					try {
 						runTransform(imageDir);
 					} catch (Exception e) {
@@ -432,6 +445,17 @@ public class AMIImageTool extends AbstractAMITool {
 		}
 	}
 	
+	private void readTemplate(File imageDir) {
+		File templateFile = new File(imageDir, template);
+		if (!templateFile.exists()) {
+			LOG.info("no template in: "+imageDir);
+		}
+		Element tElement = XMLUtil.parseQuietlyToRootElement(templateFile);
+		TemplateElement templateElement = TemplateElement.read(tElement);
+		
+		
+	}
+
 	// ================= filter ============
 	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
 		if (destDirname != null) {

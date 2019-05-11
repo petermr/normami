@@ -38,26 +38,26 @@ public class LuceneUtils {
 	 */
 	public static TokenStream createTokenStreamQuietly(Analyzer analyzer, String string) {
 		TokenStream tokenStream = null;
-		try {
+//		try {
 			tokenStream = analyzer.tokenStream(null, new StringReader(string));
 			LuceneUtils.resetTokenStreamQuietly(tokenStream);
-		} catch (IOException e) {
-			throw new RuntimeException("cannot create tokenStream", e);
-		}
+//		} catch (IOException e) {
+//			throw new RuntimeException("cannot create tokenStream", e);
+//		}
 		return tokenStream;
 	}
 
 	public static TokenStream createWhitespaceTokenStreamQuietly(String string) {
 		Analyzer analyzer = new WhitespaceAnalyzer();
 		TokenStream tokenStream = null;
-		try {
+//		try {
 			tokenStream = analyzer.tokenStream(null, new StringReader(string));
 			LuceneUtils.resetTokenStreamQuietly(tokenStream);
 			analyzer.close();
-		} catch (IOException e) {
-			analyzer.close();
-			throw new RuntimeException("cannot create tokenStream", e);
-		}
+//		} catch (IOException e) {
+//			analyzer.close();
+//			throw new RuntimeException("cannot create tokenStream", e);
+//		}
 		return tokenStream;
 	}
 

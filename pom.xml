@@ -206,6 +206,11 @@
 							<!-- description: converts XML to HTML -->
                             <id>ami-xml</id>
                         </program>
+                        <program>
+                            <mainClass>org.contentmine.ami.tools.AMITransformTool</mainClass>
+							<!-- description: transform with AMITransform mainly XML-->
+                            <id>ami-transform</id>
+                        </program>
                         
                          <program>
                             <mainClass>org.contentmine.ami.plugins.CommandProcessor</mainClass>

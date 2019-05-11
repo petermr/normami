@@ -65,7 +65,8 @@ public class SPSSForestPlot {
 	
 	public SPSSForestPlot readHOCR(HtmlElement htmlElement) {
 		SPSSForestPlot spssForestPlot = new SPSSForestPlot(); 
-		int tableEnd = 750; //kludge until we iterate over segmentation
+		int xmax = 770;
+		int tableEnd = xmax; //kludge until we iterate over segmentation
 		spssForestPlot.setBoundingBox(
 				new Int2Range(new IntRange(0,tableEnd), new IntRange(0,1000)));
 		spssForestPlot.extractTable(htmlElement);
@@ -376,7 +377,7 @@ public class SPSSForestPlot {
 		Element fieldElement = null;
 		List<HtmlSpan> spanList = matchLineStart(irow, field);
 		if (spanList != null) {
-//			LOG.debug("....extract "+field);
+			LOG.debug("....extract "+field);
 			fieldElement = extractToXML(name, spanList, fields);
 			irow++;
 		}
@@ -433,6 +434,7 @@ public class SPSSForestPlot {
 
 	private Element extractToXML(String tag, List<HtmlSpan> spanList, String[] fields) {
 		Element element = null;
+		LOG.debug("spans: "+HtmlSpan.toString(spanList));
 		if (spanList.size() == fields.length) {
 			element = new Element(tag);
 			for (int i = 0; i < fields.length; i++) {
@@ -467,7 +469,7 @@ public class SPSSForestPlot {
 			}
 		} else {
 			
-			LOG.debug("cannot match>"+spanList.size()+" != "+fields.length+" | "+HtmlSpan.toString(spanList));
+			LOG.debug("cannot match: "+tag+">"+spanList.size()+" != "+fields.length+" | "+HtmlSpan.toString(spanList));
 		}
 		return element;
 	}
