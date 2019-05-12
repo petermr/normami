@@ -1,7 +1,10 @@
 package org.contentmine.ami.tools;
 
+import java.util.List;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.eucl.xml.XMLUtil;
 
 import nu.xom.Element;
 
@@ -20,7 +23,7 @@ public class TemplateElement extends Element {
 	public static String TAG = "template";
 
 	
-	private TemplateElement(Element element) {
+	protected TemplateElement(Element element) {
 		super(element);
 	}
 	
@@ -35,7 +38,23 @@ public class TemplateElement extends Element {
 	}
 
 	public static TemplateElement read(Element tElement) {
-		throw new RuntimeException("TemplateElement.read() NYI");
+		TemplateElement templateElement = null;
+		List<Element> childElements = XMLUtil.getQueryElements(tElement, "./*");
+		for (Element cElement : childElements) {
+			TemplateElement childElement = TemplateElement.createTemplateElement(cElement);
+		}
+		return templateElement;
 	}
+
+	private static TemplateElement createTemplateElement(Element cElement) {
+		String tag = cElement.getLocalName();
+		if (ImageTemplateElement.TAG.equals(tag)) {
+			return ImageTemplateElement.createImageTemplateElement(cElement);
+		}
+		return null;
+
+	}
+	
+	
 
 }
