@@ -447,6 +447,21 @@ public class AMIImageTest {
 		
 	}
 
+	@Test
+	public void testTemplate() {
+		String userDir = System.getProperty("user.home");
+		File projectDir = new File(userDir, "projects/carnegiemellon");
+		File treeDir = new File(projectDir, "p2nax");
+		String args = 
+				"-t "+treeDir+
+//				" --template" +
+				" --help"
+				;
+		AMIImageTool amiImage = new AMIImageTool();
+		amiImage.runCommands(args);
+		
+	}
+
 
 	
 

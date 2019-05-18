@@ -272,9 +272,9 @@ public class AMIImageTool extends AbstractAMITool {
 //    private String split = "00";
     @Option(names = {"--template"},
     		arity = "0..1",
-    		defaultValue = "template.xml",
-            description = "use template (default: ${DEFAULT-VALUE}) in each image.*/ dir to process image")
-    private String template = "null";
+//    		defaultValue = "template.xml",
+            description = "use template in each image.*/ dir to process image")
+    private String template = "template.xml";
 
     @Option(names = {"--thinning"},
     		arity = "0..1",
