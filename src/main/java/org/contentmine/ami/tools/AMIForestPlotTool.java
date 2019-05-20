@@ -15,6 +15,7 @@ import java.util.Map;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.template.AbstractTemplateElement;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.euclid.Axis.Axis2;
@@ -51,17 +52,19 @@ import picocli.CommandLine.Option;
  */
 @Command(
 		//String name() default "<main class>";
-name = "ami-pixel", 
+name = "ami-forest", 
 		//String[] aliases() default {};
-aliases = "pixel",
+aliases = "forest",
 		//Class<?>[] subcommands() default {};
-version = "ami-pixel 0.1",
+version = "ami-forext 0.1",
 		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
-description = "analyzes bitmaps - generally binary, but may be oligochrome. Creates pixelIslands "
+description = "analyzes ForestPlot images; uses template.xml to steer the operations "
 )
 
 public class AMIForestPlotTool extends AbstractAMITool {
+
 	private static final Logger LOG = Logger.getLogger(AMIForestPlotTool.class);
+	private static final String TEMPLATE_XML = "template.xml";
 
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -117,15 +120,21 @@ public class AMIForestPlotTool extends AbstractAMITool {
             description = "radius for drawing circle round centroid")
     private Double radius = 4.0;
 
-    @Option(names = {"--split"},
-    		arity = "1",
-            description = "split images along axis (x or y)")
-    private Axis splitAxis = null;
+//    @Option(names = {"--split"},
+//    		arity = "1",
+//            description = "split images along axis (x or y)")
+//    private Axis splitAxis = null;
 
     @Option(names = {"--table"},
     		arity = "0..1",
             description = "use bounding boxes to create a table")
     private boolean table;
+
+    @Option(names = {"--template"},
+    		arity = "0..1",
+            description = "template to give imagedir-specific operations (adaptively rewritable),"
+            		+ "defaults to 'template.xml'")
+    private String templateFilename = TEMPLATE_XML;
 
 	private Real2Array localSummitCoordinates;
 	private DiagramAnalyzer diagramAnalyzer;
@@ -138,6 +147,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	private List<List<String>> phraseListList;
 
 	private HtmlElement hocrElement;
+	private AbstractTemplateElement templateElement;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -326,8 +336,9 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		System.out.println("use Hocr            " + useHocr);
 		System.out.println("offsets             " + offsets);
 		System.out.println("scaledFilename      " + basename);
-		System.out.println("split axis          " + splitAxis);
+//		System.out.println("split axis          " + splitAxis);
 		System.out.println("table               " + table);
+		System.out.println("template            " + templateFilename);
 		System.out.println();
 
 		System.out.println();
@@ -353,6 +364,14 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		for (File imageDir : imageDirs) {
 			this.basename = FilenameUtils.getBaseName(imageDir.toString());
 			System.out.println("======>"+basename);
+			templateElement = AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
+			if (templateElement != null) {
+				templateElement.process();
+				continue;
+			}
+
+			// probably obsolete
+			/**
 			if (splitAxis != null){
 				BufferedImage image = ImageUtil.readImageQuietly(new File(imageDir, "raw_s4_thr_150.png"));
 				Axis2 axis2 = (Axis.x.equals(splitAxis)) ? Axis2.X : Axis2.Y; 
@@ -363,6 +382,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 				ImageUtil.writeImageQuietly(imageList.get(1), new File(imageDir, "raw_s4_thr_150.plot.png"));
 				continue;
 			}
+			*/
 			if (table) {
 				File hocrFile = new File(imageDir, "hocr/raw.raw.html");
 				if (!hocrFile.exists()) {

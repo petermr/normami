@@ -12,6 +12,8 @@ import javax.imageio.ImageIO;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.template.AbstractTemplateElement;
+import org.contentmine.ami.tools.template.ImageTemplateElement;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
@@ -28,6 +30,7 @@ import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
 import nu.xom.Element;
+import nu.xom.Elements;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -265,16 +268,11 @@ public class AMIImageTool extends AbstractAMITool {
             description = "sharpen image using Laplacian kernel or sharpen4 or sharpen8 (BoofCV)..(default: ${DEFAULT-VALUE})")
     private String sharpen = "sharpen4";
 
-    // will this be per image?
-//    @Option(names = {"--split"},
-//    		arity = "1..*",
-//            description = "split ")
-//    private String split = "00";
     @Option(names = {"--template"},
     		arity = "0..1",
 //    		defaultValue = "template.xml",
             description = "use template in each image.*/ dir to process image")
-    private String template = "template.xml";
+    private String templateFilename = "template.xml";
 
     @Option(names = {"--thinning"},
     		arity = "0..1",
@@ -307,12 +305,8 @@ public class AMIImageTool extends AbstractAMITool {
 	private static final String SCALE = "scale";
 
 	private Multiset<String> duplicateSet;
-
-
-
 	private SharpenMethod sharpenMethod;
-
-	private Element templateElement;
+	private AbstractTemplateElement templateElement;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -348,7 +342,7 @@ public class AMIImageTool extends AbstractAMITool {
 		System.out.println("rotate              " + rotateAngle);
 		System.out.println("scalefactor         " + scalefactor);
 		System.out.println("sharpen             " + sharpen);
-		System.out.println("template            " + template);
+		System.out.println("template            " + templateFilename);
 		System.out.println("threshold           " + threshold);
 		System.out.println();
 	}
@@ -430,10 +424,14 @@ public class AMIImageTool extends AbstractAMITool {
 				System.err.print(".");
 				if (!imageDir.exists()) {
 					LOG.debug("Dir does not exist: "+imageDir);
+					continue;
+				}
+				if (templateFilename != null) {
+					templateElement = AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
+				}
+				if (templateElement != null) {
+					processTemplate();
 				} else {
-					if (template != null) {
-						readTemplate(imageDir);
-					}
 					try {
 						runTransform(imageDir);
 					} catch (Exception e) {
@@ -442,20 +440,28 @@ public class AMIImageTool extends AbstractAMITool {
 					}
 				}
 			}
+			continue;
 		}
 	}
 	
-	private void readTemplate(File imageDir) {
-		File templateFile = new File(imageDir, template);
-		if (!templateFile.exists()) {
-			LOG.info("no template in: "+imageDir);
+	private void processTemplate() {
+		List<Element> imageElements = XMLUtil.getQueryElements(templateElement, "./*[local-name()='"+ImageTemplateElement.TAG+"']");
+		for (int i = 0; i < imageElements.size(); i++) {
+			((ImageTemplateElement) imageElements.get(i)).process();
 		}
-		Element tElement = XMLUtil.parseQuietlyToRootElement(templateFile);
-		TemplateElement templateElement = TemplateElement.read(tElement);
-		
+	}
+/**
+	private AbstractTemplateElement readTemplate(File imageDir) {
+		File templateFile = new File(imageDir, templateFilename);
+		if (!templateFile.exists()) {
+			LOG.info(">>>>>>>>>>>>>>>no template in: "+imageDir);
+		}
+		Element element = XMLUtil.parseQuietlyToRootElement(templateFile);
+		templateElement = AbstractTemplateElement.createTemplateElement(element);
+		return templateElement;
 		
 	}
-
+*/
 	// ================= filter ============
 	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
 		if (destDirname != null) {

@@ -104,7 +104,7 @@ public class AMISearchTool extends AbstractAMITool {
 	}
 
 	private void runSearch() {
-		AMIProcessor amiProcessor = AMIProcessor.createProcessorFromDir(cProject.getDirectory());
+		AMIProcessor amiProcessor = AMIProcessor.createProcessorFromCProjectDir(cProject.getDirectory());
 		String cmd = buildCommandFromBuiltinsAndFacets();
 		/** this uses SearchArgProcessor.runSearch()
 		 * this should be called directly.
@@ -119,9 +119,9 @@ public class AMISearchTool extends AbstractAMITool {
 			
 			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
 			List<String> cmdList = Arrays.asList(cmd.trim().split("\\s+"));
-//			for (String cmd0 : cmdList) {
-//				System.out.println("cmd> "+cmd0);
-//			}
+			for (String cmd0 : cmdList) {
+				System.out.println("cmd> "+cmd0);
+			}
 			commandProcessor.parseCommands(cmdList);
 			commandProcessor.runNormaIfNecessary();
 			commandProcessor.runJsonBibliography();

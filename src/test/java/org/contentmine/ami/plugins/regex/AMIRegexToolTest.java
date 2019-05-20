@@ -1,17 +1,18 @@
 package org.contentmine.ami.plugins.regex;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
-import org.contentmine.ami.plugins.AMIPlugin;
+import org.contentmine.ami.plugins.regex.AMIRegexTool;
+import org.contentmine.ami.plugins.regex.CompoundRegex;
+import org.contentmine.ami.plugins.regex.RegexArgProcessor;
+import org.contentmine.ami.plugins.regex.RegexComponent;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.ResultElement;
 import org.contentmine.cproject.files.ResultsElement;
@@ -21,39 +22,24 @@ import org.contentmine.graphics.html.HtmlA;
 import org.contentmine.graphics.html.HtmlElement;
 import org.contentmine.graphics.html.HtmlP;
 import org.contentmine.norma.NAConstants;
-import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import junit.framework.Assert;
 import nu.xom.Element;
 import nu.xom.Text;
 
-public class RegexPluginTest {
-	
-	private static final Logger LOG = Logger.getLogger(RegexPluginTest.class);
+/** test AMIAMIRegexTool
+ * hacked from old AMIRegexTool
+ * @author pm286
+ *
+ */
+public class AMIRegexToolTest {
+	private static final Logger LOG = Logger.getLogger(AMIRegexToolTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	
-	
-	
-	/** test help
-	 * 
-	 * desn't run anything
-	 * 
-	 * @throws IOException
-	 */
-	@Test
-	@Ignore // to avoid output
-	public void testSimpleTestRegexHelp() throws IOException {
-		String[] args = {
-				
-		};
-		new RegexPlugin(args);
-	}
-	
 
-	
 	/** test generation of conformant regexes
 	 * 
 	 * desn't run anything
@@ -62,53 +48,55 @@ public class RegexPluginTest {
 	 */
 	@Test
 	public void testSimpleTestRegex() throws IOException {
-		String[] args = {
+		String args = 
 				// add context for 25 chars preceding and 40 post
-				"--context", "25", "40", "--r.regex", NAConstants.MAIN_AMI_DIR+"/regex/common.xml",
-		};
-		new RegexPlugin(args);
+				""
+				+ " --regex "+NAConstants.MAIN_AMI_DIR+"/regex/common.xml"
+				+ " --context 25 40";
+	
+		new AMIRegexTool().runCommands(args);
 	}
 	
 	@Test
 	// EMPTY??
-	public void testRegexPlugin() throws IOException {
+	public void testAMIRegexTool() throws IOException {
 		File target = new File("target/bmc/regex/15_1_511_test");
 		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
 		String args = 
-				"-q "+ target.toString()+" -i scholarly.html -o results.xml --context 25 40 --r.regex "
-						+ NAConstants.MAIN_AMI_DIR+"/regex/common.xml";
-		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
-		argProcessor.runAndOutput();
-		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+				"-t "+ target.toString()+
+				" -i scholarly.html"
+				+ " -o results.xml"
+				+ " --context 25 40"
+				+ " --regex "+NAConstants.MAIN_AMI_DIR+"/regex/common.xml";
+		new AMIRegexTool().runCommands(args);
+		
+		AMIFixtures.checkResultsElementList(null, 1, 0, 
 				"<results title=\"common\" />");
 	}
 	
 	@Test
-	public void testRegexPlugins() throws IOException {
+	public void testAMIRegexTools() throws IOException {
 		File target = new File("target/bmc/regex/15_1_511_test");
 		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
 		File normaTemp = new File("target/bmc/regex/15_1_511_test");
-		String regexFile = NAConstants.MAIN_AMI_DIR+"/regex/common.xml";
-		LOG.debug(">"+regexFile+"/"+IOUtils.toString(new FileInputStream(regexFile)));
+		LOG.debug("tree "+normaTemp.getAbsolutePath());
+		Assert.assertTrue("exists: "+normaTemp, normaTemp.exists());
 		String args = 
-				"-q "+normaTemp.toString()
-				+" -i scholarly.html"
-				+ " -o results.xml"
-				+ " --context 55 40"
-				+ " --r.regex "+
-		    regexFile
-//		    		+ " "+NAConstants.MAIN_AMI_DIR+"/regex/figure.xml"
-//		    		+ " "+NAConstants.MAIN_AMI_DIR+"/regex/phylotree.xml"
-		    ;
-		AMIPlugin regexPlugin = new RegexPlugin(args);
-		RegexArgProcessor argProcessor = (RegexArgProcessor) regexPlugin.getArgProcessor();
-		Assert.assertNotNull(argProcessor);
-		argProcessor.runAndOutput();
-		AMIFixtures.checkResultsElementList(argProcessor, 3, 0, 
+				""
+				+ "-t "+normaTemp.toString()
+//				+ " -i scholarly.html"
+//				+ " -o results.xml"
+				+ " --context 25 40"
+				+ " --regex "
+					+ NAConstants.MAIN_AMI_DIR+"/regex/common.xml"
+		    		+ " "+NAConstants.MAIN_AMI_DIR+"/regex/figure.xml"
+		    		+ " "+NAConstants.MAIN_AMI_DIR+"/regex/phylotree.xml";
+		new AMIRegexTool().runCommands(args);
+		AMIFixtures.checkResultsElementList(null, 3, 0, 
 				"<results title=\"common\" />");
-		AMIFixtures.checkResultsElementList(argProcessor, 3, 1, 
+		AMIFixtures.checkResultsElementList(null, 3, 1, 
 				"<results title=\"figure\" />");
-		AMIFixtures.checkResultsElementList(argProcessor, 3, 2, 
+		AMIFixtures.checkResultsElementList(null, 3, 2, 
 				"<results title=\"phylotree\" />");
 	}
 	
@@ -117,11 +105,12 @@ public class RegexPluginTest {
 	// FAILS? logic is broken
 	public void testCONSORTRegex() throws IOException {
 		File target = new File("target/consort0/15_1_511_test/");
+		
 		AMIFixtures.runStandardTestHarness(
 				AMIFixtures.TEST_BMC_15_1_511_CMDIR, 
 				target, 
-				new RegexPlugin(),
-				"-q "+target+" -i scholarly.html --context 25 40 --r.regex "
+				/*new AMIRegexTool(),*/ null, // will deliberately fail
+				"-q "+target+" -i scholarly.html --context 25 40 --regex "
 						+ NAConstants.MAIN_AMI_DIR+"/regex/consort0.xml",
 				"regex/consort0/");
 		CTree cTree = new CTree(target);
@@ -176,10 +165,13 @@ public class RegexPluginTest {
 	public void testCONSORTRegex1() throws IOException {
 		File target = new File("target/consort0/15_1_511_test/");
 		FileUtils.copyDirectory(AMIFixtures.TEST_WORD_EXAMPLES, AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1);
-		String args = "-q "+target+" -i scholarly.html --context 25 40 --r.regex "+NAConstants.MAIN_AMI_DIR+"/regex/consort0.xml";
-		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
-		argProcessor.runAndOutput();
-		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+		String args = "-t "+target
+//				+" -i scholarly.html"
+				+ " --context 25 40"
+				+ " --regex "+NAConstants.MAIN_AMI_DIR+"/regex/consort0.xml";
+		new AMIRegexTool().runCommands(args);
+		
+		AMIFixtures.checkResultsElementList(null, 1, 0, 
 				"<results title=\"consort0\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" "
 				+ "post=\"based on exclusion of a specific cause o\" "
 				+ "xpath=\"/html[1]/body[1]/div[16]/div[2]/div[9]"
@@ -191,21 +183,26 @@ public class RegexPluginTest {
 	// TESTED 2016-01-12
 	public void testSectioning() throws IOException {
 		FileUtils.copyDirectory(AMIFixtures.TEST_BMC_15_1_511_CMDIR, new File("target/consort0/15_1_511_test/"));
-		String cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --r.regex "+NAConstants.MAIN_AMI_DIR+"/regex/consort0.xml";
+		String cmd = ""
+				+ "-t target/consort0/15_1_511_test/"
+//				+ " -i scholarly.html"
+				+ " --regex "+NAConstants.MAIN_AMI_DIR+"/regex/consort0.xml";
 		RegexArgProcessor argProcessor = new RegexArgProcessor(cmd);
-		argProcessor.runAndOutput();
-		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+		
+		AMIFixtures.checkResultsElementList(null, 1, 0, 
 				"<results title=\"consort0\"><result pre=\"ety  3 . Approximately 90% of patients with LBP are labelled as having non-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause or pathology  4 . A wide range of health interventions for p\" xpath=\"/html[1]/b");
 		
 		File resultsFile = new File("target/consort0/15_1_511_test/results/regex/consort0/results.xml");
 		Assert.assertEquals("results without xpath", 8,  
 				XMLUtil.getQueryElements(XMLUtil.parseQuietlyToDocument(resultsFile).getRootElement(), 
 						"//result").size());
-		cmd = "-q target/consort0/15_1_511_test/ -i scholarly.html --xpath //*[@tagx='title']/* --r.regex "
-				+ NAConstants.MAIN_AMI_DIR+"/regex/consort0.xml";
+		cmd = "-t target/consort0/15_1_511_test/"
+//				+ " -i scholarly.html"
+				+ " --xpath //*[@tagx='title']/*"
+				+ " --regex "+ NAConstants.MAIN_AMI_DIR+"/regex/consort0.xml";
 		argProcessor = new RegexArgProcessor(cmd);
-		argProcessor.runAndOutput();
-		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+		
+		AMIFixtures.checkResultsElementList(null, 1, 0, 
 				"<results title=\"consort0\">"
 				+ "<result pre=\"r pattern of improvement following a wide range of primary care treatments: a systematic review of \" "
 				+ "name0=\"random\" value0=\"randomized\" post=\"clinical trials \" "
@@ -215,7 +212,7 @@ public class RegexPluginTest {
 		Assert.assertEquals("results with xpath", 2,  
 				XMLUtil.getQueryElements(XMLUtil.parseQuietlyToDocument(resultsFile).getRootElement(), 
 						"//result").size());
-		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+		AMIFixtures.checkResultsElementList(null, 1, 0, 
 				"<results title=\"consort0\"><result pre=\"r pattern of improvement following a wide range "
 				+ "of primary care treatments: a systematic review of \" name0=\"random\" value0=\"randomized\" "
 				+ "post=\"clinical trials \" xpath=\"/html[1]/body[1]/div[16]/");
@@ -226,12 +223,16 @@ public class RegexPluginTest {
 
 	@Test
 	// TESTED 2016-01-12
-	public void testRegexPluginConsort0() throws IOException {
-		String args = "-q target/bmc/regex/15_1_511_test -i scholarly.html -o results.xml --context 25 40 "
-				+ "--r.regex "+NAConstants.MAIN_AMI_DIR+"/regex/consort0.xml";
-		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
-		argProcessor.runAndOutput();
-		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+	public void testAMIRegexToolConsort0() throws IOException {
+		String args = ""
+				+ "-t target/bmc/regex/15_1_511_test"
+//				+ " -i scholarly.html"
+//				+ " -o results.xml"
+				+ " --context 25 40 "
+				+ "--regex "+NAConstants.MAIN_AMI_DIR+"/regex/consort0.xml";
+		new AMIRegexTool().runCommands(args);
+		
+		AMIFixtures.checkResultsElementList(null, 1, 0, 
 				"<results title=\"consort0\"><result pre=\"-specific LBP (NSLBP), a \" name0=\"diagnose\" value0=\"diagnosis\" post=\"based on exclusion of a specific cause o\" xpath=\"/html[1]/body[1]/div[16]/div[2]/div[9]/"
 				);
 	}
@@ -242,10 +243,15 @@ public class RegexPluginTest {
 		
 		File regexDir = new File(NAConstants.TEST_AMI_DIR, "regex/");
 		FileUtils.copyDirectory(new File(regexDir, "PMC4625707"), new File("target/regex/PMC4625707/"));
-		String args = "-q target/regex/PMC4625707/ -i scholarly.html -o results.xml --context 25 40 --r.regex "+new File(regexDir, "snp.regex.xml");
-		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
-		argProcessor.runAndOutput();
-		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
+		String args = ""
+				+ "-t target/regex/PMC4625707/"
+//				+ " -i scholarly.html"
+//				+ " -o results.xml"
+				+ " --context 25 40"
+				+ " --regex "+new File(regexDir, "snp.regex.xml");
+		new AMIRegexTool().runCommands(args);
+		
+		AMIFixtures.checkResultsElementList(null, 1, 0, 
 				"<results title=\"snp\" />");
 
 	}
@@ -259,10 +265,13 @@ public class RegexPluginTest {
 		File test = new File("target/regex/brackets0/scholarly.html");
 		FileUtils.write(test, testXML);
 		Assert.assertTrue("test exists", test.exists());
-		String args = "-q target/regex/brackets0/ -i scholarly.html -o results.xml  --r.regex "
-				+ NAConstants.MAIN_AMI_DIR+"/regex/statistics.xml";
-		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
-		argProcessor.runAndOutput();
+		String args = ""
+				+ "-t target/regex/brackets0/"
+//				+ " -i scholarly.html"
+//				+ " -o results.xml"
+				+ " --regex " + NAConstants.MAIN_AMI_DIR+"/regex/statistics.xml";
+		new AMIRegexTool().runCommands(args);
+		
 	}
 	@Test
 	public void testBracketRegex() throws IOException {
@@ -277,10 +286,13 @@ public class RegexPluginTest {
 		File test = new File("target/regex/brackets/scholarly.html");
 		FileUtils.write(test, testXML);
 		Assert.assertTrue("test exists", test.exists());
-		String args = "-q target/regex/brackets/ -i scholarly.html -o results.xml  --r.regex "
-				+NAConstants.MAIN_AMI_DIR+"/regex/statistics.xml";
-		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
-		argProcessor.runAndOutput();
+		String args = ""
+				+ "-t target/regex/brackets/"
+//				+ " -i scholarly.html"
+//				+ " -o results.xml"
+				+ " --regex " + NAConstants.MAIN_AMI_DIR+"/regex/statistics.xml";
+		new AMIRegexTool().runCommands(args);
+		
 	}
 	
 	@Test
@@ -292,9 +304,13 @@ public class RegexPluginTest {
 				+ "</div>"
 				);
 		File regexFile = createRegexFile(targetDir, "testme", "qqq", "Q");
-		String args = "-q "+targetDir+" -i scholarly.html -o results.xml  --r.regex "+regexFile;
-		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
-		argProcessor.runAndOutput();
+		String args = ""
+				+ "-t "+targetDir
+//				+" -i scholarly.html"
+//				+ " -o results.xml"
+				+ "  --regex "+regexFile;
+		new AMIRegexTool().runCommands(args);
+		
 	}
 
 	@Test
@@ -306,9 +322,12 @@ public class RegexPluginTest {
 				+ "</div>"
 				);
 		File regexFile = createRegexFile(targetDir, "testme1", "qqq", "[Qn]\\s*=\\s*[0-9]+");
-		String args = "-q "+targetDir+" -i scholarly.html -o results.xml  --r.regex "+regexFile;
-		RegexArgProcessor argProcessor = new RegexArgProcessor(args);
-		argProcessor.runAndOutput();
+		String args = ""
+				+ "-t "+targetDir
+//				+" -i scholarly.html"
+//				+ " -o results.xml"
+				+ "  --regex "+regexFile;
+		new AMIRegexTool().runCommands(args);
 	}
 
 	private File createRegexFile(File targetDir, String title, String field, String rawRegex) {
@@ -322,8 +341,6 @@ public class RegexPluginTest {
 		return regexFile;
 	}
 
-
-
 	private CompoundRegex createCompoundRegex(String title, String fields, String rawRegex) {
 		CompoundRegex compoundRegex = new CompoundRegex(title);
 		RegexComponent regexComponent = new RegexComponent(compoundRegex);
@@ -332,11 +349,10 @@ public class RegexPluginTest {
 		return compoundRegex;
 	}
 
-
-
 	private void createTestDocument(File targetDir, String testXML) throws IOException {
 		File test = new File(targetDir, "scholarly.html");
 		FileUtils.write(test, testXML);
 		Assert.assertTrue("test exists", test.exists());
 	}
+
 }

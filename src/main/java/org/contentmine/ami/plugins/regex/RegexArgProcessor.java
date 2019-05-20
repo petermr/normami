@@ -100,6 +100,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 	}
 
 	private void runRegex() {
+		LOG.debug("Running regex");
 		ensureSectionElements();
 		resultsByCompoundRegex = new HashMap<String, ResultsElement>();
 		for (CompoundRegex compoundRegex : compoundRegexList) {

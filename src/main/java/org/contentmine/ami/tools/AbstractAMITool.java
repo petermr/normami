@@ -94,6 +94,20 @@ public abstract class AbstractAMITool implements Callable<Void> {
 				)
     protected String cProjectDirectory = null;
 
+    @Option(names = {"-i", "--input"}, 
+		arity = "1",
+		paramLabel="input",
+		description = "input filename (no defaults)"
+				)
+    protected String input = null;
+
+    @Option(names = {"-o", "--output"}, 
+		arity = "1",
+		paramLabel="output",
+		description = "output filename (no defaults)"
+				)
+    protected String output = null;
+
     @Option(names = {"-t", "--ctree"}, 
 		arity = "0..1",
 		paramLabel = "CTree",

@@ -208,6 +208,34 @@ public class AMIForestPlotTest {
 
 	}
 
+	@Test 
+	/** splits SPSS Plots vertically into Table and Graph
+	 * 
+	 */
+	public void testSplitSPSSSimpleTableGraph() {
+		
+
+//		boolean useTree = true;
+		boolean useTree = false;
+//		File projectDir = SPSS_DIR;
+		File projectDir = SPSS_SIMPLE_DIR;
+//		File projectDir - SPSS_MULTIPLE_DIR;
+//		File projectDir - SPSS_SUBPLOT_DIR;
+//		String treename = "PMC5502154";
+		String treename = "PMC5911624";
+		CTree cTree = new CTree(new File(projectDir, treename));
+		CProject cProject = new CProject(projectDir);
+		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
+		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
+		String cmd = ""
+			+ source
+			+ " --template template.xml"
+		    + "";
+		System.out.println("ami-forest "+cmd);
+		forestPlotTool.runCommands(cmd);
+
+	}
+
 	@Test
 	public void testSPSSImageProcessing() {
 		
