@@ -80,32 +80,34 @@ public class ImageDirProcessor {
 
 	void processImageDir(File imageDir) {
 		this.imageDir = imageDir;
+		System.out.println("image: "+imageDir.getName());
 		String inputname = amiocrTool.getInputname();
 		File imageFile = inputname != null ? new File(imageDir, inputname+".png") :
 		AbstractAMITool.getRawImageFile(imageDir);
-//		amiocrTool = null;
-	// this is crude; should use interfaces later!
-//		if (amiTool instanceof AMIOCRTool) {
-//			amiocrTool = (AMIOCRTool) amiTool;
 		amiocrTool.runOCR(imageFile);
 		if (amiocrTool.outputHtml) {
+			processTesseractOutput(imageDir);
+		}
+	}
+
+	private void processTesseractOutput(File imageDir) {
+		boolean ok = true;
+		try {
+			amiocrTool.createStructuredHtml();
+		} catch (Exception e) {
+			LOG.debug("Cannot read HOCR input: "+e);
+			ok = false;
+		}
+		if (ok && LineDir.horiz.equals(amiocrTool.extractLines)) {
 			try {
-				amiocrTool.createStructuredHtml();
-			} catch (Exception e) {
-				LOG.debug("Cannot read HOCR input: "+e);
-				return;
-			}
-			if (LineDir.horiz.equals(amiocrTool.extractLines)) {
-				try {
-					File hocrRawDir = getHocrRawFilename(imageDir);
-					File rawSvgFile = new File(hocrRawDir, "raw.svg");
-					SVGTextLineList textLineList = amiocrTool.createTextLineList(rawSvgFile);
-					textLineList.getOrCreateTypeAnnotations();
-					SVGSVG.wrapAndWriteAsSVG((SVGElement)textLineList.createSVGElement(),
-							getTextLineListFilename(imageDir));
-				} catch (FileNotFoundException e) {
-					throw new RuntimeException("Cannot find file in ImageDir "+imageDir, e);
-				}
+				File hocrRawDir = getHocrRawFilename(imageDir);
+				File rawSvgFile = new File(hocrRawDir, "raw.svg");
+				SVGTextLineList textLineList = amiocrTool.createTextLineList(rawSvgFile);
+				textLineList.getOrCreateTypeAnnotations();
+				SVGSVG.wrapAndWriteAsSVG((SVGElement)textLineList.createSVGElement(),
+						getTextLineListFilename(imageDir));
+			} catch (FileNotFoundException e) {
+				throw new RuntimeException("Cannot find file in ImageDir "+imageDir, e);
 			}
 		}
 	}

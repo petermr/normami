@@ -136,7 +136,7 @@ public class AMIImageTool extends AbstractAMITool {
 		public final static AMIImageType getImageType(String filename) {
 			for (AMIImageType imageType : values()) {
 				if (filename != null && filename.startsWith(imageType.name)) {
-					LOG.debug("type "+imageType);
+//					LOG.debug("type "+imageType);
 					return imageType;
 				}
 			}
@@ -269,10 +269,10 @@ public class AMIImageTool extends AbstractAMITool {
     private String sharpen = "sharpen4";
 
     @Option(names = {"--template"},
-    		arity = "0..1",
+    		arity = "1",
 //    		defaultValue = "template.xml",
             description = "use template in each image.*/ dir to process image")
-    private String templateFilename = "template.xml";
+    private String templateFilename = null /*"template.xml"*/;
 
     @Option(names = {"--thinning"},
     		arity = "0..1",
@@ -511,8 +511,9 @@ public class AMIImageTool extends AbstractAMITool {
 	// ================= transform ===============
 	
 	private void runTransform(File imageDir) {
-		List<File> imageFiles = CMineGlobber.listSortedChildFiles(imageDir, CTree.PNG);
-		File highestImageFile = AMIImageType.getHighestLevelFile(imageFiles, priorityImage);
+//		List<File> imageFiles = CMineGlobber.listSortedChildFiles(imageDir, CTree.PNG);
+//		File highestImageFile = AMIImageType.getHighestLevelFile(imageFiles, priorityImage);
+		File highestImageFile = new File(imageDir, inputBasename+"."+CTree.PNG);
 		LOG.debug("transforming: "+highestImageFile);
 		BufferedImage image = ImageUtil.readImageQuietly(highestImageFile);
 		String basename = FilenameUtils.getBaseName(highestImageFile.toString());

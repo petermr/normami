@@ -34,6 +34,7 @@ import org.contentmine.graphics.svg.text.SVGTextLine;
 import org.contentmine.graphics.svg.text.SVGTextLineList;
 import org.contentmine.image.ImageUtil;
 import org.contentmine.image.ocr.HOCRReader;
+import org.contentmine.norma.image.ocr.GOCRConverter;
 import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
 
 import com.google.common.collect.ArrayListMultimap;
@@ -73,6 +74,8 @@ public class AMIOCRTool extends AbstractAMITool {
 
 
 	static final String IMAGE_DOT = "image.";
+	private static final String GOCR_XML = ".gocr.xml";
+	
 	static final Logger LOG = Logger.getLogger(AMIOCRTool.class);
 	
 	enum LineDir {
@@ -93,9 +96,16 @@ public class AMIOCRTool extends AbstractAMITool {
             description = "name for transformed Imagefile")
     private String basename = "default";
     
+    @Option(names = {"--gocr"},
+    		arity = "1",
+            description = "path for running gocr",
+            defaultValue = "/usr/local/bin/gocr")
+    private String gocrPath = null;
+    
     @Option(names = {"--html"},
     		arity = "0..1",
-            description = "create structured html") boolean outputHtml = true;
+            description = "create structured html") 
+    boolean outputHtml = true;
 
     @Option(names = {"--maxsize"},
     		arity = "1",
@@ -132,6 +142,9 @@ public class AMIOCRTool extends AbstractAMITool {
 	private ImageToHOCRConverter imageToHOCRConverter;
 	private Multimap<Integer, SVGText> textByYMap;
 	private SVGTextLineList textLineList;
+//	private String basename;
+	private String newbasename;
+	private File imageFile;
 
 
 	/** used by some non-picocli calls
@@ -152,6 +165,7 @@ public class AMIOCRTool extends AbstractAMITool {
     @Override
 	protected void parseSpecifics() {
 		System.out.println("extractlines        " + extractLines);
+		System.out.println("gocr                " + gocrPath);
 		System.out.println("html                " + outputHtml);
 		System.out.println("maxsize             " + maxsize);
 		System.out.println("scale               " + applyScale);
@@ -166,7 +180,6 @@ public class AMIOCRTool extends AbstractAMITool {
     protected void runSpecifics() {
     	if (processTrees()) { 
     	} else {
-    		
 			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
 	    }
     }
@@ -178,32 +191,62 @@ public class AMIOCRTool extends AbstractAMITool {
 		
 	}
 
+	/** this is called from ImageDirProcessor ? move it
+	 * 
+	 * @param imageFile
+	 */
 	void runOCR(File imageFile) {
-		String basename = FilenameUtils.getBaseName(imageFile.toString());
-		String newbasename = FilenameUtils.getBaseName(imageFile.getParentFile().toString());
+		this.imageFile = imageFile;
+		basename = FilenameUtils.getBaseName(imageFile.toString());
+		newbasename = FilenameUtils.getBaseName(imageFile.getParentFile().toString());
 		if (!imageFile.exists()) {
 			System.err.println("!not exist "+newbasename+"!");
-		} else {
-			if (scalefactor != null || Boolean.TRUE.equals(applyScale)) {
-				imageFile = scaleAndWriteFile(imageFile, newbasename);
-			}
-			System.out.println("["+newbasename+"]");
-			File outputDir = new File(imageFile.getParentFile(), HOCR_DIR);
-			// messy: tesseract filenames don't have html extension
-			outputHOCRFile = new File(outputDir, basename);
-			imageToHOCRConverter = new ImageToHOCRConverter();
-			if (tesseractPath != null) {
-				imageToHOCRConverter.setTesseractPath(tesseractPath);
-			}
+		} else if (gocrPath != null) {
 			try {
-				// run the OCR and return HOCR
-				outputHOCRFile = imageToHOCRConverter.convertImageToHOCR(imageFile, outputHOCRFile);
-				if (!outputHOCRFile.exists()) {
-					throw new RuntimeException("HOCR HTML should exist: "+outputHOCRFile);
-				}
+				runGOCR();
 			} catch (Exception e) {
-				throw new RuntimeException("cannot convert OCR", e);
+				LOG.error("Cannot run GOCR", e);
+			}	
+		} else if (tesseractPath != null) {
+			runTesseract(imageFile, basename, newbasename);
+		}
+	}
+
+	private void runGOCR() throws IOException, InterruptedException {
+		File imageDir = imageFile.getParentFile();
+		File gocrXmlFile = new File(imageDir, basename + GOCR_XML);
+		GOCRConverter converter = new GOCRConverter();
+		converter.createGOCRElement(imageFile, gocrXmlFile);
+		SVGElement svgElement = converter.createSVGElementWithGlyphs(imageDir);
+		
+		outputGOCR(imageDir, svgElement);
+	}
+
+	private void outputGOCR(File imageDir, SVGElement svgElement) {
+		
+		File svgFile = new File(imageDir, basename + ".gocr.svg");
+//		System.out.println(">> "+svgFile);
+		SVGSVG.wrapAndWriteAsSVG(svgElement, svgFile);
+	}
+
+	private void runTesseract(File imageFile, String basename, String newbasename) {
+		if (scalefactor != null || Boolean.TRUE.equals(applyScale)) {
+			imageFile = scaleAndWriteFile(imageFile, newbasename);
+		}
+		File outputDir = new File(imageFile.getParentFile(), HOCR_DIR);
+		// messy: tesseract filenames don't have html extension
+		outputHOCRFile = new File(outputDir, basename);
+		imageToHOCRConverter = new ImageToHOCRConverter();
+		imageToHOCRConverter.setTesseractPath(tesseractPath);
+
+		try {
+			// run the OCR and return HOCR
+			outputHOCRFile = imageToHOCRConverter.convertImageToHOCR(imageFile, outputHOCRFile);
+			if (!outputHOCRFile.exists()) {
+				throw new RuntimeException("HOCR HTML should exist: "+outputHOCRFile);
 			}
+		} catch (Exception e) {
+			throw new RuntimeException("cannot convert OCR", e);
 		}
 	}
 

@@ -215,7 +215,6 @@ public class AMIForestPlotTest {
 	public void testSplitSPSSSimpleTableGraph() {
 		
 
-//		boolean useTree = true;
 		boolean useTree = false;
 //		File projectDir = SPSS_DIR;
 		File projectDir = SPSS_SIMPLE_DIR;
@@ -227,6 +226,38 @@ public class AMIForestPlotTest {
 		CProject cProject = new CProject(projectDir);
 		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
 		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
+		String cmd = ""
+			+ source
+			+ " --template template.xml"
+		    + "";
+		System.out.println("ami-forest "+cmd);
+		forestPlotTool.runCommands(cmd);
+
+	}
+
+	@Test
+	public void testSplitSPSSMultipleTableGraph() {
+		
+		File projectDir = SPSS_MULTIPLE_DIR;
+		CProject cProject = new CProject(projectDir);
+		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
+		String source = "--cproject "+cProject.getDirectory();
+		String cmd = ""
+			+ source
+			+ " --template template.xml"
+		    + "";
+		System.out.println("ami-forest "+cmd);
+		forestPlotTool.runCommands(cmd);
+
+	}
+
+	@Test
+	public void testSplitSPSSSubplotTableGraph() {
+		
+		File projectDir = SPSS_SUBPLOT_DIR;
+		CProject cProject = new CProject(projectDir);
+		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
+		String source = "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source
 			+ " --template template.xml"

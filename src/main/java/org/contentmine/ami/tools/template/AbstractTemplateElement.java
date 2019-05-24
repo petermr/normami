@@ -81,7 +81,12 @@ public abstract class AbstractTemplateElement extends Element {
 	}
 
 	public static AbstractTemplateElement readTemplateElement(File currentDir, String templateFilename) {
-		AbstractTemplateElement templateElement = readTemplateElement(new File(currentDir, templateFilename), currentDir);
+		AbstractTemplateElement templateElement = null;
+		try {
+			templateElement = readTemplateElement(new File(currentDir, templateFilename), currentDir);
+		} catch (RuntimeException e) {
+			LOG.error("Cannot read template: "+templateFilename+" "+e.getMessage());
+		}
 		if (templateElement != null) {
 			templateElement.currentDir = currentDir;
 		}

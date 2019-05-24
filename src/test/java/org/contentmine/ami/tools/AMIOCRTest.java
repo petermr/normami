@@ -1,13 +1,30 @@
 package org.contentmine.ami.tools;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.gocr.GOCRPageElement;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
+import org.contentmine.eucl.euclid.Int2;
+import org.contentmine.eucl.euclid.Int2Range;
+import org.contentmine.eucl.euclid.Util;
+import org.contentmine.graphics.svg.SVGElement;
+import org.contentmine.graphics.svg.SVGImage;
+import org.contentmine.graphics.svg.SVGSVG;
+import org.contentmine.image.ImageUtil;
 import org.contentmine.norma.NormaFixtures;
+import org.contentmine.norma.image.ocr.GOCRCharBox;
+import org.contentmine.norma.image.ocr.GOCRConverter;
 import org.junit.Test;
+
+import com.google.common.collect.Multimap;
 
 /** test OCR.
  * 
@@ -212,5 +229,85 @@ public class AMIOCRTest {
 	
 	}
 	
+	@Test
+	public void testGOCRa() throws Exception {
+		File projectDir = new File("/Users/pm286/projects/forestplots/spssSimple");
+		CTree cTree = new CTree(new File(projectDir, "PMC5502154"));
+		File pdfImageDir = new File(cTree.getDirectory(), "pdfimages/");
+		File imageDir = new File(pdfImageDir, "image.4.3.96_553.569_697/");
+		File inputFile = new File(imageDir, "raw.png");
+
+		File gocrXmlFile = new File(imageDir, "raw.gocr.xml");
+		GOCRConverter gocrConverter = new GOCRConverter();
+		gocrConverter.createGOCRElement(inputFile, gocrXmlFile);
+		SVGElement svgElement = gocrConverter.createSVGElementWithGlyphs(imageDir);
+		File svgFile = new File(imageDir, "raw.gocr.svg");
+		SVGSVG.wrapAndWriteAsSVG(svgElement, svgFile);	
+		
+		if (false) {
+			gocrConverter.createMaps(svgElement);
+			gocrConverter.correlateImagesForGlyphs();
+		}
+
+	}
+	
+	@Test
+	public void testGOCR() throws Exception {
+		File projectDir = new File("/Users/pm286/projects/forestplots/spssSimple");
+		CProject cProject = new CProject(projectDir);
+		CTree cTree = new CTree(new File(projectDir, "PMC5502154"));
+		AMIOCRTool ocrTool = new AMIOCRTool();
+		String cmd = ""
+				+ "--cproject "+cProject.getDirectory()
+				+ " --gocr /usr/local/bin/gocr"
+				+ " --html false"
+		;
+		LOG.debug(cmd);
+		ocrTool.runCommands(cmd);
+
+	}
+
+	@Test
+	public void testGOCRBasename() throws Exception {
+		File projectDir = new File("/Users/pm286/projects/forestplots/spssSimple");
+		CProject cProject = new CProject(projectDir);
+		CTree cTree = new CTree(new File(projectDir, "PMC5502154"));
+		AMIOCRTool ocrTool = new AMIOCRTool();
+		String cmd = ""
+				+ "--cproject "+cProject.getDirectory()
+				+ " --gocr /usr/local/bin/gocr"
+				+ " --html false"
+				+ " --inputname raw.table.body"
+		;
+		LOG.debug(cmd);
+		ocrTool.runCommands(cmd);
+
+	}
+
+	@Test
+	public void testGOCRSharpen() throws Exception {
+		File projectDir = new File("/Users/pm286/projects/forestplots/spssSimple");
+		CProject cProject = new CProject(projectDir);
+		String imageBaseCmd = ""
+				+ "--cproject "+cProject.getDirectory()
+				+ " --sharpen sharpen4"
+				+ " --threshold 180"
+				;
+		;
+		new AMIImageTool().runCommands(imageBaseCmd + " --inputname " + "raw.table.header");
+		new AMIImageTool().runCommands(imageBaseCmd + " --inputname " + "raw.table.body");
+		new AMIImageTool().runCommands(imageBaseCmd + " --inputname " + "raw.graph.header");
+		new AMIImageTool().runCommands(imageBaseCmd + " --inputname " + "raw.graph.footer");
+		
+		AMIOCRTool ocrTool = new AMIOCRTool();
+		String ocrBaseCmd = "--cproject "+cProject.getDirectory()+" --gocr /usr/local/bin/gocr --html false";
+
+		new AMIOCRTool().runCommands(ocrBaseCmd + " --inputname raw.graph.footer_s4_b_10_thr_180");
+		new AMIOCRTool().runCommands(ocrBaseCmd + " --inputname raw.graph.header_s4_b_10_thr_180");
+		new AMIOCRTool().runCommands(ocrBaseCmd + " --inputname raw.table.footer_s4_b_10_thr_180");
+		new AMIOCRTool().runCommands(ocrBaseCmd + " --inputname raw.table.body_s4_b_10_thr_180");
+
+	}
+
 
 }

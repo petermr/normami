@@ -336,7 +336,6 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		System.out.println("use Hocr            " + useHocr);
 		System.out.println("offsets             " + offsets);
 		System.out.println("scaledFilename      " + basename);
-//		System.out.println("split axis          " + splitAxis);
 		System.out.println("table               " + table);
 		System.out.println("template            " + templateFilename);
 		System.out.println();
@@ -347,10 +346,6 @@ public class AMIForestPlotTool extends AbstractAMITool {
     @Override
     protected void runSpecifics() {
     	if (processTrees()) { 
-//    	} else if (imageFilenames != null) {
-//    		for (String imageFilename : imageFilenames) {
-//    			runForestPlot(new File(imageFilename));
-//    		}
     	} else {
 			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree ie imageFile");
 	    }
@@ -376,7 +371,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 				BufferedImage image = ImageUtil.readImageQuietly(new File(imageDir, "raw_s4_thr_150.png"));
 				Axis2 axis2 = (Axis.x.equals(splitAxis)) ? Axis2.X : Axis2.Y; 
 				ImageLineAnalyzer lineAnalyzer = new ImageLineAnalyzer(image);
-				List<BufferedImage> imageList = lineAnalyzer.splitAtLeftOfBottomLine(
+******			List<BufferedImage> imageList = lineAnalyzer.splitAtLeftOfBottomLine(
 						color, minline, offsets.get(0), axis2);
 				ImageUtil.writeImageQuietly(imageList.get(0), new File(imageDir, "raw_s4_thr_150.table.png"));
 				ImageUtil.writeImageQuietly(imageList.get(1), new File(imageDir, "raw_s4_thr_150.plot.png"));

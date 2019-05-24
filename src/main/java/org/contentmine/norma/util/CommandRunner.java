@@ -13,7 +13,7 @@ public abstract class CommandRunner {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-	protected static final String TESS_CONFIG = "replaceme";
+//	protected static final String TESS_CONFIG = "replaceme";
 	protected static final String ENCODING = "UTF-8";
 	protected static final int SLEEP_TIME = 1500;
 	protected static final int NTRIES = 20;

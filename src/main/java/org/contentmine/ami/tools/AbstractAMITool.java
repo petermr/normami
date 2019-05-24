@@ -554,6 +554,8 @@ public abstract class AbstractAMITool implements Callable<Void> {
 				this.cTree = cTree;
 				processTree();
 			}
+		} else {
+			LOG.warn("No trees to process");
 		}
 		return processed;
 	}
