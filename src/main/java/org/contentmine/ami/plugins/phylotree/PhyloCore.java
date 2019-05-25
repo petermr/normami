@@ -29,7 +29,7 @@ import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.graphics.svg.linestuff.LineMerger.MergeMethod;
 import org.contentmine.graphics.svg.text.SVGPhrase;
 import org.contentmine.norma.image.ocr.HOCRReaderOLD;
-import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
+import org.contentmine.norma.image.ocr.HOCRConverter;
 import org.contentmine.norma.util.CommandRunner;
 
 /** the main data and logic of phylo.
@@ -53,7 +53,7 @@ public class PhyloCore {
 	private String svgFilename;
 	private File outputDir;
 	private String outputRoot;
-	private ImageToHOCRConverter imageToHOCRConverter;
+	private HOCRConverter imageToHOCRConverter;
 	private Double joiningRadius = 40.0;
 	NexmlProcessor nexmlProcessor;
 	private SVGXTree svgxTree;
@@ -219,7 +219,7 @@ public class PhyloCore {
 
 	public CommandRunner getOrCreateImageToHOCRConverter() {
 		if (imageToHOCRConverter == null) {
-			imageToHOCRConverter = new ImageToHOCRConverter();
+			imageToHOCRConverter = new HOCRConverter();
 			imageToHOCRConverter.setTryCount(DEFAULT_RETRIES_FOR_TESSERACT_EXIT);
 		}
 		return imageToHOCRConverter;

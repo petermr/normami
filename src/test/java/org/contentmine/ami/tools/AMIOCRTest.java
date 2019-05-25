@@ -1,30 +1,18 @@
 package org.contentmine.ami.tools;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.tools.gocr.GOCRPageElement;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
-import org.contentmine.eucl.euclid.Int2;
-import org.contentmine.eucl.euclid.Int2Range;
-import org.contentmine.eucl.euclid.Util;
 import org.contentmine.graphics.svg.SVGElement;
-import org.contentmine.graphics.svg.SVGImage;
 import org.contentmine.graphics.svg.SVGSVG;
-import org.contentmine.image.ImageUtil;
 import org.contentmine.norma.NormaFixtures;
-import org.contentmine.norma.image.ocr.GOCRCharBox;
 import org.contentmine.norma.image.ocr.GOCRConverter;
 import org.junit.Test;
 
-import com.google.common.collect.Multimap;
+import junit.framework.Assert;
 
 /** test OCR.
  * 
@@ -245,7 +233,7 @@ public class AMIOCRTest {
 		SVGSVG.wrapAndWriteAsSVG(svgElement, svgFile);	
 		
 		if (false) {
-			gocrConverter.createMaps(svgElement);
+			gocrConverter.createGOCRMaps(svgElement);
 			gocrConverter.correlateImagesForGlyphs();
 		}
 
@@ -309,5 +297,57 @@ public class AMIOCRTest {
 
 	}
 
+	@Test
+	public void testGOCRTesseract() throws Exception {
+		File projectDir = new File("/Users/pm286/projects/forestplots/spssSimple");
+		LOG.debug(">"+projectDir);
+		CProject cProject = new CProject(projectDir);
+		File cTreeDirectory = new File(projectDir, "PMC5502154");
+		LOG.debug(cTreeDirectory.getAbsolutePath());
+		CTree cTree = new CTree(cTreeDirectory);
+		LOG.debug("t "+cTree.getDirectory());
+		String cProjectArg = "--cproject "+cProject.getDirectory();
+		String imageBaseCmd = ""
+				+ cProjectArg
+//				+ "--ctree "+cTree.getDirectory()
+				+ " --sharpen sharpen4"
+				+ " --threshold 180"
+				;
+		;
 
+		
+		new AMIImageTool().runCommands(imageBaseCmd + " --inputname " + "raw");
+		
+		String gocrBaseCmd = cProjectArg /*"--ctree "+cTree.getDirectory()*/ +" --gocr /usr/local/bin/gocr --html false";
+		String raw = "raw";
+		String raw180 = "raw_s4_b_10_thr_180";
+		new AMIOCRTool().runCommands(gocrBaseCmd + " --inputname " + raw);
+		new AMIOCRTool().runCommands(gocrBaseCmd + " --inputname " + raw180);
+
+		String hocrBaseCmd = cProjectArg /*"--ctree "+cTree.getDirectory()*/+" --tesseract /usr/local/bin/tesseract --html true";
+		new AMIOCRTool().runCommands(hocrBaseCmd + " --inputname "+raw);
+		new AMIOCRTool().runCommands(hocrBaseCmd + " --inputname "+raw180);
+
+		File pdfImageDir = cTree.getExistingPDFImagesDir();
+		File baseImageDir = new File(pdfImageDir, "image.4.3.96_553.569_697");
+		File processedImageDir = new File(baseImageDir, raw180);
+		
+		File hocrSVG = makeOcrSVG(processedImageDir, "hocr");
+		File gocrSVG = makeOcrSVG(processedImageDir, "gocr");
+
+		new AMIOCRTool().mergeOcr(hocrSVG, gocrSVG);
+	}
+
+	private File makeOcrSVG(File processedImageDir, String hocrGocr) {
+		File hocrGocrDir = makeHocrGocrDir(processedImageDir, hocrGocr);
+		File hocrGocrSVG = new File(hocrGocrDir, hocrGocr + ".svg");
+		return hocrGocrSVG;
+	}
+
+	private File makeHocrGocrDir(File processedImageDir, String hocrGocr) {
+		File hocrGocrDir =  new File(processedImageDir, hocrGocr);
+		hocrGocrDir.mkdirs();
+		return hocrGocrDir;
+	}
+	
 }

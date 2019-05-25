@@ -168,7 +168,7 @@ public class EssoilDB {
 //	}
 
 	void checkAndIndexChemicals() throws IOException {
-		EssoilDB.LOG.debug("checkChemicals");
+		LOG.debug("checkChemicals");
 		ChemicalCollection chemicalCollection = getOrCreateChemicalCollection();
 		chemicalCollection.checkAndIndexChemicals();
 	}

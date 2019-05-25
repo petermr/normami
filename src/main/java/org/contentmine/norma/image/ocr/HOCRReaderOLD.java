@@ -607,7 +607,7 @@ public class HOCRReaderOLD extends InputReader {
 	private void createHTMLandSVG(File imageDir, String imageSuffix, BufferedImage rawImage0, String id, File pngFile) throws Exception {
 		BufferedImage expandedImage = addMargins(rawImage0);
 		ImageIO.write(expandedImage, imageSuffix, new FileOutputStream(pngFile));
-		ImageToHOCRConverter converter = new ImageToHOCRConverter();
+		HOCRConverter converter = new HOCRConverter();
 		File outfileRoot = new File(imageDir, id+HOCRReaderOLD.HOCR);
 		File outputHtml = converter.convertImageToHOCR(pngFile, outfileRoot);
 		if (outputHtml == null) {

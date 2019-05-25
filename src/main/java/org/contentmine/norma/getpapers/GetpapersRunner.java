@@ -7,12 +7,12 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CTree;
-import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
+import org.contentmine.norma.image.ocr.HOCRConverter;
 import org.contentmine.norma.util.CommandRunner;
 
 public class GetpapersRunner extends CommandRunner {
 
-	public final static Logger LOG = Logger.getLogger(ImageToHOCRConverter.class);
+	public final static Logger LOG = Logger.getLogger(HOCRConverter.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}

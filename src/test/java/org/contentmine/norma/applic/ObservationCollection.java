@@ -223,11 +223,11 @@ public class ObservationCollection {
 	}
 
 	void readObservationsAndCreateIndexes() throws IOException {
-		EssoilDB.LOG.debug("read observations");
+		LOG.debug("read observations");
 		readObservations(new File(EssoilDB.ESSOIL, "info_compound_08102015.csv"));
-		EssoilDB.LOG.debug("writeObservations");
+		LOG.debug("writeObservations");
 		writeObservations(new File(EssoilDB.ESSOIL, "info_observation.csv"));
-		EssoilDB.LOG.debug("writeSameTrivial");
+		LOG.debug("writeSameTrivial");
 		writeTrivialNamesWithinSameObservations(new File(EssoilDB.ESSOIL, "trivialNamesWithinSame.txt"));
 		summarizeObservations(new File(EssoilDB.ESSOIL, "compoundList.txt"));
 		createObservationListWithUniqueBinomials();

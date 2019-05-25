@@ -1,23 +1,19 @@
 package org.contentmine.ami.tools;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Collections;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.tools.AMIOCRTool.LineDir;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.util.CMineGlobber;
-import org.contentmine.graphics.svg.SVGElement;
-import org.contentmine.graphics.svg.SVGSVG;
-import org.contentmine.graphics.svg.text.SVGTextLineList;
+import org.contentmine.norma.image.ocr.HOCRConverter;
+
 
 public class ImageDirProcessor {
 
-	private static final String TEXT_LINE_LIST_SVG = "textLineList.svg";
-	private static final Logger LOG = Logger.getLogger(ImageDirProcessor.class);
+	public static final Logger LOG = Logger.getLogger(ImageDirProcessor.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -25,7 +21,7 @@ public class ImageDirProcessor {
 	private CTree cTree;
 //	private AbstractAMITool amiTool;
 	private File imageDir;
-	private AMIOCRTool amiocrTool;
+	public AMIOCRTool amiocrTool;
 
 	public ImageDirProcessor() {
 		
@@ -86,45 +82,9 @@ public class ImageDirProcessor {
 		AbstractAMITool.getRawImageFile(imageDir);
 		amiocrTool.runOCR(imageFile);
 		if (amiocrTool.outputHtml) {
-			processTesseractOutput(imageDir);
+			HOCRConverter converter = new HOCRConverter(amiocrTool);
+			converter.processTesseractOutput(imageDir);
 		}
 	}
 
-	private void processTesseractOutput(File imageDir) {
-		boolean ok = true;
-		try {
-			amiocrTool.createStructuredHtml();
-		} catch (Exception e) {
-			LOG.debug("Cannot read HOCR input: "+e);
-			ok = false;
-		}
-		if (ok && LineDir.horiz.equals(amiocrTool.extractLines)) {
-			try {
-				File hocrRawDir = getHocrRawFilename(imageDir);
-				File rawSvgFile = new File(hocrRawDir, "raw.svg");
-				SVGTextLineList textLineList = amiocrTool.createTextLineList(rawSvgFile);
-				textLineList.getOrCreateTypeAnnotations();
-				SVGSVG.wrapAndWriteAsSVG((SVGElement)textLineList.createSVGElement(),
-						getTextLineListFilename(imageDir));
-			} catch (FileNotFoundException e) {
-				throw new RuntimeException("Cannot find file in ImageDir "+imageDir, e);
-			}
-		}
-	}
-
-	public static File getTextLineListFilename(File imageDir) {
-		File hocrRawDir = getHocrRawFilename(imageDir);
-		return new File(hocrRawDir, TEXT_LINE_LIST_SVG);
-	}
-
-	private static File getHocrDirFilename(File imageDir) {
-		File hocrDir = new File(imageDir, AMIOCRTool.HOCR);
-		return hocrDir;
-	}
-
-	public static File getHocrRawFilename(File imageDir) {
-		File hocrDir = getHocrDirFilename(imageDir);
-		File hocrRawDir = new File(hocrDir, AMIOCRTool.RAW);
-		return hocrRawDir;
-	}
 }

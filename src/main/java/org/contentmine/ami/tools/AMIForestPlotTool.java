@@ -1,7 +1,5 @@
 package org.contentmine.ami.tools;
 
-import java.awt.image.BufferedImage;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -18,7 +16,6 @@ import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.template.AbstractTemplateElement;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.DebugPrint;
-import org.contentmine.eucl.euclid.Axis.Axis2;
 import org.contentmine.eucl.euclid.Int2Range;
 import org.contentmine.eucl.euclid.IntRange;
 import org.contentmine.eucl.euclid.Real2;
@@ -35,9 +32,8 @@ import org.contentmine.graphics.svg.SVGUtil;
 import org.contentmine.graphics.svg.text.SVGPhrase;
 import org.contentmine.graphics.svg.text.SVGTextLine;
 import org.contentmine.graphics.svg.text.SVGTextLineList;
-import org.contentmine.image.ImageLineAnalyzer;
-import org.contentmine.image.ImageUtil;
 import org.contentmine.image.diagram.DiagramAnalyzer;
+import org.contentmine.norma.image.ocr.HOCRConverter;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
@@ -403,7 +399,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 			}
 
 			if (useHocr) {
-				File textLineListFile = ImageDirProcessor.getTextLineListFilename(imageDir);
+				File textLineListFile = HOCRConverter.getTextLineListFilename(imageDir);
 				createForestPlotFromImageText(textLineListFile);
 			} else {
 				File imageFile = getRawImageFile(imageDir);
