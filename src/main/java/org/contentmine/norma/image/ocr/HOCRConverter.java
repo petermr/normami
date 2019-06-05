@@ -16,6 +16,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMIOCRTool;
 import org.contentmine.ami.tools.AMIOCRTool.LineDir;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.ami.tools.ImageDirProcessor;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.eucl.xml.XMLUtil;
@@ -79,7 +80,7 @@ public class HOCRConverter extends CommandRunner {
 		tessConfig.add(HOCR);
 		
 		builder = new ProcessBuilder(tessConfig);
-		LOG.debug("builder "+builder.command());
+//		LOG.debug("builder "+builder.command());
         runBuilderAndCleanUp();
         
     	hocrHtmlFile = convertToHtmlFile(outputHocrFile);
@@ -151,7 +152,7 @@ public class HOCRConverter extends CommandRunner {
 	public void processTesseractOutput(File imageDir) {
 		boolean ok = true;
 		try {
-			createStructuredHtml();
+			createHOCRStructuredHtml();
 		} catch (Exception e) {
 //			e.printStackTrace();
 			LOG.debug("Cannot read HOCR input: "+ e);
@@ -171,7 +172,7 @@ public class HOCRConverter extends CommandRunner {
 		}
 	}
 
-	public void createStructuredHtml() {
+	public void createHOCRStructuredHtml() {
 		HOCRReader hocrReader = new HOCRReader();
 		if (amiocrTool == null) {
 			throw new RuntimeException("Need to call constructorwith amiocrTool");
@@ -180,7 +181,7 @@ public class HOCRConverter extends CommandRunner {
 			throw new RuntimeException("Cannot find outputHOCRFile: "+amiocrTool.outputHOCRFile);
 		}
 		String filename = amiocrTool.outputHOCRFile.toString();
-		LOG.debug("hocr output: "+filename);
+//		LOG.debug("hocr output: "+filename);
 		try {
 			InputStream inputStream = new FileInputStream(filename);
 			// analyze the HOCR

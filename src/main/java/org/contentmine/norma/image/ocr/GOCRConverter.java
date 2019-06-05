@@ -2,10 +2,10 @@ package org.contentmine.norma.image.ocr;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -14,10 +14,10 @@ import javax.imageio.ImageIO;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.tools.AMIOCRTool.OcrType;
 import org.contentmine.ami.tools.gocr.GOCRPageElement;
 import org.contentmine.eucl.euclid.Int2;
 import org.contentmine.eucl.euclid.Int2Range;
+import org.contentmine.eucl.euclid.IntRange;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.RealSquareMatrix;
 import org.contentmine.eucl.euclid.Util;
@@ -31,8 +31,8 @@ import org.contentmine.graphics.svg.SVGText;
 import org.contentmine.image.ImageUtil;
 import org.contentmine.norma.util.CommandRunner;
 
-import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Multiset;
 
 import nu.xom.Element;
 
@@ -96,7 +96,7 @@ http://www-e.uni-magdeburg.de/jschulen/ocr/
  * @author pm286
  *
  */
-public class GOCRConverter extends CommandRunner {
+public class GOCRConverter  extends AbstractOCRConverter {
 
 
 	public final static Logger LOG = Logger.getLogger(GOCRConverter.class);
@@ -134,24 +134,28 @@ public class GOCRConverter extends CommandRunner {
     public final static int EXTEND_DATABASE = 130;
   // 256       switch off the recognition engine (makes sense together with -m 2)
     public final static int SWITCH_OFF_RECOGNITION = 256;
-private String inputFilename;
-private BufferedImage inputImage;
-private List<GOCRCharBox> gocrCharBoxList;
-//  maps
-private Multimap<String, GOCRCharBox> charBoxByText;
-private Map<Int2Range, GOCRCharBox> charBoxByBBox;
-private Multimap<String, Int2> bboxSizeByText;
+	private String inputFilename;
+	private BufferedImage inputImage;
+	CharBoxList gocrCharBoxList;
+	
+	private GOCRPageElement gocrElement;
+	private SVGElement svgElement;
+	private File ocrBaseDir;
+	private File imageFile;
+	private int minYRange;
+	int minEntryCount;
+	private TextLineAnalyzer textLineAnalyzer;
 
-private GOCRPageElement gocrElement;
-private SVGElement svgElement;
-private File ocrBaseDir;
-private File imageFile;
 
-
-	public GOCRConverter() {
+	public GOCRConverter () {
 		setDefaults();
 	}
 	
+	protected void setDefaults() {
+		super.setDefaults();
+		minYRange = 8;
+		minEntryCount = 2;
+	}
 	/** converts Image to GOCR
      * relies on GOCR.
      * 
@@ -162,13 +166,21 @@ private File imageFile;
      * @throws IOException // if Tesseract not present
      * @throws InterruptedException ??
      */
-    public void convertImageToGOCR(File inputImageFile, File outputGocrFile) throws IOException, InterruptedException {
+    public void convertImageToGOCR(File inputImageFile, File outputGocrFile) throws FileNotFoundException, InterruptedException {
 
     	inputFilename = inputImageFile.getAbsolutePath();
-		inputImage = ImageIO.read(inputImageFile);
+    	if (!inputImageFile.exists()) {
+    		throw new FileNotFoundException("inoput image: "+inputImageFile);
+    	}
+		try {
+			inputImage = ImageIO.read(inputImageFile);
+		} catch (IOException e) {
+			LOG.error("Cannot read image: "+inputImageFile);
+			e.printStackTrace();
+		}
 		
     	this.outputFileRoot = outputGocrFile;
-    	outputGocrFile.getParentFile().mkdirs();
+		outputGocrFile.getParentFile().mkdirs();
 		String fmt = PNM;
 		File outputFile = new File(inputImageFile.getParentFile(), 
 				FilenameUtils.getBaseName(inputFilename) + "." + fmt);
@@ -202,6 +214,8 @@ private File imageFile;
 		
 		gocrConfig.add("-i");
 		gocrConfig.add(inputFilename);
+		System.out.println("GOCR command: "+gocrConfig);
+		
 		
 		builder = new ProcessBuilder(gocrConfig);
         runBuilderAndCleanUp();
@@ -242,35 +256,37 @@ private File imageFile;
 		return gocrElement;
 	}
 
-	public List<GOCRCharBox> getOrCreateGOCRCharBoxes(SVGElement svgElement) {
-		List<SVGRect> rectList = SVGRect.extractSelfAndDescendantRects(svgElement);
-		if (gocrCharBoxList == null || gocrCharBoxList.size() == 0) {
-			gocrCharBoxList = new ArrayList<GOCRCharBox>();
-			for (SVGRect rect : rectList) {
-				if (SVGText.TAG.contentEquals(SVGRect.getClassAttributeValue(rect))) {
-					SVGG parentG = (SVGG) rect.getParent();
-					SVGImage svgImage = (SVGImage) XMLUtil.getSingleElement(parentG, "*[local-name()='"+SVGImage.TAG+"']");
-					if (svgImage == null && inputImage != null) {
-						createAndAddGlyphImage(rect, parentG);
-					}
-					GOCRCharBox charBox = GOCRCharBox.createFrom(parentG);
-					gocrCharBoxList.add(charBox);
-				}
-			}
+	public CharBoxList createCharBoxList(SVGElement svgElement) {
+		if (gocrCharBoxList == null) {
+			gocrCharBoxList = new CharBoxList();
+			List<SVGRect> rectList = SVGRect.extractSelfAndDescendantRects(svgElement);
+			addRectsAndContents(rectList);
 		}
 		return gocrCharBoxList;
 	}
-	
-	public List<GOCRCharBox> getGOCRCharBoxes() {
-		return gocrCharBoxList;
-	}
 
-	private void createAndAddGlyphImage(SVGRect rect, SVGG parentG) {
+	private void addRectsAndContents(List<SVGRect> rectList) {
+		for (SVGRect rect : rectList) {
+			if (SVGText.TAG.contentEquals(SVGRect.getClassAttributeValue(rect))) {
+				SVGG parentG = (SVGG) rect.getParent();
+				SVGImage svgImage = (SVGImage) XMLUtil.getSingleElement(parentG, "*[local-name()='"+SVGImage.TAG+"']");
+				if (svgImage == null && inputImage != null) {
+					svgImage = createAndAddGlyphImage(rect, parentG);
+				}
+				svgImage.setOpacity(0.2);
+				CharBox charBox = CharBox.createFrom(parentG);
+				gocrCharBoxList.add(charBox);
+			}
+		}
+	}
+	
+	private SVGImage createAndAddGlyphImage(SVGRect rect, SVGG parentG) {
 		SVGImage svgImage;
 		Int2Range boundingBox = rect.createIntBoundingBox();
 		svgImage = SVGImage.createSVGSubImage(inputImage, boundingBox);
 		svgImage.setOpacity(0.2);
 		parentG.appendChild(svgImage);
+		return svgImage;
 	}
 	
 	public static void addGlyphsToRectsInG(SVGElement svgElement, BufferedImage inputImage) throws IOException {
@@ -286,58 +302,162 @@ private File imageFile;
 		}
 	}
 	
-	public void createGOCRMaps(SVGElement svgElement) /*throws IOException*/ {
-		getOrCreateGOCRCharBoxes(svgElement);
-		bboxSizeByText = ArrayListMultimap.create();
-		charBoxByText = ArrayListMultimap.create();
-		charBoxByBBox = new HashMap<>();
-		for (GOCRCharBox gocrCharBox : gocrCharBoxList) {
-			charBoxByText.put(gocrCharBox.getSvgText().getText(), gocrCharBox);
-			bboxSizeByText.put(gocrCharBox.getSvgText().getText(), gocrCharBox.getBoundingBoxSize());
-			charBoxByBBox.put(gocrCharBox.getBoundingBox(), gocrCharBox);
+	public TextLineAnalyzer createMaps(SVGElement svgElement) {
+		createCharBoxList(svgElement);
+		textLineAnalyzer = new TextLineAnalyzer();
+		Multiset<IntRange> yRangeMultiset = textLineAnalyzer.createYRangeMultiset(gocrCharBoxList);
+		
+		textLineAnalyzer.setMinYRange(minYRange);
+		textLineAnalyzer.createMajorNonOverlappingTextLines(yRangeMultiset);
+		textLineAnalyzer.addCharBoxes(gocrCharBoxList);
+		textLineAnalyzer.disambiguateCharacters();
+		
+		System.out.println("TextLineAnalyzer "+textLineAnalyzer);
+		
+		return textLineAnalyzer;   
+	}
+
+
+	public TextLineAnalyzer getTextLineAnalyzer() {
+		return textLineAnalyzer;
+	}
+
+	public void setTextLineAnalyzer(TextLineAnalyzer textLineAnalyzer) {
+		this.textLineAnalyzer = textLineAnalyzer;
+	}
+
+	private SVGImage createImage(SVGImage imagei, Real2 xy, double opacity) {
+		SVGImage imageix = (SVGImage) imagei.copy();
+		imageix.setOpacity(opacity);
+		imageix.setXY(xy);
+		return imageix;
+	}
+
+	private SVGImage createImage(SVGImage imagej, double opacity, Real2 plus) {
+		SVGImage imagejx = (SVGImage) imagej.copy();
+		imagejx.setOpacity(opacity);
+		imagejx.setXY(plus);
+		return imagejx;
+	}
+
+	private SVGImage createSVGImage(int x,int y, SVGImage imagej) {
+		SVGImage image = (SVGImage) imagej.copy();
+		image.setX(x);
+		image.setY(y);
+		return image;
+	}
+
+	private RealSquareMatrix getGlyphMatrix(List<SVGImage> glyphList) {
+		RealSquareMatrix rsm = new RealSquareMatrix(glyphList.size());
+		for (int i = 0; i < glyphList.size(); i++) {
+			SVGImage svgImage = glyphList.get(i);
+			if(svgImage != null) {
+				BufferedImage imagei = svgImage.getBufferedImage();
+				for (int j = 0; j < glyphList.size(); j++) {
+					BufferedImage imagej = glyphList.get(j).getBufferedImage();
+					double cc = ImageUtil.correlateBlack(imagei, imagej);
+					rsm.setElementAt(i, j, Util.format(cc, 2));
+				}
+			} else {
+				throw new RuntimeException("null glyph");
+			}
 		}
-		   
+		return rsm;
+	}
+
+	private List<SVGImage> getGlyphList(List<CharBox> charBoxList) {
+		List<SVGImage> imageList = new ArrayList<SVGImage>();
+		for (CharBox charBox : charBoxList) {
+			imageList.add(charBox.getSvgImage());
+		}
+		return imageList;
+	}
+
+	public SVGElement createSVGElementWithGlyphs(File imageDir) throws IOException {
+		svgElement = null;
+		if (gocrElement != null) {
+			svgElement = gocrElement.createSVGElement();
+			addGlyphsToRectsInG(svgElement, inputImage);
+			createIndividualGlyphFiles(inputImage, svgElement, new File(createGocrDir(), GLYPH_DIR));
+		} else {
+			LOG.warn("Null gocr");
+		}
+		return svgElement;
 	}
 	
-	public void analyzeCharBoxes() {
-		for (String text : charBoxByText.keys()) {
-			List<GOCRCharBox> charBoxList = new ArrayList<GOCRCharBox>(charBoxByText.get(text));
-			LOG.debug(text + ":" +charBoxList);
-		}
+	public void readSVGElementWithGlyphs(SVGElement svgElement) {
 		
 	}
+			
 	
-	public Multimap<String, Int2> getBboxSizeByText() {
-		return bboxSizeByText;
+	public void runGOCR() throws IOException, InterruptedException {
+		ocrBaseDir = new File(imageFile.getParentFile(),FilenameUtils.getBaseName(imageFile.getAbsolutePath()));
+		ocrBaseDir.mkdirs();
+		File gocrXmlFile = new File(getGocrBase(), GOCR_XML);
+		LOG.debug("gocr >"+gocrXmlFile);
+		createGOCRElement(imageFile, gocrXmlFile);
+		SVGElement svgElement = createSVGElementWithGlyphs(gocrXmlFile);
+		
+		outputGOCR(svgElement);
 	}
 
-	public Multimap<String, GOCRCharBox> getCharBoxByText() {
-		return charBoxByText;
+	private File getGocrBase() {
+		return ocrBaseDir == null ? null : new File(ocrBaseDir, GOCR);
 	}
 
-	public Map<Int2Range, GOCRCharBox> getCharBoxByBBox() {
-		return charBoxByBBox;
+	public void outputGOCR(SVGElement svgElement) {
+		
+		File gocrDir = createGocrDir();
+		File svgFile = new File(gocrDir, GOCR_SVG);
+		addOpacity(svgElement, 0.3);
+		SVGSVG.wrapAndWriteAsSVG(svgElement, svgFile);
 	}
 
-//	public void addSubImageGlyphs() {
-//		
-//	}
+	private void addOpacity(SVGElement svgElement, double opacity) {
+		List<SVGImage> imageList = SVGImage.extractSelfAndDescendantImages(svgElement);
+		for (SVGImage image :imageList) {
+			image.setOpacity(opacity);
+		}
+	}
 
-	public void correlateImagesForGlyphs() {
+	private File createGocrDir() {
+		return getGocrBase();
+	}
+
+	public static List<File> createIndividualGlyphFiles(BufferedImage inputImage, SVGElement svgElement, File glyphDir) throws IOException {
+		List<SVGRect> rectList = SVGRect.extractSelfAndDescendantRects(svgElement);
+		List<File> glyphFileList = new ArrayList<File>();
+		for (SVGRect rect : rectList) {
+			if (SVGText.TAG.contentEquals(SVGRect.getClassAttributeValue(rect))) {
+				Int2Range boundingBox = rect.createIntBoundingBox();
+				SVGImage svgImage = SVGImage.createSVGSubImage(inputImage, boundingBox);
+				String  filename = boundingBox.toString().replaceAll("(\\(|\\)|\\,)", "_")+".png";
+				glyphDir.mkdirs();
+				File glyphFile = new File(glyphDir, filename);
+				ImageUtil.writeImageQuietly(svgImage.getBufferedImage(), glyphFile);
+        				
+			}
+		}
+		return glyphFileList;
+	}
+
+	public void setImageFile(File imageFile) {
+		this.imageFile = imageFile;
+	}
+	
+	public void correlateImagesForGlyphs(Multimap<String, CharBox> charBoxByText) {
 		List<String> charList = new ArrayList<String>(charBoxByText.keySet());
 		Collections.sort(charList);
 		for (String s : charList) {
-			List<GOCRCharBox> charBoxList = new ArrayList<GOCRCharBox>(charBoxByText.get(s));
+			List<CharBox> charBoxList = new ArrayList<CharBox>(charBoxByText.get(s));
 			List<SVGImage> glyphList = getGlyphList(charBoxList);
-			RealSquareMatrix correlation = getMatrix(glyphList);
+			RealSquareMatrix correlation = getGlyphMatrix(glyphList);
 			System.out.println(" "+s+"\n"+correlation);
 			SVGG g = createCorrelationMap(s, glyphList, correlation);
 			char ch = s.charAt(0);
 			SVGSVG.wrapAndWriteAsSVG(g, new File("target/gocr/correlation_"+ch+"_"+(int)ch+".svg"));
 		}
-	}
-
-	private SVGG createCorrelationMap(String s, List<SVGImage> glyphList, RealSquareMatrix correlation) {
+	}	private SVGG createCorrelationMap(String s, List<SVGImage> glyphList, RealSquareMatrix correlation) {
 		SVGG g = new SVGG();
 		int dx = 20;
 		int dy = 20;
@@ -377,110 +497,6 @@ private File imageFile;
 		return g;
 	}
 
-	private SVGImage createImage(SVGImage imagei, Real2 xy, double opacity) {
-		SVGImage imageix = (SVGImage) imagei.copy();
-		imageix.setOpacity(opacity);
-		imageix.setXY(xy);
-		return imageix;
-	}
 
-	private SVGImage createImage(SVGImage imagej, double opacity, Real2 plus) {
-		SVGImage imagejx = (SVGImage) imagej.copy();
-		imagejx.setOpacity(opacity);
-		imagejx.setXY(plus);
-		return imagejx;
-	}
-
-	private SVGImage createSVGImage(int x,int y, SVGImage imagej) {
-		SVGImage image = (SVGImage) imagej.copy();
-		image.setX(x);
-		image.setY(y);
-		return image;
-	}
-
-	private RealSquareMatrix getMatrix(List<SVGImage> glyphList) {
-		RealSquareMatrix rsm = new RealSquareMatrix(glyphList.size());
-		for (int i = 0; i < glyphList.size(); i++) {
-			SVGImage svgImage = glyphList.get(i);
-			if(svgImage != null) {
-				BufferedImage imagei = svgImage.getBufferedImage();
-				for (int j = 0; j < glyphList.size(); j++) {
-					BufferedImage imagej = glyphList.get(j).getBufferedImage();
-					double cc = ImageUtil.correlateBlack(imagei, imagej);
-					rsm.setElementAt(i, j, Util.format(cc, 2));
-				}
-			} else {
-				throw new RuntimeException("null glyph");
-			}
-		}
-		return rsm;
-	}
-
-	private List<SVGImage> getGlyphList(List<GOCRCharBox> charBoxList) {
-		List<SVGImage> imageList = new ArrayList<SVGImage>();
-		for (GOCRCharBox charBox : charBoxList) {
-			imageList.add(charBox.getSvgImage());
-		}
-		return imageList;
-	}
-
-	public SVGElement createSVGElementWithGlyphs(File imageDir) throws IOException {
-		svgElement = null;
-		if (gocrElement != null) {
-			svgElement = gocrElement.createSVGElement();
-			addGlyphsToRectsInG(svgElement, inputImage);
-			createIndividualGlyphFiles(inputImage, svgElement, new File(createGocrDir(), GLYPH_DIR));
-		} else {
-			LOG.warn("Null gocr");
-		}
-		return svgElement;
-	}
-	
-	public void readSVGElementWithGlyphs(SVGElement svgElement) {
-		
-	}
-			
-	
-	public void runGOCR() throws IOException, InterruptedException {
-		ocrBaseDir = new File(imageFile.getParentFile(),FilenameUtils.getBaseName(imageFile.getAbsolutePath()));
-		ocrBaseDir.mkdirs();
-		File gocrXmlFile = new File(ocrBaseDir, GOCR_XML);
-		createGOCRElement(imageFile, gocrXmlFile);
-		SVGElement svgElement = createSVGElementWithGlyphs(gocrXmlFile);
-		
-		outputGOCR(svgElement);
-	}
-
-	public void outputGOCR(SVGElement svgElement) {
-		
-		File gocrDir = createGocrDir();
-		File svgFile = new File(gocrDir, GOCR_SVG);
-		SVGSVG.wrapAndWriteAsSVG(svgElement, svgFile);
-	}
-
-	private File createGocrDir() {
-		return new File(ocrBaseDir, GOCR);
-	}
-
-	public static List<File> createIndividualGlyphFiles(BufferedImage inputImage, SVGElement svgElement, File glyphDir) throws IOException {
-		List<SVGRect> rectList = SVGRect.extractSelfAndDescendantRects(svgElement);
-		List<File> glyphFileList = new ArrayList<File>();
-		for (SVGRect rect : rectList) {
-			if (SVGText.TAG.contentEquals(SVGRect.getClassAttributeValue(rect))) {
-				Int2Range boundingBox = rect.createIntBoundingBox();
-				SVGImage svgImage = SVGImage.createSVGSubImage(inputImage, boundingBox);
-				String  filename = boundingBox.toString().replaceAll("(\\(|\\)|\\,)", "_")+".png";
-				glyphDir.mkdirs();
-				File glyphFile = new File(glyphDir, filename);
-				ImageUtil.writeImageQuietly(svgImage.getBufferedImage(), glyphFile);
-        				
-			}
-		}
-		return glyphFileList;
-	}
-
-	public void setImageFile(File imageFile) {
-		this.imageFile = imageFile;
-	}
 
 }

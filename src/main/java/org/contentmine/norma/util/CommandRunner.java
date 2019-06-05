@@ -90,6 +90,8 @@ public abstract class CommandRunner {
 		if (exitValue != 0) {
 			proc.destroy();
 			LOG.error("Process failed to terminate after :"+tryCount);
+		} else {
+//			LOG.debug("OCR launched");
 		}
 	}
 

@@ -23,6 +23,7 @@ public class GOCRBoxElement extends AbstractGOCRElement {
 	}
 	public static String TAG = "box";
 	private static final String VALUE = "value";
+	private static final String ACHARS = "achars";
 
 	public GOCRBoxElement(Element element) {
 		super(TAG, element);
@@ -43,7 +44,9 @@ public class GOCRBoxElement extends AbstractGOCRElement {
 		int dx = getDX();
 		int dy = getDY();
 		String value = this.getAttributeValue(VALUE);
-		SVGText text = new SVGText(new Real2(x, y + dy + getTextOffset()), value);
+		String achars = this.getAttributeValue(ACHARS);
+		achars = achars == null ? null : achars.replace(",,", ",CM");
+		SVGText text = new SVGText(new Real2(x, y + dy + getTextOffset()), achars/*value*/);
 		text.setCSSStyle(cssStyle);
 //		text.setFontSize(10.);
 		return text;

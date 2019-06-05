@@ -29,9 +29,10 @@ import org.contentmine.graphics.svg.SVGUtil;
 import org.contentmine.graphics.svg.text.SVGTextLine;
 import org.contentmine.graphics.svg.text.SVGTextLineList;
 import org.contentmine.image.ImageUtil;
-import org.contentmine.norma.image.ocr.GOCRCharBox;
+import org.contentmine.norma.image.ocr.CharBoxList;
 import org.contentmine.norma.image.ocr.GOCRConverter;
 import org.contentmine.norma.image.ocr.HOCRConverter;
+import org.contentmine.norma.image.ocr.TextLineAnalyzer;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
@@ -57,7 +58,8 @@ description = "Extracts text from OCR and (NYI) postprocesses HOCR output to cre
 
 public class AMIOCRTool extends AbstractAMITool {
 	public static final String RAW = "raw";
-//	public static final String HOCR = "hocr";
+	public static final String HOCR = "hocr";
+	public static final String GOCR = "gocr";
 	// fraction of font that descender goes below baseline , approximate
 	private static final Double DESCENDER_FUDGE = 0.15;
 	
@@ -72,7 +74,8 @@ public class AMIOCRTool extends AbstractAMITool {
 	public static final String IMAGE_DOT = "image.";
 	
 	public static final Logger LOG = Logger.getLogger(AMIOCRTool.class);
-	
+
+	/** not yet used*/
 	public enum LineDir {
 		horiz,
 		vert,
@@ -84,6 +87,7 @@ public class AMIOCRTool extends AbstractAMITool {
 		hocr
 	}
 	
+	private static final String GOCR_DIR = OcrType.gocr.toString();
 	private static final String HOCR_DIR = OcrType.hocr.toString();
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -91,8 +95,8 @@ public class AMIOCRTool extends AbstractAMITool {
 	
     @Option(names = {"--filename"},
     		arity = "1",
-            description = "name for transformed Imagefile")
-	public String basename = "default";
+            description = "name for transformed Imagefile. no default")
+	public String basename = null;
     
     @Option(names = {"--gocr"},
     		arity = "1",
@@ -124,16 +128,17 @@ public class AMIOCRTool extends AbstractAMITool {
 
     @Option(names = {"--tesseract"},
     		arity = "1",
-            description = "path for tesseract binary e.g. /usr/local/tesseract/",
-            defaultValue = "/usr/local/bin/tesseract")
+            description = "path for tesseract binary e.g. /usr/local/tesseract/"
+//            defaultValue = "/usr/local/bin/tesseract"
+            )
     private String tesseractPath = null;
 
     @Option(names = {"--extractlines"},
-    		arity = "1",
-            description = "extracts textlines ",
-            defaultValue = "none"
+    		arity = "1..*",
+            description = "extracts textlines from gocr and/or hocr "
+//            defaultValue = "none"
             )
-	public LineDir extractLines = null; 
+	public List<OcrType> extractLines = new ArrayList<OcrType>(); 
 
 
 	public File outputHOCRFile;
@@ -195,21 +200,39 @@ public class AMIOCRTool extends AbstractAMITool {
 	 * @param imageFile
 	 */
 	void runOCR(File imageFile) {
+		LOG.debug("image file "+imageFile);
+		
 		this.imageFile = imageFile;
 		basename = FilenameUtils.getBaseName(imageFile.toString());
 		newbasename = FilenameUtils.getBaseName(imageFile.getParentFile().toString());
-		if (!imageFile.exists()) {
-			System.err.println("!not exist "+newbasename+"!");
-		} else if (gocrPath != null) {
+		if (!imageFile.exists()) { 
+			System.err.println("image file does not exist "+newbasename);
+			return;
+		}
+		File imageDir = imageFile.getParentFile();
+		if (gocrPath != null) {
 			GOCRConverter gocrConverter = new GOCRConverter();
 			try {
 				gocrConverter.setImageFile(imageFile);
 				gocrConverter.runGOCR();
 			} catch (Exception e) {
 				LOG.error("Cannot run GOCR", e);
+				return;
 			}	
+			processGOCR(imageDir);
 		} else if (tesseractPath != null) {
 			runTesseract(imageFile, basename, newbasename);
+			if (outputHtml) {
+				HOCRConverter converter = new HOCRConverter(this);
+				converter.processTesseractOutput(getHocrDirectory(imageFile));
+			}
+			processHOCR(imageDir);
+		}
+		if (extractLines.contains(OcrType.gocr)) {
+			processGOCR(imageDir);
+		}
+		if (extractLines.contains(OcrType.hocr)) {
+			processHOCR(imageDir);
 		}
 	}
 
@@ -354,20 +377,50 @@ public class AMIOCRTool extends AbstractAMITool {
     	}
     }
 
-	public String getInputname() {
-		return inputBasename;
+	public File processHOCR(File processedImageDir) {
+		File hocrSVGFile = AMIOCRTool.makeOcrOutputFilename(processedImageDir, basename, AMIOCRTool.HOCR, CTree.SVG);
+		SVGElement hocrSVG1 = SVGElement.readAndCreateSVG(hocrSVGFile);
+		return hocrSVGFile;
 	}
 
-	public void mergeOcr(File hocrSVGFile, File gocrSVGFile) {
-		SVGElement hocrSVG = SVGElement.readAndCreateSVG(hocrSVGFile);
-		SVGElement gocrSVG = SVGElement.readAndCreateSVG(gocrSVGFile);
-		
+	public File processGOCR(File processedImageDir) {
+		File gocrSVGFile = AMIOCRTool.makeOcrOutputFilename(processedImageDir, basename, AMIOCRTool.GOCR, CTree.SVG);
+		SVGElement gocrSvgElement = SVGElement.readAndCreateSVG(gocrSVGFile);
 		GOCRConverter converter = new GOCRConverter();
-		converter.createGOCRMaps(gocrSVG);
-		List<GOCRCharBox> charBoxes = converter.getGOCRCharBoxes();
+		TextLineAnalyzer textLineAnalyzer = converter.createMaps(gocrSvgElement);
+		File gocrTextFile = AMIOCRTool.makeOcrOutputFilename(processedImageDir, basename, AMIOCRTool.GOCR, CTree.TXT);
+		textLineAnalyzer.outputText(gocrTextFile);
 		
-		LOG.debug("cb "+charBoxes);
+		CharBoxList gocrCharBoxList = converter.createCharBoxList(gocrSvgElement);
+		LOG.debug("cb "+gocrCharBoxList);
+		converter.getTextLineAnalyzer().makeTable(0);
 		
-		List<SVGImage> gocrImages = SVGImage.extractSelfAndDescendantImages(gocrSVG);
+		List<SVGImage> gocrImages = SVGImage.extractSelfAndDescendantImages(gocrSvgElement);
+		return gocrSVGFile;
 	}
+	
+	private static File makeOcrTextFilename(File processedImageDir, String basename2, String gocr2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static File makeOcrOutputFilename(File imageDir, String basename, String hocrGocr, String suffix) {
+		File hocrGocrDir = makeHocrOcrDir(imageDir, basename, hocrGocr);
+		File hocrGocrSVG = new File(hocrGocrDir, hocrGocr + "."+suffix);
+		return hocrGocrSVG;
+	}
+
+	private static File makeHocrOcrDir(File imageDir, String basename, String hocrGocr) {
+		File hocrGocrDir1 =  new File(new File(imageDir, basename), hocrGocr);
+		hocrGocrDir1.mkdirs();
+		File hocrGocrDir = hocrGocrDir1;
+		return hocrGocrDir;
+	}
+	
+	@Override
+	public void processImageDir(File imageFile) {
+		runOCR(imageFile);
+	}
+
+
 }

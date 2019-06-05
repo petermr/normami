@@ -188,7 +188,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 
 	
 	protected static final String NONE = "NONE";
-	private static final String RAW = "raw";
+	protected static final String RAW = "raw";
 
 	static final String TRUNCATE = "%";
 	protected static File HOME_DIR = new File(System.getProperty("user.home"));
@@ -592,6 +592,10 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		return false;
 	}
 
+	public String getInputBasename() {
+		return inputBasename;
+	}
+
 	/** this may not be the best place to define this.
 	 * 
 	 * @param imageDir
@@ -599,6 +603,11 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	 */
 	protected static File getRawImageFile(File imageDir) {
 		return new File(imageDir, RAW + "." + CTree.PNG);
+	}
+
+	/** override this in tools which process images */
+	public void processImageDir(File imageFile) {
+		LOG.error("Must override this in:"+this.getClass().getName());
 	}
 
 

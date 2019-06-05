@@ -33,6 +33,8 @@ public class AMIForestPlotTest {
 	private static final File SPSS_SUBPLOT_DIR = new File(FOREST_PLOT_DIR, SPSS_SUBPLOT);
 	private final static String STATA = "stata";
 	private static final File STATA_DIR = new File(FOREST_PLOT_DIR, STATA);
+	private final static String STATA_TOTAL = "stataTotal";
+	private static final File STATA_TOTAL_DIR = new File(FOREST_PLOT_DIR, STATA_TOTAL);
 	public static final String DEVTEST = SPSS_DIR.toString();
 
 	@Test
@@ -291,6 +293,154 @@ public class AMIForestPlotTest {
 		forestPlotTool.runCommands(cmd);
 	}
 
+	/** assumes CProject structure but no subdirectories 
+	 * */
+	@Test
+	public void testTotalStata() {
+		
+		boolean useTree = 
+//				true
+				false
+				;
+		File projectDir = STATA_TOTAL_DIR;
+		String treename = "PMC5882397";
+		CTree cTree = new CTree(new File(projectDir, treename));
+		CProject cProject = new CProject(projectDir);
+		
+		boolean makeProject = 
+//				true
+				false
+				;
+		boolean makePdf = 
+//				true
+				false
+				;
+		boolean makeImage = 
+				false
+//				true
+				;
+		boolean makeOCR = 
+				false
+//				true
+				;
+		boolean makePixel = 
+//				false
+				true
+				;
+		boolean makeForest = 
+				false
+//				true
+				;
+		
+		/** make the CTrees -no-op if already present 
+		 * from commandline:
+		 *  ami-makeproject -p /Users/pm286/my/project  --rawfiletypes html,pdf,xml";
+		 */
+		String makeProjectCmd = " -p " + cProject.getDirectory().getAbsoluteFile() + " --rawfiletypes html,pdf,xml";
+		if (makeProject) new AMIMakeProjectTool().runCommands(makeProjectCmd);
+
+		
+		// =====PDF======
+		/** parse PDFs and extract images // this will contain non-forest images
+		 * from commandline:
+		 *  ami-pdf -p /Users/pm286/my/project ";
+		 */
+		String pdfCmd = " -p " + cProject.getDirectory().getAbsoluteFile() ;
+		if (makePdf) new AMIPDFTool().runCommands(pdfCmd);
+		
+		// =====Image======
+		/** enhance images by thresholding and sharpening.
+		 * from commandline:
+		 *  ami-pdf -p /Users/pm286/my/project --sharpen sharpen4 --threshold 150 despeckle true";
+		 * 
+		 */
+
+		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
+		String imageCmd = ""
+				+ source
+				+ " --sharpen sharpen4"
+				+ " --threshold 120"
+				+ " --despeckle true"
+				;
+//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+		imageCmd = ""
+				+ source
+				+ " --threshold 120"
+				+ " --despeckle true"
+				;
+//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+		imageCmd = ""
+				+ source
+				+ " --sharpen sharpen4"
+				+ " --threshold 200"
+				+ " --despeckle true"
+				;
+//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+		imageCmd = ""
+				+ source
+				+ " --threshold 200"
+				+ " --despeckle true"
+				+ " -vvv"
+				;
+//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+
+		imageCmd = ""
+				+ source
+				+ " --threshold 240"
+				+ " --despeckle true"
+				+ " -vvv"
+				;
+//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+
+		// =====OCR======
+		/** Optical Character Recognition OCR.
+		 * from commandline:
+		 *  ami-ocr -p /Users/pm286/my/project " --gocr /usr/local/bin/gocr"
+		 * 
+		 */
+		String ocrCmd = ""
+				+ source
+				+ " --tesseract /usr/local/bin/tesseract"
+//				+ " --html false"
+		;
+		if (makeOCR) new AMIOCRTool().runCommands(ocrCmd);
+		ocrCmd = ""
+				+ source
+				+ " --gocr /usr/local/bin/gocr"
+		;
+		if (makeOCR) new AMIOCRTool().runCommands(ocrCmd);
+
+		// =====OCR2======
+		String ocr2Cmd = ""
+			+ source
+			+ " --extractlines gocr"
+			;
+		if (makeOCR) new AMIOCRTool().runCommands(ocr2Cmd);
+
+		// =====Pixel======
+		String pixelCmd = ""
+			+ source
+			+ " --projections"
+			+ " --minheight -1"
+			+ " --rings -1"
+			+ " --islands 0"
+			+ " --inputname raw_thr_240_ds"
+			;
+		if (makePixel) new AMIPixelTool().runCommands(pixelCmd);
+
+		// =====Forest======
+
+		String forestCmd = ""
+				+ source
+				+ " --forest"
+				;
+//		if (makeForest) new AMIForestTool().runCommands(forestCmd);
+
+
+	}
+	
+	
+
 
 
 	// ========================================
@@ -300,12 +450,12 @@ public class AMIForestPlotTest {
 		
 		CTree cTree = new CTree(new File(projectDir, treename));
 		CProject cProject = new CProject(projectDir);
-		AMIOCRTool ocrTool = new AMIOCRTool();
+		AbstractAMITool ocrTool = new AMIOCRTool();
 
 		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source 
-			+ " --extractlines horiz"
+			+ " --extractlines gocr"
 			+ "";
 		// create SVG
 		

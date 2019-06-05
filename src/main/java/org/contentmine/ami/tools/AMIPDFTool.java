@@ -72,7 +72,7 @@ public class AMIPDFTool extends AbstractAMITool {
 
     @Option(names = {"--svgpages"}, 
     		arity="0..1",
-   		    description = "output SVG pages. "
+   		    description = "output SVG pages. Default true"
     		)
     private boolean outputSVG = true;
     
@@ -86,7 +86,7 @@ public class AMIPDFTool extends AbstractAMITool {
     
     @Option(names = {"--pdfimages"}, 
     		arity="0..1",
-   		    description = "output PDFImages pages. "
+   		    description = "output PDFImages pages. Default true "
     		)
     private boolean outputPdfImages = true;
     

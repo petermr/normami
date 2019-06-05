@@ -19,22 +19,20 @@ public class ImageDirProcessor {
 	}
 
 	private CTree cTree;
-//	private AbstractAMITool amiTool;
 	private File imageDir;
-	public AMIOCRTool amiocrTool;
+	public AbstractAMITool amiTool;
 
 	public ImageDirProcessor() {
-		
 	}
 
-	public ImageDirProcessor(AMIOCRTool amiocrTool) {
+	public ImageDirProcessor(AbstractAMITool amiTool) {
 		this();
-		this.amiocrTool = amiocrTool;
+		this.amiTool = amiTool;
 		
 	}
 
-	public ImageDirProcessor(AMIOCRTool amiocrTool, CTree cTree) {
-		this(amiocrTool);
+	public ImageDirProcessor(AbstractAMITool amiTool, CTree cTree) {
+		this(amiTool);
 		this.cTree = cTree;
 	}
 
@@ -77,14 +75,10 @@ public class ImageDirProcessor {
 	void processImageDir(File imageDir) {
 		this.imageDir = imageDir;
 		System.out.println("image: "+imageDir.getName());
-		String inputname = amiocrTool.getInputname();
+		String inputname = amiTool.getInputBasename();
 		File imageFile = inputname != null ? new File(imageDir, inputname+".png") :
-		AbstractAMITool.getRawImageFile(imageDir);
-		amiocrTool.runOCR(imageFile);
-		if (amiocrTool.outputHtml) {
-			HOCRConverter converter = new HOCRConverter(amiocrTool);
-			converter.processTesseractOutput(imageDir);
-		}
+			AbstractAMITool.getRawImageFile(imageDir);
+		amiTool.processImageDir(imageFile);
 	}
 
 }
