@@ -110,7 +110,7 @@ public class AMIMakeProjectTool extends AbstractAMITool {
     }
 
     protected void parseSpecifics() {
-    	argument(Level.INFO, "compress            "+compress);
+    	addLoggingLevel(Level.INFO, "compress            "+compress);
     }
 
 	protected void runSpecifics() {
@@ -133,14 +133,14 @@ public class AMIMakeProjectTool extends AbstractAMITool {
     @Override
 	protected void validateCTree() {
 		if (cTreeDirectory != null) {
-			argument(Level.WARN, "must not have --ctree: " + cTreeDirectory+"; IGNORED");
+			addLoggingLevel(Level.WARN, "must not have --ctree: " + cTreeDirectory+"; IGNORED");
     	}
 	}
 	
     @Override
     protected void validateRawFormats() {
 		if (args.length > 0 && (rawFileFormats == null || rawFileFormats.length == 0)) {
-			argument(Level.ERROR, "must give at least one filetype (e.g. html); NO ACTION");
+			addLoggingLevel(Level.ERROR, "must give at least one filetype (e.g. html); NO ACTION");
 		}
     }
 

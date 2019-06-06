@@ -146,7 +146,7 @@ public class AMICleanTool extends AbstractAMITool {
 
 	public void cleanFileOrDirs(List<String> filenameList) {
 		if (filenameList == null) {
-			System.err.println("No filenameList given");
+			addLoggingLevel(Level.WARN,"No filenameList given");
 			return;
 		}
 		if (cProject != null) {
@@ -165,7 +165,7 @@ public class AMICleanTool extends AbstractAMITool {
 				}
 			}
 		} else {
-			throw new RuntimeException("must give cProject or cTree");
+			addLoggingLevel(Level.ERROR, "must give cProject or cTree");
 		}
 	}
 

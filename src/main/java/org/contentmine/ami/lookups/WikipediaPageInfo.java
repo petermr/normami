@@ -125,6 +125,7 @@ public class WikipediaPageInfo {
 		String href = getHref(WIKIDATA_ITEM_ID_FIELD);
 		HtmlA aElement = null;
 		if (value != null && href != null) {
+			LOG.debug(">"+value+"; "+(int)value.codePointAt(0));
 			aElement = HtmlA.createFromHrefAndContent(href, value);
 		}
 		return aElement;

@@ -17,7 +17,7 @@ public class AMISearchToolTest {
 
 	static File TIGR2ESS = new File("/Users/pm286/workspace/Tigr2essDistrib/tigr2ess");
 	private static final File DICTIONARY_EXAMPLES = new File(TIGR2ESS, "dictionaries/examples/");
-	static File OSANCTUM200 = new File(TIGR2ESS, "/osanctum200");
+	static File OSANCTUM200 = new File(TIGR2ESS, "osanctum200");
 	static File OSANCTUM2000 = new File(TIGR2ESS, "scratch/ocimum2019027");
 
 	@Test

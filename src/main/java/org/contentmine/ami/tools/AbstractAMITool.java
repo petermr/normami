@@ -467,7 +467,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		System.out.println("================================");
 	}
 
-	protected void argument(Level level, String message) {
+	protected void addLoggingLevel(Level level, String message) {
 		combineLevel(level);
 		if (level.isGreaterOrEqual(Level.WARN)) {
 			System.err.println(this.getClass().getSimpleName()+": "+level + ": "+message);
@@ -486,7 +486,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	
 	public Level getVerbosity() {
 		if (verbosity.length == 0) {
-			LOG.error("BUG?? in verbosity");
+			addLoggingLevel(Level.ERROR, "BUG?? in verbosity");
 			return null;
 		} else if (verbosity.length == 1) {
 			 return verbosity[0] ? Level.INFO : Level.WARN; 

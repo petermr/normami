@@ -18,6 +18,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -76,13 +77,16 @@ import picocli.CommandLine.Parameters;
 		)
 
 public class AMIDictionaryTool extends AbstractAMITool {
-	private static final String HTTPS_EN_WIKIPEDIA_ORG_WIKI = "https://en.wikipedia.org/wiki/";
-	private static final String SLASH_WIKI_SLASH = "/wiki/";
-	private static final String CM_PREFIX = "CM.";
-	public static final Logger LOG = Logger.getLogger(AMIDictionaryTool.class);
+	
+
+	private static final Logger LOG = Logger.getLogger(AMIDictionaryTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+
+	private static final String HTTPS_EN_WIKIPEDIA_ORG_WIKI = "https://en.wikipedia.org/wiki/";
+	private static final String SLASH_WIKI_SLASH = "/wiki/";
+	private static final String CM_PREFIX = "CM.";
 	
 	public static final String ALL = "ALL";
 	public static final String FULL = "FULL";
@@ -401,6 +405,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	private void runDictionary() {
 		resetMissingLinks();
 		if (getOrCreateExistingDictionaryTop() == null) {
+			LOG.warn("No dictionary directory; aborted");
 			return;
 		}
 		if (Operation.display.equals(operation)) {
@@ -416,8 +421,8 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	}
 
     private void printMissingLinks() {
-       	printMissingLinks("Missing wikipedia: ", missingWikipediaSet);
-       	printMissingLinks("Missing wikidata: ", missingWikidataSet);
+       	printMissingLinks("\nMissing wikipedia: ", missingWikipediaSet);
+       	printMissingLinks("\nMissing wikidata: ", missingWikidataSet);
 	}
 
 	private void printMissingLinks(String title, Set<String> missingLinkSet) {
@@ -458,7 +463,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	    	if (!dictionaryTop.exists()) {
 	    		dictionaryTop.mkdirs();
 	    	} else if (!dictionaryTop.isDirectory()) {
-	    		System.err.println(dictionaryTop + " must be a directory");
+	    		addLoggingLevel(Level.ERROR, dictionaryTop + " must be a directory");
 	    	}
     	}
 	   	return dictionaryTop;
@@ -485,7 +490,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		if (!newDictionaryDir.exists()) {
     			newDictionaryDir.mkdirs();
     		} else if (!newDictionaryDir.isDirectory()) {
-    			throw new RuntimeException(newDictionaryDir + " must not be directory" );
+    			addLoggingLevel(Level.ERROR, newDictionaryDir + " must not be directory" );
     		}
     	}
     	return newDictionaryDir;
@@ -496,7 +501,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		InputStream inputStream = openInputStream();
     	if (inputStream != null) {
     		if (informat == null) {
-    			System.err.println("ERROR: no input format given ");
+    			addLoggingLevel(Level.ERROR, "no input format given ");
     			return;
     		} else if (InputFormat.wikicategory.equals(informat)) {
 	    		wikipediaDictionary = new WikipediaDictionary();
@@ -510,7 +515,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		} else if (InputFormat.csv.equals(informat)) {
     			readCSV(inputStream);
     		} else {
-    			LOG.error("unknown inputformat: "+informat);
+    			addLoggingLevel(Level.ERROR, "unknown inputformat: "+informat);
     			return;
     		}
     	} else {
@@ -541,7 +546,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 			try {
 				inputStream = input.startsWith("http") ? new URL(input).openStream() : new FileInputStream(new File(input));
 			} catch (IOException e) {
-				throw new RuntimeException("cannot read/open stream", e);
+    			addLoggingLevel(Level.ERROR, "cannot read/open stream");
 			}
 		}
 		return inputStream;
@@ -556,19 +561,19 @@ public class AMIDictionaryTool extends AbstractAMITool {
 			directory = new File(dictionary[0]).getParentFile();
 			useAbsoluteNames = true;
 		} else {
-			System.err.println("Must give either 'directory' or existing absolute filenames of dictionaries");
+			addLoggingLevel(Level.ERROR, "Must give either 'directory' or existing absolute filenames of dictionaries");
 			return;
 		}
 		for (String dictionaryS : dictionary) {
 			String basename = FilenameUtils.getBaseName(dictionaryS);
 			File dictionaryFile = (useAbsoluteNames) ? new File(dictionaryS) : new File(directory, dictionaryS);
 			if (!dictionaryFile.exists()) {
-				LOG.error("File does not exist: "+dictionaryFile);
+    			addLoggingLevel(Level.ERROR, "File does not exist: "+dictionaryFile);
 				continue;
 			}
 			dictInformat = DictionaryFileFormat.getFormat(FilenameUtils.getExtension(dictionaryS));
 			if (dictInformat.equals(dictOutformat)) {
-				LOG.warn("dictionary input and output formats identical; no action");
+    			addLoggingLevel(Level.WARN, "dictionary input and output formats identical; no action");
 				continue;
 			}
 			File dictOutfile = new File(dictionaryFile.getParentFile(), basename + "." + dictOutformat);
@@ -762,6 +767,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 				entry.addAttribute(new Attribute(WIKIDATA, wikiResult.getQString()));
 				entry.addAttribute(new Attribute(DictionaryTerm.NAME, wikiResult.getLabel()));
 				entry.addAttribute(new Attribute(DictionaryTerm.DESCRIPTION, wikiResult.getDescription()));
+				LOG.debug("ENTRY "+entry.toXML());
 			} else {
 				missingWikidataSet.add(term);
 			}

@@ -183,7 +183,7 @@ public class AMISearchTool extends AbstractAMITool {
 			for (String dictTop : dictionaryTopList) {
 				dictionaryFile = new File(dictTop, facet+"."+dictionarySuffix.get(0));
 				if (dictionaryFile.exists()) {
-					LOG.debug("exists: "+dictionaryFile);
+//					LOG.debug("exists: "+dictionaryFile);
 					try {
 						dictionaryInputStream = new FileInputStream(dictionaryFile);
 					} catch (FileNotFoundException e) {
@@ -191,7 +191,7 @@ public class AMISearchTool extends AbstractAMITool {
 					}
 					break;
 				} else {
-					LOG.trace("cannot find: "+dictionaryFile);
+					addLoggingLevel(Level.DEBUG, "cannot find: "+dictionaryFile);
 				}
 			}
 		}
