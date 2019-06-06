@@ -290,7 +290,7 @@ WS: /
 				System.out.println("summary: "+pluginOption);
 				pluginOption.runSummaryAndCountOptions(); 
 			}
-			CommandProcessor.LOG.trace(commandProcessor.pluginOptions);	 
+			LOG.trace(commandProcessor.pluginOptions);	 
 	*/
 			commandProcessor.createDataTables();
 		} catch (IOException e) {

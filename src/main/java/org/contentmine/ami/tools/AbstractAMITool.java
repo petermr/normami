@@ -71,13 +71,20 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		EXCLUDE
 	}
 	
-	@Option(names = {"--basename"}, 
+	@Option(names = {"--outputname"}, 
     		arity="1",
-    		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png. By default this is computed by AMI."
-    				+ " This allows users to create their own variants, but they won't be known by default to subsequent"
+    		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png or directories. By default this is computed by AMI."
+    				+ " This allows users to create their own variants, but they won't always be known by default to subsequent"
     				+ "applications"
     		)
-	protected String userBasename;
+	protected String outputBasename;
+
+	@Option(names = {"--inputname"}, 
+    		arity="1",
+    		description = "User's basename for inputfiles (e.g. foo/bar/<basename>.png) or directories. By default this is often computed by AMI."
+    				+ " However some files will have variable names (e.g. output of AMIImage) or from foreign sources or applications"
+    		)
+	protected String inputBasename;
 
     @Option(names = {"-p", "--cproject"}, 
 		arity = "1",
@@ -86,6 +93,20 @@ public abstract class AbstractAMITool implements Callable<Void> {
 				+ " No defaults. The cProject name is the basename of the file."
 				)
     protected String cProjectDirectory = null;
+
+    @Option(names = {"-i", "--input"}, 
+		arity = "1",
+		paramLabel="input",
+		description = "input filename (no defaults)"
+				)
+    protected String input = null;
+
+    @Option(names = {"-o", "--output"}, 
+		arity = "1",
+		paramLabel="output",
+		description = "output filename (no defaults)"
+				)
+    protected String output = null;
 
     @Option(names = {"-t", "--ctree"}, 
 		arity = "0..1",
@@ -167,7 +188,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 
 	
 	protected static final String NONE = "NONE";
-	private static final String RAW = "raw";
+	protected static final String RAW = "raw";
 
 	static final String TRUNCATE = "%";
 	protected static File HOME_DIR = new File(System.getProperty("user.home"));
@@ -395,7 +416,8 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	 * 
 	 */
 	private void printGenericValues() {
-        System.out.println("basename            " + userBasename);
+        System.out.println("output basename     " + outputBasename);
+        System.out.println("input basename      " + inputBasename);
         System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
         System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
         System.out.println("cTreeList           " + prettyPrint(cTreeList));
@@ -532,6 +554,8 @@ public abstract class AbstractAMITool implements Callable<Void> {
 				this.cTree = cTree;
 				processTree();
 			}
+		} else {
+			LOG.warn("No trees to process");
 		}
 		return processed;
 	}
@@ -568,8 +592,22 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		return false;
 	}
 
+	public String getInputBasename() {
+		return inputBasename;
+	}
+
+	/** this may not be the best place to define this.
+	 * 
+	 * @param imageDir
+	 * @return
+	 */
 	protected static File getRawImageFile(File imageDir) {
 		return new File(imageDir, RAW + "." + CTree.PNG);
+	}
+
+	/** override this in tools which process images */
+	public void processImageDir(File imageFile) {
+		LOG.error("Must override this in:"+this.getClass().getName());
 	}
 
 

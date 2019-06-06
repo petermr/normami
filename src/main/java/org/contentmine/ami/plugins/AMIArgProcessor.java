@@ -270,7 +270,8 @@ public class AMIArgProcessor extends NormaArgProcessor {
 
 	private void truncateLargeLists(int maxsize) {
 		if (sectionElements.size() > maxsize) {
-			System.out.println("\nlarge document (" + sectionElements.size() + ") for " + currentCTree.getName() + " truncated to " + maxsize + " sections");
+			System.out.println("\nlarge document (" + sectionElements.size() + ") for "
+		        + currentCTree.getName() + " truncated to " + maxsize + " sections");
 			List<Element> newList = new ArrayList<Element>();
 			for (int i = 0; i < maxsize; i++) {
 				newList.add(sectionElements.get(i));

@@ -1,13 +1,10 @@
 package org.contentmine.ami.tools;
 
+import java.io.File;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.image.ImageUtil.ThresholdMethod;
 import org.junit.Test;
-
-import boofcv.alg.filter.binary.GThresholdImageOps;
-import boofcv.alg.misc.ImageStatistics;
-import boofcv.struct.ConfigLength;
 
 /** test cleaning.
  * 
@@ -15,6 +12,7 @@ import boofcv.struct.ConfigLength;
  *
  */
 public class AMIImageTest {
+	private static final String OLD_DEVTEST = "/Users/pm286/workspace/uclforest/devtest/";
 	private static final Logger LOG = Logger.getLogger(AMIImageTest.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -34,7 +32,7 @@ public class AMIImageTest {
 //				"-t /Users/pm286/workspace/uclforest/devtest/buzick_stone_2014_readalo"
 //				"-t /Users/pm286/workspace/uclforest/devtest/campbell_systematic_revie"
 //				"-t /Users/pm286/workspace/uclforest/devtest/case_systematic_review_ar"
-				"-t /Users/pm286/workspace/uclforest/devtest/mcarthur_etal2012_cochran"
+				"-t " + OLD_DEVTEST + "mcarthur_etal2012_cochran"
 //				"-t /Users/pm286/workspace/uclforest/devtest/puziocolby2013_co-operati"
 //				"-t /Users/pm286/workspace/uclforest/devtest/torgersonetal_2011dferepo"
 //				"-t /Users/pm286/workspace/uclforest/devtest/zhengetal_2016"
@@ -399,6 +397,70 @@ public class AMIImageTest {
 		amiImage.runCommands(args);
 	}
 	
+	@Test
+	/** 
+	 * 
+	 */
+	public void testImagePanels() throws Exception {
+		// NYI
+		String targetDir = "xxx";
+		String args = 
+				"-p "+targetDir+
+				" --monochrome true"+
+				" --monochromedir monochrome"+
+				" --minwidth 100"+
+				" --minheight 100"+
+				" --smalldir small"+
+				" --duplicates true"+ 
+				" --duplicatedir duplicates"
+				;
+		AMIImageFilterTool amiImage = new AMIImageFilterTool();
+		amiImage.runCommands(args);
+	}
+
+	@Test
+	public void testAddBorders() {
+		String userDir = System.getProperty("user.home");
+		File projectDir = new File(userDir, "projects/forestplots/spss");
+		File treeDir = new File(projectDir, "PMC5502154");
+		String args = 
+				"-t "+treeDir+
+				" --scalefactor 2.0"+
+				" --erodedilate" +
+				" --borders 10 "
+				;
+		AMIImageTool amiImage = new AMIImageTool();
+		amiImage.runCommands(args);
+		
+	}
+
+	@Test
+	public void testImageBug() {
+		String userDir = System.getProperty("user.home");
+		File projectDir = new File(userDir, "projects/carnegiemellon");
+		File treeDir = new File(projectDir, "p2nax");
+		String args = 
+				"-t "+treeDir
+				;
+		AMIImageTool amiImage = new AMIImageTool();
+		amiImage.runCommands(args);
+		
+	}
+
+	@Test
+	public void testTemplate() {
+		String userDir = System.getProperty("user.home");
+		File projectDir = new File(userDir, "projects/carnegiemellon");
+		File treeDir = new File(projectDir, "p2nax");
+		String args = 
+				"-t "+treeDir+
+//				" --template" +
+				" --help"
+				;
+		AMIImageTool amiImage = new AMIImageTool();
+		amiImage.runCommands(args);
+		
+	}
 
 
 	

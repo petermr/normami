@@ -314,15 +314,26 @@ public class RegexComponent {
 
 	MatcherResult searchWithPattern(String value) {
 		Pattern pattern = getOrCreatePattern();
+//		pattern = Pattern.compile("who");
+//		pattern = Pattern.compile("(.{0,25})(\\w([Ww]hen|[Ww]hy|[Ww]hat|[Ww]ho|[Ww]here)\\w)\\s+(.{0,40})");
+//		pattern = Pattern.compile("(\\w([Ww]hen|[Ww]hy|[Ww]hat|[Ww]ho|[Ww]here)\\w)");
+//		pattern = Pattern.compile("(.{0,25})\\w([Ww]hen|[Ww]hy|[Ww]hat|[Ww]ho|[Ww]here)(.{0,40})");
 		Matcher matcher = pattern.matcher(value);
+//		LOG.debug(">>"+pattern);
 		int start = 0;
 		count = 0;
 		MatcherResult matcherResult = new MatcherResult(fieldList);
 		while (matcher.find(start)) {
 			matcherResult.captureNextMatch(matcher);
-			start = matcher.end();
+			int end = matcher.end();
+//			LOG.debug("matched: "+value+"("+start+"/"+end+")");
+			start = end;
 			count++;
 		}
+		if (count == 0) {
+//			LOG.debug("couldn't match: "+value+"/"+matcher);
+		}
+		LOG.debug(">>"+matcherResult);
 		return matcherResult;
 	}
 	

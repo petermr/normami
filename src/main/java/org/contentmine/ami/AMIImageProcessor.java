@@ -26,7 +26,7 @@ import org.contentmine.image.ImageUtil;
 import org.contentmine.image.diagram.DiagramAnalyzer;
 import org.contentmine.image.pixel.PixelIsland;
 import org.contentmine.image.pixel.PixelIslandList;
-import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
+import org.contentmine.norma.image.ocr.HOCRConverter;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
@@ -311,7 +311,7 @@ public class AMIImageProcessor  extends AbstractAMITool {
 		for (File imageFile : imageFiles) {
 			String base = FilenameUtils.getBaseName(imageFile.toString());
 			File outputBase = new File(outputDir, base);
-			ImageToHOCRConverter imageToHOCRConverter = new ImageToHOCRConverter();
+			HOCRConverter imageToHOCRConverter = new HOCRConverter();
 			imageToHOCRConverter.writeHOCRFile(imageFile, outputBase);
 		}
 	}

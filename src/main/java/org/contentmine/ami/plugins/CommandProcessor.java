@@ -55,6 +55,7 @@ public class CommandProcessor {
 	private String helpString;
 	private Map<String, AbstractMetadata> metadataByCTreename;
 	private AbstractAMITool abstractAMITool;
+	private DataTablesTool dataTablesTool;
 	
 	private CommandProcessor() {
 		init();
@@ -169,7 +170,11 @@ public class CommandProcessor {
 
 	public void runNormaIfNecessary() {
 		if (!new CProject(projectDir).hasScholarlyHTML(0.1)) {
-			String args = "-i fulltext.xml -o scholarly.html --transform nlm2html --project "+projectDir;
+			String args = ""
+					+ "-i fulltext.xml"
+					+ " -o scholarly.html"
+					+ " --transform nlm2html"
+					+ " --project "+projectDir;
 			LOG.debug("running NORMA "+args);
 			new Norma().run(args);
 		}
@@ -210,12 +215,12 @@ public class CommandProcessor {
 	 * @param wikidataBiblio
 	 * @throws IOException
 	 */
-	public void createDataTables(boolean wikidataBiblio) throws IOException {
+	public DataTablesTool createDataTables(boolean wikidataBiblio) throws IOException {
 		System.out.println("\ncreate data tables");
 		if (projectDir == null) {
 			throw new RuntimeException("projectDir must be set");
 		}
-		DataTablesTool dataTablesTool = DataTablesTool.createBiblioEnabledTable();
+		dataTablesTool = DataTablesTool.createBiblioEnabledTable();
 		dataTablesTool.setLookup(new WikipediaLookup());
 		dataTablesTool.setAddWikidataBiblio(wikidataBiblio);
 		dataTablesTool.setProjectDir(projectDir);
@@ -230,6 +235,7 @@ public class CommandProcessor {
 		resultsAnalysis.setRowHeadingName("EPMCID");
 
 		dataTablesTool.createTableComponents(resultsAnalysis);
+		return dataTablesTool;
 	}
 
 	public static void main(String[] args) throws IOException {
@@ -250,7 +256,7 @@ public class CommandProcessor {
 		}
 	}
 
-	/** other commands
+	/** other commands (I don't think these are a good idea now)
 	 * 	<symbol abbreviation="g_h" expand="gene(human)"/>
 	<symbol abbreviation="sp_b" expand="species(binomial)"/>
 	<symbol abbreviation="sp_g" expand="species(genus)"/>

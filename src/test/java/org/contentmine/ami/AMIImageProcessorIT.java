@@ -41,7 +41,7 @@ import org.contentmine.image.pixel.PixelIslandList;
 import org.contentmine.image.pixel.PixelRing;
 import org.contentmine.image.pixel.PixelRingList;
 import org.contentmine.image.processing.ZhangSuenThinning;
-import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
+import org.contentmine.norma.image.ocr.HOCRConverter;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -593,7 +593,7 @@ public class AMIImageProcessorIT {
 		Assert.assertTrue(imageFile+" should exist", imageFile.exists());
 		AbstractAMITool amiImageProcessor = AMIImageProcessor.createAIProcessor(cTree);
 		amiImageProcessor.setCTreeOutputDir(outputDir);
-		ImageToHOCRConverter imageToHOCRConverter = new ImageToHOCRConverter();
+		HOCRConverter imageToHOCRConverter = new HOCRConverter();
 		File hocrHtmlFile = imageToHOCRConverter.writeHOCRFile(imageFile, outputBase);
 		LOG.debug(outputBase+" / "+hocrHtmlFile);
 		

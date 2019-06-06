@@ -17,7 +17,7 @@ import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.norma.NormaFixtures;
 import org.contentmine.norma.image.ocr.HOCRReaderOLD;
-import org.contentmine.norma.image.ocr.ImageToHOCRConverter;
+import org.contentmine.norma.image.ocr.HOCRConverter;
 import org.contentmine.norma.image.ocr.NamedImage;
 import org.contentmine.norma.input.pdf.PDF2ImagesConverter;
 import org.junit.Assert;
@@ -32,7 +32,7 @@ public class ImageToHOCRConverterIT {
 	
 	@Test
 	public void testConvert() throws Exception {
-		ImageToHOCRConverter converter = new ImageToHOCRConverter();
+		HOCRConverter converter = new HOCRConverter();
 		File infile = new File(NormaFixtures.TEST_PUBSTYLE_DIR, "neuro/image.2.1.Im0.png.png");
 		File outfile = new File("target/neuro/image.2.1.hocr");
 		converter.convertImageToHOCR(infile, outfile);
@@ -40,7 +40,7 @@ public class ImageToHOCRConverterIT {
 	
 	@Test
 	public void testConvertToSVG() throws Exception {
-		ImageToHOCRConverter converter = new ImageToHOCRConverter();
+		HOCRConverter converter = new HOCRConverter();
 		File infile = new File(NormaFixtures.TEST_PUBSTYLE_DIR, "neuro/image.2.1.Im0.png.png");
 		File outfileRoot = new File("target/neuro/image.2.1.hocr");
 		File outfile = converter.convertImageToHOCR(infile, outfileRoot);

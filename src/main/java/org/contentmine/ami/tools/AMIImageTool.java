@@ -2,24 +2,25 @@ package org.contentmine.ami.tools;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 
-import org.apache.commons.io.FileExistsException;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.template.AbstractTemplateElement;
+import org.contentmine.ami.tools.template.ImageTemplateElement;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.eucl.euclid.Real;
 import org.contentmine.eucl.euclid.util.CMFileUtil;
+import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.svg.util.ImageIOUtil;
 import org.contentmine.image.ImageUtil;
 import org.contentmine.image.ImageUtil.SharpenMethod;
@@ -28,6 +29,8 @@ import org.contentmine.image.ImageUtil.ThresholdMethod;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
+import nu.xom.Element;
+import nu.xom.Elements;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -101,7 +104,8 @@ public class AMIImageTool extends AbstractAMITool {
 	public enum AMIImageType {
 		NONE("none", 0, new AMIImageType[]{}),
 		RAW("raw", NONE.priority + 1, new AMIImageType[]{}),
-		SCALE("scale", RAW.priority + 1, AMIImageType.RAW),
+		BORDER("border", RAW.priority + 1, AMIImageType.RAW),
+		SCALE("scale", RAW.priority + 1, AMIImageType.BORDER, AMIImageType.RAW),
 		ROTATE("rotate", SCALE.priority + 1, AMIImageType.SCALE, AMIImageType.RAW),
 		SHARPEN("sharpen", ROTATE.priority + 1, AMIImageType.ROTATE, AMIImageType.SCALE, AMIImageType.RAW),
 		POSTERIZE("posterize", SHARPEN.priority + 1, AMIImageType.SHARPEN, AMIImageType.ROTATE, AMIImageType.SCALE, AMIImageType.RAW),
@@ -132,7 +136,7 @@ public class AMIImageTool extends AbstractAMITool {
 		public final static AMIImageType getImageType(String filename) {
 			for (AMIImageType imageType : values()) {
 				if (filename != null && filename.startsWith(imageType.name)) {
-					LOG.debug("type "+imageType);
+//					LOG.debug("type "+imageType);
 					return imageType;
 				}
 			}
@@ -169,6 +173,14 @@ public class AMIImageTool extends AbstractAMITool {
 	private static final String _DELETE = "_delete";
 
     // FILTER OPTIONS
+
+    @Option(names = {"--borders"},
+    		arity = "1..2",
+//    		defaultValue = "10",
+            description = "add borders: 1 == all; 2 : top/bottom, edges, "
+            + "4 vals = top, right bottpm, left; default NONE")
+//	private List<Integer> borders = Arrays.asList(new Integer[] {10}) ;
+	private List<Integer> borders = null ;
 
     @Option(names = {"--duplicate"},
     		arity = "0..1",
@@ -210,11 +222,21 @@ public class AMIImageTool extends AbstractAMITool {
             description = "TRANSFORM: create binary (normally black and white); methods local_mean ... (default: ${DEFAULT-VALUE})")
     private ThresholdMethod binarize = null;
 
+    @Option(names = {"--despeckle"},
+    		arity = "0..1",
+//    		defaultValue = "false",
+            description = "TRANSFORM: remove single pixels surrounded by whitespace "
+            		+ "run AFTER any other image enhancement. default FALSE")
+    private Boolean despeckle = false;
+
     @Option(names = {"--erodedilate"},
     		arity = "0..1",
-    		defaultValue = "false",
-            description = "TRANSFORM: erode 1-pixel layer and then dilate. Removes minor spikes (default: ${DEFAULT-VALUE})")
-    private Boolean erodeDilate;
+//    		defaultValue = "false",
+            description = "TRANSFORM: erode 1-pixel layer and then dilate. "
+            		+ "Removes minor spikes (default: FALSE ${DEFAULT-VALUE}); generally destroys fine details."
+            		+ "(currently doesn't work - wiped out most image")
+    
+    private Boolean erodeDilate = false;
 
     @Option(names = {"--maxheight"},
     		arity = "0..1",
@@ -237,7 +259,7 @@ public class AMIImageTool extends AbstractAMITool {
     @Option(names = {"--priority"},
     		arity = "0..1",
     		defaultValue = "RAW",
-            description = "force transformations starting with the lowest priority (usually 'raw')")
+            description = "force transformations starting with the lowest priority (usually 'raw'). Probably obsolete")
     private AMIImageType priorityImage = AMIImageType.RAW;
 
     @Option(names = {"--rotate"},
@@ -247,14 +269,21 @@ public class AMIImageTool extends AbstractAMITool {
     
     @Option(names = {"--scalefactor"},
     		arity = "1",
-    		description = "geometrical scalefactor. if missing, no scaling (don't use 1.0) Uses Imgscalr library. ")
+    		description = "geometrical scalefactor. if missing, no scaling (don't use 1.0) Uses Imgscalr library. default NONE ")
 	private Double scalefactor = null;
 
     @Option(names = {"--sharpen"},
     		arity = "0..1",
-    		defaultValue = "sharpen4",
-            description = "sharpen image using Laplacian kernel or sharpen4 or sharpen8 (BoofCV)..(default: ${DEFAULT-VALUE})")
-    private String sharpen;
+ //   		defaultValue = "sharpen4",
+            description = "sharpen image using Laplacian kernel or sharpen4 or sharpen8 (BoofCV)..(default: NONE ${DEFAULT-VALUE})")
+//    private String sharpen = "sharpen4";
+    private String sharpen = "none";
+
+    @Option(names = {"--template"},
+    		arity = "1",
+//    		defaultValue = "template.xml",
+            description = "use template in each image.*/ dir to process image")
+    private String templateFilename = null /*"template.xml"*/;
 
     @Option(names = {"--thinning"},
     		arity = "0..1",
@@ -264,16 +293,20 @@ public class AMIImageTool extends AbstractAMITool {
 
     @Option(names = {"--threshold"},
     		arity = "1",
-    		defaultValue = "180",
-            description = "maximum value for black pixels (non-background) (default: ${DEFAULT-VALUE})")
-    private Integer threshold;
+//    		defaultValue = "180",
+            description = "maximum value for black pixels (non-background) (default: NONE ${DEFAULT-VALUE})."
+            		+ "between 120 and 180 (200 for lighter grey images) seems useful."
+            )
+    
+    private Integer threshold = null;
 
     @Option(names = {"--toolkit"},
     		arity = "1",
-    		defaultValue = "Boofcv",
+//    		defaultValue = "Boofcv",
             description = "Image toolkit to use., "
             		+ "Scalr (Imgscalr), simple but no longer developed. Pmr (my own) when all else fails.(default: ${DEFAULT-VALUE}) (not yet fully worked out)")
-    private ImageToolkit toolkit = ImageToolkit.Boofcv;
+//    private ImageToolkit toolkit = ImageToolkit.Boofcv;
+    private ImageToolkit toolkit = null;
 
 	public static final String DUPLICATES = "duplicates/";
 	public static final String MONOCHROME = "monochrome/";
@@ -282,13 +315,12 @@ public class AMIImageTool extends AbstractAMITool {
 	private static final String ROT = "rot";
 	private static final String RAW = "raw";
 
+	private static final String BORDER = "border";
 	private static final String SCALE = "scale";
 
 	private Multiset<String> duplicateSet;
-
-
-
 	private SharpenMethod sharpenMethod;
+	private AbstractTemplateElement templateElement;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -314,7 +346,9 @@ public class AMIImageTool extends AbstractAMITool {
 		System.out.println("duplicateDir        " + duplicateDirname);
 
     	
+		System.out.println("borders             " + borders);
 		System.out.println("binarize            " + binarize);
+		System.out.println("despeckle           " + despeckle);
 		System.out.println("erodeDilate         " + erodeDilate);
 		System.out.println("maxheight           " + maxHeight);
 		System.out.println("maxwidth            " + maxWidth);
@@ -323,6 +357,7 @@ public class AMIImageTool extends AbstractAMITool {
 		System.out.println("rotate              " + rotateAngle);
 		System.out.println("scalefactor         " + scalefactor);
 		System.out.println("sharpen             " + sharpen);
+		System.out.println("template            " + templateFilename);
 		System.out.println("threshold           " + threshold);
 		System.out.println();
 	}
@@ -394,6 +429,13 @@ public class AMIImageTool extends AbstractAMITool {
 	protected void processTreeTransform() {
 		System.out.println("transformImages cTree: "+cTree.getName());
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
+		if (pdfImagesDir == null) {
+			throw new RuntimeException("Cannot find pdfImages for cTree "+cTree.getName());
+		}
+		if (inputBasename == null) {
+			System.out.println("Assuming base: "+RAW);
+			inputBasename = RAW;
+		}
 		List<File> imageDirs = CMineGlobber.listSortedChildDirectories(pdfImagesDir);
 		Collections.sort(imageDirs);
 		for (File imageDir : imageDirs) {
@@ -401,17 +443,44 @@ public class AMIImageTool extends AbstractAMITool {
 				System.err.print(".");
 				if (!imageDir.exists()) {
 					LOG.debug("Dir does not exist: "+imageDir);
+					continue;
+				}
+				if (templateFilename != null) {
+					templateElement = AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
+				}
+				if (templateElement != null) {
+					processTemplate();
 				} else {
 					try {
 						runTransform(imageDir);
 					} catch (Exception e) {
+						e.printStackTrace();
 						LOG.error("Bad read: "+imageDir+" ("+e.getMessage()+")");
 					}
 				}
 			}
+			continue;
 		}
 	}
 	
+	private void processTemplate() {
+		List<Element> imageElements = XMLUtil.getQueryElements(templateElement, "./*[local-name()='"+ImageTemplateElement.TAG+"']");
+		for (int i = 0; i < imageElements.size(); i++) {
+			((ImageTemplateElement) imageElements.get(i)).process();
+		}
+	}
+/**
+	private AbstractTemplateElement readTemplate(File imageDir) {
+		File templateFile = new File(imageDir, templateFilename);
+		if (!templateFile.exists()) {
+			LOG.info(">>>>>>>>>>>>>>>no template in: "+imageDir);
+		}
+		Element element = XMLUtil.parseQuietlyToRootElement(templateFile);
+		templateElement = AbstractTemplateElement.createTemplateElement(element);
+		return templateElement;
+		
+	}
+*/
 	// ================= filter ============
 	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
 		if (destDirname != null) {
@@ -461,9 +530,10 @@ public class AMIImageTool extends AbstractAMITool {
 	// ================= transform ===============
 	
 	private void runTransform(File imageDir) {
-		List<File> imageFiles = CMineGlobber.listSortedChildFiles(imageDir, CTree.PNG);
-		File highestImageFile = AMIImageType.getHighestLevelFile(imageFiles, priorityImage);
-		LOG.debug("transforming: "+highestImageFile);
+//		List<File> imageFiles = CMineGlobber.listSortedChildFiles(imageDir, CTree.PNG);
+//		File highestImageFile = AMIImageType.getHighestLevelFile(imageFiles, priorityImage);
+		File highestImageFile = new File(imageDir, inputBasename+"."+CTree.PNG);
+		LOG.debug("transforming: "+highestImageFile.getName());
 		BufferedImage image = ImageUtil.readImageQuietly(highestImageFile);
 		String basename = FilenameUtils.getBaseName(highestImageFile.toString());
 		if (image != null) {
@@ -472,13 +542,19 @@ public class AMIImageTool extends AbstractAMITool {
 			}
 			if (scalefactor != null) {
 				image = scaleAndSave(image, imageDir);
+				basename += "_sc_"+(int)(double)scalefactor;
 			}
-			if (sharpen != null) {
+			if (sharpen != null && !SharpenMethod.NONE.toString().contentEquals(sharpen)) {
 				image = sharpenAndSave(image, imageDir);
 				basename += "_s4";
 			}
+			if (borders != null) {
+				image = bordersAndSave(image, imageDir);
+				basename += "_b_"+borders.toString().replaceAll("(\\[|\\])", "");
+			}
 			if (erodeDilate) {
 				image = erodeDilateAndSave(image, imageDir);
+				basename += "_e";
 			}
 			if (binarize != null || threshold != null) {
 				image = binarizeAndSave(image, imageDir);
@@ -492,7 +568,13 @@ public class AMIImageTool extends AbstractAMITool {
 			if (posterize) {
 				image = posterizeAndSave(image, imageDir);
 			}
+			if (despeckle) {
+				image = despeckleAndSave(image, imageDir);
+				basename += "_ds".toString();
+				
+			}
 			File outfile = new File(imageDir, basename+"."+CTree.PNG);
+			System.out.println("writing "+outfile.getAbsolutePath());
 			ImageIOUtil.writeImageQuietly(image, outfile);
 		}
 	}
@@ -506,7 +588,21 @@ public class AMIImageTool extends AbstractAMITool {
 
 	private BufferedImage erodeDilateAndSave(BufferedImage image, File imageDir) {
 		image = ImageUtil.thresholdBoofcv(image, erodeDilate);
-		ImageUtil.writeImageQuietly(image, new File(imageDir, erodeDilate+"."+CTree.PNG));
+		if (verbosity.length > 1) {
+			File outputPng = new File(imageDir, "erodeDilate"+"."+CTree.PNG);
+			LOG.debug("writing "+outputPng);
+			ImageUtil.writeImageQuietly(image, outputPng);
+		}
+		return image;
+	}
+
+	private BufferedImage despeckleAndSave(BufferedImage image, File imageDir) {
+		image = ImageUtil.despeckle(image);
+		if (verbosity.length > 1) {
+			File outputPng = new File(imageDir, "despeckle"+"."+CTree.PNG);
+			LOG.debug("writing "+outputPng);
+			ImageUtil.writeImageQuietly(image, outputPng);
+		}
 		return image;
 	}
 
@@ -516,10 +612,26 @@ public class AMIImageTool extends AbstractAMITool {
 	 * @return
 	 */
 	private BufferedImage binarizeAndSave(BufferedImage image, File imageDir) {
+		int[] oldRGB = {0x000d0d0d};
+		int[] newRGB = {0x00ffffff};
+		
 		// binarization follows sharpen
 		String type = null;
-		if (binarize != null) {
-			image = ImageUtil.boofCVThreshold(image, binarize);
+		if (image == null) {
+			throw new RuntimeException("null image in binarize");
+		} else if (binarize != null) {
+			image = ImageUtil.boofCVThreshold(image, binarize); // this fails
+			image = ImageUtil.thresholdBoofcv(image, erodeDilate);
+			image = ImageUtil.removeAlpha(image);
+			image = ImageUtil.magnifyToWhite(image);
+			LOG.debug("colors0 "+ImageUtil.createHexMultiset(image));
+			image = ImageUtil.convertRGB(image, oldRGB, newRGB);
+			
+			Integer color = ImageUtil.getSingleColor(image);
+			LOG.debug("colors "+ImageUtil.createHexMultiset(image));
+			if (color != null) {
+				throw new RuntimeException("Single color: "+color+" Corrupt conversion?");
+			}
 			type = binarize.toString().toLowerCase();
 			// debug
 		} else if (threshold != null) {
@@ -542,8 +654,10 @@ public class AMIImageTool extends AbstractAMITool {
 			resultImage = ImageUtil.sharpen(image, SharpenMethod.SHARPEN4);
 		} else if (SharpenMethod.SHARPEN8.toString().equals(sharpen)) {
 			resultImage = ImageUtil.sharpen(image, SharpenMethod.SHARPEN8);
+		} else if (SharpenMethod.NONE.toString().equals(sharpen)) {
+			resultImage = image;
 		} 
-		if (resultImage != null) {
+		if (resultImage != null ) {
 			ImageUtil.writeImageQuietly(resultImage, new File(imageDir, sharpenMethod+"."+CTree.PNG));
 		}
 		return resultImage;
@@ -568,10 +682,25 @@ public class AMIImageTool extends AbstractAMITool {
 		if (!Real.isEqual(scale,  1.0,  0.0000001)) {
 			if (ImageToolkit.Scalr.equals(toolkit)) {
 				image = ImageUtil.scaleImageScalr(scale, image);
+			} else if (ImageToolkit.Boofcv.equals(toolkit)) {
+				throw new RuntimeException("Boofcv scale NYI");
+			} else if (scale > 1.9){
+				int intScale = (int) Math.round(scale);
+				image = ImageUtil.scaleImage(image, intScale, intScale);
 			}
 			String scaleValue = String.valueOf(scalefactor).replace(".",  "_");
 			ImageUtil.writeImageQuietly(image, new File(imageDir, SCALE + " _ " + scaleValue + "." + CTree.PNG));
 		}
+		return image;
+	}
+	
+	private BufferedImage bordersAndSave(BufferedImage image, File imageDir) {
+		int color = 0x00FFFFFF;
+		int xBorder = borders.get(0);
+		int yBorder = borders.size() > 1 ? borders.get(1) : xBorder;
+		image = ImageUtil.addBorders(image, xBorder, yBorder, color);
+		String borderValue = String.valueOf(borders).replaceAll("(\\[|\\])",  "_");
+		ImageUtil.writeImageQuietly(image, new File(imageDir, BORDER + " _ " + borderValue + "." + CTree.PNG));
 		return image;
 	}
 	

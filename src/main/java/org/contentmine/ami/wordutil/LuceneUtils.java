@@ -6,16 +6,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
-import org.apache.lucene.analysis.core.WhitespaceTokenizer;
-import org.apache.lucene.analysis.en.PorterStemFilter;
 import org.apache.lucene.analysis.shingle.ShingleFilter;
-import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.contentmine.ami.dictionary.TermPhrase;
 
@@ -38,26 +34,26 @@ public class LuceneUtils {
 	 */
 	public static TokenStream createTokenStreamQuietly(Analyzer analyzer, String string) {
 		TokenStream tokenStream = null;
-		try {
+//		try {
 			tokenStream = analyzer.tokenStream(null, new StringReader(string));
 			LuceneUtils.resetTokenStreamQuietly(tokenStream);
-		} catch (IOException e) {
-			throw new RuntimeException("cannot create tokenStream", e);
-		}
+//		} catch (IOException e) {
+//			throw new RuntimeException("cannot create tokenStream", e);
+//		}
 		return tokenStream;
 	}
 
 	public static TokenStream createWhitespaceTokenStreamQuietly(String string) {
 		Analyzer analyzer = new WhitespaceAnalyzer();
 		TokenStream tokenStream = null;
-		try {
+//		try {
 			tokenStream = analyzer.tokenStream(null, new StringReader(string));
 			LuceneUtils.resetTokenStreamQuietly(tokenStream);
 			analyzer.close();
-		} catch (IOException e) {
-			analyzer.close();
-			throw new RuntimeException("cannot create tokenStream", e);
-		}
+//		} catch (IOException e) {
+//			analyzer.close();
+//			throw new RuntimeException("cannot create tokenStream", e);
+//		}
 		return tokenStream;
 	}
 

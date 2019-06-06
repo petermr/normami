@@ -76,10 +76,10 @@ public class AMIProcessor {
 		File userDir = new File(System.getProperty("user.dir"));
 		LOG.debug("project name: "+projectName+" "+userDir);
 		File projectDir = new File(userDir, projectName);
-		return createProcessorFromDir(projectDir);
+		return createProcessorFromCProjectDir(projectDir);
 	}
 
-	public static AMIProcessor createProcessorFromDir(File projectDir) {
+	public static AMIProcessor createProcessorFromCProjectDir(File projectDir) {
 		if (!projectDir.exists() || !projectDir.isDirectory()) {
 			System.err.println("Project does not exist or is not directory:");
 			System.err.println("    "+projectDir);
@@ -94,6 +94,9 @@ public class AMIProcessor {
 	}
 	
 	public void defaultAnalyzeCooccurrence(List<String> facets) {
+		if (facets == null) {
+			return;
+		}
 		EntityAnalyzer entityAnalyzer = EntityAnalyzer.createEntityAnalyzer(cProject.getDirectory());
 	
 		for (String facet : facets) {
@@ -114,7 +117,6 @@ public class AMIProcessor {
 			String argString = /*cProject.getDirectory()+" "+*/cmd;
 			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
 			commandProcessor.processCommands(argString);
-//			DataTablesTool dataTablesTool = DataTablesTool.createBiblioEnabledTable();
 			commandProcessor.createDataTables();
 
 		} catch (IOException e) {

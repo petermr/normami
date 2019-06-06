@@ -180,6 +180,10 @@ public class AMIFixtures {
 	
 	// FIXME better test
 	public static void checkResultsElementList(AMIArgProcessor argProcessor, int size, int elem, String start) {
+		if (argProcessor == null) {
+			LOG.error("null argProcessor");
+			return;
+		}
 		CTree currentTree = argProcessor.getCurrentCTree();
 		if (currentTree == null) {
 			LOG.warn("Null CTree");

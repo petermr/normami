@@ -1,19 +1,17 @@
 package org.contentmine.ami.plugins.regex;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
 import org.contentmine.ami.plugins.AMIPlugin;
-import org.contentmine.ami.plugins.regex.CompoundRegex;
-import org.contentmine.ami.plugins.regex.RegexArgProcessor;
-import org.contentmine.ami.plugins.regex.RegexComponent;
-import org.contentmine.ami.plugins.regex.RegexPlugin;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.ResultElement;
 import org.contentmine.cproject.files.ResultsElement;
@@ -90,11 +88,18 @@ public class RegexPluginTest {
 		File target = new File("target/bmc/regex/15_1_511_test");
 		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_BMC_15_1_511_CMDIR, target);
 		File normaTemp = new File("target/bmc/regex/15_1_511_test");
+		String regexFile = NAConstants.MAIN_AMI_DIR+"/regex/common.xml";
+		LOG.debug(">"+regexFile+"/"+IOUtils.toString(new FileInputStream(regexFile)));
 		String args = 
-				"-q "+normaTemp.toString()+" -i scholarly.html -o results.xml --context 25 40 --r.regex "+
-		    NAConstants.MAIN_AMI_DIR+"/regex/common.xml"
-		    		+ " "+NAConstants.MAIN_AMI_DIR+"/regex/figure.xml"
-		    		+ " "+NAConstants.MAIN_AMI_DIR+"/regex/phylotree.xml";
+				"-q "+normaTemp.toString()
+				+" -i scholarly.html"
+				+ " -o results.xml"
+				+ " --context 55 40"
+				+ " --r.regex "+
+		    regexFile
+//		    		+ " "+NAConstants.MAIN_AMI_DIR+"/regex/figure.xml"
+//		    		+ " "+NAConstants.MAIN_AMI_DIR+"/regex/phylotree.xml"
+		    ;
 		AMIPlugin regexPlugin = new RegexPlugin(args);
 		RegexArgProcessor argProcessor = (RegexArgProcessor) regexPlugin.getArgProcessor();
 		Assert.assertNotNull(argProcessor);

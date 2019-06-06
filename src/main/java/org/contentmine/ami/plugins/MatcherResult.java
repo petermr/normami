@@ -88,6 +88,8 @@ public class MatcherResult {
 			for (int i = 1; i <= matcher.groupCount(); i++) {
 				add(matcher.group(i));
 			}
+		} else {
+			LOG.trace("no match");
 		}
 		return this;
 	}

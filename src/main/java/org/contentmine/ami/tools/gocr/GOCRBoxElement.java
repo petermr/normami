@@ -1,0 +1,56 @@
+package org.contentmine.ami.tools.gocr;
+
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.contentmine.eucl.euclid.Real2;
+import org.contentmine.graphics.svg.SVGElement;
+import org.contentmine.graphics.svg.SVGG;
+import org.contentmine.graphics.svg.SVGRect;
+import org.contentmine.graphics.svg.SVGText;
+
+import nu.xom.Element;
+
+/**
+ <box x="1002" y="25" dx="5" dy="4" value="o" numac="3" weights="95,94,94" achars="o,O,0" />
+ <box x="1010" y="25" dx="6" dy="7" value="o" numac="3" weights="97,93,93" achars="o,O,0" />
+ * @author pm286
+ *
+ */
+public class GOCRBoxElement extends AbstractGOCRElement {
+	private static final Logger LOG = Logger.getLogger(GOCRBoxElement.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
+	public static String TAG = "box";
+	private static final String VALUE = "value";
+	private static final String ACHARS = "achars";
+
+	public GOCRBoxElement(Element element) {
+		super(TAG, element);
+	}
+	
+	public SVGElement createSVGElement() {
+		SVGG g = new SVGG();
+		SVGRect svgRect = createSVGBox("stroke:red;stroke-width:0.5;fill:none;", "text");
+		g.appendChild(svgRect);
+		SVGText textElement = createSVGText("font-size:5;fill:black;font-family:helvetica;");
+		g.appendChild(textElement);
+		return g;
+	}
+
+	private SVGText createSVGText(String cssStyle) {
+		int x = getX();
+		int y = getY();
+		int dx = getDX();
+		int dy = getDY();
+		String value = this.getAttributeValue(VALUE);
+		String achars = this.getAttributeValue(ACHARS);
+		achars = achars == null ? null : achars.replace(",,", ",CM");
+		SVGText text = new SVGText(new Real2(x, y + dy + getTextOffset()), achars/*value*/);
+		text.setCSSStyle(cssStyle);
+//		text.setFontSize(10.);
+		return text;
+
+	}
+
+}
