@@ -552,6 +552,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		if (cTreeList != null) {
 			for (CTree cTree : cTreeList) {
 				this.cTree = cTree;
+				outputCTreeName();
 				processTree();
 			}
 		} else {
@@ -608,6 +609,10 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	/** override this in tools which process images */
 	public void processImageDir(File imageFile) {
 		LOG.error("Must override this in:"+this.getClass().getName());
+	}
+
+	protected void outputCTreeName() {
+		System.out.println(this.getClass().getSimpleName()+" cTree: "+cTree.getName());
 	}
 
 

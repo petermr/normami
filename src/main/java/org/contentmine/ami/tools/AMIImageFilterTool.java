@@ -152,7 +152,7 @@ public class AMIImageFilterTool extends AbstractAMITool {
 				String basename = FilenameUtils.getBaseName(imageFile.toString());
 				BufferedImage image = null;
 				try {
-					image = ImageIO.read(imageFile);
+					image = ImageUtil.readImage(imageFile);
 					if (false) {
 					} else if (moveSmallImageTo(image, imageFile, new File(pdfImagesDir, SMALL))) {
 						System.out.println("small: "+basename);

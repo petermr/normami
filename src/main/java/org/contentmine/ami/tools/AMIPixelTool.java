@@ -13,6 +13,7 @@ import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.euclid.Int2;
 import org.contentmine.eucl.euclid.IntArray;
+import org.contentmine.eucl.euclid.IntRange;
 import org.contentmine.eucl.euclid.Real2Range;
 import org.contentmine.eucl.euclid.RealArray;
 import org.contentmine.eucl.euclid.RealRange;
@@ -20,6 +21,7 @@ import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.graphics.svg.SVGG;
 import org.contentmine.graphics.svg.SVGRect;
 import org.contentmine.graphics.svg.SVGSVG;
+import org.contentmine.image.ImageUtil;
 import org.contentmine.image.diagram.DiagramAnalyzer;
 import org.contentmine.image.pixel.AxialPixelFrequencies;
 import org.contentmine.image.pixel.IslandRingList;
@@ -216,7 +218,6 @@ public class AMIPixelTool extends AbstractAMITool {
     }
 
 	public void processTree() {
-		System.out.println("cTree: "+cTree.getName());
 		ImageDirProcessor imageDirProcessor = new ImageDirProcessor(this, cTree);
 		imageDirProcessor.processImageDirs();
 	}
@@ -235,7 +236,18 @@ public class AMIPixelTool extends AbstractAMITool {
 		if (includeExclude(basename)) {
 			LOG.debug("basename: "+basename);
 		}
+		if (!imageFile.exists()) {
+			throw new RuntimeException("Image file does not exist: "+imageFile);
+		}
 		BufferedImage image = UtilImageIO.loadImage(imageFile.toString());
+		if (image == null) {
+			LOG.error("Null image for: "+imageFile );
+			image = ImageUtil.readImage(imageFile);
+			if (image == null) {
+				LOG.error("STILL Null image for: "+imageFile );
+				return;
+			}
+		}
 		diagramAnalyzer = new DiagramAnalyzer().setImage(image);
 		diagramAnalyzer.setMaxIsland(maxislands);
 		Thinning thinning = thinningName == null ? null : ThinningMethod.getThinning(thinningName);
@@ -262,21 +274,31 @@ public class AMIPixelTool extends AbstractAMITool {
 
 	private void createProjections() {
 		diagramAnalyzer.createAxialPixelFrequencies();
-		int height = diagramAnalyzer.getImage().getHeight();
-		int width = diagramAnalyzer.getImage().getWidth();
+		BufferedImage image = diagramAnalyzer.getImage();
+		if (image == null) {
+			LOG.error("null image");
+			return;
+		}
+		int height = image.getHeight();
+		int width = image.getWidth();
 		axialPixelFrequencies = diagramAnalyzer.getAxialPixelFrequencies();
 		RealArray xFrequencies = new RealArray(axialPixelFrequencies.getXFrequencies());
-		LOG.debug("x axial frequencies "+xFrequencies); 
+//		LOG.debug("x axial frequencies "+xFrequencies);
 		IntArray xindexes = xFrequencies.getIndexesWithinRange(new RealRange(width/2, 9999));
 		if (xindexes.size() > 0) {
-			LOG.debug("xindexes "+xindexes);
+//			LOG.debug("xindexes "+xindexes);
 		}
+		List<IntRange> xRangeList = xFrequencies.createMaskArray((double)height * 0.5);
+		LOG.debug("x mask: possible vertical "+xRangeList);
+		
 		RealArray yFrequencies = new RealArray(axialPixelFrequencies.getYFrequencies());
 //		LOG.debug("y axial frequencies "+yFrequencies);
 		IntArray yindexes = yFrequencies.getIndexesWithinRange(new RealRange(height/2, 9999));
-		if (xindexes.size() > 0) {
-			LOG.debug("yindexes "+yindexes);
+		if (yindexes.size() > 0) {
+//			LOG.debug("yindexes "+yindexes);
 		}
+		List<IntRange> yRangeList = yFrequencies.createMaskArray((double)width * 0.5);
+		LOG.debug("y mask: possible horizontal "+yRangeList);
 		return;
 	}
 

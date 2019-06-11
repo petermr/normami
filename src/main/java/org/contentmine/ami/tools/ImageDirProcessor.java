@@ -55,7 +55,11 @@ public class ImageDirProcessor {
 			System.out.println("imageDirs: "+imageDirs.size());
 			Collections.sort(imageDirs);
 			for (File imageDir : imageDirs) {
-				processImageDir(imageDir);
+				try {
+					processImageDir(imageDir);
+				} catch (Exception e) {
+					LOG.error("Cannot process imageDir: "+imageDir + e.getMessage());
+				}
 			}
 		} else {
 			processRawImageDir(rawImageDir);
@@ -78,6 +82,9 @@ public class ImageDirProcessor {
 		String inputname = amiTool.getInputBasename();
 		File imageFile = inputname != null ? new File(imageDir, inputname+".png") :
 			AbstractAMITool.getRawImageFile(imageDir);
+		if (imageFile == null || !imageFile.exists()) {
+			throw new RuntimeException("image file does not exist: "+imageFile);
+		}
 		amiTool.processImageDir(imageFile);
 	}
 

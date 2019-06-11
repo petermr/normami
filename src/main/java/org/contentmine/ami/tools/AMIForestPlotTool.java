@@ -348,7 +348,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
     }
 
 	public void processTree() {
-		System.out.println("cTree: "+cTree.getName());
+		System.out.println("cTree>> "+cTree.getName());
 		
 		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
 		Collections.sort(imageDirs);

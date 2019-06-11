@@ -23,10 +23,10 @@ public class HOCRNeuroImageTest {
 	 */
 //	@Ignore // closed access
 	@Test
-	public void testReadImage() throws IOException {
+	public void testReadImage() {
 		File image21 = new File(NormaFixtures.TEST_PUBSTYLE_DIR, "neuro/image.2.1.Im0.png");
 		Assert.assertTrue("image21 exists", image21.exists());
-		BufferedImage image = ImageIO.read(image21);
+		BufferedImage image = ImageUtil.readImage(image21);
 		int w = image.getWidth();
 		int h = image.getHeight();
 		BufferedImage image1 = ImageUtil.createARGBBufferedImage(w, h);
@@ -41,6 +41,6 @@ public class HOCRNeuroImageTest {
 				}
 			}
 		}
-		ImageIO.write(image1, "png", new File(image21.toString()+".png"));
+		ImageUtil.writeImageQuietly(image1, new File(image21.toString()+".png"), "png");
 	}
 }

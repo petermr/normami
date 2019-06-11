@@ -100,7 +100,7 @@ public class AMIGrobidTool extends AbstractAMITool {
 
 	protected void processTree() {
 //		this.cTree = cTree;
-		System.out.println("\n" + "cTree: "+cTree.getName());
+		System.out.println("\n" + "grobid CTree: "+cTree.getName());
 		try {
 			runGrobid();
 			convertTEIToHtml();

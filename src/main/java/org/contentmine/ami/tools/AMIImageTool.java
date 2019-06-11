@@ -395,7 +395,7 @@ public class AMIImageTool extends AbstractAMITool {
 				String basename = FilenameUtils.getBaseName(imageFile.toString());
 				BufferedImage image = null;
 				try {
-					image = ImageIO.read(imageFile);
+					image = ImageUtil.readImage(imageFile);
 					// this has to cascade in order; they can be reordered if required
 					if (false) {
 					} else if (moveSmallImageTo(image, imageFile, smallDirname, pdfImagesDir)) {

@@ -35,6 +35,8 @@ public class AMIForestPlotTest {
 	private static final File STATA_DIR = new File(FOREST_PLOT_DIR, STATA);
 	private final static String STATA_TOTAL = "stataTotal";
 	private static final File STATA_TOTAL_DIR = new File(FOREST_PLOT_DIR, STATA_TOTAL);
+	private final static String STATA_TOTAL_EDITED = "stataTotalEdited";
+	private static final File STATA_TOTAL_EDITED_DIR = new File(FOREST_PLOT_DIR, STATA_TOTAL_EDITED);
 	public static final String DEVTEST = SPSS_DIR.toString();
 
 	@Test
@@ -302,7 +304,8 @@ public class AMIForestPlotTest {
 //				true
 				false
 				;
-		File projectDir = STATA_TOTAL_DIR;
+//		File projectDir = STATA_TOTAL_DIR;
+		File projectDir = STATA_TOTAL_EDITED_DIR;
 		String treename = "PMC5882397";
 		CTree cTree = new CTree(new File(projectDir, treename));
 		CProject cProject = new CProject(projectDir);
@@ -382,7 +385,7 @@ public class AMIForestPlotTest {
 				+ " --despeckle true"
 				+ " -vvv"
 				;
-//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+		if (makeImage) new AMIImageTool().runCommands(imageCmd);
 
 		imageCmd = ""
 				+ source
@@ -390,7 +393,7 @@ public class AMIForestPlotTest {
 				+ " --despeckle true"
 				+ " -vvv"
 				;
-//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+		if (makeImage) new AMIImageTool().runCommands(imageCmd);
 
 		// =====OCR======
 		/** Optical Character Recognition OCR.

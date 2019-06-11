@@ -302,7 +302,7 @@ public class WellIT {
 	}
 
 	@Test
-	public void testEraseGridLines() throws IOException {
+	public void testEraseGridLines() {
 		String root = "1.1.c.clip";
 		String root1 = "1.1.c.clip.clear";
 		String ctree = "nusco_002";
@@ -310,7 +310,7 @@ public class WellIT {
 		File imageFile = new File(testFile, ctree+"/images/page."+root+".png");
 		File outFile = new File(testFile, ctree+"/images/page."+root1+".png");
 		Assert.assertTrue(""+imageFile, imageFile.exists());
-		BufferedImage image = ImageIO.read(imageFile);
+		BufferedImage image = ImageUtil.readImage(imageFile);
 		int width = image.getWidth();
 		int height = image.getHeight();
 		int y0 = 1;

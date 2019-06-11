@@ -189,7 +189,7 @@ public class AMIOCRTool extends AbstractAMITool {
     }
 
 	protected void processTree() {
-		System.out.println("cTree: "+cTree.getName());
+		System.out.println("OCR cTree: "+cTree.getName());
 		ImageDirProcessor imageDirProcessor = new ImageDirProcessor(this, cTree);
 		imageDirProcessor.processImageDirs();
 		
@@ -275,7 +275,7 @@ public class AMIOCRTool extends AbstractAMITool {
 	private File scaleAndWriteFile(File imageFile, String basename) {
 		File scaledFile = null;
 		try {
-			BufferedImage image = ImageIO.read(imageFile);
+			BufferedImage image = ImageUtil.readImage(imageFile);
 			if (applyScale != null && applyScale) {
 				double height = image.getHeight();
 				double width = image.getWidth();

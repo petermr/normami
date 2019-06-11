@@ -175,7 +175,7 @@ public class AMIImageProcessor  extends AbstractAMITool {
 //			for (File imageFile : imageFiles) {
 //				BufferedImage image = null;
 //				try {
-//					image = ImageIO.read(imageFile);
+//					image = ImageUtil.readImage(imageFile);
 //					if (false) {
 ////					} else if (moveSmallImageTo(image, imageFile, new File(pdfImagesDir, SMALL))) {
 ////						LOG.debug("small");

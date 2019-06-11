@@ -33,6 +33,7 @@ import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlSpan;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.graphics.svg.text.SVGPhrase;
+import org.contentmine.image.ImageUtil;
 import org.contentmine.image.pixel.PixelGraph;
 import org.contentmine.image.pixel.PixelNode;
 import org.contentmine.norma.NAConstants;
@@ -68,10 +69,10 @@ public class NexmlProcessor {
 		this.argProcessor = argProcessor;
 	}
 	
-	public NexmlNEXML createNexmlAndTreeFromPixels(File inputImageFile) throws IOException {
+	public NexmlNEXML createNexmlAndTreeFromPixels(File inputImageFile) {
 		int largestSmallEdgeAllaowed = 5;
 		if (inputImageFile != null && inputImageFile.exists()) {
-			BufferedImage image = ImageIO.read(inputImageFile);
+			BufferedImage image = ImageUtil.readImage(inputImageFile);
 			phyloTreePixelAnalyzer = argProcessor.getPhyloCore().createAndConfigurePixelAnalyzer(image);
 			diagramTree = phyloTreePixelAnalyzer.processImageIntoGraphsAndTree();
 			if (diagramTree == null) {

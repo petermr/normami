@@ -68,12 +68,7 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 	}
 
 	private void splitImage() {
-		BufferedImage image = null;
-		try {
-			image = ImageIO.read(sourceFile);
-		} catch (IOException e) {
-			throw new RuntimeException("Cannot read "+sourceFile, e);
-		}
+		BufferedImage image = ImageUtil.readImage(sourceFile);
 		File parentFile = sourceFile.getParentFile();
 		int imageSize = Direction.horizontal.equals(splitDirection) ? image.getHeight() : image.getWidth();
 		// add both edge borders

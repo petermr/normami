@@ -172,12 +172,7 @@ public class GOCRConverter  extends AbstractOCRConverter {
     	if (!inputImageFile.exists()) {
     		throw new FileNotFoundException("inoput image: "+inputImageFile);
     	}
-		try {
-			inputImage = ImageIO.read(inputImageFile);
-		} catch (IOException e) {
-			LOG.error("Cannot read image: "+inputImageFile);
-			e.printStackTrace();
-		}
+		inputImage = ImageUtil.readImage(inputImageFile);
 		
     	this.outputFileRoot = outputGocrFile;
 		outputGocrFile.getParentFile().mkdirs();

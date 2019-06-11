@@ -1,24 +1,18 @@
 package org.contentmine.norma.image.ocr;
 
 import java.awt.image.BufferedImage;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.List;
 
-import javax.imageio.ImageIO;
-
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGSVG;
+import org.contentmine.image.ImageUtil;
 import org.contentmine.norma.NormaFixtures;
-import org.contentmine.norma.image.ocr.HOCRReaderOLD;
-import org.contentmine.norma.image.ocr.HOCRConverter;
-import org.contentmine.norma.image.ocr.NamedImage;
 import org.contentmine.norma.input.pdf.PDF2ImagesConverter;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -90,7 +84,7 @@ public class ImageToHOCRConverterIT {
 			DefaultArgProcessor.CM_LOG.debug(file.toString());
 			String root = FilenameUtils.getBaseName(file.getParentFile().getName());
 			DefaultArgProcessor.CM_LOG.debug(root);
-			BufferedImage image = ImageIO.read(file);
+			BufferedImage image = ImageUtil.readImage(file);
 			HOCRReaderOLD hocrReader = new HOCRReaderOLD();
 			hocrReader.setMaxFontSize(50.);
 			hocrReader.labelSubImages("[A-Za-z]");
