@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.cproject.util.CMineUtil;
 
 public abstract class CommandRunner {
@@ -24,6 +25,7 @@ public abstract class CommandRunner {
 	protected String encoding = ENCODING;
 	protected ProcessBuilder builder;
 	protected Process proc;
+//	protected AbstractAMITool amiTool;
 
 	protected int exitAfterTrying() throws InterruptedException {
 			int exitValue = -1;
@@ -94,5 +96,15 @@ public abstract class CommandRunner {
 //			LOG.debug("OCR launched");
 		}
 	}
+
+//	public AbstractAMITool getAmiTool() {
+//		return amiTool;
+//	}
+//
+//	public void setAmiTool(AbstractAMITool amiTool) {
+//		this.amiTool = amiTool;
+//	}
+	
+	
 
 }

@@ -11,6 +11,8 @@ import java.util.Map;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMIOCRTool;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.eucl.euclid.Int2;
 import org.contentmine.eucl.euclid.Int2Range;
 import org.contentmine.eucl.euclid.IntArray;
@@ -43,9 +45,12 @@ public class TextLineAnalyzer {
 	Multimap<String, CharBox> charBoxByText;
 	Map<Int2Range, CharBox> charBoxByBBox;
 	Multimap<String, Int2> bboxSizeByText;
+	boolean disambiguate = false;
+	private AMIOCRTool amiocrTool;
 
 	
-	public TextLineAnalyzer() {
+	public TextLineAnalyzer(AMIOCRTool amiocrTool) {
+		this.amiocrTool = amiocrTool;
 		return;
 	}
 
@@ -66,7 +71,7 @@ public class TextLineAnalyzer {
 			TextLine textLine = addEntryToContainingTextLine(yRangeEntry);
 		}
 		for (TextLine textLine : textLineList) {
-			LOG.debug("=========");
+//			LOG.debug("=====line====");
 			FontGeometry fontGeometry = textLine.getOrCreateFontGeometry();
 			fontGeometry.createUpperLowerLimitMultisets();
 			fontGeometry.createMedianAscDescenders();
@@ -87,7 +92,7 @@ public class TextLineAnalyzer {
 			}
 		}
 		if (textLine0 == null) {
-			LOG.debug("couldn't add:"+yRange);
+//			LOG.debug("couldn't add:"+yRange);
 		}
 		return textLine0;
 	}
@@ -195,8 +200,10 @@ public class TextLineAnalyzer {
 		this.setYRangeMultiset(yRangeMultiset);
 		List<Multiset.Entry<IntRange>> sortedYRangeSet = 
 				MultisetUtil.createListSortedByCount(yRangeMultiset);
-		LOG.debug("total char yranges: "+yRangeMultiset.size()+" => unique yranges "+
-				sortedYRangeSet.size()+": "+sortedYRangeSet);
+		if (amiocrTool.getVerbosityInt() == AbstractAMITool.DEBUG) {
+			LOG.debug("total char yranges: "+yRangeMultiset.size()+" => unique yranges "+
+					sortedYRangeSet.size()+": "+sortedYRangeSet);
+		}
 		textLineList = createInitialEmptyTextLineList();
 		this.createMultisetsForEachTextLine();
 		return textLineList;
@@ -240,7 +247,7 @@ public class TextLineAnalyzer {
 				}
 			}
 			if (textLine0 == null) {
-				LOG.debug("Cannot add char:  "+charBox);
+				LOG.trace("doesn't fit line: cannot add char:  "+charBox);
 			}
 		}
 		
@@ -266,27 +273,33 @@ public class TextLineAnalyzer {
 	}
 
 	public void disambiguateCharacters() {
-		disambiguateOZero();
-		disambiguate1li();
-		disambiguatea8();
-		disambiguateHyphenDash();
-		disambiguateQuotesCommas();
+		if (disambiguate) {
+			disambiguateOZero();
+			disambiguate1li();
+			disambiguatea8();
+			disambiguateHyphenDash();
+			disambiguateQuotesCommas();
+		}
 	}
 
 	private void disambiguateQuotesCommas() {
-		displayOccurrences("'");
-		displayOccurrences("\"");
-		displayOccurrences(",");
-		displayOccurrences(";");
+		if (disambiguate) {
+			displayOccurrences("'");
+			displayOccurrences("\"");
+			displayOccurrences(",");
+			displayOccurrences(";");
+		}
 	}
 
 	private void disambiguateHyphenDash() {
-		displayOccurrences("-");
-		displayOccurrences("_");
+		if (disambiguate) {
+			displayOccurrences("-");
+			displayOccurrences("_");
+		}
 	}
 
 	private void displayOccurrences(String character) {
-		LOG.debug(character+" "+getMultisetSortedByCount(character));
+		LOG.debug("disambiguate: "+character+" "+getMultisetSortedByCount(character));
 	}
 
 	private void disambiguate1li() {
@@ -388,7 +401,7 @@ public class TextLineAnalyzer {
 			int delta = baseY != null && baseY2 != null ?
 					baseY - baseY2 : 0;
 			List<String> phrases = textLine.getPhrases();
-			LOG.debug(textLine.getBaseY()+" "+delta+" "+phrases.size()+ " "+phrases);
+//			LOG.debug(textLine.getBaseY()+" "+delta+" "+phrases.size()+ " "+phrases);
 			lastTextLine = textLine;
 		}
 		return table;
@@ -402,6 +415,23 @@ public class TextLineAnalyzer {
 			throw new RuntimeException("Cannot write gocr output", e);
 		}
 	}
+
+	public boolean isDisambiguate() {
+		return disambiguate;
+	}
+
+	public void setDisambiguate(boolean disambiguate) {
+		this.disambiguate = disambiguate;
+	}
+
+	public AMIOCRTool getAmiocrTool() {
+		return amiocrTool;
+	}
+
+	public void setAmiocrTool(AMIOCRTool amiocrTool) {
+		this.amiocrTool = amiocrTool;
+	}
+
 
 	
 

@@ -67,7 +67,7 @@ public abstract class AbstractTemplateElement extends Element {
 	}
 
 	public static AbstractTemplateElement readTemplateElement(File file, File currentDir) {
-		LOG.debug(">>>>>>reading template: "+file);
+		System.out.println(">reading template> "+file.getParentFile().getName());
 		Element element = XMLUtil.parseQuietlyToRootElement(file);
 		return AbstractTemplateElement.createTemplateElement(element, currentDir);
 	}
@@ -82,13 +82,18 @@ public abstract class AbstractTemplateElement extends Element {
 
 	public static AbstractTemplateElement readTemplateElement(File currentDir, String templateFilename) {
 		AbstractTemplateElement templateElement = null;
-		try {
-			templateElement = readTemplateElement(new File(currentDir, templateFilename), currentDir);
-		} catch (RuntimeException e) {
-			LOG.error("Cannot read template: "+templateFilename+" "+e.getMessage());
-		}
-		if (templateElement != null) {
-			templateElement.currentDir = currentDir;
+		File templateFile = new File(currentDir, templateFilename);
+		if (!templateFile.exists()) {
+			System.out.println("template does not exist ");
+		} else {
+			try {
+				templateElement = readTemplateElement(templateFile, currentDir);
+			} catch (RuntimeException e) {
+				System.out.println("Cannot read template>: "+templateFilename+" "+e.getMessage());
+			}
+			if (templateElement != null) {
+				templateElement.currentDir = currentDir;
+			}
 		}
 		return templateElement;
 	}

@@ -66,25 +66,25 @@ public class FontGeometry {
 	}
 	public Integer getBaseY() {
 		if (this.commonestUpperLimits == null || this.commonestUpperLimits.size() == 0) {
-			LOG.error("no upper limits");
+			LOG.trace("no upper limits");
 			return null;
 		}
 		this.commonestUpperLimit = this.commonestUpperLimits.get(0);
 		this.baseYSet = HashMultiset.create();
 		this.baseY = this.commonestUpperLimit.getElement();
-		LOG.debug("baseY "+this.baseY);
+//		LOG.debug("baseY "+this.baseY);
 		return this.baseY;
 	}
 
 	public Integer getCapsY() {
 		if (this.commonestLowerLimits == null || this.commonestLowerLimits.size() == 0) {
-			LOG.error("no lower limits");
+			LOG.trace("no lower limits");
 			return null;
 		}
 		this.commonestLowerLimit = this.commonestLowerLimits.get(0);
 		this.capsYSet = HashMultiset.create();
 		this.capsY = this.commonestLowerLimit.getElement();
-		LOG.debug("caps: "+capsY);
+//		LOG.debug("caps: "+capsY);
 		return this.capsY;
 	}
 	
@@ -102,7 +102,7 @@ public class FontGeometry {
 			
 		}
 		descY = (descenderSet.size() == 0) ? null:(Integer) MultisetUtil.getCommonestValue(descenderSet);
-		LOG.debug("desc: "+descY);
+//		LOG.debug("desc: "+descY);
 		
 	}
 
@@ -120,7 +120,7 @@ public class FontGeometry {
 			
 		}
 		this.ascY = (this.ascenderSet.size() == 0) ? null:(Integer) MultisetUtil.getCommonestValue(this.ascenderSet);
-		LOG.debug("asc: "+this.ascenderSet);
+//		LOG.debug("asc: "+this.ascenderSet);
 		
 	}
 
@@ -130,32 +130,32 @@ public class FontGeometry {
 		for (Integer upperValue : upperValues) {
 			Collection<Entry<IntRange>> ranges = this.yRangeMultisetEntryByLowerValue.get(upperValue);
 			double tol = this.medianFraction  * textLine.getYRange().getRange();
-			LOG.debug("upperVal "+upperValue);
+//			LOG.debug("upperVal "+upperValue);
 			Integer deltaBase = this.baseY == null ? null : this.baseY - upperValue;
 			Integer deltaCaps = this.capsY == null ? null : upperValue - capsY;
-			LOG.debug(deltaCaps+"/"+deltaBase+"/"+tol);
+//			LOG.debug(deltaCaps+"/"+deltaBase+"/"+tol);
 			if (deltaBase > tol && deltaCaps > tol) {
 				this.medianSet.add(upperValue, ranges.size());
 			}
 			
 		}
 		this.medianY = (this.medianSet.size() == 0) ? null:(Integer) MultisetUtil.getCommonestValue(this.medianSet);
-		LOG.debug("median: "+this.medianSet);
+//		LOG.debug("median: "+this.medianSet);
 	}
 
 
 
 	public void createMedianAscDescenders() {
 		this.getOrCreateYRangesByLowerUpperValues();
-		LOG.debug("upper "+this.baseY+this.yRangeMultisetEntryByUpperValue);
-		LOG.debug("low "+this.capsY+" "+this.yRangeMultisetEntryByLowerValue);
-		LOG.debug("yRange "+textLine.getYRange()+textLine.getPhrases());
+//		LOG.debug("upper "+this.baseY+this.yRangeMultisetEntryByUpperValue);
+//		LOG.debug("low "+this.capsY+" "+this.yRangeMultisetEntryByLowerValue);
+//		LOG.debug("yRange "+textLine.getYRange()+textLine.getPhrases());
 		this.getBaseY();
 		this.getCapsY();
 		this.getMedian();
 		this.getDescender();
 		this.getAscender();
-		LOG.debug(ascY+"/"+capsY+"/"+medianY+"/"+baseY+"/"+descY);
+//		LOG.debug(ascY+"/"+capsY+"/"+medianY+"/"+baseY+"/"+descY);
 
 	}
 
@@ -165,7 +165,7 @@ public class FontGeometry {
 			this.yRangeMultisetEntryByUpperValue = ArrayListMultimap.create();
 			List<Entry<IntRange>> yRangeMultisetEntryList = textLine.getYRangeMultisetEntryList();
 			if (yRangeMultisetEntryList == null) {
-				LOG.debug("null yRangeMultisetEntryList");
+				LOG.trace("null yRangeMultisetEntryList");
 				return;
 			}
 			for (Entry<IntRange> yRangeMultisetEntry : yRangeMultisetEntryList) {

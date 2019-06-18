@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.eucl.euclid.IntRange;
 
 public class IntRangeAnalyzer {
@@ -36,17 +37,15 @@ public class IntRangeAnalyzer {
 	}
 
 	/**
-	public TextLineList createMajorNonOverlappingTextLines(Multiset<IntRange> yRangeMultiset) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	 * @return
 	 */
 	List<IntRange> createMajorNonOverlappingYRanges() {
 		yRangeList = createYRangeListFromYRangeMultisets();
 		yRangeList = excludeMinorComponents();
 		yRangeList = mergeEquivalentYRanges(1);
-		LOG.debug("yRangeList: "+yRangeList.size()+": "+yRangeList);
+		if (AbstractAMITool.isDebug(textLineAnalyzer.getAmiocrTool())) {
+			LOG.debug("yRangeList: "+yRangeList.size()+": "+yRangeList);
+		}
 		return yRangeList;
 	}
 	

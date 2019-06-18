@@ -19,8 +19,9 @@ public class ImageDirProcessor {
 	}
 
 	private CTree cTree;
-	private File imageDir;
+	private File currentImageDir;
 	public AbstractAMITool amiTool;
+	private List<File> imageDirs;
 
 	public ImageDirProcessor() {
 	}
@@ -37,7 +38,7 @@ public class ImageDirProcessor {
 	}
 
 	void processImageDirs() {
-		List<File> imageDirs = null;
+		imageDirs = null;
 		File rawImageDir = null;
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
 		if (pdfImagesDir != null && pdfImagesDir.exists()) {
@@ -58,7 +59,9 @@ public class ImageDirProcessor {
 				try {
 					processImageDir(imageDir);
 				} catch (Exception e) {
+					e.printStackTrace();
 					LOG.error("Cannot process imageDir: "+imageDir + e.getMessage());
+					int a = 0;
 				}
 			}
 		} else {
@@ -77,10 +80,10 @@ public class ImageDirProcessor {
 	}
 
 	void processImageDir(File imageDir) {
-		this.imageDir = imageDir;
-		System.out.println("image: "+imageDir.getName());
+		this.currentImageDir = imageDir;
+//		System.out.println("image: "+imageDir.getName());
 		String inputname = amiTool.getInputBasename();
-		File imageFile = inputname != null ? new File(imageDir, inputname+".png") :
+		File imageFile = inputname != null ? new File(currentImageDir, inputname+".png") :
 			AbstractAMITool.getRawImageFile(imageDir);
 		if (imageFile == null || !imageFile.exists()) {
 			throw new RuntimeException("image file does not exist: "+imageFile);

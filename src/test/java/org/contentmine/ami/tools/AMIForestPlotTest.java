@@ -1,15 +1,11 @@
 package org.contentmine.ami.tools;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
-import org.contentmine.eucl.euclid.Axis.Axis2;
-import org.contentmine.image.ImageLineAnalyzer;
 import org.junit.Test;
 
 /** test cleaning.
@@ -326,20 +322,30 @@ public class AMIForestPlotTest {
 				false
 //				true
 				;
+		boolean makeHOCR = 
+				false
+//				true
+				;
+		boolean makeGOCR = 
+				false
+//				true
+				;
+		boolean extractLines = true;
 		boolean makePixel = 
 //				false
 				true
 				;
 		boolean makeForest = 
-				false
-//				true
+//				false
+				true
 				;
 		
 		/** make the CTrees -no-op if already present 
 		 * from commandline:
 		 *  ami-makeproject -p /Users/pm286/my/project  --rawfiletypes html,pdf,xml";
 		 */
-		String makeProjectCmd = " -p " + cProject.getDirectory().getAbsoluteFile() + " --rawfiletypes html,pdf,xml";
+		String makeProjectCmd = " -p " + cProject.getDirectory().getAbsoluteFile() + " --rawfiletypes html,pdf,xml" + " --omit template\\.xml log\\.txt"
+				;
 		if (makeProject) new AMIMakeProjectTool().runCommands(makeProjectCmd);
 
 		
@@ -348,7 +354,7 @@ public class AMIForestPlotTest {
 		 * from commandline:
 		 *  ami-pdf -p /Users/pm286/my/project ";
 		 */
-		String pdfCmd = " -p " + cProject.getDirectory().getAbsoluteFile() ;
+		String pdfCmd = " -p " + cProject.getDirectory().getAbsoluteFile()  ;
 		if (makePdf) new AMIPDFTool().runCommands(pdfCmd);
 		
 		// =====Image======
@@ -365,20 +371,20 @@ public class AMIForestPlotTest {
 				+ " --threshold 120"
 				+ " --despeckle true"
 				;
-//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+		if (makeImage) new AMIImageTool().runCommands(imageCmd);
 		imageCmd = ""
 				+ source
 				+ " --threshold 120"
 				+ " --despeckle true"
 				;
-//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+		if (makeImage) new AMIImageTool().runCommands(imageCmd);
 		imageCmd = ""
 				+ source
 				+ " --sharpen sharpen4"
 				+ " --threshold 200"
 				+ " --despeckle true"
 				;
-//		if (makeImage) new AMIImageTool().runCommands(imageCmd);
+		if (makeImage) new AMIImageTool().runCommands(imageCmd);
 		imageCmd = ""
 				+ source
 				+ " --threshold 200"
@@ -404,23 +410,18 @@ public class AMIForestPlotTest {
 		String ocrCmd = ""
 				+ source
 				+ " --tesseract /usr/local/bin/tesseract"
+				+ " --extractlines hocr"
 //				+ " --html false"
 		;
-		if (makeOCR) new AMIOCRTool().runCommands(ocrCmd);
+		if (makeHOCR) new AMIOCRTool().runCommands(ocrCmd);
 		ocrCmd = ""
 				+ source
 				+ " --gocr /usr/local/bin/gocr"
+				+ " --extractlines gocr"
 		;
-		if (makeOCR) new AMIOCRTool().runCommands(ocrCmd);
+		if (makeGOCR) new AMIOCRTool().runCommands(ocrCmd);
 
-		// =====OCR2======
-		String ocr2Cmd = ""
-			+ source
-			+ " --extractlines gocr"
-			;
-		if (makeOCR) new AMIOCRTool().runCommands(ocr2Cmd);
-
-		// =====Pixel======
+		// =====Pixel get borders ======
 		String pixelCmd = ""
 			+ source
 			+ " --projections"
@@ -435,9 +436,9 @@ public class AMIForestPlotTest {
 
 		String forestCmd = ""
 				+ source
-				+ " --forest"
+				+ " --template template.xml"
 				;
-//		if (makeForest) new AMIForestTool().runCommands(forestCmd);
+		if (makeForest) new AMIForestPlotTool().runCommands(forestCmd);
 
 
 	}

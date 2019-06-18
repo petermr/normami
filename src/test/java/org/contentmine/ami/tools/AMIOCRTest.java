@@ -228,9 +228,10 @@ public class AMIOCRTest {
 		File inputFile = new File(imageDir, "raw.png");
 
 		File gocrXmlFile = new File(imageDir, "raw.gocr.xml");
-		GOCRConverter gocrConverter = new GOCRConverter();
+		GOCRConverter gocrConverter = new GOCRConverter(null);
 		gocrConverter.createGOCRElement(inputFile, gocrXmlFile);
-		SVGElement svgElement = gocrConverter.createSVGElementWithGlyphs(imageDir);
+		boolean glyphs = true;
+		SVGElement svgElement = gocrConverter.createSVGElementWithGlyphs(imageDir, glyphs);
 		File svgFile = new File(imageDir, "raw.gocr.svg");
 		SVGSVG.wrapAndWriteAsSVG(svgElement, svgFile);	
 		

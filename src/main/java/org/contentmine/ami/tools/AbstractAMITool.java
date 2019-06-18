@@ -71,6 +71,21 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		EXCLUDE
 	}
 	
+	public enum Verbosity {
+		TRACE(3),
+		DEBUG(2),
+		INFO(3),
+		;
+		private int verbosity;
+
+		private Verbosity(int v) {
+			this.verbosity = v;
+		}
+		public int getVerbosity() {
+			return verbosity;
+		}
+	}
+	
 	@Option(names = {"--outputname"}, 
     		arity="1",
     		description = "User's basename for outputfiles (e.g. foo/bar/<basename>.png or directories. By default this is computed by AMI."
@@ -191,6 +206,10 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	protected static final String RAW = "raw";
 
 	static final String TRUNCATE = "%";
+
+	public static final int TRACE = 3;
+	public static final int DEBUG = 2;
+	public static final int INFO = 1;
 	protected static File HOME_DIR = new File(System.getProperty("user.home"));
 	protected static String CONTENT_MINE_HOME = "ContentMine";
 	protected static File DEFAULT_CONTENT_MINE_DIR = new File(HOME_DIR, CONTENT_MINE_HOME);
@@ -506,10 +525,14 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		}
 	}
 	
+	public int getVerbosityInt() {
+		return verbosity.length;
+	}
+		
 	public Level getVerbosity() {
 		if (verbosity.length == 0) {
-			addLoggingLevel(Level.ERROR, "BUG?? in verbosity");
-			return null;
+//			addLoggingLevel(Level.ERROR, "BUG?? in verbosity");
+			return Level.WARN;
 		} else if (verbosity.length == 1) {
 			 return verbosity[0] ? Level.INFO : Level.WARN; 
 		} else if (verbosity.length == 2) {
@@ -520,7 +543,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		return Level.ERROR;
 		
 	}
-
+	
 	/** creates toplevel ContentMine directory in which all dictionaries and other tools
 	 * will be stored. By default this is "ContentMine" under the users home directory.
 	 * It is probably not a good idea to store actual projects here, but we will eveolve the usage.
@@ -613,6 +636,30 @@ public abstract class AbstractAMITool implements Callable<Void> {
 
 	protected void outputCTreeName() {
 		System.out.println(this.getClass().getSimpleName()+" cTree: "+cTree.getName());
+	}
+
+	public Boolean getForceMake() {
+		return forceMake;
+	}
+
+	public void setForceMake(Boolean forceMake) {
+		this.forceMake = forceMake;
+	}
+
+	public static boolean isTrace(AbstractAMITool amiTool) {
+		return isLevel(amiTool, AbstractAMITool.Verbosity.TRACE);
+	}
+
+	public static boolean isDebug(AbstractAMITool amiTool) {
+		return isLevel(amiTool, AbstractAMITool.Verbosity.DEBUG);
+	}
+
+	public static boolean isInfo(AbstractAMITool amiTool) {
+		return isLevel(amiTool, AbstractAMITool.Verbosity.INFO);
+	}
+
+	private static boolean isLevel(AbstractAMITool amiTool, Verbosity debug2) {
+		return (amiTool == null) ? false : debug2.getVerbosity() == amiTool.getVerbosityInt();
 	}
 
 

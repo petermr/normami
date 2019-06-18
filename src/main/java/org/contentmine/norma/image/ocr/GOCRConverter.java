@@ -7,13 +7,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
-
-import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMIOCRTool;
 import org.contentmine.ami.tools.gocr.GOCRPageElement;
 import org.contentmine.eucl.euclid.Int2;
 import org.contentmine.eucl.euclid.Int2Range;
@@ -21,6 +19,7 @@ import org.contentmine.eucl.euclid.IntRange;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.RealSquareMatrix;
 import org.contentmine.eucl.euclid.Util;
+import org.contentmine.eucl.euclid.util.CMFileUtil;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGG;
@@ -29,7 +28,6 @@ import org.contentmine.graphics.svg.SVGRect;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.graphics.svg.SVGText;
 import org.contentmine.image.ImageUtil;
-import org.contentmine.norma.util.CommandRunner;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
@@ -145,10 +143,17 @@ public class GOCRConverter  extends AbstractOCRConverter {
 	private int minYRange;
 	int minEntryCount;
 	private TextLineAnalyzer textLineAnalyzer;
+	private boolean disambiguate;
+	private AMIOCRTool amiOcrTool;
 
 
-	public GOCRConverter () {
+	private GOCRConverter () {
 		setDefaults();
+	}
+	
+	public GOCRConverter(AMIOCRTool amiOcrTool) {
+		this();
+		this.amiOcrTool = amiOcrTool;
 	}
 	
 	protected void setDefaults() {
@@ -168,6 +173,10 @@ public class GOCRConverter  extends AbstractOCRConverter {
      */
     public void convertImageToGOCR(File inputImageFile, File outputGocrFile) throws FileNotFoundException, InterruptedException {
 
+		if (!CMFileUtil.shouldMake(outputGocrFile, imageFile)) {
+			System.out.println(">skip gocr>"+imageFile);
+			return;
+		}
     	inputFilename = inputImageFile.getAbsolutePath();
     	if (!inputImageFile.exists()) {
     		throw new FileNotFoundException("inoput image: "+inputImageFile);
@@ -290,7 +299,6 @@ public class GOCRConverter  extends AbstractOCRConverter {
 			if (SVGText.TAG.contentEquals(SVGRect.getClassAttributeValue(rect))) {
 				Int2Range boundingBox = rect.createIntBoundingBox();
 				SVGImage svgImage = SVGImage.createSVGSubImage(inputImage, boundingBox);
-				
 				SVGG parentG = (SVGG) rect.getParent();
 				parentG.appendChild(svgImage);
 			}
@@ -299,7 +307,8 @@ public class GOCRConverter  extends AbstractOCRConverter {
 	
 	public TextLineAnalyzer createMaps(SVGElement svgElement) {
 		createCharBoxList(svgElement);
-		textLineAnalyzer = new TextLineAnalyzer();
+		textLineAnalyzer = new TextLineAnalyzer(amiOcrTool);
+		textLineAnalyzer.setDisambiguate(disambiguate);
 		Multiset<IntRange> yRangeMultiset = textLineAnalyzer.createYRangeMultiset(gocrCharBoxList);
 		
 		textLineAnalyzer.setMinYRange(minYRange);
@@ -307,7 +316,9 @@ public class GOCRConverter  extends AbstractOCRConverter {
 		textLineAnalyzer.addCharBoxes(gocrCharBoxList);
 		textLineAnalyzer.disambiguateCharacters();
 		
-		System.out.println("TextLineAnalyzer "+textLineAnalyzer);
+		if (Level.DEBUG.equals(amiOcrTool.getVerbosity())) {
+			System.out.println("TextLineAnalyzer> "+textLineAnalyzer);
+		}
 		
 		return textLineAnalyzer;   
 	}
@@ -368,12 +379,14 @@ public class GOCRConverter  extends AbstractOCRConverter {
 		return imageList;
 	}
 
-	public SVGElement createSVGElementWithGlyphs(File imageDir) throws IOException {
+	public SVGElement createSVGElementWithGlyphs(File imageDir, boolean glyphs) throws IOException {
 		svgElement = null;
 		if (gocrElement != null) {
 			svgElement = gocrElement.createSVGElement();
-			addGlyphsToRectsInG(svgElement, inputImage);
-			createIndividualGlyphFiles(inputImage, svgElement, new File(createGocrDir(), GLYPH_DIR));
+			if (glyphs) {
+				addGlyphsToRectsInG(svgElement, inputImage);
+				createIndividualGlyphFiles(inputImage, svgElement, new File(createGocrDir(), GLYPH_DIR));
+			}
 		} else {
 			LOG.warn("Null gocr");
 		}
@@ -391,8 +404,7 @@ public class GOCRConverter  extends AbstractOCRConverter {
 		File gocrXmlFile = new File(getGocrBase(), GOCR_XML);
 		LOG.debug("gocr >"+gocrXmlFile);
 		createGOCRElement(imageFile, gocrXmlFile);
-		SVGElement svgElement = createSVGElementWithGlyphs(gocrXmlFile);
-		
+		SVGElement svgElement = createSVGElementWithGlyphs(gocrXmlFile, amiOcrTool.isGlyphs());
 		outputGOCR(svgElement);
 	}
 
@@ -492,6 +504,13 @@ public class GOCRConverter  extends AbstractOCRConverter {
 		return g;
 	}
 
+	public boolean isDisambiguate() {
+		return disambiguate;
+	}
+
+	public void setDisambiguate(boolean disambiguate) {
+		this.disambiguate = disambiguate;
+	}
 
 
 }

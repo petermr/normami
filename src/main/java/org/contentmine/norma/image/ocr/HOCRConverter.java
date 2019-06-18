@@ -16,9 +16,11 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMIOCRTool;
 import org.contentmine.ami.tools.AMIOCRTool.LineDir;
+import org.contentmine.ami.tools.AMIOCRTool.OcrType;
 import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.ami.tools.ImageDirProcessor;
 import org.contentmine.cproject.files.CTree;
+import org.contentmine.eucl.euclid.util.CMFileUtil;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGSVG;
@@ -94,23 +96,23 @@ public class HOCRConverter extends CommandRunner {
 		return hocrHtmlFile;
 	}
 
-	private File convertToHtmlFile(File output) throws IOException {
+	private File convertToHtmlFile(File outputDir) throws IOException {
 		
-		outputHtmlFile = createOutputHtmlFileDescriptorForHOCR_HTML(output);
+		outputHtmlFile = createOutputHtmlFileDescriptorForHOCR_HTML(outputDir);
 //		File outputHtmlFile = createOutputHtmlFileDescriptorForHOCR_HTML(output);
-		File outputHocr = createOutputHtmlFileDescriptorForHOCR_HOCR(output);
+		File outputHocr = createOutputHtmlFileDescriptorForHOCR_HOCR(outputDir);
 		if (!outputHocr.exists()) {	
 			LOG.trace("failed to create HOCR: "+outputHtmlFile+" or "+outputHocr);
 		} else {
-			LOG.debug("copying "+outputHocr+" to "+outputHtmlFile);
+//			LOG.debug("copying "+outputHocr+" to "+outputHtmlFile);
 			FileUtils.copyFile(outputHocr, outputHtmlFile);
 			FileUtils.deleteQuietly(outputHocr);
 		}
 		return outputHtmlFile;
 	}
 
-	private File createOutputHtmlFileDescriptorForHOCR_HTML(File output) {
-		return new File(new File(output.getParentFile(), HOCR), HOCR+"."+CTree.HTML);
+	private File createOutputHtmlFileDescriptorForHOCR_HTML(File outputDir) {
+		return new File(new File(outputDir.getParentFile(), HOCR), HOCR+"."+CTree.HTML);
 	}
 
 //	private File createOutputHtmlFileDescriptorForHOCR_HTML(File output) {
@@ -148,24 +150,49 @@ public class HOCRConverter extends CommandRunner {
 	public void setTesseractPath(String tesseractPath) {
 		this.tesseractPath = tesseractPath;
 	}
+	
+	/**
+	 * from imageDir/file.png creates imageDir/hocr/
+	 * is this a good thing?
+	 * NO!
+	 * 
+	 * @param imageFile
+	 * @return
+	 */
+	public static File getHocrDirectory(File imageFile) {
+		File imageFileDir = new File(imageFile.getParentFile(), FilenameUtils.getBaseName(imageFile.toString()));
+		imageFileDir.mkdirs();
+		File imageFileHocrDir = new File(imageFileDir, AMIOCRTool.HOCR_DIR);
+		imageFileHocrDir.mkdirs();
+		return imageFileHocrDir;
+	}
 
-	public void processTesseractOutput(File imageDir) {
+
+
+	public void processTesseractOutput(File imageFile) {
+		File imageDir = imageFile.getParentFile();
+		File hocrDirectory = getHocrDirectory(imageFile);
 		boolean ok = true;
 		try {
 			createHOCRStructuredHtml();
 		} catch (Exception e) {
-//			e.printStackTrace();
+			e.printStackTrace();
 			LOG.debug("Cannot read HOCR input: "+ e);
 			ok = false;
 		}
-		if (ok && LineDir.horiz.equals(amiocrTool.extractLines)) {
+		if (ok && amiocrTool.extractLines.contains(OcrType.hocr)) {
 			try {
-				File hocrRawDir = HOCRConverter.getHocrRawFilename(imageDir);
-				File rawSvgFile = new File(hocrRawDir, "raw.svg");
+				File rawSvgFile = new File(hocrDirectory, HOCR + "." + CTree.SVG);
+				if (!rawSvgFile.exists()) {
+					throw new FileNotFoundException("cannot find "+rawSvgFile);
+				}
 				SVGTextLineList textLineList = amiocrTool.createTextLineList(rawSvgFile);
 				textLineList.getOrCreateTypeAnnotations();
-				SVGSVG.wrapAndWriteAsSVG((SVGElement)textLineList.createSVGElement(),
-						HOCRConverter.getTextLineListFilename(imageDir));
+//				File imageDir = hocrDir.getParentFile().getParentFile();
+				File textLineListFilename = HOCRConverter.getTextLineListFilename(imageDir);
+				SVGElement createSVGElement = textLineList.createSVGElement();
+				SVGSVG.wrapAndWriteAsSVG(createSVGElement, textLineListFilename);
+//				System.out.println(">svg>"+textLineListFilename);
 			} catch (FileNotFoundException e) {
 				throw new RuntimeException("Cannot find file in ImageDir "+imageDir, e);
 			}
@@ -178,7 +205,11 @@ public class HOCRConverter extends CommandRunner {
 			throw new RuntimeException("Need to call constructorwith amiocrTool");
 		}
 		if (amiocrTool.outputHOCRFile == null || !amiocrTool.outputHOCRFile.exists()) {
+//			System.out.println(">no outputHOCR file");
 			throw new RuntimeException("Cannot find outputHOCRFile: "+amiocrTool.outputHOCRFile);
+		}
+		if (amiocrTool.outputHOCRFile.isDirectory()) {
+			throw new RuntimeException("outputHOCRFile is directory: "+amiocrTool.outputHOCRFile);
 		}
 		String filename = amiocrTool.outputHOCRFile.toString();
 //		LOG.debug("hocr output: "+filename);
@@ -226,20 +257,44 @@ public class HOCRConverter extends CommandRunner {
 		}
 	}
 
+	public void runTesseract(AMIOCRTool amiocrTool, File imageFile, String basename, String newbasename) {
+		if (amiocrTool.scalefactor != null || Boolean.TRUE.equals(amiocrTool.applyScale)) {
+			imageFile = amiocrTool.scaleAndWriteFile(imageFile, newbasename);
+		}
+		File outputDir = HOCRConverter.getHocrDirectory(imageFile);
+		// messy: tesseract filenames don't have html extension
+		amiocrTool.outputHOCRFile = createOutputHtmlFileDescriptorForHOCR_HTML(outputDir);
+		this.setTesseractPath(amiocrTool.tesseractPath);
+		if (!CMFileUtil.shouldMake(amiocrTool.outputHOCRFile, imageFile)) {
+			System.out.println(">skip hocr>");
+			return;
+		}
+		
+		try {
+			// run the OCR and return HOCR
+			amiocrTool.outputHOCRFile = this.convertImageToHOCR(imageFile, outputDir);
+			if (!amiocrTool.outputHOCRFile.exists()) {
+				throw new RuntimeException("HOCR HTML should exist: "+amiocrTool.outputHOCRFile);
+			}
+		} catch (Exception e) {
+			throw new RuntimeException("cannot convert OCR", e);
+		}
+	}
+
 	public static File getTextLineListFilename(File imageDir) {
 		File hocrRawDir = getHocrRawFilename(imageDir);
 		return new File(hocrRawDir, TEXT_LINE_LIST_SVG);
 	}
 
-	private static File getHocrDirFilename(File imageDir) {
-		File hocrDir = new File(imageDir, AMIOCRTool.OcrType.hocr.toString());
+	private static File getHocrDirFilename(File imageDir, String imageName) {
+		File hocrDir = new File(new File(imageDir, imageName), AMIOCRTool.OcrType.hocr.toString());
 		return hocrDir;
 	}
 
 	public static File getHocrRawFilename(File imageDir) {
-		File hocrDir = getHocrDirFilename(imageDir);
-		File hocrRawDir = new File(hocrDir, AMIOCRTool.RAW);
-		return hocrRawDir;
+		File hocrDir = getHocrDirFilename(imageDir, AMIOCRTool.RAW);
+		return hocrDir;
 	}
 
+	
 }

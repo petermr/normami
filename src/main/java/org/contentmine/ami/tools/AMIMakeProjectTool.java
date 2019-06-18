@@ -74,7 +74,7 @@ description = "Processes a directory (CProject) containing files (e.g.*.pdf, *.h
 		+ " If any of these creates ambiguity, then numeric suffixes are added. "
 		+ ""
 		+ "By default a logfile of the conversions is created in make_project.json. "
-		+ "The name can be cahnged "
+		+ "The name can be changed "
 )
 
 public class AMIMakeProjectTool extends AbstractAMITool {
@@ -90,13 +90,12 @@ public class AMIMakeProjectTool extends AbstractAMITool {
     		)
     private int compress = 25;
 
-//    @Option(names = {"--logfile"},
-//    		arity="0..1",
-//    		description = "logfile name (usually created by default - see particular command)."
-//    				+ " To omit logfile use argument NONE. Note"
-//    				+ "that default logfile names are reserved and it is normally a bad idea to use different ones"
-//    		)
-//    private String logfile;
+    @Option(names = {"--omit"},
+    		arity="1..*",
+    		description = "omit filenames (list of regexes). e.g. template.xml (applies to names, not paths) (not yet tested)",
+    		defaultValue = "template\\.xml, log\\.txt, summary\\.json"
+    		)
+    private List<String> omitRegexList;
 
 	public AMIMakeProjectTool() {
 	}
@@ -111,10 +110,14 @@ public class AMIMakeProjectTool extends AbstractAMITool {
 
     protected void parseSpecifics() {
     	addLoggingLevel(Level.INFO, "compress            "+compress);
+    	addLoggingLevel(Level.INFO, "omit                "+omitRegexList);
+    	System.out.println("compress            "+compress);
+    	System.out.println("omit                "+omitRegexList);
     }
 
 	protected void runSpecifics() {
 		if (cProject != null) {
+			cProject.setOmitRegexList(omitRegexList);
 	        cProject.makeProject(Util.toStringList(rawFileFormats), compress);
 	        addMakeProjectLogfile();
 		}

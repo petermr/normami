@@ -374,6 +374,9 @@ public class AMIForestPlotTool extends AbstractAMITool {
 				continue;
 			}
 			*/
+			/** WRONG
+			 * 
+			 */
 			if (table) {
 				File hocrFile = new File(imageDir, "hocr/raw.raw.html");
 				if (!hocrFile.exists()) {
