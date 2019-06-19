@@ -3,6 +3,7 @@ package org.contentmine.ami.tools;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,7 +14,6 @@ import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.euclid.Int2;
-import org.contentmine.eucl.euclid.IntArray;
 import org.contentmine.eucl.euclid.IntRange;
 import org.contentmine.eucl.euclid.Real2Range;
 import org.contentmine.eucl.euclid.RealArray;
@@ -62,6 +62,9 @@ description = "analyzes bitmaps - generally binary, but may be oligochrome. Crea
 )
 
 public class AMIPixelTool extends AbstractAMITool {
+
+
+
 	private static final Logger LOG = Logger.getLogger(AMIPixelTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -99,11 +102,6 @@ public class AMIPixelTool extends AbstractAMITool {
 		vertical
 	}
 	
-    @Option(names = {"--extractedname"},
-    		arity = "1",
-            description = "name for holding extracted results ")
-	public String extractedName = "extracted";
-
     @Option(names = {"--filename"},
     		arity = "1",
             description = "name for transformed Imagefile")
@@ -141,14 +139,28 @@ public class AMIPixelTool extends AbstractAMITool {
             		+ "black pixels ")
     private boolean projections = false;
     
+    @Option(names = {"--projectionsname"},
+    		arity = "1",
+    		defaultValue = "projections",
+            description = "name for holding extracted projections ")
+	public String projectionsName;
+
     @Option(names = {"--rings"},
     		arity = "1",
     		defaultValue = "-1",
             description = "create pixelRings and tabulate properties. "
             		+ "Islands are only analyzed if they have more than minRingCount. "
             		+ "Default (negative) means analyze none. 0 means all islands. Only '--islands' count are analyzed")
-    
     private Integer minRingCount = -1;
+	
+    @Option(names = {"--subimage"},
+    		arity = "1..*",
+            description = "create a subimage and extract projections "
+            		+ " '--subimage statascale ycoord 2 10 xprojection' means:"
+            		+ "     use statascale protocol 2nd y horizntal line and add 10 pixels and project onto x."
+            		+ " Horrible kludge. The first token is the name, the others are more hacky."
+            		+ "")
+    private List<String> subimageTokens = new ArrayList<String>();
 	
     @Option(names = {"--thinning"},
     		arity = "1",
@@ -162,17 +174,56 @@ public class AMIPixelTool extends AbstractAMITool {
             description = "subdirectory for output of pixel analysis and diagrams (if none defaults to <inputBasename>)")
     private String outputDirname = null;
     
+    @Option(names = {"--xprojection"},
+    		arity = "1",
+    		defaultValue = "0.5",
+            description = "fraction of height for meaningful projection. If greater will contribute to a projection range ")
+    private Double xProjectionFactor;
+    
+    @Option(names = {"--yprojection"},
+    		arity = "1",
+    		defaultValue = "0.5",
+            description = "fraction of width for meaningful projection. If greater will contribute to a projection range ")
+    private Double yProjectionFactor;
+
+	private static final String BASENAME = "basename";
+	private static final String COORD = "coord";
+	private static final String CTREE = "cTree";
+	private static final String DELTA = "delta";
+	private static final String IMAGE_DIR = "imageDir";
+	private static final String LINES = "projections";
+	private static final String MAX = "max";
+	private static final String MIN = "min";
+	private static final String PROJECTION = "projection";
+	private static final String SUB_IMAGE = "subImage";
+	private static final String X = "x";
+	private static final String Y = "y";
+	private static final String X_COORD = "xcoord";
+	private static final String Y_COORD = "ycoord";
+	private static final String X_COORDS = "xcoords";
+	private static final String Y_COORDS = "ycoords";
+
 	private DiagramAnalyzer diagramAnalyzer;
 	private PixelIslandList pixelIslandList;
 	private File outputDirectory;
 
 	private static String[] COLORS = new String[] {"red", "green", "blue", "pink", "yellow", "cyan", "magenta", "brown"};
 
-	private AxialPixelFrequencies axialPixelFrequencies;
+//	private AxialPixelFrequencies axialPixelFrequencies;
 	private File imageDir;
+	private File imageFile;
 	private List<IntRange> yRangeList;
 	private List<IntRange> xRangeList;
 
+	private BufferedImage image;
+
+	private BufferedImage subImage;
+
+	private String initialCoordName;
+
+	private String projectionCoordName;
+
+	private List<List<IntRange>> intRangeListList;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -203,7 +254,6 @@ public class AMIPixelTool extends AbstractAMITool {
 	protected void parseSpecifics() {
     	outputDirname = outputDirname.endsWith("/") ? outputDirname : outputDirname + "/";
 		System.out.println("basename             " + basename);
-		System.out.println("extractedName        " + extractedName);
 		System.out.println("maxislands           " + maxislands);
 		System.out.println("minwidth             " + minwidth);
 		System.out.println("minheight            " + minheight);
@@ -211,6 +261,8 @@ public class AMIPixelTool extends AbstractAMITool {
 		System.out.println("minRingCount         " + minRingCount);
 		System.out.println("outputDirname        " + outputDirname);
 		System.out.println("projections          " + projections);
+		System.out.println("projectionsName      " + projectionsName);
+		System.out.println("subimageTokens       " + subimageTokens);
 		System.out.println("thinning             " + thinningName);
 		System.out.println();
 	}
@@ -250,7 +302,7 @@ public class AMIPixelTool extends AbstractAMITool {
 		if (!imageFile.exists()) {
 			throw new RuntimeException("Image file does not exist: "+imageFile);
 		}
-		BufferedImage image = UtilImageIO.loadImage(imageFile.toString());
+		image = UtilImageIO.loadImage(imageFile.toString());
 		if (image == null) {
 			LOG.error("Null image for: "+imageFile );
 			image = ImageUtil.readImage(imageFile);
@@ -276,42 +328,166 @@ public class AMIPixelTool extends AbstractAMITool {
 		}
 		if (projections) {
 			createProjections();
+			if (subimageTokens.size() > 0) {
+				subImage = createSubimage();
+				if (subImage != null) {
+					intRangeListList = analyzeSubImage(subImage, 0.5, 0.7);
+//					List<IntRange> xRangeList = intRangeListList.get(0);
+//					LOG.debug("**********************************ticks "+xRangeList);
+				}
+			}
+			if (projectionsName != null) {
+				try {
+					writeProjections();
+				} catch (Exception e) {
+					throw new RuntimeException("Cannot write XML file", e);
+				}
+			}
 		}
 		if (minRingCount > 0 || maxIslandCount > 0) {
 			this.analyzeAndPlotIslands();
 		}
-		if (extractedName != null) {
-			try {
-				writeExtracted();
-			} catch (Exception e) {
-				throw new RuntimeException("Cannot write XML file", e);
-			}
-		}
 
 	}
 
-	private void writeExtracted() throws IOException {
+	private List<List<IntRange>> analyzeSubImage(BufferedImage image, double xProjectionFactor, double yProjectionFactor) {
+		int height = image.getHeight();
+		int width = image.getWidth();
+		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
+		diagramAnalyzer.setImage(image);
+		List<List<IntRange>> intRangeListList = new ArrayList<List<IntRange>>();
+		AxialPixelFrequencies axialPixelFrequencies = diagramAnalyzer.getAxialPixelFrequencies();
+		RealArray xFrequencies = new RealArray(axialPixelFrequencies.getXFrequencies());
+		xFrequencies.getIndexesWithinRange(new RealRange(width/2, 9999));
+		List<IntRange> xRangeList = xFrequencies.createMaskArray((double)height * xProjectionFactor);
+		intRangeListList.add(xRangeList);
+		
+		RealArray yFrequencies = new RealArray(axialPixelFrequencies.getYFrequencies());
+		yFrequencies.getIndexesWithinRange(new RealRange(height/2, 9999));
+		List<IntRange> yRangeList = yFrequencies.createMaskArray((double)width * yProjectionFactor);
+		intRangeListList.add(yRangeList);
+		return intRangeListList;
+	}
+
+	/** --subimage statascale y 2 delta 10 projection x
+	 *  the ycoord index runs from 1 
+	 * @return 
+	 * */
+	private BufferedImage createSubimage() {
+		String subImageName = null;
+		initialCoordName = null;
+		Integer coord1 = -1;
+		Integer coord2 = -1;
+		Integer delta = 0;
+		projectionCoordName = null;
+		
+		int itoken = 0;
+		while (itoken < subimageTokens.size()) {
+			String token = subimageTokens.get(itoken);
+			if (itoken == 0) {
+				subImageName = token;
+			} else if (X.equals(token) || Y.equals(token)) {
+				initialCoordName = token;
+				int coordIndex = parseInt(subimageTokens.get(++itoken)); 
+				List<IntRange> rangeList = X.equals(token) ? xRangeList : yRangeList;
+				coord1 = rangeList.size() < coordIndex ? null : rangeList.get(coordIndex - 1).getMax();
+				if (coord1 == null) {
+					LOG.warn("cannot find yRange: "+coordIndex+" "+yRangeList);
+				}
+			} else if (DELTA.equals(token)) {
+				itoken++;
+				if (coord1 == null) {
+					LOG.warn("missing coord: "+subimageTokens);
+				} else {
+					delta = parseInt(subimageTokens.get(itoken));
+					coord2 = coord1 + delta;
+				}
+			} else if (PROJECTION.equals(token)) {
+				projectionCoordName = subimageTokens.get(++itoken).toLowerCase(); 
+				if (projectionCoordName == null || (!projectionCoordName.equals(X) && !projectionCoordName.equals(Y))) {
+					throw new RuntimeException(PROJECTION+" must be "+X+" or "+Y);
+				}
+			} else {
+				throw new RuntimeException("Cannot parse subImage token "+itoken+" "+token+" "+subimageTokens);
+			}
+			itoken++;
+		}
+		BufferedImage subImage = null;
+		if (coord1 != null && coord2 != null) {
+			int xoff = X.equals(initialCoordName) ? coord1 : 0;
+			int yoff = X.equals(initialCoordName) ? 0 : coord1;
+			int newWidth = X.equals(initialCoordName) ? coord2 - coord1 : image.getWidth();
+			int newHeight = X.equals(initialCoordName) ? image.getHeight() : coord2 - coord1;
+			subImage = ImageUtil.createClippedImage(image, xoff, yoff, newWidth, newHeight);
+			if (false) {
+				ImageUtil.writePngQuietly(subImage, new File(imageFile.getParentFile(), basename+".scale"+"."+CTree.PNG));
+			}
+		}
+		return subImage;
+	}
+
+	private Integer parseInt(String token) {
+		Integer ii = null;
+		if (token != null) {
+			try {
+				ii = Integer.parseInt(token);
+			} catch (NumberFormatException nfe) {
+				throw new RuntimeException("cann parse integer: "+token);
+			}
+		}
+		return ii;
+	}
+
+	private void writeProjections() throws IOException {
 		File outputDir = new File(imageDir, basename);
-		File extractedFile = new File(outputDir, extractedName+"."+CTree.XML);
-		Element linesElement = new Element("lines");
-		linesElement.appendChild(createRangeElement("xLines", "xLine", xRangeList));
-		linesElement.appendChild(createRangeElement("yLines", "yLine", yRangeList));
+		File extractedFile = new File(outputDir, projectionsName+"."+CTree.XML);
+		Element linesElement = new Element(LINES);
+		linesElement.addAttribute(new Attribute(CTREE, cTree.getName()));
+		linesElement.addAttribute(new Attribute(IMAGE_DIR, imageDir.getName()));
+		linesElement.addAttribute(new Attribute(BASENAME, basename));
+		
+		linesElement.appendChild(createRangeElement(X_COORDS, X_COORD, xRangeList));
+		linesElement.appendChild(createRangeElement(Y_COORDS, Y_COORD, yRangeList));
+	
+		if (intRangeListList != null) {
+			linesElement.appendChild(subImageProjections());
+		}
+		
 		XMLUtil.debug(linesElement, extractedFile, 1);
 	}
 
-	private Element createRangeElement(String name, String childName, List<IntRange> rangeList) {
-		Element linesElement = new Element(name);
-		addAttributes(linesElement, childName, rangeList);
+	private Element subImageProjections() {
+		Element subImageElement = new Element(SUB_IMAGE);
+		addRangeList(subImageElement, intRangeListList.get(0), X);
+		addRangeList(subImageElement, intRangeListList.get(1), Y);
+		return subImageElement;
+		
+	}
+
+	private void addRangeList(Element subImageElement, List<IntRange> xRangeList, String name) {
+		for (IntRange range : xRangeList) {
+			subImageElement.appendChild(createRangeElement(name, range));
+		}
+	}
+
+	private Element createRangeElement(String coordsName, String coordName, List<IntRange> rangeList) {
+		Element linesElement = new Element(coordsName);
+		addCoordRanges(linesElement, coordName, rangeList);
 		return linesElement;
 	}
 
-	private void addAttributes(Element lineElement, String name, List<IntRange> rangeList) {
+	private void addCoordRanges(Element lineElement, String name, List<IntRange> rangeList) {
 		for (IntRange range : rangeList) {
-			Element line = new Element(name);
-			lineElement.appendChild(line);
-			line.addAttribute(new Attribute("min", String.valueOf(range.getMin())));
-			line.addAttribute(new Attribute("max", String.valueOf(range.getMax())));
+			Element rangeElement = createRangeElement(name, range);
+			lineElement.appendChild(rangeElement);
 		}
+	}
+
+	private Element createRangeElement(String name, IntRange range) {
+		Element rangeElement = new Element(name);
+		rangeElement.addAttribute(new Attribute(MIN, String.valueOf(range.getMin())));
+		rangeElement.addAttribute(new Attribute(MAX, String.valueOf(range.getMax())));
+		return rangeElement;
 	}
 
 	private void createProjections() {
@@ -321,25 +497,17 @@ public class AMIPixelTool extends AbstractAMITool {
 			LOG.error("null image");
 			return;
 		}
+		
 		int height = image.getHeight();
 		int width = image.getWidth();
-		axialPixelFrequencies = diagramAnalyzer.getAxialPixelFrequencies();
+		AxialPixelFrequencies axialPixelFrequencies = diagramAnalyzer.getAxialPixelFrequencies();
 		RealArray xFrequencies = new RealArray(axialPixelFrequencies.getXFrequencies());
-//		LOG.debug("x axial frequencies "+xFrequencies);
-		IntArray xindexes = xFrequencies.getIndexesWithinRange(new RealRange(width/2, 9999));
-		if (xindexes.size() > 0) {
-//			LOG.debug("xindexes "+xindexes);
-		}
-		xRangeList = xFrequencies.createMaskArray((double)height * 0.5);
+		xFrequencies.getIndexesWithinRange(new RealRange(width/2, 9999));
+		xRangeList = xFrequencies.createMaskArray((double)height * xProjectionFactor);
 		
 		RealArray yFrequencies = new RealArray(axialPixelFrequencies.getYFrequencies());
-//		LOG.debug("y axial frequencies "+yFrequencies);
-		IntArray yindexes = yFrequencies.getIndexesWithinRange(new RealRange(height/2, 9999));
-		if (yindexes.size() > 0) {
-//			LOG.debug("yindexes "+yindexes);
-		}
-		yRangeList = yFrequencies.createMaskArray((double)width * 0.5);
-//		LOG.debug("y mask: possible horizontal "+yRangeList);
+		yFrequencies.getIndexesWithinRange(new RealRange(height/2, 9999));
+		yRangeList = yFrequencies.createMaskArray((double)width * yProjectionFactor);
 		return;
 	}
 
@@ -348,9 +516,9 @@ public class AMIPixelTool extends AbstractAMITool {
 			PixelIsland island = pixelIslandList.get(i);
 			PixelRingList pixelRingList = island.getOrCreateInternalPixelRings();
 			int size = pixelRingList.size();
-			if (size >= minRingCount) {
-				LOG.debug("rings "+size);
-			}
+//			if (size >= minRingCount) {
+//				LOG.debug("rings "+size);
+//			}
 		}
 	}
 
@@ -473,6 +641,7 @@ public class AMIPixelTool extends AbstractAMITool {
 	
 	@Override
 	public void processImageDir(File imageFile) {
+		this.imageFile = imageFile;
 		runPixel(imageFile);
 	}
 

@@ -425,10 +425,13 @@ public class AMIForestPlotTest {
 		String pixelCmd = ""
 			+ source
 			+ " --projections"
+			+ " --yprojection 0.8"
+			+ " --xprojection 0.5"
 			+ " --minheight -1"
 			+ " --rings -1"
 			+ " --islands 0"
-			+ " --inputname raw_thr_240_ds"
+			+ " --inputname raw_thr_230_ds"
+			+ " --subimage statascale y 2 delta 10 projection x"
 			;
 		if (makePixel) new AMIPixelTool().runCommands(pixelCmd);
 

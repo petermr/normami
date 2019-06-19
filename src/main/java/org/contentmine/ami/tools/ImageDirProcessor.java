@@ -61,7 +61,6 @@ public class ImageDirProcessor {
 				} catch (Exception e) {
 					e.printStackTrace();
 					LOG.error("Cannot process imageDir: "+imageDir + e.getMessage());
-					int a = 0;
 				}
 			}
 		} else {
