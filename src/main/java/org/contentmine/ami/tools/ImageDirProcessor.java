@@ -85,7 +85,8 @@ public class ImageDirProcessor {
 		File imageFile = inputname != null ? new File(currentImageDir, inputname+".png") :
 			AbstractAMITool.getRawImageFile(imageDir);
 		if (imageFile == null || !imageFile.exists()) {
-			throw new RuntimeException("image file does not exist: "+imageFile);
+			System.out.println("image file does not exist: "+imageFile);
+			return;
 		}
 		amiTool.processImageDir(imageFile);
 	}

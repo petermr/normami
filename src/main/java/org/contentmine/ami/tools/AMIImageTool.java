@@ -29,6 +29,7 @@ import org.contentmine.image.ImageUtil.ThresholdMethod;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
+import boofcv.alg.feature.orientation.impl.ImplOrientationAverageGradientIntegral;
 import nu.xom.Element;
 import nu.xom.Elements;
 import picocli.CommandLine.Command;
@@ -530,12 +531,14 @@ public class AMIImageTool extends AbstractAMITool {
 	// ================= transform ===============
 	
 	private void runTransform(File imageDir) {
-//		List<File> imageFiles = CMineGlobber.listSortedChildFiles(imageDir, CTree.PNG);
-//		File highestImageFile = AMIImageType.getHighestLevelFile(imageFiles, priorityImage);
-		File highestImageFile = new File(imageDir, inputBasename+"."+CTree.PNG);
-		LOG.debug("transforming: "+highestImageFile.getName());
-		BufferedImage image = ImageUtil.readImageQuietly(highestImageFile);
-		String basename = FilenameUtils.getBaseName(highestImageFile.toString());
+		File imageFile = new File(imageDir, inputBasename+"."+CTree.PNG);
+		if (!imageFile.exists()) {
+			System.out.println("non-existent image file: "+imageFile);
+			return;
+		}
+		System.out.println("transforming: "+imageFile.getParentFile().getName()+"/"+imageFile.getName());
+		BufferedImage image = ImageUtil.readImageQuietly(imageFile);
+		String basename = FilenameUtils.getBaseName(imageFile.toString());
 		if (image != null) {
 			if (rotateAngle != null) {
 				image = rotateAndSave(image, imageDir);
@@ -574,7 +577,7 @@ public class AMIImageTool extends AbstractAMITool {
 				
 			}
 			File outfile = new File(imageDir, basename+"."+CTree.PNG);
-			System.out.println("writing "+outfile.getAbsolutePath());
+//			System.out.println("writing "+outfile.getAbsolutePath());
 			ImageIOUtil.writeImageQuietly(image, outfile);
 		}
 	}

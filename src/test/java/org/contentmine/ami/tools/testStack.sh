@@ -1,0 +1,94 @@
+#! /bin/sh
+
+# your path should include the /bin directory of the appassembler distrib, e.g.
+# ami-forestplot => /Users/pm286/workspace/cmdev/normami/target/appassembler/bin/ami-forestplot
+
+# edit this to your own directory
+STATA_TOTAL="/Users/pm286/projects/forestplots/stataforestplots"
+
+# directories
+STATA_TOTAL_EDITED_DIR=$STATA_TOTAL/stataTotalEdited
+CPROJECT=$STATA_TOTAL_EDITED_DIR
+CTREE=$CPROJECT/PMC5882397
+
+# choose the first SOURCE to run a single CTree, the second to run a CProject (long). 
+# Comment in the one you want
+SOURCE="-t $CTREE"
+# SOURCE="-p $CPROJECT"
+echo $CTREE
+ls $CTREE
+
+# images 
+RAW=raw
+RAW230DS=raw_thr_230_ds
+#subimages
+
+# regions of image
+HEADER=header
+BODY=body
+LTABLE=ltable
+RTABLE=rtable
+SCALE=scale
+
+# make project from a directory (CPROJECT) containing PDFs. 
+# a no-op here as EuPMC has already done this
+
+ami-makeproject -p $SCPROJECT --rawfiletypes pdf
+
+# convert PDFs to CTrees
+
+ami-pdf $SOURCE
+
+# image processing at 3 threshold levels (later will try to make this an AMI loop)
+
+ami-image $SOURCE --sharpen sharpen4 --threshold 150 --despeckle true
+ami-image $SOURCE --sharpen sharpen4 --threshold 230 --despeckle true
+ami-image $SOURCE --sharpen sharpen4 --threshold 240 --despeckle true
+
+# run OCR both types
+
+ami-ocr $SOURCE --gocr /usr/local/bin/gocr --extractlines gocr
+ami-ocr $SOURCE --tesseract /usr/local/bin/tesseract --extractlines hocr --html false
+
+# extract the pixels and project onto axes to get subimage regions
+# further project the scale subimage (y(2)) to get the tick values 
+# in this case do it for the threshold 230 version only
+# the spreadsheet location (xsl) is hard coded into the distrib but it could be 
+# more general.
+# This *generates* raw_thr_230_ds/template.xml . its variables (e.f. $RAW.$HEADER) are specified 
+# in the stylesheet and values computed from applying ami-pixel to the images
+
+ami-pixel $SOURCE --projections --yprojection 0.8 --xprojection 0.5 \
+                --minheight -1 --rings -1 --islands 0 \
+			    --inputname $RAW230DS \
+			    --subimage statascale y 2 delta 10 projection x \
+			    --templateinput $RAW230DS/projections.xml \
+			    --templateoutput template.xml \
+			    --templatexsl /org/contentmine/ami/tools/stataTemplate.xsl
+
+# use the generated template.xml in each CTree/*/image*/raw_thr_230_ds/ directory to segment the image
+# this will create subimages $RAW.$HEADER, $RAW.$BODY.$LTABLE, raw.body.graph, $RAW.$BODY.$RTABLE and raw.scale
+# these subimages will be written to *.png in the CTree/*/image* directory
+			    
+ami-forestplot $SOURCE --template $RAW230DS/template.xml"
+
+#now re-run ami-image to enhance each subimage separately
+
+ami-image $SOURCE --inputname $RAW.$HEADER --sharpen sharpen4 --threshold 120 --despeckle true
+ami-image $SOURCE --inputname $RAW.$BODY.$LTABLE --sharpen sharpen4 --threshold 120 --despeckle true
+ami-image $SOURCE --inputname $RAW.$BODY.$RTABLE --sharpen sharpen4 --threshold 120 --despeckle true
+
+
+# and rerun tesseract on each subimage (suspect Tessearct gets confused by the whole
+# image including the graph and lines.
+
+ami-ocr $SOURCE --inputname $RAW.$HEADER_s4_thr_120_ds      --tesseract /usr/local/bin/tesseract --extractlines hocr
+ami-ocr $SOURCE --inputname $RAW.$BODY.$LTABLE_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr
+ami-ocr $SOURCE --inputname $RAW.$BODY.$RTABLE_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr
+
+ami-ocr $SOURCE --inputname $RAW.$HEADER_s4_thr_120_ds      --gocr /usr/local/bin/gocr --extractlines gocr
+ami-ocr $SOURCE --inputname $RAW.$BODY.$LTABLE_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr
+ami-ocr $SOURCE --inputname $RAW.$BODY.$RTABLE_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr
+
+
+

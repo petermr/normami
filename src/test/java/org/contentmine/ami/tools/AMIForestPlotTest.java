@@ -421,7 +421,7 @@ public class AMIForestPlotTest {
 		;
 		if (makeGOCR) new AMIOCRTool().runCommands(ocrCmd);
 
-		// =====Pixel get borders ======
+		// =====Pixel get subimage dimensions ======
 		String pixelCmd = ""
 			+ source
 			+ " --projections"
@@ -432,6 +432,9 @@ public class AMIForestPlotTest {
 			+ " --islands 0"
 			+ " --inputname raw_thr_230_ds"
 			+ " --subimage statascale y 2 delta 10 projection x"
+			+ " --templateinput raw_thr_230_ds/projections.xml"
+			+ " --templateoutput template.xml"
+			+ " --templatexsl /org/contentmine/ami/tools/stataTemplate.xsl"
 			;
 		if (makePixel) new AMIPixelTool().runCommands(pixelCmd);
 
@@ -446,6 +449,79 @@ public class AMIForestPlotTest {
 
 	}
 	
+	
+	@Test
+	public void testTemplateXML() {
+		File projectDir = STATA_TOTAL_EDITED_DIR;
+		CProject cProject = new CProject(projectDir);
+		String treename = "PMC5882397";
+		CTree cTree = new CTree(new File(projectDir, treename));
+//		String source = "-c "+cTree.getDirectory();
+		String source = "-p "+cProject.getDirectory();
+
+		// first make template.xml
+		String pixelCmd = ""
+			+ source
+			+ " --projections"
+			+ " --yprojection 0.8"
+			+ " --xprojection 0.5"
+			+ " --minheight -1"
+			+ " --rings -1"
+			+ " --islands 0"
+			+ " --inputname raw_thr_230_ds"
+			+ " --subimage statascale y 2 delta 10 projection x"
+			+ " --templateinput raw_thr_230_ds/projections.xml"
+			+ " --templateoutput template.xml"
+			+ " --templatexsl /org/contentmine/ami/tools/stataTemplate.xsl"
+			;
+		new AMIPixelTool().runCommands(pixelCmd);
+		// now use it to section images
+		String forestCmd = ""
+				+ source
+				+ " --template raw_thr_230_ds/template.xml"
+				;
+		new AMIForestPlotTool().runCommands(forestCmd);
+	}
+	
+	@Test
+	public void testHOCROnSplitRegions() {
+		File projectDir = STATA_TOTAL_EDITED_DIR;
+		CProject cProject = new CProject(projectDir);
+		String treename = "PMC5882397";
+		CTree cTree = new CTree(new File(projectDir, treename));
+		String source = "-c "+cTree.getDirectory();
+//		String source = "-p "+cProject.getDirectory();
+
+//		String imageCmd = source + " --inputname raw.body.ltable --sharpen sharpen4 --threshold 120 --despeckle true";
+//		new AMIImageTool().runCommands(imageCmd);
+
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable --tesseract /usr/local/bin/tesseract --extractlines hocr");
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable --tesseract /usr/local/bin/tesseract --extractlines hocr");
+		new AMIOCRTool().runCommands(source + " --inputname raw.header --tesseract /usr/local/bin/tesseract --extractlines hocr");
+		new AMIOCRTool().runCommands(source + " --inputname raw.scale --tesseract /usr/local/bin/tesseract --extractlines hocr");
+	}
+	
+	@Test
+	public void testHGOCROnSplitThresholdRegions() {
+		File projectDir = STATA_TOTAL_EDITED_DIR;
+		CProject cProject = new CProject(projectDir);
+		String treename = "PMC5882397";
+		CTree cTree = new CTree(new File(projectDir, treename));
+//		String source = "-t "+cTree.getDirectory();
+		String source = "-p "+cProject.getDirectory();
+/*
+		new AMIImageTool().runCommands(source + " --inputname raw.header --sharpen sharpen4 --threshold 120 --despeckle true");
+		new AMIImageTool().runCommands(source + " --inputname raw.body.ltable --sharpen sharpen4 --threshold 120 --despeckle true");
+		new AMIImageTool().runCommands(source + " --inputname raw.body.rtable --sharpen sharpen4 --threshold 120 --despeckle true");
+
+		new AMIOCRTool().runCommands(source + " --inputname raw.header_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr");
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr");
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr");
+*/
+		new AMIOCRTool().runCommands(source + " --inputname raw.header_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr");
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr");
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr");
+	}
 	
 
 

@@ -1,12 +1,24 @@
 package org.contentmine.ami.tools;
 
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -133,6 +145,12 @@ public class AMIPixelTool extends AbstractAMITool {
             description = "minimum height range for islands ")
     private int minheight = 30;
     
+    @Option(names = {"--outputDirectory"},
+    		arity = "1",
+//    		defaultValue = "pixels",
+            description = "subdirectory for output of pixel analysis and diagrams (if none defaults to <inputBasename>)")
+    private String outputDirname = null;
+    
     @Option(names = {"--projections"},
     		arity = "0",
             description = "project pixels onto both axes. Results are IntArrays with frequency of"
@@ -162,17 +180,28 @@ public class AMIPixelTool extends AbstractAMITool {
             		+ "")
     private List<String> subimageTokens = new ArrayList<String>();
 	
+    @Option(names = {"--templateinput"},
+    		arity = "1",
+            description = "generate template from pixel projections; triggers the activity; normally some/where/projections.xml")
+    private String templateInput = null;
+    
+    @Option(names = {"--templateoutput"},
+    		arity = "1",
+    		defaultValue = "template.xml",
+            description = "filename of generated template file")
+    private String templateOutput = "template.xml";
+    
+    @Option(names = {"--templatexsl"},
+    		arity = "1",
+            description = "stylesheet for generating individual templates. located in "
+            		+ "src/main/resources, normally accessed as resource /org/contentmine/ami/tools/foo.xsl")
+    private String templateXsl = null;
+    
     @Option(names = {"--thinning"},
     		arity = "1",
     		defaultValue = "none",
             description = "Apply thinning (${COMPLETION-CANDIDATES}) (none, or absence -> no thinning)")
     private String thinningName;
-    
-    @Option(names = {"--outputDirectory"},
-    		arity = "1",
-//    		defaultValue = "pixels",
-            description = "subdirectory for output of pixel analysis and diagrams (if none defaults to <inputBasename>)")
-    private String outputDirname = null;
     
     @Option(names = {"--xprojection"},
     		arity = "1",
@@ -214,16 +243,13 @@ public class AMIPixelTool extends AbstractAMITool {
 	private File imageFile;
 	private List<IntRange> yRangeList;
 	private List<IntRange> xRangeList;
-
 	private BufferedImage image;
-
 	private BufferedImage subImage;
-
 	private String initialCoordName;
-
 	private String projectionCoordName;
-
 	private List<List<IntRange>> intRangeListList;
+
+	private File projectionsFile;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -263,7 +289,12 @@ public class AMIPixelTool extends AbstractAMITool {
 		System.out.println("projections          " + projections);
 		System.out.println("projectionsName      " + projectionsName);
 		System.out.println("subimageTokens       " + subimageTokens);
+		System.out.println("templateInput        " + templateInput);
+		System.out.println("templateOutput       " + templateOutput);
+		System.out.println("templateXsl          " + templateXsl);
 		System.out.println("thinning             " + thinningName);
+		System.out.println("xProjectionFactor    " + xProjectionFactor);
+		System.out.println("yProjectionFactor    " + yProjectionFactor);
 		System.out.println();
 	}
 
@@ -332,8 +363,6 @@ public class AMIPixelTool extends AbstractAMITool {
 				subImage = createSubimage();
 				if (subImage != null) {
 					intRangeListList = analyzeSubImage(subImage, 0.5, 0.7);
-//					List<IntRange> xRangeList = intRangeListList.get(0);
-//					LOG.debug("**********************************ticks "+xRangeList);
 				}
 			}
 			if (projectionsName != null) {
@@ -344,10 +373,53 @@ public class AMIPixelTool extends AbstractAMITool {
 				}
 			}
 		}
+		if (templateInput != null) {
+			makeTemplate();
+		}
 		if (minRingCount > 0 || maxIslandCount > 0) {
 			this.analyzeAndPlotIslands();
 		}
 
+	}
+
+	private void makeTemplate() {
+		if (projectionsFile == null || !projectionsFile.exists()) {
+			throw new RuntimeException("null or non-existent projections file "+projectionsFile);
+		}
+		InputStream xmlIs = null;
+		try {
+			xmlIs = new FileInputStream(projectionsFile);
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+		String xslName = templateXsl;
+		InputStream xslIs = this.getClass().getResourceAsStream(xslName);
+		if (xslIs == null) {
+			throw new RuntimeException("XSL file / resource not found or nor read "+ xslName);
+		}
+		File templateOutputFile = null;
+		try {
+			String xmlString = transform(xmlIs, xslIs);
+			templateOutputFile = new File(projectionsFile.getParentFile(), templateOutput);
+			FileUtils.writeStringToFile(templateOutputFile, xmlString, "UTF-8");
+		} catch (TransformerException e) {
+			throw new RuntimeException(e);
+		} catch (IOException e) {
+			throw new RuntimeException("cannot write file: "+templateOutputFile);
+		}
+	}
+	
+	private String transform(InputStream xmlIs, InputStream xslIs) throws TransformerException {
+		TransformerFactory tfactory = TransformerFactory.newInstance();
+	    StreamSource source = new StreamSource(xslIs);
+	    if (source == null) {
+	    	LOG.debug("null transformer source");
+	    	return null;
+	    }
+		Transformer javaxTransformer = tfactory.newTransformer(source);
+		OutputStream baos = new ByteArrayOutputStream();
+		javaxTransformer.transform(new StreamSource(xmlIs),  new StreamResult(baos));
+		return baos.toString();
 	}
 
 	private List<List<IntRange>> analyzeSubImage(BufferedImage image, double xProjectionFactor, double yProjectionFactor) {
@@ -380,7 +452,7 @@ public class AMIPixelTool extends AbstractAMITool {
 		Integer coord2 = -1;
 		Integer delta = 0;
 		projectionCoordName = null;
-		
+				
 		int itoken = 0;
 		while (itoken < subimageTokens.size()) {
 			String token = subimageTokens.get(itoken);
@@ -440,7 +512,7 @@ public class AMIPixelTool extends AbstractAMITool {
 
 	private void writeProjections() throws IOException {
 		File outputDir = new File(imageDir, basename);
-		File extractedFile = new File(outputDir, projectionsName+"."+CTree.XML);
+		projectionsFile = new File(outputDir, projectionsName+"."+CTree.XML);
 		Element linesElement = new Element(LINES);
 		linesElement.addAttribute(new Attribute(CTREE, cTree.getName()));
 		linesElement.addAttribute(new Attribute(IMAGE_DIR, imageDir.getName()));
@@ -453,7 +525,7 @@ public class AMIPixelTool extends AbstractAMITool {
 			linesElement.appendChild(subImageProjections());
 		}
 		
-		XMLUtil.debug(linesElement, extractedFile, 1);
+		XMLUtil.debug(linesElement, projectionsFile, 1);
 	}
 
 	private Element subImageProjections() {

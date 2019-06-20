@@ -277,7 +277,13 @@ public class GOCRConverter  extends AbstractOCRConverter {
 				if (svgImage == null && inputImage != null) {
 					svgImage = createAndAddGlyphImage(rect, parentG);
 				}
-				svgImage.setOpacity(0.2);
+				if (svgImage == null) {
+					System.out.println("NULL SVG");
+					return;
+				}
+				if (svgImage != null) {
+					svgImage.setOpacity(0.2);
+				}
 				CharBox charBox = CharBox.createFrom(parentG);
 				gocrCharBoxList.add(charBox);
 			}
