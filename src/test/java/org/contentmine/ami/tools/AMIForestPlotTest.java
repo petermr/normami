@@ -18,7 +18,7 @@ public class AMIForestPlotTest {
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	private static final File FOREST_PLOT_DIR = new File("/Users/pm286/projects/forestplots");
+	private static final File FOREST_PLOT_DIR = new File("/Users/pm286/projects/forestplots/stataforestplots");
 	private final static String SPSS = "spss";
 	private static final File SPSS_DIR = new File(FOREST_PLOT_DIR, SPSS);
 	private final static String SPSS_SIMPLE = "spssSimple";
@@ -478,7 +478,7 @@ public class AMIForestPlotTest {
 		// now use it to section images
 		String forestCmd = ""
 				+ source
-				+ " --template raw_thr_230_ds/template.xml"
+				+ " --segment --template raw_thr_230_ds/template.xml"
 				;
 		new AMIForestPlotTool().runCommands(forestCmd);
 	}
@@ -502,7 +502,7 @@ public class AMIForestPlotTest {
 	}
 	
 	@Test
-	public void testHGOCROnSplitThresholdRegions() {
+	public void testHOCRandGOCR() {
 		File projectDir = STATA_TOTAL_EDITED_DIR;
 		CProject cProject = new CProject(projectDir);
 		String treename = "PMC5882397";
@@ -518,11 +518,36 @@ public class AMIForestPlotTest {
 		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr");
 		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr");
 */
-		new AMIOCRTool().runCommands(source + " --inputname raw.header_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr");
-		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr");
-		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr");
+//		new AMIOCRTool().runCommands(source + " --inputname raw.header_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr");
+//		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr");
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr"
+				+ " --replace"
+				+ " o 0 O 0 a 0 d 0"
+				+ " e 2"
+				+ " q 4 A 4"
+				+ " s 5 S 5 $ 5"
+				+ " d 6 G 6"
+				+ " J 7"
+				);
+		
 	}
 	
+	@Test
+	/** requires some tests to be run previously (UGH)
+	 * 
+	 */
+	public void testDisplay() {
+		File projectDir = STATA_TOTAL_EDITED_DIR;
+		CProject cProject = new CProject(projectDir);
+		String treename = "PMC5882397";
+		CTree cTree = new CTree(new File(projectDir, treename));
+//			String source = "-t "+cTree.getDirectory();
+		String source = "-p "+cProject.getDirectory();
+		new AMIForestPlotTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds"
+				+ " --display .png hocr/hocr.svg gocr/gocr.svg --header raw.header_s4_thr_120_ds.png"
+				+ " --template raw_thr_230_ds/template.xml"
+				);
+	}
 
 
 

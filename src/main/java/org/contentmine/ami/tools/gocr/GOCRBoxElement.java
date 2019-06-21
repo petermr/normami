@@ -8,6 +8,7 @@ import org.contentmine.graphics.svg.SVGG;
 import org.contentmine.graphics.svg.SVGRect;
 import org.contentmine.graphics.svg.SVGText;
 
+import nu.xom.Attribute;
 import nu.xom.Element;
 
 /**
@@ -24,6 +25,7 @@ public class GOCRBoxElement extends AbstractGOCRElement {
 	public static String TAG = "box";
 	private static final String VALUE = "value";
 	private static final String ACHARS = "achars";
+	private double fontSize = 10;
 
 	public GOCRBoxElement(Element element) {
 		super(TAG, element);
@@ -33,11 +35,13 @@ public class GOCRBoxElement extends AbstractGOCRElement {
 		SVGG g = new SVGG();
 		SVGRect svgRect = createSVGBox("stroke:red;stroke-width:0.5;fill:none;", "text");
 		g.appendChild(svgRect);
-		SVGText textElement = createSVGText("font-size:5;fill:black;font-family:helvetica;");
+		SVGText textElement = createSVGText("font-size:10;fill:black;font-family:helvetica;");
 		g.appendChild(textElement);
 		return g;
 	}
 
+	/** this is where the text size etc is set */
+	
 	private SVGText createSVGText(String cssStyle) {
 		int x = getX();
 		int y = getY();
@@ -45,10 +49,13 @@ public class GOCRBoxElement extends AbstractGOCRElement {
 		int dy = getDY();
 		String value = this.getAttributeValue(VALUE);
 		String achars = this.getAttributeValue(ACHARS);
-		achars = achars == null ? null : achars.replace(",,", ",CM");
-		SVGText text = new SVGText(new Real2(x, y + dy + getTextOffset()), achars/*value*/);
+		// replace comma by section mark for visual 
+		achars = achars == null ? "" : achars.replace(",,", ","+((char)167));
+		String achars2 = (achars.length() == 0) ? "?" : String.valueOf(achars.charAt(0));
+		SVGText text = new SVGText(new Real2(x, y + dy + getTextOffset()), achars2);
+		text.addAttribute(new Attribute(ACHARS, achars));
 		text.setCSSStyle(cssStyle);
-//		text.setFontSize(10.);
+		text.setFontSize(fontSize);
 		return text;
 
 	}

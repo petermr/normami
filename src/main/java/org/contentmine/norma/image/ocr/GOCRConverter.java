@@ -29,6 +29,7 @@ import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.graphics.svg.SVGText;
 import org.contentmine.image.ImageUtil;
 
+import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
 
@@ -145,6 +146,8 @@ public class GOCRConverter  extends AbstractOCRConverter {
 	private TextLineAnalyzer textLineAnalyzer;
 	private boolean disambiguate;
 	private AMIOCRTool amiOcrTool;
+	private List<String> replaceList;
+	private Multimap<String, String> replaceMap;
 
 
 	private GOCRConverter () {
@@ -174,7 +177,7 @@ public class GOCRConverter  extends AbstractOCRConverter {
     public void convertImageToGOCR(File inputImageFile, File outputGocrFile) throws FileNotFoundException, InterruptedException {
 
 		if (!CMFileUtil.shouldMake(outputGocrFile, imageFile)) {
-			System.out.println(">skip gocr>"+imageFile);
+			System.out.println(">skip gocr>"+imageFile.getName());
 			return;
 		}
     	inputFilename = inputImageFile.getAbsolutePath();
@@ -203,24 +206,15 @@ public class GOCRConverter  extends AbstractOCRConverter {
 		List<String> gocrConfig = new ArrayList<>();
 		gocrConfig.add(getProgram());
 		
-		gocrConfig.add("-o");
-		gocrConfig.add(outputFilename);
-		gocrConfig.add("-f");
-		gocrConfig.add("XML");
-		gocrConfig.add("-C");
-//		gocrConfig.add("0-9A-Za-z--[]().,%'="); // don't think this works
-		gocrConfig.add("0123456789"); // don't think this works
-		gocrConfig.add("-m");
-		gocrConfig.add(String.valueOf(
-				DONT_DIVIDE_OVERLAPPING
-				+DONT_CONTEXT_CORRECT
-				));
+		gocrConfig.add("-o");		gocrConfig.add(outputFilename);
+		gocrConfig.add("-f");		gocrConfig.add("XML");
+		gocrConfig.add("-C"); /* gocrConfig.add("0-9A-Za-z--[]().,%'="); */	gocrConfig.add("0123456789"); // don't think this works
+		gocrConfig.add("-m");		gocrConfig.add(String.valueOf(
+				/*DONT_DIVIDE_OVERLAPPING + */DONT_CONTEXT_CORRECT + CHARACTER_PACKING));
 		
-		gocrConfig.add("-i");
-		gocrConfig.add(inputFilename);
-		System.out.println("GOCR command: "+gocrConfig);
-		
-		
+		gocrConfig.add("-i");		gocrConfig.add(inputFilename);
+//		System.out.println("GOCR command: "+gocrConfig);
+			
 		builder = new ProcessBuilder(gocrConfig);
         runBuilderAndCleanUp();
 	}
@@ -255,9 +249,26 @@ public class GOCRConverter  extends AbstractOCRConverter {
 		convertImageToGOCR(infile, gocrXmlFile);
 		Element element = XMLUtil.parseQuietlyToRootElement(gocrXmlFile);
 		gocrElement = new GOCRPageElement();
-//		gocrElement.setTextOffset(5); // not working
 		gocrElement.createGOCRDescendants(element);
 		return gocrElement;
+	}
+
+	private void replaceStrings() {
+		List<SVGText> textList = SVGText.extractSelfAndDescendantTexts(svgElement);
+		for (SVGText text : textList) {
+			String textValue = text.getText();
+			List<String> newValueList = new ArrayList<>(replaceMap.get(textValue));
+			if (newValueList != null) {
+				if (newValueList.size() == 0) {
+				} else if (newValueList.size() > 1) {
+					System.out.println("ambiguous replacment: "+textValue+" => "+newValueList);
+				} else {
+					String newText = newValueList.get(0);
+					text.setText(newText);
+					System.out.println("replaced "+textValue+"=>"+newText);
+				}
+			}
+		}
 	}
 
 	public CharBoxList createCharBoxList(SVGElement svgElement) {
@@ -278,7 +289,7 @@ public class GOCRConverter  extends AbstractOCRConverter {
 					svgImage = createAndAddGlyphImage(rect, parentG);
 				}
 				if (svgImage == null) {
-					System.out.println("NULL SVG");
+//					System.out.println("NULL SVG Image");
 					return;
 				}
 				if (svgImage != null) {
@@ -408,9 +419,12 @@ public class GOCRConverter  extends AbstractOCRConverter {
 		ocrBaseDir = new File(imageFile.getParentFile(),FilenameUtils.getBaseName(imageFile.getAbsolutePath()));
 		ocrBaseDir.mkdirs();
 		File gocrXmlFile = new File(getGocrBase(), GOCR_XML);
-		LOG.debug("gocr >"+gocrXmlFile);
+//		LOG.debug("gocr >"+gocrXmlFile);
 		createGOCRElement(imageFile, gocrXmlFile);
-		SVGElement svgElement = createSVGElementWithGlyphs(gocrXmlFile, amiOcrTool.isGlyphs());
+		svgElement = createSVGElementWithGlyphs(gocrXmlFile, amiOcrTool.isGlyphs());
+		if (replaceList.size() > 0) {
+			replaceStrings();
+		}
 		outputGOCR(svgElement);
 	}
 
@@ -492,7 +506,8 @@ public class GOCRConverter  extends AbstractOCRConverter {
 				double cc = correlation.elementAt(new Int2(irow, jcol));
 				Real2 xy = new Real2((double)x, (double)y);
 				SVGText text = new SVGText(xy, String.valueOf(cc));
-				text.setFontSize(7.);
+				double fontSize = 7.;
+				text.setFontSize(fontSize);
 				text.setFill("blue");
 				text.setFontFamily("monospace");
 				text.setOpacity(0.5);
@@ -516,6 +531,27 @@ public class GOCRConverter  extends AbstractOCRConverter {
 
 	public void setDisambiguate(boolean disambiguate) {
 		this.disambiguate = disambiguate;
+	}
+
+	/** list of paired characters to substitute.
+	 * a b c d 
+	 * replaces a by b, c with d ...
+	 * 
+	 * @param replaceList
+	 */
+	public void setReplaceList(List<String> replaceList) {
+		if (replaceList == null) {
+			replaceList = new ArrayList<>();
+		}
+		if (replaceList.size() % 2 != 0) {
+			throw new RuntimeException("raplaceList must have even numbers of characters: "+replaceList);
+		}
+		this.replaceList = replaceList;
+		this.replaceMap = ArrayListMultimap.create();
+		for (int i = 0; i < replaceList.size(); i += 2) {
+			replaceMap.put(replaceList.get(i), replaceList.get(i + 1));
+		}
+		System.out.println("replacements: "+replaceMap);
 	}
 
 

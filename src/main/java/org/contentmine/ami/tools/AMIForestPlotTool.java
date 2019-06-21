@@ -3,6 +3,7 @@ package org.contentmine.ami.tools;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -15,13 +16,24 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.template.AbstractTemplateElement;
 import org.contentmine.cproject.files.CProject;
+import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.euclid.Int2Range;
 import org.contentmine.eucl.euclid.IntRange;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Array;
+import org.contentmine.eucl.euclid.Transform2;
+import org.contentmine.eucl.euclid.Vector2;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
+import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.html.HtmlElement;
+import org.contentmine.graphics.html.HtmlImg;
+import org.contentmine.graphics.html.HtmlTable;
+import org.contentmine.graphics.html.HtmlTbody;
+import org.contentmine.graphics.html.HtmlTd;
+import org.contentmine.graphics.html.HtmlTh;
+import org.contentmine.graphics.html.HtmlThead;
+import org.contentmine.graphics.html.HtmlTr;
 import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.graphics.svg.SVGCircle;
 import org.contentmine.graphics.svg.SVGElement;
@@ -38,6 +50,7 @@ import org.contentmine.norma.image.ocr.HOCRConverter;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
+import nu.xom.Element;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -82,10 +95,16 @@ public class AMIForestPlotTool extends AbstractAMITool {
             description = "colors of lines on plot as hex string")
     private Integer color = 0x0;
 
+    @Option(names = {"--display"},
+    		arity = "1..*",
+            description = "display files in panel"
+            )
+    private List<String> displayList = null;
+
     @Option(names = {"--hocr"},
     		arity = "1",
-            description = "use HOCR output from Tesseract",
-            defaultValue = "true"
+            description = "use HOCR output from Tesseract"
+//            defaultValue = "true"
             )
     private boolean useHocr;
 
@@ -116,10 +135,10 @@ public class AMIForestPlotTool extends AbstractAMITool {
             description = "radius for drawing circle round centroid")
     private Double radius = 4.0;
 
-//    @Option(names = {"--split"},
-//    		arity = "1",
-//            description = "split images along axis (x or y)")
-//    private Axis splitAxis = null;
+    @Option(names = {"--segment"},
+    		arity = "0",
+            description = "segment using template file; requires --template")
+    private boolean segment = false;
 
     @Option(names = {"--table"},
     		arity = "0..1",
@@ -127,10 +146,11 @@ public class AMIForestPlotTool extends AbstractAMITool {
     private boolean table;
 
     @Option(names = {"--template"},
-    		arity = "0..1",
-            description = "template to give imagedir-specific operations (adaptively rewritable),"
-            		+ "defaults to 'template.xml'")
-    private String templateFilename = TEMPLATE_XML;
+    		arity = "1",
+            description = "template to give imagedir-specific operations "
+            		+ "(often created automatically by ami-image),"
+            		)
+    private String templateFilename = null;
 
 	private Real2Array localSummitCoordinates;
 	private DiagramAnalyzer diagramAnalyzer;
@@ -143,7 +163,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	private List<List<String>> phraseListList;
 
 	private HtmlElement hocrElement;
-	private AbstractTemplateElement templateElement;
+	private File imageDir;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -325,6 +345,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
     @Override
 	protected void parseSpecifics() {
 		System.out.println("color of lines      " + color);
+		System.out.println("files to display    " + displayList);
 		System.out.println("min line length     " + minline);
 		System.out.println("min nested rings    " + minNestedRings);
 		System.out.println("radius of contours  " + radius);
@@ -333,6 +354,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		System.out.println("offsets             " + offsets);
 		System.out.println("scaledFilename      " + basename);
 		System.out.println("table               " + table);
+		System.out.println("segment             " + segment);
 		System.out.println("template            " + templateFilename);
 		System.out.println();
 
@@ -352,28 +374,17 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		
 		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
 		Collections.sort(imageDirs);
-		for (File imageDir : imageDirs) {
+		for (int i = 0; i < imageDirs.size(); i++) {
+			imageDir = imageDirs.get(i);
 			this.basename = FilenameUtils.getBaseName(imageDir.toString());
-			System.out.println("======>"+basename);
-			templateElement = AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
-			if (templateElement != null) {
+			System.out.println("======>"+imageDir.getName()+"/"+inputBasename);
+			if (segment) {	
+				AbstractTemplateElement templateElement = 
+						AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
 				templateElement.process();
 				continue;
 			}
 
-			// probably obsolete
-			/**
-			if (splitAxis != null){
-				BufferedImage image = ImageUtil.readImageQuietly(new File(imageDir, "raw_s4_thr_150.png"));
-				Axis2 axis2 = (Axis.x.equals(splitAxis)) ? Axis2.X : Axis2.Y; 
-				ImageLineAnalyzer lineAnalyzer = new ImageLineAnalyzer(image);
-******			List<BufferedImage> imageList = lineAnalyzer.splitAtLeftOfBottomLine(
-						color, minline, offsets.get(0), axis2);
-				ImageUtil.writeImageQuietly(imageList.get(0), new File(imageDir, "raw_s4_thr_150.table.png"));
-				ImageUtil.writeImageQuietly(imageList.get(1), new File(imageDir, "raw_s4_thr_150.plot.png"));
-				continue;
-			}
-			*/
 			/** WRONG
 			 * 
 			 */
@@ -400,16 +411,119 @@ public class AMIForestPlotTool extends AbstractAMITool {
 				
 				continue;
 			}
+			if (displayList != null && displayList.size() > 0) {
+				displayFiles();
+			}
 
 			if (useHocr) {
 				File textLineListFile = HOCRConverter.getTextLineListFilename(imageDir);
 				createForestPlotFromImageText(textLineListFile);
-			} else {
+			} else if (false) {
 				File imageFile = getRawImageFile(imageDir);
 				createForestPlotFromImage(imageFile);
 			}
 		}
-		LOG.debug(MultisetUtil.createListSortedByCount(abbrevSet));
+		LOG.debug(">abbrev>"+MultisetUtil.createListSortedByCount(abbrevSet));
+	}
+
+	private void displayFiles() {
+		System.out.println(">display>"+displayList);
+		HtmlTable table = createDisplayTable();
+		File htmlFile = new File(imageDir, inputBasename+"."+CTree.HTML);
+		try {
+			XMLUtil.debug(table, htmlFile, 1);
+		} catch (IOException e) {
+			throw new RuntimeException("Cannot write: "+htmlFile);
+		}
+	}
+
+	private HtmlTable createDisplayTable() {
+		HtmlTable table = new HtmlTable();
+		createAndFillHead(table);
+		createAndFillBody(table);
+		return table;
+	}
+
+	private void createAndFillBody(HtmlTable table) {
+		HtmlTbody body = table.getOrCreateTbody();
+		HtmlTr tr = new HtmlTr();
+		body.appendChild(tr);
+		for (int i = 0; i < displayList.size(); i++) {
+			String filename = displayList.get(i);
+			File subdir = new File(imageDir, inputBasename);
+			File displayFile = filename.startsWith(".") ? 
+					new File(imageDir, inputBasename+filename) : new File(subdir, filename);
+			String displayFilename = filename.startsWith(".") ? 
+					inputBasename+filename :inputBasename + "/" + filename;
+//			System.out.println(">>>"+displayFilename);
+			HtmlTd td = createCell(displayFilename, displayFile);
+			tr.appendChild(td);
+		}
+	}
+
+	private Integer getFirstYOffset() {
+		Integer offset = 0;
+		AbstractTemplateElement templateElement = 
+				AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
+		if (templateElement != null) {
+			String borderString = XMLUtil.getSingleValue(templateElement, "/template/image/@borders");
+			String[] borders = borderString == null ? null : borderString.split("\\s+");
+			if (borders != null && borders.length == 2) {
+				String s = borders[0];
+				try {
+					offset = Integer.parseInt(s);
+				} catch (NumberFormatException nfe) {
+					System.out.println("Cannot parse "+Arrays.asList(borders));
+				}
+			}
+		}
+		return offset;
+	}
+
+	private HtmlTd createCell(String name, File file) {
+//		String name = displayFile.getName();
+		HtmlTd td = new HtmlTd();
+		if (name.endsWith("."+CTree.PNG)) {
+			HtmlImg img = new HtmlImg();
+			img.setSrc(name);
+			td.appendChild(img);
+		} else if (name.endsWith("."+CTree.SVG)) {
+
+			Integer offset = getFirstYOffset();
+
+			/**<object type="image/svg+xml" data="image.svg">
+			  Your browser does not support SVG
+			</object>*/
+			// this doesn't work
+//			HtmlObject obj = new HtmlObject();
+//			obj.setType(HtmlObject.SVGTYPE);
+//			obj.setSrc(name);
+			if (!file.exists()) {
+				System.out.println("no file>"+file);
+				td.appendChild("no file: "+file);
+			} else {
+				Element svg = XMLUtil.parseQuietlyToRootElement(file);
+				SVGSVG svgCopy = (SVGSVG) SVGElement.readAndCreateSVG(svg);
+				SVGG g = (SVGG) svgCopy.getChildElements().get(0);
+				// BUG in offset
+				offset = null; 
+				Transform2 t2 = new Transform2(new Vector2(0, (offset == null) ? -30 : -1 * offset));
+				g.setTransform(t2);
+				td.appendChild(svgCopy);
+			}
+		}
+		return td;
+		
+	}
+
+	private void createAndFillHead(HtmlTable table) {
+		HtmlThead thead = table.getOrCreateThead();
+		HtmlTr headTr = thead.getOrCreateChildTr();
+		for (int i = 0; i < displayList.size(); i++) {
+			HtmlTh th = new HtmlTh();
+			th.appendChild(displayList.get(i));
+			headTr.appendChild(th);
+		}
 	}
 
 	private void createForestPlotFromImageText(File textLineListFile) {

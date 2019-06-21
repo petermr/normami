@@ -138,6 +138,12 @@ public class AMIOCRTool extends AbstractAMITool {
             description = "maximum size of small dimension after scaling")
     private Double maxsize = null;
 
+    @Option(names = {"--replace"},
+    		arity = "2..*",
+            description = "characters to substitute misreadings (even number of args, replace a(2n+1) by a(2n+2); )."
+            		+ " GOCR often reads numbers as alpha , so (font-dependent) '--replace o 0 q 4 e 2 s 5 S 5 '. ")
+    private List<String> replaceList = new ArrayList<>();
+
     @Option(names = {"--scalefactor"},
     		arity = "1",
             description = "increase geometric scale - helps tesseract. Normally '--maxize' will autoscale, "
@@ -190,6 +196,7 @@ public class AMIOCRTool extends AbstractAMITool {
 		System.out.println("gocr                " + gocrPath);
 		System.out.println("html                " + outputHtml);
 		System.out.println("maxsize             " + maxsize);
+		System.out.println("replace             " + replaceList);
 		System.out.println("scale               " + applyScale);
 		System.out.println("scalefactor         " + scalefactor);
 		System.out.println("scaledFilename      " + basename);
@@ -230,6 +237,9 @@ public class AMIOCRTool extends AbstractAMITool {
 		File imageDir = imageFile.getParentFile();
 		if (gocrPath != null) {
 			GOCRConverter gocrConverter = new GOCRConverter(this);
+			if (replaceList.size() > 0) {
+				gocrConverter.setReplaceList(replaceList);
+			}
 			
 			try {
 				gocrConverter.setImageFile(imageFile);
