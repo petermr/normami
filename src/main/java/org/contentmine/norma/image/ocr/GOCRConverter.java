@@ -176,7 +176,7 @@ public class GOCRConverter  extends AbstractOCRConverter {
      */
     public void convertImageToGOCR(File inputImageFile, File outputGocrFile) throws FileNotFoundException, InterruptedException {
 
-		if (!CMFileUtil.shouldMake(outputGocrFile, imageFile)) {
+		if (!amiOcrTool.getForceMake() && !CMFileUtil.shouldMake(outputGocrFile, imageFile)) {
 			System.out.println(">skip gocr>"+imageFile.getName());
 			return;
 		}
@@ -198,6 +198,7 @@ public class GOCRConverter  extends AbstractOCRConverter {
 			throw new RuntimeException("Cannot write format: "+fmt);
 		};
 		/** now run GOCR */
+		System.out.println(">gocr>" /*+imageFile.getName()*/ );
 		runGocr(fmtFilename, outputGocrFile.getAbsolutePath());
 
     }
@@ -422,7 +423,7 @@ public class GOCRConverter  extends AbstractOCRConverter {
 //		LOG.debug("gocr >"+gocrXmlFile);
 		createGOCRElement(imageFile, gocrXmlFile);
 		svgElement = createSVGElementWithGlyphs(gocrXmlFile, amiOcrTool.isGlyphs());
-		if (replaceList.size() > 0) {
+		if (replaceList != null && replaceList.size() > 0) {
 			replaceStrings();
 		}
 		outputGOCR(svgElement);

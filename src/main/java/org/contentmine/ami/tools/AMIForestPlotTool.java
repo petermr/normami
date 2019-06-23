@@ -18,6 +18,7 @@ import org.contentmine.ami.tools.template.AbstractTemplateElement;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.eucl.euclid.Axis.Axis2;
 import org.contentmine.eucl.euclid.Int2Range;
 import org.contentmine.eucl.euclid.IntRange;
 import org.contentmine.eucl.euclid.Real2;
@@ -26,14 +27,19 @@ import org.contentmine.eucl.euclid.Transform2;
 import org.contentmine.eucl.euclid.Vector2;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.html.HtmlA;
+import org.contentmine.graphics.html.HtmlBody;
 import org.contentmine.graphics.html.HtmlElement;
+import org.contentmine.graphics.html.HtmlHtml;
 import org.contentmine.graphics.html.HtmlImg;
+import org.contentmine.graphics.html.HtmlLi;
 import org.contentmine.graphics.html.HtmlTable;
 import org.contentmine.graphics.html.HtmlTbody;
 import org.contentmine.graphics.html.HtmlTd;
 import org.contentmine.graphics.html.HtmlTh;
 import org.contentmine.graphics.html.HtmlThead;
 import org.contentmine.graphics.html.HtmlTr;
+import org.contentmine.graphics.html.HtmlUl;
 import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.graphics.svg.SVGCircle;
 import org.contentmine.graphics.svg.SVGElement;
@@ -89,6 +95,10 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		y
 	}
 	
+	private enum Orientation {
+		horizontal,
+		vertical,
+	}
 
     @Option(names = {"--color"},
     		arity = "1",
@@ -125,6 +135,11 @@ public class AMIForestPlotTool extends AbstractAMITool {
             description = "offsets from split position/s")
     private List<Integer> offsets;
 
+    @Option(names = {"--orientation"},
+    		arity = "0",
+            description = "display direction (horizontal or vertical)")
+    private Orientation orientation = Orientation.horizontal;
+
     @Option(names = {"--plottype"},
     		arity = "1",
             description = "type of SPSS plot")
@@ -139,6 +154,12 @@ public class AMIForestPlotTool extends AbstractAMITool {
     		arity = "0",
             description = "segment using template file; requires --template")
     private boolean segment = false;
+
+    @Option(names = {"--summary"},
+    		arity = "1",
+            description = "create summary listing of files of given name in higher level directory."
+            		+ "e.g. summarize all raw.png files in ../raw.html . exploratory. Can be used recursively")
+    private String summaryFilename = null;
 
     @Option(names = {"--table"},
     		arity = "0..1",
@@ -164,6 +185,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 
 	private HtmlElement hocrElement;
 	private File imageDir;
+	private List<File> summaryFileList;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -353,8 +375,10 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		System.out.println("use Hocr            " + useHocr);
 		System.out.println("offsets             " + offsets);
 		System.out.println("scaledFilename      " + basename);
+		System.out.println("summaryFilenam      " + summaryFilename);
 		System.out.println("table               " + table);
 		System.out.println("segment             " + segment);
+		System.out.println("table               " + table);
 		System.out.println("template            " + templateFilename);
 		System.out.println();
 
@@ -371,7 +395,8 @@ public class AMIForestPlotTool extends AbstractAMITool {
 
 	public void processTree() {
 		System.out.println("cTree>> "+cTree.getName());
-		
+		summaryFileList = new ArrayList<>();
+
 		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
 		Collections.sort(imageDirs);
 		for (int i = 0; i < imageDirs.size(); i++) {
@@ -381,36 +406,15 @@ public class AMIForestPlotTool extends AbstractAMITool {
 			if (segment) {	
 				AbstractTemplateElement templateElement = 
 						AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
-				templateElement.process();
+				if (templateElement != null) {
+					templateElement.process();
+				} else {
+					System.out.println(">> canot read template "+templateFilename);
+				}
 				continue;
+				
 			}
 
-			/** WRONG
-			 * 
-			 */
-			if (table) {
-				File hocrFile = new File(imageDir, "hocr/raw.raw.html");
-				if (!hocrFile.exists()) {
-					hocrFile = new File(imageDir, "hocr/raw/raw.hocr.html");
-				}
-				if (!hocrFile.exists()) {
-					LOG.debug("cannot find HOCR in "+imageDir);
-					continue;
-				} 
-				try {
-					
-					hocrElement = HtmlUtil.parseQuietlyToHtmlElementWithoutDTD(hocrFile);
-					SPSSForestPlot spssForestPlot = new SPSSForestPlot();
-					// clip
-					spssForestPlot.setBoundingBox(new Int2Range(new IntRange(0,750), new IntRange(0,1000)));
-					spssForestPlot.readHOCR(hocrElement);
-				} catch (Exception e) {
-					e.printStackTrace();
-					LOG.debug("Cannot read HOCR: "+hocrFile+"; "+e);
-				}
-				
-				continue;
-			}
 			if (displayList != null && displayList.size() > 0) {
 				displayFiles();
 			}
@@ -422,14 +426,70 @@ public class AMIForestPlotTool extends AbstractAMITool {
 				File imageFile = getRawImageFile(imageDir);
 				createForestPlotFromImage(imageFile);
 			}
+			if (table) {
+				// depends on format - not yet worked out
+				SVGElement hocrSvg = readSVGFile("hocr/hocr.svg");
+				createHOCRTable(hocrSvg); 
+				SVGElement gocrSvg = readSVGFile("gocr/gocr.svg");
+//				createGOCRTable(gocrSvg); 
+			}
+			addSummaryFile();
 		}
+		summarizeFiles();
 		LOG.debug(">abbrev>"+MultisetUtil.createListSortedByCount(abbrevSet));
 	}
 
+	private void createHOCRTable(SVGElement hocrSvg) {
+//		List<IntRange> yList = project(Axis2.Y);
+	}
+
+	private SVGElement readSVGFile(String ocrSvgFile) {
+		File ocrFile = new File(imageDir, inputBasename+"/"+ocrSvgFile);
+		return !ocrFile.exists() ? null : SVGElement.readAndCreateSVG(ocrFile);
+	}
+
+	private void addSummaryFile() {
+		if (summaryFilename != null) {
+			File summaryFile = new File(imageDir, summaryFilename);
+			if (summaryFile.exists()) {
+				summaryFileList.add(summaryFile);
+			}
+		}
+	}
+	
+	private void summarizeFiles() {
+		if (summaryFileList != null) {
+			HtmlHtml html = new HtmlHtml();
+			HtmlBody body = html.getOrCreateBody();
+			HtmlUl ul = new HtmlUl();
+			body.appendChild(ul);
+			for (File summarizedFile : summaryFileList) {
+				createAndAddLinkToFile(ul, summarizedFile);
+			}
+			if (summaryFilename == null) {
+				System.out.println(">> null sumary");
+			} else {
+				File summaryHtmlFile = new File(imageDir.getParent(), summaryFilename);
+				XMLUtil.writeQuietly(html, summaryHtmlFile, 1);
+			}
+		}
+	}
+
+	private void createAndAddLinkToFile(HtmlUl ul, File summaryFile) {
+		String imageDirname = summaryFile.getParentFile().getName();
+		HtmlLi li = new HtmlLi();
+		ul.appendChild(li);
+		HtmlA a = new HtmlA();
+		a.setHref(""+imageDirname+"/"+summaryFile.getName());
+		a.setTarget("_blank");
+		a.appendChild(imageDirname);
+		li.appendChild(a);
+	}
+
 	private void displayFiles() {
-		System.out.println(">display>"+displayList);
 		HtmlTable table = createDisplayTable();
-		File htmlFile = new File(imageDir, inputBasename+"."+CTree.HTML);
+		String filename = inputBasename != null ? inputBasename+"."+CTree.HTML : summaryFilename;
+		File htmlFile = new File(imageDir, filename);
 		try {
 			XMLUtil.debug(table, htmlFile, 1);
 		} catch (IOException e) {
@@ -446,19 +506,58 @@ public class AMIForestPlotTool extends AbstractAMITool {
 
 	private void createAndFillBody(HtmlTable table) {
 		HtmlTbody body = table.getOrCreateTbody();
+		if (Orientation.horizontal.equals(orientation)) {
+			createHorizontalDisplay(body);
+		} else {
+			createVerticalDisplay(body);
+		}
+	}
+
+	private void createHorizontalDisplay(HtmlTbody body) {
 		HtmlTr tr = new HtmlTr();
 		body.appendChild(tr);
 		for (int i = 0; i < displayList.size(); i++) {
-			String filename = displayList.get(i);
-			File subdir = new File(imageDir, inputBasename);
-			File displayFile = filename.startsWith(".") ? 
-					new File(imageDir, inputBasename+filename) : new File(subdir, filename);
-			String displayFilename = filename.startsWith(".") ? 
-					inputBasename+filename :inputBasename + "/" + filename;
-//			System.out.println(">>>"+displayFilename);
-			HtmlTd td = createCell(displayFilename, displayFile);
+			HtmlTd td = createTd(displayList.get(i));
 			tr.appendChild(td);
 		}
+	}
+
+	private void createVerticalDisplay(HtmlTbody body) {
+		for (int i = 0; i < displayList.size(); i++) {
+			HtmlTr tr = new HtmlTr();
+			body.appendChild(tr);
+			HtmlTd td = createTd(displayList.get(i));
+			tr.appendChild(td);
+		}
+	}
+
+	private HtmlTd createTd(String filename) {
+		/** create full file. relative to imageDir 
+		 *    if (inputBasename == null) imageDir/filename
+		 *    If filename is ".foo", creates imageDir/inputBasename.foo
+		 *    else treat as subdirectory/ => imageDir/inputBasename/filename
+		 */
+		File displayFile = null;
+		String displayFilename = imageDir+"/"+filename;
+		if (inputBasename == null) {
+			displayFile = new File(imageDir, filename);
+		} else {
+			File subdir = new File(imageDir, inputBasename);
+		    if (filename.startsWith("../")) {
+		    	filename = filename.substring(3);
+		    	displayFile = new File(imageDir, filename);
+				displayFilename = filename;
+		    } else if (filename.startsWith(".")) {
+			    	String imageFilename = inputBasename+filename;
+					displayFile = new File(imageDir, imageFilename);
+					displayFilename = imageFilename;
+		    } else {
+		    	displayFile = new File(subdir, filename);
+		    	displayFilename = inputBasename + "/" + filename;
+		    }
+		}
+		HtmlTd td = createCell(displayFilename, displayFile);
+		return td;
 	}
 
 	private Integer getFirstYOffset() {
@@ -506,7 +605,8 @@ public class AMIForestPlotTool extends AbstractAMITool {
 				SVGSVG svgCopy = (SVGSVG) SVGElement.readAndCreateSVG(svg);
 				SVGG g = (SVGG) svgCopy.getChildElements().get(0);
 				// BUG in offset
-				offset = null; 
+//				offset = null; 
+				offset = 0; 
 				Transform2 t2 = new Transform2(new Vector2(0, (offset == null) ? -30 : -1 * offset));
 				g.setTransform(t2);
 				td.appendChild(svgCopy);

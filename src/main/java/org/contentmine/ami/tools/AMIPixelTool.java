@@ -25,14 +25,20 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.eucl.euclid.Axis.Axis2;
 import org.contentmine.eucl.euclid.Int2;
+import org.contentmine.eucl.euclid.Int2Range;
+import org.contentmine.eucl.euclid.IntArray;
 import org.contentmine.eucl.euclid.IntRange;
+import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Range;
 import org.contentmine.eucl.euclid.RealArray;
 import org.contentmine.eucl.euclid.RealRange;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.svg.SVGG;
+import org.contentmine.graphics.svg.SVGLine;
+import org.contentmine.graphics.svg.SVGLineList;
 import org.contentmine.graphics.svg.SVGRect;
 import org.contentmine.graphics.svg.SVGSVG;
 import org.contentmine.image.ImageUtil;
@@ -125,6 +131,11 @@ public class AMIPixelTool extends AbstractAMITool {
             description = "create pixelIslands and tabulate properties of first $maxIslandCount islands sorted by size."
             		+ "0 means no anaysis.")
     private Integer maxIslandCount = 10;
+	
+    @Option(names = {"--lines"},
+    		arity = "0",
+            description = "extract lines from projections. Result is set of lines in SVGLine format")
+    private boolean lines = false;;
 	
     @Option(names = {"--maxislands"},
     		arity = "1",
@@ -231,13 +242,11 @@ public class AMIPixelTool extends AbstractAMITool {
 	private static final String Y_COORD = "ycoord";
 	private static final String X_COORDS = "xcoords";
 	private static final String Y_COORDS = "ycoords";
+	private static String[] COLORS = new String[] {"red", "green", "blue", "pink", "yellow", "cyan", "magenta", "brown"};
 
 	private DiagramAnalyzer diagramAnalyzer;
 	private PixelIslandList pixelIslandList;
 	private File outputDirectory;
-
-	private static String[] COLORS = new String[] {"red", "green", "blue", "pink", "yellow", "cyan", "magenta", "brown"};
-
 //	private AxialPixelFrequencies axialPixelFrequencies;
 	private File imageDir;
 	private File imageFile;
@@ -250,6 +259,13 @@ public class AMIPixelTool extends AbstractAMITool {
 	private List<List<IntRange>> intRangeListList;
 
 	private File projectionsFile;
+	// still being worked out... should be arguments
+	private double lineProjectionFactor = 0.1;
+	private double minLineLength = 10;
+
+	private List<SVGLineList> verticalLineListList;
+
+	private List<SVGLineList> horizontalLineListList;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -280,6 +296,7 @@ public class AMIPixelTool extends AbstractAMITool {
 	protected void parseSpecifics() {
     	outputDirname = outputDirname.endsWith("/") ? outputDirname : outputDirname + "/";
 		System.out.println("basename             " + basename);
+		System.out.println("lines                " + lines);
 		System.out.println("maxislands           " + maxislands);
 		System.out.println("minwidth             " + minwidth);
 		System.out.println("minheight            " + minheight);
@@ -324,6 +341,7 @@ public class AMIPixelTool extends AbstractAMITool {
 	
 	private void runPixel(File imageFile) {
 		imageDir = imageFile.getParentFile();
+		System.out.println(">imageDir> "+imageDir.getName());
 		outputDirectory = new File(imageDir, outputDirname+"/");
 		outputDirectory.mkdirs();
 		basename = FilenameUtils.getBaseName(imageFile.toString());
@@ -347,7 +365,7 @@ public class AMIPixelTool extends AbstractAMITool {
 		Thinning thinning = thinningName == null ? null : ThinningMethod.getThinning(thinningName);
 		diagramAnalyzer.setThinning(thinning);
 		pixelIslandList = diagramAnalyzer.getOrCreateSortedPixelIslandList();
-		System.out.println("pixel island sizes "+pixelIslandList.size());
+//		System.out.println("pixel island sizes "+pixelIslandList.size());
 		if (maxIslandCount > 0) {
 			analyzeIslandSizes();
 		}
@@ -362,7 +380,7 @@ public class AMIPixelTool extends AbstractAMITool {
 			if (subimageTokens.size() > 0) {
 				subImage = createSubimage();
 				if (subImage != null) {
-					intRangeListList = analyzeSubImage(subImage, 0.5, 0.7);
+					intRangeListList = extractProjectionRangeLists(subImage, 0.5, 0.7);
 				}
 			}
 			if (projectionsName != null) {
@@ -422,23 +440,30 @@ public class AMIPixelTool extends AbstractAMITool {
 		return baos.toString();
 	}
 
-	private List<List<IntRange>> analyzeSubImage(BufferedImage image, double xProjectionFactor, double yProjectionFactor) {
+	private static List<List<IntRange>> extractProjectionRangeLists(BufferedImage image, double xProjectionFactor, double yProjectionFactor) {
 		int height = image.getHeight();
 		int width = image.getWidth();
+		LOG.debug("w/h "+width+"/"+height);
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		diagramAnalyzer.setImage(image);
 		List<List<IntRange>> intRangeListList = new ArrayList<List<IntRange>>();
 		AxialPixelFrequencies axialPixelFrequencies = diagramAnalyzer.getAxialPixelFrequencies();
-		RealArray xFrequencies = new RealArray(axialPixelFrequencies.getXFrequencies());
-		xFrequencies.getIndexesWithinRange(new RealRange(width/2, 9999));
-		List<IntRange> xRangeList = xFrequencies.createMaskArray((double)height * xProjectionFactor);
-		intRangeListList.add(xRangeList);
 		
-		RealArray yFrequencies = new RealArray(axialPixelFrequencies.getYFrequencies());
-		yFrequencies.getIndexesWithinRange(new RealRange(height/2, 9999));
-		List<IntRange> yRangeList = yFrequencies.createMaskArray((double)width * yProjectionFactor);
-		intRangeListList.add(yRangeList);
+		intRangeListList.add(extractRangeList(xProjectionFactor, height, width, axialPixelFrequencies, Axis2.X));
+		intRangeListList.add(extractRangeList(yProjectionFactor, height, width, axialPixelFrequencies, Axis2.Y));
+		
+		
 		return intRangeListList;
+	}
+
+	private static List<IntRange> extractRangeList(double projectionFactor, int height, int width,
+			AxialPixelFrequencies axialPixelFrequencies, Axis2 axis) {
+		RealArray frequencies = new RealArray((Axis2.X.equals(axis) ? axialPixelFrequencies.getXFrequencies() : axialPixelFrequencies.getYFrequencies()));
+		int limit1 = Axis2.X.equals(axis) ? width/2 : height/2;
+		frequencies.getIndexesWithinRange(new RealRange(limit1, 9999));
+		double limit2 = projectionFactor * (Axis2.X.equals(axis) ? height : width); 
+		List<IntRange> rangeList = frequencies.createMaskArray(limit2);
+		return rangeList;
 	}
 
 	/** --subimage statascale y 2 delta 10 projection x
@@ -520,12 +545,22 @@ public class AMIPixelTool extends AbstractAMITool {
 		
 		linesElement.appendChild(createRangeElement(X_COORDS, X_COORD, xRangeList));
 		linesElement.appendChild(createRangeElement(Y_COORDS, Y_COORD, yRangeList));
+		linesElement.appendChild(createLineListListElement(horizontalLineListList, "horizontal"));
+		linesElement.appendChild(createLineListListElement(verticalLineListList, "vertical"));
 	
 		if (intRangeListList != null) {
 			linesElement.appendChild(subImageProjections());
 		}
 		
 		XMLUtil.debug(linesElement, projectionsFile, 1);
+	}
+
+	private Element createLineListListElement(List<SVGLineList> lineListList, String direction) {
+		Element element = new Element(direction+"lines");
+		for (SVGLineList lineList : lineListList) {
+			element.appendChild(lineList.createSVGElement());
+		}
+		return element;
 	}
 
 	private Element subImageProjections() {
@@ -573,14 +608,64 @@ public class AMIPixelTool extends AbstractAMITool {
 		int height = image.getHeight();
 		int width = image.getWidth();
 		AxialPixelFrequencies axialPixelFrequencies = diagramAnalyzer.getAxialPixelFrequencies();
-		RealArray xFrequencies = new RealArray(axialPixelFrequencies.getXFrequencies());
-		xFrequencies.getIndexesWithinRange(new RealRange(width/2, 9999));
-		xRangeList = xFrequencies.createMaskArray((double)height * xProjectionFactor);
 		
-		RealArray yFrequencies = new RealArray(axialPixelFrequencies.getYFrequencies());
-		yFrequencies.getIndexesWithinRange(new RealRange(height/2, 9999));
-		yRangeList = yFrequencies.createMaskArray((double)width * yProjectionFactor);
+		verticalLineListList = createRangesAndLineLists(height, width, axialPixelFrequencies, Axis2.X);		
+		horizontalLineListList = createRangesAndLineLists(height, width, axialPixelFrequencies, Axis2.Y);
+		
 		return;
+	}
+
+	private List<SVGLineList> createRangesAndLineLists(int height, int width, AxialPixelFrequencies axialPixelFrequencies, Axis2 axis) {
+		IntArray intFrequencies = (Axis2.X.equals(axis)) ? 
+				axialPixelFrequencies.getXFrequencies() : axialPixelFrequencies.getYFrequencies();
+		RealArray frequencies = new RealArray(intFrequencies);
+		int minv = (Axis2.X.equals(axis)) ? width/2 : height/2;
+		frequencies.getIndexesWithinRange(new RealRange(minv, 9999));
+		double limit = (Axis2.X.equals(axis)) ? (double)height * xProjectionFactor : (double)width * yProjectionFactor;
+		List<IntRange> maskArray = frequencies.createMaskArray(limit);
+		// save ranges
+		if (Axis2.X.equals(axis)) {
+			xRangeList = maskArray;
+		} else {
+			yRangeList = maskArray;
+		}
+		return (lines) ? extractLineLists(maskArray, axis) : new ArrayList<>();
+	}
+
+	private List<SVGLineList> extractLineLists(List<IntRange> rangeList, Axis2 axis) {
+		List<SVGLineList> lineListList = new ArrayList<>();
+		for (IntRange range : rangeList) {
+			SVGLineList lineList = extractLineList(range, axis);
+			lineListList.add(lineList);
+		}
+		return lineListList;
+	}
+
+	private SVGLineList extractLineList(IntRange projectionRange, Axis2 axis) {
+		int lineBase = projectionRange.getMin();
+		int lineWidth = projectionRange.getRange();
+		Int2Range boundingBox = Axis2.X.equals(axis) ? new Int2Range(projectionRange, new IntRange(0, image.getHeight())) : 
+			new Int2Range(new IntRange(0, image.getWidth()), projectionRange);
+		BufferedImage subImage = ImageUtil.clipSubImage(image, boundingBox);
+		SVGLineList lineList = new SVGLineList();
+		if (subImage == null) {
+			LOG.debug("Cannot clip: "+boundingBox);
+		} else {
+			List<List<IntRange>> rangeListList = extractProjectionRangeLists(subImage, lineProjectionFactor , lineProjectionFactor);
+			for (List<IntRange> rangeList : rangeListList) {
+				for (IntRange rng : rangeList) {
+					Real2 x1 = Axis2.Y.equals(axis) ? new Real2(rng.getMin(), lineBase) : new Real2(lineBase, rng.getMin()); 
+					Real2 x2 = Axis2.Y.equals(axis) ? new Real2(rng.getMax(), lineBase) : new Real2(lineBase, rng.getMax()); 
+					SVGLine line = new SVGLine(x1, x2);
+					if (line.getLength() > minLineLength) {
+						line.setWidth(lineWidth);
+						lineList.add(line);
+					}
+				}
+			}
+			LOG.debug(">"+lineList.size()+">>"+lineList.createSVGElement().toXML());
+		}
+		return lineList;
 	}
 
 	private void analyzeRings() {
