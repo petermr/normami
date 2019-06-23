@@ -58,8 +58,8 @@ sleep $SLEEP1
 
 # run OCR both types
 
-ami-ocr $SOURCE --gocr /usr/local/bin/gocr --extractlines gocr
-ami-ocr $SOURCE --tesseract /usr/local/bin/tesseract --extractlines hocr --html false
+ami-ocr $SOURCE --gocr /usr/local/bin/gocr --extractlines gocr --forcemake
+ami-ocr $SOURCE --tesseract /usr/local/bin/tesseract --extractlines hocr --html false  --forcemake
 
 echo "===============Finished AmiOcr============="
 sleep $SLEEP1
