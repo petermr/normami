@@ -346,7 +346,7 @@ public class AMIPixelTool extends AbstractAMITool {
 		outputDirectory.mkdirs();
 		basename = FilenameUtils.getBaseName(imageFile.toString());
 		if (includeExclude(basename)) {
-			LOG.debug("basename: "+basename);
+			System.out.println(">basename> "+basename);
 		}
 		if (!imageFile.exists()) {
 			throw new RuntimeException("Image file does not exist: "+imageFile);
@@ -443,7 +443,7 @@ public class AMIPixelTool extends AbstractAMITool {
 	private static List<List<IntRange>> extractProjectionRangeLists(BufferedImage image, double xProjectionFactor, double yProjectionFactor) {
 		int height = image.getHeight();
 		int width = image.getWidth();
-		LOG.debug("w/h "+width+"/"+height);
+		LOG.trace("w/h "+width+"/"+height);
 		DiagramAnalyzer diagramAnalyzer = new DiagramAnalyzer();
 		diagramAnalyzer.setImage(image);
 		List<List<IntRange>> intRangeListList = new ArrayList<List<IntRange>>();
@@ -663,7 +663,7 @@ public class AMIPixelTool extends AbstractAMITool {
 					}
 				}
 			}
-			LOG.debug(">"+lineList.size()+">>"+lineList.createSVGElement().toXML());
+			LOG.trace(">"+lineList.size()+">>"+lineList.createSVGElement().toXML());
 		}
 		return lineList;
 	}

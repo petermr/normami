@@ -242,9 +242,7 @@ public class AMIOCRTool extends AbstractAMITool {
 			}
 			
 			try {
-				if (gocrPath != null) {
-					gocrConverter.setGocrPath(gocrPath);
-				}
+				gocrConverter.setGocrPath(gocrPath);
 				gocrConverter.setImageFile(imageFile);
 				gocrConverter.runGOCR();
 			} catch (Exception e) {

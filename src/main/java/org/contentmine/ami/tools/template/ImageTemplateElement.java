@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.eucl.euclid.Int2Range;
 import org.contentmine.eucl.euclid.IntArray;
 import org.contentmine.eucl.euclid.IntRange;
+import org.contentmine.eucl.euclid.RealArray;
 import org.contentmine.image.ImageUtil;
 
 public class ImageTemplateElement extends AbstractTemplateElement {
@@ -57,7 +58,7 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 			parseAttributes();
 		} catch (RuntimeException e) {
 			ok = false;
-			LOG.debug("Cannot create images: "+e.getMessage());
+			LOG.debug("Cannot create images: "+e.getClass()+"/"+e.getMessage());
 		}
 		if(ok) {
 			if (splitDirection != null) {
@@ -74,7 +75,7 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 		// add both edge borders
 		borders.insertElementAt(0,  0);
 		borders.addElement(imageSize);
-		LOG.debug(borders);
+		LOG.trace("borders: "+borders);
 		for (int border = 0; border < borders.size() - 1; border++) {
 			splitImageAtBorders(image, parentFile, border);
 		}
@@ -104,12 +105,12 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 	}
 
 	private void parseAttributes() {
-		LOG.debug("processing "+this.getLocalName()+"Template");
+		LOG.trace("processing "+this.getLocalName()+"Template");
 		splitDirection = Direction.valueOf(AbstractTemplateElement.getNonNullAttributeValue(this, SPLIT));
 		if (splitDirection == null) {
 			throw new RuntimeException("must have "+SPLIT+" with one of "+Direction.values());
 		}
-		borders = new IntArray(AbstractTemplateElement.getNonNullAttributeValue(this, BORDERS));
+		borders = new RealArray(AbstractTemplateElement.getNonNullAttributeValue(this, BORDERS)).createIntArray();
 		if (borders.size() == 0) {
 			throw new RuntimeException("must have at least one border");
 		}

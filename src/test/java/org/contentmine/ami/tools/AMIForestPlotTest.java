@@ -37,6 +37,20 @@ public class AMIForestPlotTest {
 	private final static String STATA_TOTAL_EDITED = "stataTotalEdited";
 	private static final File STATA_TOTAL_EDITED_DIR = new File(STATA_FOREST_PLOT_DIR, STATA_TOTAL_EDITED);
 	public static final String DEVTEST = SPSS_DIR.toString();
+	
+	/** common arguments - note leading space */
+	private final static String DS = " --despeckle true";
+	private final static String EXTLINES_GOCR = " --extractlines gocr";
+	private final static String EXTLINES_HOCR = " --extractlines hocr";
+	private final static String GOCR = " --gocr /usr/local/bin/gocr";
+	private final static String SHARP4 = " --sharpen sharpen4 ";
+	private static final String TEMPLATE_XML = " --template template.xml";
+	private final static String TESSERACT = " --tesseract /usr/local/bin/tesseract";
+	private final static String THRESH = " --threshold ";
+
+	private static final String PMC5882397 = "PMC5882397";
+	private static final String PMC5502154 = "PMC5502154";
+
 
 	@Test
 	public void testHelp() {
@@ -51,13 +65,13 @@ public class AMIForestPlotTest {
 //				"-t "+DEVTEST+"bowmann-perrottetal_2013"
 //				"-t "+DEVTEST+"buzick_stone_2014_readalo"
 //				"-t "+DEVTEST+"campbell_systematic_revie"
-				"-t "+DEVTEST+"PMC5502154"
+				"-t "+DEVTEST+PMC5502154
 //				"-t "+DEVTEST+"mcarthur_etal2012_cochran"
 //				"-t "+DEVTEST+"puziocolby2013_co-operati"
 //				"-t "+DEVTEST+"torgersonetal_2011dferepo"
 //				"-t "+DEVTEST+"zhengetal_2016"
-//				+ " --sharpen sharpen4"
-				+ " --threshold 180"
+//				+ SHARP4
+				+ THRESH + " 180"
 				+ " --binarize BLOCK_OTSU"
 //				+ " --rotate 270"
 				+ " --priority SCALE"
@@ -89,8 +103,8 @@ public class AMIForestPlotTest {
 		+ " ergen_canagli_17_"
 		+ " fanetal_2017_meta_science"
 		+ ""
-		+ " --sharpen sharpen4"
-		+ " --threshold 180"
+		+ SHARP4
+		+ THRESH + " 180"
 //		+ " --binarize GLOBAL_ENTROPY"
 		+ " --priority SCALE"
 		;
@@ -146,7 +160,7 @@ public class AMIForestPlotTest {
 		String plotType = SPSS;
 		boolean useTree = true;
 //		useTree = false;
-		String treename = "PMC5502154";
+		String treename = PMC5502154;
 //		extractPlots(plotType, treename, useTree);		
 		analyzePlots(plotType, treename, useTree);		
 	}
@@ -154,7 +168,7 @@ public class AMIForestPlotTest {
 	@Test
 	public void testStataTable() {
 		String plotType = STATA;
-		String treename = "PMC5502154";
+		String treename = PMC5502154;
 		boolean useTree = false;
 		extractPlots(plotType, treename, useTree);
 		
@@ -169,7 +183,7 @@ public class AMIForestPlotTest {
 
 		boolean useTree = true;
 		File projectDir = SPSS_DIR;
-		String treename = "PMC5502154";
+		String treename = PMC5502154;
 		CTree cTree = new CTree(new File(projectDir, treename));
 		CProject cProject = new CProject(projectDir);
 		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
@@ -197,7 +211,7 @@ public class AMIForestPlotTest {
 		File projectDir = SPSS_SIMPLE_DIR;
 //		File projectDir - SPSS_MULTIPLE_DIR;
 //		File projectDir - SPSS_SUBPLOT_DIR;
-		String treename = "PMC5502154";
+		String treename = PMC5502154;
 		CTree cTree = new CTree(new File(projectDir, treename));
 		CProject cProject = new CProject(projectDir);
 		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
@@ -231,7 +245,7 @@ public class AMIForestPlotTest {
 		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source
-			+ " --template template.xml"
+			+ TEMPLATE_XML
 		    + "";
 		System.out.println("ami-forest "+cmd);
 		forestPlotTool.runCommands(cmd);
@@ -247,7 +261,7 @@ public class AMIForestPlotTest {
 		String source = "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source
-			+ " --template template.xml"
+			+ TEMPLATE_XML
 		    + "";
 		System.out.println("ami-forest "+cmd);
 		forestPlotTool.runCommands(cmd);
@@ -263,7 +277,7 @@ public class AMIForestPlotTest {
 		String source = "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source
-			+ " --template template.xml"
+			+ TEMPLATE_XML
 		    + "";
 		System.out.println("ami-forest "+cmd);
 		forestPlotTool.runCommands(cmd);
@@ -275,15 +289,15 @@ public class AMIForestPlotTest {
 		
 		boolean useTree = true;
 		File projectDir = SPSS_DIR;
-		String treename = "PMC5502154";
+		String treename = PMC5502154;
 		CTree cTree = new CTree(new File(projectDir, treename));
 		CProject cProject = new CProject(projectDir);
 		AMIImageTool imageTool = new AMIImageTool();
 		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source
-			+ " --sharpen sharpen4"
-			+ " --threshold 150"
+			+ SHARP4
+			+ THRESH + " 150"
 			+ " --scalefactor 2.0";
 		imageTool.runCommands(cmd);
 		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
@@ -305,7 +319,7 @@ public class AMIForestPlotTest {
 				;
 //		File projectDir = STATA_TOTAL_DIR;
 		File projectDir = STATA_TOTAL_EDITED_DIR;
-		String treename = "PMC5882397";
+		String treename = PMC5882397;
 		CTree cTree = new CTree(new File(projectDir, treename));
 		CProject cProject = new CProject(projectDir);
 		
@@ -370,36 +384,36 @@ public class AMIForestPlotTest {
 		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
 		String imageCmd = ""
 				+ source
-				+ " --sharpen sharpen4"
-				+ " --threshold 120"
-				+ " --despeckle true"
+				+ SHARP4
+				+ THRESH + " 120"
+				+ DS
 				;
 		if (makeImage) new AMIImageTool().runCommands(imageCmd);
 		imageCmd = ""
 				+ source
-				+ " --threshold 120"
-				+ " --despeckle true"
+				+ THRESH + " 120"
+				+ DS
 				;
 		if (makeImage) new AMIImageTool().runCommands(imageCmd);
 		imageCmd = ""
 				+ source
-				+ " --sharpen sharpen4"
-				+ " --threshold 200"
-				+ " --despeckle true"
+				+ SHARP4
+				+ THRESH + " 200"
+				+ DS
 				;
 		if (makeImage) new AMIImageTool().runCommands(imageCmd);
 		imageCmd = ""
 				+ source
-				+ " --threshold 200"
-				+ " --despeckle true"
+				+ THRESH + " 200"
+				+ DS
 				+ " -vvv"
 				;
 		if (makeImage) new AMIImageTool().runCommands(imageCmd);
 
 		imageCmd = ""
 				+ source
-				+ " --threshold 240"
-				+ " --despeckle true"
+				+ THRESH + " 240"
+				+ DS
 				+ " -vvv"
 				;
 		if (makeImage) new AMIImageTool().runCommands(imageCmd);
@@ -412,15 +426,11 @@ public class AMIForestPlotTest {
 		 */
 		String ocrCmd = ""
 				+ source
-				+ " --tesseract /usr/local/bin/tesseract"
-				+ " --extractlines hocr"
-//				+ " --html false"
+				+ TESSERACT
+				+ EXTLINES_HOCR
 		;
 		if (makeHOCR) new AMIOCRTool().runCommands(ocrCmd);
-		ocrCmd = ""
-				+ source
-				+ " --gocr /usr/local/bin/gocr"
-				+ " --extractlines gocr"
+		ocrCmd = source + GOCR + EXTLINES_GOCR;
 		;
 		if (makeGOCR) new AMIOCRTool().runCommands(ocrCmd);
 
@@ -443,7 +453,7 @@ public class AMIForestPlotTest {
 
 		// =====Forest======
 
-		if (makeForest) new AMIForestPlotTool().runCommands(source + " --template template.xml");
+		if (makeForest) new AMIForestPlotTool().runCommands(source + TEMPLATE_XML);
 
 
 	}
@@ -453,7 +463,7 @@ public class AMIForestPlotTest {
 	public void testTemplateXML() {
 		File projectDir = STATA_TOTAL_EDITED_DIR;
 		CProject cProject = new CProject(projectDir);
-		String treename = "PMC5882397";
+		String treename = PMC5882397;
 		CTree cTree = new CTree(new File(projectDir, treename));
 //		String source = "-t "+cTree.getDirectory();
 		String source = "-p "+cProject.getDirectory();
@@ -484,7 +494,7 @@ public class AMIForestPlotTest {
 	public void testHOCROnSplitRegions() {
 		File projectDir = STATA_TOTAL_EDITED_DIR;
 		CProject cProject = new CProject(projectDir);
-		String treename = "PMC5882397";
+		String treename = PMC5882397;
 		CTree cTree = new CTree(new File(projectDir, treename));
 		String source = "-t "+cTree.getDirectory();
 //		String source = "-p "+cProject.getDirectory();
@@ -492,35 +502,35 @@ public class AMIForestPlotTest {
 //		String imageCmd = source + " --inputname raw.body.ltable --sharpen sharpen4 --threshold 120 --despeckle true";
 //		new AMIImageTool().runCommands(imageCmd);
 
-		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable --tesseract /usr/local/bin/tesseract --extractlines hocr");
-		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable --tesseract /usr/local/bin/tesseract --extractlines hocr");
-		new AMIOCRTool().runCommands(source + " --inputname raw.header --tesseract /usr/local/bin/tesseract --extractlines hocr");
-		new AMIOCRTool().runCommands(source + " --inputname raw.scale --tesseract /usr/local/bin/tesseract --extractlines hocr");
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable" + TESSERACT + EXTLINES_HOCR);
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable" + TESSERACT + EXTLINES_HOCR);
+		new AMIOCRTool().runCommands(source + " --inputname raw.header" + TESSERACT + EXTLINES_HOCR);
+		new AMIOCRTool().runCommands(source + " --inputname raw.scale" + TESSERACT + EXTLINES_HOCR);
 	}
 	
 	@Test
 	public void testHOCRandGOCR() {
 		File projectDir = STATA_TOTAL_EDITED_DIR;
 		CProject cProject = new CProject(projectDir);
-		String treename = "PMC5882397";
+		String treename = PMC5882397;
 		CTree cTree = new CTree(new File(projectDir, treename));
 //		String source = "-t "+cTree.getDirectory();
 		String source = "-p "+cProject.getDirectory();
 		String FORCEMAKE = " --forcemake";
-		FORCEMAKE = "";
+
 		// sharpen subimages
 
-		new AMIImageTool().runCommands(source + " --inputname raw.header --sharpen sharpen4 --threshold 120 --despeckle true");
-		new AMIImageTool().runCommands(source + " --inputname raw.body.ltable --sharpen sharpen4 --threshold 120 --despeckle true");
-		new AMIImageTool().runCommands(source + " --inputname raw.body.rtable --sharpen sharpen4 --threshold 120 --despeckle true");		
+		new AMIImageTool().runCommands(source + " --inputname raw.header" + SHARP4 +  THRESH + " 120" + DS);
+		new AMIImageTool().runCommands(source + " --inputname raw.body.ltable" + SHARP4 + THRESH + " 120" + DS);
+		new AMIImageTool().runCommands(source + " --inputname raw.body.rtable" + SHARP4 +  THRESH + " 120" + DS);		
 
- 		new AMIOCRTool().runCommands(source + " --inputname raw.header_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr" + FORCEMAKE);
-		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr" + FORCEMAKE);
-		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds --tesseract /usr/local/bin/tesseract --extractlines hocr" + FORCEMAKE);
+ 		new AMIOCRTool().runCommands(source + " --inputname raw.header_s4_thr_120_ds" + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable_s4_thr_120_ds" + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds" + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
 
-		new AMIOCRTool().runCommands(source + " --inputname raw.header_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr" + FORCEMAKE);
-		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr" + FORCEMAKE);
-		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds --gocr /usr/local/bin/gocr --extractlines gocr" + FORCEMAKE
+		new AMIOCRTool().runCommands(source + " --inputname raw.header_s4_thr_120_ds" + GOCR + EXTLINES_HOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.ltable_s4_thr_120_ds" + GOCR + EXTLINES_HOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source + " --inputname raw.body.rtable_s4_thr_120_ds" + GOCR + EXTLINES_HOCR + FORCEMAKE
 				+ " --replace"
 				+ " o 0 O 0 d 0"
 				+ " e 2"
@@ -530,9 +540,7 @@ public class AMIForestPlotTest {
 				+ " J 7"
 				+ " T 7"
 				+ " Z 2"
-				// ambiguous?
-//				+ " a 0 a 4"
-				+ " a 4"
+				+ " a 4 a 0"
 				);
 		
 	}
@@ -544,7 +552,7 @@ public class AMIForestPlotTest {
 	public void testDisplay() {
 		File projectDir = STATA_TOTAL_EDITED_DIR;
 		CProject cProject = new CProject(projectDir);
-		String treename = "PMC5882397";
+		String treename = PMC5882397;
 		CTree cTree = new CTree(new File(projectDir, treename));
 //			String source = "-t "+cTree.getDirectory();
 		String source = "-p "+cProject.getDirectory();
@@ -575,16 +583,20 @@ public class AMIForestPlotTest {
 	public void testSPSSSimple() {
 		File projectDir = SPSS_SIMPLE_DIR;
 		CProject cProject = new CProject(projectDir);
-		String treename = "PMC5502154";
+		String treename = PMC5502154;
 		CTree cTree = new CTree(new File(projectDir, treename));
-//		String source = "-t "+cTree.getDirectory();
-		String source = "-p "+cProject.getDirectory();
-		String FORCEMAKE = " --forcemake";
+		String source = "-t "+cTree.getDirectory();
+//		String source = "-p "+cProject.getDirectory();
+		String FORCEMAKE = "";
+//		String FORCEMAKE = " --forcemake";
+		
+		// convert PDF (will skip if already done)
 		new AMIPDFTool().runCommands(source);
-		new AMIImageTool().runCommands(source + " --sharpen sharpen4" + " --threshold 120" + " --despeckle true");
-		new AMIImageTool().runCommands(source + " --sharpen sharpen4" + " --threshold 150" + " --despeckle true");
-		new AMIImageTool().runCommands(source + " --sharpen sharpen4" + " --threshold 180" + " --despeckle true");
-		// display what we have got
+		// scan the probable thresholds
+		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 120" + DS);
+		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 150" + DS);
+		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 180" + DS);
+		// display what we have got; later create an ami-display command
 		new AMIForestPlotTool().runCommands(source + ""
 //				+ " --inputname raw.body.rtable_s4_thr_120_ds"
 				+ " --display "
@@ -602,25 +614,55 @@ public class AMIForestPlotTest {
 			+ " --templateoutput template.xml"
 			+ " --templatexsl /org/contentmine/ami/tools/spssTemplate.xsl");
 
+		/** segment image */
 		new AMIForestPlotTool().runCommands(source + " --segment --template raw_s4_thr_150_ds/template.xml");
-		new AMIImageTool().runCommands(source + " --inputname raw.header  --sharpen sharpen4" + " --threshold 150" + " --despeckle true");
-		new AMIImageTool().runCommands(source + " --inputname raw.body --sharpen sharpen4" + " --threshold 150" + " --despeckle true");
+
+		/** sharpen/threshold segment images */
+		new AMIImageTool().runCommands(source + " --inputname raw.header.tableheads "+SHARP4 + THRESH + " 150" + DS);
+		new AMIImageTool().runCommands(source + " --inputname raw.header.graphheads "+SHARP4 + THRESH + " 150" + DS);
+		new AMIImageTool().runCommands(source + " --inputname raw.body.table "+SHARP4 + THRESH + " 150" + DS);
+		new AMIImageTool().runCommands(source + " --inputname raw.body.graph "+SHARP4 + THRESH + " 150" + DS);
+		new AMIImageTool().runCommands(source + " --inputname raw.footer.summary "+SHARP4 + THRESH + " 150" + DS);
+		new AMIImageTool().runCommands(source + " --inputname raw.footer.scale "+SHARP4 + THRESH + " 150" + DS);
 		
- 		new AMIOCRTool().runCommands(source 
- 				+ " --inputname raw.header_s4_thr_150_ds --tesseract /usr/local/bin/tesseract --extractlines hocr" + FORCEMAKE);
+		new AMIOCRTool().runCommands(source 
+ 				+ " --inputname raw.header.tableheads_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source 
+ 				+ " --inputname raw.header.graphheads_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
 		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.body_s4_thr_150_ds --tesseract /usr/local/bin/tesseract --extractlines hocr" + FORCEMAKE);
+				+ " --inputname raw.body.table_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source
+				+ " --inputname raw.body.graph_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source
+				+ " --inputname raw.footer.summary_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source
+				+ " --inputname raw.footer.scale_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
 		
- 		new AMIOCRTool().runCommands(source 
- 				+ " --inputname raw.header_s4_thr_150_ds --gocr /usr/local/bin/gocr --extractlines gocr" + FORCEMAKE);
+		new AMIOCRTool().runCommands(source 
+ 				+ " --inputname raw.header_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
 		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.body_s4_thr_150_ds --gocr /usr/local/bin/gocr --extractlines gocr" + FORCEMAKE + " --table");
+				+ " --inputname raw.body_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE );
+
+		new AMIOCRTool().runCommands(source 
+ 				+ " --inputname raw.header.tableheads_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source 
+ 				+ " --inputname raw.header.graphheads_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source
+				+ " --inputname raw.body.table_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source
+				+ " --inputname raw.body.graph_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source
+				+ " --inputname raw.footer.summary_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
+		new AMIOCRTool().runCommands(source
+				+ " --inputname raw.footer.scale_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
+		
 
 		new AMIForestPlotTool().runCommands(source + ""
 				+ " --inputname raw.body_s4_thr_150_ds"
 				+ " --display ../raw.body.png .png hocr/hocr.svg gocr/gocr.svg"
 				+ " --orientation vertical"
-				+ " --summary raw.body_s4_thr_150_ds.html");
+				+ " --summary raw.body_s4_thr_150_ds.html"
+				+ " --table");
 
 		new AMIForestPlotTool().runCommands(source + ""
 				+ " --inputname raw.header_s4_thr_150_ds"
@@ -653,13 +695,7 @@ public class AMIForestPlotTest {
 		AbstractAMITool ocrTool = new AMIOCRTool();
 
 		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
-		String cmd = ""
-			+ source 
-			+ " --extractlines gocr"
-			+ "";
-		// create SVG
-		
-		ocrTool.runCommands(cmd);
+		ocrTool.runCommands(source + EXTLINES_GOCR);
 	}
 	
 	private void analyzePlots(String plotType, String treename, boolean useTree) {

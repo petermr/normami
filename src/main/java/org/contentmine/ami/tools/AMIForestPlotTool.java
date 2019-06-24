@@ -404,6 +404,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
 			this.basename = FilenameUtils.getBaseName(imageDir.toString());
 			System.out.println("======>"+imageDir.getName()+"/"+inputBasename);
 			if (segment) {	
+				LOG.debug("template "+templateFilename);
 				AbstractTemplateElement templateElement = 
 						AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
 				if (templateElement != null) {
