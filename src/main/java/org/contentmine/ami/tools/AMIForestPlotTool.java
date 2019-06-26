@@ -18,9 +18,6 @@ import org.contentmine.ami.tools.template.AbstractTemplateElement;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
-import org.contentmine.eucl.euclid.Axis.Axis2;
-import org.contentmine.eucl.euclid.Int2Range;
-import org.contentmine.eucl.euclid.IntRange;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Array;
 import org.contentmine.eucl.euclid.Transform2;
@@ -40,7 +37,6 @@ import org.contentmine.graphics.html.HtmlTh;
 import org.contentmine.graphics.html.HtmlThead;
 import org.contentmine.graphics.html.HtmlTr;
 import org.contentmine.graphics.html.HtmlUl;
-import org.contentmine.graphics.html.util.HtmlUtil;
 import org.contentmine.graphics.svg.SVGCircle;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGG;
@@ -78,7 +74,7 @@ description = "analyzes ForestPlot images; uses template.xml to steer the operat
 
 public class AMIForestPlotTool extends AbstractAMITool {
 
-	private static final Logger LOG = Logger.getLogger(AMIForestPlotTool.class);
+	static final Logger LOG = Logger.getLogger(AMIForestPlotTool.class);
 	private static final String TEMPLATE_XML = "template.xml";
 
 	static {
@@ -158,13 +154,18 @@ public class AMIForestPlotTool extends AbstractAMITool {
     @Option(names = {"--summary"},
     		arity = "1",
             description = "create summary listing of files of given name in higher level directory."
-            		+ "e.g. summarize all raw.png files in ../raw.html . exploratory. Can be used recursively")
+            		+ "e.g. summarize all raw.png files in ../raw.html . exploratory. Can be used recursively."
+            		+ "Currently used with --display.")
     private String summaryFilename = null;
 
     @Option(names = {"--table"},
-    		arity = "0..1",
-            description = "use bounding boxes to create a table")
-    private boolean table;
+    		arity = "1",
+            description = "svgFile containing potential table; path relative to inputname; e.g. 'hocr/hocr.svg")
+    private String table = null;
+
+    @Option(names = {"--tableType"},
+    		arity = "1..*",
+            description = "string describing type of table (experimental) - e.g 'leftjust'") List<String> tableTypeList = new ArrayList<>();
 
     @Option(names = {"--template"},
     		arity = "1",
@@ -376,9 +377,9 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		System.out.println("offsets             " + offsets);
 		System.out.println("scaledFilename      " + basename);
 		System.out.println("summaryFilenam      " + summaryFilename);
-		System.out.println("table               " + table);
 		System.out.println("segment             " + segment);
 		System.out.println("table               " + table);
+		System.out.println("tableType           " + tableTypeList);
 		System.out.println("template            " + templateFilename);
 		System.out.println();
 
@@ -427,12 +428,15 @@ public class AMIForestPlotTool extends AbstractAMITool {
 				File imageFile = getRawImageFile(imageDir);
 				createForestPlotFromImage(imageFile);
 			}
-			if (table) {
-				// depends on format - not yet worked out
-				SVGElement hocrSvg = readSVGFile("hocr/hocr.svg");
-				createHOCRTable(hocrSvg); 
-				SVGElement gocrSvg = readSVGFile("gocr/gocr.svg");
-//				createGOCRTable(gocrSvg); 
+			if (table != null) {
+				File svgFile = new File(new File(imageDir, inputBasename), table);
+				if (!svgFile.exists()) {
+					System.out.println("no file>: "+svgFile);
+				} else {
+					TableExtractor tableExtractor = new TableExtractor();
+					tableExtractor.setTableTypeList(tableTypeList);
+					tableExtractor.extractTable(svgFile);
+				}
 			}
 			addSummaryFile();
 		}
@@ -440,14 +444,10 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		LOG.debug(">abbrev>"+MultisetUtil.createListSortedByCount(abbrevSet));
 	}
 
-	private void createHOCRTable(SVGElement hocrSvg) {
-//		List<IntRange> yList = project(Axis2.Y);
-	}
-
-	private SVGElement readSVGFile(String ocrSvgFile) {
-		File ocrFile = new File(imageDir, inputBasename+"/"+ocrSvgFile);
-		return !ocrFile.exists() ? null : SVGElement.readAndCreateSVG(ocrFile);
-	}
+//	private SVGElement readSVGFile(String ocrSvgFile) {
+//		File ocrFile = new File(imageDir, inputBasename+"/"+ocrSvgFile);
+//		return !ocrFile.exists() ? null : SVGElement.readAndCreateSVG(ocrFile);
+//	}
 
 	private void addSummaryFile() {
 		if (summaryFilename != null) {

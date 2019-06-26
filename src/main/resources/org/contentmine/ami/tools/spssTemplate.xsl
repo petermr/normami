@@ -4,56 +4,82 @@
 
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
-<!--
-<xsl:variable name="external-doc" select="@href"/>
-	<xsl:variable name="projections" select="document('${directory}/projections.xml')"/>
-  -->
+<!--  
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+|                               |                         |              
+|       header.tableheads       |     header.graphheads   |              
+|                               |                         |              
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+|                               |                         |              
+|                               |                         |              
+|                               |                         |              
+|                               |                         |              
+|                               |                         |              
+|       body.table              |     body.graph          |              
+|                               |                         |              
+|                               |                         |              
+|                               |                         |              
+|                               |                         |              
+|                               |                         |              
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+|       footer.summary          |     footer.scale        |              
+|                               |                         |              
+|                               |                         |              
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
+-->
 <!--  operates on projections.xml to create template.xml  
-<projections cTree="PMC6320077" imageDir="image.5.1.122_554.409_699" basename="raw_thr_230_ds">
+<projections cTree="PMC5911624" imageDir="image.6.2.72_532.419_592" basename="raw_s4_thr_150_ds">
  <xcoords>
-  <xcoord min="564" max="567"/>
+  <xcoord min="1021" max="1022"/>
  </xcoords>
  <ycoords>
-  <ycoord min="231" max="232"/>
-  <ycoord min="742" max="746"/>
+  <ycoord min="43" max="44"/>
+  <ycoord min="413" max="414"/>
  </ycoords>
- <subImage>
-  <x min="391" max="394"/>
-  <x min="563" max="568"/>
-  <x min="737" max="742"/>
-  <y min="0" max="0"/>
- </subImage>
+ <horizontallines>
+  <g xmlns="http://www.w3.org/2000/svg">
+   <line x1="0.0" y1="43.0" x2="1277.0" y2="43.0" style="stroke:black;stroke-width:1.0;"/>
+  </g>
+  <g xmlns="http://www.w3.org/2000/svg">
+   <line x1="782.0" y1="413.0" x2="1262.0" y2="413.0" style="stroke:black;stroke-width:1.0;"/>
+  </g>
+ </horizontallines>
+ <verticallines>
+  <g xmlns="http://www.w3.org/2000/svg">
+   <line x1="1021.0" y1="43.0" x2="1021.0" y2="421.0" style="stroke:black;stroke-width:1.0;"/>
+   <line x1="1021.0" y1="429.0" x2="1021.0" y2="443.0" style="stroke:black;stroke-width:1.0;"/>
+  </g>
+ </verticallines>
 </projections>
 -->
+<xsl:variable name="horizontallines" select="projections/horizontallines"/>
+<xsl:variable name="hlines" select="$horizontallines//*[local-name()='line']"/>
+<xsl:variable name="verticallines" select="projections/verticallines"/>
+<xsl:variable name="vlines" select="$verticallines//*[local-name()='line']"/>
+
 <xsl:variable name="xcoords" select="projections/xcoords"/>
 <xsl:variable name="ycoords" select="projections/ycoords"/>
 <xsl:variable name="subImage" select="projections/subImage"/>
 <xsl:variable name="y1" select="$ycoords/ycoord[1]"/>
 <xsl:variable name="y2" select="$ycoords/ycoord[2]"/>
-<!-- 
-<xsl:variable name="sx1" select="$subImage/x[1]"/>
-<xsl:variable name="sx2" select="$subImage/x[2]"/>
-<xsl:variable name="sx3" select="$subImage/x[3]"/>
- -->
  <xsl:variable name="headerBottom" select="$y1/@min - 1"/>
  <xsl:variable name="bodyTop" select="$y1/@max + 1"/>
-<xsl:variable name="scaleTop" select="$y2/@max + 1"/>
-<!-- 
-<xsl:variable name="graphLeft" select="$sx1/@max"/>
-<xsl:variable name="graphRight" select="$sx3/@max"/>
- -->
+ <xsl:variable name="footerTop" select="$y2/@max + 1"/>
+ <!--  kludge, approximate line between table/Heterogeneity; also top of tickmarks in scale  -->
+ <xsl:variable name="bodyBottom" select="$y2/@min - 5"/>
+<xsl:variable name="graphLeft" select="$hlines[2]/@x1"/>
+
 	<xsl:template match="/">
 	  <xsl:call-template name="createTemplate"/>
 	</xsl:template>
 
 	<xsl:template name="createTemplate">
 	  <template>
-		  	<image source="raw.png" split="horizontal" sections="header null body scale" borders="{$headerBottom} {$bodyTop} {$scaleTop}" extension="png">
-<!-- 
-	    	  <image source="raw.body.png" split="horizontal" sections="table graph" borders="{$graphLeft}" extension="png">
-	    	  </image>
--->
+		  	<image source="raw.png" split="horizontal" sections="header null body footer" borders="{$headerBottom} {$bodyTop} {$bodyBottom}" extension="png">
+	    	  <image source="raw.header.png" split="vertical" sections="tableheads graphheads" borders="{$graphLeft}" extension="png"></image>
+	    	  <image source="raw.body.png" split="vertical" sections="table graph" borders="{$graphLeft}" extension="png"></image>
+	    	  <image source="raw.footer.png" split="vertical" sections="summary scale" borders="{$graphLeft}" extension="png"></image>
 		   </image>
       </template>
 	</xsl:template>

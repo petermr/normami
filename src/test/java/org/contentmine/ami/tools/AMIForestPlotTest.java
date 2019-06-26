@@ -585,8 +585,8 @@ public class AMIForestPlotTest {
 		CProject cProject = new CProject(projectDir);
 		String treename = PMC5502154;
 		CTree cTree = new CTree(new File(projectDir, treename));
-		String source = "-t "+cTree.getDirectory();
-//		String source = "-p "+cProject.getDirectory();
+//		String source = "-t "+cTree.getDirectory();
+		String source = "-p "+cProject.getDirectory();
 		String FORCEMAKE = "";
 //		String FORCEMAKE = " --forcemake";
 		
@@ -639,11 +639,6 @@ public class AMIForestPlotTest {
 				+ " --inputname raw.footer.scale_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
 		
 		new AMIOCRTool().runCommands(source 
- 				+ " --inputname raw.header_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.body_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE );
-
-		new AMIOCRTool().runCommands(source 
  				+ " --inputname raw.header.tableheads_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
 		new AMIOCRTool().runCommands(source 
  				+ " --inputname raw.header.graphheads_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
@@ -662,14 +657,56 @@ public class AMIForestPlotTest {
 				+ " --display ../raw.body.png .png hocr/hocr.svg gocr/gocr.svg"
 				+ " --orientation vertical"
 				+ " --summary raw.body_s4_thr_150_ds.html"
-				+ " --table");
+				+ " --table"
+				);
 
 		new AMIForestPlotTool().runCommands(source + ""
 				+ " --inputname raw.header_s4_thr_150_ds"
 				+ " --display ../raw.header.png .png hocr/hocr.svg gocr/gocr.svg"
 				+ " --orientation vertical"
-				+ " --summary raw.header_s4_thr_150_ds.html");
+				+ " --summary raw.header_s4_thr_150_ds.html"
+				);
 
+		/** analyze graph */
+		new AMIPixelTool().runCommands(source
+				+ " --projections --yprojection 0.02  --lines"
+				+ " --minheight -1 --rings -1 --islands 0"
+				+ " --inputname raw.body.graph_s4_thr_150_ds"
+//				+ " --templateinput raw.body.graph_s4_thr_150_ds/projections.xml"
+//				+ " --templateoutput template.xml"
+//				+ " --templatexsl /org/contentmine/ami/tools/spssTemplate.xsl"
+				);
+
+
+	}
+	
+	@Test
+	public void testSPSSTable1() {
+		File projectDir = SPSS_SIMPLE_DIR;
+		CProject cProject = new CProject(projectDir);
+		String treename = PMC5502154;
+		CTree cTree = new CTree(new File(projectDir, treename));
+		String source = "-t "+cTree.getDirectory();
+//		String source = "-p "+cProject.getDirectory();
+		
+if (false) {
+		new AMIForestPlotTool().runCommands(source + ""
+				+ " --inputname raw.body.table_s4_thr_150_ds"
+				+ " --table hocr/hocr.svg"
+				+ " --tableType hocr"
+				);
+
+		new AMIForestPlotTool().runCommands(source + ""
+				+ " --inputname raw.body.graph_s4_thr_150_ds"
+				+ " --table hocr/hocr.svg"
+				+ " --tableType hocr"
+				);
+}
+		new AMIPixelTool().runCommands(source + ""
+				+ " --projections --yprojection 0.02  --lines"
+				+ " --minheight -1 --rings -1 --islands 0"
+				+ " --inputname raw.body.graph_s4_thr_150_ds"
+				);
 
 	}
 
