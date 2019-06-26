@@ -36,6 +36,7 @@ import org.contentmine.eucl.euclid.RealArray;
 import org.contentmine.eucl.euclid.RealRange;
 import org.contentmine.eucl.euclid.util.MultisetUtil;
 import org.contentmine.eucl.xml.XMLUtil;
+import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGG;
 import org.contentmine.graphics.svg.SVGLine;
 import org.contentmine.graphics.svg.SVGLineList;
@@ -162,6 +163,11 @@ public class AMIPixelTool extends AbstractAMITool {
             description = "subdirectory for output of pixel analysis and diagrams (if none defaults to <inputBasename>)")
     private String outputDirname = null;
     
+    @Option(names = {"--overlap"},
+    		arity = "0",
+            description = "try to untangle overlaps")
+    private boolean overlap = false;
+    
     @Option(names = {"--projections"},
     		arity = "0",
             description = "project pixels onto both axes. Results are IntArrays with frequency of"
@@ -173,6 +179,11 @@ public class AMIPixelTool extends AbstractAMITool {
     		defaultValue = "projections",
             description = "name for holding extracted projections ")
 	public String projectionsName;
+
+    @Option(names = {"--removelines"},
+    		arity = "1",
+            description = "file with lines to remove; will trace through image removing pixels where line overlaps. NYI")
+	public String removeLinesFilename;
 
     @Option(names = {"--rings"},
     		arity = "1",
@@ -217,7 +228,8 @@ public class AMIPixelTool extends AbstractAMITool {
     @Option(names = {"--xprojection"},
     		arity = "1",
     		defaultValue = "0.5",
-            description = "fraction of height for meaningful projection. If greater will contribute to a projection range ")
+            description = "fraction of height for meaningful projection. If greater will contribute to a projection range."
+            		+ "When extracting lines may need to be 1.0 ")
     private Double xProjectionFactor;
     
     @Option(names = {"--yprojection"},
@@ -231,10 +243,11 @@ public class AMIPixelTool extends AbstractAMITool {
 	private static final String CTREE = "cTree";
 	private static final String DELTA = "delta";
 	private static final String IMAGE_DIR = "imageDir";
-	private static final String LINES = "projections";
+	private static final String LINES = "lines";
 	private static final String MAX = "max";
 	private static final String MIN = "min";
 	private static final String PROJECTION = "projection";
+	private static final String PROJECTIONS = "projections";
 	private static final String SUB_IMAGE = "subImage";
 	private static final String X = "x";
 	private static final String Y = "y";
@@ -264,7 +277,6 @@ public class AMIPixelTool extends AbstractAMITool {
 	private double minLineLength = 10;
 
 	private List<SVGLineList> verticalLineListList;
-
 	private List<SVGLineList> horizontalLineListList;
 
     /** used by some non-picocli calls
@@ -303,8 +315,10 @@ public class AMIPixelTool extends AbstractAMITool {
 		System.out.println("maxIslandCount       " + maxIslandCount);
 		System.out.println("minRingCount         " + minRingCount);
 		System.out.println("outputDirname        " + outputDirname);
+		System.out.println("overlap              " + overlap);
 		System.out.println("projections          " + projections);
 		System.out.println("projectionsName      " + projectionsName);
+		System.out.println("removelinesFilename  " + removeLinesFilename);
 		System.out.println("subimageTokens       " + subimageTokens);
 		System.out.println("templateInput        " + templateInput);
 		System.out.println("templateOutput       " + templateOutput);
@@ -333,11 +347,11 @@ public class AMIPixelTool extends AbstractAMITool {
 		imageDirProcessor.processImageDirs();
 	}
 
-	private List<File> createSortedImageDirectories() {
-		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
-		Collections.sort(imageDirs);
-		return imageDirs;
-	}
+//	private List<File> createSortedImageDirectories() {
+//		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
+//		Collections.sort(imageDirs);
+//		return imageDirs;
+//	}
 	
 	private void runPixel(File imageFile) {
 		imageDir = imageFile.getParentFile();
@@ -391,6 +405,9 @@ public class AMIPixelTool extends AbstractAMITool {
 				}
 			}
 		}
+		if (removeLinesFilename != null) {
+			removeLines();
+		}
 		if (templateInput != null) {
 			makeTemplate();
 		}
@@ -398,6 +415,83 @@ public class AMIPixelTool extends AbstractAMITool {
 			this.analyzeAndPlotIslands();
 		}
 
+	}
+
+	private void removeLines() {
+		File removeFile = new File(imageDir, removeLinesFilename);
+		if (!removeFile.exists()) {
+			System.err.println("Remove file non-existent: "+removeFile);
+		} else {
+			SVGElement svg = SVGElement.readAndCreateSVG(removeFile);
+			List<SVGLine> lineList = SVGLine.extractSelfAndDescendantLines(svg);
+			for (SVGLine line : lineList) {
+				removeLine(line);
+			}
+			File outputFile = new File(imageDir, removeLinesFilename.replace(".xml", ".remove.png"));
+//			LOG.debug(outputFile);
+			ImageUtil.writeImageQuietly(image, outputFile);
+		}
+	}
+
+	private void removeLine(SVGLine line) {
+		Real2 xy0 = line.getXY(0);
+		Real2 xy1 = line.getXY(1);
+		int x0 = (int) xy0.getX();
+		int x1 = (int) xy1.getX();
+		int y0 = (int) xy0.getY();
+		int y1 = (int) xy1.getY();
+		int width = (int) (double)line.getStrokeWidth();
+//		System.out.println(x0+","+y0+" / "+x1+","+y1 + "; " + width + " "+image.getWidth()+"/"+image.getHeight());
+		if (y0 == y1) { // horizontal
+			removePixels(y0, width, x0, x1, Axis2.Y);
+		} else if (x0 == x1) {
+			removePixels(x0, width, y0, y1, Axis2.X);
+		} else {
+			System.err.println("not horizontal");
+		}
+	}
+
+	/**
+	 * 
+	 * @param start start of width iteration 
+	 * @param width of line
+	 * @param limit0 first pixel in line
+	 * @param limit1 last inclusive pixel
+	 * @param axis if X line runs from x = limit0 to limit1
+	 */
+	private void removePixels(int start, int width, int limit0, int limit1, Axis2 axis) {
+		int BLACK = 0x00000000;
+		// note values are inclusive
+		for (int j = limit0; j < limit1; j++) {
+			int rgb0 = getColour(start - 1, j, axis);
+			int rgb1 = getColour(start + width, j, axis);
+			boolean hasBlackNeighbours = (rgb0 == BLACK || rgb1 == BLACK);
+			for (int i = start; i < start + width; i++) {
+				int x = (Axis2.X.equals(axis)) ? i : j;
+				int y = (Axis2.X.equals(axis)) ? j : i;
+				if (!overlap || !hasBlackNeighbours) {
+					if (x < 0 || x >= image.getWidth()) {
+						System.out.println("x "+x);
+					} else if (y < 0 || y >= image.getHeight()) {
+						System.out.println("y "+y);
+					} else {
+						image.setRGB(x, y, 0x00ffffff);
+					}
+				} else {
+					// keep black
+				}
+			}
+		}
+	}
+
+	/** default to white if outside range */
+	private int getColour(int i, int j, Axis2 axis) {
+		int rgb = 0x00ffffff;
+		if (i >= 0 && i < image.getWidth() && j >= 0 && j < image.getHeight()) {
+			rgb = (Axis2.X.equals(axis)) ? image.getRGB(i, j) : image.getRGB(j, i) ;
+			rgb &= 0x00ffffff;
+		}
+		return rgb;
 	}
 
 	private void makeTemplate() {
@@ -538,15 +632,26 @@ public class AMIPixelTool extends AbstractAMITool {
 	private void writeProjections() throws IOException {
 		File outputDir = new File(imageDir, basename);
 		projectionsFile = new File(outputDir, projectionsName+"."+CTree.XML);
-		Element linesElement = new Element(LINES);
+		Element linesElement = new Element(PROJECTIONS);
 		linesElement.addAttribute(new Attribute(CTREE, cTree.getName()));
 		linesElement.addAttribute(new Attribute(IMAGE_DIR, imageDir.getName()));
 		linesElement.addAttribute(new Attribute(BASENAME, basename));
 		
 		linesElement.appendChild(createRangeElement(X_COORDS, X_COORD, xRangeList));
 		linesElement.appendChild(createRangeElement(Y_COORDS, Y_COORD, yRangeList));
-		linesElement.appendChild(createLineListListElement(horizontalLineListList, "horizontal"));
-		linesElement.appendChild(createLineListListElement(verticalLineListList, "vertical"));
+		if (lines) {
+			File llinesFile = new File(outputDir, LINES+"."+CTree.SVG);
+			SVGG hl = createLineListListElement(horizontalLineListList, "horizontal");
+			SVGG vl = createLineListListElement(verticalLineListList, "vertical");
+			SVGG g = new SVGG();
+			g.appendChild(hl.copy());
+			g.appendChild(vl.copy());
+			SVGSVG.wrapAndWriteAsSVG(g, llinesFile);
+			
+			linesElement.appendChild(vl);
+			linesElement.appendChild(hl);
+			
+		}
 	
 		if (intRangeListList != null) {
 			linesElement.appendChild(subImageProjections());
@@ -555,12 +660,19 @@ public class AMIPixelTool extends AbstractAMITool {
 		XMLUtil.debug(linesElement, projectionsFile, 1);
 	}
 
-	private Element createLineListListElement(List<SVGLineList> lineListList, String direction) {
-		Element element = new Element(direction+"lines");
+	private SVGG createLineListListElement(List<SVGLineList> lineListList, String direction) {
+		SVGG g = new SVGG(direction+"lines");
 		for (SVGLineList lineList : lineListList) {
-			element.appendChild(lineList.createSVGElement());
+			for (SVGLine line : lineList ) {
+				SVGLine ll = (SVGLine) line.copy();
+				if (ll.getStrokeWidth() < 0.1) {
+					ll.setStrokeWidth(0.5);
+				}
+				ll.setStroke(direction.equals("horizontal") ? "red" : "blue");
+				g.appendChild(ll);
+			}
 		}
-		return element;
+		return g;
 	}
 
 	private Element subImageProjections() {
@@ -629,7 +741,11 @@ public class AMIPixelTool extends AbstractAMITool {
 		} else {
 			yRangeList = maskArray;
 		}
-		return (lines) ? extractLineLists(maskArray, axis) : new ArrayList<>();
+		List<SVGLineList> lineListList = new ArrayList<>();
+		if (lines) {
+			lineListList = extractLineLists(maskArray, axis);
+		}
+		return lineListList;
 	}
 
 	private List<SVGLineList> extractLineLists(List<IntRange> rangeList, Axis2 axis) {
@@ -643,7 +759,7 @@ public class AMIPixelTool extends AbstractAMITool {
 
 	private SVGLineList extractLineList(IntRange projectionRange, Axis2 axis) {
 		int lineBase = projectionRange.getMin();
-		int lineWidth = projectionRange.getRange();
+		int lineWidth = projectionRange.getRange() + 1; // since range is inclusive
 		Int2Range boundingBox = Axis2.X.equals(axis) ? new Int2Range(projectionRange, new IntRange(0, image.getHeight())) : 
 			new Int2Range(new IntRange(0, image.getWidth()), projectionRange);
 		BufferedImage subImage = ImageUtil.clipSubImage(image, boundingBox);
@@ -663,7 +779,6 @@ public class AMIPixelTool extends AbstractAMITool {
 					}
 				}
 			}
-			LOG.trace(">"+lineList.size()+">>"+lineList.createSVGElement().toXML());
 		}
 		return lineList;
 	}

@@ -10,6 +10,8 @@ import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.junit.Test;
 
+import junit.framework.Assert;
+
 /** test cleaning.
  * 
  * @author pm286
@@ -50,6 +52,8 @@ public class AMIForestPlotTest {
 
 	private static final String PMC5882397 = "PMC5882397";
 	private static final String PMC5502154 = "PMC5502154";
+	private CProject cProject;
+	private CTree cTree;
 
 
 	@Test
@@ -180,14 +184,8 @@ public class AMIForestPlotTest {
 	 */
 	public void testSPSSSplit() {
 		
-
-		boolean useTree = true;
-		File projectDir = SPSS_DIR;
-		String treename = PMC5502154;
-		CTree cTree = new CTree(new File(projectDir, treename));
-		CProject cProject = new CProject(projectDir);
+		String source = createSourceFromProjectAndTree("-t",SPSS_DIR, PMC5502154);
 		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
-		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source
 			+ " --split x"
@@ -205,17 +203,8 @@ public class AMIForestPlotTest {
 	 */
 	public void testSPSSTableBBoxes() {
 		
-//		boolean useTree = true;
-		boolean useTree = false;
-//		File projectDir = SPSS_DIR;
-		File projectDir = SPSS_SIMPLE_DIR;
-//		File projectDir - SPSS_MULTIPLE_DIR;
-//		File projectDir - SPSS_SUBPLOT_DIR;
-		String treename = PMC5502154;
-		CTree cTree = new CTree(new File(projectDir, treename));
-		CProject cProject = new CProject(projectDir);
+		String source = createSourceFromProjectAndTree("-t",SPSS_SIMPLE_DIR, PMC5502154);
 		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
-		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source
 			+ " --table"
@@ -232,17 +221,9 @@ public class AMIForestPlotTest {
 	public void testSplitSPSSSimpleTableGraph() {
 		
 
-		boolean useTree = false;
-//		File projectDir = SPSS_DIR;
-		File projectDir = SPSS_SIMPLE_DIR;
-//		File projectDir - SPSS_MULTIPLE_DIR;
-//		File projectDir - SPSS_SUBPLOT_DIR;
-//		String treename = "PMC5502154";
-		String treename = "PMC5911624";
-		CTree cTree = new CTree(new File(projectDir, treename));
-		CProject cProject = new CProject(projectDir);
+		String source = createSourceFromProjectAndTree("-t",SPSS_SIMPLE_DIR, "PMC5911624");
+
 		AMIForestPlotTool forestPlotTool = new AMIForestPlotTool();
-		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source
 			+ TEMPLATE_XML
@@ -287,13 +268,8 @@ public class AMIForestPlotTest {
 	@Test
 	public void testSPSSImageProcessing() {
 		
-		boolean useTree = true;
-		File projectDir = SPSS_DIR;
-		String treename = PMC5502154;
-		CTree cTree = new CTree(new File(projectDir, treename));
-		CProject cProject = new CProject(projectDir);
+		String source = createSourceFromProjectAndTree("-t",SPSS_DIR, PMC5502154);
 		AMIImageTool imageTool = new AMIImageTool();
-		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
 		String cmd = ""
 			+ source
 			+ SHARP4
@@ -317,11 +293,7 @@ public class AMIForestPlotTest {
 //				true
 				false
 				;
-//		File projectDir = STATA_TOTAL_DIR;
-		File projectDir = STATA_TOTAL_EDITED_DIR;
-		String treename = PMC5882397;
-		CTree cTree = new CTree(new File(projectDir, treename));
-		CProject cProject = new CProject(projectDir);
+		String source = createSourceFromProjectAndTree("-t",STATA_TOTAL_EDITED_DIR, PMC5882397);
 		
 		boolean makeProject = 
 //				true
@@ -381,7 +353,6 @@ public class AMIForestPlotTest {
 		 * 
 		 */
 
-		String source = useTree ? "--ctree "+cTree.getDirectory() : "--cproject "+cProject.getDirectory();
 		String imageCmd = ""
 				+ source
 				+ SHARP4
@@ -437,12 +408,8 @@ public class AMIForestPlotTest {
 		// =====Pixel get subimage dimensions ======
 		String pixelCmd = ""
 			+ source
-			+ " --projections"
-			+ " --yprojection 0.8"
-			+ " --xprojection 0.5"
-			+ " --minheight -1"
-			+ " --rings -1"
-			+ " --islands 0"
+			+ " --projections --yprojection 0.8 --xprojection 0.5"
+			+ " --minheight -1 --rings -1 --islands 0"
 			+ " --inputname raw_thr_230_ds"
 			+ " --subimage statascale y 2 delta 10 projection x"
 			+ " --templateinput raw_thr_230_ds/projections.xml"
@@ -461,22 +428,13 @@ public class AMIForestPlotTest {
 	
 	@Test
 	public void testTemplateXML() {
-		File projectDir = STATA_TOTAL_EDITED_DIR;
-		CProject cProject = new CProject(projectDir);
-		String treename = PMC5882397;
-		CTree cTree = new CTree(new File(projectDir, treename));
-//		String source = "-t "+cTree.getDirectory();
-		String source = "-p "+cProject.getDirectory();
+		String source = createSourceFromProjectAndTree("-t",STATA_TOTAL_EDITED_DIR, PMC5882397);
 
 		// first make template.xml
 		String pixelCmd = ""
 			+ source
-			+ " --projections"
-			+ " --yprojection 0.8"
-			+ " --xprojection 0.5"
-			+ " --minheight -1"
-			+ " --rings -1"
-			+ " --islands 0"
+			+ " --projections --yprojection 0.8 --xprojection 0.5"
+			+ " --minheight -1 --rings -1 --islands 0"
 			+ " --inputname raw_thr_230_ds"
 			+ " --subimage statascale y 2 delta 10 projection x"
 			+ " --templateinput raw_thr_230_ds/projections.xml"
@@ -492,12 +450,7 @@ public class AMIForestPlotTest {
 	
 	@Test
 	public void testHOCROnSplitRegions() {
-		File projectDir = STATA_TOTAL_EDITED_DIR;
-		CProject cProject = new CProject(projectDir);
-		String treename = PMC5882397;
-		CTree cTree = new CTree(new File(projectDir, treename));
-		String source = "-t "+cTree.getDirectory();
-//		String source = "-p "+cProject.getDirectory();
+		String source = createSourceFromProjectAndTree("-t",STATA_TOTAL_EDITED_DIR, PMC5882397);
 
 //		String imageCmd = source + " --inputname raw.body.ltable --sharpen sharpen4 --threshold 120 --despeckle true";
 //		new AMIImageTool().runCommands(imageCmd);
@@ -510,12 +463,8 @@ public class AMIForestPlotTest {
 	
 	@Test
 	public void testHOCRandGOCR() {
-		File projectDir = STATA_TOTAL_EDITED_DIR;
-		CProject cProject = new CProject(projectDir);
-		String treename = PMC5882397;
-		CTree cTree = new CTree(new File(projectDir, treename));
-//		String source = "-t "+cTree.getDirectory();
-		String source = "-p "+cProject.getDirectory();
+		String source = createSourceFromProjectAndTree("-t",STATA_TOTAL_EDITED_DIR, PMC5882397);
+
 		String FORCEMAKE = " --forcemake";
 
 		// sharpen subimages
@@ -550,19 +499,12 @@ public class AMIForestPlotTest {
 	 * 
 	 */
 	public void testDisplay() {
-		File projectDir = STATA_TOTAL_EDITED_DIR;
-		CProject cProject = new CProject(projectDir);
-		String treename = PMC5882397;
-		CTree cTree = new CTree(new File(projectDir, treename));
-//			String source = "-t "+cTree.getDirectory();
-		String source = "-p "+cProject.getDirectory();
-		new AMIForestPlotTool().runCommands(source + ""
+		String source = createSourceFromProjectAndTree("-t",STATA_TOTAL_EDITED_DIR, PMC5882397);
+
+		new AMIDisplayTool().runCommands(source + ""
 				+ " --inputname raw.body.rtable_s4_thr_120_ds"
 				+ " --display .png hocr/hocr.svg gocr/gocr.svg "
-				+ " --summary raw.body.rtable_s4_thr_120_ds.html"
-// doesn't work - use width and height, then it might
-//				+ " --header raw.header_s4_thr_120_ds.png"
-//				+ " --template raw_thr_230_ds/template.xml"
+				+ " --aggregate raw.body.rtable_s4_thr_120_ds.html"
 				);
 		
 	}
@@ -581,12 +523,7 @@ public class AMIForestPlotTest {
 	
 	@Test
 	public void testSPSSSimple() {
-		File projectDir = SPSS_SIMPLE_DIR;
-		CProject cProject = new CProject(projectDir);
-		String treename = PMC5502154;
-		CTree cTree = new CTree(new File(projectDir, treename));
-//		String source = "-t "+cTree.getDirectory();
-		String source = "-p "+cProject.getDirectory();
+		String source = createSourceFromProjectAndTree("-t",SPSS_SIMPLE_DIR, PMC5502154);
 		String FORCEMAKE = "";
 //		String FORCEMAKE = " --forcemake";
 		
@@ -597,14 +534,14 @@ public class AMIForestPlotTest {
 		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 150" + DS);
 		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 180" + DS);
 		// display what we have got; later create an ami-display command
-		new AMIForestPlotTool().runCommands(source + ""
+		new AMIDisplayTool().runCommands(source + ""
 //				+ " --inputname raw.body.rtable_s4_thr_120_ds"
 				+ " --display "
 				+ " raw_s4_thr_120_ds.png"
 				+ " raw_s4_thr_150_ds.png"
 				+ " raw_s4_thr_180_ds.png"
 				+ " --orientation vertical"
-				+ " --summary raw_s4_120_150_180_ds.html");
+				+ " --aggregate raw_s4_120_150_180_ds.html");
 
 		new AMIPixelTool().runCommands(source
 			+ " --projections --yprojection 0.4 --xprojection 0.7 --lines"
@@ -631,8 +568,8 @@ public class AMIForestPlotTest {
  				+ " --inputname raw.header.graphheads_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
 		new AMIOCRTool().runCommands(source
 				+ " --inputname raw.body.table_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.body.graph_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
+//		new AMIOCRTool().runCommands(source
+//				+ " --inputname raw.body.graph_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
 		new AMIOCRTool().runCommands(source
 				+ " --inputname raw.footer.summary_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
 		new AMIOCRTool().runCommands(source
@@ -645,51 +582,50 @@ public class AMIForestPlotTest {
 		new AMIOCRTool().runCommands(source
 				+ " --inputname raw.body.table_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
 		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.body.graph_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source
 				+ " --inputname raw.footer.summary_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
 		new AMIOCRTool().runCommands(source
 				+ " --inputname raw.footer.scale_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
 		
 
-		new AMIForestPlotTool().runCommands(source + ""
-				+ " --inputname raw.body_s4_thr_150_ds"
-				+ " --display ../raw.body.png .png hocr/hocr.svg gocr/gocr.svg"
+		new AMIDisplayTool().runCommands(source + ""
+				+ " --inputname raw.body.table_s4_thr_150_ds"
+				+ " --display ../raw.body.table.png .png hocr/hocr.svg gocr/gocr.svg"
 				+ " --orientation vertical"
-				+ " --summary raw.body_s4_thr_150_ds.html"
-				+ " --table"
+				+ " --aggregate raw.body.table_s4_thr_150_ds.html"
+//				+ " --table"
 				);
 
-		new AMIForestPlotTool().runCommands(source + ""
-				+ " --inputname raw.header_s4_thr_150_ds"
-				+ " --display ../raw.header.png .png hocr/hocr.svg gocr/gocr.svg"
+		new AMIDisplayTool().runCommands(source + ""
+				+ " --inputname raw.header.tableheads_s4_thr_150_ds"
+				+ " --display ../raw.header.tableheads.png .png hocr/hocr.svg gocr/gocr.svg"
 				+ " --orientation vertical"
-				+ " --summary raw.header_s4_thr_150_ds.html"
+				+ " --aggregate raw.header.tableheads_s4_thr_150_ds.html"
 				);
 
 		/** analyze graph */
+		/** lines are written to "projections.xml" */
+		/** 0.02 is too small and picks up the squares. It might miss some very short lines */
 		new AMIPixelTool().runCommands(source
-				+ " --projections --yprojection 0.02  --lines"
+				+ " --projections --yprojection 0.05  --lines "
 				+ " --minheight -1 --rings -1 --islands 0"
 				+ " --inputname raw.body.graph_s4_thr_150_ds"
-//				+ " --templateinput raw.body.graph_s4_thr_150_ds/projections.xml"
-//				+ " --templateoutput template.xml"
-//				+ " --templatexsl /org/contentmine/ami/tools/spssTemplate.xsl"
+				);
+		assertImageDirFileExists("raw.body.graph_s4_thr_150_ds", "lines.svg");
+		assertImageDirFileExists("raw.body.graph_s4_thr_150_ds", "projections.xml");
+		
+		new AMIDisplayTool().runCommands(source + ""
+				+ " --inputname raw.body.graph_s4_thr_150_ds"
+				+ " --display lines.svg ../raw.body.png"
+				+ " --orientation overlap"
+//				+ " --aggregate raw.header.tableheads_s4_thr_150_ds.html"
 				);
 
-
 	}
-	
+
 	@Test
 	public void testSPSSTable1() {
-		File projectDir = SPSS_SIMPLE_DIR;
-		CProject cProject = new CProject(projectDir);
-		String treename = PMC5502154;
-		CTree cTree = new CTree(new File(projectDir, treename));
-		String source = "-t "+cTree.getDirectory();
-//		String source = "-p "+cProject.getDirectory();
+		String source = createSourceFromProjectAndTree("-t", SPSS_SIMPLE_DIR, PMC5502154);
 		
-if (false) {
 		new AMIForestPlotTool().runCommands(source + ""
 				+ " --inputname raw.body.table_s4_thr_150_ds"
 				+ " --table hocr/hocr.svg"
@@ -697,20 +633,69 @@ if (false) {
 				);
 
 		new AMIForestPlotTool().runCommands(source + ""
-				+ " --inputname raw.body.graph_s4_thr_150_ds"
-				+ " --table hocr/hocr.svg"
-				+ " --tableType hocr"
+				+ " --inputname raw.body.table_s4_thr_150_ds"
+				+ " --table hocr/gocr.svg"
+				+ " --tableType gocr"
 				);
-}
+
 		new AMIPixelTool().runCommands(source + ""
 				+ " --projections --yprojection 0.02  --lines"
 				+ " --minheight -1 --rings -1 --islands 0"
 				+ " --inputname raw.body.graph_s4_thr_150_ds"
 				);
 
+		new AMIDisplayTool().runCommands(source + ""
+				+ " --inputname raw.body.graph_s4_thr_150_ds"
+				+ " --display ../raw.header.tableheads.png .png hocr/hocr.svg gocr/gocr.svg"
+				+ " --orientation vertical"
+				+ " --aggregate raw.header.tableheads_s4_thr_150_ds.html"
+				);
+
+		/** compare how hocr and gocr tables correspond */
+		/** DEVELOP THIS !!*/
+		new AMIDisplayTool().runCommands(source + ""
+				+ " --inputname raw.body.table_s4_thr_150_ds"
+				+ " --display ../raw.body.table.png hocr/hocr.boxes.svg .png gocr/gocr.boxes.svg hocr/hocr.boxes.svg"
+				+ " --orientation vertical"
+				+ " --aggregate raw.body.table_s4_thr_150_ds.html"
+				);
+
+
+	}
+	
+	@Test
+	public void testRemoveLines() {
+		String source = createSourceFromProjectAndTree("-p", SPSS_SIMPLE_DIR, PMC5502154);
+
+		new AMIPixelTool().runCommands(source
+				+ " --projections --yprojection 0.05 --xprojection 0.5 --lines "
+				+ " --minheight -1 --rings -1 --islands 0"
+				+ " --inputname raw.body.graph_s4_thr_150_ds"
+				);
+
+		new AMIPixelTool().runCommands(source 
+				+ " --inputname raw.body.graph_s4_thr_150_ds"
+				+ " --minheight -1 --rings -1 --islands 0"
+				+ " --removelines raw.body.graph_s4_thr_150_ds/projections.xml"
+				+ " --overlap"
+				);
 	}
 
+
 	// ========================================
+
+	private void assertImageDirFileExists(String basename, String finalPath) {
+		File file = new File(new File(cTree.getPDFImagesImageDirectories().get(0), basename), finalPath);
+		Assert.assertTrue(finalPath, file.exists());
+	}
+	
+	private String createSourceFromProjectAndTree(String treeOrProject, File projectDir, String treename) {
+		cProject = new CProject(projectDir);
+		cTree = new CTree(new File(projectDir, treename));
+		String source = "-t".equals(treeOrProject) ? "-t "+cTree.getDirectory() : "-p "+cProject.getDirectory();
+		return source;
+
+	}
 
 	private void align(String s1, String s2) {
 		LevenshteinDistanceAligment<Character> align01 =
