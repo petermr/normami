@@ -81,9 +81,16 @@ public class AMIForestPlotTool extends AbstractAMITool {
 		LOG.setLevel(Level.DEBUG);
 	}
 	
-	private enum PlotType {
+	public enum ForestPlotType {
 		spss,
-		stata
+		stata;
+		public static ForestPlotType getPlotType(String s) {
+			if (s == null) return null;
+			if (s.toLowerCase().equals(spss.toString())) return spss;
+			if (s.toLowerCase().equals(stata.toString())) return stata;
+			return null;
+		}
+		
 	}
 	
 	private enum Axis {
@@ -139,7 +146,7 @@ public class AMIForestPlotTool extends AbstractAMITool {
     @Option(names = {"--plottype"},
     		arity = "1",
             description = "type of SPSS plot")
-    private PlotType plotType;
+    private ForestPlotType plotType;
 
     @Option(names = {"--radius"},
     		arity = "1",
@@ -404,13 +411,13 @@ public class AMIForestPlotTool extends AbstractAMITool {
 			this.basename = FilenameUtils.getBaseName(imageDir.toString());
 			System.out.println("======>"+imageDir.getName()+"/"+inputBasename);
 			if (segment) {	
-				LOG.debug("template "+templateFilename);
+				System.out.println("template "+templateFilename);
 				AbstractTemplateElement templateElement = 
 						AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
 				if (templateElement != null) {
 					templateElement.process();
 				} else {
-					System.out.println(">> canot read template "+templateFilename);
+//					System.out.println(">> cannot read template "+templateFilename);
 				}
 				continue;
 				

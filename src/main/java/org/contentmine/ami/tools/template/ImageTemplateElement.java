@@ -53,6 +53,7 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 	
 	@Override
 	public void process() {
+//		System.out.println(">> "+this.toXML());
 		boolean ok = true;
 		try {
 			parseAttributes();
@@ -112,7 +113,7 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 		}
 		borders = new RealArray(AbstractTemplateElement.getNonNullAttributeValue(this, BORDERS)).createIntArray();
 		if (borders.size() == 0) {
-			throw new RuntimeException("must have at least one border");
+			throw new RuntimeException("must have at least one border: "+this.toXML());
 		}
 		sections = new ArrayList<String>(Arrays.asList(
 				AbstractTemplateElement.getNonNullAttributeValue(this, SECTIONS).trim().split("\\s+")));

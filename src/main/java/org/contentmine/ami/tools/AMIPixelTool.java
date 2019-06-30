@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.imageio.stream.IIOByteBuffer;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -198,7 +199,8 @@ public class AMIPixelTool extends AbstractAMITool {
             description = "create a subimage and extract projections "
             		+ " '--subimage statascale ycoord 2 10 xprojection' means:"
             		+ "     use statascale protocol 2nd y horizntal line and add 10 pixels and project onto x."
-            		+ " Horrible kludge. The first token is the name, the others are more hacky."
+            		+ " Horrible kludge. The first token is the name, the others are more hacky. Will try to replace by"
+            		+ " creating actual subimages."
             		+ "")
     private List<String> subimageTokens = new ArrayList<String>();
 	
@@ -365,7 +367,14 @@ public class AMIPixelTool extends AbstractAMITool {
 		if (!imageFile.exists()) {
 			throw new RuntimeException("Image file does not exist: "+imageFile);
 		}
-		image = UtilImageIO.loadImage(imageFile.toString());
+		try {
+			
+			image = null;
+			image = UtilImageIO.loadImage(imageFile.toString());
+		} catch (IndexOutOfBoundsException ioobe) {
+			/** deep java image exception */
+			System.err.println("cannot read image: "+ioobe+" "+ioobe.getMessage()+" "+imageFile);
+		}
 		if (image == null) {
 			LOG.error("Null image for: "+imageFile );
 			image = ImageUtil.readImage(imageFile);
@@ -461,6 +470,10 @@ public class AMIPixelTool extends AbstractAMITool {
 	 */
 	private void removePixels(int start, int width, int limit0, int limit1, Axis2 axis) {
 		int BLACK = 0x00000000;
+		int WHITE = 0x00ffffff;
+		int RED = 0x00ff0000;
+		int LIGHTGRAY = 0x00aaaaaa;
+		int YELLOW = 0x00ffff00;
 		// note values are inclusive
 		for (int j = limit0; j < limit1; j++) {
 			int rgb0 = getColour(start - 1, j, axis);
@@ -475,7 +488,14 @@ public class AMIPixelTool extends AbstractAMITool {
 					} else if (y < 0 || y >= image.getHeight()) {
 						System.out.println("y "+y);
 					} else {
-						image.setRGB(x, y, 0x00ffffff);
+						int origRgb = image.getRGB(x, y) & 0x00ffffff;
+						if (origRgb == BLACK) {
+							image.setRGB(x, y, verbosity.length == 1 ? YELLOW : WHITE);
+						} else if (origRgb == WHITE) {
+							image.setRGB(x, y, verbosity.length == 1 ? LIGHTGRAY : WHITE);
+						} else {
+							
+						}
 					}
 				} else {
 					// keep black
@@ -583,12 +603,12 @@ public class AMIPixelTool extends AbstractAMITool {
 				List<IntRange> rangeList = X.equals(token) ? xRangeList : yRangeList;
 				coord1 = rangeList.size() < coordIndex ? null : rangeList.get(coordIndex - 1).getMax();
 				if (coord1 == null) {
-					LOG.warn("cannot find yRange: "+coordIndex+" "+yRangeList);
+					LOG.warn("subimage X/Y: cannot find yRange: "+coordIndex+" "+yRangeList);
 				}
 			} else if (DELTA.equals(token)) {
 				itoken++;
 				if (coord1 == null) {
-					LOG.warn("missing coord: "+subimageTokens);
+					LOG.warn("subimage delta: missing coord: "+subimageTokens);
 				} else {
 					delta = parseInt(subimageTokens.get(itoken));
 					coord2 = coord1 + delta;

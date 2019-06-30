@@ -80,8 +80,17 @@ public class ImageDirProcessor {
 
 	void processImageDir(File imageDir) {
 		this.currentImageDir = imageDir;
-//		System.out.println("image: "+imageDir.getName());
-		String inputname = amiTool.getInputBasename();
+		List<String> inputnameList = amiTool.getInputBasenameList();
+		if (inputnameList != null && inputnameList.size() > 0) {
+			for (String inputname : inputnameList) {
+				processInputName(imageDir, inputname);
+			}
+		} else {
+			processInputName(imageDir, amiTool.getInputBasename());
+		}
+	}
+
+	private void processInputName(File imageDir, String inputname) {
 		File imageFile = inputname != null ? new File(currentImageDir, inputname+".png") :
 			AbstractAMITool.getRawImageFile(imageDir);
 		if (imageFile == null || !imageFile.exists()) {

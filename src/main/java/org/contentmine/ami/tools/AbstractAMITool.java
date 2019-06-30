@@ -71,6 +71,21 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		EXCLUDE
 	}
 	
+	public enum Scope {
+		PROJECT("-p"),
+		TREE("-t"),
+		;
+		private String abbrev;
+		private Scope(String abbrev) {
+			this.abbrev = abbrev;
+		}
+		public String getAbbrev() {
+			return abbrev;
+		}
+		
+		
+	}
+	
 	public enum Verbosity {
 		TRACE(3),
 		DEBUG(2),
@@ -100,6 +115,12 @@ public abstract class AbstractAMITool implements Callable<Void> {
     				+ " However some files will have variable names (e.g. output of AMIImage) or from foreign sources or applications"
     		)
 	protected String inputBasename;
+
+	@Option(names = {"--inputnamelist"}, 
+    		arity="1..*",
+    		description = "list of inputnames; will iterate over them , eseentially compressing multiple commands into one. Experimental"
+    		)
+	protected List<String> inputBasenameList = null;
 
     @Option(names = {"-p", "--cproject"}, 
 		arity = "1",
@@ -437,6 +458,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	private void printGenericValues() {
         System.out.println("output basename     " + outputBasename);
         System.out.println("input basename      " + inputBasename);
+        System.out.println("input basename list " + inputBasenameList);
         System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
         System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
         System.out.println("cTreeList           " + prettyPrint(cTreeList));
@@ -618,6 +640,10 @@ public abstract class AbstractAMITool implements Callable<Void> {
 
 	public String getInputBasename() {
 		return inputBasename;
+	}
+
+	public List<String> getInputBasenameList() {
+		return inputBasenameList;
 	}
 
 	/** this may not be the best place to define this.

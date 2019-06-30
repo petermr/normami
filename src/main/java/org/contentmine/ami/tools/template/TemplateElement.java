@@ -20,7 +20,7 @@ public class TemplateElement extends AbstractTemplateElement {
 
 	@Override
 	public void process() {
-		LOG.debug("Processing templateElement");
+//		System.out.println(">> Processing templateElement");
 		super.process();
 	}
 	

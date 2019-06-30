@@ -85,12 +85,12 @@ public abstract class AbstractTemplateElement extends Element {
 		if (templateFilename != null) {
 			File templateFile = new File(currentDir, templateFilename);
 			if (!templateFile.exists()) {
-	//			System.out.println("no template.xml");
+				System.err.println("no template.xml: "+templateFile);
 			} else {
 				try {
 					templateElement = readTemplateElement(templateFile, currentDir);
 				} catch (RuntimeException e) {
-					System.out.println("Cannot read template>: "+templateFilename+" "+e.getMessage());
+					System.out.println("Cannot read template>: ("+templateFilename+") "+e.getClass()+" "+e.getMessage());
 				}
 				if (templateElement != null) {
 					templateElement.currentDir = currentDir;

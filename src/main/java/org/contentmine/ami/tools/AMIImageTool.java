@@ -431,7 +431,8 @@ public class AMIImageTool extends AbstractAMITool {
 		System.out.println("transformImages cTree: "+cTree.getName());
 		File pdfImagesDir = cTree.getExistingPDFImagesDir();
 		if (pdfImagesDir == null) {
-			throw new RuntimeException("Cannot find pdfImages for cTree "+cTree.getName());
+			System.err.println("Cannot find pdfImages for cTree "+cTree.getName());
+			return;
 		}
 		if (inputBasename == null) {
 			System.out.println("Assuming base: "+RAW);
@@ -531,12 +532,22 @@ public class AMIImageTool extends AbstractAMITool {
 	// ================= transform ===============
 	
 	private void runTransform(File imageDir) {
-		File imageFile = new File(imageDir, inputBasename+"."+CTree.PNG);
+		if (inputBasenameList != null && inputBasenameList.size() > 0) {
+			for (String inputBasename2 : inputBasenameList) {
+				runTransform(imageDir, inputBasename2);
+			}
+		} else{
+			runTransform(imageDir, inputBasename);
+		}
+	}
+
+	private void runTransform(File imageDir, String inputBasename2) {
+		File imageFile = new File(imageDir, inputBasename2+"."+CTree.PNG);
 		if (!imageFile.exists()) {
-			System.out.println("non-existent image file: "+imageFile);
+			System.out.println("non-existent image file: "+AMIImageTool.shortName(imageFile));
 			return;
 		}
-		System.out.println("transforming: "+imageFile.getParentFile().getName()+"/"+imageFile.getName());
+		System.out.println("transforming: "+AMIImageTool.shortName(imageFile));
 		BufferedImage image = ImageUtil.readImageQuietly(imageFile);
 		String basename = FilenameUtils.getBaseName(imageFile.toString());
 		if (image != null) {
@@ -577,9 +588,12 @@ public class AMIImageTool extends AbstractAMITool {
 				
 			}
 			File outfile = new File(imageDir, basename+"."+CTree.PNG);
-//			System.out.println("writing "+outfile.getAbsolutePath());
 			ImageIOUtil.writeImageQuietly(image, outfile);
 		}
+	}
+
+	public static String shortName(File imageFile) {
+		return imageFile.getParentFile().getName()+"/"+imageFile.getName();
 	}
 
 	private BufferedImage posterizeAndSave(BufferedImage image, File imageDir) {
@@ -594,7 +608,7 @@ public class AMIImageTool extends AbstractAMITool {
 		if (verbosity.length > 1) {
 			File outputPng = new File(imageDir, "erodeDilate"+"."+CTree.PNG);
 			LOG.debug("writing "+outputPng);
-			ImageUtil.writeImageQuietly(image, outputPng);
+//			ImageUtil.writeImageQuietly(image, outputPng);
 		}
 		return image;
 	}
