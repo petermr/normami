@@ -138,6 +138,11 @@ public class AMIOCRTool extends AbstractAMITool {
             description = "maximum size of small dimension after scaling")
     private Double maxsize = null;
 
+    @Option(names = {"--merge"},
+    		arity = "2..*",
+            description = "merge files/XML/SVG into single file")
+    private List<String> mergeNames = new ArrayList<>();
+
     @Option(names = {"--replace"},
     		arity = "2..*",
             description = "characters to substitute misreadings (even number of args, replace a(2n+1) by a(2n+2); )."
@@ -171,6 +176,7 @@ public class AMIOCRTool extends AbstractAMITool {
 	private SVGTextLineList textLineList;
 	private String newbasename;
 	public File imageFile;
+	private File imageDir;
 
 
 	/** used by some non-picocli calls
@@ -196,6 +202,7 @@ public class AMIOCRTool extends AbstractAMITool {
 		System.out.println("gocr                " + gocrPath);
 		System.out.println("html                " + outputHtml);
 		System.out.println("maxsize             " + maxsize);
+		System.out.println("mergeNames          " + mergeNames);
 		System.out.println("replace             " + replaceList);
 		System.out.println("scale               " + applyScale);
 		System.out.println("scalefactor         " + scalefactor);
@@ -234,7 +241,7 @@ public class AMIOCRTool extends AbstractAMITool {
 			return;
 		}
 		System.out.println(">"+newbasename+"/"+basename+">");
-		File imageDir = imageFile.getParentFile();
+		imageDir = imageFile.getParentFile();
 		if (gocrPath != null) {
 			GOCRConverter gocrConverter = new GOCRConverter(this);
 			if (replaceList.size() > 0) {
@@ -265,6 +272,17 @@ public class AMIOCRTool extends AbstractAMITool {
 		if (extractLines.contains(OcrType.hocr)) {
 			processHOCR(imageDir);
 		}
+		if (mergeNames.size() >= 2) {
+			merge();
+		}
+	}
+
+	private void merge() {
+		OcrMerger ocrMerger = new OcrMerger();
+		File imageSubDir = new File(imageDir, inputBasename);
+		ocrMerger.addFile(new File(imageSubDir, mergeNames.get(0)));
+		ocrMerger.addFile(new File(imageSubDir, mergeNames.get(1)));
+		ocrMerger.merge();
 	}
 
 	public File scaleAndWriteFile(File imageFile, String basename) {

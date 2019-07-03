@@ -501,7 +501,7 @@ public class AMIForestPlotTest {
 		String process = "s4_thr_" + thresh + "_ds";
 		String templprocess = "s4_thr_" + templthresh + "_ds";
 		new AMIPixelTool().runCommands(source
-				+ " --projections --yprojection 0.4 --xprojection 0.7 --lines"
+				+ " --projections --yprojection 0.8 --xprojection 0.6 --lines"
 				+ " --minheight -1 --rings -1 --islands 0"
 				+ " --inputname raw_"+process
 				+ " --subimage statascale y 1 delta 10 projection x"
@@ -565,11 +565,73 @@ public class AMIForestPlotTest {
 				);
 		
 	}
-
 	
-	private String createSourceFromProjectAndTree(Scope scope, ForestPlotType type) {
-		return createSourceFromProjectAndTree(scope.getAbbrev(), type);
+	@Test
+	public void testIntegrateHOCRGOCRScale() {
+		String source = createSourceFromProjectAndTree(AbstractAMITool.Scope.PROJECT, ForestPlotType.stata);
+		String thresh = "150";
+		String process = "s4_thr_" + thresh + "_ds";
+		
+// 		new AMIOCRTool().runCommands(source + " --inputname raw.scale_s4_thr_"+thresh+"_ds" + TESSERACT + EXTLINES_HOCR /*+" --forcemake"*/);
+// 		new AMIOCRTool().runCommands(source + " --inputname raw.scale_s4_thr_"+thresh+"_ds" + GOCR + EXTLINES_GOCR /*+" --forcemake"*/);
+
+ 		new AMIOCRTool().runCommands(source + ""
+ 				+ " --inputname raw.scale_"+process
+ 				+ " --merge hocr/hocr.svg gocr/gocr.svg"
+ 				);
+//		new AMIDisplayTool().runCommands(source + ""
+//				+ " --inputname raw.scale_"+process
+//				+ " --display .png hocr/hocr.svg gocr/gocr.svg"
+//				+ " --orientation vertical"
+//				+ " --aggregate raw.scale_"+process+".html"
+//				);
+		
 	}
+
+	@Test
+	/** thresh 150 leaves gaps in lines. 
+	 * 
+	 */
+	public void testStataThresholds() {
+		String treename = "PMC5992663";
+		String source = createSourceFromProjectAndTree(AbstractAMITool.Scope.TREE, ForestPlotType.stata , treename);
+
+		String th120 = "120";
+		String th150 = "150";
+		String th180 = "180";
+		String th230 = "230";
+		String sh120 = source + SHARP4 + THRESH + th120 + DS;
+		String sh150 = source + SHARP4 + THRESH + th150 + DS;
+		String sh180 = source + SHARP4 + THRESH + th180 + DS;
+		String sh230 = source + SHARP4 + THRESH + th230 + DS;
+		String sh = sh180;
+				;
+		new AMIImageTool().runCommands(sh);
+
+		/** make template - requires */
+		String pr120 = "s4_thr_" + th120 + "_ds";
+		String pr150 = "s4_thr_" + th150 + "_ds";
+		String pr180 = "s4_thr_" + th180 + "_ds";
+		String pr230 = "s4_thr_" + th230 + "_ds";
+		String basename = pr180;
+		
+		new AMIPixelTool().runCommands(source
+				+ " --projections --yprojection 0.8 --xprojection 0.6 --lines --mingap 3"
+				+ " --minheight -1 --rings -1 --islands 0"
+				+ " --inputnamelist raw_"+basename 
+				+ " --subimage statascale y 1 delta 10 projection x"
+				+ " --templateinput raw_"+basename+"/projections.xml"
+				+ " --templateoutput template.xml"
+				+ " --templatexsl /org/contentmine/ami/tools/stataTemplate1.xsl"
+				);
+		
+		/** segment image */
+		source = createSourceFromProjectAndTree(AbstractAMITool.Scope.TREE, ForestPlotType.stata , treename);
+		/** use the template above on the current project/trees */
+		new AMIForestPlotTool().runCommands(source + " --segment --template raw_"+basename+"/template.xml");
+
+				
+}
 
 	@Test
 	public void testAlign() {
@@ -798,12 +860,32 @@ public class AMIForestPlotTest {
 		Assert.assertTrue(finalPath, file.exists());
 	}
 
+	private String createSourceFromProjectAndTree(Scope scope, ForestPlotType type, String treename) {
+		return createSourceFromProjectAndTree(scope.getAbbrev(), type, treename);
+	}
+	
 	private String createSourceFromProjectAndTree(String treeOrProject, ForestPlotType type) {
+		return createSourceFromProjectAndTree(treeOrProject, type, (String) null);
+	}
+	
+	private String createSourceFromProjectAndTree(Scope scope, ForestPlotType type) {
+		return createSourceFromProjectAndTree(scope.getAbbrev(), type);
+	}
+
+
+
+	private String createSourceFromProjectAndTree(String treeOrProject, ForestPlotType type, String treename) {
 		if (type == null) return null;
 		if (type.equals(ForestPlotType.stata)) {
-			return createSourceFromProjectAndTree(treeOrProject, STATA_TOTAL_EDITED_DIR, PMC5882397);
+			if (treename == null) {
+				treename = PMC5882397;
+			}
+			return createSourceFromProjectAndTree(treeOrProject, STATA_TOTAL_EDITED_DIR, treename);
 		}
 		if (type.equals(ForestPlotType.spss)) {
+			if (treename == null) {
+				treename = PMC5502154;
+			}
 			return createSourceFromProjectAndTree(treeOrProject, SPSS_SIMPLE_DIR, PMC5502154);
 		}
 		return null;

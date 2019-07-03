@@ -10,9 +10,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-import javax.imageio.stream.IIOByteBuffer;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -31,6 +31,7 @@ import org.contentmine.eucl.euclid.Int2;
 import org.contentmine.eucl.euclid.Int2Range;
 import org.contentmine.eucl.euclid.IntArray;
 import org.contentmine.eucl.euclid.IntRange;
+import org.contentmine.eucl.euclid.IntRangeComparator;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Range;
 import org.contentmine.eucl.euclid.RealArray;
@@ -138,6 +139,14 @@ public class AMIPixelTool extends AbstractAMITool {
     		arity = "0",
             description = "extract lines from projections. Result is set of lines in SVGLine format")
     private boolean lines = false;;
+	
+    @Option(names = {"--mingap"},
+    		arity = "1",
+    		defaultValue = "1",
+            description = "minimum number of pixels separating islands or lines. Only currently for lines. "
+            		+ "two lines separated by < mingap will be joined, so mingap=1 means all disjoint objects are"
+            		+ "retained. mingap=2 will join lines (2,8) and (10,20) to create (2,20)")
+    private int mingap;
 	
     @Option(names = {"--maxislands"},
     		arity = "1",
@@ -312,6 +321,7 @@ public class AMIPixelTool extends AbstractAMITool {
 		System.out.println("basename             " + basename);
 		System.out.println("lines                " + lines);
 		System.out.println("maxislands           " + maxislands);
+		System.out.println("mingap               " + mingap);
 		System.out.println("minwidth             " + minwidth);
 		System.out.println("minheight            " + minheight);
 		System.out.println("maxIslandCount       " + maxIslandCount);
@@ -788,19 +798,55 @@ public class AMIPixelTool extends AbstractAMITool {
 			LOG.debug("Cannot clip: "+boundingBox);
 		} else {
 			List<List<IntRange>> rangeListList = extractProjectionRangeLists(subImage, lineProjectionFactor , lineProjectionFactor);
+			Real2 lastXY = null;
+			SVGLine line = null;
+			double eps = 0.0001; // to make gap inclusive
 			for (List<IntRange> rangeList : rangeListList) {
+				IntRange.joinRanges(rangeList, mingap);
 				for (IntRange rng : rangeList) {
-					Real2 x1 = Axis2.Y.equals(axis) ? new Real2(rng.getMin(), lineBase) : new Real2(lineBase, rng.getMin()); 
-					Real2 x2 = Axis2.Y.equals(axis) ? new Real2(rng.getMax(), lineBase) : new Real2(lineBase, rng.getMax()); 
-					SVGLine line = new SVGLine(x1, x2);
-					if (line.getLength() > minLineLength) {
-						line.setWidth(lineWidth);
-						lineList.add(line);
+					Real2 xy1 = Axis2.Y.equals(axis) ? new Real2(rng.getMin(), lineBase) : new Real2(lineBase, rng.getMin()); 
+					Real2 xy2 = Axis2.Y.equals(axis) ? new Real2(rng.getMax(), lineBase) : new Real2(lineBase, rng.getMax()); 
+					boolean isJoinedInDirection = isJoinedInDirection(lastXY, xy1, axis, ((double) mingap) + eps);
+					if (isJoinedInDirection) {
+						System.out.println("\n>> " + line +" "+ xy1+" ... "+xy2);
+						line.setXY(xy2, (axis.equals(Axis2.X.equals(axis)) ? 0 : 1 ));
+						lastXY = xy2;
+						System.out.println(">>JOIN>> "+line);
+					} else {
+						System.out.println("last>>>"+line);
+						line = new SVGLine(xy1, xy2);
+						lastXY = xy2;
+						if (line.getLength() > minLineLength) {
+							line.setWidth(lineWidth);
+							lineList.add(line);
+						}
 					}
 				}
 			}
 		}
 		return lineList;
+	}
+
+	/** are the ends of 2 colinear lines less than mingap apart?
+	 * assume lastXY is end of preceding line an xy2 start of next
+	 * expected that lines are in sorted order
+	 * 
+	 * might also be useful for points.
+	 * 
+	 * @param lastXY
+	 * @param xy2
+	 * @param axis
+	 * @return
+	 */
+	private static  boolean isJoinedInDirection(Real2 xy1, Real2 xy2, Axis2 axis, double gap) {
+		if (xy1 == null || xy2 == null || axis == null) return false;
+		Double lastCoord = (Axis2.Y.equals(axis) ? xy1.getX() : xy1.getY());
+		Double coord = (Axis2.Y.equals(axis) ? xy2.getX() : xy2.getY());
+		boolean isJoined = false;
+		if (lastCoord < coord && (coord - lastCoord) < gap) {
+			isJoined = true;
+		};
+		return isJoined;
 	}
 
 	private void analyzeRings() {

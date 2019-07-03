@@ -191,6 +191,7 @@ public class HOCRConverter extends CommandRunner {
 //				File imageDir = hocrDir.getParentFile().getParentFile();
 				File textLineListFilename = HOCRConverter.getTextLineListFilename(imageDir);
 				SVGElement createSVGElement = textLineList.createSVGElement();
+//				LOG.debug(textLineListFilename+" "+"tll "+textLineList.toXML());
 				SVGSVG.wrapAndWriteAsSVG(createSVGElement, textLineListFilename);
 //				System.out.println(">svg>"+textLineListFilename);
 			} catch (FileNotFoundException e) {
@@ -226,6 +227,7 @@ public class HOCRConverter extends CommandRunner {
 		SVGSVG svgSvg = (SVGSVG) hocrReader.getOrCreateSVG();
 		File parentFile = amiocrTool.outputHOCRFile.getParentFile();
 		File svgFile = new File(parentFile, basename+"."+CTree.SVG);
+//		LOG.debug("SVG: "+svgFile+" "+svgSvg.toXML());
 		SVGSVG.wrapAndWriteAsSVG(svgSvg, svgFile);
 		amiocrTool.htmlBody = hocrReader.getOrCreateHtmlBody();
 		// debug
@@ -265,7 +267,7 @@ public class HOCRConverter extends CommandRunner {
 		// messy: tesseract filenames don't have html extension
 		amiocrTool.outputHOCRFile = createOutputHtmlFileDescriptorForHOCR_HTML(outputDir);
 		this.setTesseractPath(amiocrTool.tesseractPath);
-		if (!CMFileUtil.shouldMake(amiocrTool.outputHOCRFile, imageFile)) {
+		if (!amiocrTool.getForceMake() && !CMFileUtil.shouldMake(amiocrTool.outputHOCRFile, imageFile)) {
 			System.out.println(">skip hocr>");
 			return;
 		}

@@ -6,7 +6,6 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.eucl.xml.XMLUtil;
 
-import net.sf.saxon.functions.Abs;
 import nu.xom.Element;
 import nu.xom.Elements;
 import nu.xom.Node;
@@ -45,8 +44,10 @@ public abstract class AbstractTemplateElement extends Element {
 				templateElement = new TemplateElement();
 			} else if (ImageTemplateElement.TAG.equals(tag)) {
 				templateElement = new ImageTemplateElement();
+			} else if (MessageTemplateElement.TAG.equals(tag)) {
+				templateElement = new MessageTemplateElement();
 			} else {
-				throw new RuntimeException("Unknown tag: "+tag);
+				System.err.println("Unknown tag: "+tag);
 			}
 			if (templateElement != null) {
 				templateElement.setCurrentDir(currentDir);
@@ -75,6 +76,7 @@ public abstract class AbstractTemplateElement extends Element {
 	protected static String getNonNullAttributeValue(Element element, String attname) {
 		String attval = element == null || attname == null ? null : element.getAttributeValue(attname);
 		if (attval == null) {
+			LOG.debug(element.toXML());
 			throw new RuntimeException("Must give "+attname+" attribute");
 		}
 		return attval;
