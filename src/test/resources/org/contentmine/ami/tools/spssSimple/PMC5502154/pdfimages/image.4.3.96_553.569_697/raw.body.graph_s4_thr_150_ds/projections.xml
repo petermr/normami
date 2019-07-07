@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projections height="271" width="271" cTree="PMC5502154" imageDir="image.4.3.96_553.569_697" basename="raw.body.graph_s4_thr_150_ds">
+ <xcoords>
+  <xcoord min="247" max="248"/>
+ </xcoords>
+ <ycoords>
+  <ycoord min="9" max="9"/>
+  <ycoord min="29" max="30"/>
+  <ycoord min="49" max="50"/>
+  <ycoord min="70" max="71"/>
+  <ycoord min="90" max="91"/>
+  <ycoord min="111" max="112"/>
+  <ycoord min="131" max="132"/>
+  <ycoord min="152" max="153"/>
+  <ycoord min="172" max="173"/>
+  <ycoord min="193" max="194"/>
+  <ycoord min="231" max="238"/>
+ </ycoords>
+ <g class="verticallines" xmlns="http://www.w3.org/2000/svg">
+  <line x1="247.0" y1="0.0" x2="247.0" y2="270.0" style="stroke:blue;stroke-width:2.0;"/>
+ </g>
+ <g class="horizontallines" xmlns="http://www.w3.org/2000/svg">
+  <line x1="210.0" y1="9.0" x2="342.0" y2="9.0" style="stroke:red;stroke-width:1.0;"/>
+  <line x1="68.0" y1="49.0" x2="319.0" y2="49.0" style="stroke:red;stroke-width:2.0;"/>
+  <line x1="236.0" y1="70.0" x2="401.0" y2="70.0" style="stroke:red;stroke-width:2.0;"/>
+  <line x1="77.0" y1="90.0" x2="340.0" y2="90.0" style="stroke:red;stroke-width:2.0;"/>
+  <line x1="95.0" y1="131.0" x2="399.0" y2="131.0" style="stroke:red;stroke-width:2.0;"/>
+  <line x1="155.0" y1="152.0" x2="333.0" y2="152.0" style="stroke:red;stroke-width:2.0;"/>
+  <line x1="174.0" y1="193.0" x2="292.0" y2="193.0" style="stroke:red;stroke-width:2.0;"/>
+ </g>
+</projections>

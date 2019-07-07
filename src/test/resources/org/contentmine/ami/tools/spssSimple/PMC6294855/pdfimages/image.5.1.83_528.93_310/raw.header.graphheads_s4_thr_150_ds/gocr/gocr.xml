@@ -1,0 +1,33 @@
+<page x="0" y="0" dx="0" dy="0">
+<block x="0" y="0" dx="0" dy="0">
+<line x="76" y="7" dx="47" dy="7" value="1">
+ <space x="76" y="7" dx="-1" dy="7" />
+ <space x="77" y="7" dx="-2" dy="7" />
+ <space x="76" y="7" dx="12" dy="7" />
+ <box x="76" y="7" dx="12" dy="7" value="O9" numac="2" weights="96,96" achars="O9,O8" />
+ <box x="89" y="7" dx="4" dy="7" value="_" />
+ <box x="94" y="8" dx="4" dy="6" value="g" numac="2" weights="98,95" achars="g,q" />
+ <box x="102" y="7" dx="5" dy="6" value="R" numac="1" weights="100" achars="R" />
+ <box x="108" y="8" dx="4" dy="6" value="t" numac="1" weights="98" achars="t" />
+ <box x="113" y="7" dx="2" dy="7" value="l" numac="2" weights="98,91" achars="l,1" />
+ <box x="116" y="7" dx="2" dy="6" value="i" numac="2" weights="99,93" achars="i,j" />
+ <box x="118" y="8" dx="5" dy="6" value="o" numac="5" weights="99,98,98,98,96" achars="o,O,0,9,a" />
+</line>
+<line x="60" y="18" dx="82" dy="8" value="2">
+ <space x="60" y="18" dx="1" dy="7" />
+ <box x="60" y="18" dx="1" dy="7" value="l" numac="4" weights="98,97,96,84" achars="l,I,|,1" />
+ <box x="62" y="18" dx="6" dy="7" value="_" />
+ <box x="68" y="24" dx="2" dy="1" value="." numac="1" weights="99" achars="." />
+ <box x="73" y="19" dx="11" dy="6" value="R8" numac="2" weights="96,94" achars="R8,ii8" />
+ <box x="85" y="20" dx="4" dy="5" value="n" numac="2" weights="96,96" achars="n,N" />
+ <box x="90" y="18" dx="5" dy="7" value="d" numac="1" weights="100" achars="d" />
+ <box x="95" y="20" dx="5" dy="5" value="o" numac="4" weights="100,99,99,98" achars="o,O,0,a" />
+ <box x="101" y="20" dx="7" dy="5" value="m" numac="1" weights="100" achars="m" />
+ <box x="109" y="24" dx="1" dy="1" value="." numac="2" weights="99,97" achars=".,," />
+ <box x="113" y="18" dx="5" dy="7" value="4" numac="4" weights="99,97,93,85" achars="4,9,g,0" />
+ <box x="119" y="18" dx="12" dy="7" value="X" numac="1" weights="95" achars="X" />
+ <box x="134" y="18" dx="5" dy="7" value="e" numac="1" weights="98" achars="e" />
+ <box x="140" y="19" dx="2" dy="6" value="|" numac="4" weights="99,98,83,59" achars="|,l,1,I" />
+</line>
+</block>
+</page>

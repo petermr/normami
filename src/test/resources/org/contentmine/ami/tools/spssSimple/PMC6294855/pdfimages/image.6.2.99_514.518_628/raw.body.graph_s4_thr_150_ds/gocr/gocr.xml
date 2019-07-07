@@ -1,0 +1,15 @@
+<page x="0" y="0" dx="0" dy="0">
+<block x="0" y="0" dx="0" dy="0">
+<line x="311" y="0" dx="-310" dy="0" value="0">
+ <space x="150" y="0" dx="1" dy="131" />
+ <box x="150" y="0" dx="1" dy="131" value="(PICTURE)" />
+ <space x="152" y="21" dx="21" dy="5" />
+ <box x="174" y="21" dx="11" dy="5" value="t" numac="1" weights="97" achars="t" />
+ <box x="176" y="69" dx="13" dy="5" value="+" numac="2" weights="100,97" achars="+,t" />
+ <box x="179" y="85" dx="6" dy="6" value="_" numac="1" weights="76" achars="&#x2022;" />
+ <box x="180" y="37" dx="10" dy="5" value="t" numac="1" weights="97" achars="t" />
+ <box x="181" y="112" dx="9" dy="14" value="t" numac="1" weights="98" achars="t" />
+ <box x="189" y="54" dx="16" dy="4" value="+" numac="3" weights="100,97,95" achars="+,t,r" />
+</line>
+</block>
+</page>

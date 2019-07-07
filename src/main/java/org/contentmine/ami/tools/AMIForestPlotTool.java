@@ -72,7 +72,7 @@ version = "ami-forext 0.1",
 description = "analyzes ForestPlot images; uses template.xml to steer the operations "
 )
 
-public class AMIForestPlotTool extends AbstractAMITool {
+public class AMIForestPlotTool extends AbstractAMITool implements HasImageDir {
 
 	static final Logger LOG = Logger.getLogger(AMIForestPlotTool.class);
 	private static final String TEMPLATE_XML = "template.xml";
@@ -172,7 +172,9 @@ public class AMIForestPlotTool extends AbstractAMITool {
 
     @Option(names = {"--tableType"},
     		arity = "1..*",
-            description = "string describing type of table (experimental) - e.g 'leftjust'") List<String> tableTypeList = new ArrayList<>();
+            description = "string describing type of table (experimental) - e.g 'leftjust'"
+            )
+    List<String> tableTypeList = new ArrayList<>();
 
     @Option(names = {"--template"},
     		arity = "1",
@@ -400,238 +402,75 @@ public class AMIForestPlotTool extends AbstractAMITool {
 	    }
     }
 
-	public void processTree() {
-		System.out.println("cTree>> "+cTree.getName());
-//		summaryFileList = new ArrayList<>();
-
-		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
-		Collections.sort(imageDirs);
-		for (int i = 0; i < imageDirs.size(); i++) {
-			imageDir = imageDirs.get(i);
-			this.basename = FilenameUtils.getBaseName(imageDir.toString());
-			System.out.println("======>"+imageDir.getName()+"/"+inputBasename);
-			if (segment) {	
-				System.out.println("template "+templateFilename);
-				AbstractTemplateElement templateElement = 
-						AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
-				if (templateElement != null) {
-					templateElement.process();
-				} else {
-//					System.out.println(">> cannot read template "+templateFilename);
-				}
-				continue;
-				
-			}
-//
-//			if (displayList != null && displayList.size() > 0) {
-//				displayFiles();
-//			}
-//
-			if (useHocr) {
-				File textLineListFile = HOCRConverter.getTextLineListFilename(imageDir);
-				createForestPlotFromImageText(textLineListFile);
-			} else if (false) {
-				File imageFile = getRawImageFile(imageDir);
-				createForestPlotFromImage(imageFile);
-			}
-			if (table != null) {
-				File svgFile = new File(new File(imageDir, inputBasename), table);
-				if (!svgFile.exists()) {
-					System.out.println("no file>: "+svgFile);
-				} else {
-					TableExtractor tableExtractor = new TableExtractor();
-					tableExtractor.setTableTypeList(tableTypeList);
-					tableExtractor.extractTable(svgFile);
-				}
-			}
-//			addSummaryFile();
-		}
-//		summarizeFiles();
-		LOG.debug(">abbrev>"+MultisetUtil.createListSortedByCount(abbrevSet));
+	protected void processTree() {
+		ImageDirProcessor imageDirProcessor = new ImageDirProcessor(this, cTree);
+		imageDirProcessor.processImageDirs();
+		
 	}
 
-//	private SVGElement readSVGFile(String ocrSvgFile) {
-//		File ocrFile = new File(imageDir, inputBasename+"/"+ocrSvgFile);
-//		return !ocrFile.exists() ? null : SVGElement.readAndCreateSVG(ocrFile);
-//	}
-
-//	private void addSummaryFile() {
-//		if (summaryFilename != null) {
-//			File summaryFile = new File(imageDir, summaryFilename);
-//			if (summaryFile.exists()) {
-//				summaryFileList.add(summaryFile);
-//			}
-//		}
-//	}
-//	
-//	private void summarizeFiles() {
-//		if (summaryFileList != null) {
-//			HtmlHtml html = new HtmlHtml();
-//			HtmlBody body = html.getOrCreateBody();
-//			HtmlUl ul = new HtmlUl();
-//			body.appendChild(ul);
-//			for (File summarizedFile : summaryFileList) {
-//				createAndAddLinkToFile(ul, summarizedFile);
-//			}
-//			if (summaryFilename == null) {
-//				System.out.println(">> null sumary");
-//			} else {
-//				File summaryHtmlFile = new File(imageDir.getParent(), summaryFilename);
-//				XMLUtil.writeQuietly(html, summaryHtmlFile, 1);
-//			}
-//		}
-//	}
+//	public void processTree() {
+//		System.out.println("cTree>> "+cTree.getName());
+////		summaryFileList = new ArrayList<>();
 //
-//	private void createAndAddLinkToFile(HtmlUl ul, File summaryFile) {
-//		String imageDirname = summaryFile.getParentFile().getName();
-//		HtmlLi li = new HtmlLi();
-//		ul.appendChild(li);
-//		HtmlA a = new HtmlA();
-//		a.setHref(""+imageDirname+"/"+summaryFile.getName());
-//		a.setTarget("_blank");
-//		a.appendChild(imageDirname);
-//		li.appendChild(a);
-//	}
-//
-//	private void displayFiles() {
-//		HtmlTable table = createDisplayTable();
-//		String filename = inputBasename != null ? inputBasename+"."+CTree.HTML : summaryFilename;
-//		File htmlFile = new File(imageDir, filename);
-//		try {
-//			XMLUtil.debug(table, htmlFile, 1);
-//		} catch (IOException e) {
-//			throw new RuntimeException("Cannot write: "+htmlFile);
+//		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
+//		Collections.sort(imageDirs);
+//		for (int i = 0; i < imageDirs.size(); i++) {
+//			imageDir = imageDirs.get(i);
+//			this.basename = FilenameUtils.getBaseName(imageDir.toString());
+//			System.out.println("======>"+imageDir.getName());
+//			processImageDirCallback();
 //		}
 //	}
 
-//	private HtmlTable createDisplayTable() {
-//		HtmlTable table = new HtmlTable();
-//		createAndFillHead(table);
-//		createAndFillBody(table);
-//		return table;
-//	}
-//
-//	private void createAndFillBody(HtmlTable table) {
-//		HtmlTbody body = table.getOrCreateTbody();
-//		if (Orientation.horizontal.equals(orientation)) {
-//			createHorizontalDisplay(body);
-//		} else {
-//			createVerticalDisplay(body);
-//		}
-//	}
-//
-//	private void createHorizontalDisplay(HtmlTbody body) {
-//		HtmlTr tr = new HtmlTr();
-//		body.appendChild(tr);
-//		for (int i = 0; i < displayList.size(); i++) {
-//			HtmlTd td = createTd(displayList.get(i));
-//			tr.appendChild(td);
-//		}
-//	}
-//
-//	private void createVerticalDisplay(HtmlTbody body) {
-//		for (int i = 0; i < displayList.size(); i++) {
-//			HtmlTr tr = new HtmlTr();
-//			body.appendChild(tr);
-//			HtmlTd td = createTd(displayList.get(i));
-//			tr.appendChild(td);
-//		}
-//	}
-//
-//	private HtmlTd createTd(String filename) {
-//		/** create full file. relative to imageDir 
-//		 *    if (inputBasename == null) imageDir/filename
-//		 *    If filename is ".foo", creates imageDir/inputBasename.foo
-//		 *    else treat as subdirectory/ => imageDir/inputBasename/filename
-//		 */
-//		File displayFile = null;
-//		String displayFilename = imageDir+"/"+filename;
-//		if (inputBasename == null) {
-//			displayFile = new File(imageDir, filename);
-//		} else {
-//			File subdir = new File(imageDir, inputBasename);
-//		    if (filename.startsWith("../")) {
-//		    	filename = filename.substring(3);
-//		    	displayFile = new File(imageDir, filename);
-//				displayFilename = filename;
-//		    } else if (filename.startsWith(".")) {
-//			    	String imageFilename = inputBasename+filename;
-//					displayFile = new File(imageDir, imageFilename);
-//					displayFilename = imageFilename;
-//		    } else {
-//		    	displayFile = new File(subdir, filename);
-//		    	displayFilename = inputBasename + "/" + filename;
-//		    }
-//		}
-//		HtmlTd td = createCell(displayFilename, displayFile);
-//		return td;
-//	}
-//
-//	private Integer getFirstYOffset() {
-//		Integer offset = 0;
-//		AbstractTemplateElement templateElement = 
-//				AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
-//		if (templateElement != null) {
-//			String borderString = XMLUtil.getSingleValue(templateElement, "/template/image/@borders");
-//			String[] borders = borderString == null ? null : borderString.split("\\s+");
-//			if (borders != null && borders.length == 2) {
-//				String s = borders[0];
-//				try {
-//					offset = Integer.parseInt(s);
-//				} catch (NumberFormatException nfe) {
-//					System.out.println("Cannot parse "+Arrays.asList(borders));
-//				}
-//			}
-//		}
-//		return offset;
-//	}
-//
-//	private HtmlTd createCell(String name, File file) {
-////		String name = displayFile.getName();
-//		HtmlTd td = new HtmlTd();
-//		if (name.endsWith("."+CTree.PNG)) {
-//			HtmlImg img = new HtmlImg();
-//			img.setSrc(name);
-//			td.appendChild(img);
-//		} else if (name.endsWith("."+CTree.SVG)) {
-//
-//			Integer offset = getFirstYOffset();
-//
-//			/**<object type="image/svg+xml" data="image.svg">
-//			  Your browser does not support SVG
-//			</object>*/
-//			// this doesn't work
-////			HtmlObject obj = new HtmlObject();
-////			obj.setType(HtmlObject.SVGTYPE);
-////			obj.setSrc(name);
-//			if (!file.exists()) {
-//				System.out.println("no file>"+file);
-//				td.appendChild("no file: "+file);
-//			} else {
-//				Element svg = XMLUtil.parseQuietlyToRootElement(file);
-//				SVGSVG svgCopy = (SVGSVG) SVGElement.readAndCreateSVG(svg);
-//				SVGG g = (SVGG) svgCopy.getChildElements().get(0);
-//				// BUG in offset
-////				offset = null; 
-//				offset = 0; 
-//				Transform2 t2 = new Transform2(new Vector2(0, (offset == null) ? -30 : -1 * offset));
-//				g.setTransform(t2);
-//				td.appendChild(svgCopy);
-//			}
-//		}
-//		return td;
-//		
-//	}
-//
-//	private void createAndFillHead(HtmlTable table) {
-//		HtmlThead thead = table.getOrCreateThead();
-//		HtmlTr headTr = thead.getOrCreateChildTr();
-//		for (int i = 0; i < displayList.size(); i++) {
-//			HtmlTh th = new HtmlTh();
-//			th.appendChild(displayList.get(i));
-//			headTr.appendChild(th);
-//		}
-//	}
+	@Override
+	public void processImageDir() {
+		LOG.error("Must override this in:"+this.getClass().getName());
+	}
+
+	@Override
+	public File getImageFile(File imageDir, String inputname) {
+		File imageFile = inputname != null ? new File(imageDir, inputname) :
+			AbstractAMITool.getRawImageFile(imageDir);
+		return imageFile;
+	}
+
+
+	@Override
+	public void processImageDir(File imageFile) {
+		LOG.warn("must implement processImageDir");
+	}
+
+	private void processImageDirCallback() {
+		if (segment) {	
+			AbstractTemplateElement templateElement = 
+					AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
+			if (templateElement != null) {
+				templateElement.process();
+			}
+			return;
+			
+		}
+		if (useHocr) {
+			File textLineListFile = HOCRConverter.getTextLineListFilename(imageDir);
+			createForestPlotFromImageText(textLineListFile);
+		} else if (false) {
+			File imageFile = getRawImageFile(imageDir);
+			createForestPlotFromImage(imageFile);
+		}
+		if (table != null) {
+			if (inputBasename == null) {
+				throw new RuntimeException("Must give inputbase");
+			}
+			File svgFile = new File(new File(imageDir, inputBasename), table);
+			if (!svgFile.exists()) {
+				System.out.println("no file>: "+svgFile);
+			} else {
+				TableExtractor tableExtractor = new TableExtractor();
+				tableExtractor.setTableTypeList(tableTypeList);
+				tableExtractor.extractTable(svgFile);
+			}
+		}
+	}
 
 	private void createForestPlotFromImageText(File textLineListFile) {
 		SVGElement svgElement = null;

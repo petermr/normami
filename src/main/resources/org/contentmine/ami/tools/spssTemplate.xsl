@@ -53,14 +53,13 @@
  </verticallines>
 </projections>
 -->
-<xsl:variable name="horizontallines" select="projections/horizontallines"/>
-<xsl:variable name="hlines" select="$horizontallines//*[local-name()='line']"/>
-<xsl:variable name="verticallines" select="projections/verticallines"/>
-<xsl:variable name="vlines" select="$verticallines//*[local-name()='line']"/>
 
 <xsl:variable name="xcoords" select="projections/xcoords"/>
 <xsl:variable name="ycoords" select="projections/ycoords"/>
 <xsl:variable name="subImage" select="projections/subImage"/>
+<xsl:variable name="horizontallines" select="projections/svg:g[@class='horizontallines']"/>
+<xsl:variable name="verticallines" select="projections/svg:g[@class='verticallines']"/>
+
 <xsl:variable name="y1" select="$ycoords/ycoord[1]"/>
 <xsl:variable name="y2" select="$ycoords/ycoord[2]"/>
  <xsl:variable name="headerBottom" select="$y1/@min - 1"/>

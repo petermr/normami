@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.eucl.euclid.RealArray;
 import org.contentmine.eucl.euclid.Transform2;
 import org.contentmine.eucl.euclid.Vector2;
 import org.contentmine.eucl.xml.XMLUtil;
@@ -32,6 +33,7 @@ import org.contentmine.graphics.svg.SVGG;
 import org.contentmine.graphics.svg.SVGSVG;
 
 import nu.xom.Element;
+import nu.xom.Node;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -57,6 +59,8 @@ description = "	Displays files in CTree. Uses HTML to aggregate several files fr
 )
 
 public class AMIDisplayTool extends AbstractAMITool {
+	private static final String FAIL = "fail";
+
 	private static final String IMAGE = "image";
 
 	private static final Logger LOG = Logger.getLogger(AMIDisplayTool.class);
@@ -79,6 +83,25 @@ public class AMIDisplayTool extends AbstractAMITool {
             		+ "Currently used with --display.")
     private String summaryFilename = null;
     
+    @Option(names = {"--assert"},
+    		arity = "2..*",
+            description = "assertion. current args ' message type [value ...] [fail]? '. ducktype processing."
+            		+ " message is single mnemonic string "
+            		+ "action depends on 'type' (xpath, image, file)  compares output with "
+            		+ "0 or more values. if 'fail', then throws RuntimeException. "
+            		+ "SPACES, quotes in args must be escaped by %20 %(uck! but necessary)"
+            		+ "Example: "
+            		+ " '--assert checkHasFooChild xpath /*[local-name()='foo%20and%20@class='bar') 1 3 fail' will:"
+            		+ "   apply xpath to  look for 'foo' child element of root in current element and pass if 1 <= count(nodes) <= 3"
+               		+ " '--assert imageBigEnough image height 20 width 30 fail' will:"
+            		+ "   fail if current image has width<20 or height < 30"
+            		+ "This will evolve. "
+            		+ " '--assert help will try to give some ducktype help"
+            		+ "FRAGILE :-)"
+            		
+            )
+    private List<String> assertList = null;
+
     @Option(names = {"--display"},
     		arity = "1..*",
             description = "display files in panel"
@@ -113,7 +136,9 @@ public class AMIDisplayTool extends AbstractAMITool {
     @Override
 	protected void parseSpecifics() {
 		System.out.println("aggregate           " + summaryFilename);
+		System.out.println("assert              " + assertList);
 		System.out.println("display             " + displayList);
+		System.out.println("orientation         " + orientation);
 		System.out.println();
 	}
 
@@ -139,13 +164,13 @@ public class AMIDisplayTool extends AbstractAMITool {
 
 			if (displayList != null && displayList.size() > 0) {
 				displayFiles();
+				addSummaryFile();
 			}
-
-			addSummaryFile();
 		}
 		summarizeFiles();
 	}
 
+	
 	private void addSummaryFile() {
 		if (summaryFilename != null) {
 			File summaryFile = new File(imageDir, summaryFilename);
@@ -165,7 +190,7 @@ public class AMIDisplayTool extends AbstractAMITool {
 				createAndAddLinkToFile(ul, summarizedFile);
 			}
 			if (summaryFilename == null) {
-				System.out.println(">> null sumary");
+//				System.out.println(">> null summary");
 			} else {
 				File summaryHtmlFile = new File(imageDir.getParent(), summaryFilename);
 				XMLUtil.writeQuietly(html, summaryHtmlFile, 1);

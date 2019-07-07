@@ -9,6 +9,7 @@ import org.contentmine.ami.tools.AbstractAMITool.Scope;
 import org.contentmine.ami.tools.gocr.LevenshteinDistanceAligment;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import junit.framework.Assert;
@@ -203,6 +204,7 @@ public class AMIForestPlotTest {
 	/** creates columns for SPSS Tables
 	 * 
 	 */
+	@Ignore
 	public void testSPSSTableBBoxes() {
 		
 		String source = createSourceFromProjectAndTree("-t",ForestPlotType.spss);
@@ -504,7 +506,7 @@ public class AMIForestPlotTest {
 				+ " --projections --yprojection 0.8 --xprojection 0.6 --lines"
 				+ " --minheight -1 --rings -1 --islands 0"
 				+ " --inputname raw_"+process
-				+ " --subimage statascale y 1 delta 10 projection x"
+				+ " --subimage statascale y LAST delta 10 projection x"
 				+ " --templateinput raw_"+process+"/projections.xml"
 				+ " --templateoutput template.xml"
 				+ " --templatexsl /org/contentmine/ami/tools/stataTemplate1.xsl");
@@ -592,9 +594,11 @@ public class AMIForestPlotTest {
 	/** thresh 150 leaves gaps in lines. 
 	 * 
 	 */
-	public void testStataThresholds() {
+	public void testStataSegmentAndAssert() {
 		String treename = "PMC5992663";
-		String source = createSourceFromProjectAndTree(AbstractAMITool.Scope.TREE, ForestPlotType.stata , treename);
+		Scope scope = AbstractAMITool.Scope.PROJECT;
+//		scope = AbstractAMITool.Scope.TREE;
+		String source = createSourceFromProjectAndTree(scope, ForestPlotType.stata , treename);
 
 		String th120 = "120";
 		String th150 = "150";
@@ -616,17 +620,38 @@ public class AMIForestPlotTest {
 		String basename = pr180;
 		
 		new AMIPixelTool().runCommands(source
-				+ " --projections --yprojection 0.8 --xprojection 0.6 --lines --mingap 3"
+				+ " --projections --yprojection 0.8 --xprojection 0.5 --lines --mingap 3"
 				+ " --minheight -1 --rings -1 --islands 0"
 				+ " --inputnamelist raw_"+basename 
-				+ " --subimage statascale y 1 delta 10 projection x"
+				+ " --subimage statascale y LAST delta 10 projection x"
 				+ " --templateinput raw_"+basename+"/projections.xml"
 				+ " --templateoutput template.xml"
 				+ " --templatexsl /org/contentmine/ami/tools/stataTemplate1.xsl"
 				);
 		
+		new AMIAssertTool().runCommands(source
+				+ " --inputname raw_"+basename+"/projections.xml"
+				+ " --subdirectorytype pdfimages"
+				+ " --message horizontal lines"
+				+ " --assertType xpath"
+				+ " --xpath /projections/*[local-name()='g'%20and%20@class='horizontallines']/*[local-name()='line']"
+				+ " --sizes 1 2"
+				);
+		
+		new AMIAssertTool().runCommands(source
+				+ " --inputname raw_"+basename+"/projections.xml"
+				+ " --subdirectorytype pdfimages"
+				+ " --message horizontal lines"
+				+ " --assertType xpath"
+				+ " --xpath /projections/*[local-name()='g'%20and%20@class='verticallines']/*[local-name()='line'] 1 2 "
+				+ " --sizes 1 2"
+				+ " --inputname raw_"+basename+"/projections.xml"
+				+ " --assert Vertical xpath "
+				);
+		
+		
 		/** segment image */
-		source = createSourceFromProjectAndTree(AbstractAMITool.Scope.TREE, ForestPlotType.stata , treename);
+		source = createSourceFromProjectAndTree(scope, ForestPlotType.stata , treename);
 		/** use the template above on the current project/trees */
 		new AMIForestPlotTool().runCommands(source + " --segment --template raw_"+basename+"/template.xml");
 
@@ -673,76 +698,95 @@ public class AMIForestPlotTest {
 	
 	@Test
 	public void testSPSSSimple() {
-		String source = createSourceFromProjectAndTree("-t", ForestPlotType.spss);
+		String source = createSourceFromProjectAndTree(Scope.TREE, ForestPlotType.spss);
 		String FORCEMAKE = "";
 //		String FORCEMAKE = " --forcemake";
 		
 		// convert PDF (will skip if already done)
 		new AMIPDFTool().runCommands(source);
 		// scan the probable thresholds
-		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 120" + DS);
+//		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 120" + DS);
 		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 150" + DS);
-		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 180" + DS);
+//		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 180" + DS);
 		// display what we have got; later create an ami-display command
 		new AMIDisplayTool().runCommands(source + ""
-//				+ " --inputname raw.body.rtable_s4_thr_120_ds"
 				+ " --display "
-				+ " raw_s4_thr_120_ds.png"
+//				+ " raw_s4_thr_120_ds.png"
 				+ " raw_s4_thr_150_ds.png"
-				+ " raw_s4_thr_180_ds.png"
+//				+ " raw_s4_thr_180_ds.png"
 				+ " --orientation vertical"
-				+ " --aggregate raw_s4_120_150_180_ds.html");
+				+ " --aggregate raw_s4_150_ds.html");
 
+		String basename = "raw_s4_thr_150_ds";
 		new AMIPixelTool().runCommands(source
 			+ " --projections --yprojection 0.4 --xprojection 0.7 --lines"
 			+ " --minheight -1 --rings -1 --islands 0"
-			+ " --inputname raw_s4_thr_150_ds"
-			+ " --templateinput raw_s4_thr_150_ds/projections.xml"
+			+ " --inputname "+basename
+			+ " --templateinput "+basename+"/projections.xml"
 			+ " --templateoutput template.xml"
-			+ " --templatexsl /org/contentmine/ami/tools/spssTemplate.xsl");
+			+ " --templatexsl /org/contentmine/ami/tools/spssTemplate1.xsl");
+
+		new AMIAssertTool().runCommands(source
+				+ " --inputname "+basename+"/projections.xml"
+				+ " --subdirectorytype pdfimages"
+				+ " --type xpath"
+				+ " --message  Horizontal lines"
+				+ " --xpath /projections/*[local-name()='g'%20and%20@class='horizontallines']/*[local-name()='line'] "
+				+ " --size 2"
+				);
+		
+		new AMIAssertTool().runCommands(source
+				+ " --inputname "+basename+"/projections.xml"
+				+ " --subdirectorytype pdfimages"
+				+ " --type xpath"
+				+ " --message Vertical lines"
+				+ " --xpath /projections/*[local-name()='g'%20and%20@class='verticallines']/*[local-name()='line']"
+				+ " --size 1 "
+				);
+		
 
 		/** segment image */
-		new AMIForestPlotTool().runCommands(source + " --segment --template raw_s4_thr_150_ds/template.xml");
+		new AMIForestPlotTool().runCommands(source + " --segment --template "+basename+"/template.xml");
 
+		String sharp = SHARP4 + THRESH + " 150" + DS;
 		/** sharpen/threshold segment images */
-		new AMIImageTool().runCommands(source + " --inputname raw.header.tableheads "+SHARP4 + THRESH + " 150" + DS);
-		new AMIImageTool().runCommands(source + " --inputname raw.header.graphheads "+SHARP4 + THRESH + " 150" + DS);
-		new AMIImageTool().runCommands(source + " --inputname raw.body.table "+SHARP4 + THRESH + " 150" + DS);
-		new AMIImageTool().runCommands(source + " --inputname raw.body.graph "+SHARP4 + THRESH + " 150" + DS);
-		new AMIImageTool().runCommands(source + " --inputname raw.footer.summary "+SHARP4 + THRESH + " 150" + DS);
-		new AMIImageTool().runCommands(source + " --inputname raw.footer.scale "+SHARP4 + THRESH + " 150" + DS);
+//		new AMIImageTool().runCommands(source + " --inputname raw.header.tableheads "+sharp);
+//		new AMIImageTool().runCommands(source + " --inputname raw.header.graphheads "+sharp);
+//		new AMIImageTool().runCommands(source + " --inputname raw.body.table "+sharp);
+//		new AMIImageTool().runCommands(source + " --inputname raw.body.graph "+sharp);
+//		new AMIImageTool().runCommands(source + " --inputname raw.footer.summary "+sharp);
+//		new AMIImageTool().runCommands(source + " --inputname raw.footer.scale "+sharp);
 		
-		new AMIOCRTool().runCommands(source 
- 				+ " --inputname raw.header.tableheads_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source 
- 				+ " --inputname raw.header.graphheads_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.body.table_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
-//		new AMIOCRTool().runCommands(source
-//				+ " --inputname raw.body.graph_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.footer.summary_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.footer.scale_s4_thr_150_ds " + TESSERACT + EXTLINES_HOCR + FORCEMAKE);
-		
-		new AMIOCRTool().runCommands(source 
- 				+ " --inputname raw.header.tableheads_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source 
- 				+ " --inputname raw.header.graphheads_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.body.table_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.footer.summary_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
-		new AMIOCRTool().runCommands(source
-				+ " --inputname raw.footer.scale_s4_thr_150_ds " + GOCR + EXTLINES_GOCR + FORCEMAKE);
-		
+		String raw_s4_thr_150_ds_list = ""
+			+ " raw.header.tableheads_s4_thr_150_ds " 
+			+ " raw.header.graphheads_s4_thr_150_ds "
+			+ " raw.body.table_s4_thr_150_ds "
+			+ " raw.footer.summary_s4_thr_150_ds "
+			+ " raw.footer.scale_s4_thr_150_ds "
+			;
 
+		new AMIImageTool().runCommands(source + " --inputnamelist "
+				+ " raw.header.tableheads "
+				+ " raw.header.graphheads "
+				+ " raw.body.table "
+				+ " raw.footer.summary "
+				+ " raw.footer.scale "
+				+ sharp
+				);
+		String tess = TESSERACT + EXTLINES_HOCR + FORCEMAKE;
+		new AMIOCRTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + tess);
+		
+		String gocr = GOCR + EXTLINES_HOCR + FORCEMAKE;
+		new AMIOCRTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + gocr);
+		
+		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + " --table "+"hocr/hocr.svg" );
+		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + " --table "+"gocr/gocr.svg" );
+		
 		new AMIDisplayTool().runCommands(source + ""
 				+ " --inputname raw.body.table_s4_thr_150_ds"
 				+ " --display ../raw.body.table.png .png hocr/hocr.svg gocr/gocr.svg"
 				+ " --orientation vertical"
 				+ " --aggregate raw.body.table_s4_thr_150_ds.html"
-//				+ " --table"
 				);
 
 		new AMIDisplayTool().runCommands(source + ""
@@ -852,6 +896,12 @@ public class AMIForestPlotTest {
 
 	}
 
+	@Test
+	public void testRegression() {
+		testSPSSSimple();
+		testStataSegmentAndAssert();
+		testStataStack();
+	}
 
 	// ========================================
 

@@ -61,7 +61,7 @@ version = "ami-ocr 0.1",
 description = "Extracts text from OCR and (NYI) postprocesses HOCR output to create HTML."
 )
 
-public class AMIOCRTool extends AbstractAMITool {
+public class AMIOCRTool extends AbstractAMITool implements HasImageDir {
 	public static final String RAW = "raw";
 	public static final String HOCR = "hocr";
 	public static final String GOCR = "gocr";
@@ -438,6 +438,18 @@ public class AMIOCRTool extends AbstractAMITool {
 	@Override
 	public void processImageDir(File imageFile) {
 		runOCR(imageFile);
+	}
+
+	@Override
+	public void processImageDir() {
+		LOG.warn("must implement processImageDir");
+	}
+
+	@Override
+	public File getImageFile(File imageDir, String inputname) {
+		File imageFile = inputname != null ? new File(imageDir, inputname+".png") :
+			AbstractAMITool.getRawImageFile(imageDir);
+		return imageFile;
 	}
 
 	public boolean isGlyphs() {

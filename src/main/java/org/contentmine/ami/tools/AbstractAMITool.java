@@ -12,6 +12,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMIDictionaryTool.RawFileFormat;
+import org.contentmine.ami.tools.AbstractAMITool.SubDirectoryType;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
@@ -71,6 +72,11 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		EXCLUDE
 	}
 	
+	/** maybe add subdirectory of tree later
+	 * 
+	 * @author pm286
+	 *
+	 */
 	public enum Scope {
 		PROJECT("-p"),
 		TREE("-t"),
@@ -85,6 +91,25 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		
 		
 	}
+
+	/** subdirectories of CTree
+	 * 
+	 * @author pm286
+	 *
+	 */
+	public enum SubDirectoryType {
+		pdfimages("pdfimaages"),
+		svg("svg"),
+		;
+		public final String subdirname;
+
+		private SubDirectoryType(String subdir) {
+			this.subdirname = subdir;
+		}
+		public String getSubdirectoryName() {
+			return subdirname;
+		}
+    }
 	
 	public enum Verbosity {
 		TRACE(3),
@@ -213,6 +238,11 @@ public abstract class AbstractAMITool implements Callable<Void> {
 			description = "suffixes of included files (${COMPLETION-CANDIDATES}): "
 					+ "can be concatenated with commas ")
 	protected RawFileFormat[] rawFileFormats;
+
+    @Option(names = {"--subdirectorytype"},
+    		arity = "1",
+            description = "use subdirectory of cTree")
+    protected SubDirectoryType subdirectoryType;
 
 	@Option(names = { "-v", "--verbose" }, 
     		description = {
@@ -450,6 +480,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 			cTreeList.add(cTree);
     	}
 	}
+	
 
 	/** prints generic values from abstract superclass.
 	 * at present cproject, ctree and filetypes
@@ -471,6 +502,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
         System.out.println("includeTrees        " + includeTrees);
         System.out.println("log4j               " + (log4j == null ? "" : new ArrayList<String>(Arrays.asList(log4j))));
         System.out.println("logfile             " + logfile);
+        System.out.println("subdirectoryType    " + subdirectoryType);
         System.out.println("verbose             " + verbosity.length);
 //        System.out.println("version             " + version);
 	}
@@ -655,11 +687,22 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		return new File(imageDir, RAW + "." + CTree.PNG);
 	}
 
-	/** override this in tools which process images */
-	public void processImageDir(File imageFile) {
-		LOG.error("Must override this in:"+this.getClass().getName());
-	}
-
+//	/** override this in tools which process images */
+//	public void processImageDir(File imageFile) {
+//		LOG.error("Must override this in:"+this.getClass().getName());
+//	}
+//
+//	/** override this in tools which process imageDirs */
+//	public void processImageDir() {
+//		LOG.error("Must override this in:"+this.getClass().getName());
+//	}
+//
+//	/** override this in tools which process imageDirs */
+//	public File getImageFile(File imageDir, String inputname) {
+//		LOG.error("Must override this in:"+this.getClass().getName());
+//		return null;
+//	}
+//	
 	protected void outputCTreeName() {
 		System.out.println(this.getClass().getSimpleName()+" cTree: "+cTree.getName());
 	}

@@ -1,0 +1,28 @@
+<page x="0" y="0" dx="0" dy="0">
+<block x="0" y="0" dx="0" dy="0">
+<line x="225" y="0" dx="-224" dy="0" value="0">
+ <space x="5" y="100" dx="8" dy="3" />
+ <box x="5" y="100" dx="8" dy="3" value="_" />
+ <space x="14" y="76" dx="9" dy="3" />
+ <box x="24" y="76" dx="5" dy="3" value="_" />
+ <box x="24" y="147" dx="10" dy="3" value="_" />
+ <box x="24" y="159" dx="12" dy="3" value="_" />
+ <box x="32" y="88" dx="7" dy="3" value="_" />
+ <box x="32" y="135" dx="8" dy="3" value="_" />
+ <box x="35" y="64" dx="6" dy="3" value="_" />
+ <box x="35" y="111" dx="8" dy="3" value="_" />
+ <box x="36" y="171" dx="8" dy="3" value="_" />
+ <box x="40" y="123" dx="7" dy="3" value="_" />
+ <space x="48" y="0" dx="10" dy="1" />
+ <space x="70" y="0" dx="7" dy="1" />
+ <space x="91" y="0" dx="2" dy="1" />
+ <space x="101" y="0" dx="-1" dy="1" />
+ <box x="101" y="0" dx="105" dy="1" value="(PICTURE)" />
+</line>
+<line x="10" y="225" dx="34" dy="13" value="1">
+ <space x="32" y="225" dx="-1" dy="11" />
+ <space x="29" y="225" dx="5" dy="11" />
+ <box x="29" y="225" dx="5" dy="11" value="t" numac="1" weights="100" achars="t" />
+</line>
+</block>
+</page>

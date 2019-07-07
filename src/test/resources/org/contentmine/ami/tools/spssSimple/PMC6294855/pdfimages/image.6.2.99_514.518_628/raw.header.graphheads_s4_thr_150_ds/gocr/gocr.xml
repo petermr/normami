@@ -1,0 +1,33 @@
+<page x="0" y="0" dx="0" dy="0">
+<block x="0" y="0" dx="0" dy="0">
+<line x="119" y="6" dx="61" dy="11" value="1">
+ <space x="119" y="6" dx="-1" dy="9" />
+ <space x="120" y="6" dx="-2" dy="9" />
+ <space x="119" y="6" dx="8" dy="9" />
+ <box x="119" y="6" dx="8" dy="9" value="O" numac="2" weights="99,99" achars="O,0" />
+ <box x="128" y="6" dx="6" dy="9" value="d" numac="1" weights="100" achars="d" />
+ <box x="135" y="6" dx="6" dy="9" value="d" numac="1" weights="100" achars="d" />
+ <box x="142" y="8" dx="6" dy="7" value="s" numac="1" weights="100" achars="s" />
+ <box x="152" y="6" dx="18" dy="9" value="Rd" numac="3" weights="95,94,89" achars="Rd,i4at,i1d" />
+ <box x="171" y="6" dx="2" dy="9" value="i" numac="2" weights="99,93" achars="i,j" />
+ <box x="174" y="8" dx="6" dy="7" value="o" numac="3" weights="100,99,99" achars="o,O,0" />
+</line>
+<line x="97" y="22" dx="106" dy="11" value="2">
+ <space x="97" y="22" dx="11" dy="9" />
+ <box x="97" y="22" dx="11" dy="9" value="N" numac="1" weights="100" achars="N" />
+ <box x="108" y="29" dx="2" dy="3" value="." numac="2" weights="99,97" achars=".,," />
+ <box x="114" y="22" dx="14" dy="9" value="Rn" numac="1" weights="97" achars="Rn" />
+ <box x="129" y="24" dx="6" dy="7" value="n" numac="1" weights="100" achars="n" />
+ <box x="136" y="22" dx="6" dy="9" value="d" numac="1" weights="100" achars="d" />
+ <box x="143" y="24" dx="6" dy="7" value="0" numac="1" weights="97" achars="0" />
+ <box x="150" y="24" dx="10" dy="7" value="m" numac="1" weights="100" achars="m" />
+ <box x="161" y="29" dx="2" dy="3" value="." numac="2" weights="99,97" achars=".,," />
+ <box x="167" y="22" dx="6" dy="9" value="9" numac="3" weights="100,92,83" achars="9,g,0" />
+ <box x="174" y="22" dx="6" dy="9" value="5" numac="1" weights="100" achars="5" />
+ <box x="181" y="22" dx="7" dy="9" value="_" />
+ <box x="186" y="26" dx="3" dy="5" value="0" numac="2" weights="96,95" achars="0,D" />
+ <box x="193" y="22" dx="7" dy="9" value="C" numac="1" weights="100" achars="C" />
+ <box x="201" y="22" dx="2" dy="9" value="l" numac="4" weights="98,97,96,84" achars="l,I,|,1" />
+</line>
+</block>
+</page>

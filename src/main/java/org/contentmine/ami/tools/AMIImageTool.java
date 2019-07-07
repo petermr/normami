@@ -67,7 +67,7 @@ description = "	first FILTERs images (initally from PDFimages), but does not tra
 		
 )
 
-public class AMIImageTool extends AbstractAMITool {
+public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 	private static final String IMAGE = "image";
 
 	private static final Logger LOG = Logger.getLogger(AMIImageTool.class);
@@ -724,6 +724,25 @@ public class AMIImageTool extends AbstractAMITool {
 	// ============== misc ============
 	private String truncateToLastDot(String basename) {
 		return basename.substring(0, basename.lastIndexOf("."));
+	}
+
+	/** HasImageDir methods*/
+	@Override
+	public void processImageDir(File imageFile) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void processImageDir() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public File getImageFile(File imageDir, String inputname) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+<image extension="png" borders="32 35 305" sections="header null body footer" split="horizontal" source="raw.png">
+<image extension="png" borders="758.0" sections="tableheads graphheads" split="vertical" source="raw.header.png"/>
+<image extension="png" borders="758.0" sections="table graph" split="vertical" source="raw.body.png"/>
+<image extension="png" borders="758.0" sections="summary scale" split="vertical" source="raw.footer.png"/>
+</image>
+</template>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg style="font-family:helvetica;font-size:10.0px;" tesseractVersion="tesseract 3.05.02" height="226.0" width="252.0" xmlns="http://www.w3.org/2000/svg">
+ <g class="wordPageList">
+  <g class="wordPage" id="page_1">
+   <g class="wordBlock" id="block_1_1">
+    <g class="para" id="par_1_1">
+     <g id="line_1_1" textangle="90.0" style="font-size:30.0px;" class="line">
+      <text x="118.0" y="8.0" style="font-size:7.0px;">78.7</text>
+      <rect x="118.0" y="8.0" width="124.0" height="208.0" style="fill:darkgray;opacity:0.2;"/>
+      <g id="word_1_1" class="word" x_wconf="45">
+       <rect x="118.0" y="8.0" width="124.0" height="208.0" style="fill:green;opacity:0.2;stroke-width:3.0;"/>
+       <text x="118.0" y="38.0" class="text" style="fill:red;font-size:30.0px;font-style:italic;opacity:0.315;">WWW</text>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g class="wordBlock" id="block_1_2">
+    <g class="para" id="par_1_2">
+     <g class="line" id="line_1_2"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <line x1="242.0" y1="0.0" x2="242.0" y2="226.0" style="opacity:0.5;stroke:red;stroke-width:0.2;"/>
+ <line x1="118.0" y1="0.0" x2="118.0" y2="226.0" style="opacity:0.5;stroke:magenta;stroke-width:0.2;"/>
+ <line x1="0.0" y1="8.0" x2="252.0" y2="8.0" style="opacity:0.5;stroke:green;stroke-width:0.2;"/>
+ <line x1="0.0" y1="216.0" x2="252.0" y2="216.0" style="opacity:0.5;stroke:blue;stroke-width:0.2;"/>
+</svg>

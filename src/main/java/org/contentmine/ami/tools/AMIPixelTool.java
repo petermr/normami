@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -82,14 +83,16 @@ version = "ami-pixel 0.1",
 description = "analyzes bitmaps - generally binary, but may be oligochrome. Creates pixelIslands "
 )
 
-public class AMIPixelTool extends AbstractAMITool {
-
+public class AMIPixelTool extends AbstractAMITool implements HasImageDir {
 
 
 	private static final Logger LOG = Logger.getLogger(AMIPixelTool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
+	private static final String LAST = "LAST";
+	private static final String WIDTH = "width";
+	private static final String HEIGHT = "height";
 	
 	public enum ThinningMethod {
 		hilditch(new HilditchThinning()),
@@ -137,8 +140,15 @@ public class AMIPixelTool extends AbstractAMITool {
 	
     @Option(names = {"--lines"},
     		arity = "0",
-            description = "extract lines from projections. Result is set of lines in SVGLine format")
-    private boolean lines = false;;
+            description = "extract lines from projections. Result is set of lines in SVGLine format. use --lineLengths for control")
+    private boolean lines;
+	
+    @Option(names = {"--lineLengths"},
+    		arity = "2",
+            description = " "
+            		+ "minlength and maxlength. Units with integers are absolute. maxLength will depend on scaling"
+            		+ "so use carefully. Default 100 9999")
+    private List<Integer> lineLengths = Arrays.asList(new Integer[]{100, 9999});
 	
     @Option(names = {"--mingap"},
     		arity = "1",
@@ -285,7 +295,6 @@ public class AMIPixelTool extends AbstractAMITool {
 	private File projectionsFile;
 	// still being worked out... should be arguments
 	private double lineProjectionFactor = 0.1;
-	private double minLineLength = 10;
 
 	private List<SVGLineList> verticalLineListList;
 	private List<SVGLineList> horizontalLineListList;
@@ -320,6 +329,7 @@ public class AMIPixelTool extends AbstractAMITool {
     	outputDirname = outputDirname.endsWith("/") ? outputDirname : outputDirname + "/";
 		System.out.println("basename             " + basename);
 		System.out.println("lines                " + lines);
+		System.out.println("lineLengths          " + lineLengths);
 		System.out.println("maxislands           " + maxislands);
 		System.out.println("mingap               " + mingap);
 		System.out.println("minwidth             " + minwidth);
@@ -608,10 +618,11 @@ public class AMIPixelTool extends AbstractAMITool {
 			if (itoken == 0) {
 				subImageName = token;
 			} else if (X.equals(token) || Y.equals(token)) {
-				initialCoordName = token;
-				int coordIndex = parseInt(subimageTokens.get(++itoken)); 
 				List<IntRange> rangeList = X.equals(token) ? xRangeList : yRangeList;
-				coord1 = rangeList.size() < coordIndex ? null : rangeList.get(coordIndex - 1).getMax();
+				initialCoordName = token;
+				String xToken = subimageTokens.get(++itoken).toLowerCase();
+				int coordIndex = LAST.equalsIgnoreCase(xToken) ? rangeList.size() : parseInt(xToken); 
+				coord1 = (coordIndex < 1 || rangeList.size() < coordIndex) ? null : rangeList.get(coordIndex - 1).getMax();
 				if (coord1 == null) {
 					LOG.warn("subimage X/Y: cannot find yRange: "+coordIndex+" "+yRangeList);
 				}
@@ -633,6 +644,7 @@ public class AMIPixelTool extends AbstractAMITool {
 			}
 			itoken++;
 		}
+//		LOG.debug(message);
 		BufferedImage subImage = null;
 		if (coord1 != null && coord2 != null) {
 			int xoff = X.equals(initialCoordName) ? coord1 : 0;
@@ -663,6 +675,8 @@ public class AMIPixelTool extends AbstractAMITool {
 		File outputDir = new File(imageDir, basename);
 		projectionsFile = new File(outputDir, projectionsName+"."+CTree.XML);
 		Element linesElement = new Element(PROJECTIONS);
+		linesElement.addAttribute(new Attribute(HEIGHT, String.valueOf(image.getHeight())));
+		linesElement.addAttribute(new Attribute(WIDTH, String.valueOf(image.getWidth())));
 		linesElement.addAttribute(new Attribute(CTREE, cTree.getName()));
 		linesElement.addAttribute(new Attribute(IMAGE_DIR, imageDir.getName()));
 		linesElement.addAttribute(new Attribute(BASENAME, basename));
@@ -670,13 +684,13 @@ public class AMIPixelTool extends AbstractAMITool {
 		linesElement.appendChild(createRangeElement(X_COORDS, X_COORD, xRangeList));
 		linesElement.appendChild(createRangeElement(Y_COORDS, Y_COORD, yRangeList));
 		if (lines) {
-			File llinesFile = new File(outputDir, LINES+"."+CTree.SVG);
+			File linesFile = new File(outputDir, LINES+"."+CTree.SVG);
 			SVGG hl = createLineListListElement(horizontalLineListList, "horizontal");
 			SVGG vl = createLineListListElement(verticalLineListList, "vertical");
 			SVGG g = new SVGG();
 			g.appendChild(hl.copy());
 			g.appendChild(vl.copy());
-			SVGSVG.wrapAndWriteAsSVG(g, llinesFile);
+			SVGSVG.wrapAndWriteAsSVG(g, linesFile);
 			
 			linesElement.appendChild(vl);
 			linesElement.appendChild(hl);
@@ -808,15 +822,12 @@ public class AMIPixelTool extends AbstractAMITool {
 					Real2 xy2 = Axis2.Y.equals(axis) ? new Real2(rng.getMax(), lineBase) : new Real2(lineBase, rng.getMax()); 
 					boolean isJoinedInDirection = isJoinedInDirection(lastXY, xy1, axis, ((double) mingap) + eps);
 					if (isJoinedInDirection) {
-						System.out.println("\n>> " + line +" "+ xy1+" ... "+xy2);
 						line.setXY(xy2, (axis.equals(Axis2.X.equals(axis)) ? 0 : 1 ));
 						lastXY = xy2;
-						System.out.println(">>JOIN>> "+line);
 					} else {
-						System.out.println("last>>>"+line);
 						line = new SVGLine(xy1, xy2);
 						lastXY = xy2;
-						if (line.getLength() > minLineLength) {
+						if (line.getLength() >= lineLengths.get(0) && line.getLength() <= lineLengths.get(1)) {
 							line.setWidth(lineWidth);
 							lineList.add(line);
 						}
@@ -981,6 +992,17 @@ public class AMIPixelTool extends AbstractAMITool {
 	public void processImageDir(File imageFile) {
 		this.imageFile = imageFile;
 		runPixel(imageFile);
+	}
+
+	@Override
+	public void processImageDir() {
+		LOG.warn("must implement processImageDir");
+	}
+
+	@Override
+	public File getImageFile(File imageDir, String inputname) {
+		LOG.warn("must implement getImagefile");
+		return null;
 	}
 
 }

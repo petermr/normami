@@ -1,0 +1,8 @@
+<template name="spss">
+	<image source="raw.png" split="vertical" sections="table graph" borders="380" extension="png">
+		<image source="raw.table.png" split="horizontal" sections="header null body" borders="25 27" extension="png">
+		</image>
+		<image source="raw.graph.png" split="horizontal" sections="header null plot footer" borders="25 27 187" extension="png">
+		</image>
+	</image>
+</template>

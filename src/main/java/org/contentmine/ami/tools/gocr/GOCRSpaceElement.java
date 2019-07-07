@@ -31,7 +31,8 @@ public class GOCRSpaceElement extends AbstractGOCRElement {
 	}
 	
 	public SVGRect createSVGElement() {
-		SVGRect svgRect = createSVGBox("stroke:blue;stroke-width:0.5;fill:none;", "space");
+//		SVGRect svgRect = createSVGBox("stroke:blue;stroke-width:0.5;fill:none;", "space");
+		SVGRect svgRect = createSVGBox("stroke:none;stroke-width:0.0;fill:none;", "space");
 		return svgRect;
 	}
 

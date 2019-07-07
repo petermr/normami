@@ -26,6 +26,8 @@
  </g>
 </projections>
 -->
+
+<xsl:variable name="TICK">15</xsl:variable>
 <xsl:variable name="ylines">twolines</xsl:variable>
 
 <xsl:variable name="xcoords" select="projections/xcoords"/>
@@ -36,41 +38,149 @@
 
 <xsl:variable name="ylines">twolines</xsl:variable>
 
-<!--  the vertical line is probably the best indicator of Y coord  -->
-<!--  except it has a tick below it so is too long -->
-<!-- 
-    <xsl:variable name="y1" select="$verticallines[1]/svg:line/@y1"/>
-    <xsl:variable name="y2" select="$verticallines[1]/svg:line/@y2"/>
--->    
+<!--  the vertical line is an indicator of Y coord  -->
+<!--  it has a tick below it so is too long -->
+    <xsl:variable name="verty1" select="$verticallines[1]/svg:line/@y1"/>
+    <xsl:variable name="verty2" select="$verticallines[1]/svg:line/@y2"/>
+    <xsl:variable name="lenverty"><xsl:value-of select="$verty2 - $verty1"/></xsl:variable>
+    <!--  x may be valuable for the ticks -->
+    <xsl:variable name="vertx1" select="$verticallines[1]/svg:line/@x1"/>
+    
  <!-- this is used if there are good horizontal lines -->
-    <xsl:variable name="y1" select="$ycoords/ycoord[1]"/>
-    <xsl:variable name="y2" select="$ycoords/ycoord[2]"/>
-  
-<xsl:variable name="sx1" select="$subImage/x[1]"/>
-<xsl:variable name="sx2" select="$subImage/x[2]"/>
-<xsl:variable name="sx3" select="$subImage/x[3]"/>
+ 
+    <xsl:variable name="hory1" select="$horizontallines[1]/svg:line/@y1"/>
+    <xsl:variable name="hory2" select="$horizontallines[2]/svg:line/@y2"/>
 
-<xsl:variable name="bodyTop" select="$y1 + 1"/>
-<xsl:variable name="scaleTop" select="$y2 + 1"/>
-<!-- 
-<xsl:variable name="scaleTop" select="$y2/@max + 1"/>
--->
-<xsl:variable name="graphLeft" select="$sx1/@max"/>
-<xsl:variable name="graphRight" select="$sx3/@max"/>
+	<xsl:variable name="subImageCount" select="count($subImage/x)"/>
+	<xsl:variable name="epsx">3</xsl:variable>
+	<xsl:variable name="sx1" select="$subImage/x[1]"/>
+	<xsl:variable name="sx2" select="$subImage/x[2]"/>
+	<xsl:variable name="sx3" select="$subImage/x[3]"/>
+	<xsl:variable name="sx1m" select="($sx1/@max + $sx1/@min) div 2"/>
+	<xsl:variable name="sx2m" select="($sx2/@max + $sx2/@min) div 2"/>
+	<xsl:variable name="sx3m" select="($sx3/@max + $sx3/@min) div 2"/>
 
 	<xsl:template match="/">
-	  <xsl:call-template name="createTemplate"/>
-	  
+	  <xsl:call-template name="createStataTemplate"/>  
 	</xsl:template>
 
-	<xsl:template name="createTemplate">
+	<xsl:template name="createStataTemplate">
+	<!-- 
+	    <xsl:message><xsl:text>"TEMPLATE"</xsl:text></xsl:message>
+ -->
+ 	<!--  absolute diffs from $vertx1 -->
+    <xsl:variable name="sxabs1"><xsl:call-template name="math_abs"><xsl:with-param name="x"><xsl:value-of select="$vertx1 - $sx1m"/></xsl:with-param></xsl:call-template></xsl:variable>
+    <xsl:variable name="sxabs2"><xsl:call-template name="math_abs"><xsl:with-param name="x"><xsl:value-of select="$vertx1 - $sx2m"/></xsl:with-param></xsl:call-template></xsl:variable>
+    <xsl:variable name="sxabs3"><xsl:call-template name="math_abs"><xsl:with-param name="x"><xsl:value-of select="$vertx1 - $sx3m"/></xsl:with-param></xsl:call-template></xsl:variable>
+ 
+ <xsl:variable name="bodyTop">
+ 		<xsl:choose>
+		  <xsl:when test="$hory1 and $hory2">
+			<xsl:value-of select="$hory1 + 1"/>
+		  </xsl:when>
+		  <xsl:when test="$verty1 and $verty2">
+			<xsl:value-of select="$verty1 + 1"/>
+		  </xsl:when>
+		</xsl:choose>
+</xsl:variable>
+ <xsl:variable name="tickTop">
+ 		<xsl:choose>
+		  <xsl:when test="$hory1 and $hory2">
+			<xsl:value-of select="$hory2 + 1"/>
+		  </xsl:when>
+		  <xsl:when test="$verty1 and $verty2">
+			<xsl:value-of select="$verty2 - $TICK"/>
+		  </xsl:when>
+		</xsl:choose>
+</xsl:variable>
+ <xsl:variable name="scaleTop">
+ 		<xsl:choose>
+		  <xsl:when test="$verty2">
+			<xsl:value-of select="$verty2 + 1"/>
+		  </xsl:when>
+		  <xsl:when test="$tickTop">
+			<xsl:value-of select="$tickTop + $TICK"/>
+		  </xsl:when>
+		</xsl:choose>
+</xsl:variable>
+ <xsl:variable name="graphLeft">
+ 		<xsl:choose>
+		  <xsl:when test="$subImageCount = 3">
+			<xsl:value-of select="number($sx1m)"/>
+		  </xsl:when>
+		  <xsl:when test="$subImageCount = 2">
+		    <xsl:choose>
+		    <!--  middle tick is lowest -->
+		    <xsl:when test="$epsx > $sxabs1">
+		      <xsl:value-of select="$sx1m + $sx1m - $sx2m"/>
+		    </xsl:when>
+		    <!--  middle tick is highest -->
+		    <xsl:when test="$epsx > $sxabs2">
+		      <xsl:value-of select="$sx1m"/>
+		    </xsl:when>
+		    <xsl:otherwise>
+		      <xsl:value-of select="$sx1m"/>
+		    </xsl:otherwise>
+		    </xsl:choose>
+		  </xsl:when>
+		</xsl:choose>
+</xsl:variable>
+ <xsl:variable name="graphRight">
+ 		<xsl:choose>
+		  <xsl:when test="$subImageCount = 3">
+			<xsl:value-of select="number($sx3m)"/>
+		  </xsl:when>
+		  <xsl:when test="$subImageCount = 2">
+		    <xsl:choose>
+		    <!--  middle tick is lowest -->
+		    <xsl:when test="$epsx > $sxabs1">
+		      <xsl:value-of select="$sx2m"/>
+		    </xsl:when>
+		    <!--  middle tick is highest -->
+		    <xsl:when test="$epsx > $sxabs2">
+		      <xsl:value-of select="$sx2m + $sx2m - $sx1m"/>
+		    </xsl:when>
+		    <xsl:otherwise>
+		      <xsl:value-of select="$sx2m"/>
+		    </xsl:otherwise>
+		    </xsl:choose>
+		  </xsl:when>
+		</xsl:choose>
+</xsl:variable>
+ 
+<!--  
+ <xsl:message><xsl:value-of select="$sxabs1"/>/<xsl:value-of select="$sxabs2"/>/<xsl:value-of select="$sxabs3"/></xsl:message>
+-->
+		  <xsl:if test="$subImageCount = 2">
+		    <xsl:message>"ONLY TWO TICKS "<xsl:value-of select="number($sx1m)"/> ? <xsl:value-of select="number($sx2m)"/> x1 <xsl:value-of select="$vertx1"/></xsl:message>
+		  </xsl:if>
+		  <xsl:if test="$subImageCount = 1">
+		    <xsl:message>ONLY ONE TICK <xsl:value-of select="$sx1"/></xsl:message>
+		  </xsl:if>
+		  <!-- 
+	  <xsl:message>bt[<xsl:value-of select="$bodyTop"/>] st[<xsl:value-of select="$scaleTop"/>] </xsl:message>
+	  <xsl:message>gl[<xsl:value-of select="$graphLeft"/>] gr[<xsl:value-of select="$graphRight"/>]</xsl:message>
+-->	
 	  <template>
-	  <message>y1[<xsl:value-of select="$y1"/>] y2[<xsl:value-of select="$y2"/>] gl[<xsl:value-of select="$graphLeft"/>] gr[<xsl:value-of select="$graphRight"/>]</message>
-		  	<image source="raw.png" split="horizontal" sections="header body scale" borders="{$bodyTop} {$scaleTop}" extension="png">
+		  	<image source="raw.png" split="horizontal" sections="header body ticks scale" borders="{$bodyTop} {$tickTop} {$scaleTop}" extension="png">
 	    	  <image source="raw.body.png" split="vertical" sections="ltable graph rtable" borders="{$graphLeft} {$graphRight}" extension="png">
 	    	  </image>
 		   </image>
       </template>
-	</xsl:template>
+ </xsl:template>
+ 
+ <xsl:template name="math_abs">
+     <xsl:param name="x"/>
+     
+     <xsl:choose>
+          <xsl:when test="$x &lt; 0">
+               <xsl:value-of select="$x * -1"/>
+          </xsl:when>
+          <xsl:otherwise>
+               <xsl:value-of select="$x"/>
+          </xsl:otherwise>
+     </xsl:choose>
+     
+</xsl:template>
 	
 </xsl:stylesheet>
