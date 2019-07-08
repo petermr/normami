@@ -1,7 +1,11 @@
 package org.contentmine.ami.tools;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMIForestPlotTool.ForestPlotType;
@@ -600,6 +604,7 @@ public class AMIForestPlotTest {
 //		scope = AbstractAMITool.Scope.TREE;
 		String source = createSourceFromProjectAndTree(scope, ForestPlotType.stata , treename);
 
+		String raw = "raw";
 		String th120 = "120";
 		String th150 = "150";
 		String th180 = "180";
@@ -653,7 +658,7 @@ public class AMIForestPlotTest {
 		/** segment image */
 		source = createSourceFromProjectAndTree(scope, ForestPlotType.stata , treename);
 		/** use the template above on the current project/trees */
-		new AMIForestPlotTool().runCommands(source + " --segment --template raw_"+basename+"/template.xml");
+		new AMIForestPlotTool().runCommands(source + " --segment --inputname " + raw + " --template raw_"+basename+"/template.xml");
 
 				
 }
@@ -696,6 +701,7 @@ public class AMIForestPlotTest {
 				+ " --aggregate raw_s4_120_150_180_ds.html");
 	}
 	
+	
 	@Test
 	public void testSPSSSimple() {
 		String source = createSourceFromProjectAndTree(Scope.TREE, ForestPlotType.spss);
@@ -703,7 +709,7 @@ public class AMIForestPlotTest {
 //		String FORCEMAKE = " --forcemake";
 		
 		// convert PDF (will skip if already done)
-		new AMIPDFTool().runCommands(source);
+		new AMIPDFTool().runCommands(source + FORCEMAKE);
 		// scan the probable thresholds
 //		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 120" + DS);
 		new AMIImageTool().runCommands(source + SHARP4 + THRESH + " 150" + DS);
@@ -746,16 +752,11 @@ public class AMIForestPlotTest {
 		
 
 		/** segment image */
-		new AMIForestPlotTool().runCommands(source + " --segment --template "+basename+"/template.xml");
+		String inputname = "raw";
+		new AMIForestPlotTool().runCommands(source + " --inputname " +inputname + " --segment --template "+basename+"/template.xml");
 
 		String sharp = SHARP4 + THRESH + " 150" + DS;
 		/** sharpen/threshold segment images */
-//		new AMIImageTool().runCommands(source + " --inputname raw.header.tableheads "+sharp);
-//		new AMIImageTool().runCommands(source + " --inputname raw.header.graphheads "+sharp);
-//		new AMIImageTool().runCommands(source + " --inputname raw.body.table "+sharp);
-//		new AMIImageTool().runCommands(source + " --inputname raw.body.graph "+sharp);
-//		new AMIImageTool().runCommands(source + " --inputname raw.footer.summary "+sharp);
-//		new AMIImageTool().runCommands(source + " --inputname raw.footer.scale "+sharp);
 		
 		String raw_s4_thr_150_ds_list = ""
 			+ " raw.header.tableheads_s4_thr_150_ds " 
@@ -902,11 +903,94 @@ public class AMIForestPlotTest {
 		testStataSegmentAndAssert();
 		testStataStack();
 	}
+	
+	/** delete a single tree and run the complete stack over it
+	 * @throws IOException 
+	 * 
+	 */
+	@Test
+	public void testSPSSSimpleClean() throws IOException {
+		String source = createSourceFromProjectAndTree(Scope.TREE, ForestPlotType.spss);
+		resetCTree(source, "PMC5502154/");
+		new AMIPDFTool().runCommands(source);
+		new AMIFilterTool().runCommands(source + " --small small --duplicate duplicate --monochrome monochrome");
+		String inputname = "raw";
+		new AMIImageTool().runCommands(source + " --inputname "+inputname+ " "+ SHARP4 + THRESH + " 150" + DS);
+
+		String basename = "raw_s4_thr_150_ds";
+		new AMIPixelTool().runCommands(source
+			+ " --projections --yprojection 0.4 --xprojection 0.7 --lines"
+			+ " --minheight -1 --rings -1 --islands 0"
+			+ " --inputname "+basename
+			+ " --templateinput "+basename+"/projections.xml"
+			+ " --templateoutput template.xml"
+			+ " --templatexsl /org/contentmine/ami/tools/spssTemplate1.xsl");
+		
+		/** segment image */
+		inputname = "raw";
+		new AMIForestPlotTool().runCommands(source + " --inputname " +inputname + " --segment --template "+basename+"/template.xml");
+
+		String sharp = SHARP4 + THRESH + " 150" + DS;
+		/** sharpen/threshold segment images */
+
+		String raw_list = ""
+		+ " raw.header.tableheads "
+		+ " raw.header.graphheads "
+		+ " raw.body.table "
+		+ " raw.footer.summary "
+		+ " raw.footer.scale "
+		;
+
+		String raw_s4_thr_150_ds_list = ""
+			+ " raw.header.tableheads_s4_thr_150_ds " 
+			+ " raw.header.graphheads_s4_thr_150_ds "
+			+ " raw.body.table_s4_thr_150_ds "
+			+ " raw.footer.summary_s4_thr_150_ds "
+			+ " raw.footer.scale_s4_thr_150_ds "
+			;
+
+		new AMIImageTool().runCommands(source + " --inputnamelist "
+				+ raw_list + " "
+				+ sharp
+				);
+		
+		String FORCEMAKE = "";
+		String tess = TESSERACT + EXTLINES_HOCR + FORCEMAKE;
+		new AMIOCRTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + tess);
+		
+		String gocr = GOCR + EXTLINES_HOCR + FORCEMAKE;
+		new AMIOCRTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + gocr);
+		
+		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + " --table "+"hocr/hocr.svg" );
+		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + " --table "+"gocr/gocr.svg" );
+
+		return;
+	}
+
+	private void resetCTree(String source, String pdfFilename) throws IOException {
+		String filename = source.split("\\s+")[1];
+		CTree cTree = new CTree(filename);
+		CProject cProject = cTree. getOrCreateProject();
+		cProject.deleteCTree(cTree);
+		copyTreeIntoProject(cProject, pdfFilename);
+	}
 
 	// ========================================
 
+	private void copyTreeIntoProject(CProject cProject, String pdfFilename) throws IOException {
+		File srcDir = new File(cProject.getDirectory(), "_original/" + pdfFilename);
+		File destDir = new File(cProject.getDirectory(), pdfFilename);
+		LOG.debug("copy "+srcDir+" to "+destDir);
+		FileUtils.copyDirectory(srcDir, destDir);
+	}
+
+	private void copyPDFIntoProject(CProject cProject, String pdfFilename) throws IOException {
+		FileUtils.copyFile(new File(cProject.getDirectory(), "_original/" + pdfFilename), new File(cProject.getDirectory(), pdfFilename));
+	}
+
 	private void assertImageDirFileExists(String basename, String finalPath) {
-		File file = new File(new File(cTree.getPDFImagesImageDirectories().get(0), basename), finalPath);
+		File tree = cTree.getPDFImagesImageDirectories().get(0);
+		File file = new File(new File(tree, basename), finalPath);
 		Assert.assertTrue(finalPath, file.exists());
 	}
 

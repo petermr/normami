@@ -674,6 +674,10 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		return inputBasename;
 	}
 
+	public void setInputBasename(String inputBasename) {
+		this.inputBasename = inputBasename;
+	}
+
 	public List<String> getInputBasenameList() {
 		return inputBasenameList;
 	}
@@ -687,22 +691,6 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		return new File(imageDir, RAW + "." + CTree.PNG);
 	}
 
-//	/** override this in tools which process images */
-//	public void processImageDir(File imageFile) {
-//		LOG.error("Must override this in:"+this.getClass().getName());
-//	}
-//
-//	/** override this in tools which process imageDirs */
-//	public void processImageDir() {
-//		LOG.error("Must override this in:"+this.getClass().getName());
-//	}
-//
-//	/** override this in tools which process imageDirs */
-//	public File getImageFile(File imageDir, String inputname) {
-//		LOG.error("Must override this in:"+this.getClass().getName());
-//		return null;
-//	}
-//	
 	protected void outputCTreeName() {
 		System.out.println(this.getClass().getSimpleName()+" cTree: "+cTree.getName());
 	}

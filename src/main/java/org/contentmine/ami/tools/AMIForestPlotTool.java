@@ -195,7 +195,6 @@ public class AMIForestPlotTool extends AbstractAMITool implements HasImageDir {
 
 	private HtmlElement hocrElement;
 	private File imageDir;
-//	private List<File> summaryFileList;
 
     /** used by some non-picocli calls
      * obsolete it
@@ -408,53 +407,44 @@ public class AMIForestPlotTool extends AbstractAMITool implements HasImageDir {
 		
 	}
 
-//	public void processTree() {
-//		System.out.println("cTree>> "+cTree.getName());
-////		summaryFileList = new ArrayList<>();
-//
-//		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
-//		Collections.sort(imageDirs);
-//		for (int i = 0; i < imageDirs.size(); i++) {
-//			imageDir = imageDirs.get(i);
-//			this.basename = FilenameUtils.getBaseName(imageDir.toString());
-//			System.out.println("======>"+imageDir.getName());
-//			processImageDirCallback();
-//		}
-//	}
-
-	@Override
-	public void processImageDir() {
-		LOG.error("Must override this in:"+this.getClass().getName());
-	}
-
 	@Override
 	public File getImageFile(File imageDir, String inputname) {
-		File imageFile = inputname != null ? new File(imageDir, inputname) :
+		File imageFile = inputname != null ? new File(imageDir, inputname + "." + CTree.PNG) :
 			AbstractAMITool.getRawImageFile(imageDir);
 		return imageFile;
 	}
 
-
 	@Override
 	public void processImageDir(File imageFile) {
-		LOG.warn("must implement processImageDir");
+		processImageDirCallback(imageFile);
 	}
 
-	private void processImageDirCallback() {
+	@Override
+	public void processImageDir() {
+		
+		LOG.error("Must override processImageDir() in:"+this.getClass().getName());
+		processImageDirCallback(null);
+	}
+
+	private void processImageDirCallback(File imageFile) {
+		if (imageFile == null) {
+			throw new RuntimeException("null imageFile ");
+		}
+		this.imageDir = imageFile.getParentFile();
 		if (segment) {	
 			AbstractTemplateElement templateElement = 
 					AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
 			if (templateElement != null) {
 				templateElement.process();
 			}
-			return;
-			
 		}
 		if (useHocr) {
 			File textLineListFile = HOCRConverter.getTextLineListFilename(imageDir);
 			createForestPlotFromImageText(textLineListFile);
 		} else if (false) {
+			/** maybe wrong to comment out
 			File imageFile = getRawImageFile(imageDir);
+			*/
 			createForestPlotFromImage(imageFile);
 		}
 		if (table != null) {
@@ -463,11 +453,14 @@ public class AMIForestPlotTool extends AbstractAMITool implements HasImageDir {
 			}
 			File svgFile = new File(new File(imageDir, inputBasename), table);
 			if (!svgFile.exists()) {
+				LOG.warn("no file>"+svgFile);
 				System.out.println("no file>: "+svgFile);
 			} else {
-				TableExtractor tableExtractor = new TableExtractor();
-				tableExtractor.setTableTypeList(tableTypeList);
-				tableExtractor.extractTable(svgFile);
+				if (tableTypeList != null && tableTypeList.size() > 0) {
+					TableExtractor tableExtractor = new TableExtractor();
+					tableExtractor.setTableTypeList(tableTypeList);
+					tableExtractor.extractTable(svgFile);
+				}
 			}
 		}
 	}

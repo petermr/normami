@@ -393,7 +393,7 @@ public class AMIImageTest {
 				"--duplicates", "true", 
 				"--duplicatedir", "duplicates",
 				};
-		AMIImageFilterTool amiImage = new AMIImageFilterTool();
+		AMIImageTool amiImage = new AMIImageTool();
 		amiImage.runCommands(args);
 	}
 	
@@ -403,18 +403,17 @@ public class AMIImageTest {
 	 */
 	public void testImagePanels() throws Exception {
 		// NYI
-		String targetDir = "xxx";
+		String userDir = System.getProperty("user.home");
+		File projectDir = new File(userDir, "projects/forestplots/spss");
 		String args = 
-				"-p "+targetDir+
-				" --monochrome true"+
-				" --monochromedir monochrome"+
+				"-p "+projectDir+
 				" --minwidth 100"+
 				" --minheight 100"+
-				" --smalldir small"+
-				" --duplicates true"+ 
-				" --duplicatedir duplicates"
+				" --monochrome monochrome"+
+				" --small small"+
+				" --duplicate duplicate"
 				;
-		AMIImageFilterTool amiImage = new AMIImageFilterTool();
+		AMIImageTool amiImage = new AMIImageTool();
 		amiImage.runCommands(args);
 	}
 

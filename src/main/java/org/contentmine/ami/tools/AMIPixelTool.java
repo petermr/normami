@@ -369,12 +369,6 @@ public class AMIPixelTool extends AbstractAMITool implements HasImageDir {
 		imageDirProcessor.processImageDirs();
 	}
 
-//	private List<File> createSortedImageDirectories() {
-//		List<File> imageDirs = cTree.getPDFImagesImageDirectories();
-//		Collections.sort(imageDirs);
-//		return imageDirs;
-//	}
-	
 	private void runPixel(File imageFile) {
 		imageDir = imageFile.getParentFile();
 		System.out.println(">imageDir> "+imageDir.getName());
@@ -1001,8 +995,9 @@ public class AMIPixelTool extends AbstractAMITool implements HasImageDir {
 
 	@Override
 	public File getImageFile(File imageDir, String inputname) {
-		LOG.warn("must implement getImagefile");
-		return null;
+		File imageFile = inputname != null ? new File(imageDir, inputname+".png") :
+			AbstractAMITool.getRawImageFile(imageDir);
+		return imageFile;
 	}
 
 }

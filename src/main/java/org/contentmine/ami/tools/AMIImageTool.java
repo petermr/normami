@@ -2,12 +2,8 @@ package org.contentmine.ami.tools;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
@@ -19,19 +15,15 @@ import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.cproject.util.CMineGlobber;
 import org.contentmine.eucl.euclid.Real;
-import org.contentmine.eucl.euclid.util.CMFileUtil;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.svg.util.ImageIOUtil;
 import org.contentmine.image.ImageUtil;
 import org.contentmine.image.ImageUtil.SharpenMethod;
 import org.contentmine.image.ImageUtil.ThresholdMethod;
 
-import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
-import boofcv.alg.feature.orientation.impl.ImplOrientationAverageGradientIntegral;
 import nu.xom.Element;
-import nu.xom.Elements;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -209,7 +201,7 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 	private MonochromeDest monochromeDirname;
 
     @Option(names = {"--small"},
-    		arity = "1",
+    		arity = "0..1",
     		defaultValue = "small",
             description = "FILTER: move small images to <monochrome>; default ${DEFAULT-VALUE}; "+_DELETE+" means delete"
             )
@@ -378,54 +370,40 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 	}
 
 	protected void processTree() {
-		processTreeFilter();
-		processTreeTransform();
+		ImageDirProcessor imageDirProcessor = new ImageDirProcessor(this, cTree);
+		imageDirProcessor.processImageDirs();
 	}
 
-	protected void processTreeFilter() {
-		System.out.println("filterImages cTree: "+cTree.getName());
-		File pdfImagesDir = cTree.getExistingPDFImagesDir();
-		if (pdfImagesDir == null || !pdfImagesDir.exists()) {
-			LOG.warn("no pdfimages/ dir");
+	private void processSingleImageFile(File imageFile) {
+		if (imageFile == null) {
+			LOG.debug("processSingleImageFile: null file");
 		} else {
-			duplicateSet = HashMultiset.create();
-			List<File> imageFiles = CMineGlobber.listSortedChildFiles(pdfImagesDir, CTree.PNG);
-			Collections.sort(imageFiles);
-			for (File imageFile : imageFiles) {
-				System.err.print(".");
-				String basename = FilenameUtils.getBaseName(imageFile.toString());
-				BufferedImage image = null;
+			File imageDir = imageFile.getParentFile();
+			processTransformImageDir(imageDir);
+		}
+	}
+
+
+	private void processTransformImageDir(File imageDir) {
+		if (!imageDir.exists()) {
+			LOG.debug("Dir does not exist: "+imageDir);
+		} else {
+			if (templateFilename != null) {
+				templateElement = AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
+			}
+			if (templateElement != null) {
+				processTemplate();
+			} else {
 				try {
-					image = ImageUtil.readImage(imageFile);
-					// this has to cascade in order; they can be reordered if required
-					if (false) {
-					} else if (moveSmallImageTo(image, imageFile, smallDirname, pdfImagesDir)) {
-						System.out.println("small: "+basename);
-					} else if (moveMonochromeImagesTo(image, imageFile, monochromeDirname, pdfImagesDir)) {
-						System.out.println("monochrome: "+basename);
-					} else if (moveDuplicateImagesTo(image, imageFile, duplicateDirname, pdfImagesDir)) {
-						System.out.println("duplicate: "+basename);
-					} else {
-						// move file to <pdfImagesDir>/<basename>/raw.png
-						File imgDir = new File(pdfImagesDir, basename);
-						File newImgFile = new File(imgDir, RAW + "." + CTree.PNG);
-						try {
-							CMFileUtil.forceMove(imageFile, newImgFile);
-						} catch (Exception ioe) {
-							throw new RuntimeException("cannot rename "+imageFile+" to "+newImgFile, ioe); 
-						}
-					}
-				} catch(IndexOutOfBoundsException e) {
-					LOG.error("BUG: failed to read: "+imageFile);
-				} catch(IOException e) {
+					runTransform(imageDir);
+				} catch (Exception e) {
 					e.printStackTrace();
-					LOG.debug("failed to read file " + imageFile + "; "+ e);
+					LOG.error("Bad read: "+imageDir+" ("+e.getMessage()+")");
 				}
 			}
 		}
-		return;
 	}
-
+	
 
 	protected void processTreeTransform() {
 		System.out.println("transformImages cTree: "+cTree.getName());
@@ -443,91 +421,68 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 		for (File imageDir : imageDirs) {
 			if (imageDir.getName().startsWith(IMAGE)) {
 				System.err.print(".");
-				if (!imageDir.exists()) {
-					LOG.debug("Dir does not exist: "+imageDir);
-					continue;
-				}
-				if (templateFilename != null) {
-					templateElement = AbstractTemplateElement.readTemplateElement(imageDir, templateFilename);
-				}
-				if (templateElement != null) {
-					processTemplate();
-				} else {
-					try {
-						runTransform(imageDir);
-					} catch (Exception e) {
-						e.printStackTrace();
-						LOG.error("Bad read: "+imageDir+" ("+e.getMessage()+")");
-					}
-				}
+				processTransformImageDir(imageDir);
 			}
 			continue;
 		}
 	}
+
 	
+
 	private void processTemplate() {
 		List<Element> imageElements = XMLUtil.getQueryElements(templateElement, "./*[local-name()='"+ImageTemplateElement.TAG+"']");
 		for (int i = 0; i < imageElements.size(); i++) {
 			((ImageTemplateElement) imageElements.get(i)).process();
 		}
 	}
-/**
-	private AbstractTemplateElement readTemplate(File imageDir) {
-		File templateFile = new File(imageDir, templateFilename);
-		if (!templateFile.exists()) {
-			LOG.info(">>>>>>>>>>>>>>>no template in: "+imageDir);
-		}
-		Element element = XMLUtil.parseQuietlyToRootElement(templateFile);
-		templateElement = AbstractTemplateElement.createTemplateElement(element);
-		return templateElement;
-		
-	}
-*/
-	// ================= filter ============
-	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
-		if (destDirname != null) {
-			int width = image.getWidth();
-			int height = image.getHeight();
-			if (width < minWidth || height < minHeight) {
-				copyOrDelete(srcImageFile, destDirname, destDir);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	private boolean moveMonochromeImagesTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
-		if (destDirname != null) {
-			Integer singleColor = ImageUtil.getSingleColor(image);
-			if (singleColor != null && srcImageFile.exists()) {
-				copyOrDelete(srcImageFile, destDirname, destDir);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	private boolean moveDuplicateImagesTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
-		if (destDirname != null) {
-			String hash = ""+image.getWidth()+"-"+image.getHeight()+"-"+ImageUtil.createSimpleHash(image);
-			duplicateSet.add(hash);
-			if (duplicateSet.count(hash) > 1) {
-				copyOrDelete(srcImageFile, destDirname, destDir);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	private void copyOrDelete(File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
-		if (_DELETE.equals(destDirname.toString())) {
-			CMFileUtil.forceDelete(srcImageFile);
-		} else {
-			File fullDestDir = new File(destDir, destDirname.toString());
-			fullDestDir.mkdirs();
-			CMFileUtil.forceMoveFileToDirectory(srcImageFile, fullDestDir);
-		}
-	}
+	
+//	// ================= filter ============
+//	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
+//		if (destDirname != null) {
+//			int width = image.getWidth();
+//			int height = image.getHeight();
+//			if (width < minWidth || height < minHeight) {
+//				copyOrDelete(srcImageFile, destDirname, destDir);
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
+//
+//	private boolean moveMonochromeImagesTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
+//		if (destDirname != null) {
+//			Integer singleColor = ImageUtil.getSingleColor(image);
+//			if (singleColor != null && srcImageFile.exists()) {
+//				copyOrDelete(srcImageFile, destDirname, destDir);
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
+//
+//	private boolean moveDuplicateImagesTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
+//		if (destDirname != null) {
+//			String hash = ""+image.getWidth()+"-"+image.getHeight()+"-"+ImageUtil.createSimpleHash(image);
+//			if (duplicateSet != null) {
+//				duplicateSet.add(hash);
+//				if (duplicateSet.count(hash) > 1) {
+//					copyOrDelete(srcImageFile, destDirname, destDir);
+//					return true;
+//				}
+//			}
+//		}
+//		return false;
+//	}
+//
+//	private void copyOrDelete(File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
+//		if (_DELETE.equals(destDirname.toString())) {
+//			CMFileUtil.forceDelete(srcImageFile);
+//		} else {
+//			File fullDestDir = new File(destDir, destDirname.toString());
+//			fullDestDir.mkdirs();
+//			CMFileUtil.forceMoveFileToDirectory(srcImageFile, fullDestDir);
+//		}
+//	}
 
 	// ================= transform ===============
 	
@@ -656,7 +611,7 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 			type = "threshold"+"_"+threshold;
 		}
 		if (image != null) {
-			ImageUtil.writeImageQuietly(image, new File(imageDir, type+"."+CTree.PNG));
+//			ImageUtil.writeImageQuietly(image, new File(imageDir, type+"."+CTree.PNG));
 		}
 		return image;
 	}
@@ -675,7 +630,7 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 			resultImage = image;
 		} 
 		if (resultImage != null ) {
-			ImageUtil.writeImageQuietly(resultImage, new File(imageDir, sharpenMethod+"."+CTree.PNG));
+//			ImageUtil.writeImageQuietly(resultImage, new File(imageDir, sharpenMethod+"."+CTree.PNG));
 		}
 		return resultImage;
 	}
@@ -729,20 +684,21 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 	/** HasImageDir methods*/
 	@Override
 	public void processImageDir(File imageFile) {
-		// TODO Auto-generated method stub
-		
+//		System.err.println("Single IMAGE FILE "+imageFile);
+		processSingleImageFile(imageFile);
 	}
 
 	@Override
 	public void processImageDir() {
-		// TODO Auto-generated method stub
-		
+		processSingleImageFile(null);
+		LOG.warn("process ImageDir()");
 	}
 
 	@Override
 	public File getImageFile(File imageDir, String inputname) {
-		// TODO Auto-generated method stub
-		return null;
+		File imageFile = inputname != null ? new File(imageDir, inputname+"."+CTree.PNG) :
+			AbstractAMITool.getRawImageFile(imageDir);
+		return imageFile;
 	}
 
 

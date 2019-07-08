@@ -8,7 +8,6 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.util.CMineGlobber;
-import org.contentmine.norma.image.ocr.HOCRConverter;
 
 
 public class ImageDirProcessor {
@@ -19,7 +18,6 @@ public class ImageDirProcessor {
 	}
 
 	private CTree cTree;
-	private File currentImageDir;
 	public AbstractAMITool amiTool;
 	private List<File> imageDirs;
 
@@ -79,7 +77,6 @@ public class ImageDirProcessor {
 	}
 
 	private void processImageDir(File imageDir) {
-		this.currentImageDir = imageDir;
 		List<String> inputnameList = amiTool.getInputBasenameList();
 		if (inputnameList != null && inputnameList.size() > 0) {
 			for (String inputname : inputnameList) {
@@ -90,13 +87,15 @@ public class ImageDirProcessor {
 		}
 	}
 
+	/** this calls back to amiTool */
 	private void processInputName(File imageDir, String inputname) {
 		HasImageDir hasImageDir = (HasImageDir)amiTool;
 		File imageFile = hasImageDir.getImageFile(imageDir, inputname);
+		amiTool.setInputBasename(inputname);
+		/** this is NOT right */
 		if (imageFile == null || !imageFile.exists()) {
-//			System.out.println("image file does not exist: "+imageFile);
-			hasImageDir.processImageDir();
-			return;
+			System.out.println("BUG? image file does not exist: "+imageFile);
+//			hasImageDir.processImageDir();
 		} else {
 			hasImageDir.processImageDir(imageFile);
 		}

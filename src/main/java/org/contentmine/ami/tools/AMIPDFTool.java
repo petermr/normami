@@ -36,13 +36,6 @@ public class AMIPDFTool extends AbstractAMITool {
 	public AMIPDFTool() {
 	}
 	
-//    @Parameters(index = "0",
-//    		arity="0..*",
-//    		split=",",
-//    		description = "primary operation: (${COMPLETION-CANDIDATES}); if no operation, runs help"
-//    		)
-//    private Operation operation = Operation.help;
-
     public AMIPDFTool(CProject cProject) {
     	this.cProject = cProject;
 	}

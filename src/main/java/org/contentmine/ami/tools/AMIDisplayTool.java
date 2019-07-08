@@ -325,7 +325,7 @@ public class AMIDisplayTool extends AbstractAMITool {
 //			obj.setType(HtmlObject.SVGTYPE);
 //			obj.setSrc(name);
 			if (!file.exists()) {
-				System.out.println("no file>"+file);
+				LOG.warn("no file>"+file);
 				td.appendChild("no file: "+file);
 			} else {
 				Element svg = XMLUtil.parseQuietlyToRootElement(file);
