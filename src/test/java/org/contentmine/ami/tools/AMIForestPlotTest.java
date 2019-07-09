@@ -975,45 +975,65 @@ public class AMIForestPlotTest {
 	 */
 	@Test
 	public void testSPSSStataSimpleClean() throws IOException {
+		// un/comment to switch Stata <=> spss
 //		ForestPlotType fpType = ForestPlotType.spss;
 		ForestPlotType fpType = ForestPlotType.stata;
-		String source = createSourceFromProjectAndTree(Scope.TREE, fpType);
+		
+		// un/comment to switch project <=> tree
+//		Scope scope = Scope.TREE;
+		Scope scope = Scope.PROJECT;
+		
+		String source = createSourceFromProjectAndTree(scope, fpType);
 		String TREENAME = ForestPlotType.spss.equals(fpType) ? "PMC5502154/" : "PMC5882397/";
 		String THRESH = ForestPlotType.spss.equals(fpType) ? "150" : "150";
-		String RAW = "raw_";
-		String SHARPENED    = "s4_"+"thr_"+THRESH+"_ds";
-		String SHARPBASE = RAW+SHARPENED;
+		String TEMPLATE_XSL = ForestPlotType.spss.equals(fpType) ? "spssTemplate1" : "stataTemplate1";
 		String SUBIMAGE = ForestPlotType.spss.equals(fpType) ? "" : " --subimage statascale y LAST delta 10 projection x";
 		String YPROJECT = ForestPlotType.spss.equals(fpType) ? "0.4" : "0.8";
 		String XPROJECT = ForestPlotType.spss.equals(fpType) ? "0.7" : "0.6";
+		
+		String RAW = "raw";
+		String SHARPENED    = "s4_"+"thr_"+THRESH+"_ds";
+		String SHARPBASE = RAW+"_"+SHARPENED;
 
-// uncomment to start from scratch 
+// uncomment to start from scratch (for debugging)
  		resetCTree(source, TREENAME);
  
+		/** =================================== */
+		/** process PDFs into svg and pdfimages */
+		/** =================================== */
 		new AMIPDFTool().runCommands(source);
-		new AMIFilterTool().runCommands(source + " --small small --duplicate duplicate --monochrome monochrome");
-		String inputname = "raw";
 		
-		new AMIImageTool().runCommands(source + " --inputname "+inputname+ " "+ SHARP4 + " --threshold " + THRESH + " " + DS);
+		/** ======================================= */
+		/** filter small, duplicates and monochrome */
+		/** ======================================= */
+		new AMIFilterTool().runCommands(source + " --small small --duplicate duplicate --monochrome monochrome");
+		
+		/** ================= */
+		/** sharpen raw image */
+		/** ================= */
+		new AMIImageTool().runCommands(source + " --inputname "+RAW+ " "+ SHARP4 + " --threshold " + THRESH + " " + DS);
 
-		String TEMPLATE_XSL = ForestPlotType.spss.equals(fpType) ? "spssTemplate1" : "stataTemplate1";
+		/** ============================ */
+		/** segment raw image into panels*/
+		/** ============================ */
 		new AMIPixelTool().runCommands(source
 				+ " --projections --yprojection " + YPROJECT + "  --xprojection "+XPROJECT + " --lines"
 				+ " --minheight -1 --rings -1 --islands 0"
 				+ " --inputname "+SHARPBASE
 				+ SUBIMAGE
-//				+ " --subimage statascale y LAST delta 10 projection x"
 				+ " --templateinput "+SHARPBASE+"/projections.xml"
 				+ " --templateoutput template.xml"
 				+ " --templatexsl /org/contentmine/ami/tools/" + TEMPLATE_XSL + ".xsl");
 
-		/** segment image */
-		inputname = "raw";
-		/** NO PROBLEMS  HERE */
-		new AMIForestPlotTool().runCommands(source + " --inputname " +inputname + " --segment --template "+SHARPBASE+"/template.xml");
+		/** ============================ */
+		/** segment raw image into panels*/
+		/** ============================ */
+		new AMIForestPlotTool().runCommands(source + " --inputname " +RAW + " --segment --template "+SHARPBASE+"/template.xml");
 
+		/** =========================== */
+		/** sharpen segmented panels */
+		/** =========================== */
 		String SHARPEN = SHARP4 + " --threshold "+THRESH + DS;
-		/** sharpen/threshold segment images */
 
 		String RAW_LIST = ForestPlotType.spss.equals(fpType) ? ""
 			+ " raw.header.tableheads "
@@ -1028,10 +1048,11 @@ public class AMIForestPlotTest {
 			+ " raw.scale"
 		;
 
-		/* sharpen the new segments */
-		/** PROBLEMS  HERE */
 		new AMIImageTool().runCommands(source + " --inputnamelist " + RAW_LIST + " " + SHARPEN );
 
+		/** ============================== */
+		/** OCR sharpened segmented panels */
+		/** ============================== */
 		String SHARP_LIST = ForestPlotType.spss.equals(fpType) ? ""
 				+ " raw.header.tableheads_"+SHARPENED 
 				+ " raw.header.graphheads_"+SHARPENED 
@@ -1053,7 +1074,9 @@ public class AMIForestPlotTest {
 		String GOCR_CMD = GOCR + EXTLINES_HOCR + FORCEMAKE;
 		new AMIOCRTool().runCommands(source + " --inputnamelist " + SHARP_LIST + GOCR_CMD);
 		
+		/** =========================== */
 		/** analyse OCR output in boxes */
+		/** =========================== */
 		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + SHARP_LIST + " --table "+"hocr/hocr.svg" + " --tableType hocr" );
 		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + SHARP_LIST + " --table "+"gocr/gocr.svg" + " --tableType gocr");
 
