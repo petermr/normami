@@ -13,6 +13,7 @@ import org.contentmine.ami.tools.AbstractAMITool.Scope;
 import org.contentmine.ami.tools.gocr.LevenshteinDistanceAligment;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
+import org.contentmine.image.plot.forest.ForestPlotTest;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -503,9 +504,7 @@ public class AMIForestPlotTest {
 
 		/** make template - requires */
 		String thresh = "150";
-		String templthresh = "230";
 		String process = "s4_thr_" + thresh + "_ds";
-		String templprocess = "s4_thr_" + templthresh + "_ds";
 		new AMIPixelTool().runCommands(source
 				+ " --projections --yprojection 0.8 --xprojection 0.6 --lines"
 				+ " --minheight -1 --rings -1 --islands 0"
@@ -516,7 +515,6 @@ public class AMIForestPlotTest {
 				+ " --templatexsl /org/contentmine/ami/tools/stataTemplate1.xsl");
 
 		/** segment image */
-//		new AMIForestPlotTool().runCommands(source + " --segment --template raw_" + templprocess + "/template.xml");
 		new AMIForestPlotTool().runCommands(source + " --segment --inputname raw_"+process+" --template raw_" + process + "/template.xml");
 		String f = "raw_" + process + "/template.xml";
 		System.out.println("f"+f);
@@ -911,7 +909,9 @@ public class AMIForestPlotTest {
 	@Test
 	public void testSPSSSimpleClean() throws IOException {
 		String source = createSourceFromProjectAndTree(Scope.TREE, ForestPlotType.spss);
-		resetCTree(source, "PMC5502154/");
+/** uncomment to start from scratch 
+ * 		resetCTree(source, "PMC5502154/");
+ */
 		new AMIPDFTool().runCommands(source);
 		new AMIFilterTool().runCommands(source + " --small small --duplicate duplicate --monochrome monochrome");
 		String inputname = "raw";
@@ -941,31 +941,125 @@ public class AMIForestPlotTest {
 		+ " raw.footer.scale "
 		;
 
-		String raw_s4_thr_150_ds_list = ""
-			+ " raw.header.tableheads_s4_thr_150_ds " 
-			+ " raw.header.graphheads_s4_thr_150_ds "
-			+ " raw.body.table_s4_thr_150_ds "
-			+ " raw.footer.summary_s4_thr_150_ds "
-			+ " raw.footer.scale_s4_thr_150_ds "
-			;
-
 		new AMIImageTool().runCommands(source + " --inputnamelist "
 				+ raw_list + " "
 				+ sharp
 				);
-		
+
+		String raw_s4_thr_150_ds_list = ""
+				+ " raw.header.tableheads_s4_thr_150_ds " 
+				+ " raw.header.graphheads_s4_thr_150_ds "
+				+ " raw.body.table_s4_thr_150_ds "
+				+ " raw.footer.summary_s4_thr_150_ds "
+				+ " raw.footer.scale_s4_thr_150_ds "
+				;
+/* comment out for speed? why does the make not work?
 		String FORCEMAKE = "";
 		String tess = TESSERACT + EXTLINES_HOCR + FORCEMAKE;
 		new AMIOCRTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + tess);
 		
 		String gocr = GOCR + EXTLINES_HOCR + FORCEMAKE;
 		new AMIOCRTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + gocr);
+		*/
 		
-		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + " --table "+"hocr/hocr.svg" );
-		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + " --table "+"gocr/gocr.svg" );
+		/** analyse OCR output in boxes */
+		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + " --table "+"hocr/hocr.svg" + " --tableType hocr" );
+		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + raw_s4_thr_150_ds_list + " --table "+"gocr/gocr.svg" + " --tableType gocr");
 
 		return;
 	}
+
+	/** delete a single tree and run the complete stack over it
+	 * @throws IOException 
+	 * 
+	 */
+	@Test
+	public void testSPSSStataSimpleClean() throws IOException {
+//		ForestPlotType fpType = ForestPlotType.spss;
+		ForestPlotType fpType = ForestPlotType.stata;
+		String source = createSourceFromProjectAndTree(Scope.TREE, fpType);
+		String TREENAME = ForestPlotType.spss.equals(fpType) ? "PMC5502154/" : "PMC5882397/";
+		String THRESH = ForestPlotType.spss.equals(fpType) ? "150" : "150";
+		String RAW = "raw_";
+		String SHARPENED    = "s4_"+"thr_"+THRESH+"_ds";
+		String SHARPBASE = RAW+SHARPENED;
+		String SUBIMAGE = ForestPlotType.spss.equals(fpType) ? "" : " --subimage statascale y LAST delta 10 projection x";
+		String YPROJECT = ForestPlotType.spss.equals(fpType) ? "0.4" : "0.8";
+		String XPROJECT = ForestPlotType.spss.equals(fpType) ? "0.7" : "0.6";
+
+// uncomment to start from scratch 
+ 		resetCTree(source, TREENAME);
+ 
+		new AMIPDFTool().runCommands(source);
+		new AMIFilterTool().runCommands(source + " --small small --duplicate duplicate --monochrome monochrome");
+		String inputname = "raw";
+		
+		new AMIImageTool().runCommands(source + " --inputname "+inputname+ " "+ SHARP4 + " --threshold " + THRESH + " " + DS);
+
+		String TEMPLATE_XSL = ForestPlotType.spss.equals(fpType) ? "spssTemplate1" : "stataTemplate1";
+		new AMIPixelTool().runCommands(source
+				+ " --projections --yprojection " + YPROJECT + "  --xprojection "+XPROJECT + " --lines"
+				+ " --minheight -1 --rings -1 --islands 0"
+				+ " --inputname "+SHARPBASE
+				+ SUBIMAGE
+//				+ " --subimage statascale y LAST delta 10 projection x"
+				+ " --templateinput "+SHARPBASE+"/projections.xml"
+				+ " --templateoutput template.xml"
+				+ " --templatexsl /org/contentmine/ami/tools/" + TEMPLATE_XSL + ".xsl");
+
+		/** segment image */
+		inputname = "raw";
+		/** NO PROBLEMS  HERE */
+		new AMIForestPlotTool().runCommands(source + " --inputname " +inputname + " --segment --template "+SHARPBASE+"/template.xml");
+
+		String SHARPEN = SHARP4 + " --threshold "+THRESH + DS;
+		/** sharpen/threshold segment images */
+
+		String RAW_LIST = ForestPlotType.spss.equals(fpType) ? ""
+			+ " raw.header.tableheads "
+			+ " raw.header.graphheads "
+			+ " raw.body.table "
+			+ " raw.footer.summary "
+			+ " raw.footer.scale "
+		: ""
+			+ " raw.header"
+			+ " raw.body.ltable"
+			+ " raw.body.rtable"
+			+ " raw.scale"
+		;
+
+		/* sharpen the new segments */
+		/** PROBLEMS  HERE */
+		new AMIImageTool().runCommands(source + " --inputnamelist " + RAW_LIST + " " + SHARPEN );
+
+		String SHARP_LIST = ForestPlotType.spss.equals(fpType) ? ""
+				+ " raw.header.tableheads_"+SHARPENED 
+				+ " raw.header.graphheads_"+SHARPENED 
+				+ " raw.body.table_"+SHARPENED 
+				+ " raw.footer.summary_"+SHARPENED 
+				+ " raw.footer.scale_"+SHARPENED 
+				: ""
+ 				+ " raw.header_"+SHARPENED
+ 				+ " raw.body.ltable_"+SHARPENED
+ 				+ " raw.body.rtable_"+SHARPENED
+ 				+ " raw.scale_"+SHARPENED
+ 				;
+
+/* comment out for speed? why does the make not work? */
+		String FORCEMAKE = " --forcemake";
+		String TESS_CMD = TESSERACT + EXTLINES_HOCR + FORCEMAKE;
+		new AMIOCRTool().runCommands(source + " --inputnamelist " + SHARP_LIST + TESS_CMD);
+		
+		String GOCR_CMD = GOCR + EXTLINES_HOCR + FORCEMAKE;
+		new AMIOCRTool().runCommands(source + " --inputnamelist " + SHARP_LIST + GOCR_CMD);
+		
+		/** analyse OCR output in boxes */
+		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + SHARP_LIST + " --table "+"hocr/hocr.svg" + " --tableType hocr" );
+		new AMIForestPlotTool().runCommands(source + " --inputnamelist " + SHARP_LIST + " --table "+"gocr/gocr.svg" + " --tableType gocr");
+
+		return;
+	}
+
 
 	private void resetCTree(String source, String pdfFilename) throws IOException {
 		String filename = source.split("\\s+")[1];

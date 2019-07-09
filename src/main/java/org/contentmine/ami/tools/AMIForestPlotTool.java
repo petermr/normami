@@ -460,6 +460,8 @@ public class AMIForestPlotTool extends AbstractAMITool implements HasImageDir {
 					TableExtractor tableExtractor = new TableExtractor();
 					tableExtractor.setTableTypeList(tableTypeList);
 					tableExtractor.extractTable(svgFile);
+				} else {
+					LOG.warn("No tableType");
 				}
 			}
 		}

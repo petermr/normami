@@ -370,6 +370,7 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 	}
 
 	protected void processTree() {
+		System.out.println("AMIImageTOOL processTree");
 		ImageDirProcessor imageDirProcessor = new ImageDirProcessor(this, cTree);
 		imageDirProcessor.processImageDirs();
 	}
@@ -395,7 +396,7 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 				processTemplate();
 			} else {
 				try {
-					runTransform(imageDir);
+					runTransform(imageDir, inputBasename);
 				} catch (Exception e) {
 					e.printStackTrace();
 					LOG.error("Bad read: "+imageDir+" ("+e.getMessage()+")");
@@ -435,67 +436,9 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
 			((ImageTemplateElement) imageElements.get(i)).process();
 		}
 	}
-	
-//	// ================= filter ============
-//	private boolean moveSmallImageTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
-//		if (destDirname != null) {
-//			int width = image.getWidth();
-//			int height = image.getHeight();
-//			if (width < minWidth || height < minHeight) {
-//				copyOrDelete(srcImageFile, destDirname, destDir);
-//				return true;
-//			}
-//		}
-//		return false;
-//	}
-//
-//	private boolean moveMonochromeImagesTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
-//		if (destDirname != null) {
-//			Integer singleColor = ImageUtil.getSingleColor(image);
-//			if (singleColor != null && srcImageFile.exists()) {
-//				copyOrDelete(srcImageFile, destDirname, destDir);
-//				return true;
-//			}
-//		}
-//		return false;
-//	}
-//
-//	private boolean moveDuplicateImagesTo(BufferedImage image, File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
-//		if (destDirname != null) {
-//			String hash = ""+image.getWidth()+"-"+image.getHeight()+"-"+ImageUtil.createSimpleHash(image);
-//			if (duplicateSet != null) {
-//				duplicateSet.add(hash);
-//				if (duplicateSet.count(hash) > 1) {
-//					copyOrDelete(srcImageFile, destDirname, destDir);
-//					return true;
-//				}
-//			}
-//		}
-//		return false;
-//	}
-//
-//	private void copyOrDelete(File srcImageFile, AbstractDest destDirname, File destDir) throws IOException {
-//		if (_DELETE.equals(destDirname.toString())) {
-//			CMFileUtil.forceDelete(srcImageFile);
-//		} else {
-//			File fullDestDir = new File(destDir, destDirname.toString());
-//			fullDestDir.mkdirs();
-//			CMFileUtil.forceMoveFileToDirectory(srcImageFile, fullDestDir);
-//		}
-//	}
 
 	// ================= transform ===============
 	
-	private void runTransform(File imageDir) {
-		if (inputBasenameList != null && inputBasenameList.size() > 0) {
-			for (String inputBasename2 : inputBasenameList) {
-				runTransform(imageDir, inputBasename2);
-			}
-		} else{
-			runTransform(imageDir, inputBasename);
-		}
-	}
-
 	private void runTransform(File imageDir, String inputBasename2) {
 		File imageFile = new File(imageDir, inputBasename2+"."+CTree.PNG);
 		if (!imageFile.exists()) {

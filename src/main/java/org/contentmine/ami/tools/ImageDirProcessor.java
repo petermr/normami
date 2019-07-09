@@ -51,7 +51,7 @@ public class ImageDirProcessor {
 		}
 			
 		if (imageDirs != null) {
-			System.out.println("imageDirs: "+imageDirs.size());
+			System.out.println(" >>>>> imageDirs: "+imageDirs.size());
 			Collections.sort(imageDirs);
 			for (File imageDir : imageDirs) {
 				try {
@@ -78,6 +78,7 @@ public class ImageDirProcessor {
 
 	private void processImageDir(File imageDir) {
 		List<String> inputnameList = amiTool.getInputBasenameList();
+//		LOG.debug("processing ImageDir: "+imageDir+"//"+inputnameList);
 		if (inputnameList != null && inputnameList.size() > 0) {
 			for (String inputname : inputnameList) {
 				processInputName(imageDir, inputname);
@@ -92,12 +93,12 @@ public class ImageDirProcessor {
 		HasImageDir hasImageDir = (HasImageDir)amiTool;
 		File imageFile = hasImageDir.getImageFile(imageDir, inputname);
 		amiTool.setInputBasename(inputname);
-		/** this is NOT right */
 		if (imageFile == null || !imageFile.exists()) {
-			System.out.println("BUG? image file does not exist: "+imageFile);
+			LOG.error("BUG? image file does not exist: "+imageFile);
 //			hasImageDir.processImageDir();
 		} else {
 			hasImageDir.processImageDir(imageFile);
+//			hasImageDir.processImageFile(imageFile);
 		}
 	}
 
