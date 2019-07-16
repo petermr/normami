@@ -29,102 +29,34 @@ public class OcrMerger {
 		geometric,
 	}
 	
-	private ArrayList<File> fileList;
-	private ArrayList<String> fileTypeList;
-	private ArrayList<SVGElement> svgList;
-	private ArrayList<SVGElement> parsedList;
+	private List<OcrSegment> segmentList;
 	
 	public OcrMerger() {
 		ensureLists();
 	}
 	
 	private void ensureLists() {
-		if (this.fileList == null) {
-			this.fileList = new ArrayList<>();
-		}
-		if (this.fileTypeList == null) {
-			this.fileTypeList = new ArrayList<>();
-		}
-		if (this.svgList == null) {
-			this.svgList = new ArrayList<>();
-		}
-		if (this.parsedList == null) {
-			this.parsedList = new ArrayList<>();
+		if (segmentList == null) {
+			segmentList = new ArrayList<>();
 		}
 	}
-	public void addFile(File mergeFile) {
+	public void addFile(File svgFile) {
 		ensureLists();
-		String mergeType = FilenameUtils.getBaseName(mergeFile.toString());
-		fileList.add(mergeFile);
-		fileTypeList.add(mergeType);
+		OcrSegment ocrSegment = new OcrSegment(svgFile);
+		segmentList.add(ocrSegment);
 	}
 
 	public void merge() {
 		ensureLists();
-		addSVGFromFileList(0);
-		addSVGFromFileList(1);
+		segmentList.get(0).prepareMerge();
+		segmentList.get(1).prepareMerge();
+		merge(segmentList.get(0), segmentList.get(1));
 		return;
 		
 	}
 
-	private void addSVGFromFileList(int i) {
-		File file = fileList.get(i);
-//		System.out.println(">>file "+file);
-		svgList.add(SVGUtil.parseToSVGElement(file));
-		SVGElement svg = svgList.get(i);
-		String value = svg.getValue().replaceAll("\\s+", " ").trim();
-		value = value.replaceAll(",",  ".");
-		if (!value.contains(".")) {
-			value = "." + value;
-		}
-		System.out.println("svg ____________________________________ "+value);
-		String[] values = value.split("\\s+");
-		List<String> valueList = Arrays.asList(values);
-		LOG.debug(valueList);
-		LOG.debug("VAL "+values.length);
-		RealArray realArray = null;
-		try {
-			realArray = new RealArray(values);
-		} catch (Exception e) {
-			System.out.println("bad array : "+e.getMessage());
-		}
-		
-		if (realArray != null) {
-			LOG.debug("*****REALARRAY: "+realArray+" ********");
-			Double mean = null;
-			MeanType type = null;
-			
-			if (realArray.size() == 1) {
-				LOG.debug("***** SINGLE VALUE ****");
-			} else if (realArray.size() == 3) {
-				if (Real.isEqual(realArray.get(1),0.0,0.01)) {
-					mean = 0.0;
-					type = MeanType.arithmetic;
-				} else if (Real.isEqual(realArray.get(1),0.0,1.01)) {
-					mean = 1.0;
-					type = MeanType.geometric;
-				}
-				realArray.deleteElement(1);
-			} else if (realArray.size() == 2) {
-				mean = Double.NaN;
-			}
-			if (realArray.size() == 2) {
-				double prod = realArray.get(0) * realArray.get(1);
-				double sum = realArray.get(0) + realArray.get(1);
-				if (Real.isEqual(prod, 1., 0.01)) {
-					type = MeanType.geometric;
-				} else if (Real.isEqual(sum, 0., 0.01)) {
-					type = MeanType.arithmetic;
-				} else {
-					type = null;
-					LOG.debug("cannot find mean: "+realArray);
-				}
-			}
-			if (mean != null) {
-				LOG.debug("******** MEAN ****** "+type+": "+realArray);
-			} 
-		}
-		
+	private void merge(OcrSegment ocrSegment, OcrSegment ocrSegment2) {
+		LOG.debug("merge NYI");
 	}
-	
+
 }

@@ -3,6 +3,8 @@ package org.contentmine.ami.tools;
 import java.io.File;
 import java.util.List;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMIOCRTool.OcrType;
 import org.contentmine.eucl.euclid.Axis.Axis2;
 import org.contentmine.eucl.euclid.Real2;
@@ -20,6 +22,10 @@ import com.google.common.collect.Multiset;
 import com.google.common.collect.Multiset.Entry;
 
 public class TableExtractor {
+	private static final Logger LOG = Logger.getLogger(TableExtractor.class);
+	static {
+		LOG.setLevel(Level.DEBUG);
+	}
 
 	private List<String> tableTypeList;
 	private SVGElement svgElement;
@@ -44,7 +50,7 @@ public class TableExtractor {
 	}
 
 	void readHocrTable() {
-		AMIForestPlotTool.LOG.debug("hocrTable");
+		LOG.debug("hocrTable");
 	/** 
 	 * a tesseract chunk containing 2 words
 	<g id="line_1_2" baseline="(0.0,-3.0)" style="font-size:22.0px;" class="line">
@@ -67,7 +73,7 @@ public class TableExtractor {
 	}
 
 	void readGocrTable() {
-		AMIForestPlotTool.LOG.debug("hocrTable");
+//		LOG.debug("gocrTable");
 /** 
    <g class="line">
     <rect x="14.0" y="8.0" width="17.0" height="12.0" class="space" style="fill:none;stroke:blue;stroke-width:0.5;"/>

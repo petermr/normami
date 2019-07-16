@@ -3,15 +3,12 @@ package org.contentmine.ami.tools;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.template.AbstractTemplateElement;
@@ -20,23 +17,7 @@ import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
 import org.contentmine.eucl.euclid.Real2;
 import org.contentmine.eucl.euclid.Real2Array;
-import org.contentmine.eucl.euclid.Transform2;
-import org.contentmine.eucl.euclid.Vector2;
-import org.contentmine.eucl.euclid.util.MultisetUtil;
-import org.contentmine.eucl.xml.XMLUtil;
-import org.contentmine.graphics.html.HtmlA;
-import org.contentmine.graphics.html.HtmlBody;
 import org.contentmine.graphics.html.HtmlElement;
-import org.contentmine.graphics.html.HtmlHtml;
-import org.contentmine.graphics.html.HtmlImg;
-import org.contentmine.graphics.html.HtmlLi;
-import org.contentmine.graphics.html.HtmlTable;
-import org.contentmine.graphics.html.HtmlTbody;
-import org.contentmine.graphics.html.HtmlTd;
-import org.contentmine.graphics.html.HtmlTh;
-import org.contentmine.graphics.html.HtmlThead;
-import org.contentmine.graphics.html.HtmlTr;
-import org.contentmine.graphics.html.HtmlUl;
 import org.contentmine.graphics.svg.SVGCircle;
 import org.contentmine.graphics.svg.SVGElement;
 import org.contentmine.graphics.svg.SVGG;
@@ -52,7 +33,6 @@ import org.contentmine.norma.image.ocr.HOCRConverter;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
-import nu.xom.Element;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -454,7 +434,6 @@ public class AMIForestPlotTool extends AbstractAMITool implements HasImageDir {
 			File svgFile = new File(new File(imageDir, inputBasename), table);
 			if (!svgFile.exists()) {
 				LOG.warn("no file>"+svgFile);
-				System.out.println("no file>: "+svgFile);
 			} else {
 				if (tableTypeList != null && tableTypeList.size() > 0) {
 					TableExtractor tableExtractor = new TableExtractor();
@@ -485,7 +464,6 @@ public class AMIForestPlotTool extends AbstractAMITool implements HasImageDir {
 			String abb = textLine.getOrCreateTypeAnnotatedString();
 			System.out.println("tl: "+abb+";"+textLine);
 			List<SVGPhrase> phraseList = textLine.createPhraseList();
-			
 			textLine.annotateWith(phraseListList);
 		}
 		List<String> textLineAbbs = textLineList.getOrCreateTypeAnnotations();

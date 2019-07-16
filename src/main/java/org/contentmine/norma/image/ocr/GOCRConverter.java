@@ -13,6 +13,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMIOCRTool;
 import org.contentmine.ami.tools.gocr.GOCRPageElement;
+import org.contentmine.cproject.files.CTree;
 import org.contentmine.eucl.euclid.Int2;
 import org.contentmine.eucl.euclid.Int2Range;
 import org.contentmine.eucl.euclid.IntRange;
@@ -133,23 +134,13 @@ public class GOCRConverter  extends AbstractOCRConverter {
     public final static int EXTEND_DATABASE = 130;
   // 256       switch off the recognition engine (makes sense together with -m 2)
     public final static int SWITCH_OFF_RECOGNITION = 256;
-	private String inputFilename;
-	private BufferedImage inputImage;
+    
 	CharBoxList gocrCharBoxList;
 	
 	private GOCRPageElement gocrElement;
-	private SVGElement svgElement;
-	private File ocrBaseDir;
-	private File imageFile;
 	private int minYRange;
 	int minEntryCount;
-	private TextLineAnalyzer textLineAnalyzer;
-	private boolean disambiguate;
-	private AMIOCRTool amiOcrTool;
-	private List<String> replaceList;
-	private Multimap<String, String> replaceMap;
-
-
+	private File gocrSVGFile;
 	private GOCRConverter () {
 		setDefaults();
 	}
@@ -526,14 +517,6 @@ public class GOCRConverter  extends AbstractOCRConverter {
 		return g;
 	}
 
-	public boolean isDisambiguate() {
-		return disambiguate;
-	}
-
-	public void setDisambiguate(boolean disambiguate) {
-		this.disambiguate = disambiguate;
-	}
-
 	/** list of paired characters to substitute.
 	 * a b c d 
 	 * replaces a by b, c with d ...
@@ -553,6 +536,25 @@ public class GOCRConverter  extends AbstractOCRConverter {
 			replaceMap.put(replaceList.get(i), replaceList.get(i + 1));
 		}
 		System.out.println("replacements: "+replaceMap);
+	}
+
+	public void processGOCR(File processedImageDir) {
+		gocrSVGFile = AMIOCRTool.makeOcrOutputFilename(processedImageDir, amiOcrTool.getInputBasename(), AMIOCRTool.GOCR, CTree.SVG);
+		SVGElement gocrSvgElement = SVGElement.readAndCreateSVG(gocrSVGFile);
+		setDisambiguate(amiOcrTool.getDisambiguate());
+		TextLineAnalyzer textLineAnalyzer = createMaps(gocrSvgElement);
+		File gocrTextFile = AMIOCRTool.makeOcrOutputFilename(processedImageDir, amiOcrTool.getInputBasename(), AMIOCRTool.GOCR, CTree.TXT);
+		textLineAnalyzer.outputText(gocrTextFile);
+		
+		CharBoxList gocrCharBoxList = createCharBoxList(gocrSvgElement);
+	//		LOG.debug("cb "+gocrCharBoxList);
+		getTextLineAnalyzer().makeTable(0);
+		
+		List<SVGImage> gocrImages = SVGImage.extractSelfAndDescendantImages(gocrSvgElement);
+	}
+	
+	public File getSVGFile() {
+		return gocrSVGFile;
 	}
 
 

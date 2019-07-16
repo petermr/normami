@@ -28,7 +28,7 @@ import org.contentmine.graphics.svg.text.SVGTextLineList;
 import org.contentmine.image.ocr.HOCRReader;
 import org.contentmine.norma.util.CommandRunner;
 
-public class HOCRConverter extends CommandRunner {
+public class HOCRConverter /*extends CommandRunner*/ extends AbstractOCRConverter {
 
 
 	public final static Logger LOG = Logger.getLogger(HOCRConverter.class);

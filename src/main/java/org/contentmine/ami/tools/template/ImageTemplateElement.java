@@ -59,6 +59,7 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 			parseAttributes();
 		} catch (RuntimeException e) {
 			ok = false;
+			e.printStackTrace();
 			LOG.debug("Cannot create images: "+e.getClass()+"/"+e.getMessage());
 		}
 		if(ok) {
@@ -70,6 +71,14 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 	}
 
 	private void splitImage() {
+		if (sourceFile == null) {
+			System.err.println("Null source image file");
+			return;
+		}
+		if (!sourceFile.exists()) {
+			System.err.println("Source image file does not exist: "+sourceFile);
+			return;
+		}
 		BufferedImage image = ImageUtil.readImage(sourceFile);
 		File parentFile = sourceFile.getParentFile();
 		int imageSize = Direction.horizontal.equals(splitDirection) ? image.getHeight() : image.getWidth();
@@ -111,14 +120,17 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 		if (splitDirection == null) {
 			throw new RuntimeException("must have "+SPLIT+" with one of "+Direction.values());
 		}
-		borders = new RealArray(AbstractTemplateElement.getNonNullAttributeValue(this, BORDERS)).createIntArray();
+		String nonNullAttributeValue = AbstractTemplateElement.getNonNullAttributeValue(this, BORDERS);
+		LOG.debug(">"+nonNullAttributeValue);
+		borders = new RealArray(nonNullAttributeValue).createIntArray();
 		if (borders.size() == 0) {
 			throw new RuntimeException("must have at least one border: "+this.toXML());
 		}
-		sections = new ArrayList<String>(Arrays.asList(
-				AbstractTemplateElement.getNonNullAttributeValue(this, SECTIONS).trim().split("\\s+")));
+		String attVal = AbstractTemplateElement.getNonNullAttributeValue(this, SECTIONS);
+		sections = new ArrayList<String>(Arrays.asList(attVal.trim().split("\\s+")));
 		if (sections.size() - borders.size() != 1) {
-			throw new RuntimeException("must have exactly one more section than border");
+			System.err.println("must have exactly one more section than border: ["+attVal + "] // "+borders);
+			return;
 		}
 		extension = AbstractTemplateElement.getNonNullAttributeValue(this, EXTENSION);
 		if (extension == null) {
@@ -127,7 +139,7 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 		source = AbstractTemplateElement.getNonNullAttributeValue(this, SOURCE);
 		sourceFile = currentDir ==  null ? null : new File(currentDir, source);
 		if (sourceFile == null || !sourceFile.exists()) {
-			throw new RuntimeException("must have existing sourcefile: "+sourceFile);
+			System.err.println("must have existing sourcefile: "+sourceFile);
 		}
 	}
 }

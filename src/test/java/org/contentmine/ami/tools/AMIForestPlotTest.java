@@ -2,8 +2,6 @@ package org.contentmine.ami.tools;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
@@ -13,7 +11,6 @@ import org.contentmine.ami.tools.AbstractAMITool.Scope;
 import org.contentmine.ami.tools.gocr.LevenshteinDistanceAligment;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
-import org.contentmine.image.plot.forest.ForestPlotTest;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -41,10 +38,10 @@ public class AMIForestPlotTest {
 	private static final File SPSS_SUBPLOT_DIR = new File(FOREST_PLOT_DIR, SPSS_SUBPLOT);
 	private final static String STATA = "stata";
 	private static final File STATA_DIR = new File(STATA_FOREST_PLOT_DIR, STATA);
-	private final static String STATA_TOTAL = "stataTotal";
-	private static final File STATA_TOTAL_DIR = new File(STATA_FOREST_PLOT_DIR, STATA_TOTAL);
-	private final static String STATA_TOTAL_EDITED = "stataTotalEdited";
-	private static final File STATA_TOTAL_EDITED_DIR = new File(STATA_FOREST_PLOT_DIR, STATA_TOTAL_EDITED);
+	private final static String STATA_SIMPLE = "stataSimple";
+	private static final File STATA_SIMPLE_DIR = new File(FOREST_PLOT_DIR, STATA_SIMPLE);
+//	private final static String STATA_TOTAL_EDITED = "stataTotalEdited";
+//	private static final File STATA_TOTAL_EDITED_DIR = new File(STATA_FOREST_PLOT_DIR, STATA_TOTAL_EDITED);
 	public static final String DEVTEST = SPSS_DIR.toString();
 	
 	/** common arguments - note leading space */
@@ -572,17 +569,20 @@ public class AMIForestPlotTest {
 	
 	@Test
 	public void testIntegrateHOCRGOCRScale() {
-		String source = createSourceFromProjectAndTree(AbstractAMITool.Scope.PROJECT, ForestPlotType.stata);
+		String source = createSourceFromProjectAndTree(AbstractAMITool.Scope.TREE, ForestPlotType.stata);
 		String thresh = "150";
 		String process = "s4_thr_" + thresh + "_ds";
 		
-// 		new AMIOCRTool().runCommands(source + " --inputname raw.scale_s4_thr_"+thresh+"_ds" + TESSERACT + EXTLINES_HOCR /*+" --forcemake"*/);
-// 		new AMIOCRTool().runCommands(source + " --inputname raw.scale_s4_thr_"+thresh+"_ds" + GOCR + EXTLINES_GOCR /*+" --forcemake"*/);
-
  		new AMIOCRTool().runCommands(source + ""
- 				+ " --inputname raw.scale_"+process
- 				+ " --merge hocr/hocr.svg gocr/gocr.svg"
+// 				+ " --inputname raw.scale_"+process
+ 				+ " --inputname raw.body.rtable_"+process
+// 				+ " --config _config/config.xml "
+// 				+ " --whitelist hocr gocr"
+// 				+ " --regex "
+ 				
+ 				+ " --merge hocr/hocr.boxes.svg gocr/gocr.boxes.svg"
  				);
+ 		
 //		new AMIDisplayTool().runCommands(source + ""
 //				+ " --inputname raw.scale_"+process
 //				+ " --display .png hocr/hocr.svg gocr/gocr.svg"
@@ -995,8 +995,8 @@ public class AMIForestPlotTest {
 		String SHARPENED    = "s4_"+"thr_"+THRESH+"_ds";
 		String SHARPBASE = RAW+"_"+SHARPENED;
 
-// uncomment to start from scratch (for debugging)
- 		resetCTree(source, TREENAME);
+// uncomment to start from scratch (for debugging) DONT USE
+// 		resetCTree(source, TREENAME);
  
 		/** =================================== */
 		/** process PDFs into svg and pdfimages */
@@ -1101,9 +1101,9 @@ public class AMIForestPlotTest {
 		FileUtils.copyDirectory(srcDir, destDir);
 	}
 
-	private void copyPDFIntoProject(CProject cProject, String pdfFilename) throws IOException {
-		FileUtils.copyFile(new File(cProject.getDirectory(), "_original/" + pdfFilename), new File(cProject.getDirectory(), pdfFilename));
-	}
+//	private void copyPDFIntoProject(CProject cProject, String pdfFilename) throws IOException {
+//		FileUtils.copyFile(new File(cProject.getDirectory(), "_original/" + pdfFilename), new File(cProject.getDirectory(), pdfFilename));
+//	}
 
 	private void assertImageDirFileExists(String basename, String finalPath) {
 		File tree = cTree.getPDFImagesImageDirectories().get(0);
@@ -1131,13 +1131,13 @@ public class AMIForestPlotTest {
 			if (treename == null) {
 				treename = PMC5882397;
 			}
-			return createSourceFromProjectAndTree(treeOrProject, STATA_TOTAL_EDITED_DIR, treename);
+			return createSourceFromProjectAndTree(treeOrProject, STATA_SIMPLE_DIR, treename);
 		}
 		if (type.equals(ForestPlotType.spss)) {
 			if (treename == null) {
 				treename = PMC5502154;
 			}
-			return createSourceFromProjectAndTree(treeOrProject, SPSS_SIMPLE_DIR, PMC5502154);
+			return createSourceFromProjectAndTree(treeOrProject, SPSS_SIMPLE_DIR, treename);
 		}
 		return null;
 	}
