@@ -72,6 +72,8 @@ TREE_DIR="${PROJECT_DIR}/${TREE_NAME}"
 echo TREE ${TREE_DIR}
 
 # if clean, make a new test tree directory
+# needs a child tree: ${PROJECT_DIR}/_original/${TREE_NAME}/fulltext.pdf 
+
 if [ $CLEAN != "" ]
 then
 	TEST_DIR="${PROJECT_DIR}/_test"
