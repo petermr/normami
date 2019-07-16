@@ -980,8 +980,8 @@ public class AMIForestPlotTest {
 		ForestPlotType fpType = ForestPlotType.stata;
 		
 		// un/comment to switch project <=> tree
-//		Scope scope = Scope.TREE;
-		Scope scope = Scope.PROJECT;
+		Scope scope = Scope.TREE;
+//		Scope scope = Scope.PROJECT;
 		
 		String source = createSourceFromProjectAndTree(scope, fpType);
 		String TREENAME = ForestPlotType.spss.equals(fpType) ? "PMC5502154/" : "PMC5882397/";
@@ -995,8 +995,9 @@ public class AMIForestPlotTest {
 		String SHARPENED    = "s4_"+"thr_"+THRESH+"_ds";
 		String SHARPBASE = RAW+"_"+SHARPENED;
 
-// uncomment to start from scratch (for debugging) DONT USE
-// 		resetCTree(source, TREENAME);
+// uncomment to start from scratch (for debugging)
+// copies new TREE + fulltext.pdf
+ 		resetCTree(source, TREENAME);
  
 		/** =================================== */
 		/** process PDFs into svg and pdfimages */
@@ -1090,6 +1091,7 @@ public class AMIForestPlotTest {
 		CProject cProject = cTree. getOrCreateProject();
 		cProject.deleteCTree(cTree);
 		copyTreeIntoProject(cProject, pdfFilename);
+		return;
 	}
 
 	// ========================================

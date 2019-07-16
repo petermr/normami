@@ -117,8 +117,9 @@ public class AMIImageFilterTool extends AbstractAMITool {
 	}
 	
     public static void main(String[] args) throws Exception {
-    	AMIImageFilterTool amiCleaner = new AMIImageFilterTool();
-    	amiCleaner.runCommands(args);
+    	LOG.warn("Deprecated); use AMIFilterTool instead");
+    	AMIImageFilterTool amiFilter = new AMIImageFilterTool();
+    	amiFilter.runCommands(args);
     }
 
     @Override

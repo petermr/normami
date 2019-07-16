@@ -59,7 +59,7 @@ public class ImageTemplateElement extends AbstractTemplateElement {
 			parseAttributes();
 		} catch (RuntimeException e) {
 			ok = false;
-			e.printStackTrace();
+//			e.printStackTrace();
 			LOG.debug("Cannot create images: "+e.getClass()+"/"+e.getMessage());
 		}
 		if(ok) {

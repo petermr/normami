@@ -131,8 +131,13 @@
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.tools.AMIImageFilterTool</mainClass>
-							<!-- description: filters images -->
+							<!-- description: filters images DEPRECATED -->
                             <id>ami-imagefilter</id>
+                        </program>
+                         <program>
+                            <mainClass>org.contentmine.ami.tools.AMIFilterTool</mainClass>
+							<!-- description: filters images -->
+                            <id>ami-filter</id>
                         </program>
                          <program>
                             <mainClass>org.contentmine.ami.tools.AMIOCRTool</mainClass>

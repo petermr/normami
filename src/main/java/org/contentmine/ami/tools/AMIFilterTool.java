@@ -232,6 +232,7 @@ public class AMIFilterTool extends AbstractAMITool /*implements HasImageDir*/ {
 	}
 	
     public static void main(String[] args) throws Exception {
+    	LOG.info("supersedes AMIImageFilter");
     	new AMIFilterTool().runCommands(args);
     }
 
