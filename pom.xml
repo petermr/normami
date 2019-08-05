@@ -286,9 +286,13 @@
           <version>2.0.1</version>
         </plugin>  
 
-            <plugin>
+<!-- comment out as we don't use and it breaks docker -->
+
+
                 <!--Tool for building a Debian package (.deb) http://tech.ebuddy.com/2013/10/02/automating-debian-package-creation-and-management-with-mavenant/ 
                     https://github.com/brndkfr/xmppbot/blob/master/xmppbot/pom.xml -->
+                    <!-- 
+            <plugin>
                 <artifactId>jdeb</artifactId>
                 <groupId>org.vafer</groupId>
                 <version>1.3</version>
@@ -343,6 +347,8 @@
                     </dataSet>
                 </configuration>
             </plugin>
+            -->
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

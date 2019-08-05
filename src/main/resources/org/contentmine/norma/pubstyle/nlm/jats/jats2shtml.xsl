@@ -89,7 +89,8 @@
         $secTitle[contains(normalize-space(.),'SUPPORTING')]"
         />
     
-    <xsl:variable name="back" select="$article/*[local-name()='back']"/>
+	    <xsl:variable name="back" select="$article/*[local-name()='back']"/>
+	    <xsl:variable name="floats-group" select="$article/*[local-name()='floats-group']"/>
     
 	<!--  root element -->    
 	<xsl:template match="/">
@@ -97,6 +98,11 @@
 		<xsl:apply-templates select="$front"/>
 		<xsl:apply-templates select="$body"/>
 		<xsl:apply-templates select="$back"/>
+		<xsl:apply-templates select="$floats-group"/>
+		<xsl:message>CHECK unusual</xsl:message>
+		<xsl:for-each select="*[not($front) and not($body) and not ($back)]">
+			<xsl:message>NOT trapped: <xsl:value-of select="."/></xsl:message>
+		</xsl:for-each>
 		<xsl:call-template name='summary'/>
 	  </html>
 	</xsl:template>
@@ -507,6 +513,7 @@ If figure has typeof="sa:Table" then it is a table container. It must contain no
 	</xsl:template>
 	
 	<xsl:template match="*[local-name()='floats-group']">
+		<xsl:message>FLOATS-GROUP</xsl:message>
 	    <div>
 	        <xsl:copy-of select="@*"/>
 	        <xsl:attribute name="tagx"><xsl:value-of select="local-name()"/></xsl:attribute>

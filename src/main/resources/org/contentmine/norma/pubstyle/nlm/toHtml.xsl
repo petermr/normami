@@ -327,6 +327,16 @@ UNKNOWN nlm: alt-text:
 			<xsl:apply-templates select="*[local-name()='front']"/>
 			<xsl:apply-templates select="*[local-name()='body']"/>
 			<xsl:apply-templates select="*[local-name()='back']"/>
+			<xsl:apply-templates select="*[local-name()='floats-group']"/>
+			<!--
+			<xsl:message>CHECK unusual toHtml</xsl:message>
+				-->
+			<xsl:for-each select="*[not(local-name()='front') 
+				and not(local-name()='body')
+				and not(local-name()='back')
+				and not(local-name()='floats-group')]">
+				<xsl:message>NOT trapped 001: <xsl:value-of select="local-name()"/></xsl:message>
+			</xsl:for-each>
 	    </body>
 	</xsl:template>
 

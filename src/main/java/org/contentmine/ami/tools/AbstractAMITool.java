@@ -1,6 +1,10 @@
 package org.contentmine.ami.tools;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -639,7 +643,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	}
 	
 	protected void processTree() {
-		LOG.warn("Overide this");
+		LOG.warn("Override processTree()");
 	}
 	
     protected boolean includeExclude(String basename) {
@@ -701,6 +705,18 @@ public abstract class AbstractAMITool implements Callable<Void> {
 
 	public void setForceMake(Boolean forceMake) {
 		this.forceMake = forceMake;
+	}
+
+	protected InputStream openInputStream() {
+		InputStream inputStream = null;
+		if (input != null) {
+			try {
+				inputStream = input.startsWith("http") ? new URL(input).openStream() : new FileInputStream(new File(input));
+			} catch (IOException e) {
+				addLoggingLevel(Level.ERROR, "cannot read/open stream");
+			}
+		}
+		return inputStream;
 	}
 
 	public static boolean isTrace(AbstractAMITool amiTool) {

@@ -1,68 +1,137 @@
 package org.contentmine.ami.tools;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
+import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.sections.JATSSectionTagger;
 import org.contentmine.norma.sections.JATSSectionTagger.SectionTag;
 
-/** creates sections in CTree for scholarlyHTML and XM components
+import nu.xom.Element;
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Option;
+
+/** analyses sections in XML/HTML
  * 
  * @author pm286
  *
  */
+@Command(
+		//String name() default "<main class>";
+name = "ami-section", 
+		//String[] aliases() default {};
+aliases = "section",
+		//Class<?>[] subcommands() default {};
+version = "ami-section 0.1",
+		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
+description = "analyzes bitmaps - generally binary, but may be oligochrome. Creates pixelIslands "
+)
+
 public class AMISectionTool extends AbstractAMITool {
+	
 	private static final Logger LOG = Logger.getLogger(AMISectionTool.class);
-	private List<SectionTag> sectionTagList;
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
-	
+
+    @Option(names = {"--write"},
+    		arity = "0",
+            description = "write section files (may be customised later)")
+	public boolean writeFiles = true;
+
+    @Option(names = {"--sections"},
+    		arity = "1..*",
+            description = "sections to extract (uses JATSSectionTagger) defaults to ALL")
+    private List<SectionTag> sectionTagList = Arrays.asList(new SectionTag[]{SectionTag.ALL});
+
+	private JATSSectionTagger tagger;
+		
 	public AMISectionTool() {
 		
 	}
 
 	public static void main(String[] args) {
-		if (args.length == 0) {
-			runHelp();
-		} else {
-//			parseOptions(args);
-		}
-		
+    	new AMISectionTool().runCommands(args);
 	}
-	
-	@Override
+
+    @Override
 	protected void parseSpecifics() {
-		throw new RuntimeException("NYI");
+		System.out.println("sectionList             " + sectionTagList);
+		System.out.println();
 	}
 
-	@Override
-	protected void runSpecifics() {
-		throw new RuntimeException("NYI");
-	}
-	
 
-	
-	private static void runHelp() {
+    @Override
+    protected void runSpecifics() {
+    	if (processTrees()) { 
+    	} else {
+			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
+	    }
+    }
+
+	public void processTree() {
+		normalizeSectionTags();
+		boolean deleteExisting = false;
+		cTree.setHtmlTagger(getOrCreateJATSTagger());
+		for (SectionTag sectionTag : sectionTagList) {
+			writeSectionComponents(deleteExisting, sectionTag);
+		}
+	}
+
+	private void writeSectionComponents(boolean deleteExisting, SectionTag sectionTag) {
+		List<Element> sectionList = tagger.getSections(sectionTag);
+		if (writeFiles && sectionList.size() > 0) {
+			File sectionDir = cTree.makeSectionDir(sectionTag.getName(), deleteExisting);
+			for (int i = 0; i < sectionList.size(); i++) {
+				Element section = sectionList.get(i);
+				String title = createTitleForSection(section);
+				try {
+					File xmlFile = new File(sectionDir, ((title != null) ? title : "elem") + "_" + i + "." + CTree.XML);
+					XMLUtil.debug(section, xmlFile, 1);
+				} catch (IOException e) {
+					System.err.println(">cannot write file> "+e.getMessage());
+				}
+			}
+		}
+	}
+
+	private void normalizeSectionTags() {
+		if (sectionTagList.size() == 1 && SectionTag.ALL.equals(sectionTagList.get(0))) {
+			sectionTagList = SectionTag.getAllTags();
+		}
+	}
+
+	private String createTitleForSection(Element section) {
+		/** <div abstract-type="summary" class="abstract" xmlns="http://www.w3.org/1999/xhtml">
+			    <div class="title">Author Summary</div> 
+		*/
+		String title = XMLUtil.getSingleValue(section, ".//*[local-name()='div' and @class='title']");
+		if (title != null) {
+			title = title.toLowerCase().replaceAll("\\s+", "_");
+			title = title.substring(0, Math.min(15, title.length()));
+		}
+		return title;
+	}
+
+	private JATSSectionTagger getOrCreateJATSTagger() {
+		if (tagger == null) {
+			tagger = new JATSSectionTagger();
+		}
+		return tagger;
+	}
+
+	private void runHelp() {
 		DebugPrint.debugPrint("sections recognized in documents");
 		for (SectionTag tag : JATSSectionTagger.SectionTag.values()) {
 			DebugPrint.debugPrint(tag.name()+": "+tag.getDescription());
 		}
-	}
-
-	public AMISectionTool addSectionTag(SectionTag section) {
-		getOrCreateSectionTagList();
-		return this;
-	}
-
-	public List<SectionTag> getOrCreateSectionTagList() {
-		if (sectionTagList == null) {
-			sectionTagList = new ArrayList<SectionTag>();
-		}
-		return sectionTagList;
 	}
 
 	

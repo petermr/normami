@@ -151,45 +151,56 @@ public class JATSSectionTagger implements HtmlTagger {
 	 */
 	// mainly hardcoded. May change
 	public enum SectionTag {
-		ABBREVIATION(new String[]{"abbrev"}, "Authors abbreviations", "abbreviations?"),
-		ABSTRACT(new String[]{"abstract"}, "Abstract or summary", "abstract"),
-		ACK_FUND(new String[]{"ack"}, "Acknowledgements including funders", "(Acknowledge?ments?|Fund(ers)?|ing)"),
-		APPENDIX(new String[]{"app"}, "Appendix", "Appendix"),
-		ARTICLE_META(new String[]{"article-meta"}, "Html meta", ""),
-		   ARTICLE_TITLE(new String[]{""}, "Article title", "title"),
-		   CONTRIB(new String[]{""}, "Contributors", "Contributors"),
-		AUTH_CONT(new String[]{""}, "Author contributions", "Author contributions"),
-		BACK(new String[]{"back"}, "Backmatter", "Back"),
-		BODY(new String[]{"body"}, "Body", ""),
-		CASE(new String[]{""}, "Case study", "Case stud(y|ies)"),
-		CONCL(new String[]{""}, "Conclusions", "Conclusions"),
-		COMP_INT(new String[]{""}, "Conflict of interests", "(Conflicts of interest|Competing interests)"),
-		DISCUSS(new String[]{"discussion"}, "Discussion", "Discussion"),
-		FINANCIAL(new String[]{""}, "Financial?", "Financial"),
-		FIG(new String[]{"figure"}, "Figure (often caption)", "Fig(ure)?"),
-		FRONT(new String[]{"front"}, "Frontmatter", "front"),
-		INTRO(new String[]{""}, "Introduction", "Introduction|Babkground"),
-		JOURNAL_META(new String[]{""}, "", ""),
-      		JOURNAL_TITLE(new String[]{""}, "Journal title", "title"),
-      		PUBLISHER_NAME(new String[]{""}, "Publisher name", "publisher"),
-		KEYWORD(new String[]{"kwd"}, "Author keywords", "keywords"),
-		METHODS(new String[]{""}, "Methods and materials", "methods|methods(and|&)materials|experimental"),
-		OTHER(new String[]{""}, "Sections not in list", ""),
-		PMCID(new String[]{""}, "PMCID", "pmcid"),
-		REF(new String[]{""}, "References/citations", "references|citations"),
-		RESULTS(new String[]{""}, "Results", "results"),
-		SUPPL(new String[]{""}, "Supplementary material/supporting information", "(Supplementary|supporting)(material|information)"),
-		TABLE(new String[]{""}, "Table", ""),
-		SUBTITLE(new String[]{""}, "Subtitle of article", "subtitle"),
-		TITLE(new String[]{""}, "Title of article", "title"),
+		ABBREVIATION("abbrev", new String[]{"abbrev"}, "Authors abbreviations", "abbreviations?"),
+		ABSTRACT("abstract", new String[]{"abstract"}, "Abstract or summary", "abstract"),
+		ACK_FUND("acknowledge", new String[]{"ack"}, "Acknowledgements including funders", "(Acknowledge?ments?|Fund(ers)?|ing)"),
+		/*
+         <div class="app-group" title="app-group">
+            <div class="app" title="app">
+               <div class="title" tagx="title" title="title">Appendix A</div>
+               <div class="Appendix A" title="Appendix A">
+		 * 
+		 */
+		APPENDIX("appendix", new String[]{"app"}, "Appendix", "app-group"),
+		ARTICLE_META("articleMeta", new String[]{"article-meta"}, "Html meta", ""),
+		ARTICLE_TITLE("articleTitle", new String[]{""}, "Article title", "title"),
+		CONTRIB("contrib", new String[]{"contrib"}, "Contributors", "Contributors"),
+		AUTH_CONT("authorContrib", new String[]{""}, "Author contributions", "Author contributions"),
+		BACK("back", new String[]{"back"}, "Backmatter", "Back"),
+		BODY("body", new String[]{"body"}, "Body", ""),
+		CASE("caseStudy", new String[]{""}, "Case study", "Case stud(y|ies)"),
+		CONCL("conclusion", new String[]{""}, "Conclusions", "Conclusions"),
+		COMP_INT("conflict", new String[]{""}, "Conflict of interests", "(Conflicts of interest|Competing interests)"),
+		DISCUSS("discussion", new String[]{"discussion"}, "Discussion", "Discussion"),
+		FINANCIAL("financial", new String[]{""}, "Financial?", "Financial"),
+		FIG("figure", new String[]{"figure"}, "Figure (often caption)", "Fig(ure)?"),
+		FRONT("front", new String[]{"front"}, "Frontmatter", "front"),
+		INTRO("introduction", new String[]{""}, "Introduction", "Introduction|Babkground"),
+		JOURNAL_META("jrnlmeta", new String[]{""}, "", ""),
+      		JOURNAL_TITLE("jrnltitle", new String[]{""}, "Journal title", "title"),
+      		PUBLISHER_NAME("publtitle", new String[]{""}, "Publisher name", "publisher"),
+		KEYWORD("keyword", new String[]{"kwd"}, "Author keywords", "keywords"),
+		METHODS("methods", new String[]{""}, "Methods and materials", "methods|methods(and|&)materials|experimental"),
+		OTHER("other", new String[]{""}, "Sections not in list", ""),
+		PMCID("pmcid", new String[]{""}, "PMCID", "pmcid"),
+		REF("references", new String[]{""}, "References/citations", "references|citations"),
+		RESULTS("results", new String[]{""}, "Results", "results"),
+		SUPPL("suppdata", new String[]{""}, "Supplementary material/supporting information", "(Supplementary|supporting)(material|information)"),
+		TABLE("table", new String[]{""}, "Table", ""),
+		SUBTITLE("subtitle", new String[]{""}, "Subtitle of article", "subtitle"),
+		TITLE("title", new String[]{""}, "Title of article", "title"),
+		/** a reserved word for all the sections */
+		ALL("all", new String[]{""}, "all sections", "all"),
 		
 		;
 		private String description;
 		private Pattern pattern;
+		private String name;
 		private String[] tags;
 		private String singleTag;
 		
-		private SectionTag(String[] tags, String description, String regex) {
+		private SectionTag(String name, String[] tags, String description, String regex) {
+			this.name = name;
 			this.tags = tags;
 			this.singleTag = tags.length == 1 ?  tags[0] : null;
 			this.description = description;
@@ -197,9 +208,13 @@ public class JATSSectionTagger implements HtmlTagger {
 		}
 		
 		private static Map<String, SectionTag> tagByTagName = new HashMap<String, SectionTag>();
+		private static List<SectionTag> allTags = new ArrayList<>();
 		static {
 			for (SectionTag sectionTag : values()) {
 				tagByTagName.put(sectionTag.toString(), sectionTag);
+				if (!ALL.equals(sectionTag)) {
+					allTags.add(sectionTag);
+				}
 			}
 		}
 		private SectionTag() {
@@ -209,6 +224,10 @@ public class JATSSectionTagger implements HtmlTagger {
 			return tagByTagName.get(tagName);
 		}
 
+		public static List<SectionTag> getAllTags() {
+			return allTags;
+		}
+		
 		public String getDescription() {
 			return description;
 		}
@@ -225,6 +244,10 @@ public class JATSSectionTagger implements HtmlTagger {
 
 		public String getSingleTag() {
 			return singleTag;
+		}
+		
+		public String getName() {
+			return name;
 		}
 		
 	};
@@ -410,7 +433,7 @@ public class JATSSectionTagger implements HtmlTagger {
 	public static final String HELP = "help";
 	
 	private HtmlElement htmlElement;
-	private Element jatsHtmlElement;
+	private HtmlElement jatsHtmlElement;
 	private Element scholarlyHtmlElement;
 	public static final String DEFAULT_SECTION_TAGGER_RESOURCE = NAConstants.NORMA_RESOURCE+"/pubstyle/sectionTagger.xml";
 	static final String SECTION = "section.";
@@ -430,6 +453,7 @@ public class JATSSectionTagger implements HtmlTagger {
 	}
 
 	public JATSSectionTagger(CProject cProject) {
+		this();
 		this.cProject = cProject;
 	}
 
@@ -654,18 +678,22 @@ public class JATSSectionTagger implements HtmlTagger {
 	/**
 	 * 
 	 * @param jatsXml
+	 * @return 
 	 * @throws RuntimeException // null JATS 
 	 */
-	public void getOrCreateJatsHtml(File jatsXml) throws RuntimeException {
-		if (jatsXml == null) {
-			throw new RuntimeException("Null JATS XML");
+	public HtmlElement getOrCreateJATSHtml(File jatsXmlFile) throws RuntimeException {
+		if (htmlElement == null) {
+			if (jatsXmlFile == null) {
+				throw new RuntimeException("Null JATS XML");
+			}
+			rawXmlElement = XMLUtil.parseQuietlyToDocumentWithoutDTD(jatsXmlFile).getRootElement();
+			htmlElement = getOrCreateJATSHtmlElement();
 		}
-		rawXmlElement = XMLUtil.parseQuietlyToDocumentWithoutDTD(jatsXml).getRootElement();
-		getOrCreateHtml();
+		return htmlElement;
 	}
 
 	
-	public void getOrCreateHtml() {
+	public HtmlElement getOrCreateJATSHtmlElement() {
 		if (jatsHtmlElement == null) {
 			JATSFactory jatsFactory = new JATSFactory();
 			jatsHtmlElement = jatsFactory.createHtml(rawXmlElement);
@@ -674,6 +702,7 @@ public class JATSSectionTagger implements HtmlTagger {
 			HtmlElement bodyHtmlElement = ((HtmlHtml)jatsHtmlElement).getBody();
 			jatsArticleElement = (JATSArticleElement) bodyHtmlElement.getChild(0);
 		}
+		return jatsHtmlElement;
 	}
 
 	public Element getJATSHtmlElement() {
@@ -746,8 +775,10 @@ public class JATSSectionTagger implements HtmlTagger {
 	}
 
 	public List<Element> getSections(SectionTag sectionTag) {
+		File existingFulltextXML = cTree.getExistingFulltextXML();
+		this.getOrCreateJATSHtml(existingFulltextXML);
 		String xpath = getXPath(sectionTag);
-		LOG.trace("xpath for tag: "+xpath);
+		LOG.debug("xpath for tag: "+sectionTag+": "+xpath);
 		return getSections(xpath);
 	}
 
@@ -825,7 +856,7 @@ public class JATSSectionTagger implements HtmlTagger {
 		this.setCTree(cTree);
 		File existingFulltextXML = cTree.getExistingFulltextXML();
 		if (existingFulltextXML != null) {
-			this.getOrCreateJatsHtml(existingFulltextXML);
+			this.getOrCreateJATSHtml(existingFulltextXML);
 			this.getOrCreateTagClassMultiset();
 		}
 	}
@@ -839,7 +870,7 @@ public class JATSSectionTagger implements HtmlTagger {
 		CTreeList cTreeList = cProject.getOrCreateCTreeList();
 		for (CTree cTree : cTreeList) {
 			JATSSectionTagger treeSectionTagger = new JATSSectionTagger();
-			treeSectionTagger.getOrCreateJatsHtml(cTree.getExistingFulltextXML());
+			treeSectionTagger.getOrCreateJATSHtml(cTree.getExistingFulltextXML());
 			List<HtmlDiv> divList = getAbbreviations();
 			divListList.add(divList);
 		}
@@ -855,7 +886,7 @@ public class JATSSectionTagger implements HtmlTagger {
 		CTreeList cTreeList = cProject.getOrCreateCTreeList();
 		for (CTree cTree : cTreeList) {
 			JATSSectionTagger treeSectionTagger = new JATSSectionTagger();
-			treeSectionTagger.getOrCreateJatsHtml(cTree.getExistingFulltextXML());
+			treeSectionTagger.getOrCreateJATSHtml(cTree.getExistingFulltextXML());
 			List<HtmlDiv> divList1 = new ArrayList<HtmlDiv>();
 			divList1 = treeSectionTagger.getAbstracts();
 			List<HtmlDiv> divList = divList1;
@@ -889,7 +920,7 @@ public class JATSSectionTagger implements HtmlTagger {
 			File existingFulltextXML = cTree.getExistingFulltextXML();
 			if (existingFulltextXML != null) {
 				JATSSectionTagger tagger = new JATSSectionTagger();
-				tagger.getOrCreateJatsHtml(existingFulltextXML);
+				tagger.getOrCreateJATSHtml(existingFulltextXML);
 				divList = extractor.getDivList(tagger);
 			}
 		}
@@ -908,7 +939,7 @@ public class JATSSectionTagger implements HtmlTagger {
 			File existingFulltextXML = cTree.getExistingFulltextXML();
 			if (existingFulltextXML != null) {
 				JATSSectionTagger tagger = new JATSSectionTagger();
-				tagger.getOrCreateJatsHtml(existingFulltextXML);
+				tagger.getOrCreateJATSHtml(existingFulltextXML);
 				div = extractor.getSingleDiv(tagger);
 			}
 		}
@@ -925,7 +956,7 @@ public class JATSSectionTagger implements HtmlTagger {
 		HtmlElement htmlElement = null;
 		if (cTree != null) {
 			JATSSectionTagger tagger = JATSSectionTagger.createAndPopulateTagger(cTree);
-			tagger.getOrCreateHtml();
+			tagger.getOrCreateJATSHtmlElement();
 			htmlElement = extractor.getHtmlElement(tagger);
 		}
 		return htmlElement;

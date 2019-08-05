@@ -248,11 +248,11 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		)
     private InputFormat informat;
     
-    @Option(names = {"-i", "--input"}, 
-    		arity="1",
-    		description = "input stream; URL if starts with 'http' else file"
-    		)
-    private String input;
+//    @Option(names = {"-i", "--input"}, 
+//    		arity="1",
+//    		description = "input stream; URL if starts with 'http' else file"
+//    		)
+//    private String input;
     
     @Option(names = {"--linkcol"}, 
     		arity="1",
@@ -542,18 +542,6 @@ public class AMIDictionaryTool extends AbstractAMITool {
 		}
 		termList = new ArrayList<String>(termSet);
 		Collections.sort(termList);
-	}
-
-	private InputStream openInputStream() {
-		InputStream inputStream = null;
-		if (input != null) {
-			try {
-				inputStream = input.startsWith("http") ? new URL(input).openStream() : new FileInputStream(new File(input));
-			} catch (IOException e) {
-    			addLoggingLevel(Level.ERROR, "cannot read/open stream");
-			}
-		}
-		return inputStream;
 	}
 
 	private void translateDictionaries() {
