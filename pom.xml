@@ -103,6 +103,7 @@
                             <id>norma</id>
                         </program>
                       <!-- ami -->
+					  
                       <!--  TOOLS -->  
                          <program>
                             <mainClass>org.contentmine.ami.AMIProcessor</mainClass>
@@ -139,48 +140,37 @@
 							<!-- description: filters images -->
                             <id>ami-filter</id>
                         </program>
+                        <program>
+                            <mainClass>org.contentmine.ami.tools.AMIMakeProjectTool</mainClass>
+							<!-- description: make project from a directory-->
+                            <id>ami-makeproject</id>
+                        </program>
                          <program>
                             <mainClass>org.contentmine.ami.tools.AMIOCRTool</mainClass>
 							<!-- description: process images -->
                             <id>ami-ocr</id>
                         </program>
                          <program>
-                            <mainClass>org.contentmine.ami.tools.AMIPDFTool</mainClass>
-							<!-- description: process images -->
-                            <id>ami-pdf</id>
-                        </program>
-                         <program>
                             <mainClass>org.contentmine.ami.tools.AMIPixelTool</mainClass>
 							<!-- description: process images -->
                             <id>ami-pixel</id>
                         </program>
-                        
-                        
+                        <program>
+                           <mainClass>org.contentmine.ami.tools.AMIPDFTool</mainClass>
+						<!-- description: process images -->
+                           <id>ami-pdf</id>
+                       </program>
+                       <program>
+                           <mainClass>org.contentmine.ami.tools.AMISectionTool</mainClass>
+						<!-- description: run AMI searches -->
+                           <id>ami-section</id>
+                       </program>
+                       <program>
+                           <mainClass>org.contentmine.ami.tools.AMISearchTool</mainClass>
+						<!-- description: run AMI searches -->
+                           <id>ami-search</id>
+                       </program>
 
-                         <program>
-                         <!--  will become a tool -->
-                            <mainClass>org.contentmine.ami.tools.AMIDictionaryTool</mainClass>
-							<!-- description: edit/create AMI dictionaries -->
-                            <id>ami-dictionary</id>
-                        </program>
-                        <program>
-                        <!-- may need renaming -->
-                            <mainClass>org.contentmine.ami.tools.AMIMakeProjectTool</mainClass>
-							<!-- description: make project from a directory-->
-                            <id>ami-makeproject</id>
-                        </program>
-                        <program>
-                         <!--  now a tool -->
-                            <mainClass>org.contentmine.ami.tools.AMISearchTool</mainClass>
-							<!-- description: run AMI searches -->
-                            <id>ami-search-new</id>
-                        </program>
-                        <program>
-                         <!--  will become a tool -->
-                            <mainClass>org.contentmine.ami.tools.AMISearch</mainClass>
-							<!-- description: run AMI searches and co-occurrence -->
-                            <id>ami-search-cooccur</id>
-                        </program>
                         <program>
                          <!--  now a tool -->
                             <mainClass>org.contentmine.ami.tools.AMISummaryTool</mainClass>
@@ -249,10 +239,21 @@
                             <!--  description:  -->
                             <id>ami-regex</id>
                         </program>
+                        <program>
+                            <mainClass>org.contentmine.ami.tools.AMISearchTool</mainClass>
+ 						<!-- description: run AMI searches -->
+                            <id>ami-search-new</id>
+                        </program>
                          <program>
                             <mainClass>org.contentmine.ami.plugins.search.SearchPlugin</mainClass>
                             <!--  description:  -->
-                            <id>ami-search</id>
+                            <id>ami-search-old</id>
+                        </program>
+                        <program>
+                         <!--  will become a tool -->
+                            <mainClass>org.contentmine.ami.tools.AMISearch</mainClass>
+							<!-- description: run AMI searches and co-occurrence -->
+                            <id>ami-search-cooccur-old</id>
                         </program>
                         <program>
                             <mainClass>org.contentmine.ami.plugins.sequence.SequencePlugin</mainClass>

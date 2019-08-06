@@ -45,7 +45,7 @@ import picocli.CommandLine.Option;
 
 @Command(
 		//String name() default "<main class>";
-name = "ami-fllter", 
+name = "ami-filter", 
 		//String[] aliases() default {};
 aliases = "filter",
 		//Class<?>[] subcommands() default {};

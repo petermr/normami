@@ -775,11 +775,15 @@ public class JATSSectionTagger implements HtmlTagger {
 	}
 
 	public List<Element> getSections(SectionTag sectionTag) {
+		List<Element> sections = new ArrayList<>();
 		File existingFulltextXML = cTree.getExistingFulltextXML();
-		this.getOrCreateJATSHtml(existingFulltextXML);
-		String xpath = getXPath(sectionTag);
-		LOG.debug("xpath for tag: "+sectionTag+": "+xpath);
-		return getSections(xpath);
+		if (existingFulltextXML != null) {
+			this.getOrCreateJATSHtml(existingFulltextXML);
+			String xpath = getXPath(sectionTag);
+			LOG.debug("xpath for tag: "+sectionTag+": "+xpath);
+			sections = getSections(xpath);
+		}
+		return sections;
 	}
 
 	private List<Element> getSections(String xpath) {

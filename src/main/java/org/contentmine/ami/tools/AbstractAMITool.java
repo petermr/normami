@@ -300,7 +300,14 @@ public abstract class AbstractAMITool implements Callable<Void> {
     	args = args.length == 0 ? new String[] {"--help"} : args;
 		CommandLine.call(this, args);
 		
-    	printGenericHeader();
+    	runCommands(); 
+	}
+
+	/** assumes arguments have been preset (e.g. by set commands). 
+	 * Use at own risk
+	 */
+	public void runCommands() {
+		printGenericHeader();
 		parseGenerics();
 		
     	printSpecificHeader();
@@ -311,7 +318,7 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		} else {
 			runGenerics();
 			runSpecifics();
-		} 
+		}
 	}
 	
 	protected abstract void parseSpecifics();
@@ -521,28 +528,32 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		return s;
 	}
 
-	public void setCProject(CProject cProject) {
+	public AbstractAMITool setCProject(CProject cProject) {
 		this.cProject = cProject;
+		return this;
 	}
 
-	public void setCTree(CTree cTree) {
+	public AbstractAMITool setCTree(CTree cTree) {
 		this.cTree = cTree;
+		return this;
 	}
 
 	public CTree getCTree() {
 		return cTree;
 	}
 
-	public void setCProjectOutputDir(File dir) {
+	public AbstractAMITool setCProjectOutputDir(File dir) {
 		this.cProjectOutputDir = dir;
+		return this;
 	}
 
 	public File getCProjectOutputDir() {
 		return cProjectOutputDir;
 	}
 
-	public void setCTreeOutputDir(File outputDir) {
+	public AbstractAMITool setCTreeOutputDir(File outputDir) {
 		cTreeOutputDir = outputDir;
+		return this;
 	}
 
 	public File getCTreeOutputDir() {
@@ -637,7 +648,8 @@ public abstract class AbstractAMITool implements Callable<Void> {
 				processTree();
 			}
 		} else {
-			LOG.warn("No trees to process");
+			System.err.println("no trees");
+//			LOG.warn("No trees to process");
 		}
 		return processed;
 	}

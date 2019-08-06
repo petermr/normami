@@ -47,9 +47,12 @@ public class AMISectionTool extends AbstractAMITool {
 	public boolean writeFiles = true;
 
     @Option(names = {"--sections"},
-    		arity = "1..*",
-            description = "sections to extract (uses JATSSectionTagger) defaults to ALL")
-    private List<SectionTag> sectionTagList = Arrays.asList(new SectionTag[]{SectionTag.ALL});
+    		arity = "0..*",
+    		required = true,
+            description = "sections to extract (uses JATSSectionTagger) %n"
+            		+ "if no args lists tags"
+            		+ "ALL selects all tags ")
+    private List<SectionTag> sectionTagList = new ArrayList<>();
 
 	private JATSSectionTagger tagger;
 		
@@ -71,6 +74,8 @@ public class AMISectionTool extends AbstractAMITool {
     @Override
     protected void runSpecifics() {
     	if (processTrees()) { 
+    	} else if (sectionTagList.size() == 0) {
+    		System.err.println("section values: "+SectionTag.values());
     	} else {
 			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
 	    }
@@ -79,9 +84,14 @@ public class AMISectionTool extends AbstractAMITool {
 	public void processTree() {
 		normalizeSectionTags();
 		boolean deleteExisting = false;
-		cTree.setHtmlTagger(getOrCreateJATSTagger());
+		JATSSectionTagger orCreateJATSTagger = getOrCreateJATSTagger();
+		cTree.setHtmlTagger(orCreateJATSTagger);
 		for (SectionTag sectionTag : sectionTagList) {
-			writeSectionComponents(deleteExisting, sectionTag);
+			if (sectionTag == null) {
+				System.err.println("AMISectionTool null section tag");
+			} else {
+				writeSectionComponents(deleteExisting, sectionTag);
+			}
 		}
 	}
 

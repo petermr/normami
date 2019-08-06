@@ -4,12 +4,30 @@
 # ami-forestplot => /Users/pm286/workspace/cmdev/normami/target/appassembler/bin/ami-forestplot
 
 # edit this to your own directory
-STATA_TOTAL="/Users/pm286/projects/forestplots/stataforestplots"
+# STATA="/Users/pm286/projects/forestplots/stataforestplots"
+WORKSPACE=$HOME/workspace/
+FOREST_TOP=$WORKSPACE/projects/forestplots
+MID_DIR=test20190804
+FOREST_MID=$FOREST_TOP/$MID_DIR
+LOW_DIR=_stataok
+FOREST_DIR=$FOREST_MID/$LOW_DIR
 
-# directories
-STATA_TOTAL_EDITED_DIR=$STATA_TOTAL/stataTotalEdited
-CPROJECT=$STATA_TOTAL_EDITED_DIR
-CTREE=$CPROJECT/PMC5882397
+CPROJECT=$FOREST_DIR
+CTREE_NAME=PMC6127950
+#CTREE_NAME=PMC5882397
+CTREE=$CPROJECT/$CTREE_NAME
+
+echo CTREE $CTREE
+
+while getopts p:t: option
+do
+case "${option}"
+in
+p) CPROJECT=${OPTARG};;
+t) CTREE=${OPTARG};;
+esac
+done
+
 
 # choose the first SOURCE to run a single CTree, the second to run a CProject (long). 
 # Comment in the one you want
@@ -58,7 +76,7 @@ sleep $SLEEP1
 
 # run OCR both types
 
-ami-ocr $SOURCE --gocr /usr/local/bin/gocr --extractlines gocr --forcemake
+ami-ocr $SOURCE --gocr      /usr/local/bin/gocr      --extractlines gocr               --forcemake
 ami-ocr $SOURCE --tesseract /usr/local/bin/tesseract --extractlines hocr --html false  --forcemake
 
 echo "===============Finished AmiOcr============="
