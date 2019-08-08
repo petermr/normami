@@ -175,7 +175,7 @@ public class JATSSectionTagger implements HtmlTagger {
 		FINANCIAL("financial", new String[]{""}, "Financial?", "Financial"),
 		FIG("figure", new String[]{"figure"}, "Figure (often caption)", "Fig(ure)?"),
 		FRONT("front", new String[]{"front"}, "Frontmatter", "front"),
-		INTRO("introduction", new String[]{""}, "Introduction", "Introduction|Babkground"),
+		INTRO("introduction", new String[]{""}, "Introduction", "Introduction|Background"),
 		JOURNAL_META("jrnlmeta", new String[]{""}, "", ""),
       		JOURNAL_TITLE("jrnltitle", new String[]{""}, "Journal title", "title"),
       		PUBLISHER_NAME("publtitle", new String[]{""}, "Publisher name", "publisher"),

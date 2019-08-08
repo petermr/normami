@@ -5,6 +5,7 @@
 
 # edit this to your own directory
 # STATA="/Users/pm286/projects/forestplots/stataforestplots"
+# STATA="/Users/pm286/projects/forestplots/_stataok"
 WORKSPACE=$HOME/workspace/
 FOREST_TOP=$WORKSPACE/projects/forestplots
 MID_DIR=test20190804
@@ -31,8 +32,8 @@ done
 
 # choose the first SOURCE to run a single CTree, the second to run a CProject (long). 
 # Comment in the one you want
-SOURCE="-t $CTREE"
-# SOURCE="-p $CPROJECT"
+SOURCE=" -t $CTREE"
+# SOURCE=" -p $CPROJECT"
 echo $CTREE
 ls $CTREE
 

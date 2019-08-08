@@ -1,25 +1,67 @@
 #! /bin/sh
 # run complete stack over SPSS/Stata CTree/CProject
 
+echo ========== RUN AMI STACK ==========
+
+
+# === DEFAULTS ===
+
+# from _stataok, _statabad, _spss
+CPROJECT=_stataok
+
+SPSS_TREE=PMC5502154
+STATA_TREE=PMC6127950
+
+# from stata, spss
+TYPE="stata"
+
+# from tree, project
+SCOPE_CMD="tree"
+
+# from "", clean
+CLEAN=""
+
+# overwrite with type, project, tree
+
+while getopts ":cd:p:s:t:h" opt; do
+  case ${opt} in
+    c ) CLEAN=$OPTARG;;
+    d ) TYPE=$OPTARG;;
+    p ) CPROJECT=$OPTARG;;
+    s ) SCOPE_CMD=$OPTARG;;
+    t ) 
+       echo CTREE OPTION
+       echo OPTARG $OPTARG
+       CTREE=$OPTARG
+       echo CTREE: $CTREE
+       ;;
+    h )
+      echo "Usage:"
+      echo "    -h                      Display this help message."
+      echo "    -c                      clean"
+      echo "    -d                      type"
+      echo "    -p                      project"
+      echo "    -t                      tree"
+      exit 0
+      ;;
+   \? )
+     echo "Invalid Option: -$OPTARG" 1>&2
+     exit 1
+     ;;
+    : )
+      echo "Invalid option: $OPTARG requires an argument" 1>&2
+      ;;  
+  esac
+done
+
+echo bbbbbbbbbbbbbb $CTREE bbbbbbbbbbbbbb
+
 # edit this to your own directory
-# STATA="/Users/pm286/projects/forestplots/stataforestplots"
-# STATA="/Users/pm286/projects/forestplots/_stataok"
 WORKSPACE=$HOME/workspace/
 FOREST_TOP=$WORKSPACE/projects/forestplots
 MID_DIR=test20190804
 FOREST_MID=$FOREST_TOP/$MID_DIR
-LOW_DIR=_stataok
-FOREST_DIR=$FOREST_MID/$LOW_DIR
-
-# comment these 4 lines 
-STAT_TYPE="spss"
-#STAT_TYPE="stata"
-
-SCOPE_CMD="tree"
-#SCOPE_CMD="project"
-
-#CLEAN=""
-CLEAN="clean"
+PROJECT_DIR=$FOREST_MID/$CPROJECT
 
 
 #constants
@@ -43,10 +85,10 @@ AMI_OCR="ami-ocr"
 AMI_PIXEL="ami-pixel"
 AMI_PDF="ami-pdf"
 
-if [ $STAT_TYPE == "spss" ]
+if [ $TYPE == "spss" ]
 then 
-  PROJECT_DIR="${TOP_DIR}/spssSimple"
-  TREE_NAME="PMC5502154"
+#  PROJECT_DIR="${TOP_DIR}/spssSimple"
+  TREE_NAME=$CTREE
   TEMPLATE_XSL=spssTemplate1
   SUBIMAGE=""
   YPROJECT=0.4
@@ -56,10 +98,10 @@ then
   RAW_LIST="raw.header.tableheads raw.header.graphheads raw.body.table raw.footer.summary raw.footer.scale"
   SHARP_LIST="raw.header.tableheads_${SHARPENED} raw.header.graphheads_${SHARPENED} raw.body.table_${SHARPENED}  raw.footer.summary_${SHARPENED} raw.footer.scale_${SHARPENED}"
   
-elif [ $STAT_TYPE == "stata" ]
+elif [ $TYPE == "stata" ]
 then
-  PROJECT_DIR="${TOP_DIR}/stataSimple/"
-  TREE_NAME="PMC5882397"
+#  PROJECT_DIR="${TOP_DIR}/stataSimple/"
+  TREE_NAME=$CTREE
   TEMPLATE_XSL=stataTemplate1
   SUBIMAGE="--subimage statascale y LAST delta 10 projection x"
   YPROJECT=0.8
@@ -80,14 +122,14 @@ echo TREE ${TREE_DIR}
 # if clean, make a new test tree directory
 # needs a child tree: ${PROJECT_DIR}/_original/${TREE_NAME}/fulltext.pdf 
 
-if [ $CLEAN != "" ]
-then
-	TEST_DIR="${PROJECT_DIR}/_test"
-	ORIGINAL_DIR="${PROJECT_DIR}/_original"
-	rm -rf ${TEST_DIR}
-	cp -R ${ORIGINAL_DIR} ${TEST_DIR}
-	TREE_DIR=${TEST_DIR}/${TREE_NAME}
-fi
+# if [ $CLEAN != "" ]
+# then
+# 	TEST_DIR="${PROJECT_DIR}/_test"
+# 	ORIGINAL_DIR="${PROJECT_DIR}/_original"
+# 	rm -rf ${TEST_DIR}
+# 	cp -R ${ORIGINAL_DIR} ${TEST_DIR}
+# 	TREE_DIR=${TEST_DIR}/${TREE_NAME}
+# fi
 
 THRESHOLD=" --threshold ${THRESH} "
 DS=" --despeckle "
@@ -106,6 +148,9 @@ echo "SCOPE "${SCOPE}
 # initial and sharpeneed directories
 RAW="raw"
 SHARPBASE=${RAW}_${SHARPENED}
+
+# START OF EXECUTION
+# ==================
 
 # parse PDFs and create images
 ${AMI_PDF} ${SCOPE}

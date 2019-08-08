@@ -43,7 +43,7 @@ aliases = "image",
 		//Class<?>[] subcommands() default {};
 version = "ami-image 0.1",
 		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
-description = "	first FILTERs images (initally from PDFimages), but does not transform the contents."
+description = "	transforms image contents but only provides basic filtering (see ami-filter)."
 		+ " Services include %n"
 		+ ""
 		+ "%n identification of duplicate images, and removal<.li>"
@@ -178,8 +178,16 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
     @Option(names = {"--duplicate"},
     		arity = "0..1",
     		defaultValue = "duplicate",
-            description = "FILTER: move duplicate images to <duplicate>; default = ${DEFAULT-VALUE}; "+_DELETE+" means delete")
+            description = "FILTER: move duplicate images to <duplicate>; default = ${DEFAULT-VALUE}; "+_DELETE+" means delete"
+            )
 	private DuplicateDest duplicateDirname;
+
+    @Option(names = {"--filter"},
+    		arity = "0",
+    		defaultValue = "false",
+            description = "pre-runs default FILTER (i.e. without args), duplicate, small, monochrome"
+            )
+	private boolean filter;
 
     @Option(names = {"--minheight"},
     		arity = "0..1",
@@ -361,9 +369,15 @@ public class AMIImageTool extends AbstractAMITool implements HasImageDir {
     	getSharpenMethod();
     	if (processTrees()) { 
     	} else {
-			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
+//			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
 	    }
     }
+
+	protected void runPrevious() {
+		if (filter) {
+    		new AMIFilterTool().setCProject(cProject).setCTree(cTree).runCommands();
+    	}
+	}
 
 	private void getSharpenMethod() {
 		sharpenMethod = SharpenMethod.getMethod(sharpen);

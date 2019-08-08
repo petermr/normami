@@ -316,11 +316,15 @@ public abstract class AbstractAMITool implements Callable<Void> {
 		if (level != null && !Level.WARN.isGreaterOrEqual(level)) {
 			System.err.println("processing halted due to argument errors, level:"+level);
 		} else {
+	    	runPrevious();
 			runGenerics();
 			runSpecifics();
 		}
 	}
 	
+	protected void runPrevious() {
+		// override if you want previous Tools run
+	}
 	protected abstract void parseSpecifics();
 	protected abstract void runSpecifics();
 
