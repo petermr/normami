@@ -12,6 +12,8 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
+import org.contentmine.ami.plugins.phylotree.PhyloConstants;
+import org.contentmine.ami.plugins.phylotree.PhyloTreeArgProcessor;
 import org.contentmine.ami.plugins.phylotree.nexml.NexmlNEXML;
 import org.contentmine.ami.plugins.phylotree.nexml.NexmlOtu;
 import org.contentmine.ami.plugins.regex.RegexArgProcessor;

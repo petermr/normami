@@ -3,6 +3,7 @@ package org.contentmine.ami.plugins.search;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.AMIPlugin;
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 
 /** test plugin.
  * 
@@ -19,17 +20,17 @@ public class SearchPlugin extends AMIPlugin {
 	}
 	
 	public SearchPlugin() {
-		this.argProcessor = new SearchArgProcessor();
+		this.argProcessor = new AbstractSearchArgProcessor();
 	}
 
 	public SearchPlugin(String[] args) {
 		super();
-		this.argProcessor = new SearchArgProcessor(args);
+		this.argProcessor = new AbstractSearchArgProcessor(args);
 	}
 
 	public SearchPlugin(String args) {
 		super();
-		this.argProcessor = new SearchArgProcessor(args);
+		this.argProcessor = new AbstractSearchArgProcessor(args);
 	}
 
 	public static void main(String[] args) {

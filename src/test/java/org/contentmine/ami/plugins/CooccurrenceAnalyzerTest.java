@@ -5,6 +5,9 @@ import java.io.IOException;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.plugins.CooccurrenceAnalyzer;
+import org.contentmine.ami.plugins.EntityAnalyzer;
+import org.contentmine.ami.plugins.OccurrenceAnalyzer;
 import org.contentmine.eucl.euclid.IntMatrix;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.graphics.svg.SVGSVG;

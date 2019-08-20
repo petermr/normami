@@ -4,6 +4,7 @@ import java.net.URL;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.AMIProcessor;
 import org.contentmine.norma.NAConstants;
 import org.junit.Assert;
 import org.junit.Test;

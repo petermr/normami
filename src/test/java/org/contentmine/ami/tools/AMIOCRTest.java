@@ -4,6 +4,9 @@ import java.io.File;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMIImageTool;
+import org.contentmine.ami.tools.AMIOCRTool;
+import org.contentmine.ami.tools.AbstractAMITool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.eucl.euclid.IntRange;

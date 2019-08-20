@@ -5,8 +5,10 @@ import java.io.File;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
+import org.contentmine.ami.tools.AMISearchTool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.util.CMineTestFixtures;
+import org.contentmine.norma.NAConstants;
 import org.junit.Test;
 
 public class AMISearchToolTest {
@@ -21,6 +23,24 @@ public class AMISearchToolTest {
 	static File OSANCTUM2000 = new File(TIGR2ESS, "scratch/ocimum2019027");
 
 	@Test
+	public void testZikaSearch2() {
+		String project = "zika2";
+		File rawDir = new File(NAConstants.TEST_AMI_DIR, project);
+		File targetDir = new File("target/cooccurrence/zika2");
+		CMineTestFixtures.cleanAndCopyDir(rawDir, targetDir);
+		String args = 
+				"-p "+targetDir
+//				"-t "+new File(targetDir, "PMC2640145")
+				+ " --dictionaryTop /Users/pm286/ContentMine/dictionary/dictionaries"
+				+ " --dictionary country "
+//				+ " --ignorePlugins word"
+				+ " -v"
+			;
+		new AMISearchTool().runCommands(args);
+	}
+	
+
+	@Test
 	public void testZikaCooccurrence0() {
 		File targetDir = new File("target/cooccurrence/zika10a");
 		CMineTestFixtures.cleanAndCopyDir(AMIFixtures.TEST_ZIKA10A_DIR, targetDir);
@@ -30,8 +50,9 @@ public class AMISearchToolTest {
 				+ " --dictionaryTop /Users/pm286/ContentMine/dictionary/dictionaries"
 				+ " --dictionary "
 				+ ""
-				+ "country bio.auxin"
-				+ " --ignorePlugins word"
+				+ "country species "
+//				+ " --ignorePlugins word"
+				+ " -v"
 			;
 		new AMISearchTool().runCommands(args);
 	}
@@ -98,6 +119,24 @@ public class AMISearchToolTest {
 				+ " --ignorePlugins word"//				
 				+ " --dictionary "+DICTIONARY_EXAMPLES+"/monoterpenes country species plantparts" 
 				;
+		new AMISearchTool().runCommands(args);
+	}
+	
+	@Test
+	public void testAMISearchSubCommands() {
+		String args = " ami-words --help ";
+		new AMISearchTool().runCommands(args);
+	}
+	
+	@Test
+	public void testAMIWordsCommands() {
+		String args = " ami-words --help ";
+		new AMIWordsTool().runCommands(args);
+	}
+	
+	@Test
+	public void testSubCommands() {
+		String args = " test --dummyx value --write";
 		new AMISearchTool().runCommands(args);
 	}
 	

@@ -11,6 +11,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
 import org.contentmine.ami.dictionary.DefaultAMIDictionary;
+import org.contentmine.ami.lookups.WikipediaLookup;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.species.SpeciesArgProcessor;
 import org.contentmine.eucl.euclid.IntArray;

@@ -6,42 +6,42 @@ echo ========== RUN AMI STACK ==========
 
 # === DEFAULTS ===
 
-# from _stataok, _statabad, _spss
-CPROJECT=_stataok
-
-SPSS_TREE=PMC5502154
-STATA_TREE=PMC6127950
-
-# from stata, spss
-TYPE="stata"
-
-# from tree, project
-SCOPE_CMD="tree"
+ CPROJECT="none"
+ CTREE="none"
+ TYPE="none"
+ SCOPE="none"
 
 # from "", clean
 CLEAN=""
 
 # overwrite with type, project, tree
 
-while getopts ":cd:p:s:t:h" opt; do
+while getopts ":p:s:t:v:y:hc" opt; do
   case ${opt} in
     c ) CLEAN=$OPTARG;;
-    d ) TYPE=$OPTARG;;
-    p ) CPROJECT=$OPTARG;;
-    s ) SCOPE_CMD=$OPTARG;;
+    p ) 
+        CPROJECT=$OPTARG
+        ;;
+    s ) 
+        SCOPE=$OPTARG;;
     t ) 
-       echo CTREE OPTION
-       echo OPTARG $OPTARG
        CTREE=$OPTARG
-       echo CTREE: $CTREE
        ;;
+    v )
+        VERBOSITY=$OPTARG
+        ;;
+    y )
+        TYPE=$OPTARG
+        ;;
     h )
       echo "Usage:"
       echo "    -h                      Display this help message."
       echo "    -c                      clean"
-      echo "    -d                      type"
-      echo "    -p                      project"
-      echo "    -t                      tree"
+      echo "    -p                      project (if scope==project)"
+      echo "    -s                      scope (project or tree)"
+      echo "    -t                      tree directory (if scope==tree)"
+      echo "    -v                      verbosity (v or vv)"
+      echo "    -y                      type (stata or spss)"
       exit 0
       ;;
    \? )
@@ -54,15 +54,43 @@ while getopts ":cd:p:s:t:h" opt; do
   esac
 done
 
-echo bbbbbbbbbbbbbb $CTREE bbbbbbbbbbbbbb
+if [ $TYPE == stata ] || [  $TYPE == spss ] ; then
+    echo "type " $TYPE;
+else
+   echo "bad type (requires stata or spss) " $TYPE;   exit 1
+fi 
 
-# edit this to your own directory
-WORKSPACE=$HOME/workspace/
-FOREST_TOP=$WORKSPACE/projects/forestplots
-MID_DIR=test20190804
-FOREST_MID=$FOREST_TOP/$MID_DIR
-PROJECT_DIR=$FOREST_MID/$CPROJECT
+if [ "project" == ${SCOPE} ] 
+then
+  if [ x$CPROJECT == "x" ] 
+  then
+     echo "must give project for scope=project";
+     exit 1;
+  fi
+elif [ "tree" == "tree" ] 
+then
+  if [ $CTREE == "" ] 
+  then
+     echo "must give tree for scope=tree";
+     exit 1;
+  fi
+  
+  echo CTREE $CTREE;
+  
+  if [ $CPROJECT != "" ] 
+  then
+      CTREE=${CPROJECT}/${CTREE} ;
+  fi
+  
+else
+   echo "bad scope (requires project or tree)" /${SCOPE}/ ;
+   exit 1
+fi 
 
+echo project $CPROJECT
+echo tree    $CTREE
+
+#exit 0
 
 #constants
 EXTLINES_GOCR=" --extractlines gocr"
@@ -87,8 +115,6 @@ AMI_PDF="ami-pdf"
 
 if [ $TYPE == "spss" ]
 then 
-#  PROJECT_DIR="${TOP_DIR}/spssSimple"
-  TREE_NAME=$CTREE
   TEMPLATE_XSL=spssTemplate1
   SUBIMAGE=""
   YPROJECT=0.4
@@ -100,8 +126,6 @@ then
   
 elif [ $TYPE == "stata" ]
 then
-#  PROJECT_DIR="${TOP_DIR}/stataSimple/"
-  TREE_NAME=$CTREE
   TEMPLATE_XSL=stataTemplate1
   SUBIMAGE="--subimage statascale y LAST delta 10 projection x"
   YPROJECT=0.8
@@ -112,38 +136,29 @@ then
   SHARP_LIST="raw.header_${SHARPENED} raw.body.ltable_${SHARPENED} raw.body.rtable_${SHARPENED} raw.scale_${SHARPENED}"
   
 else
-  echo "Must set STAT_TYPE to 'spss' or 'stata'"
+  echo "Must set type to 'spss' or 'stata'"
+  exit 0
 fi
-
-# create tree directory
-TREE_DIR="${PROJECT_DIR}/${TREE_NAME}"
-echo TREE ${TREE_DIR}
-
-# if clean, make a new test tree directory
-# needs a child tree: ${PROJECT_DIR}/_original/${TREE_NAME}/fulltext.pdf 
-
-# if [ $CLEAN != "" ]
-# then
-# 	TEST_DIR="${PROJECT_DIR}/_test"
-# 	ORIGINAL_DIR="${PROJECT_DIR}/_original"
-# 	rm -rf ${TEST_DIR}
-# 	cp -R ${ORIGINAL_DIR} ${TEST_DIR}
-# 	TREE_DIR=${TEST_DIR}/${TREE_NAME}
-# fi
 
 THRESHOLD=" --threshold ${THRESH} "
 DS=" --despeckle "
 SHARPEN="${SHARP4} ${THRESHOLD} ${DS} "
 
 # choose between tree and project
-if [ $SCOPE_CMD == "project" ]
+if [ $SCOPE == "project" ]
 then 
-  SCOPE=" -p ${PROJECT_DIR} "
-elif [ $SCOPE_CMD == "tree" ]
+  SCOPE=" -p ${CPROJECT} "
+elif [ $SCOPE == "tree" ]
 then
-  SCOPE=" -t ${TREE_DIR} "
+  SCOPE=" -t ${CTREE} "
 fi
-echo "SCOPE "${SCOPE}
+
+echo ============================= INPUT PARAMETERS ================================
+echo CPROJECT    ${CPROJECT}
+echo CTREE       ${CTREE}
+echo SCOPE       ${SCOPE}
+echo TYPE        ${TYPE}
+echo ================================================================================
 
 # initial and sharpeneed directories
 RAW="raw"
@@ -154,10 +169,19 @@ SHARPBASE=${RAW}_${SHARPENED}
 
 # parse PDFs and create images
 ${AMI_PDF} ${SCOPE}
+
 #remove non-meaningful images
 ${AMI_FILTER} ${SCOPE}
+
 #sharpen/threshold images 
 ${AMI_IMAGE} ${SCOPE} --inputname ${RAW} ${SHARPEN}
+
+# sharpen then Tesseract OCR raw to find type of image (experimental)
+${AMI_IMAGE} ${VERBOSITY} ${SCOPE} --inputnamelist ${RAW} ${SHARPEN}
+${AMI_OCR} ${SCOPE} --inputnamelist ${SHARPBASE} ${TESS_CMD}
+
+${AMI_SEARCH} ${VERBOSITY} ${SCOPE} --inputnamelist ${RAW} --basename 
+
 #segment 
 ${AMI_PIXEL} ${SCOPE} \
      --projections --yprojection ${YPROJECT} --xprojection ${XPROJECT} --lines \
@@ -166,10 +190,21 @@ ${AMI_PIXEL} ${SCOPE} \
      --templateoutput template.xml \
      --templatexsl /org/contentmine/ami/tools/${TEMPLATE_XSL}.xsl 
 
-    ${AMI_FOREST_PLOT} ${SCOPE}  --inputname ${RAW} --segment --template ${SHARPBASE}/template.xml
-    ${AMI_IMAGE} ${SCOPE} --inputnamelist ${RAW_LIST} ${SHARPEN}
-    ${AMI_OCR} ${SCOPE} --inputnamelist ${SHARP_LIST} ${TESS_CMD}
-    ${AMI_OCR} ${SCOPE} --inputnamelist ${SHARP_LIST} ${GOCR_CMD}
-    ${AMI_FOREST_PLOT} ${SCOPE} --inputnamelist ${SHARP_LIST} --table hocr/hocr.svg --tableType hocr
-    ${AMI_FOREST_PLOT} ${SCOPE} --inputnamelist ${SHARP_LIST} --table gocr/gocr.svg --tableType gocr
+# segment the images using TYPE-specific lines
+${AMI_FOREST_PLOT} ${SCOPE}  --inputname ${RAW} --segment --template ${SHARPBASE}/template.xml
+
+# sharpen
+${AMI_IMAGE} ${SCOPE} --inputnamelist ${RAW_LIST} ${SHARPEN}
+
+# Tesseract OCR
+${AMI_OCR} ${SCOPE} --inputnamelist ${SHARP_LIST} ${TESS_CMD}
+
+# GOCR OCR
+${AMI_OCR} ${SCOPE} --inputnamelist ${SHARP_LIST} ${GOCR_CMD}
+
+# Forest plot - make tables from Tesseract OCR (not fully implemented)
+${AMI_FOREST_PLOT} ${SCOPE} --inputnamelist ${SHARP_LIST} --table hocr/hocr.svg --tableType hocr
+
+# Forest plot - make tables from GOCR OCR (not fully implemented)
+${AMI_FOREST_PLOT} ${SCOPE} --inputnamelist ${SHARP_LIST} --table gocr/gocr.svg --tableType gocr
 

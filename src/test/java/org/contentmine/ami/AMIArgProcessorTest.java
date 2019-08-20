@@ -4,6 +4,7 @@ import java.io.File;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.AMIProcessor;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.junit.Ignore;
 import org.junit.Test;

@@ -91,6 +91,7 @@
     
 	    <xsl:variable name="back" select="$article/*[local-name()='back']"/>
 	    <xsl:variable name="floats-group" select="$article/*[local-name()='floats-group']"/>
+	    <xsl:variable name="sub-article" select="$article/*[local-name()='sub-article']"/>
     
 	<!--  root element -->    
 	<xsl:template match="/">
@@ -99,8 +100,14 @@
 		<xsl:apply-templates select="$body"/>
 		<xsl:apply-templates select="$back"/>
 		<xsl:apply-templates select="$floats-group"/>
+		<xsl:apply-templates select="$sub-article"/>
 		<xsl:message>CHECK unusual</xsl:message>
-		<xsl:for-each select="*[not($front) and not($body) and not ($back)]">
+		<xsl:for-each select="*[
+		not($front) 
+		and not($body)
+		and not ($back)
+		and not ($floats-group)
+		and not ($subarticle)]">
 			<xsl:message>NOT trapped: <xsl:value-of select="."/></xsl:message>
 		</xsl:for-each>
 		<xsl:call-template name='summary'/>
@@ -514,6 +521,15 @@ If figure has typeof="sa:Table" then it is a table container. It must contain no
 	
 	<xsl:template match="*[local-name()='floats-group']">
 		<xsl:message>FLOATS-GROUP</xsl:message>
+	    <div>
+	        <xsl:copy-of select="@*"/>
+	        <xsl:attribute name="tagx"><xsl:value-of select="local-name()"/></xsl:attribute>
+			[<xsl:value-of select="local-name()"/>]<xsl:apply-templates />
+	    </div>
+	</xsl:template>
+	
+	<xsl:template match="*[local-name()='sub-article']">
+		<xsl:message>SUB-ARTICLE</xsl:message>
 	    <div>
 	        <xsl:copy-of select="@*"/>
 	        <xsl:attribute name="tagx"><xsl:value-of select="local-name()"/></xsl:attribute>

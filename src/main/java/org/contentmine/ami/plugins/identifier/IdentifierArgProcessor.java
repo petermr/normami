@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.NamedPattern;
+import org.contentmine.ami.plugins.regex.RegexArgProcessor;
 import org.contentmine.cproject.args.ArgIterator;
 import org.contentmine.cproject.args.ArgumentOption;
 
@@ -16,7 +16,7 @@ import nu.xom.Element;
  * 
  * @author pm286
  */
-public class IdentifierArgProcessor extends AMIArgProcessor {
+public class IdentifierArgProcessor extends RegexArgProcessor {
 	
 	
 	public static final Logger LOG = Logger.getLogger(IdentifierArgProcessor.class);

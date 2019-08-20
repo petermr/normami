@@ -5,17 +5,19 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.AMISearcher;
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.ami.plugins.search.SearchSearcher;
+import org.contentmine.ami.tools.AMIWordsTool.WordMethod;
+import org.contentmine.cproject.args.AbstractTool;
 import org.contentmine.cproject.args.ArgIterator;
 import org.contentmine.cproject.args.ArgumentOption;
+import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.ContentProcessor;
 import org.contentmine.cproject.files.ResultsElement;
@@ -29,7 +31,7 @@ import org.contentmine.eucl.xml.XMLUtil;
  * 
  * @author pm286
  */
-public class WordArgProcessor extends AMIArgProcessor {
+public class WordArgProcessor extends AbstractSearchArgProcessor {
 	
 	
 	public static final Logger LOG = Logger.getLogger(WordArgProcessor.class);
@@ -72,7 +74,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 	private List<String> summaryMethods;
 	WordResultsElementList frequenciesElementList;
 	WordResultsElement aggregatedFrequenciesElement;
-	private IntRange wordCount;
+	private IntRange wordCountRange;
 	private WordResultsElement booleanFrequencyElement;
 	private Map<String, ResultsElement> resultsByDictionary;
 	
@@ -92,9 +94,20 @@ public class WordArgProcessor extends AMIArgProcessor {
 
 	// =============== METHODS ==============
 
+	public WordArgProcessor(AbstractTool abstractTool) {
+		super(abstractTool);
+	}
+
+	/** make these an enum! */
 	/** select methods to use
-	 * 
+	 * 			FREQUENCIES,
+				WORD_FREQUENCIES,
+				WORD_LENGTHS,
+				SEARCH,
+				WORD_SEARCH
+
 	 * @param option list of methods (none gives help)
+	 * 
 	 * @param argIterator
 	 */
 	public void parseWords(ArgumentOption option, ArgIterator argIterator) {
@@ -108,6 +121,10 @@ public class WordArgProcessor extends AMIArgProcessor {
 
 	public void parseWordLengths(ArgumentOption option, ArgIterator argIterator) {
 		wordLengthRange =argIterator.getIntRange(option);
+		setWordLength(wordLengthRange);
+	}
+
+	private void setWordLength(IntRange wordLengthRange) {
 		if (wordLengthRange.getMin() < 1 || wordLengthRange.getMax() < 1) {
 			throw new RuntimeException("bad word lengths: "+wordLengthRange);
 		}
@@ -123,11 +140,31 @@ public class WordArgProcessor extends AMIArgProcessor {
 	}
 	
 	public void parseMinCount(ArgumentOption option, ArgIterator argIterator) {
-		wordCount = argIterator.getIntRange(option);
+		wordCountRange = argIterator.getIntRange(option);
 	}
 	
+	public IntRange getWordCountRange() {
+		return wordCountRange;
+	}
+
+	public DefaultArgProcessor setWordCountRange(IntRange wordCountRange) {
+		this.wordCountRange = wordCountRange;
+		return this;
+	}
+	
+	/** called by reflection */
 	public void runExtractWords(ArgumentOption option) {
-		ensureWordCollectionFactory();
+		extractWords(); // drops the mandatory ArgumentOption
+	}
+
+	/** extracts words - currently crudely splits the contentstream
+	 */
+	public void extractWords() {
+ 		AbstractTool tool = this.getAbstractTool();
+		if (tool != null && tool.getVerbosityInt() > 0) {
+			LOG.debug("EXTRACT WORDS");
+		}
+		getOrCreateWordCollectionFactory();
 		wordCollectionFactory.extractWords();
 	}
 	
@@ -138,7 +175,8 @@ public class WordArgProcessor extends AMIArgProcessor {
 		for (DefaultStringDictionary dictionary : this.getDictionaryList()) {
 			AMISearcher wordSearcher = new SearchSearcher(this, dictionary);
 			searcherList.add(wordSearcher);
-			wordSearcher.setName(dictionary.getTitle());
+			String dictTitle = dictionary.getTitle();
+			wordSearcher.setName(dictTitle);
 		}
 //		wordSearcher.setDictionaryList(this.getDictionaryList());
 	}
@@ -147,20 +185,25 @@ public class WordArgProcessor extends AMIArgProcessor {
 	 * 
 	 * @param option
 	 */
-//	@Deprecated 
-	// this 
+	// called by reflection
 	public void outputWords(ArgumentOption option) {
+		outputWords(option.getName());
+	}
+
+	public void outputWords(String optionName) {
+		AbstractTool.debug(abstractTool, 0, "outputWordsOld "+optionName, LOG);
 		ContentProcessor currentContentProcessor = getOrCreateContentProcessor();
 		ResultsElementList resultsElementList = currentContentProcessor.getOrCreateResultsElementList();
 		for (int i = 0; i < resultsElementList.size(); i++) {
 			File outputDirectory = currentContentProcessor.createResultsDirectoryAndOutputResultsElement(
-					option, resultsElementList.get(i)/*, CTree.RESULTS_XML*/);
+					optionName, resultsElementList.get(i)/*, CTree.RESULTS_XML*/);
 			File htmlFile = new File(outputDirectory, CTree.RESULTS_HTML);
 			((WordResultsElement) resultsElementList.get(i)).writeResultsElementAsHTML(htmlFile, this);
 		}
 	}
-	
+
 	public void parseSummary(ArgumentOption option, ArgIterator argIterator) {
+		AbstractTool.debug(abstractTool, 1, "parseSummary", LOG);
 		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		if (tokens.size() == 0) {
 			LOG.error("parseSummary needs a list of actions");
@@ -170,8 +213,9 @@ public class WordArgProcessor extends AMIArgProcessor {
 	}
 	
 	public void finalSummary(ArgumentOption option) {
+		AbstractTool.debug(abstractTool, 1, "finalSummary", LOG);
 		WordResultsElementList frequenciesElementList = this.aggregateOverCMDirList(getPlugin(), WordArgProcessor.FREQUENCIES);
-		ensureWordCollectionFactory();
+		getOrCreateWordCollectionFactory();
 		for (String method : summaryMethods) {
 			runSummaryMethod(frequenciesElementList, wordCollectionFactory, method);
 		}
@@ -179,6 +223,7 @@ public class WordArgProcessor extends AMIArgProcessor {
 
 	private void runSummaryMethod(WordResultsElementList frequenciesElementList,
 			WordCollectionFactory wordCollectionFactory, String method) {
+		AbstractTool.debug(abstractTool, 1, "runSummaryMethod", LOG);
 		if (AGGREGATE_FREQUENCY.equals(method) && summaryFileName != null) {
 			aggregatedFrequenciesElement = wordCollectionFactory.createAggregatedFrequenciesElement(frequenciesElementList);
 			writeResultsElement(new File(summaryFileName, AGGREGATE_XML), aggregatedFrequenciesElement);
@@ -211,8 +256,9 @@ public class WordArgProcessor extends AMIArgProcessor {
 		outputResultsElements(option.getName());
 	}
 
-	private void outputResultsElements(String name) {
-		LOG.debug("resultsElement option "+name);
+	public void outputResultsElements(String name) {
+		AbstractTool.debug(abstractTool, 1, "outputResultsElements "+name, LOG);
+		LOG.debug("outputResultsElements "+name);
 		ContentProcessor currentContentProcessor = currentCTree.getOrCreateContentProcessor();
 		currentContentProcessor.clearResultsElementList();
 
@@ -278,6 +324,24 @@ public class WordArgProcessor extends AMIArgProcessor {
 
 	public List<String> getChosenWordAggregationMethods() {
 		return chosenWordAggregationMethods;
+	}
+	
+	public void add(String method) { 
+		getOrCreateWordAggregationMethods();
+		if (!chosenWordAggregationMethods.contains(method)) {
+			chosenWordAggregationMethods.add(method);
+		}
+	}
+
+	private List<String> getOrCreateWordAggregationMethods() {
+		if (chosenWordAggregationMethods == null) {
+			chosenWordAggregationMethods = new ArrayList<String>();
+		}
+		return chosenWordAggregationMethods;
+	}
+
+	public void addChosenMethod(WordMethod wordMethod) {
+		
 	}
 
 }

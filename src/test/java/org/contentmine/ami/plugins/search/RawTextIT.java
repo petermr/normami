@@ -3,6 +3,7 @@ package org.contentmine.ami.plugins.search;
 import java.io.File;
 import java.io.IOException;
 
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.Norma;
@@ -28,7 +29,7 @@ public class RawTextIT {
 		
 		cmd = "--project "+project+" -i fulltext.pdf.txt --sr.search "
 				+ "searchwords/cochrane.xml -o junk.txt";
-		SearchArgProcessor argProcessor = new SearchArgProcessor(cmd);
+		AbstractSearchArgProcessor argProcessor = new AbstractSearchArgProcessor(cmd);
 		argProcessor.runAndOutput();
 	}
 

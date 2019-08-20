@@ -1,6 +1,5 @@
 package org.contentmine.ami.plugins;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -10,27 +9,23 @@ import java.util.Map;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.dictionary.DefaultAMIDictionary;
-import org.contentmine.ami.plugins.regex.CompoundRegex;
 import org.contentmine.ami.plugins.regex.CompoundRegexList;
 import org.contentmine.ami.plugins.regex.RegexComponent;
 import org.contentmine.ami.plugins.word.WordCollectionFactory;
 import org.contentmine.ami.wordutil.WordSetWrapper;
+import org.contentmine.cproject.args.AbstractTool;
 import org.contentmine.cproject.args.ArgIterator;
 import org.contentmine.cproject.args.ArgumentOption;
 import org.contentmine.cproject.args.ValueElement;
 import org.contentmine.cproject.args.VersionManager;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.ContentProcessor;
-import org.contentmine.cproject.files.ResourceLocation;
 import org.contentmine.cproject.files.ResultsElement;
 import org.contentmine.cproject.lookup.AbstractLookup;
 import org.contentmine.cproject.lookup.DefaultStringDictionary;
-import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.NormaArgProcessor;
 
-import nu.xom.Builder;
-import nu.xom.Document;
 import nu.xom.Element;
 
 /** 
@@ -84,10 +79,9 @@ public class AMIArgProcessor extends NormaArgProcessor {
 	private String plugin;
     Map<String,AbstractLookup> lookupInstanceByName;
 	protected CompoundRegexList compoundRegexList;
-	protected List<Element> regexElementList;
 	protected List<? extends Element> sectionElements;
 	protected List<String> lookupNames;
-	public WordCollectionFactory wordCollectionFactory;
+	protected WordCollectionFactory wordCollectionFactory;
 	protected HashMap<String, AMISearcher> searcherByNameMap; // req
 	// searching
 	protected List<AMISearcher> searcherList; // req
@@ -96,6 +90,7 @@ public class AMIArgProcessor extends NormaArgProcessor {
 	private Boolean stemming;
 	private List<WordSetWrapper> stopwordSetList;
 	public List<String> chosenWordTypes;
+	
 	public AMIArgProcessor() {
 		super();
 		readArgsResourcesIntoOptions();
@@ -121,6 +116,10 @@ public class AMIArgProcessor extends NormaArgProcessor {
 	
 	public AMIArgProcessor(String cmd) {
 		this(cmd.split("\\s+"));
+	}
+
+	public AMIArgProcessor(AbstractTool abstractTool) {
+		super(abstractTool);
 	}
 
 	protected String createPluginArgsResourceName() {
@@ -167,11 +166,22 @@ public class AMIArgProcessor extends NormaArgProcessor {
 	public void parseStem(ArgumentOption option, ArgIterator argIterator) {
 		stemming = argIterator.getBoolean(option);
 	}
+	
+	public AMIArgProcessor setStemming(Boolean stemming) {
+		this.stemming = stemming;
+		return this;
+	}
 
 	public void parseStopwords(ArgumentOption option, ArgIterator argIterator) {
 		List<String> stopwordLocations = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		addStopwords(stopwordLocations);
 	}
+
+	public AMIArgProcessor setStopwords(List<String> stopwordLocations) {
+		addStopwords(stopwordLocations);
+		return this;
+	}
+
 
 	public void parseContext(ArgumentOption option, ArgIterator argIterator) {
 		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
@@ -341,7 +351,7 @@ public class AMIArgProcessor extends NormaArgProcessor {
 		return defaultSearcher;
 	}
 
-	protected void createSearcherList(List<String> names) {
+	public List<AMISearcher> createSearcherList(List<String> names) {
 		ensureSearcherBySearcherNameMap();
 		ensureSearcherList();
 		for (String name : names) {
@@ -352,6 +362,7 @@ public class AMIArgProcessor extends NormaArgProcessor {
 				searcherList.add(optionSearcher);
 			}
 		}
+		return searcherList;
 	}
 
 	private void ensureSearcherBySearcherNameMap() {
@@ -435,76 +446,6 @@ public class AMIArgProcessor extends NormaArgProcessor {
 		createSearcherList(types);
 	}
 
-	protected void createRegexElementList(ArgumentOption option, List<String> tokens) {
-		List<String> regexLocations = option.processArgs(tokens).getStringValues();
-		ensureRegexElementList();
-		for (String regexLocation : regexLocations) {
-			LOG.trace("RegexLocation "+regexLocation);
-			try {
-//				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
-				InputStream is = new ResourceLocation().getInputStreamHeuristically(AMIArgProcessor.class, regexLocation);
-				Element rawCompoundRegex = new Builder().build(is).getRootElement();
-				List<Element> elements = XMLUtil.getQueryElements(rawCompoundRegex, ".//*[local-name()='regex']");
-				regexElementList.addAll(elements);
-			} catch (Exception e) {
-				LOG.debug("RXXX "+regexLocations);
-				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);
-			}
-		}
-	}
-
-	private void ensureRegexElementList() {
-		if (regexElementList == null) {
-			regexElementList = new ArrayList<Element>();
-		}
-	}
-
-	protected void createCompoundRegexes(ArgumentOption option, List<String> tokens) {
-		List<String> regexLocations = option.processArgs(tokens).getStringValues();
-		getOrCreateCompoundRegexList();
-		for (String regexLocation : regexLocations) {
-			LOG.trace("RegexLocation "+regexLocation);
-			try {
-//				InputStream is = new ResourceLocation().getInputStreamHeuristically(regexLocation);
-				InputStream is = new ResourceLocation().getInputStreamHeuristically(AMIArgProcessor.class, regexLocation);
-				if (is == null) {
-					throw new RuntimeException("cannot find regex: "+regexLocation);
-				}
-				CompoundRegex compoundRegex = readAndCreateCompoundRegex(is);
-				compoundRegexList.add(compoundRegex);
-			} catch (Exception e) {
-				LOG.debug("RX "+regexLocations);
-				LOG.error("Cannot parse regexLocation: ("+e+")"+regexLocation);
-			}
-			
-		}
-	}
-
-	public CompoundRegexList getOrCreateCompoundRegexList() {
-		if (compoundRegexList == null) {
-			compoundRegexList = new CompoundRegexList();
-		}
-		return compoundRegexList;
-	}
-
-	/** creates a regex from InputStream if possible
-	 * 	 * 
-	 * @param file
-	 * @param is TODO
-	 * @return null if not a regex file
-	 * @exception RuntimeException if cannot read/parse
-	 */
-	public CompoundRegex readAndCreateCompoundRegex(InputStream is) {
-		Element rootElement = null;
-		try {
-			Document doc = new Builder().build(is);
-			rootElement = doc.getRootElement();
-		} catch (Exception e) {
-			throw new RuntimeException("Cannot read or parse regexInputStream", e);
-		}
-		return new CompoundRegex(this, rootElement);
-	}
-
 	public CTree getCurrentCTree() {
 		return currentCTree;
 	}
@@ -519,7 +460,7 @@ public class AMIArgProcessor extends NormaArgProcessor {
 		}
 	}
 
-	protected WordCollectionFactory ensureWordCollectionFactory() {
+	public WordCollectionFactory getOrCreateWordCollectionFactory() {
 		if (wordCollectionFactory == null) {
 			this.wordCollectionFactory = new WordCollectionFactory(this);
 		}
@@ -599,6 +540,10 @@ public class AMIArgProcessor extends NormaArgProcessor {
 		if (chosenWordTypes == null) {
 			chosenWordTypes = new ArrayList<String>();
 		}
+	}
+
+	public void setWordCollectionFactory(WordCollectionFactory wordCollectionFactory) {
+		this.wordCollectionFactory = wordCollectionFactory;
 	}
 
 

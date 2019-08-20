@@ -2,15 +2,21 @@ package org.contentmine.ami.tools;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.CommandProcessor;
+import org.contentmine.ami.plugins.word.WordArgProcessor;
+import org.contentmine.ami.plugins.word.WordCollectionFactory;
 import org.contentmine.ami.plugins.word.WordPluginOption;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.OptionFlag;
+import org.contentmine.eucl.euclid.IntRange;
+import org.eclipse.jetty.util.log.Log;
 
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -52,17 +58,14 @@ DefaultArgProcessor  - running method: finalDFFile
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-words", 
-		//String[] aliases() default {};
 aliases = "words",
-		//Class<?>[] subcommands() default {};
 version = "ami-words 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "Analyze word frequencies"
 )
 
-public class AMIWordsTool extends AbstractAMITool {
+public class AMIWordsTool extends AbstractAMISearchTool {
+//public class AMIWordsTool extends AMISearchTool {
 	private static final String OPTIONS_JOIN = "~";
 	private static final String XPATH_JOIN = ":";
 	private static final String STOPWORD_JOIN = "_";
@@ -78,7 +81,7 @@ public class AMIWordsTool extends AbstractAMITool {
 	 * @author pm286
 	 *
 	 */
-	public enum WordTarget {
+	public enum WordMethod {
 		frequencies,
 //		wordFrequencies,
 		wordLengths,
@@ -87,6 +90,36 @@ public class AMIWordsTool extends AbstractAMITool {
 		;
 		}
 		
+	/** Word and wordList transformations
+	 * 
+	 * @author pm286
+	 *
+	 */
+	public enum WordTransform {
+		abbreviation(AMIArgProcessor.ABBREVIATION),
+		capitalized(AMIArgProcessor.CAPITALIZED),
+		ignore(AMIArgProcessor.IGNORE),
+		;
+		private String amiName;
+
+		private WordTransform(String amiName) {
+			this.amiName = amiName;
+		}
+		public String getAMIName() {
+			return amiName;
+		}
+	}
+
+	/* historical 
+        finalMethod="finalSummary"
+        		pattern="(aggregateFrequencies|tfidf|foo)"
+
+   		parseMethod="parseWordLengths"
+		pattern="(acronym|capitalized)"
+		parseMethod="parseWordTypes"
+
+    */
+	
     @Option(names = {"--filter"},
     		arity = "0..1",
             description = "run filter")
@@ -102,17 +135,22 @@ public class AMIWordsTool extends AbstractAMITool {
             description = "run filter summary")
     private Boolean filterSummary;
 
-    @Option(names = {"--mincount"},
-    		arity = "1",
-            description = "minimum count for wrds for acceptance in frequencies")
-    private Integer minCount = 20;
-
-    @Option(names = {"--targets"},
+    @Option(names = {"--methods"},
     		arity = "1..*",
-            description = "frequencies and other word targets (frequencies, wordFrequencies, wordLengths, search, wordSearch); "
+            description = "frequencies and other word targets (${COMPLETION-CANDIDATES}); "
             		+ "201902 only frequencies implemented")
-    private WordTarget[] targets = new WordTarget[]{WordTarget.frequencies};
+    private List<WordMethod> wordMethods = Arrays.asList(new WordMethod[]{WordMethod.frequencies});
 
+    @Option(names = {"--processtree"},
+    		arity = "0",
+            description = " use new processTree style of processing")
+	private boolean processTree = true;
+
+    @Option(names = {"--stemming"},
+    		arity = "0",
+            description = "apply stemming")
+    private Boolean stemming = false;
+	
     @Option(names = {"--stopworddir"},
     		arity = "1",
             description = "Stop word directory (only one allowed) not yet working")
@@ -121,9 +159,25 @@ public class AMIWordsTool extends AbstractAMITool {
     @Option(names = {"--stopwords"},
     		arity = "1..*",
             description = "Stop word files for w.stopwords: (ex: pmcstop.txt stopwords.txt)")
-    private String[] stopwordFileList = {"pmcstop.txt", "stopwords.txt"};
+    private List<String> stopwordLocations = Arrays.asList(new String[]{"pmcstop.txt", "stopwords.txt"});
 
+    @Option(names = {"--transform"},
+    		arity = "1..*",
+            description = "methods for word transformation")
+    private List<WordTransform> transformList = new ArrayList<>();
+
+
+    /**
+    @Option(names = "-x", arity = "0..1",
+            defaultValue = "-1", fallbackValue = "-2",
+            description = "Option with optional parameter. Default: ${DEFAULT-VALUE}, " +
+                          "if specified without parameter: ${FALLBACK-VALUE}")
+    int x;
+*/
+    
 	private String wordCmd;
+	private WordArgProcessor wordArgProcessor;
+	private WordCollectionFactory wordCollectionFactory;
 	
 
     /**
@@ -151,76 +205,87 @@ public class AMIWordsTool extends AbstractAMITool {
 
     @Override
 	protected void parseSpecifics() {
-		System.out.println("stopword files       " + stopwordFileList);
-		System.out.println("minCount             " + minCount);
+		System.out.println("filter               " + filter);
+		System.out.println("filterfinal          " + filterFinal);
+		System.out.println("filtersummary        " + filterSummary);
+		System.out.println("methods              " + wordMethods);
+		System.out.println("processTree          " + processTree);
+		System.out.println("stemming             " + stemming);
+		System.out.println("stopword directory   " + stopwordDir);
+		System.out.println("stopword files       " + stopwordLocations);
+		System.out.println("transform            " + transformList);
 		System.out.println();
 	}
 
     @Override
     protected void runSpecifics() {
+		wordArgProcessor = getOrCreateSearchProcessor();
+		
+    	populateArgProcessorFromCLI();
+    	createWordListInWordCollectionFactory();
+    	
+    	if (processTree && processTrees()) { 
+    	} else {
+    		buildCommandFromBuiltinsAndFacets();
+//			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
+	    }
+
+    }
+
+	protected void createWordListInWordCollectionFactory() {
+		super.createWordListInWordCollectionFactory();
+	}
+
+	protected void populateArgProcessorFromCLI() {
+		wordArgProcessor.setStemming(stemming);
+    	wordArgProcessor.setStopwords(stopwordLocations);
+    	wordArgProcessor.setWordCountRange(wordCountRange);
+    	for (WordMethod wordMethod : wordMethods) {
+    		wordArgProcessor.addChosenMethod(wordMethod);
+    	}
+	}
+
+	
+	protected String buildCommandFromBuiltinsAndFacets() {
 		String wordTargets = makeWordTargets();
     	String wordOptions = makeWordOptions();
 		wordCmd = wordTargets + wordOptions;
     	LOG.debug("WORD>>> "+wordCmd);
-    	processTrees();
-    }
-
-	private String makeWordTargets() {
-		String wordString = null;
-		if (targets != null && targets.length > 0) {
-			wordString = "word(";
-			for (WordTarget target : targets) {
-				wordString += target + " ";			
-			}
-			wordString = wordString.trim() + ")";
-		}
-		return wordString;
+    	return wordCmd;
 	}
 
-	private String makeWordOptions() {
-		return makeXPathOptions() + OPTIONS_JOIN + makeStopwordOptions();
-	}
-
-	private String makeXPathOptions() {
-		String xPathString = null;
-		if (minCount != null) {
-			xPathString = "" + "xpath" + XPATH_JOIN + "@count" + ">" + minCount + "";
-		}
-		return xPathString;		
-	}
-
-	private String makeStopwordOptions() {
-		String stopwordOptions = null;
-		// this is awful
-		if (stopwordFileList != null && stopwordFileList.length > 0) {
-			stopwordOptions = W_STOPWORDS;
-			for (int i = 0; i < stopwordFileList.length; i++) {
-				if (i > 0) {
-					stopwordOptions += STOPWORD_JOIN;
-				}
-				stopwordOptions += stopwordFileList[i];
-			}
-		}
-		return stopwordOptions;
-	}
-
-	@Override
-	public boolean processTrees() {
-		System.out.println("cProject: "+cProject.getName());
+	protected void processTree() {
+		if (getVerbosityInt() > 0) System.out.println("AMIWords processTree");
+		wordArgProcessor.setCTree(cTree);
+		extractWords();
+		// this is the original, phased out; will run twice unnecessarily because runs project
+//		runWords();
 //		runWordsNew();
-		runWords();
-		return true;
-	}
-
-	public void processTree() {
-		System.out.println("cTree: "+cTree.getName());
-//		runWordsNew();
-		runWords();
-//		WordArgProcessor argProcessor = new WordArgProcessor();
-//		argProcessor.setCTree(cTree);
-//		argProcessor.runExtractWords((ArgumentOption) null);
 	}
 	
+	/** ================================================= */
+
+
+	private void extractWords() {
+		wordArgProcessor.setCTree(cTree);
+		wordArgProcessor.extractWords();
+		wordArgProcessor.outputWords("word");
+	}
+
+	public WordArgProcessor getOrCreateSearchProcessor() {
+		if (wordArgProcessor == null) {
+			wordArgProcessor = new WordArgProcessor(this);
+		}
+		return wordArgProcessor;
+	}
+
+	protected void processProject() {
+		runProjectSearch();
+	}
+	protected void runProjectSearch() {
+		runWordsNew();
+	}
+	/** probably needs refactoring */
 	public void runWordsNew() {
 		
 		try {
@@ -245,6 +310,7 @@ public class AMIWordsTool extends AbstractAMITool {
 			
 			CommandProcessor commandProcessor = new CommandProcessor(cProject.getDirectory());
 			List<String> cmdList = Arrays.asList(wordCmd.trim().split("\\s+"));
+			if (getVerbosityInt() >= 2) System.err.println("cmdList "+cmdList);
 			commandProcessor.parseCommands(cmdList);
 			// this runs commands and filters results
 			LOG.debug("running command: "+wordCmd);
@@ -297,4 +363,47 @@ WS: /
 			throw new RuntimeException("Cannot run command: "+wordCmd, e);
 		}
 	}
+	
+	// ======================================================
+	
+	private String makeWordTargets() {
+		String wordString = null;
+		if (wordMethods != null && wordMethods.size() > 0) {
+			wordString = "word(";
+			for (WordMethod method : wordMethods) {
+				wordString += method + " ";			
+				wordArgProcessor.add(method.toString());
+			}
+			wordString = wordString.trim() + ")";
+		}
+		return wordString;
+	}
+
+	private String makeWordOptions() {
+		return makeXPathOptions() + OPTIONS_JOIN + makeStopwordOptions();
+	}
+
+	private String makeXPathOptions() {
+		String xPathString = null;
+		if (wordCountRange != null) {
+			xPathString = "" + "xpath" + XPATH_JOIN + "@count" + ">" + wordCountRange.getMin() + "";
+		}
+		return xPathString;		
+	}
+
+	private String makeStopwordOptions() {
+		String stopwordOptions = null;
+		// this is awful
+		if (stopwordLocations != null && stopwordLocations.size() > 0) {
+			stopwordOptions = W_STOPWORDS;
+			for (int i = 0; i < stopwordLocations.size(); i++) {
+				if (i > 0) {
+					stopwordOptions += STOPWORD_JOIN;
+				}
+				stopwordOptions += stopwordLocations.get(i);
+			}
+		}
+		return stopwordOptions;
+	}
+
 }

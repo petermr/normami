@@ -14,6 +14,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
 import org.contentmine.ami.lookups.ENALookup;
+import org.contentmine.ami.plugins.phylotree.PhyloTreeArgProcessor;
 import org.contentmine.ami.plugins.phylotree.nexml.NexmlNEXML;
 import org.contentmine.eucl.xml.XMLUtil;
 import org.contentmine.norma.NAConstants;

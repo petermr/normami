@@ -1,6 +1,7 @@
 package org.contentmine.ami.tools;
 
 import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,11 +13,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
-import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.tools.AMIDictionaryTool.RawFileFormat;
-import org.contentmine.ami.tools.AbstractAMITool.SubDirectoryType;
+import org.contentmine.cproject.args.AbstractTool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
@@ -65,7 +65,7 @@ import picocli.CommandLine.Option;
 	version = "ami20190228" // also edit ami-jars-sh
 	)
 
-public abstract class AbstractAMITool implements Callable<Void> {
+public abstract class AbstractAMITool implements Callable<Void> , AbstractTool {
 	private static final Logger LOG = Logger.getLogger(AbstractAMITool.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
@@ -502,23 +502,25 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	 * 
 	 */
 	private void printGenericValues() {
-        System.out.println("output basename     " + outputBasename);
-        System.out.println("input basename      " + inputBasename);
-        System.out.println("input basename list " + inputBasenameList);
-        System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
-        System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
-        System.out.println("cTreeList           " + prettyPrint(cTreeList));
-        System.out.println("dryrun              " + dryrun);
-        System.out.println("excludeBase         " + excludeBase);
-        System.out.println("excludeTrees        " + excludeTrees);
-        System.out.println("file types          " + Util.toStringList(rawFileFormats));
-        System.out.println("forceMake           " + forceMake);
-        System.out.println("includeBase         " + includeBase);
-        System.out.println("includeTrees        " + includeTrees);
-        System.out.println("log4j               " + (log4j == null ? "" : new ArrayList<String>(Arrays.asList(log4j))));
-        System.out.println("logfile             " + logfile);
-        System.out.println("subdirectoryType    " + subdirectoryType);
-        System.out.println("verbose             " + verbosity.length);
+		if (verbosity.length > 0) {
+	        System.out.println("output basename     " + outputBasename);
+	        System.out.println("input basename      " + inputBasename);
+	        System.out.println("input basename list " + inputBasenameList);
+	        System.out.println("cproject            " + (cProject == null ? "" : cProject.getDirectory().getAbsolutePath()));
+	        System.out.println("ctree               " + (cTree == null ? "" : cTree.getDirectory().getAbsolutePath()));
+	        System.out.println("cTreeList           " + prettyPrint(cTreeList));
+	        System.out.println("dryrun              " + dryrun);
+	        System.out.println("excludeBase         " + excludeBase);
+	        System.out.println("excludeTrees        " + excludeTrees);
+	        System.out.println("file types          " + Util.toStringList(rawFileFormats));
+	        System.out.println("forceMake           " + forceMake);
+	        System.out.println("includeBase         " + includeBase);
+	        System.out.println("includeTrees        " + includeTrees);
+	        System.out.println("log4j               " + (log4j == null ? "" : new ArrayList<String>(Arrays.asList(log4j))));
+	        System.out.println("logfile             " + logfile);
+	        System.out.println("subdirectoryType    " + subdirectoryType);
+	        System.out.println("verbose             " + verbosity.length);
+        }
 //        System.out.println("version             " + version);
 	}
 
@@ -750,7 +752,6 @@ public abstract class AbstractAMITool implements Callable<Void> {
 	private static boolean isLevel(AbstractAMITool amiTool, Verbosity debug2) {
 		return (amiTool == null) ? false : debug2.getVerbosity() == amiTool.getVerbosityInt();
 	}
-
 
 
 }

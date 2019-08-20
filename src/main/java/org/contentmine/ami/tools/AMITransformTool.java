@@ -44,11 +44,11 @@ public class AMITransformTool extends AbstractAMITool {
             description = "XSLT stylesheet")
     private String stylesheet;
     
-    @Option(names = {"--output"},
-    		arity = "1",
-    		defaultValue="scholarly.html",
-            description = "ScholarlyHtml")
-    private String filename;
+//    @Option(names = {"--output"},
+//    		arity = "1",
+//    		defaultValue="scholarly.html",
+//            description = "ScholarlyHtml")
+//    private String filename;
 
     /** used by some non-picocli calls
      * obsolete it

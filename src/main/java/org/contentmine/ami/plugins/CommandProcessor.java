@@ -299,17 +299,23 @@ public class CommandProcessor {
 		for (AMIPluginOption pluginOption : pluginOptions) {
 			String plugin = pluginOption.getPlugin();
 			System.out.print("\nrunning: " + plugin + "; " + pluginOption);
-			if (amiSearchTool != null && amiSearchTool.getIgnorePluginList().contains(plugin)) {
+			if (amiSearchTool != null /*&& amiSearchTool.getIgnorePluginList().contains(plugin)*/) {
 				System.out.println("ignored: " + plugin);
 				continue;
 			}
 			try {
+				if (amiTool != null && amiTool.getVerbosityInt() > 0) {
+					LOG.debug("running plugin: "+pluginOption);
+				}
 				pluginOption.run();
 			} catch (Exception e) {
+				if (amiTool.getVerbosityInt() > 0) {
+					e.printStackTrace();
+				}
 				System.err.println("cannot run command: "+pluginOption +"; " + e.getMessage());
 				continue;
 			}
-//			System.out.println("filter: "+pluginOption);
+			System.out.println("filter: "+pluginOption+"/"+amiTool);
 			pluginOption.runFilterResultsXMLOptions();
 //			System.out.println("summary: "+pluginOption);
 			pluginOption.runSummaryAndCountOptions(); 

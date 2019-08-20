@@ -5,6 +5,7 @@ import java.io.File;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
+import org.contentmine.ami.tools.AMITransformTool;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.junit.Test;
 

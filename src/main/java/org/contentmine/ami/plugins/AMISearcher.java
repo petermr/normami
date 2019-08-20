@@ -345,7 +345,7 @@ public class AMISearcher extends AbstractSearcher {
 
 	private ResultsElement searchWithDictionary(String value) {
 			ResultsElement resultsElement = new ResultsElement();
-			WordCollectionFactory wordCollectionFactory = amiArgProcessor.ensureWordCollectionFactory();
+			WordCollectionFactory wordCollectionFactory = amiArgProcessor.getOrCreateWordCollectionFactory();
 			List<String> stringList = wordCollectionFactory.createWordList();
 			resultsElement = searchWithDictionary(stringList);
 			return resultsElement;

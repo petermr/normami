@@ -4,6 +4,7 @@ import java.io.File;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMIImageTool;
 import org.junit.Test;
 
 /** test cleaning.

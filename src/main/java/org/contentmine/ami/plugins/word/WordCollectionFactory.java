@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.wordutil.LuceneUtils;
 import org.contentmine.ami.wordutil.WordSetWrapper;
+import org.contentmine.cproject.args.AbstractTool;
 import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.ResultElement;
@@ -34,7 +35,7 @@ import nu.xom.IllegalCharacterDataException;
  *
  */
 public class WordCollectionFactory {
-	private static final Logger LOG = Logger.getLogger(WordCollectionFactory.class);
+	public static final Logger LOG = Logger.getLogger(WordCollectionFactory.class);
 	static {
 		LOG.setLevel(Level.DEBUG);
 	}
@@ -70,6 +71,7 @@ public class WordCollectionFactory {
 	private WordResultsElement aggregatedFrequenciesElement;
 	private WordResultsElement booleanFrequenciesElement;
 	private boolean stripNumbers;
+	private List<String> rawWords;
 
 	public WordCollectionFactory(AMIArgProcessor argProcessor) {
 		this.amiArgProcessor = argProcessor;
@@ -104,43 +106,33 @@ public class WordCollectionFactory {
 		}
 		WordArgProcessor wordArgProcessor = (WordArgProcessor) amiArgProcessor;
 		List<String> chosenMethods = wordArgProcessor.getChosenWordAggregationMethods();
-		LOG.trace("chosen methods: "+chosenMethods);
+		if (wordArgProcessor.getVerbosityInt() > 0) System.out.println("chosen methods: "+chosenMethods);
 		if (chosenMethods.contains(WordArgProcessor.WORD_LENGTHS)) {
 			ResultsElement resultsElement = createWordLengthsResultsElement(words);
 			wordArgProcessor.addResultsElement(resultsElement);
 		}
-		if (chosenMethods.contains(WordArgProcessor.WORD_FREQUENCIES) || chosenMethods.contains(WordArgProcessor.FREQUENCIES)) {
+		if (chosenMethods.contains(WordArgProcessor.WORD_FREQUENCIES) 
+				|| chosenMethods.contains(WordArgProcessor.FREQUENCIES)) {
 			ResultsElement resultsElement = getWordFrequencies(words);
 			wordArgProcessor.addResultsElement(resultsElement);
 		}
 	}
 
 	public List<String> createWordList() {
+		AbstractTool.debug(amiArgProcessor.getAbstractTool(), 0, "createWordList", LOG);
 		CTree currentCTree = amiArgProcessor.getCurrentCTree();
-		List<String> rawWords = new ArrayList<String>();
-		if (currentCTree != null) {
-			if (currentCTree.hasScholarlyHTML()) {
-				rawWords = currentCTree.extractWordsFromScholarlyHtml();
-			} else if (currentCTree.hasFulltextPDFTXT()) {
-				rawWords = currentCTree.extractWordsFromPDFTXT();
-			} else {
-				String msg = "No scholarlyHtml or PDFTXT: "+currentCTree.getDirectory();
-				LOG.trace(msg);
-			}
-			LOG.trace("raw words " + rawWords.size());
+		List<String> words = null;
+		if (currentCTree == null) {
+			LOG.warn("No current tree");
+		} else {
+			List<String> rawWords = currentCTree.extractWords();
+			words = (rawWords == null) ? null : transformWordStream(rawWords);
 		}
-		return createTransformedWords(rawWords);
-	}
-
-	private List<String> createTransformedWords(List<String> rawWords) {
-		List<String> transformedWords = null;
-		if (rawWords != null) {
-			transformedWords = transformWordStream(rawWords);
-		}
-		return transformedWords;
+		return words;
 	}
 
 	private List<String> transformWordStream(List<String> transformedWords) {
+		AbstractTool.debug(amiArgProcessor.getAbstractTool(), 1, "transformWordStream", LOG);
 		AMIArgProcessor wordArgProcessor = (AMIArgProcessor) amiArgProcessor;
 		if (amiArgProcessor.getChosenWordTypes().contains(AMIArgProcessor.ABBREVIATION)) {
 			transformedWords = createAbbreviations(transformedWords);
@@ -255,10 +247,10 @@ public class WordCollectionFactory {
 		for (String word : words) {
 			lengthSet.add(word.length());
 		}
-		return getWordLengths(lengthSet);
+		return getWordLengthsResultsElement(lengthSet);
 	}
 
-	private WordResultsElement getWordLengths(Multiset<Integer> lengthSet) {
+	private WordResultsElement getWordLengthsResultsElement(Multiset<Integer> lengthSet) {
 		WordResultsElement lengthsElement = new WordResultsElement(LENGTHS);
 		for (Entry<Integer> entry : lengthSet.entrySet()) {
 			WordResultElement lengthElement = new WordResultElement(LENGTH);
@@ -440,16 +432,18 @@ public class WordCollectionFactory {
 	}
 
 	/** aggregate frequencies for each ResultsElement.
-	 * 
+	 * Never used?
 	 * @param resultsElementList
 	 */
 	public void createAggregateFrequenciesElement(ResultsElementList resultsElementList) {
+		if (amiArgProcessor.getVerbosityInt() >= 2) System.out.println("createAggregateFrequenciesElement");
 		Multiset<String> aggregateSet = this.createAggregateSet(resultsElementList);
 		Iterable<Entry<String>> sortedEntries = getEntriesSortedByCount(aggregateSet);
 		this.createWordResultElementsAndAddToAggregateFrequenciesElement(sortedEntries);
 	}
 
 	private Multiset<String> createAggregateSet(ResultsElementList resultsElementList) {
+		if (amiArgProcessor.getVerbosityInt() >= 2) System.out.println("createAggregateSet(ResultsElementList)");
 		Multiset<String> aggregateSet = HashMultiset.create();
 		for (ResultsElement resultsElement : resultsElementList) {
 			String title = resultsElement.getTitle();
@@ -463,6 +457,7 @@ public class WordCollectionFactory {
 	}
 
 	private WordResultsElement createWordResultElementsAndAddToAggregateFrequenciesElement(Iterable<Entry<String>> sortedEntries) {
+		if (amiArgProcessor.getVerbosityInt() >= 2) System.out.println("createWordResultElementsAndAddToAggregateFrequenciesElement(Iterable<Entry<String>>");
 		aggregatedFrequenciesElement = new WordResultsElement(WordArgProcessor.FREQUENCIES);
 		for (Entry<String> entry : sortedEntries) {
 			WordResultElement wordResultElement = new WordResultElement(FREQUENCY_ATT);

@@ -4,7 +4,7 @@ import java.io.File;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.plugins.search.SearchArgProcessor;
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.norma.NAConstants;
 import org.junit.Test;
 
@@ -22,7 +22,7 @@ public class RawTextTest {
 		File test = new File(NAConstants.TEST_AMI_DIR, "word/sentences");
 		String cmd = "--ctree "+test.toString()+" -i simple.txt --sr.search "
 				+ "searchwords/prepositions.xml -o junk.txt";
-		SearchArgProcessor argProcessor = new SearchArgProcessor(cmd);
+		AbstractSearchArgProcessor argProcessor = new AbstractSearchArgProcessor(cmd);
 		argProcessor.runAndOutput();
 	}
 	
@@ -31,7 +31,7 @@ public class RawTextTest {
 		File test = new File(NAConstants.TEST_AMI_DIR, "word/sentences/cochrane1");
 		String cmd = "--ctree "+test.toString()+" -i fulltext.pdf.txt --sr.search "
 				+ "searchwords/cochrane.xml -o junk.txt";
-		SearchArgProcessor argProcessor = new SearchArgProcessor(cmd);
+		AbstractSearchArgProcessor argProcessor = new AbstractSearchArgProcessor(cmd);
 		argProcessor.runAndOutput();
 	}
 	
@@ -40,7 +40,7 @@ public class RawTextTest {
 		File test = new File(NAConstants.TEST_AMI_DIR, "word/sentences");
 		String cmd = "--project "+test.toString()+" -i fulltext.pdf.txt --sr.search "
 				+ "searchwords/cochrane.xml -o junk.txt";
-		SearchArgProcessor argProcessor = new SearchArgProcessor(cmd);
+		AbstractSearchArgProcessor argProcessor = new AbstractSearchArgProcessor(cmd);
 		argProcessor.runAndOutput();
 	}
 	

@@ -8,6 +8,8 @@ import org.apache.log4j.Layout;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
+import org.contentmine.ami.tools.AMICleanTool;
+import org.contentmine.ami.tools.AMIPDFTool;
 import org.contentmine.cproject.files.CProject;
 import org.junit.Assert;
 import org.junit.Test;

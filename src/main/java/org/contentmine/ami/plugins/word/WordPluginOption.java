@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.AMIPluginOption;
-import org.contentmine.ami.plugins.search.SearchArgProcessor;
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.cproject.util.CellRenderer;
 
@@ -27,17 +27,19 @@ public class WordPluginOption extends AMIPluginOption {
 	}
 
 	public void run() {
-		StringBuilder commandString = createCoreCommandStringBuilder();
-		commandString.append(" --w.words "+optionString);
+		StringBuilder commandStringBuilder = createCoreCommandStringBuilder();
+		commandStringBuilder.append(" --w.words "+optionString);
 		String sw = getOptionFlagString("w.stopwords", " ");
-		commandString.append(sw);
-		LOG.trace("WORD "+commandString);
+		commandStringBuilder.append(sw);
+		LOG.debug("WORD "+commandStringBuilder);
 		//System.out.print("WS: "+projectDir+"  ");
-		DefaultArgProcessor argProcessor = new WordArgProcessor(commandString.toString());
+		String commandString = commandStringBuilder.toString();
+		WordArgProcessor argProcessor = new WordArgProcessor(commandString);
 		argProcessor.setDebug(true);
 		argProcessor.runAndOutput();
-		new WordArgProcessor(commandString.toString()).runAndOutput();
-//		new SearchArgProcessor(commandString.toString()).runAndOutput();
+//		System.out.println("running command second time? "+commandString);
+//		new WordArgProcessor(commandString).runAndOutput();
+		return;
 	}
 
 	protected String getPlugin(String plugin) {

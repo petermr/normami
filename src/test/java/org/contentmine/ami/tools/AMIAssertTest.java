@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMIAssertTool;
 import org.junit.Test;
 
 public class AMIAssertTest {

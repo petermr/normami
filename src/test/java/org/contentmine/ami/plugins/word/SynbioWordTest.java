@@ -6,7 +6,7 @@ import java.io.IOException;
 import org.junit.Test;
 import org.contentmine.ami.AMIFixtures;
 import org.contentmine.ami.plugins.AMIArgProcessor;
-import org.contentmine.ami.plugins.search.SearchArgProcessor;
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.norma.NAConstants;
 import org.contentmine.norma.util.NormaTestFixtures;
@@ -23,7 +23,7 @@ public class SynbioWordTest {
 				+ " --w.stem true"
 				+ " --w.case ignore"    
 				+ " -q "+targetDir; 
-		AMIArgProcessor argProcessor = new SearchArgProcessor(args);
+		AMIArgProcessor argProcessor = new AbstractSearchArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"synbio\">"
@@ -43,7 +43,7 @@ public class SynbioWordTest {
 		String args = "-i scholarly.html"
 				+ " --sr.search "+NAConstants.PLUGINS_SYNBIO+"/synbio0.xml"
 				+ " --project "+targetDir; 
-		AMIArgProcessor argProcessor = new SearchArgProcessor(args);
+		AMIArgProcessor argProcessor = new AbstractSearchArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"synbio\" />"
@@ -59,7 +59,7 @@ public class SynbioWordTest {
 		String args = "-i scholarly.html"
 				+ " --sr.search "+NAConstants.PLUGINS_SYNBIO+"/synbio.xml"
 				+ " --project "+targetDir; 
-		AMIArgProcessor argProcessor = new SearchArgProcessor(args);
+		AMIArgProcessor argProcessor = new AbstractSearchArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 				"<results title=\"synbioPhrases\" />"

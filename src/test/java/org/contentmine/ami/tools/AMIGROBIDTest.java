@@ -2,6 +2,7 @@ package org.contentmine.ami.tools;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.tools.AMIGrobidTool;
 import org.contentmine.ami.tools.AMIOCRTool;
 import org.junit.Test;
 

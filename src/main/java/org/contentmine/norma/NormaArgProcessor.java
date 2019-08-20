@@ -20,6 +20,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.cproject.CProjectArgProcessor;
+import org.contentmine.cproject.args.AbstractTool;
 import org.contentmine.cproject.args.ArgIterator;
 import org.contentmine.cproject.args.ArgumentOption;
 import org.contentmine.cproject.args.DefaultArgProcessor;
@@ -110,6 +111,10 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 		this();
 		setDefaults();
 		parseArgs(args);
+	}
+
+	public NormaArgProcessor(AbstractTool abstractTool) {
+		super(abstractTool);
 	}
 
 	private void setDefaults() {
@@ -799,6 +804,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 	 */
 		public void createAndAddDictionaries(List<String> dictionarySources) {
 			ensureDictionaryList();
+			if (dictionarySources == null) return;
 			for (String dictionarySource : dictionarySources) {
 				InputStream is = null;
 				LOG.trace("DictionarySource "+dictionarySource);

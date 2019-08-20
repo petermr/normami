@@ -131,9 +131,8 @@ public class OccurrenceAnalyzer {
 	private List<File> resultsFiles; // descendants of cTree
 	private List<File> cTreeFiles;   // ancestor of results (?1:1 map)
 	private EntityAnalyzer entityAnalyzer;
-
 	
-	OccurrenceAnalyzer() {
+	public OccurrenceAnalyzer() {
 		setDefaults();
 	}
 	

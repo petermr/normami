@@ -6,6 +6,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.AMISearcher;
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.ami.plugins.regex.CompoundRegex;
 import org.contentmine.ami.plugins.regex.RegexComponent;
 import org.contentmine.ami.plugins.word.WordArgProcessor;
@@ -48,7 +49,7 @@ public class SearchSearcher extends AMISearcher {
 	 * @return resultsElements 
 	 */
 	public ResultsElement searchWordList() {
-		List<String> strings = new WordCollectionFactory((SearchArgProcessor)this.getArgProcessor()).createWordList();
+		List<String> strings = new WordCollectionFactory((AbstractSearchArgProcessor)this.getArgProcessor()).createWordList();
 		ResultsElement resultsElement = searchWithDictionary(strings);
 		return resultsElement;
 	}

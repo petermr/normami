@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.CHESConstants;
+import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.cproject.testutil.DataTablesToolAnalyzer;
 import org.contentmine.cproject.util.CMineTestFixtures;
 import org.contentmine.norma.NAConstants;

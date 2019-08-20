@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.contentmine.ami.dictionary.DefaultAMIDictionary;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.AMIPluginOption;
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.cproject.files.ResourceLocation;
 import org.contentmine.cproject.util.CellRenderer;
@@ -41,7 +42,7 @@ public class SearchPluginOption extends AMIPluginOption {
 		commandString.append(" "+createSearchDictionaryResourceString(searchDictionary));
 		plugin = "search";
 		LOG.trace("SEARCH "+commandString);
-		new SearchArgProcessor(commandString.toString()).runAndOutput();
+		new AbstractSearchArgProcessor(commandString.toString()).runAndOutput();
 	}
 
 	/** just letters and numbers? expand to resourceString

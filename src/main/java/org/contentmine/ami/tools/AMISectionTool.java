@@ -24,13 +24,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-section", 
-		//String[] aliases() default {};
 aliases = "section",
-		//Class<?>[] subcommands() default {};
 version = "ami-section 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "analyzes bitmaps - generally binary, but may be oligochrome. Creates pixelIslands "
 )
 
