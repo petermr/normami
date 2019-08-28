@@ -8,6 +8,7 @@ import org.contentmine.ami.dictionary.DefaultAMIDictionary;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.AMIPluginOption;
 import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
+import org.contentmine.ami.plugins.word.WordArgProcessor;
 import org.contentmine.cproject.args.DefaultArgProcessor;
 import org.contentmine.cproject.files.ResourceLocation;
 import org.contentmine.cproject.util.CellRenderer;
@@ -32,18 +33,37 @@ public class SearchPluginOption extends AMIPluginOption {
 	}
 
 	public void run() {
-		StringBuilder commandString = createCoreCommandStringBuilder();
+		StringBuilder commandStringBuilder = createCoreCommandStringBuilder();
 		searchDictionary = optionString;
 		if (searchDictionary == null) {
 			LOG.warn("no dictionary given); no search");
 			return;
 		}
-		commandString.append(" --sr.search");		
-		commandString.append(" "+createSearchDictionaryResourceString(searchDictionary));
+		commandStringBuilder.append(" --sr.search");		
+		commandStringBuilder.append(" "+createSearchDictionaryResourceString(searchDictionary));
 		plugin = "search";
-		LOG.trace("SEARCH "+commandString);
-		new AbstractSearchArgProcessor(commandString.toString()).runAndOutput();
+		LOG.debug("SEARCH "+commandStringBuilder);
+		String commandString = commandStringBuilder.toString();
+		SearchArgProcessor searchArgProcessor = new SearchArgProcessor(commandString);
+		searchArgProcessor.runAndOutput();
 	}
+	
+	/**
+	 * 		StringBuilder commandStringBuilder = createCoreCommandStringBuilder();
+		commandStringBuilder.append(" --w.words "+optionString);
+		String sw = getOptionFlagString("w.stopwords", " ");
+		commandStringBuilder.append(sw);
+		LOG.debug("WORD "+commandStringBuilder);
+		//System.out.print("WS: "+projectDir+"  ");
+		String commandString = commandStringBuilder.toString();
+		WordArgProcessor argProcessor = new WordArgProcessor(commandString);
+		argProcessor.setDebug(true);
+		argProcessor.runAndOutput();
+//		System.out.println("running command second time? "+commandString);
+//		new WordArgProcessor(commandString).runAndOutput();
+		return;
+
+	 */
 
 	/** just letters and numbers? expand to resourceString
 	 * org/contentmine/ami/plugins/dictionary/country.xml

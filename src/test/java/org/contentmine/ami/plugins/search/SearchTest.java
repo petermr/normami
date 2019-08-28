@@ -29,7 +29,7 @@ public class SearchTest {
 		String args = 
 				"-q "+projectDir+
 				" --sr.search searchwords/adjectives.xml searchwords/prepositions.xml " ;
-		AMIArgProcessor argProcessor = new AbstractSearchArgProcessor(args);
+		AMIArgProcessor argProcessor = new SearchArgProcessor(args);
 		LOG.trace("stem "+argProcessor.getStemming());
 		argProcessor.runAndOutput();
 		File searchDir = new File(projectDir, 
@@ -60,7 +60,7 @@ public class SearchTest {
 		String args = 
 				"-q "+projectDir+
 				" --sr.search searchwords/adjectives.xml searchwords/prepositions.xml --w.stem true " ;
-		AMIArgProcessor argProcessor = new AbstractSearchArgProcessor(args);
+		AMIArgProcessor argProcessor = new SearchArgProcessor(args);
 		argProcessor.runAndOutput();
 		File searchDir = new File(projectDir, 
 				"http_www.trialsjournal.com_content_16_1_1/results/search");
@@ -90,7 +90,7 @@ public class SearchTest {
 		String args = 
 			"-q "+AMIFixtures.TARGET_EXAMPLES_TEMP_16_1_1.toString()+
 			" --sr.search searchwords/trials.xml " ;
-		AMIArgProcessor argProcessor = new AbstractSearchArgProcessor(args);
+		AMIArgProcessor argProcessor = new SearchArgProcessor(args);
 		argProcessor.runAndOutput();
 		AMIFixtures.checkResultsElementList(argProcessor, 1, 0, 
 		    "<results title=\"trials\"><result pre=\"from recruiting socioeconomically disadvantaged smokers into a pilot "

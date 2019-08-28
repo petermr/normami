@@ -19,13 +19,8 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-getpapers", 
-		//String[] aliases() default {};
-//aliases = "",
-		//Class<?>[] subcommands() default {};
 version = "ami-getpapers 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "Runs getpapers in java environment."
 )
 

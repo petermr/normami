@@ -36,13 +36,9 @@ import picocli.CommandLine.Option;
 
 
 @Command(
-		//String name() default "<main class>";
 name = "ami-image", 
-		//String[] aliases() default {};
 aliases = "image",
-		//Class<?>[] subcommands() default {};
 version = "ami-image 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "	transforms image contents but only provides basic filtering (see ami-filter)."
 		+ " Services include %n"
 		+ ""

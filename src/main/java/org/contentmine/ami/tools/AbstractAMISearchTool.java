@@ -24,11 +24,6 @@ import picocli.CommandLine.Option;
 
 /** probably wont use these */
 @Command(
-		subcommands = {
-//	    AMIRegexTool.class,
-//	    AMIWordsTool.class,
-//	    SubCommand1Tool.class,
-	},
 name = "ami-abstract-search", 
 aliases = "abstract-search",
 version = "ami-abstract-search 0.1",
@@ -107,11 +102,6 @@ public abstract class AbstractAMISearchTool extends AbstractAMITool {
 	    parseMethod="parseTypes"
 	
 	 */
-    @Option(names = {"--processtree"},
-    		arity = "0",
-            description = " use new processTree style of processing")
-	protected boolean processTree = true;
-    
     @Option(names = {"--stripNumbers"},
     		arity = "0",
             description = "Strip numbers from words")
@@ -158,6 +148,7 @@ public abstract class AbstractAMISearchTool extends AbstractAMITool {
     @Override
 	protected void parseSpecifics() {
 //		System.out.println("dictionaryList       " + dictionaryOption.getDictionaryList());
+		System.out.println("oldstyle             " + oldstyle);
 		System.out.println("strip numbers        " + stripNumbers);
 		System.out.println("wordCountRange       " + wordCountRange);
 		System.out.println("wordLengthRange      " + wordLengthRange);
@@ -168,20 +159,24 @@ public abstract class AbstractAMISearchTool extends AbstractAMITool {
     protected void runSpecifics() {
     	abstractSearchArgProcessor = getOrCreateSearchProcessor();
     	
-    	buildCommandFromBuiltinsAndFacets();
-    	populateArgProcessorFromCLI();
+    	if (oldstyle) {
+        	String cmd = buildCommandFromBuiltinsAndFacets();
+        	LOG.debug("cmd: "+cmd);
+    	} else {
+    		populateArgProcessorFromCLI();
+    	}
     	createWordListInWordCollectionFactory();
     	
     	if (false) {
-    	} else if (processTree && processTrees()) { 
-    		
-    	} else {
+    	} else if (oldstyle) {
     		LOG.debug("old style search command); change");
 			if (cProject == null) {
 				DebugPrint.errorPrintln(Level.ERROR, "requires cProject");
 			} else if (projectExists(cProject)) {
 				processProject();
 			}
+    	} else if (processTrees()) { 
+    		// 
     	}
     }
 
@@ -191,6 +186,7 @@ public abstract class AbstractAMISearchTool extends AbstractAMITool {
 		wordCollectionFactory.setMinRawWordLength(wordLengthRange.getMin());
 		wordCollectionFactory.setMaxRawWordLength(wordLengthRange.getMax());
 		wordCollectionFactory.setStripNumbers(stripNumbers);
+		LOG.debug("wordCollection Factory");
 	}
 
 	private boolean projectExists(CProject cProject) {

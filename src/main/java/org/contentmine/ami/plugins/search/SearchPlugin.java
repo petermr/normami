@@ -20,17 +20,17 @@ public class SearchPlugin extends AMIPlugin {
 	}
 	
 	public SearchPlugin() {
-		this.argProcessor = new AbstractSearchArgProcessor();
+		this.argProcessor = new SearchArgProcessor();
 	}
 
 	public SearchPlugin(String[] args) {
 		super();
-		this.argProcessor = new AbstractSearchArgProcessor(args);
+		this.argProcessor = new SearchArgProcessor(args);
 	}
 
 	public SearchPlugin(String args) {
 		super();
-		this.argProcessor = new AbstractSearchArgProcessor(args);
+		this.argProcessor = new SearchArgProcessor(args);
 	}
 
 	public static void main(String[] args) {

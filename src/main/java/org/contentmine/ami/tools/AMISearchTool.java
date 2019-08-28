@@ -28,12 +28,13 @@ import picocli.CommandLine.Option;
  *
  */
 // MAYBE MERGE WITH WordsTool 
+// Currently use this for dictionaries
 
 @Command(
-		subcommands = {
-	    AMIRegexTool.class,
-	    AMIWordsTool.class,
-	},
+//		subcommands = {
+//	    AMIRegexTool.class,
+//	    AMIWordsTool.class,
+//	},
 name = "ami-search", 
 aliases = "search",
 version = "ami-search 0.1",
@@ -126,9 +127,9 @@ public class AMISearchTool extends AbstractAMISearchTool {
 
 
 	// These may be required in subclasses
-    @Mixin DictionaryOption dictionaryOption = new DictionaryOption();
-    @Mixin DictionaryTopOption dictionaryTopOption = new DictionaryTopOption();
-    @Mixin DictionarySuffixOption dictionarySuffixOption = new DictionarySuffixOption();
+//    @Mixin DictionaryOption dictionaryOption = new DictionaryOption();
+//    @Mixin DictionaryTopOption dictionaryTopOption = new DictionaryTopOption();
+//    @Mixin DictionarySuffixOption dictionarySuffixOption = new DictionarySuffixOption();
     @Mixin IgnorePluginsOption ignorePluginsOption = new IgnorePluginsOption();
     
     private File dictionaryFile;
@@ -152,6 +153,7 @@ public class AMISearchTool extends AbstractAMISearchTool {
 
     @Override
 	protected void parseSpecifics() {
+    	super.parseSpecifics();
 		System.out.println("dictionaryList       " + dictionaryList);
 		System.out.println("dictionaryTop        " + dictionaryTopList);
 		System.out.println("dictionarySuffix     " + dictionarySuffix);

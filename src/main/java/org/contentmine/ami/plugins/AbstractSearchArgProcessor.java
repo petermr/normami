@@ -24,7 +24,7 @@ import org.contentmine.cproject.lookup.DefaultStringDictionary;
  * 
  * @author pm286
  */
-public class AbstractSearchArgProcessor extends AMIArgProcessor {
+public abstract class AbstractSearchArgProcessor extends AMIArgProcessor {
 	
 	public static final Logger LOG = Logger.getLogger(AbstractSearchArgProcessor.class);
 	static {
@@ -57,6 +57,8 @@ public class AbstractSearchArgProcessor extends AMIArgProcessor {
 
 
 	// =============== METHODS ==============
+	
+	public abstract void parseSearch(ArgumentOption option, ArgIterator argIterator);
 
 	public List<AMISearcher> createSearcherList(List<String> dictionarySources) {
 		ensureSearcherList();
@@ -109,11 +111,13 @@ public class AbstractSearchArgProcessor extends AMIArgProcessor {
 		currentContentProcessor.clearResultsElementList();
 
 		LOG.trace("DBG outputResultsElements "+name);
-		for (String title : resultsByDictionary.keySet()) {
-			LOG.trace("DBG    title "+title);
-			ResultsElement resultsElement = resultsByDictionary.get(title);
-			resultsElement.setTitle(title);
-			currentContentProcessor.addResultsElement(resultsElement);
+		if (resultsByDictionary != null) {
+			for (String title : resultsByDictionary.keySet()) {
+				LOG.trace("DBG    title "+title);
+				ResultsElement resultsElement = resultsByDictionary.get(title);
+				resultsElement.setTitle(title);
+				currentContentProcessor.addResultsElement(resultsElement);
+			}
 		}
 		currentContentProcessor.createResultsDirectoriesAndOutputResultsElement(name);
 	}

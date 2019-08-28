@@ -29,7 +29,7 @@ public class RawTextIT {
 		
 		cmd = "--project "+project+" -i fulltext.pdf.txt --sr.search "
 				+ "searchwords/cochrane.xml -o junk.txt";
-		AbstractSearchArgProcessor argProcessor = new AbstractSearchArgProcessor(cmd);
+		AbstractSearchArgProcessor argProcessor = new SearchArgProcessor(cmd);
 		argProcessor.runAndOutput();
 	}
 

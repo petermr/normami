@@ -44,13 +44,9 @@ import picocli.CommandLine.Option;
 
 
 @Command(
-		//String name() default "<main class>";
 name = "ami-filter", 
-		//String[] aliases() default {};
 aliases = "filter",
-		//Class<?>[] subcommands() default {};
 version = "ami-filter 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "	FILTERs images (initally from PDFimages), but does not transform the contents."
 		+ "Might later be extended to other data types."
 		+ "Works at level of raw *.png. Does not transform or split the png."

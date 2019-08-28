@@ -182,6 +182,12 @@
 							<!-- description: processes SVG (e.g. created by ami-pdf -->
                             <id>ami-svg</id>
                         </program>
+                        <program>
+                            <mainClass>org.contentmine.ami.tools.AMIWordsTool</mainClass>
+							<!-- description: runs word counts -->
+                            <id>ami-word</id>
+                        </program>
+                        
                         
                         
                         
@@ -268,7 +274,7 @@
                         <program>
                             <mainClass>org.contentmine.ami.plugins.word.WordPlugin</mainClass>
                             <!--  description:  -->
-                            <id>ami-word</id>
+                            <id>ami-word-old</id>
                         </program>
                     </programs>
 

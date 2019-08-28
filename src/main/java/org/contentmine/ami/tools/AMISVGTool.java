@@ -40,13 +40,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-svg", 
-		//String[] aliases() default {};
 aliases = "svg",
-		//Class<?>[] subcommands() default {};
 version = "ami-svg 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "Takes raw SVG from PDF2SVG and converts into structured HTML and higher graphics primitives."
 )
 

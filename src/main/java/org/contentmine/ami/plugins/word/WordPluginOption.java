@@ -32,13 +32,10 @@ public class WordPluginOption extends AMIPluginOption {
 		String sw = getOptionFlagString("w.stopwords", " ");
 		commandStringBuilder.append(sw);
 		LOG.debug("WORD "+commandStringBuilder);
-		//System.out.print("WS: "+projectDir+"  ");
 		String commandString = commandStringBuilder.toString();
 		WordArgProcessor argProcessor = new WordArgProcessor(commandString);
 		argProcessor.setDebug(true);
 		argProcessor.runAndOutput();
-//		System.out.println("running command second time? "+commandString);
-//		new WordArgProcessor(commandString).runAndOutput();
 		return;
 	}
 

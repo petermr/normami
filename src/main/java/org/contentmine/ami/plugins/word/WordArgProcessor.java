@@ -168,7 +168,9 @@ public class WordArgProcessor extends AbstractSearchArgProcessor {
 		wordCollectionFactory.extractWords();
 	}
 	
+	/** should this be here? */
 	public void parseSearch(ArgumentOption option, ArgIterator argIterator) {
+		LOG.warn("parseSearch in wrong place?");
 		ensureSearcherList();
 		List<String> dictionarySources = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		createAndAddDictionaries(dictionarySources);
@@ -187,6 +189,7 @@ public class WordArgProcessor extends AbstractSearchArgProcessor {
 	 */
 	// called by reflection
 	public void outputWords(ArgumentOption option) {
+		LOG.debug("OUTPUT WORDS REFLECT");
 		outputWords(option.getName());
 	}
 
@@ -239,21 +242,22 @@ public class WordArgProcessor extends AbstractSearchArgProcessor {
 		}
 	}
 
-	public void runSearch(ArgumentOption option) {
-		LOG.warn("moved to wordSearch");
-//		ensureResultsByDictionary();
-//		ensureSearcherList();
-//		for (AMISearcher searcher : searcherList) {
-//			SearchSearcher wordSearcher = (SearchSearcher)searcher;
-//			String title = wordSearcher.getTitle();
-//			ResultsElement resultsElement = wordSearcher.searchWordList();
-//			resultsElement.setTitle(title);
-//			resultsByDictionary.put(title, resultsElement);
-//		}
-	}
+//	public void runSearch(ArgumentOption option) {
+//		LOG.warn("moved to wordSearch");
+////		ensureResultsByDictionary();
+////		ensureSearcherList();
+////		for (AMISearcher searcher : searcherList) {
+////			SearchSearcher wordSearcher = (SearchSearcher)searcher;
+////			String title = wordSearcher.getTitle();
+////			ResultsElement resultsElement = wordSearcher.searchWordList();
+////			resultsElement.setTitle(title);
+////			resultsByDictionary.put(title, resultsElement);
+////		}
+//	}
 	
 	public void outputSearch(ArgumentOption option) {
 		outputResultsElements(option.getName());
+		LOG.debug("OUTPUT SEARCH");
 	}
 
 	public void outputResultsElements(String name) {

@@ -42,13 +42,9 @@ import picocli.CommandLine.Option;
  */
 
 @Command(
-		//String name() default "<main class>";
 name = "ami-image", 
-		//String[] aliases() default {};
 aliases = "image",
-		//Class<?>[] subcommands() default {};
 version = "ami-image 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "Requires a CProject containing fulltext.pdf. (see makeProject). and initial PDF processing (ami-pdf) "
 		+ "The input (reseved name directories) is therefore"
 		+ "(a) text/characters (in svg/) %n"

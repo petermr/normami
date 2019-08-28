@@ -7,6 +7,6 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
 @Command()
-public class DummyTool {
+public class DummyOption {
 
 }

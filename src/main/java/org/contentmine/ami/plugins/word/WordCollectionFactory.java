@@ -119,7 +119,6 @@ public class WordCollectionFactory {
 	}
 
 	public List<String> createWordList() {
-		AbstractTool.debug(amiArgProcessor.getAbstractTool(), 0, "createWordList", LOG);
 		CTree currentCTree = amiArgProcessor.getCurrentCTree();
 		List<String> words = null;
 		if (currentCTree == null) {
@@ -128,6 +127,7 @@ public class WordCollectionFactory {
 			List<String> rawWords = currentCTree.extractWords();
 			words = (rawWords == null) ? null : transformWordStream(rawWords);
 		}
+		AbstractTool.debug(amiArgProcessor.getAbstractTool(), 0, "createWordList "+words, LOG);
 		return words;
 	}
 

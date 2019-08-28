@@ -28,13 +28,9 @@ import picocli.CommandLine.Option;
 
 
 @Command(
-		//String name() default "<main class>";
 name = "ami-assert", 
-		//String[] aliases() default {};
 aliases = "assert",
-		//Class<?>[] subcommands() default {};
 version = "ami-assert 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "	Makes assertions about objects created by AMI. "
 		
 )

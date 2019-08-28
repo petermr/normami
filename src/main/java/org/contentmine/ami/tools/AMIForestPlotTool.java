@@ -42,13 +42,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-forest", 
-		//String[] aliases() default {};
 aliases = "forest",
-		//Class<?>[] subcommands() default {};
 version = "ami-forext 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "analyzes ForestPlot images; uses template.xml to steer the operations "
 )
 

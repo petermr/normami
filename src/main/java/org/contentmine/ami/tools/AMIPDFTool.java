@@ -15,13 +15,9 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
 	@Command(
-			//String name() default "<main class>";
 	name = "ami-pdf", 
-			//String[] aliases() default {};
 	aliases = "pdf",
-			//Class<?>[] subcommands() default {};
 	version = "ami-pdf 0.1",
-			//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 	description = "Convert PDFs to SVG-Text, SVG-graphics and Images. Does not process images, graphics or text."
 			+ "often followed by ami-image and ami-xml?"
 	)

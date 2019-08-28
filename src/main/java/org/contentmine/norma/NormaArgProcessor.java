@@ -295,11 +295,12 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 	}
 
 	public void runTransform(ArgumentOption option) {
+		LOG.debug("runTransform");
 		boolean ok = false;
 		if (currentCTree == null) {
 			LOG.warn("No current CTree");
 		} else {
-			LOG.trace("***run transform on tree "+currentCTree);
+			LOG.debug("***run transform on tree "+currentCTree);
 			getOrCreateNormaTransformer();
 			normaTransformer.setCurrentCTree(currentCTree);
 			String transformTypeString = option.getStringValue();
@@ -505,7 +506,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 
 	// =============output=============
 	public void outputMethod(ArgumentOption option) {
-		LOG.trace("DBG OutputSpecifiedFormat");
+		LOG.debug("DBG OutputSpecifiedFormat");
 		outputSpecifiedFormat();
 	}
 
@@ -517,6 +518,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 
 	private void outputSpecifiedFormat() {
 		getOrCreateNormaTransformer();
+		LOG.debug("outputSpecifiedFormat");
 		normaTransformer.outputSpecifiedFormat();
 	}
 
@@ -801,44 +803,55 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 	/**
 	 * move to ami
 	 * @param dictionarySources
+	 * @return 
 	 */
-		public void createAndAddDictionaries(List<String> dictionarySources) {
+		public List<DefaultStringDictionary> createAndAddDictionaries(List<String> dictionarySources) {
 			ensureDictionaryList();
-			if (dictionarySources == null) return;
-			for (String dictionarySource : dictionarySources) {
-				InputStream is = null;
-				LOG.trace("DictionarySource "+dictionarySource);
-				String dictionaryResource = dictionarySource;
-				// add /classpath prefix for resource
-				if (dictionarySource.startsWith("src")) {
-//					dictionaryResource = "/"+dictionarySource;
-				} else if (dictionarySource.startsWith("org")) {
-						dictionaryResource = "/"+dictionarySource;
-				} else if (!dictionarySource.startsWith("/")) {
-					dictionaryResource = NAConstants.DICTIONARY_RESOURCE+"/"+dictionarySource;
+			if (dictionarySources != null) {
+				for (String dictionarySource : dictionarySources) {
+					String dictionaryResource = dictionarySource;
+					dictionaryResource = getDictionaryAsResource(dictionarySource, dictionaryResource);
+					InputStream is = getInputStream(dictionarySource, dictionaryResource);
+					DefaultStringDictionary dictionary = DefaultStringDictionary.createDictionary(dictionarySource, is);
+					if (dictionary == null) {
+						throw new RuntimeException("cannot read/create dictionary: "+dictionarySource);
+					}
+					dictionaryList.add(dictionary);
 				}
-				if (!dictionaryResource.endsWith(NAConstants.DOT_XML)) {
-					dictionaryResource = dictionaryResource+NAConstants.DOT_XML;
-				}
-				LOG.trace("DR "+dictionaryResource);
-//				is = this.getClass().getResourceAsStream(dictionaryResource);
-				is = AMIArgProcessor.class.getResourceAsStream(dictionaryResource);
-				if (is == null) {
-					is = new ResourceLocation().getInputStreamHeuristically(dictionarySource);
-				}
-				if (is == null) {
-					is = readAsFile(dictionaryResource);
-				}
-				if (is == null) {
-					throw new RuntimeException("cannot read inputStream for dictionary: "+dictionaryResource);
-				}
-				DefaultStringDictionary dictionary = DefaultStringDictionary.createDictionary(dictionarySource, is);
-				if (dictionary == null) {
-					throw new RuntimeException("cannot read/create dictionary: "+dictionarySource);
-				}
-				dictionaryList.add(dictionary);
 			}
+			return dictionaryList;
 		}
+
+	private InputStream getInputStream(String dictionarySource, String dictionaryResource) {
+		InputStream is = this.getClass().getResourceAsStream(dictionaryResource);
+		is = AMIArgProcessor.class.getResourceAsStream(dictionaryResource);
+		if (is == null) {
+			is = new ResourceLocation().getInputStreamHeuristically(dictionarySource);
+		}
+		if (is == null) {
+			is = readAsFile(dictionaryResource);
+		}
+		if (is == null) {
+			throw new RuntimeException("cannot read inputStream for dictionary: "+dictionaryResource);
+		}
+		return is;
+	}
+
+	private String getDictionaryAsResource(String dictionarySource, String dictionaryResource) {
+		// add /classpath prefix for resource
+		if (dictionarySource.startsWith("src")) {
+//					dictionaryResource = "/"+dictionarySource;
+		} else if (dictionarySource.startsWith("org")) {
+				dictionaryResource = "/"+dictionarySource;
+		} else if (!dictionarySource.startsWith("/")) {
+			dictionaryResource = NAConstants.DICTIONARY_RESOURCE+"/"+dictionarySource;
+		}
+		if (!dictionaryResource.endsWith(NAConstants.DOT_XML)) {
+			dictionaryResource = dictionaryResource+NAConstants.DOT_XML;
+		}
+		LOG.trace("DR "+dictionaryResource);
+		return dictionaryResource;
+	}
 
 		private InputStream readAsFile(String dictionaryResource) {
 			InputStream is = null;

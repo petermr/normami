@@ -46,13 +46,9 @@ import picocli.CommandLine.Option;
 
 
 @Command(
-		//String name() default "<main class>";
 name = "ami-display", 
-		//String[] aliases() default {};
 aliases = "display",
-		//Class<?>[] subcommands() default {};
 version = "ami-display 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "	Displays files in CTree. Uses HTML to aggregate several files from (say) same imageDir."
 		+ "Also creates aggregated links in parent directory."
 		

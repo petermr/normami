@@ -37,13 +37,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-pixel", 
-		//String[] aliases() default {};
 aliases = "pixel",
-		//Class<?>[] subcommands() default {};
 version = "ami-pixel 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "analyzes bitmaps - generally binary, but may be oligochrome. Creates pixelIslands "
 )
 

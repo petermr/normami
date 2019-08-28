@@ -10,6 +10,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.AMISearcher;
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.cproject.args.ArgIterator;
 import org.contentmine.cproject.args.ArgumentOption;
 import org.contentmine.cproject.files.ContentProcessor;
@@ -26,7 +27,7 @@ import nu.xom.Element;
  * 
  * @author pm286
  */
-public class RegexArgProcessor extends AMIArgProcessor {
+public class RegexArgProcessor extends AbstractSearchArgProcessor {
 	
 	public static final Logger LOG = Logger.getLogger(RegexArgProcessor.class);
 	static {
@@ -54,6 +55,7 @@ public class RegexArgProcessor extends AMIArgProcessor {
 		this(argString.split(WHITESPACE));
 	}
 
+	
 	// =============== METHODS ==============
 
 	public void parseRegex(ArgumentOption option, ArgIterator argIterator) {
@@ -197,6 +199,12 @@ public class RegexArgProcessor extends AMIArgProcessor {
 			throw new RuntimeException("Cannot read or parse regexInputStream", e);
 		}
 		return new CompoundRegex(this, rootElement);
+	}
+
+	@Override
+	public void parseSearch(ArgumentOption option, ArgIterator argIterator) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

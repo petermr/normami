@@ -1,9 +1,15 @@
 package org.contentmine.ami.plugins.search;
 
+import java.util.List;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.plugins.AMISearcher;
 import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.cproject.args.AbstractTool;
+import org.contentmine.cproject.args.ArgIterator;
+import org.contentmine.cproject.args.ArgumentOption;
+import org.contentmine.cproject.lookup.DefaultStringDictionary;
 
 /** 
  * Processes commandline arguments.
@@ -40,6 +46,33 @@ public class SearchArgProcessor extends AbstractSearchArgProcessor {
 		super(abstractTool);
 	}
 
+	public void parseSearch(ArgumentOption option, ArgIterator argIterator) {
+		ensureSearcherList();
+		List<String> dictionarySources = argIterator.createTokenListUpToNextNonDigitMinus(option);
+		createAndAddDictionaries(dictionarySources);
+		for (DefaultStringDictionary dictionary : this.getDictionaryList()) {
+			AMISearcher dictionarySearcher = new SearchSearcher(this, dictionary);
+			searcherList.add(dictionarySearcher);
+			String dictTitle = dictionary.getTitle();
+			dictionarySearcher.setName(dictTitle);
+		}
+		LOG.debug("PARSE_SEARCH");
+	}
+
+	public void runSearch(ArgumentOption option, ArgIterator argIterator) {
+		LOG.debug("RUN_SEARCH");
+		super.runSearch();
+	}
+
+	public void runSearch(ArgumentOption option) {
+		LOG.debug("RUN_SEARCH OPTION: "+option);
+		super.runSearch();
+	}
+
+	public void outputSearch(ArgumentOption option) {
+		super.outputSearch(option);
+	}
 
 
+	
 }

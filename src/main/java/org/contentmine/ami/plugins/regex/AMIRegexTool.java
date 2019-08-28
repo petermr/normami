@@ -20,13 +20,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-regex", 
-		//String[] aliases() default {};
 aliases = "regex",
-		//Class<?>[] subcommands() default {};
 version = "ami-regex 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "runs regex on HTML or XML files "
 )
 

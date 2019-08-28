@@ -24,6 +24,8 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
+import org.contentmine.ami.plugins.regex.RegexArgProcessor;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
@@ -73,13 +75,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-regex", 
-		//String[] aliases() default {};
 aliases = "regex",
-		//Class<?>[] subcommands() default {};
 version = "ami-regex 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "searches with regex, possibly subcommand of search "
 )
 
@@ -94,7 +92,7 @@ description = "searches with regex, possibly subcommand of search "
  * @author pm286
  *
  */
-public class AMIRegexTool extends AMISearchTool {
+public class AMIRegexTool extends AbstractAMISearchTool {
 
 
 	private static final Logger LOG = Logger.getLogger(AMIRegexTool.class);
@@ -138,7 +136,10 @@ public class AMIRegexTool extends AMISearchTool {
 
     @Override
     protected void runSpecifics() {
-    	if (processTree && processTrees()) { 
+    	if (oldstyle) {
+    		LOG.debug("oldstyle regex; no code");
+    	} else if (processTrees()) { 
+    		
     	} else {
 			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree ie imageFile");
 	    }
@@ -146,6 +147,34 @@ public class AMIRegexTool extends AMISearchTool {
 
 	public void processTree() {
 		LOG.debug("processTree");
+	}
+
+	@Override
+	protected void populateArgProcessorFromCLI() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected AbstractSearchArgProcessor getOrCreateSearchProcessor() {
+		abstractSearchArgProcessor = new RegexArgProcessor();
+		return abstractSearchArgProcessor;
+	}
+
+	@Override
+	protected void processProject() {
+		LOG.debug("regex processProject NYI");
+	}
+
+	@Override
+	protected String buildCommandFromBuiltinsAndFacets() {
+		LOG.debug("regex buildCommandFromBuiltinsAndFacets NYI");
+		return null;
+	}
+
+	@Override
+	protected void runProjectSearch() {
+		LOG.debug("regex runProjectSearch NYI");
 	}
 
 

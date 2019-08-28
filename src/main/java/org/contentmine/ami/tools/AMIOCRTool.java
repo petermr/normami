@@ -49,13 +49,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-ocr", 
-		//String[] aliases() default {};
 aliases = "ocr",
-		//Class<?>[] subcommands() default {};
 version = "ami-ocr 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "Extracts text from OCR and (NYI) postprocesses HOCR output to create HTML."
 )
 

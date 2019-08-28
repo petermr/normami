@@ -18,6 +18,7 @@ import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.CTreeList;
 import org.contentmine.cproject.files.OptionFlag;
+import org.contentmine.cproject.files.PluginOption;
 import org.contentmine.cproject.files.ResourceLocation;
 import org.contentmine.cproject.metadata.AbstractMetadata;
 import org.contentmine.cproject.util.DataTablesTool;
@@ -115,7 +116,8 @@ public class CommandProcessor {
 		List<String> cmds = preprocess(cmds0);
 		
 		for (String cmd : cmds) {
-			createPluginOption(cmd);
+			PluginOption pluginOption = createPluginOption(cmd);
+			LOG.debug("plugin option: "+pluginOption);
 		}
 	}
 
@@ -143,8 +145,8 @@ public class CommandProcessor {
 		}
 	}
 	
-	private void createPluginOption(String cmd) {
-		LOG.trace("creating pluginOption: "+cmd);
+	private AMIPluginOption createPluginOption(String cmd) {
+		LOG.debug("creating pluginOption: "+cmd);
 		AMIPluginOption pluginOption = AMIPluginOption.createPluginOption(cmd);
 		if (pluginOption == null) {
 			LOG.error("skipping unknown command: "+cmd);
@@ -153,6 +155,7 @@ public class CommandProcessor {
 			pluginOption.setProject(projectDir);
 			pluginOptions.add(pluginOption);
 		}
+		return pluginOption;
 	}
 	
 	private List<String> preprocess(List<String> cmds0) {
@@ -298,8 +301,9 @@ public class CommandProcessor {
 		AMISearchTool amiSearchTool = (amiTool != null && amiTool instanceof AMISearchTool) ? (AMISearchTool) amiTool : null;
 		for (AMIPluginOption pluginOption : pluginOptions) {
 			String plugin = pluginOption.getPlugin();
-			System.out.print("\nrunning: " + plugin + "; " + pluginOption);
-			if (amiSearchTool != null /*&& amiSearchTool.getIgnorePluginList().contains(plugin)*/) {
+			LOG.debug("\n+++++++++++++++++++running: " + plugin + "; " + pluginOption);
+//			if (amiSearchTool != null /*&& amiSearchTool.getIgnorePluginList().contains(plugin)*/) {
+			if (false /*amiSearchTool != null && amiSearchTool.getIgnorePluginList().contains(plugin)*/) {
 				System.out.println("ignored: " + plugin);
 				continue;
 			}

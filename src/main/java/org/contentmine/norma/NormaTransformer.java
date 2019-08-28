@@ -366,8 +366,13 @@ public class NormaTransformer {
 		if (outputDir == null) {
 			if (normaArgProcessor.getOutputDirName() != null) {
 				outputDir = new File(normaArgProcessor.getOutputDirName());
-			} else {
+			} else if (inputDir != null) {
 				outputDir = inputDir;
+			} else if (inputFile == null ) {
+				LOG.debug("get input parent directory: "+inputFile);
+				outputDir = inputFile.getParentFile();
+			} else {
+				
 			}
 
 		}
@@ -863,6 +868,7 @@ public class NormaTransformer {
 
 	void outputSpecifiedFormat() {
 		String output = null;
+		LOG.debug("outputFile "+outputFile);
 		if (outputFile != null) {
 			String outname = outputFile.getAbsolutePath().toString();
 			String treename = currentCTree.getDirectory().getAbsolutePath().toString();

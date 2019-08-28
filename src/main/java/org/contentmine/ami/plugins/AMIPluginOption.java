@@ -255,6 +255,8 @@ String cmd0 ="	--project /Users/pm286/workspace/cmdev/normami/target/cooccurrenc
 
 	protected StringBuilder createCoreCommandStringBuilder() {
 		StringBuilder commandStringBuilder = new StringBuilder("--project "+projectDir+" -i scholarly.html");
+//		LOG.debug(" JUNK remove");
+//		commandStringBuilder.append(" -o junk.xxx");
 		commandStringBuilder.append(getOptionFlagString("context", " "));
 		return commandStringBuilder;
 	}

@@ -19,13 +19,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-makeproject", 
-		//String[] aliases() default {};
 aliases = "makeproject",
-		//Class<?>[] subcommands() default {};
 version = "ami-makeproject 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "Processes a directory (CProject) containing files (e.g.*.pdf, *.html, *.xml) to be made into CTrees.%n"
 		+ "Assuming a directory foo/ with files%n%n"
 		+ "  a.pdf%n"

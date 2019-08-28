@@ -7,9 +7,9 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
 @Command()
-public class ProcessTreeTool {
-    @Option(names = {"--processtree"},
+public class WikidataBiblioOption {
+    @Option(names = {"--wikidataBiblio"},
     		arity = "0",
-            description = " use new processTree style of processing")
-	protected boolean processTree = true;
+            description = " lookup wikidata biblographic object")
+    private Boolean wikidataBiblio = false;
 }

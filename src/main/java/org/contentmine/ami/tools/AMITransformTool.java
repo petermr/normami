@@ -22,13 +22,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-transform", 
-		//String[] aliases() default {};
 aliases = "transform",
-		//Class<?>[] subcommands() default {};
 version = "ami-transform 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "Runs XSLT transformation on XML (NYFI)."
 )
 

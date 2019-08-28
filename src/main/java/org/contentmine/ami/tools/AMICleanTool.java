@@ -21,13 +21,9 @@ import picocli.CommandLine.Option;
  *
  */
 @Command(
-		//String name() default "<main class>";
 name = "ami-clean", 
-		//String[] aliases() default {};
 aliases = "clean",
-		//Class<?>[] subcommands() default {};
 version = "ami-clean 0.1",
-		//Class<? extends IVersionProvider> versionProvider() default NoVersionProvider.class;
 description = "cleans specific files or directories in project, explicitly or by regex %n"
 		+ "	ami-clean -p /Users/pm286/workspace/tigr2ess --dir results cooccurrence%n"
 		+ "    deletes subdirectories results/ and cooccurrence/ in projcts tigr2ess%n"
