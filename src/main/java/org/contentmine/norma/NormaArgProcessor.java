@@ -295,12 +295,12 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 	}
 
 	public void runTransform(ArgumentOption option) {
-		LOG.debug("runTransform");
+		LOG.trace("runTransform");
 		boolean ok = false;
 		if (currentCTree == null) {
 			LOG.warn("No current CTree");
 		} else {
-			LOG.debug("***run transform on tree "+currentCTree);
+			LOG.trace("***run transform on tree "+currentCTree);
 			getOrCreateNormaTransformer();
 			normaTransformer.setCurrentCTree(currentCTree);
 			String transformTypeString = option.getStringValue();
@@ -506,7 +506,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 
 	// =============output=============
 	public void outputMethod(ArgumentOption option) {
-		LOG.debug("DBG OutputSpecifiedFormat");
+		LOG.trace("DBG OutputSpecifiedFormat");
 		outputSpecifiedFormat();
 	}
 
@@ -518,7 +518,7 @@ public class NormaArgProcessor extends CProjectArgProcessor {
 
 	private void outputSpecifiedFormat() {
 		getOrCreateNormaTransformer();
-		LOG.debug("outputSpecifiedFormat");
+		LOG.trace("outputSpecifiedFormat");
 		normaTransformer.outputSpecifiedFormat();
 	}
 

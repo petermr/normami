@@ -42,7 +42,7 @@ public class SearchPluginOption extends AMIPluginOption {
 		commandStringBuilder.append(" --sr.search");		
 		commandStringBuilder.append(" "+createSearchDictionaryResourceString(searchDictionary));
 		plugin = "search";
-		LOG.debug("SEARCH "+commandStringBuilder);
+		LOG.trace("SEARCH "+commandStringBuilder);
 		String commandString = commandStringBuilder.toString();
 		SearchArgProcessor searchArgProcessor = new SearchArgProcessor(commandString);
 		searchArgProcessor.runAndOutput();

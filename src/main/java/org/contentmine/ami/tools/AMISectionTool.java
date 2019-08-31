@@ -46,7 +46,7 @@ public class AMISectionTool extends AbstractAMITool {
     		arity = "0..*",
     		required = true,
             description = "sections to extract (uses JATSSectionTagger) %n"
-            		+ "if no args lists tags"
+            		+ "if no args, lists tags%n"
             		+ "ALL selects all tags ")
     private List<SectionTag> sectionTagList = new ArrayList<>();
 
@@ -62,6 +62,7 @@ public class AMISectionTool extends AbstractAMITool {
 
     @Override
 	protected void parseSpecifics() {
+		normalizeSectionTags();
 		System.out.println("sectionList             " + sectionTagList);
 		System.out.println();
 	}
@@ -69,19 +70,19 @@ public class AMISectionTool extends AbstractAMITool {
 
     @Override
     protected void runSpecifics() {
-    	if (processTrees()) { 
-    	} else if (sectionTagList.size() == 0) {
-    		System.err.println("section values: "+SectionTag.values());
+		if (sectionTagList.size() == 0) {
+			System.err.println("section values: "+Arrays.asList(SectionTag.values()));
+		} else if (processTrees()) { 
     	} else {
 			DebugPrint.debugPrint(Level.ERROR, "must give cProject or cTree");
 	    }
     }
 
 	public void processTree() {
-		normalizeSectionTags();
 		boolean deleteExisting = false;
-		JATSSectionTagger orCreateJATSTagger = getOrCreateJATSTagger();
-		cTree.setHtmlTagger(orCreateJATSTagger);
+		tagger = new JATSSectionTagger();
+//		JATSSectionTagger orCreateJATSTagger = getOrCreateJATSTagger();
+		cTree.setHtmlTagger(tagger);
 		for (SectionTag sectionTag : sectionTagList) {
 			if (sectionTag == null) {
 				System.err.println("AMISectionTool null section tag");
@@ -109,7 +110,15 @@ public class AMISectionTool extends AbstractAMITool {
 	}
 
 	private void normalizeSectionTags() {
-		if (sectionTagList.size() == 1 && SectionTag.ALL.equals(sectionTagList.get(0))) {
+		if (sectionTagList.size() == 0) {
+			List<JATSSectionTagger.SectionTag> tags = SectionTag.getAllTags();
+			int i = 1;
+			for (SectionTag tag : tags) {
+				System.out.print("  "+tag);
+				if (i++%8 == 0) System.out.println();
+			}
+			System.out.println();
+		} else if (sectionTagList.size() == 1 && SectionTag.ALL.equals(sectionTagList.get(0))) {
 			sectionTagList = SectionTag.getAllTags();
 		}
 	}

@@ -8,7 +8,6 @@ import java.util.List;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.contentmine.ami.AMIFixtures;
-import org.contentmine.ami.tools.AMISectionTool;
 import org.contentmine.cproject.files.CProject;
 import org.contentmine.cproject.files.CTree;
 import org.contentmine.cproject.files.DebugPrint;
@@ -79,8 +78,14 @@ public class AMISectionToolTest {
 	
 	@Test
 	public void testALL() {
+		File targetDir = new File("target/sections/");
+//		File testZikaDir = AMIFixtures.TEST_ZIKA2_DIR;
+		File testZikaDir = AMIFixtures.TEST_ZIKA10_DIR;
+		CMineTestFixtures.cleanAndCopyDir(testZikaDir, targetDir);
 		String args = ""
-				+ "-p " + AMIFixtures.TEST_ZIKA10_DIR 
+				+ "-p " + targetDir
+//				+" --sections ABSTRACT"
+				+" --sections ALL"
 			;
 		new AMISectionTool().runCommands(args);
 	}

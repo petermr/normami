@@ -1,0 +1,165 @@
+Generic values (AMISearchTool)
+================================
+output basename     null
+input basename      null
+input basename list null
+cproject            /Users/pm286/workspace/cmdev/normami/target/cooccurrence/zika1
+ctree               
+cTreeList           [target/cooccurrence/zika1/PMC3113902]
+dryrun              false
+excludeBase         null
+excludeTrees        null
+file types          []
+forceMake           false
+includeBase         null
+includeTrees        null
+log4j               
+logfile             null
+oldstyle            true
+subdirectoryType    null
+verbose             1
+
+Specific values (AMISearchTool)
+================================
+oldstyle             true
+strip numbers        false
+wordCountRange       (20,1000000)
+wordLengthRange      (1,20)
+
+dictionaryList       [country]
+dictionaryTop        [/Users/pm286/ContentMine/dictionary/dictionaries]
+dictionarySuffix     [xml]
+
+0    [main] DEBUG org.contentmine.ami.tools.AbstractAMISearchTool  - cmd: word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt search(country)
+3    [main] DEBUG org.contentmine.ami.tools.AbstractAMISearchTool  - wordCollection Factory
+3    [main] DEBUG org.contentmine.ami.tools.AbstractAMISearchTool  - old style search command); change
+cProject: zika1
+4    [main] DEBUG org.contentmine.ami.tools.AMISearchTool  - ************************* search word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt search(country)
+legacy cmd> word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt
+legacy cmd> search(country)
+11   [main] DEBUG org.contentmine.ami.plugins.CommandProcessor  - creating pluginOption: word(frequencies)xpath:@count>20~w.stopwords:pmcstop.txt_stopwords.txt
+13   [main] DEBUG org.contentmine.ami.plugins.CommandProcessor  - plugin option: word([frequencies])[{xpath:@count>20}, {w.stopwords:pmcstop.txt stopwords.txt}]
+13   [main] DEBUG org.contentmine.ami.plugins.CommandProcessor  - creating pluginOption: search(country)
+14   [main] DEBUG org.contentmine.ami.plugins.CommandProcessor  - plugin option: search([country])[]
+14   [main] DEBUG org.contentmine.ami.plugins.CommandProcessor  - running NORMA -i fulltext.xml -o scholarly.html --transform nlm2html --project target/cooccurrence/zika1
+58   [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - MAIN LOOP [target/cooccurrence/zika1/PMC3113902]
+59   [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - run:
+59   [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --transform; (1,2147483647); parseTransform; STRING: null / []; nlm2html; [nlm2html] class org.contentmine.norma.NormaArgProcessor
+59   [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: runTransform
+59   [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: runTransform /  or --transform; (1,2147483647); parseTransform; STRING: null / []; nlm2html; [nlm2html]
+59   [main] DEBUG org.contentmine.norma.NormaArgProcessor  - runTransform
+65   [main] DEBUG org.contentmine.norma.NormaArgProcessor  - ***run transform on tree dir: target/cooccurrence/zika1/PMC3113902
+target/cooccurrence/zika1/PMC3113902/fulltext.xml
+
+PMC3113902 1849 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - output: 
+1850 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option -o or --output; (1,1); parseOutput; STRING: null / null; null; null class org.contentmine.norma.NormaArgProcessor
+1850 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: outputMethod
+1850 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: outputMethod / -o or --output; (1,1); parseOutput; STRING: null / null; null; null
+1850 [main] DEBUG org.contentmine.norma.NormaArgProcessor  - DBG OutputSpecifiedFormat
+1850 [main] DEBUG org.contentmine.norma.NormaArgProcessor  - outputSpecifiedFormat
+1850 [main] DEBUG org.contentmine.norma.NormaTransformer  - outputFile target/cooccurrence/zika1/PMC3113902/scholarly.html
+.1873 [main] DEBUG org.contentmine.ami.plugins.CommandProcessor  - 
++++++++++++++++++++running: word; word([frequencies])[{xpath:@count>20}, {w.stopwords:pmcstop.txt stopwords.txt}]
+1873 [main] DEBUG org.contentmine.ami.plugins.CommandProcessor  - running plugin: word([frequencies])[{xpath:@count>20}, {w.stopwords:pmcstop.txt stopwords.txt}]
+1873 [main] DEBUG org.contentmine.ami.plugins.word.WordPluginOption  - WORD --project target/cooccurrence/zika1 -i scholarly.html --w.words frequencies --w.stopwords pmcstop.txt stopwords.txt
+1907 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - MAIN LOOP [target/cooccurrence/zika1/PMC3113902]
+PMC3113902 2082 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - run:
+2082 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option -w.w or --w.words; (0,2147483647); parseWords; STRING: null / null; null; null class org.contentmine.ami.plugins.word.WordArgProcessor
+2082 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: runExtractWords
+2082 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: runExtractWords / -w.w or --w.words; (0,2147483647); parseWords; STRING: null / null; null; null
+2091 [main] DEBUG org.contentmine.ami.plugins.word.WordCollectionFactory  - transformWordStream
+2100 [main] DEBUG org.contentmine.ami.plugins.word.WordCollectionFactory  - createWordList 7070
+2202 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - output: 
+2202 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option -w.w or --w.words; (0,2147483647); parseWords; STRING: null / null; null; null class org.contentmine.ami.plugins.word.WordArgProcessor
+2202 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: outputWords
+2202 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: outputWords / -w.w or --w.words; (0,2147483647); parseWords; STRING: null / null; null; null
+2202 [main] DEBUG org.contentmine.ami.plugins.word.WordArgProcessor  - OUTPUT WORDS REFLECT
+2202 [main] DEBUG org.contentmine.ami.plugins.word.WordArgProcessor  - outputWordsOld word
+createResultsDirectoryAndOutputResultsElement: word
+createResultsDirectoryAndOutputResultsElement: dir target/cooccurrence/zika1/PMC3113902/results/word
+.filter: word([frequencies])[{xpath:@count>20}, {w.stopwords:pmcstop.txt stopwords.txt}]/org.contentmine.ami.tools.AMISearchTool@34eaf9c1
+2237 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - MAIN LOOP [target/cooccurrence/zika1/PMC3113902]
+2237 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - run:
+2238 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --filter; (1,1); parseFilter; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2238 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: runFilter
+2238 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: runFilter /  or --filter; (1,1); parseFilter; STRING: null / null; null; null
+2259 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - output: 
+2259 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --filter; (1,1); parseFilter; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2259 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: outputFilter
+2259 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: outputFilter /  or --filter; (1,1); parseFilter; STRING: null / null; null; null
+2260 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option -o or --output; (1,1); parseOutput; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2260 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: outputMethod
+2260 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: outputMethod / -o or --output; (1,1); parseOutput; STRING: null / null; null; null
+2260 [main] WARN  org.contentmine.cproject.args.DefaultArgProcessor  - output method not written
+.2260 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --filter; (1,1); parseFilter; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2260 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: finalFilter
+2260 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: finalFilter /  or --filter; (1,1); parseFilter; STRING: null / null; null; null
+2269 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - MAIN LOOP [target/cooccurrence/zika1/PMC3113902]
+2270 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - run:
+2270 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --summaryfile; (1,1); parseSummaryFile; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2270 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: runSummaryFile
+2270 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: runSummaryFile /  or --summaryfile; (1,1); parseSummaryFile; STRING: null / null; null; null
+2273 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --dffile; (1,1); parseDFFile; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2273 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: runDFFile
+2273 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: runDFFile /  or --dffile; (1,1); parseDFFile; STRING: null / null; null; null
+2273 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - output: 
+.2273 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --summaryfile; (1,1); parseSummaryFile; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2273 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: finalSummaryFile
+2273 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: finalSummaryFile /  or --summaryfile; (1,1); parseSummaryFile; STRING: null / null; null; null
+2273 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --dffile; (1,1); parseDFFile; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2274 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: finalDFFile
+2274 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: finalDFFile /  or --dffile; (1,1); parseDFFile; STRING: null / null; null; null
+2274 [main] DEBUG org.contentmine.ami.plugins.CommandProcessor  - 
++++++++++++++++++++running: search; search([country])[]
+2274 [main] DEBUG org.contentmine.ami.plugins.CommandProcessor  - running plugin: search([country])[]
+2275 [main] DEBUG org.contentmine.ami.plugins.search.SearchPluginOption  - SEARCH --project target/cooccurrence/zika1 -i scholarly.html --sr.search org/contentmine/ami/plugins/dictionary/country.xml
+2294 [main] DEBUG org.contentmine.ami.plugins.search.SearchArgProcessor  - PARSE_SEARCH
+2294 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - MAIN LOOP [target/cooccurrence/zika1/PMC3113902]
+2389 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - run:
+2389 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --sr.search; (1,2147483647); parseSearch; STRING: null / null; null; null class org.contentmine.ami.plugins.search.SearchArgProcessor
+2389 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: runSearch
+2390 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: runSearch /  or --sr.search; (1,2147483647); parseSearch; STRING: null / null; null; null
+2390 [main] DEBUG org.contentmine.ami.plugins.search.SearchArgProcessor  - RUN_SEARCH OPTION:  or --sr.search; (1,2147483647); parseSearch; STRING: null / null; null; null
+2395 [main] DEBUG org.contentmine.ami.plugins.word.WordCollectionFactory  - transformWordStream
+2395 [main] DEBUG org.contentmine.ami.plugins.word.WordCollectionFactory  - createWordList 9386
+2409 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - output: 
+2409 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --sr.search; (1,2147483647); parseSearch; STRING: null / null; null; null class org.contentmine.ami.plugins.search.SearchArgProcessor
+2409 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: outputSearch
+2409 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: outputSearch /  or --sr.search; (1,2147483647); parseSearch; STRING: null / null; null; null
+createResultsDirectoryAndOutputResultsElement: search
+createResultsDirectoryAndOutputResultsElement: dir target/cooccurrence/zika1/PMC3113902/results/search
+.filter: search([country])[]/org.contentmine.ami.tools.AMISearchTool@34eaf9c1
+2415 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - MAIN LOOP [target/cooccurrence/zika1/PMC3113902]
+2415 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - run:
+2415 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --filter; (1,1); parseFilter; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2415 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: runFilter
+2415 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: runFilter /  or --filter; (1,1); parseFilter; STRING: null / null; null; null
+2417 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - output: 
+2417 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --filter; (1,1); parseFilter; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2417 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: outputFilter
+2417 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: outputFilter /  or --filter; (1,1); parseFilter; STRING: null / null; null; null
+2418 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option -o or --output; (1,1); parseOutput; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2418 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: outputMethod
+2418 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: outputMethod / -o or --output; (1,1); parseOutput; STRING: null / null; null; null
+2418 [main] WARN  org.contentmine.cproject.args.DefaultArgProcessor  - output method not written
+.2418 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --filter; (1,1); parseFilter; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2418 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: finalFilter
+2418 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: finalFilter /  or --filter; (1,1); parseFilter; STRING: null / null; null; null
+2424 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - MAIN LOOP [target/cooccurrence/zika1/PMC3113902]
+2424 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - run:
+2424 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --summaryfile; (1,1); parseSummaryFile; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2424 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: runSummaryFile
+2424 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: runSummaryFile /  or --summaryfile; (1,1); parseSummaryFile; STRING: null / null; null; null
+2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --dffile; (1,1); parseDFFile; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: runDFFile
+2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: runDFFile /  or --dffile; (1,1); parseDFFile; STRING: null / null; null; null
+2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - output: 
+.2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --summaryfile; (1,1); parseSummaryFile; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: finalSummaryFile
+2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: finalSummaryFile /  or --summaryfile; (1,1); parseSummaryFile; STRING: null / null; null; null
+2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - option  or --dffile; (1,1); parseDFFile; STRING: null / null; null; null class org.contentmine.cproject.args.DefaultArgProcessor
+2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - method: finalDFFile
+2425 [main] DEBUG org.contentmine.cproject.args.DefaultArgProcessor  - running meth/opt: finalDFFile /  or --dffile; (1,1); parseDFFile; STRING: null / null; null; null
+
+create data tables
+rrrr

@@ -38,6 +38,7 @@ public class AMISearchToolTest {
 //				+ " --ignorePlugins word"
 				+ " -v"
 			;
+		LOG.debug("args "+args);
 		new AMISearchTool().runCommands(args);
 	}
 	

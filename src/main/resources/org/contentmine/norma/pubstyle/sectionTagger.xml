@@ -94,7 +94,7 @@
 </tag>
 
 <tag title="Title" id="cm:TITLE">
-  <xpath>//*[@class='title']</xpath>
+  <xpath>//*[*[@class='title']]</xpath>
 </tag>
 <tag title="Title" id="cm:ARTICLE_META">
   <xpath>//*[@class='article-meta']</xpath>

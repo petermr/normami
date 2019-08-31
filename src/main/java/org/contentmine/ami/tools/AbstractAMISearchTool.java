@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.contentmine.ami.plugins.AMIArgProcessor;
 import org.contentmine.ami.plugins.AbstractSearchArgProcessor;
 import org.contentmine.ami.plugins.CommandProcessor;
 import org.contentmine.ami.plugins.word.WordCollectionFactory;
@@ -161,7 +160,7 @@ public abstract class AbstractAMISearchTool extends AbstractAMITool {
     	
     	if (oldstyle) {
         	String cmd = buildCommandFromBuiltinsAndFacets();
-        	LOG.debug("cmd: "+cmd);
+        	LOG.trace("cmd: "+cmd);
     	} else {
     		populateArgProcessorFromCLI();
     	}
@@ -186,7 +185,7 @@ public abstract class AbstractAMISearchTool extends AbstractAMITool {
 		wordCollectionFactory.setMinRawWordLength(wordLengthRange.getMin());
 		wordCollectionFactory.setMaxRawWordLength(wordLengthRange.getMax());
 		wordCollectionFactory.setStripNumbers(stripNumbers);
-		LOG.debug("wordCollection Factory");
+		LOG.trace("wordCollection Factory");
 	}
 
 	private boolean projectExists(CProject cProject) {

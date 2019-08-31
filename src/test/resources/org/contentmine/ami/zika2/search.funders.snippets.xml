@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSnippetsTree>
+ <snippetsTree>
+  <snippets file="../src/test/resources/org/contentmine/ami/zika2/PMC3113902/results/search/funders/results.xml">
+   <result pre="Medical Center Amsterdam, Netherlands Edited by: Johan van der Vlag," exact="Radboud University Nijmegen" post="Medical Centre, Netherlands Reviewed by: Johan van der Vlag,"/>
+   <result pre="Nijmegen Medical Centre, Netherlands Reviewed by: Johan van der Vlag," exact="Radboud University Nijmegen" post="Medical Centre, Netherlands; Jurgen Dieker, Nijmegen Center for Molecular"/>
+   <result pre="DNA binding complex is mutated in MHC class II deficiency." exact="EMBO" post="J. 16, 1045– 1055 10.1093/emboj/16.5.1045 9118943 Flajollet S. Poras"/>
+   <result pre="differential usage of multiple promoters of the transactivator CIITA ." exact="EMBO" post="J. 16, 2851– 2860 10.1093/emboj/16.10.2851 9184229 Murphy S. P."/>
+   <result pre="Interferon-gamma-induced chromatin remodeling at the CIITA locus is BRG1 dependent." exact="EMBO" post="J. 21, 1978– 1986 10.1093/emboj/21.8.1978 11953317 Piskurich J. F."/>
+  </snippets>
+ </snippetsTree>
+ <snippetsTree>
+  <snippets file="../src/test/resources/org/contentmine/ami/zika2/PMC3321797/results/search/funders/results.xml">
+   <result pre="Dis Emerging Infect. Dis EID Emerging Infectious Diseases 1080-6040 1080-6059" exact="Centers for Disease Control and Prevention" post="pmcid: 3310660 pmid: 22000358 10-1890 doi: 10.3201/eid1710.101890 : Dispatch"/>
+   <result pre="of Zoonosis of Ministry of Agriculture, College of Veterinary Medicine," exact="China Agricultural University," post="Yuanmingyuan West Rd, no. 2, Beijing 100193, People’s Republic"/>
+   <result pre="Cao is a graduate student at College of Veterinary Medicine," exact="China Agricultural University" post="in Beijing, in the Modern Agro-industry Technology Research System."/>
+  </snippets>
+ </snippetsTree>
+</projectSnippetsTree>

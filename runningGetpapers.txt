@@ -1,0 +1,71 @@
+6m
+Replying to @petermurrayrust @_tallison
+Depending on what you want this for, `script` the standard utility might be handy, or asciinema.org
+
+1Reply
+Retweet
+Like
+More options
+sagardkhare's avatar
+Sagar Khare @sagardkhare
+15m
+Replying to @LindorffLarsen @petermurrayrust
+me too. awk+shell_scripting is the snapchat of programming ;)
+
+Reply
+Retweet
+1 Like
+More options
+stuartayeates's avatar
+stuart @stuartayeates
+25m
+Replying to @petermurrayrust
+${HOME}/.bash_history
+
+Reply
+Retweet
+Like
+More options
+diloloji_com's avatar
+Diloloji Com @diloloji_com
+30m
+Replying to @invisiblecomma @petermurrayrust
+history|grep ls|tail -n 1|cut -c4-80>log.txt
+may work but one may have to modify cut part depending on the length of history.
+
+Reply
+Retweet
+Like
+More options
+LindorffLarsen's avatar
+Kresten Lindorff-Larsen @LindorffLarsen
+36m
+Replying to @petermurrayrust
+That’s the upside of having used shell scripting and awk instead of proper programming for lots of data analysis 🙃
+
+1Reply
+Retweet
+1 Like
+More options
+invisiblecomma's avatar
+Alf Eaton @invisiblecomma
+37m
+Replying to @petermurrayrust
+Maybe a wrapper function that logs then executes the arguments?
+
+exe() { echo "$@" >> log.txt ; eval "$@" ; }
+exe "ls -lt *.xyz"
+
+It does mean everything has to be in double-quotes to stop it expanding, though.
+
+2Reply
+Retweet
+1 Like
+More options
+LindorffLarsen's avatar
+Kresten Lindorff-Larsen @LindorffLarsen
+43m
+Replying to @petermurrayrust
+Ahh, maybe you wanted this:
+cmd='ls -lt *.xyz';echo "${cmd}">log.txt;${cmd}
+

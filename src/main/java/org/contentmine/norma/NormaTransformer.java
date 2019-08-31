@@ -270,7 +270,7 @@ public class NormaTransformer {
 		File dir = currentCTree.getDirectory();
 		IOFileFilter ioFileFilter1 = ioFileFilter;
 		File[] files = Utils.getFilesWithFilter(dir, ioFileFilter1);
-		LOG.debug("filtered files: "+Arrays.asList(files));
+		LOG.trace("filtered files: "+Arrays.asList(files));
 		transformFiles(files);
 	}
 
@@ -301,7 +301,7 @@ public class NormaTransformer {
 				} else {
 					outputFile = new File(outputDir, filename);
 				}
-				LOG.debug("writing to "+outputFile+"; output="+normaArgProcessor.getOutput());
+				LOG.trace("writing to "+outputFile+"; output="+normaArgProcessor.getOutput());
 				try {
 					transformSingleInput(file);
 				} catch (Exception e) {
@@ -331,7 +331,7 @@ public class NormaTransformer {
 			parseInputDirectoryAndAddDefaults(inputDirName, outputDirName);
 		} else if (ioFileFilter != null) {
 			// used later in transformFilteredFiles() on ctree.dir
-			LOG.debug("fileFilter: "+ioFileFilter);
+			LOG.trace("fileFilter: "+ioFileFilter);
 		} else {
 			try {
 				parseInputFile();
@@ -630,7 +630,7 @@ public class NormaTransformer {
 		PDFAnalyzer pdfAnalyzer = new PDFAnalyzer();
 		try {
 			this.outputDir = outputDirectory;
-			LOG.debug("outputDir: "+outputDir);
+			LOG.trace("outputDir: "+outputDir);
 			// this is the proper way
 //			File svgDir = currentCTree.getAllowedChildDirectory(CTree.SVG); 
 			// this is a kludge
@@ -868,7 +868,7 @@ public class NormaTransformer {
 
 	void outputSpecifiedFormat() {
 		String output = null;
-		LOG.debug("outputFile "+outputFile);
+		LOG.trace("outputFile "+outputFile);
 		if (outputFile != null) {
 			String outname = outputFile.getAbsolutePath().toString();
 			String treename = currentCTree.getDirectory().getAbsolutePath().toString();

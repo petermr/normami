@@ -117,7 +117,7 @@ public class CommandProcessor {
 		
 		for (String cmd : cmds) {
 			PluginOption pluginOption = createPluginOption(cmd);
-			LOG.debug("plugin option: "+pluginOption);
+			LOG.trace("plugin option: "+pluginOption);
 		}
 	}
 
@@ -146,7 +146,7 @@ public class CommandProcessor {
 	}
 	
 	private AMIPluginOption createPluginOption(String cmd) {
-		LOG.debug("creating pluginOption: "+cmd);
+		LOG.trace("creating pluginOption: "+cmd);
 		AMIPluginOption pluginOption = AMIPluginOption.createPluginOption(cmd);
 		if (pluginOption == null) {
 			LOG.error("skipping unknown command: "+cmd);
@@ -178,7 +178,7 @@ public class CommandProcessor {
 					+ " -o scholarly.html"
 					+ " --transform nlm2html"
 					+ " --project "+projectDir;
-			LOG.debug("running NORMA "+args);
+			LOG.trace("running NORMA "+args);
 			new Norma().run(args);
 		}
 	}
@@ -301,7 +301,7 @@ public class CommandProcessor {
 		AMISearchTool amiSearchTool = (amiTool != null && amiTool instanceof AMISearchTool) ? (AMISearchTool) amiTool : null;
 		for (AMIPluginOption pluginOption : pluginOptions) {
 			String plugin = pluginOption.getPlugin();
-			LOG.debug("\n+++++++++++++++++++running: " + plugin + "; " + pluginOption);
+			LOG.trace("\n+++++++++++++++++++running: " + plugin + "; " + pluginOption);
 //			if (amiSearchTool != null /*&& amiSearchTool.getIgnorePluginList().contains(plugin)*/) {
 			if (false /*amiSearchTool != null && amiSearchTool.getIgnorePluginList().contains(plugin)*/) {
 				System.out.println("ignored: " + plugin);
@@ -309,7 +309,7 @@ public class CommandProcessor {
 			}
 			try {
 				if (amiTool != null && amiTool.getVerbosityInt() > 0) {
-					LOG.debug("running plugin: "+pluginOption);
+					LOG.trace("running plugin: "+pluginOption);
 				}
 				pluginOption.run();
 			} catch (Exception e) {
@@ -319,7 +319,7 @@ public class CommandProcessor {
 				System.err.println("cannot run command: "+pluginOption +"; " + e.getMessage());
 				continue;
 			}
-			System.out.println("filter: "+pluginOption+"/"+amiTool);
+//			System.out.println("filter: "+pluginOption+"/"+amiTool);
 			pluginOption.runFilterResultsXMLOptions();
 //			System.out.println("summary: "+pluginOption);
 			pluginOption.runSummaryAndCountOptions(); 

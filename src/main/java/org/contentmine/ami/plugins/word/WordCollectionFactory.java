@@ -127,12 +127,12 @@ public class WordCollectionFactory {
 			List<String> rawWords = currentCTree.extractWords();
 			words = (rawWords == null) ? null : transformWordStream(rawWords);
 		}
-		AbstractTool.debug(amiArgProcessor.getAbstractTool(), 0, "createWordList "+words, LOG);
+//		AbstractTool.debug(amiArgProcessor.getAbstractTool(), 0, "createWordList "+words.size(), LOG);
 		return words;
 	}
 
 	private List<String> transformWordStream(List<String> transformedWords) {
-		AbstractTool.debug(amiArgProcessor.getAbstractTool(), 1, "transformWordStream", LOG);
+//		AbstractTool.debug(amiArgProcessor.getAbstractTool(), 1, "transformWordStream", LOG);
 		AMIArgProcessor wordArgProcessor = (AMIArgProcessor) amiArgProcessor;
 		if (amiArgProcessor.getChosenWordTypes().contains(AMIArgProcessor.ABBREVIATION)) {
 			transformedWords = createAbbreviations(transformedWords);

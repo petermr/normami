@@ -189,12 +189,12 @@ public class WordArgProcessor extends AbstractSearchArgProcessor {
 	 */
 	// called by reflection
 	public void outputWords(ArgumentOption option) {
-		LOG.debug("OUTPUT WORDS REFLECT");
+		LOG.trace("OUTPUT WORDS REFLECT");
 		outputWords(option.getName());
 	}
 
 	public void outputWords(String optionName) {
-		AbstractTool.debug(abstractTool, 0, "outputWordsOld "+optionName, LOG);
+//		AbstractTool.debug(abstractTool, 0, "outputWordsOld "+optionName, LOG);
 		ContentProcessor currentContentProcessor = getOrCreateContentProcessor();
 		ResultsElementList resultsElementList = currentContentProcessor.getOrCreateResultsElementList();
 		for (int i = 0; i < resultsElementList.size(); i++) {
@@ -206,7 +206,7 @@ public class WordArgProcessor extends AbstractSearchArgProcessor {
 	}
 
 	public void parseSummary(ArgumentOption option, ArgIterator argIterator) {
-		AbstractTool.debug(abstractTool, 1, "parseSummary", LOG);
+//		AbstractTool.debug(abstractTool, 1, "parseSummary", LOG);
 		List<String> tokens = argIterator.createTokenListUpToNextNonDigitMinus(option);
 		if (tokens.size() == 0) {
 			LOG.error("parseSummary needs a list of actions");
@@ -216,7 +216,7 @@ public class WordArgProcessor extends AbstractSearchArgProcessor {
 	}
 	
 	public void finalSummary(ArgumentOption option) {
-		AbstractTool.debug(abstractTool, 1, "finalSummary", LOG);
+//		AbstractTool.debug(abstractTool, 1, "finalSummary", LOG);
 		WordResultsElementList frequenciesElementList = this.aggregateOverCMDirList(getPlugin(), WordArgProcessor.FREQUENCIES);
 		getOrCreateWordCollectionFactory();
 		for (String method : summaryMethods) {
@@ -226,7 +226,7 @@ public class WordArgProcessor extends AbstractSearchArgProcessor {
 
 	private void runSummaryMethod(WordResultsElementList frequenciesElementList,
 			WordCollectionFactory wordCollectionFactory, String method) {
-		AbstractTool.debug(abstractTool, 1, "runSummaryMethod", LOG);
+//		AbstractTool.debug(abstractTool, 1, "runSummaryMethod", LOG);
 		if (AGGREGATE_FREQUENCY.equals(method) && summaryFileName != null) {
 			aggregatedFrequenciesElement = wordCollectionFactory.createAggregatedFrequenciesElement(frequenciesElementList);
 			writeResultsElement(new File(summaryFileName, AGGREGATE_XML), aggregatedFrequenciesElement);
@@ -257,11 +257,11 @@ public class WordArgProcessor extends AbstractSearchArgProcessor {
 	
 	public void outputSearch(ArgumentOption option) {
 		outputResultsElements(option.getName());
-		LOG.debug("OUTPUT SEARCH");
+//		LOG.debug("OUTPUT SEARCH");
 	}
 
 	public void outputResultsElements(String name) {
-		AbstractTool.debug(abstractTool, 1, "outputResultsElements "+name, LOG);
+//		AbstractTool.debug(abstractTool, 1, "outputResultsElements "+name, LOG);
 		LOG.debug("outputResultsElements "+name);
 		ContentProcessor currentContentProcessor = currentCTree.getOrCreateContentProcessor();
 		currentContentProcessor.clearResultsElementList();

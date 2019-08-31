@@ -780,7 +780,7 @@ public class JATSSectionTagger implements HtmlTagger {
 		if (existingFulltextXML != null) {
 			this.getOrCreateJATSHtml(existingFulltextXML);
 			String xpath = getXPath(sectionTag);
-			LOG.debug("xpath for tag: "+sectionTag+": "+xpath);
+			LOG.trace("xpath for tag: "+sectionTag+": "+xpath);
 			sections = getSections(xpath);
 		}
 		return sections;

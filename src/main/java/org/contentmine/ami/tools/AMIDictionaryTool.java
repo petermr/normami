@@ -178,7 +178,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 
     @Parameters(index = "0",
     		arity="0..*",
-    		split=",",
+//    		split=",",
     		description = "primary operation: (${COMPLETION-CANDIDATES}); if no operation, runs help"
     		)
     private Operation operation = Operation.help;
@@ -233,26 +233,12 @@ public class AMIDictionaryTool extends AbstractAMITool {
     		)
     private String[] hrefCols;
 
-    // obsoleted
-//    @Option(names = {"--hreftext"}, 
-//    		arity="0",
-//    		description = "hyperlinks from text (maybe excludes tables);"
-//    				+ " requires wikipedia or wikitable input at present; still under test"
-//    		)
-//	public String href;
-    
     @Option(names = {"--informat"}, 
     		arity="1",
     		paramLabel = "input format",
     		description = "input format (${COMPLETION-CANDIDATES})"
     		)
     private InputFormat informat;
-    
-//    @Option(names = {"-i", "--input"}, 
-//    		arity="1",
-//    		description = "input stream; URL if starts with 'http' else file"
-//    		)
-//    private String input;
     
     @Option(names = {"--linkcol"}, 
     		arity="1",
@@ -261,7 +247,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	public String linkCol;
 
     @Option(names = {"--namecol"}, 
-    		split=",",
+//    		split=",",
     		arity="1..*",
     		description = "column(s) to extract name; use exact case (e.g. Common name)"
     		)
@@ -362,7 +348,7 @@ public class AMIDictionaryTool extends AbstractAMITool {
 	}
 	
 	public static void main(String args) {
-		main(args.split("\\s+"));
+		main(args.trim().split("\\s+"));
 	}
 	public static void main(String[] args) {
         AMIDictionaryTool amiDictionary = new AMIDictionaryTool();

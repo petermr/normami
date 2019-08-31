@@ -56,16 +56,16 @@ public class SearchArgProcessor extends AbstractSearchArgProcessor {
 			String dictTitle = dictionary.getTitle();
 			dictionarySearcher.setName(dictTitle);
 		}
-		LOG.debug("PARSE_SEARCH");
+		LOG.trace("PARSE_SEARCH");
 	}
 
 	public void runSearch(ArgumentOption option, ArgIterator argIterator) {
-		LOG.debug("RUN_SEARCH");
+		LOG.trace("RUN_SEARCH");
 		super.runSearch();
 	}
 
 	public void runSearch(ArgumentOption option) {
-		LOG.debug("RUN_SEARCH OPTION: "+option);
+		LOG.trace("RUN_SEARCH OPTION: "+option);
 		super.runSearch();
 	}
 
