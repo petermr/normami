@@ -254,6 +254,12 @@ public abstract class AbstractAMITool implements Callable<Void> , AbstractTool {
             description = "use subdirectory of cTree")
     protected SubDirectoryType subdirectoryType;
 
+    @Option(names = {"--maxTrees"},
+    		arity = "1",
+            description = "quit after given number of trees; null means infinite")
+    protected Integer maxTreeCount = null;
+
+
 	@Option(names = { "-v", "--verbose" }, 
     		description = {
         "Specify multiple -v options to increase verbosity.",
@@ -527,6 +533,8 @@ public abstract class AbstractAMITool implements Callable<Void> , AbstractTool {
 	        System.out.println("oldstyle            " + oldstyle);
 	        System.out.println("subdirectoryType    " + subdirectoryType);
 	        System.out.println("verbose             " + verbosity.length);
+        } else {
+        	System.out.println("-v to see generic values");
         }
 //        System.out.println("version             " + version);
 	}
@@ -654,8 +662,13 @@ public abstract class AbstractAMITool implements Callable<Void> , AbstractTool {
 
 	protected boolean processTrees() {
 		boolean processed = cTreeList != null && cTreeList.size() > 0;
+		int treeCount = 0; 
 		if (cTreeList != null) {
 			for (CTree cTree : cTreeList) {
+				if (maxTreeCount != null && treeCount++ >= maxTreeCount) {
+					System.out.println("CTree limit readched: "+(--treeCount));
+					break;
+				}
 				this.cTree = cTree;
 				outputCTreeName();
 				processTree();

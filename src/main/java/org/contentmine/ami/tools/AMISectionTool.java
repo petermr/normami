@@ -37,11 +37,6 @@ public class AMISectionTool extends AbstractAMITool {
 		LOG.setLevel(Level.DEBUG);
 	}
 
-    @Option(names = {"--write"},
-    		arity = "0",
-            description = "write section files (may be customised later)")
-	public boolean writeFiles = true;
-
     @Option(names = {"--sections"},
     		arity = "0..*",
     		required = true,
@@ -49,6 +44,11 @@ public class AMISectionTool extends AbstractAMITool {
             		+ "if no args, lists tags%n"
             		+ "ALL selects all tags ")
     private List<SectionTag> sectionTagList = new ArrayList<>();
+
+    @Option(names = {"--write"},
+    		arity = "0",
+            description = "write section files (may be customised later)")
+	public boolean writeFiles = true;
 
 	private JATSSectionTagger tagger;
 		
@@ -64,6 +64,7 @@ public class AMISectionTool extends AbstractAMITool {
 	protected void parseSpecifics() {
 		normalizeSectionTags();
 		System.out.println("sectionList             " + sectionTagList);
+		System.out.println("write                   " + writeFiles);
 		System.out.println();
 	}
 
@@ -81,7 +82,6 @@ public class AMISectionTool extends AbstractAMITool {
 	public void processTree() {
 		boolean deleteExisting = false;
 		tagger = new JATSSectionTagger();
-//		JATSSectionTagger orCreateJATSTagger = getOrCreateJATSTagger();
 		cTree.setHtmlTagger(tagger);
 		for (SectionTag sectionTag : sectionTagList) {
 			if (sectionTag == null) {

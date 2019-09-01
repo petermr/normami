@@ -89,7 +89,23 @@ public class AMISectionToolTest {
 			;
 		new AMISectionTool().runCommands(args);
 	}
+
+	@Test
+	public void testCEVBug() {
+		File targetDir = new File("target/cevbug/");
+		File testDir = new File("/Users/pm286/workspace/projects/CEV/oil186");
+//		File testDir = new File("/Users/pm286/workspace/projects/quantumchem/qchem100");
+		CMineTestFixtures.cleanAndCopyDir(testDir, targetDir);
+		String args = ""
+				+ "-p " + targetDir
+				+ " --maxTrees 25"
+				+" --sections ALL"
+//				+ " -v"
+			;
+		new AMISectionTool().runCommands(args);
+	}
 	
+
 	/**
 	 * name x 199, surname x 199, given-names x 197, label x 69, year x 60, element-citation x 57, ref x 57, source x 56, person-group x 56, 
 	 * article-title x 56, fpage x 54, lpage x 54, volume x 51, pub-id x 45, italic x 25, title x 25, bold x 21, sec x 18, etal x 15, fn x 13, sup x 11,
