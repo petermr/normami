@@ -238,8 +238,8 @@ public abstract class AbstractAMITool implements Callable<Void> , AbstractTool {
 
     @Option(names = {"--oldstyle"},
     		arity = "0",
-            description = " use oldstyle style of processing (project based); new style is per tree")
-	protected boolean oldstyle = false;
+            description = " use oldstyle style of processing (project based) for unconverted tools; new style is per tree")
+	protected boolean oldstyle = true;
     
 
 	@Option(names = {"--rawfiletypes" }, 
@@ -530,13 +530,12 @@ public abstract class AbstractAMITool implements Callable<Void> , AbstractTool {
 	        System.out.println("includeTrees        " + includeTrees);
 	        System.out.println("log4j               " + (log4j == null ? "" : new ArrayList<String>(Arrays.asList(log4j))));
 	        System.out.println("logfile             " + logfile);
-	        System.out.println("oldstyle            " + oldstyle);
 	        System.out.println("subdirectoryType    " + subdirectoryType);
 	        System.out.println("verbose             " + verbosity.length);
         } else {
         	System.out.println("-v to see generic values");
         }
-//        System.out.println("version             " + version);
+        System.out.println("oldstyle            " + oldstyle);
 	}
 
 	private String prettyPrint(CTreeList cTreeList) {
